@@ -19,12 +19,12 @@ if (d1Db) {
   }
 }
 
-const tourTitle = tour?.title || "Full-Day Mekong Delta Tour: Ben Tre & My Tho 1-Day Premium Discovery";
+const tourTitle = "Full-Day Mekong Delta Tour: Ben Tre & My Tho 1-Day Premium Discovery";
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "A soulful 1-day Mekong Delta private journey. Cruise the 4 mythical islands (Long, Lan, Qui, Phung), hand-paddle three-plank sampans under water coconuts, taste raw honey, ride rural tuk-tuks, listen to UNESCO Đờn Ca Tài Tử, and explore 170-year-old Vinh Trang Pagoda. Private VIP group (max 5 guests) with dedicated photographer.";
-const featuredImage = tour?.ogImage || tour?.featuredImage || "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80";
-const basePrice = tour?.price_number || 2890000;
-const formattedPrice = tour?.price_text || "2,890,000 VND";
+const featuredImage = "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80";
+const basePrice = 2890000;
+const formattedPrice = "2,890,000 VND";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
