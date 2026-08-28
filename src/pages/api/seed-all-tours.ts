@@ -12,19 +12,19 @@ export const GET: APIRoute = async ({ locals }) => {
 
     await d1Db.prepare(`
       UPDATE Tour SET 
-        content = ?,
+        content = '<!-- Astro Native Page: src/pages/tour/1-day-premium-cu-chi-tunnels.astro -->',
         price_text = '3,090,000 VND',
         price_number = 3090000,
-        format = 'elementor',
+        format = 'astro',
         updatedAt = datetime('now')
       WHERE slug = '1-day-premium-cu-chi-tunnels'
-    `).bind(goldHtml).run();
+    `).run();
 
     return new Response(JSON.stringify({
       success: true,
-      message: 'Successfully deployed Gold Standard Cu Chi tour content into remote D1 database!',
+      message: 'Successfully updated Tour in D1 to format=astro (Native Astro Page)!',
       slug: '1-day-premium-cu-chi-tunnels',
-      htmlLength: goldHtml.length
+      format: 'astro'
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
