@@ -938,11 +938,11 @@
 .breadcrumb-tour {
   display: flex;
   align-items: center;
-  gap: 8px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 20px 18px;
-  font-size: 14px;
+  gap: 6px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 13px;
   font-weight: 500;
   color: #94a3b8;
   flex-wrap: wrap;
