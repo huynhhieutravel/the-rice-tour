@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/ladakh-co-may.css';
+import App from '../components/ReactApp/ChoLehLadakh/App.tsx';
+import { env } from 'cloudflare:workers';
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Emagazine Chợ Leh Ladakh: Mua Sắm Bản Địa | FIT Tour";
+let seoDesc = "Kinh nghiệm dạo chơi, mua sắm và thưởng thức ẩm thực tại khu chợ đi bộ Leh Bazaar trung tâm Ladakh từ HDV FIT Tour.";
+let seoImage = "https://media.fittour.vn/uploads/2022/06/con-pho-chinh-o-leh-ladakh.webp";
+let adminEditUrl = "";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage FROM Post WHERE slug = 'cho-leh-ladakh' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      seoTitle = postData.metaTitle || postData.title || seoTitle;
+      seoDesc = postData.metaDescription || seoDesc;
+      seoImage = postData.featuredImage || seoImage;
+      if (postData.id) adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data cho trang cho-leh-ladakh:", e);
+  }
+}
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/cho-leh-ladakh"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <!-- Optimize Google Fonts Loading -->
+            <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    </noscript>
+  </Fragment>
+
+  <!-- client:idle is used to delay hydration until the main thread is free, improving PageSpeed metrics (TBT/JS Execution) -->
+  <App client:idle /> 
+</BaseLayout>

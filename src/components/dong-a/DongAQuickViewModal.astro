@@ -1,0 +1,222 @@
+---
+// src/components/dong-a/DongAQuickViewModal.astro
+---
+
+<!-- Modal Overlay -->
+<div id="tour-quickview-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity opacity-0 duration-300" id="tour-quickview-backdrop"></div>
+  
+  <!-- Modal Content (Bottom Sheet on Mobile, Centered on Desktop) -->
+  <div id="tour-quickview-panel" class="relative bg-[#111] border border-white/10 w-full md:w-[600px] h-[75vh] md:h-auto md:max-h-[95vh] rounded-t-3xl md:rounded-2xl mt-auto md:mt-0 shadow-2xl flex flex-col transform translate-y-full md:translate-y-4 md:scale-95 opacity-0 transition-all duration-300 ease-out">
+    
+    <!-- Drag Handle for Mobile -->
+    <div class="w-full h-6 flex md:hidden items-center justify-center shrink-0 pt-2 absolute top-0 left-0" id="quickview-drag-handle">
+      <div class="w-12 h-1.5 bg-white/20 rounded-full"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 pb-4 pt-8 md:pt-6 border-b border-white/10 shrink-0">
+      <h3 id="quickview-title" class="text-[#c5a365] font-cinzel text-xl tracking-wider font-bold">Tour Đông Á</h3>
+      <button id="close-quickview-btn" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-4 md:p-5 scrollbar-hide">
+      
+      <!-- List all East Asia tours -->
+      <div id="quickview-content-dong-a" class="quickview-content hidden grid grid-cols-2 gap-3 md:gap-4">
+        
+        <!-- Cột Hàn Quốc -->
+        <div class="col-span-1 flex flex-col gap-3">
+          <h4 class="text-white/50 text-[10px] md:text-xs uppercase tracking-widest border-b border-white/10 pb-2">Hàn Quốc</h4>
+          <a href="/tour/tour-han-quoc-5n4d" class="flex flex-col gap-2 md:gap-3 bg-white/5 rounded-xl p-2 md:p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10 h-full">
+            <div class="overflow-hidden rounded-lg w-full aspect-[4/3] md:aspect-video shrink-0">
+              <img src="https://media.fittour.vn/uploads/2023/07/khung-canh-lang-tuyet-nhu-mot-bo-phim-han-quoc.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Hàn Quốc" />
+            </div>
+            <div class="flex flex-col flex-1">
+              <h4 class="text-white font-serif text-[13px] md:text-sm font-medium line-clamp-2 mb-1.5 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Hàn Quốc 5N4Đ trọn gói bay thẳng - KS 3-4 sao</h4>
+              <div class="flex items-center gap-1.5 text-[10px] md:text-xs text-white/50 mb-2 md:mb-3">
+                <span class="flex items-center gap-1"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 5 ngày 4 đêm</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto border-t border-white/5 pt-2">
+                <span class="text-[#c5a365] text-[10px] md:text-xs tracking-wider">Xem ngay</span>
+                <span class="text-[10px] md:text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Cột Đài Loan -->
+        <div class="col-span-1 flex flex-col gap-3">
+          <h4 class="text-white/50 text-[10px] md:text-xs uppercase tracking-widest border-b border-white/10 pb-2">Đài Loan</h4>
+          <a href="/tour/tour-dai-loan" class="flex flex-col gap-2 md:gap-3 bg-white/5 rounded-xl p-2 md:p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10 h-full">
+            <div class="overflow-hidden rounded-lg w-full aspect-[4/3] md:aspect-video shrink-0">
+              <img src="https://media.fittour.vn/uploads/tour-dai-loan-fittour.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Đài Loan" />
+            </div>
+            <div class="flex flex-col flex-1">
+              <h4 class="text-white font-serif text-[13px] md:text-sm font-medium line-clamp-2 mb-1.5 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Đài Loan 5N4Đ - Bay Thẳng - Lịch trình hấp dẫn</h4>
+              <div class="flex items-center gap-1.5 text-[10px] md:text-xs text-white/50 mb-2 md:mb-3">
+                <span class="flex items-center gap-1"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 5 ngày 4 đêm</span>
+              </div>
+              <div class="flex items-center justify-between mt-auto border-t border-white/5 pt-2">
+                <span class="text-[#c5a365] text-[10px] md:text-xs tracking-wider">Xem ngay</span>
+                <span class="text-[10px] md:text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Hàng Nhật Bản (Chiếm 2 cột) -->
+        <div class="col-span-2 flex flex-col gap-3 mt-2 md:mt-3">
+          <h4 class="text-white/50 text-[10px] md:text-xs uppercase tracking-widest border-b border-white/10 pb-2">Nhật Bản</h4>
+          <div class="grid grid-cols-2 gap-3 md:gap-4">
+            <!-- Card Nhật Bản 1 -->
+            <a href="/tour/tour-nhat-ban-6n5d" class="col-span-1 flex flex-col gap-2 md:gap-3 bg-white/5 rounded-xl p-2 md:p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10 h-full">
+              <div class="overflow-hidden rounded-lg w-full aspect-[4/3] md:aspect-video shrink-0">
+                <img src="https://media.fittour.vn/uploads/2025/12/thap-ba-tang-koyasu-chua-kiyomizu.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Nhật Bản 6N5Đ" />
+              </div>
+              <div class="flex flex-col flex-1">
+                <h4 class="text-white font-serif text-[13px] md:text-sm font-medium line-clamp-2 mb-1.5 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Nhật Bản 6N5Đ trọn gói - KS 3-4 sao - Nagoya - Phú Sĩ - Tokyo</h4>
+                <div class="flex items-center gap-1.5 text-[10px] md:text-xs text-white/50 mb-2 md:mb-3">
+                  <span class="flex items-center gap-1"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 6 ngày 5 đêm</span>
+                </div>
+                <div class="flex items-center justify-between mt-auto border-t border-white/5 pt-2">
+                  <span class="text-[#c5a365] text-[10px] md:text-xs tracking-wider">Xem ngay</span>
+                  <span class="text-[10px] md:text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+                </div>
+              </div>
+            </a>
+            <!-- Card Nhật Bản 2 -->
+            <a href="/tour/tour-hokkaido-6n6d" class="col-span-1 flex flex-col gap-2 md:gap-3 bg-white/5 rounded-xl p-2 md:p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10 h-full">
+              <div class="overflow-hidden rounded-lg w-full aspect-[4/3] md:aspect-video shrink-0">
+                <img src="https://media.fittour.vn/uploads/2026/03/tour-hokkaido-6n6d-fittour-1.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Hokkaido 6N6Đ" />
+              </div>
+              <div class="flex flex-col flex-1">
+                <h4 class="text-white font-serif text-[13px] md:text-sm font-medium line-clamp-2 mb-1.5 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Hokkaido 6N6Đ trọn gói - Bay thẳng - Buffet cua Nanda</h4>
+                <div class="flex items-center gap-1.5 text-[10px] md:text-xs text-white/50 mb-2 md:mb-3">
+                  <span class="flex items-center gap-1"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 6 ngày 6 đêm</span>
+                </div>
+                <div class="flex items-center justify-between mt-auto border-t border-white/5 pt-2">
+                  <span class="text-[#c5a365] text-[10px] md:text-xs tracking-wider">Xem ngay</span>
+                  <span class="text-[10px] md:text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('tour-quickview-modal');
+    const backdrop = document.getElementById('tour-quickview-backdrop');
+    const panel = document.getElementById('tour-quickview-panel');
+    const closeBtn = document.getElementById('close-quickview-btn');
+    const titleEl = document.getElementById('quickview-title');
+    
+    const contents = document.querySelectorAll('.quickview-content');
+    const triggers = document.querySelectorAll('[data-tour-modal]');
+
+    const titles = {
+      'dong-a': 'Tour Đông Á'
+    };
+
+    function openModal(id) {
+      // Hide all contents
+      contents.forEach(el => el.classList.add('hidden'));
+      // Show targeted content
+      const targetContent = document.getElementById(`quickview-content-${id}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+      
+      // Update Title
+      titleEl.textContent = titles[id] || 'Khám phá';
+
+      // Show modal block
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      // Lock scroll
+      document.body.style.overflow = 'hidden';
+
+      // Trigger animations
+      requestAnimationFrame(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        
+        panel.classList.remove('translate-y-full', 'md:translate-y-4', 'md:scale-95', 'opacity-0');
+        panel.classList.add('translate-y-0', 'md:translate-y-0', 'md:scale-100', 'opacity-100');
+      });
+    }
+
+    function closeModal() {
+      // Revert animations
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      
+      panel.classList.remove('translate-y-0', 'md:translate-y-0', 'md:scale-100', 'opacity-100');
+      panel.classList.add('translate-y-full', 'md:translate-y-4', 'md:scale-95', 'opacity-0');
+
+      // After animation finishes, hide completely
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = trigger.getAttribute('data-tour-modal');
+        openModal(id);
+      });
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+
+    // Swipe down to close on Mobile Bottom Sheet
+    let startY = 0;
+    let currentY = 0;
+    
+    panel?.addEventListener('touchstart', (e) => {
+      // Only allow swipe from the top drag handle area
+      if (e.target.closest('#quickview-drag-handle') || panel.scrollTop === 0) {
+        startY = e.touches[0].clientY;
+      }
+    }, {passive: true});
+
+    panel?.addEventListener('touchmove', (e) => {
+      if (startY === 0) return;
+      currentY = e.touches[0].clientY;
+      const diff = currentY - startY;
+      
+      if (diff > 0 && panel.scrollTop <= 0) {
+        panel.style.transform = `translateY(${diff}px)`;
+        panel.style.transition = 'none';
+        e.preventDefault(); // Prevent pull-to-refresh
+      }
+    }, {passive: false});
+
+    panel?.addEventListener('touchend', () => {
+      if (startY === 0) return;
+      const diff = currentY - startY;
+      panel.style.transition = ''; // Restore tailwind transition
+      panel.style.transform = ''; // Restore original
+      
+      if (diff > 100) {
+        closeModal();
+      }
+      
+      startY = 0;
+    });
+  });
+</script>

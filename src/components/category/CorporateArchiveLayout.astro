@@ -1,0 +1,565 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Pagination from '@/components/ui/Pagination.astro';
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+import { env } from 'cloudflare:workers';
+import { safeQueryOptional } from '@/lib/db-client';
+import SnippetBlock from '@/components/shortcodes/SnippetBlock.astro';
+
+const { categoryData, categoryPosts } = Astro.props;
+
+const currentSearch = categoryData.currentSearch || '';
+const currentTag = categoryData.currentTag || '';
+const allTags = categoryData.allTags || [];
+
+const MARKET_GROUPS = [
+  { label: 'Trung Quốc', children: ['Trung Quốc','Bắc Kinh','Cáp Nhĩ Tân','Cửu Trại Câu','Giang Nam, Trung Quốc','Giang Tây','Lệ Giang','Tân Cương','Tây An','Tây Tạng','Vân Nam','Á Đinh','Thành Đô, Trung Quốc', 'Mông Cổ'] },
+  { label: 'Đông Bắc Á', children: ['Hàn Quốc','Nhật Bản','Đài Loan', 'Kobe, Nhật Bản', 'Hong Kong'] },
+  { label: 'Đông Nam Á', children: ['Đông Nam Á','Bali, Indonesia', 'Chiang Mai, Thái Lan', 'Bali','Indonesia','Bromo','Campuchia','Thái Lan','Singapore','Malaysia','Lào','Philippines'] },
+  { label: 'Việt Nam', children: ['Việt Nam', 'Phan Thiết, Việt Nam', 'Nha Trang, Việt Nam', 'TP.HCM, Việt Nam', 'Hà Nội, Việt Nam', 'Đà Nẵng, Việt Nam', 'Phú Quốc, Việt Nam', 'Hồ Tràm, Việt Nam'] },
+  { label: 'Nam Á & Himalayas', children: ['Bhutan','Himalayas','Kailash','Kashmir','Ladakh','Nepal','Pakistan'] },
+  { label: 'Con Đường Tơ Lụa', children: ['Trung Á','Caucasus','Silk Road'] },
+  { label: 'Châu Âu & Nga', children: ['Châu Âu','Nga - Murmansk'] },
+  { label: 'Trung Đông & Châu Phi', children: ['Trung Đông','Thổ Nhĩ Kỳ','Dubai','Ai Cập','Morocco','Châu Phi','Ả Rập'] },
+  { label: 'Châu Mỹ', children: ['Mỹ'] },
+];
+
+const normalizeStr = (s: string) => (s || '').toLowerCase().trim();
+const allDests = new Set(allTags.map((t: any) => t.slug));
+
+const activeGroups = MARKET_GROUPS
+  .map(g => {
+    return {
+      label: g.label,
+      children: g.children.filter(c => {
+        for (let d of allDests) {
+          if (normalizeStr(d) === normalizeStr(c)) return true;
+        }
+        return false;
+      })
+    };
+  })
+  .filter(g => g.children.length > 0);
+
+const mappedDestsNorm = new Set(MARKET_GROUPS.flatMap(g => g.children).map(normalizeStr));
+const unmapped = [...allDests].filter(d => !mappedDestsNorm.has(normalizeStr(d)));
+if (unmapped.length > 0) {
+  activeGroups.push({ label: 'Khác', children: unmapped });
+}
+
+const d1Db = env?.dulichcoguu_d1 as D1Database;
+const partnerLogosSnippet = await safeQueryOptional(
+  d1Db.prepare(`SELECT * FROM Snippet WHERE slug = 'partner-logos'`).first<any>(),
+  null,
+  { route: Astro.url.pathname, queryType: "fetch_partner_logos_snippet" }
+);
+const dataMap = { snippets: { 'partner-logos': partnerLogosSnippet } };
+
+function getLocation(post: any) {
+  if (post.customSchema) {
+    try {
+      const parsed = JSON.parse(post.customSchema);
+      if (parsed.location) return parsed.location;
+    } catch (e) {}
+  }
+  // Fallback to first line of excerpt if location not found
+  if (post.excerpt) {
+    const lines = post.excerpt.split('\n');
+    const firstLine = lines[0].trim();
+    if (firstLine.length < 50 && !firstLine.includes('.')) {
+        return firstLine;
+    }
+  }
+  return '';
+}
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FIT Tour",
+  "url": "https://thericetour.com",
+  "logo": "https://media.thericetour.com/uploads/logo-the-rice.webp",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "0938341441",
+    "contactType": "sales",
+    "areaServed": "VN",
+    "availableLanguage": "Vietnamese"
+  }
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Corporate Tour & Incentive Travel",
+  "name": categoryData.name || "Tổ Chức Tour Doanh Nghiệp",
+  "provider": {
+    "@type": "Organization",
+    "name": "FIT Tour"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Vietnam"
+  },
+  "description": categoryData.description || `Dịch vụ ${categoryData.name} chuyên nghiệp dành cho tổ chức và doanh nghiệp.`
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Trang chủ",
+      "item": "https://thericetour.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": categoryData.name || "Tour Doanh Nghiệp",
+      "item": `https://thericetour.com/${categoryData.slug || 'tour-doanh-nghiep'}`
+    }
+  ]
+};
+---
+
+<BaseLayout 
+  title={categoryData.name} 
+  description={categoryData.description || `Danh sách các bài viết thuộc chuyên mục ${categoryData.name}`}
+  isCorporate={true}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  {/* Hero Section */}
+  <section class="bg-slate-900 text-white py-16 lg:py-24">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      {/* Left side: Text & CTA */}
+      <div class="text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight mb-6 leading-tight">Tổ Chức Tour Doanh Nghiệp & Incentive Travel Cùng FIT Tour</h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-xl font-light leading-relaxed mb-8">
+          Khám phá những hành trình đẳng cấp được thiết kế riêng cho các đối tác doanh nghiệp. FIT Tour tự hào là người đồng hành đáng tin cậy trong các chuyến đi nghỉ dưỡng, team building và sự kiện tri ân, giúp gắn kết đội ngũ và nâng tầm văn hóa doanh nghiệp.
+        </p>
+        
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="https://zalo.me/0934888854" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-[#0068FF] hover:bg-[#0054D6] text-white font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M21.1 9.6c0-4.6-4.1-8.3-9.1-8.3-5.1 0-9.1 3.7-9.1 8.3 0 2.6 1.3 5 3.5 6.5l-1.3 3.8c-.1.3.1.5.3.6.1.1.2.1.3.1.1 0 .2 0 .3-.1l4.2-2.3c1.2.3 2.5.5 3.8.5 5 0 9.1-3.7 9.1-8.3M15.4 12c-.2 0-.3-.1-.3-.3v-1.6c0-.5-.4-.9-.9-.9s-.9.4-.9.9v1.6c0 .2-.1.3-.3.3-.2 0-.3-.1-.3-.3V10c0-.5-.4-.9-.9-.9s-.9.4-.9.9v1.8c0 .2-.1.3-.3.3-.2 0-.3-.1-.3-.3V8.8c0-.2.1-.3.3-.3s.3.1.3.3v2c0 .2.3.2.3 0v-2c0-.2.1-.3.3-.3s.3.1.3.3v2.8c0 .2.3.2.3 0v-2.8c0-.2.1-.3.3-.3s.3.1.3.3v2.8c0 .2.3.2.3 0v-2.8c0-.2.1-.3.3-.3s.3.1.3.3V11.7c0 .2-.1.3-.3.3z"/></svg>
+            Nhắn Zalo
+          </a>
+          <a href="mailto:info@fittour.com.vn" class="px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur border border-white/20 transition-all hover:-translate-y-0.5 flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Gửi Email
+          </a>
+        </div>
+      </div>
+
+      {/* Right side: Image/Snippet */}
+      <div class="relative w-full overflow-hidden flex items-center justify-center">
+         <SnippetBlock name="partner-logos" dataMap={dataMap} />
+      </div>
+
+    </div>
+  </section>
+
+  {/* Filter Bar */}
+  <section id="corporate-filter-bar" class="bg-white border-b border-slate-200 sticky top-[72px] z-40 shadow-sm overflow-visible">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-4">
+      <div class="flex flex-col md:flex-row md:items-center gap-4">
+        
+        <div class="flex flex-wrap gap-2 items-start" id="lkh-market-groups">
+          <a href={`/${categoryData.slug}`} class={`lkh-group-tab ${!currentTag ? 'active' : ''}`}>Tất cả</a>
+          
+          {activeGroups.map((g) => {
+            const isActiveGroup = g.children.some(c => normalizeStr(c) === normalizeStr(currentTag));
+            
+            // If only 1 child, make the parent button a direct link
+            if (g.children.length === 1) {
+              const child = g.children[0];
+              const isActiveSub = normalizeStr(currentTag) === normalizeStr(child);
+              const linkParams = new URLSearchParams();
+              linkParams.set('tag', child);
+              const linkHref = `/${categoryData.slug}?${linkParams.toString()}`;
+
+              return (
+                <a href={linkHref} class={`lkh-group-tab uppercase-tab ${isActiveSub ? 'active' : ''}`}>
+                  {g.label}
+                </a>
+              );
+            }
+            
+            // Dropdown for multiple children
+            return (
+              <div class="lkh-group-wrap relative inline-block">
+                <button 
+                  class={`lkh-group-tab uppercase-tab toggle-dropdown ${isActiveGroup ? 'active' : ''}`}
+                >
+                  {g.label}
+                  <span class="lkh-arrow inline-block transition-transform duration-200">▼</span>
+                </button>
+                
+                <div class="lkh-dropdown absolute top-[calc(100%+4px)] left-0 min-w-[180px] bg-white border border-slate-200 rounded-md shadow-lg z-50 py-1 max-h-[320px] overflow-y-auto hidden">
+                  {g.children.map((child: string) => {
+                    const isActiveSub = normalizeStr(currentTag) === normalizeStr(child);
+                    const linkParams = new URLSearchParams();
+                    linkParams.set('tag', child);
+                    const linkHref = `/${categoryData.slug}?${linkParams.toString()}`;
+
+                    return (
+                      <a href={linkHref} class={`block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-slate-100 filter-link ${isActiveSub ? 'text-[#d32f2f] font-bold bg-[#fffaf9]' : 'text-slate-800'}`}>
+                        {child}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {/* Showcase Grid */}
+  <section id="corporate-showcase-grid" class="py-16 md:py-24 bg-slate-100 min-h-[50vh]">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+      {categoryPosts.length > 0 ? (
+        <div class="space-y-10 lg:space-y-12">
+          {categoryPosts.map((p: any, index: number) => {
+            const isEven = index % 2 === 0;
+            const location = getLocation(p);
+            
+            return (
+              <div class={`bg-white rounded-[32px] p-6 md:p-8 lg:p-10 shadow-sm flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 lg:gap-16 group`}>
+                {/* Content Side */}
+                <div class="w-full md:w-1/2 space-y-5 order-last md:order-none">
+                  <h2 class="text-3xl lg:text-[40px] font-bold text-slate-900 leading-tight mb-2">
+                    <a href={`/${p.slug}`} class="hover:text-brand-600 transition-colors">{p.title}</a>
+                  </h2>
+                  
+                  {location && (
+                    <div class="text-slate-600 font-medium text-base mb-6">
+                      Vị trí: <span class="text-slate-900">{location}</span>
+                    </div>
+                  )}
+                  
+                  <p class="text-slate-700 text-lg leading-relaxed line-clamp-4 font-light">
+                    {p.excerpt}
+                  </p>
+                  
+                  <div class="pt-6">
+                    <a href={`/${p.slug}`} class="inline-flex items-center justify-center px-8 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 hover:text-brand-600 transition-colors">
+                      Đọc thêm
+                    </a>
+                  </div>
+                </div>
+
+                {/* Image Side */}
+                <div class="w-full md:w-1/2 order-first md:order-none">
+                  <a href={`/${p.slug}`} class="block overflow-hidden rounded-2xl">
+                    <img 
+                      src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : 'https://placehold.co/800x450/e2e8f0/475569?text=FIT+Tour'} 
+                      alt={p.title || 'Bài viết'} 
+                      class="w-full h-auto object-cover aspect-[16/9] bg-slate-200 transition-transform duration-700 group-hover:scale-105" 
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div class="text-center py-20 bg-white rounded-2xl shadow-sm border border-slate-100">
+          <div class="text-5xl mb-4">🔍</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Không tìm thấy kết quả</h3>
+          <p class="text-slate-500">Không có chuyến đi nào phù hợp với bộ lọc của bạn. Vui lòng thử lại với từ khóa hoặc thẻ khác.</p>
+          <a href={`/${categoryData.slug}`} class="inline-block mt-6 px-6 py-2 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 transition-colors">
+            Xoá bộ lọc
+          </a>
+        </div>
+      )}
+      
+      {categoryPosts.length > 0 && (
+        <div class="mt-24 border-t border-slate-200 pt-12">
+          <Pagination 
+            currentPage={categoryData.currentPage} 
+            totalPages={categoryData.totalPages} 
+            baseUrl={`/${categoryData.slug}`} 
+          />
+        </div>
+      )}
+    </div>
+  </section>
+
+  {/* Form Đăng ký nhận báo giá (Moved to Modal) */}
+  <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute -top-[20%] -right-[10%] w-[50%] aspect-square rounded-full bg-brand-500 blur-[100px]"></div>
+      <div class="absolute -bottom-[20%] -left-[10%] w-[50%] aspect-square rounded-full bg-blue-500 blur-[100px]"></div>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+      <div class="bg-white rounded-[32px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col items-center text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nhận Báo Giá Tư Vấn & Thiết Kế Tour Doanh Nghiệp</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-lg mb-8">Chuyên viên tư vấn của FIT Tour sẽ liên hệ trong vòng 4 giờ làm việc để tư vấn lộ trình và ngân sách tối ưu nhất cho quý công ty.</p>
+        <button data-action="open-corporate-modal" class="inline-flex items-center justify-center px-10 py-4 bg-brand-600 text-white font-bold text-lg rounded-xl hover:bg-brand-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+          Đăng Ký Tư Vấn Ngay
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* Truyền thông nói về FIT Tour */}
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1000px] mx-auto px-4 md:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Truyền thông nói về FIT Tour</h2>
+      <p class="text-slate-600 text-lg mb-12 leading-relaxed">
+        FIT Tour với những giải thưởng (minh chứng cho năng lực thiết kế), hay Quản trị rủi ro vận hành qua các biến động chiến tranh. Tất cả tạo nên bức tranh về Năng lực mà chúng tôi tự hào. Dù thành công, hay thất bại thì FIT Tour vẫn viết tiếp câu chuyện cùng Khách hàng của mình.
+      </p>
+
+      <div class="space-y-10">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">VnExpress:</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-brand-500 mt-1">►</span>
+              <a href="https://vnexpress.net/fit-tour-hai-nam-lien-tiep-thang-giai-tour-thiet-ke-rieng-4648753.html" target="_blank" rel="nofollow" class="text-brand-600 hover:text-brand-800 transition-colors font-medium">Fit Tour hai năm liên tiếp thắng giải 'Tour thiết kế riêng'</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand-500 mt-1">►</span>
+              <a href="https://vnexpress.net/doanh-nghiep-viet-dung-loat-tour-gia-100-trieu-dong-di-israel-4662990.html" target="_blank" rel="nofollow" class="text-brand-600 hover:text-brand-800 transition-colors font-medium">FIT Tour dừng loạt tour giá tới 100 triệu đồng đi Israel, Iran năm 2022</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Kênh 14:</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-brand-500 mt-1">►</span>
+              <a href="https://kenh14.vn/huy-tour-hon-100-trieu-khach-viet-va-cac-don-vi-lu-hanh-uu-tien-an-toan-giua-cang-thang-trung-dong-215260301213959619.chn" target="_blank" rel="nofollow" class="text-brand-600 hover:text-brand-800 transition-colors font-medium">FIT Tour ưu tiên khách hàng khi hủy loạt Tour 100 triệu mỗi khách, dù đã book Lịch khởi hành. (2026)</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Tiền Phong:</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-brand-500 mt-1">►</span>
+              <a href="https://tienphong.vn/huy-tour-du-lich-san-bay-dong-cua-khach-viet-o-trung-dong-ra-sao-post1823999.tpo" target="_blank" rel="nofollow" class="text-brand-600 hover:text-brand-800 transition-colors font-medium">FIT Tour ngưng khai thác Tour Pakistan dù đã chốt vé cùng du khách do biến động chính trị</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Cách thức hoạt động */}
+  <section class="py-16 md:py-24 bg-slate-900 text-white">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <div class="text-slate-400 text-sm font-bold tracking-widest uppercase mb-4">Quá trình</div>
+        <h2 class="text-3xl md:text-5xl font-bold">Cách thức hoạt động</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Step 1 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 1</div>
+          <h3 class="text-2xl font-bold mb-4">Cuộc gọi giới thiệu</h3>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Mỗi chương trình đều bắt đầu bằng một cuộc gọi điện thoại. Chúng ta sẽ thảo luận về mục tiêu của bạn, đặt một vài câu hỏi và cùng đưa ra ý tưởng ban đầu. Chúng tôi sẽ giải thích cách thức hoạt động và cách chúng tôi có thể giúp đỡ. Sau đó, chúng tôi sẽ gửi bản tóm tắt qua email và bắt đầu lập đề xuất.
+          </p>
+        </div>
+        
+        {/* Step 2 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 2</div>
+          <h3 class="text-2xl font-bold mb-1">Nghiên cứu & Đề xuất</h3>
+          <div class="text-slate-400 text-sm mb-4">(Miễn phí)</div>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Chúng tôi tin rằng việc hiểu rõ đối tác trước khi chi tiền là rất quan trọng. Chúng tôi sẽ chuẩn bị một bản đề xuất miễn phí với 3-5 lựa chọn địa điểm nghỉ dưỡng, khách sạn, hoạt động. Bạn sẽ chọn ra 3 địa điểm ưng ý nhất để chúng tôi lập dự toán sơ bộ so sánh.
+          </p>
+        </div>
+
+        {/* Step 3 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 3</div>
+          <h3 class="text-2xl font-bold mb-4">Thư cam kết & Ý tưởng</h3>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Nếu bạn muốn tiến xa hơn, chúng ta sẽ ký một thỏa thuận đơn giản và đặt cọc một khoản nhỏ. Bạn sẽ chọn lựa chọn ưu tiên hàng đầu, sau đó chúng tôi sẽ thương lượng các điều khoản và giá cả tốt nhất có thể để hoàn thiện lịch trình cụ thể và ngân sách tương ứng.
+          </p>
+        </div>
+
+        {/* Step 4 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 4</div>
+          <h3 class="text-2xl font-bold mb-4">Giai đoạn hợp đồng</h3>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Hai bên sẽ thống nhất các điều khoản chi tiết, ký kết hợp đồng dịch vụ chính thức và tiến hành các thủ tục thanh toán theo tiến độ đã thỏa thuận để đảm bảo việc giữ chỗ các dịch vụ với giá và chất lượng tốt nhất.
+          </p>
+        </div>
+
+        {/* Step 5 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 5</div>
+          <h3 class="text-2xl font-bold mb-4">Giai đoạn lập kế hoạch</h3>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Đội ngũ điều hành của FIT Tour sẽ lên chi tiết lịch trình từng ngày, đặt dịch vụ phòng, vé máy bay, nhà hàng và chuẩn bị các kịch bản tổ chức Team Building, Gala Dinner độc đáo cho đoàn.
+          </p>
+        </div>
+
+        {/* Step 6 */}
+        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-colors">
+          <div class="text-brand-400 text-sm font-bold tracking-wider mb-4 uppercase">Bước 6</div>
+          <h3 class="text-2xl font-bold mb-4">Thi công tại chỗ</h3>
+          <p class="text-slate-400 leading-relaxed text-sm lg:text-base">
+            Đội ngũ hướng dẫn viên và ban tổ chức của FIT Tour sẽ trực tiếp có mặt tại điểm đến để điều hành, giám sát và đảm bảo mọi hoạt động diễn ra suôn sẻ, mang lại trải nghiệm hoàn hảo và gắn kết nhất.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-[1080px] mx-auto px-4 md:px-8">
+      <div class="bg-white rounded-[24px] lg:rounded-[32px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 p-8 lg:p-12 xl:p-14 flex flex-col justify-center">
+          <div class="text-slate-500 text-xs font-bold tracking-widest uppercase mb-3">Lên kế hoạch cho chuyến đi nghỉ dưỡng của công ty</div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 leading-tight tracking-tight">Nhận báo giá miễn phí</h2>
+          <p class="text-slate-600 text-[15px] leading-relaxed mb-8 font-normal">
+            Bạn đang căng thẳng vì phải lên kế hoạch cho một chuyến đi nghỉ dưỡng mà không có nhiều thời gian? Tại sao bạn không để chúng tôi giúp bạn giảm bớt gánh nặng trước, và lập một bản đề xuất miễn phí bao gồm các địa điểm, hoạt động và chi phí lý tưởng cho chuyến đi sắp tới của bạn.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://zalo.me/0934888854" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 bg-[#0068FF] text-white font-semibold rounded-[10px] hover:bg-blue-700 transition-all gap-2.5 shadow-sm hover:shadow-md text-[15px]">
+              <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center">
+                <img src="/icons/zalo.svg" alt="Zalo" class="w-3.5 h-3.5" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg'; this.style.filter='brightness(0) invert(1)'; this.parentElement.style.background='transparent'" />
+              </div>
+              Nhắn tin Zalo
+            </a>
+            <a href="mailto:info@fittour.com.vn" class="inline-flex items-center justify-center px-6 py-3.5 bg-slate-800 text-white font-semibold rounded-[10px] hover:bg-slate-900 transition-all gap-2.5 shadow-sm hover:shadow-md text-[15px]">
+              <svg class="w-5 h-5 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              Gửi Email
+            </a>
+          </div>
+        </div>
+        
+        <div class="w-full lg:w-1/2 min-h-[300px] lg:min-h-auto">
+          <img 
+            src="https://media.fittour.vn/uploads/2026/03/fit-tour-elite-operations-executive-program-briefing-bosch-nha-trang.webp" 
+            alt="Đội ngũ FIT Tour tư vấn" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Group tabs matching CRM */
+  .lkh-group-tab {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px; font-size: 13px; font-weight: 600;
+    border: 1px solid #d1d5db; border-radius: 4px;
+    background: #ffffff; color: #374151; cursor: pointer;
+    transition: all 0.15s ease; white-space: nowrap; text-decoration: none;
+  }
+  .lkh-group-tab.uppercase-tab {
+    text-transform: uppercase;
+  }
+  .lkh-group-tab:hover { background: #f9fafb; border-color: #9ca3af; }
+  .lkh-group-tab.active { background: #d32f2f; border-color: #d32f2f; color: #fff; font-weight: 700; }
+  .lkh-arrow { font-size: 10px; color: #6b7280; transition: transform 0.2s; }
+  .lkh-group-tab.active .lkh-arrow { color: #ffffff; }
+  .lkh-group-wrap.open .lkh-arrow { transform: rotate(180deg); }
+  .lkh-group-wrap.open .lkh-dropdown { display: block !important; }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Toggle Dropdowns (Event Delegation)
+    document.addEventListener('click', (e) => {
+      // Handle Toggle button click
+      const toggleBtn = e.target.closest('.toggle-dropdown');
+      if (toggleBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const wrap = toggleBtn.closest('.lkh-group-wrap');
+        const isOpen = wrap.classList.contains('open');
+        document.querySelectorAll('.lkh-group-wrap').forEach(w => w.classList.remove('open'));
+        if (!isOpen) {
+          wrap.classList.add('open');
+        }
+        return;
+      }
+
+      // Close dropdowns if clicking outside
+      if (!e.target.closest('.lkh-group-wrap')) {
+        document.querySelectorAll('.lkh-group-wrap').forEach(w => w.classList.remove('open'));
+      }
+    });
+
+    // 2. AJAX SPA Filtering
+    document.addEventListener('click', async (e) => {
+      // Find if clicked element is a filter link
+      const filterLink = e.target.closest('#lkh-market-groups a');
+      if (filterLink) {
+        e.preventDefault();
+        const url = filterLink.getAttribute('href');
+        
+        // Update browser URL silently
+        window.history.pushState({}, '', url);
+        
+        const filterContainer = document.getElementById('corporate-filter-bar');
+        const showcaseGrid = document.getElementById('corporate-showcase-grid');
+        
+        if (showcaseGrid && filterContainer) {
+          // Visual feedback
+          showcaseGrid.style.opacity = '0.4';
+          showcaseGrid.style.transition = 'opacity 0.2s ease-in-out';
+          showcaseGrid.style.pointerEvents = 'none';
+          
+          try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('Network response was not ok');
+            const html = await res.text();
+            
+            // Parse new HTML
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            const newFilterContainer = doc.getElementById('corporate-filter-bar');
+            const newShowcaseGrid = doc.getElementById('corporate-showcase-grid');
+            
+            if (newFilterContainer && newShowcaseGrid) {
+              // Replace DOM content
+              filterContainer.innerHTML = newFilterContainer.innerHTML;
+              showcaseGrid.innerHTML = newShowcaseGrid.innerHTML;
+            } else {
+              window.location.href = url; // Fallback if structure changes
+            }
+          } catch (err) {
+            console.error('AJAX Filter Error:', err);
+            window.location.href = url; // Fallback on error
+          } finally {
+            // Restore visual state
+            showcaseGrid.style.opacity = '1';
+            showcaseGrid.style.pointerEvents = 'auto';
+          }
+        } else {
+          window.location.href = url;
+        }
+      }
+    });
+    
+    // 3. Handle browser Back/Forward buttons
+    window.addEventListener('popstate', () => {
+      window.location.reload();
+    });
+  });
+</script>

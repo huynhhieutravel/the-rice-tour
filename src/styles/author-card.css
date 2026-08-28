@@ -1,0 +1,166 @@
+.author-card-outer {
+  margin: 2.5rem 0;
+}
+
+.author-card-box {
+  background: #ffffff;
+  border: 1px solid #fef3c7;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: border-color 0.5s, box-shadow 0.5s;
+}
+
+.author-card-box:hover {
+  border-color: #fcd34d;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.author-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Avatar */
+.author-card img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2), 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Content wrapper (the <div> wrapping text) */
+.author-card > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Tag line */
+.author-card .author-tag {
+  display: inline;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b45309;
+  background: #fffbeb;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #fef3c7;
+}
+
+/* Organization */
+.author-card .author-org {
+  display: inline;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78716c;
+  padding-left: 0.5rem;
+}
+
+/* Credentials */
+.author-card .author-credentials {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-style: italic;
+  color: #0e7490;
+  border-left: 1px solid #d6d3d1;
+  padding-left: 0.5rem;
+  margin: 4px 0 6px;
+  display: inline-block;
+}
+
+/* Row: name + button */
+.author-card .author-name-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Author Name */
+.author-card .author-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1c1917;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Bio text */
+.author-card .author-bio {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #44403c;
+  margin: 0;
+  max-width: 48rem;
+}
+
+.author-card .author-bio strong {
+  color: #b45309;
+  font-weight: 700;
+}
+
+/* Profile link / button */
+.author-card .author-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  margin-top: 0.75rem;
+}
+
+.author-card .author-link:hover {
+  border-color: #fbbf24;
+  background: #fef3c7;
+}
+
+@media (max-width: 768px) {
+  .author-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .author-card img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .author-card .author-name-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .author-card .author-tag,
+  .author-card .author-org,
+  .author-card .author-credentials {
+    display: inline;
+  }
+  .author-card-box {
+    padding: 1.25rem 1.5rem;
+  }
+}

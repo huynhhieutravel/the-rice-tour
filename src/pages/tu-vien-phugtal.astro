@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/ladakh-co-may.css';
+import '../styles/blog.css';
+import '../styles/author-card.css';
+import App from '../components/ReactApp/TuVienPhugtal/App.tsx';
+import { env } from 'cloudflare:workers';
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Tu viện Phuktal: Trái tim của Zanskar";
+let seoDesc = "Khám phá Tu viện Phugtal (Phuktal Monastery) - tu viện cổ nằm lọt thỏm trên vách đá dựng đứng của vùng Zanskar hoang sơ, một trong những trải nghiệm trekking và tâm linh độc đáo nhất ở Ladakh.";
+let seoImage = "https://media.fittour.vn/uploads/2023/06/tu-vien-Phugtal.webp";
+let adminEditUrl = "";
+
+let datePublished = "2023-06-15T08:00:00+08:00";
+let dateModified = "2026-07-14T08:00:00+08:00";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage, createdAt, updatedAt FROM Post WHERE slug = 'tu-vien-phugtal' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      seoImage = postData.featuredImage || seoImage;
+      if (postData.id) adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+      if (postData.createdAt) datePublished = new Date(postData.createdAt).toISOString();
+      if (postData.updatedAt) dateModified = new Date(postData.updatedAt).toISOString();
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data cho trang tu-vien-phugtal:", e);
+  }
+}
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/tu-vien-phugtal"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <!-- Optimize Google Fonts Loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    </noscript>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://thericetour.com/#website",
+          "url": "https://thericetour.com/",
+          "name": "FIT Tour",
+          "publisher": { "@id": "https://thericetour.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://thericetour.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://thericetour.com/#organization",
+          "name": "FIT Tour",
+          "url": "https://thericetour.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://thericetour.com/#logo",
+            "url": "https://media.fittour.vn/logo-fit-tour.png",
+            "contentUrl": "https://media.fittour.vn/logo-fit-tour.png",
+            "caption": "FIT Tour Logo",
+            "inLanguage": "vi-VN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+84-938-123-456",
+            "contactType": "customer service"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://thericetour.com/tu-vien-phugtal#webpage",
+          "url": "https://thericetour.com/tu-vien-phugtal",
+          "name": seoTitle,
+          "description": seoDesc,
+          "isPartOf": { "@id": "https://thericetour.com/#website" },
+          "primaryImageOfPage": { "@id": "https://thericetour.com/tu-vien-phugtal#primaryimage" },
+          "inLanguage": "vi-VN",
+          "mainEntity": { "@id": "https://thericetour.com/tu-vien-phugtal#article" }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://thericetour.com/tu-vien-phugtal#primaryimage",
+          "url": seoImage,
+          "contentUrl": seoImage,
+          "width": 1200,
+          "height": 630,
+          "caption": seoTitle
+        },
+        {
+          "@type": "Article",
+          "@id": "https://thericetour.com/tu-vien-phugtal#article",
+          "isPartOf": { "@id": "https://thericetour.com/tu-vien-phugtal#webpage" },
+          "mainEntityOfPage": { "@id": "https://thericetour.com/tu-vien-phugtal#webpage" },
+          "headline": seoTitle,
+          "description": seoDesc,
+          "image": { "@id": "https://thericetour.com/tu-vien-phugtal#primaryimage" },
+          "inLanguage": "vi-VN",
+          "publisher": { "@id": "https://thericetour.com/#organization" },
+          "author": {
+            "@type": "Person",
+            "@id": "https://thericetour.com/hdv-huy-ngo#person",
+            "name": "Huy Ngô",
+            "url": "https://thericetour.com/hdv-huy-ngo",
+            "jobTitle": "Travel Curator",
+            "worksFor": { "@id": "https://thericetour.com/#organization" },
+            "sameAs": ["https://www.facebook.com/huyngo.fittour"]
+          },
+          "datePublished": datePublished,
+          "dateModified": dateModified,
+          "about": { "@id": "https://thericetour.com/tu-vien-phugtal#place" },
+          "mentions": [
+            { "@id": "https://thericetour.com/kinh-nghiem-du-lich-zanskar#place" },
+            { "@id": "https://thericetour.com/du-lich-ladakh#place" }
+          ]
+        },
+        {
+          "@type": "TouristAttraction",
+          "@id": "https://thericetour.com/tu-vien-phugtal#place",
+          "name": "Tu viện Phugtal",
+          "description": "Tu viện cổ nằm lọt thỏm trên vách đá dựng đứng của vùng Zanskar hoang sơ.",
+          "url": "https://thericetour.com/tu-vien-phugtal",
+          "image": { "@id": "https://thericetour.com/tu-vien-phugtal#primaryimage" },
+          "isAccessibleForFree": true,
+          "touristType": "Adventure travellers",
+          "additionalType": "https://schema.org/Place",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.2667",
+            "longitude": "77.1778"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Padum",
+            "addressRegion": "Zanskar, Ladakh",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Phugtal_Monastery",
+            "https://www.wikidata.org/wiki/Q1497914"
+          ]
+        },
+        {
+          "@type": ["Place", "TouristDestination"],
+          "@id": "https://thericetour.com/kinh-nghiem-du-lich-zanskar#place",
+          "name": "Zanskar Valley",
+          "sameAs": ["https://en.wikipedia.org/wiki/Zanskar"]
+        },
+        {
+          "@type": ["Place", "TouristDestination"],
+          "@id": "https://thericetour.com/du-lich-ladakh#place",
+          "name": "Ladakh",
+          "sameAs": ["https://en.wikipedia.org/wiki/Ladakh"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://thericetour.com/tu-vien-phugtal#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang chủ",
+              "item": "https://thericetour.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kinh nghiệm du lịch Zanskar",
+              "item": "https://thericetour.com/kinh-nghiem-du-lich-zanskar"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Tu viện Phugtal",
+              "item": "https://thericetour.com/tu-vien-phugtal"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Đi Phugtal vào tháng nào là đẹp nhất?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tháng 6 đến tháng 9 là thời điểm lý tưởng nhất vì thời tiết tương đối dễ chịu, ít tuyết rơi cản trở đường đi. Mùa đông (tháng 11 đến tháng 4) đường đèo bị phong tỏa, chỉ những người có kinh nghiệm sinh tồn trên sông băng (Chadar Trek) mới có thể tiếp cận."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Người lớn tuổi có thể đi tuyến này được không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tuy đoạn đường đi bộ đã rút ngắn, nhưng với độ cao ~3.850m và địa hình vách đá hẹp, nơi đây không khuyến khích cho người cao tuổi, người có bệnh tim mạch hay xương khớp."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Tu viện có sóng điện thoại hay Wi-Fi không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gần như không! Tín hiệu mạng (BSNL hoặc Jio) chỉ xuất hiện rải rác ở vài điểm dọc tuyến đường mới (NPD Road) và sẽ mất hẳn khi bạn tiến sâu vào thung lũng Lungnak."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Nhà vệ sinh và điều kiện lưu trú thế nào?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Phugtal là một trong những nơi xa xôi nhất Ladakh. Nhà khách (Guesthouse) của tu viện cực kỳ cơ bản. Nhà vệ sinh thường là kiểu hố khô truyền thống (Dry Toilet) của người Tây Tạng, không có nước xả."
+              }
+            }
+          ]
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- client:load is used to enable SSR which fixes Render Blocking and LCP issues -->
+  <App client:load /> 
+</BaseLayout>

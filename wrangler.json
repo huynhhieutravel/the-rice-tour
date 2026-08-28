@@ -1,0 +1,58 @@
+{
+	"compatibility_date": "2026-04-24",
+	"compatibility_flags": [
+		"global_fetch_strictly_public",
+		"nodejs_compat"
+	],
+	"name": "thericetour-frontend",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "dulichcoguu_d1",
+			"database_name": "thericetour-d1",
+			"database_id": "34dcd6c1-61fc-4434-94b4-592409679a1f"
+		},
+		{
+			"binding": "thericetour_d1",
+			"database_name": "thericetour-d1",
+			"database_id": "34dcd6c1-61fc-4434-94b4-592409679a1f"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "716c9ddc84c74d5d9026770f790cb18f"
+		}
+	],
+	"routes": [
+		{
+			"pattern": "thericetour.com/*",
+			"zone_name": "thericetour.com"
+		},
+		{
+			"pattern": "www.thericetour.com/*",
+			"zone_name": "thericetour.com"
+		}
+	],
+	"vars": {
+		"PUBLIC_ENABLE_IMAGE_RESIZING": "false",
+		"PUBLIC_CDN_BASE": "https://media.thericetour.com",
+		"PUBLIC_IMAGE_VERSION": "v1",
+		"ROBOTS_INDEX": "false",
+		"BRAND_NAME": "The Rice Tour",
+		"BRAND_TAGLINE": "Authentic Vietnam Inbound Journeys & Bespoke Experiences",
+		"SUPPORT_EMAIL": "hello@thericetour.com",
+		"WHATSAPP_NUMBER": "+84962333621",
+		"R2_ACCOUNT_ID": "6f2cb2ce2eac8af8c2f3f173c3287641",
+		"R2_BUCKET_NAME": "thericetour-media",
+		"R2_PUBLIC_DOMAIN": "https://media.thericetour.com",
+		"R2_ENDPOINT": "https://6f2cb2ce2eac8af8c2f3f173c3287641.r2.cloudflarestorage.com"
+	}
+}

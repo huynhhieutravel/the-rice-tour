@@ -1,0 +1,12 @@
+---
+import { parseShortcodes } from '@/utils/shortcodes/parser';
+import ShortcodeRenderer from '@/components/shortcodes/ShortcodeRenderer.astro';
+
+const testHtml = "[ladakh-co-may-portrait]";
+const astNodes = parseShortcodes(testHtml);
+---
+<html>
+<body>
+  {astNodes.map(node => <ShortcodeRenderer node={node} dataMap={{}} />)}
+</body>
+</html>

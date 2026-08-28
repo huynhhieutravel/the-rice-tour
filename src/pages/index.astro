@@ -1,0 +1,87 @@
+---
+// src/pages/index.astro - The Rice Tour Homepage
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import InboundNavbar from '@/components/inbound/InboundNavbar.astro';
+import InboundHero from '@/components/inbound/InboundHero.astro';
+import InboundFeaturedTours from '@/components/inbound/InboundFeaturedTours.astro';
+import InboundTravelStyles from '@/components/inbound/InboundTravelStyles.astro';
+import InboundDestinationTabs from '@/components/inbound/InboundDestinationTabs.astro';
+import InboundWhyUs from '@/components/inbound/InboundWhyUs.astro';
+import InboundPlannerWidget from '@/components/inbound/InboundPlannerWidget.astro';
+import InboundReviews from '@/components/inbound/InboundReviews.astro';
+import InboundJournal from '@/components/inbound/InboundJournal.astro';
+import InboundFooter from '@/components/inbound/InboundFooter.astro';
+
+const seoData = {
+  title: "The Rice Tour | Authentic Vietnam Inbound Journeys & Bespoke Expeditions",
+  description: "The Rice Tour is Vietnam's premier boutique inbound travel designer. Curated luxury & cultural journeys, 100% tailor-made itineraries, and 24/7 dedicated concierge.",
+  canonical: "https://thericetour.com/",
+  image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "The Rice Tour",
+  "url": "https://thericetour.com",
+  "logo": "https://thericetour.com/logo.png",
+  "image": seoData.image,
+  "description": seoData.description,
+  "telephone": "+84909123456",
+  "email": "hello@thericetour.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 Ngo Quyen Street, Hoan Kiem",
+    "addressLocality": "Hanoi",
+    "addressCountry": "VN"
+  },
+  "priceRange": "$$$$"
+};
+---
+
+<BaseLayout 
+  title={seoData.title} 
+  description={seoData.description} 
+  image={seoData.image}
+  canonical={seoData.canonical}
+  hideGlobalHeader={true}
+  hideGlobalFooter={true}
+>
+  <Fragment slot="head">
+    <JsonLdSchema type="website" data={orgSchema} />
+  </Fragment>
+
+  <!-- Luxury Floating Navbar -->
+  <InboundNavbar />
+
+  <!-- Main Content Flow -->
+  <main class="w-full overflow-hidden">
+    <!-- Hero Section with Quick Search -->
+    <InboundHero />
+
+    <!-- Signature Tours Grid -->
+    <InboundFeaturedTours />
+
+    <!-- Travel By Styles -->
+    <InboundTravelStyles />
+
+    <!-- Interactive Destination Explorer -->
+    <InboundDestinationTabs />
+
+    <!-- Why Choose The Rice Tour (Philosophy & Commitments) -->
+    <InboundWhyUs />
+
+    <!-- Interactive Custom Trip Planner Widget -->
+    <InboundPlannerWidget />
+
+    <!-- Guest Reviews & Trust Signals -->
+    <InboundReviews />
+
+    <!-- Travel Guides & Inspiration Journal -->
+    <InboundJournal />
+  </main>
+
+  <!-- Luxury Obsidian Footer -->
+  <InboundFooter />
+</BaseLayout>

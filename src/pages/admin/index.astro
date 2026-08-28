@@ -1,0 +1,232 @@
+---
+import { env } from 'cloudflare:workers';
+import AdminLayout from '@/layouts/AdminLayout.astro';
+
+let posts: any[] = [];
+let stats = {
+  mediaCount: 0,
+  postCount: 0,
+  tourCount: 0,
+  userCount: 0,
+};
+
+const d1Db = env?.dulichcoguu_d1;
+if (d1Db) {
+  try {
+    const mediaRes = await d1Db.prepare("SELECT COUNT(*) as count FROM Media").first();
+    const postRes = await d1Db.prepare("SELECT COUNT(*) as count FROM Post WHERE status != 'trash'").first();
+    const tourRes = await d1Db.prepare("SELECT COUNT(*) as count FROM Tour WHERE status != 'trash'").first();
+    const userRes = await d1Db.prepare("SELECT COUNT(*) as count FROM User").first();
+    
+    stats.mediaCount = mediaRes?.count || 0;
+    stats.postCount = postRes?.count || 0;
+    stats.tourCount = tourRes?.count || 0;
+    stats.userCount = userRes?.count || 0;
+
+    const { results } = await d1Db.prepare(
+      "SELECT Post.id, Post.title, Post.slug, BlogCategory.name as category, Post.status, Post.author, Post.createdAt, Post.updatedAt, Post.featuredImage FROM Post LEFT JOIN BlogCategory ON Post.categoryId = BlogCategory.id ORDER BY COALESCE(Post.updatedAt, Post.createdAt) DESC LIMIT 10"
+    ).all();
+    posts = results || [];
+  } catch (err) {
+    console.error("D1 Dashboard Error:", err);
+  }
+}
+
+const totalPosts = posts.length;
+const publishedCount = posts.filter(p => p.status === 'published').length;
+const draftCount = posts.filter(p => p.status === 'draft').length;
+---
+
+<AdminLayout title="Dashboard" activeMenu="dashboard">
+<style>
+  .dash-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
+  .dash-header h2 { font-size: 24px; font-weight: 700; }
+  .dash-header p { color: #64748b; font-size: 14px; margin-top: 4px; }
+  .dash-header .date-range { color: #64748b; font-size: 13px; background: #fff; padding: 8px 16px; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+  /* Stat Cards */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 28px; }
+  .stat-card { background: #fff; border-radius: 14px; padding: 20px 24px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 16px; }
+  .stat-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .stat-icon.blue { background: #dbeafe; }
+  .stat-icon.green { background: #dcfce7; }
+  .stat-icon.amber { background: #fef3c7; }
+  .stat-icon.purple { background: #ede9fe; }
+  .stat-value { font-size: 28px; font-weight: 700; color: #0f172a; }
+  .stat-label { font-size: 13px; color: #64748b; margin-bottom: 2px; }
+  .stat-change { font-size: 11px; color: #16a34a; margin-top: 2px; }
+
+  /* Layout: Main + Right Sidebar */
+  .dash-body { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+
+  /* Recent Posts */
+  .recent-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .recent-header h3 { font-size: 18px; font-weight: 700; }
+  .recent-header a { font-size: 13px; color: #2563eb; text-decoration: none; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; }
+  thead th { text-align: left; padding: 12px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #94a3b8; font-weight: 600; border-bottom: 1px solid #e2e8f0; }
+  tbody td { padding: 14px; font-size: 13px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+  tbody tr:hover { background: #f8fafc; }
+  .post-cell { display: flex; align-items: center; gap: 12px; }
+  .post-cell img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; }
+  .post-cell span { font-weight: 500; color: #0f172a; }
+  .cat-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+  .status-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+  .date-cell { color: #64748b; font-size: 12px; }
+  .action-btn { background: none; border: none; cursor: pointer; color: #94a3b8; font-size: 16px; padding: 4px 8px; }
+
+  /* Pagination */
+  .pagination { display: flex; align-items: center; justify-content: space-between; padding: 16px 14px; }
+  .pagination span { font-size: 13px; color: #64748b; }
+  .pagination .pages { display: flex; gap: 4px; }
+  .pagination .pages button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #e2e8f0; background: #fff; font-size: 13px; cursor: pointer; color: #64748b; display: flex; align-items: center; justify-content: center; }
+  .pagination .pages button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+
+  .right-sidebar { display: flex; flex-direction: column; gap: 20px; }
+  .quick-actions { padding: 20px; }
+  .quick-actions h4 { font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+  .qa-btn { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 10px; border: 1px solid #e2e8f0; background: #fff; width: 100%; cursor: pointer; font-size: 13px; font-weight: 500; color: #334155; margin-bottom: 8px; transition: all .15s; text-decoration: none; }
+  .qa-btn:hover { border-color: #2563eb; background: #eff6ff; }
+  .qa-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .qa-icon.blue { background: #dbeafe; }
+  .qa-icon.green { background: #dcfce7; }
+  .qa-icon.purple { background: #ede9fe; }
+  .qa-icon.amber { background: #fef3c7; }
+</style>
+
+<!-- Dashboard Header -->
+<div class="dash-header">
+  <div>
+    <h2>Dashboard</h2>
+    <p>Welcome back, Admin! Here's what's happening with your site today.</p>
+  </div>
+</div>
+
+<!-- Stat Cards -->
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-icon blue">📄</div>
+    <div>
+      <div class="stat-label">Total Posts</div>
+      <div class="stat-value">{stats.postCount}</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon green">🖼️</div>
+    <div>
+      <div class="stat-label">Total Media</div>
+      <div class="stat-value">{stats.mediaCount}</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon amber">🌍</div>
+    <div>
+      <div class="stat-label">Total Tours</div>
+      <div class="stat-value">{stats.tourCount}</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon purple">👥</div>
+    <div>
+      <div class="stat-label">Total Users</div>
+      <div class="stat-value">{stats.userCount}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main + Right Sidebar -->
+<div class="dash-body">
+  <div>
+    <!-- Recent Posts -->
+    <div class="card" style="padding: 20px;">
+      <div class="recent-header">
+        <h3>Recent Posts</h3>
+        <a href="/admin/posts">View All Posts</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {posts.map((post) => (
+            <tr>
+              <td>
+                <div class="post-cell">
+                  {post.featuredImage ? (
+                    <img src={post.featuredImage} alt={post.title} />
+                  ) : (
+                    <div style="width: 44px; height: 44px; border-radius: 8px; background: #e2e8f0;"></div>
+                  )}
+                  <span>{post.title}</span>
+                </div>
+              </td>
+              <td>{post.author || 'Admin'}</td>
+              <td>
+                <span class="cat-badge" style="background:#dbeafe;color:#2563eb;">
+                  {post.category || 'Uncategorized'}
+                </span>
+              </td>
+              <td>
+                <span class={`status-badge badge-${post.status || 'draft'}`}>
+                  {post.status}
+                </span>
+              </td>
+              <td class="date-cell">
+                {post.updatedAt && post.updatedAt !== post.createdAt ? (
+                  <>
+                    <div style="color: #0f172a; font-weight: 500;">
+                      {new Date(post.updatedAt).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' })}
+                    </div>
+                    <div style="font-size: 10px; color: #64748b;">Đã cập nhật</div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      {post.createdAt ? new Date(post.createdAt).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'N/A'}
+                    </div>
+                    <div style="font-size: 10px; color: #94a3b8;">Mới tạo</div>
+                  </>
+                )}
+              </td>
+              <td>
+                <button class="action-btn">⋮</button>
+              </td>
+            </tr>
+          ))}
+          {posts.length === 0 && (
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 24px; color: #64748b;">
+                No recent posts.
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <span>Showing {posts.length} of {stats.postCount} results</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <div class="right-sidebar">
+    <div class="card quick-actions">
+      <h4>Quick Actions</h4>
+      <a href="/admin/posts/edit" class="qa-btn"><span class="qa-icon blue">➕</span> Add New Post</a>
+      <a href="/admin/media" class="qa-btn"><span class="qa-icon purple">📤</span> Media Library</a>
+      <a href="/" target="_blank" class="qa-btn"><span class="qa-icon amber">🌐</span> View Site</a>
+    </div>
+  </div>
+</div>
+</AdminLayout>

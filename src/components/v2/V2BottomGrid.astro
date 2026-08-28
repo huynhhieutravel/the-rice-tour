@@ -1,0 +1,81 @@
+---
+// src/components/v2/V2BottomGrid.astro
+
+const cards = [
+  {
+    title: "E-MAGAZINE",
+    desc: "Tạp chí du lịch độc quyền\nvới những câu chuyện truyền cảm hứng.",
+    link: "/emagazine",
+    image: "https://media.fittour.vn/uploads/max-vu-kailash-pilgrimage-top.webp", // Valid image
+    isVideo: false
+  },
+  {
+    title: "PHOTO STORIES",
+    desc: "Bộ sưu tập ảnh từ\nnhững hành trình thực tế.",
+    link: "/gallery",
+    image: "https://media.fittour.vn/uploads/2023/03/tu-vien-potala-nhin-tu-xa.webp", // Valid image
+    isVideo: false
+  },
+  {
+    title: "WORLDWIDE EXPEDITIONS",
+    desc: "Khám phá những hành trình\nđộc bản trên toàn thế giới.",
+    link: "/du-lich-nuoc-ngoai",
+    image: "https://media.fittour.vn/uploads/lulu-road-trip-pangong-lake.webp", // Valid image
+    isVideo: false
+  },
+  {
+    title: "OUR PORTFOLIO",
+    desc: "Hồ sơ năng lực và những\ndấu ấn tự hào của chúng tôi.",
+    link: "/portfolio",
+    image: "https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-du-ky-o-Zanskar.webp", // Valid image
+    isVideo: false
+  }
+];
+---
+
+<section id="bottom-grid" class="w-full bg-[#f2f0eb] py-16">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-12">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {cards.map((card) => (
+        <a href={card.link} class="group relative aspect-[4/3] rounded-sm overflow-hidden block">
+          <!-- Background -->
+          <img 
+            src={card.image} 
+            alt={card.title} 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale-[20%] group-hover:grayscale-0 brightness-[60%]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 p-6 flex flex-col justify-between">
+            <h3 class="font-serif text-lg md:text-xl font-bold text-white tracking-widest uppercase">
+              {card.title}
+            </h3>
+
+            {card.isVideo && (
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-sm group-hover:bg-[#c5a365] group-hover:border-[#c5a365] transition-all">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="ml-1 text-white group-hover:text-black transition-colors">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+              </div>
+            )}
+
+            <div class="mt-auto">
+              <p class="font-sans text-[11px] text-white/80 leading-relaxed whitespace-pre-line mb-4 font-medium">
+                {card.desc}
+              </p>
+              <div class="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-[#c5a365] group-hover:text-white transition-colors">
+                DISCOVER MORE
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>

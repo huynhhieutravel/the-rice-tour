@@ -1,0 +1,425 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { MapPin, Info, Users, Clock, Calendar, Compass, Share2, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare(`
+      SELECT p.*, u.url as authorUrl, u.avatar as authorAvatar 
+      FROM Post p 
+      LEFT JOIN "User" u ON p.authorId = u.id 
+      WHERE p.slug = ? AND (p.status = 'published' OR p.status = 'publish')
+    `).bind('vi-sao-kora-kailash-lam-thay-doi-cuoc-doi').first<any>(),
+    { route: Astro.url.pathname, slug: 'vi-sao-kora-kailash-lam-thay-doi-cuoc-doi', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title;
+const seoDesc = post.seoDesc || post.excerpt;
+const seoImage = post.seoImage || post.featuredImage || 'https://pub-fe90037727604a2586cc601e6a3c6575.r2.dev/wp-content/uploads/2024/07/du-khach-chuan-bi-hanh-trinh-kora-kailash.jpg';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || new Date().toISOString();
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#c89845] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full h-[600px] lg:h-[650px] overflow-hidden">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Núi Kailash" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 h-full flex flex-col justify-center pt-20 pb-16">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Tây Tạng</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          {post.title}
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-amber-400 italic mb-10 max-w-3xl drop-shadow-md">
+          {post.excerpt}
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium">
+          
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={post.authorUrl || "/huynh-hieu"} class="flex items-center gap-3 group">
+            <img src={post.authorAvatar || "https://media.fittour.vn/uploads/huynhhieutravel.webp"} alt={post.author || 'Huynh Hieu Travel'} class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {post.author || 'Huynh Hieu Travel'} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>10 phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">⛰️</span> Đỉnh 6.638m
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🪷</span> Đất Thánh 4 Tôn giáo
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🚶</span> Hành hương Kora 52km
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🧭</span> Vị trí: Ngari Prefecture
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[70vh] overflow-y-auto custom-scrollbar">
+              <a href="#ly-do-1" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold">
+                1. Chấp nhận giới hạn
+              </a>
+              <a href="#ly-do-2" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-1">
+                2. Con người bạn gặp
+              </a>
+              <a href="#ly-do-3" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-1">
+                3. Sự tĩnh lặng
+              </a>
+              
+              <a href="#ly-do-4" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                4. Buông bỏ
+              </a>
+
+              <a href="#ly-do-5" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                5. Cho phép mình thay đổi
+              </a>
+              
+              <a href="#hau-kora" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3 border-t border-slate-100 pt-3">
+                6. Hậu Kora
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-xl border border-amber-100 shrink-0">🥾</div>
+              <div>
+                <div class="text-[13px] font-bold text-slate-800">52 km hành hương</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-10 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">💭</div>
+              <div>
+                <div class="text-[13px] font-bold text-slate-800">Hành trình của sự chuyển hóa</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-10 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">🏔️</div>
+              <div>
+                <div class="text-[13px] font-bold text-slate-800">Vượt đèo Dolma La 5.630 m</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-10 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl border border-emerald-100 shrink-0">🪷</div>
+              <div>
+                <div class="text-[13px] font-bold text-slate-800">Không cần theo tôn giáo nào</div>
+              </div>
+            </div>
+          </div>
+
+          <article class="bg-white rounded-3xl p-6 lg:p-10 shadow-sm border border-slate-200/60 relative overflow-hidden">
+
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700 
+                        prose-headings:font-serif prose-headings:text-slate-900 
+                        prose-h2:text-[28px] prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b-2 prose-h2:border-amber-500 prose-h2:inline-block
+                        prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                        prose-p:mb-5
+                        prose-a:text-amber-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:text-amber-700 hover:prose-a:underline
+                        prose-ul:my-6 prose-li:my-2 prose-li:text-slate-700
+                        prose-img:rounded-2xl prose-img:shadow-md prose-img:my-10
+                        prose-figure:my-10 prose-figcaption:text-center prose-figcaption:text-slate-500 prose-figcaption:italic prose-figcaption:mt-3
+                        custom-content">
+
+            
+            
+            <p>Có những chuyến đi khiến bạn mang về hàng nghìn bức ảnh.</p>
+            <p>Có những chuyến đi khiến bạn mang về một phiên bản khác của chính mình.</p>
+            <p>Với nhiều người, <strong><a href="/kinh-nghiem-di-tour-hanh-huong-kailash-tay-tang">Kora quanh núi Kailash</a></strong> thuộc về kiểu hành trình thứ hai.</p>
+            <p>Điều thay đổi không nằm ở đôi chân đã đi hết <strong>52 km</strong> đường mòn đầy sỏi đá, mà ở chính <strong>cách bạn nhìn nhận về cuộc sống</strong>, về thế giới và về bản thân mình sau khi trở về.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/2024/07/hanh-trinh-kora-kailash-fittour.webp" alt="Hành trình Kora Kailash Fit Tour" class="w-full h-auto aspect-video object-cover" />
+            </figure>
+            
+            <h2 id="ly-do-1" class="scroll-mt-28">1. Không phải vì bạn đi được 52 km. Mà vì bạn học cách chấp nhận giới hạn.</h2>
+            <p>Ở độ cao hơn <strong>5.000m</strong>, không khí loãng đến mức mỗi hơi thở đều có cảm giác như bạn đang phải giành giật sự sống.</p>
+            <p>Bạn sẽ nhanh chóng nhận ra cơ thể con người thực sự <strong>mong manh hơn mình tưởng</strong> rất nhiều. Những danh xưng, những thành tựu hay sức mạnh thể chất mà bạn từng tự hào ở nơi đồng bằng trù phú bỗng chốc trở nên vô nghĩa trước sự kỳ vĩ và khắc nghiệt của tự nhiên.</p>
+            <p>Khi đối diện với <strong>đèo Dolma La ở độ cao 5.630m</strong>, mỗi bước đi đều nặng trĩu. Sẽ có những người đồng hành cùng bạn buộc phải <strong>quay đầu</strong> vì cơ thể không thể chịu đựng thêm.</p>
+            <p>Nhưng trong khoảnh khắc đó, sự từ bỏ không còn mang dáng dấp của sự thất bại. Đó là lúc họ, và cả bạn, học được bài học lớn nhất về sự khiêm nhường: <strong>biết chấp nhận giới hạn của bản thân</strong> và hiểu rằng đôi khi lùi lại còn đòi hỏi nhiều dũng khí hơn là cố chấp bước tiếp.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/2024/07/hanh-trinh-hanh-huong-bang-qua-nhieu-dia-hinh-khac-nhau.webp" alt="Hành trình hành hương băng qua nhiều địa hình khác nhau" class="w-full h-auto" />
+            </figure>
+            
+            <h2 id="ly-do-2" class="scroll-mt-28">2. Không phải vì ngọn núi. Mà vì con người bạn gặp.</h2>
+            <p>Điều làm bạn rơi nước mắt trên cung đường Kora có thể không phải là sự hùng vĩ của ngọn núi tuyết trắng xóa, mà chính là <strong>những bóng dáng nhỏ bé</strong> đang phủ phục trên mặt đất đá lởm chởm.</p>
+            <p>Bạn sẽ thấy những người dân <a href="/van-hoa-tay-tang">Tây Tạng</a>, từ người già còng lưng đến những đứa trẻ, thực hiện nghi thức <strong>"ngũ thể đầu địa"</strong> – lạy dài bằng cả năm vóc sát đất, cứ ba bước một lạy, kéo dài ròng rã suốt hàng tháng trời.</p>
+            <p>Họ không đi để lập kỷ lục, không đi để khoe khoang, cũng chẳng mưu cầu vật chất. Họ đi bằng một <strong>đức tin thuần khiết, tuyệt đối và nguyên sơ nhất</strong>.</p>
+            <p>Nhìn những gương mặt sạm nắng gió, những đôi bàn tay rớm máu nhọc nhằn nhưng đôi mắt lại <strong>sáng rực sự bình yên</strong>, mọi định nghĩa về hạnh phúc của bạn sẽ bị thách thức. Bạn bị chấn động mạnh mẽ, không phải vì sự khổ hạnh, mà vì nhận ra sức mạnh vô hình của lòng tin có thể đưa con người vượt qua mọi nghịch cảnh.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/2024/07/du-khach-dung-chan-chup-anh-cung-cac-em-nho-dia-phuong-tren-duong-hanh-huong-nui-tu-di.webp" alt="Du khách dừng chân chụp ảnh cùng các em nhỏ địa phương trên đường hành hương núi Kailash" class="w-full h-auto" />
+            </figure>
+            
+            <h2 id="ly-do-3" class="scroll-mt-28">3. Không phải vì tôn giáo. Mà vì sự tĩnh lặng.</h2>
+            <p>Giữa những thung lũng đá xám xịt và tuyết trắng, Kailash tách biệt bạn hoàn toàn khỏi <strong>những âm thanh huyên náo</strong> của thế giới hiện đại. Không có tiếng còi xe, không có email công việc, không có những thông báo nhảy liên tục trên màn hình điện thoại.</p>
+            <p>Khi vạn vật chìm vào im lặng, âm thanh duy nhất còn sót lại là <strong>tiếng gió rít qua những dải cờ lungta</strong>, tiếng lạo xạo của đế giày đạp lên tuyết, và nhịp tim đang đập thình thịch trong lồng ngực bạn.</p>
+            <p>Sự tĩnh lặng tuyệt đối đó ban đầu có thể khiến bạn sợ hãi, vì nó lột trần mọi vỏ bọc. Nhưng dần dần, nó trở thành <strong>một liều thuốc an thần kỳ diệu</strong>.</p>
+            <p>Không còn rác rưởi thông tin bủa vây, bạn buộc phải <strong>quay vào bên trong</strong>. Bạn bắt đầu lắng nghe được những thanh âm tĩnh tại của tâm hồn, đối diện với những tổn thương cũ và những suy nghĩ mà bạn đã vô tình, hay cố ý, lờ đi suốt bao nhiêu năm qua.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/2024/05/tour-hanh-huong-nui-tu-di-kailash-tay-tang.webp" alt="Tour hành hương núi Tu Di Kailash Tây Tạng" class="w-full h-auto aspect-video object-cover" />
+            </figure>
+
+            <h2 id="ly-do-4" class="scroll-mt-28">4. Không phải vì chiến thắng. Mà vì biết buông bỏ.</h2>
+            <p>Ở thành phố, bạn được dạy rằng phải <strong>nhanh hơn, mạnh hơn, nỗ lực hơn</strong> để vươn lên dẫn đầu. Mọi người đều lao về phía trước trong một cuộc đua vô tận.</p>
+            <p>Nhưng ở Kailash, <strong>tốc độ là kẻ thù</strong>. Nếu bạn cố đi nhanh, <a href="/thong-tin-can-biet-hanh-huong-nui-kailash">chứng sốc độ cao (AMS)</a> sẽ quật ngã bạn ngay lập tức. Ngọn núi linh thiêng này bắt buộc bạn phải chậm lại, cực kỳ chậm. Mỗi bước đi là một sự chắt chiu năng lượng, một sự thiền định trong từng hơi thở.</p>
+            <p>Theo niềm tin của Phật giáo Tây Tạng và tín ngưỡng Bon, mỗi vòng Kora là một lần thanh tẩy đi hàng núi nghiệp chướng. Nhưng nhìn ở một góc độ thực tế, chính hành trình này đã <strong>thanh tẩy đi cái tôi kiêu hãnh của bạn</strong>.</p>
+            <p>Bạn cởi bỏ sự cao ngạo, rũ bỏ áp lực phải thành công. Bạn chiến thắng không phải vì đã chinh phục được một ngọn núi cao 5.630m, mà vì bạn đã học được cách <strong>buông bỏ khao khát phải chiến thắng mọi thứ</strong>.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/2024/07/doan-hanh-huong-kora-trong-ngay-2.webp" alt="Đoàn hành hương Kora núi Kailash trong ngày 2" class="w-full h-auto" />
+            </figure>
+
+            <h2 id="ly-do-5" class="scroll-mt-28">5. Không phải vì Kailash thay đổi bạn. Mà vì bạn cho phép mình thay đổi.</h2>
+            <p>Kailash không có phép thuật nào cả. Ngọn núi này không biến bạn thành một con người khác ngay khi vừa hoàn thành <a href="/nhat-ky-hanh-trinh-hanh-huong-nui-kailash">vòng Kora</a>. Sự thật là, <strong>những thay đổi diễn ra rất âm thầm</strong>.</p>
+            <p>Ngọn núi chỉ đơn giản là đặt bạn vào một hoàn cảnh đủ khắc nghiệt và đủ tĩnh lặng để <strong>gạt bỏ đi những lớp vỏ bọc</strong> thường ngày.</p>
+            <p>Khi bạn lê bước về đến điểm đích Darchen, toàn thân rã rời và bám đầy bụi đất, thứ bạn cảm nhận rõ nhất chỉ là <strong>sự nhẹ nhõm</strong>.</p>
+            <p>Bạn trở về không phải như một người vừa chinh phục được đỉnh cao, mà là một người đã <strong>không còn khao khát phải chứng tỏ bản thân nữa</strong>. Bạn chấp nhận sự yếu đuối của mình, và nhận ra chính lúc đó mình mới thực sự tự do.</p>
+            
+            <h2 id="hau-kora" class="scroll-mt-28">6. Hậu Kora – Khi bạn trở về nhà</h2>
+            <p>Nhiều người nói rằng Kailash làm thay đổi cuộc đời họ, nhưng điều đó hiếm khi xảy ra ngay trên đất Tây Tạng. Thường thì phải mất <strong>vài tuần, hoặc thậm chí vài tháng sau</strong>, khi bạn đã quay lại với nhịp sống bận rộn ở thành phố.</p>
+            <p>Một ngày nào đó, giữa dòng xe kẹt cứng lúc tan tầm, hoặc khi phải đối mặt với một vấn đề căng thẳng trong công việc, bạn bỗng nhận ra: <strong>mình không còn cáu gắt như trước nữa</strong>.</p>
+            <p>Ký ức về bầu trời xanh tĩnh lặng ở đèo Dolma La chợt ùa về. Bạn thở chậm lại, bao dung hơn và <strong>không còn bị cuốn vào những rắc rối vụn vặt</strong>. Đó mới thực sự là lúc chuyến đi Kailash phát huy ý nghĩa thực sự của nó.</p>
+
+            <p class="mt-8 mb-10 text-[17px] leading-relaxed"><a href="/nui-kailash-la-gi">Kailash</a> không hứa hẹn sẽ thay đổi tất cả mọi người theo cùng một cách. Nhưng với rất nhiều người, đó là nơi họ lần đầu tiên hiểu rằng: chuyến đi vĩ đại nhất đời người <strong>không phải là đi vòng quanh một ngọn núi, mà là đi sâu vào bên trong chính mình</strong>.</p>
+
+            {/* CTA */}
+            <div class="not-prose bg-slate-900 text-white rounded-2xl p-8 lg:p-12 text-center mt-6 shadow-xl relative overflow-hidden group mb-6">
+               <div class="relative z-10 flex flex-col items-center">
+                  <div class="w-16 h-16 rounded-full bg-amber-500/20 flex items-center justify-center mb-6">
+                    <Compass class="w-8 h-8 text-amber-500" />
+                  </div>
+                  <h3 class="text-2xl lg:text-3xl font-bold font-serif mb-6 text-white leading-snug">
+                    Nếu bạn đang tìm một chuyến đi để "check-in", Kailash có lẽ không dành cho bạn.
+                  </h3>
+                  <p class="mb-8 text-slate-300 max-w-2xl mx-auto text-[17px] leading-relaxed">
+                    Nhưng nếu bạn đang tìm một hành trình để hiểu bản thân hơn, thì Kora có thể là trải nghiệm đáng nhớ nhất trong cuộc đời.
+                  </p>
+                  <a href="/tour/tour-hanh-huong-nui-kailash-12n11d" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]">
+                     Xem Chi Tiết Tour Kailash 15 Ngày <ChevronRight class="w-5 h-5" />
+                  </a>
+               </div>
+               <div class="absolute inset-0 bg-[url('https://media.fittour.vn/uploads/2024/07/dinh-nui-kailash-sung-sung-tu-xa.webp')] opacity-10 bg-cover bg-center group-hover:scale-110 transition-transform duration-1000"></div>
+            </div>
+          </article>
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+                    {/* Guide Quote Box */}
+          <div class="bg-slate-900 rounded-2xl shadow-lg border border-slate-800 p-6 relative overflow-hidden">
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-500/20 rounded-full blur-xl"></div>
+            <div class="flex items-center gap-3 mb-6">
+               <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-500 shadow-sm shrink-0">
+                 <img src="https://media.fittour.vn/uploads/2024/05/trip-planner-tran-thinh.webp" alt="Trần Thịnh" class="w-full h-full object-cover bg-white" />
+               </div>
+               <div>
+                 <div class="font-bold text-white text-sm">Trần Thịnh</div>
+                 <div class="text-amber-500 text-[11px] font-medium uppercase tracking-wider">HDV FIT TOUR</div>
+               </div>
+            </div>
+            
+            <div class="relative">
+              <svg class="w-8 h-8 text-slate-700 absolute -top-3 -left-2 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+              <p class="text-slate-300 italic text-[15px] leading-relaxed relative z-10 pl-4">
+                "Trong nhiều đoàn FIT TOUR, khoảnh khắc khiến tôi nhớ nhất không phải lúc khách vượt qua Dolma La, mà là khi họ ngồi lặng nhìn Kailash rất lâu, không nói một lời."
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Facts */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-[#475569] pl-3 text-sm tracking-wide uppercase">
+              Bảng Thông Tin Nhanh
+            </div>
+            
+            <div class="space-y-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100 text-lg">⛰️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Độ cao đỉnh</div>
+                  <div class="font-bold text-slate-800 text-[13px]">6.638m (21,778 ft)</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 text-lg">🗺️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Vị trí</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Ngari Prefecture, Tây Tạng</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100 text-lg">🪷</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">4 Tôn giáo</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Phật giáo, Ấn giáo, Jain, Bon</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 border border-slate-200 text-lg">🚶</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Quãng đường Kora</div>
+                  <div class="font-bold text-slate-800 text-[13px]">52 km (3 ngày)</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 border border-rose-100 text-lg">🏔️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Đỉnh đèo cao nhất</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Dolma La (5.630m)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+              Bài Viết Liên Quan
+            </div>
+            <div class="space-y-4">
+              {[
+                { title: "Kinh nghiệm đi tour hành hương Kailash Tây Tạng", img: "https://media.fittour.vn/uploads/chi-ly-kora-kailash-lan-thu-hai.webp", link: "/kinh-nghiem-di-tour-hanh-huong-kailash-tay-tang" },
+                { title: "Những thông tin cần biết trước khi chinh phục Kailash", img: "https://media.fittour.vn/uploads/2023/06/du-khach-chup-anh-ben-tu-vien-Phugtal.webp", link: "/thong-tin-can-biet-hanh-huong-nui-kailash" },
+                { title: "Nhật ký hành trình hành hương núi Kailash", img: "https://media.fittour.vn/uploads/max-vu-kailash-pilgrimage-top.webp", link: "/nhat-ky-hanh-trinh-hanh-huong-nui-kailash" },
+                { title: "Núi Kailash là gì? Hành hương đỉnh núi Tu Di", img: "https://media.fittour.vn/uploads/2024/05/tour-hanh-huong-nui-tu-di-kailash-tay-tang.webp", link: "/nui-kailash-la-gi" }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-24 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img src={item.img} alt={item.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-700 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Share Block */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+            <div class="flex justify-center gap-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/vi-sao-kora-kailash-lam-thay-doi-cuoc-doi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors" title="Chia sẻ lên Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=https://thericetour.com/vi-sao-kora-kailash-lam-thay-doi-cuoc-doi&text=Vì sao Kora Kailash làm thay đổi cuộc đời?" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-colors" title="Chia sẻ lên Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.95 4.57a10 10 0 01-2.82.77 4.96 4.96 0 002.16-2.72 9.9 9.9 0 01-3.13 1.2 4.93 4.93 0 00-8.39 4.48A14 14 0 011.67 3.15 4.93 4.93 0 003.2 9.73a4.9 4.9 0 01-2.23-.62v.06a4.93 4.93 0 003.95 4.83 4.92 4.92 0 01-2.22.08 4.93 4.93 0 004.6 3.42A9.87 9.87 0 010 19.54 13.94 13.94 0 007.55 21.7c9.06 0 14-7.5 14-14v-.64a10 10 0 002.4-2.49z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText('https://thericetour.com/vi-sao-kora-kailash-lam-thay-doi-cuoc-doi');" title="Sao chép liên kết" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-600">
+                <span class="text-xs font-bold">🔗</span>
+                <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+              </button>
+            </div>
+          </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

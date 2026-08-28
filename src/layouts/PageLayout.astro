@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import '../styles/global.css';
+
+const { title, description, image, date, customSchema, isLandingPage = false, adminEditUrl, customCss, noindex } = Astro.props;
+
+const htmlStr = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+const hasSpecialLayout = htmlStr.includes('znews-scroll-wrapper') || htmlStr.includes('fb-profile-wrapper') || htmlStr.includes('grid-fit-masonry') || htmlStr.includes('data-elementor-type');
+const needsProse = !isLandingPage && !hasSpecialLayout;
+
+const currentOrigin = Astro.url.origin;
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Trang chủ", url: `${currentOrigin}/` },
+    { name: title, url: canonicalUrl }
+  ]
+};
+
+// Page chỉ dùng Global Org Schema (render sẵn trong BaseLayout <head>)
+// Chỉ render thêm nếu admin đã thiết lập customSchema hợp lệ JSON-LD
+let schemasToRender: any[] = [];
+if (customSchema) {
+  try {
+    const parsed = JSON.parse(customSchema);
+    // Chỉ dùng nếu là JSON-LD thực sự
+    const isValidJsonLd = parsed['@context'] ||
+      (Array.isArray(parsed['@graph']) && parsed['@graph'].length > 0);
+    if (isValidJsonLd) {
+      schemasToRender.push({ type: 'custom', data: parsed });
+    }
+  } catch (e) {
+    // ignore invalid JSON
+  }
+}
+// Luôn thêm BreadcrumbList cho điều hướng
+schemasToRender.push({ type: 'breadcrumb', data: breadcrumbSchema });
+---
+
+<BaseLayout title={title} description={description} image={image} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} noindex={noindex}>
+  <Fragment slot="schema">
+    {schemasToRender.map(schema => (
+      <JsonLdSchema type={schema.type as any} data={schema.data} />
+    ))}
+    {customCss && <style is:inline set:html={customCss} />}
+  </Fragment>
+
+  <main class:list={[isLandingPage ? "w-full" : "site-container", !isLandingPage && "py-8 lg:py-12"]}>
+    
+    {needsProse && !isLandingPage && (
+      <header class="mb-10 border-b border-border pb-6">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary leading-[1.3] tracking-tight">
+          {title}
+        </h1>
+      </header>
+    )}
+
+    <!-- Page Content -->
+    <div class:list={[needsProse && 'prose prose-lg prose-brand custom-blog-prose block max-w-none']}>
+      <slot />
+    </div>
+
+</main>
+
+<script>
+  function initReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.reveal-up').forEach(el => {
+      observer.observe(el);
+    });
+  }
+  // Since this is a module script, DOM is already parsed.
+  // ViewTransitions is not used, so astro:page-load won't fire.
+  initReveal();
+</script>
+
+</BaseLayout>

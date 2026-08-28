@@ -1,0 +1,35 @@
+---
+interface Props {
+  url?: string;
+  title?: string;
+  desc?: string;
+  className?: string;
+}
+
+const props = Astro.props;
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const url = props.url || `https://thericetour.com${pathname}`;
+const title = props.title || "Quét mã QR";
+const desc = props.desc || "Lưu và chia sẻ lịch trình trên thiết bị di động của bạn.";
+const className = props.className || "mb-10";
+
+const encodedUrl = encodeURIComponent(url);
+const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodedUrl}&margin=0`;
+---
+
+<div class={`premium-qr-box ${className}`}>
+  <div class="qr-wrapper">
+    <img 
+      src={qrSrc} 
+      alt={`Mã QR ${title}`} 
+      width="96" 
+      height="96" 
+      loading="lazy" 
+      decoding="async" 
+    />
+  </div>
+  <div class="qr-text">
+    <div class="qr-title">{title}</div>
+    <div class="qr-desc">{desc}</div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+---
+import ShortsFeed from '@/components/shorts/ShortsFeed.astro';
+import { env } from 'cloudflare:workers';
+
+const { slug } = Astro.params;
+
+const d1Db = env?.dulichcoguu_d1;
+let shorts: any[] = [];
+let topicInfo: any = null;
+let toursMap: Record<string, string> = {};
+
+if (d1Db && slug) {
+  try {
+    // 1. Lấy thông tin topic
+    topicInfo = await d1Db.prepare("SELECT * FROM ShortTopic WHERE slug = ?").bind(slug).first();
+    
+    if (topicInfo) {
+      // 2. Lấy danh sách video thuộc topic này
+      const { results } = await d1Db.prepare("SELECT * FROM ShortVideo WHERE topicSlug = ? AND status = 'published' ORDER BY viewOrder ASC, createdAt DESC").bind(slug).all();
+      shorts = results || [];
+
+      // 3. Lấy tên tour cho CTA
+      if (shorts.length > 0) {
+        const tourSlugs = shorts.map(s => s.tourSlug).filter(Boolean);
+        if (tourSlugs.length > 0) {
+          const placeholders = tourSlugs.map(() => '?').join(',');
+          const { results: tourResults } = await d1Db.prepare(`SELECT slug, title FROM Tour WHERE slug IN (${placeholders})`).bind(...tourSlugs).all();
+          if (tourResults) {
+            tourResults.forEach((r: any) => {
+              toursMap[r.slug] = r.title;
+            });
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+if (!topicInfo) {
+  return new Response("Không tìm thấy chủ đề này", { status: 404 });
+}
+---
+
+<ShortsFeed shorts={shorts} toursMap={toursMap} topicInfo={topicInfo} />

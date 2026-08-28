@@ -1,0 +1,19 @@
+---
+interface Props {
+  user: string;
+  dataMap: Record<string, any>;
+}
+
+const { user, dataMap } = Astro.props;
+const author = dataMap?.authors?.[user];
+const snippet = author?.author_snippet;
+import '../../styles/author-card.css';
+---
+
+{snippet ? (
+  <div class="author-card-outer not-prose">
+    <div class="author-card-box">
+      <div class="author-card" set:html={snippet} />
+    </div>
+  </div>
+) : null}

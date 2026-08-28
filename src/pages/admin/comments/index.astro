@@ -1,0 +1,98 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+
+const mockReviews = [
+  {
+    id: 'rev_01',
+    authorName: 'Eleanor & David Vance',
+    country: 'London, United Kingdom 🇬🇧',
+    rating: 5,
+    tourName: 'Grand Vietnam Discovery (14 Days)',
+    date: 'February 2026',
+    comment: 'The Rice Tour curated the most poetic journey across Vietnam for our 25th anniversary. Every boutique lodge was exceptional and our private guide in Hue felt like family. Zero shopping traps — just pure cultural joy.',
+    status: 'approved'
+  },
+  {
+    id: 'rev_02',
+    authorName: 'Marcus Schneider',
+    country: 'Munich, Germany 🇩🇪',
+    rating: 5,
+    tourName: 'Sapa & Tonkinese Alps (4 Days)',
+    date: 'January 2026',
+    comment: 'Trekking through the misty rice terraces of Sapa with our local Hmong host was a profound experience. The logistics, private transport, and WhatsApp support team were flawless.',
+    status: 'approved'
+  },
+  {
+    id: 'rev_03',
+    authorName: 'Sarah & Brian Miller',
+    country: 'California, United States 🇺🇸',
+    rating: 5,
+    tourName: 'Mekong Waterways Private Explorer (3 Days)',
+    date: 'January 2026',
+    comment: 'From cruising the lantern river of Hoi An to the private sunrise sampan in Can Tho, every single detail exceeded our expectations. Highly recommend!',
+    status: 'approved'
+  }
+];
+---
+
+<AdminLayout title="Reviews & Testimonials" activeMenu="comments">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 4px;">Reviews &amp; Guest Testimonials</h2>
+        <p style="color: #64748b; font-size: 14px;">Kiểm duyệt và quản lý đánh giá 5 sao từ du khách quốc tế (TripAdvisor &amp; Website Direct).</p>
+      </div>
+      <button style="padding: 10px 16px; background: #0f172a; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+        + Thêm Đánh Giá Mới
+      </button>
+    </div>
+
+    <!-- Review Rating Overview -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 32px;">
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Average Rating</div>
+        <div style="font-size: 32px; font-weight: 800; color: #059669; margin-top: 4px;">5.0 / 5.0</div>
+        <div style="font-size: 12px; color: #f59e0b; margin-top: 4px;">★ ★ ★ ★ ★ (100% 5 Stars)</div>
+      </div>
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Total Published Reviews</div>
+        <div style="font-size: 32px; font-weight: 800; color: #d97706; margin-top: 4px;">{mockReviews.length}</div>
+        <div style="font-size: 12px; color: #64748b; margin-top: 4px;">TripAdvisor Verified</div>
+      </div>
+    </div>
+
+    <!-- Reviews List -->
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <div style="padding: 18px 24px; border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+        <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;">Danh Sách Lời Nhận Xét Từ Khách Quốc Tế</h3>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        {mockReviews.map(r => (
+          <div style="padding: 20px 24px; border-bottom: 1px solid #f1f5f9; display: flex; gap: 20px;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #fef3c7; color: #d97706; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">
+              {r.authorName[0]}
+            </div>
+            <div style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div>
+                  <span style="font-size: 15px; font-weight: 700; color: #0f172a;">{r.authorName}</span>
+                  <span style="font-size: 13px; color: #64748b; margin-left: 8px;">({r.country})</span>
+                </div>
+                <div style="color: #f59e0b; font-size: 14px;">★ ★ ★ ★ ★</div>
+              </div>
+              <div style="font-size: 12px; color: #2563eb; font-weight: 600; margin-bottom: 8px;">Tour: {r.tourName} • {r.date}</div>
+              <p style="font-size: 14px; color: #334155; line-height: 1.6; background: #f8fafc; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #d97706;">"{r.comment}"</p>
+              <div style="margin-top: 10px; display: flex; gap: 12px; font-size: 12px;">
+                <span style="color: #059669; font-weight: 600;">✓ Đã xuất bản lên trang chủ</span>
+                <a href="#" style="color: #64748b; text-decoration: none;">Chỉnh sửa</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</AdminLayout>

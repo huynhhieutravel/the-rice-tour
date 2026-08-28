@@ -1,0 +1,878 @@
+---
+import { env } from 'cloudflare:workers';
+import BlogLayout from '@/layouts/BlogLayout.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Pagination from '@/components/ui/Pagination.astro';
+import BlockRenderer from '@/components/blog/blocks/BlockRenderer.astro';
+import CorporateArchiveLayout from '@/components/category/CorporateArchiveLayout.astro';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { replaceTokens } from '@/lib/contentTokens';
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+import { sanitizeElementorHtml } from '@/lib/elementorSanitizer';
+import { parseShortcodes } from '@/utils/shortcodes/parser';
+import { fetchAllShortcodeData } from '@/utils/shortcodes/dataLoader';
+import ShortcodeRenderer from '@/components/shortcodes/ShortcodeRenderer.astro';
+
+// CMS Engine Shortcodes
+import { 
+  happyLandHtml, khanRanHtml,
+  happyLandBenLucTravelGuideHtml,
+  namDuIslandExpeditionGuideHtml,
+  mekongDeltaFruitsHarvestMapHtml,
+  truongTienBridgeHueHeritageHtml,
+  myQuynhSafariDefinitiveGuideHtml,
+  mekongKhanRanScarfLegacyHtml,
+  huynhThuyLeAncientHouseHtml,
+  lanVuongEcoparkMekongMudHtml,
+  honSonIslandLodgingHomestaysHtml,
+  canThoBeachArtificialOasisHtml
+} from '@/data/demo-articles';
+
+let { slug } = Astro.params;
+const url = new URL(Astro.request.url);
+
+if (!slug) {
+  return Astro.rewrite("/404");
+}
+
+let currentPage = 1;
+// Parse pagination from slug: matches 'blog/page/2' or 'blog/page/2/'
+slug = slug.replace(/\/+$/, '');
+const pageMatch = slug.match(/^(.*)\/page\/(\d+)$/);
+if (pageMatch) {
+  slug = pageMatch[1];
+  currentPage = parseInt(pageMatch[2], 10);
+}
+
+// Alias for typo in database to prevent 404
+if (slug === 'emagazine') {
+  slug = 'emegazine';
+}
+
+import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
+
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return Astro.rewrite("/500");
+}
+
+// Fetch Post and Category
+let post;
+const cleanPostSlug = slug.replace(/^blog\//, '');
+
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare(`
+      SELECT p.*, u.url as authorUrl, u.avatar as authorAvatar, u.displayName as authorName
+      FROM Post p 
+      LEFT JOIN "User" u ON p.authorId = u.id 
+      WHERE (p.slug = ? OR p.slug = ?) AND (p.status = 'published' OR p.status = 'publish')
+    `).bind(slug, cleanPostSlug).first<any>(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+let isPage = false;
+let isCategory = false;
+let categoryData: any = null;
+let categoryPosts: any[] = [];
+let locationFilter: string | null = null;
+
+const demoSlugs = [
+  'happy-land-ben-luc-travel-guide',
+  'nam-du-island-expedition-guide',
+  'mekong-delta-fruits-harvest-map',
+  'truong-tien-bridge-hue-heritage',
+  'my-quynh-safari-definitive-guide',
+  'mekong-khan-ran-scarf-legacy',
+  'huynh-thuy-le-ancient-house',
+  'lan-vuong-ecopark-mekong-mud',
+  'hon-son-island-lodging-homestays',
+  'can-tho-beach-artificial-oasis'
+];
+
+if (!post && (demoSlugs.includes(slug) || demoSlugs.includes(cleanPostSlug))) {
+  const actualSlug = demoSlugs.includes(slug) ? slug : cleanPostSlug;
+  post = {
+    id: 'demo_' + actualSlug,
+    slug: actualSlug,
+    title: actualSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    status: 'published',
+    content: '', // Will be filled by demo-articles fallback
+    createdAt: new Date().toISOString()
+  };
+}
+
+if (!post) {
+  // Fallback to Page table
+  try {
+    post = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Page WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(slug).first<any>(),
+      { route: Astro.url.pathname, slug, queryType: "fetch_page_by_slug" }
+    );
+  } catch (e) {
+    return Astro.rewrite("/500");
+  }
+
+  if (!post) {
+    // Fallback to BlogCategory
+    try {
+      categoryData = await safeQueryCritical(
+        d1Db.prepare("SELECT * FROM BlogCategory WHERE slug = ?").bind(slug).first<any>(),
+        { route: Astro.url.pathname, slug, queryType: "fetch_category_by_slug" }
+      );
+    } catch (e) {
+      return Astro.rewrite("/500");
+    }
+
+    if (!categoryData) {
+      return Astro.rewrite("/404");
+    }
+    isCategory = true;
+    // Pagination logic
+    const POSTS_PER_PAGE = 12;
+    const offset = (currentPage - 1) * POSTS_PER_PAGE;
+    locationFilter = url.searchParams.get('location');
+
+    try {
+      const queryParams: any[] = [categoryData.id];
+      let filterClause = '';
+      if (locationFilter) {
+         filterClause = ` AND p.customSchema LIKE ?`;
+         queryParams.push(`%"location"%${locationFilter}%"%`);
+      }
+
+      // Fetch total count and posts concurrently
+      const [countRes, catPostsRes, allSchemasRes] = await Promise.all([
+        safeQueryCritical(
+          d1Db.prepare(`
+            SELECT COUNT(*) as total
+            FROM Post p
+            JOIN PostCategory pc ON p.id = pc.postId
+            WHERE pc.categoryId = ? AND (p.status = 'published' OR p.status = 'publish') ${filterClause}
+          `).bind(...queryParams).first<any>(),
+          { route: Astro.url.pathname, slug, queryType: "count_category_posts" }
+        ),
+        safeQueryCritical(
+          d1Db.prepare(`
+            SELECT p.id, p.slug, p.title, p.excerpt, p.featuredImage, p.customSchema 
+            FROM Post p
+            JOIN PostCategory pc ON p.id = pc.postId
+            WHERE pc.categoryId = ? AND (p.status = 'published' OR p.status = 'publish') ${filterClause}
+            ORDER BY p.createdAt DESC
+            LIMIT ? OFFSET ?
+          `).bind(...queryParams, POSTS_PER_PAGE, offset).all<any>(),
+          { route: Astro.url.pathname, slug, queryType: "fetch_category_posts" }
+        ),
+        // Fetch all schemas to extract unique locations
+        safeQueryCritical(
+          d1Db.prepare(`
+            SELECT p.customSchema
+            FROM Post p
+            JOIN PostCategory pc ON p.id = pc.postId
+            WHERE pc.categoryId = ? AND (p.status = 'published' OR p.status = 'publish')
+          `).bind(categoryData.id).all<any>(),
+          { route: Astro.url.pathname, slug, queryType: "fetch_category_locations" }
+        )
+      ]);
+
+      const totalPosts = countRes?.total || 0;
+      categoryData.currentPage = currentPage;
+      categoryData.totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+      categoryPosts = (catPostsRes.results || []).map((p: any) => {
+        let loc = '';
+        if (p.customSchema) {
+          try {
+            const schema = JSON.parse(p.customSchema);
+            if (schema.location) {
+              if (Array.isArray(schema.location)) {
+                loc = schema.location.filter((x: any) => typeof x === 'string' && x.trim()).join(', ');
+              } else if (typeof schema.location === 'string') {
+                loc = schema.location.trim();
+              }
+            }
+          } catch (_) {}
+        }
+        p.locationStr = loc;
+        return p;
+      });
+      
+      const allLocations = new Set<string>();
+      if (allSchemasRes?.results) {
+        allSchemasRes.results.forEach((row: any) => {
+          if (row.customSchema) {
+            try {
+              const parsed = JSON.parse(row.customSchema);
+              if (parsed.location) {
+                let locs: string[] = [];
+                if (Array.isArray(parsed.location)) {
+                  locs = parsed.location;
+                } else if (typeof parsed.location === 'string') {
+                  locs = [parsed.location.trim()];
+                }
+                locs.forEach((l: string) => {
+                  if (typeof l === 'string' && l.trim()) allLocations.add(l.trim());
+                });
+              }
+            } catch (e) {}
+          }
+        });
+      }
+      categoryData.availableLocations = Array.from(allLocations).sort();
+
+      // Group by country for quick filter buttons
+      const _cMap = new Map();
+      categoryData.availableLocations.forEach((loc: string) => {
+        const parts = loc.split(',').map((s: string) => s.trim());
+        const country = parts.length > 1 ? parts[parts.length - 1] : loc;
+        _cMap.set(country, (_cMap.get(country) || 0) + 1);
+      });
+      categoryData.quickCountries = Array.from(_cMap.entries())
+        .sort((a: any, b: any) => b[1] - a[1])
+        .slice(0, 4)
+        .map((e: any) => e[0]);
+    } catch (e) {
+      return Astro.rewrite("/500");
+    }
+  } else {
+    isPage = true;
+  }
+}
+
+// Variables for post/page
+let tags: any[] = [];
+let relatedPosts: any[] = [];
+let formattedRelatedPosts: any[] = [];
+let publishDate = '';
+let publishDateIso: string | null = null;
+let updatedAtIso: string | null = null;
+let parsedJson = null;
+let isJson = false;
+let faqQuestions: any[] = [];
+let isLandingPage = false;
+let forceHeader = false;
+let isLegacyElementor = false;
+let isFullWidth = false;
+let readTime = 1;
+let authorUrl = '';
+let rawSafeHtml = '';
+let cleanHtml = '';
+let contentVersion = 1;
+let astNodes: any[] = [];
+let dataMap: any = {};
+let category: any = null;
+
+if (!isCategory) {
+  // We prepare the promises for concurrent execution
+  const optionalQueries: Promise<any>[] = [];
+  
+  const categoryPromise = post.categoryId 
+    ? safeQueryOptional(
+        d1Db.prepare("SELECT * FROM BlogCategory WHERE id = ?").bind(post.categoryId).first<any>(),
+        null,
+        { route: Astro.url.pathname, slug, queryType: "fetch_category_breadcrumb" }
+      )
+    : Promise.resolve(null);
+    
+  let tagsPromise = Promise.resolve({ results: [] });
+  let relatedPromise = Promise.resolve({ results: [] });
+  let authorPromise = post.authorId
+    ? safeQueryOptional(
+        d1Db.prepare('SELECT url FROM "User" WHERE id = ?').bind(post.authorId).first<any>(),
+        null,
+        { route: Astro.url.pathname, slug, queryType: "fetch_author_url" }
+      )
+    : Promise.resolve(null);
+
+  if (!isPage) {
+    tagsPromise = safeQueryOptional(
+      d1Db.prepare(`
+        SELECT t.id, t.name, t.slug 
+        FROM Tag t
+        JOIN PostTag pt ON t.id = pt.tagId
+        WHERE pt.postId = ?
+      `).bind(post.id).all<any>(),
+      { results: [] },
+      { route: Astro.url.pathname, slug, queryType: "fetch_post_tags" }
+    );
+    
+    relatedPromise = safeQueryOptional(
+      d1Db.prepare(`
+        SELECT p.id, p.title, p.slug, p.featuredImage as image, p.createdAt as date,
+               (SELECT COUNT(*) FROM PostTag pt1 WHERE pt1.postId = p.id AND pt1.tagId IN (SELECT tagId FROM PostTag WHERE postId = ?)) as tag_match,
+               CASE WHEN p.categoryId = ? THEN 1 ELSE 0 END as cat_match
+        FROM Post p
+        WHERE p.id != ? AND (p.status = 'published' OR p.status = 'publish')
+        ORDER BY (cat_match * 5) + tag_match DESC, p.createdAt DESC
+        LIMIT 4
+      `).bind(post.id, post.categoryId || '', post.id).all<any>(),
+      { results: [] },
+      { route: Astro.url.pathname, slug, queryType: "fetch_related_posts" }
+    );
+  }
+
+  // Execute all optional queries concurrently
+  const [catResult, tagsResult, relatedResult, authorResult] = await Promise.allSettled([
+    categoryPromise,
+    tagsPromise,
+    relatedPromise,
+    authorPromise
+  ]);
+
+  category = catResult.status === "fulfilled" ? catResult.value : null;
+  authorUrl = (authorResult.status === "fulfilled" && authorResult.value?.url) ? authorResult.value.url : '';
+  
+  if (!isPage) {
+    tags = tagsResult.status === "fulfilled" ? tagsResult.value?.results || [] : [];
+    relatedPosts = relatedResult.status === "fulfilled" ? relatedResult.value?.results || [] : [];
+  }
+
+  // Convert ISO date to readable string for related posts
+  formattedRelatedPosts = relatedPosts.map(p => ({
+    ...p,
+    image: getCanonicalMediaUrl(p.image as string),
+    date: new Date(typeof p.date === 'string' ? p.date.replace(' ', 'T') : p.date).toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Ho_Chi_Minh' })
+  }));
+
+  // Convert ISO date to readable string for UI display (unchanged)
+  publishDate = post.createdAt || post.publishedAt ? new Date(typeof (post.createdAt || post.publishedAt) === 'string' ? (post.createdAt || post.publishedAt).replace(' ', 'T') : (post.createdAt || post.publishedAt)).toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Ho_Chi_Minh' }) : '';
+
+  // Keep raw ISO strings for Schema (avoid passing human-readable string to JSON-LD)
+  publishDateIso = post.publishedAt || post.createdAt || null;
+  updatedAtIso = post.updatedAt || post.publishedAt || post.createdAt || null;
+
+  // Hybrid Strategy: Detect JSON vs HTML
+  if (post.content && (post.content.trim().startsWith('{') || post.content.trim().startsWith('['))) {
+    try {
+      parsedJson = JSON.parse(post.content);
+      isJson = true;
+      
+      // Extract FAQ blocks for Schema
+      const extractFaqs = (node: any) => {
+        if (!node) return;
+        if (node.type === 'faqBlock' && node.attrs?.questions) {
+          node.attrs.questions.forEach((q: any) => {
+             if (q.q && q.a) {
+               faqQuestions.push({ question: q.q, answer: q.a });
+             }
+          });
+        }
+        if (node.content && Array.isArray(node.content)) {
+          node.content.forEach(extractFaqs);
+        }
+      };
+      extractFaqs(parsedJson);
+    } catch (e) {
+      console.error("Failed to parse post content as JSON", e);
+    }
+  }
+
+  // 2. Determine layout mode
+  isLandingPage = post.format === 'landing' || (post.content && post.content.includes('<!-- layout: landing -->'));
+  forceHeader = post.content && post.content.includes('<!-- force-header -->');
+  isLegacyElementor = !isJson && (post.isElementor === 1 || post.format === 'elementor' || (post.content && post.content.includes('data-elementor-type')));
+  isFullWidth = isLandingPage || isLegacyElementor || isPage || (post.content && post.content.includes('<!-- layout: full-width -->'));
+
+  // Calculate real reading time from content
+  let wordCount = 0;
+  try {
+    if (isJson && parsedJson) {
+      const extractText = (node: any): string => {
+        if (!node) return '';
+        if (node.type === 'text') return node.text || '';
+        if (node.content && Array.isArray(node.content)) return node.content.map(extractText).join(' ');
+        return '';
+      };
+      wordCount = extractText(parsedJson).split(/\s+/).filter(Boolean).length;
+    } else {
+      const textContent = (post.content || '').replace(/<[^>]*>/g, '');
+      wordCount = textContent.split(/\s+/).filter(Boolean).length;
+    }
+  } catch(e) {}
+  readTime = Math.max(1, Math.ceil(wordCount / 200));
+
+  // Fetch global settings for Content Token System
+  const { settings, version } = await getGlobalSettings();
+  
+  // Map of canonical 3-Column Magazine layouts
+  const demoArticlesMap: Record<string, string> = {
+    'happy-land-ben-luc-travel-guide': happyLandBenLucTravelGuideHtml,
+    'nam-du-island-expedition-guide': namDuIslandExpeditionGuideHtml,
+    'mekong-delta-fruits-harvest-map': mekongDeltaFruitsHarvestMapHtml,
+    'truong-tien-bridge-hue-heritage': truongTienBridgeHueHeritageHtml,
+    'my-quynh-safari-definitive-guide': myQuynhSafariDefinitiveGuideHtml,
+    'mekong-khan-ran-scarf-legacy': mekongKhanRanScarfLegacyHtml,
+    'huynh-thuy-le-ancient-house': huynhThuyLeAncientHouseHtml,
+    'lan-vuong-ecopark-mekong-mud': lanVuongEcoparkMekongMudHtml,
+    'hon-son-island-lodging-homestays': honSonIslandLodgingHomestaysHtml,
+    'can-tho-beach-artificial-oasis': canThoBeachArtificialOasisHtml,
+    'khan-ran-nam-bo': mekongKhanRanScarfLegacyHtml,
+    'khu-du-lich-happy-land-ben-luc-long-an': happyLandBenLucTravelGuideHtml
+  };
+
+  let pageContent = post.content || '';
+  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('Quick Expedition Facts'))) {
+    pageContent = demoArticlesMap[post.slug];
+    isLandingPage = true;
+    isFullWidth = true;
+  }
+  if (post.featuredImage) {
+    pageContent = pageContent.replace(/\{\{PAGE_FEATURED_IMAGE\}\}/g, post.featuredImage);
+  } else {
+    // Fallback if no image is set
+    pageContent = pageContent.replace(/\{\{PAGE_FEATURED_IMAGE\}\}/g, 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+  }
+  
+  rawSafeHtml = isJson ? '' : replaceTokens(pageContent, settings);
+
+  // Content Sanitizer Pipeline
+  contentVersion = post.contentVersion || 1;
+  cleanHtml = (!isJson && contentVersion <= 1)
+    ? sanitizeElementorHtml(rawSafeHtml, isLandingPage ? undefined : post.featuredImage, !isLandingPage)
+    : rawSafeHtml;
+
+  // Parse CMS Engine Shortcodes
+  // Parse CMS Engine Shortcodes
+  astNodes = isJson ? parseShortcodes(post.content) : parseShortcodes(cleanHtml);
+  dataMap = await fetchAllShortcodeData(astNodes, d1Db);
+}
+
+const corporateSlugs = ['tour-doanh-nghiep'];
+const isCorporatePost = category && category.slug ? corporateSlugs.includes(category.slug) : false;
+const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.includes(categoryData.slug) : false;
+---
+
+{isCategory ? (
+  isCorporateCategory ? (
+    <CorporateArchiveLayout categoryData={categoryData} categoryPosts={categoryPosts} />
+  ) : (
+  <BaseLayout 
+    title={categoryData.name} 
+    description={categoryData.description || `Khám phá các bài viết, cẩm nang và kinh nghiệm du lịch về chuyên mục ${categoryData.name}. Cập nhật mới nhất từ FIT TOUR.`}
+  >
+    <section class="py-16 md:py-24 bg-slate-50 min-h-[60vh]">
+      <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 lg:mb-16">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight capitalize mb-4">{categoryData.name}</h1>
+          {categoryData.description && <p class="text-slate-600 text-lg max-w-2xl mx-auto">{categoryData.description}</p>}
+        </div>
+        
+        {categoryData.availableLocations && categoryData.availableLocations.length > 0 && (
+          <div class="mb-10 grid grid-cols-3 gap-2 max-w-sm mx-auto md:max-w-none md:flex md:flex-wrap md:justify-center">
+            <a href={`/${categoryData.slug}`} class={`text-center px-3 py-2.5 rounded-full text-sm font-semibold transition-all ${!locationFilter ? 'bg-[#ea580c] text-white shadow-sm' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}>Tất cả</a>
+            {(categoryData.quickCountries || []).map((country: string) => (
+              <a href={`/${categoryData.slug}?location=${encodeURIComponent(country)}`} class={`text-center px-3 py-2.5 rounded-full text-sm font-semibold transition-all ${locationFilter === country ? 'bg-[#ea580c] text-white shadow-sm' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}>
+                {country}
+              </a>
+            ))}
+            <div class="relative flex items-center">
+              <select id="location-dropdown" class="w-full appearance-none bg-white border border-slate-200 text-slate-600 text-sm font-semibold rounded-full pl-3 py-2.5 pr-8 cursor-pointer hover:border-slate-300 transition-all focus:outline-none focus:ring-2 focus:ring-[#ea580c]/30 focus:border-[#ea580c]">
+                <option value="">Khác ▼</option>
+                {categoryData.availableLocations.map((loc: string) => (
+                  <option value={`/${categoryData.slug}?location=${encodeURIComponent(loc)}`} selected={locationFilter === loc}>
+                    {loc}
+                  </option>
+                ))}
+              </select>
+              <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+        )}
+
+        {categoryPosts.length > 0 ? (
+          <>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+              {categoryPosts.map((p: any) => (
+                <a href={`/${p.slug}`} class="group block">
+                  <div class="overflow-hidden mb-6 bg-slate-50 rounded-lg relative">
+                    <img src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : '/placeholder-image.jpg'} alt={p.title} class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                    {p.locationStr && (
+                      <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-[#ea580c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        {p.locationStr}
+                      </div>
+                    )}
+                  </div>
+                  <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-3">{p.title}</h3>
+                  <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
+                </a>
+              ))}
+            </div>
+            
+            <Pagination 
+              currentPage={categoryData.currentPage} 
+              totalPages={categoryData.totalPages} 
+              baseUrl={`/${categoryData.slug}`} 
+            />
+          </>
+        ) : (
+          <div class="text-center py-12">
+            <p class="text-slate-500">Chưa có bài viết nào trong chuyên mục này.</p>
+          </div>
+        )}
+      </div>
+      <script is:inline>
+        var dd = document.getElementById('location-dropdown');
+        if (dd) dd.addEventListener('change', function() { if (this.value) window.location.href = this.value; });
+      </script>
+    </section>
+  </BaseLayout>
+  )
+) : isPage ? (
+  <PageLayout 
+    title={post.title || post.seoTitle}
+    description={post.excerpt || post.seoDescription || post.title}
+    image={getCanonicalMediaUrl(post.featuredImage || post.ogImage)}
+    date={publishDate}
+    customSchema={post.customSchema}
+    isLandingPage={isLandingPage}
+    adminEditUrl={`/admin/pages/edit?id=${post.id}`}
+    customCss={post.css_content || ''}
+    noindex={post.slug.endsWith('-series')}
+    isCorporate={isCorporatePost}
+  >
+    {isJson && parsedJson ? (
+      <BlockRenderer node={parsedJson} settings={dataMap.settings} dataMap={dataMap} />
+    ) : (
+      <div class="coguu-raw-content">
+        {astNodes.map(node => <ShortcodeRenderer node={node} dataMap={dataMap} />)}
+      </div>
+    )}
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        var gallerySelectors = ['.coguu-gallery', '.grid-fit-masonry', '.coguu-gallery-story', '.wp-block-gallery'];
+        var allData = [];
+        var done = [];
+        gallerySelectors.forEach(function(s) {
+          var els = document.querySelectorAll(s);
+          els.forEach(function(el) {
+            if (done.indexOf(el) !== -1) return;
+            done.push(el);
+            var imgs = el.querySelectorAll('img');
+            if (!imgs.length) return;
+            var items = [];
+            var valid = [];
+            for (var i = 0; i < imgs.length; i++) {
+              if (imgs[i].closest('.exclude-lightbox') || imgs[i].closest('a')) continue;
+              items.push({href: imgs[i].getAttribute('src') || '', type: 'image', description: imgs[i].getAttribute('alt') || ''});
+              valid.push(imgs[i]);
+            }
+            if (items.length > 0) allData.push({items: items, imgs: valid});
+          });
+        });
+        if (!allData.length) return;
+
+        function initLB() {
+          requestAnimationFrame(function() {
+            allData.forEach(function(d) {
+              var lb = GLightbox({elements: d.items, touchNavigation: true, loop: true, zoomable: true, descPosition: 'bottom'});
+              for (var j = 0; j < d.imgs.length; j++) {
+                d.imgs[j].style.cursor = 'zoom-in';
+                (function(idx) {
+                  d.imgs[idx].addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    lb.openAt(idx);
+                  });
+                })(j);
+              }
+            });
+          });
+        }
+
+        function loadGLightbox() {
+          if (typeof GLightbox !== 'undefined') { initLB(); return; }
+          var l = document.createElement('link');
+          l.rel = 'stylesheet';
+          l.href = 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css';
+          // Load CSS asynchronously to prevent render blocking
+          l.media = 'print';
+          l.onload = function() { l.media = 'all'; };
+          document.head.appendChild(l);
+          var sc = document.createElement('script');
+          sc.src = 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+          sc.onload = initLB;
+          document.head.appendChild(sc);
+        }
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGLightbox);
+        } else {
+          setTimeout(loadGLightbox, 200);
+        }
+      });
+    </script>
+  </PageLayout>
+) : (
+  <BlogLayout 
+    title={post.title || post.seoTitle}
+    description={post.seoDescription || post.excerpt || post.title}
+    image={getCanonicalMediaUrl(post.featuredImage || post.ogImage)}
+    author={post.authorName || post.author || "Admin"}
+    authorUrl={authorUrl}
+    date={publishDate}
+    dateIso={publishDateIso}
+    dateModifiedIso={updatedAtIso}
+    category={category}
+    tags={tags}
+    relatedPosts={formattedRelatedPosts}
+    readTime={readTime}
+    customSchema={post.customSchema}
+    faqQuestions={faqQuestions}
+    slug={post.slug}
+    isFullWidth={isFullWidth}
+    isLandingPage={isLandingPage}
+    forceHeader={forceHeader}
+    customCss={post.customCss}
+    isTiptap={isJson}
+    adminEditUrl={`/admin/posts/edit?id=${post.id}`}
+    noindex={post.slug.endsWith('-series')}
+    isCorporate={isCorporatePost}
+  >
+    {isJson && parsedJson ? (
+      <BlockRenderer node={parsedJson} settings={dataMap.settings} dataMap={dataMap} />
+    ) : (
+      <div class="coguu-raw-content">
+        {astNodes.map(node => <ShortcodeRenderer node={node} dataMap={dataMap} />)}
+      </div>
+    )}
+  </BlogLayout>
+)}
+
+<script>
+  // Global Tab Switcher for Portfolio and other raw HTML content
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+  
+  if (tabBtns.length > 0) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset all buttons
+        tabBtns.forEach(b => {
+          b.classList.remove('bg-brand-500', 'text-white', 'border-brand-500');
+          b.classList.add('bg-white', 'text-brand-500', 'border-brand-200');
+        });
+        
+        // Active clicked button
+        btn.classList.remove('bg-white', 'text-brand-500', 'border-brand-200');
+        btn.classList.add('bg-brand-500', 'text-white', 'border-brand-500');
+
+        // Hide all panes
+        tabPanes.forEach(pane => {
+          pane.classList.add('hidden');
+        });
+
+        // Show target pane
+        const targetId = btn.getAttribute('data-target');
+        if (targetId) {
+          const targetPane = document.getElementById(targetId);
+          if (targetPane) {
+            targetPane.classList.remove('hidden');
+          }
+        }
+      });
+    });
+  }
+
+  // Custom Slider for Our Team page (Philosophy section)
+  function initCustomSlider() {
+    const slider = document.getElementById('team-philosophy-slider');
+    if (!slider || slider.dataset.init === 'true') return;
+    slider.dataset.init = 'true';
+
+    const track = slider.querySelector('.custom-track');
+    if (!track) return;
+    const slides = track.querySelectorAll('.custom-slide');
+    const prevBtn = slider.querySelector('.custom-prev');
+    const nextBtn = slider.querySelector('.custom-next');
+    const dots = slider.querySelectorAll('.custom-dot');
+
+    const total = slides.length;
+    let current = 0;
+    let autoTimer: ReturnType<typeof setInterval>;
+
+    function getPerView() {
+      return window.innerWidth >= 768 ? 2 : 1;
+    }
+
+    function goTo(n: number) {
+      const pv = getPerView();
+      const mx = total - pv;
+      if (n > mx) n = 0;
+      if (n < 0) n = mx;
+      current = n;
+      const slideWidth = 100 / pv;
+      track.style.transform = `translateX(-${current * slideWidth}%)`;
+      dots.forEach((d, i) => {
+        (d as HTMLElement).style.display = i <= mx ? 'block' : 'none';
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+    nextBtn?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+    dots.forEach(d => {
+      d.addEventListener('click', () => {
+        goTo(parseInt((d as HTMLElement).dataset.index || '0'));
+        resetAuto();
+      });
+    });
+
+    let startX = 0;
+    track.addEventListener('touchstart', (e: TouchEvent) => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e: TouchEvent) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goTo(current + 1) : goTo(current - 1);
+        resetAuto();
+      }
+    }, { passive: true });
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current + 1), 4000);
+    }
+
+    goTo(0);
+    resetAuto();
+    window.addEventListener('resize', () => goTo(current));
+  }
+
+  // Generic Tour Slider Architecture
+  function initTourSliders() {
+    const carousels = document.querySelectorAll('[data-component="tour-carousel"]');
+    
+    carousels.forEach(slider => {
+      if ((slider as HTMLElement).dataset.init === 'true') return;
+      (slider as HTMLElement).dataset.init = 'true';
+
+      // Find prev/next buttons (usually they are siblings or inside the parent container)
+      const container = slider.parentElement;
+      if (!container) return;
+      
+      const prev = container.querySelector('[data-action="carousel-prev"]');
+      const next = container.querySelector('[data-action="carousel-next"]');
+
+      if (prev) {
+        prev.addEventListener('click', (e) => {
+          e.preventDefault();
+          slider.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+      }
+      if (next) {
+        next.addEventListener('click', (e) => {
+          e.preventDefault();
+          slider.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+      }
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let isDragging = false;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isDragging = false;
+        (slider as HTMLElement).style.cursor = 'grabbing';
+        (slider as HTMLElement).style.scrollBehavior = 'auto'; // Disable smooth scroll for instant drag follow
+        startX = (e as MouseEvent).pageX - (slider as HTMLElement).offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      const stopDrag = () => {
+        isDown = false;
+        (slider as HTMLElement).style.cursor = 'grab';
+        (slider as HTMLElement).style.scrollBehavior = 'smooth';
+      };
+
+      slider.addEventListener('mouseleave', stopDrag);
+      slider.addEventListener('mouseup', stopDrag);
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        isDragging = true;
+        const x = (e as MouseEvent).pageX - (slider as HTMLElement).offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+
+      (slider as HTMLElement).style.cursor = 'grab';
+
+      slider.addEventListener('click', (e) => {
+        if (isDragging) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+
+      const links = slider.querySelectorAll('a, img');
+      links.forEach(link => {
+        link.addEventListener('dragstart', (e) => e.preventDefault());
+      });
+    });
+  }
+
+  // Generic Dot Slider Architecture
+  function initDotSliders() {
+    const sliders = document.querySelectorAll('[data-component="dot-slider"]');
+    
+    sliders.forEach(container => {
+      if ((container as HTMLElement).dataset.init === 'true') return;
+      (container as HTMLElement).dataset.init = 'true';
+
+      const track = container.querySelector('[data-action="slider-track"]');
+      if (!track) return;
+      const prev = container.querySelector('[data-action="slider-prev"]');
+      const next = container.querySelector('[data-action="slider-next"]');
+      const dots = container.querySelectorAll('.slider-dot');
+
+      if (prev) {
+        prev.addEventListener('click', (e) => {
+          e.preventDefault();
+          track.scrollLeft -= track.clientWidth;
+        });
+      }
+      if (next) {
+        next.addEventListener('click', (e) => {
+          e.preventDefault();
+          track.scrollLeft += track.clientWidth;
+        });
+      }
+
+      if (dots.length > 0) {
+        track.addEventListener('scroll', () => {
+          const index = Math.round(track.scrollLeft / track.clientWidth);
+          dots.forEach((dot, i) => {
+            (dot as HTMLElement).style.opacity = i === index ? '1' : '0.5';
+          });
+        }, { passive: true });
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener('click', () => {
+            track.scrollLeft = track.clientWidth * i;
+          });
+        });
+      }
+    });
+  }
+
+  // Init on first load
+  initCustomSlider();
+  initTourSliders();
+  initDotSliders();
+  // Re-init on Astro page transitions
+  document.addEventListener('astro:page-load', () => {
+    initCustomSlider();
+    initTourSliders();
+    initDotSliders();
+  });
+</script>
+
+ 

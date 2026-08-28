@@ -1,0 +1,144 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+const title = "About Us | The Rice Tour — Curated Vietnam Inbound Journeys";
+const description = "Discover the story of The Rice Tour. We craft bespoke, authentic, and sustainable private travel experiences across Vietnam for curious international travelers.";
+const canonicalUrl = "https://thericetour.com/about-us";
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: "https://thericetour.com/" },
+    { name: "About Us", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonicalUrl}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Hero Header -->
+  <section class="relative bg-slate-950 text-white py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-30">
+      <img 
+        src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1920&q=80" 
+        alt="Sapa Terraces and Culture" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 backdrop-blur-md mb-6">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">Our Heritage & Philosophy</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+        Rooted in Vietnam, Crafted for Discerning Travelers
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+        In Vietnamese culture, the rice grain is more than sustenance—it represents life, patience, community, and the timeless beauty of our homeland.
+      </p>
+    </div>
+  </section>
+
+  <!-- Narrative Section -->
+  <section class="py-16 lg:py-24 bg-white text-slate-800">
+    <div class="max-w-5xl mx-auto px-4">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Our Origin Story</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">
+            Beyond Standard Sightseeing: A Quest for Authenticity
+          </h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Founded by a collective of passionate Vietnamese travel architects, <strong>The Rice Tour</strong> was born from a simple belief: the most transformative journeys happen when you slow down, venture beyond generic tour buses, and engage with the living heartbeat of Vietnam.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Whether it is waking up to mist rising over Sapa’s centuries-old rice terraces, sharing a cup of green tea with a village elder in Hue, or gliding along the emerald waters of Lan Ha Bay aboard a boutique wooden junk, we design experiences that linger in your memory for a lifetime.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=80" 
+              alt="Vietnamese Culture and Landscape" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-amber-500 text-slate-950 p-6 rounded-2xl shadow-xl max-w-[240px] hidden sm:block">
+            <span class="block text-2xl font-serif font-black">100%</span>
+            <span class="text-xs font-bold uppercase tracking-wider">Locally Owned & Managed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Pillars -->
+      <div class="border-t border-slate-100 pt-16">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Why Travel With Us</span>
+          <h2 class="font-serif text-3xl font-bold text-slate-900">The Rice Tour Commitments</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
+                1
+              </div>
+              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">No Forced Shopping</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Zero commission shopping stops. We believe your precious vacation time should be spent experiencing authentic culture, scenic beauty, and local cuisine.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
+                2
+              </div>
+              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Tailor-Made Mastery</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Every itinerary is 100% customizable. You dictate the pace, accommodation styles, dietary requirements, and specific passions.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
+                3
+              </div>
+              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Responsible Tourism</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                We actively support ethnic minority families, employ local village guides, and practice leave-no-trace environmental stewardship.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="mt-20 p-10 bg-slate-950 text-white rounded-3xl text-center relative overflow-hidden shadow-2xl">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold mb-4 text-white">Ready to Discover the Real Vietnam?</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+            Tell us about your dream trip and let our specialists build your bespoke itinerary.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/tailor-made" class="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg">
+              Start Custom Trip →
+            </a>
+            <a href="/whatsapp" target="_blank" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-xl backdrop-blur-md border border-white/20 transition-all">
+              WhatsApp Us 24/7
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

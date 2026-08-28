@@ -1,0 +1,515 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import TourCard from '@/components/tour/TourCard.astro';
+import CtaBlock from '@/components/ui/CtaBlock.astro';
+
+const { slug } = Astro.params;
+import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
+
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return Astro.rewrite("/500");
+}
+
+// --- DATA FETCHING ---
+let country;
+try {
+  country = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Country WHERE slug = ?").bind(slug).first<any>(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_country_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!country) {
+  return new Response("Country not found", { status: 404 });
+}
+
+// Linked tours
+let linkedTours: any[] = [];
+try {
+  const res = await safeQueryOptional(
+    d1Db.prepare(`
+      SELECT t.* FROM Tour t
+      JOIN TourCountry tc ON t.id = tc.tour_id
+      WHERE tc.country_slug = ? AND t.status = 'published' AND (t.badge IS NULL OR t.badge != 'inactive')
+      ORDER BY tc.display_order ASC, t.createdAt DESC
+    `).bind(slug).all<any>(),
+    { results: [] },
+    { route: Astro.url.pathname, slug, queryType: "fetch_country_linked_tours" }
+  );
+  linkedTours = res?.results || [];
+} catch (e) {
+  console.error('TourCountry query failed (table may not exist):', e);
+}
+
+// Other countries for cross-linking
+let otherCountries: any[] = [];
+try {
+  const res = await safeQueryOptional(
+    d1Db.prepare(`
+      SELECT slug, name, featuredImage FROM Country
+      WHERE slug != ? AND featuredImage IS NOT NULL AND featuredImage != ''
+      ORDER BY display_order ASC, name ASC LIMIT 4
+    `).bind(slug).all<any>(),
+    { results: [] },
+    { route: Astro.url.pathname, slug, queryType: "fetch_other_countries" }
+  );
+  otherCountries = res?.results || [];
+  
+  // Clean up long names for display
+  otherCountries = otherCountries.map((c: any) => {
+    let cleanName = c.name?.replace(/^Danh sách Tour(?: du lịch)?\s*/i, '')
+                          .replace(/\s*[-]?\s*trọn gói.*$/i, '')
+                          .replace(/\s*\d{4}(?:\/\d{4})?\s*$/i, '')
+                          .trim() || c.name;
+    // Tùy chọn: Thêm chữ 'Tour ' vào trước nếu chưa có để giống thiết kế
+    if (!cleanName.toLowerCase().startsWith('tour ')) {
+      cleanName = 'Tour ' + cleanName;
+    }
+    return { ...c, cleanName };
+  });
+} catch (e) { console.error(e); }
+
+// Format prices
+const formattedTours = linkedTours.map((t: any) => {
+  let fp = t.price_text || '';
+  if (fp && /^\d+$/.test(fp.trim())) {
+    fp = String(Number(fp.trim())).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' VNĐ';
+  } else if (fp && /^[\d\.\,]+$/.test(fp.trim())) {
+    fp = fp.trim() + ' VNĐ';
+  }
+  if (!fp && (!t.price_number || t.price_number === 0)) fp = 'Liên Hệ';
+  if (!fp && t.price_number) fp = String(Number(t.price_number)).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' VNĐ';
+  return { ...t, formattedPrice: fp };
+});
+
+// --- META ---
+const title = country.metaTitle || country.name;
+const description = country.metaDescription || country.name;
+let image = country.featuredImage || country.bannerImage || '';
+
+// Fallback: If no featured image in DB, try to extract the hero image from the legacy Elementor description
+if (!image && country.description) {
+  const imgMatch = country.description.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
+  if (imgMatch && imgMatch[1]) {
+    image = imgMatch[1];
+  }
+}
+
+const countryName = country.name?.replace(/^Danh sách Tour(?: du lịch)?\s*/i, '')
+                               .replace(/\s*[-]?\s*trọn gói.*$/i, '')
+                               .replace(/\s*\d{4}(?:\/\d{4})?\s*$/i, '')
+                               .trim() || country.name;
+
+// Extract ONLY the introductory text blocks (paragraphs and lists) from the Elementor HTML
+let cleanDescription = '';
+if (country.description) {
+  // Find all <p> and <ul> tags, handling potential multi-line formatting
+  const textBlocks = country.description.match(/<(p|ul)[\s\S]*?<\/\1>/gi);
+  if (textBlocks && textBlocks.length > 0) {
+    let blocks = [];
+    for (const block of textBlocks) {
+      const textOnly = block.replace(/<[^>]*>/g, '').trim();
+      // Skip empty paragraphs, "Home", "Giá từ", and short price texts by requiring > 40 chars
+      if (textOnly && textOnly.length > 40 && textOnly.toLowerCase() !== 'home') {
+        // Stop extracting if we hit a testimonial (starts with quote marks)
+        if (textOnly.startsWith('“') || textOnly.startsWith('"') || textOnly.startsWith('«')) {
+          break;
+        }
+        blocks.push(block);
+      }
+      // Usually the intro sapo is about 2 blocks (a paragraph and a list). Let's take up to 2.
+      if (blocks.length >= 2) break;
+    }
+    cleanDescription = blocks.join('\n');
+  } else {
+    cleanDescription = country.description; // fallback if no <p> or <ul> tags found
+  }
+}
+
+const isAdminLoggedIn = (Astro.locals as any).isAdminLoggedIn === true;
+if (!isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+} else {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache');
+}
+
+const currentOrigin = Astro.url.origin;
+const canonicalUrl = `${currentOrigin}/country/${slug}`;
+const breadcrumbSchema = {
+  items: [
+    { name: "Trang chủ", url: `${currentOrigin}/` },
+    { name: "Tours", url: `${currentOrigin}/tours` },
+    { name: title, url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  preloadImages={image ? [image] : []}
+  adminEditUrl={`/admin/countries/edit?id=${country.id}`}
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+  </Fragment>
+
+  <!-- ====== SECTION 1: HERO / INTRO ====== -->
+  <section class="country-hero">
+    <div class="country-container">
+      <nav class="country-breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <span>{title}</span>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>{title}</h1>
+          <div class="hero-description" set:html={cleanDescription} />
+        </div>
+
+        {image && (
+          <div class="hero-image">
+            <img src={image} alt={countryName} loading="eager" />
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- HR Separator giống giao diện gốc -->
+  <div class="country-container"><hr class="section-divider" /></div>
+
+  <!-- ====== SECTION 2: TOUR LISTINGS ====== -->
+  {linkedTours.length > 0 && (
+    <section class="country-tours">
+      <div class="country-container">
+        <h2 class="section-heading">
+          {linkedTours.length}+ gói Tour du lịch {countryName}
+        </h2>
+        <div class="tour-grid">
+          {formattedTours.map((t: any) => (
+            <TourCard
+              title={t.title}
+              price={t.formattedPrice}
+              image={t.featuredImage || t.ogImage || ''}
+              url={`/tour/${t.slug}`}
+              duration={t.days || 'Liên hệ'}
+              description={t.metaDescription || t.excerpt || t.content || ''}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ====== SECTION 3: CTA BANNER ====== -->
+  <section class="country-cta-banner">
+    <div class="country-container cta-inner">
+      <div class="cta-text">
+        <p class="cta-tagline">Du lịch có Guu – Hành trình của trải nghiệm giá trị</p>
+      </div>
+      <a href="/msg" target="_blank" rel="nofollow noopener" class="btn-cta-messenger">
+        NHẮN FACEBOOK NGAY
+      </a>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 4: TRUST / WHY FIT TOUR ====== -->
+  <section class="country-trust">
+    <div class="country-container">
+      <h2 class="trust-heading">
+        Fit Tour giúp bạn đến <span class="text-highlight">{countryName}</span> dễ dàng và an toàn hơn!
+      </h2>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>Kinh nghiệm được chứng thực</h3>
+          <p>Chúng tôi từng tổ chức nhiều tour du lịch khác nhau đến vùng đất {countryName}.</p>
+        </div>
+        <div class="trust-card">
+          <h3>Trải nghiệm giá trị có Guu riêng</h3>
+          <p>Chúng tôi có những Trip Planner chuyên nghiệp, nghiên cứu và lên lịch trình thú vị cho du khách. Chúng tôi tự tin mang đến trải nghiệm độc đáo có Guu dành cho bạn.</p>
+        </div>
+        <div class="trust-card">
+          <h3>{countryName} và sự đa dạng để khám phá</h3>
+          <p>Khám phá {countryName} với những hành trình đa dạng, từ văn hóa, ẩm thực đến thiên nhiên hùng vĩ. Mỗi chuyến đi là một câu chuyện riêng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 5: OTHER COUNTRIES ====== -->
+  {otherCountries.length > 0 && (
+    <section class="country-others">
+      <div class="country-container">
+        <h2 class="section-heading">Những lịch trình khác ở các vùng đất đặc biệt</h2>
+        <div class="others-grid">
+          {otherCountries.map((c: any) => (
+            <a href={`/country/${c.slug}/`} class="other-card">
+              {c.featuredImage && <img src={c.featuredImage} alt={c.name} loading="lazy" />}
+              <span>{c.cleanName}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ====== SECTION 6: CUSTOM TOUR CTA ====== -->
+  <section class="country-container">
+    <CtaBlock 
+      layout="premium"
+      subtitle="Chỉ riêng đoàn của bạn"
+      title="Đặt lịch trình riêng cho chuyến đi"
+      content="Đặt Tour riêng để tận hưởng chuyến đi đặc biệt dành riêng cho bạn. Chúng tôi có đội ngũ Trip Planner chuyên nghiệp để thiết kế chương trình du lịch riêng dành cho bạn và gia đình."
+      image={{ url: image || "https://media.fittour.vn/images/2024/04/kailash-banner.jpg", alt: "Custom Tour" }} 
+      buttons={[
+        { label: 'Lên Plan Ngay', href: '/zalo', icon: 'zalo' }
+      ]}
+    />
+  </section>
+
+  <!-- ====== SECTION 7: SOCIAL FOOTER ====== -->
+  <section class="country-social-footer">
+    <div class="country-container" style="text-align:center;">
+      <h2>#FitTour #DulichcoGuu</h2>
+      <div class="social-links">
+        <a href="/fb" target="_blank" rel="noopener">Facebook</a>
+        <a href="/youtube" target="_blank" rel="noopener">Youtube</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+/* ===== SHARED ===== */
+.country-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.section-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ea580c;
+  margin-bottom: 2rem;
+}
+.text-highlight { color: #ea580c; }
+.section-divider {
+  border: none !important;
+  border-top: 1px solid #e2e8f0 !important;
+  margin: 3rem 0;
+  display: block;
+  height: 0;
+  width: 100%;
+}
+
+/* ===== SECTION 1: HERO ===== */
+.country-hero {
+  padding: 1.5rem 0 2.5rem;
+}
+.country-breadcrumb {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+.country-breadcrumb a { color: #ea580c; text-decoration: none; }
+.country-breadcrumb span { margin: 0 0.25rem; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 13fr 7fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-text h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+.hero-description {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.hero-description :global(p) { margin-bottom: 0.75rem; }
+.hero-description :global(ul) { 
+  padding-left: 1.5rem; 
+  margin-bottom: 1rem; 
+  list-style-type: disc; 
+  list-style-position: outside;
+}
+.hero-description :global(li) { margin-bottom: 0.5rem; }
+.hero-description :global(strong) { color: #1e293b; }
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===== SECTION 2: TOURS ===== */
+.country-tours {
+  padding: 2.5rem 0;
+  background: #f8fafc;
+}
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ===== SECTION 3: CTA BANNER ===== */
+.country-cta-banner {
+  background: #4a90d9;
+  padding: 3rem 0;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.cta-tagline {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+.btn-cta-messenger {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+.btn-cta-messenger:hover { background: #fff; color: #4a90d9; }
+
+/* ===== SECTION 4: TRUST ===== */
+.country-trust {
+  padding: 3rem 0;
+}
+.trust-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.trust-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s;
+}
+.trust-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.trust-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.75rem;
+}
+.trust-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== SECTION 5: OTHER COUNTRIES ===== */
+.country-others {
+  padding: 3rem 0;
+  background: #f8fafc;
+}
+.others-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.other-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.other-card:hover { transform: translateY(-4px); }
+.other-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+.other-card span {
+  font-weight: 700;
+  color: #ea580c; /* Changed from #1e293b to match the reference design */
+  font-size: 1rem; /* Slightly larger */
+}
+
+/* ===== SECTION 7: SOCIAL FOOTER ===== */
+.country-social-footer {
+  padding: 2rem 0 3rem;
+  background: #f8fafc;
+}
+.country-social-footer h2 {
+  font-size: 1.25rem;
+  color: #ea580c;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-links a {
+  color: #1e293b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: #ea580c; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .tour-grid { grid-template-columns: repeat(3, 1fr); }
+  .others-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-image { order: -1; }
+  .hero-image img { max-height: 240px; }
+  .tour-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-grid { grid-template-columns: 1fr; }
+  .others-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .tour-grid { grid-template-columns: 1fr; }
+}
+</style>

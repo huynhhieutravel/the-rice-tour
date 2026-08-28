@@ -1,0 +1,64 @@
+---
+import { getOptimizedImageUrl, generateSrcSet, getCanonicalMediaUrl } from '@/lib/imageOptimization';
+
+export interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  width?: number | string;
+  height?: number | string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  qualityRole?: 'hero' | 'card' | 'thumb';
+}
+
+const {
+  src,
+  alt,
+  class: className = '',
+  width,
+  height,
+  sizes = '100vw',
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  qualityRole = 'card'
+} = Astro.props;
+
+// Determine quality and widths based on role
+let quality = 85;
+let widths = [400, 800, 1200, 1600];
+
+if (qualityRole === 'hero') {
+  quality = 85;
+  widths = [768, 1200, 1600, 1920, 2400];
+} else if (qualityRole === 'thumb') {
+  quality = 85;
+  widths = [400, 800];
+}
+
+// Ensure the src is normalized first (in case it's a dirty WP url)
+const normalizedSrc = getCanonicalMediaUrl(src);
+
+// Fallback image in case of error
+const fallbackImg = "https://media.thericetour.com/uploads/logo-the-rice.webp";
+const onErrorScript = `this.src='${fallbackImg}'; this.className='w-1/2 h-1/2 m-auto object-contain opacity-20';`;
+
+// Generate responsive assets
+const srcSet = generateSrcSet(normalizedSrc, widths, quality);
+const defaultSrc = getOptimizedImageUrl(normalizedSrc, widths[widths.length > 2 ? 1 : 0], quality);
+
+---
+
+<img
+  src={defaultSrc}
+  srcset={srcSet || undefined}
+  sizes={srcSet ? sizes : undefined}
+  alt={alt}
+  class={className}
+  width={width}
+  height={height}
+  loading={loading}
+  fetchpriority={fetchpriority}
+  onerror={onErrorScript}
+/>

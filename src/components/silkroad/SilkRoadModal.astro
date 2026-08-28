@@ -1,0 +1,213 @@
+---
+// SilkRoadModal.astro
+---
+
+<!-- Modal Overlay -->
+<div id="silkroad-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity opacity-0 duration-300" id="silkroad-backdrop"></div>
+  
+  <!-- Modal Content (Bottom Sheet on Mobile, Centered on Desktop) -->
+  <div id="silkroad-panel" class="relative bg-[#111] border border-white/10 w-full md:w-[600px] h-[75vh] md:h-auto md:max-h-[85vh] rounded-t-3xl md:rounded-2xl mt-auto md:mt-0 shadow-2xl flex flex-col transform translate-y-full md:translate-y-4 md:scale-95 opacity-0 transition-all duration-300 ease-out">
+    
+    <!-- Drag Handle for Mobile -->
+    <div class="w-full h-6 flex md:hidden items-center justify-center shrink-0 pt-2 absolute top-0 left-0" id="silkroad-drag-handle">
+      <div class="w-12 h-1.5 bg-white/20 rounded-full"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 pb-4 pt-8 md:pt-6 border-b border-white/10 shrink-0">
+      <h3 id="silkroad-title" class="text-[#c5a365] font-cinzel text-xl tracking-wider font-bold">Khám phá</h3>
+      <button id="close-silkroad-btn" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto p-6 scrollbar-hide">
+      
+      <!-- Tân Cương List -->
+      <div id="quickview-content-tan-cuong" class="quickview-content hidden flex-col gap-4">
+        <!-- Card 1 -->
+        <a href="/tour/tour-tan-cuong-8n7d-mua-dong" class="flex gap-4 bg-white/5 rounded-xl p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10">
+          <img src="https://media.fittour.vn/wp-content/uploads/2025/09/tour-tan-cuong-mua-dong-8n7d.jpg" class="w-32 md:w-40 aspect-video self-center rounded-lg object-cover group-hover:scale-105 transition-transform duration-500 shrink-0" alt="Tân Cương Mùa Đông" />
+          <div class="flex flex-col flex-1 justify-center py-1">
+            <h4 class="text-white font-serif text-sm md:text-base font-medium line-clamp-2 mb-2 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Tân Cương 8N7Đ Mùa Đông - Trọn gói KS 4 sao</h4>
+            <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+              <span class="flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 8 ngày 7 đêm</span>
+            </div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1">Chi tiết <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+            </div>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="/tour/tour-tan-cuong-mua-thu" class="flex gap-4 bg-white/5 rounded-xl p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10">
+          <img src="https://media.fittour.vn/uploads/2025/08/road-trip-tan-cuong-ho-bach-sa-toan-canh-fit-tour.webp" class="w-32 md:w-40 aspect-video self-center rounded-lg object-cover group-hover:scale-105 transition-transform duration-500 shrink-0" alt="Tân Cương Mùa Thu" />
+          <div class="flex flex-col flex-1 justify-center py-1">
+            <h4 class="text-white font-serif text-sm md:text-base font-medium line-clamp-2 mb-2 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Tân Cương Mùa Thu</h4>
+            <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+              <span class="flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Khám phá</span>
+            </div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1">Chi tiết <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+            </div>
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="/tour/tour-tan-cuong-road-trip" class="flex gap-4 bg-white/5 rounded-xl p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10">
+          <img src="https://media.fittour.vn/wp-content/uploads/2024/04/tan-cuong-roadtrip-9n8d.jpg" class="w-32 md:w-40 aspect-video self-center rounded-lg object-cover group-hover:scale-105 transition-transform duration-500 shrink-0" alt="Tân Cương Road Trip" />
+          <div class="flex flex-col flex-1 justify-center py-1">
+            <h4 class="text-white font-serif text-sm md:text-base font-medium line-clamp-2 mb-2 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Tân Cương Road Trip</h4>
+            <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+              <span class="flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Khám phá</span>
+            </div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1">Chi tiết <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mông Cổ List -->
+      <div id="quickview-content-mong-co" class="quickview-content hidden flex-col gap-4">
+        <!-- Card 1 -->
+        <a href="/tour/roadtrip-mong-co-12n9d" class="flex gap-4 bg-white/5 rounded-xl p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10">
+          <img src="https://media.fittour.vn/uploads/lexus-lx570-offroad-thao-nguyen-mong-co.webp" class="w-32 md:w-40 aspect-video self-center rounded-lg object-cover group-hover:scale-105 transition-transform duration-500 shrink-0" alt="Roadtrip Mông Cổ" />
+          <div class="flex flex-col flex-1 justify-center py-1">
+            <h4 class="text-white font-serif text-sm md:text-base font-medium line-clamp-2 mb-2 group-hover:text-[#c5a365] transition-colors leading-snug">Roadtrip Mông Cổ 12N9Đ</h4>
+            <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+              <span class="flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 12 ngày 9 đêm</span>
+            </div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1">Chi tiết <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+            </div>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="/tour/tour-mong-co-8n7d" class="flex gap-4 bg-white/5 rounded-xl p-3 border border-white/5 hover:border-[#c5a365]/30 transition-all duration-300 group cursor-pointer hover:bg-white/10">
+          <img src="https://media.fittour.vn/uploads/2025/07/motor-trip-mong-co-chinh-phuc-dia-hinh-gs.webp" class="w-32 md:w-40 aspect-video self-center rounded-lg object-cover group-hover:scale-105 transition-transform duration-500 shrink-0" alt="Tour Mông Cổ" />
+          <div class="flex flex-col flex-1 justify-center py-1">
+            <h4 class="text-white font-serif text-sm md:text-base font-medium line-clamp-2 mb-2 group-hover:text-[#c5a365] transition-colors leading-snug">Tour Mông Cổ 8N7Đ</h4>
+            <div class="flex items-center gap-3 text-xs text-white/50 mb-3">
+              <span class="flex items-center gap-1"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 8 ngày 7 đêm</span>
+            </div>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-white/70 group-hover:text-white transition-colors flex items-center gap-1">Chi tiết <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"></path></svg></span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('silkroad-modal');
+    const backdrop = document.getElementById('silkroad-backdrop');
+    const panel = document.getElementById('silkroad-panel');
+    const closeBtn = document.getElementById('close-silkroad-btn');
+    const titleEl = document.getElementById('silkroad-title');
+    
+    const contents = document.querySelectorAll('#silkroad-modal .quickview-content');
+    const triggers = document.querySelectorAll('[data-tour-modal]');
+
+    const titles = {
+      'tan-cuong': 'Các tour Tân Cương',
+      'mong-co': 'Các tour Mông Cổ'
+    };
+
+    function openModal(id) {
+      // Hide all contents
+      contents.forEach(el => el.classList.add('hidden'));
+      // Show targeted content
+      const targetContent = document.getElementById(`quickview-content-${id}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+      
+      // Update Title
+      titleEl.textContent = titles[id] || 'Khám phá';
+
+      // Show modal block
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      
+      // Lock scroll
+      document.body.style.overflow = 'hidden';
+
+      // Trigger animations
+      requestAnimationFrame(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        
+        panel.classList.remove('translate-y-full', 'md:translate-y-4', 'md:scale-95', 'opacity-0');
+        panel.classList.add('translate-y-0', 'md:translate-y-0', 'md:scale-100', 'opacity-100');
+      });
+    }
+
+    function closeModal() {
+      // Revert animations
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      
+      panel.classList.remove('translate-y-0', 'md:translate-y-0', 'md:scale-100', 'opacity-100');
+      panel.classList.add('translate-y-full', 'md:translate-y-4', 'md:scale-95', 'opacity-0');
+
+      // After animation finishes, hide completely
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = trigger.getAttribute('data-tour-modal');
+        openModal(id);
+      });
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+
+    // Swipe down to close on Mobile Bottom Sheet
+    let startY = 0;
+    let currentY = 0;
+    
+    panel?.addEventListener('touchstart', (e) => {
+      // Only allow swipe from the top drag handle area
+      if (e.target.closest('#silkroad-drag-handle') || panel.scrollTop === 0) {
+        startY = e.touches[0].clientY;
+      }
+    }, {passive: true});
+
+    panel?.addEventListener('touchmove', (e) => {
+      if (startY === 0) return;
+      currentY = e.touches[0].clientY;
+      const diff = currentY - startY;
+      
+      if (diff > 0 && panel.scrollTop <= 0) {
+        panel.style.transform = `translateY(${diff}px)`;
+        panel.style.transition = 'none';
+        e.preventDefault(); // Prevent pull-to-refresh
+      }
+    }, {passive: false});
+
+    panel?.addEventListener('touchend', () => {
+      if (startY === 0) return;
+      const diff = currentY - startY;
+      panel.style.transition = ''; // Restore tailwind transition
+      panel.style.transform = ''; // Restore original
+      
+      if (diff > 100) {
+        closeModal();
+      }
+      
+      startY = 0;
+      currentY = 0;
+    });
+  });
+</script>

@@ -1,0 +1,648 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import MediaPickerEventBridge from '@/components/admin/MediaPickerEventBridge';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return new Response("DB Error", { status: 500 });
+
+const idParam = Astro.url.searchParams.get('id');
+const id = idParam === 'null' ? null : idParam;
+let tour: any = null;
+let message = Astro.url.searchParams.get('success') === '1' ? 'Đã lưu thay đổi thành công!' : '';
+let isError = false;
+
+// Handle POST Save
+if (Astro.request.method === 'POST') {
+  try {
+    const formData = await Astro.request.formData();
+    const saveId = formData.get('id') as string;
+    const title = formData.get('title') as string;
+    const slug = formData.get('slug') as string;
+    const country_slugs = formData.getAll('country_slugs') as string[];
+    const status = formData.get('status') as string;
+    const format = formData.get('format') as string || 'elementor';
+    const price_text = formData.get('price_text') as string;
+    const days = formData.get('days') as string;
+    const qr_link = formData.get('qr_link') as string;
+    const featuredImage = formData.get('featuredImage') as string;
+    const raw_content = formData.get('raw_content') as string;
+    const content = formData.get('content') as string;
+    const css_content = formData.get('css_content') as string;
+    const seoTitle = formData.get('seoTitle') as string;
+    const seoDescription = formData.get('seoDescription') as string;
+    const ogImage = formData.get('ogImage') as string;
+    const excerpt = formData.get('excerpt') as string;
+    const badge = formData.get('is_inactive_flag') === '1' ? 'inactive' : null;
+    
+    const price_number = price_text ? parseInt(price_text.replace(/[^0-9]/g, '')) || 0 : 0;
+
+    if (saveId) {
+      await d1Db.prepare(`
+        UPDATE Tour SET 
+          title=?, slug=?, country_slug=?, status=?, price_text=?, price_number=?, days=?, qr_link=?, 
+          featuredImage=?, raw_content=?, content=?, css_content=?, seoTitle=?, seoDescription=?, ogImage=?, excerpt=?, format=?, badge=?,
+          updatedAt=CURRENT_TIMESTAMP
+        WHERE id=?
+      `).bind(
+        title, slug, country_slugs.length > 0 ? country_slugs[0] : 'uncategorized', status, price_text, price_number, days, qr_link,
+        featuredImage, raw_content, content, css_content, seoTitle, seoDescription, ogImage, excerpt, format, badge,
+        saveId
+      ).run();
+      
+      // Update Many-to-Many relationships
+      await d1Db.prepare("DELETE FROM TourCountry WHERE tour_id = ?").bind(saveId).run();
+      for (const cSlug of country_slugs) {
+         await d1Db.prepare("INSERT INTO TourCountry (tour_id, country_slug) VALUES (?, ?)").bind(saveId, cSlug).run();
+      }
+      
+      return Astro.redirect(`/admin/tours/edit?id=${saveId}&success=1`);
+    } else {
+      // Create new Tour
+      const newId = crypto.randomUUID();
+      await d1Db.prepare(`
+        INSERT INTO Tour (
+          id, title, slug, country_slug, status, price_text, price_number, days, qr_link, 
+          featuredImage, raw_content, content, css_content, seoTitle, seoDescription, ogImage, excerpt, format, badge,
+          createdAt, updatedAt
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+      `).bind(
+        newId, title, slug, country_slugs.length > 0 ? country_slugs[0] : 'uncategorized', status, price_text, price_number, days, qr_link,
+        featuredImage, raw_content, content, css_content, seoTitle, seoDescription, ogImage, excerpt, format, badge
+      ).run();
+      
+      for (const cSlug of country_slugs) {
+         await d1Db.prepare("INSERT INTO TourCountry (tour_id, country_slug) VALUES (?, ?)").bind(newId, cSlug).run();
+      }
+      
+      return Astro.redirect(`/admin/tours/edit?id=${newId}&success=1`);
+    }
+  } catch (err: any) {
+    message = 'Lỗi lưu: ' + err.message;
+    isError = true;
+  }
+}
+
+// Fetch Tour
+let tourCountries: string[] = [];
+if (id) {
+  tour = await d1Db.prepare("SELECT * FROM Tour WHERE id = ?").bind(id).first<any>();
+  if (tour) {
+    const { results } = await d1Db.prepare("SELECT country_slug FROM TourCountry WHERE tour_id = ?").bind(id).all();
+    if (results) {
+        tourCountries = results.map((r: any) => r.country_slug);
+    }
+  }
+}
+if (!tour && id) {
+  return new Response("Tour not found", { status: 404 });
+}
+
+// Fetch Countries
+const { results: countries } = await d1Db.prepare("SELECT slug, name, featuredImage FROM Country ORDER BY name ASC").all();
+
+---
+
+<AdminLayout title={tour ? "Sửa Tour" : "Thêm Tour Mới"} activeMenu="tours" hideSidebar={true}>
+  <style>
+    .editor-container { max-width: 1400px; margin: 0 auto; padding: 20px 0; }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0; }
+    .header-title { font-size: 24px; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 12px; }
+    .btn-back { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid #e2e8f0; color: #64748b; background: #fff; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+    .btn-back:hover { background: #f8fafc; color: #0f172a; }
+    .btn-save { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 24px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-save:hover { background: #1d4ed8; }
+    
+    .grid-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; }
+    .card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .card-title { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; }
+    
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; color: #0f172a; background: #fff; outline: none; transition: border-color 0.2s; }
+    .form-control:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+    textarea.form-control { min-height: 100px; resize: vertical; line-height: 1.5; }
+    
+    .dual-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .code-pane { display: flex; flex-direction: column; height: 600px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; }
+    .code-pane-header { background: #f8fafc; padding: 10px 14px; border-bottom: 1px solid #cbd5e1; font-size: 12px; font-weight: 700; color: #475569; display: flex; justify-content: space-between; align-items: center; }
+    .code-pane textarea { flex: 1; width: 100%; border: none; padding: 16px; font-family: 'Menlo', 'Monaco', 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #e2e8f0; background: #0f172a; resize: none; outline: none; white-space: pre-wrap; }
+    .badge-raw { background: #fee2e2; color: #ef4444; padding: 2px 8px; border-radius: 12px; font-size: 10px; }
+    .badge-clean { background: #dcfce7; color: #16a34a; padding: 2px 8px; border-radius: 12px; font-size: 10px; }
+
+    .css-editor textarea { font-family: 'Menlo', 'Monaco', 'Courier New', monospace; font-size: 13px; color: #e2e8f0; background: #1e293b; min-height: 200px; }
+
+    .msg-toast { padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 500; font-size: 14px; }
+    .msg-success { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .msg-error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+  </style>
+
+  <div class="editor-container">
+    {message && (
+      <div class={`msg-toast ${isError ? 'msg-error' : 'msg-success'}`}>
+        {message}
+      </div>
+    )}
+
+    <form method="POST" action={`/admin/tours/edit${id ? `?id=${id}` : ''}`}>
+      <input type="hidden" name="id" value={tour?.id || ''} />
+      
+      <div class="header-bar">
+        <div class="header-title">
+          <a href="/admin/tours" class="btn-back">←</a>
+          {tour ? "Chỉnh sửa Tour" : "Tạo Tour Mới"}
+        </div>
+        <div style="display: flex; gap: 12px;">
+          {tour && (
+            <a href={`/tour/${tour.slug}`} target="_blank" class="btn-back" style="width: auto; padding: 0 16px; color: #2563eb; font-weight: 600; border-color: #bfdbfe; background: #eff6ff;">Xem thử (Preview)</a>
+          )}
+          <button type="submit" class="btn-save">Lưu Tour</button>
+        </div>
+      </div>
+
+      <div class="grid-layout">
+        <!-- Cột Trái -->
+        <div>
+          <!-- HTML Dual Editor -->
+          <div class="card" style="padding: 0; overflow: hidden; position: relative;">
+            <div id="astroFormatOverlay" style={`position: absolute; inset: 0; background: rgba(255,255,255,0.8); z-index: 10; align-items: center; justify-content: center; backdrop-filter: blur(2px); display: ${tour?.format === 'astro' ? 'flex' : 'none'};`}>
+              <div style="background: #fee2e2; border: 1px solid #ef4444; color: #991b1b; padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <div style="font-size: 20px; margin-bottom: 8px;">🚀 Tour Astro Native</div>
+                Tour này đã được code giao diện Native. Vui lòng không nhập HTML vào đây.
+              </div>
+            </div>
+            <div class="card-title" style="padding: 16px 24px; margin: 0; background: #f8fafc;">
+              <span>📝 HTML Source Code</span>
+              <span style="font-size: 12px; color: #64748b; font-weight: 400; margin-left: auto;">Tour được Render 100% từ Custom HTML</span>
+            </div>
+            
+            <div class="dual-editor" style="padding: 16px;">
+              <div class="code-pane">
+                <div class="code-pane-header">
+                  <span>RAW CONTENT (Gốc từ WP)</span>
+                  <span class="badge-raw">Nguy Hiểm (XSS)</span>
+                </div>
+                <textarea name="raw_content" spellcheck="false" placeholder="Mã HTML gốc từ WordPress / Elementor...">{tour?.raw_content}</textarea>
+              </div>
+              
+              <div class="code-pane">
+                <div class="code-pane-header">
+                  <span>CLEAN CONTENT (Sanitized)</span>
+                  <span class="badge-clean">An toàn để Render</span>
+                </div>
+                <textarea name="content" spellcheck="false" placeholder="Mã HTML đã được làm sạch (chống XSS)...">{tour?.content}</textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom CSS -->
+          <div class="card css-editor">
+            <h3 class="card-title">🎨 Custom CSS (Elementor Styles)</h3>
+            <div class="form-group mb-0">
+              <textarea name="css_content" class="form-control" spellcheck="false" placeholder="CSS dành riêng cho Tour này...">{tour?.css_content}</textarea>
+            </div>
+          </div>
+          
+          <!-- SEO & Settings -->
+          <div class="card" style="padding: 24px; text-align: center; border: 1px solid #e2e8f0; border-radius: 12px; background: #fafafa;">
+             <button type="button" id="seoBtn" style="width: 100%; padding: 12px; background: #fff; border: 1px solid #3b82f6; color: #3b82f6; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; transition: all 0.2s;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              Tùy chỉnh SEO nâng cao
+            </button>
+          </div>
+
+          <!-- SEO Modal (Hidden by default) -->
+          <div id="seoModal" style="display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.6); z-index: 1000; align-items: center; justify-content: center;">
+            <div style="background: #fff; border-radius: 16px; width: 90%; max-width: 600px; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto;">
+              <h2 style="margin: 0 0 24px 0; font-size: 20px; font-weight: 700; color: #1e293b;">Tùy chỉnh SEO nâng cao</h2>
+              <button type="button" id="closeSeoBtn" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b;">&times;</button>
+              
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+                <div style="font-size: 12px; color: #475569; margin-bottom: 12px; font-weight: 600;">Xem trước trên Google Search</div>
+                <div style="background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                  <div style="font-size: 14px; color: #202124; display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+                    <div style="width: 28px; height: 28px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">🌍</div>
+                    <div>
+                      <div style="line-height: 1.2;">FIT Tour - Du Lịch Có Guu</div>
+                      <div style="font-size: 12px; color: #4d5156; margin-top: 2px;">https://thericetour.com/tour/<span id="preview-slug">{tour?.slug || 'slug'}</span></div>
+                    </div>
+                  </div>
+                  <div id="preview-title" style="font-size: 20px; color: #1a0dab; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; padding-top: 4px;">{tour?.seoTitle || tour?.title || 'Untitled Tour'}</div>
+                  <div id="preview-desc" style="font-size: 14px; color: #4d5156; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.58;">{tour?.seoDescription || tour?.excerpt || 'Đoạn văn này xuất hiện ở kết quả tìm kiếm Google...'}</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <label style="margin-bottom: 0;">SEO Title</label>
+                  <span id="title-counter" style="font-size: 12px; color: #64748b;">0 / 60</span>
+                </div>
+                <div style="height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 8px; overflow: hidden;">
+                  <div id="title-progress" style="height: 100%; width: 0%; background: #3b82f6; transition: all 0.3s;"></div>
+                </div>
+                <input type="text" id="seoTitleInput" name="seoTitle" class="form-control" value={tour?.seoTitle || ''} placeholder="Để trống sẽ dùng Tên Tour" />
+              </div>
+              
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <label style="margin-bottom: 0;">SEO Description</label>
+                  <span id="desc-counter" style="font-size: 12px; color: #64748b;">0 / 160</span>
+                </div>
+                <div style="height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 8px; overflow: hidden;">
+                  <div id="desc-progress" style="height: 100%; width: 0%; background: #3b82f6; transition: all 0.3s;"></div>
+                </div>
+                <textarea id="seoDescInput" name="seoDescription" class="form-control" rows="3" placeholder="Để trống sẽ dùng Đoạn trích (Excerpt)">{tour?.seoDescription || ''}</textarea>
+              </div>
+              
+              <div class="form-group">
+                <label>OG Image URL (Ảnh khi share FB/Zalo)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="ogImageInput" name="ogImage" class="form-control" value={tour?.ogImage || ''} placeholder="https://..." />
+                  <button type="button" class="btn-back" style="width: auto; padding: 0 16px; flex-shrink: 0;" onclick="window.dispatchEvent(new CustomEvent('open-media-picker', { detail: { inputId: 'ogImageInput' } }))">
+                    Chọn Ảnh
+                  </button>
+                </div>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; margin-top: 32px;">
+                <button type="button" id="saveSeoBtn" class="btn-save" style="background: #3b82f6;">Xong</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Phải -->
+        <div>
+          <div class="card">
+            <h3 class="card-title">⚙️ Cài đặt Cơ bản</h3>
+            <div class="form-group">
+              <label>Tên Tour</label>
+              <input type="text" name="title" class="form-control" value={tour?.title || ''} required />
+            </div>
+            <div class="form-group">
+              <label>Đường dẫn (Slug)</label>
+              <input type="text" name="slug" class="form-control" value={tour?.slug || ''} required />
+              {tour && (
+                <div style="font-size: 12px; margin-top: 6px; color: #64748b;">
+                  Permalink: <a href={`/tour/${tour.slug}`} target="_blank" style="color: #3b82f6; text-decoration: underline;">https://thericetour.com/tour/{tour.slug}</a>
+                </div>
+              )}
+            </div>
+            <div class="form-group">
+              <label>Trạng thái</label>
+              <select name="status" class="form-control">
+                <option value="published" selected={tour?.status === 'published'}>Đã xuất bản (Đang mở bán)</option>
+                <option value="draft" selected={tour?.status === 'draft'}>Bản nháp (Draft)</option>
+                <option value="trash" selected={tour?.status === 'trash'}>Thùng rác (Trash)</option>
+              </select>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 24px; padding: 12px; border: 1px solid #bfdbfe; border-radius: 8px; background: #eff6ff;">
+              <label style="margin-bottom: 8px; color: #1e3a8a; font-weight: 700;">Định dạng trang (Render Mode)</label>
+              <div style="display: flex; gap: 16px; align-items: center;">
+                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 500; color: #334155; margin: 0;">
+                  <input type="radio" name="format" value="elementor" checked={(!tour?.format || tour?.format === 'elementor')} style="width: 16px; height: 16px;" onchange="toggleFormatOverlay('elementor')" />
+                  Elementor HTML
+                </label>
+                <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 500; color: #334155; margin: 0;">
+                  <input type="radio" name="format" value="astro" checked={tour?.format === 'astro'} style="width: 16px; height: 16px;" onchange="toggleFormatOverlay('astro')" />
+                  Astro Native 🚀
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 24px; background: #fffbeb; padding: 12px; border: 1px solid #fcd34d; border-radius: 8px;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #92400e; margin: 0; font-size: 14px;">
+                <input type="checkbox" name="is_inactive_flag" value="1" checked={tour?.badge === 'inactive'} style="width: 18px; height: 18px; accent-color: #f59e0b;" />
+                <b>Đánh dấu "Ngừng nhận khách" (Cấp Data)</b>
+              </label>
+              <div style="font-size: 12px; color: #b45309; margin-top: 6px; margin-left: 26px; line-height: 1.4;">
+                Tour vẫn hoạt động và xem được. Nhưng Developer có thể dùng cờ dữ liệu (tour.badge === 'inactive') để tự viết code ẩn nó khỏi các danh sách gợi ý.
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">
+                <label style="margin: 0; font-size: 14px; font-weight: 700; color: #1e293b;">🌍 Quốc gia liên kết</label>
+                <button type="button" id="openCountryPickerBtn" style="background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; padding: 4px 10px; border-radius: 6px; font-weight: 500; font-size: 12px; cursor: pointer;">+ Thêm Quốc Gia</button>
+              </div>
+
+              <div id="selectedCountriesGrid" style="display: flex; flex-direction: column; gap: 8px;">
+                <!-- Rendered by JS -->
+              </div>
+              <div id="noCountriesMsg" style="text-align: center; padding: 20px; color: #94a3b8; display: none; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1;">
+                <div style="font-size: 13px; font-weight: 500;">Chưa chọn quốc gia nào</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Đoạn trích (Excerpt)</label>
+              <textarea name="excerpt" class="form-control" rows="3">{tour?.excerpt || ''}</textarea>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">💰 Thông tin Bán hàng</h3>
+            <div class="form-group">
+              <label>Giá hiển thị (Text)</label>
+              <input type="text" name="price_text" class="form-control" value={tour?.price_text || ''} placeholder="Ví dụ: 49.800.000đ" />
+            </div>
+            <div class="form-group">
+              <label>Thời lượng (Days)</label>
+              <input type="text" name="days" class="form-control" value={tour?.days || ''} placeholder="Ví dụ: 6 ngày 6 đêm" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">🖼️ Hình ảnh & QR</h3>
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label style="font-size: 14px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">Featured Image</label>
+              <div style="position: relative; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#cbd5e1'" onclick="window.dispatchEvent(new CustomEvent('open-media-picker', { detail: { inputId: 'featuredImageInput', previewId: 'featuredImagePreview', placeholderId: 'featuredImagePlaceholder' } }))">
+                
+                <img id="featuredImagePreview" src={tour?.featuredImage || ''} style={`position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: ${tour?.featuredImage ? 'block' : 'none'};`} />
+                
+                <div id="featuredImagePlaceholder" style={`text-align: center; color: #94a3b8; display: ${tour?.featuredImage ? 'none' : 'block'};`}>
+                  <svg style="margin: 0 auto 8px auto;" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z"></path></svg>
+                  <div style="font-size: 13px; font-weight: 500;">Nhấn để chọn ảnh</div>
+                </div>
+
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.6); color: #fff; text-align: center; padding: 8px; font-size: 12px; font-weight: 500; opacity: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0">Nhấn để thay ảnh</div>
+              </div>
+              <input type="hidden" id="featuredImageInput" name="featuredImage" value={tour?.featuredImage || ''} />
+              <button type="button" onclick="document.getElementById('featuredImageInput').value=''; document.getElementById('featuredImagePreview').style.display='none'; document.getElementById('featuredImagePlaceholder').style.display='block';" style="position: absolute; top: 12px; right: 12px; background: #ef4444; color: #fff; border: none; width: 24px; height: 24px; border-radius: 50%; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">&times;</button>
+            </div>
+            
+            <div class="form-group">
+              <label>Link QR Code (Tùy chọn ghi đè)</label>
+              <input type="url" name="qr_link" class="form-control" value={tour?.qr_link || ''} placeholder="Để trống sẽ tự động tạo QR Link Tour" />
+              <div style="font-size: 12px; margin-top: 6px; color: #64748b;">
+                💡 <b>Mặc định:</b> Hệ thống đã tự động tạo mã QR dẫn về link của Tour này.<br/>
+                Nếu nhập link Zalo (ví dụ: <code>https://zalo.me/...</code>), mã QR sẽ đổi thành quét để mở Zalo tư vấn.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Country Picker Modal -->
+      <div id="countryPickerModal" style="display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.6); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="background: #fff; border-radius: 12px; width: 90%; max-width: 500px; height: 70vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);">
+          <div style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; background: #f8fafc;">
+            <h3 style="margin: 0; font-size: 16px; font-weight: 700;">Chọn Quốc Gia</h3>
+            <button type="button" id="closeCountryPickerBtn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b;">&times;</button>
+          </div>
+          <div style="padding: 12px 20px; border-bottom: 1px solid #e2e8f0;">
+            <input type="text" id="countrySearchInput" placeholder="Tìm tên quốc gia..." style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none;" />
+          </div>
+          <div id="countryListContainer" style="flex: 1; overflow-y: auto; padding: 12px 20px;">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script is:inline>
+    // Format toggle logic
+    function toggleFormatOverlay(format) {
+      const overlay = document.getElementById('astroFormatOverlay');
+      if (overlay) {
+        overlay.style.display = format === 'astro' ? 'flex' : 'none';
+      }
+    }
+
+    // Modal Toggle
+    const seoBtn = document.getElementById('seoBtn');
+    const seoModal = document.getElementById('seoModal');
+    const closeSeoBtn = document.getElementById('closeSeoBtn');
+    const saveSeoBtn = document.getElementById('saveSeoBtn');
+
+    if (seoBtn && seoModal) {
+      seoBtn.addEventListener('click', () => seoModal.style.display = 'flex');
+      closeSeoBtn.addEventListener('click', () => seoModal.style.display = 'none');
+      saveSeoBtn.addEventListener('click', () => seoModal.style.display = 'none');
+    }
+
+    // SEO Interactive Script
+    const seoTitleInput = document.getElementById('seoTitleInput');
+    const seoDescInput = document.getElementById('seoDescInput');
+    const titleInput = document.querySelector('input[name="title"]');
+    const slugInput = document.querySelector('input[name="slug"]');
+    const excerptInput = document.querySelector('textarea[name="excerpt"]');
+    
+    const previewTitle = document.getElementById('preview-title');
+    const previewDesc = document.getElementById('preview-desc');
+    const previewSlug = document.getElementById('preview-slug');
+    
+    const titleCounter = document.getElementById('title-counter');
+    const descCounter = document.getElementById('desc-counter');
+    const titleProgress = document.getElementById('title-progress');
+    const descProgress = document.getElementById('desc-progress');
+
+    function updateSeo() {
+      const currentTitle = seoTitleInput.value || titleInput.value || 'Untitled Tour';
+      const currentDesc = seoDescInput.value || excerptInput.value || 'Đoạn văn này xuất hiện ở kết quả tìm kiếm Google...';
+      const currentSlug = slugInput.value || 'slug';
+
+      previewTitle.textContent = currentTitle;
+      previewDesc.textContent = currentDesc;
+      previewSlug.textContent = currentSlug;
+
+      // Update counters
+      const titleLen = currentTitle.length;
+      titleCounter.textContent = `${titleLen} / 60`;
+      
+      let titlePct = (titleLen / 60) * 100;
+      if (titlePct > 100) titlePct = 100;
+      titleProgress.style.width = `${titlePct}%`;
+      
+      if (titleLen < 30 || titleLen > 60) {
+        titleProgress.style.background = '#eab308'; // Warning Yellow
+        if(titleLen > 65) titleProgress.style.background = '#ef4444'; // Danger Red
+      } else {
+        titleProgress.style.background = '#22c55e'; // Success Green
+      }
+
+      const descLen = currentDesc.length;
+      descCounter.textContent = `${descLen} / 160`;
+      
+      let descPct = (descLen / 160) * 100;
+      if (descPct > 100) descPct = 100;
+      descProgress.style.width = `${descPct}%`;
+      
+      if (descLen < 120 || descLen > 160) {
+        descProgress.style.background = '#eab308';
+        if(descLen > 165) descProgress.style.background = '#ef4444';
+      } else {
+        descProgress.style.background = '#22c55e';
+      }
+    }
+
+    if(seoTitleInput) {
+      seoTitleInput.addEventListener('input', updateSeo);
+      seoDescInput.addEventListener('input', updateSeo);
+      titleInput.addEventListener('input', updateSeo);
+      slugInput.addEventListener('input', updateSeo);
+      excerptInput.addEventListener('input', updateSeo);
+      updateSeo(); // Init
+    }
+
+    
+    // Price Formatting
+    const priceInput = document.querySelector('input[name="price_text"]');
+    if (priceInput) {
+      // Format on load
+      formatPrice(priceInput);
+      
+      // Format on input
+      priceInput.addEventListener('input', (e) => {
+        formatPrice(e.target);
+      });
+      
+      function formatPrice(input) {
+        let value = input.value.replace(/[^0-9]/g, '');
+        if (value) {
+          value = parseInt(value, 10).toLocaleString('vi-VN');
+          // replace , with . because vi-VN uses . for thousands separator in JS by default?
+          // Actually, .toLocaleString('vi-VN') uses .
+          // To be safe, we can manually format:
+          value = value.replace(/\./g, '').replace(/,/g, '');
+          value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+          input.value = value;
+        }
+      }
+    }
+
+    // Auto-slug logic
+    let userEditedSlug = slugInput && slugInput.value.trim().length > 0;
+    if (slugInput) {
+      slugInput.addEventListener('input', () => {
+        userEditedSlug = true;
+      });
+    }
+
+    if (titleInput && slugInput) {
+      titleInput.addEventListener('input', () => {
+        if (!userEditedSlug) {
+          const text = titleInput.value;
+          const slug = text.normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+          slugInput.value = slug;
+          if(typeof updateSeo === 'function') updateSeo();
+        }
+      });
+    }
+  </script>
+  
+  <script is:inline define:vars={{ allCountries: countries, initialTourCountries: tourCountries }}>
+    let selectedCountries = allCountries.filter(c => initialTourCountries.includes(c.slug));
+    
+    const openCountryPickerBtn = document.getElementById('openCountryPickerBtn');
+    const closeCountryPickerBtn = document.getElementById('closeCountryPickerBtn');
+    const countryPickerModal = document.getElementById('countryPickerModal');
+    const countrySearchInput = document.getElementById('countrySearchInput');
+    const countryListContainer = document.getElementById('countryListContainer');
+    const selectedCountriesGrid = document.getElementById('selectedCountriesGrid');
+    const noCountriesMsg = document.getElementById('noCountriesMsg');
+
+    openCountryPickerBtn.addEventListener('click', () => {
+      countryPickerModal.style.display = 'flex';
+      renderPickerList('');
+      countrySearchInput.value = '';
+      countrySearchInput.focus();
+    });
+
+    closeCountryPickerBtn.addEventListener('click', () => {
+      countryPickerModal.style.display = 'none';
+    });
+
+    countrySearchInput.addEventListener('input', (e) => {
+      renderPickerList(e.target.value);
+    });
+
+    // Hàm bỏ dấu tiếng Việt để tìm kiếm
+    function removeAccents(str) {
+      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
+    }
+
+    function renderPickerList(query) {
+      countryListContainer.innerHTML = '';
+      const normalizedQuery = removeAccents(query);
+      const filtered = allCountries.filter(c => removeAccents(c.name).includes(normalizedQuery));
+      
+      if (filtered.length === 0) {
+        countryListContainer.innerHTML = '<div style="text-align:center; padding: 20px; color: #94a3b8;">Không tìm thấy quốc gia nào</div>';
+        return;
+      }
+
+      filtered.forEach(country => {
+        const isSelected = selectedCountries.some(sc => sc.slug === country.slug);
+        const div = document.createElement('div');
+        div.style.cssText = `display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #f1f5f9; cursor: pointer; transition: background 0.15s; background: ${isSelected ? '#eff6ff' : '#fff'}; border-radius: 8px; margin-bottom: 4px;`;
+        
+        div.innerHTML = `
+          <input type="checkbox" ${isSelected ? 'checked' : ''} style="width: 16px; height: 16px; cursor: pointer; pointer-events: none;" />
+          <div style="flex-shrink:0; width:40px; height:28px; border-radius:4px; overflow:hidden; background:#e2e8f0;">
+            ${country.featuredImage ? `<img src="${country.featuredImage}" style="width:100%;height:100%;object-fit:cover;" />` : ''}
+          </div>
+          <div style="flex:1; font-size:13px; font-weight:500; color:#0f172a;">${country.name}</div>
+        `;
+
+        div.addEventListener('click', () => {
+          if (isSelected) {
+            selectedCountries = selectedCountries.filter(sc => sc.slug !== country.slug);
+          } else {
+            selectedCountries.push(country);
+          }
+          renderPickerList(query);
+          renderSelectedGrid();
+        });
+
+        countryListContainer.appendChild(div);
+      });
+    }
+
+    function renderSelectedGrid() {
+      selectedCountriesGrid.innerHTML = '';
+      
+      if (selectedCountries.length === 0) {
+        noCountriesMsg.style.display = 'block';
+        return;
+      }
+      
+      noCountriesMsg.style.display = 'none';
+
+      selectedCountries.forEach(country => {
+        const item = document.createElement('div');
+        item.style.cssText = 'display:flex; gap:12px; align-items:center; padding:8px 12px; border:1px solid #e2e8f0; border-radius:8px; background:#fff; position: relative;';
+        
+        item.innerHTML = `
+          <input type="hidden" name="country_slugs" value="${country.slug}" />
+          <div style="flex-shrink:0; width:40px; height:28px; border-radius:4px; overflow:hidden; background:#f1f5f9;">
+            ${country.featuredImage ? `<img src="${country.featuredImage}" style="width:100%; height:100%; object-fit:cover;" />` : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:14px;">🌍</div>`}
+          </div>
+          <div style="flex:1; min-width:0; padding-right: 24px;">
+            <div style="font-size:13px; font-weight:600; color:#0f172a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${country.name}</div>
+          </div>
+          <button type="button" class="remove-country-btn" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: #fee2e2; color: #ef4444; border: none; width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s;">
+            &times;
+          </button>
+        `;
+
+        item.querySelector('.remove-country-btn').addEventListener('click', () => {
+          selectedCountries = selectedCountries.filter(sc => sc.slug !== country.slug);
+          renderSelectedGrid();
+        });
+
+        selectedCountriesGrid.appendChild(item);
+      });
+    }
+
+    renderSelectedGrid();
+  </script>
+
+  <MediaPickerEventBridge client:only="react" />
+</AdminLayout>

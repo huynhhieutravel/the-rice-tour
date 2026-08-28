@@ -1,0 +1,115 @@
+---
+import { env } from 'cloudflare:workers';
+import OptimizedImage from '@/components/ui/OptimizedImage.astro';
+
+export interface Props {
+  country?: string;
+  tour_type?: string;
+  limit?: string | number;
+  layout?: 'grid' | 'carousel';
+  title?: string;
+  dataMap?: Record<string, any>;
+}
+
+const { country, tour_type, limit = '4', layout = 'carousel', title, dataMap } = Astro.props;
+const numLimit = parseInt(String(limit), 10) || 4;
+
+let envLocals: any = null;
+try { envLocals = Astro.locals?.runtime?.env; } catch (_) {}
+const d1Db = env?.dulichcoguu_d1 || envLocals?.dulichcoguu_d1;
+
+let tours: any[] = [];
+
+if (d1Db) {
+  try {
+    // Note: Adjust the Tour table query based on actual schema
+    // Assuming Tour table has country_slug, category, title, slug, price, excerpt, featuredImage
+    let query = `
+      SELECT t.id, t.slug, t.title, t.featuredImage 
+      FROM Tour t
+      WHERE (t.status = 'published' OR t.status = 'publish') AND (t.badge IS NULL OR t.badge != 'inactive')
+    `;
+    
+    let bindings: any[] = [];
+
+    if (country) {
+      query += ` AND t.id IN (SELECT tour_id FROM TourCountry WHERE country_slug = ?)`;
+      bindings.push(country);
+    }
+    
+    // NOTE: This assumes there's a category column or TourCategory mapping. 
+    // If not, we just fallback gracefully.
+    // if (tour_type) { ... }
+
+    query += ` ORDER BY t.createdAt DESC LIMIT ?`;
+    bindings.push(numLimit);
+
+    let statement = d1Db.prepare(query);
+    statement = statement.bind(...bindings);
+
+    const res = await statement.all();
+    if (res && res.results) {
+      tours = res.results as any[];
+    }
+  } catch (e) {
+    console.error("[DataTour] DB Error:", e);
+    // Suppress error if Tour table doesn't exist yet or schema mismatch
+  }
+}
+
+if (!tours || tours.length === 0) {
+  return null;
+}
+---
+
+<div class="data-block-wrapper my-12">
+  {title && (
+    <h3 class="text-2xl md:text-3xl font-serif text-slate-900 mb-8 border-l-4 border-[#3b82f6] pl-4">{title}</h3>
+  )}
+
+  {layout === 'grid' ? (
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {tours.map((tour) => (
+        <a href={`/tour/${tour.slug}`} class="group block border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-all bg-white">
+          <div class="relative aspect-video overflow-hidden bg-slate-100">
+            <OptimizedImage 
+              src={tour.featuredImage || '/placeholder-image.jpg'} 
+              alt={tour.title} 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 25vw"
+              loading="lazy"
+              qualityRole="card"
+            />
+          </div>
+          <div class="p-4">
+            <h4 class="text-base font-bold text-slate-900 mb-2 group-hover:text-[#3b82f6] transition-colors leading-snug line-clamp-2">{tour.title}</h4>
+          </div>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 hide-scrollbar">
+      {tours.map((tour) => (
+        <a href={`/tour/${tour.slug}`} class="snap-start shrink-0 w-[260px] md:w-[300px] group block border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition-all bg-white">
+          <div class="relative aspect-video overflow-hidden bg-slate-100">
+            <OptimizedImage 
+              src={tour.featuredImage || '/placeholder-image.jpg'} 
+              alt={tour.title} 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              qualityRole="card"
+            />
+          </div>
+          <div class="p-4">
+            <h4 class="text-base font-bold text-slate-900 mb-2 group-hover:text-[#3b82f6] transition-colors leading-snug line-clamp-2">{tour.title}</h4>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>

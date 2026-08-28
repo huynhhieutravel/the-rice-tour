@@ -1,0 +1,449 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { MapPin, Info, Users, Clock, Calendar, Compass, Share2, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('jet-lag-khi-du-lich-alaska').first<any>(),
+    { route: Astro.url.pathname, slug: 'dieu-can-biet-truoc-khi-bay-truc-thang-alaska', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Jet Lag Khi Du Lịch Alaska: Vì Sao Xảy Ra Và 10 Cách Giúp Bạn Thích Nghi Nhanh Hơn';
+const seoDesc = post.seoDesc || post.excerpt || 'Tìm hiểu nguyên nhân gây Jet Lag khi du lịch Alaska và những cách đơn giản nhưng hiệu quả giúp cơ thể nhanh chóng thích nghi với múi giờ mới.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/2023/11/11.webp'; // Placeholder Alaska image
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || new Date().toISOString();
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+
+const tips = [
+  {
+    "id": "jet-lag-thuc-chat-la-gi",
+    "name": "Jet Lag Thực Chất Là Gì?",
+    "desc": "<p>Jet Lag xảy ra khi <strong>đồng hồ sinh học</strong> của cơ thể chưa kịp điều chỉnh theo giờ địa phương.</p>\n<p>Cơ thể chúng ta hoạt động theo chu kỳ 24 giờ, được điều khiển bởi ánh sáng:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Trời tối → cơ thể chuẩn bị ngủ</li>\n  <li>Trời sáng → cơ thể tỉnh táo</li>\n</ul>\n<p>Khi bay từ Việt Nam sang <a href=\"/country/my\" title=\"Du lịch Mỹ\" class=\"text-sky-700 hover:text-sky-800 font-semibold underline underline-offset-2 transition-colors\">Mỹ</a> (đặc biệt là đến Alaska), bạn lệch khoảng <strong>15 giờ</strong>. Điều này khiến:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Cơ thể muốn ngủ khi bên ngoài đang là ban ngày</li>\n  <li>Cơ thể tỉnh táo khi đã đến giờ đi ngủ</li>\n</ul>\n<p>Đồng hồ sinh học không thể thay đổi ngay lập tức, nên cần thời gian để thích nghi.</p>"
+  },
+  {
+    "id": "vi-sao-alaska-de-gay-jet-lag",
+    "name": "Vì Sao Alaska Dễ Gây Jet Lag Hơn?",
+    "desc": "<p>Ngoài lệch múi giờ lớn, Alaska còn có đặc điểm:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Mùa hè trời sáng rất lâu (đến 9–10 giờ tối)</li>\n</ul>\n<p>Ánh sáng kéo dài khiến cơ thể khó nhận biết thời điểm cần nghỉ ngơi. Vì vậy, nhiều người:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Không buồn ngủ vào buổi tối</li>\n  <li>Nhưng lại thức rất sớm vào sáng hôm sau</li>\n</ul>\n<p>Đây là phản ứng bình thường khi cơ thể chưa quen môi trường mới.</p>"
+  },
+  {
+    "id": "khong-chi-la-buon-ngu",
+    "name": "Jet Lag Không Chỉ Là Buồn Ngủ",
+    "desc": "<p>Jet Lag ảnh hưởng nhiều hơn bạn nghĩ. Trong 1–2 ngày đầu, bạn có thể gặp:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Buồn ngủ ban ngày</li>\n  <li>Thức dậy sớm</li>\n  <li>Khó tập trung</li>\n  <li>Ăn không ngon hoặc không thấy đói</li>\n  <li>Dễ mệt hoặc hơi cáu gắt</li>\n</ul>\n<p>Đây không phải dấu hiệu sức khỏe kém, mà chỉ là cơ thể vẫn đang hoạt động theo giờ Việt Nam.</p>\n<p>Thông thường, các triệu chứng sẽ giảm sau 1–2 ngày nếu bạn sinh hoạt theo giờ địa phương.</p>",
+    "note": "<p>Điều quan trọng nhất không phải là ngủ đủ, mà là <strong>điều chỉnh theo giờ Alaska càng sớm càng tốt</strong>.</p>\n<p>Ngay từ ngày đầu tiên:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Ăn theo giờ địa phương</li>\n  <li>Đi ngủ theo giờ địa phương</li>\n  <li>Ra ngoài tiếp xúc ánh sáng ban ngày</li>\n</ul>\n<p>Đừng cố giữ thói quen theo giờ Việt Nam, vì điều đó sẽ kéo dài Jet Lag.</p>"
+  },
+  {
+    "id": "jet-lag-co-tranh-duoc-khong",
+    "name": "Jet Lag Có Tránh Được Không?",
+    "desc": "<p>Không thể tránh hoàn toàn, nhưng bạn có thể <strong>giảm đáng kể</strong>.</p>\n<p>Cơ thể sẽ thích nghi nhanh hơn nếu bạn kiểm soát tốt các yếu tố sau:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Giấc ngủ</li>\n  <li>Ánh sáng</li>\n  <li>Nước</li>\n  <li>Vận động</li>\n  <li>Thời gian ăn uống</li>\n</ul>\n<p>Trong phần tiếp theo, FIT TOUR sẽ hướng dẫn cụ thể cách chuẩn bị trước chuyến đi, nghỉ ngơi trên máy bay và những mẹo thực tế giúp bạn thích nghi nhanh chỉ sau 1–2 ngày.</p>"
+  },
+  {
+    "id": "chuan-bi-truoc-chuyen-di",
+    "name": "Chuẩn Bị Từ 3–5 Ngày Trước Chuyến Đi",
+    "desc": "<p>Nhiều người nghĩ Jet Lag chỉ bắt đầu sau khi máy bay hạ cánh.</p>\n<p>Thực tế, cơ thể đã có thể chuẩn bị trước từ vài ngày.</p>\n<p>Chỉ cần thay đổi một vài thói quen nhỏ, quá trình thích nghi sẽ dễ dàng hơn rất nhiều.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Ngủ Đủ Quan Trọng Hơn Ngủ Bù</h3>\n<p>Một sai lầm khá phổ biến là thức khuya nhiều ngày để hoàn thành công việc rồi nghĩ rằng có thể ngủ bù trên máy bay.</p>\n<p>Điều này hiếm khi hiệu quả.</p>\n<p>Giấc ngủ trên máy bay thường bị gián đoạn bởi tiếng ồn, ánh sáng, bữa ăn và việc cất hạ cánh. Vì vậy, đừng xem chuyến bay là nơi để \"bù ngủ\".</p>\n<p>Trong 3–5 ngày trước khi khởi hành, hãy cố gắng ngủ đủ khoảng 7–8 tiếng mỗi đêm. Một cơ thể được nghỉ ngơi tốt sẽ thích nghi với múi giờ mới nhanh hơn.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Nếu Có Thể, Hãy Điều Chỉnh Giờ Ngủ Sớm Hơn Một Chút</h3>\n<p>Bạn không cần thay đổi quá nhiều.</p>\n<p>Chỉ cần đi ngủ và thức dậy sớm hơn khoảng <strong>30–60 phút mỗi ngày</strong> trong vài ngày trước chuyến đi cũng đã giúp đồng hồ sinh học bắt đầu làm quen với sự thay đổi.</p>\n<p>Nếu không thực hiện được cũng không sao. Đây chỉ là một mẹo giúp việc thích nghi sau khi đến Alaska diễn ra nhẹ nhàng hơn.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Đừng Để Cơ Thể Thiếu Nước</h3>\n<p>Không nhiều người để ý rằng việc thiếu nước cũng khiến cảm giác mệt mỏi rõ rệt hơn.</p>\n<p>Trong những ngày trước chuyến đi, hãy duy trì thói quen uống đủ nước thay vì đợi đến lúc khát mới uống.</p>\n<p>Đây là việc đơn giản nhưng mang lại hiệu quả rõ rệt trong suốt hành trình bay dài.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Hạn Chế Rượu Bia Trong 2–3 Ngày Cuối</h3>\n<p>Một ly rượu có thể khiến bạn dễ buồn ngủ hơn.</p>\n<p>Nhưng chất lượng giấc ngủ lại giảm.</p>\n<p>Bạn có thể ngủ nhanh hơn, nhưng cũng dễ thức giấc giữa đêm và cơ thể không được phục hồi tốt.</p>\n<p>Nếu có thể, hãy hạn chế rượu bia trong vài ngày trước khi khởi hành để bước vào chuyến đi với trạng thái tốt nhất.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Có Cần Dùng Melatonin Không?</h3>\n<p>Đây là câu hỏi FIT TOUR nhận được khá nhiều.</p>\n<p>Melatonin là hormone giúp cơ thể điều hòa giấc ngủ và một số người sử dụng để hỗ trợ giảm Jet Lag.</p>\n<p>Tuy nhiên, đây không phải sản phẩm phù hợp với tất cả mọi người.</p>\n<p>Nếu Anh/Chị đang có bệnh nền, đang sử dụng thuốc điều trị hoặc muốn dùng Melatonin lần đầu, nên tham khảo ý kiến bác sĩ trước chuyến đi.</p>\n<p>Đừng tự ý sử dụng chỉ vì người khác thấy hiệu quả.</p>",
+    "note": "<p>Điều khác biệt lớn nhất mình nhận thấy sau nhiều đoàn Bắc Mỹ không phải là tuổi tác.</p>\n<p>Mà là tình trạng nghỉ ngơi trước chuyến đi.</p>\n<p>Những Anh/Chị ngủ đủ trong vài ngày trước khi khởi hành thường thích nghi nhanh hơn hẳn so với những người vừa thức khuya làm việc, vừa phải bay gần một ngày để đến Alaska.</p>"
+  },
+  {
+    "id": "tren-may-bay",
+    "name": "Trên Máy Bay: Đừng Chỉ Ngồi Chờ Đến Nơi",
+    "desc": "<p>Chuyến bay từ Việt Nam đến Alaska kéo dài nhiều giờ và cơ thể sẽ phải làm việc liên tục để thích nghi.</p>\n<p>Nếu tận dụng tốt khoảng thời gian này, bạn có thể giảm đáng kể cảm giác Jet Lag sau khi hạ cánh.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Chỉnh Đồng Hồ Sang Giờ Alaska Ngay Khi Khởi Hành</h3>\n<p>Nghe có vẻ đơn giản nhưng đây là một mẹo rất hiệu quả.</p>\n<p>Ngay sau khi lên máy bay, hãy chỉnh:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Đồng hồ.</li>\n  <li>Điện thoại.</li>\n  <li>Và quan trọng hơn, hãy bắt đầu suy nghĩ theo giờ Alaska.</li>\n</ul>\n<p>Ví dụ, nếu theo giờ địa phương đã là ban đêm, hãy chuẩn bị nghỉ ngơi thay vì tiếp tục xem phim hoặc làm việc.</p>\n<p>Việc này giúp não bộ bắt đầu thích nghi với nhịp sinh hoạt mới.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Chặng Taipei → Seattle Là Thời Gian Vàng Để Nghỉ Ngơi</h3>\n<p>Đây là chặng bay dài nhất của hành trình và cũng là khoảng thời gian thuận lợi nhất để ngủ.</p>\n<p>Nếu có thể, hãy cố gắng ngủ khoảng 5–7 tiếng.</p>\n<p>Nếu không ngủ được liên tục cũng đừng quá lo lắng.</p>\n<p>Chỉ cần ngủ được vài chu kỳ ngắn cũng tốt hơn việc thức suốt chuyến bay.</p>\n<p>Đừng tạo áp lực phải ngủ đủ số giờ. Càng căng thẳng, bạn càng khó ngủ.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Uống Nước Nhiều Hơn Bình Thường</h3>\n<p>Không khí trong cabin máy bay khô hơn rất nhiều so với môi trường thông thường.</p>\n<p>Điều này khiến cơ thể dễ mất nước, từ đó làm cảm giác mệt mỏi và đau đầu trở nên rõ rệt hơn.</p>\n<p>Hãy uống nước đều trong suốt chuyến bay.</p>\n<p>Không cần uống quá nhiều một lúc. Chỉ cần bổ sung từng ngụm nhỏ nhưng đều đặn là đủ.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Hạn Chế Cà Phê Và Rượu Bia</h3>\n<p>Một ly cà phê có thể giúp bạn tỉnh táo trong thời gian ngắn.</p>\n<p>Nhưng nếu uống không đúng thời điểm, nó cũng có thể khiến bạn khó ngủ khi cơ thể cần nghỉ ngơi.</p>\n<p>Tương tự, rượu bia có thể khiến bạn dễ buồn ngủ lúc đầu nhưng lại làm giảm chất lượng giấc ngủ.</p>\n<p>Nếu mục tiêu là giảm Jet Lag, nước lọc vẫn là lựa chọn tốt nhất trong phần lớn chuyến bay.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Đừng Ngồi Một Chỗ Suốt Chuyến Bay</h3>\n<p>Cứ khoảng 2–3 giờ, nếu điều kiện cho phép, hãy đứng dậy đi lại nhẹ nhàng hoặc thực hiện một vài động tác kéo giãn.</p>\n<p>Việc vận động giúp máu lưu thông tốt hơn, giảm cảm giác mỏi cơ sau chuyến bay dài và cũng khiến cơ thể dễ chịu hơn khi hạ cánh.</p>\n<p>Không cần tập luyện.</p>\n<p>Chỉ vài phút đi bộ trong khoang máy bay cũng đã đủ tạo khác biệt.</p>"
+  },
+  {
+    "id": "24-gio-dau-tien",
+    "name": "24 Giờ Đầu Tiên Tại Alaska: Thời Điểm Quyết Định",
+    "desc": "<p>Nhiều người cho rằng Jet Lag xảy ra trên máy bay.</p>\n<p>Thực tế, thời điểm quyết định lại là <strong>24 giờ đầu tiên sau khi hạ cánh</strong>.</p>\n<p>Nếu giúp cơ thể nhận đúng \"tín hiệu\", bạn có thể rút ngắn đáng kể thời gian thích nghi.</p>\n<p>Ngược lại, chỉ một vài thói quen không phù hợp cũng có thể khiến cảm giác mệt mỏi kéo dài thêm vài ngày.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Đừng Ngủ Ngay Nhiều Tiếng Khi Vừa Đến Khách Sạn</h3>\n<p>Sau một chuyến bay dài, việc đầu tiên nhiều người muốn làm là lên phòng và ngủ thật sâu.</p>\n<p>Đây lại là sai lầm phổ biến nhất.</p>\n<p>Nếu hạ cánh vào buổi sáng hoặc đầu giờ chiều, việc ngủ liên tục 3–5 tiếng sẽ khiến đồng hồ sinh học càng khó chuyển sang giờ Alaska.</p>\n<p>Nếu thực sự quá mệt, hãy chợp mắt khoảng <strong>20–30 phút</strong>.</p>\n<p>Khoảng thời gian này đủ để cơ thể hồi phục phần nào mà không làm ảnh hưởng nhiều đến giấc ngủ buổi tối.</p>\n<p>Sau đó, hãy cố gắng thức đến giờ ngủ theo lịch trình địa phương.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Hãy Ra Ngoài Trời Càng Sớm Càng Tốt</h3>\n<p>Nếu chỉ chọn một việc để giảm Jet Lag, FIT TOUR sẽ chọn:</p>\n<p><strong>Tiếp xúc với ánh sáng tự nhiên.</strong></p>\n<p>Ánh sáng là tín hiệu quan trọng nhất giúp não bộ nhận biết đã bắt đầu một ngày mới.</p>\n<p>Chỉ cần đi bộ khoảng <strong>20–30 phút</strong> ngoài trời vào buổi sáng hoặc đầu giờ chiều cũng giúp cơ thể điều chỉnh đồng hồ sinh học nhanh hơn.</p>\n<p>Đây cũng là lý do lịch trình ngày đầu của <a href=\"/tour/tour-alaska-8n7d\" title=\"Tour du lịch Alaska 8 ngày 7 đêm\" class=\"text-sky-700 hover:text-sky-800 font-semibold underline underline-offset-2 transition-colors\">Tour Alaska</a> do FIT TOUR tổ chức thường không quá dày.</p>\n<p>Thay vì ngồi trong khách sạn, cả đoàn sẽ có những hoạt động nhẹ nhàng ngoài trời để cơ thể bắt đầu làm quen với môi trường mới.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Hãy Ăn Theo Giờ Alaska, Dù Chưa Thấy Đói</h3>\n<p>Nhiều người nói:</p>\n<blockquote class=\"border-l-4 border-slate-300 pl-4 italic text-slate-600 my-4\">\"Em ơi, chị chưa thấy đói.\"</blockquote>\n<p>Đó là điều hoàn toàn bình thường.</p>\n<p>Không chỉ giấc ngủ, hệ tiêu hóa cũng đang hoạt động theo giờ Việt Nam.</p>\n<p>Nếu bỏ bữa hoặc ăn quá muộn, cơ thể sẽ mất thêm một tín hiệu để điều chỉnh đồng hồ sinh học.</p>\n<p>Vì vậy, hãy cố gắng ăn sáng, ăn trưa và ăn tối theo giờ địa phương, kể cả khi khẩu vị chưa hoàn toàn trở lại.</p>\n<p>Không cần ăn quá nhiều.</p>\n<p>Một bữa ăn nhẹ cũng đủ giúp cơ thể bắt đầu thích nghi.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Đừng Quên Uống Nước Sau Khi Hạ Cánh</h3>\n<p>Sau gần một ngày di chuyển bằng máy bay, nhiều người vẫn chưa bù đủ lượng nước đã mất.</p>\n<p>Cảm giác khô môi, khô da hoặc hơi đau đầu trong ngày đầu tiên đôi khi không phải do Jet Lag mà đơn giản là do cơ thể thiếu nước.</p>\n<p>Hãy tiếp tục duy trì thói quen uống nước đều trong suốt ngày đầu tiên tại Alaska.</p>\n<p>Nếu có thể, hãy mang theo một chai nước nhỏ bên mình trong những ngày đầu của hành trình.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Vận Động Nhẹ Hiệu Quả Hơn Bạn Nghĩ</h3>\n<p>Bạn không cần chạy bộ hay tập thể dục.</p>\n<p>Chỉ cần đi bộ, kéo giãn cơ hoặc tham gia các hoạt động tham quan nhẹ cũng đủ giúp máu lưu thông tốt hơn sau chuyến bay dài.</p>\n<p>Đây cũng là lý do nhiều người cảm thấy tỉnh táo hơn sau khi ra ngoài đi dạo thay vì nằm nghỉ trong phòng khách sạn.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Alaska Có Một \"Cái Bẫy\" Mà Nhiều Người Không Để Ý</h3>\n<p>Nếu đi Alaska vào mùa hè, bạn sẽ nhanh chóng nhận ra một điều rất thú vị.</p>\n<p>Đã gần 10 giờ tối.</p>\n<p>Nhưng bên ngoài vẫn còn khá sáng.</p>\n<p>Điều này dễ khiến não bộ hiểu rằng \"chưa đến giờ đi ngủ\".</p>\n<p>Nếu tối đầu tiên bạn vẫn ngồi cạnh cửa sổ ngắm trời sáng hoặc sử dụng điện thoại quá lâu, giấc ngủ có thể đến muộn hơn.</p>\n<p>Khi trở về khách sạn, hãy:</p>\n<ul class=\"list-disc pl-5 my-2 space-y-1\">\n  <li>Kéo kín rèm cản sáng (blackout curtain) nếu phòng có.</li>\n  <li>Giảm ánh sáng trong phòng khoảng 30 phút trước khi ngủ.</li>\n  <li>Hạn chế sử dụng điện thoại hoặc máy tính bảng.</li>\n  <li>Đi ngủ theo giờ Alaska, ngay cả khi chưa thật sự buồn ngủ.</li>\n</ul>\n<p>Đây là một mẹo nhỏ nhưng đặc biệt hữu ích đối với các chuyến đi vào mùa hè.</p>",
+    "note": "<p>Qua nhiều đoàn Alaska, điều mình nhận thấy là những Anh/Chị thích nghi nhanh thường không phải là người ngủ giỏi nhất.</p>\n<p>Họ là những người sớm \"sống theo giờ Alaska\".</p>\n<p>Đến giờ ăn thì ăn.</p>\n<p>Đến giờ ngủ thì nghỉ.</p>\n<p>Sáng hôm sau ra ngoài đi bộ cùng cả đoàn.</p>\n<p>Chỉ sau khoảng hai ngày, phần lớn đã gần như quên mất cảm giác lệch múi giờ.</p>"
+  },
+  {
+    "id": "nhung-sai-lam",
+    "name": "Những Sai Lầm Khiến Jet Lag Kéo Dài Hơn",
+    "desc": "<p>Không phải Jet Lag nào cũng giống nhau.</p>\n<p>Nhiều trường hợp kéo dài đơn giản vì những thói quen tưởng như vô hại.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Ngủ Quá Nhiều Vào Ban Ngày</h3>\n<p>Một giấc ngủ ngắn giúp cơ thể hồi phục.</p>\n<p>Nhưng ngủ nhiều giờ vào buổi chiều lại khiến bạn khó ngủ vào ban đêm và làm quá trình thích nghi chậm hơn.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Uống Quá Nhiều Cà Phê Để Cố Tỉnh</h3>\n<p>Cà phê có thể giúp tỉnh táo tạm thời.</p>\n<p>Tuy nhiên, nếu sử dụng vào cuối buổi chiều hoặc buổi tối, bạn có thể khó ngủ đúng giờ địa phương.</p>\n<p>Nếu cần dùng, hãy ưu tiên vào buổi sáng hoặc đầu giờ chiều.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Chỉ Ở Trong Phòng Khách Sạn</h3>\n<p>Nghỉ ngơi là cần thiết.</p>\n<p>Nhưng nếu ở trong phòng cả ngày, cơ thể sẽ nhận được rất ít tín hiệu từ ánh sáng tự nhiên.</p>\n<p>Đó là lý do nhiều người càng nghỉ lại càng thấy mệt.</p>\n<p>Ra ngoài đi bộ một lúc thường hiệu quả hơn nằm trên giường nhiều giờ liên tục.</p>\n\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">Cố Sinh Hoạt Theo Giờ Việt Nam</h3>\n<p>Một số người vẫn gọi điện về nhà, ăn uống hoặc thức khuya theo giờ Việt Nam trong những ngày đầu.</p>\n<p>Điều này vô tình khiến đồng hồ sinh học khó chuyển sang múi giờ mới hơn.</p>\n<p>Ngay khi đến Alaska, hãy xem giờ địa phương là \"giờ chính thức\" của mình.</p>\n<p>Đó là cách đơn giản nhưng hiệu quả nhất để rút ngắn Jet Lag.</p>"
+  },
+  {
+    "id": "cau-hoi-thuong-gap",
+    "name": "Những Câu Hỏi FIT TOUR Nhận Được Nhiều Nhất Về Jet Lag",
+    "desc": "<div class=\"space-y-3 mt-4\">\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Người Lớn Tuổi Có Bị Jet Lag Nặng Hơn Không?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Không hẳn.</p>\n          <p>Tuổi tác không phải yếu tố quyết định mức độ Jet Lag.</p>\n          <p>Điều quan trọng hơn là chất lượng giấc ngủ, sức khỏe tổng thể và khả năng thích nghi của từng người.</p>\n          <p>Trong các đoàn Alaska của FIT TOUR, nhiều cô chú ngoài 60 hoặc 70 tuổi vẫn thích nghi rất tốt chỉ sau khoảng hai ngày.</p>\n          <p>Điều giúp ích nhiều nhất không phải là ngủ thật nhiều, mà là ăn uống, nghỉ ngơi và sinh hoạt theo giờ Alaska ngay từ đầu.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Không Ngủ Được Trên Máy Bay Có Sao Không?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Đây là điều rất bình thường.</p>\n          <p>Không phải ai cũng có thể ngủ ngon trên ghế máy bay, đặc biệt trong những chuyến bay kéo dài hơn 10 giờ.</p>\n          <p>Đừng tạo áp lực phải ngủ đủ 5–7 tiếng.</p>\n          <p>Nếu chỉ chợp mắt được vài lần, cơ thể vẫn có thời gian nghỉ ngơi.</p>\n          <p>Sau khi đến Alaska, tiếp tục uống đủ nước, tiếp xúc với ánh sáng tự nhiên và đi ngủ đúng giờ địa phương sẽ giúp cơ thể thích nghi nhanh hơn.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Có Nên Uống Thuốc Ngủ Để Dễ Ngủ Trên Máy Bay?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>FIT TOUR không khuyến khích tự ý sử dụng thuốc ngủ.</p>\n          <p>Nếu Anh/Chị đang được bác sĩ kê đơn hoặc có chỉ định riêng thì hãy làm theo hướng dẫn của bác sĩ.</p>\n          <p>Đối với đa số du khách khỏe mạnh, nghỉ ngơi tự nhiên kết hợp với việc điều chỉnh giờ sinh hoạt thường đã đủ để giảm Jet Lag.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Có Nên Uống Melatonin Không?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Melatonin có thể hỗ trợ điều chỉnh nhịp sinh học ở một số người.</p>\n          <p>Tuy nhiên, đây không phải là sản phẩm phù hợp với tất cả mọi người và không nên sử dụng theo kinh nghiệm truyền miệng.</p>\n          <p>Nếu Anh/Chị muốn sử dụng Melatonin lần đầu hoặc đang có bệnh nền, hãy trao đổi với bác sĩ trước chuyến đi.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Trẻ Em Có Bị Jet Lag Không?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Có.</p>\n          <p>Trẻ nhỏ cũng có thể bị lệch múi giờ giống người lớn.</p>\n          <p>Tuy nhiên, nhiều trẻ thích nghi khá nhanh nếu được ngủ đủ, ăn đúng giờ và có cơ hội vận động ngoài trời sau khi đến nơi.</p>\n          <p>Điều quan trọng nhất vẫn là giữ lịch sinh hoạt ổn định theo giờ địa phương.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Bao Lâu Thì Hết Jet Lag?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Đối với phần lớn du khách đi cùng FIT TOUR, cảm giác Jet Lag giảm rõ rệt sau khoảng <strong>1–2 ngày</strong>.</p>\n          <p>Một số người có thể cần lâu hơn, đặc biệt nếu trước chuyến đi thiếu ngủ hoặc phải làm việc căng thẳng.</p>\n          <p>Đừng quá lo lắng nếu ngày đầu tiên cảm thấy chưa thật sự sung sức.</p>\n          <p>Đó là phản ứng hoàn toàn bình thường của cơ thể.</p>\n        </div>\n      </details>\n      <details class=\"group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden\">\n        <summary class=\"flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none\">\n          <div class=\"flex items-center gap-3\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#0ea5e9\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"shrink-0\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"></path><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"></line></svg>\n            <span>Có Nên Uống Cà Phê Để Chống Buồn Ngủ?</span>\n          </div>\n          <span class=\"text-slate-400 group-open:hidden text-2xl font-light leading-none\">+</span>\n          <span class=\"text-slate-400 hidden group-open:block text-3xl font-light leading-none\" style=\"margin-top:-6px\">-</span>\n        </summary>\n        <div class=\"px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2\">\n          <p>Có thể.</p>\n          <p>Nhưng nên sử dụng đúng thời điểm.</p>\n          <p>Một ly cà phê vào buổi sáng hoặc đầu giờ chiều có thể giúp bạn tỉnh táo hơn.</p>\n          <p>Ngược lại, uống cà phê vào cuối buổi chiều hoặc buổi tối dễ khiến bạn khó ngủ đúng giờ địa phương và làm Jet Lag kéo dài hơn.</p>\n        </div>\n      </details>\n    </div>"
+  },
+  {
+    "id": "tom-tat-5-dieu-quan-trong",
+    "name": "Tóm Tắt: 5 Điều Quan Trọng Nhất",
+    "desc": "<p>Nếu chỉ nhớ năm điều sau, Anh/Chị đã giúp cơ thể thích nghi nhanh hơn rất nhiều.</p>\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">1. Đừng Để Cơ Thể Thiếu Ngủ Trước Chuyến Đi</h3>\n<p>Ngủ đủ trong vài ngày trước khi khởi hành hiệu quả hơn nhiều so với việc cố ngủ bù trên máy bay.</p>\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">2. Chỉnh Đồng Hồ Sang Giờ Alaska Ngay Khi Lên Máy Bay</h3>\n<p>Hãy bắt đầu suy nghĩ và nghỉ ngơi theo múi giờ mới càng sớm càng tốt.</p>\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">3. Uống Nước Đều Trong Suốt Chuyến Bay</h3>\n<p>Không khí trong cabin rất khô.</p>\n<p>Uống đủ nước sẽ giúp cơ thể dễ chịu hơn sau khi hạ cánh.</p>\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">4. Tiếp Xúc Với Ánh Sáng Tự Nhiên Trong Ngày Đầu Tiên</h3>\n<p>Đi bộ khoảng 20–30 phút ngoài trời là một trong những cách hiệu quả nhất giúp đồng hồ sinh học điều chỉnh theo giờ Alaska.</p>\n<h3 class=\"font-serif text-[19px] font-bold text-slate-900 mt-10 mb-4 border-l-[3.5px] border-sky-500 pl-3 leading-snug\">5. Sinh Hoạt Theo Giờ Alaska Ngay Từ Ngày Đầu</h3>\n<p>Ăn theo giờ địa phương.</p>\n<p>Đi ngủ theo giờ địa phương.</p>\n<p>Đừng cố giữ nhịp sinh hoạt theo giờ Việt Nam.</p>\n<p>Đây là điều quan trọng nhất để rút ngắn Jet Lag.</p>"
+  }
+];
+
+
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#0ea5e9] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Alaska Glacier Landing" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" decoding="async" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Alaska</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          Jet Lag Khi Du Lịch Alaska: Vì Sao Xảy Ra Và 10 Cách Giúp Bạn Thích Nghi Nhanh Hơn
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-sky-400 italic mb-10 max-w-3xl drop-shadow-md">
+          Bí quyết từ Trưởng Đoàn FIT TOUR giúp vượt qua khác biệt 15 múi giờ
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium">
+          Nếu bạn từng bay đường dài đến Bắc Mỹ, rất có thể bạn sẽ gặp tình trạng: tỉnh dậy lúc 3-4 giờ sáng, buồn ngủ giữa ban ngày và không thấy đói đúng giờ. Đó chính là Jet Lag. 
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href="/huynh-hieu" class="flex items-center gap-3 group">
+            <img src="https://media.fittour.vn/uploads/huynhhieutravel.webp" alt="Huynh Hieu" class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-sky-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-1">
+              {post.author || 'Huynh Hieu Travel'} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-sky-400" />
+            <span>14 phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">✈️</span> Sức Khỏe
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">🌙</span> Glacier Landing
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">✨</span> Thích Nghi Nhanh
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-sky-700 bg-sky-50 px-3 py-2.5 rounded-lg transition-colors">
+                <span class="text-sky-500 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-2 pb-1">
+                <a href="#danh-sach-12-dieu" class="flex items-center gap-2 text-slate-700 hover:text-sky-800 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">📋</span> Các nội dung chính
+                </a>
+                <div class="pl-9 pr-3 space-y-1.5 mt-1 border-l border-slate-100 ml-[18px] max-h-[500px] overflow-y-auto custom-scrollbar">
+                  {tips.map((m, i) => (
+                    <a href={`#${m.id}`} class="block text-slate-500 hover:text-sky-800 text-[13px] py-1 transition-colors leading-tight">
+                      {i+1}. {m.name}
+                    </a>
+                  ))}
+                  <a href="#checklist" class="block text-slate-500 hover:text-sky-800 text-[13px] py-1 transition-colors leading-tight">Checklist & 5 Điều Cần Nhớ</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl border border-emerald-100 shrink-0">🌎</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Lệch múi giờ</div>
+                <div class="text-[13px] font-bold text-slate-800">Khoảng 15 giờ</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">😴</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Triệu chứng</div>
+                <div class="text-[13px] font-bold text-slate-800">Mệt, buồn ngủ ban ngày</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">💡</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Giải pháp</div>
+                <div class="text-[13px] font-bold text-slate-800">Trực thăng</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-xl border border-amber-100 shrink-0">⏱️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Hồi phục</div>
+                <div class="text-[13px] font-bold text-slate-800">Từ 1 đến 2 ngày</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-sky-500 pb-2 inline-block mb-6">Giới Thiệu</h2>
+            <p>Nếu bạn từng bay đường dài đến Bắc Mỹ, rất có thể bạn sẽ gặp tình trạng:</p>
+            <ul class="list-disc pl-5 mt-2 space-y-1 mb-4 text-slate-700">
+              <li>Tỉnh dậy lúc 3–4 giờ sáng</li>
+              <li>Buồn ngủ giữa ban ngày</li>
+              <li>Không thấy đói đúng giờ</li>
+            </ul>
+            <p>Đó là <strong>Jet Lag</strong> – hiện tượng lệch múi giờ.</p>
+            <p>Jet Lag không phải bệnh. Đây chỉ là phản ứng tự nhiên khi cơ thể chưa kịp thích nghi với múi giờ mới. Tin tốt là bạn hoàn toàn có thể giảm nhẹ và thích nghi nhanh hơn nếu hiểu đúng cách cùng <a href="/" class="text-sky-700 font-bold hover:underline">FIT TOUR</a>.</p>
+          </div>
+
+          <div class="flex items-center justify-center py-4 opacity-40">
+            <div class="w-16 h-px bg-slate-400"></div>
+            <span class="mx-4 text-sky-700 text-xl">🚁</span>
+            <div class="w-16 h-px bg-slate-400"></div>
+          </div>
+
+          {/* Tips List */}
+          <div id="danh-sach-12-dieu" class="space-y-16">
+            {tips.map((m, i) => (
+              <div id={m.id} class="scroll-mt-28">
+                
+                {/* Title */}
+                <div class="flex items-start gap-4 mb-6">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-white font-serif font-bold text-xl md:text-2xl shadow-md shrink-0 mt-1">
+                    {i+1}
+                  </div>
+                  <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                    {m.name}
+                  </h2>
+                </div>
+
+                {/* Description */}
+                <div class="text-slate-700 text-[15.5px] leading-relaxed mb-6 font-medium [&>p]:mb-4 [&>ul]:mb-4" set:html={m.desc}></div>
+
+                {/* Note from tour leader */}
+                {m.note && (
+                  <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mt-4 mb-6">
+                    <p class="text-sm font-bold text-blue-800 uppercase tracking-wide mb-1">💡 Ghi Chú Từ Trưởng Đoàn</p>
+                    <div class="text-blue-900 text-[14.5px] italic leading-relaxed space-y-2" set:html={m.note}></div>
+                  </div>
+                )}
+
+              </div>
+            ))}
+          </div>
+
+          {/* Checklist */}
+          <div id="checklist" class="scroll-mt-28 border-t-2 border-dashed border-slate-200 pt-12 mt-12">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 mb-6">Checklist Trước Ngày Khởi Hành</h2>
+            <p class="text-slate-700 mb-4">Trước khi bắt đầu chuyến đi, hãy kiểm tra nhanh:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[15px] text-slate-700">
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Ngủ đủ trong 2–3 đêm gần nhất.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Uống đủ nước.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Hạn chế rượu bia.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Chuẩn bị gối cổ, bịt mắt và tai nghe.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Sạc đầy điện thoại và pin dự phòng.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Chỉnh đồng hồ sang giờ Alaska (khi lên máy bay).</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Mang theo chai nước cá nhân.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500 shrink-0" /> Chuẩn bị tinh thần nghỉ ngơi.</div>
+            </div>
+
+            <div class="mt-12 bg-slate-50 border border-slate-200 p-6 md:p-8 rounded-2xl">
+              <h2 class="font-serif text-2xl font-bold text-slate-900 mb-4">Lời Kết</h2>
+              <p class="text-slate-700 leading-relaxed mb-4">
+                Jet Lag gần như là một phần không thể tránh khỏi của những chuyến bay đường dài. Nhưng cũng giống như việc cơ thể cần thời gian để làm quen với khí hậu hay độ cao, đồng hồ sinh học chỉ đang cần thêm một chút thời gian để bắt kịp nhịp sống mới.
+              </p>
+              <p class="text-slate-700 leading-relaxed mb-4">
+                Đừng quá áp lực nếu ngày đầu tiên bạn cảm thấy hơi mệt hoặc thức dậy sớm hơn bình thường. Chỉ cần ngủ đủ, uống nhiều nước, tiếp xúc với ánh sáng tự nhiên và sinh hoạt theo giờ Alaska, phần lớn du khách sẽ nhanh chóng lấy lại trạng thái tốt nhất chỉ sau một đến hai ngày.
+              </p>
+              <p class="text-slate-700 leading-relaxed mb-4">
+                Sau đó, điều còn lại chỉ là tận hưởng Alaska – vùng đất của những dòng sông băng (đừng bỏ lỡ trải nghiệm <a href="/dieu-can-biet-truoc-khi-bay-truc-thang-alaska" class="text-sky-700 hover:text-sky-800 font-semibold underline underline-offset-2 transition-colors">bay trực thăng Glacier Landing</a>), rừng nguyên sinh và những cung đường đẹp bậc nhất Bắc Mỹ.
+              </p>
+              <p class="text-slate-700 leading-relaxed font-bold">
+                FIT TOUR chúc Quý Anh/Chị có một hành trình thật nhiều trải nghiệm đáng nhớ.
+              </p>
+              <div class="mt-8">
+                <a href="/tour/tour-alaska-8n7d" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                  <span>Tham khảo Lịch trình Tour Alaska 8N7D</span>
+                  <ChevronRight class="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Data Post: Alaska Series */}
+            <div class="mt-12 mb-8">
+              <DataPost source="tag" slug="tim-hieu-ve-alaska-series" limit="10" title="Chuỗi Bài Viết: Tìm Hiểu Về Alaska" />
+            </div>
+
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+          {/* Quick Facts */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Thông tin chuyến bay
+            </div>
+            
+            <div class="space-y-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100 text-lg">⛰️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Điểm hạ cánh</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Sông băng Alaska</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 text-lg">❄️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Nhiệt độ</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Thấp hơn 8-12°C so với thị trấn</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100 text-lg">👕</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Trang phục khuyên dùng</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Layering (nhiều lớp)</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 border border-slate-200 text-lg">🥾</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Giày dép</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Giày đi bộ kín mũi, đế bám</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+              Bài Viết Liên Quan
+            </div>
+            <div class="space-y-4">
+              {[
+                { title: "Alaska: Điều Còn Lại Sau Hành Trình Đến Miền Biên Cương Cuối Cùng", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-10-alaska-day-chung-ta-dieu-gi.webp", link: "/alaska-dieu-con-lai" },
+                { title: "Alaska: Cơn Sốt Vàng Klondike – Hành Trình Đã Thay Đổi Alaska", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-9-con-sot-vang-klondike-giac-mo-doi-doi.webp", link: "/alaska-con-sot-vang-klondike" },
+                { title: "Alaska: Người Bản Địa Alaska – Những Người Đầu Tiên Gọi Nơi Đây Là Nhà", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-8-nguoi-ban-dia-alaska-linh-hon-phuong-bac.webp", link: "/alaska-nguoi-ban-dia" }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-24 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img src={item.img} alt={item.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-sky-800 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="mt-5 text-center">
+              <a href="/blog" class="text-sky-700 text-xs font-bold hover:underline">Xem tất cả bài viết →</a>
+            </div>
+          </div>
+
+          {/* Share Block */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+            <div class="flex justify-center gap-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/dieu-can-biet-truoc-khi-bay-truc-thang-alaska" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors" title="Chia sẻ lên Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText('https://thericetour.com/dieu-can-biet-truoc-khi-bay-truc-thang-alaska');" title="Sao chép liên kết" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-600">
+                <LinkIcon class="w-4 h-4 group-focus:hidden" />
+                <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+              </button>
+            </div>
+          </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

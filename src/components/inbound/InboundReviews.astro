@@ -1,0 +1,100 @@
+---
+// src/components/inbound/InboundReviews.astro
+const reviews = [
+  {
+    author: "Eleanor & David Vance",
+    country: "London, United Kingdom 🇬🇧",
+    tour: "Grand Vietnam Discovery 14D",
+    rating: 5,
+    title: "The trip of a lifetime without any tour bus stress",
+    content: "From the moment we landed in Hanoi to our final sunset in the Mekong Delta, everything was orchestrated flawlessly. Our private guides were knowledgeable, funny, and took us to secret noodle stalls we would never have found on our own. The Lan Ha Bay cruise was magical!"
+  },
+  {
+    author: "Marcus Schneider",
+    country: "Munich, Germany 🇩🇪",
+    tour: "Sapa & Tonkinese Alps 4D",
+    rating: 5,
+    title: "Incredible trek through Sapa's golden terraces",
+    content: "The Rice Tour organized our trekking through Muong Hoa valley with a local Red Dao guide. The boutique mountain lodge had breathtaking panoramic views. Genuine hospitality and zero tourist traps—exactly what we were looking for."
+  },
+  {
+    author: "Sarah & Brian Miller",
+    country: "California, United States 🇺🇸",
+    tour: "Tailor-Made 10-Day Family Journey",
+    rating: 5,
+    title: "Exceptional 24/7 concierge support on WhatsApp",
+    content: "Traveling with two teenagers can be challenging, but The Rice Tour adapted our itinerary seamlessly when our daughter wanted more cycling and cooking classes. Their WhatsApp support responded within minutes every single time. Highly recommend!"
+  }
+];
+---
+
+<section class="py-20 lg:py-28 bg-gray-50" id="guest-reviews">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top TripAdvisor Banner -->
+    <div class="bg-white rounded-3xl p-8 sm:p-10 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+      <div class="flex items-center gap-5">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold text-2xl shadow-md">
+          🦉
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-serif text-2xl font-bold text-gray-900">TripAdvisor Excellence</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-extrabold uppercase border border-emerald-100">5.0 / 5.0</span>
+          </div>
+          <p class="text-sm text-gray-500 mt-1">Rated #1 Boutique Inbound Tour Operator by International Travelers</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="text-brand-500 text-lg">★★★★★</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-gray-700">100% Five-Star Guest Reviews</span>
+      </div>
+    </div>
+
+    <!-- Section Title -->
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3 shadow-sm">
+        Traveler Testimonials
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+        Stories From Our Global Guests
+      </h2>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reviews.map((r) => (
+        <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-brand-500 text-sm">
+                {"★".repeat(r.rating)}
+              </div>
+              <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">{r.tour}</span>
+            </div>
+
+            <h3 class="font-serif text-lg font-bold text-gray-900 mb-3 leading-snug group-hover:text-brand-600 transition-colors">
+              "{r.title}"
+            </h3>
+
+            <p class="text-sm text-gray-600 leading-relaxed font-normal italic mb-6">
+              "{r.content}"
+            </p>
+          </div>
+
+          <div class="pt-5 border-t border-gray-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-50 text-brand-700 font-bold flex items-center justify-center text-sm font-serif border border-brand-100">
+              {r.author.charAt(0)}
+            </div>
+            <div>
+              <span class="font-bold text-sm text-gray-900 block">{r.author}</span>
+              <span class="text-xs text-gray-500">{r.country}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

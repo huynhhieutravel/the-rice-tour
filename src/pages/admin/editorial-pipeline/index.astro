@@ -1,0 +1,274 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+---
+
+<AdminLayout title="Hệ Thống Dây Chuyền Biên Tập AI (Editorial Pipeline)" activeMenu="tools" activeSubmenu="editorial-pipeline">
+  <div class="content-body" style="padding: 24px; max-width: 1400px; margin: 0 auto; font-family: system-ui, -apple-system, sans-serif;">
+    
+    <!-- Hero Header -->
+    <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 32px; border-radius: 16px; margin-bottom: 28px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: #fbbf24; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">
+            <span>🤖</span> Antigravity Editorial Engine 2.0
+          </div>
+          <h1 style="margin: 0 0 8px 0; font-size: 26px; font-weight: 800; letter-spacing: -0.02em;">Cẩm Nang Vận Hành Dây Chuyền Biên Tập AI (Editorial Pipeline)</h1>
+          <p style="margin: 0; color: #94a3b8; font-size: 14.5px; max-width: 800px; line-height: 1.6;">
+            Tài liệu lưu trữ vĩnh viễn và trung tâm điều phối 4 Agent AI chuyên trách chuyển hóa 788 bài viết thô (từ Nụ Cười Mê Kông) thành Cẩm nang toàn diện chuẩn phong cách <strong>FIT Tour ("Du lịch có GUU")</strong>.
+          </p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <a href="/admin/editorial-pipeline/compare" style="display: inline-flex; align-items: center; gap: 8px; background: #d97706; hover:bg-amber-500; color: white; padding: 10px 18px; border-radius: 10px; font-size: 13.5px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3); transition: all 0.2s;">
+            <span>⚖️</span> Xem Trang Đối Chiếu Mẫu
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 32px;">
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #64748b;">Trạm 1: Tone & Fact</span>
+          <span style="background: #ecfdf5; color: #059669; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">🟢 Active</span>
+        </div>
+        <div style="font-size: 18px; font-weight: 700; color: #0f172a;">@1-fittour-tone-rewriter</div>
+        <div style="font-size: 12.5px; color: #64748b; margin-top: 4px;">5 Archetypes Pillar Guide Engine</div>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #64748b;">Trạm 2: Thẩm Định QA</span>
+          <span style="background: #fefce8; color: #ca8a04; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">🟡 Active</span>
+        </div>
+        <div style="font-size: 18px; font-weight: 700; color: #0f172a;">@2-content-qa-auditor</div>
+        <div style="font-size: 12.5px; color: #64748b; margin-top: 4px;">Quét Blacklist, Fact-Check & Chống Fake News</div>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #64748b;">Trạm 3: Dịch Tiếng Anh</span>
+          <span style="background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">🔵 Active</span>
+        </div>
+        <div style="font-size: 18px; font-weight: 700; color: #0f172a;">@3-editorial-translator</div>
+        <div style="font-size: 12.5px; color: #64748b; margin-top: 4px;">National Geographic Style</div>
+      </div>
+
+      <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <span style="font-size: 13px; font-weight: 600; color: #64748b;">Trạm 4: Template Astro</span>
+          <span style="background: #faf5ff; color: #9333ea; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">🟣 Active</span>
+        </div>
+        <div style="font-size: 18px; font-weight: 700; color: #0f172a;">@4-astro-publisher</div>
+        <div style="font-size: 12.5px; color: #64748b; margin-top: 4px;">Đóng gói Astro SSR & WebP</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Hướng dẫn gọi từng trạm -->
+    <div style="background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; pb: 16px;">
+        <span style="font-size: 24px;">🚀</span>
+        <div>
+          <h2 style="margin: 0; font-size: 20px; font-weight: 700; color: #0f172a;">1. Hướng Dẫn & Câu Lệnh Mẫu Gọi Từng Agent Trong Chat</h2>
+          <p style="margin: 4px 0 0 0; font-size: 13.5px; color: #64748b;">Chỉ cần gõ cú pháp `@tên-agent` kèm theo yêu cầu, AI sẽ tự động kích hoạt bộ kỹ năng chuyên biệt tương ứng.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+        
+        <!-- Box Trạm 1 -->
+        <div style="border: 1px solid #fed7aa; background: #fffaf5; border-radius: 12px; padding: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="background: #ea580c; color: white; font-weight: 800; font-size: 12px; padding: 3px 8px; border-radius: 6px;">TRẠM 1</span>
+              <strong style="font-size: 16px; color: #9a3412;">Agent Chuyển Thể Văn Phong FIT Tour (Pillar Guide)</strong>
+            </div>
+            <span style="font-family: monospace; font-size: 12px; color: #ea580c; background: #ffedd5; padding: 2px 8px; border-radius: 4px; font-weight: 600;">@1-fittour-tone-rewriter</span>
+          </div>
+          <p style="font-size: 13.5px; color: #7c2d12; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Nhiệm vụ:</strong> Đọc bài thô từ `nucuoimekong_blog_data` hoặc `content-pipeline/01-raw/`, nhận diện 1 trong 5 Archetypes, tạo Quick Stats, viết văn phong lữ hành có chiều sâu, cập nhật dữ liệu 2026 và lưu sang `02-vietnamese-guu/`.
+          </p>
+          <div style="background: #1e293b; color: #e2e8f0; padding: 12px 16px; border-radius: 8px; font-family: monospace; font-size: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span>Chạy @1-fittour-tone-rewriter xử lý bài 007_nha-co-huynh-thuy-le.md theo chuẩn Pillar Guide FIT Tour.</span>
+            <button onclick="copyText(this, 'Chạy @1-fittour-tone-rewriter xử lý bài 007_nha-co-huynh-thuy-le.md theo chuẩn Pillar Guide FIT Tour.')" style="background: #334155; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; shrink-0;">Copy Lệnh</button>
+          </div>
+        </div>
+
+        <!-- Box Trạm 2 -->
+        <div style="border: 1px solid #fef08a; background: #fefce8; border-radius: 12px; padding: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="background: #ca8a04; color: white; font-weight: 800; font-size: 12px; padding: 3px 8px; border-radius: 6px;">TRẠM 2</span>
+              <strong style="font-size: 16px; color: #854d0e;">Agent Thẩm Định QA & Rà Soát Lỗi</strong>
+            </div>
+            <span style="font-family: monospace; font-size: 12px; color: #854d0e; background: #fef9c3; padding: 2px 8px; border-radius: 4px; font-weight: 600;">@2-content-qa-auditor</span>
+          </div>
+          <p style="font-size: 13.5px; color: #713f12; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Nhiệm vụ:</strong> Quét sạch 100% từ cấm Blacklist, <strong>thực hiện Fact-Check (Chống Fake News, update giá 2026, loại bỏ địa điểm đã đóng cửa)</strong>, kiểm tra thẻ H2/H3, captions ảnh và chuyển bài sang `03-qa-passed/`.
+          </p>
+          <div style="background: #1e293b; color: #e2e8f0; padding: 12px 16px; border-radius: 8px; font-family: monospace; font-size: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span>Chạy @2-content-qa-auditor quét và thẩm định các bài trong content-pipeline/02-vietnamese-guu/</span>
+            <button onclick="copyText(this, 'Chạy @2-content-qa-auditor quét và thẩm định các bài trong content-pipeline/02-vietnamese-guu/')" style="background: #334155; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; shrink-0;">Copy Lệnh</button>
+          </div>
+        </div>
+
+        <!-- Box Trạm 3 -->
+        <div style="border: 1px solid #bfdbfe; background: #eff6ff; border-radius: 12px; padding: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="background: #2563eb; color: white; font-weight: 800; font-size: 12px; padding: 3px 8px; border-radius: 6px;">TRẠM 3</span>
+              <strong style="font-size: 16px; color: #1e40af;">Agent Biên Dịch Du Lịch Cao Cấp (National Geographic Style)</strong>
+            </div>
+            <span style="font-family: monospace; font-size: 12px; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 4px; font-weight: 600;">@3-editorial-translator</span>
+          </div>
+          <p style="font-size: 13.5px; color: #1e3a8a; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Nhiệm vụ:</strong> Dịch bài đã duyệt ở `03-qa-passed/` sang tiếng Anh phong cách báo chí lữ hành quốc tế (không dịch máy từng từ) và lưu sang `04-english/`.
+          </p>
+          <div style="background: #1e293b; color: #e2e8f0; padding: 12px 16px; border-radius: 8px; font-family: monospace; font-size: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span>Chạy @3-editorial-translator dịch toàn bộ các bài ở 03-qa-passed sang tiếng Anh chuẩn National Geographic.</span>
+            <button onclick="copyText(this, 'Chạy @3-editorial-translator dịch toàn bộ các bài ở 03-qa-passed sang tiếng Anh chuẩn National Geographic.')" style="background: #334155; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; shrink-0;">Copy Lệnh</button>
+          </div>
+        </div>
+
+        <!-- Box Trạm 4 -->
+        <div style="border: 1px solid #e9d5ff; background: #faf5ff; border-radius: 12px; padding: 20px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="background: #9333ea; color: white; font-weight: 800; font-size: 12px; padding: 3px 8px; border-radius: 6px;">TRẠM 4</span>
+              <strong style="font-size: 16px; color: #6b21a8;">Agent Đóng Gói Lên Web (Astro Component & Schema)</strong>
+            </div>
+            <span style="font-family: monospace; font-size: 12px; color: #6b21a8; background: #f3e8ff; padding: 2px 8px; border-radius: 4px; font-weight: 600;">@4-astro-publisher</span>
+          </div>
+          <p style="font-size: 13.5px; color: #581c87; margin-bottom: 12px; line-height: 1.5;">
+            <strong>Nhiệm vụ:</strong> Đóng gói cặp bài VI - EN vào template Astro chuẩn SEO, format Masonry Gallery, gán metadata EXIF/WebP cho ảnh và xuất bản vào source code.
+          </p>
+          <div style="background: #1e293b; color: #e2e8f0; padding: 12px 16px; border-radius: 8px; font-family: monospace; font-size: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span>Chạy @4-astro-publisher đóng gói cặp bài VI-EN vào template Astro chuẩn SEO.</span>
+            <button onclick="copyText(this, 'Chạy @4-astro-publisher đóng gói cặp bài VI-EN vào template Astro chuẩn SEO.')" style="background: #334155; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; shrink-0;">Copy Lệnh</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 2: Khung 5 Archetypes -->
+    <div style="background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 28px; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; pb: 16px;">
+        <span style="font-size: 24px;">🏛️</span>
+        <div>
+          <h2 style="margin: 0; font-size: 20px; font-weight: 700; color: #0f172a;">2. Hệ Thống 5 Khung Bài Viết Chuẩn (5 Content Archetypes)</h2>
+          <p style="margin: 4px 0 0 0; font-size: 13.5px; color: #64748b;">Mỗi bài viết khi chuyển đổi sẽ tự động bám sát theo 1 trong 5 cấu trúc chuyên sâu dưới đây:</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+        
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 700; color: #0f172a;">1. Di Sản Làng Nghề & Thủ Công</h3>
+          <p style="font-size: 12.5px; color: #64748b; margin-bottom: 10px;">VD: Khăn rằn Long Khánh A, Lò gạch Mang Thít, Làng hoa Sa Đéc...</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155; line-height: 1.6;">
+            <li>Quick Stats (Niên đại, chất liệu, giá 2026)</li>
+            <li>Cội nguồn tâm linh & Giao thoa văn hóa</li>
+            <li>Bảng so sánh 3-4 dòng sản phẩm</li>
+            <li>Trực tiếp thực địa (Tọa độ, giờ vàng phơi chỉ/gạch)</li>
+            <li>Quy trình thủ công độc bản & Tips nhận biết</li>
+          </ul>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 700; color: #0f172a;">2. Điểm Đến, Kiến Trúc & Di Tích</h3>
+          <p style="font-size: 12.5px; color: #64748b; margin-bottom: 10px;">VD: Nhà cổ Huỳnh Thủy Lê, Chùa Som Rong, Dinh Cậu...</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155; line-height: 1.6;">
+            <li>Quick Stats (Năm xây, phong cách, giá vé 2026)</li>
+            <li>Trầm tích lịch sử & Giai thoại tình sử/tâm linh</li>
+            <li>Bóc tách chi tiết không gian kiến trúc</li>
+            <li>Khung giờ tham quan vắng & Góc chụp có GUU</li>
+            <li>Lộ trình kết hợp nửa ngày / 1 ngày</li>
+          </ul>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 700; color: #0f172a;">3. Ẩm Thực Bản Địa (Culinary Deep Dive)</h3>
+          <p style="font-size: 12.5px; color: #64748b; margin-bottom: 10px;">VD: Cơm tấm Long Xuyên, Lẩu mắm Cần Thơ, Bún nước lèo...</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155; line-height: 1.6;">
+            <li>Triết lý ẩm thực & Mùa nước nổi/thổ nhưỡng</li>
+            <li>Bóc tách nguyên liệu bản địa & Bí quyết nấu</li>
+            <li>Top 3 - 5 Tọa độ quán lâu năm (địa chỉ, giá 2026)</li>
+            <li>Cách thưởng thức đúng điệu của dân sành ăn</li>
+          </ul>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 700; color: #0f172a;">4. Quần Đảo, Biển & Thám Hiểm</h3>
+          <p style="font-size: 12.5px; color: #64748b; margin-bottom: 10px;">VD: Quần đảo Nam Du, Hòn Sơn, Mũi Cà Mau...</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155; line-height: 1.6;">
+            <li>Mùa biển đẹp nhất & Lịch tàu cao tốc 2026</li>
+            <li>Bản đồ địa hình & So sánh các bãi tắm/hòn đảo</li>
+            <li>Trải nghiệm độc bản (câu mực đêm, lặn san hô)</li>
+            <li>Lưu ý an toàn, sóng biển & Lữ hành trách nhiệm</li>
+          </ul>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 15px; font-weight: 700; color: #0f172a;">5. Cẩm Nang Lộ Trình Chuyên Sâu</h3>
+          <p style="font-size: 12.5px; color: #64748b; margin-bottom: 10px;">VD: Chợ nổi Cái Răng, Lịch trình Vĩnh Long 2N1Đ...</p>
+          <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155; line-height: 1.6;">
+            <li>Lịch trình Time-block tối ưu theo giờ thực tế</li>
+            <li>Lời khuyên thực chiến (Tránh bẫy giá cao, mẹo đò)</li>
+            <li>Checklist chuẩn bị hành lý theo mùa</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 3: Quy tắc từ cấm & Từ đắt giá -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px;">
+      
+      <!-- Cột từ cấm -->
+      <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 16px; padding: 24px;">
+        <h3 style="margin: 0 0 12px 0; font-size: 16px; font-weight: 700; color: #9f1239; display: flex; align-items: center; gap: 8px;">
+          <span>🚫</span> Danh Sách Từ Cấm (Blacklist - Cấm 100%)
+        </h3>
+        <p style="font-size: 13px; color: #be123c; margin-bottom: 14px;">Tuyệt đối không để lọt các từ ngữ mang tính rẻ tiền, giật tít câu view hoặc quảng cáo bán tour:</p>
+        <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #881337; line-height: 1.8;">
+          <li><code>Check-in sống ảo</code>, <code>thánh địa sống ảo</code>, <code>cực chất</code></li>
+          <li><code>Điên đảo</code>, <code>rần rần</code>, <code>gây bão mạng</code>, <code>siêu hot</code></li>
+          <li><code>Tour giá rẻ bất ngờ</code>, <code>siêu giảm giá</code>, <code>xả stress thả ga</code></li>
+          <li><code>Review từ A-Z</code>, <code>tất tần tật</code>, <code>bỏ túi ngay kẻo lỡ</code></li>
+          <li><code>Nụ Cười Mê Kông</code> (Xóa sạch mọi nhắc tên thương hiệu cũ)</li>
+        </ul>
+      </div>
+
+      <!-- Cột từ đắt giá -->
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 16px; padding: 24px;">
+        <h3 style="margin: 0 0 12px 0; font-size: 16px; font-weight: 700; color: #166534; display: flex; align-items: center; gap: 8px;">
+          <span>✨</span> Từ Điển Đắt Giá FIT Tour (Golden Lexicon)
+        </h3>
+        <p style="font-size: 13px; color: #15803d; margin-bottom: 14px;">Ưu tiên sử dụng các cụm từ thể hiện sự đĩnh đạc, chiều sâu văn hóa và trải nghiệm nguyên bản:</p>
+        <ul style="margin: 0; padding-left: 18px; font-size: 13px; color: #14532d; line-height: 1.8;">
+          <li><em>Nguyên bản, độc bản, trầm tích thời gian, phong trần, hoang sơ</em></li>
+          <li><em>Chiêm nghiệm, tĩnh tại, thong dong, chạm vào, lắng nghe, kết nối</em></li>
+          <li><em>Độ cao, vi khí hậu, thổ nhưỡng, nhịp thở đất mẹ, khắc nghiệt kỳ vĩ</em></li>
+          <li><em>Bespoke, trải nghiệm có GUU, cẩm nang thực địa, lữ hành trách nhiệm</em></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script is:inline>
+    function copyText(button, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = button.innerText;
+        button.innerText = 'Đã Copy! ✓';
+        button.style.background = '#059669';
+        setTimeout(() => {
+          button.innerText = originalText;
+          button.style.background = '#334155';
+        }, 2000);
+      });
+    }
+  </script>
+</AdminLayout>

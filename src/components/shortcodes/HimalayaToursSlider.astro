@@ -1,0 +1,89 @@
+---
+const himalayaTours = [
+  {
+    title: "Pakistan",
+    desc: "Vùng đất thuần khiết - Vẻ đẹp hoang dã. Những sông băng khổng lồ và cung đường huyền thoại Karakoram vĩ đại.",
+    image: "https://media.fittour.vn/uploads/2022/12/doan-duong-cao-toc-Karakoram.webp",
+    link: "/country/pakistan/"
+  },
+  {
+    title: "Ladakh",
+    desc: "Tiểu Tây Tạng - Vẻ đẹp hoang sơ kỳ vĩ với những hồ nước mặn cao nhất thế giới và sa mạc tuyết trắng.",
+    image: "https://media.fittour.vn/uploads/2023/06/nui-tuyen-vung-zanskar-ladakh.webp",
+    link: "/country/ladakh/"
+  },
+  {
+    title: "Kailash",
+    desc: "Ngọn núi thiêng - Điểm hành hương linh thiêng bậc nhất thế giới, trung tâm vũ trụ của nhiều tôn giáo.",
+    image: "https://media.fittour.vn/uploads/2024/07/du-khach-tour-kailash-tan-huong-su-tuyet-voi-tai-song-bang-karola.webp",
+    link: "/country/kailash/"
+  },
+  {
+    title: "Nepal",
+    desc: "Cội nguồn thiêng liêng - Nơi toạ lạc của 8/10 đỉnh núi cao nhất thế giới và những tu viện linh thiêng bậc nhất.",
+    image: "https://media.fittour.vn/uploads/2022/11/du-khach-fit-tour-va-khung-canh-namche-bazaar.webp",
+    link: "/country/nepal/"
+  },
+  {
+    title: "Sikkim",
+    desc: "Vương quốc hẻo lánh - Nằm ẩn mình dưới bóng đỉnh Kangchenjunga - đỉnh núi cao thứ 3 thế giới.",
+    image: "https://media.fittour.vn/uploads/2023/01/dinh-nui-Kangchenjunga.webp",
+    link: "/country/sikkim/"
+  },
+  {
+    title: "Bhutan",
+    desc: "Vương quốc hạnh phúc - Quốc gia Phật giáo duy nhất trên thế giới, nơi vẻ đẹp thiên nhiên và văn hóa đan xen.",
+    image: "https://media.fittour.vn/uploads/legacy/khach-du-lich-max-vu-chup-anh-giua-nui-non-bhutan.webp",
+    link: "/country/bhutan/"
+  },
+  {
+    title: "Tây Tạng",
+    desc: "Nóc nhà thế giới - Vùng đất linh thiêng huyền bí với những hồ nước thiêng và tu viện cổ kính.",
+    image: "https://media.fittour.vn/uploads/2023/02/banh-xe-kinh-luan-tay-tang.webp",
+    link: "/country/tay-tang/"
+  }
+];
+---
+
+<div class="himalaya-slider-section bg-slate-50 py-16 md:py-24 border-y border-slate-200 mt-16 gallery-breakout" style="margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); width: 100vw; max-width: 100vw;">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6">
+    <div class="text-center mb-10">
+      <span class="text-[#c2410c] text-sm font-bold uppercase tracking-wider mb-2 block">Khám Phá Thêm</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Các Hành Trình Thuộc Himalaya Series</h2>
+      <p class="text-slate-600 max-w-2xl mx-auto">Hành trình dọc theo rặng núi cao nhất thế giới, khám phá những nền văn hóa linh thiêng và cảnh quan kỳ vĩ bậc nhất hành tinh.</p>
+    </div>
+    
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar" style="scroll-padding-left: 1rem;">
+      {himalayaTours.map((tour) => (
+        <a href={tour.link} class="group block w-[280px] md:w-[320px] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 !no-underline">
+          <div class="aspect-[4/3] w-full overflow-hidden relative">
+            <img src={tour.image} alt={tour.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 m-0" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-xl font-bold text-white mb-1 drop-shadow-md">{tour.title}</h3>
+            </div>
+          </div>
+          <div class="p-5">
+            <p class="text-sm text-slate-600 line-clamp-3 m-0 leading-relaxed">{tour.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+    
+    <div class="text-center mt-6">
+      <a href="/country/himalaya/" class="inline-block px-8 py-3 bg-[#c2410c] font-bold rounded-full hover:bg-orange-800 shadow-sm hover:shadow-md transition-all text-white !no-underline">
+        Tìm Hiểu Himalaya Series
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>

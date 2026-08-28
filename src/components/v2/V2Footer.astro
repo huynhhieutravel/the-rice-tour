@@ -1,0 +1,101 @@
+---
+// src/components/v2/V2Footer.astro
+import FooterBottom from '../system/footer/sections/FooterBottom.astro';
+---
+
+<footer class="w-full bg-[#0a0a0a] text-white pt-16 pb-12 border-t border-[#1a1d24] relative overflow-hidden font-sans">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 relative">
+      
+      <!-- Column 1: Brand & Intro -->
+      <div class="col-span-1">
+        <div class="flex items-center mb-2">
+          <h2 class="font-serif text-2xl font-bold tracking-wider text-white uppercase leading-none">THE RICE TOUR</h2>
+        </div>
+        <p class="font-serif italic text-xs tracking-widest text-amber-400 mb-6">AUTHENTIC VIETNAM INBOUND EXPEDITIONS</p>
+        
+        <ul class="space-y-1 text-sm text-white/60 font-medium">
+          <li><a href="/about-us" class="inline-block py-1.5 hover:text-amber-400 transition-colors">About Our Story</a></li>
+          <li><a href="/tailor-made" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Tailor-Made Trip Planner</a></li>
+          <li><a href="/tours" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Curated Expeditions</a></li>
+          <li><a href="/blog" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Vietnam Travel Guides</a></li>
+          <li><a href="/contact" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Contact Our Specialists</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Signature Regions -->
+      <div class="col-span-1 flex flex-col gap-6">
+        <div>
+          <p class="font-serif text-amber-400 text-lg mb-3">Top Destinations</p>
+          <ul class="space-y-1 text-sm text-white/60 font-medium">
+            <li><a href="/tours?region=north" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Hanoi & Northern Highlands</a></li>
+            <li><a href="/tours?region=halong" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Ha Long & Lan Ha Bay</a></li>
+            <li><a href="/tours?region=sapa" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Sapa Terraced Rice Fields</a></li>
+            <li><a href="/tours?region=central" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Hue & Ancient Hoi An</a></li>
+            <li><a href="/tours?region=mekong" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Mekong Delta Waterways</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3: Travel Info & Policy -->
+      <div class="col-span-1">
+        <p class="font-serif text-amber-400 text-lg mb-3">Travel Essentials</p>
+        <ul class="space-y-1 text-sm text-white/60 font-medium">
+          <li><a href="/blog/vietnam-visa-guide-2026" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Vietnam Visa Guide 2026</a></li>
+          <li><a href="/blog/best-time-to-visit-vietnam" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Best Time to Visit</a></li>
+          <li><a href="/tailor-made" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Bespoke Travel Inquiry</a></li>
+          <li><a href="/contact" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Booking & Cancellation Terms</a></li>
+          <li><a href="/contact" class="inline-block py-1.5 hover:text-amber-400 transition-colors">Responsible Travel Pledge</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact & Concierge -->
+      <div class="col-span-1 text-sm text-white/60 font-medium leading-relaxed">
+        <p class="font-serif text-amber-400 text-lg mb-4">Dedicated Concierge</p>
+        <p class="font-bold text-white mb-4 uppercase">The Rice Tour Co., Ltd</p>
+        
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-white/40 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span>180 Bui Vien St, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-white/40 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <a href="tel:02888887888" class="hover:text-amber-400 transition-colors">Hotline: 028.8888.7888</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-white/40 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <a href="mailto:hello@thericetour.com" class="hover:text-amber-400 transition-colors">hello@thericetour.com</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.201.301-.779.979-.955 1.18-.176.2-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.201-.301.301-.502.1-.201.05-.376-.025-.527-.075-.15-.678-1.635-.93-2.243-.245-.591-.494-.511-.678-.521-.176-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.912 1.23 3.113.15.2 2.123 3.242 5.143 4.547.718.31 1.279.496 1.716.635.721.23 1.377.197 1.896.12.577-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351z"/></svg>
+                <a href="/whatsapp" target="_blank" class="hover:text-amber-400 font-bold text-amber-300 transition-colors">WhatsApp 24/7: +84 962 333 621</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-2 pt-4 border-t border-white/10 space-y-1 text-xs">
+            <p><strong>Operator License:</strong> 79-1588/2023/TCDL-GP LHQT</p>
+            <p class="text-amber-400/80">★ TripAdvisor 5.0 Excellence Award 2026</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-800">
+      <FooterBottom />
+    </div>
+
+  </div>
+
+  <!-- Signature Absolute Right Bottom -->
+  <div class="absolute bottom-10 right-0 opacity-[0.15] pointer-events-none hidden md:block z-0">
+    <p class="font-['Great_Vibes'] text-7xl lg:text-8xl xl:text-9xl text-amber-400 rotate-[-5deg] translate-y-8 translate-x-8 whitespace-nowrap">
+      Welcome to Vietnam!
+    </p>
+  </div>
+</footer>

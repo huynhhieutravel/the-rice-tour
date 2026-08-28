@@ -1,0 +1,11 @@
+---
+import PillarGuide from '../kailash/PillarGuide.tsx';
+
+interface Props {
+  dataMap?: Record<string, any>;
+}
+
+const { dataMap } = Astro.props;
+---
+
+<PillarGuide client:idle />

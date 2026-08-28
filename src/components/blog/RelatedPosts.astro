@@ -1,0 +1,101 @@
+---
+// Component RelatedPosts
+import { getOptimizedImageUrl, generateSrcSet } from '@/lib/imageOptimization';
+
+const { posts = [], title = "Bài viết liên quan" } = Astro.props;
+
+if (!posts || posts.length === 0) {
+  return null;
+}
+---
+
+<related-posts class="block bg-surface lg:rounded-2xl lg:p-6 lg:shadow-sm lg:border lg:border-border mt-8 lg:mt-0">
+  <h2 class="font-bold text-primary uppercase tracking-wider text-sm mb-4 lg:mb-6 border-b border-border pb-3">{title}</h2>
+  
+  <div class="related-posts-scroll flex lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 snap-x snap-mandatory">
+    {posts.map(post => (
+      <a href={`/${post.slug}`} class="flex lg:flex-row flex-col gap-3 lg:gap-4 group snap-start flex-shrink-0 w-[75vw] md:w-[350px] lg:w-auto">
+        <div class="w-full lg:w-20 h-32 lg:h-20 rounded-lg overflow-hidden flex-shrink-0 bg-subtle aspect-video lg:aspect-square">
+          <img 
+            src={post.image || '/avatar-placeholder.jpg'}  
+            alt={post.title} 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out text-transparent text-[0px]" 
+            loading="lazy" 
+            decoding="async" 
+            fetchpriority="low" 
+          />
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-primary text-sm leading-tight group-hover:text-brand-500 transition-colors line-clamp-2 mb-2">{post.title}</h3>
+          <p class="text-xs text-muted">{post.date}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="scroll-indicator lg:hidden flex gap-1.5 justify-center mt-3">
+    {posts.map((_, i) => (
+      <span class={`block h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-brand-500 w-4' : 'bg-border-subtle w-1.5'}`}></span>
+    ))}
+  </div>
+</related-posts>
+
+<style>
+  @reference "../../styles/global.css";
+
+  .related-posts-scroll {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .related-posts-scroll::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  /* Update active dot based on scroll position */
+</style>
+
+<script>
+  class RelatedPosts extends HTMLElement {
+    constructor() {
+      super();
+      const scrollContainer = this.querySelector('.related-posts-scroll');
+      const dots = this.querySelectorAll('.scroll-indicator span');
+      if (!scrollContainer || dots.length === 0) return;
+
+      let itemWidth = 0;
+      // Cache width to avoid Layout Thrashing (offsetWidth forces sync layout)
+      const updateWidth = () => {
+        if (scrollContainer.firstElementChild) {
+          itemWidth = (scrollContainer.firstElementChild as HTMLElement).offsetWidth;
+        }
+      };
+      
+      // Defer initial measure to avoid Layout Thrashing during page load
+      requestAnimationFrame(() => {
+        updateWidth();
+      });
+      
+      // Re-measure on resize
+      window.addEventListener('resize', () => {
+        requestAnimationFrame(updateWidth);
+      }, { passive: true });
+
+      scrollContainer.addEventListener('scroll', () => {
+        if (itemWidth === 0) return;
+        const scrollLeft = scrollContainer.scrollLeft;
+        const activeIndex = Math.round(scrollLeft / itemWidth);
+        
+        dots.forEach((dot, index) => {
+          if (index === activeIndex) {
+            dot.classList.remove('bg-border-subtle', 'w-1.5');
+            dot.classList.add('bg-brand-500', 'w-4');
+          } else {
+            dot.classList.remove('bg-brand-500', 'w-4');
+            dot.classList.add('bg-border-subtle', 'w-1.5');
+          }
+        });
+      }, { passive: true });
+    }
+  }
+  customElements.define('related-posts', RelatedPosts);
+</script>

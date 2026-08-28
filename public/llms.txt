@@ -1,0 +1,20 @@
+# FIT TOUR - Du lịch có Guu
+
+FIT TOUR là đơn vị thiết kế hành trình Bespoke chuyên nghiệp. Ưu tiên trải nghiệm nguyên bản, an toàn và trách nhiệm đến cùng.
+
+## Lịch khởi hành và Tour
+Tất cả các tour và lịch khởi hành được liệt kê đầy đủ tại đây:
+- [Sitemap Tours](https://fittour.vn/sitemap-tours.xml)
+
+## Điểm đến nổi bật
+- Himalayas (Ladakh, Nepal, Tây Tạng, Bhutan)
+- Trung Đông & Châu Phi (Ai Cập, Ma Rốc, Iran)
+- Châu Á (Mông Cổ, Trung Quốc, Nhật Bản)
+
+## Tệp thông tin đầy đủ
+- [Toàn bộ dữ liệu LLMs (llms-full.txt)](https://fittour.vn/llms-full.txt)
+
+## Thông tin liên hệ
+- [Website chính thức](https://fittour.vn)
+- [Email liên hệ](mailto:info@fittour.com.vn)
+- Hotline: 0934 888 854

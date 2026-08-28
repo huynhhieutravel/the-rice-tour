@@ -1,0 +1,683 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { MapPin, Info, Users, Clock, Calendar, Compass, Share2, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('dieu-can-biet-truoc-khi-bay-truc-thang-alaska').first<any>(),
+    { route: Astro.url.pathname, slug: 'dieu-can-biet-truoc-khi-bay-truc-thang-alaska', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || '12 Điều Cần Biết Trước Khi Bay Trực Thăng Hạ Cánh Trên Sông Băng Alaska';
+const seoDesc = post.seoDesc || post.excerpt || 'Kinh nghiệm và lưu ý chuẩn bị đi trực thăng hạ cánh trên sông băng (Glacier Landing) tại Alaska.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/2023/11/11.webp'; // Placeholder Alaska image
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || new Date().toISOString();
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+
+const tips = [
+  { 
+    id: "mac-dung-cach",
+    name: "Điều Quan Trọng Nhất Không Phải Là Áo Dày, Mà Là Mặc Đúng Cách",
+    desc: `Nhiều người nghĩ đi Alaska cần áo thật dày, nhưng thực tế nhiệt độ mùa hè ở các thị trấn khá dễ chịu (15–20°C). Chỉ khi trực thăng hạ cánh xuống sông băng, nhiệt độ mới giảm thêm 8–12°C kèm theo gió lạnh.<br/><br/>
+Đó là lý do các hãng trực thăng khuyến nghị mặc theo nguyên tắc nhiều lớp (Layering):
+<ul class="list-disc pl-5 mt-2 space-y-1 mb-2">
+  <li>Áo giữ nhiệt mặc trong cùng.</li>
+  <li>Áo len hoặc áo nỉ giữ ấm.</li>
+  <li>Áo khoác chống gió và chống nước bên ngoài.</li>
+</ul>
+Cách mặc này giúp bạn dễ dàng cởi bớt khi dạo phố và nhanh chóng khoác thêm lớp ngoài ngay trước khi lên trực thăng.`,
+    note: "Trong nhiều đoàn FIT TOUR, điều khách bất ngờ nhất là lúc xuống thị trấn lại thấy khá nóng. Mặc nhiều lớp giúp linh hoạt hơn rất nhiều so với một chiếc áo phao cồng kềnh.",
+    img: ""
+  },
+  {
+    id: "khong-can-mua-boots",
+    name: "Bạn Không Cần Mua Boots Đi Băng Đắt Tiền",
+    desc: `Rất nhiều khách lần đầu đi Alaska lầm tưởng phải mua loại giày đi tuyết chuyên dụng. Thực tế, nếu chỉ tham gia Glacier Landing thì bạn hoàn toàn không cần.<br/><br/>
+Ngay trước khi bước xuống sông băng, nhân viên sẽ phát Glacier Boots hoặc thiết bị chống trượt (Ice Cleats) để bọc bên ngoài đôi giày của bạn.<br/><br/>
+Bạn chỉ cần mang một đôi sneaker chắc chắn hoặc giày trekking có đế bám tốt là đủ. Tránh mang dép, sandal hay giày cao gót vì thiết bị chống trượt sẽ không phát huy tác dụng.`,
+    note: "Nhiều khách hỏi mua boots chuyên dụng đắt tiền, nhưng sau khi trải nghiệm mới nhận ra đôi giày trekking có sẵn ở nhà đã đáp ứng tốt yêu cầu."
+  },
+  {
+    id: "kinh-ram",
+    name: "Có Một Món Đồ Nhỏ Mà Người Việt Hay Quên Nhất: Kính Râm",
+    desc: `Không phải để chụp hình cho đẹp, kính râm là trang bị cực kỳ cần thiết trên sông băng. Băng tuyết phản chiếu ánh sáng mặt trời giống như một tấm gương khổng lồ, khiến mắt dễ bị chói và chảy nước mắt nếu đứng lâu.<br/><br/>
+Một chiếc kính chống tia UV sẽ giúp bạn quan sát cảnh quan dễ chịu hơn, chụp ảnh tự nhiên và giảm mỏi mắt suốt chuyến tham quan.<br/><br/>
+Ngoài ra, môi trường ở đây khá khô lạnh, đừng quên mang theo thỏi son dưỡng và tuýp kem chống nắng nhỏ.`
+  },
+  {
+    id: "gio-lanh",
+    name: "Cái Lạnh Không Chỉ Đến Từ Nhiệt Độ, Mà Là Gió",
+    desc: `Con số trên ứng dụng thời tiết chỉ nói lên một nửa sự thật. Trên sông băng hoàn toàn trống trải, không có cây cối hay công trình chắn gió, luồng gió tự nhiên kết hợp với bề mặt băng sẽ làm bạn thấy lạnh hơn nhiều.<br/><br/>
+Đôi bàn tay và đôi tai thường là những nơi cảm nhận cái lạnh đầu tiên. Một đôi găng tay giữ ấm đơn giản và chiếc mũ len che tai sẽ rất hữu ích.<br/><br/>
+Bạn không cần găng tay leo núi chuyên nghiệp, chỉ cần đủ ấm để thoải mái cầm máy ảnh hoặc điện thoại mà không phải liên tục đút tay vào túi áo.`
+  },
+  {
+    id: "pin-dien-thoai",
+    name: "Điện Thoại Của Bạn Không Hỏng, Chỉ Là Alaska Quá Lạnh",
+    desc: `Bạn có thể gặp tình huống này: pin còn hơn 70%, chụp vài tấm ảnh rồi tụt nhanh xuống 20% hoặc tự tắt nguồn.<br/><br/>
+Nguyên nhân không phải do điện thoại, mà do nhiệt độ thấp. Pin lithium hoạt động kém khi trời lạnh, đặc biệt trên sông băng có gió mạnh.<br/><br/>
+Cách xử lý khá đơn giản:
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>Sạc đầy trước khi đi.</li>
+  <li>Mang theo sạc dự phòng.</li>
+  <li>Khi không dùng, để điện thoại trong túi áo khoác để giữ ấm.</li>
+</ul><br/>
+Đây là mẹo quen thuộc của những người thường xuyên chụp ảnh ở vùng lạnh.`
+  },
+  {
+    id: "mang-it-do",
+    name: "Bạn Mang Càng Ít Đồ, Chuyến Bay Càng Dễ Chịu",
+    desc: `Nhiều khách lần đầu thường mang khá nhiều đồ: máy ảnh, ống kính, áo khoác, balo...<br/><br/>
+Nhưng thực tế, phần lớn sẽ phải để lại vì trực thăng có không gian hạn chế và yêu cầu nghiêm ngặt về tải trọng.<br/><br/>
+Những thứ thật sự cần thiết chỉ gồm:
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>Điện thoại.</li>
+  <li>Máy ảnh có dây đeo.</li>
+  <li>Ví nhỏ.</li>
+  <li>Một chai nước nhỏ.</li>
+</ul><br/>
+Các vật dụng khác thường có khu vực gửi tại văn phòng.<br/><br/>
+Nếu mang máy ảnh, hãy dùng dây đeo chắc chắn. Gió từ cánh quạt rất mạnh, việc làm rơi thiết bị không chỉ gây tiếc nuối mà còn ảnh hưởng đến an toàn.`,
+    note: "Có khách từng mang rất nhiều thiết bị chụp ảnh, nhưng cuối cùng gần như phải gửi lại hết. Sau chuyến đi, anh chỉ cười: 'Lần sau chắc chỉ mang điện thoại thôi.' Thực ra, điều đáng nhớ nhất không phải là thiết bị, mà là trải nghiệm đứng giữa một dòng sông băng hàng nghìn năm tuổi."
+  },
+  {
+    id: "can-nang",
+    name: "Đây Có Lẽ Là Lần Hiếm Hoi Bạn Vui Vẻ Khi Được... Cân",
+    desc: `Trước chuyến bay, bạn sẽ được cân.<br/><br/>
+Đây là quy trình an toàn tiêu chuẩn, giúp phi công tính toán vị trí ngồi để đảm bảo cân bằng cho trực thăng.<br/><br/>
+Vì vậy, đôi khi bạn sẽ không ngồi cạnh người đi cùng. Nếu được yêu cầu đổi chỗ, đó là quyết định kỹ thuật, không phải ngẫu nhiên.`
+  },
+  {
+    id: "nguoi-lon-tuoi",
+    name: "Người Lớn Tuổi Có Đi Được Không?",
+    desc: `Câu trả lời thường là: <strong class="text-amber-700">Có.</strong><br/><br/>
+Nhiều du khách ngoài 70 tuổi vẫn tham gia Glacier Landing bình thường.<br/><br/>
+Điều quan trọng là sức khỏe, không phải tuổi tác. Nếu vẫn đi lại ổn định và không có chống chỉ định từ bác sĩ, chuyến đi thường không gặp vấn đề.<br/><br/>
+Ngược lại, nếu có bệnh tim mạch, hô hấp hoặc vừa phẫu thuật, nên tham khảo ý kiến bác sĩ trước.<br/><br/>
+Một lưu ý nhỏ: trên trực thăng <strong class="text-amber-700">không có nhà vệ sinh</strong>, nên hãy sử dụng trước khi lên máy bay.`
+  },
+  {
+    id: "an-toan",
+    name: "Đừng Chỉ Nhìn Cảnh Đẹp, Hãy Nghe Kỹ Phần Hướng Dẫn An Toàn",
+    desc: `Trước khi lên trực thăng, bạn sẽ được hướng dẫn các quy tắc an toàn.<br/><br/>
+Hãy chú ý lắng nghe, vì bạn sẽ được hướng dẫn:
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>Khi nào được tiến lại gần.</li>
+  <li>Hướng di chuyển an toàn.</li>
+  <li>Cách lên xuống trực thăng.</li>
+  <li>Cách sử dụng tai nghe.</li>
+</ul><br/>
+Phần này chỉ mất vài phút nhưng rất quan trọng.<br/><br/>
+Bạn không cần nhớ hết mọi thứ, chỉ cần luôn đi theo hướng dẫn của nhân viên và chờ hiệu lệnh trước khi di chuyển.<br/><br/>
+An toàn luôn quan trọng hơn mọi bức ảnh.`
+  },
+  {
+    id: "thoi-tiet",
+    name: "Thời Tiết Mới Là Người Quyết Định Cuối Cùng",
+    desc: `Nếu có một yếu tố mà ngay cả phi công cũng không thể can thiệp, đó là thời tiết.<br/><br/>
+Alaska nổi tiếng với thời tiết thay đổi rất nhanh. Một buổi sáng có thể nắng đẹp, nhưng chỉ vài giờ sau mây thấp hoặc sương mù đã phủ kín thung lũng.<br/><br/>
+Với các chuyến bay trực thăng, an toàn luôn được đặt lên hàng đầu. Nếu điều kiện không đảm bảo, đơn vị khai thác có thể:
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>Lùi giờ bay.</li>
+  <li>Đổi sang khung giờ khác.</li>
+  <li>Hoặc hủy chuyến.</li>
+</ul><br/>
+Điều này đôi khi khiến du khách tiếc nuối, nhưng cũng là dấu hiệu của một đơn vị vận hành chuyên nghiệp. Không có bức ảnh nào đáng để đánh đổi sự an toàn.`
+  },
+  {
+    id: "hieu-nham",
+    name: "Những Điều Khách Việt Thường Hiểu Nhầm",
+    desc: `<div class="space-y-3 mt-2">
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>"Alaska mùa hè lúc nào cũng dưới 0°C"</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Không đúng. Nhiều ngày mùa hè ở Anchorage hoặc Talkeetna có nhiệt độ 15–20°C. Chỉ khi lên sông băng, nhiệt độ mới giảm đáng kể và kết hợp với gió tạo cảm giác lạnh hơn.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>"Phải mua boots chuyên dụng mới đi được"</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Không cần. Các tour Glacier Landing thường chuẩn bị Glacier Boots, Ice Cleats hoặc thiết bị chống trượt tương đương để sử dụng trên băng. Bạn chỉ cần mang giày kín mũi và có độ bám tốt.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>"Trực thăng rung lắc rất đáng sợ"</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Trong điều kiện thời tiết thuận lợi, chuyến bay thường khá êm. Một số thời điểm có thể xuất hiện rung nhẹ khi bay qua thung lũng hoặc vùng núi, nhưng đây là hiện tượng bình thường.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>"Người lớn tuổi không tham gia được"</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Tuổi tác không phải yếu tố quyết định. Điều quan trọng là tình trạng sức khỏe và khả năng đi lại. Thực tế, rất nhiều du khách lớn tuổi vẫn tham gia Glacier Landing mỗi năm.
+    </div>
+  </details>
+</div>`
+  },
+  {
+    id: "cau-hoi-thuong-gap",
+    name: "Những Câu Hỏi Thường Gặp Khác",
+    desc: `<div class="space-y-3 mt-2">
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Đoạn đường đi bộ trên sông băng có dài không? Có cần mang theo gậy leo núi không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      <p>Trải nghiệm Glacier Landing là một hoạt động đi dạo nhẹ nhàng ngắm cảnh, hoàn toàn không phải là một chuyến trekking đường dài. Cụ thể:</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li><strong>Về quãng đường:</strong> Trực thăng sẽ hạ cánh ở khu vực băng đã được kiểm tra an toàn và bằng phẳng. Bạn sẽ có khoảng 20-30 phút để tự do đi dạo xung quanh trực thăng (thường trong bán kính ngắn) để chiêm ngưỡng dòng sông băng và chụp ảnh kỷ niệm.</li>
+        <li><strong>Về gậy leo núi (trekking poles):</strong> Bạn <strong>không cần</strong> và cũng không nên mang theo gậy leo núi cá nhân. Thứ nhất, khoang trực thăng có không gian rất giới hạn, các vật dụng cồng kềnh sẽ phải để lại tại trạm bay. Thứ hai, bạn đã được trang bị sẵn thiết bị chống trượt (Ice Cleats) bọc ngoài giày, giúp đi lại trên băng rất vững chãi mà không cần điểm tựa từ gậy.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có được mang flycam không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Thông thường không. Hầu hết các đơn vị khai thác đều không cho phép sử dụng flycam gần khu vực trực thăng vì lý do an toàn.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có được mang gậy selfie không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Nhiều đơn vị cũng hạn chế hoặc không cho phép gậy selfie và các loại gậy nối dài. Nếu muốn sử dụng, hãy hỏi trước hướng dẫn viên.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có được quay video bằng điện thoại không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Có. Điện thoại và máy ảnh đều được phép mang theo. Tuy nhiên, nên sử dụng dây đeo để tránh rơi khi lên xuống trực thăng.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có giới hạn cân nặng không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Có. Tất cả hành khách đều được cân trước chuyến bay để phi công sắp xếp vị trí ngồi phù hợp. Một số đơn vị có thể áp dụng phụ phí nếu vượt ngưỡng quy định của họ.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có được chọn chỗ ngồi không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Thông thường không. Chỗ ngồi được sắp xếp dựa trên cân bằng tải của trực thăng.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Có cần chuẩn bị tiền tip không?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Không bắt buộc, nhưng nếu bạn hài lòng với dịch vụ, việc gửi một khoản tip nhỏ cho phi công hoặc nhân viên hỗ trợ là điều khá phổ biến tại Mỹ.
+    </div>
+  </details>
+
+  <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <span>Nếu thời tiết xấu thì sao?</span>
+      </div>
+      <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+      <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+    </summary>
+    <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed">
+      Đơn vị khai thác sẽ đánh giá tình hình và có thể đổi giờ hoặc hủy chuyến nếu điều kiện không an toàn.
+    </div>
+  </details>
+</div>`
+  }
+];
+
+
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#0ea5e9] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Alaska Glacier Landing" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" decoding="async" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Alaska</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          12 Điều Cần Biết Trước Khi Bay Trực Thăng Hạ Cánh Trên Sông Băng Alaska
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-sky-400 italic mb-10 max-w-3xl drop-shadow-md">
+          Những Lưu Ý Từ Trưởng Đoàn Trước Khi Tham Gia Glacier Landing
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium">
+          "Mọi người nhớ mang kính râm nhé." Đó gần như là câu nói mà trưởng đoàn FIT TOUR luôn nhắc trước khi cả đoàn bước vào khu vực chuẩn bị bay trực thăng. 
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href="/huynh-hieu" class="flex items-center gap-3 group">
+            <img src="https://media.fittour.vn/uploads/huynhhieutravel.webp" alt="Huynh Hieu" class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-sky-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-1">
+              {post.author || 'Huynh Hieu Travel'} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-sky-400" />
+            <span>14 phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">🚁</span> 1 Trải nghiệm
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">❄️</span> Glacier Landing
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">🏔️</span> Cảnh quan hùng vĩ
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-sky-700 bg-sky-50 px-3 py-2.5 rounded-lg transition-colors">
+                <span class="text-sky-500 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-2 pb-1">
+                <a href="#danh-sach-12-dieu" class="flex items-center gap-2 text-slate-700 hover:text-sky-600 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">📋</span> Danh sách 12 lưu ý
+                </a>
+                <div class="pl-9 pr-3 space-y-1.5 mt-1 border-l border-slate-100 ml-[18px] max-h-[500px] overflow-y-auto custom-scrollbar">
+                  {tips.map((m, i) => (
+                    <a href={`#${m.id}`} class="block text-slate-500 hover:text-sky-600 text-[13px] py-1 transition-colors leading-tight">
+                      {i+1}. {m.name}
+                    </a>
+                  ))}
+                  <a href="#luu-y-rieng" class="block text-slate-500 hover:text-sky-600 text-[13px] py-1 transition-colors leading-tight">13. Checklist trước giờ bay</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl border border-emerald-100 shrink-0">📍</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Khu vực</div>
+                <div class="text-[13px] font-bold text-slate-800">Sông băng Alaska</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">❄️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Nhiệt độ TB</div>
+                <div class="text-[13px] font-bold text-slate-800">Thấp hơn 8-12°C</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">🚁</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Trải nghiệm</div>
+                <div class="text-[13px] font-bold text-slate-800">Trực thăng</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-xl border border-amber-100 shrink-0">⏳</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Thời gian</div>
+                <div class="text-[13px] font-bold text-slate-800">Khoảng 1 giờ</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-sky-500 pb-2 inline-block mb-6">Giới Thiệu</h2>
+            <p>Lần nào cũng vậy, sẽ có vài khách mỉm cười khi nghe trưởng đoàn nhắc mang kính râm. "<strong>Alaska</strong> lạnh thế này mà cũng cần kính râm hả em?"</p>
+            <p>Nhưng chỉ 20 phút sau, khi trực thăng hạ cánh xuống <a href="/alaska-glacier-nhung-dong-song-bang" target="_blank" class="text-sky-700 font-bold hover:underline">dòng sông băng trắng xóa</a> trải dài đến tận chân trời, ai nấy đều hiểu ra: <strong>Ánh sáng phản chiếu từ băng gây chói mắt hơn nắng gắt rất nhiều.</strong></p>
+            <p>Đó cũng là điều thú vị của <strong>Glacier Landing</strong>. Điều khiến bạn bất ngờ đôi khi không phải là cảnh đẹp, mà là những chi tiết rất nhỏ: điện thoại tụt pin đột ngột, gió trên băng lạnh hơn thị trấn chục độ, hay việc chiếc áo siêu ấm lại khiến bạn ngột ngạt.</p>
+            <p>Bài viết này tổng hợp toàn bộ kinh nghiệm thực tế từ các trưởng đoàn <a href="/" class="text-sky-700 font-bold hover:underline">FIT TOUR</a> cùng hướng dẫn chuẩn từ hãng bay Alaska. Đủ để bạn biết chính xác mình cần mang gì và bỏ lại gì, giúp tận hưởng chuyến bay trực thăng một cách trọn vẹn nhất.</p>
+          </div>
+
+          <div class="flex items-center justify-center py-4 opacity-40">
+            <div class="w-16 h-px bg-slate-400"></div>
+            <span class="mx-4 text-sky-600 text-xl">🚁</span>
+            <div class="w-16 h-px bg-slate-400"></div>
+          </div>
+
+          {/* Tips List */}
+          <div id="danh-sach-12-dieu" class="space-y-16">
+            {tips.map((m, i) => (
+              <div id={m.id} class="scroll-mt-28">
+                
+                {/* Title */}
+                <div class="flex items-start gap-4 mb-6">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-white font-serif font-bold text-xl md:text-2xl shadow-md shrink-0 mt-1">
+                    {i+1}
+                  </div>
+                  <h3 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                    {m.name}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <div class="text-slate-700 text-[15.5px] leading-relaxed mb-6 font-medium [&>br]:mb-2" set:html={m.desc}></div>
+
+                {/* Note from tour leader */}
+                {m.note && (
+                  <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mt-4 mb-6">
+                    <p class="text-sm font-bold text-blue-800 uppercase tracking-wide mb-1">💡 Ghi Chú Từ Trưởng Đoàn</p>
+                    <p class="text-blue-900 text-[14.5px] italic leading-relaxed">{m.note}</p>
+                  </div>
+                )}
+
+              </div>
+            ))}
+          </div>
+
+          {/* Checklist */}
+          <div id="luu-y-rieng" class="scroll-mt-28 border-t-2 border-dashed border-slate-200 pt-12 mt-12">
+            <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6">Checklist Trước Ngày Khởi Hành</h3>
+            <p class="text-slate-700 mb-4">Trước khi rời khách sạn, hãy kiểm tra nhanh:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[15px] text-slate-700">
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Áo giữ nhiệt.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Kính râm chống tia UV.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Áo khoác chống gió / nước.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Găng tay và mũ len.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Giày kín mũi, đế bám tốt.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Điện thoại đã sạc đầy.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Pin dự phòng.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Máy ảnh và dây đeo.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Giấy tờ cá nhân.</div>
+              <div class="flex items-center gap-2"><CheckCircle2 class="w-5 h-5 text-emerald-500" /> Đã sử dụng nhà vệ sinh.</div>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 p-6 rounded-xl mt-8">
+              <h4 class="font-bold text-amber-900 mb-2">Một Lưu Ý Dành Riêng Cho Khách FIT TOUR</h4>
+              <p class="text-amber-800 text-[14.5px] leading-relaxed">
+                Trong chương trình Alaska của FIT TOUR, trải nghiệm <strong>Mountain Voyage with Glacier Landing</strong> đã được bao gồm trong giá tour.<br/><br/>
+                Nếu vì lý do sức khỏe hoặc mong muốn cá nhân mà quý khách không tham gia hoạt động này, FIT TOUR sẽ hoàn lại <strong>554 USD/người</strong> theo chính sách áp dụng của chương trình.<br/><br/>
+                Nếu còn bất kỳ thắc mắc nào trước ngày khởi hành, đội ngũ FIT TOUR luôn sẵn sàng hỗ trợ để bạn chuẩn bị hành trang đầy đủ và yên tâm tận hưởng chuyến đi.
+              </p>
+              <div class="mt-6">
+                <a href="https://thericetour.com/tour/tour-alaska-8n7d" target="_blank" class="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2.5 px-6 rounded-lg transition-colors text-sm shadow-sm">
+                  Khám Phá Tour Alaska 8N7Đ
+                  <ChevronRight class="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Data Post: Alaska Series */}
+            <div class="mt-12 mb-12">
+              <DataPost source="tag" slug="tim-hieu-ve-alaska-series" layout="carousel" limit="10" title="Chuỗi Bài Viết: Tìm Hiểu Về Alaska" />
+            </div>
+
+            <div class="mt-10 italic text-slate-600 text-center leading-relaxed">
+              <p>Có những nơi đẹp vì phong cảnh.<br/>
+              Có những nơi đáng nhớ vì cảm xúc.<br/>
+              Glacier Landing ở Alaska hội tụ cả hai.</p>
+            </div>
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+          {/* Quick Facts */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Thông tin chuyến bay
+            </div>
+            
+            <div class="space-y-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100 text-lg">⛰️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Điểm hạ cánh</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Sông băng Alaska</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 text-lg">❄️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Nhiệt độ</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Thấp hơn 8-12°C so với thị trấn</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100 text-lg">👕</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Trang phục khuyên dùng</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Layering (nhiều lớp)</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 border border-slate-200 text-lg">🥾</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Giày dép</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Giày đi bộ kín mũi, đế bám</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+              Bài Viết Liên Quan
+            </div>
+            <div class="space-y-4">
+              {[
+                { title: "Alaska: Điều Còn Lại Sau Hành Trình Đến Miền Biên Cương Cuối Cùng", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-10-alaska-day-chung-ta-dieu-gi.webp", link: "/alaska-dieu-con-lai" },
+                { title: "Alaska: Cơn Sốt Vàng Klondike – Hành Trình Đã Thay Đổi Alaska", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-9-con-sot-vang-klondike-giac-mo-doi-doi.webp", link: "/alaska-con-sot-vang-klondike" },
+                { title: "Alaska: Người Bản Địa Alaska – Những Người Đầu Tiên Gọi Nơi Đây Là Nhà", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-8-nguoi-ban-dia-alaska-linh-hon-phuong-bac.webp", link: "/alaska-nguoi-ban-dia" }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-24 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img src={item.img} alt={item.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-sky-700 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="mt-5 text-center">
+              <a href="/blog" class="text-sky-700 text-xs font-bold hover:underline">Xem tất cả bài viết →</a>
+            </div>
+          </div>
+
+          {/* Share Block */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+            <div class="flex justify-center gap-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/dieu-can-biet-truoc-khi-bay-truc-thang-alaska" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors" title="Chia sẻ lên Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText('https://thericetour.com/dieu-can-biet-truoc-khi-bay-truc-thang-alaska');" title="Sao chép liên kết" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-600">
+                <LinkIcon class="w-4 h-4 group-focus:hidden" />
+                <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+              </button>
+            </div>
+          </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

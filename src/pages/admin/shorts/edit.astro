@@ -1,0 +1,249 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import MediaPickerEventBridge from '@/components/admin/MediaPickerEventBridge';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return new Response("DB Error", { status: 500 });
+
+const idParam = Astro.url.searchParams.get('id');
+const id = idParam === 'null' ? null : idParam;
+let shortItem: any = null;
+
+if (id) {
+  shortItem = await d1Db.prepare("SELECT * FROM ShortVideo WHERE id = ?").bind(id).first<any>();
+}
+if (!shortItem && id) {
+  return new Response("Video not found", { status: 404 });
+}
+
+// Fetch all tours for the tourSlug dropdown
+let tours: any[] = [];
+try {
+  const { results } = await d1Db.prepare("SELECT title, slug FROM Tour WHERE status != 'trash' ORDER BY createdAt DESC").all();
+  tours = results || [];
+} catch (e) {
+  console.error(e);
+}
+
+// Fetch all topics for topicSlug dropdown
+let topics: any[] = [];
+try {
+  const { results } = await d1Db.prepare("SELECT title, slug FROM ShortTopic ORDER BY viewOrder ASC, createdAt DESC").all();
+  topics = results || [];
+} catch (e) {
+  console.error(e);
+}
+---
+
+<AdminLayout title={shortItem ? "Sửa Video Ngắn" : "Thêm Video Mới"} activeMenu="shorts" hideSidebar={true}>
+  <style>
+    .editor-container { max-width: 800px; margin: 0 auto; padding: 20px 0; }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0; }
+    .header-title { font-size: 24px; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 12px; }
+    .btn-back { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid #e2e8f0; color: #64748b; background: #fff; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+    .btn-back:hover { background: #f8fafc; color: #0f172a; }
+    .btn-save { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 24px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-save:hover { background: #1d4ed8; }
+    
+    .card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; color: #0f172a; background: #fff; outline: none; transition: border-color 0.2s; }
+    .form-control:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+    textarea.form-control { min-height: 80px; resize: vertical; line-height: 1.5; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  </style>
+
+  <div class="editor-container">
+    <form id="shortForm">
+      <input type="hidden" id="shortId" value={shortItem?.id || ''} />
+      
+      <div class="header-bar">
+        <div class="header-title">
+          <a href="/admin/shorts" class="btn-back">←</a>
+          {shortItem ? "Chỉnh sửa Video" : "Thêm Video Mới"}
+        </div>
+        <div>
+          <button type="submit" class="btn-save" id="saveBtn">Lưu Video</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="form-group" id="urlGroup">
+          <label>URL Video Gốc (TikTok, Youtube Shorts, Reels...)</label>
+          <input type="url" id="videoUrl" class="form-control" value={shortItem?.videoUrl || ''} placeholder="https://www.tiktok.com/@user/video/123456789" />
+          <div style="font-size: 12px; margin-top: 6px; color: #64748b;">Hệ thống sẽ tự động bóc tách ID để tạo mã nhúng (Embed).</div>
+        </div>
+        
+        <div class="form-group" id="localMp4Group" style="display: none;">
+          <label>File Video MP4 (Tải lên R2)</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="text" id="localMp4Url" class="form-control" value={shortItem?.videoUrl || ''} placeholder="Chọn file hoặc dán link MP4..." />
+            <button type="button" class="btn-save" style="white-space: nowrap; padding: 10px 16px; background: #f59e0b;" onclick="window.dispatchEvent(new CustomEvent('open-media-picker', { detail: { inputId: 'localMp4Url' } }))">Mở Thư Viện</button>
+          </div>
+          <div style="font-size: 12px; margin-top: 6px; color: #64748b;">Video sẽ được lưu trên Cloudflare R2, hoàn toàn miễn phí băng thông.</div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Nền tảng (Platform)</label>
+            <select id="platform" class="form-control" onchange="togglePlatformFields()">
+              <option value="tiktok" selected={shortItem?.platform === 'tiktok'}>TikTok</option>
+              <option value="youtube" selected={shortItem?.platform === 'youtube'}>YouTube Shorts</option>
+              <option value="instagram" selected={shortItem?.platform === 'instagram'}>Instagram Reels</option>
+              <option value="local" selected={shortItem?.platform === 'local'}>Khác / Local MP4</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Chủ đề (Topic / Category)</label>
+            <select id="topicSlug" class="form-control">
+              <option value="">-- Tất cả chủ đề --</option>
+              {topics.map(t => (
+                <option value={t.slug} selected={shortItem?.topicSlug === t.slug}>{t.title}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="form-group">
+          <label>Tiêu đề Video (Tùy chọn hiển thị đè lên Video)</label>
+          <input type="text" id="title" class="form-control" value={shortItem?.title || ''} placeholder="Review Tour 5N4Đ..." />
+        </div>
+        
+        <div class="form-group">
+          <label>Mô tả ngắn gọn</label>
+          <textarea id="description" class="form-control">{shortItem?.description || ''}</textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Tour Liên Kết (CTA Overlay)</label>
+          <select id="tourSlug" class="form-control">
+            <option value="">-- Không có CTA --</option>
+            {tours.map(tour => (
+              <option value={tour.slug} selected={shortItem?.tourSlug === tour.slug}>{tour.title}</option>
+            ))}
+          </select>
+          <div style="font-size: 12px; margin-top: 6px; color: #64748b;">Nếu chọn, một nút "Xem chi tiết Tour" sẽ xuất hiện trên video dẫn khách đến trang Tour này.</div>
+        </div>
+      </div>
+
+      <div class="card grid-2">
+        <div>
+          <div class="form-group">
+            <label>Trạng thái</label>
+            <select id="status" class="form-control">
+              <option value="published" selected={shortItem?.status === 'published'}>Đã xuất bản (Hiện trên Web)</option>
+              <option value="draft" selected={shortItem?.status === 'draft'}>Bản nháp</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Thứ tự hiển thị (View Order)</label>
+            <input type="number" id="viewOrder" class="form-control" value={shortItem?.viewOrder || 0} />
+            <div style="font-size: 12px; margin-top: 6px; color: #64748b;">Số nhỏ hiển thị trước. Mặc định 0.</div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Ảnh đại diện (Thumbnail Placeholder)</label>
+          <div style="position: relative; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; width: 140px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#cbd5e1'" onclick="window.dispatchEvent(new CustomEvent('open-media-picker', { detail: { inputId: 'thumbnailUrlInput', previewId: 'thumbnailPreview', placeholderId: 'thumbnailPlaceholder' } }))">
+            
+            <img id="thumbnailPreview" src={shortItem?.thumbnailUrl || ''} style={`position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: ${shortItem?.thumbnailUrl ? 'block' : 'none'};`} />
+            
+            <div id="thumbnailPlaceholder" style={`text-align: center; color: #94a3b8; display: ${shortItem?.thumbnailUrl ? 'none' : 'block'};`}>
+              <svg style="margin: 0 auto 8px auto;" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z"></path></svg>
+              <div style="font-size: 12px; font-weight: 500;">Chọn ảnh</div>
+            </div>
+          </div>
+          <input type="hidden" id="thumbnailUrlInput" value={shortItem?.thumbnailUrl || ''} />
+          <div style="font-size: 11px; margin-top: 6px; color: #64748b;">Ảnh này dùng để hiển thị giữ chỗ trước khi Load iFrame của TikTok. (Tỷ lệ 9:16 dọc)</div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script is:inline>
+    const form = document.getElementById('shortForm');
+    const saveBtn = document.getElementById('saveBtn');
+    
+    function togglePlatformFields() {
+      const platform = document.getElementById('platform').value;
+      const urlGroup = document.getElementById('urlGroup');
+      const localMp4Group = document.getElementById('localMp4Group');
+      if (platform === 'local') {
+        urlGroup.style.display = 'none';
+        localMp4Group.style.display = 'block';
+      } else {
+        urlGroup.style.display = 'block';
+        localMp4Group.style.display = 'none';
+      }
+    }
+    togglePlatformFields(); // Run on load
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const id = document.getElementById('shortId').value;
+      const platform = document.getElementById('platform').value;
+      const videoUrl = platform === 'local' ? document.getElementById('localMp4Url').value : document.getElementById('videoUrl').value;
+      
+      if (!videoUrl) {
+        window.AppModal.alert('Vui lòng cung cấp link hoặc file video', 'warning');
+        return;
+      }
+
+      const payload = {
+        videoUrl: videoUrl,
+        platform: platform,
+        topicSlug: document.getElementById('topicSlug').value,
+        title: document.getElementById('title').value,
+        description: document.getElementById('description').value,
+        tourSlug: document.getElementById('tourSlug').value,
+        status: document.getElementById('status').value,
+        viewOrder: parseInt(document.getElementById('viewOrder').value) || 0,
+        thumbnailUrl: document.getElementById('thumbnailUrlInput').value
+      };
+
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Đang lưu...';
+
+      try {
+        const url = id ? `/api/admin/shorts/${id}` : '/api/admin/shorts';
+        const method = id ? 'PATCH' : 'POST';
+
+        const res = await fetch(url, {
+          method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        
+        if (res.ok && data.success) {
+          window.AppModal.alert('Đã lưu thành công!', 'success');
+          if (!id && data.data?.id) {
+            // Redirect to edit page for new item
+            setTimeout(() => {
+              window.location.href = `/admin/shorts/edit?id=${data.data.id}`;
+            }, 1000);
+          }
+        } else {
+          window.AppModal.alert(data.error?.message || 'Có lỗi xảy ra', 'error');
+        }
+      } catch (err) {
+        window.AppModal.alert('Lỗi kết nối máy chủ', 'error');
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Lưu Video';
+      }
+    });
+  </script>
+
+  <MediaPickerEventBridge client:only="react" />
+</AdminLayout>

@@ -1,0 +1,35 @@
+---
+export interface Props {
+  zaloPhone?: string;
+  messengerName?: string;
+  tourName?: string;
+}
+const { zaloPhone = '0934.8888.54', messengerName = 'Du Lịch Có Guu', tourName = 'Tour' } = Astro.props;
+---
+<div class="premium-cta-bar mb-10">
+  <div class="cta-title hidden md:block">Tư vấn Tour</div>
+  <div class="cta-links">
+    <a href="/zalo" target="_blank" class="social-btn zalo">
+      <div class="social-icon-wrapper">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
+      </div>
+      <div class="social-text">
+        <span class="social-name">Zalo</span>
+        <span class="social-desc">{zaloPhone}</span>
+      </div>
+    </a>
+    <a href="/msg" target="_blank" class="social-btn msg">
+      <div class="social-icon-wrapper">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.923 1.472 5.518 3.753 7.185v3.42l3.41-1.86a10.871 10.871 0 0 0 2.837.382c5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.096 12.443-2.823-3.003-5.514 3.003 6.068-6.438 2.89 3.002 5.445-3.002-6.066 6.438z"></path></svg>
+      </div>
+      <div class="social-text">
+        <span class="social-name">Messenger</span>
+        <span class="social-desc">{messengerName}</span>
+      </div>
+    </a>
+  </div>
+  <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name={tourName} aria-label="Điền Form tư vấn tour">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+    Điền Form
+  </button>
+</div>

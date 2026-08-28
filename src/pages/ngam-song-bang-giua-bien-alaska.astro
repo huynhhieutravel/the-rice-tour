@@ -1,0 +1,549 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { MapPin, Info, Users, Clock, Calendar, Compass, Share2, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('ngam-song-bang-giua-bien-alaska').first<any>(),
+    { route: Astro.url.pathname, slug: 'ngam-song-bang-giua-bien-alaska', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Ngắm Sông Băng Giữa Biển Alaska – Trải Nghiệm Kenai Fjords National Park Cruise';
+const seoDesc = post.seoDesc || post.excerpt || 'Khám phá Kenai Fjords National Park Cruise, hành trình ngắm sông băng, cá voi, động vật hoang dã và thiên nhiên hùng vĩ bậc nhất Alaska.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/kenai-fjords-da-bien-va-dinh-tuyet.webp'; // Placeholder Alaska image
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || new Date().toISOString();
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "Max Vũ": {
+    name: "Max Vũ",
+    url: "/max-vu",
+    img: "https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp"
+  },
+  "Huy Ngô": {
+    name: "Huy Ngô",
+    url: "/hdv-huy-ngo",
+    img: "https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/huynh-hieu",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["Huynh Hieu Travel"];
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+
+const tips = [
+  {
+    id: "kenai-fjords-national-park-o-dau",
+    name: "Kenai Fjords National Park Ở Đâu?",
+    desc: `<p>Kenai Fjords National Park nằm ở phía nam bang <a href="/alaska-mien-bien-cuong-cuoi-cung" class="text-sky-600 hover:text-sky-800 underline font-medium">Alaska</a>, cách thành phố <a href="/anchorage" class="text-sky-600 hover:text-sky-800 underline font-medium">Anchorage</a> khoảng 200 km. Hầu hết các chuyến du thuyền đều khởi hành từ thị trấn cảng Seward, nơi được xem là cửa ngõ dẫn vào công viên quốc gia này.</p><p>Điểm đặc biệt của Kenai Fjords là hơn một nửa diện tích được bao phủ bởi băng, bắt nguồn từ Harding Icefield – một trong những cánh đồng băng lớn nhất nước Mỹ. Từ đây, hàng chục dòng sông băng chảy xuống biển, tạo nên những vịnh hẹp (fjord) tuyệt đẹp mà chỉ có thể khám phá trọn vẹn bằng tàu.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6"><figure><img src="https://media.fittour.vn/uploads/duong-den-seward-alaska.webp" alt="Thị trấn cảng Seward - cửa ngõ dẫn vào Kenai Fjords" class="w-full rounded-xl shadow-sm"><figcaption class="text-center text-sm text-slate-500 italic mt-2">Thị trấn cảng Seward - cửa ngõ dẫn vào Kenai Fjords</figcaption></figure><figure><img src="https://media.fittour.vn/uploads/cung-duong-den-seward-kenai-peninsula-alaska.webp" alt="Cung đường tuyệt đẹp dẫn đến bán đảo Kenai" class="w-full rounded-xl shadow-sm"><figcaption class="text-center text-sm text-slate-500 italic mt-2">Cung đường tuyệt đẹp dọc theo bán đảo Kenai</figcaption></figure></div>`
+  },
+  {
+    id: "vi-sao-nen-kham-pha-bang-du-thuyen",
+    name: "Vì Sao Nên Khám Phá Kenai Fjords Bằng Du Thuyền?",
+    desc: `<p>Nhiều người nghĩ rằng chỉ cần đến Alaska là có thể nhìn thấy <a href="/alaska-glacier-nhung-dong-song-bang" class="text-sky-600 hover:text-sky-800 underline font-medium">sông băng</a> ở khắp nơi. Thực tế, những dòng băng hùng vĩ nhất lại nằm sâu trong các vịnh hẹp và gần như không thể tiếp cận bằng đường bộ.</p><p>Du thuyền là cách đưa du khách đến gần những khối băng xanh khổng lồ, nơi tiếng băng nứt vang vọng giữa không gian tĩnh lặng và từng tảng băng lớn có thể tách khỏi sông băng rồi rơi xuống biển. Cảnh tượng ấy luôn khiến mọi người trên tàu cùng hướng mắt về phía trước trong sự háo hức.</p><p>Đó là khoảnh khắc mà máy ảnh khó có thể truyền tải hết cảm giác khi đứng giữa thiên nhiên Alaska.</p><figure class="my-6"><img src="https://media.fittour.vn/uploads/turnagain-arm-alaska.webp" alt="Khung cảnh vịnh hẹp đẹp ngoạn mục khi ngắm từ du thuyền" class="w-full rounded-xl shadow-md"><figcaption class="text-center text-sm text-slate-500 italic mt-3">Khung cảnh vịnh hẹp đẹp ngoạn mục khi ngắm từ du thuyền</figcaption></figure>`
+  },
+  {
+    id: "thoi-diem-dep-nhat-de-di-kenai-fjords",
+    name: "Thời Điểm Đẹp Nhất Để Đi Kenai Fjords",
+    desc: `<p>Mùa hè, từ khoảng <strong>giữa tháng 5 đến giữa tháng 9</strong>, là thời điểm lý tưởng nhất để thực hiện chuyến du thuyền khám phá Kenai Fjords.</p><p>Vào giai đoạn này, vùng nước ở Vịnh Alaska trở nên hiền hòa hơn, thời tiết ít khắc nghiệt và số giờ nắng kéo dài giúp bạn có nhiều thời gian chiêm ngưỡng cảnh quan. Đặc biệt, mùa hè là lúc hệ sinh thái biển nhộn nhịp nhất. Các loài chim biển như Puffin bắt đầu làm tổ trên vách đá, và các đàn cá voi lưng gù di cư từ vùng nước ấm Hawaii đến Alaska để kiếm ăn.</p><p>Nếu đi vào tháng 6 hoặc tháng 7, bạn sẽ trải nghiệm những ngày dài rực rỡ dưới ánh nắng vùng cực. Trong khi đó, tháng 5 hoặc tháng 9 (giai đoạn chuyển mùa) lại mang đến sự tĩnh lặng, ít đông đúc hơn và thỉnh thoảng có tuyết rơi nhẹ trên các đỉnh núi tạo nên khung cảnh đầy lãng mạn.</p>`
+  },
+  {
+    id: "ngam-nhung-dong-song-bang-hung-vi",
+    name: "Ngắm Những Dòng Sông Băng Hùng Vĩ",
+    desc: `<p>Điểm nhấn của hành trình là các dòng tidewater glacier – sông băng đổ trực tiếp ra biển.</p><p>Khác với những khối băng nhỏ trong các khu du lịch thông thường, các bức tường băng ở Kenai Fjords cao hàng chục mét, trải dài hàng kilomet với màu xanh lam đặc trưng do băng bị nén suốt hàng nghìn năm.</p><p>Khi tàu tiến đến khoảng cách an toàn, du khách có thể quan sát rõ từng lớp băng, những khe nứt tự nhiên và cảm nhận luồng gió lạnh thổi trực tiếp từ sông băng.</p><p>Đó là một cảm giác rất khó quên, ngay cả trong mùa hè Alaska.</p><figure class="my-6"><img src="https://media.fittour.vn/uploads/glacier-bay-tu-xa-alaska.webp" alt="Dòng sông băng Tidewater hùng vĩ đổ trực tiếp ra biển" class="w-full rounded-xl shadow-md"><figcaption class="text-center text-sm text-slate-500 italic mt-3">Dòng sông băng Tidewater hùng vĩ đổ trực tiếp ra biển</figcaption></figure>`
+  },
+  {
+    id: "cham-tay-vao-bang-ha-hang-nghin-nam",
+    name: "Chạm Tay Vào Băng Hà Hàng Nghìn Năm Tuổi",
+    desc: `<p>Một trải nghiệm thú vị trên nhiều chuyến cruise là thủy thủ đoàn sẽ vớt những khối băng vừa tách khỏi sông băng và mang lên tàu để du khách quan sát.</p><p>Được cầm trên tay một khối băng đã hình thành từ hàng trăm, thậm chí hàng nghìn năm trước là cảm giác đặc biệt mà không phải nơi nào cũng có.</p><p>Nhiều người chỉ chạm nhẹ vài giây, nhưng đủ để cảm nhận sự tinh khiết, lạnh buốt và vẻ đẹp trong suốt của băng hà Alaska.</p><figure class="my-6"><img src="https://media.fittour.vn/uploads/cam-bang-tren-du-thuyen-kenai-fjords.webp" alt="Du khách được chạm tay vào những khối băng hà hàng nghìn năm tuổi" class="w-full rounded-xl shadow-md"><figcaption class="text-center text-sm text-slate-500 italic mt-3">Du khách được chạm tay vào những khối băng hà hàng nghìn năm tuổi</figcaption></figure>`
+  },
+  {
+    id: "thien-nhien-thay-doi-lien-tuc",
+    name: "Thiên Nhiên Thay Đổi Liên Tục Trên Suốt Hành Trình",
+    desc: `<p>Một trong những điều hấp dẫn nhất của Kenai Fjords National Park Cruise là khung cảnh luôn thay đổi.</p><p>Có lúc con tàu lướt qua những hòn đảo đá nhô lên giữa biển.</p><p>Có lúc hai bên là rừng thông xanh thẫm kéo dài đến tận chân núi.</p><p>Xa hơn là những dãy núi phủ tuyết quanh năm phản chiếu xuống mặt nước phẳng lặng, tạo nên khung cảnh đặc trưng mà nhiều người ví như một bức tranh Bắc Cực.</p><p>Chỉ trong vài giờ, du khách sẽ được trải nghiệm rất nhiều dạng địa hình khác nhau của Alaska.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6"><figure><img src="https://media.fittour.vn/uploads/kenai-fjords-nui-tuyet-bien-alaska.webp" alt="Núi tuyết và biển tạo nên khung cảnh ngoạn mục" class="w-full rounded-xl shadow-sm"><figcaption class="text-center text-sm text-slate-500 italic mt-2">Dãy núi tuyết hòa cùng mặt biển</figcaption></figure><figure><img src="https://media.fittour.vn/uploads/kenai-fjords-rung-thong-va-dinh-bang.webp" alt="Rừng thông xanh thẫm bên cạnh đỉnh băng giá" class="w-full rounded-xl shadow-sm"><figcaption class="text-center text-sm text-slate-500 italic mt-2">Rừng thông và đỉnh băng đan xen</figcaption></figure></div>`
+  },
+  {
+    id: "co-hoi-gap-dong-vat-hoang-da",
+    name: "Cơ Hội Gặp Động Vật Hoang Dã",
+    desc: `<p>Ngoài cảnh quan, Kenai Fjords còn nổi tiếng với hệ sinh thái biển phong phú.</p><p>Nếu thời tiết thuận lợi, du khách có thể bắt gặp:</p><ul><li>Cá voi lưng gù (Humpback Whale)</li><li>Rái cá biển (Sea Otter)</li><li>Hải cẩu và Sư tử biển Steller</li><li>Đại bàng đầu trắng (Bald Eagle)</li><li>Chim Puffin và nhiều loài chim biển khác</li></ul><p>Không chuyến đi nào giống nhau, và đó cũng là điều khiến mỗi hành trình đều mang lại cảm giác mới mẻ.</p>`
+  },
+  {
+    id: "co-de-thay-ca-voi-khong",
+    name: "Có Thấy Cá Voi Không?",
+    desc: `<p>Vùng biển bao quanh Kenai Fjords là một trong những ngư trường trù phú nhất Alaska, thu hút lượng lớn động vật biển đến kiếm ăn vào mùa hè. Vì vậy, tỷ lệ bắt gặp <a href="/alaska-mua-ngam-ca-voi" class="text-sky-600 hover:text-sky-800 underline font-medium">cá voi</a> trên các chuyến du thuyền là rất cao.</p><p>Hai loài thường xuyên xuất hiện nhất là <strong>cá voi lưng gù (Humpback whales)</strong> và <strong>cá voi sát thủ (Orcas)</strong>. Các thuyền trưởng tại đây đều là những người cực kỳ dày dặn kinh nghiệm, họ thường xuyên liên lạc qua bộ đàm với các tàu khác để xác định vị trí của những đàn cá voi đang săn mồi.</p><p>Tuy thiên nhiên luôn ẩn chứa sự bất ngờ và không có chuyến đi nào được đảm bảo 100%, nhưng mỗi khi phát hiện vòi phun nước từ xa hay một chiếc đuôi khổng lồ quạt tung bọt trắng xóa, thuyền trưởng sẽ chủ động giảm tốc độ hoặc dừng hẳn tàu để du khách có thể quan sát và ghi lại khoảnh khắc kỳ diệu này.</p><figure class="my-6"><img src="https://media.fittour.vn/uploads/ca-voi-sat-thu-orca-kenai-fjords-national-park-cruise.webp" alt="Đàn cá voi sát thủ (Orca) đang săn mồi trên vịnh Alaska" class="w-full rounded-xl shadow-md"><figcaption class="text-center text-sm text-slate-500 italic mt-3">Đàn cá voi sát thủ (Orca) tung hoành trên vịnh Alaska</figcaption></figure>`
+  },
+  {
+    id: "cau-hoi-thuong-gap",
+    name: "Những Câu Hỏi Thường Gặp Về Kenai Fjords Cruise",
+    desc: `<div class="space-y-3 mt-4">
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Đi Kenai Fjords Cruise Có Bị Say Sóng Không?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Đây là vấn đề được nhiều du khách quan tâm nhất.</p>
+          <p>Hành trình bắt đầu ở vịnh Resurrection Bay thường khá êm đềm, nhưng khi tàu tiến ra khu vực Vịnh Alaska (Gulf of Alaska) để tiếp cận các sông băng, sóng có thể mạnh và tàu sẽ chao đảo khá nhiều, đặc biệt trong những ngày có gió lớn.</p>
+          <p><strong>Lời khuyên:</strong> Nếu bạn dễ bị say tàu xe, hãy chủ động uống hoặc dán thuốc chống say sóng khoảng 1-2 tiếng trước khi lên tàu. Ngoài ra, việc chọn vị trí ngồi ở tầng dưới, gần khu vực giữa tàu (trọng tâm của tàu) và luôn hướng mắt nhìn xa ra đường chân trời cũng giúp giảm cảm giác say sóng đáng kể.</p>
+        </div>
+      </details>
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Hành Trình Có Phù Hợp Cho Người Lớn Tuổi Và Trẻ Em Không?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Hoàn toàn phù hợp! Kenai Fjords Cruise là một trải nghiệm tuyệt vời và an toàn dành cho mọi lứa tuổi.</p>
+          <p>Các du thuyền đều được thiết kế với không gian sưởi ấm bên trong, chỗ ngồi thoải mái, cửa sổ kính lớn để ngắm cảnh từ trong khoang, và thường có phục vụ đồ ăn nhẹ hoặc bữa trưa trọn gói. Trẻ em luôn đặc biệt thích thú với việc tìm kiếm động vật hoang dã, trong khi người lớn tuổi có thể thư giãn và tận hưởng khung cảnh kỳ vĩ mà không cần phải đi bộ nhiều hay tốn sức lực.</p>
+          <p>Lưu ý duy nhất là khi di chuyển ra boong ngoài để chụp ảnh, mọi người nên bám sát vào các thanh vịn để đảm bảo an toàn nếu tàu có lắc nhẹ.</p>
+        </div>
+      </details>
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Nên Mặc Trang Phục Gì Khi Đi Du Thuyền?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Quy tắc quan trọng nhất ở Alaska là <strong>mặc nhiều lớp (layering)</strong>.</p>
+          <p>Nhiệt độ trên tàu thường lạnh hơn đáng kể so với trong đất liền do gió biển và hơi lạnh tỏa ra từ sông băng. Bạn nên mặc một lớp áo giữ nhiệt bên trong, một lớp áo len hoặc nỉ ở giữa để giữ ấm, và ngoài cùng là một chiếc áo khoác chống nước, chống gió.</p>
+          <p>Ngoài ra, mũ len che kín tai, găng tay và giày bệt chống trơn trượt là những phụ kiện không thể thiếu khi bạn muốn đứng ở boong ngoài ngắm cảnh.</p>
+        </div>
+      </details>
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Trời Mưa Hoặc Nhiều Mây Tàu Có Chạy Không?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Có. Các chuyến du thuyền vẫn hoạt động bình thường dưới trời mưa nhẹ hoặc nhiều mây.</p>
+          <p>Thực tế, có một bí mật mà người dân địa phương thường nói: <strong>Màu xanh lam của sông băng sẽ hiện ra rực rỡ và ảo diệu nhất vào những ngày trời âm u (overcast days)</strong>. Động vật hoang dã như cá voi hay sư tử biển cũng thường hoạt động tích cực hơn khi trời mát.</p>
+          <p>Tuy nhiên, trong trường hợp bão lớn hoặc biển động quá mạnh gây mất an toàn, thuyền trưởng sẽ điều chỉnh lộ trình vào những khu vực vịnh kín gió hơn hoặc hủy chuyến để đảm bảo an toàn tuyệt đối cho hành khách.</p>
+        </div>
+      </details>
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Trên Tàu Có Phục Vụ Ăn Uống Không?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Hầu hết các chuyến du thuyền tuyến dài (từ 6 tiếng trở lên) đều có phục vụ một bữa ăn trưa nhẹ trên tàu.</p>
+          <p>Thực đơn thường là các món dễ ăn như sandwich cá hồi, wrap gà, salad hoặc súp nóng. Trà, cà phê và nước lọc thường được phục vụ miễn phí suốt hành trình.</p>
+          <p>Bạn cũng có thể tự do mang theo các loại snack, bánh kẹo hoặc đồ ăn nhẹ cá nhân (nhưng nhớ giữ gìn vệ sinh và tuyệt đối không cho động vật hoang dã ăn nhé).</p>
+        </div>
+      </details>
+      <details class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 list-none outline-none">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Nên Mang Theo Những Vật Dụng Gì?</span>
+          </div>
+          <span class="text-slate-400 group-open:hidden text-2xl font-light leading-none">+</span>
+          <span class="text-slate-400 hidden group-open:block text-3xl font-light leading-none" style="margin-top:-6px">-</span>
+        </summary>
+        <div class="px-4 pb-4 pt-0 pl-11 text-slate-600 text-[15px] leading-relaxed space-y-2">
+          <p>Bên cạnh trang phục ấm áp, đây là 3 thứ bạn nhất định phải mang theo:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Ống nhòm (Binoculars):</strong> Để quan sát rõ các loài chim làm tổ trên vách đá hay cá voi phun nước từ xa.</li>
+            <li><strong>Kính râm và kem chống nắng:</strong> Ánh sáng phản chiếu từ băng và mặt nước biển rất chói, kể cả vào ngày râm mát. Kính râm là vật bất ly thân.</li>
+            <li><strong>Máy ảnh (hoặc điện thoại) đã sạc đầy pin:</strong> Có rất nhiều khoảnh khắc xuất thần diễn ra chỉ trong tích tắc, hãy đảm bảo bạn có đủ bộ nhớ và pin dự phòng.</li>
+          </ul>
+        </div>
+      </details>
+    </div>`
+  }
+];
+
+
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#0ea5e9] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Du thuyền Kenai Fjords National Park Alaska" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" decoding="async" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Alaska</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          {post.title || "Ngắm Sông Băng Giữa Biển Alaska – Trải Nghiệm Kenai Fjords National Park Cruise"}
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-sky-400 italic mb-10 max-w-3xl drop-shadow-md">
+          Chạm vào băng hà hàng nghìn năm tuổi
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium">
+          Giữa những dãy núi phủ tuyết của miền nam Alaska, có một hành trình khiến hầu hết du khách đều phải thay đổi cách nhìn về thiên nhiên nơi đây. Không phải là đứng trên đỉnh núi hay ngắm cực quang giữa đêm, mà là lên một con tàu, lặng lẽ tiến vào những vịnh hẹp được băng hà tạo nên qua hàng chục nghìn năm.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <img src={authorData.img} alt={authorData.name} class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-sky-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-sky-400 transition-colors flex items-center gap-1">
+              {authorData.name} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-sky-400" />
+            <span>{post.readingTime || 12} phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">⛰️</span> Thiên Nhiên
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">🦌</span> Động Vật Hoang Dã
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-sky-400 text-lg">🏕️</span> Văn Hóa Bản Địa
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-sky-700 bg-sky-50 px-3 py-2.5 rounded-lg transition-colors">
+                <span class="text-sky-500 text-base">🏠</span> Giới thiệu
+              </a>
+              <a href="#nhung-dieu-chua-biet" class="flex items-center gap-2 text-slate-600 hover:text-sky-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition-colors group">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-400 transition-colors"></span>
+                Những Điều Chưa Biết
+              </a>
+              {tips.map((m) => (
+                <a href={"#" + m.id} class="flex items-center gap-2 text-slate-600 hover:text-sky-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition-colors group">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-400 transition-colors"></span>
+                  {m.name}
+                </a>
+              ))}
+              <a href="#ket-luan" class="flex items-center gap-2 text-slate-600 hover:text-sky-700 hover:bg-slate-50 px-3 py-2.5 rounded-lg transition-colors group">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-sky-400 transition-colors"></span>
+                Tổng Kết
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl border border-emerald-100 shrink-0">🌎</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vị trí</div>
+                <div class="text-[13px] font-bold text-slate-800">Bán đảo Kenai (Nam Alaska)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">👥</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Dân số</div>
+                <div class="text-[13px] font-bold text-slate-800">Cảng Seward (2,700 người)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">🏔️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Đặc trưng</div>
+                <div class="text-[13px] font-bold text-slate-800">Sông băng & Vịnh hẹp</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-xl border border-amber-100 shrink-0">⏱️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Thời gian khám phá</div>
+                <div class="text-[13px] font-bold text-slate-800">Khoảng 6 - 8.5 tiếng</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+            <p>Đó chính là Kenai Fjords National Park Cruise – trải nghiệm được xem là một trong những hoạt động không thể bỏ lỡ khi đến Alaska. Trong suốt hành trình, du khách sẽ được ngắm nhìn những dòng sông băng khổng lồ, những vách đá dựng đứng, các đảo nhỏ phủ đầy rừng thông và hệ động vật hoang dã đặc trưng của vùng biển lạnh Bắc Thái Bình Dương.</p>
+            <p>Đây cũng là một trong những trải nghiệm được nhiều đoàn khách của FIT TOUR yêu thích nhất khi khám phá Alaska.</p>
+          </div>
+
+          <div id="nhung-dieu-chua-biet" class="scroll-mt-28 bg-amber-50/70 border border-amber-200/80 p-6 md:p-8 rounded-2xl my-10 shadow-sm">
+            <h2 class="font-serif text-2xl font-bold text-amber-900 mb-5">
+              Những Điều Bạn Chưa Biết Về Kenai Fjords
+            </h2>
+            <ul class="space-y-3 text-slate-800 text-[15.5px] leading-relaxed marker:text-amber-500 list-disc pl-5">
+              <li>Kenai Fjords National Park được thành lập vào năm 1980 để bảo vệ những khu vực băng giá hoang sơ nhất của Alaska.</li>
+              <li>Công viên có diện tích hơn 2,700 km², trong đó hơn một nửa bị bao phủ bởi lớp băng hà vĩnh cửu.</li>
+              <li>Harding Icefield - trung tâm của công viên - là một trong những cánh đồng băng lớn nhất nước Mỹ, nguồn gốc của hàng chục dòng sông băng khác nhau.</li>
+              <li>Vùng biển tại đây là nơi sinh sống của các loài thú quý hiếm như cá voi lưng gù, cá voi sát thủ (Orca) và rái cá biển.</li>
+              <li>Không giống nhiều công viên quốc gia khác, cách duy nhất để chiêm ngưỡng trọn vẹn sự vĩ đại của Kenai Fjords là đi bằng tàu biển.</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-center py-4 opacity-40">
+            <div class="w-16 h-px bg-slate-400"></div>
+            <div class="w-2 h-2 rounded-full bg-slate-400 mx-4"></div>
+            <div class="w-16 h-px bg-slate-400"></div>
+          </div>
+
+          {/* Tips List */}
+          <div id="danh-sach-12-dieu" class="space-y-16">
+            {tips.map((m, i) => (
+              <div id={m.id} class="scroll-mt-28">
+                
+                {/* Title */}
+                <div class="mb-6 border-l-4 border-sky-500 pl-4">
+                  <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                    {m.name}
+                  </h2>
+                </div>
+
+                {/* Description */}
+                <div class="text-slate-700 text-[15.5px] leading-relaxed mb-6 font-medium [&>p]:mb-4 [&>ul]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul>li]:mb-1.5" set:html={m.desc}></div>
+
+                {/* Note from tour leader */}
+                {m.note && (
+                  <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mt-4 mb-6">
+                    <p class="text-sm font-bold text-blue-800 uppercase tracking-wide mb-1">💡 Ghi Chú Từ Trưởng Đoàn</p>
+                    <div class="text-blue-900 text-[14.5px] italic leading-relaxed space-y-2" set:html={m.note}></div>
+                  </div>
+                )}
+
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Banner */}
+          <div class="my-14 bg-gradient-to-br from-sky-50 to-white border border-sky-100 p-8 rounded-2xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-sky-100 opacity-50"><svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3 relative z-10">Bạn Đã Sẵn Sàng Bắt Đầu Hành Trình Đến Alaska?</h3>
+            <p class="text-slate-600 mb-8 max-w-lg mx-auto relative z-10">Khám phá vẻ đẹp hoang dã của vùng cực Bắc với các hành trình được thiết kế chuyên sâu từ FIT TOUR.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a href="/tour/tour-alaska-8n7d" target="_blank" class="w-full sm:w-auto px-6 py-3.5 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+                <span>🏔️</span> Xem Tour Alaska 8N7Đ
+              </a>
+              <a href="/country/bac-cuc" target="_blank" class="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-50 text-sky-700 border border-sky-200 font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+                <span>❄️</span> Khám Phá Vùng Bắc Cực
+              </a>
+            </div>
+          </div>
+
+          {/* Conclusion */}
+          <div id="ket-luan" class="scroll-mt-28 mt-16 pt-10 border-t border-slate-200">
+            <div class="mb-6 border-l-4 border-sky-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Trải Nghiệm Không Thể Bỏ Lỡ Khi Đến Alaska
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[15.5px] leading-relaxed mb-6 font-medium [&>p]:mb-4">
+              <p>Nếu Anchorage là cánh cửa dẫn vào Alaska, thì Kenai Fjords National Park Cruise chính là nơi giúp du khách cảm nhận rõ nhất vẻ đẹp nguyên sơ của vùng đất này.</p>
+              <p>Những dòng sông băng xanh biếc, các vịnh hẹp được tạo nên qua hàng chục nghìn năm, những dãy núi phủ tuyết và biển cả rộng lớn kết hợp với nhau tạo nên một hành trình mà khó nơi nào trên thế giới có thể mang lại.</p>
+              <p>Đó không chỉ là một chuyến du thuyền ngắm cảnh, mà còn là cơ hội để đứng trước thiên nhiên ở quy mô lớn đến mức con người chỉ còn biết lặng im và tận hưởng.</p>
+              <figure class="my-6"><img src="https://media.fittour.vn/uploads/aio-alaska-glacier-cruise.webp" alt="Toàn cảnh du thuyền chiêm ngưỡng vẻ đẹp hùng vĩ của Kenai Fjords" class="w-full rounded-xl shadow-md"><figcaption class="text-center text-sm text-slate-500 italic mt-3">Toàn cảnh du thuyền chiêm ngưỡng vẻ đẹp hùng vĩ của Kenai Fjords</figcaption></figure>
+            </div>
+          </div>
+
+          {/* Data Post: Alaska Series */}
+          <div class="mt-12 mb-8">
+            <DataPost source="tag" slug="tim-hieu-ve-alaska-series" limit="10" title="Chuỗi Bài Viết: Tìm Hiểu Về Alaska" />
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+          {/* Quick Facts */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-sky-500 pl-3 text-sm tracking-wide uppercase">
+              Thông tin hữu ích
+            </div>
+            
+            <div class="space-y-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100 text-lg">✈️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Cửa ngõ</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Thị trấn cảng Seward</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 text-lg">🌡️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Nhiệt độ mùa hè</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Khá lạnh do gió biển</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100 text-lg">☀️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Đặc trưng</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Du thuyền ngắm vịnh băng</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 border border-slate-200 text-lg">🚗</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Di chuyển</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Xe bus hoặc Alaska Railroad từ Anchorage</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+              Bài Viết Liên Quan
+            </div>
+            <div class="space-y-4">
+              {[
+                { title: "Alaska: Điều Còn Lại Sau Hành Trình Đến Miền Biên Cương Cuối Cùng", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-10-alaska-day-chung-ta-dieu-gi.webp", link: "/alaska-dieu-con-lai" },
+                { title: "Alaska: Cơn Sốt Vàng Klondike – Hành Trình Đã Thay Đổi Alaska", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-9-con-sot-vang-klondike-giac-mo-doi-doi.webp", link: "/alaska-con-sot-vang-klondike" },
+                { title: "Alaska: Người Bản Địa Alaska – Những Người Đầu Tiên Gọi Nơi Đây Là Nhà", img: "https://media.fittour.vn/uploads/du-lich-alaska-usa-phan-8-nguoi-ban-dia-alaska-linh-hon-phuong-bac.webp", link: "/alaska-nguoi-ban-dia" }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-24 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img src={item.img} alt={item.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-sky-800 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="mt-5 text-center">
+              <a href="/blog" class="text-sky-700 text-xs font-bold hover:underline">Xem tất cả bài viết →</a>
+            </div>
+          </div>
+
+          {/* Share Block */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+            <div class="flex justify-center gap-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ngam-song-bang-giua-bien-alaska" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors" title="Chia sẻ lên Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText('https://thericetour.com/ngam-song-bang-giua-bien-alaska');" title="Sao chép liên kết" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-600">
+                <LinkIcon class="w-4 h-4 group-focus:hidden" />
+                <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+              </button>
+            </div>
+          </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

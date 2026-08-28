@@ -1,0 +1,309 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+import { defaultNavItems } from '@/config/navigation/default';
+
+// Auth check
+const userRole = (Astro.locals as any).user?.role;
+if (!userRole || !['admin', 'editor', 'author'].includes(userRole)) {
+  return Astro.redirect('/admin/login');
+}
+
+const id = Astro.url.searchParams.get('id');
+let profile: any = null;
+let allProfiles: any[] = [];
+let error = '';
+
+const defaultFooterFallback = { 
+  brandLinks: [
+    { name: "Về chúng tôi", href: "/gioi-thieu" },
+    { name: "Danh mục Tour", href: "/portfolio" },
+    { name: "Đội ngũ của chúng tôi", href: "/our-team" },
+    { name: "Câu chuyện thương hiệu FIT Tour", href: "/cau-chuyen-thuong-hieu" },
+    { name: "Đánh giá của Khách hàng", href: "/danh-gia" }
+  ], 
+  tourLinks: [
+    { name: "Tour du lịch nước ngoài", href: "/tours" },
+    { name: "Tour trong nước", href: "/tour-trong-nuoc" },
+    { name: "Tour thiết kế riêng", href: "/tour-thiet-ke-rieng" }
+  ], 
+  infoLinks: [
+    { name: "Blog", href: "/blog" },
+    { name: "Emagazine", href: "/emagazine" },
+    { name: "Hình ảnh du lịch", href: "/gallery" },
+    { name: "Câu chuyện khách hàng", href: "/cau-chuyen-khach-hang" },
+    { name: "Cẩm nang du lịch", href: "/cam-nang" },
+    { name: "Tin tức", href: "/tin-tuc" }
+  ], 
+  confirmLinks: [
+    { name: "Liên hệ", href: "/lien-he" },
+    { name: "Chính sách bảo mật", href: "/chinh-sach-bao-mat" },
+    { name: "Điều khoản dịch vụ", href: "/dieu-khoan-dich-vu" },
+    { name: "Tài khoản thanh toán", href: "/thanh-toan" }
+  ] 
+};
+
+try {
+  if (env?.dulichcoguu_d1) {
+    const d1Db = env.dulichcoguu_d1;
+    const { results } = await d1Db.prepare("SELECT value FROM SiteSetting WHERE key = 'layout_profiles'").all();
+    if (results && results.length > 0) {
+      try {
+        allProfiles = typeof results[0].value === 'string' ? JSON.parse(results[0].value) : results[0].value;
+      } catch(e) { allProfiles = []; }
+    }
+  }
+
+  // Nếu DB trống, khởi tạo profile mặc định ảo để sếp có thể Edit luôn
+  if (allProfiles.length === 0) {
+    allProfiles = [
+      {
+        id: 'default',
+        name: 'Giao diện Mặc định',
+        isDefault: true,
+        conditions: [],
+        header_nav: defaultNavItems,
+        footer_config: defaultFooterFallback
+      }
+    ];
+  }
+
+  if (id) {
+    profile = allProfiles.find(p => p.id === id);
+    if (!profile) {
+      error = "Không tìm thấy Layout Profile.";
+    }
+  }
+
+} catch (e: any) {
+  error = e.message;
+}
+
+// Handle Save via POST
+if (Astro.request.method === 'POST') {
+  try {
+    const formData = await Astro.request.formData();
+    const saveId = formData.get('id')?.toString() || `layout_${Date.now()}`;
+    const name = formData.get('name')?.toString() || '';
+    const isDefault = formData.get('isDefault') === 'on';
+    
+    // Parse JSON fields
+    const conditionsStr = formData.get('conditions')?.toString() || '[]';
+    const headerStr = formData.get('header_nav')?.toString() || '[]';
+    const footerStr = formData.get('footer_config')?.toString() || '{}';
+    
+    let conditions = [];
+    let header_nav = [];
+    let footer_config = {};
+    
+    try { conditions = JSON.parse(conditionsStr); } catch(e) {}
+    try { header_nav = JSON.parse(headerStr); } catch(e) { throw new Error('Cú pháp Header JSON không hợp lệ'); }
+    try { footer_config = JSON.parse(footerStr); } catch(e) { throw new Error('Cú pháp Footer JSON không hợp lệ'); }
+    
+    const newProfile = {
+      id: saveId,
+      name,
+      isDefault,
+      conditions,
+      header_nav,
+      footer_config
+    };
+    
+    if (isDefault) {
+      // Unset other default
+      allProfiles = allProfiles.map(p => ({ ...p, isDefault: false }));
+    }
+
+    const existingIndex = allProfiles.findIndex(p => p.id === saveId);
+    if (existingIndex >= 0) {
+      allProfiles[existingIndex] = newProfile;
+    } else {
+      allProfiles.push(newProfile);
+    }
+    
+    if (env?.dulichcoguu_d1) {
+      const d1Db = env.dulichcoguu_d1;
+      
+      // Check if layout_profiles exists
+      const checkRes = await d1Db.prepare("SELECT key FROM SiteSetting WHERE key = 'layout_profiles'").first();
+      if (checkRes) {
+        await d1Db.prepare("UPDATE SiteSetting SET value = ? WHERE key = 'layout_profiles'")
+          .bind(JSON.stringify(allProfiles))
+          .run();
+      } else {
+        await d1Db.prepare("INSERT INTO SiteSetting (key, value) VALUES (?, ?)")
+          .bind('layout_profiles', JSON.stringify(allProfiles))
+          .run();
+      }
+    }
+    
+    return Astro.redirect('/admin/layouts');
+  } catch (err: any) {
+    error = err.message;
+  }
+}
+---
+
+<AdminLayout title={profile ? "Sửa Layout Profile" : "Thêm Layout Mới"} activeMenu="system" activeSubmenu="layouts">
+  <div class="header-section">
+    <h2>{profile ? "Sửa Layout Profile" : "Thêm Layout Mới"}</h2>
+    <a href="/admin/layouts" class="btn-secondary">Quay lại</a>
+  </div>
+
+  {error && <div class="alert error">{error}</div>}
+
+  <form method="POST" id="layoutForm">
+    <div class="layout-grid">
+      <!-- Cột Trái: Cấu hình cơ bản -->
+      <div class="card p-6">
+        <h3 class="mb-4 text-lg font-bold">Thông tin Cơ bản</h3>
+        
+        <div class="form-group">
+          <label for="name">Tên Layout (Hiển thị trong Admin)</label>
+          <input type="text" id="name" name="name" value={profile?.name || ''} required placeholder="Ví dụ: Landing Page Trung Quốc" />
+        </div>
+        
+        <div class="form-group" style={profile ? "display:none" : ""}>
+          <label for="id">ID (Không được trùng)</label>
+          <input type="text" id="id" name="id" value={profile?.id || ''} placeholder="Để trống tự tạo ID ngẫu nhiên" />
+        </div>
+
+        <div class="form-group checkbox-group mt-4">
+          <input type="checkbox" id="isDefault" name="isDefault" checked={profile?.isDefault} />
+          <label for="isDefault" style="margin-bottom:0">Đánh dấu là Giao diện Mặc định (Áp dụng cho toàn bộ Website)</label>
+        </div>
+        <p class="hint">Nếu là Mặc định, hệ thống sẽ bỏ qua các Điều kiện kích hoạt.</p>
+
+        <h3 class="mb-4 text-lg font-bold mt-8 border-t border-gray-200 pt-6">Điều kiện Kích hoạt</h3>
+        <p class="hint">Thêm các điều kiện để xác định trang nào sẽ sử dụng Layout này.</p>
+        
+        <div id="conditions-container" class="mt-4 flex flex-col gap-3">
+          <!-- JS sẽ render input vào đây -->
+        </div>
+        
+        <button type="button" id="btnAddCondition" class="mt-4 px-4 py-2 bg-gray-100 text-gray-700 rounded text-sm font-semibold hover:bg-gray-200 transition-colors">+ Thêm Điều Kiện</button>
+        
+        <!-- Hidden input to store conditions JSON -->
+        <input type="hidden" name="conditions" id="conditionsData" value={JSON.stringify(profile?.conditions || [])} />
+      </div>
+
+      <!-- Cột Phải: JSON Editor -->
+      <div class="card p-6">
+        <h3 class="mb-4 text-lg font-bold">Menu Header (JSON)</h3>
+        <p class="hint">Cấu trúc: <code>{`[{"id":"home","label":"Trang Chủ","href":"/"}]`}</code></p>
+        <textarea name="header_nav" rows="18" style="font-family: monospace; white-space: pre; background: #f8fafc; width: 100%; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-top:8px;">
+{JSON.stringify(profile?.header_nav && profile.header_nav.length > 0 ? profile.header_nav : defaultNavItems, null, 2)}
+        </textarea>
+
+        <h3 class="mb-4 text-lg font-bold mt-8 border-t border-gray-200 pt-6">Footer Config (JSON)</h3>
+        <p class="hint">Gồm các cột: <code>brandLinks</code>, <code>tourLinks</code>, <code>infoLinks</code>, <code>confirmLinks</code></p>
+        <textarea name="footer_config" rows="18" style="font-family: monospace; white-space: pre; background: #f8fafc; width: 100%; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-top:8px;">
+{JSON.stringify(profile?.footer_config && Object.keys(profile.footer_config).length > 0 ? profile.footer_config : defaultFooterFallback, null, 2)}
+        </textarea>
+      </div>
+    </div>
+    
+    <div class="submit-bar mt-6 bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex justify-end">
+      <button type="submit" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+        Lưu Layout Profile
+      </button>
+    </div>
+  </form>
+</AdminLayout>
+
+<style>
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .header-section h2 { font-size: 24px; font-weight: 700; color: #0f172a; }
+  .btn-secondary { background: #f1f5f9; color: #334155; font-weight: 600; padding: 8px 16px; border-radius: 8px; text-decoration: none; border: 1px solid #cbd5e1; }
+  
+  .layout-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; }
+  @media (max-width: 1024px) { .layout-grid { grid-template-columns: 1fr; } }
+  
+  .card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; }
+  .p-6 { padding: 24px; }
+  .mb-4 { margin-bottom: 16px; }
+  .mt-4 { margin-top: 16px; }
+  .mt-6 { margin-top: 24px; }
+  .mt-8 { margin-top: 32px; }
+  .pt-6 { padding-top: 24px; }
+  .border-t { border-top-width: 1px; }
+  .border-gray-200 { border-color: #e2e8f0; }
+  .text-lg { font-size: 18px; }
+  .font-bold { font-weight: 700; }
+  
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #475569; }
+  .form-group input[type="text"], .form-group select { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; }
+  .form-group input:focus, .form-group select:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+  
+  .checkbox-group { display: flex; align-items: center; gap: 8px; }
+  .checkbox-group input { width: 18px; height: 18px; }
+  
+  .hint { font-size: 12px; color: #64748b; margin-top: 4px; }
+  .alert.error { background: #fee2e2; color: #dc2626; border: 1px solid #fecaca; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-weight: 500; }
+  
+  .condition-row { display: flex; gap: 8px; align-items: center; background: #f8fafc; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .btn-remove-cond { color: #dc2626; background: #fee2e2; border: none; padding: 6px; border-radius: 6px; cursor: pointer; }
+</style>
+
+<script>
+  let conditions = JSON.parse((document.getElementById('conditionsData') as HTMLInputElement).value || '[]');
+  
+  function renderConditions() {
+    const container = document.getElementById('conditions-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    conditions.forEach((cond: any, index: number) => {
+      const row = document.createElement('div');
+      row.className = 'condition-row';
+      
+      const select = document.createElement('select');
+      select.innerHTML = `
+        <option value="path_starts_with" ${cond.type === 'path_starts_with' ? 'selected' : ''}>Đường dẫn bắt đầu bằng</option>
+        <option value="exact_path" ${cond.type === 'exact_path' ? 'selected' : ''}>Đường dẫn chính xác</option>
+        <option value="category_slug" ${cond.type === 'category_slug' ? 'selected' : ''}>Category Slug</option>
+      `;
+      select.onchange = (e) => {
+        conditions[index].type = (e.target as HTMLSelectElement).value;
+        updateInput();
+      };
+      
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = cond.type === 'category_slug' ? 'Ví dụ: trung-quoc' : 'Ví dụ: /tour/trung-quoc';
+      input.value = cond.value || '';
+      input.oninput = (e) => {
+        conditions[index].value = (e.target as HTMLInputElement).value;
+        updateInput();
+      };
+      
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'btn-remove-cond';
+      removeBtn.innerHTML = 'X';
+      removeBtn.onclick = () => {
+        conditions.splice(index, 1);
+        renderConditions();
+        updateInput();
+      };
+      
+      row.appendChild(select);
+      row.appendChild(input);
+      row.appendChild(removeBtn);
+      container.appendChild(row);
+    });
+  }
+  
+  function updateInput() {
+    (document.getElementById('conditionsData') as HTMLInputElement).value = JSON.stringify(conditions);
+  }
+  
+  document.getElementById('btnAddCondition')?.addEventListener('click', () => {
+    conditions.push({ type: 'path_starts_with', value: '' });
+    renderConditions();
+    updateInput();
+  });
+  
+  renderConditions();
+</script>

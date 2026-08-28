@@ -1,0 +1,262 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+let snippets: any[] = [];
+
+if (d1Db) {
+  try {
+    const { results } = await d1Db.prepare(`SELECT * FROM Snippet ORDER BY created_at DESC`).all();
+    snippets = results || [];
+  } catch (error) {
+    console.error("Failed to load snippets", error);
+  }
+}
+---
+
+<AdminLayout title="Snippets Plugin" activeMenu="snippets">
+<style>
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .header h2 { font-size: 24px; font-weight: 700; margin: 0; }
+  .header p { color: #64748b; font-size: 14px; margin-top: 4px; }
+  
+  .layout-grid { display: grid; grid-template-columns: 1fr 350px; gap: 24px; align-items: start; }
+  @media (max-width: 1024px) { .layout-grid { grid-template-columns: 1fr; } }
+  
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; }
+  
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; box-sizing: border-box; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #bfdbfe; }
+  .form-group .hint { display: block; font-size: 12px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+  
+  .btn-submit { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; width: auto; }
+  .btn-submit:hover { background: #1d4ed8; }
+  
+  .btn-cancel { background: #f1f5f9; color: #334155; font-weight: 600; padding: 10px 16px; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-size: 14px; margin-right: 10px; }
+  
+  table { width: 100%; border-collapse: collapse; }
+  thead th { text-align: left; padding: 12px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+  tbody td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+  tbody tr:hover { background: #f8fafc; }
+  
+  .action-link { font-size: 12px; border: none; background: none; cursor: pointer; padding: 0; display: inline-block; margin-right: 8px; font-weight: 600; }
+  .action-edit { color: #2563eb; }
+  .action-delete { color: #ef4444; }
+
+  .badge-status { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .badge-active { background: #dcfce7; color: #166534; }
+  .badge-hidden { background: #f1f5f9; color: #475569; }
+
+  .code-badge { background: #f1f5f9; color: #2563eb; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; border: 1px solid #e2e8f0; }
+
+  .editor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .editor-grid { grid-template-columns: 1fr; } }
+  
+  .form-actions { margin-top: 24px; padding-top: 16px; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; }
+</style>
+
+<div class="header">
+  <div>
+    <h2>Quản lý Snippet Plugin</h2>
+    <p>Tự do tạo các khối nội dung, bảng giá, CTA động mà không cần code cứng.</p>
+  </div>
+  <button id="btnAddNew" class="btn-submit" onclick="showForm()">+ Thêm Snippet Mới</button>
+</div>
+
+<div class="layout-grid">
+  <!-- List Table (Left) -->
+  <div class="card" style="padding: 0; overflow: hidden; grid-column: 1;">
+    <table>
+      <thead>
+        <tr>
+          <th>Tên Snippet</th>
+          <th>Shortcode</th>
+          <th>Mô tả</th>
+          <th>Trạng thái</th>
+          <th style="width: 120px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {snippets.length === 0 && (
+          <tr><td colspan="5" style="text-align: center; color: #94a3b8; padding: 32px;">Chưa có Snippet nào.</td></tr>
+        )}
+        {snippets.map(s => (
+          <tr id={`row-${s.id}`}>
+            <td style="font-weight: 600; color: #0f172a;">{s.name}</td>
+            <td><span class="code-badge">[snippet name="{s.slug}"]</span></td>
+            <td style="color: #64748b; line-height: 1.5; max-width: 400px; white-space: normal;">
+              {s.description || '—'}
+            </td>
+            <td>
+              <span class={`badge-status ${s.status === 1 ? 'badge-active' : 'badge-hidden'}`}>
+                {s.status === 1 ? 'Active' : 'Hidden'}
+              </span>
+            </td>
+            <td>
+              <button class="action-link action-edit" onclick={`editSnippet(${s.id})`}>Sửa</button>
+              <button class="action-link action-delete" onclick={`deleteSnippet('${s.id}')`}>Xóa</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Form Edit (Right) -->
+  <div class="card" id="formContainer" style="display: none; grid-column: 2; position: sticky; top: 20px;">
+    <h3 id="formTitle" style="font-size: 16px; font-weight: 600; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">Thêm Snippet Mới</h3>
+    
+    <form id="snippetForm">
+      <input type="hidden" id="editId" name="editId" />
+      
+      <div class="form-group">
+        <label for="name">Tên Snippet *</label>
+        <input type="text" id="name" name="name" required placeholder="VD: Bảng giá chung 2024" />
+      </div>
+      
+      <div class="form-group">
+        <label for="slug">Mã (Slug) *</label>
+        <input type="text" id="slug" name="slug" required pattern="[a-zA-Z0-9-]+" placeholder="VD: bang-gia-2024" />
+        <span class="hint">Chỉ dùng chữ không dấu, số và dấu gạch ngang (-).</span>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Mô tả nội bộ</label>
+        <textarea id="description" name="description" rows="2" placeholder="Ghi chú công dụng của Snippet này"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="html_content" style="color: #0369a1;">HTML Content <span style="font-weight: normal; color: #64748b; font-size: 11px;">(Sandbox XSS)</span></label>
+        <textarea id="html_content" name="html_content" rows="6" style="font-family: monospace; font-size: 12px; background: #f8fafc;" placeholder="<div class='title'>Bảng Giá</div>"></textarea>
+        <span class="hint">Hỗ trợ Token: {`{{settings.hotline}}`}. Code mã độc sẽ bị tự động quét bỏ.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="css_content" style="color: #be185d;">CSS Scoped <span style="font-weight: normal; color: #64748b; font-size: 11px;">(Auto Prefix)</span></label>
+        <textarea id="css_content" name="css_content" rows="6" style="font-family: monospace; font-size: 12px; background: #f8fafc;" placeholder=".title { color: red; font-weight: bold; }"></textarea>
+        <span class="hint">Không cần viết Wrapper class, hệ thống sẽ tự động bọc CSS (Scoped).</span>
+      </div>
+
+      <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="status" name="status" value="1" checked style="width: auto; margin: 0;" />
+        <label for="status" style="margin: 0; font-weight: 500;">Hiển thị (Active)</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" onclick="hideForm()">Hủy</button>
+        <button type="submit" class="btn-submit" id="btnSave">Lưu Snippet</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script is:inline define:vars={{ rawSnippets: snippets }}>
+  // Auto generate slug
+  document.getElementById('name').addEventListener('input', (e) => {
+    if (!document.getElementById('editId').value) {
+      const val = e.target.value;
+      const slug = val.toLowerCase().trim()
+        .replace(/[\u0300-\u036f]/g, "")
+        .normalize('NFD')
+        .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-');
+      document.getElementById('slug').value = slug;
+    }
+  });
+
+  function showForm() {
+    document.getElementById('formContainer').style.display = 'block';
+    document.getElementById('snippetForm').reset();
+    document.getElementById('editId').value = '';
+    document.getElementById('formTitle').innerText = 'Thêm Snippet Mới';
+    document.getElementById('slug').readOnly = false;
+    document.getElementById('slug').style.backgroundColor = '#fff';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function hideForm() {
+    document.getElementById('formContainer').style.display = 'none';
+  }
+
+  window.editSnippet = function(id) {
+    const s = rawSnippets.find(x => x.id === id);
+    if (!s) return;
+    
+    document.getElementById('formContainer').style.display = 'block';
+    document.getElementById('editId').value = s.id;
+    document.getElementById('name').value = s.name;
+    document.getElementById('slug').value = s.slug;
+    document.getElementById('description').value = s.description || '';
+    document.getElementById('html_content').value = s.html_content || '';
+    document.getElementById('css_content').value = s.css_content || '';
+    document.getElementById('status').checked = s.status === 1;
+    
+    document.getElementById('slug').readOnly = true;
+    document.getElementById('slug').style.backgroundColor = '#f1f5f9';
+    document.getElementById('formTitle').innerText = 'Sửa Snippet';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.deleteSnippet = async function(id) {
+    const confirmed = await window.AppModal.confirm('Xóa Snippet này? Mọi bài viết đang dùng nó sẽ không còn hiển thị.');
+    if (!confirmed) return;
+    
+    try {
+      const res = await fetch(`/api/admin/snippets/${id}`, { method: 'DELETE' });
+      const resData = await res.json();
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error || 'Lỗi khi xóa', 'error');
+      }
+    } catch (err) {
+      window.AppModal.alert('Lỗi kết nối API', 'error');
+    }
+  }
+
+  document.getElementById('snippetForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('editId').value;
+    const name = document.getElementById('name').value;
+    const slug = document.getElementById('slug').value;
+    const description = document.getElementById('description').value;
+    const html_content = document.getElementById('html_content').value;
+    const css_content = document.getElementById('css_content').value;
+    const status = document.getElementById('status').checked ? 1 : 0;
+    
+    const btn = document.getElementById('btnSave');
+    const originalText = btn.innerText;
+
+    btn.innerText = 'Đang lưu...';
+    btn.disabled = true;
+
+    try {
+      const url = id ? `/api/admin/snippets/${id}` : '/api/admin/snippets';
+      const method = id ? 'PUT' : 'POST';
+
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, slug, description, html_content, css_content, status })
+      });
+      
+      const resData = await res.json();
+
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error || 'Có lỗi xảy ra', 'error');
+      }
+    } catch (err) {
+      window.AppModal.alert('Lỗi kết nối mạng', 'error');
+    } finally {
+      btn.innerText = originalText;
+      btn.disabled = false;
+    }
+  });
+</script>
+</AdminLayout>

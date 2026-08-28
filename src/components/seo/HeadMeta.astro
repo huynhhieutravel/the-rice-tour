@@ -1,0 +1,96 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+
+let defaultPath = Astro.url.pathname;
+if (defaultPath.length > 1 && defaultPath.endsWith('/')) {
+  defaultPath = defaultPath.slice(0, -1);
+}
+const { 
+  title, 
+  description, 
+  image, 
+  canonical = new URL(defaultPath, Astro.site || Astro.url.origin).href,
+  noindex = false
+} = Astro.props;
+
+// Xử lý fallback cho OG image khi biến image bị rỗng (null hoặc "")
+const finalImage = image || 'https://media.thericetour.com/uploads/logo-the-rice.webp';
+const ogImage = getCanonicalMediaUrl(finalImage);
+
+// Xử lý Robots Meta
+// Global toggle qua Environment Variable:
+//   - Mặc định: noindex (staging mode)  
+//   - Khi go-live: thêm ROBOTS_INDEX = "true" vào wrangler.toml [vars] hoặc Cloudflare Dashboard
+//   - Per-post: field noindex trong DB vẫn hoạt động độc lập
+let isGlobalIndex = false;
+try {
+  // 1. Check process.env (Node SSR fallback)
+  if (typeof process !== 'undefined' && process.env && process.env.ROBOTS_INDEX) {
+    isGlobalIndex = String(process.env.ROBOTS_INDEX) === 'true';
+  }
+  // 2. Check import.meta.env
+  else if (import.meta.env && import.meta.env.ROBOTS_INDEX !== undefined) {
+    isGlobalIndex = String(import.meta.env.ROBOTS_INDEX) === 'true';
+  }
+  // 3. Try to get from cloudflare:workers (Cloudflare Edge)
+  else {
+    // Cannot dynamically import cloudflare:workers easily in all environments,
+    // so we rely on Astro.locals if available
+    const rt = (Astro.locals as any)?.runtime;
+    if (rt?.env?.ROBOTS_INDEX !== undefined) {
+      isGlobalIndex = String(rt.env.ROBOTS_INDEX) === 'true';
+    } else {
+      // Force true for production if env var missing but we know it's prod
+      isGlobalIndex = false;
+    }
+  }
+} catch (e) {
+  isGlobalIndex = false;
+}
+
+const robotsContent = noindex 
+  ? "noindex, follow"   // Per-post noindex từ Admin
+  : isGlobalIndex 
+    ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    : "noindex, nofollow"; // Staging mode (default)
+---
+
+<!-- Favicon: Chiến lược Multi-format chuẩn Googlebot -->
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+<link rel="shortcut icon" href="/favicon-48.png" />
+
+<!-- Bắt buộc -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Robots & Indexing & Verification -->
+<meta name="msvalidate.01" content="8F832FC6B1D0E38480967492438B78F2" />
+<meta name="zalo-platform-site-verification" content="O--248RA3Xf_uwW-kVK5Ccx1eX-2jtX4E38r" />
+<meta name="robots" content={robotsContent} />
+{canonical && <link rel="canonical" href={canonical} />}
+
+<!-- Open Graph / Zalo / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />

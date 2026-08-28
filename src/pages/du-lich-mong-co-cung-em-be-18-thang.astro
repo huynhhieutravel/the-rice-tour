@@ -1,0 +1,579 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RelatedArticles from '../components/ReactApp/HoTsoMoriri/components/RelatedArticles.tsx';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Du Lịch Mông Cổ Cùng Em Bé 18 Tháng: Hành Trình Gia Đình Đầy Ký Ức";
+let seoDesc = "Hành trình 7 ngày khám phá Mông Cổ cùng em bé 18 tháng tuổi. Private tour qua sa mạc Gobi, thung lũng Orkhon, hồ Ugii và những ký ức đẹp giữa thảo nguyên.";
+let seoImage = "https://media.fittour.vn/uploads/em-be-ben-dong-suoi-thung-lung-orkhon.webp";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage FROM Post WHERE slug = 'du-lich-mong-co-cung-em-be-18-thang' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      if (postData.featuredImage) seoImage = postData.featuredImage;
+      if (postData.metaTitle) seoTitle = postData.metaTitle;
+      if (postData.metaDescription) seoDesc = postData.metaDescription;
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data:", e);
+  }
+}
+
+const mongoliaArticles = [
+  {
+    title: 'Theo Dấu Người Du Mục Tuần Lộc: 5 Trải Nghiệm Đặc Biệt Ở Bắc Mông Cổ',
+    excerpt: 'E-magazine khám phá Bắc Mông Cổ mùa thu, rừng Taiga, người Tsaatan và hành trình disconnect giữa thiên nhiên hoang dã nguyên bản hiếm có.',
+    url: '/trai-nghiem-dac-biet-o-bac-mong-co',
+    image: 'https://media.fittour.vn/uploads/tour-lang-tuan-loc-mong-co-fittour.webp',
+    date: 'Tháng 5, 2026',
+    readTime: '12 phút đọc'
+  },
+  {
+    title: 'Du Lịch Mông Cổ cùng Quỳnh Anh Shyn – Sống Giữa Vùng Đất của Gió',
+    excerpt: 'Du lịch Mông Cổ qua góc nhìn Quỳnh Anh Shyn, cùng đi qua hành trình 700km từ sa mạc đến thảo nguyên, khám phá vẻ đẹp và văn hóa du mục.',
+    url: '/du-lich-mong-co-cung-quynh-anh-shyn',
+    image: 'https://media.fittour.vn/uploads/2025/08/kham-pha-mong-co-cung-quynh-anh-shyn.webp',
+    date: 'Tháng 8, 2025',
+    readTime: '10 phút đọc'
+  },
+  {
+    title: 'Nhật ký Road Trip Mông Cổ – Gió Luôn Thổi Trên Thảo Nguyên',
+    excerpt: 'Nhật ký Road Trip Mông Cổ với 10 khoảnh khắc từ chuyến đi FIT Tour: lều Ger, Orkhon, Mini Gobi... Một góc nhìn khác biệt về du lịch Mông Cổ.',
+    url: '/nhat-ky-road-trip-mong-co',
+    image: 'https://media.fittour.vn/uploads/2025/07/nhat-ky-roadtrip-mong-co.webp',
+    date: 'Tháng 7, 2025',
+    readTime: '8 phút đọc'
+  },
+  {
+    title: 'Kinh nghiệm du lịch Mông Cổ – Cẩm nang A-Z cho người mới',
+    excerpt: 'Hướng dẫn du lịch Mông Cổ từ A-Z cho người mới: thời điểm đẹp, cách chống sốc độ cao, lịch trình, trang phục và kinh nghiệm thực tế.',
+    url: '/kinh-nghiem-du-lich-mong-co',
+    image: 'https://media.fittour.vn/uploads/2025/07/kinh-nghiem-du-lich-mong-co-fittour.webp',
+    date: 'Tháng 7, 2025',
+    readTime: '15 phút đọc'
+  }
+];
+
+let adminEditUrl = "/admin/posts/edit?id=99997";
+
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/du-lich-mong-co-cung-em-be-18-thang"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="https://media.fittour.vn/uploads/em-be-ben-dong-suoi-thung-lung-orkhon.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": seoTitle,
+          "description": seoDesc,
+          "image": seoImage,
+          "author": {
+            "@type": "Organization",
+            "name": "FIT Tour",
+            "url": "https://thericetour.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "FIT Tour",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+            }
+          },
+          "datePublished": "2026-06-23T08:00:00+08:00",
+          "dateModified": "2026-06-23T08:00:00+08:00",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thericetour.com/du-lich-mong-co-cung-em-be-18-thang"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang chủ",
+              "item": "https://thericetour.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tin Tức & Blog",
+              "item": "https://thericetour.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Du Lịch Mông Cổ Cùng Em Bé 18 Tháng"
+            }
+          ]
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <main class="min-h-screen bg-[#F9F6F0] text-stone-800 font-sans antialiased overflow-x-hidden selection:bg-stone-300">
+    
+    <!-- Hero Section -->
+    <section class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden">
+      <!-- Breadcrumb Overlay -->
+      <div class="absolute top-28 md:top-36 left-0 right-0 z-20 px-6 max-w-7xl mx-auto">
+        <nav class="flex text-sm text-white/70 font-sans tracking-wide" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="/" class="inline-flex items-center hover:text-white transition-colors">
+                Trang chủ
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <svg class="w-3 h-3 mx-1 text-white/50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <a href="/blog" class="ml-1 md:ml-2 hover:text-white transition-colors">Blog</a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg class="w-3 h-3 mx-1 text-white/50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ml-1 md:ml-2 text-white font-medium">Khám phá</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="absolute inset-0 w-full h-full">
+        <img src={seoImage} alt={seoTitle} class="w-full h-full object-cover object-center scale-105 animate-slow-zoom" fetchpriority="high" />
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+      
+      <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-8xl text-white font-bold leading-tight mb-6 drop-shadow-lg reveal-up">
+          Du Lịch Mông Cổ Cùng Em Bé 18 Tháng
+        </h1>
+        <p class="text-white/90 text-xl md:text-2xl font-light max-w-3xl mx-auto tracking-wide drop-shadow reveal-up" style="transition-delay: 200ms;">
+          Hành Trình Gia Đình Đầy Ký Ức
+        </p>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="py-16 md:py-20 px-6 max-w-3xl mx-auto text-center reveal-up mt-8">
+      <p class="text-xl md:text-2xl leading-relaxed text-stone-600 font-light mb-8">
+        Một chuyến đi không chỉ để khám phá vùng đất mới, mà còn là hành trình tìm lại sự kết nối giữa các thành viên trong gia đình.
+      </p>
+      <p class="text-xl md:text-2xl leading-relaxed text-stone-800 font-medium italic font-serif my-12">
+        Đặc biệt, khi đồng hành cùng em bé 18 tháng tuổi, mỗi trải nghiệm đều trở nên ý nghĩa hơn.
+      </p>
+      <p class="text-lg md:text-xl leading-relaxed text-stone-600 font-light mt-8">
+        Không phải đi được bao xa, mà là cùng nhau tận hưởng từng khoảnh khắc.
+      </p>
+    </section>
+
+    <!-- Section 1: Asymmetrical Grid -->
+    <section class="py-12 px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 items-center">
+        <div class="md:col-span-7 reveal-up">
+          <div class="relative overflow-hidden rounded-sm shadow-2xl group">
+            <img src="https://media.fittour.vn/uploads/em-be-giua-dong-hoa-thao-nguyen-mong-co.webp" alt="Em bé giữa đồng hoa thảo nguyên Mông Cổ" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-[2000ms] ease-out" />
+          </div>
+        </div>
+        <div class="md:col-span-5 space-y-6 reveal-up" style="transition-delay: 200ms;">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-800 leading-tight">
+            Tổng Quan Hành Trình Gia Đình
+          </h2>
+          <div class="space-y-5 text-lg text-stone-600 font-light">
+            <p>
+              Sau những tháng ngày bận rộn, gia đình chị Võ Thị Lệ đã quyết định dành 7 ngày để đến <a href="/tour/tour-mong-co-8n7d" class="text-amber-800 font-medium hover:underline underline-offset-4 decoration-amber-300">Mông Cổ</a> – một lựa chọn có phần “liều lĩnh” khi đi cùng em bé 18 tháng tuổi. Nhưng cũng chính vì vậy, chuyến đi trở nên đặc biệt hơn bao giờ hết.
+            </p>
+            <p>
+              Hành trình được thiết kế riêng (Private tour) với mục tiêu không phải là đi thật nhiều, mà là đi đủ chậm để cả gia đình – đặc biệt là em bé – có thể thích nghi, tận hưởng và cảm nhận trọn vẹn từng khoảnh khắc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Two Column Content -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8 reveal-up order-2 md:order-1">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-800 leading-tight">
+            7 Ngày Xuyên Qua Những Vùng Đất Đặc Trưng
+          </h2>
+          <div class="space-y-4 text-lg text-stone-600 font-light">
+            <p>Ba thành viên trong gia đình cùng nhau di chuyển hơn 1.000 km bằng xe riêng, băng qua những vùng đất đặc trưng nhất của Mông Cổ.</p>
+            <p>Các điểm đến không chỉ đẹp, mà còn mang lại những trải nghiệm rất “đời” cho một gia đình có con nhỏ:</p>
+            <ul class="space-y-4 mt-6 text-stone-700">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-amber-700 rounded-full mt-2.5"></span> <strong>Sa mạc Gobi rộng lớn</strong> – nơi bé lần đầu chạm vào cát và gió.</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-amber-700 rounded-full mt-2.5"></span> <strong>Cố đô Kharkhorin</strong> – nơi lịch sử hiện diện trong không gian yên bình.</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-amber-700 rounded-full mt-2.5"></span> <strong>Thung lũng Orkhon xanh mướt</strong> – nơi bé có thể tự do chạy trên cỏ.</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-amber-700 rounded-full mt-2.5"></span> <strong>Hồ Ugii tĩnh lặng</strong> – nơi cả gia đình cùng ngồi bên nhau không cần làm gì cả.</li>
+            </ul>
+            <p class="font-serif italic text-xl mt-8 text-stone-800">
+              Mỗi điểm đến không phải để “check-in”, mà là để sống chậm lại, để quan sát con mình khám phá thế giới theo cách rất riêng.
+            </p>
+          </div>
+        </div>
+        <div class="reveal-up order-1 md:order-2">
+           <img src="https://media.fittour.vn/uploads/bo-va-be-ben-ho-ugii-mong-co.webp" alt="Bố và bé bên hồ Ugii" class="w-full h-auto object-cover rounded-sm shadow-xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinematic Break -->
+    <div class="relative w-full mt-16">
+      <!-- Sticky Image Background -->
+      <div class="sticky top-0 h-screen w-full z-0 overflow-hidden">
+        <img src="https://media.fittour.vn/uploads/dolphin-chay-tren-thao-nguyen-mong-co.webp" alt="Dolphin chạy trên thảo nguyên" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-stone-900/30"></div>
+      </div>
+      
+      <!-- Scrolling Text Content -->
+      <div class="relative z-10 -mt-[100vh] min-h-screen flex items-center justify-center px-6 py-20">
+        <div class="bg-white/10 backdrop-blur-md p-8 md:p-14 border border-white/20 max-w-4xl text-center reveal-up shadow-2xl">
+          <h2 class="font-serif text-3xl md:text-5xl text-white font-bold leading-tight mb-8">
+            Góc Nhìn Thực Tế: Đi Cùng Em Bé Không Phải Là Quyết Định Dễ Dàng
+          </h2>
+          <p class="font-serif italic text-2xl md:text-3xl mt-8 text-white">
+            Nhưng chính khi bước vào hành trình, gia đình mới nhận ra rằng thực tế có thể khác rất nhiều so với những gì mình tưởng tượng.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prose Content section (Requires background color and relative z-index to cover the sticky image) -->
+    <section class="relative z-20 bg-[#F9F6F0] py-16 px-6">
+      <div class="max-w-3xl mx-auto space-y-16">
+        <div class="reveal-up">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-800 mb-10 text-center">
+            Những Lo Ngại Ban Đầu
+          </h2>
+          <div class="space-y-6 text-lg text-stone-600 font-light leading-relaxed">
+            <p>Trước chuyến đi, nỗi lo lớn nhất không phải là đường xa hay thời tiết, mà là liệu em bé có chịu được hành trình dài và điều kiện không quen thuộc hay không.</p>
+            <p>Những cung đường offroad, thời gian di chuyển kéo dài, sự thay đổi nhiệt độ… tất cả đều là những điều khiến bất kỳ bố mẹ nào cũng phải cân nhắc khi lên kế hoạch <a href="/kinh-nghiem-du-lich-mong-co" class="text-amber-800 font-medium hover:underline underline-offset-4 decoration-amber-300">chuẩn bị hành lý du lịch Mông Cổ</a>.</p>
+            <p>Chị Võ Thị Lệ chia sẻ rằng gia đình đã chuẩn bị rất kỹ: lịch trình giãn, thời gian nghỉ hợp lý, phương tiện di chuyển thoải mái và luôn đặt sự an toàn của bé lên hàng đầu.</p>
+          </div>
+        </div>
+        
+        <div class="reveal-up py-8">
+           <img src="https://media.fittour.vn/uploads/nghi-trua-duoi-rung-thong-mong-co.webp" alt="Nghỉ trưa dưới rừng thông" class="w-full h-auto object-cover rounded-sm shadow-md" />
+           <p class="text-center text-sm text-stone-500 mt-4 italic">Khoảnh khắc nghỉ trưa thanh bình dưới rừng thông mát rượi.</p>
+        </div>
+
+        <div class="reveal-up">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-800 mb-10 text-center">
+            Trải Nghiệm Thực Tế Của Dolphin
+          </h2>
+          <div class="space-y-6 text-lg text-stone-600 font-light leading-relaxed">
+            <p>Điều bất ngờ nhất chính là cách em bé thích nghi với hành trình. Dolphin không chỉ “chịu được” chuyến đi, mà còn tận hưởng nó theo cách rất tự nhiên:</p>
+            <ul class="space-y-3 text-stone-700 bg-white p-8 border border-stone-200 rounded-sm">
+                <li class="flex items-center gap-3"><span class="w-2 h-2 bg-stone-400 rounded-full"></span> Bé ngủ ngon trên xe trong những chặng đường dài</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 bg-stone-400 rounded-full"></span> Thức dậy với ánh mắt tò mò khi nhìn thấy đàn ngựa, dòng suối</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 bg-stone-400 rounded-full"></span> Ít quấy khóc hơn so với khi ở thành phố</li>
+            </ul>
+            
+            <div class="my-12 py-8 border-y border-stone-200">
+              <p class="text-2xl md:text-3xl font-serif text-stone-800 italic text-center leading-relaxed">
+                "Thiên nhiên rộng lớn đã mang lại cho bé một cảm giác tự do mà không gian đô thị không thể có."
+              </p>
+            </div>
+            <p>Đây là quốc gia thứ tư mà bé đặt chân đến, và mỗi chuyến đi đều là một cách để bé làm quen với thế giới – dù có thể bé chưa nhớ, nhưng chắc chắn đã cảm nhận.</p>
+          </div>
+        </div>
+        
+        <div class="reveal-up grid grid-cols-2 gap-4">
+           <img src="https://media.fittour.vn/uploads/em-be-nghich-nuoc-thao-nguyen-mong-co.webp" alt="Em bé nghịch nước" class="w-full h-full object-cover rounded-sm shadow-md aspect-square" />
+           <img src="https://media.fittour.vn/uploads/em-be-kham-pha-khu-nghi-duong-thao-nguyen.webp" alt="Em bé khám phá" class="w-full h-full object-cover rounded-sm shadow-md aspect-square" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Story Block -->
+    <section class="py-16 bg-stone-900 text-stone-100">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-10 reveal-up">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-100 leading-tight">
+            Giá Trị Cốt Lõi Của Hành Trình Cá Nhân Hóa
+          </h2>
+          <div class="space-y-6 text-lg text-stone-400 font-light leading-relaxed">
+            <p>Điều đáng nhớ nhất trong chuyến đi lại không nằm trong kế hoạch. Đó là những khoảnh khắc rất nhỏ, nhưng lại chạm đến cảm xúc sâu nhất: khi cả gia đình cùng cưỡi lạc đà, bé vừa sợ vừa tò mò; khi ngồi bên dòng suối, bé nghịch nước và cười không ngừng; khi bé chạy những bước chập chững trên <a href="/nhat-ky-road-trip-mong-co" class="text-white hover:underline underline-offset-4 decoration-amber-300">thảo nguyên bát ngát</a>.</p>
+            <p>Không có lịch trình nào có thể lên kế hoạch cho những khoảnh khắc như vậy. Chúng chỉ xảy ra khi cả gia đình thực sự có mặt ở đó – cùng nhau.</p>
+            <p><a href="/trai-nghiem-dac-biet-o-bac-mong-co" class="text-white hover:underline underline-offset-4 decoration-amber-300">Mông Cổ</a> mang lại điều đó một cách trọn vẹn: một bầu trời rộng để bé ngước nhìn, một thảo nguyên đủ lớn để bé chạy, và một nhịp sống chậm để bố mẹ không còn vội vàng.</p>
+          </div>
+        </div>
+        <div class="reveal-up" style="transition-delay: 200ms;">
+          <img src="https://media.fittour.vn/uploads/me-va-be-trong-trang-phuc-mong-co-kharkhorin.webp" alt="Mẹ và bé trong trang phục Mông Cổ" class="w-full h-auto object-cover rounded-sm shadow-2xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Epilogue -->
+    <section class="py-16 px-6 max-w-3xl mx-auto text-center reveal-up">
+      <div class="mb-12">
+        <img src="https://media.fittour.vn/uploads/me-va-be-ngam-thao-nguyen-mong-co.webp" alt="Mẹ và bé ngắm thảo nguyên" class="w-full h-auto object-cover rounded-sm shadow-md mx-auto" />
+      </div>
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-800 mb-12">
+        Kết Luận: Du Lịch Không Chỉ Là Đi Xa
+      </h2>
+      <div class="space-y-6 text-xl text-stone-600 font-light leading-relaxed">
+        <p>Thực tế di chuyển tại Ulaanbaatar đôi khi là một thử thách (15km mất 3 tiếng), nhưng chính những lúc đó lại khiến gia đình trân trọng hơn sự yên bình ngoài thảo nguyên.</p>
+        <p>Có thể sau này, Dolphin sẽ không nhớ mình đã từng đến Mông Cổ khi mới 18 tháng tuổi.</p>
+        <p class="font-serif italic text-2xl md:text-3xl text-stone-800 my-12 leading-relaxed">
+          Nhưng với gia đình, những ký ức ấy sẽ luôn ở lại.
+        </p>
+        <p>Khi đi cùng một em bé, du lịch không còn là việc “đi được bao nhiêu nơi”, mà là “ở bên nhau như thế nào trong suốt hành trình”.</p>
+        <div class="mt-16 text-2xl font-serif text-stone-900 border-t border-stone-200 pt-16">
+          <p class="mb-4">Đôi khi, điều ý nghĩa nhất không phải là con sẽ nhớ gì.</p>
+          <p class="italic text-amber-800">Mà là bố mẹ đã cùng con trải qua những gì.</p>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+    <section class="max-w-[1400px] mx-auto px-6 lg:px-12 pb-16 lg:pb-24">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <a href="https://media.fittour.vn/uploads/ngua-me-va-ngua-con-tren-thao-nguyen-mong-co.webp" data-gallery="mongco-baby" data-title="Ngựa mẹ và ngựa con trên thảo nguyên Mông Cổ" class="glightbox-img overflow-hidden rounded-2xl aspect-video shadow-sm block relative cursor-zoom-in group">
+          <img src="https://media.fittour.vn/uploads/ngua-me-va-ngua-con-tren-thao-nguyen-mong-co.webp" alt="Ngựa mẹ và ngựa con trên thảo nguyên Mông Cổ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </a>
+        <a href="https://media.fittour.vn/uploads/lexus-lx570-offroad-thao-nguyen-mong-co.webp" data-gallery="mongco-baby" data-title="Lexus LX570 offroad thảo nguyên Mông Cổ" class="glightbox-img overflow-hidden rounded-2xl aspect-video shadow-sm block relative cursor-zoom-in group">
+          <img src="https://media.fittour.vn/uploads/lexus-lx570-offroad-thao-nguyen-mong-co.webp" alt="Lexus LX570 offroad thảo nguyên Mông Cổ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </a>
+        <a href="https://media.fittour.vn/uploads/ger-don-doc-giua-thao-nguyen-mong-co.webp" data-gallery="mongco-baby" data-title="Ger đơn độc giữa thảo nguyên Mông Cổ" class="glightbox-img overflow-hidden rounded-2xl aspect-video shadow-sm block relative cursor-zoom-in group">
+          <img src="https://media.fittour.vn/uploads/ger-don-doc-giua-thao-nguyen-mong-co.webp" alt="Ger đơn độc giữa thảo nguyên Mông Cổ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </a>
+        <a href="https://media.fittour.vn/uploads/cung-duong-road-trip-xuyen-thao-nguyen-mong-co.webp" data-gallery="mongco-baby" data-title="Cung đường road trip xuyên thảo nguyên Mông Cổ" class="glightbox-img overflow-hidden rounded-2xl aspect-video shadow-sm block relative cursor-zoom-in group">
+          <img src="https://media.fittour.vn/uploads/cung-duong-road-trip-xuyen-thao-nguyen-mong-co.webp" alt="Cung đường road trip xuyên thảo nguyên Mông Cổ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <!-- Related Tours Carousel -->
+    <section class="py-16 lg:py-24 bg-[#0a0a0a]" id="journeys">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">NHỮNG HÀNH TRÌNH ĐỘC BẢN</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-wide">LỰA CHỌN HÀNH TRÌNH</h2>
+          </div>
+        </div>
+        <div class="relative w-full">
+          <button data-action="carousel-prev" type="button"  class="hidden md:flex items-center justify-center bg-[#111] text-white rounded-full cursor-pointer hover:bg-[#c5a365] hover:text-black transition-colors" style="position: absolute; left: -24px; top: 40%; transform: translateY(-50%); z-index: 50; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <svg style="width: 24px; height: 24px; pointer-events: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button data-action="carousel-next" type="button"  class="hidden md:flex items-center justify-center bg-[#111] text-white rounded-full cursor-pointer hover:bg-[#c5a365] hover:text-black transition-colors" style="position: absolute; right: -24px; top: 40%; transform: translateY(-50%); z-index: 50; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <svg style="width: 24px; height: 24px; pointer-events: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+          <div data-component="tour-carousel" class="flex overflow-x-auto -mx-6 px-6 lg:-mx-12 lg:px-12 snap-x snap-mandatory " style="gap: 1.25rem; padding-bottom: 2rem; scrollbar-width: none; scroll-behavior: smooth;">
+            
+            <!-- Tour 1 -->
+            <a href="/tour/tour-mong-co-8n7d" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+              <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+                <img src="https://media.fittour.vn/uploads/2024/01/tour-mong-co-fit-tour.webp" alt="Tour Mông Cổ 8N7Đ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Sống du mục VIP</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col grow relative z-10">
+                <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">8N7Đ | VIP Journey</p>
+                <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">Tour Mông Cổ 8N7Đ trọn gói</h3>
+                <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Sống du mục kiểu VIP - Lều Luxury</p>
+                <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Trải nghiệm ngủ lều Ger 4 sao, cưỡi lạc đà ở sa mạc Gobi, tiệc BBQ. Tận huởng theo cách của riêng bạn.</p>
+              </div>
+            </a>
+
+            <!-- Tour 2 -->
+            <a href="/tour/tour-tan-cuong-road-trip" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+              <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+                <img src="https://media.fittour.vn/uploads/2024/04/tan-cuong-roadtrip-9n8d.webp" alt="Tour Tân Cương 9N8Đ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Trải nghiệm Roadtrip</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col grow relative z-10">
+                <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">9N8Đ | Road Trip</p>
+                <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">Tour Tân Cương 9N8Đ trọn gói</h3>
+                <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Road Trip - No Shopping</p>
+                <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Lịch trình mới nhất, No Shopping, trải nghiệm cung đường thiết kế bởi thổ địa lâu năm.</p>
+              </div>
+            </a>
+
+            <!-- Tour 3 -->
+            <a href="/tour/tour-3stan" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+              <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+                <img src="https://media.fittour.vn/uploads/2024/10/tour-3stan-con-duong-to-lua-fit-tour.webp" alt="Tour 3stan 13N11Đ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Con đường tơ lụa</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col grow relative z-10">
+                <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">13N11Đ | Silk Road</p>
+                <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">Tour 3stan 13N11Đ</h3>
+                <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Kazakhstan - Kyrgyzstan - Uzbekistan</p>
+                <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Khám phá 3 vùng đất con đường tơ lụa Trung Á với dịch vụ trọn gói, khách sạn 4-5 sao.</p>
+              </div>
+            </a>
+
+            <!-- Tour 4 -->
+            <a href="/tour/tour-kazakhstan-kyrgyzstan-8n7d" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+              <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+                <img src="https://media.fittour.vn/uploads/2025/04/tour-lien-tuyen-kazakhstan-kyrgyzstan.webp" alt="Tour Kazakhstan - Kyrgyzstan 8N7Đ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Khám phá Trung Á</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col grow relative z-10">
+                <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">8N7Đ | Bay thẳng</p>
+                <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">Tour Kazakhstan - Kyrgyzstan 8N7Đ</h3>
+                <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Bay thẳng - Miễn Visa</p>
+                <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình đặc biệt để khám phá nét đặc sắc con đường tơ lụa cổ xưa. Tour bay thẳng, miễn visa.</p>
+              </div>
+            </a>
+
+            <!-- Tour 5 -->
+            <a href="/tour/tour-tay-a-3-nuoc" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+              <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+                <img src="https://media.fittour.vn/uploads/2024/11/tour-tay-a-fit-tour.webp" alt="Tour Tây Á 13N12Đ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+                  <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Caucasus Journey</span>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col grow relative z-10">
+                <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">13N12Đ | Caucasus</p>
+                <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">Tour Tây Á 13N12Đ</h3>
+                <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Azerbaijan - Georgia - Armenia</p>
+                <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình đến 3 nước Xô Viết trước đây: khách sạn 4-5 sao chọn lọc, khuyến mãi khinh khí cầu.</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <RelatedArticles articles={mongoliaArticles} />
+  </main>
+
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-sans {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    @keyframes slowZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    .animate-slow-zoom {
+      animation: slowZoom 20s alternate infinite ease-in-out;
+    }
+
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-up.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .sticky-parallax {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        z-index: 0;
+      }
+      .sticky-parallax img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+
+  <script>
+    const initObserver = () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    };
+
+    const loadLightbox = () => {
+      if (document.querySelectorAll('.glightbox-img').length === 0) return;
+      if (typeof window.GLightbox === 'undefined') {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css';
+        document.head.appendChild(link);
+
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+        script.onload = () => {
+          window.GLightbox({
+            selector: '.glightbox-img',
+            touchNavigation: true,
+            loop: true,
+            descPosition: 'bottom'
+          });
+        };
+        document.body.appendChild(script);
+      } else {
+        window.GLightbox({
+          selector: '.glightbox-img',
+          touchNavigation: true,
+          loop: true,
+          descPosition: 'bottom'
+        });
+      }
+    };
+
+    const initPage = () => {
+      initObserver();
+      if (window.requestIdleCallback) window.requestIdleCallback(loadLightbox);
+      else setTimeout(loadLightbox, 1000);
+    };
+
+    document.addEventListener('DOMContentLoaded', initPage);
+    document.addEventListener('astro:page-load', initPage);
+  </script>
+</BaseLayout>

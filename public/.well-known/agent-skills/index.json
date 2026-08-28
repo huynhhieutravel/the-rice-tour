@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schema/agent-skills-discovery-v0.2.0.json",
+  "skills": [
+    {
+      "name": "search_tours",
+      "type": "openapi",
+      "description": "Tìm kiếm và tra cứu thông tin tour du lịch FIT Tour",
+      "url": "https://fittour.vn/api/openapi.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

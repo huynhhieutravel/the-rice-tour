@@ -1,0 +1,213 @@
+---
+// src/components/inbound/InboundDestinationTabs.astro
+---
+<section class="py-20 lg:py-28 bg-gray-50" id="destinations">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3">
+          Geographic Wonders
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
+          Explore Vietnam by Region
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg mt-3 font-light">
+          Three distinct geographic worlds stretching over 3,200 kilometers of coastline, each offering its own culinary soul, climate, and cultural tapestry.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex items-center gap-2 p-1.5 bg-gray-200 rounded-2xl w-fit" id="dest-tab-buttons">
+        <button 
+          data-target="north" 
+          class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-brand-600 text-white shadow-sm"
+        >
+          North Vietnam
+        </button>
+        <button 
+          data-target="central" 
+          class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-gray-600 hover:text-brand-600"
+        >
+          Central Coast
+        </button>
+        <button 
+          data-target="south" 
+          class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-gray-600 hover:text-brand-600"
+        >
+          South &amp; Mekong
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab Panels -->
+    <div id="dest-tab-panels">
+      
+      <!-- Panel 1: North -->
+      <div class="dest-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-north">
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
+          <img 
+            src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" 
+            alt="North Vietnam Highlands" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
+            <p class="text-xs text-gray-700">Hanoi Old Quarter · Lan Ha &amp; Ha Long Bay · Sapa Terraced Valleys · Ninh Binh Karsts</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-center">
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Highland Mystique &amp; Ancient Capitals</span>
+          <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
+            Northern Highlands &amp; Thousand-Year Hanoi
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
+            Northern Vietnam is where dramatic limestone peaks meet emerald valleys and timeless artisan villages. Walk through the fragrant coffee quarters of Hanoi, cruise quiet waters in Lan Ha Bay aboard a private junk, and trek across golden rice amphitheaters in Sapa.
+          </p>
+          
+          <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Boutique cruising away from tourist crowds in Lan Ha Bay</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Private treks through Muong Hoa valley and ethnic craft villages</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Curated Hanoi street gastronomy tours with local culinary experts</span>
+            </li>
+          </ul>
+
+          <a href="/tours?country=mien-bac" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+            <span>Explore Northern Tours</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel 2: Central (Hidden by default) -->
+      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-central">
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
+          <img 
+            src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80" 
+            alt="Central Vietnam Hoi An" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
+            <p class="text-xs text-gray-700">Hue Imperial Citadel · Lantern-lit Hoi An Old Town · Golden Bridge Da Nang · Phong Nha Caves</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-center">
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Royal Legacies &amp; Coastal Charm</span>
+          <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
+            Central Heritage Coast &amp; Ancient Hoi An
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
+            Step back into the realm of emperors in Hue, cycle past emerald paddy fields to UNESCO-protected Hoi An, and discover the world's most spectacular underground cave kingdoms in Phong Nha.
+          </p>
+          
+          <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Private access to royal garden houses and imperial banquets in Hue</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Master tailor fittings &amp; twilight lantern boat rides in Hoi An</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Exclusive caving expeditions into Phong Nha national park</span>
+            </li>
+          </ul>
+
+          <a href="/tours?country=mien-trung" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+            <span>Explore Central Tours</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel 3: South (Hidden by default) -->
+      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-south">
+        <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
+          <img 
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" 
+            alt="Mekong Delta Waterways" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
+            <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
+            <p class="text-xs text-gray-700">Saigon Modern Hub · Cu Chi Historic Tunnels · Cai Rang Floating Market · Phu Quoc Beaches</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-center">
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Tropical Waterways &amp; Urban Pulse</span>
+          <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
+            Southern Metropolis &amp; Mekong Waterways
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
+            Experience the energetic rhythm of modern Saigon before slowing down completely in the lush labyrinth of the Mekong Delta, where life has flowed along riverbanks for centuries.
+          </p>
+          
+          <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Private wooden sampan navigation through secluded palm-fringed canals</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Sunrise breakfast at vibrant Cai Rang floating market</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
+              <span>Luxury beach extensions on pristine Phu Quoc island</span>
+            </li>
+          </ul>
+
+          <a href="/tours?country=mien-nam" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+            <span>Explore Southern Tours</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  const tabButtons = document.querySelectorAll('.dest-tab-btn');
+  const panels = document.querySelectorAll('.dest-panel');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      
+      tabButtons.forEach(b => {
+        b.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+        b.classList.add('text-gray-600');
+      });
+      btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+      btn.classList.remove('text-gray-600');
+
+      panels.forEach(p => {
+        p.classList.add('hidden');
+        p.classList.remove('grid');
+      });
+
+      const activePanel = document.getElementById(`panel-${target}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+        activePanel.classList.add('grid');
+      }
+    });
+  });
+</script>

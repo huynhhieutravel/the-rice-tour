@@ -1,0 +1,61 @@
+---
+// src/components/v2/about/PortfolioArtisans.astro
+const artisans = [
+  {
+    name: "Lê Nhật Cường",
+    role: "Founder / Lead Curator",
+    quote: "Du lịch là để làm giàu tâm hồn, không phải làm đầy vali.",
+    image: "https://media.fittour.vn/uploads/2025/02/team-cuong.jpg" // Placeholder if needed, or use a general image
+  },
+  {
+    name: "Nguyễn Lê Thái Bình",
+    role: "Co-Founder / Operations Expert",
+    quote: "Sự an toàn của bạn kết thúc tại vạch xuất phát của sự chuẩn bị.",
+    image: "https://media.fittour.vn/uploads/2025/02/team-binh.jpg"
+  },
+  {
+    name: "Đội ngũ chuyên gia",
+    role: "Tour Leaders",
+    quote: "Người kể chuyện bằng những chặng đường thực tế.",
+    image: "https://media.fittour.vn/uploads/2022/11/du-khach-chim-dam-voi-ve-dep-cua-nui-non-himalayas.webp" // Using a scenic shot as placeholder
+  }
+];
+---
+
+<section class="py-32 bg-black text-white border-t border-neutral-900">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-20">
+      <div class="max-w-2xl">
+        <h2 class="font-serif text-4xl md:text-6xl text-white mb-6">Những Nghệ Nhân</h2>
+        <p class="font-sans text-neutral-400 text-lg font-light">
+          Đứng sau mỗi kiệt tác là một nghệ nhân. Tại FIT Tour, mỗi Tour Leader là một người thợ điêu khắc thầm lặng, miệt mài gọt giũa từng khoảnh khắc của bạn trên những chặng đường khắc nghiệt nhất.
+        </p>
+      </div>
+    </div>
+
+    <!-- Editorial Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {artisans.map((artisan) => (
+        <div class="group relative overflow-hidden aspect-[3/4] bg-neutral-900 rounded-sm cursor-pointer">
+          <!-- Image with B&W filter, color on hover -->
+          <img 
+            src={artisan.image} 
+            alt={artisan.name} 
+            class="w-full h-full object-cover grayscale opacity-60 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100"
+            onerror="this.src='https://media.fittour.vn/uploads/2022/11/du-khach-chim-dam-voi-ve-dep-cua-nui-non-himalayas.webp'"
+          />
+          
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8">
+            <h3 class="font-sans text-2xl text-white font-medium mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{artisan.name}</h3>
+            <p class="font-sans text-brand-500 text-sm tracking-widest uppercase mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{artisan.role}</p>
+            
+            <p class="font-serif italic text-neutral-300 text-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-200">
+              "{artisan.quote}"
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,430 @@
+---
+// Trang so sánh đối chiếu bài viết: Bản gốc Nụ Cười Mê Kông vs Bản mới FIT Tour (Nội bộ Admin CMS)
+import '@/styles/global.css';
+
+// Kiểm tra auth admin nếu có
+const isAdminLoggedIn = (Astro.locals as any)?.isAdminLoggedIn !== false;
+---
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>So Sánh Đối Chiếu Bài Viết | Trạm 1: FIT Tour Tone Rewriter (Nội bộ Admin)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-serif-cormorant {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- Top Sticky Control Bar -->
+  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-6 py-4 shadow-xl">
+    <div class="max-w-[1700px] mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="/admin/editorial-pipeline" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors border border-slate-700">
+          ← Về Cẩm Nang Pipeline
+        </a>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+          🟢 TRẠM 1: FIT TOUR PILLAR GUIDE STANDARD
+        </span>
+        <h1 class="text-lg md:text-xl font-bold text-white tracking-tight">
+          So Sánh Đối Chiếu: <span class="text-amber-400">Khăn Rằn Nam Bộ</span> (Bản Thô vs Chuẩn FIT Tour)
+        </h1>
+      </div>
+
+      <!-- View Toggle Buttons -->
+      <div class="flex items-center gap-2 bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs font-semibold">
+        <button id="btn-side-by-side" class="px-4 py-2 rounded-lg bg-amber-600 text-white shadow transition-all">
+          ⚖️ Chia Đôi (Side-by-Side)
+        </button>
+        <button id="btn-fittour-only" class="px-4 py-2 rounded-lg text-slate-400 hover:text-white transition-all">
+          🌟 Chỉ Xem Bản FIT Tour
+        </button>
+        <button id="btn-raw-only" class="px-4 py-2 rounded-lg text-slate-400 hover:text-white transition-all">
+          📄 Chỉ Xem Bản Gốc
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Stat Badges -->
+    <div class="max-w-[1700px] mx-auto mt-3 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Từ cấm & thương hiệu cũ: <strong class="text-emerald-400">Đã xóa 100%</strong></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span>Cấu trúc chuyên gia: <strong class="text-amber-400">Quick Stats + So sánh 4 dòng khăn + 4 kiểu quấn + Làng nghề 2026</strong></span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+        <span>Trải nghiệm thực chiến: <strong class="text-blue-400">Cù lao Long Khánh A (cách đi, giờ đẹp, bí quyết bột gạo)</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Comparison Area -->
+  <main class="flex-1 max-w-[1700px] w-full mx-auto p-4 md:p-6">
+    <div id="comparison-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+
+      <!-- LEFT COLUMN: BẢN GỐC NỤ CƯỜI MÊ KÔNG -->
+      <div id="col-raw" class="bg-white text-slate-800 rounded-2xl shadow-2xl border border-slate-200 overflow-hidden transition-all duration-300">
+        <!-- Header Column -->
+        <div class="bg-rose-50 border-b border-rose-100 p-4 px-6 flex items-center justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-rose-600 bg-rose-100/80 px-2.5 py-1 rounded-md">
+              ❌ Bản Thô Ban Đầu (Nụ Cười Mê Kông)
+            </span>
+            <h2 class="text-base font-bold text-slate-900 mt-1">Khăn rằn Nam Bộ: Biểu tượng văn hóa & lịch sử 300 năm của Miền Tây</h2>
+          </div>
+          <span class="text-xs text-slate-400 font-mono">006_khan-ran-nam-bo.md</span>
+        </div>
+
+        <!-- Content Body -->
+        <div class="p-6 md:p-8 space-y-6 max-h-[82vh] overflow-y-auto leading-relaxed text-[15px]">
+          
+          <div class="p-4 bg-rose-50/60 border border-rose-200 rounded-xl text-xs text-rose-700 space-y-1">
+            <p><strong>⚠️ Điểm yếu bản cũ:</strong> Giọng văn liệt kê khô khan, văn phong mang tính bán tour và quảng cáo thương mại cho Nụ Cười Mê Kông, thiếu chiều sâu kiến thức thực tế, chú thích ảnh cộc lốc.</p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-bold text-lg text-slate-900 border-b pb-2">Tóm tắt & Giới thiệu bài gốc</h3>
+            <p class="text-slate-600">
+              Du lịch miền Tây không thể bỏ qua trải nghiệm với khăn rằn Nam Bộ – biểu tượng văn hóa 300 năm tuổi gắn liền với đời sống người dân vùng sông nước. Từ nguồn gốc tâm linh của người Khmer đến vai trò anh hùng trong kháng chiến, hãy cùng khám phá làng nghề dệt khăn trăm tuổi tại Đồng Tháp, học cách quấn khăn rằn chuẩn miền Tây, và <span class="bg-rose-100 text-rose-800 px-1 py-0.5 rounded font-semibold">trải nghiệm các tour văn hóa độc đáo với Nụ Cười Mê Kông – nơi mỗi du khách sẽ được tặng khăn rằn chính gốc</span> và hướng dẫn chi tiết cách sử dụng truyền thống.
+            </p>
+          </div>
+
+          <figure class="rounded-xl overflow-hidden border border-slate-200">
+            <img src="https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-du-lich-mien-tay-nu-cuoi-me-kong.webp" alt="Du khách quàng khăn rằn" class="w-full h-48 object-cover">
+            <figcaption class="p-2.5 bg-slate-50 text-xs text-slate-500 italic text-center">
+              Du khách thích thú quàng khăn, trải nghiệm làm người dân miền Tây khi đi du lịch (Chú thích cũ)
+            </figcaption>
+          </figure>
+
+          <div class="space-y-3">
+            <h4 class="font-bold text-slate-900">Lịch sử và nguồn gốc khăn rằn</h4>
+            <p class="text-slate-600">
+              Khăn rằn có nguồn gốc từ khăn krama của người Khmer, được sử dụng trong vùng đồng bằng sông Cửu Long từ rất lâu đời. Chiếc khăn được cho là có nguồn gốc từ thế kỷ XVII của người Khmer, mang trong mình một biểu tượng của sự tôn kính và lòng thành kính đối với các vị thần trong đạo Hindu.
+            </p>
+            <p class="text-slate-600">
+              Theo tín ngưỡng cổ xưa, thần Vishnu được coi là biểu tượng của sự hiền hòa và lòng từ bi, thường được tưởng tượng cưỡi trên lưng con rắn Naga 7 đầu. Việc tạo ra chiếc khăn Krama (hay khăn rằn) là một cách để thể hiện lòng kính trọng...
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <h4 class="font-bold text-slate-900">Liệt kê màu sắc (Dạng gạch đầu dòng thô):</h4>
+            <ul class="list-disc pl-5 text-slate-600 text-sm space-y-1">
+              <li>Xanh lá cây – trắng</li>
+              <li>Xanh dương – trắng</li>
+              <li>Đỏ – trắng</li>
+              <li>Hồng – trắng</li>
+              <li>Đen – đỏ</li>
+            </ul>
+          </div>
+
+          <div class="space-y-3 p-4 bg-amber-50 rounded-xl border border-amber-200 text-sm">
+            <h4 class="font-bold text-amber-900">Đoạn chèo kéo bán tour Nụ Cười Mê Kông cũ:</h4>
+            <p class="text-amber-800">
+              Ngoài Tour Chợ Nổi Cái Răng, Nụ Cười Mê Kông còn những hành trình trải nghiệm văn hóa miền Tây một cách sâu sắc nhất: Tour Cần Thơ 2 ngày 1 đêm, Tour Chợ Nổi Cái Răng Cồn Sơn. Đặc biệt: Nụ Cười Mê Kông thân tặng quý khách chiếc khăn rằn truyền thống...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: BẢN MỚI FIT TOUR - CHUẨN PILLAR GUIDE -->
+      <div id="col-fittour" class="bg-[#F8F9FA] text-slate-900 rounded-2xl shadow-2xl border-2 border-amber-500/50 overflow-hidden transition-all duration-300">
+        <!-- Header Column -->
+        <div class="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-b border-amber-200/80 p-4 px-6 flex items-center justify-between">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-900 bg-amber-200 px-2.5 py-1 rounded-md shadow-xs">
+              ✨ Bản Chuẩn FIT TOUR (Pillar Guide Thực Chiến)
+            </span>
+            <h2 class="text-base font-bold text-slate-900 mt-1 font-playfair">
+              Khăn Rằn Nam Bộ: Nguồn Gốc 300 Năm, Làng Nghề Trăm Tuổi Long Khánh A Và Cẩm Nang Trải Nghiệm Chuẩn Lữ Hành
+            </h2>
+          </div>
+          <span class="text-xs text-amber-800 font-mono bg-amber-100 px-2 py-1 rounded-md">12 phút đọc</span>
+        </div>
+
+        <!-- Content Body (FIT Tour Full Pillar Guide) -->
+        <div class="p-6 md:p-8 space-y-8 max-h-[82vh] overflow-y-auto leading-relaxed text-[15.5px] text-slate-800">
+
+          <!-- Lead Box -->
+          <div class="p-5 bg-amber-50 border-l-4 border-amber-600 rounded-r-xl shadow-xs font-serif text-[16.5px] italic text-slate-800 leading-relaxed">
+            Khăn rằn không đơn thuần là một món quà lưu niệm phổ biến tại các khu du lịch miền Tây. Đằng sau những ô vuông ca-rô đen trắng mộc mạc là một hành trình giao thoa văn hóa kéo dài hơn 3 thế kỷ giữa các tộc người vùng châu thổ Mekong, một chứng nhân lịch sử đi qua thời khẩn hoang và chiến tranh vệ quốc, cùng một làng nghề trăm tuổi vừa được công nhận là Di sản văn hóa phi vật thể Quốc gia. Dưới đây là cẩm nang toàn diện giúp bạn hiểu sâu về nguồn gốc, cách phân biệt các dòng khăn và kinh nghiệm thực địa tại thủ phủ dệt khăn rằn Đồng Tháp.
+          </div>
+
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-xs">
+            <div class="font-bold text-xs uppercase tracking-wider text-amber-800 mb-3 border-l-3 border-amber-500 pl-2">
+              Tổng Quan Nhanh Về Khăn Rằn Nam Bộ
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">⏳ Niên đại</div>
+                <div class="font-bold text-slate-900 mt-0.5">Thế kỷ XVII (~300 năm)</div>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">📍 Làng nghề thủ phủ</div>
+                <div class="font-bold text-slate-900 mt-0.5">Long Khánh A (Đồng Tháp)</div>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">🏆 Danh hiệu</div>
+                <div class="font-bold text-slate-900 mt-0.5">Di sản Phi vật thể QG</div>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">🧵 Chất liệu chuẩn</div>
+                <div class="font-bold text-slate-900 mt-0.5">Cotton hồ nước bột gạo</div>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">📏 Kích thước</div>
+                <div class="font-bold text-slate-900 mt-0.5">160x60cm / 170x65cm</div>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                <div class="text-slate-500 font-medium">💰 Giá thực tế 2026</div>
+                <div class="font-bold text-slate-900 mt-0.5">35.000 – 90.000 đ/cái</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="space-y-3">
+            <h3 class="font-playfair text-xl font-bold text-slate-900 border-l-4 border-amber-500 pl-3">
+              1. Nguồn Gốc 300 Năm: Từ Khăn Krama Đến Biểu Tượng Nam Bộ
+            </h3>
+            
+            <h4 class="font-bold text-slate-900 text-[16px] mt-4">1.1. Tín ngưỡng tâm linh thần Vishnu và dấu ấn Krama</h4>
+            <p>
+              Nhiều du khách khi cầm trên tay chiếc khăn rằn thường nghĩ đây là sản phẩm thuần túy của người Việt di cư. Tuy nhiên, về mặt nhân học và lịch sử trang phục, khăn rằn Nam Bộ có nguồn gốc trực tiếp từ chiếc khăn <strong>Krama</strong> của người Khmer bản địa vùng hạ lưu sông Mekong.
+            </p>
+            <p>
+              Trong văn hóa Hindu giáo cổ xưa của người Khmer, thần <strong>Vishnu</strong> là đấng bảo hộ, hiện thân của lòng từ bi, che chở muôn loài và thường ngự trên lưng rắn thần Naga 7 đầu. Chiếc khăn Krama được dệt từ những sợi chỉ đan xen kẻ ca-rô vuông vức mô phỏng lớp vảy của rắn thần Naga. Người Khmer cổ tin rằng, việc luôn mang tấm khăn Krama bên mình sẽ giúp họ nhận được sự bảo hộ vô hình của thần Vishnu trước thú dữ, giông bão và tai ương trên sông nước.
+            </p>
+
+            <figure class="my-5 rounded-xl overflow-hidden border border-slate-200 bg-white p-2 shadow-xs">
+              <img src="https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-campuchia-krama.jpg" alt="Khăn Krama nguyên bản Khmer" class="w-full h-52 object-cover rounded-lg">
+              <figcaption class="p-2.5 text-center text-xs text-slate-600 font-serif italic">
+                Khăn Krama của người Khmer – cội nguồn lịch sử mang đậm dấu ấn tín ngưỡng bảo hộ của thần Vishnu.
+              </figcaption>
+            </figure>
+
+            <h4 class="font-bold text-slate-900 text-[16px] mt-4">1.2. Sự biến đổi tự nhiên trong dòng chảy mở cõi</h4>
+            <p>
+              Khi người Việt đặt chân đến khai phá vùng đất đồng bằng sông Cửu Long từ thế kỷ XVII–XVIII, điều kiện tự nhiên sình lầy, kênh rạch chằng chịt và thời tiết hai mùa mưa nắng khắc nghiệt đã thúc đẩy sự tiếp biến văn hóa. Manh áo bà ba xẻ tà kết hợp cùng chiếc khăn rằn vắt vai đã trở thành bộ trang phục hoàn hảo nhất cho việc lao động mở đất.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="space-y-3">
+            <h3 class="font-playfair text-xl font-bold text-slate-900 border-l-4 border-amber-500 pl-3">
+              2. Chiếc Khăn Rằn Trong Kháng Chiến: Biểu Tượng Của Tinh Thần Bất Khuất
+            </h3>
+            <p>
+              Trong suốt hai cuộc kháng chiến chống Pháp và chống Mỹ, chiếc khăn rằn không còn dừng lại ở một vật dụng thường nhật mà đã bước vào lịch sử như một biểu tượng quân sự và văn hóa bất tử của chiến trường Nam Bộ:
+            </p>
+            <ul class="space-y-2 list-disc pl-5 text-[15px]">
+              <li><strong>Nhận diện đồng đội:</strong> Trong điều kiện rừng rậm U Minh hay bưng biền Đồng Tháp Mười, chiếc khăn rằn quàng cổ là dấu hiệu nhận diện bí mật giữa các cánh quân du kích và cơ sở nội thành.</li>
+              <li><strong>Vật dụng sinh tồn đa năng:</strong> Chiếc khăn dùng để lọc nước sông nhiều cặn phù sa trước khi đun sôi, làm băng gạc cấp cứu vết thương, bọc cơm vắt hành quân và làm tấm ngụy trang dưới làn đạn pháo.</li>
+              <li><strong>Huyền thoại "Đội quân tóc dài":</strong> Hình ảnh những nữ du kích miền Nam với bộ bà ba đen giản dị, nón tai bèo và chiếc khăn rằn quấn cổ kiên cường đối mặt với quân thù đã trở thành biểu tượng sống động cho lòng dũng cảm của phụ nữ Việt Nam.</li>
+            </ul>
+
+            <figure class="my-5 rounded-xl overflow-hidden border border-slate-200 bg-white p-2 shadow-xs">
+              <img src="https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-trong-khang-chien-nu-cuoi-me-kong.webp" alt="Khăn rằn trong kháng chiến" class="w-full h-52 object-cover rounded-lg">
+              <figcaption class="p-2.5 text-center text-xs text-slate-600 font-serif italic">
+                Vắt ngang vai áo bà ba, chiếc khăn rằn từng cùng các mẹ, các chị đi qua những năm tháng khói lửa hào hùng.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Section 3: Bảng So Sánh 4 Dòng Khăn -->
+          <div class="space-y-3">
+            <h3 class="font-playfair text-xl font-bold text-slate-900 border-l-4 border-amber-500 pl-3">
+              3. Bảng So Sánh 4 Dòng Khăn Rằn Phổ Biến Tại Đông Nam Á
+            </h3>
+            <p>Để không bị nhầm lẫn khi mua sắm hoặc tìm hiểu di sản, dưới đây là bảng đối chiếu chi tiết giữa các dòng khăn ca-rô tại khu vực:</p>
+            
+            <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-xs bg-white">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr class="bg-amber-100/70 text-slate-900 font-bold">
+                    <th class="p-2.5 border-b">Tiêu chí</th>
+                    <th class="p-2.5 border-b">Khăn rằn Nam Bộ</th>
+                    <th class="p-2.5 border-b">Khăn Krama Campuchia</th>
+                    <th class="p-2.5 border-b">Khăn Chăm An Giang</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 bg-slate-50">Chất liệu</td>
+                    <td class="p-2.5">Cotton dệt thoi, có hồ bột gạo</td>
+                    <td class="p-2.5">Sợi bông dày hoặc tơ tằm dệt tay</td>
+                    <td class="p-2.5">Sợi dệt tự nhiên, nhuộm vỏ cây</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 bg-slate-50">Đặc tính</td>
+                    <td class="p-2.5">Ban đầu hơi đanh, giặt xả cực mềm mát</td>
+                    <td class="p-2.5">Mật độ sợi dày, sờ đanh nhám, bền hàng chục năm</td>
+                    <td class="p-2.5">Mềm rũ tự nhiên, giữ màu sắc tốt</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 bg-slate-50">Giá 2026</td>
+                    <td class="p-2.5 text-amber-700 font-bold">35.000 – 90.000 đ</td>
+                    <td class="p-2.5 font-bold text-slate-700">150.000 – 400.000 đ</td>
+                    <td class="p-2.5 font-bold text-slate-700">60.000 – 180.000 đ</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 4: Làng nghề Long Khánh A -->
+          <div class="space-y-4">
+            <h3 class="font-playfair text-xl font-bold text-slate-900 border-l-4 border-amber-500 pl-3">
+              4. Hành Trình Thực Địa: Khám Phá Làng Nghề Dệt Choàng Long Khánh A (Đồng Tháp)
+            </h3>
+            
+            <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200 text-xs space-y-2">
+              <div class="font-bold text-amber-900 text-sm">📍 Thông Tin Thực Chiến 2026:</div>
+              <p><strong>• Vị trí & Cách đi:</strong> Nằm trên cồn Long Khánh giữa sông Tiền. Từ TP. Hồng Ngự đi phà khoảng 10 phút sang cồn, đường bê tông rộng rãi thuận tiện đi xe máy/xe đạp dạo quanh xóm nghề.</p>
+              <p><strong>• Giờ vàng tham quan:</strong> <strong>7:30 – 10:30 sáng</strong> (khung giờ các hộ phơi giàn chỉ rực rỡ bên bờ sông và tiếng khung cửi rộn rã nhất).</p>
+            </div>
+
+            <h4 class="font-bold text-slate-900 text-[16px]">Quy trình 6 bước độc bản đằng sau chiếc khăn:</h4>
+            <ul class="space-y-2 list-decimal pl-5 text-[15px]">
+              <li><strong>Xả chỉ:</strong> Búp chỉ bông lớn được xả bằng guồng quay gỗ.</li>
+              <li><strong>Nhuộm màu:</strong> Nhúng vào vạc nước nhuộm nóng ăn sâu vào lõi sợi.</li>
+              <li><strong>Hồ chỉ bằng bột gạo (Bí quyết độc bản):</strong> Nhúng chỉ qua nước bột gạo khuấy chín. Lớp bột gạo giúp sợi đanh chắc, bóng mượt và không bị xơ khi đưa thoi.</li>
+              <li><strong>Phơi chỉ:</strong> Giăng giàn tre dài hàng chục mét dọc bờ sông Tiền đón nắng sớm.</li>
+              <li><strong>Mắc cửi (Luồn go):</strong> Hàng ngàn sợi luồn thủ công qua mắt go và khe lược dệt.</li>
+              <li><strong>Dệt thoi:</strong> Chân đạp nhịp nhàng, tay giật con thoi bay thoăn thoắt đan chặt từng đường ca-rô.</li>
+            </ul>
+
+            <figure class="my-5 rounded-xl overflow-hidden border border-slate-200 bg-white p-2 shadow-xs">
+              <img src="https://r2.nucuoimekong.com/wp-content/uploads/lang-nghe-det-khan-ran-nu-cuoi-me-kong.webp" alt="Làng nghề dệt choàng Long Khánh A Đồng Tháp" class="w-full h-52 object-cover rounded-lg">
+              <figcaption class="p-2.5 text-center text-xs text-slate-600 font-serif italic">
+                Nghệ nhân làng nghề Long Khánh A bên khung cửi gỗ – Di sản văn hóa phi vật thể Quốc gia.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Section 5: Hướng Dẫn 4 Kiểu Quấn Khăn -->
+          <div class="space-y-3">
+            <h3 class="font-playfair text-xl font-bold text-slate-900 border-l-4 border-amber-500 pl-3">
+              5. Hướng Dẫn 4 Kiểu Quấn Khăn Rằn Chuẩn Phong Cách Lữ Hành
+            </h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+                <div class="font-bold text-slate-900 text-sm mb-1 text-amber-800">1. Quàng cổ buông vạt</div>
+                <p class="text-slate-600">Vắt qua sau gáy, hai vạt buông thẳng trước ngực. Thích hợp đi dạo chợ nổi, vườn cây trái thư thái.</p>
+              </div>
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+                <div class="font-bold text-slate-900 text-sm mb-1 text-amber-800">2. Thắt nút lệch vai</div>
+                <p class="text-slate-600">Quấn quanh cổ và thắt một nút nhẹ lệch sang một bên vai. Rất gọn gàng khi đi xe máy, xuồng chèo hoặc trekking.</p>
+              </div>
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+                <div class="font-bold text-slate-900 text-sm mb-1 text-amber-800">3. Băng trán chống mồ hôi</div>
+                <p class="text-slate-600">Gấp bản rộng 5–7cm buộc ngang trán. Ngăn mồ hôi chảy xuống mắt khi chèo thuyền kayak, đạp xe ngoài nắng.</p>
+              </div>
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+                <div class="font-bold text-slate-900 text-sm mb-1 text-amber-800">4. Trùm đầu chống nắng</div>
+                <p class="text-slate-600">Phủ kín đỉnh đầu, che hai bên má và vắt chéo ra sau. Bảo vệ đầu và gáy khỏi nắng rát khi ngồi tàu thuyền đường dài.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6: Tips Mua & Bảo Quản -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm">💡 Lời Khuyên Chọn Mua & Bảo Quản Khăn:</h4>
+            <p><strong>• Nhận biết khăn thủ công chuẩn:</strong> Khi mới mua sờ hơi đanh cứng do còn lớp bột gạo hồ sợi. Sau lần giặt đầu sẽ cực kỳ mềm mát, thấm hút mồ hôi tốt. Tránh mua khăn trơn bóng pha nilon vì không thấm nước và gây bí bách.</p>
+            <p><strong>• Giặt lần đầu:</strong> Ngâm nước lạnh pha chút muối loãng 15 phút để bền màu, phơi trong bóng râm.</p>
+            <p><strong>• Nơi mua chuẩn 2026:</strong> Trực tiếp tại Hợp tác xã Dệt choàng Long Khánh A (Đồng Tháp) hoặc các không gian văn hóa bản địa uy tín tại Cần Thơ, Bến Tre, Châu Đốc.</p>
+          </div>
+
+          <!-- Closing Reflection -->
+          <div class="pt-6 border-t border-slate-200">
+            <h3 class="font-playfair text-lg font-bold text-slate-900 mb-2">Lời kết</h3>
+            <p class="text-[15.5px] italic text-slate-700 leading-relaxed font-serif">
+              Trong chuyến hành trình sắp tới về miền Tây, hãy dành một buổi sớm mai ghé thăm cù lao Long Khánh A, chạm tay vào khung cửi trăm năm và chọn cho mình một tấm khăn rằn nguyên bản để chuyến đi thực sự trọn vẹn cả về trải nghiệm lẫn chiều sâu cảm xúc.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive JavaScript Toggle -->
+  <script>
+    const btnSideBySide = document.getElementById('btn-side-by-side');
+    const btnFittourOnly = document.getElementById('btn-fittour-only');
+    const btnRawOnly = document.getElementById('btn-raw-only');
+    const grid = document.getElementById('comparison-grid');
+    const colRaw = document.getElementById('col-raw');
+    const colFittour = document.getElementById('col-fittour');
+
+    function resetButtons() {
+      [btnSideBySide, btnFittourOnly, btnRawOnly].forEach(btn => {
+        btn?.classList.remove('bg-amber-600', 'text-white', 'shadow');
+        btn?.classList.add('text-slate-400');
+      });
+    }
+
+    btnSideBySide?.addEventListener('click', () => {
+      resetButtons();
+      btnSideBySide.classList.add('bg-amber-600', 'text-white', 'shadow');
+      grid?.classList.remove('grid-cols-1');
+      grid?.classList.add('lg:grid-cols-2');
+      colRaw?.classList.remove('hidden');
+      colFittour?.classList.remove('hidden');
+    });
+
+    btnFittourOnly?.addEventListener('click', () => {
+      resetButtons();
+      btnFittourOnly.classList.add('bg-amber-600', 'text-white', 'shadow');
+      grid?.classList.remove('lg:grid-cols-2');
+      grid?.classList.add('grid-cols-1');
+      colRaw?.classList.add('hidden');
+      colFittour?.classList.remove('hidden');
+    });
+
+    btnRawOnly?.addEventListener('click', () => {
+      resetButtons();
+      btnRawOnly.classList.add('bg-amber-600', 'text-white', 'shadow');
+      grid?.classList.remove('lg:grid-cols-2');
+      grid?.classList.add('grid-cols-1');
+      colRaw?.classList.remove('hidden');
+      colFittour?.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/ladakh-co-may.css';
+import '../styles/blog.css';
+import '../styles/author-card.css';
+import App from '../components/ReactApp/TuVienStongdey/App.tsx';
+import { env } from 'cloudflare:workers';
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Tu viện Stongdey: Trái tim của Zanskar";
+let seoDesc = "Khám phá Tu viện Stongdey (Stongdey Monastery) - tu viện cổ nằm lọt thỏm trên vách đá dựng đứng của vùng Zanskar hoang sơ, một trong những trải nghiệm trekking và tâm linh độc đáo nhất ở Ladakh.";
+let seoImage = "https://media.fittour.vn/uploads/2023/06/tu-vien-Stongdey.webp";
+let adminEditUrl = "";
+
+let datePublished = "2023-06-15T08:00:00+08:00";
+let dateModified = "2026-07-14T08:00:00+08:00";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage, createdAt, updatedAt FROM Post WHERE slug = 'tu-vien-stongdey' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      seoImage = postData.featuredImage || seoImage;
+      if (postData.id) adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+      if (postData.createdAt) datePublished = new Date(postData.createdAt).toISOString();
+      if (postData.updatedAt) dateModified = new Date(postData.updatedAt).toISOString();
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data cho trang tu-vien-stongdey:", e);
+  }
+}
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/tu-vien-stongdey"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <!-- Optimize Google Fonts Loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    </noscript>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://thericetour.com/#website",
+          "url": "https://thericetour.com/",
+          "name": "FIT Tour",
+          "publisher": { "@id": "https://thericetour.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://thericetour.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://thericetour.com/#organization",
+          "name": "FIT Tour",
+          "url": "https://thericetour.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://thericetour.com/#logo",
+            "url": "https://media.fittour.vn/logo-fit-tour.png",
+            "contentUrl": "https://media.fittour.vn/logo-fit-tour.png",
+            "caption": "FIT Tour Logo",
+            "inLanguage": "vi-VN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+84-938-123-456",
+            "contactType": "customer service"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://thericetour.com/tu-vien-stongdey#webpage",
+          "url": "https://thericetour.com/tu-vien-stongdey",
+          "name": seoTitle,
+          "description": seoDesc,
+          "isPartOf": { "@id": "https://thericetour.com/#website" },
+          "primaryImageOfPage": { "@id": "https://thericetour.com/tu-vien-stongdey#primaryimage" },
+          "inLanguage": "vi-VN",
+          "mainEntity": { "@id": "https://thericetour.com/tu-vien-stongdey#article" }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://thericetour.com/tu-vien-stongdey#primaryimage",
+          "url": seoImage,
+          "contentUrl": seoImage,
+          "width": 1200,
+          "height": 630,
+          "caption": seoTitle
+        },
+        {
+          "@type": "Article",
+          "@id": "https://thericetour.com/tu-vien-stongdey#article",
+          "isPartOf": { "@id": "https://thericetour.com/tu-vien-stongdey#webpage" },
+          "mainEntityOfPage": { "@id": "https://thericetour.com/tu-vien-stongdey#webpage" },
+          "headline": seoTitle,
+          "description": seoDesc,
+          "image": { "@id": "https://thericetour.com/tu-vien-stongdey#primaryimage" },
+          "inLanguage": "vi-VN",
+          "publisher": { "@id": "https://thericetour.com/#organization" },
+          "author": {
+            "@type": "Person",
+            "@id": "https://thericetour.com/hdv-huy-ngo#person",
+            "name": "Huy Ngô",
+            "url": "https://thericetour.com/hdv-huy-ngo",
+            "jobTitle": "Travel Curator",
+            "worksFor": { "@id": "https://thericetour.com/#organization" },
+            "sameAs": ["https://www.facebook.com/huyngo.fittour"]
+          },
+          "datePublished": datePublished,
+          "dateModified": dateModified,
+          "about": { "@id": "https://thericetour.com/tu-vien-stongdey#place" },
+          "mentions": [
+            { "@id": "https://thericetour.com/kinh-nghiem-du-lich-zanskar#place" },
+            { "@id": "https://thericetour.com/du-lich-ladakh#place" }
+          ]
+        },
+        {
+          "@type": "TouristAttraction",
+          "@id": "https://thericetour.com/tu-vien-stongdey#place",
+          "name": "Tu viện Stongdey",
+          "description": "Tu viện lớn thứ hai tại Zanskar, nằm chót vót trên ngọn đồi với tầm nhìn bao quát toàn bộ thung lũng Doda.",
+          "url": "https://thericetour.com/tu-vien-stongdey",
+          "image": { "@id": "https://thericetour.com/tu-vien-stongdey#primaryimage" },
+          "isAccessibleForFree": true,
+          "touristType": "Adventure travellers",
+          "additionalType": "https://schema.org/Place",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "33.2667",
+            "longitude": "77.1778"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Padum",
+            "addressRegion": "Zanskar, Ladakh",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://en.wikipedia.org/wiki/Stongdey_Monastery",
+            "https://www.wikidata.org/wiki/Q1497914"
+          ]
+        },
+        {
+          "@type": ["Place", "TouristDestination"],
+          "@id": "https://thericetour.com/kinh-nghiem-du-lich-zanskar#place",
+          "name": "Zanskar Valley",
+          "sameAs": ["https://en.wikipedia.org/wiki/Zanskar"]
+        },
+        {
+          "@type": ["Place", "TouristDestination"],
+          "@id": "https://thericetour.com/du-lich-ladakh#place",
+          "name": "Ladakh",
+          "sameAs": ["https://en.wikipedia.org/wiki/Ladakh"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://thericetour.com/tu-vien-stongdey#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang chủ",
+              "item": "https://thericetour.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kinh nghiệm du lịch Zanskar",
+              "item": "https://thericetour.com/kinh-nghiem-du-lich-zanskar"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Tu viện Stongdey",
+              "item": "https://thericetour.com/tu-vien-stongdey"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Đi Stongdey vào tháng nào là đẹp nhất?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tháng 6 đến tháng 9 là thời điểm lý tưởng nhất vì thời tiết tương đối dễ chịu. Đặc biệt nếu bạn đi vào tháng 7 (âm lịch Tây Tạng), bạn sẽ có cơ hội tham gia Lễ hội Stongdey Gustor với các màn múa mặt nạ truyền thống cực kỳ đặc sắc."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Đường đi đến tu viện Stongdey có khó không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Khá thuận tiện. Tu viện chỉ cách trung tâm Padum khoảng 18km. Tuy nhiên, tu viện nằm trên một ngọn đồi cao ngất nên đoạn đường ziczac cuối cùng lên đồi yêu cầu tài xế có kinh nghiệm."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Người lớn tuổi có thể đi tuyến này được không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hoàn toàn có thể. Vì xe ô tô có thể đưa bạn lên tận cổng tu viện nên không yêu cầu trekking vất vả như Phugtal, rất phù hợp cho mọi lứa tuổi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Nhà vệ sinh và điều kiện lưu trú thế nào?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Du khách thường lưu trú tại thị trấn Padum với các khách sạn đầy đủ tiện nghi, sau đó đi xe đến thăm Stongdey trong ngày. Vì thế điều kiện sinh hoạt rất thoải mái."
+              }
+            }
+          ]
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <!-- client:load is used to enable SSR which fixes Render Blocking and LCP issues -->
+  <App client:load /> 
+</BaseLayout>

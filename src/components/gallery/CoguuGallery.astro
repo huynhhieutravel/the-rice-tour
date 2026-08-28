@@ -1,0 +1,153 @@
+---
+/**
+ * CoguuGallery.astro — Component Gallery tái sử dụng
+ * 
+ * Sử dụng:
+ * <CoguuGallery 
+ *   columns={3}
+ *   items={[
+ *     { type: 'image', src: 'https://...', alt: 'Mô tả ảnh' },
+ *     { type: 'mood', text: 'Có những mùa hoa...', color: '#c2410c', bg: 'warm' },
+ *     { type: 'image', src: 'https://...', alt: 'Mô tả ảnh 2' },
+ *   ]}
+ * />
+ * 
+ * Props:
+ *   columns: 2 | 3 | 4 | 5 (mặc định 3) — Số cột trên desktop
+ *   items: mảng các item, mỗi item là:
+ *     - { type: 'image', src: string, alt?: string }
+ *     - { type: 'mood', text: string, color?: string, bg?: 'warm' | 'cool' | 'brand' }
+ */
+
+import { getOptimizedImageUrl, generateSrcSet } from '@/lib/imageOptimization';
+
+interface GalleryImage {
+  type: 'image';
+  src: string;
+  alt?: string;
+}
+
+interface GalleryMood {
+  type: 'mood';
+  text: string;
+  color?: string;   // Màu chữ, ví dụ: '#c2410c'
+  bg?: 'warm' | 'cool' | 'brand'; // Preset background gradient
+}
+
+type GalleryItem = GalleryImage | GalleryMood;
+
+interface Props {
+  columns?: 2 | 3 | 4 | 5;
+  items: GalleryItem[];
+}
+
+const { columns = 3, items: rawItems = [] } = Astro.props;
+
+// Map bg preset sang gradient CSS
+const bgPresets: Record<string, string> = {
+  warm: 'linear-gradient(135deg, #fffbeb, #fff7ed, #ffedd5)',
+  cool: 'linear-gradient(135deg, #f8fafc, #f1f5f9, #e2e8f0)',
+  brand: 'linear-gradient(135deg, #fff7ed, #ffedd5, #fed7aa)',
+};
+
+// Map columns sang CSS class
+const columnClass = `coguu-gallery-cols-${columns}`;
+
+// === Chốt chặn: Tự động dời Mood Text để không bao giờ cùng hàng ===
+// CSS columns phân bổ item từ trên xuống, rồi qua cột tiếp theo.
+// Nếu 2 mood text nằm ở cùng vị trí tương đối trong cột → cùng hàng.
+// Thuật toán: đảm bảo khoảng cách giữa 2 mood text >= itemsPerColumn + 2
+function redistributeMoodTexts(items: GalleryItem[], cols: number): GalleryItem[] {
+  const total = items.length;
+  const itemsPerCol = Math.ceil(total / cols);
+  const minGap = itemsPerCol + 2; // Đảm bảo nằm ở cột khác VÀ hàng khác
+
+  // Tách mood text ra khỏi mảng
+  const moodIndices: number[] = [];
+  const imageItems: GalleryItem[] = [];
+  const moodItems: GalleryItem[] = [];
+
+  items.forEach((item, i) => {
+    if (item.type === 'mood') {
+      moodIndices.push(i);
+      moodItems.push(item);
+    } else {
+      imageItems.push(item);
+    }
+  });
+
+  if (moodItems.length <= 1) return items; // Không cần xử lý
+
+  // Tính toán vị trí chèn mới cho mood texts
+  const totalImages = imageItems.length;
+  const totalSlots = totalImages + moodItems.length;
+  const newItemsPerCol = Math.ceil(totalSlots / cols);
+  
+  // Đặt mood text đầu tiên ở vị trí tương đối nhỏ trong cột 1
+  // Đặt mood text thứ 2 ở vị trí tương đối khác trong cột khác
+  const newPositions: number[] = [];
+  newPositions.push(Math.min(2, totalImages - 1)); // Mood 1: hàng 3 cột 1
+  
+  for (let m = 1; m < moodItems.length; m++) {
+    let pos = newPositions[m - 1] + minGap;
+    if (pos >= totalSlots) pos = totalSlots - 1;
+    newPositions.push(pos);
+  }
+
+  // Rebuild mảng
+  const result: GalleryItem[] = [...imageItems];
+  // Chèn mood texts vào vị trí mới (chèn từ cuối để không bị lệch index)
+  for (let m = moodItems.length - 1; m >= 0; m--) {
+    const insertAt = Math.min(newPositions[m], result.length);
+    result.splice(insertAt, 0, moodItems[m]);
+  }
+
+  return result;
+}
+
+const items = redistributeMoodTexts(rawItems, columns);
+---
+
+<div class={`coguu-gallery grid-fit-masonry ${columnClass}`}>
+  {items.map((item) => {
+    if (item.type === 'mood') {
+      const bgStyle = bgPresets[item.bg || 'warm'] || bgPresets.warm;
+      const textColor = item.color || '#c2410c';
+      return (
+        <div 
+          class="feature-box coguu-gallery-mood" 
+          style={`display:flex;align-items:center;justify-content:center;background:${bgStyle};aspect-ratio:1/1;padding:2rem;`}
+        >
+          <p class="mood-text" style={`column-span:unset;margin:0;color:${textColor};`}>
+            {item.text}
+          </p>
+        </div>
+      );
+    }
+
+    // type === 'image'
+    const optimizedSrc = getOptimizedImageUrl(item.src, 800);
+    const srcset = generateSrcSet(item.src, [400, 800, 1200]);
+    
+    // CLS Prevention: Reserve space using exact aspect-ratio
+    const hasDimensions = item.width && item.height;
+    const boxStyle = hasDimensions ? `aspect-ratio: ${item.width} / ${item.height};` : 'min-height: 250px;';
+
+    return (
+      <div class="feature-box bg-slate-100" style={boxStyle}>
+        <img 
+          src={optimizedSrc}
+          srcset={srcset}
+          sizes={`(max-width: 640px) 100vw, (max-width: 1024px) 50vw, ${Math.floor(100 / columns)}vw`}
+          class="feature-image w-full h-full object-cover" 
+          alt={item.alt || ''} 
+          width={item.width || undefined}
+          height={item.height || undefined}
+          loading="lazy" 
+          decoding="async" 
+        />
+        <div class="feature-overlay"></div>
+      </div>
+    );
+  })}
+</div>

@@ -1,0 +1,22 @@
+---
+// src/components/system/footer/sections/FooterBrand.astro
+export interface Props {
+  links: { name: string; href: string }[];
+  company?: { name: string; tax?: string };
+}
+
+const { links = [], company } = Astro.props;
+---
+<div class="flex flex-col gap-6">
+  <div class="mb-4">
+    <a href="/" class="block max-w-[180px]">
+      <img src="https://media.thericetour.com/uploads/logo-the-rice-light.webp" alt="The Rice Tour" class="w-full h-auto object-contain" loading="lazy" />
+    </a>
+  </div>
+
+  <ul class="space-y-4 text-sm text-gray-300">
+    {links.map(link => (
+      <li><a href={link.href} class="hover:text-white transition-colors">{link.name}</a></li>
+    ))}
+  </ul>
+</div>

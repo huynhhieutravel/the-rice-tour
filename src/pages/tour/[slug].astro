@@ -1,0 +1,568 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import '@/styles/tour-landing.css';
+import * as cheerio from 'cheerio';
+
+// CMS Engine Shortcodes
+import { parseShortcodes } from '@/utils/shortcodes/parser';
+import { fetchAllShortcodeData } from '@/utils/shortcodes/dataLoader';
+import ShortcodeRenderer from '@/components/shortcodes/ShortcodeRenderer.astro';
+import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
+
+const { slug } = Astro.params;
+const d1Db = env?.dulichcoguu_d1 || env?.thericetour_d1;
+
+if (!d1Db) {
+  return Astro.rewrite("/500");
+}
+
+// Fetch Tour
+let tour: any;
+try {
+  tour = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Tour WHERE slug = ? AND status = 'published'").bind(slug).first<any>(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_tour_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!tour) {
+  return new Response("Tour not found", { status: 404 });
+}
+
+// Sanitize inputs
+const title = tour.seoTitle || tour.title;
+const description = tour.seoDescription || tour.excerpt || tour.title;
+const image = tour.ogImage || tour.featuredImage || '';
+
+// Cloudflare Edge Cache (Cache 1 hour, stale-while-revalidate 24 hours)
+const isAdminLoggedIn = (Astro.locals as any).isAdminLoggedIn === true;
+if (!isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+} else {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache');
+}
+
+// Clean up Elementor Wrapper
+let contentHtml = tour.content || '';
+const customCss = tour.css_content || '';
+
+if (contentHtml) {
+  // Fix hardcoded prices from legacy migrations
+  contentHtml = contentHtml.replace(/<span class="text-3xl font-bold text-slate-800">[^<]+<\/span>/g, '<span class="text-3xl font-bold text-slate-800">{{TOUR_PRICE_FORMATTED}}</span>');
+  contentHtml = contentHtml.replace(/<span class="text-lg font-bold text-slate-800">[^<]+<\/span>/g, '<span class="text-lg font-bold text-slate-800">{{TOUR_PRICE_FORMATTED}}</span>');
+  contentHtml = contentHtml.replace(/<span class="text-base font-bold text-brand-600">[^<]+<\/span>/g, '<span class="text-base font-bold text-brand-600">{{TOUR_PRICE_FORMATTED}}</span>');
+  
+  // Fix older legacy template hardcoded prices
+  contentHtml = contentHtml.replace(/<div class="price-amount">[^<]+<\/div>/g, '<div class="price-amount">{{TOUR_PRICE_FORMATTED}}</div>');
+  
+  // Fix older legacy template hardcoded durations
+  contentHtml = contentHtml.replace(/<div class="service-sub">\d+\s+ngày\s+\d+\s+đêm<\/div>/g, '<div class="service-sub">{{TOUR_DURATION}}</div>');
+
+  // Fix hardcoded durations from legacy migrations
+  contentHtml = contentHtml.replace(/<span class="text-sm text-slate-600">\d+ ngày \d+ đêm<\/span>/g, '<span class="text-sm text-slate-600">{{TOUR_DURATION}}</span>');
+
+  // Format price if price_number exists
+  let formattedPrice = tour.price_text || '';
+  
+  if (formattedPrice) {
+    if (/^\d+$/.test(formattedPrice.trim())) {
+      const num = Number(formattedPrice.trim());
+      if (num < 50000) {
+        formattedPrice = `$${num.toLocaleString('en-US')} USD`;
+      } else {
+        formattedPrice = num.toLocaleString('vi-VN') + ' đ';
+      }
+    }
+  }
+
+  if (!formattedPrice && (!tour.price_number || tour.price_number === 0)) {
+    formattedPrice = 'Inquire for Pricing';
+  }
+  if (!formattedPrice && tour.price_number) {
+    const num = Number(tour.price_number);
+    if (num < 50000) {
+      formattedPrice = `$${num.toLocaleString('en-US')} USD`;
+    } else {
+      formattedPrice = num.toLocaleString('vi-VN') + ' đ';
+    }
+  }
+  
+  contentHtml = contentHtml.replace(/{{TOUR_PRICE_FORMATTED}}/g, formattedPrice);
+  contentHtml = contentHtml.replace(/{{TOUR_DURATION}}/g, tour.days || '');
+  contentHtml = contentHtml.replace(/{{TOUR_FEATURED_IMAGE}}/g, image || '');
+  contentHtml = contentHtml.replace(/{{TOUR_TITLE}}/g, tour.title || '');
+}
+
+// Strip legacy breadcrumb from content HTML
+contentHtml = contentHtml.replace(/<nav[^>]*aria-label="Breadcrumb"[^>]*>[\s\S]*?<\/nav>/gi, '');
+
+const isElementor = tour.format === 'elementor' || (tour.content && tour.content.includes('elementor-'));
+
+if (isElementor) {
+  // Strip legacy WordPress [snippet] shortcodes from Elementor tours
+  contentHtml = contentHtml.replace(/\[snippet[^\]]*\]/g, '');
+}
+
+// Fix Nested HTML Documents in Elementor Tours
+if (isElementor && contentHtml.includes('<body')) {
+  try {
+    const $ = cheerio.load(contentHtml);
+    const headStyles = $('head style').map((i, el) => $.html(el)).get().join('\n');
+    const bodyInnerHtml = $('body').html() || '';
+    if (bodyInnerHtml) {
+      contentHtml = headStyles + '\n' + bodyInnerHtml;
+    }
+  } catch (e) {
+    console.error('[Elementor Parse Error]', e);
+  }
+}
+
+// Parse CMS Engine Shortcodes
+const astNodes = parseShortcodes(contentHtml);
+const dataMap = await fetchAllShortcodeData(astNodes, d1Db);
+
+// Generate Schema Data
+const currentOrigin = Astro.url.origin;
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: `${currentOrigin}/` },
+    { name: "Tours", url: `${currentOrigin}/tours` },
+    { name: tour.title, url: canonicalUrl }
+  ]
+};
+
+// Product Schema
+const productImages: string[] = [];
+if (image) productImages.push(image);
+
+if (contentHtml) {
+  const imgMatches = contentHtml.match(/src="([^"]+)"/g) || [];
+  for (const match of imgMatches) {
+    const src = match.replace(/^src="/, '').replace(/"$/, '');
+    if (src && src.startsWith('http') && !src.includes('qrserver') && !src.includes('logo') && !productImages.includes(src)) {
+      productImages.push(src);
+    }
+  }
+}
+
+const productPriceNumber = Number(tour.price_number) || 0;
+const tourCategory = tour.destination ? `Tour ${tour.destination}` : "Vietnam Inbound Tour";
+
+const productSchema = {
+  name: tour.title,
+  image: productImages.length > 0 ? productImages : (image ? [image] : []),
+  description: description,
+  sku: slug,
+  category: tourCategory,
+  brand: {
+    "@type": "Brand",
+    "name": "The Rice Tour"
+  },
+  url: canonicalUrl,
+  price: productPriceNumber,
+  inStock: true,
+  seller: {
+    "@type": "Organization",
+    "name": "The Rice Tour"
+  }
+};
+---
+
+<BaseLayout 
+  title={title} 
+  description={description} 
+  image={image} 
+  preloadImages={image ? [image] : []}
+  adminEditUrl={`/admin/tours/edit?id=${tour.id}`}
+  canonicalMdUrl={`${currentOrigin}/tour/${slug}.md`}
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <JsonLdSchema type="product" data={productSchema} />
+  </Fragment>
+
+  {customCss && (
+    <style set:html={customCss}></style>
+  )}
+
+  <div class="bg-gray-50 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <nav class="breadcrumb-tour flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="text-gray-900 font-medium truncate">{tour.title}</span>
+      </nav>
+
+      <main class="elementor-tour-wrapper">
+        {astNodes.map(node => <ShortcodeRenderer node={node} dataMap={dataMap} />)}
+      </main>
+    </div>
+  </div>
+
+  <!-- MOBILE STICKY BOTTOM NAVIGATION (Native App Style) -->
+  <nav class="mobile-sticky-bottom-nav" aria-label="Mobile Quick Navigation">
+    <button type="button" class="mobile-nav-item item-itinerary" id="btn-mobile-itinerary" aria-label="View Itinerary">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+      </div>
+      <span>Itinerary</span>
+    </button>
+
+    <button type="button" class="mobile-nav-item item-office" id="btn-mobile-office" aria-label="View Office and Trust Guarantees">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+      </div>
+      <span>Our Office</span>
+    </button>
+
+    <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-whatsapp" aria-label="Chat on WhatsApp">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://m.me/thericetour" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-messenger" aria-label="Chat on Messenger">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+      </div>
+      <span>Messenger</span>
+    </a>
+  </nav>
+
+  <!-- HEADQUARTERS & TRUST MODAL -->
+  <div id="office-trust-modal" class="office-modal-overlay" style="display: none;">
+    <div class="office-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+        <div>
+          <span style="display: inline-flex; align-items: center; gap: 4px; background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Official Tour Operator
+          </span>
+          <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0;">The Rice Travel Group</h3>
+          <p style="font-size: 13px; color: #64748b; margin: 2px 0 0;">Licensed International Inbound & Tailor-Made Tour Specialist</p>
+        </div>
+        <button type="button" id="close-office-modal" style="background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #64748b; cursor: pointer; transition: background 0.2s;">✕</button>
+      </div>
+
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px;">📍</div>
+          <div>
+            <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Headquarters Office</div>
+            <div style="font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4;">180 Bui Vien Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 12px; border-top: 1px solid #f1f5f9; padding-top: 10px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: #f0fdf4; color: #16a34a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px;">🏛️</div>
+          <div>
+            <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">International Tour License</div>
+            <div style="font-size: 13px; font-weight: 600; color: #1e293b;">License No: 79-1588/2023/TCDL-GP LHQT</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 12px; border-top: 1px solid #f1f5f9; padding-top: 10px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px;">📞</div>
+          <div>
+            <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Office &amp; 24/7 Concierge Hotline</div>
+            <div style="font-size: 13px; font-weight: 700; color: #ea580c;">028.8888.7888 / 0962.333.621 (WhatsApp)</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; font-size: 13px; color: #334155;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #16a34a; font-weight: 800;">✓</span> <strong>100% No Forced Shopping:</strong> Pure authentic cultural journey
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #16a34a; font-weight: 800;">✓</span> <strong>VIP Small Group:</strong> Maximum 5 guests per private vehicle
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="color: #16a34a; font-weight: 800;">✓</span> <strong>Complimentary Photos:</strong> Full edited album by professional photographer
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <a href="https://maps.app.goo.gl/9dNo3sCwDp3r4RJt7" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px; border-radius: 12px; background: #f1f5f9; color: #1e293b; font-weight: 700; font-size: 13px; text-decoration: none; border: 1px solid #cbd5e1;">
+          <span>🗺️ Google Maps</span>
+        </a>
+        <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px; border-radius: 12px; background: #25D366; color: #ffffff; font-weight: 700; font-size: 13px; text-decoration: none; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
+          <span>💬 Chat WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    function initTourInteractions() {
+      // 1. GLightbox Zoom
+      var container = document.querySelector('.elementor-tour-wrapper');
+      if (container) {
+        var imgs = container.querySelectorAll('.grid-fit-masonry img, .tour-gallery img, img.feature-image, .tour-gallery-slider img, .tour-slide-img');
+        if (imgs.length > 0) {
+          var elements = [];
+          imgs.forEach(function(img, idx) {
+            var src = img.getAttribute('src');
+            if (!src) return;
+            var alt = img.getAttribute('alt') || '';
+            elements.push({ href: src, type: 'image', title: alt, description: alt });
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+              e.preventDefault();
+              if (window.GLightbox) {
+                var lightbox = window.GLightbox({ elements: elements, startAt: idx, loop: true, zoomable: true });
+                lightbox.open();
+              }
+            });
+          });
+        }
+      }
+
+      // 2. Office Trust Modal
+      var officeModal = document.getElementById('office-trust-modal');
+      var openBtn = document.getElementById('open-office-modal-btn');
+      var btnOfficeMobile = document.getElementById('btn-mobile-office');
+      var closeBtn = document.getElementById('close-office-modal');
+
+      function openModal(e) {
+        if (e) e.preventDefault();
+        if (officeModal) officeModal.style.display = 'flex';
+      }
+      function closeModal() {
+        if (officeModal) officeModal.style.display = 'none';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (btnOfficeMobile) btnOfficeMobile.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (officeModal) {
+        officeModal.addEventListener('click', function(e) {
+          if (e.target === officeModal) closeModal();
+        });
+      }
+
+      // 3. Mobile Bottom Nav Smooth Scroll
+      var btnMobileItinerary = document.getElementById('btn-mobile-itinerary');
+      if (btnMobileItinerary) {
+        btnMobileItinerary.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.getElementById('itinerary') || document.querySelector('.tour-itinerary-section');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+
+      // 4. Accommodation Slider
+      document.querySelectorAll('.tour-accommodation-section').forEach(function(section) {
+        var track = section.querySelector('.tour-slider-track');
+        var slides = section.querySelectorAll('.tour-slide');
+        var prevBtn = section.querySelector('.tour-slider-prev');
+        var nextBtn = section.querySelector('.tour-slider-next');
+        var dots = section.querySelectorAll('.tour-slider-dot');
+        var counter = section.querySelector('.tour-slider-counter');
+        if (!track || slides.length === 0) return;
+
+        var currentIndex = 0;
+        function updateSlider(index) {
+          if (index < 0) index = slides.length - 1;
+          if (index >= slides.length) index = 0;
+          currentIndex = index;
+          track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+          dots.forEach(function(dot, i) {
+            dot.classList.toggle('active', i === currentIndex);
+          });
+          if (counter) counter.textContent = (currentIndex + 1) + ' / ' + slides.length;
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', function(e) { e.preventDefault(); updateSlider(currentIndex - 1); });
+        if (nextBtn) nextBtn.addEventListener('click', function(e) { e.preventDefault(); updateSlider(currentIndex + 1); });
+        dots.forEach(function(dot, i) {
+          dot.addEventListener('click', function(e) { e.preventDefault(); updateSlider(i); });
+        });
+      });
+
+      // 5. Customer Gallery Slider
+      document.querySelectorAll('.tour-gallery-section').forEach(function(section) {
+        var slider = section.querySelector('.tour-gallery-slider');
+        var prev = section.querySelector('.tour-gallery-prev');
+        var next = section.querySelector('.tour-gallery-next');
+        if (!slider) return;
+
+        if (prev) prev.addEventListener('click', function(e) { e.preventDefault(); slider.scrollBy({ left: -320, behavior: 'smooth' }); });
+        if (next) next.addEventListener('click', function(e) { e.preventDefault(); slider.scrollBy({ left: 320, behavior: 'smooth' }); });
+      });
+
+      // 6. Related Tours Carousel
+      var relatedCarousel = document.querySelector('.related-tours-carousel');
+      var relatedPrev = document.querySelector('.related-prev');
+      var relatedNext = document.querySelector('.related-next');
+      if (relatedCarousel) {
+        if (relatedPrev) relatedPrev.addEventListener('click', function(e) { e.preventDefault(); relatedCarousel.scrollBy({ left: -380, behavior: 'smooth' }); });
+        if (relatedNext) relatedNext.addEventListener('click', function(e) { e.preventDefault(); relatedCarousel.scrollBy({ left: 380, behavior: 'smooth' }); });
+      }
+
+      // 7. Lịch Khởi Hành Filter
+      var searchInput = document.getElementById('lkh-search');
+      if (searchInput && !searchInput.dataset.initialized) {
+        searchInput.dataset.initialized = 'true';
+        searchInput.addEventListener('input', function() {
+          var query = (this.value || '').toLowerCase().trim();
+          document.querySelectorAll('.lkh-row, .lkh-card').forEach(function(el) {
+            var title = (el.dataset.title || '').toLowerCase();
+            var code = (el.dataset.code || '').toLowerCase();
+            el.style.display = (!query || title.includes(query) || code.includes(query)) ? '' : 'none';
+          });
+        });
+      }
+
+      // 8. Guest Counter & Dynamic Pricing Calculator
+      var guestMinus = document.getElementById('guest-minus-btn');
+      var guestPlus = document.getElementById('guest-plus-btn');
+      var guestCount = document.getElementById('guest-count-display');
+      var totalDisplay = document.getElementById('total-price-display');
+
+      if (guestMinus && guestPlus && guestCount && totalDisplay && !guestMinus.dataset.initialized) {
+        guestMinus.dataset.initialized = 'true';
+        var currentGuests = parseInt(guestCount.textContent || '1', 10) || 1;
+        var rawPriceAttr = totalDisplay.getAttribute('data-base-price');
+        var basePrice = rawPriceAttr ? parseInt(rawPriceAttr, 10) : (parseInt((totalDisplay.textContent || '3090000').replace(/\D/g, ''), 10) || 3090000);
+        var isUSD = (totalDisplay.textContent || '').includes('USD') || (totalDisplay.textContent || '').includes('$');
+
+        function updateGuestCount(val) {
+          currentGuests = Math.max(1, Math.min(5, val));
+          guestCount.textContent = currentGuests;
+          var total = currentGuests * basePrice;
+          if (isUSD) {
+            totalDisplay.textContent = '$' + total.toLocaleString('en-US') + ' USD';
+          } else {
+            totalDisplay.textContent = total.toLocaleString('en-US') + ' VND';
+          }
+        }
+
+        guestMinus.addEventListener('click', function(e) {
+          e.preventDefault();
+          updateGuestCount(currentGuests - 1);
+        });
+
+        guestPlus.addEventListener('click', function(e) {
+          e.preventDefault();
+          updateGuestCount(currentGuests + 1);
+        });
+      }
+
+      // 9. Booking Consultation Modal
+      function initBookingModal() {
+        var bookingButtons = document.querySelectorAll('.js-open-booking-modal');
+        if (bookingButtons.length === 0) return;
+
+        var modal = document.getElementById('booking-consult-modal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'booking-consult-modal';
+          modal.style.cssText = 'position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); padding: 20px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; backdrop-filter: blur(6px);';
+
+          var modalContent = document.createElement('div');
+          modalContent.style.cssText = 'background: #ffffff; padding: 32px 28px; border-radius: 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.25); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);';
+
+          var iconWrapper = document.createElement('div');
+          iconWrapper.style.cssText = 'width: 64px; height: 64px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 28px;';
+          iconWrapper.innerHTML = '✈️';
+
+          var title = document.createElement('h3');
+          title.id = 'booking-modal-tour-title';
+          title.style.cssText = 'font-size: 19px; font-weight: 800; color: #0f172a; margin: 0 0 8px 0; line-height: 1.35;';
+
+          var desc = document.createElement('p');
+          desc.style.cssText = 'font-size: 14px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
+          desc.innerHTML = 'Đăng ký tư vấn trực tiếp 1:1 với chuyên viên <strong>The Rice Travel Group</strong> để nhận tư vấn lịch trình riêng và giá ưu đãi!';
+
+          var actionGroup = document.createElement('div');
+          actionGroup.style.cssText = 'display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;';
+
+          var waBtn = document.createElement('a');
+          waBtn.href = 'https://wa.me/84962333621';
+          waBtn.target = '_blank';
+          waBtn.rel = 'noopener noreferrer';
+          waBtn.innerHTML = '💬 Chat WhatsApp 24/7';
+          waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
+
+          var zaloBtn = document.createElement('a');
+          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.target = '_blank';
+          zaloBtn.rel = 'noopener noreferrer';
+          zaloBtn.innerHTML = '💬 Chat Zalo Tư Vấn';
+          zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          var hotlineBtn = document.createElement('a');
+          hotlineBtn.href = 'tel:0962333621';
+          hotlineBtn.innerHTML = '📞 Gọi Hotline: 0962.333.621';
+          hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          var closeBtn = document.createElement('button');
+          closeBtn.type = 'button';
+          closeBtn.innerText = 'Đóng lại';
+          closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 13px; width: 100%; transition: background 0.2s;';
+          
+          function closeBookingModal() {
+            modal.style.opacity = '0';
+            modalContent.style.transform = 'translateY(20px)';
+            setTimeout(function() { modal.style.pointerEvents = 'none'; }, 300);
+          }
+
+          closeBtn.addEventListener('click', closeBookingModal);
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeBookingModal();
+          });
+
+          actionGroup.appendChild(waBtn);
+          actionGroup.appendChild(zaloBtn);
+          actionGroup.appendChild(hotlineBtn);
+
+          modalContent.appendChild(iconWrapper);
+          modalContent.appendChild(title);
+          modalContent.appendChild(desc);
+          modalContent.appendChild(actionGroup);
+          modalContent.appendChild(closeBtn);
+          modal.appendChild(modalContent);
+          document.body.appendChild(modal);
+        }
+
+        bookingButtons.forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var tourName = btn.getAttribute('data-tour-name') || document.querySelector('h1')?.textContent || 'Hành trình The Rice Tour';
+            var titleEl = document.getElementById('booking-modal-tour-title');
+            if (titleEl) titleEl.innerText = tourName;
+
+            modal.style.pointerEvents = 'auto';
+            requestAnimationFrame(function() {
+              modal.style.opacity = '1';
+              if (modal.firstElementChild) {
+                modal.firstElementChild.style.transform = 'translateY(0)';
+              }
+            });
+          });
+        });
+      }
+      initBookingModal();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTourInteractions);
+    } else {
+      initTourInteractions();
+    }
+    document.addEventListener('astro:page-load', initTourInteractions);
+  </script>
+</BaseLayout>

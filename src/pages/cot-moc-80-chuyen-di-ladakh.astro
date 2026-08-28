@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/milestone-80.css';
+import App from '../components/ReactApp/Milestone80/App.tsx';
+import { env } from 'cloudflare:workers';
+import { safeQueryCritical } from '../lib/db-client';
+
+let postData = null;
+let adminEditUrl = "/admin/posts/edit?id=16001";
+
+const d1Db = env?.dulichcoguu_d1;
+if (d1Db) {
+  try {
+    postData = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE id = ?").bind("16001").first(),
+      { route: Astro.url.pathname, slug: "cot-moc-80-chuyen-di-ladakh", queryType: "fetch_landing_post" }
+    );
+    if (postData && postData.id) {
+        adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+    }
+  } catch (e) {
+    console.log("Could not fetch post metadata from D1:", e);
+  }
+}
+
+const featuredImage = postData?.featuredImage || "https://media.fittour.vn/uploads/cot-moc-80-chuyen-di-ladakh-fittour.webp";
+---
+<BaseLayout
+  title={postData?.title || "Cột mốc 80 chuyến đi Ladakh do FIT Tour thiết kế"}
+  description={postData?.description || "Kỷ Niệm Mốc 80 Chuyến Đi Thành Công Vượt Tuyết Sơn. Hành trình viễn du vĩ đại qua miền đất phật Ladakh."}
+  image={featuredImage}
+  canonical="https://thericetour.com/cot-moc-80-chuyen-di-ladakh"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" media="print" onload="this.media='all'">
+  </Fragment>
+
+  <App client:load featuredImage={featuredImage} /> 
+</BaseLayout>

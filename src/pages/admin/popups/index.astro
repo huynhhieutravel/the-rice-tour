@@ -1,0 +1,260 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+let popups: any[] = [];
+
+if (d1Db) {
+  try {
+    const { results } = await d1Db.prepare(`SELECT * FROM Popup ORDER BY createdAt DESC`).all();
+    popups = results || [];
+  } catch (error) {
+    console.error("Failed to load popups", error);
+  }
+}
+---
+
+<AdminLayout title="Popups & Toasts" activeMenu="popups">
+<style>
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .header h2 { font-size: 24px; font-weight: 700; margin: 0; }
+  .header p { color: #64748b; font-size: 14px; margin-top: 4px; }
+  
+  .layout-grid { display: grid; grid-template-columns: 1fr 350px; gap: 24px; align-items: start; }
+  @media (max-width: 1024px) { .layout-grid { grid-template-columns: 1fr; } }
+  
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; }
+  
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; box-sizing: border-box; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #bfdbfe; }
+  .form-group .hint { display: block; font-size: 12px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+  
+  .btn-submit { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; width: auto; }
+  .btn-submit:hover { background: #1d4ed8; }
+  
+  .btn-cancel { background: #f1f5f9; color: #334155; font-weight: 600; padding: 10px 16px; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-size: 14px; margin-right: 10px; }
+  
+  table { width: 100%; border-collapse: collapse; }
+  thead th { text-align: left; padding: 12px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+  tbody td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+  tbody tr:hover { background: #f8fafc; }
+  
+  .action-link { font-size: 12px; border: none; background: none; cursor: pointer; padding: 0; display: inline-block; margin-right: 8px; font-weight: 600; }
+  .action-edit { color: #2563eb; }
+  .action-delete { color: #ef4444; }
+
+  .badge-status { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .badge-active { background: #dcfce7; color: #166534; }
+  .badge-hidden { background: #f1f5f9; color: #475569; }
+
+  .form-actions { margin-top: 24px; padding-top: 16px; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; }
+</style>
+
+<div class="header">
+  <div>
+    <h2>Quản lý Popups & Toasts</h2>
+    <p>Tạo bong bóng thông báo trượt góc màn hình để điều hướng người dùng.</p>
+  </div>
+  <button id="btnAddNew" class="btn-submit" onclick="showForm()">+ Thêm Popup Mới</button>
+</div>
+
+<div class="layout-grid">
+  <!-- List Table (Left) -->
+  <div class="card" style="padding: 0; overflow: hidden; grid-column: 1;">
+    <table>
+      <thead>
+        <tr>
+          <th>Ảnh</th>
+          <th>Tiêu đề / Link</th>
+          <th>Hiển thị tại</th>
+          <th>Trạng thái</th>
+          <th style="width: 120px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {popups.length === 0 && (
+          <tr><td colspan="5" style="text-align: center; color: #94a3b8; padding: 32px;">Chưa có Popup nào.</td></tr>
+        )}
+        {popups.map(p => (
+          <tr id={`row-${p.id}`}>
+            <td>
+              {p.image ? <img src={p.image} style="width: 48px; height: 48px; object-fit: cover; border-radius: 6px;" /> : <div style="width: 48px; height: 48px; background: #f1f5f9; border-radius: 6px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:10px;">No IMG</div>}
+            </td>
+            <td>
+              <div style="font-weight: 600; color: #0f172a; margin-bottom: 4px;">{p.title}</div>
+              <a href={p.link} target="_blank" style="color: #3b82f6; font-size: 11px; text-decoration: none;">{p.link || 'Không có link'}</a>
+            </td>
+            <td>
+              {p.pageSlugToMatch ? <span style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 11px;">/{p.pageSlugToMatch}</span> : <span style="color: #64748b; font-size: 11px;">Toàn site</span>}
+            </td>
+            <td>
+              <span class={`badge-status ${p.isActive === 1 ? 'badge-active' : 'badge-hidden'}`}>
+                {p.isActive === 1 ? 'Active' : 'Hidden'}
+              </span>
+            </td>
+            <td>
+              <button class="action-link action-edit" onclick={`editPopup('${p.id}')`}>Sửa</button>
+              <button class="action-link action-delete" onclick={`deletePopup('${p.id}')`}>Xóa</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Form Edit (Right) -->
+  <div class="card" id="formContainer" style="display: none; grid-column: 2; position: sticky; top: 20px;">
+    <h3 id="formTitle" style="font-size: 16px; font-weight: 600; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">Thêm Popup Mới</h3>
+    
+    <form id="popupForm">
+      <input type="hidden" id="editId" name="editId" />
+      
+      <div class="form-group">
+        <label for="title">Tiêu đề *</label>
+        <input type="text" id="title" name="title" required placeholder="VD: Khuyến mãi Hè" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Mô tả ngắn</label>
+        <textarea id="description" name="description" rows="2" placeholder="VD: Nhập mã HE2024 để giảm 5%"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="link">Link đích (Khi click)</label>
+        <input type="url" id="link" name="link" placeholder="https://thericetour.com/..." />
+      </div>
+      
+      <div class="form-group">
+        <label for="image">Ảnh Thumbnail (URL)</label>
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="image" name="image" placeholder="https://media.fittour.vn/..." />
+          <button type="button" class="btn-cancel" style="margin:0; padding: 8px 12px;" onclick="window.openMediaManager('image')">Chọn</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pageSlugToMatch">Hiển thị ở bài viết nào?</label>
+        <input type="text" id="pageSlugToMatch" name="pageSlugToMatch" placeholder="VD: ladakh-series (để trống: mọi trang)" />
+        <span class="hint">Nhập slug của bài viết/page. Bỏ trống nếu muốn hiển thị ở tất cả mọi nơi.</span>
+      </div>
+
+      <div class="form-group" style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="isActive" name="isActive" value="1" checked style="width: auto; margin: 0;" />
+        <label for="isActive" style="margin: 0; font-weight: 500;">Kích hoạt</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" onclick="hideForm()">Hủy</button>
+        <button type="submit" class="btn-submit" id="btnSave">Lưu Popup</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Thư viện Media Manager -->
+<script is:inline src="/js/media-manager.js"></script>
+<script is:inline define:vars={{ rawPopups: popups }}>
+  // Load Media Manager
+  window.openMediaManager = function(targetInputId) {
+    if (typeof window.MediaLibrary !== 'undefined') {
+      window.MediaLibrary.open({
+        onSelect: function(media) {
+          document.getElementById(targetInputId).value = media.url;
+        }
+      });
+    } else {
+      alert("Media Library chưa tải xong.");
+    }
+  };
+
+  function showForm() {
+    document.getElementById('formContainer').style.display = 'block';
+    document.getElementById('popupForm').reset();
+    document.getElementById('editId').value = '';
+    document.getElementById('formTitle').innerText = 'Thêm Popup Mới';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function hideForm() {
+    document.getElementById('formContainer').style.display = 'none';
+  }
+
+  window.editPopup = function(id) {
+    const p = rawPopups.find(x => x.id === id);
+    if (!p) return;
+    
+    document.getElementById('formContainer').style.display = 'block';
+    document.getElementById('editId').value = p.id;
+    document.getElementById('title').value = p.title;
+    document.getElementById('description').value = p.description || '';
+    document.getElementById('link').value = p.link || '';
+    document.getElementById('image').value = p.image || '';
+    document.getElementById('pageSlugToMatch').value = p.pageSlugToMatch || '';
+    document.getElementById('isActive').checked = p.isActive === 1;
+    
+    document.getElementById('formTitle').innerText = 'Sửa Popup';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.deletePopup = async function(id) {
+    const confirmed = await window.AppModal.confirm('Xóa Popup này vĩnh viễn?');
+    if (!confirmed) return;
+    
+    try {
+      const res = await fetch(`/api/admin/popups/${id}`, { method: 'DELETE' });
+      const resData = await res.json();
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error || 'Lỗi khi xóa', 'error');
+      }
+    } catch (err) {
+      window.AppModal.alert('Lỗi kết nối API', 'error');
+    }
+  }
+
+  document.getElementById('popupForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('editId').value;
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const link = document.getElementById('link').value;
+    const image = document.getElementById('image').value;
+    const pageSlugToMatch = document.getElementById('pageSlugToMatch').value;
+    const isActive = document.getElementById('isActive').checked ? 1 : 0;
+    
+    const btn = document.getElementById('btnSave');
+    const originalText = btn.innerText;
+
+    btn.innerText = 'Đang lưu...';
+    btn.disabled = true;
+
+    try {
+      const url = id ? `/api/admin/popups/${id}` : '/api/admin/popups';
+      const method = id ? 'PUT' : 'POST';
+
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, description, link, image, pageSlugToMatch, isActive })
+      });
+      
+      const resData = await res.json();
+
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error || 'Có lỗi xảy ra', 'error');
+      }
+    } catch (err) {
+      window.AppModal.alert('Lỗi kết nối mạng', 'error');
+    } finally {
+      btn.innerText = originalText;
+      btn.disabled = false;
+    }
+  });
+</script>
+</AdminLayout>

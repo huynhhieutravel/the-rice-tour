@@ -1,0 +1,1202 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { Clock, Calendar, ChevronRight, CheckCircle2, Shield, Check, Info, AlertTriangle, MapPin, Ticket, Landmark, Compass, Flag, ShieldCheck, Footprints, Sun, Users, Sparkles, Navigation, Waves, Trees } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+let post;
+try {
+  if (d1Db) post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('di-hoa-vien').first<any>(),
+    { route: Astro.url.pathname, slug: 'di-hoa-vien', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  // Gracefully fallback if DB error or not created yet
+}
+
+// Fallback metadata if post is not yet populated in CMS
+if (!post) {
+  post = {
+    id: 996,
+    title: 'Di Hòa Viên Bắc Kinh: Kinh Nghiệm Chọn Cổng, Tuyến Tham Quan & Giá Vé',
+    excerpt: 'Kinh nghiệm tham quan Di Hòa Viên (Cung điện Mùa Hè) Bắc Kinh: Tuyến đi bộ đẹp nhất, kinh nghiệm chọn cổng, giá vé 2026, đi thuyền Hồ Côn Minh và lưu ý quan trọng.',
+    featuredImage: 'https://media.fittour.vn/uploads/china-sereis-background.webp',
+    author: 'Huynh Hieu Travel',
+    createdAt: '2026-08-19T08:00:00.000Z',
+    updatedAt: '2026-08-19T08:00:00.000Z',
+    readingTime: 14
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Di Hòa Viên Bắc Kinh: Kinh Nghiệm Chọn Cổng, Tuyến Tham Quan & Giá Vé';
+const seoDesc = post.seoDesc || post.excerpt || 'Kinh nghiệm tham quan Di Hòa Viên (Cung điện Mùa Hè) Bắc Kinh: Tuyến đi bộ đẹp nhất, kinh nghiệm chọn cổng, giá vé 2026, đi thuyền Hồ Côn Minh và lưu ý quan trọng.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/china-sereis-background.webp';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-08-19T08:00:00.000Z';
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "Max Vũ": {
+    name: "Max Vũ",
+    url: "/max-vu",
+    img: "https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp"
+  },
+  "Huy Ngô": {
+    name: "Huy Ngô",
+    url: "/hdv-huy-ngo",
+    img: "https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/huynh-hieu",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["Huynh Hieu Travel"];
+// ------------------
+
+const adminEditUrl = post.id && post.id !== 996 && post.id !== 997 && post.id !== 998 && post.id !== 999 ? `/admin/posts/edit?id=${post.id}` : '#';
+
+// TOC Navigation Structure
+const toc = [
+  { id: "gioi-thieu", title: "Giới thiệu", icon: "🏠" },
+  { id: "di-hoa-vien-la-gi", title: "Di Hòa Viên Là Gì?" },
+  { id: "vi-sao-dang-di", title: "Vì Sao Di Hòa Viên Đáng Đi?" },
+  { id: "bon-khu-vuc-chinh", title: "Bốn Khu Vực Chính Của Di Hòa Viên" },
+  { id: "khu-cung-dinh", title: "• Khu Cung Đình Phía Đông", indent: true },
+  { id: "tien-son-doi-truong-tho", title: "• Tiền Sơn – Đồi Trường Thọ", indent: true },
+  { id: "hau-son-hau-ho", title: "• Hậu Sơn Và Hậu Hồ", indent: true },
+  { id: "ho-con-minh", title: "• Hồ Côn Minh & Cầu 17 Vòm", indent: true },
+  { id: "co-can-dat-ve-truoc", title: "Có Cần Đặt Vé Trước Không?" },
+  { id: "gia-ve-2026", title: "Giá Vé Di Hòa Viên 2026 & Vé Liên Hợp" },
+  { id: "chinh-sach-mien-ve-60-tuoi", title: "Người Từ 60 Tuổi Có Được Miễn Vé Không?" },
+  { id: "gio-mo-cua", title: "Giờ Mở Cửa & Lưu Ý Thứ Hai" },
+  { id: "nen-vao-cong-nao", title: "Nên Vào Cổng Nào Ở Di Hòa Viên?" },
+  { id: "tuyen-tham-quan", title: "Tuyến Di Hòa Viên Cho Người Lần Đầu" },
+  { id: "di-thuyen-ho-con-minh", title: "Có Nên Đi Thuyền Trên Hồ Côn Minh?" },
+  { id: "ngam-sen-mua-he", title: "Di Hòa Viên Mùa Hè: Ngắm Sen Hồ Côn Minh" },
+  { id: "mua-nao-dep-nhat", title: "Mùa Nào Đẹp Nhất Để Đi Di Hòa Viên?" },
+  { id: "phu-hop-nguoi-lon-tuoi", title: "Di Hòa Viên Có Phù Hợp Người Lớn Tuổi Không?" },
+  { id: "thue-huong-dan-vien", title: "Có Nên Thuê Hướng Dẫn Viên?" },
+  { id: "cach-di-den", title: "Cách Đi Đến Di Hòa Viên (Metro Line 4)" },
+  { id: "so-sanh-tu-cam-thanh", title: "Di Hòa Viên Có Gì Khác Tử Cấm Thành?" },
+  { id: "ket-hop-vien-minh-vien", title: "Có Nên Kết Hợp Với Viên Minh Viên?" },
+  { id: "co-dang-di-khong", title: "Di Hòa Viên Có Đáng Đi Không?" },
+  { id: "7-dieu-can-nho", title: "7 Điều Cần Nhớ Trước Khi Đi" },
+  { id: "faq", title: "Câu Hỏi Thường Gặp (FAQ)" },
+  { id: "hanh-trinh-fit-tour", title: "Di Hòa Viên Trong Hành Trình FIT TOUR" }
+];
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[580px] lg:min-h-[660px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src={seoImage} 
+          alt="Di Hòa Viên Cung Điện Mùa Hè Bắc Kinh Trung Quốc" 
+          class="w-full h-full object-cover object-center opacity-75" 
+          width="1920" 
+          height="1080"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white font-semibold line-clamp-1">Di Hòa Viên (Summer Palace)</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {post.title}
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Kinh nghiệm chọn cổng, tuyến tham quan, thời gian và những điều cần biết trước khi đi
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Di Hòa Viên là khu vườn hoàng gia nổi tiếng nhất Bắc Kinh, <a href="/country/trung-quoc" class="text-amber-400 hover:text-amber-300 underline underline-offset-4" title="Du lịch Trung Quốc">Trung Quốc</a>. Nơi đây kết hợp hài hòa giữa Đồi Trường Thọ, mặt nước Hồ Côn Minh thơ mộng và các kiến trúc cung đình đỉnh cao của triều đại nhà Thanh.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="40" 
+              height="40" 
+              class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" 
+            />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {authorData.name} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>{post.readingTime || 14} phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">📍</span> Tây Bắc Bắc Kinh (~15km)
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏞️</span> Diện Tích ~301 Hecta (3/4 Mặt Nước)
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🎟️</span> Vé Mua Tại Cửa & Online (Không Bắt Buộc Đặt Trước)
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏛️</span> Di Sản Thế Giới UNESCO 1998
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class={`block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 ${item.indent ? 'pl-2 text-[12.5px] border-l border-transparent hover:border-amber-400' : 'font-semibold text-[13px]'}`}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vị trí</div>
+                <div class="text-[13px] font-bold text-slate-900">Tây Bắc Bắc Kinh (~15km)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📐</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Quy mô</div>
+                <div class="text-[13px] font-bold text-slate-900">301 ha (3/4 mặt hồ)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎫</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Đặt vé</div>
+                <div class="text-[13px] font-bold text-slate-900">Tại chỗ & Online linh hoạt</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏱️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Thời gian gợi ý</div>
+                <div class="text-[13px] font-bold text-slate-900">3 – 5 giờ (Nửa ngày)</div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700 space-y-4">
+            <p>
+              Nếu <a href="/tu-cam-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Tử Cấm Thành</a> đưa bạn vào thế giới của quyền lực tối thượng và những nghi lễ thâm nghiêm, thì <strong>Di Hòa Viên (颐和园, Yíhéyuán)</strong> lại mở ra một bầu không khí hoàn toàn trái ngược: thư thái, phóng khoáng và tràn ngập hơi thở thiên nhiên.
+            </p>
+            <p>
+              Được mệnh danh là một trong những khu vườn hoàng gia được bảo tồn tốt nhất Trung Quốc, Di Hòa Viên là sự kết hợp tài tình giữa bàn tay con người và vẻ đẹp tạo hóa. Ở đây, bạn sẽ được trải nghiệm nhịp điệu du ngoạn chậm rãi: thả bước bên bờ <strong>Hồ Côn Minh</strong> mênh mông, ngắm nhìn hàng ngàn bức họa trên <strong>Trường Lang</strong>, phóng tầm mắt từ đỉnh <strong>Đồi Trường Thọ</strong>, hay chèo thuyền trôi bồng bềnh giữa sóng nước.
+            </p>
+            <p>
+              Khác với <a href="/tu-cam-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Tử Cấm Thành</a> hay <a href="/thien-an-mon" class="text-brand-700 hover:text-brand-800 underline font-medium">Quảng trường Thiên An Môn</a>, Di Hòa Viên <strong>không bắt buộc đặt vé trước</strong>. Bạn có thể linh hoạt mua vé trực tiếp tại quầy hoặc mua online.
+            </p>
+          </div>
+
+          {/* Section 1: Di Hòa Viên Là Gì? */}
+          <section id="di-hoa-vien-la-gi" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Di Hòa Viên Là Gì?
+              </h2>
+            </div>
+            
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Di Hòa Viên nằm cách trung tâm Bắc Kinh khoảng 15 km về phía tây bắc, sở hữu diện tích khổng lồ lên tới <strong>khoảng 301 ha</strong>, trong đó mặt nước Hồ Côn Minh chiếm tới 3/4 diện tích toàn khu.
+              </p>
+              <p>
+                Khởi nguyên từ năm 1750 dưới thời Hoàng đế Càn Long, khu vườn ban đầu mang tên <strong>Thanh Y Viên (清漪园)</strong>. Đây được xem như món quà hiếu thảo mà vua Càn Long dành tặng cho mẹ mình là Sùng Khánh Hoàng Thái hậu nhân dịp đại thọ 60 tuổi. Công trình hoàn thành năm 1764, trở thành nơi nghỉ dưỡng mùa hè và trung tâm điều hành chính sự ngoài hoàng cung.
+              </p>
+              <p>
+                Trải qua nhiều biến cố lịch sử, khu vườn từng bị thiêu rụi phần lớn trong cuộc chiến năm 1860. Đến cuối thế kỷ 19, dưới thời vua Quang Tự, Từ Hi Thái hậu đã cho tái thiết toàn bộ trên nền móng cũ và chính thức đổi tên thành <strong>Di Hòa Viên</strong> ("khu vườn nuôi dưỡng sự an hòa"). Sau sự kiện Liên quân Tám nước tàn phá năm 1900, hoa viên tiếp tục được trùng tu và chính thức mở cửa cho công chúng từ năm 1924.
+              </p>
+              <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200 text-sm text-slate-800 space-y-1">
+                🏛️ <strong><a href="https://whc.unesco.org/en/list/880/" target="_blank" rel="noopener noreferrer" class="text-brand-700 hover:text-brand-800 underline font-medium">Di Hòa Viên – Di sản Thế giới UNESCO</a> (1998):</strong> UNESCO công nhận nơi đây là một kiệt tác của nghệ thuật làm vườn phong cảnh Trung Hoa, nơi địa hình tự nhiên của đồi núi và mặt hồ hòa quyện xuất sắc với kiến trúc cung điện, chùa miếu, cầu và đình tạ.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 2: Vì Sao Đáng Đi? */}
+          <section id="vi-sao-dang-di" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Vì Sao Di Hòa Viên Đáng Đi?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Điểm thu hút của Di Hòa Viên không chỉ nằm ở các cung điện, mà là <strong>sự chuyển đổi nhịp nhàng giữa các không gian</strong>:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">👑</span>
+                  <h3 class="font-bold text-slate-900 text-base">Cung đình uy nghiêm</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Điện Nhân Thọ, Ngọc Lan Đường và Lạc Thọ Đường lưu giữ trọn vẹn dấu ấn sinh hoạt xa hoa và các hoạt động triều chính của Từ Hi Thái hậu.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">⛰️</span>
+                  <h3 class="font-bold text-slate-900 text-base">Đồi Trường Thọ kỳ vĩ</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Phật Hương Các ngự trị trên đỉnh cao, Điện Bài Vân uy nghi cùng Hải Trí Tuệ tạo nên trục cảnh quan Phật giáo tráng lệ giữa non nước.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🌊</span>
+                  <h3 class="font-bold text-slate-900 text-base">Hồ Côn Minh khoáng đạt</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Mặt hồ phẳng lặng như gương soi, điểm xuyết Cầu Mười Bảy Vòm duyên dáng, Thuyền Đá sừng sững và những tuyến đê rợp bóng liễu rủ.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🎨</span>
+                  <h3 class="font-bold text-slate-900 text-base">Trường Lang danh bất hư truyền</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Hành lang gỗ dài 728 mét men theo chân núi với hơn 14.000 bức tranh sơn thủy, lịch sử và thần thoại được vẽ thủ công tinh xảo.
+                  </p>
+                </div>
+              </div>
+              <p>
+                Sự thay đổi bối cảnh liên tục từ cung điện, hành lang, đồi núi cho đến mặt hồ mang lại trải nghiệm đi bộ nhẹ nhàng và không bị nhàm chán.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 3: Bốn Khu Vực Chính */}
+          <section id="bon-khu-vuc-chinh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Bốn Khu Vực Chính Của Di Hòa Viên
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Với diện tích hơn 300 hecta, nếu cố gắng đi theo kiểu check-in toàn bộ, bạn chắc chắn sẽ kiệt sức. Cách tiếp cận thông minh nhất là chia hoa viên thành 4 phân khu trải nghiệm rõ rệt:
+              </p>
+
+              {/* Khu 1 */}
+              <div id="khu-cung-dinh" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-3 text-amber-700 font-bold text-sm uppercase tracking-wider">
+                  <span>🏛️ Phân Khu 1</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">1. Khu Cung Đình Phía Đông (Dấu Vết Hoàng Gia)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Nằm ngay sát Cổng Đông (Đông Cung Môn), đây là khu vực lưu giữ nhiều công trình hành chính và khu tẩm điện của hoàng tộc triều Thanh:
+                </p>
+                <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                  <li><strong>Điện Nhân Thọ (仁寿殿):</strong> Trung tâm hành chính, nơi Càn Long và sau này là Từ Hi Thái hậu tiếp kiến triều thần và quốc sứ.</li>
+                  <li><strong>Vườn Đức Hòa (德和园):</strong> Khu nhà hát hoàng gia 3 tầng lộng lẫy, nơi phục vụ các buổi diễn kinh kịch phục vụ Từ Hi.</li>
+                  <li><strong>Ngọc Lan Đường & Lạc Thọ Đường:</strong> Nơi ở của Hoàng đế Quang Tự (từng bị giam lỏng tại đây) và tẩm điện xa hoa của Từ Hi Thái hậu.</li>
+                </ul>
+              </div>
+
+              {/* Khu 2 */}
+              <div id="tien-son-doi-truong-tho" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-3 text-amber-700 font-bold text-sm uppercase tracking-wider">
+                  <span>⛰️ Phân Khu 2</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">2. Tiền Sơn – Đồi Trường Thọ (Biểu Tượng Của Hoa Viên)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Là trái tim kiến trúc của toàn bộ Di Hòa Viên, tập trung những công trình tráng lệ bậc nhất trên sườn núi hướng ra hồ:
+                </p>
+                <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                  <li><strong>Trường Lang (长廊):</strong> Trường Lang dài khoảng 728 m, chạy dọc phía bắc Hồ Côn Minh, rợp bóng liễu rủ ven hồ.</li>
+                  <li><strong>Điện Bài Vân & Phật Hương Các:</strong> Cụm bảo tháp bát giác 3 tầng nguy nga vươn cao 41m trên sườn đồi, là góc ngắm toàn cảnh Hồ Côn Minh đẹp nhất.</li>
+                  <li><strong>Hải Trí Tuệ (智慧海):</strong> Ngôi điện hoàn toàn bằng gạch lưu ly men màu không dùng dầm gỗ ngự trên đỉnh núi.</li>
+                </ul>
+              </div>
+
+              {/* Khu 3 */}
+              <div id="hau-son-hau-ho" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-3 text-amber-700 font-bold text-sm uppercase tracking-wider">
+                  <span>🍃 Phân Khu 3</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">3. Hậu Sơn Và Hậu Hồ (Không Gian Giang Nam Yên Tĩnh)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Nếu Tiền Sơn rực rỡ vàng son thì Hậu Sơn lại mang phong vị sông nước êm đềm của vùng <a href="/tour/tour-trung-quoc-giang-nam" class="text-brand-700 hover:text-brand-800 underline font-medium">Giang Nam</a> thu nhỏ:
+                </p>
+                <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                  <li><strong>Phố Tô Châu (苏州街):</strong> Con phố cổ trên bến dưới thuyền mô phỏng vùng đất <a href="/tour/tour-trung-quoc-9n8d" class="text-brand-700 hover:text-brand-800 underline font-medium">Tô Châu</a> nổi tiếng, nơi các cung nữ và thái giám xưa đóng vai người buôn bán cho hoàng gia giải trí.</li>
+                  <li><strong>Hậu Hồ:</strong> Tuyến kênh nước rợp bóng thông xanh, vắng lặng và ít khách hơn hẳn khu vực trung tâm.</li>
+                </ul>
+              </div>
+
+              {/* Khu 4 */}
+              <div id="ho-con-minh" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-3 text-amber-700 font-bold text-sm uppercase tracking-wider">
+                  <span>🌊 Phân Khu 4</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">4. Hồ Côn Minh & Cầu Mười Bảy Vòm (Phần Hồn Hoa Viên)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Khu vực rộng lớn với mặt hồ trải dài và các công trình kiến trúc đặc trưng ven bờ:
+                </p>
+                <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                  <li><strong>Cầu Mười Bảy Vòm (十七孔桥):</strong> Cây cầu đá dài 150m nối liền Đảo Nam Hồ, nổi tiếng với hiện tượng kỳ thú khi ánh nắng hoàng hôn đông chí xuyên qua toàn bộ 17 vòm cầu.</li>
+                  <li><strong>Thuyền Đá Thanh Yến Phảng:</strong> Chiếc thuyền đá cẩm thạch hai tầng đồ sộ đứng vững chãi ven bờ bắc của hồ.</li>
+                  <li><strong>Tuyến Đê Tây (西堤):</strong> Con đê dài mô phỏng đê Tô Đông Pha ở Tây Hồ Hàng Châu với 6 cây cầu đá hình dáng uốn lượn tuyệt đẹp.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 4: Có Cần Đặt Vé Trước Không? */}
+          <section id="co-can-dat-ve-truoc" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Có Cần Đặt Vé Di Hòa Viên Trước Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="text-lg font-bold text-slate-900">
+                Câu trả lời là: <strong>KHÔNG BẮT BUỘC</strong>.
+              </p>
+              <p>
+                Đây là một tin vui lớn cho du khách tự túc. Không giống như Tử Cấm Thành bắt buộc phải "chực chờ săn vé" trước 7 ngày, Di Hòa Viên <strong>hỗ trợ cả hai hình thức: mua vé trực tiếp tại quầy và đặt vé trực tuyến</strong>.
+              </p>
+              
+              <div class="bg-blue-50/70 p-5 rounded-xl border border-blue-200 text-slate-800 text-sm space-y-2">
+                💡 <strong>Kinh nghiệm mua vé cho khách Việt Nam năm 2026:</strong>
+                <ul class="list-disc pl-5 space-y-1.5 mt-2">
+                  <li><strong>Đi ngày thường / mùa thấp điểm:</strong> Bạn chỉ cần cầm theo Hộ chiếu (Passport) đến quầy vé tại cổng (Đông Cung Môn hoặc Bắc Cung Môn) là có thể mua vé vào cửa ngay lập tức, thanh toán bằng <a href="/ung-dung-can-cai-truoc-khi-du-lich-trung-quoc" class="text-brand-700 hover:text-brand-800 underline font-medium">Alipay/WeChat Pay</a> hoặc thẻ quốc tế.</li>
+                  <li><strong>Đi cuối tuần / mùa hoa sen / lễ hội:</strong> Nên đặt trước qua WeChat Mini Program chính thức hoặc các nền tảng OTA quốc tế để tiết kiệm thời gian xếp hàng tại cổng.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 5: Giá Vé 2026 */}
+          <section id="gia-ve-2026" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Giá Vé Di Hòa Viên 2026 & Vé Liên Hợp
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Giá vé tham quan Di Hòa Viên được quy định rõ ràng theo hai mùa du lịch:
+              </p>
+
+              {/* Table Pricing */}
+              <div class="overflow-x-auto my-6">
+                <table class="w-full text-left text-sm border-collapse bg-white rounded-2xl overflow-hidden shadow-2xs border border-slate-200">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-medium">
+                      <th class="p-4 border-b border-slate-800">Loại Vé</th>
+                      <th class="p-4 border-b border-slate-800">Mùa Cao Điểm (1/4 – 31/10)</th>
+                      <th class="p-4 border-b border-slate-800">Mùa Thấp Điểm (1/11 – 31/3)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-amber-50/40 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Vé vào cổng tiêu chuẩn</td>
+                      <td class="p-4 font-bold text-amber-700">30 CNY (~105.000 VNĐ)</td>
+                      <td class="p-4 font-bold text-slate-700">20 CNY (~70.000 VNĐ)</td>
+                    </tr>
+                    <tr class="hover:bg-amber-50/40 transition-colors">
+                      <td class="p-4 font-semibold text-slate-900">Vé ưu đãi (Học sinh/Sinh viên)</td>
+                      <td class="p-4 text-slate-600">15 CNY</td>
+                      <td class="p-4 text-slate-600">10 CNY</td>
+                    </tr>
+                    <tr class="hover:bg-amber-50/40 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Vé liên hợp trọn gói (All-in-one)</td>
+                      <td class="p-4 font-bold text-brand-700">60 CNY (~210.000 VNĐ)</td>
+                      <td class="p-4 font-bold text-slate-700">50 CNY (~175.000 VNĐ)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3">
+                <h3 class="font-bold text-slate-900 text-base">Có nên mua Vé Liên Hợp (Combo Ticket) không?</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Vé liên hợp bao gồm vé vào cổng + 4 điểm thu phí bên trong (Phật Hương Các, Vườn Đức Hòa, Phố Tô Châu và Bảo tàng Văn Xương Viện).
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+                  <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                    <strong>Nên mua vé liên hợp nếu:</strong> Bạn có 4–6 giờ trở lên và muốn leo lên Phật Hương Các ngắm toàn cảnh hồ hoặc dạo Phố Tô Châu.
+                  </div>
+                  <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                    <strong>Chỉ cần mua vé thường nếu:</strong> Bạn chỉ có 2–3 giờ, chủ yếu muốn đi dạo ven hồ, chụp ảnh Trường Lang và ngắm cảnh ngoài trời.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 6: Miễn Vé 60 Tuổi */}
+          <section id="chinh-sach-mien-ve-60-tuoi" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Người Từ 60 Tuổi Có Được Miễn Vé Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="font-bold text-slate-900 text-base">
+                Có. Khách du lịch từ 60 tuổi trở lên được miễn phí vé vào cửa.
+              </p>
+              <p>
+                Theo quy định hiện hành, <strong>người cao tuổi từ 60 tuổi trở lên (bao gồm cả du khách quốc tế)</strong> đều được hưởng chính sách <strong>miễn phí vé vào cổng</strong> tại các công viên công cộng của thành phố.
+              </p>
+              <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 text-emerald-950 text-sm space-y-1">
+                ✅ <strong>Cách nhận vé miễn phí:</strong> Du khách từ đủ 60 tuổi chỉ cần mang theo <strong>Hộ chiếu gốc (Passport)</strong> đến trực tiếp quầy vé tại bất kỳ cổng nào của Di Hòa Viên để nhân viên quét đối chiếu và xuất vé miễn phí vào cửa.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 7: Giờ Mở Cửa & Thứ Hai */}
+          <section id="gio-mo-cua" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Giờ Mở Cửa & Lưu Ý Quan Trọng Vào Thứ Hai
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Du khách cần phân biệt rõ ràng giữa <strong>giờ mở cửa công viên chung</strong> và <strong>giờ mở cửa các điểm thu phí bên trong</strong> (tham khảo thêm <a href="https://english.beijing.gov.cn/specials/parktours/guidevisitors/summerpalace/" target="_blank" rel="noopener noreferrer" class="text-brand-700 hover:text-brand-800 underline font-medium">thông tin tham quan chính thức Di Hòa Viên</a>):
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                  <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600">🌲</span> Toàn Bộ Công Viên
+                  </h3>
+                  <ul class="text-xs text-slate-600 space-y-1.5">
+                    <li><strong>Mùa cao điểm (1/4 – 31/10):</strong> 06:00 – 20:00 (Ngừng đón khách lúc 19:00)</li>
+                    <li><strong>Mùa thấp điểm (1/11 – 31/3):</strong> 06:30 – 19:00 (Ngừng đón khách lúc 18:00)</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                  <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600">🏛️</span> Các Điểm Thu Phí Bên Trong
+                  </h3>
+                  <ul class="text-xs text-slate-600 space-y-1.5">
+                    <li><strong>Mùa cao điểm:</strong> 08:00 – 18:00 (Ngừng đón khách lúc 17:30)</li>
+                    <li><strong>Mùa thấp điểm:</strong> 08:30 – 17:00 (Ngừng đón khách lúc 16:30)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 text-rose-950 text-sm space-y-2">
+                ⚠️ <strong>Cảnh báo về Thứ Hai hàng tuần:</strong>
+                <p>
+                  Các điểm tham quan thu phí bên trong (như Phật Hương Các, Vườn Đức Hòa, Phố Tô Châu) <strong>sẽ ĐÓNG CỬA vào Thứ Hai</strong> (trừ các dịp lễ tết quốc gia). 
+                </p>
+                <p class="text-xs text-rose-900 italic">
+                  👉 <strong>Lời khuyên FIT TOUR:</strong> Nếu đi lần đầu, bạn nên chọn đi từ Thứ Ba đến Chủ Nhật để được vào trọn vẹn các di tích. Nếu đi trúng Thứ Hai, bạn vẫn có thể dạo mát công viên, ngắm hồ Côn Minh và Trường Lang nhưng sẽ không leo lên được đỉnh Phật Hương Các.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 8: Nên Vào Cổng Nào? */}
+          <section id="nen-vao-cong-nao" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Nên Vào Cổng Nào Ở Di Hòa Viên?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Di Hòa Viên có tới 6 cổng vào, nhưng đối với khách du lịch, chỉ có 3 cổng thuận tiện nhất:
+              </p>
+
+              <div class="space-y-3">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                      <span class="text-amber-600">🚪</span> 1. Đông Cung Môn (Cổng Đông – Tuyến Cổ Điển Nhất)
+                    </h3>
+                    <span class="text-xs bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full">Khuyên dùng ⭐⭐⭐⭐⭐</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Đây là cổng chính của hoàng gia ngày xưa. Đi từ cổng này, bạn sẽ vào ngay khu cung điện cổ (Điện Nhân Thọ, Lạc Thọ Đường), sau đó kết nối thẳng ra bờ hồ và Trường Lang. Rất tiện đi bằng Metro Line 4 (Ga Xiyuan).
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                      <span class="text-amber-600">🚪</span> 2. Bắc Cung Môn (Cổng Bắc – Gần Phố Tô Châu)
+                    </h3>
+                    <span class="text-xs bg-blue-100 text-blue-900 font-bold px-2.5 py-1 rounded-full">Gần Ga Metro Beigongmen</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Nằm sát ngay lối ra Ga Beigongmen (Line 4). Cổng này dẫn thẳng vào Phố Tô Châu và mặt sau Đồi Trường Thọ. Lưu ý: Tuyến này có nhiều đoạn dốc và bậc thang leo ngược núi, không tối ưu cho người lớn tuổi.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                      <span class="text-amber-600">🚪</span> 3. Tân Cung Môn (Cổng Nam Mới – Tuyến Ven Hồ)
+                    </h3>
+                    <span class="text-xs bg-slate-100 text-slate-800 font-bold px-2.5 py-1 rounded-full">Gần Cầu 17 Vòm</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Cổng nằm ở góc đông nam, phù hợp nếu bạn muốn ngắm Cầu Mười Bảy Vòm và Đảo Nam Hồ đầu tiên, sau đó thả bộ thong dong dọc theo Đê Đông về khu cung đình.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 9: Tuyến Tham Quan */}
+          <section id="tuyen-tham-quan" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Gợi Ý Tuyến Tham Quan Theo Quỹ Thời Gian
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Tùy vào quỹ thời gian của hành trình, bạn có thể lựa chọn một trong các tuyến sau:
+              </p>
+
+              <div class="space-y-4">
+                {/* 2-3h */}
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base">⏱️ Tuyến 2 – 3 Giờ: Tuyến Highlights Nhanh</h3>
+                    <span class="text-xs bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-full">Tiết kiệm thời gian</span>
+                  </div>
+                  <div class="text-sm text-slate-700 font-medium bg-amber-50/60 p-3 rounded-xl border border-amber-200">
+                    Đông Cung Môn ➔ Điện Nhân Thọ ➔ Vườn Đức Hòa ➔ Trường Lang ➔ Điện Bài Vân ➔ Phật Hương Các ➔ Ra Cổng Bắc.
+                  </div>
+                  <p class="text-xs text-slate-500">
+                    Tập trung trọn vẹn vào các công trình mang tính biểu tượng nhất mà không cần đi vòng quanh hồ.
+                  </p>
+                </div>
+
+                {/* 4-5h */}
+                <div class="bg-white p-5 rounded-2xl border-2 border-amber-400 space-y-2 shadow-2xs">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base">⏱️ Tuyến 4 – 5 Giờ: Tuyến Cân Bằng Nhất (Khuyên Dùng)</h3>
+                    <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Chuẩn 100% ⭐⭐⭐⭐⭐</span>
+                  </div>
+                  <div class="text-sm text-slate-900 font-medium bg-amber-50 p-3 rounded-xl border border-amber-200">
+                    Đông Cung Môn ➔ Khu Cung Đình ➔ Trường Lang ➔ Phật Hương Các ➔ Thuyền Đá ➔ Đi Thuyền qua Hồ Côn Minh ➔ Cầu 17 Vòm ➔ Đảo Nam Hồ.
+                  </div>
+                  <p class="text-xs text-slate-600">
+                    Tuyến đường hoàn hảo kết hợp đủ: Cung điện + Leo đồi ngắm cảnh + Đi thuyền + Check-in cây cầu 17 vòm nổi tiếng.
+                  </p>
+                </div>
+
+                {/* 5-6h */}
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-2">
+                  <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-slate-900 text-base">⏱️ Tuyến Cả Ngày: Khám Phá Toàn Diện</h3>
+                    <span class="text-xs bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-full">Dành cho người mê nhiếp ảnh</span>
+                  </div>
+                  <div class="text-sm text-slate-700 font-medium bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    Đông Cung Môn ➔ Cung điện ➔ Trường Lang ➔ Phật Hương Các ➔ Thuyền Đá ➔ Đê Tây (Ngắm Sen) ➔ Cầu 17 Vòm ➔ Phố Tô Châu.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 10: Đi Thuyền Trên Hồ */}
+          <section id="di-thuyen-ho-con-minh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Có Nên Đi Thuyền Trên Hồ Côn Minh?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="font-bold text-slate-900 text-base">
+                RẤT NÊN, nếu bạn có thời gian từ 3 tiếng trở lên.
+              </p>
+              <p>
+                Ngồi thuyền trên Hồ Côn Minh đem lại góc nhìn hoàn toàn khác biệt. Từ mặt nước lộng gió, bạn sẽ nhìn ngược lên sườn Đồi Trường Thọ với Phật Hương Các và dãy Trường Lang kiêu hãnh trải dài sát mép nước.
+              </p>
+              <div class="bg-emerald-50/70 p-4 rounded-xl border border-emerald-200 text-sm text-slate-800 space-y-2">
+                🚢 <strong>Mẹo đi thuyền thực chiến:</strong>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Tuyến thuyền phà công cộng:</strong> Có nhiều tuyến nối các điểm chính, phổ biến nhất là từ bến gần Thuyền Đá sang Đảo Nam Hồ (Cầu 17 Vòm). Giá vé và tuyến đường có thể thay đổi tùy thời điểm, nhưng đây là cách rất tốt để tiết kiệm sức đi bộ.</li>
+                  <li><strong>Thuyền đạp chân/thuyền điện tự lái:</strong> Thích hợp cho cặp đôi hoặc gia đình muốn thong thả tự do giữa lòng hồ (thuê theo giờ).</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 11: Ngắm Sen Mùa Hè */}
+          <section id="ngam-sen-mua-he" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Di Hòa Viên Mùa Hè: Ngắm Sen Hồ Côn Minh
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Vào khoảng <strong>cuối tháng 6 đến hết tháng 8</strong>, Hồ Côn Minh bước vào mùa hoa sen nở rộ.
+              </p>
+              <p>
+                Những đầm sen trải dài dọc theo Đê Tây tạo ra mảng không gian xanh mát. Đi thuyền xuyên qua đầm sen là một hoạt động rất được ưa chuộng trong mùa này.
+              </p>
+              <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-sm text-slate-800">
+                ☀️ <strong>Lưu ý chống nắng:</strong> Phần lớn hoa viên là cảnh quan mặt nước và đồi núi ngoài trời. Mùa hè bạn bắt buộc phải trang bị mũ rộng vành, kính râm, kem chống nắng và luôn mang theo bình nước cá nhân.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 12: Mùa Nào Đẹp Nhất? */}
+          <section id="mua-nao-dep-nhat" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Mùa Nào Đẹp Nhất Để Đi Di Hòa Viên?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Phong cảnh Di Hòa Viên thay đổi rõ rệt theo 4 mùa:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <h3 class="font-bold text-slate-900">🌸 Mùa Xuân (Tháng 3 – 5)</h3>
+                  <p class="text-slate-600 text-xs mt-1">Hoa đào, hoa mộc lan và liễu non đâm chồi ven hồ, thời tiết mát mẻ tuyệt hảo để đi bộ.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <h3 class="font-bold text-slate-900">🪷 Mùa Hè (Tháng 6 – 8)</h3>
+                  <p class="text-slate-600 text-xs mt-1">Hồ sen nở rực rỡ, cây cối xanh um, thích hợp nhất để trải nghiệm đi thuyền trên hồ.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <h3 class="font-bold text-slate-900">🍁 Mùa Thu (Tháng 9 – 11)</h3>
+                  <p class="text-slate-600 text-xs mt-1">Mùa thu thường được nhiều du khách yêu thích. Bầu trời thu Bắc Kinh trong xanh, lá vàng lá đỏ rực rỡ soi bóng xuống mặt hồ phẳng lặng.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <h3 class="font-bold text-slate-900">❄️ Mùa Đông (Tháng 12 – 2)</h3>
+                  <p class="text-slate-600 text-xs mt-1">Hồ Côn Minh đóng băng thành sân trượt băng tự nhiên khổng lồ. Cảnh tuyết trắng phủ lên mái ngói lưu ly đẹp như tranh thủy mặc.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 13: Người Lớn Tuổi */}
+          <section id="phu-hop-nguoi-lon-tuoi" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Di Hòa Viên Có Phù Hợp Người Lớn Tuổi Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                <strong>CÓ, nhưng cần chọn lộ trình phù hợp.</strong>
+              </p>
+              <p>
+                Di Hòa Viên có những cung đường ven hồ hoàn toàn bằng phẳng, rợp bóng cây xanh và nhiều ghế nghỉ chân dọc theo Trường Lang, cực kỳ lý tưởng cho người lớn tuổi tản bộ dưỡng sinh.
+              </p>
+              <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 text-sm text-slate-800 space-y-1">
+                👵 <strong>Lưu ý về thể lực:</strong> Tránh leo các bậc thang đá cao dốc lên đỉnh Phật Hương Các và Đồi Trường Thọ. Thay vào đó, hãy kết hợp đi thuyền công cộng ngang hồ để ngắm cảnh từ xa mà không tốn sức.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 14: Thuê HDV */}
+          <section id="thue-huong-dan-vien" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Có Nên Thuê Hướng Dẫn Viên Hay Dùng Audio Guide?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Nếu chỉ muốn dạo cảnh chụp ảnh, bạn hoàn toàn có thể tự khám phá. Nhưng nếu muốn hiểu rõ những câu chuyện thâm cung bí sử đằng sau từng tẩm điện của Từ Hi Thái hậu hay điển tích trên 14.000 bức tranh Trường Lang, thiết bị thuyết minh sẽ rất giá trị.
+              </p>
+              <p>
+                Tại các cổng chính đều có quầy cho thuê <strong>máy thuyết minh tự động (Audio Guide)</strong> hỗ trợ tới 19 ngôn ngữ (bao gồm tiếng Anh, tiếng Pháp, tiếng Nga, tiếng Trung) tự động phát bài thuyết minh theo định vị GPS khi bạn bước tới từng điểm di tích.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 15: Cách Đi Đến */}
+          <section id="cach-di-den" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Cách Đi Đến Di Hòa Viên Bằng Tàu Điện Ngầm (Metro)
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Phương tiện nhanh chóng và tiết kiệm nhất từ trung tâm Bắc Kinh là <strong>Tàu điện ngầm Tuyến số 4 (Metro Line 4)</strong>:
+              </p>
+              <div class="space-y-3">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <div class="font-bold text-slate-900 text-sm">🚇 Đi Cổng Đông (Đông Cung Môn):</div>
+                  <p class="text-slate-600 text-xs mt-1">Đi Line 4 hoặc Line 16 ➔ Xuống tại <strong>Ga Xiyuan (西苑站)</strong> ➔ Ra Cửa C2 ➔ Đi bộ khoảng 10 phút là tới cổng.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <div class="font-bold text-slate-900 text-sm">🚇 Đi Cổng Bắc (Bắc Cung Môn):</div>
+                  <p class="text-slate-600 text-xs mt-1">Đi Line 4 ➔ Xuống tại <strong>Ga Beigongmen (北宫门站)</strong> ➔ Ra Cửa D ➔ Đi bộ 3 phút là tới thẳng cổng.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 16: So Sánh Tử Cấm Thành */}
+          <section id="so-sanh-tu-cam-thanh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Di Hòa Viên Có Gì Khác Tử Cấm Thành?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Dù cùng là di sản hoàng gia đỉnh cao, trải nghiệm của hai nơi này hoàn toàn khác biệt:
+              </p>
+
+              <div class="overflow-x-auto my-4">
+                <table class="w-full text-left text-sm border-collapse bg-white rounded-2xl overflow-hidden shadow-2xs border border-slate-200">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-medium">
+                      <th class="p-4 border-b border-slate-800">Tiêu Chí</th>
+                      <th class="p-4 border-b border-slate-800">Di Hòa Viên (Summer Palace)</th>
+                      <th class="p-4 border-b border-slate-800">Tử Cấm Thành (Forbidden City)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr>
+                      <td class="p-4 font-bold text-slate-900">Trải nghiệm chính</td>
+                      <td class="p-4 text-emerald-800 font-medium">Vườn hoàng gia, hồ nước, núi non, nghỉ dưỡng</td>
+                      <td class="p-4 text-amber-800 font-medium">Cung điện, sân nghi lễ, quyền lực tối cao</td>
+                    </tr>
+                    <tr>
+                      <td class="p-4 font-bold text-slate-900">Cảnh quan thiên nhiên</td>
+                      <td class="p-4 text-amber-600 font-bold">⭐⭐⭐⭐⭐</td>
+                      <td class="p-4 text-amber-600 font-bold">⭐⭐</td>
+                    </tr>
+                    <tr>
+                      <td class="p-4 font-bold text-slate-900">Kiến trúc cung đình</td>
+                      <td class="p-4 text-amber-600 font-bold">⭐⭐⭐⭐</td>
+                      <td class="p-4 text-amber-600 font-bold">⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                      <td class="p-4 font-bold text-slate-900">Áp lực đặt vé</td>
+                      <td class="p-4 text-emerald-700 font-bold">Dễ thở (Có bán tại quầy)</td>
+                      <td class="p-4 text-rose-700 font-bold">Rất gắt (Phải săn trước 7 ngày)</td>
+                    </tr>
+                    <tr>
+                      <td class="p-4 font-bold text-slate-900">Thời gian tham quan</td>
+                      <td class="p-4">3 – 5 giờ</td>
+                      <td class="p-4">3 – 4 giờ</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-sm italic text-slate-600">
+                👉 Không nên gộp cả Tử Cấm Thành và Di Hòa Viên vào chung một buổi, vì mỗi nơi đòi hỏi từ 15.000 – 20.000 bước chân. Hãy chia làm 2 ngày riêng biệt.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 17: Kết Hợp Viên Minh Viên */}
+          <section id="ket-hop-vien-minh-vien" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Có Nên Kết Hợp Di Hòa Viên Với Viên Minh Viên?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                <strong>Viên Minh Viên (Old Summer Palace)</strong> nằm ngay sát Di Hòa Viên (cách khoảng 10 phút đi taxi). Nơi đây nổi tiếng với tàn tích các cung điện phong cách Baroque châu Âu tráng lệ từng bị tàn phá năm 1860.
+              </p>
+              <p>
+                Nếu bạn là người cực kỳ đam mê lịch sử và có trọn vẹn 1 ngày rảnh rỗi ở mảng phía tây bắc, việc kết hợp cả hai là hoàn toàn khả thi. Tuy nhiên, nếu đi lần đầu, hãy dành trọn vẹn nửa ngày cho Di Hòa Viên trước để không bị quá tải.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 18: Có Đáng Đi Không? */}
+          <section id="co-dang-di-khong" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Quảng Cảnh Di Hòa Viên Có Đáng Đi Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="font-bold text-slate-900 text-lg">
+                Có, đây là một điểm đến rất đáng cân nhắc.
+              </p>
+              <p>
+                Khác với sự thâm nghiêm của các di tích trong phố cổ, Di Hòa Viên mang lại không gian đi bộ rộng rãi và nhiều cây xanh. Góc nhìn toàn cảnh từ trên cao xuống mặt hồ Côn Minh cũng là một trong những điểm nhấn đáng nhớ của chuyến đi.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 19: 7 Điều Cần Nhớ */}
+          <section id="7-dieu-can-nho" class="scroll-mt-28">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 rounded-3xl text-white space-y-6 shadow-xl border border-slate-700">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📋</span>
+                <h2 class="font-serif text-2xl font-bold text-amber-400 leading-tight">
+                  7 Điều Cần Nhớ Trước Khi Đi Di Hòa Viên
+                </h2>
+              </div>
+
+              <div class="space-y-3.5 text-sm text-slate-200">
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">1.</span>
+                  <span><strong>Vé vào cổng linh hoạt:</strong> Có thể mua trực tiếp tại quầy bằng Passport hoặc đặt trước online.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">2.</span>
+                  <span><strong>Thứ Hai đóng cửa điểm thu phí:</strong> Công viên vẫn mở nhưng Phật Hương Các, Vườn Đức Hòa và Phố Tô Châu sẽ đóng.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">3.</span>
+                  <span><strong>Người từ 60 tuổi được miễn vé:</strong> Xuất trình Passport tại quầy để nhận vé miễn phí 100%.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">4.</span>
+                  <span><strong>Vào Cổng Đông (Đông Cung Môn):</strong> Tuyến đi dễ hiểu và kinh điển nhất cho người lần đầu.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">5.</span>
+                  <span><strong>Tận dụng thuyền qua hồ:</strong> Đi thuyền qua hồ vừa mang lại góc nhìn đẹp vừa giúp bạn tiết kiệm sức đi bộ rất nhiều.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">6.</span>
+                  <span><strong>Chuẩn bị giày êm & chống nắng:</strong> Khuôn viên rất rộng (301 ha), hãy mang giày thể thao thoải mái nhất.</span>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-xl">
+                  <span class="font-bold text-amber-400">7.</span>
+                  <span><strong>Đi chậm để cảm nhận:</strong> Dành tối thiểu 3–4 tiếng để tận hưởng vẻ đẹp thiên nhiên thay vì chỉ chạy lướt qua.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 20: FAQ */}
+          <section id="faq" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Câu Hỏi Thường Gặp (FAQ)
+              </h2>
+            </div>
+
+            <div class="space-y-3">
+              {[
+                {
+                  q: "Di Hòa Viên có cần đặt vé trước không?",
+                  a: "Không bắt buộc, bạn có thể mua tại quầy bằng Hộ chiếu hoặc mua online để tránh xếp hàng vào ngày lễ."
+                },
+                {
+                  q: "Thứ Hai Di Hòa Viên có mở cửa không?",
+                  a: "Công viên chính vẫn mở cửa bình thường. Tuy nhiên, các điểm tham quan thu phí bên trong (Phật Hương Các, Vườn Đức Hòa, Phố Tô Châu) sẽ đóng cửa vào thứ Hai."
+                },
+                {
+                  q: "Nên dành bao nhiêu thời gian cho Di Hòa Viên?",
+                  a: "Tối thiểu 2–3 giờ cho tuyến highlights chính; lý tưởng nhất là 4–5 giờ (nửa ngày) để kết hợp đi thuyền và dạo quanh hồ."
+                },
+                {
+                  q: "Có nên mua vé liên hợp (combo ticket) không?",
+                  a: "Nếu có từ 4 tiếng trở lên và muốn leo lên Phật Hương Các ngắm toàn cảnh thì rất nên mua vé liên hợp. Nếu chỉ dạo mát ven hồ thì mua vé thường là đủ."
+                },
+                {
+                  q: "Di Hòa Viên có phù hợp với người lớn tuổi không?",
+                  a: "Rất phù hợp nếu đi tuyến dạo mát ven hồ và Trường Lang bằng phẳng. Tránh leo các bậc thang đá cao dốc lên đỉnh Đồi Trường Thọ."
+                },
+                {
+                  q: "Nên vào bằng cổng nào dễ nhất?",
+                  a: "Đông Cung Môn (Cổng Đông) là lựa chọn cổ điển và thuận tiện nhất cho người lần đầu."
+                }
+              ].map((item) => (
+                <details class="group bg-white rounded-2xl border border-slate-200 p-5 open:ring-2 open:ring-amber-500/20 transition-all">
+                  <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none text-base">
+                    <span>{item.q}</span>
+                    <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                  </summary>
+                  <p class="text-slate-600 text-sm mt-3 pt-3 border-t border-slate-100 leading-relaxed">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 21: FIT TOUR Travel */}
+          <section id="hanh-trinh-fit-tour" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Di Hòa Viên Trong Hành Trình Bắc Kinh Cùng FIT TOUR
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Để có một chuyến đi trọn vẹn nhất tại thủ đô Bắc Kinh, việc phân bổ thời gian hợp lý giữa các di sản là điều tối quan trọng:
+              </p>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3 font-medium text-slate-900 text-sm">
+                <div>📅 <strong>Ngày 1:</strong> Quảng Trường Thiên An Môn ➔ Tử Cấm Thành ➔ Núi Cảnh Sơn.</div>
+                <div>📅 <strong>Ngày 2:</strong> Chinh phục <a href="/van-ly-truong-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Vạn Lý Trường Thành</a> ➔ Thưởng thức Vịt quay Bắc Kinh.</div>
+                <div>📅 <strong>Ngày 3:</strong> Dạo bước Di Hòa Viên thơ mộng ➔ Khám phá Viên Minh Viên hoặc Phố cổ Tiền Môn.</div>
+              </div>
+              <p>
+                Trong các hành trình tour Bắc Kinh, <strong>FIT TOUR</strong> luôn thiết kế lịch trình tối ưu nhịp thở, không chạy sô dồn ép, giúp quý khách có trọn vẹn thời gian thả hồn vào cảnh sắc non nước Di Hòa Viên.
+              </p>
+              
+              {/* Internal Link Block */}
+              <div class="bg-amber-50/60 p-5 rounded-2xl border border-amber-200/80 space-y-2 mt-4 text-sm">
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-bac-kinh-5n5d" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Bắc Kinh 5 Ngày 5 Đêm: Khám phá Tử Cấm Thành & Vạn Lý Trường Thành</a>
+                </div>
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-trung-quoc-9n8d" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Trung Quốc 9 Ngày 8 Đêm: Bắc Kinh - Thượng Hải - Hàng Châu - Tô Châu</a>
+                </div>
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/country/trung-quoc" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Cẩm Nang Du Lịch Trung Quốc Trọn Gói Từ A-Z</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-100 p-4 rounded-xl text-xs text-slate-600 space-y-1 mt-6 border border-slate-200">
+              <div><strong>Lưu ý:</strong> Giờ mở cửa, giá vé, hoạt động thuyền và tình trạng các điểm thu phí tại Di Hòa Viên có thể thay đổi theo mùa, thời tiết và quy định vận hành của Ban Quản lý. Du khách nên kiểm tra thông tin trước chuyến đi.</div>
+            </div>
+          </section>
+
+          {/* CTA Box */}
+          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1A1A1A] via-[#2A2A2A] to-[#1A1A1A] p-8 sm:p-10 text-white shadow-2xl border border-white/10">
+            <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white mb-3 relative z-10">
+              Khám Phá Di Hòa Viên Cùng Chuyên Gia FIT TOUR
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-xl relative z-10">
+              Đồng hành cùng đội ngũ HDV am hiểu văn hóa sâu sắc, trải nghiệm dịch vụ cao cấp và lịch trình tinh tế tại thủ đô Bắc Kinh.
+            </p>
+            <div class="flex flex-wrap gap-4 relative z-10">
+              <a 
+                href="/tour/tour-bac-kinh-5n5d" 
+                class="inline-flex items-center gap-2 bg-[#F7931E] hover:bg-[#e08215] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-amber-500/25"
+              >
+                <span>Xem Tour Bắc Kinh 5N5Đ</span>
+                <ChevronRight class="w-4 h-4" />
+              </a>
+              <a 
+                href="/country/trung-quoc" 
+                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all backdrop-blur-sm border border-white/10"
+              >
+                <span>Xem Tất Cả Tour Trung Quốc</span>
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3 space-y-6 lg:sticky lg:top-24">
+          
+          {/* Author Card */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 space-y-4 text-center">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="80" 
+              height="80" 
+              class="w-20 h-20 rounded-full mx-auto border-2 border-amber-500/40 object-cover object-top shadow-md" 
+            />
+            <div>
+              <div class="font-bold text-slate-900 text-base">{authorData.name}</div>
+              <div class="text-xs text-slate-500">Chuyên gia Lịch trình Du lịch Trung Quốc</div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed text-left">
+              Chia sẻ những kinh nghiệm thực tế, mẹo di chuyển thông minh và lịch trình tối ưu nhất cho du khách Việt khám phá các kỳ quan thế giới.
+            </p>
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 space-y-4">
+            <div class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase tracking-wide">
+              Cẩm Nang Bắc Kinh Liên Quan
+            </div>
+            <div class="space-y-3 pt-1">
+              {[
+                { 
+                  title: "Tử Cấm Thành Bắc Kinh: Kinh Nghiệm Đặt Vé & Tuyến Tham Quan", 
+                  img: "https://media.fittour.vn/uploads/han-phuc-hanh-lang-tu-cam-thanh-bac-kinh.webp", 
+                  link: "/tu-cam-thanh" 
+                },
+                { 
+                  title: "Quảng Trường Thiên An Môn: Đặt Chỗ & Lưu Ý Quan Trọng", 
+                  img: "https://media.fittour.vn/uploads/so-do-quang-truong-thien-an-mon.webp", 
+                  link: "/thien-an-mon" 
+                },
+                { 
+                  title: "Vạn Lý Trường Thành Bắc Kinh: Kinh Nghiệm Chọn Đoạn Leo", 
+                  img: "https://media.fittour.vn/uploads/van-ly-truong-thanh-bac-kinh.webp", 
+                  link: "/van-ly-truong-thanh" 
+                },
+                { 
+                  title: "Tại Sao Nên Du Lịch Trung Quốc Cùng FIT TOUR?", 
+                  img: "https://media.fittour.vn/uploads/china-sereis-background.webp", 
+                  link: "/why-travel-china-fittour" 
+                }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-20 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img 
+                      src={item.img} 
+                      alt={item.title} 
+                      width="80" 
+                      height="45" 
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                      loading="lazy" 
+                    />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="pt-2 border-t border-slate-100">
+              <a href="/country/trung-quoc" class="text-amber-700 text-xs font-bold hover:underline">Khám phá cẩm nang Trung Quốc →</a>
+            </div>
+          </div>
+
+          {/* Social Share */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 space-y-3">
+            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider">Chia sẻ bài viết</div>
+            <div class="flex items-center gap-2">
+              <a 
+                href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/di-hoa-vien" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold py-2 px-3 rounded-lg text-center transition-colors"
+              >
+                Facebook
+              </a>
+              <button 
+                onclick="navigator.clipboard.writeText('https://thericetour.com/di-hoa-vien');" 
+                class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2 px-3 rounded-lg text-center transition-colors cursor-pointer"
+              >
+                Copy Link
+              </button>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

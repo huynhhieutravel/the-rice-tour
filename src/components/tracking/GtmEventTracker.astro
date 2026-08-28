@@ -1,0 +1,107 @@
+---
+/**
+ * GtmEventTracker — Component theo dõi hành vi người dùng tự động
+ *
+ * Gắn 1 lần duy nhất vào BaseLayout.astro, tracking toàn bộ website.
+ *
+ * Features:
+ * - page_view khi tải trang
+ * - click_zalo, click_phone, click_email (Event Delegation)
+ * - click_consultation (click nút "Điền form tư vấn" → #form-dang-ky)
+ * - scroll percent=90 (IntersectionObserver khi footer hiện ra)
+ *
+ * Prop:
+ * - contentType: 'corporate' | 'tour' | 'blog' | 'general' | ...
+ */
+interface Props {
+  contentType?: string;
+}
+
+const { contentType = 'general' } = Astro.props;
+---
+
+<!-- Data attribute để truyền content_type từ server sang client -->
+<meta name="gtm-content-type" content={contentType} data-gtm-tracker />
+
+<script>
+  import { track, setContentType } from '@/lib/analytics';
+  import { EVENTS } from '@/tracking/events';
+  import { inferContentType } from '@/tracking/content';
+
+  // === 1. Set content_type từ server (hoặc fallback từ URL) ===
+  const meta = document.querySelector('meta[data-gtm-tracker]');
+  const serverContentType = meta?.getAttribute('content') || '';
+  const ct = serverContentType && serverContentType !== 'general'
+    ? serverContentType
+    : inferContentType();
+  setContentType(ct);
+
+  // === 2. Page View (bắn 1 lần khi mount) ===
+  track({ event: EVENTS.PAGE_VIEW });
+
+  // === 3. Click Tracking (Event Delegation trên document) ===
+  document.addEventListener('click', (e: Event) => {
+    const target = (e.target as HTMLElement)?.closest('a') as HTMLAnchorElement | null;
+    if (!target) return;
+
+    const href = target.href || '';
+    const ariaLabel = (target.getAttribute('aria-label') || '').toLowerCase();
+
+    // Zalo: check href="/bu3" (short URL redirect) + zalo.me + aria-label
+    if (href.includes('zalo.me') || href.includes('/bu3') || ariaLabel.includes('zalo')) {
+      track({ event: EVENTS.CLICK_ZALO });
+      return;
+    }
+
+    // Phone
+    if (href.startsWith('tel:')) {
+      track({ event: EVENTS.CLICK_PHONE });
+      return;
+    }
+
+    // Email
+    if (href.startsWith('mailto:')) {
+      track({ event: EVENTS.CLICK_EMAIL });
+      return;
+    }
+
+    // Nút "Điền form tư vấn" (anchor link → #form-dang-ky)
+    if (href.includes('#form-dang-ky')) {
+      track({ event: EVENTS.CLICK_CONSULTATION });
+      return;
+    }
+  });
+
+  // === 4. Scroll Tracking (Chuyển xuống 50% thay vì 90%) ===
+  // Tính toán cuộn 50% bằng throttled listener siêu nhẹ để không ảnh hưởng tốc độ web
+  let scrollFired = false;
+  let isThrottled = false;
+
+  const checkScroll = () => {
+    if (scrollFired) return;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+    
+    // Tránh lỗi chia cho 0 ở các trang quá ngắn
+    if (scrollHeight <= clientHeight) return;
+
+    const scrolledPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    
+    if (scrolledPercent >= 50) { // Bắn sự kiện khi khách đọc được 50% trang
+      scrollFired = true;
+      track({ event: EVENTS.SCROLL, percent: 50 });
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    if (scrollFired) return;
+    if (!isThrottled) {
+      window.requestAnimationFrame(() => {
+        checkScroll();
+        isThrottled = false;
+      });
+      isThrottled = true;
+    }
+  }, { passive: true });
+</script>

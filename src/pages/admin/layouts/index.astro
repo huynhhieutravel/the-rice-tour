@@ -1,0 +1,168 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+// Auth check
+const userRole = (Astro.locals as any).user?.role;
+if (!userRole || !['admin', 'editor', 'author'].includes(userRole)) {
+  return Astro.redirect('/admin/login');
+}
+
+let profiles: any[] = [];
+let error = '';
+
+try {
+  if (env?.dulichcoguu_d1) {
+    const d1Db = env.dulichcoguu_d1;
+    const { results } = await d1Db.prepare("SELECT value FROM SiteSetting WHERE key = 'layout_profiles'").all();
+    if (results && results.length > 0) {
+      try {
+        profiles = typeof results[0].value === 'string' ? JSON.parse(results[0].value) : results[0].value;
+      } catch(e) { 
+        profiles = []; 
+      }
+    } else {
+      // Initialize with a default profile if none exists
+      profiles = [
+        {
+          id: 'default',
+          name: 'Giao diện Mặc định',
+          isDefault: true,
+          conditions: [],
+          header_nav: [],
+          footer_config: {}
+        }
+      ];
+    }
+  }
+} catch (e: any) {
+  error = e.message;
+}
+---
+
+<AdminLayout title="Quản lý Cấu hình Giao diện" activeMenu="system" activeSubmenu="layouts">
+  <div class="header-section">
+    <h2>Quản lý Giao diện (Conditional Layouts)</h2>
+    <a href="/admin/layouts/edit" class="btn-primary">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+      Thêm Layout Mới
+    </a>
+  </div>
+
+  <p class="description">Hệ thống cho phép bạn tạo nhiều phiên bản Header/Footer khác nhau và gắn chúng cho các trang hoặc danh mục Tour cụ thể (Ví dụ: Layout dành riêng cho Tour Châu Âu).</p>
+
+  {error && <div class="alert error">{error}</div>}
+
+  <div class="layout-grid">
+    {profiles.map(profile => (
+      <div class="card layout-card">
+        <div class="card-header">
+          <h3>{profile.name} {profile.isDefault && <span class="badge default-badge">Mặc định</span>}</h3>
+          <div class="actions">
+            <a href={`/admin/layouts/edit?id=${profile.id}`} class="btn-edit">Sửa</a>
+            {!profile.isDefault && (
+              <button class="btn-delete" data-id={profile.id}>Xoá</button>
+            )}
+          </div>
+        </div>
+        
+        <div class="card-body">
+          <div class="info-row">
+            <strong>ID:</strong> <code>{profile.id}</code>
+          </div>
+          <div class="info-row">
+            <strong>Điều kiện kích hoạt:</strong>
+            {profile.isDefault ? (
+              <span class="text-gray-500">Áp dụng cho mọi trang (nếu không có điều kiện nào khác khớp)</span>
+            ) : (
+              <ul class="conditions-list">
+                {profile.conditions && profile.conditions.length > 0 ? profile.conditions.map((cond: any) => (
+                  <li>
+                    {cond.type === 'path_starts_with' && 'Đường dẫn bắt đầu bằng: '}
+                    {cond.type === 'category_slug' && 'Danh mục Tour: '}
+                    {cond.type === 'exact_path' && 'Đường dẫn chính xác: '}
+                    <strong>{cond.value}</strong>
+                  </li>
+                )) : (
+                  <span class="text-gray-500">Chưa có điều kiện (Sẽ không bao giờ được kích hoạt)</span>
+                )}
+              </ul>
+            )}
+          </div>
+          <div class="info-row mt-4 flex gap-4 text-sm text-gray-600 border-t border-gray-100 pt-3">
+            <span>Header: {profile.header_nav ? 'Đã tuỳ chỉnh' : 'Trống'}</span>
+            <span>Footer: {profile.footer_config && Object.keys(profile.footer_config).length > 0 ? 'Đã tuỳ chỉnh' : 'Trống'}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</AdminLayout>
+
+<style>
+  .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .header-section h2 { font-size: 24px; font-weight: 700; color: #0f172a; }
+  .description { color: #64748b; margin-bottom: 24px; font-size: 14.5px; max-width: 800px; line-height: 1.5; }
+  
+  .btn-primary { display: flex; align-items: center; gap: 8px; background: #2563eb; color: #fff; font-weight: 600; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 14px; transition: background 0.2s; }
+  .btn-primary:hover { background: #1d4ed8; }
+  
+  .layout-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px; }
+  
+  .card.layout-card { display: flex; flex-direction: column; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+  .card-header { padding: 16px 20px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; background: #f8fafc; }
+  .card-header h3 { margin: 0; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 12px; }
+  .badge.default-badge { background: #dcfce7; color: #16a34a; font-size: 11px; padding: 4px 8px; border-radius: 6px; font-weight: 700; text-transform: uppercase; }
+  
+  .actions { display: flex; gap: 8px; }
+  .btn-edit { background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; border: 1px solid #bfdbfe; transition: all 0.2s; }
+  .btn-edit:hover { background: #dbeafe; }
+  .btn-delete { background: #fef2f2; color: #dc2626; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; border: 1px solid #fecaca; cursor: pointer; transition: all 0.2s; }
+  .btn-delete:hover { background: #fee2e2; }
+  
+  .card-body { padding: 20px; flex: 1; }
+  .info-row { margin-bottom: 12px; font-size: 14px; }
+  .info-row code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: #334155; }
+  .conditions-list { margin-top: 8px; margin-left: 20px; list-style-type: disc; color: #475569; }
+  .conditions-list li { margin-bottom: 4px; }
+  
+  .mt-4 { margin-top: 16px; }
+  .flex { display: flex; }
+  .gap-4 { gap: 16px; }
+  .text-sm { font-size: 13px; }
+  .text-gray-500 { color: #64748b; }
+  .text-gray-600 { color: #475569; }
+  .border-t { border-top-width: 1px; }
+  .border-gray-100 { border-color: #f1f5f9; }
+  .pt-3 { padding-top: 12px; }
+</style>
+
+<script>
+  document.querySelectorAll('.btn-delete').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      const id = (e.currentTarget as HTMLButtonElement).dataset.id;
+      if (!id) return;
+      
+      const confirmed = await (window as any).AppModal.confirm('Bạn có chắc chắn muốn xoá Layout Profile này? Hành động này không thể hoàn tác.');
+      if (!confirmed) return;
+      
+      // We will implement an API endpoint to delete it, or just do it inside a new API handler
+      try {
+        const response = await fetch('/api/admin/layouts/delete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          window.location.reload();
+        } else {
+          (window as any).AppModal.alert('Lỗi: ' + result.error, 'error');
+        }
+      } catch (err: any) {
+        (window as any).AppModal.alert('Lỗi kết nối: ' + err.message, 'error');
+      }
+    });
+  });
+</script>

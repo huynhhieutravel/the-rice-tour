@@ -1,0 +1,142 @@
+---
+import { getOptimizedImageUrl, generateSrcSet } from '@/lib/imageOptimization';
+
+interface Location {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  locations?: string | Location[]; // Can be JSON string from shortcode or array
+  dataMap?: any;
+}
+
+const { 
+  title = "Địa điểm du lịch ở Iceland", 
+  subtitle = "Điểm tham quan hấp dẫn mà bạn không nên bỏ qua",
+  locations: locationsProp = [] 
+} = Astro.props;
+
+let locations: Location[] = [];
+
+if (typeof locationsProp === 'string') {
+  try {
+    // Attempt to parse if it's a JSON string (for shortcodes)
+    // Example: [location-slider locations='[{"title":"...","url":"..."}]']
+    locations = JSON.parse(locationsProp);
+  } catch (e) {
+    // If it's just a comma-separated list of slugs, we might need to fetch them.
+    // For now, let's assume it's a JSON array or we use defaults for Iceland if empty.
+    locations = [];
+  }
+} else {
+  locations = locationsProp as Location[];
+}
+
+// Fallback data for Iceland if no locations provided (matching the screenshot)
+if (locations.length === 0) {
+  locations = [
+    {
+      title: "Làng cổ tích Arnarstapi ở Iceland",
+      description: "Làng Arnarstapi là một ngôi làng nằm ở phía nam của bán đảo Snæfellsnes ở Iceland. Đây là điểm dừng chân lý tưởng cho du khách tham quan.",
+      image: "https://media.fittour.vn/uploads/2024/04/lang-co-tich-Arnarstapi.webp",
+      url: "/lang-arnarstapi/"
+    },
+    {
+      title: "Thác vàng Gullfoss ở Iceland - Lịch sử và Hướng dẫn du lịch",
+      description: "Thác vàng Gullfoss là một trong những thác nước mang tính biểu tượng và được yêu thích nhất tại Iceland, nằm trong vòng tròn vàng Golden Circle.",
+      image: "https://media.fittour.vn/uploads/2024/03/thac-vang-Gullfoss-iceland.webp",
+      url: "/thac-vang-gullfoss/"
+    },
+    {
+      title: "Bãi biển Djúpalónssandur ở Iceland",
+      description: "Bãi biển Djúpalónssandur ở Iceland là một vịnh hình vòm với vách đá đen và cát màu đen, nằm ở chân núi Snæfellsjökull.",
+      image: "https://media.fittour.vn/uploads/2024/04/bai-bien-Djupalonssandur-iceland.webp",
+      url: "/bai-bien-djupalonssandur/"
+    }
+  ];
+}
+---
+
+<section class="location-slider-section py-16 bg-[#fdf0e4] -mx-4 px-4 md:-mx-8 md:px-8 lg:-mx-[calc((100vw-100%)/2)] lg:px-[calc((100vw-100%)/2)] breakout-full">
+  <div class="container-custom">
+    <div class="mb-10">
+      {subtitle && <p class="text-sm md:text-base text-gray-600 mb-2 font-medium">{subtitle}</p>}
+      <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mt-0">{title}</h2>
+    </div>
+
+    <div class="relative group">
+      <!-- Slider Container -->
+      <div class="location-scroll-container flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+        {locations.map((loc) => (
+          <div class="location-card flex-shrink-0 w-[85vw] md:w-[calc(33.333%-16px)] snap-start bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group/card">
+            <a href={loc.url} class="block aspect-[4/3] overflow-hidden">
+              <img 
+                src={getOptimizedImageUrl(loc.image, 600)} 
+                srcset={generateSrcSet(loc.image, [400, 800])}
+                alt={loc.title}
+                class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700 ease-out"
+              />
+            </a>
+            <div class="p-6 flex flex-col h-[200px]">
+              <h3 class="text-lg font-bold text-gray-900 mb-3 line-clamp-2 leading-snug group-hover/card:text-brand-600 transition-colors">
+                <a href={loc.url}>{loc.title}</a>
+              </h3>
+              <p class="text-sm text-gray-600 line-clamp-3 mb-6">
+                {loc.description}
+              </p>
+              
+              <div class="mt-auto">
+                <a href={loc.url} class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-black text-black font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-all group/btn">
+                  Xem chi tiết
+                  <span class="w-5 h-5 rounded-full border border-current flex items-center justify-center group-hover/btn:border-white">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Navigation Arrows (Hidden on mobile) -->
+      <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hidden md:flex hover:bg-brand-500 hover:text-white transition-colors z-10 opacity-0 group-hover:opacity-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+      <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hidden md:flex hover:bg-brand-500 hover:text-white transition-colors z-10 opacity-0 group-hover:opacity-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .location-scroll-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .location-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Breakout full width logic */
+  .breakout-full {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  @media (min-width: 1536px) {
+    .container-custom {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
+</style>

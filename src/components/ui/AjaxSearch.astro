@@ -1,0 +1,65 @@
+---
+/**
+ * AjaxSearch.astro — Module Tìm Kiếm AJAX Tái Sử Dụng
+ * 
+ * Chỉ render nút trigger. Overlay được mount 1 lần duy nhất
+ * vào body bằng JS để tránh duplicate DOM khi dùng nhiều nơi.
+ */
+---
+<style is:inline>
+  .coguu-search-kbd { display: none !important; }
+  @media (min-width: 768px) {
+    .coguu-search-kbd { display: inline-flex !important; }
+  }
+</style>
+
+<button 
+  class="coguu-search-trigger" 
+  aria-label="Tìm kiếm" 
+  title="Tìm kiếm (Ctrl+K)"
+  data-search-trigger
+>
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+  </svg>
+</button>
+
+<script is:inline>
+  function loadSearch() {
+    if (!window.searchModulePromise) {
+      window.searchModulePromise = import('/scripts/search-modal.js?v=2').then(mod => {
+        mod.initSearch();
+        return mod;
+      });
+    }
+    return window.searchModulePromise;
+  }
+
+  // Global shortcuts
+  document.addEventListener('keydown', async (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { 
+      e.preventDefault(); 
+      if (window.__coguuSearchIsOpen) {
+        window.__coguuSearchClose?.();
+      } else {
+        await loadSearch();
+        window.__coguuSearchOpen?.();
+      }
+    }
+    if (e.key === 'Escape' && window.__coguuSearchIsOpen) {
+      window.__coguuSearchClose?.();
+    }
+  });
+
+  // Bind all trigger buttons
+  document.addEventListener('click', async (e) => {
+    const target = e.target;
+    const trigger = target.closest('[data-search-trigger]');
+    if (trigger) {
+      e.preventDefault();
+      const type = trigger.dataset.searchType || 'all';
+      await loadSearch();
+      window.__coguuSearchOpen?.(type);
+    }
+  });
+</script>

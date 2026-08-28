@@ -1,0 +1,18 @@
+---
+---
+<div class="tour-unfold-box relative mb-10">
+  <input type="checkbox" id="unfold-toggle" class="unfold-checkbox hidden">
+  <div class="unfold-content">
+    <div class="custom-blog-prose max-w-none text-slate-700 leading-relaxed pb-6">
+      <slot />
+    </div>
+    <div class="unfold-overlay"></div>
+  </div>
+  <div class="unfold-btn-wrapper flex justify-center mt-2 relative z-10">
+    <label for="unfold-toggle" class="unfold-btn shadow-sm">
+      <span class="btn-text-show">SHOW</span>
+      <span class="btn-text-hide">HIDE</span>
+      <svg class="w-4 h-4 ml-1 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </label>
+  </div>
+</div>

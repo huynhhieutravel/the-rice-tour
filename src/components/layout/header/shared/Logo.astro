@@ -1,0 +1,10 @@
+---
+export interface Props {
+  href?: string;
+}
+
+const { href = "/" } = Astro.props;
+---
+<a href={href} class="flex items-center gap-2.5 group">
+  <img src="https://media.thericetour.com/uploads/logo-the-rice.webp" alt="The Rice Tour" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+</a>

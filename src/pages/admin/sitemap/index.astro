@@ -1,0 +1,117 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+
+let tours: any[] = [];
+let posts: any[] = [];
+let countries: any[] = [];
+
+if (d1Db) {
+  try {
+    const { results: tRes } = await d1Db.prepare("SELECT slug, title, updatedAt FROM Tour WHERE status = 'published'").all();
+    if (tRes) tours = tRes;
+
+    const { results: pRes } = await d1Db.prepare("SELECT slug, title, publishedAt FROM Post WHERE status = 'published'").all();
+    if (pRes) posts = pRes;
+
+    const { results: cRes } = await d1Db.prepare("SELECT slug, name FROM Country").all();
+    if (cRes) countries = cRes;
+  } catch (e) {}
+}
+
+const staticPages = [
+  { url: '/', label: 'Homepage (Bespoke Inbound)', changefreq: 'daily', priority: '1.0' },
+  { url: '/tours', label: 'All Inbound Tours & Expeditions', changefreq: 'daily', priority: '0.9' },
+  { url: '/tailor-made', label: 'Custom Trip Planner (Interactive)', changefreq: 'weekly', priority: '0.9' },
+  { url: '/about-us', label: 'About The Rice Tour & Ethics', changefreq: 'monthly', priority: '0.7' },
+  { url: '/contact', label: '24/7 Dedicated Concierge & WhatsApp', changefreq: 'monthly', priority: '0.7' },
+  { url: '/blog', label: 'Vietnam Travel Journal & Guides', changefreq: 'daily', priority: '0.8' },
+];
+
+const totalUrls = staticPages.length + tours.length + posts.length + countries.length;
+---
+
+<AdminLayout title="Sitemap XML" activeMenu="tools" activeSubmenu="sitemap">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 4px;">Sitemap Management</h2>
+        <p style="color: #64748b; font-size: 14px;">Tự động tạo và kiểm tra trạng thái Index URL trên Google &amp; Bing.</p>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <a href="/sitemap-index.xml" target="_blank" style="padding: 10px 16px; background: #d97706; color: #ffffff; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 600;">
+          Mở XML Live ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Sitemap Stat Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px;">
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Tổng URLs trong XML</div>
+        <div style="font-size: 28px; font-weight: 800; color: #0f172a; margin-top: 4px;">{totalUrls}</div>
+      </div>
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Trang Tĩnh (Core)</div>
+        <div style="font-size: 28px; font-weight: 800; color: #2563eb; margin-top: 4px;">{staticPages.length}</div>
+      </div>
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Tour Expeditions</div>
+        <div style="font-size: 28px; font-weight: 800; color: #059669; margin-top: 4px;">{tours.length}</div>
+      </div>
+      <div class="card" style="padding: 20px;">
+        <div style="font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase;">Articles &amp; Guides</div>
+        <div style="font-size: 28px; font-weight: 800; color: #7c3aed; margin-top: 4px;">{posts.length}</div>
+      </div>
+    </div>
+
+    <!-- Sitemap List -->
+    <div class="card" style="padding: 0; overflow: hidden;">
+      <div style="padding: 18px 24px; border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
+        <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;">Danh Sách URLs Tự Động Trong Sitemap</h3>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
+        <thead style="border-bottom: 1px solid #e2e8f0; color: #475569;">
+          <tr>
+            <th style="padding: 14px 20px;">URL Path</th>
+            <th style="padding: 14px 20px;">Loại trang</th>
+            <th style="padding: 14px 20px;">Tần suất</th>
+            <th style="padding: 14px 20px;">Priority</th>
+            <th style="padding: 14px 20px; text-align: right;">Kiểm tra</th>
+          </tr>
+        </thead>
+        <tbody>
+          {staticPages.map(sp => (
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+              <td style="padding: 14px 20px; font-family: monospace; color: #0f172a; font-weight: 600;">{sp.url}</td>
+              <td style="padding: 14px 20px; color: #64748b;">{sp.label}</td>
+              <td style="padding: 14px 20px; color: #64748b;">{sp.changefreq}</td>
+              <td style="padding: 14px 20px;"><span style="padding: 2px 8px; background: #eff6ff; color: #2563eb; border-radius: 4px; font-weight: 700;">{sp.priority}</span></td>
+              <td style="padding: 14px 20px; text-align: right;"><a href={sp.url} target="_blank" style="color: #2563eb; text-decoration: none;">Xem ↗</a></td>
+            </tr>
+          ))}
+          {tours.map(t => (
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+              <td style="padding: 14px 20px; font-family: monospace; color: #0f172a;">/tour/{t.slug}</td>
+              <td style="padding: 14px 20px; color: #059669; font-weight: 600;">Tour: {t.title}</td>
+              <td style="padding: 14px 20px; color: #64748b;">daily</td>
+              <td style="padding: 14px 20px;"><span style="padding: 2px 8px; background: #ecfdf5; color: #059669; border-radius: 4px; font-weight: 700;">0.8</span></td>
+              <td style="padding: 14px 20px; text-align: right;"><a href={`/tour/${t.slug}`} target="_blank" style="color: #2563eb; text-decoration: none;">Xem ↗</a></td>
+            </tr>
+          ))}
+          {posts.map(p => (
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+              <td style="padding: 14px 20px; font-family: monospace; color: #0f172a;">/blog/{p.slug}</td>
+              <td style="padding: 14px 20px; color: #7c3aed; font-weight: 600;">Guide: {p.title}</td>
+              <td style="padding: 14px 20px; color: #64748b;">weekly</td>
+              <td style="padding: 14px 20px;"><span style="padding: 2px 8px; background: #f5f3ff; color: #7c3aed; border-radius: 4px; font-weight: 700;">0.7</span></td>
+              <td style="padding: 14px 20px; text-align: right;"><a href={`/blog/${p.slug}`} target="_blank" style="color: #2563eb; text-decoration: none;">Xem ↗</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</AdminLayout>

@@ -1,0 +1,443 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+let tours: any[] = [];
+
+const q = Astro.url.searchParams.get('q') || '';
+const countryFilter = Astro.url.searchParams.get('country') || '';
+const formatFilter = Astro.url.searchParams.get('format') || '';
+const limitParam = parseInt(Astro.url.searchParams.get('limit') || '30');
+const validLimits = [30, 50, 100];
+const limit = validLimits.includes(limitParam) ? limitParam : 30;
+const pageParam = parseInt(Astro.url.searchParams.get('page') || '1');
+const page = pageParam > 0 ? pageParam : 1;
+const offset = (page - 1) * limit;
+const currentTab = Astro.url.searchParams.get('status') || 'all';
+
+let countries: any[] = [];
+let counts = { all: 0, published: 0, inactive: 0, draft: 0, pending: 0, trash: 0 };
+
+if (d1Db) {
+  try {
+    const { results: countResults } = await d1Db.prepare("SELECT status, COUNT(*) as count FROM Tour GROUP BY status").all();
+    if (countResults) {
+      countResults.forEach((row: any) => {
+        if (row.status === 'published') counts.published = row.count;
+        if (row.status === 'inactive') counts.inactive = row.count;
+        if (row.status === 'draft') counts.draft = row.count;
+        if (row.status === 'pending') counts.pending = row.count;
+        if (row.status === 'trash') counts.trash = row.count;
+        counts.all += row.count;
+      });
+    }
+    
+    const { results: countryResults } = await d1Db.prepare("SELECT slug, name FROM Country ORDER BY display_order ASC, name ASC").all();
+    countries = countryResults || [];
+  } catch(e) { console.error('Error fetching counts:', e); }
+}
+
+if (d1Db) {
+  try {
+    let baseWhere = `WHERE 1=1`;
+    const params: any[] = [];
+    
+    if (currentTab === 'trash') {
+      baseWhere += ` AND Tour.status = 'trash'`;
+    } else if (currentTab !== 'all') {
+      baseWhere += ` AND Tour.status = ?`;
+      params.push(currentTab);
+    } else {
+      baseWhere += ` AND Tour.status != 'trash'`;
+    }
+
+    if (q) {
+      const normalizeStr = (str: string) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
+      const keywords = q.split(' ').map(k => k.trim()).filter(k => k.length > 0);
+      if (keywords.length > 0) {
+        const conditions = keywords.map(() => `(Tour.title LIKE ? OR Tour.slug LIKE ?)`).join(' AND ');
+        baseWhere += ` AND (${conditions})`;
+        keywords.forEach(k => {
+          params.push(`%${k}%`);
+          params.push(`%${normalizeStr(k)}%`);
+        });
+      }
+    }
+    if (countryFilter) {
+      baseWhere += ` AND Tour.id IN (SELECT tour_id FROM TourCountry WHERE country_slug = ?)`;
+      params.push(countryFilter);
+    }
+    if (formatFilter) {
+      baseWhere += ` AND Tour.format = ?`;
+      params.push(formatFilter);
+    }
+    
+    // Calculate actual filtered total
+    const countSql = `SELECT COUNT(*) as count FROM Tour ${baseWhere}`;
+    let countQuery = d1Db.prepare(countSql);
+    if (params.length > 0) countQuery = countQuery.bind(...params);
+    const { results: filteredCountResults } = await countQuery.all();
+    let filteredTotal = counts.all;
+    if (filteredCountResults && filteredCountResults.length > 0) {
+      filteredTotal = filteredCountResults[0].count;
+    }
+
+    let sql = `
+      SELECT Tour.*, 
+        (SELECT GROUP_CONCAT(Country.name, ', ') 
+         FROM TourCountry 
+         LEFT JOIN Country ON TourCountry.country_slug = Country.slug 
+         WHERE TourCountry.tour_id = Tour.id) as countryName
+      FROM Tour 
+      ${baseWhere}
+    `;
+    
+    sql += ` ORDER BY Tour.updatedAt DESC LIMIT ? OFFSET ?`;
+    
+    let query = d1Db.prepare(sql).bind(...params, limit, offset);
+    
+    const { results } = await query.all();
+    tours = results || [];
+
+    // Calculate pagination here to export to Astro scope
+    const totalPages = Math.ceil(filteredTotal / limit);
+    Object.assign(Astro.locals, { filteredTotal, totalPages });
+  } catch (e) {
+    console.error('Error fetching tours:', e);
+  }
+}
+
+let filteredTotal = Astro.locals.filteredTotal !== undefined ? Astro.locals.filteredTotal : (currentTab === 'trash' ? counts.trash : currentTab === 'all' ? counts.all - counts.trash : counts[currentTab as keyof typeof counts] || counts.all);
+const totalPages = Astro.locals.totalPages !== undefined ? Astro.locals.totalPages : Math.ceil(filteredTotal / limit);
+
+function formatDate(dateStr: string) {
+  if (!dateStr) return '—';
+  const safeDate = typeof dateStr === 'string' ? dateStr.replace(' ', 'T') : dateStr;
+  const d = new Date(safeDate);
+  if (isNaN(d.getTime())) return dateStr;
+  const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const timePart = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  return `${datePart}<br/>${timePart}`;
+}
+---
+
+<AdminLayout title="Tất cả Tours" activeMenu="tours" activeSubmenu="all">
+<style>
+  .posts-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .posts-header h2 { font-size: 24px; font-weight: 700; }
+  .posts-header-right { display: flex; gap: 12px; align-items: center; }
+  .posts-header-right button, .posts-header-right a { padding: 6px 14px; border-radius: 8px; font-size: 13px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; cursor: pointer; text-decoration: none; }
+  .btn-primary { background: #2563eb !important; color: #fff !important; border-color: #2563eb !important; font-weight: 600; padding: 8px 20px !important; border-radius: 8px; }
+
+  .posts-body { display: block; }
+
+  /* Tabs */
+  .tabs { display: flex; gap: 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 16px; }
+  .tabs a { padding: 10px 16px; font-size: 13px; font-weight: 500; color: #64748b; background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; text-decoration: none; display: inline-block; }
+  .tabs a:hover { color: #0f172a; }
+  .tabs a.active { color: #2563eb; border-bottom-color: #2563eb; }
+  .tabs a.trash { color: #ef4444; border: 1px solid #fecaca; border-radius: 6px; margin-left: 8px; padding: 6px 12px; background: #fef2f2; }
+
+  /* Filters */
+  .filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .filters select, .filters button { padding: 7px 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 12px; color: #64748b; background: #fff; cursor: pointer; }
+  .filters .filter-btn { background: #eff6ff; color: #2563eb; border-color: #bfdbfe; font-weight: 600; }
+  .filters .search-box { display: flex; margin-left: auto; }
+  .filters .search-box input { padding: 7px 12px; border: 1px solid #e2e8f0; border-radius: 8px 0 0 8px; font-size: 12px; width: 180px; outline: none; }
+  .filters .search-box button { border-radius: 0 8px 8px 0; border-left: none; background: #2563eb; color: #fff; font-weight: 600; padding: 7px 14px; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  thead th { text-align: left; padding: 12px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #94a3b8; font-weight: 600; border-bottom: 1px solid #e2e8f0; }
+  th.col-check { width: 44px; }
+  th.col-title { width: 45%; }
+  th.col-country { width: 15%; }
+  th.col-price { width: 15%; }
+  th.col-date { width: 13%; }
+  tbody td { padding: 14px; font-size: 13px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; }
+  tbody tr:hover { background: #f8fafc; }
+  .post-cell { display: flex; align-items: center; gap: 12px; }
+  .post-cell img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: #f1f5f9; }
+  .post-cell .img-placeholder { width: 44px; height: 44px; border-radius: 8px; background: #e2e8f0; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 18px; }
+  .post-cell a { font-weight: 600; color: #0f172a; text-decoration: none; }
+  .post-cell a:hover { color: #2563eb; }
+  
+  .cat-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; white-space: nowrap; display: inline-block; background: #f1f5f9; color: #475569; }
+  .cat-badge.published { background:#dcfce7; color:#16a34a; }
+  .cat-badge.draft { background:#fef3c7; color:#d97706; }
+  .cat-badge.inactive { background:#f1f5f9; color:#475569; }
+  .cat-badge.trash { background:#fef2f2; color:#ef4444; }
+
+  .date-cell { color: #64748b; font-size: 12px; white-space: nowrap; }
+
+  /* Toggle Switch */
+  .switch { position: relative; display: inline-block; width: 34px; height: 18px; margin: 0; vertical-align: middle; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .3s; border-radius: 20px; }
+  .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  input:checked + .slider { background-color: #f59e0b; }
+  input:focus + .slider { box-shadow: 0 0 1px #f59e0b; }
+  input:checked + .slider:before { transform: translateX(16px); }
+
+  .row-actions { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
+  .action-link { font-size: 11px; text-decoration: none; cursor: pointer; display: inline-block; background: none; border: none; padding: 0; }
+  .action-edit { color: #2563eb; }
+  .action-delete { color: #ef4444; }
+  .action-view { color: #64748b; }
+  td input[type="checkbox"], th input[type="checkbox"] { width: 16px; height: 16px; accent-color: #2563eb; }
+
+  /* Pagination */
+  .page-btn { padding: 4px 10px; border: 1px solid #e2e8f0; border-radius: 6px; text-decoration: none; color: #64748b; font-size: 13px; background: #fff; line-height: 1; display: inline-flex; align-items: center; justify-content: center; min-width: 28px; font-weight: 600; }
+  .page-btn:hover { border-color: #cbd5e1; color: #0f172a; }
+  .page-btn.disabled { opacity: 0.5; pointer-events: none; }
+  .page-input { width: 44px; padding: 4px 6px; border: 1px solid #e2e8f0; border-radius: 6px; text-align: center; font-size: 13px; outline: none; margin: 0 4px; }
+  /* hide arrows in number input */
+  .page-input::-webkit-outer-spin-button, .page-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .page-input[type=number] { -moz-appearance: textfield; }
+</style>
+
+<!-- Header -->
+<div class="posts-header">
+  <h2>Tours</h2>
+  <div class="posts-header-right">
+    <select id="perPageSelect" style="padding: 6px 14px; border-radius: 8px; font-size: 13px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; cursor: pointer; outline: none;" onchange="window.location.href='?limit='+this.value">
+      <option value="30" selected={limit === 30}>30 items</option>
+      <option value="50" selected={limit === 50}>50 items</option>
+      <option value="100" selected={limit === 100}>100 items</option>
+    </select>
+    <a href="/admin/tours/edit" class="btn-primary">Tạo Tour Mới</a>
+  </div>
+</div>
+
+<div class="posts-body">
+  <div>
+    <!-- Tabs -->
+    <div class="tabs">
+      <a href="/admin/tours?status=all" class={currentTab === 'all' ? 'active' : ''}>Tất cả ({counts.all - counts.trash})</a>
+      <a href="/admin/tours?status=published" class={currentTab === 'published' ? 'active' : ''}>Đã xuất bản ({counts.published})</a>
+      <a href="/admin/tours?status=draft" class={currentTab === 'draft' ? 'active' : ''}>Bản nháp ({counts.draft})</a>
+      <a href="/admin/tours?status=trash" class={`trash ${currentTab === 'trash' ? 'active' : ''}`}>Thùng rác ({counts.trash})</a>
+    </div>
+
+    <!-- Filters -->
+    <form class="filters" method="GET" action="/admin/tours" style="align-items: center;">
+      {currentTab !== 'all' && <input type="hidden" name="status" value={currentTab} />}
+      
+      <select name="country">
+        <option value="">Tất cả quốc gia</option>
+        {countries.map((c: any) => (
+          <option value={c.slug} selected={countryFilter === c.slug}>{c.name}</option>
+        ))}
+      </select>
+      <select name="format">
+        <option value="">Mọi định dạng</option>
+        <option value="astro" selected={formatFilter === 'astro'}>Astro Native 🚀</option>
+        <option value="elementor" selected={formatFilter === 'elementor'}>Elementor HTML</option>
+      </select>
+      <button type="submit" class="filter-btn">Lọc</button>
+
+      <!-- Bulk Actions -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-left: 16px; border-left: 1px solid #e2e8f0; padding-left: 16px;">
+        <select id="bulkActionSelect">
+          <option value="">Hành động...</option>
+          <option value="mark_inactive">Ngừng nhận khách (Ẩn)</option>
+          <option value="mark_active">Mở nhận khách lại</option>
+          {currentTab === 'trash' ? (
+            <>
+              <option value="restore">Khôi phục</option>
+              <option value="delete">Xóa vĩnh viễn</option>
+            </>
+          ) : (
+            <option value="trash">Bỏ vào thùng rác</option>
+          )}
+        </select>
+        <button type="button" class="filter-btn" style="background:#fff; color:#475569;" onclick="applyBulkAction()">Áp dụng</button>
+      </div>
+      
+      <!-- Top Pagination -->
+      <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+        <span style="font-size: 12px; color: #64748b; font-weight: 600;">{filteredTotal} tours</span>
+        {totalPages > 1 && (
+          <div style="display: flex; gap: 4px; align-items: center;">
+            <a href={`?page=1&limit=${limit}&status=${currentTab}&q=${q}&country=${countryFilter}`} class={`page-btn ${page === 1 ? 'disabled' : ''}`} aria-label="Trang đầu">«</a>
+            <a href={`?page=${Math.max(1, page - 1)}&limit=${limit}&status=${currentTab}&q=${q}&country=${countryFilter}`} class={`page-btn ${page === 1 ? 'disabled' : ''}`} aria-label="Trang trước">‹</a>
+            <span style="font-size: 13px; color: #64748b; font-weight: 500;">
+              <input type="number" class="page-input" value={page} min="1" max={totalPages} onkeydown={`if(event.key==='Enter') window.location.href='?limit=${limit}&status=${currentTab}&q=${q}&country=${countryFilter}&page='+this.value`} />
+              of {totalPages}
+            </span>
+            <a href={`?page=${Math.min(totalPages, page + 1)}&limit=${limit}&status=${currentTab}&q=${q}&country=${countryFilter}`} class={`page-btn ${page === totalPages ? 'disabled' : ''}`} aria-label="Trang sau">›</a>
+            <a href={`?page=${totalPages}&limit=${limit}&status=${currentTab}&q=${q}&country=${countryFilter}`} class={`page-btn ${page === totalPages ? 'disabled' : ''}`} aria-label="Trang cuối">»</a>
+          </div>
+        )}
+      </div>
+
+      <div class="search-box" style="margin-left: 12px;">
+        <input type="text" name="q" placeholder="Tìm tên tour..." value={q} />
+        <button type="submit">Tìm</button>
+      </div>
+    </form>
+
+    <!-- Table -->
+    <div class="card" style="overflow:hidden;">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-check"><input type="checkbox" id="selectAllCheckbox" /></th>
+            <th class="col-title">Tên Tour</th>
+            <th class="col-country">Quốc gia</th>
+            <th class="col-price">Giá</th>
+            <th class="col-date">Cập nhật ⬇</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tours.length === 0 && (
+            <tr>
+              <td colspan="5" style="text-align:center; padding: 40px; color: #94a3b8;">Không tìm thấy tour nào.</td>
+            </tr>
+          )}
+          {tours.map((tour) => {
+            const displayCountry = tour.countryName || 'Chưa phân loại';
+            return (
+            <tr data-id={tour.id}>
+              <td><input type="checkbox" class="post-checkbox" value={tour.id} data-title={tour.title} /></td>
+              <td>
+                <div class="post-cell">
+                  {tour.featuredImage ? (
+                    <img src={tour.featuredImage} alt={tour.title} />
+                  ) : (
+                    <div class="img-placeholder">✈️</div>
+                  )}
+                  <div style="display:flex; flex-direction:column; gap:2px;">
+                    <a href={`/admin/tours/edit?id=${tour.id}`} style="display: flex; align-items: center; gap: 6px;">
+                      {tour.format === 'astro' ? (
+                        <span style="background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; flex-shrink: 0;">Astro 🚀</span>
+                      ) : (
+                        <span style="background: #f1f5f9; color: #64748b; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; flex-shrink: 0;">Elementor</span>
+                      )}
+                      <span>{tour.title || '(Chưa có tên)'}</span>
+                    </a>
+                    <div class="row-actions">
+                      {tour.status === 'trash' ? (
+                        <>
+                          <button class="action-link action-edit" style="color:#16a34a" onclick={`doTourAction('${tour.id}', 'restore', 'Bạn muốn khôi phục Tour này?')`}>Khôi phục</button>
+                          <button class="action-link action-delete" onclick={`doTourAction('${tour.id}', 'delete', 'Xóa vĩnh viễn không thể khôi phục. Bạn chắc chắn chứ?')`}>Xóa vĩnh viễn</button>
+                        </>
+                      ) : (
+                        <>
+                          <a href={`/admin/tours/edit?id=${tour.id}`} class="action-link action-edit">Sửa</a>
+                          <a href={`/tour/${tour.slug}`} target="_blank" class="action-link action-view">Xem thử</a>
+                          <button class="action-link action-delete" onclick={`doTourAction('${tour.id}', 'trash', 'Bạn có chắc muốn chuyển Tour này vào thùng rác?')`}>Xoá (Thùng rác)</button>
+                        </>
+                      )}
+                      
+                      {tour.status !== 'trash' && (
+                        <div style="display: flex; align-items: center; gap: 6px; margin-left: auto; border-left: 1px solid #e2e8f0; padding-left: 10px;">
+                          <label class="switch" title="Gạt để Đánh dấu ngừng nhận khách (Unlisted)">
+                            <input type="checkbox" checked={tour.badge === 'inactive'} onchange={`toggleTourInactive(this, '${tour.id}')`} />
+                            <span class="slider"></span>
+                          </label>
+                          <span style="font-size: 11px; color: #64748b; white-space: nowrap;">
+                            {tour.badge === 'inactive' ? <span style="color:#d97706; font-weight:600;">Đang ngừng (Ẩn)</span> : 'Đang mở'}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div style="display:flex; flex-direction:column; gap:4px; align-items:flex-start;">
+                  <span class="cat-badge" style="background:#e0f2fe; color:#0284c7;">{displayCountry}</span>
+                  <span class={`cat-badge ${tour.status}`} style="font-size: 10px; padding: 2px 6px;">{tour.status}</span>
+                </div>
+              </td>
+              <td>
+                <div style="font-weight: 600; color: #0f172a;">{tour.price_text || '—'}</div>
+                <div style="font-size: 11px; color: #64748b;">{tour.days || '—'}</div>
+              </td>
+              <td class="date-cell" set:html={formatDate(tour.updatedAt)}></td>
+            </tr>
+          )})}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const selectAll = document.getElementById('selectAllCheckbox');
+  const postCheckboxes = document.querySelectorAll('.post-checkbox');
+
+  if (selectAll) {
+    selectAll.addEventListener('change', (e) => {
+      postCheckboxes.forEach(cb => cb.checked = e.target.checked);
+    });
+  }
+
+  async function doTourAction(id, action, confirmMsg) {
+    const confirmed = await window.AppModal.confirm(confirmMsg);
+    if (!confirmed) return;
+    executeTourAction([id], action);
+  }
+
+  async function toggleTourInactive(checkboxElem, tourId) {
+    checkboxElem.disabled = true;
+    const action = checkboxElem.checked ? 'mark_inactive' : 'mark_active';
+    try {
+      const res = await fetch('/api/admin/tours/action', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [tourId], action })
+      });
+      const resData = await res.json();
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error?.message || 'Có lỗi xảy ra', 'error');
+        checkboxElem.checked = !checkboxElem.checked; // revert
+      }
+    } catch (e) {
+      window.AppModal.alert('Lỗi kết nối đến máy chủ', 'error');
+      checkboxElem.checked = !checkboxElem.checked; // revert
+    } finally {
+      checkboxElem.disabled = false;
+    }
+  }
+
+  async function applyBulkAction() {
+    const action = document.getElementById('bulkActionSelect').value;
+    if (!action) return;
+
+    const selectedIds = Array.from(postCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+    if (selectedIds.length === 0) {
+      window.AppModal.alert('Vui lòng chọn ít nhất một mục.', 'error');
+      return;
+    }
+
+    const confirmed = await window.AppModal.confirm(`Bạn muốn thực hiện thao tác này cho ${selectedIds.length} mục đã chọn?`);
+    if (!confirmed) return;
+
+    executeTourAction(selectedIds, action);
+  }
+
+  async function executeTourAction(ids, action) {
+    try {
+      const res = await fetch(`/api/admin/tours/action`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids, action })
+      });
+      const resData = await res.json();
+      
+      if (res.ok && resData.success) {
+        window.location.reload();
+      } else {
+        window.AppModal.alert(resData.error?.message || 'Có lỗi xảy ra', 'error');
+      }
+    } catch (e) {
+      window.AppModal.alert('Lỗi kết nối đến máy chủ', 'error');
+    }
+  }
+</script>
+</AdminLayout>

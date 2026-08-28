@@ -1,0 +1,652 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+---
+
+<AdminLayout title="Quản lý Liên Kết Toàn Tập" activeMenu="system" activeSubmenu="link-matrix">
+  <div class="link-manager-container">
+    <!-- Header -->
+    <div class="header-actions">
+      <div>
+        <h2 style="margin:0; font-size: 24px; color: #1e293b;">Hệ thống Liên kết (Silo)</h2>
+        <p style="margin: 4px 0 0 0; color: #64748b; font-size: 14px;">Quản lý liên kết nội bộ theo từng Trang (Page/Post/Tour) và cấu trúc Silo qua Thẻ (Tag).</p>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button id="btnScanDb" onclick="scanDatabaseLinks()" style="padding: 10px 16px; background: #0f172a; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 14px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21v-5h5"/></svg>
+          Quét Lại Database (Sync)
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Tabs -->
+    <div class="main-tabs">
+      <button class="main-tab active" onclick="switchMainTab('all-nodes')">📋 Danh sách Trang (Nodes)</button>
+      <button class="main-tab" onclick="switchMainTab('tag-matrix')">🕸️ Ma trận Thẻ (Bản đồ Tri thức)</button>
+    </div>
+
+    <!-- Tab 1: All Nodes (Pages) -->
+    <div id="tab-all-nodes" class="tab-content active">
+      <div class="card">
+        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px;">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm theo URL, Tiêu đề hoặc Thẻ (Tag)..." style="flex: 1; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 14px;">
+            <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #475569; cursor: pointer; white-space: nowrap;">
+              <input type="checkbox" id="tagOnlyFilter"> Chỉ tìm trong Thẻ (Tags)
+            </label>
+            <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #ef4444; font-weight: 500; cursor: pointer; white-space: nowrap;">
+              <input type="checkbox" id="brokenOnlyFilter"> Lọc trang có Link Hỏng
+            </label>
+            <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #f59e0b; font-weight: 500; cursor: pointer; white-space: nowrap;">
+              <input type="checkbox" id="orphanOnlyFilter"> Chỉ trang Mồ Côi
+            </label>
+            <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #8b5cf6; font-weight: 500; cursor: pointer; white-space: nowrap;">
+              <input type="checkbox" id="deadEndOnlyFilter"> Chỉ trang Cụt
+            </label>
+            <button onclick="loadNodes(1)" style="padding: 10px 20px; background: #2563eb; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; white-space: nowrap;">Tìm kiếm</button>
+          </div>
+          <div id="fastTagsContainer" style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <!-- Fast tags will be populated here -->
+          </div>
+          <div id="typeFilterTabs" style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="type-tab active" data-type="" onclick="switchTypeFilter('')">Tất cả <span class="count-badge" id="count-all">0</span></button>
+            <button class="type-tab" data-type="post" onclick="switchTypeFilter('post')">Post <span class="count-badge" id="count-post">0</span></button>
+            <button class="type-tab" data-type="tour" onclick="switchTypeFilter('tour')">Tour <span class="count-badge" id="count-tour">0</span></button>
+            <button class="type-tab" data-type="page" onclick="switchTypeFilter('page')">Page <span class="count-badge" id="count-page">0</span></button>
+            <button class="type-tab" data-type="country" onclick="switchTypeFilter('country')">Country <span class="count-badge" id="count-country">0</span></button>
+          </div>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 40px; text-align: center;"><input type="checkbox" id="selectAllCheckbox" onchange="toggleAll(this)"></th>
+                <th style="width: 50px; text-align: center;">STT</th>
+                <th style="width: 250px;">URL</th>
+                <th>Tiêu đề (Title)</th>
+                <th style="width: 140px; text-align: center;">Liên kết (In / Out)</th>
+                <th style="width: 300px;">Thẻ (Tags)</th>
+                <th style="width: 200px;">Ghi chú</th>
+                <th style="width: 140px; text-align: center;">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="nodesTbody">
+              <tr><td colSpan="8" style="text-align: center; padding: 20px;">Đang tải dữ liệu...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="pagination" style="margin-top: 20px; display: flex; gap: 8px; justify-content: flex-end;"></div>
+      </div>
+    </div>
+
+    <!-- Bulk Edit Toolbar -->
+    <div id="bulkToolbar" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #1e293b; color: white; padding: 16px 24px; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); z-index: 100; align-items: center; gap: 16px;">
+      <div style="font-weight: 500; font-size: 14px;">Đã chọn <span id="bulkCount" style="color: #38bdf8; font-weight: 700;">0</span> trang</div>
+      <input type="text" id="bulkTagInput" placeholder="Nhập Thẻ chung..." style="padding: 8px 12px; border-radius: 6px; border: 1px solid #475569; background: #334155; color: white; outline: none;">
+      <button onclick="saveBulkTags()" id="btnBulkSave" style="padding: 8px 16px; background: #3b82f6; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Lưu Tag Hàng Loạt</button>
+      <button onclick="clearBulkSelection()" style="padding: 8px 12px; background: transparent; color: #94a3b8; border: 1px solid #475569; border-radius: 6px; font-weight: 500; cursor: pointer;">Hủy</button>
+    </div>
+
+    <!-- Tab 2: Tag Matrix (Graph) -->
+    <div id="tab-tag-matrix" class="tab-content">
+      <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Top Toolbar over Graph -->
+        <div style="background: #f8fafc; padding: 16px 24px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+          <div>
+            <h3 style="margin: 0 0 6px 0; font-size: 15px; font-weight: 700; color: #1e293b;">Bản đồ Tri thức theo Thẻ (Silo Graph)</h3>
+            <p style="margin: 0; font-size: 13px; color: #64748b;">Nhập tên thẻ chính xác để xem mạng lưới liên kết chặt chẽ (Silo) giữa các trang có chung thẻ này.</p>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center; min-width: 320px;">
+            <input type="text" id="graphTagInput" placeholder="Nhập thẻ, VD: Ladakh" value="Ladakh" style="flex:1; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; transition: border-color 0.2s;">
+            <button onclick="reloadGraph()" style="padding: 10px 20px; background: #10b981; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.2s;">Vẽ Graph</button>
+          </div>
+        </div>
+
+        <div style="height: calc(100vh - 200px); min-height: 600px;">
+          <div id="graph-root" style="height: 100%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <style is:global>
+    .link-manager-container { padding: 24px 20px; max-width: 100%; margin: 0 auto; }
+    .link-manager-container .header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    
+    .link-manager-container .main-tabs { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 2px solid #e2e8f0; }
+    .link-manager-container .main-tab { padding: 12px 24px; border: none; background: transparent; font-size: 15px; font-weight: 600; color: #64748b; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .link-manager-container .main-tab:hover { color: #2563eb; }
+    .link-manager-container .main-tab.active { color: #2563eb; border-bottom-color: #2563eb; }
+    
+    .link-manager-container .tab-content { display: none; }
+    .link-manager-container .tab-content.active { display: block; }
+    
+    .link-manager-container .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+    
+    .link-manager-container .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .link-manager-container .data-table th, .link-manager-container .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+    .link-manager-container .data-table th { background: #f8fafc; font-weight: 600; color: #475569; position: sticky; top: 0; }
+    .link-manager-container .data-table td.url-col { max-width: 200px; font-size: 13px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    .link-manager-container .data-table td.url-col:hover { white-space: normal; word-break: break-all; background: #fff; position: relative; z-index: 10; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-radius: 4px; padding: 12px; }
+    .link-manager-container .data-table td.title-col { max-width: 320px; font-weight: 500; font-size: 14px; color: #1e293b; line-height: 1.4; }
+    
+    .link-manager-container .badge { padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; flex-shrink: 0; align-self: flex-start; }
+    .link-manager-container .badge.post { background: #e0e7ff; color: #4338ca; }
+    .link-manager-container .badge.tour { background: #dcfce7; color: #15803d; }
+    .link-manager-container .badge.page { background: #f3e8ff; color: #7e22ce; }
+    .link-manager-container .badge.country { background: #ffedd5; color: #c2410c; }
+    
+    .link-manager-container .type-tab { padding: 8px 16px; border: 1px solid #e2e8f0; background: #fff; border-radius: 20px; font-size: 14px; font-weight: 500; color: #64748b; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+    .link-manager-container .type-tab:hover { border-color: #cbd5e1; background: #f8fafc; }
+    .link-manager-container .type-tab.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .link-manager-container .type-tab .count-badge { background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+    .link-manager-container .type-tab.active .count-badge { background: #eff6ff; color: #1d4ed8; }
+
+    .link-manager-container .title-wrapper { display: flex; flex-direction: column; align-items: flex-start; }
+    
+    .link-manager-container .tag-pill-container { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
+    .link-manager-container .tag-pill { background: #e2e8f0; color: #334155; padding: 4px 8px; border-radius: 16px; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; }
+    .link-manager-container .tag-pill.ladakh { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+    .link-manager-container .tag-input-container { display: flex; gap: 6px; align-items: center; flex-direction: column; align-items: stretch; }
+    .link-manager-container .tag-input { padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 13px; color: #334155; transition: border-color 0.2s, box-shadow 0.2s; background: #f8fafc; }
+    .link-manager-container .tag-input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); background: #fff; }
+    
+    .link-manager-container .matrix-btn { padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1px solid transparent; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; box-sizing: border-box; white-space: nowrap; }
+    .link-manager-container .matrix-btn-outline { background: #fff; color: #475569; border-color: #cbd5e1; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+    .link-manager-container .matrix-btn-outline:hover { background: #f1f5f9; color: #0f172a; border-color: #94a3b8; }
+    .link-manager-container .matrix-btn-primary { background: #3b82f6; color: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+    .link-manager-container .matrix-btn-primary:hover { background: #2563eb; }
+    .link-manager-container .matrix-btn.saving { opacity: 0.7; pointer-events: none; }
+    .link-manager-container .action-group { display: flex; flex-direction: column; gap: 6px; width: 100%; margin: 0 auto; }
+    
+    .link-manager-container .fast-tag { background: #f1f5f9; color: #475569; padding: 6px 12px; border-radius: 20px; font-size: 12px; cursor: pointer; border: 1px solid #e2e8f0; transition: all 0.2s; }
+    .link-manager-container .fast-tag:hover { background: #e2e8f0; color: #1e293b; border-color: #cbd5e1; }
+    .link-manager-container .inbound-badge { font-weight: 700; padding: 4px 10px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; min-width: 36px; }
+    .link-manager-container .inbound-badge.active { color: #059669; background: #ecfdf5; border-color: #a7f3d0; }
+    .link-manager-container .inbound-badge.active:hover { background: #d1fae5; }
+    .link-manager-container .inbound-badge.outbound-active { color: #2563eb; background: #eff6ff; border-color: #bfdbfe; }
+    .link-manager-container .inbound-badge.outbound-active:hover { background: #dbeafe; }
+    .link-manager-container .inbound-badge.inactive { color: #94a3b8; background: #f8fafc; border-color: #e2e8f0; pointer-events: none; }
+
+  </style>
+
+  <!-- React Graph Injection -->
+  <script>
+    import { createElement } from 'react';
+    import { createRoot } from 'react-dom/client';
+    import KnowledgeGraph from '../../../components/admin/KnowledgeGraph';
+
+    let graphRoot: any = null;
+
+    window.reloadGraph = () => {
+      const tag = (document.getElementById('graphTagInput') as HTMLInputElement).value;
+      if (!tag) {
+        alert('Vui lòng nhập thẻ (Tag) để lọc.');
+        return;
+      }
+      
+      const container = document.getElementById('graph-root');
+      if (container) {
+        if (!graphRoot) {
+          graphRoot = createRoot(container);
+        }
+        // Re-render with new endpoint
+        graphRoot.render(createElement(KnowledgeGraph, { 
+          dataEndpoint: `/api/admin/tag-graph?tag=${encodeURIComponent(tag)}`,
+          key: tag // force remount for new tag
+        }));
+      }
+    };
+  </script>
+
+  <script is:inline>
+    // Tab Logic
+    function switchMainTab(tabId) {
+      document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      if (tabId === 'tag-matrix' && !window.graphInitialLoaded) {
+        window.graphInitialLoaded = true;
+        if(window.reloadGraph) window.reloadGraph();
+      }
+    }
+
+    // Type Filter Logic
+    let currentTypeFilter = '';
+    function switchTypeFilter(type) {
+      currentTypeFilter = type;
+      document.querySelectorAll('.type-tab').forEach(t => {
+        if (t.dataset.type === type) t.classList.add('active');
+        else t.classList.remove('active');
+      });
+      loadNodes(1);
+    }
+
+    // Load Nodes Data
+    let currentPage = 1;
+    let currentNodes = [];
+    
+    async function loadFastTags() {
+      try {
+        const res = await fetch('/api/admin/url-tags');
+        const data = await res.json();
+        if (data.success && data.tags) {
+          const container = document.getElementById('fastTagsContainer');
+          container.innerHTML = data.tags.map(t => `<span class="fast-tag" onclick="selectFastTag('${t}')">${t}</span>`).join('');
+        }
+      } catch (e) {
+        console.error('Failed to load fast tags', e);
+      }
+    }
+    
+    function selectFastTag(tag) {
+      document.getElementById('searchInput').value = tag;
+      document.getElementById('tagOnlyFilter').checked = true;
+      loadNodes(1);
+    }
+
+    // Call loadFastTags on init
+    loadFastTags();
+    
+    async function loadNodes(page = 1) {
+      currentPage = page;
+      const search = document.getElementById('searchInput').value;
+      const tagOnly = document.getElementById('tagOnlyFilter').checked;
+      const brokenOnly = document.getElementById('brokenOnlyFilter').checked;
+      const orphanOnly = document.getElementById('orphanOnlyFilter')?.checked || false;
+      const deadEndOnly = document.getElementById('deadEndOnlyFilter')?.checked || false;
+      const type = currentTypeFilter;
+      const tbody = document.getElementById('nodesTbody');
+      tbody.innerHTML = '<tr><td colSpan="7" style="text-align: center; padding: 20px;">Đang tải dữ liệu...</td></tr>';
+      
+      try {
+        const res = await fetch(`/api/admin/nodes?page=${page}&limit=100&search=${encodeURIComponent(search)}&type=${encodeURIComponent(type)}&tagOnly=${tagOnly}&brokenOnly=${brokenOnly}&orphanOnly=${orphanOnly}&deadEndOnly=${deadEndOnly}`);
+        const data = await res.json();
+        
+        if (data.success) {
+          currentNodes = data.data;
+          renderNodes(currentNodes);
+          renderPagination(data.total, data.page, data.limit);
+          if (data.typeCounts) {
+            updateCounts(data.typeCounts);
+          }
+        } else {
+          tbody.innerHTML = `<tr><td colSpan="7" style="color:red; text-align:center;">Lỗi: ${data.error}</td></tr>`;
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colSpan="7" style="color:red; text-align:center;">Lỗi mạng: ${err.message}</td></tr>`;
+      }
+    }
+
+    function updateCounts(counts) {
+      document.getElementById('count-all').innerText = counts.all || 0;
+      document.getElementById('count-post').innerText = counts.post || 0;
+      document.getElementById('count-tour').innerText = counts.tour || 0;
+      document.getElementById('count-page').innerText = counts.page || 0;
+      document.getElementById('count-country').innerText = counts.country || 0;
+    }
+
+    function renderNodes(nodes) {
+      const tbody = document.getElementById('nodesTbody');
+      if (nodes.length === 0) {
+        tbody.innerHTML = '<tr><td colSpan="8" style="text-align: center; padding: 20px;">Không tìm thấy dữ liệu.</td></tr>';
+        return;
+      }
+      
+      tbody.innerHTML = nodes.map((n, idx) => {
+        const stt = (currentPage - 1) * 100 + idx + 1;
+        
+        function escapeHtml(unsafe) {
+          return (unsafe || '').toString()
+               .replace(/&/g, "&amp;")
+               .replace(/</g, "&lt;")
+               .replace(/>/g, "&gt;")
+               .replace(/"/g, "&quot;")
+               .replace(/'/g, "&#039;");
+        }
+
+        let tagsHtml = '';
+        if (n.tags) {
+          const tagArray = n.tags.split(',').map(t => t.trim()).filter(Boolean);
+          if (tagArray.length > 0) {
+            tagsHtml = '<div class="tag-pill-container">';
+            tagArray.forEach(t => {
+              const isLadakh = t.toLowerCase() === 'ladakh';
+              tagsHtml += `<span class="tag-pill ${isLadakh ? 'ladakh' : ''}">${escapeHtml(t)}</span>`;
+            });
+            tagsHtml += '</div>';
+          }
+        }
+
+        return `
+        <tr>
+          <td style="text-align: center;"><input type="checkbox" class="row-checkbox" value="${n.url}" onchange="updateBulkToolbar()"></td>
+          <td style="text-align: center; font-weight: 500; color: #94a3b8;">${stt}</td>
+          <td class="url-col" title="${n.url}"><a href="${n.url}" target="_blank" style="color: #2563eb; text-decoration: none;">${n.url}</a></td>
+          <td class="title-col">
+            <div class="title-wrapper">
+              <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                <span class="badge ${n.type}">${n.type}</span>
+                ${n.priority == 2 ? '<span class="badge" style="background:#f59e0b; color:#fff;">⭐ HUB</span>' : (n.priority == 1 ? '<span class="badge" style="background:#3b82f6; color:#fff;">⚡ HIGH</span>' : '')}
+                ${n.brokenCount > 0 ? `<span style="background: #ef4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; white-space: nowrap;">⚠️ ${n.brokenCount} lỗi 404</span>` : ''}
+              </div>
+              <span style="margin-top: 4px;">${escapeHtml(n.title)}</span>
+            </div>
+          </td>
+          <td style="text-align: center;">
+            <div style="display: flex; justify-content: center; gap: 8px;">
+              <span class="inbound-badge ${n.inboundCount > 0 ? 'active' : 'inactive'}" onclick="${(n.inboundCount > 0 || n.outboundCount > 0) ? `toggleLinks('${n.url}', ${idx})` : ''}" title="Inbound: Các trang khác trỏ ĐẾN trang này">📥 ${n.inboundCount}</span>
+              <span class="inbound-badge ${n.outboundCount > 0 ? 'outbound-active' : 'inactive'}" onclick="${(n.inboundCount > 0 || n.outboundCount > 0) ? `toggleLinks('${n.url}', ${idx})` : ''}" title="Outbound: Các link nằm TRONG trang này trỏ đi">📤 ${n.outboundCount}</span>
+            </div>
+          </td>
+          <td>
+            <div class="tag-input-container">
+              <select id="priorityInput_${idx}" class="tag-input" style="padding: 6px; font-weight: 500; ${n.priority == 2 ? 'color:#b45309; background:#fef3c7;' : (n.priority == 1 ? 'color:#1d4ed8; background:#eff6ff;' : '')}">
+                <option value="0" ${n.priority == 0 || !n.priority ? 'selected' : ''}>0 - Mặc định</option>
+                <option value="1" ${n.priority == 1 ? 'selected' : ''}>1 - Quan trọng (High)</option>
+                <option value="2" ${n.priority == 2 ? 'selected' : ''}>2 - Cốt lõi (Hub)</option>
+              </select>
+              ${tagsHtml}
+              <input type="text" class="tag-input" id="tagInput_${idx}" value="${(n.tags || '').replace(/"/g, '&quot;')}" placeholder="Nhập thẻ..." onkeypress="if(event.key === 'Enter') document.getElementById('btnSave_${idx}').click()">
+            </div>
+          </td>
+          <td>
+            <textarea class="tag-input" id="noteInput_${idx}" rows="1" placeholder="Ghi chú..." style="width:100%; resize:vertical; font-family:inherit;">${n.notes || ''}</textarea>
+          </td>
+          <td>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <button class="matrix-btn matrix-btn-outline" id="btnSave_${idx}" onclick="saveTag('${n.url}', ${idx}, this)" title="Lưu thông tin" style="padding: 4px 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                Lưu
+              </button>
+              <button class="matrix-btn matrix-btn-primary" id="btnScan_${idx}" onclick="scanSingleNode('${n.url}', ${idx}, this)" title="Quét cập nhật liên kết Outbound của trang này" style="padding: 4px 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21v-5h5"/></svg>
+                Quét
+              </button>
+              <a href="/admin/${n.type === 'country' ? 'countries' : n.type + 's'}?search=${encodeURIComponent(n.title)}" target="_blank" class="matrix-btn matrix-btn-outline" style="display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 8px; font-size: 11px; text-decoration: none; border-color: #6b7280; color: #6b7280;" title="Sửa nội dung bài viết này">
+                ✏️ Sửa
+              </a>
+              <a href="${n.url}" target="_blank" class="matrix-btn matrix-btn-outline" style="display: flex; align-items: center; justify-content: center; gap: 4px; padding: 4px 8px; font-size: 11px; text-decoration: none; border-color: #10b981; color: #10b981;" title="Xem trực tiếp trên web">
+                👁️ Xem
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr id="linksRow_${idx}" style="display: none; background: #f8fafc;">
+          <td colspan="8" style="padding: 0 24px;">
+            <div id="linksContent_${idx}" style="padding: 16px 0;">Đang tải...</div>
+          </td>
+        </tr>
+      `}).join('');
+      updateBulkToolbar();
+    }
+
+    function renderPagination(total, page, limit) {
+      const totalPages = Math.ceil(total / limit);
+      const pag = document.getElementById('pagination');
+      let html = '';
+      
+      if (page > 1) {
+        html += `<button onclick="loadNodes(${page - 1})" class="matrix-btn matrix-btn-outline" style="width: auto;">Trước</button>`;
+      }
+      html += `<span style="padding: 6px 12px; font-size: 14px;">Trang ${page} / ${totalPages || 1} (Tổng: ${total} Trang)</span>`;
+      if (page < totalPages) {
+        html += `<button onclick="loadNodes(${page + 1})" class="matrix-btn matrix-btn-outline" style="width: auto;">Tiếp</button>`;
+      }
+      pag.innerHTML = html;
+    }
+
+    async function saveTag(url, idx, btn) {
+      const input = document.getElementById(`tagInput_${idx}`);
+      const noteInput = document.getElementById(`noteInput_${idx}`);
+      const priorityInput = document.getElementById(`priorityInput_${idx}`);
+      const newTags = input.value;
+      const newNotes = noteInput ? noteInput.value : '';
+      const newPriority = priorityInput ? parseInt(priorityInput.value) : 0;
+      
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = 'Đang lưu...';
+      btn.classList.add('saving');
+      
+      try {
+        const res = await fetch('/api/admin/nodes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url, tags: newTags, notes: newNotes, priority: newPriority })
+        });
+        const data = await res.json();
+        if (data.success) {
+          btn.innerHTML = 'Đã lưu ✓';
+          btn.style.background = '#dcfce7';
+          btn.style.color = '#166534';
+          btn.style.borderColor = '#166534';
+          setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            btn.style = '';
+            btn.classList.remove('saving');
+          }, 2000);
+        } else {
+          alert('Lỗi: ' + data.error);
+          btn.innerHTML = 'Lỗi';
+          btn.classList.remove('saving');
+        }
+      } catch (err) {
+        alert('Lỗi mạng: ' + err.message);
+        btn.innerText = 'Lỗi';
+      } finally {
+        btn.classList.remove('saving');
+      }
+    }
+
+    async function toggleLinks(url, idx) {
+      const row = document.getElementById(`linksRow_${idx}`);
+      const content = document.getElementById(`linksContent_${idx}`);
+      
+      if (row.style.display === 'none') {
+        row.style.display = 'table-row';
+        if (content.innerHTML === 'Đang tải...') {
+          try {
+            const res = await fetch(`/api/admin/node-links?url=${encodeURIComponent(url)}`);
+            const data = await res.json();
+            
+            if (data.success) {
+              let html = '<div style="display: flex; gap: 24px; background: #f8fafc; border-radius: 8px;">';
+              
+              // Inbound
+              html += '<div style="flex: 1;">';
+              html += '<h4 style="margin: 0 0 12px 0; font-size: 14px; color: #334155;">📥 Liên kết TRỎ ĐẾN (Inbound)</h4>';
+              if(data.inbound.length === 0) html += '<p style="color: #94a3b8; font-size: 13px; margin: 0;">Không có liên kết trỏ đến.</p>';
+              else {
+                html += '<ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; max-height: 250px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; background: #fff;">';
+                html += data.inbound.map(l => `<li style="margin-bottom: 8px; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;"><a href="${l.sourceUrl}" target="_blank" style="color:#2563eb; text-decoration: none; font-weight: 500;">${l.sourceUrl.replace('https://thericetour.com','')}</a> <span style="color:#94a3b8; font-size:11px;">(Anchor: <span style="color:#10b981; font-weight:600;">${l.anchorText}</span>)</span></li>`).join('');
+                html += '</ul>';
+              }
+              html += '</div>';
+              
+              // Outbound
+              html += '<div style="flex: 1;">';
+              html += '<h4 style="margin: 0 0 12px 0; font-size: 14px; color: #334155;">📤 Liên kết TRỎ ĐI (Outbound)</h4>';
+              if(data.outbound.length === 0) html += '<p style="color: #94a3b8; font-size: 13px; margin: 0;">Không có liên kết trỏ đi.</p>';
+              else {
+                html += '<ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; max-height: 250px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; background: #fff;">';
+                
+                const targetCounts = {};
+                data.outbound.forEach(l => {
+                  targetCounts[l.targetUrl] = (targetCounts[l.targetUrl] || 0) + 1;
+                });
+                
+                html += data.outbound.map(l => {
+                  const errorBadge = l.is404 ? '<span style="background: #ef4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-left: 6px;">⚠️ 404</span>' : '';
+                  const dupeBadge = targetCounts[l.targetUrl] > 1 ? `<span style="background: #8b5cf6; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-left: 6px;">⚠️ Lặp ${targetCounts[l.targetUrl]} lần</span>` : '';
+                  
+                  let anchorWarning = '';
+                  if (!l.anchorText || l.anchorText === 'Link') {
+                    anchorWarning = '<span style="background: #f59e0b; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-left: 6px;">⚠️ Thiếu Anchor</span>';
+                  }
+
+                  return `<li style="margin-bottom: 8px; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;"><span style="color:#94a3b8; font-size:11px;">(Anchor: <span style="color:#10b981; font-weight:600;">${l.anchorText}</span>)</span> <a href="${l.targetUrl}" target="_blank" style="color:${l.is404 ? '#ef4444' : '#2563eb'}; text-decoration: none; font-weight:500;">${l.targetUrl.replace('https://thericetour.com','')}</a> ${errorBadge} ${dupeBadge} ${anchorWarning}</li>`;
+                }).join('');
+                html += '</ul>';
+              }
+              html += '</div>';
+              
+              html += '</div>';
+              content.innerHTML = html;
+            } else {
+              content.innerHTML = `<p style="color: red;">Lỗi tải dữ liệu: ${data.error}</p>`;
+            }
+          } catch (e) {
+            content.innerHTML = '<p style="color: red;">Lỗi tải dữ liệu mạng</p>';
+          }
+        }
+      } else {
+        row.style.display = 'none';
+      }
+    }
+
+    // Bulk Edit Logic
+    function toggleAll(source) {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => cb.checked = source.checked);
+      updateBulkToolbar();
+    }
+
+    function updateBulkToolbar() {
+      const checkboxes = document.querySelectorAll('.row-checkbox:checked');
+      const toolbar = document.getElementById('bulkToolbar');
+      const countEl = document.getElementById('bulkCount');
+      
+      if (checkboxes.length > 0) {
+        toolbar.style.display = 'flex';
+        countEl.innerText = checkboxes.length;
+      } else {
+        toolbar.style.display = 'none';
+        document.getElementById('selectAllCheckbox').checked = false;
+      }
+    }
+
+    function clearBulkSelection() {
+      const checkboxes = document.querySelectorAll('.row-checkbox');
+      checkboxes.forEach(cb => cb.checked = false);
+      document.getElementById('selectAllCheckbox').checked = false;
+      updateBulkToolbar();
+    }
+
+    async function saveBulkTags() {
+      const checkboxes = document.querySelectorAll('.row-checkbox:checked');
+      if (checkboxes.length === 0) return;
+      
+      const urls = Array.from(checkboxes).map(cb => cb.value);
+      const tags = document.getElementById('bulkTagInput').value;
+      const btn = document.getElementById('btnBulkSave');
+      
+      const originalText = btn.innerText;
+      btn.innerText = 'Đang lưu...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/admin/bulk-tags', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ urls, tags })
+        });
+        const data = await res.json();
+        
+        if (data.success) {
+          alert(`Đã lưu thẻ thành công cho ${data.updated} trang!`);
+          clearBulkSelection();
+          loadNodes(currentPage);
+        } else {
+          alert('Lỗi: ' + data.error);
+        }
+      } catch(e) {
+        alert('Lỗi mạng: ' + e.message);
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    async function scanSingleNode(url, idx, btn) {
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = 'Đang quét...';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+
+      try {
+        const res = await fetch('/api/admin/scan-single-link', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url })
+        });
+        const data = await res.json();
+        
+        if (data.success) {
+          alert(`Đã quét xong trang này!\nTìm thấy ${data.linksFound} liên kết Outbound.`);
+          // Quick reload the row's link if it was open
+          const row = document.getElementById(`linksRow_${idx}`);
+          if (row && row.style.display !== 'none') {
+            row.style.display = 'none';
+            toggleLinks(url, idx); // re-open to fetch new data
+          }
+          // Reload the whole list to update the counters
+          loadNodes(currentPage); 
+        } else {
+          alert('Lỗi khi quét trang: ' + data.error);
+        }
+      } catch (error) {
+        alert('Lỗi mạng khi quét DB: ' + error.message);
+      } finally {
+        btn.innerHTML = originalHtml;
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    }
+
+    async function scanDatabaseLinks() {
+      const btn = document.getElementById('btnScanDb');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = 'Đang quét... (Có thể mất 1-2 phút)';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+
+      try {
+        const res = await fetch('/api/admin/scan-db-links', { method: 'POST' });
+        const data = await res.json();
+        
+        if (data.success) {
+          alert(`Quét hoàn tất!\nĐã quét: ${data.scannedNodes} bài viết\nPhát hiện: ${data.linksFound} liên kết.`);
+          loadNodes(currentPage); // Reload list
+        } else {
+          alert('Lỗi khi quét: ' + data.error);
+        }
+      } catch (error) {
+        alert('Lỗi mạng khi quét DB: ' + error.message);
+      } finally {
+        btn.innerHTML = originalHtml;
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      loadNodes(1);
+      
+      let searchTimeout;
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          loadNodes(1);
+        }, 500);
+      });
+    });
+  </script>
+</AdminLayout>

@@ -1,0 +1,320 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Logo from '@/components/shared/Logo.astro';
+
+const heroImage = "https://media.fittour.vn/uploads/2022/09/binh-minh-tren-day-nui-himalayas.webp";
+
+const seriesData = [
+  {
+    id: '01',
+    title: 'HIMALAYA SERIES',
+    subtitle: 'Những hành trình nhẹ nhàng, sâu sắc để bạn sống chậm lại.',
+    bgImage: 'https://media.fittour.vn/uploads/2022/09/binh-minh-tren-day-nui-himalayas.webp',
+    items: [
+      { name: 'LADAKH', desc: 'Vùng Đất Của Các Lạt Ma', image: 'https://media.fittour.vn/uploads/2024/06/man-mua-truyen-thong-tai-le-hoi-hemis.webp' },
+      { name: 'TIBET', desc: 'Đường Mây Xứ Tuyết', image: 'https://media.fittour.vn/uploads/2025/07/tu-vien-tagong-co-gai-vuon-tay-truoc-nui-tuyet.webp' },
+      { name: 'BHUTAN', desc: 'Về Miền Hạnh Phúc', image: 'https://media.fittour.vn/uploads/2023/07/kien-truc-mot-dien-tho-tu-vien-Tashilhunpo-bhutan.webp' },
+      { name: 'NEPAL', desc: 'Bên Rặng Tuyết Sơn', image: 'https://media.fittour.vn/uploads/2022/11/du-khach-fit-tour-va-khung-canh-namche-bazaar.webp' },
+      { name: 'PAKISTAN', desc: 'Vùng Đất Thuần Khiết', image: 'https://media.fittour.vn/uploads/2022/12/doan-duong-cao-toc-Karakoram.webp' },
+    ]
+  },
+  {
+    id: '02',
+    title: 'SILKROAD SERIES',
+    subtitle: 'Xuôi theo những tuyến đường giao thương cổ đại.',
+    bgImage: 'https://media.fittour.vn/uploads/2022/11/du-khach-fit-tour-va-khung-canh-namche-bazaar.webp',
+    items: [
+      { name: 'TÂN CƯƠNG', desc: 'Miền Viễn Tây', image: 'https://media.fittour.vn/uploads/2025/06/lang-hoa-moc-tan-cuong.webp' },
+      { name: 'KAZAKHSTAN', desc: 'Thảo Nguyên Đại Á', image: 'https://media.fittour.vn/uploads/2024/11/hanh-trinh-trung-a-den-kazashstan-voi-fit-tour.webp' },
+      { name: 'UZBEKISTAN', desc: 'Hồi Ức Con Đường Tơ Lụa', image: 'https://media.fittour.vn/uploads/2025/05/Almaty.webp' },
+      { name: 'THIỂM TÂY', desc: 'Dấu Ấn Trường An', image: 'https://media.fittour.vn/uploads/2025/08/tour-tay-an-lac-duong-7n6d-fittour.webp' },
+      { name: 'KYRGYZSTAN', desc: 'Miền Du Mục', image: 'https://media.fittour.vn/uploads/2025/09/tour-tan-cuong-mua-dong-8n7d.webp' },
+    ]
+  },
+  {
+    id: '03',
+    title: 'AFRICAN BESPOKE',
+    subtitle: 'Trở về với lục địa hoang dã.',
+    bgImage: 'https://media.fittour.vn/uploads/2022/12/nha-tho-hoi-giao-Hassan-II.webp',
+    items: [
+      { name: 'EGYPT', desc: 'Huyền Thoại Sông Nile', image: 'https://media.fittour.vn/uploads/2023/06/doan-khach-chup-hinh-o-sa-mac-sahara-ai-cap.webp' },
+      { name: 'MOROCCO', desc: 'Atlas to Sahara', image: 'https://media.fittour.vn/uploads/2022/12/nha-tho-hoi-giao-Hassan-II.webp' },
+      { name: 'NAMIBIA', desc: 'Những Đồi Cát Cuối Cùng', image: 'https://media.fittour.vn/uploads/2023/06/emagazine-nhung-ngay-du-muc-zanskar.webp' },
+      { name: 'KENYA', desc: 'Giấc Mơ Châu Phi Hoang Dã', image: 'https://media.fittour.vn/uploads/2025/07/ngay-khong-wifi-o-dao-thanh-a-dinh.webp' },
+      { name: 'TANZANIA', desc: 'Dưới Bóng Kilimanjaro', image: 'https://media.fittour.vn/uploads/2022/11/du-khach-fit-tour-va-khung-canh-namche-bazaar.webp' },
+      { name: 'ETHIOPIA', desc: 'Vùng Đất Khởi Nguyên', image: 'https://media.fittour.vn/uploads/2025/07/checklist-du-lich-dao-thanh-a-dinh.webp' },
+    ]
+  },
+  {
+    id: '04',
+    title: 'MOTOR ADVENTURES',
+    subtitle: 'Chinh phục những cung đường không giới hạn.',
+    bgImage: 'https://media.fittour.vn/uploads/2025/08/doan-motorbike-fit-tour-chay-tren-duong-rung-pai-thai-lan.webp',
+    items: [
+      { name: 'LADAKH', desc: 'Motor Expedition', image: 'https://media.fittour.vn/uploads/2024/01/doan-tour-xe-may-ladakh-dung-lai-ven-ho.webp' },
+      { name: 'PAKISTAN', desc: 'Karakoram Ride', image: 'https://media.fittour.vn/uploads/2022/12/doan-duong-cao-toc-Karakoram.webp' },
+      { name: 'MONGOLIA', desc: 'Steppe Ride', image: 'https://media.fittour.vn/uploads/2025/07/motor-trip-mong-co-phi-qua-dinh-doi-hoang-da.webp' },
+      { name: 'TURKEY', desc: 'Anatolia Ride', image: 'https://media.fittour.vn/uploads/2025/05/Almaty.webp' },
+      { name: 'MOROCCO', desc: 'Desert Ride', image: 'https://media.fittour.vn/uploads/2022/12/nha-tho-hoi-giao-Hassan-II.webp' },
+      { name: 'BHUTAN', desc: 'Himalayan Ride', image: 'https://media.fittour.vn/uploads/2023/02/ly-do-chon-fit-tour-cho-chuyen-du-lich-ladakh.webp' },
+    ]
+  }
+];
+
+const features = [
+  { title: "THỔ ĐỊA ĐỊA PHƯƠNG", desc: "Am hiểu văn hóa và trải nghiệm sâu sắc", icon: `<path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/>` },
+  { title: "CẢM HỨNG & AN TOÀN", desc: "An toàn tuyệt đối với kế hoạch tỉ mỉ", icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>` },
+  { title: "VIỄN CHINH CAO CẤP", desc: "Dịch vụ chọn lọc và trải nghiệm chân thực", icon: `<path d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 9h6M9 13h6M9 17h6"/>` },
+  { title: "NHÓM NHỎ TINH GỌN", desc: "Thiết kế quy mô nhỏ để tối đa hóa kết nối", icon: `<circle cx="9" cy="7" r="4"/><path d="M9 14c-4.4 0-8 2-8 6v2h16v-2c0-4-3.6-6-8-6z"/><circle cx="19" cy="9" r="3"/><path d="M23 22v-1.5c0-3-2.5-5.5-5.5-5.5H16"/>` },
+  { title: "HÀNH TRÌNH CÓ CHIỀU SÂU", desc: "Vượt lên trên những điểm đến, đó là ý nghĩa sống", icon: `<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>` }
+];
+
+const journals = [
+  { name: 'Everest', desc: 'Nóc nhà của thế giới', image: 'https://media.fittour.vn/uploads/2022/09/binh-minh-tren-day-nui-himalayas.webp' },
+  { name: 'Kailash', desc: 'Cuộc hành hương tĩnh thức', image: 'https://media.fittour.vn/uploads/2023/06/emagazine-nhung-ngay-du-muc-zanskar.webp' },
+  { name: 'Silkroad', desc: 'Vết tích cổ đại', image: 'https://media.fittour.vn/uploads/2022/11/du-khach-fit-tour-va-khung-canh-namche-bazaar.webp' },
+  { name: 'Bhutan', desc: 'Vương quốc của hạnh phúc', image: 'https://media.fittour.vn/uploads/2025/07/ngay-khong-wifi-o-dao-thanh-a-dinh.webp' },
+  { name: 'Motor Diary', desc: 'Tự do trên hai bánh xe', image: 'https://media.fittour.vn/uploads/2025/07/checklist-du-lich-dao-thanh-a-dinh.webp' },
+];
+---
+
+<BaseLayout title="FIT Tour | Signature Journeys" description="Luxury expeditions and bespoke journeys across Asia & Africa.">
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+    
+    /* Ghi đè font cho toàn bộ trang Signature */
+    #signature-page, #signature-page .font-sans {
+      font-family: 'Inter', sans-serif !important;
+    }
+    #signature-page .font-serif, 
+    #signature-page h1, 
+    #signature-page h2, 
+    #signature-page h3 {
+      font-family: 'Cormorant Garamond', serif !important;
+    }
+  </style>
+
+  <div id="signature-page" class="bg-[#0a0a0a] min-h-screen text-gray-200 font-sans selection:bg-brand-500 selection:text-white pb-20">
+    
+    {/* HERO SECTION */}
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <!-- Background Image with Gradients -->
+      <div class="absolute inset-0 w-full h-full">
+        <img src={heroImage} alt="Himalayas" class="w-full h-full object-cover object-center opacity-50 lg:opacity-60" />
+        <!-- Desktop gradients -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent hidden lg:block"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/20 to-[#0a0a0a]/40 hidden lg:block"></div>
+        <!-- Mobile gradients -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-transparent to-[#0a0a0a] lg:hidden"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 w-full max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 xl:col-span-6 mt-10 lg:mt-0">
+          <p class="text-[#c5a365] text-xs font-bold tracking-[0.3em] uppercase mb-4 lg:mb-6">CẢM HỨNG & AN TOÀN</p>
+          <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] font-serif mb-6 lg:mb-8 text-white uppercase">
+            HÀNH TRÌNH <br />
+            VƯỢT XA <br />
+            ĐIỂM ĐẾN
+          </h1>
+          <p class="text-gray-400 text-base md:text-xl font-light max-w-md mb-10 lg:mb-12">
+            Những chuyến viễn chinh cao cấp và hành trình cá nhân hóa khắp Châu Á & Châu Phi.
+          </p>
+          <a href="#explore" class="inline-flex items-center gap-4 text-[10px] lg:text-xs font-bold tracking-[0.2em] uppercase text-white hover:text-[#c5a365] transition-colors group">
+            KHÁM PHÁ HÀNH TRÌNH 
+            <span class="w-12 h-[1px] bg-white/50 group-hover:bg-[#c5a365] transition-colors relative">
+              <span class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-current rotate-45"></span>
+            </span>
+          </a>
+        </div>
+        
+        {/* Right Navigation / Index */}
+        <div class="hidden lg:flex lg:col-span-5 xl:col-span-6 justify-end">
+          <ul class="space-y-6 text-right">
+            {seriesData.map((series, index) => (
+              <a href={`#series-${series.id}`} class="group cursor-pointer flex items-center justify-end gap-6">
+                <span class={`text-sm font-medium transition-colors ${index === 0 ? 'text-[#c5a365]' : 'text-transparent group-hover:text-[#c5a365]'}`}>←</span>
+                <div class={`flex flex-col items-start w-32 border-b pb-4 transition-colors ${index === 0 ? 'border-[#c5a365]' : 'border-white/10 group-hover:border-[#c5a365]/50'}`}>
+                  <span class={`text-sm font-serif mb-1 ${index === 0 ? 'text-[#c5a365]' : 'text-white/40 group-hover:text-[#c5a365]'}`}>{series.id}</span>
+                  <span class={`text-[10px] font-bold tracking-[0.2em] uppercase transition-colors ${index === 0 ? 'text-white' : 'text-white/40 group-hover:text-white'}`}>{series.title.split(' ')[0]}</span>
+                </div>
+              </a>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+        <span class="text-[9px] tracking-[0.3em] uppercase font-bold">CUỘN</span>
+        <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+      </div>
+    </section>
+
+    {/* PHILOSOPHY SECTION */}
+    <section id="explore" class="relative flex flex-col lg:flex-row items-center lg:min-h-[600px] border-t border-white/5 bg-[#050505] overflow-hidden">
+      <!-- Full-bleed background image on the right (Desktop) / Bottom (Mobile) -->
+      <div class="order-2 lg:order-none relative w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-[60%] h-[400px] lg:h-full">
+         <img src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-du-ky-o-Zanskar.webp" alt="Philosophy" class="w-full h-full object-cover object-right lg:object-[30%_center]" />
+         <!-- Subtle gradient to ensure seamless blending with the dark background -->
+         <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent lg:w-[40%] hidden lg:block"></div>
+         <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#050505] to-transparent lg:hidden"></div>
+      </div>
+
+      <div class="order-1 lg:order-none relative z-10 w-full max-w-[1600px] mx-auto px-6 lg:px-12 py-20 lg:py-0">
+        <div class="max-w-xl">
+          <p class="text-[#c5a365] text-xs font-bold tracking-[0.2em] uppercase mb-6 lg:mb-8">TRIẾT LÝ CỦA CHÚNG TÔI</p>
+          <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-serif leading-tight text-white mb-6 lg:mb-8">
+            Không chỉ là chuyến đi.<br/>
+            Đó là cách bạn thực sự<br/>
+            sống trọn vẹn hành trình.
+          </h2>
+          <p class="text-gray-400 text-base lg:text-lg font-light leading-relaxed">
+            Chúng tôi kiến tạo những hành trình ý nghĩa, nơi bạn sống chậm lại, kết nối sâu sắc và trải nghiệm thế giới một cách chân thực nhất.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* SERIES SECTIONS */}
+    <div class="flex flex-col">
+      {seriesData.map((series) => (
+        <section id={`series-${series.id}`} class="pt-24 pb-16 relative overflow-hidden group">
+          <!-- Background Image for the Series -->
+          <div class="absolute inset-0 w-full h-full">
+            <img src={series.bgImage} alt={series.title} class="w-full h-full object-cover object-center opacity-40 group-hover:opacity-60 transition-opacity duration-1000" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/40 to-transparent"></div>
+          </div>
+
+          <div class="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <span class="text-white/60 font-serif text-lg md:text-xl mb-2 block">{series.id}</span>
+                <h3 class="text-3xl md:text-[2.75rem] font-serif text-white uppercase tracking-wider mb-4">{series.title}</h3>
+                <p class="text-gray-300 font-light text-sm md:text-base mb-5">{series.subtitle}</p>
+                <a href="#" class="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 hover:text-white transition-colors">
+                  KHÁM PHÁ BỘ SƯU TẬP <span class="text-lg leading-none">→</span>
+                </a>
+              </div>
+              <div class="hidden md:flex items-center gap-3">
+                <button onclick={`document.getElementById('scroll-${series.id}').scrollBy({left: -320, behavior: 'smooth'})`} class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/50 hover:text-white hover:border-white transition-all cursor-pointer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button onclick={`document.getElementById('scroll-${series.id}').scrollBy({left: 320, behavior: 'smooth'})`} class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white/50 hover:text-white hover:border-white transition-all cursor-pointer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Horizontal Scroll Cards -->
+            <div id={`scroll-${series.id}`} class="flex gap-4 md:gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide scroll-smooth" style="scrollbar-width: none;">
+              {series.items.map((item) => (
+                <a href="#" class="group/card relative shrink-0 w-[82vw] md:w-[320px] lg:w-[360px] aspect-[4/5] bg-[#111] overflow-hidden snap-start cursor-pointer block">
+                  <img src={item.image} alt={item.name} class="w-full h-full object-cover opacity-70 group-hover/card:opacity-100 group-hover/card:scale-105 transition-all duration-1000 ease-out" loading="lazy" />
+                  <!-- Gradient overlay for text contrast -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90"></div>
+                  
+                  <div class="absolute bottom-0 left-0 w-full p-6 lg:p-8 transform group-hover/card:-translate-y-2 transition-transform duration-700">
+                    <!-- Layer 1: Hero Title -->
+                    <h4 class="text-white font-serif text-3xl md:text-4xl leading-none mb-3 group-hover/card:text-[#c5a365] transition-colors duration-500">{item.name}</h4>
+                    
+                    <!-- Layer 2: Storyline / Tagline -->
+                    <p class="text-[11px] md:text-xs tracking-[0.15em] uppercase text-gray-300 font-sans font-light leading-snug pr-4">{item.desc}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+          </div>
+        </section>
+      ))}
+    </div>
+
+    {/* FEATURES ROW */}
+    <section class="py-16 bg-[#080808] border-t border-white/5">
+      <div class="max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-4">
+        {features.map((feature, i) => (
+          <div class={`flex items-start gap-4 ${i !== 0 ? 'lg:pl-8 lg:border-l lg:border-white/5' : ''}`}>
+            <div class="shrink-0 text-brand-400 opacity-80 pt-1">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" set:html={feature.icon}></svg>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold tracking-[0.1em] text-white uppercase mb-1">{feature.title}</h4>
+              <p class="text-[11px] text-gray-500 leading-tight">{feature.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* JOURNAL SECTION */}
+    <section class="py-24 bg-[#0a0a0a] border-t border-white/5">
+      <div class="max-w-[1600px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-3">
+          <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">Nhật Ký Hành Trình</p>
+          <h2 class="text-3xl font-serif text-white">Những Câu Chuyện <br/> Vượt Xa Điểm Đến</h2>
+        </div>
+        <div class="lg:col-span-9 flex gap-4 overflow-x-auto snap-x scrollbar-hide pb-4">
+          {journals.map((journal) => (
+            <a href="#" class="group/journal relative shrink-0 w-[200px] md:w-[220px] aspect-[4/3] bg-[#111] overflow-hidden snap-start cursor-pointer block">
+              <img src={journal.image} alt={journal.name} class="w-full h-full object-cover opacity-60 group-hover/journal:opacity-90 group-hover/journal:scale-105 transition-all duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 w-full p-4">
+                <p class="text-white font-serif text-sm mb-0.5">{journal.name}</p>
+                <h4 class="text-[9px] font-medium tracking-wider uppercase text-gray-400">{journal.desc}</h4>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* FOOTER CALL TO ACTION */}
+    <section class="py-32 bg-[url('https://media.fittour.vn/uploads/2024/01/doan-tour-xe-may-ladakh-dung-lai-ven-ho.webp')] bg-cover bg-center bg-no-repeat relative">
+      <div class="absolute inset-0 bg-[#050b14]/80"></div>
+      <div class="relative z-10 flex flex-col items-center justify-center text-center px-6">
+        <h2 class="text-4xl md:text-5xl font-serif text-white tracking-wide mb-4">THẾ GIỚI VẪN CÒN ĐÓ SỰ HOANG DÃ.</h2>
+        <p class="text-gray-300 font-light text-lg mb-10 tracking-widest uppercase text-sm">Chạm sâu hơn cùng FIT TOUR.</p>
+        <a href="#" class="px-8 py-3 border border-white/50 text-white/90 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all">
+          BẮT ĐẦU LÊN KẾ HOẠCH HÀNH TRÌNH
+        </a>
+      </div>
+    </section>
+
+    {/* BOTTOM COPYRIGHT */}
+    <footer class="bg-black py-6 text-[10px] tracking-widest text-gray-500 font-medium uppercase relative z-10">
+      <div class="max-w-[1600px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="flex-1 text-left">© FIT TOUR CO., LTD. All rights reserved.</p>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="#" class="hover:text-white transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="hover:text-white transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="hover:text-white transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+
+        <div class="flex-1 flex justify-end gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* Ẩn scrollbar cho đẹp trên Webkit */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

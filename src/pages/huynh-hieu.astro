@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import App from '../components/ReactApp/HuynhHieu/App.tsx';
+import Pagination from '@/components/ui/Pagination.astro';
+import { env } from 'cloudflare:workers';
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+const d1Db = env?.dulichcoguu_d1;
+
+// Pagination via ?page=2
+const url = new URL(Astro.request.url);
+const currentPage = Math.max(1, parseInt(url.searchParams.get('page') || '1', 10));
+const POSTS_PER_PAGE = 12;
+const offset = (currentPage - 1) * POSTS_PER_PAGE;
+
+let seoTitle = "Huynh Hieu Travel | Digital Growth Architect, Travel Marketing & SEO Strategist";
+let seoDesc = "Tôi xây dựng hệ thống tăng trưởng cho giáo dục và du lịch thông qua SEO, AI Search, Content Strategy, Analytics và Marketing Automation.";
+let seoImage = "https://media.fittour.vn/uploads/huynhhieutravel.webp";
+let adminEditUrl = "";
+let authorPosts: any[] = [];
+let totalArticles = 0;
+let totalPages = 1;
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage FROM Post WHERE slug = 'huynh-hieu' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      seoTitle = postData.metaTitle || postData.title || seoTitle;
+      seoDesc = postData.metaDescription || seoDesc;
+      seoImage = postData.featuredImage || seoImage;
+      if (postData.id) adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+    }
+
+    // Fetch paginated articles by this author
+    const [postsRes, countRes] = await Promise.all([
+      d1Db.prepare(`
+        SELECT slug, title, excerpt, featuredImage, createdAt
+        FROM Post 
+        WHERE authorId = 'admin-uuid-001' AND (status = 'published' OR status = 'publish') AND type = 'blog'
+        ORDER BY createdAt DESC LIMIT ? OFFSET ?
+      `).bind(POSTS_PER_PAGE, offset).all(),
+      d1Db.prepare(`
+        SELECT COUNT(*) as total FROM Post 
+        WHERE authorId = 'admin-uuid-001' AND (status = 'published' OR status = 'publish') AND type = 'blog'
+      `).first<any>()
+    ]);
+    authorPosts = postsRes.results || [];
+    totalArticles = countRes?.total || 0;
+    totalPages = Math.ceil(totalArticles / POSTS_PER_PAGE);
+  } catch (e) {
+    console.error("Lỗi lấy data cho trang huynh-hieu:", e);
+  }
+}
+
+// Append page number to title for SEO
+if (currentPage > 1) {
+  seoTitle = `${seoTitle} - Trang ${currentPage}`;
+}
+
+// ProfilePage Schema for E-E-A-T
+const profileSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Huynh Hieu Travel",
+    "alternateName": "Trọng Hiếu",
+    "url": "https://thericetour.com/huynh-hieu",
+    "image": seoImage,
+    "jobTitle": "Digital Growth Architect",
+    "worksFor": { "@type": "Organization", "name": "FIT TOUR", "url": "https://thericetour.com" },
+    "knowsAbout": ["Travel Marketing", "SEO Strategy", "Content Architecture", "AI Search Optimization", "Himalaya Expeditions", "Silk Road Travel"],
+    "sameAs": [
+      "https://www.facebook.com/huynhtronghieu.hcm",
+      "https://www.linkedin.com/in/huynhtronghieutravel/"
+    ]
+  }
+});
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/huynh-hieu"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="profile" />
+    {currentPage > 1 && <meta name="robots" content="noindex, follow" />}
+    <script type="application/ld+json" set:html={profileSchema} />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    </noscript>
+  </Fragment>
+
+  <!-- Profile Hero & Story — only on page 1 -->
+  {currentPage === 1 && <App client:idle />}
+
+  <!-- Full Articles Section with Pagination -->
+  {authorPosts.length > 0 && (
+    <section id="articles" class="w-full bg-[#05080f] py-20 md:py-28">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-14">
+          <span class="text-amber-500 text-xs font-bold tracking-[0.2em] uppercase block mb-4 font-mono">PUBLISHED WORKS</span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-light tracking-tight mb-4">
+            {currentPage === 1 ? 'Bài viết đã xuất bản' : `Bài viết · Trang ${currentPage}`}
+          </h2>
+          <p class="text-white/40 text-sm md:text-base max-w-xl mx-auto">
+            {totalArticles} bài viết chia sẻ trải nghiệm, kiến thức và những hành trình khám phá.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {authorPosts.map((p: any) => (
+            <a href={`/${p.slug}`} class="group block bg-[#0a0f16] border border-white/5 rounded-xl overflow-hidden hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(251,191,36,0.08)]">
+              <div class="aspect-video overflow-hidden bg-slate-800">
+                <img 
+                  src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : '/placeholder-image.jpg'} 
+                  alt={p.title}
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-[15px] leading-snug mb-2 group-hover:text-amber-400 transition-colors line-clamp-2">{p.title}</h3>
+                <p class="text-white/40 text-xs line-clamp-2 leading-relaxed">{p.excerpt || ''}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {totalPages > 1 && (
+          <div class="mt-14">
+            <Pagination 
+              currentPage={currentPage} 
+              totalPages={totalPages} 
+              baseUrl="/huynh-hieu" 
+              useQueryParam={true}
+              anchor="articles"
+            />
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+</BaseLayout>

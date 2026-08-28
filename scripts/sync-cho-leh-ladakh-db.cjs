@@ -1,0 +1,22 @@
+const fs = require('fs');
+
+const contentHTML = `
+<p>Chợ Leh trong mắt tôi không đơn thuần là một điểm đến để tiêu tiền. Nếu bạn đang tham khảo <a href="https://fittour.vn/du-lich-ladakh" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">kinh nghiệm du lịch Ladakh</a>, thì đây là nơi tuyệt vời để bạn sống chậm lại, hít căng lồng ngực bầu không khí trong trẻo của vùng cao nguyên.</p>
+<p>Điểm khiến cả đoàn chúng tôi vô cùng thích thú là những chú chó hoang to lớn với bộ lông xù tơ sưởi nắng giữa phố. Trái với vẻ ngoài to xác, chúng cực kỳ hiền lành, thân thiện và cứ nằm dài lười biếng mặc kệ dòng người qua lại.</p>
+<p>Thay vì vội vã lướt qua các gian hàng, tôi thường chọn cách nép mình vào một quán cà phê trên tầng hai ngay góc ngã tư. Gọi một ly trà bơ muối ngầy ngậy hay tách cà phê nóng, ngồi sát cửa sổ ngắm nhìn những vị lạt ma áo đỏ rảo bước - có lẽ họ vừa trở về từ <a href="https://fittour.vn/tu-vien-hemis" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">tu viện Hemis</a>, và lắng nghe tiếng những vòng quay kinh luân không ngừng xoay.</p>
+<p>Chỉ cần ngồi xuống vuốt ve bộ lông dày sụ ấy, bạn sẽ cảm nhận được nhịp sống ở đây bình yên đến lạ.</p>
+<h2>Ladakh nổi tiếng với hai chất liệu giữ ấm tuyệt đỉnh</h2>
+<p>Bên cạnh Pashmina, khăn len Yak lại là "chân ái" mà tôi cực kỳ ưa chuộng. Khăn Yak thường to, dày dặn, họa tiết thổ cẩm sặc sỡ, mang lại cảm giác ấm áp tuyệt đối trong cái lạnh buốt của vùng núi. Đặc biệt, chiếc khăn len Yak vừa giúp bạn giữ ấm, vừa là món phụ kiện rất thời trang khi chụp ảnh ở nhiều địa điểm tuyệt đẹp tại Ladakh. Mức giá của khăn Yak cũng mềm hơn rất nhiều, cực kỳ lý tưởng để làm quà tặng mùa đông mang về từ <a href="https://fittour.vn/tag/series-phuong-thanh-ladakh-lan-3" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">chuyến đi Ladakh Series</a>.</p>
+<p>Dệt từ lớp lông tơ lót của loài dê Changthangi, Pashmina chuẩn rất nhẹ, mềm, không gây ngứa và không bị tích điện. Một phép thử phổ biến mà giới sành sỏi thường dùng là luồn khăn trơn tru qua một chiếc nhẫn. Để tránh hàng giả, bạn hãy ưu tiên ghé các hợp tác xã của chính quyền (Government Emporium).</p>
+<h2>Món quà vô giá từ đất mẹ khô cằn</h2>
+<p>Khí hậu ở Leh cực kỳ khô rát, độ ẩm siêu thấp, nhưng thiên nhiên lại ban tặng cho nơi đây những thảo dược phục hồi tuyệt vời.</p>
+<p>Ngay trong khu chợ có cửa hàng chính hãng của Himalaya – thương hiệu mỹ phẩm thảo mộc nổi tiếng của Ấn Độ. Bạn có thể ghé vào mua ngay tuýp kem dưỡng ẩm sâu, sữa rửa mặt tràm trà hay son dưỡng nẻ để cứu nguy cho làn da nứt nẻ vì sương muối.</p>
+<p>Bạn nhất định phải mua thử quả mơ sấy khô (khubani) ngọt thanh. Ngoài ra, các sản phẩm từ quả hắc mai biển (sea buckthorn) như trà hay mứt là đặc sản tuyệt vời. Loài cây này mọc vươn lên trên sỏi đá khắc nghiệt nên cực kỳ giàu vitamin C, giúp tăng sức đề kháng rất tốt cho chặng hành trình dài qua <a href="https://fittour.vn/deo-khardung-la-va-chang-la" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">đèo Khardung La</a> hay tới <a href="https://fittour.vn/thung-lung-nubra" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">thung lũng Nubra</a>. Nếu lo lắng về sức khoẻ người lớn tuổi, câu chuyện về <a href="https://fittour.vn/ladakh-co-may" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">hành trình Ladakh của Cô Mây U70</a> sẽ tiếp thêm động lực cho bạn.</p>
+<h2>Đồ thủ công mỹ nghệ</h2>
+<p>Bước vào các con hẻm nhỏ, bạn sẽ choáng ngợp trước các cửa hàng bán chuông xoay Tây Tạng (singing bowl), cờ phướn Lungta hay tranh cuộn Thangka.</p>
+<p>Tôi đặc biệt ấn tượng với những món trang sức bằng bạc chạm khắc tinh xảo, đính đá ngọc lam (turquoise) và san hô đỏ. Những vật phẩm này không chỉ là trang sức, mà mang theo năng lượng bình an sâu sắc của rặng tuyết sơn quanh <a href="https://fittour.vn/hinh-anh-ho-pangong-tso" class="text-amber-700 hover:text-amber-800 font-semibold underline decoration-amber-500/30 underline-offset-4">hồ Pangong Tso</a> hùng vĩ.</p>
+`;
+
+const sqlStatement = `UPDATE Post SET content = '${contentHTML.replace(/'/g, "''")}' WHERE slug = 'cho-leh-ladakh';`;
+fs.writeFileSync('sync-db.sql', sqlStatement);
+console.log("SQL script generated successfully!");

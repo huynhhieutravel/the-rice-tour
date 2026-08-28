@@ -1,0 +1,701 @@
+08:25:02 [@astrojs/cloudflare] Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+08:25:02 [vite] Re-optimizing dependencies because vite config has changed
+[vite] connected.
+08:25:03 [ERROR] [vite] (!) Failed to run dependency scan. Skipping dependency pre-bundling. Error:   Failed to scan for dependencies from entries:
+  /Users/huynhtronghieu/Documents/thericetour/src/components/AlaskaBaggageChecklist.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/RelatedBlog.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/RelatedEmagazine.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/Safelist.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/AdminLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/AstroNativeLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/BaseLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/BlogLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/PageLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/layouts/V2Layout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/styles/tw-safelist.html
+/Users/huynhtronghieu/Documents/thericetour/src/pages/404.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/500.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/800-hanh-trinh-cung-fit-tour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/[...slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/_about-demo.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/_index_old.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/_test-shortcode.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/about-demo.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/about-us.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-con-sot-vang-klondike.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-denali-dinh-nui-cao-nhat-bac-my.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-dieu-con-lai.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-gau-nau-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-glacier-nhung-dong-song-bang.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-mien-bien-cuong-cuoi-cung.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-moose-nai-sung-tam.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-mua-ngam-ca-voi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-nguoi-ban-dia.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/alaska-thuong-vu-72-trieu-usd-thay-doi-lich-su.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/am-thuc-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/anchorage.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/bay-truc-thang-tren-song-bang-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/chinh-sach-bao-mat.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/cho-leh-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/chuan-bi-suc-khoe-kora-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/co-may.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/company-trip.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/contact.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/corporate-retreat.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/cot-moc-150-chuyen-di-himalaya.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/cot-moc-250-hanh-trinh-den-trung-quoc.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/cot-moc-80-chuyen-di-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/danh-gia-khach-hang-ve-fit-tour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/demo-template.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/deo-umling-la.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/design.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/di-hoa-vien.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dia-diem-to-chuc-nha-trang.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dia-diem-to-chuc.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dia-mao-dan-ha.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/diem-den-fit-tour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dieu-can-biet-khi-du-lich-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dieu-can-biet-truoc-khi-bay-truc-thang-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/du-lich-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/du-lich-mong-co-cung-em-be-18-thang.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/du-lich-tay-tang-tu-tuc-co-duoc-khong.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/gallery-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/gioi-thieu.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/hinh-anh-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/ho-pangong-tso.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/ho-tso-moriri.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/huynh-hieu.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/index_old.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/jet-lag-khi-du-lich-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/khach-hang-quay-lai-tay-tang-kailash-3-nam.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/khan-ran-nam-bo.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/kinh-nghiem-du-lich-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/le-hoi-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/leo-nui-o-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/lien-he.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/ly-do-ban-nen-du-lich-ladakh-cung-fit-tour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/motor-trip.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/ngam-song-bang-giua-bien-alaska.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/ngay-dau-tien-o-ladakh-nen-luu-y-gi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/nhung-thac-mac-thuong-gap-khi-hanh-huong-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/noi-o-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/nui-kailash-la-gi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/pho-co-hutong.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/quynh-anh-shyn-duoc-cau-hon-o-kyrgyzstan.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/quynh-anh-shyn-silk-road.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/say-do-cao.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/search.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/seward-highway.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/signature.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/song-indus.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tai-khoan-thanh-toan.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/talkeetna.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/test-rewrite-404.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/test-route-123.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/test-shortcode.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thien-an-mon.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thien-dan-bac-kinh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thong-tin-can-biet-hanh-huong-nui-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thung-lung-nubra.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thung-lung-zanskar.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/to-chuc-su-kien-cong-ty-cho-doanh-nghiep.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour-incentive-travel-doanh-nghiep.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour-le-giang-6n5d.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/trai-nghiem-du-lich-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/trang-phuc-kora-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tro-choi-team-building-bai-bien.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/truyen-thuyet-va-su-that-ve-nui-kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tu-cam-thanh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tu-vien-ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tu-vien-phugtal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tu-vien-stongdey.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tuyen-dung-nhan-vien-kinh-doanh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tuyen-dung-truong-nhom-kinh-doanh-du-lich.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/van-ly-truong-thanh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/vi-sao-cac-pharaoh-chon-bo-dong-de-song-va-bo-tay-de-yen-nghi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/vi-sao-kora-kailash-lam-thay-doi-cuoc-doi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/why-travel-china-fittour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/category/CorporateArchiveLayout.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/ComponentLibrary.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/ErrorBoundary.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/KnowledgeGraph.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/MediaPickerEventBridge.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/MediaPickerModal.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/PostEditor.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/PostEditorWrapper.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/AuthorBox.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/RelatedPosts.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/RelatedTourWidget.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/ShareButtons.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/TableOfContents.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/china/ChinaBottomMenu.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/china/QuickViewModal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/FloatingToast.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/dong-a/DongAQuickViewModal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/gallery/CoguuGallery.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/gallery/CoguuGalleryStory.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/forms/CorporateContactModal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/forms/CorporateRegistrationForm.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/kailash/DiaryCenterpiece.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/kailash/PillarGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ladakh/DiaryCenterpiece.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ladakh/LadakhTours.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ladakh/PillarGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/reviews/CustomerStories.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/reviews/LiveGoogleReviews.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/_DoanhNghiepBottomMenuSafelist.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundDestinationTabs.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundFeaturedTours.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundFooter.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundHero.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundJournal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundNavbar.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundPlannerWidget.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundReviews.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundTravelStyles.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/inbound/InboundWhyUs.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/seo/HeadMeta.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/seo/JsonLdSchema.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/seo/ResourceHints.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shorts/ShortsFeed.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/silkroad/SilkRoadModal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/AuthorCard.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/CorporateFormBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/CorporateTripsBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/EmagazineRelated.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/HimalayaToursSlider.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/KailashPillarGuide.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/LadakhCarouselScript.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/LichKhoiHanhBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/LocationSlider.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PakistanCTA.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PakistanDiscoveryGrid.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PakistanPortrait.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PakistanStories.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PortraitCenterpiece.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PortraitCenterpieceWrapper.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/ShortcodeRenderer.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/SnippetBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/TestimonialBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/YoutubeEmbed.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/PremiumCTABar.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourCard.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourFAQ.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourFAQItem.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourGallery.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourItinerary.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourItineraryItem.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourQRCode.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourScripts.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourSidebarPriceCard.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourTeamKailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tour/TourUnfoldSection.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/tracking/GtmEventTracker.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/AjaxSearch.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/Button.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/CorporateBottomMenu.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/CtaBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/FeaturedStories.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/OptimizedImage.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/Pagination.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/Skeleton.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ui/ThemeToggle.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2BottomGrid.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Calendar.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Collections.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Destinations.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Footer.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Header.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Hero.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Journal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2Team.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/V2WallOfTrust.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/login.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/new.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/run-migration.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/schema.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/scripts.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/settings.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/template-scrollytelling.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/template-tour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/author/[...slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/blog/[...page].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/bac-cuc.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/bhutan.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/chau-phi.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/himalaya.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/kailash.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/ladakh.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/nepal.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/pakistan.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/sikkim.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/silkroad.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/tay-tang.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/country/trung-quoc.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/destination/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/destinations/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/dich-vu-visa/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/emagazine/bac-mong-co-ky-truyen-taiga.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/gallery/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/preview-post/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/shorts/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/shorts/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tag/[...slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tailor-made/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/thank-you/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour/1-day-premium-cu-chi-tunnels.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour-doanh-nghiep/dang-ky.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tour-doanh-nghiep/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/trip/[slug].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/tours/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/extensions/FaqBlockView.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/admin/extensions/MediaCardView.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/TestComponent.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/TestErrorBoundary.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/main.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/blocks/BlockRenderer.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/blog/blocks/UnknownBlock.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/App_backup.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/DieuCanBietLadakh.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HuynhHieu/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/TestComponent.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/TestErrorBoundary.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/main.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/LyDoChonFitTourLadakh.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/PortraitCenterpiece.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone250/ChinaEmagazineSlider.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone250/NoShoppingPhilosophy.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone250/TeamChina.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/main.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/App.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataCountry.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataPost.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataTour.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioArtisans.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioEpilogue.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioGrid.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioHero.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioNumbers.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/v2/about/PortfolioProcess.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/analytics/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/comments/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/components/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/countries/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/countries/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/destinations/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/destinations/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/layouts/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/layouts/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/link-matrix/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/data-blocks/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/links/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/editorial-pipeline/compare.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/editorial-pipeline/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/categories/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/media/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/posts/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/posts/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/pages/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/pages/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/shorts/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/shorts/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/roles/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/seo/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/popups/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/shorts-topics/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/shorts-topics/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/submissions/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/tags/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/tours/edit.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/tours/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/tools/graph.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/tools/site-health.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/users/[id].astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/users/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/users/new.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/sitemap/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/pages/admin/snippets/index.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ChoLehLadakh/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/AuroraControl.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/AuthorCard.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/ChinaHeritageEditorial.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/ClassicalImperialChina.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/EMagazineArticle.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/HeroPoster.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/HistoricalTimeline.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/InteractiveMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/LandscapeSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/SeriesNavigation.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/SilkRoadCollection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/AlaskaApp/components/SurvivalChecklist.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/PassComparison.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DeoUmlingLa/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/FloatingButton.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/FooterApp.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoTsoMoriri/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HuynhHieu/sections/AuthorStorySection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HuynhHieu/sections/HeroSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/HoPangongTso/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/AudioPlayer.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/DieuCanBietLadakh/components/PillarGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/AuroraControl.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/AuthorCard.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/ChinaHeritageEditorial.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/ClassicalImperialChina.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/EMagazineArticle.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/HeroPoster.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/HistoricalTimeline.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/InteractiveMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/LadakhChecklist.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/LandscapeSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/SeriesNavigation.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/SilkRoadCollection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhApp/components/SurvivalChecklist.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/AudioPlayer.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LyDoChonFitTourLadakh/components/ReasonsGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/AudioPlayer.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/AvantGardeScrapbookGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/CinematicOdysseyGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/EditorialAlpineGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/HimalayanJournalGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/LocalConnectionSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/PillarGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone150/components/VoguePortraitCenterpiece.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/components/AudioPlayer.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/LadakhCoMay/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/FloatingButton.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/FooterApp.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/SayDoCaoChecklist.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SayDoCao/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/CuisineSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/EditorialSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/HeritageSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/HeroPoster.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/InteractiveMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/LandscapeSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/NomadicSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SilkRoad/components/PlannerSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/AudioPlayer.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/AvantGardeScrapbookGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/CinematicOdysseyGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/EditorialAlpineGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/HimalayanJournalGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/LocalConnectionSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/PillarGuide.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/Milestone80/components/VoguePortraitCenterpiece.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TraiNghiemLadakh/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/FloatingButton.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/FooterApp.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungNubra/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/EmagazineCTA.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/JourneySelection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/ThungLungZanskar/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/ComparisonTable.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienPhugtal/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/default/DesktopNav.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/default/Header.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/megamenu/MegaMenuCards.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/megamenu/MegaMenuDoanhNghiep.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/megamenu/MegaMenuLinks.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/megamenu/MegaMenuLogos.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/layout/header/shared/Logo.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/footer/default/Footer.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/footer/sections/FooterBottom.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/footer/sections/FooterBrand.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/footer/sections/FooterContact.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/footer/sections/FooterLinks.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/FloatingButton.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/FooterApp.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/SongIndus/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/Backpack.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/ComparisonTable.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/FaqSection.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/Guestbook.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/MemoryMap.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/PhotoGallery.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/RelatedArticles.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/ReactApp/TuVienStongdey/components/SignatureTour.tsx
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/overlay/mobile-menu/MenuPanel.astro
+/Users/huynhtronghieu/Documents/thericetour/src/components/system/overlay/mobile-menu/MobileMenu.astro
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/ui/CtaBlock.astro" for import "default"[0m
+
+    src/components/blog/blocks/BlockRenderer.astro:6:7:
+[37m      6 │ import [32mCtaBlock[37m from '@/components/ui/CtaBlock.astro';
+        ╵        [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/SnippetBlock.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:3:7:
+[37m      3 │ import [32mSnippetBlock[37m from './SnippetBlock.astro';
+        ╵        [32m~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/ui/CtaBlock.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:4:7:
+[37m      4 │ import [32mCtaBlock[37m from '../ui/CtaBlock.astro';
+        ╵        [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/LichKhoiHanhBlock.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:7:7:
+[37m      7 │ import [32mLichKhoiHanhBlock[37m from './LichKhoiHanhBlock.astro';
+        ╵        [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/RelatedBlog.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:8:7:
+[37m      8 │ import [32mRelatedBlog[37m from '../RelatedBlog.astro';
+        ╵        [32m~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PortraitCenterpiece.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:9:7:
+[37m      9 │ import [32mPortraitCenterpiece[37m from './PortraitCenterpiece.astro';
+        ╵        [32m~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/PakistanPortrait.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:11:7:
+[37m      11 │ import [32mPakistanPortrait[37m from './PakistanPortrait.astro';
+         ╵        [32m~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/AuthorCard.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:15:7:
+[37m      15 │ import [32mAuthorCard[37m from './AuthorCard.astro';
+         ╵        [32m~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/CorporateFormBlock.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:16:7:
+[37m      16 │ import [32mCorporateFormBlock[37m from './CorporateFormBlock.astro';
+         ╵        [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataPost.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:18:7:
+[37m      18 │ import [32mDataPost[37m from './data/DataPost.astro';
+         ╵        [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataTour.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:19:7:
+[37m      19 │ import [32mDataTour[37m from './data/DataTour.astro';
+         ╵        [32m~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/data/DataCountry.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:20:7:
+[37m      20 │ import [32mDataCountry[37m from './data/DataCountry.astro';
+         ╵        [32m~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNo matching export in "html:/Users/huynhtronghieu/Documents/thericetour/src/components/shortcodes/KailashPillarGuide.astro" for import "default"[0m
+
+    src/components/shortcodes/ShortcodeRenderer.astro:21:7:
+[37m      21 │ import [32mKailashPillarGuide[37m from './KailashPillarGuide.astro';
+         ╵        [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+    at failureErrorWithLog (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1748:15)
+    at /Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1207:25
+    at runOnEndCallbacks (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1588:45)
+    at buildResponseToResult (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1205:7)
+    at /Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1217:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:1216:54)
+    at handleRequest (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:909:17)
+    at handleIncomingPacket (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:934:7)
+    at Socket.readFromStdout (/Users/huynhtronghieu/Documents/thericetour/node_modules/esbuild/lib/main.js:862:7)
+08:25:03 [WARN] [vite] Default inspector port 9229 not available, using 9232 instead
+
+Using secrets defined in .env
+08:25:03 [vite] ✨ new dependencies optimized: @astrojs/cloudflare/entrypoints/server
+08:25:03 [vite] ✨ optimized dependencies changed. reloading
+08:25:03 [vite] [vite] program reload
+08:25:04 [types] Generated 0ms
+(node:61478) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 change listeners added to [FSWatcher]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+08:25:04 [WARN] [content] Content config not loaded
+08:25:04 [vite] Re-optimizing dependencies because vite config has changed
+08:25:04 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.1.9 ready in 2221 ms
+┃ Local    http://localhost:4325/
+┃ Network  use --host to expose
+08:25:04 watching for file changes...
+08:25:19 [vite] 08:25:19 [200] /tour/1-day-premium-cu-chi-tunnels 151ms
+08:25:20 [vite] 08:25:20 [200] /api/popups/active 2ms
+08:26:44 [watch] /src/styles/global.css
+08:26:45 [vite] 08:26:45 [200] /tour/1-day-premium-cu-chi-tunnels 129ms
+08:26:45 [vite] 08:26:45 [200] /api/popups/active 1ms
+08:27:15 [watch] /src/styles/tour-landing.css, /src/styles/global.css
+08:27:25 [vite] [vite] program reload
+08:27:25 [vite] 08:27:25 [200] /tour/1-day-premium-cu-chi-tunnels 58ms
+08:27:25 [vite] 08:27:25 [200] /api/popups/active 2ms
+08:29:51 [watch] /src/styles/global.css
+08:29:51 [vite] ✨ new dependencies optimized: cheerio
+08:29:51 [vite] ✨ optimized dependencies changed. reloading
+08:29:51 [vite] [vite] program reload
+08:29:53 [vite] ✨ new dependencies optimized: motion/react, lucide-react
+08:29:53 [vite] ✨ optimized dependencies changed. reloading
+08:29:53 [vite] [vite] program reload
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 10px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 10px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 10px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 10px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 18px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 18px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 18px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 100px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 15px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 1400px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 10px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [WARN] [vite] [Shortcode] Unknown: 11px
+08:29:54 [vite] 08:29:54 [200] /tour/1-day-premium-cu-chi-tunnels 1212ms
+08:29:54 [vite] 08:29:54 [200] /api/popups/active 4ms
+08:30:07 [watch] /src/styles/tour-landing.css, /src/styles/global.css
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 10px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 10px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 10px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 10px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 18px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 18px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 18px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 100px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 15px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 1400px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 10px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [WARN] [vite] [Shortcode] Unknown: 11px
+08:30:13 [vite] 08:30:13 [200] /tour/1-day-premium-cu-chi-tunnels 32ms
+08:37:19 [watch] scratch/extracted_old_content.html

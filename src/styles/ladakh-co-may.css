@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-amber-50: #fff9eb;
+  --color-amber-100: #fef0c7;
+  --color-amber-900: #78350f;
+  
+  --animate-scroll-down: scroll-down 2s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* Custom editorial effects */
+.drop-cap::first-letter,
+.prose-dropcap p:first-of-type::first-letter {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  font-weight: bold;
+  color: #b45309; /* warm amber-700 */
+}
+
+/* Prose styles for raw HTML content */
+.prose-ladakh p + p,
+.prose-ladakh p + ul,
+.prose-ladakh ul + p {
+  margin-top: 1rem;
+}
+
+.prose-ladakh ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flow-root;
+}
+
+.prose-ladakh li {
+  margin-top: 0.5rem;
+}
+
+.prose-ladakh a {
+  color: #b45309;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(245, 158, 11, 0.3);
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+.prose-ladakh a:hover {
+  color: #92400e;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

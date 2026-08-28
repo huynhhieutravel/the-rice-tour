@@ -1,0 +1,189 @@
+---
+// src/components/system/footer/default/Footer.astro
+import FooterBrand from '../sections/FooterBrand.astro';
+import FooterLinks from '../sections/FooterLinks.astro';
+import FooterContact from '../sections/FooterContact.astro';
+import FooterBottom from '../sections/FooterBottom.astro';
+import SnippetBlock from '@/components/shortcodes/SnippetBlock.astro';
+import { env } from 'cloudflare:workers';
+
+let activeFooterConfig: any = null;
+let contactConfig: any = null;
+let companyConfig: any = null;
+let doanhNghiepSnippet: any = null;
+
+try {
+  let layoutProfiles: any[] = [];
+  
+  if (env?.dulichcoguu_d1) {
+    const d1Db = env.dulichcoguu_d1;
+    const { results } = await d1Db.prepare("SELECT key, value FROM SiteSetting WHERE key IN ('layout_profiles', 'contact', 'company')").all();
+    if (results && results.length > 0) {
+      const dbSettings = results.reduce((acc: any, row: any) => {
+        try { acc[row.key] = typeof row.value === 'string' ? JSON.parse(row.value) : row.value; } catch(e) { acc[row.key] = row.value; }
+        return acc;
+      }, {});
+      
+      layoutProfiles = dbSettings['layout_profiles'] || [];
+      contactConfig = dbSettings['contact'];
+      companyConfig = dbSettings['company'];
+    }
+  }
+
+  // Layout Matching Logic
+  const currentPath = Astro.url.pathname;
+  let matchedProfile = null;
+
+  if (layoutProfiles && layoutProfiles.length > 0) {
+    // 1. Specific condition match
+    matchedProfile = layoutProfiles.find(profile => {
+      if (profile.isDefault) return false;
+      if (!profile.conditions) return false;
+      return profile.conditions.some((cond: any) => {
+        if (cond.type === 'path_starts_with' && cond.value) return currentPath.startsWith(cond.value);
+        if (cond.type === 'exact_path' && cond.value) return currentPath === cond.value;
+        return false;
+      });
+    });
+
+    // 2. Default fallback
+    if (!matchedProfile) matchedProfile = layoutProfiles.find(p => p.isDefault);
+    if (!matchedProfile && layoutProfiles.length > 0) matchedProfile = layoutProfiles[0];
+    
+    if (matchedProfile && matchedProfile.footer_config && Object.keys(matchedProfile.footer_config).length > 0) {
+      activeFooterConfig = matchedProfile.footer_config;
+    }
+
+    // Tự động load Snippet Bottom Menu cho Giao diện Doanh nghiệp
+    if (matchedProfile?.id === 'corporate') {
+      const { results: snippetRes } = await d1Db.prepare("SELECT * FROM Snippet WHERE slug = 'doanh-nghiep-bottom-menu'").all();
+      if (snippetRes && snippetRes.length > 0) {
+        doanhNghiepSnippet = snippetRes[0];
+      }
+    }
+  }
+} catch (e) {
+  console.error("Failed to fetch footer layout config from backend:", e);
+}
+
+// Fallbacks
+const footerConfig = activeFooterConfig || {};
+
+// Fallbacks
+const brandLinks = footerConfig?.brandLinks || [
+  { name: "Về chúng tôi", href: "/gioi-thieu/" },
+  { name: "Our Portfolio", href: "/portfolio/" },
+  { name: "Our Team", href: "/our-team/" },
+  { name: "Our Destinations and Projects", href: "/diem-den-fit-tour/" },
+  { name: "Câu chuyện thương hiệu của FIT Tour", href: "/fit-team/" },
+  { name: "Đánh giá của Khách hàng về FIT Tour", href: "/danh-gia-khach-hang-ve-fit-tour/" }
+];
+
+const tourLinks = footerConfig?.tourLinks || [
+  { name: "Tour du lịch nước ngoài", href: "/du-lich-nuoc-ngoai/" },
+  { name: "Motor Trip nước ngoài", href: "/motor-trip/" },
+  { name: "Tour doanh nghiệp", href: "/tour-doanh-nghiep/" },
+  { name: "Dịch vụ Visa", href: "https://thericetour.com/dich-vu-visa/" }
+];
+
+const infoLinks = footerConfig?.infoLinks || [
+  { name: "Blog", href: "/blog/" },
+  { name: "Emagazine", href: "/emagazine/" },
+  { name: "Hình ảnh du lịch", href: "/gallery/" },
+  { name: "Câu chuyện du lịch", href: "/cau-chuyen-du-lich/" },
+  { name: "Kinh nghiệm du lịch nước ngoài", href: "/kinh-nghiem-du-lich-nuoc-ngoai/" },
+  { name: "Tin tức", href: "/tin-tuc-du-lich/" }
+];
+
+const confirmLinks = footerConfig?.confirmLinks || [
+  { name: "Liên hệ", href: "/lien-he/" },
+  { name: "Chính sách bảo mật", href: "/chinh-sach-bao-mat/" },
+  { name: "Điều khoản dịch vụ", href: "/dieu-khoan-dich-vu/" },
+  { name: "Tài khoản thanh toán", href: "/tai-khoan-thanh-toan/" },
+  { name: "Tuyển dụng", href: "https://thericetour.com/tuyen-dung/" }
+];
+
+---
+
+<footer class="bg-black pt-16 pb-8 border-t border-gray-900 relative z-20 font-sans">
+  <div class="site-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
+      
+      {/* Column 1: Brand & Intro */}
+      <div class="col-span-1">
+        <FooterBrand links={brandLinks} company={companyConfig} />
+      </div>
+
+      {/* Column 2: Tour & Thông tin */}
+      <div class="col-span-1 flex flex-col gap-8">
+        <FooterLinks 
+          title="Tour"
+          links={tourLinks}
+        />
+        <FooterLinks 
+          title="Thông tin"
+          links={infoLinks}
+        />
+      </div>
+
+      {/* Column 3: Xác nhận */}
+      <div class="col-span-1">
+        <FooterLinks 
+          title="Xác nhận"
+          links={confirmLinks}
+        />
+      </div>
+
+      {/* Column 4: Liên hệ */}
+      <div class="col-span-1">
+        <FooterContact contact={contactConfig} />
+      </div>
+
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-800">
+      <FooterBottom company={companyConfig} />
+    </div>
+  </div>
+</footer>
+
+{doanhNghiepSnippet && (
+  <SnippetBlock name="doanh-nghiep-bottom-menu" dataMap={{ snippets: { 'doanh-nghiep-bottom-menu': doanhNghiepSnippet } }} />
+)}
+
+<style is:global>
+  /* 
+   * ANTI-BLEED SHIELD
+   * Bảo vệ Footer khỏi các CSS lây lan từ content của Elementor (ví dụ: Logo khổng lồ, chữ màu đỏ, v.v.)
+   */
+  footer.bg-black {
+    /* Đảm bảo nền luôn đen dù bị đè CSS biến */
+    background-color: #000 !important;
+  }
+  
+  /* Cố định kích thước Logo */
+  footer.bg-black img[alt="FIT Tour"] {
+    max-width: 180px !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Bảo vệ màu chữ cho thẻ a */
+  footer.bg-black a {
+    color: #d1d5db !important; /* text-gray-300 */
+    text-decoration: none !important;
+  }
+  footer.bg-black a:hover {
+    color: #ffffff !important;
+  }
+
+  /* Bảo vệ màu cam cho các tiêu đề H3 (text-brand-500) */
+  footer.bg-black h3 {
+    color: #f97316 !important; /* Tailwind orange-500, default brand color */
+  }
+
+  /* Bảo vệ text liên hệ (Hotline, Địa chỉ) */
+  footer.bg-black p, footer.bg-black span, footer.bg-black li {
+    color: #d1d5db !important;
+  }
+</style>

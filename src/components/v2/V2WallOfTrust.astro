@@ -1,0 +1,88 @@
+---
+// src/components/v2/V2WallOfTrust.astro
+---
+<section id="wall-of-trust" class="w-full relative py-20 overflow-hidden border-t border-white/5">
+  
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://media.fittour.vn/uploads/2024/06/nhom-du-khach-tai-ho-pangong-motor-adventures-ladakh-fit-tour.webp" 
+      alt="FIT Tour Travelers" 
+      class="w-full h-full object-cover grayscale-[30%] brightness-[40%]"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-[#0a0a0a]/50"></div>
+  </div>
+
+  <div class="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+    
+    <!-- Header -->
+    <div class="flex items-center gap-6 w-full max-w-sm mb-16">
+      <h2 class="font-serif text-xl md:text-2xl text-[#c5a365] tracking-widest uppercase shrink-0">
+        Wall of Trust
+      </h2>
+      <div class="h-px bg-white/20 flex-grow"></div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 mb-20 text-center">
+      
+      <!-- Stat 1: Happy Travelers -->
+      <div class="flex flex-col items-center group">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c5a365" stroke-width="1.5" class="mb-4 group-hover:-translate-y-1 transition-transform">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span class="font-serif text-4xl md:text-5xl text-[#c5a365] font-bold mb-2">10,000+</span>
+        <span class="font-mono text-[9px] uppercase tracking-widest text-white font-bold">HAPPY TRAVELERS</span>
+      </div>
+
+      <!-- Stat 2: Curated Journeys -->
+      <div class="flex flex-col items-center group">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c5a365" stroke-width="1.5" class="mb-4 group-hover:-translate-y-1 transition-transform">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="font-serif text-4xl md:text-5xl text-[#c5a365] font-bold mb-2">600+</span>
+        <span class="font-mono text-[9px] uppercase tracking-widest text-white font-bold">CURATED JOURNEYS</span>
+      </div>
+
+      <!-- Stat 3: Average Rating -->
+      <div class="flex flex-col items-center group">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="mb-4 text-[#c5a365] group-hover:-translate-y-1 transition-transform">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span class="font-serif text-4xl md:text-5xl text-[#c5a365] font-bold mb-2">4.9<span class="text-2xl text-[#c5a365]/70">/5</span></span>
+        <span class="font-mono text-[9px] uppercase tracking-widest text-white font-bold">AVERAGE RATING</span>
+      </div>
+
+      <!-- Stat 4: Corporate Partners -->
+      <div class="flex flex-col items-center group">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c5a365" stroke-width="1.5" class="mb-4 group-hover:-translate-y-1 transition-transform">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+        <span class="font-serif text-4xl md:text-5xl text-[#c5a365] font-bold mb-2">150+</span>
+        <span class="font-mono text-[9px] uppercase tracking-widest text-white font-bold">CORPORATE PARTNERS</span>
+      </div>
+
+    </div>
+
+    <!-- Video Button -->
+    <div class="flex justify-end pr-8 md:pr-16">
+      <div class="flex flex-col items-center gap-3 cursor-pointer group">
+        <div class="w-14 h-14 rounded-full border border-white/30 flex items-center justify-center bg-black/40 backdrop-blur-sm group-hover:bg-[#c5a365] group-hover:border-[#c5a365] transition-all">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="ml-1 text-white group-hover:text-black transition-colors">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-[0.1em] text-white/80 group-hover:text-[#c5a365] transition-colors">
+          SEE WHAT OUR<br />TRAVELERS SAY
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import { env } from 'cloudflare:workers';
+import slugify from 'slugify';
+
+// This route ONLY redirects to author profile pages.
+// It does NOT auto-generate author archive pages.
+// If an author has a profile URL → 301 redirect
+// If not → 404
+
+let { slug } = Astro.params;
+
+if (!slug) {
+  return Astro.rewrite("/404");
+}
+
+// Strip pagination suffix and trailing slashes
+slug = slug.replace(/\/+$/, '').replace(/\/page\/\d+$/, '');
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/404");
+
+// Find author name from slug
+const authorsRes = await d1Db.prepare("SELECT DISTINCT author FROM Post WHERE author IS NOT NULL AND author != ''").all();
+const distinctAuthors = authorsRes.results || [];
+
+let matchedAuthorName: string | null = null;
+for (const row of distinctAuthors) {
+  const authorStr = row.author as string;
+  const authorSlug = slugify(authorStr, { lower: true, strict: true, locale: 'vi' });
+  if (authorSlug === slug) {
+    matchedAuthorName = authorStr;
+    break;
+  }
+}
+
+if (!matchedAuthorName) {
+  return Astro.rewrite("/404");
+}
+
+// Only redirect to profile page — no auto-generated archive
+const authorProfile = await d1Db.prepare('SELECT url FROM "User" WHERE (displayName = ? OR username = ?) AND url IS NOT NULL').bind(matchedAuthorName, matchedAuthorName).first<any>();
+if (authorProfile?.url) {
+  let redirectTarget = authorProfile.url;
+  try {
+    const parsed = new URL(authorProfile.url);
+    redirectTarget = parsed.pathname;
+  } catch {}
+  return Astro.redirect(redirectTarget, 301);
+}
+
+// No profile URL → 404 (do not auto-generate author pages)
+return Astro.rewrite("/404");
+---

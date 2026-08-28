@@ -1,0 +1,1193 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { Clock, Calendar, ChevronRight, CheckCircle2 } from 'lucide-react';
+
+const d1Db = env?.dulichcoguu_d1;
+let post;
+try {
+  if (d1Db) post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('pho-co-hutong').first<any>(),
+    { route: Astro.url.pathname, slug: 'pho-co-hutong', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  // Gracefully fallback if DB error or not created yet
+}
+
+// Fallback metadata if post is not yet populated in CMS
+if (!post) {
+  post = {
+    id: 996,
+    title: 'Phố Cổ Hutong Bắc Kinh: Kinh Nghiệm Tham Quan Các Con Ngõ Lịch Sử',
+    excerpt: 'Khám phá phố cổ Hutong Bắc Kinh: Từ Nanluoguxiang, Yandai Xiejie đến những con ngõ tĩnh lặng như Wudaoying và Fangjia. Lịch trình đi bộ, trải nghiệm Tứ Hợp Viện và ẩm thực địa phương.',
+    featuredImage: 'https://media.fittour.vn/uploads/pho-co-hutong.webp',
+    author: 'Huynh Hieu Travel',
+    createdAt: '2026-08-19T08:00:00.000Z',
+    updatedAt: '2026-08-19T08:00:00.000Z',
+    readingTime: 12
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Phố Cổ Hutong Bắc Kinh: Kinh Nghiệm Tham Quan Các Con Ngõ Lịch Sử';
+const seoDesc = post.seoDesc || post.excerpt || 'Khám phá phố cổ Hutong Bắc Kinh: Từ Nanluoguxiang, Yandai Xiejie đến những con ngõ tĩnh lặng như Wudaoying và Fangjia. Lịch trình đi bộ, trải nghiệm Tứ Hợp Viện và ẩm thực địa phương.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/pho-co-hutong.webp';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-08-19T08:00:00.000Z';
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "Max Vũ": {
+    name: "Max Vũ",
+    url: "/max-vu",
+    img: "https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp"
+  },
+  "Huy Ngô": {
+    name: "Huy Ngô",
+    url: "/hdv-huy-ngo",
+    img: "https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/huynh-hieu",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["Huynh Hieu Travel"];
+// ------------------
+
+const adminEditUrl = post.id && post.id !== 995 && post.id !== 996 && post.id !== 997 && post.id !== 998 && post.id !== 999 ? `/admin/posts/edit?id=${post.id}` : '#';
+
+// TOC Navigation Structure
+const toc = [
+  { id: "gioi-thieu", title: "Giới thiệu", icon: "🏠" },
+  { id: "la-gi", title: "Phố Cổ Hutong Bắc Kinh Là Gì?" },
+  { id: "tu-hop-vien", title: "Tứ Hợp Viện Là Gì? Có Liên Quan Gì Đến Hutong?" },
+  { id: "lich-su", title: "Lịch Sử Phố Cổ Hutong Bắc Kinh" },
+  { id: "truc-trung-tam", title: "Phố Cổ Hutong Và Trục Trung Tâm Bắc Kinh" },
+  { id: "vi-sao-dang-kham-pha", title: "Vì Sao Phố Cổ Hutong Đáng Khám Phá?" },
+  { id: "chon-khu-nao", title: "Nên Chọn Khu Phố Cổ Hutong Nào?" },
+  { id: "cac-khu-dang-di", title: "Những Khu Phố Cổ Hutong Đáng Đi Nhất" },
+  { id: "shichahai", title: "• Shichahai – Houhai", indent: true },
+  { id: "nanluoguxiang", title: "• Nanluoguxiang & Beiluoguxiang", indent: true },
+  { id: "wudaoying", title: "• Wudaoying Hutong", indent: true },
+  { id: "fangjia", title: "• Fangjia Hutong", indent: true },
+  { id: "maoer-juer", title: "• Mao'er – Yu'er – Heizhima", indent: true },
+  { id: "yandai-xiejie", title: "• Yandai Xiejie", indent: true },
+  { id: "guozijian", title: "• Guozijian Và Yonghegong", indent: true },
+  { id: "lanman-hutong", title: "• Lanman Hutong", indent: true },
+  { id: "kham-pha-bang-cach-nao", title: "Khám Phá Phố Cổ Bằng Cách Nào?" },
+  { id: "tuyen-goi-y", title: "Tuyến Phố Cổ Hutong Gợi Ý" },
+  { id: "bao-lau-la-du", title: "Khám Phá Bao Lâu Là Đủ?" },
+  { id: "sang-hay-toi", title: "Phố Cổ Hutong Nên Đi Sáng Hay Tối?" },
+  { id: "an-uong", title: "Phố Cổ Hutong Bắc Kinh Có Gì Để Ăn?" },
+  { id: "co-phu-hop-tre-em", title: "Phố Cổ Hutong Có Phù Hợp Trẻ Em?" },
+  { id: "co-dang-di-khong", title: "Phố Cổ Hutong Có Đáng Đi Không?" },
+  { id: "7-dieu-can-nho", title: "7 Điều Cần Nhớ Trước Khi Khám Phá" },
+  { id: "faq", title: "Câu Hỏi Thường Gặp (FAQ)" },
+  { id: "hanh-trinh-fit-tour", title: "Phố Cổ Hutong Trong Hành Trình FIT TOUR" }
+];
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": seoTitle,
+          "image": [seoImage],
+          "datePublished": "2026-08-19T08:00:00+07:00",
+          "dateModified": new Date().toISOString(),
+          "author": {
+            "@type": "Person",
+            "name": authorData.name,
+            "url": authorData.url
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "FIT TOUR",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+            }
+          },
+          "description": seoDesc
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang chủ",
+              "item": "https://thericetour.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog Du Lịch",
+              "item": "https://thericetour.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Phố Cổ Hutong Bắc Kinh",
+              "item": "https://thericetour.com/pho-co-hutong"
+            }
+          ]
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[580px] lg:min-h-[660px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src={seoImage} 
+          alt="Phố Cổ Hutong Bắc Kinh Ngõ Cổ Lịch Sử Trung Quốc" 
+          class="w-full h-full object-cover object-center opacity-75" 
+          width="1920" 
+          height="1080"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white font-semibold line-clamp-1">Phố Cổ Hutong Bắc Kinh</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {post.title}
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Khám phá một Bắc Kinh khác qua những con ngõ và nếp nhà Tứ Hợp Viện
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Nếu Tử Cấm Thành cho thấy Bắc Kinh của hoàng gia, Thiên Đàn cho thấy thế giới của nghi lễ tế Trời, thì Phố Cổ Hutong Bắc Kinh lại đưa du khách đến gần hơn với đời sống đô thị truyền thống của người dân nơi đây.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="40" 
+              height="40" 
+              class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" 
+            />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {authorData.name} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>{post.readingTime || 12} phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">📍</span> Khu Phố Cổ Trung Tâm Bắc Kinh
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏡</span> Kiến Trúc Tứ Hợp Viện (Siheyuan)
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏛️</span> Di Sản Trục Trung Tâm (Central Axis)
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🚶</span> Trải Nghiệm Đi Bộ & Xe Đạp
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class={`block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 ${item.indent ? 'pl-2 text-[12.5px] border-l border-transparent hover:border-amber-400' : 'font-semibold text-[13px]'}`}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vị trí</div>
+                <div class="text-[13px] font-bold text-slate-900">Nội thành Bắc Kinh</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🏡</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Đặc trưng</div>
+                <div class="text-[13px] font-bold text-slate-900">Tứ Hợp Viện & Ngõ cổ</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎫</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Tham quan</div>
+                <div class="text-[13px] font-bold text-slate-900">Miễn phí</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏱️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Thời gian gợi ý</div>
+                <div class="text-[13px] font-bold text-slate-900">2 – 4 giờ (Nửa ngày)</div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700 space-y-4">
+            <p>
+              Nếu <a href="/tu-cam-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Tử Cấm Thành</a> cho thấy Bắc Kinh của hoàng gia, <a href="/thien-dan-bac-kinh" class="text-brand-700 hover:text-brand-800 underline font-medium">Thiên Đàn</a> cho thấy thế giới của nghi lễ tế Trời, thì <strong>Phố Cổ Hutong Bắc Kinh</strong> lại đưa du khách đến gần hơn với đời sống đô thị của người dân nơi đây.
+            </p>
+            <p>
+              Phố cổ Hutong không phải một điểm tham quan duy nhất mà là tên gọi chung cho mạng lưới ngõ, hẻm và phố nhỏ từng tạo nên những khu dân cư truyền thống của Bắc Kinh. Phía sau những con ngõ ấy là các <strong>Tứ Hợp Viện (Siheyuan)</strong>, những khoảng sân, cổng gỗ, hàng cây và không gian sinh hoạt đã tạo nên một diện mạo rất riêng của thành phố.
+            </p>
+            <p>
+              Ngày nay, một số khu Hutong đã trở thành những tuyến phố du lịch nổi tiếng như <strong>Nanluoguxiang</strong>, <strong>Yandai Xiejie</strong> và <strong>Shichahai</strong>; một số khác vẫn giữ vai trò khu dân cư, trong khi <strong>Wudaoying</strong>, <strong>Fangjia</strong> và các ngõ quanh <strong>Mao'er – Ju'er</strong> lại kết hợp giữa kiến trúc cũ với văn hóa, ẩm thực và đời sống hiện đại.
+            </p>
+            <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200 text-sm text-slate-800 space-y-1">
+              💡 <strong>Lời khuyên trải nghiệm:</strong> Trải nghiệm Phố Cổ Hutong Bắc Kinh không nên dừng ở việc đi qua một con phố nổi tiếng. Cách thú vị hơn là chọn một khu, đi bộ chậm và nhìn cách Bắc Kinh cũ vẫn tồn tại bên trong thành phố hiện đại.
+            </div>
+          </div>
+
+          {/* Section 1: Hutong là gì */}
+          <section id="la-gi" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Bắc Kinh Là Gì?
+              </h2>
+            </div>
+            
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                "Hutong" thường được dùng để chỉ những ngõ, hẻm và phố nhỏ hình thành mạng lưới khu dân cư truyền thống của Bắc Kinh. Hệ thống này phát triển mạnh từ thời Nguyên và tiếp tục mở rộng, thay đổi trong các triều Minh và Thanh.
+              </p>
+              
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3">
+                <h3 class="font-bold text-slate-900 text-base">Điều quan trọng cần biết:</h3>
+                <ul class="space-y-2 text-sm text-slate-700">
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-500 font-bold">•</span>
+                    <span>Phố cổ Hutong <strong>không phải tên của một con phố cụ thể</strong>.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-500 font-bold">•</span>
+                    <span>Đó là một <strong>hệ thống không gian đô thị lịch sử</strong> rộng lớn trải khắp nội thành.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-amber-500 font-bold">•</span>
+                    <span>Mỗi khu có thể có diện mạo rất khác nhau: có nơi sầm uất đầy cửa hàng và quán café, có nơi vẫn là ngõ nhỏ yên tĩnh với nhà dân, cổng Tứ Hợp Viện và hàng cây rợp bóng.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p>
+                Chính sự đa dạng này khiến du khách không nên chỉ đi một con phố duy nhất rồi kết luận rằng đã "thấy hết Hutong Bắc Kinh".
+              </p>
+            </div>
+          </section>
+
+          {/* Section 2: Tứ Hợp Viện */}
+          <section id="tu-hop-vien" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Tứ Hợp Viện Là Gì? Có Liên Quan Gì Đến Hutong?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Một trong những khái niệm quan trọng nhất để hiểu Phố Cổ Hutong Bắc Kinh là <strong>Tứ Hợp Viện (Siheyuan)</strong>.
+              </p>
+              <p>
+                Tứ Hợp Viện (Siheyuan) đơn giản là nếp nhà truyền thống xoay quanh một khoảng sân trung tâm, nơi các thế hệ gia đình cùng sinh sống. Cấu trúc này tạo ra một không gian sinh hoạt bình yên, khép kín bên trong nhưng lại mở ra kết nối với nhịp sống nhộn nhịp của mạng lưới Hutong bên ngoài.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🛤️</span>
+                  <h3 class="font-bold text-slate-900 text-base">Hutong (Ngõ / Hẻm)</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Là không gian đường phố công cộng, nơi di chuyển, giao thương và kết nối cộng đồng.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🏡</span>
+                  <h3 class="font-bold text-slate-900 text-base">Tứ Hợp Viện (Siheyuan)</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Là không gian nhà ở gia đình, sinh hoạt khép kín xoay quanh một khoảng sân trong bình yên.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Hai yếu tố này kết hợp với nhau tạo thành một trong những hình thái đô thị đặc trưng nhất của Bắc Kinh lịch sử. Nếu chỉ đi trên các tuyến thương mại, du khách chủ yếu nhìn thấy mặt tiền của Hutong. Muốn hiểu sâu hơn, hãy quan sát những cánh cổng Siheyuan và cách các ngõ nhỏ nối tiếp thành mạng lưới phía sau.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 3: Lịch sử */}
+          <section id="lich-su" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Lịch Sử Phố Cổ Hutong Bắc Kinh
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Sự phát triển của Hutong gắn chặt với lịch sử Bắc Kinh như một kinh đô. Khi Đại Đô được xây dựng dưới thời Nguyên, thành phố được quy hoạch theo một cấu trúc đô thị có trật tự với các trục đường, khu cư trú và ô phố. Nền tảng đó tiếp tục được kế thừa và phát triển mạnh mẽ trong thời Minh và Thanh, tạo nên mạng lưới Hutong mà Bắc Kinh ngày nay vẫn còn lưu giữ từng phần.
+              </p>
+              <p>
+                Trong nhiều thế kỷ, Hutong trở thành không gian sống của nhiều tầng lớp cư dân. Có những khu gắn với phủ đệ và gia đình quan lại quý tộc; cũng có những ngõ nhỏ phục vụ đời sống thường nhật của thương nhân và thường dân thành thị.
+              </p>
+              <p>
+                Sang thế kỷ XX, quá trình mở rộng và hiện đại hóa Bắc Kinh khiến nhiều Hutong bị phá bỏ hoặc tái phát triển. Song song với đó, một số khu phố được bảo tồn, chỉnh trang và đưa vào các chương trình phục hồi di sản. Ngày nay, Phố Cổ Hutong phản ánh một câu chuyện sống động về bảo tồn di sản song hành cùng nhịp sống hiện đại.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 4: Trục trung tâm */}
+          <section id="truc-trung-tam" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Và Trục Trung Tâm Bắc Kinh
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Một cách rất hay để hiểu Hutong là đặt nó vào <strong>Beijing Central Axis</strong> – Trục Trung Tâm Bắc Kinh, vừa được UNESCO công nhận là Di sản Thế giới vào năm 2024.
+              </p>
+              <p>
+                Trục này chạy theo hướng Bắc – Nam qua trung tâm lịch sử thành phố, kết nối các cung điện, đàn tế, công trình công cộng và các tuyến phố lịch sử. Nhiều khu phố cổ Hutong tạo thành hệ sinh thái đô thị bao quanh trục trung tâm này.
+              </p>
+              <p>
+                Vì vậy, một chuyến khám phá Hutong có thể kết nối rất tự nhiên với các địa danh dọc trục trung tâm:
+              </p>
+
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-2 font-medium text-slate-900 text-sm">
+                <div>🧭 <strong>Lộ trình liên kết di sản:</strong> Drum Tower (Lầu Trống) ➔ Shichahai ➔ Nanluoguxiang ➔ Guozijian ➔ Wudaoying.</div>
+              </div>
+
+              <p>
+                Thay vì chỉ ghé một con phố rồi rời đi, bạn đang men theo chính dòng chảy quy hoạch đô thị cổ đại có bề dày hàng trăm năm.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 5: Vì sao đáng khám phá */}
+          <section id="vi-sao-dang-kham-pha" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Vì Sao Phố Cổ Hutong Bắc Kinh Đáng Khám Phá?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Điểm đáng giá nhất của Hutong không nằm ở một công trình hoành tráng đơn lẻ. <strong>Đó là quy mô của đời sống thường nhật.</strong>
+              </p>
+              <p>
+                Một khu Hutong gồm những con ngõ nhỏ, nhà ở, cửa hàng, cây xanh và các khoảng sân sinh hoạt chung. Chính cấu trúc gần gũi này mang lại cảm giác cộng đồng gắn kết, khác biệt với những khối nhà cao tầng hiện đại:
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-3">
+                  <span class="text-xl">🏛️</span>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Tứ Hợp Viện Bảo Tồn</h3>
+                    <p class="text-xs text-slate-600">Nơi lưu giữ nét kiến trúc cổ nguyên bản của các gia đình danh gia.</p>
+                  </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-3">
+                  <span class="text-xl">🎨</span>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Cửa Hàng Thủ Công</h3>
+                    <p class="text-xs text-slate-600">Những workshop nghệ thuật, gốm sứ và đồ thủ công nằm ẩn mình trong ngõ.</p>
+                  </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-3">
+                  <span class="text-xl">☕</span>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Quán Café Hoài Cổ</h3>
+                    <p class="text-xs text-slate-600">Không gian thưởng trà và café view ngói xám rêu phong bình yên.</p>
+                  </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex items-start gap-3">
+                  <span class="text-xl">👥</span>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-sm">Nhịp Sống Bản Địa</h3>
+                    <p class="text-xs text-slate-600">Nơi các cụ già ngồi đánh cờ, chim hót trong lồng và người dân chuyện trò.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 6: Các khu Hutong đáng đi */}
+          <section id="cac-khu-dang-di" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Những Khu Phố Cổ Hutong Đáng Đi Nhất
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Thay vì xếp một danh sách cố định, du khách nên chọn khu Hutong dựa trên trải nghiệm mà mình mong muốn:
+              </p>
+
+              {/* 1. Shichahai */}
+              <div id="shichahai" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 1</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Shichahai – Houhai: Lựa Chọn Cân Bằng Cho Người Lần Đầu</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Nếu chỉ có một buổi để làm quen với Phố Cổ Hutong, Shichahai là khu lịch sử có mạng lưới Hutong và nhiều điểm di sản bao quanh. Khu vực này là sự đan xen thú vị giữa hồ nước rộng, ngõ cổ, phủ đệ (như Phủ Cung Thân Vương), cầu đá Yinding và Drum Tower.
+                </p>
+                <div class="bg-amber-50/70 p-3 rounded-lg text-xs text-slate-800 font-medium">
+                  🗺️ <strong>Lộ trình gợi ý:</strong> Yandai Xiejie ➔ Cầu Yinding ➔ Bờ hồ Shichahai ➔ Lầu Trống (Drum Tower).
+                </div>
+              </div>
+
+              {/* 2. Nanluoguxiang */}
+              <div id="nanluoguxiang" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 2</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Nanluoguxiang Hay Beiluoguxiang?</h3>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-sm text-slate-700 leading-relaxed">
+                    <strong>Nanluoguxiang:</strong> Nổi tiếng nhất, dễ tiếp cận, nhiều cửa hàng ăn vặt và lưu niệm, phù hợp cho lần đầu đến Bắc Kinh. Tuy nhiên, nó hiện rất đông và đã thương mại hóa cao.
+                  </p>
+                  <p class="text-sm text-slate-700 leading-relaxed">
+                    <strong>Beiluoguxiang:</strong> Ít tính "shopping street" hơn, phù hợp nếu bạn muốn đi bộ qua những con ngõ thanh bình phía Bắc và kết nối trực tiếp với Drum Tower, Bell Tower và hồ Houhai.
+                  </p>
+                </div>
+                <div class="bg-blue-50/80 p-3 rounded-lg text-xs text-slate-800 font-medium border border-blue-100">
+                  💡 <strong>Mẹo hay:</strong> Hãy đi dọc trục chính Nanluoguxiang, sau đó rẽ vào các ngõ nhánh xương cá ở hai bên để tìm lại không gian tĩnh lặng, hoặc đi thẳng lên Beiluoguxiang để bớt đông đúc.
+                </div>
+              </div>
+
+              {/* 3. Wudaoying */}
+              <div id="wudaoying" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 3</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Wudaoying Hutong: Nơi Ngõ Cổ Gặp Văn Hóa Đương Đại</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Wudaoying có tính thương mại và sáng tạo cao, với café, nhà hàng, boutique và không gian nghệ thuật; phù hợp với người muốn kết hợp Hutong với văn hóa đương đại. Nếu muốn tìm một khu thật yên tĩnh và thuần dân cư hơn, hãy ưu tiên các tuyến Hutong khác.
+                </p>
+              </div>
+
+              {/* 4. Fangjia */}
+              <div id="fangjia" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 4</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Fangjia Hutong: Nhịp Điệu Chậm & Ít Check-in</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Fangjia mang một sắc thái riêng biệt: kết hợp giữa kiến trúc nhà xưởng cũ, không gian sáng tạo và ngõ dân cư thuần khiết. Nơi này rất dễ kết hợp trong cùng tuyến đi bộ với Wudaoying và Guozijian.
+                </p>
+              </div>
+
+              {/* 5. Maoer - Juer */}
+              <div id="maoer-juer" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 5</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Cụm Mao'er – Yu'er – Heizhima – Ju'er</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Nhóm Hutong này được đánh giá rất cao nếu bạn muốn thấy kiến trúc khu dân cư rõ nét nhất. Một tuyến đi bộ khoảng 1,6 km xuyên qua các ngõ này sẽ mang đến trải nghiệm <strong>ít mua sắm, nhiều quan sát thực tế</strong> với những cánh cổng Tứ Hợp Viện bằng gỗ đã nhuốm màu thời gian.
+                </p>
+              </div>
+
+              {/* 6. Yandai Xiejie */}
+              <div id="yandai-xiejie" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 6</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Yandai Xiejie: Con Phố Hình Ống Tẩu Cổ Kính</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Con phố nghiêng có hình dáng như một chiếc ống tẩu thuốc lá cổ, dẫn thẳng ra cầu Yinding và hồ Shichahai. Đây là điểm bắt đầu tuyệt vời cho chuyến dạo bộ buổi chiều.
+                </p>
+              </div>
+
+              {/* 7. Guozijian */}
+              <div id="guozijian" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Khu vực 7</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Quốc Tử Giám (Guozijian) & Vĩnh Hòa Cung (Yonghegong)</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Tuyến đường rợp bóng cây cổ thụ dẫn vào Quốc Tử Giám và Khổng Miếu. Gợi ý tuyến đi: Vĩnh Hòa Cung ➔ Wudaoying ➔ Quốc Tử Giám (Guozijian) ➔ Khổng Miếu.
+                </p>
+              </div>
+
+              {/* 8. Lanman Hutong */}
+              <div id="lanman-hutong" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Mới mẻ</span>
+                  <h3 class="font-bold text-slate-900 text-lg">Lanman Hutong: Một Góc Hutong Nghệ Thuật Ở Phía Tây Nam</h3>
+                </div>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Lanman Hutong (烂缦胡同) là lựa chọn đáng chú ý nếu muốn nhìn cách các không gian Hutong cũ được tái sử dụng cho nghệ thuật, café và văn hóa đương đại. Khu vực này thuộc Fayuan Temple Historical & Cultural Block, gần Caishikou (Metro Line 4 hoặc 7).
+                </p>
+                <div class="bg-amber-50/70 p-3 rounded-lg text-xs text-slate-800 font-medium border border-amber-100">
+                  🌟 <strong>Nếu muốn tìm Hutong ít mainstream hơn:</strong> Lanman Hutong, Baitasi East Alley và các tuyến quanh Fayuan Temple là những lựa chọn "hidden gem" đáng cân nhắc hiện nay.
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Section 7: Bảng chọn khu */}
+          <section id="chon-khu-nao" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Nên Chọn Khu Phố Cổ Hutong Nào?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+                <table class="w-full text-sm text-left text-slate-700">
+                  <thead class="text-xs text-slate-900 uppercase bg-slate-50 border-b border-slate-200">
+                    <tr>
+                      <th class="px-5 py-4 font-bold w-1/3">Khu vực</th>
+                      <th class="px-5 py-4 font-bold">Phù hợp nhất với</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white"><td class="px-5 py-3 font-semibold text-slate-900">Shichahai</td><td class="px-5 py-3">Lần đầu, hồ + Hutong + di sản</td></tr>
+                    <tr class="bg-slate-50"><td class="px-5 py-3 font-semibold text-slate-900">Nanluoguxiang</td><td class="px-5 py-3">Dễ đi, ăn uống, shopping</td></tr>
+                    <tr class="bg-white"><td class="px-5 py-3 font-semibold text-slate-900">Beiluoguxiang</td><td class="px-5 py-3">Muốn tránh phố quá thương mại</td></tr>
+                    <tr class="bg-slate-50"><td class="px-5 py-3 font-semibold text-slate-900">Mao'er – Ju'er</td><td class="px-5 py-3">Kiến trúc và khu dân cư tĩnh lặng</td></tr>
+                    <tr class="bg-white"><td class="px-5 py-3 font-semibold text-slate-900">Wudaoying</td><td class="px-5 py-3">Café, thiết kế, văn hóa đương đại</td></tr>
+                    <tr class="bg-slate-50"><td class="px-5 py-3 font-semibold text-slate-900">Fangjia</td><td class="px-5 py-3">Không gian sáng tạo, nhịp điệu đi chậm</td></tr>
+                    <tr class="bg-white"><td class="px-5 py-3 font-semibold text-slate-900">Lanman – Fayuan Temple</td><td class="px-5 py-3">Hutong nghệ thuật + lịch sử phía Tây Nam</td></tr>
+                    <tr class="bg-slate-50"><td class="px-5 py-3 font-semibold text-slate-900">Guozijian</td><td class="px-5 py-3">Lịch sử + Hutong + Vĩnh Hòa Cung</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 8: Cách khám phá */}
+          <section id="kham-pha-bang-cach-nao" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Khám Phá Phố Cổ Hutong Bằng Cách Nào Tốt Nhất?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🚶</span>
+                  <h3 class="font-bold text-slate-900 text-base">Đi Bộ (Khuyên dùng)</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Đây cũng là cách mà chính quyền Bắc Kinh đang phát triển nhiều tuyến trải nghiệm Hutong chính thức ("Hutong walk"), thay vì chỉ đi ngang qua bằng xe.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🚲</span>
+                  <h3 class="font-bold text-slate-900 text-base">Xe Đạp</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Phù hợp để kết nối nhanh nhiều khu vực lịch sử rộng lớn từ Shichahai sang Guozijian.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <span class="text-2xl">🛺</span>
+                  <h3 class="font-bold text-slate-900 text-base">Xích Lô Du Lịch</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Xích lô phù hợp để hiểu bố cục khu Shichahai trong thời gian ngắn; với Hutong dân cư sâu hơn, nên xuống xe và đi bộ.
+                  </p>
+                </div>
+              </div>
+              <p class="text-sm text-slate-700 bg-amber-50/60 p-4 rounded-xl border border-amber-100">
+                📌 <strong>Lưu ý thêm:</strong> Bắc Kinh hiện cũng đang phát triển các bản đồ và tuyến khám phá khu phố theo chủ đề ("Explore Beijing Street Discovery List"), trong đó có ẩm thực Hutong và các di sản đô thị. 
+              </p>
+            </div>
+          </section>
+
+          {/* Section 9: Tuyến Gợi Ý */}
+          <section id="tuyen-goi-y" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Lịch Trình Tuyến Đi Bộ Gợi Ý
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="bg-white p-5 rounded-2xl border-2 border-amber-400 space-y-3 shadow-2xs">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-slate-900 text-base">⏱️ Tuyến 2 – 3 Giờ: Lần Đầu Đến Bắc Kinh</h3>
+                  <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2.5 py-1 rounded-full">Phổ biến</span>
+                </div>
+                <div class="text-sm text-slate-900 font-medium bg-amber-50 p-3 rounded-xl border border-amber-200">
+                  Lầu Trống (Drum Tower) ➔ Beiluoguxiang ➔ Cầu Yinding ➔ Hồ Shichahai ➔ Ngõ Mao'er ➔ Nanluoguxiang
+                </div>
+                <p class="text-xs text-slate-600">
+                  Tuyến này mang đến đầy đủ các sắc thái: di tích lịch sử ➔ ngõ yên tĩnh ➔ cảnh quan mặt nước ➔ phố ẩm thực nhộn nhịp.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-slate-900 text-base">🍃 Tuyến Nửa Ngày: Văn Hóa & Nghệ Thuật</h3>
+                  <span class="text-xs bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-full">Yên tĩnh</span>
+                </div>
+                <div class="text-sm text-slate-700 font-medium bg-slate-50 p-3 rounded-xl border border-slate-200">
+                  Vĩnh Hòa Cung ➔ Wudaoying Hutong ➔ Phố Guozijian ➔ Khổng Miếu ➔ Ngõ Fangjia
+                </div>
+              </div>
+
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-slate-900 text-base">🏛️ Tuyến Phía Tây Nam: Ít Người, Chú Trọng Nghệ Thuật</h3>
+                  <span class="text-xs bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-full">Mới mẻ</span>
+                </div>
+                <div class="text-sm text-slate-700 font-medium bg-slate-50 p-3 rounded-xl border border-slate-200">
+                  Ga Caishikou ➔ Fayuan Temple ➔ Lanman Hutong ➔ Nanbanjie ➔ Xizhuan Hutong
+                </div>
+              </div>
+
+              <div class="bg-blue-50/80 p-4 rounded-xl border border-blue-100 text-sm text-slate-800 mt-4">
+                💡 <strong>Hutong Có Thể Là Điểm Cuối Của Một Ngày Trung Tâm:</strong> Sau khi tham quan Tử Cấm Thành và núi Cảnh Sơn vào buổi sáng/trưa, thay vì tiếp tục một điểm tham quan lớn khác, bạn có thể chuyển sang Drum Tower ➔ Hutong ➔ Shichahai để giảm nhịp độ và kết thúc ngày bằng ăn uống, dạo bộ hoàng hôn.
+              </div>
+            </div>
+          </section>
+
+          {/* Section: Bao Lâu Là Đủ? */}
+          <section id="bao-lau-la-du" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Khám Phá Hutong Bao Lâu Là Đủ?
+              </h2>
+            </div>
+            
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="overflow-x-auto rounded-xl border border-slate-200">
+                <table class="w-full text-sm text-left text-slate-700">
+                  <thead class="text-xs text-slate-900 uppercase bg-slate-50 border-b border-slate-200">
+                    <tr>
+                      <th class="px-5 py-4 font-bold w-1/4">Thời gian</th>
+                      <th class="px-5 py-4 font-bold">Trải nghiệm tương ứng</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr class="bg-white">
+                      <td class="px-5 py-4 font-bold text-slate-900">1 – 1,5 Giờ</td>
+                      <td class="px-5 py-4 leading-relaxed">Yandai Xiejie + Bờ hồ Shichahai (chụp ảnh và ăn nhẹ).</td>
+                    </tr>
+                    <tr class="bg-slate-50">
+                      <td class="px-5 py-4 font-bold text-slate-900">2 – 3 Giờ</td>
+                      <td class="px-5 py-4 leading-relaxed">Shichahai + Đi sâu vào các ngõ Mao'er/Ju'er + Phố chính Nanluoguxiang.</td>
+                    </tr>
+                    <tr class="bg-amber-50/30">
+                      <td class="px-5 py-4 font-bold text-amber-900">Nửa Ngày<br/><span class="text-xs text-amber-600 font-normal">(Lý tưởng nhất)</span></td>
+                      <td class="px-5 py-4 leading-relaxed">Shichahai kết hợp tản bộ các ngõ sâu, hoặc tuyến văn hóa: Vĩnh Hòa Cung + Guozijian + Wudaoying. Thong thả ghé café và ngắm nhịp sống.</td>
+                    </tr>
+                    <tr class="bg-white">
+                      <td class="px-5 py-4 font-bold text-slate-900">Cả chiều + tối</td>
+                      <td class="px-5 py-4 leading-relaxed">Dạo Hutong lúc xế bóng, ăn tối ẩm thực địa phương, sau đó ngắm đèn lồng quanh hồ Shichahai/Houhai lung linh.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 10: Sáng tối */}
+          <section id="sang-hay-toi" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Nên Đi Sáng Hay Tối?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <span>☀️</span> Buổi Sáng (7:00 – 10:00)
+                  </div>
+                  <p class="text-xs text-slate-600">
+                    Cảm nhận nhịp sống dân sinh chân thực, người dân mua đồ ăn sáng và tập thái cực quyền.
+                  </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <span>🌤️</span> Buổi Chiều (14:30 – 17:30)
+                  </div>
+                  <p class="text-xs text-slate-600">
+                    Thời điểm lý tưởng nhất để đi bộ, chụp ảnh tường gạch ngói xám dưới nắng vàng và ghé quán café.
+                  </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-1">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <span>🌙</span> Buổi Tối (Sau 18:00)
+                  </div>
+                  <p class="text-xs text-slate-600">
+                    Ưu tiên Shichahai/Houhai/Wudaoying nếu muốn ăn uống và không khí sôi động. Các Hutong dân cư thuần túy phù hợp hơn với ban ngày hoặc chiều sớm.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 11: Ẩm thực */}
+          <section id="an-uong" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Bắc Kinh Có Gì Để Ăn?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ẩm thực là một phần không thể tách rời của trải nghiệm Hutong. Khi dạo bước qua các con ngõ, bạn có thể dễ dàng bắt gặp bát Mì tương đen (Zhajiangmian) đặc trưng, thử hũ sữa chua bình gốm truyền thống, hay ăn những xiên kẹo hồ lô (Tanghulu) quen thuộc.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 12: Trẻ em */}
+          <section id="co-phu-hop-tre-em" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Có Phù Hợp Với Trẻ Em & Người Lớn Tuổi?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Rất phù hợp nếu lựa chọn lịch trình vừa sức. Không giống các cung điện rộng lớn, các tuyến phố cổ Hutong quanh hồ Shichahai hay Wudaoying có rất nhiều điểm dừng chân, quán nước, và bạn hoàn toàn có thể thuê xích lô để di chuyển nhẹ nhàng.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 13: Có đáng đi không */}
+          <section id="co-dang-di-khong" class="scroll-mt-28 space-y-4 bg-amber-50/60 p-6 rounded-2xl border border-amber-200/80">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Có Thực Sự Đáng Đi Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+              <p>
+                Tử Cấm Thành gắn với hoàng gia, Thiên Đàn dành cho nghi lễ, <strong>còn Phố Cổ Hutong là nhịp sống đời thường của Bắc Kinh.</strong> Nếu bạn muốn thấy một khía cạnh cũ kỹ và chậm rãi hơn của thành phố, đi bộ dọc theo những bức tường gạch xám dưới tán cây hòe là một cách rất hay để cảm nhận điều đó.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 14: 7 Điều cần nhớ */}
+          <section id="7-dieu-can-nho" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                7 Điều Cần Nhớ Trước Khi Khám Phá Phố Cổ Hutong
+              </h2>
+            </div>
+
+            <div class="space-y-3">
+              {[
+                "Hutong là cả một mạng lưới rộng lớn, hãy chọn tuyến khu vực cụ thể thay vì đi vu vơ.",
+                "Đừng đánh đồng Nanluoguxiang với toàn bộ Hutong, hãy rẽ vào các ngõ nhánh nhỏ hai bên.",
+                "Phân biệt rõ: Hutong là đường ngõ phố xá, còn Tứ Hợp Viện là kiểu kiến trúc nhà ở sân trong.",
+                "Đi bộ là phương thức trải nghiệm sâu sắc và chân thực nhất.",
+                "Dành tối thiểu 2 – 3 giờ để không phải vội vã lướt qua.",
+                "Hutong là không gian sống thực sự của người dân, hãy luôn giữ yên tĩnh và tôn trọng sự riêng tư của họ.",
+                "Đừng mải mê chạy theo checklist check-in; hãy đi chậm và cảm nhận không khí."
+              ].map((item, index) => (
+                <div class="flex items-start gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">{index + 1}</span>
+                  <span class="text-slate-700 text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Section 15: FAQ */}
+          <section id="faq" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Câu Hỏi Thường Gặp (FAQ) Về Phố Cổ Hutong
+              </h2>
+            </div>
+            
+            <div class="space-y-3">
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Có nên ở khách sạn trong Hutong?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Có thể, nếu bạn muốn trải nghiệm không gian phố cổ sâu hơn. Tuy nhiên, nên xem kỹ vị trí: ở ngay mặt phố du lịch như Nanluoguxiang có thể đông và ồn về tối; các khách sạn nằm sâu hơn trong mạng lưới Hutong thường yên tĩnh hơn nhưng có thể khó tìm đường đi vào với hành lý lớn.
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Dùng bản đồ nào khi đi bộ ở Hutong?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Với những con ngõ nhỏ chằng chịt, không nên phụ thuộc hoàn toàn vào Google Maps vì nhiều tuyến đường nhỏ có thể hiển thị thiếu chính xác. Du khách nên chuẩn bị sẵn ứng dụng Amap (Gaode Maps) để định vị và tìm đường. Trước chuyến đi hãy tải ứng dụng và làm quen với giao diện.
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Tham quan Hutong có mất vé không?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Bản thân các con ngõ Hutong là không gian công cộng nên hoàn toàn miễn phí. Tuy nhiên, nếu bạn muốn vào tham quan bên trong các phủ đệ, bảo tàng tư nhân, hoặc đi xe xích lô quanh hồ thì sẽ có phí riêng cho từng dịch vụ đó.
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Phố cổ Hutong nằm ở đâu?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Hutong không phải là một địa điểm cụ thể mà là mạng lưới các con ngõ trải rộng khắp khu vực nội đô lịch sử của Bắc Kinh (chủ yếu nằm ở quận Đông Thành và Tây Thành).
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Phố Cổ Hutong và Tứ Hợp Viện có giống nhau không?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Không. Hutong là hệ thống không gian đường phố (ngõ hẻm công cộng), trong khi Tứ Hợp Viện (Siheyuan) là kiến trúc nhà ở truyền thống có 4 dãy nhà vây quanh khoảng sân trong.
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Khu phố cổ Hutong nào nổi tiếng nhất?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Nanluoguxiang và Yandai Xiejie là hai khu phố cổ nổi tiếng và dễ tiếp cận nhất. Nếu thích không gian nghệ thuật yên tĩnh hơn, bạn nên ghé Wudaoying và Fangjia Hutong.
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between p-5 font-bold text-slate-900 cursor-pointer bg-slate-50 group-hover:bg-amber-50 transition-colors text-sm sm:text-base">
+                  Có nên kết hợp tham quan Hutong cùng Tử Cấm Thành?
+                  <ChevronRight class="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform shrink-0" />
+                </summary>
+                <div class="p-5 text-slate-700 text-sm leading-relaxed border-t border-slate-100 bg-white">
+                  Rất nên! Lộ trình lý tưởng trong 1 ngày là: Tham quan Tử Cấm Thành buổi sáng ➔ Chiều leo núi Cảnh Sơn ngắm toàn cảnh ➔ Đi bộ dạo phố cổ Hutong và ngắm hoàng hôn bên hồ Shichahai.
+                </div>
+              </details>
+            </div>
+          </section>
+
+          {/* Section 16: FIT TOUR Travel */}
+          <section id="hanh-trinh-fit-tour" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Phố Cổ Hutong Trong Hành Trình Bắc Kinh Cùng FIT TOUR
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Để có chuyến đi trọn vẹn nhất, <strong>FIT TOUR</strong> luôn thiết kế lịch trình cân bằng nhịp thở giữa các di sản:
+              </p>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 space-y-3 font-medium text-slate-900 text-sm">
+                <div>📅 <strong>Ngày 1:</strong> <a href="/thien-an-mon" class="text-brand-700 hover:text-brand-800 underline font-medium">Quảng Trường Thiên An Môn</a> ➔ Tử Cấm Thành ➔ Núi Cảnh Sơn ➔ Hồ Shichahai.</div>
+                <div>📅 <strong>Ngày 2:</strong> Dạo bước Thiên Đàn buổi sáng ➔ Phố Cổ Tiền Môn ➔ Khám phá Phố Cổ Hutong ➔ Thưởng thức Vịt quay Bắc Kinh.</div>
+                <div>📅 <strong>Ngày 3:</strong> Tham quan <a href="/van-ly-truong-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Vạn Lý Trường Thành</a> ➔ <a href="/di-hoa-vien" class="text-brand-700 hover:text-brand-800 underline font-medium">Di Hòa Viên</a>.</div>
+              </div>
+              <p>
+                Lịch trình được tổ chức giãn cách hợp lý giúp du khách xem được đủ các điểm chính mà vẫn giữ được sức khỏe cho cả chuyến đi dài.
+              </p>
+              
+              {/* Internal Link Block */}
+              <div class="bg-amber-50/60 p-5 rounded-2xl border border-amber-200/80 space-y-2 mt-4 text-sm">
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-bac-kinh-5n5d" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Bắc Kinh 5 Ngày 5 Đêm: Khám phá Tử Cấm Thành & Vạn Lý Trường Thành</a>
+                </div>
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-bac-kinh-tu-ha-noi" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Bắc Kinh từ Hà Nội: Trải nghiệm chuyên sâu thủ đô lịch sử</a>
+                </div>
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/country/trung-quoc" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Cẩm Nang Du Lịch Trung Quốc Trọn Gói Từ A-Z</a>
+                </div>
+                <div>
+                  <strong>Xem thêm:</strong> <a href="/why-travel-china-fittour" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Vì Sao Nên Chọn Du Lịch Trung Quốc Cùng FIT TOUR?</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-100 p-4 rounded-xl text-xs text-slate-600 space-y-1 mt-6 border border-slate-200">
+              <div><strong>Lưu ý:</strong> Phố cổ Hutong là những khu dân cư lịch sử vẫn có người sinh sống. Khi tham quan, du khách nên giữ trật tự và tôn trọng không gian sống của người dân địa phương.</div>
+            </div>
+          </section>
+
+          {/* CTA Box */}
+          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#1A1A1A] via-[#2A2A2A] to-[#1A1A1A] p-8 sm:p-10 text-white shadow-2xl border border-white/10">
+            <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white mb-3 relative z-10">
+              Trải Nghiệm Bắc Kinh Chậm Rãi Hơn
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-xl relative z-10">
+              Các hành trình của FIT TOUR chú trọng thời gian thong thả để du khách trực tiếp quan sát nhịp sống và di sản Bắc Kinh, từ các công trình lớn đến những con ngõ nhỏ.
+            </p>
+            <div class="flex flex-wrap gap-4 relative z-10">
+              <a 
+                href="/tour/tour-bac-kinh-5n5d" 
+                class="inline-flex items-center gap-2 bg-[#F7931E] hover:bg-[#e08215] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg hover:shadow-amber-500/25"
+              >
+                <span>Xem Tour Bắc Kinh 5N5Đ</span>
+                <ChevronRight class="w-4 h-4" />
+              </a>
+              <a 
+                href="/country/trung-quoc" 
+                class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all border border-white/20"
+              >
+                Tất cả tour Trung Quốc
+              </a>
+            </div>
+          </div>
+          
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3 space-y-6 lg:sticky lg:top-24">
+          
+          {/* Author Card */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 space-y-4 text-center">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="80" 
+              height="80" 
+              class="w-20 h-20 rounded-full mx-auto border-2 border-amber-500/40 object-cover object-top shadow-md" 
+            />
+            <div>
+              <div class="font-bold text-slate-900 text-base">{authorData.name}</div>
+              <div class="text-xs text-slate-500">Chuyên gia Lịch trình Du lịch Trung Quốc</div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed text-left">
+              Chia sẻ kinh nghiệm thực tế, mẹo di chuyển và lịch trình đi lại thuận tiện cho du khách Việt.
+            </p>
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 space-y-4">
+            <div class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase tracking-wide">
+              Cẩm Nang Bắc Kinh Liên Quan
+            </div>
+            <div class="space-y-3 pt-1">
+              {[
+                { 
+                  title: "Tử Cấm Thành Bắc Kinh: Kinh Nghiệm Đặt Vé & Tuyến Tham Quan", 
+                  img: "https://media.fittour.vn/uploads/2024/04/kien-truc-cung-dien-minh-thanh-la-mo-phong-lai-tu-cam-thanh.webp", 
+                  link: "/tu-cam-thanh" 
+                },
+                { 
+                  title: "Thiên Đàn Bắc Kinh: Giá Vé, Cách Đi Và Kinh Nghiệm", 
+                  img: "https://media.fittour.vn/uploads/thien-dan-bac-kinh.webp", 
+                  link: "/thien-dan-bac-kinh" 
+                },
+                { 
+                  title: "Quảng Trường Thiên An Môn: Đặt Chỗ & Lưu Ý Quan Trọng", 
+                  img: "https://media.fittour.vn/uploads/thien-an-mon.webp", 
+                  link: "/thien-an-mon" 
+                },
+                { 
+                  title: "Vạn Lý Trường Thành: Tuyến Nào Đẹp Nhất & Cách Di Chuyển", 
+                  img: "https://media.fittour.vn/uploads/van-ly-truong-thanh.webp", 
+                  link: "/van-ly-truong-thanh" 
+                }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-20 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img 
+                      src={item.img} 
+                      alt={item.title} 
+                      width="80" 
+                      height="45" 
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                      loading="lazy" 
+                    />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="pt-2 border-t border-slate-100">
+              <a href="/country/trung-quoc" class="text-amber-700 text-xs font-bold hover:underline">Khám phá cẩm nang Trung Quốc →</a>
+            </div>
+          </div>
+
+          {/* Social Share */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 space-y-3">
+            <div class="text-xs font-bold text-slate-700 uppercase tracking-wider">Chia sẻ bài viết</div>
+            <div class="flex items-center gap-2">
+              <a 
+                href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/pho-co-hutong" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold py-2 px-3 rounded-lg text-center transition-colors"
+              >
+                Facebook
+              </a>
+              <a 
+                href="https://zalo.me/share?url=https://thericetour.com/pho-co-hutong" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-semibold py-2 px-3 rounded-lg text-center transition-colors"
+              >
+                Zalo
+              </a>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  html { scroll-behavior: smooth; }
+  .prose p { margin-bottom: 1.25rem; }
+</style>
+
+<script>
+  // TOC active state script
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('text-amber-800', 'bg-amber-50/80');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('text-amber-800', 'bg-amber-50/80');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -80% 0px' });
+
+    document.querySelectorAll('section[id], div[id]').forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>

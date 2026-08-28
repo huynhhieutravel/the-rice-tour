@@ -1,0 +1,196 @@
+---
+// Component TableOfContents
+---
+
+<blog-toc class="hidden">
+  <!-- Desktop: Sidebar Card -->
+  <div class="toc-desktop hidden lg:block bg-surface rounded-2xl p-6 shadow-sm border border-border">
+    <div class="font-bold text-primary uppercase tracking-wider text-sm mb-4 border-b border-border pb-3">Mục lục</div>
+    <nav class="toc-nav">
+      <ul class="toc-list-desktop font-medium text-secondary relative border-l border-border pl-4">
+        <!-- Dynamic list items will be injected here via JS -->
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Tablet: Inline Sticky Bar -->
+  <div class="toc-tablet hidden md:flex lg:hidden sticky top-[80px] z-30 bg-surface border-b border-border py-3 px-6 gap-4 overflow-x-auto whitespace-nowrap shadow-sm items-center -mx-4 sm:-mx-6 mb-8">
+    <span class="font-bold text-primary text-sm flex-shrink-0 uppercase tracking-wider">📋 Mục lục</span>
+    <nav class="toc-nav-inline flex gap-4 text-sm font-medium text-secondary">
+      <!-- Dynamic links injected here -->
+    </nav>
+  </div>
+
+  <!-- Mobile: Floating Button & Drawer -->
+  <div class="toc-mobile md:hidden">
+    <button class="toc-toggle-btn fixed bottom-6 left-6 z-40 bg-brand-600 text-white rounded-full px-5 py-3 shadow-lg font-bold text-sm flex items-center gap-2 hover:bg-brand-700 transition-colors" aria-label="Mở mục lục">
+      📋 Mục lục
+    </button>
+    
+    <div class="toc-drawer fixed inset-x-0 bottom-0 z-50 bg-surface rounded-t-2xl shadow-2xl border-t border-border transform translate-y-full transition-transform duration-300 ease-out max-h-[60vh] flex flex-col">
+      <div class="flex justify-between items-center p-5 border-b border-border">
+        <div class="font-bold text-primary uppercase tracking-wider text-sm">Mục lục</div>
+        <button class="toc-close-btn p-2 text-muted hover:text-primary transition-colors focus:outline-none rounded-full bg-subtle">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="overflow-y-auto p-5 pb-8 flex-grow">
+        <nav class="toc-nav">
+          <ul class="toc-list-mobile font-medium text-secondary relative border-l border-border pl-4 space-y-4">
+            <!-- Dynamic list items injected here -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Overlay -->
+    <div class="toc-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm"></div>
+  </div>
+</blog-toc>
+
+<style>
+  @reference "../../styles/global.css";
+  
+  /* Desktop Active States */
+  .toc-list-desktop a { @apply block transition-colors duration-200; }
+  .toc-list-desktop a:hover { @apply text-brand-500; }
+  .toc-list-desktop a.active { @apply text-brand-500 font-bold relative; }
+  .toc-list-desktop a.active::before {
+    content: '';
+    @apply absolute -left-4 top-0 bottom-0 w-[2px] bg-brand-500 rounded-r-md;
+  }
+
+  /* Tablet Inline Active States */
+  .toc-nav-inline a { @apply px-3 py-1.5 rounded-full bg-subtle transition-colors duration-200; }
+  .toc-nav-inline a:hover { @apply bg-brand-50 text-brand-600; }
+  .toc-nav-inline a.active { @apply bg-brand-100 text-brand-700 font-bold shadow-sm; }
+
+  /* Mobile Active States */
+  .toc-list-mobile a { @apply block transition-colors duration-200 text-[15px]; }
+  .toc-list-mobile a:hover { @apply text-brand-500; }
+  .toc-list-mobile a.active { @apply text-brand-500 font-bold relative; }
+  .toc-list-mobile a.active::before {
+    content: '';
+    @apply absolute -left-4 top-0 bottom-0 w-[2px] bg-brand-500 rounded-r-md;
+  }
+
+  /* Mobile Drawer Open State */
+  .toc-mobile.is-open .toc-drawer { transform: translateY(0); }
+  .toc-mobile.is-open .toc-overlay { display: block; opacity: 1; }
+  .toc-mobile.is-open .toc-toggle-btn { display: none; }
+</style>
+
+<script>
+  class BlogToc extends HTMLElement {
+    constructor() {
+      super();
+      const articleContent = document.querySelector('.custom-blog-prose');
+      if (!articleContent) return;
+
+      const headings = articleContent.querySelectorAll('h2, h3');
+      if (headings.length === 0) return;
+
+      // Unhide the container if there are headings
+      this.classList.remove('hidden');
+      this.classList.add('block');
+
+      const desktopList = this.querySelector('.toc-list-desktop');
+      const tabletNav = this.querySelector('.toc-nav-inline');
+      const mobileList = this.querySelector('.toc-list-mobile');
+
+      // Generate TOC markup for all 3 modes
+      headings.forEach((heading, index) => {
+        if (!heading.id) heading.id = `heading-${index}`;
+        const isSub = heading.tagName.toLowerCase() === 'h3';
+        const text = heading.textContent || '';
+        const href = `#${heading.id}`;
+
+        // Desktop & Mobile Lists
+        const liDesktop = document.createElement('li');
+        const liMobile = document.createElement('li');
+        
+        if (isSub) {
+          liDesktop.classList.add('ml-4', 'text-[13px]', 'mt-2', 'opacity-80');
+          liMobile.classList.add('ml-4', 'text-[14px]', 'opacity-80');
+        } else {
+          if (index !== 0) liDesktop.classList.add('mt-4');
+          liDesktop.classList.add('text-[14px]');
+        }
+
+        const aDesktop = document.createElement('a');
+        aDesktop.href = href; aDesktop.textContent = text; aDesktop.classList.add('line-clamp-2');
+        liDesktop.appendChild(aDesktop);
+        desktopList?.appendChild(liDesktop);
+
+        const aMobile = document.createElement('a');
+        aMobile.href = href; aMobile.textContent = text;
+        liMobile.appendChild(aMobile);
+        mobileList?.appendChild(liMobile);
+
+        // Tablet Inline
+        if (!isSub) { // Only show H2s on tablet to save space
+          const aTablet = document.createElement('a');
+          aTablet.href = href; aTablet.textContent = text;
+          tabletNav?.appendChild(aTablet);
+        }
+      });
+
+      // Mobile Drawer Logic
+      const mobileContainer = this.querySelector('.toc-mobile');
+      const toggleBtn = this.querySelector('.toc-toggle-btn');
+      const closeBtn = this.querySelector('.toc-close-btn');
+      const overlay = this.querySelector('.toc-overlay');
+
+      const toggleDrawer = (open: boolean) => {
+        if (open) {
+          mobileContainer?.classList.add('is-open');
+          document.body.style.overflow = 'hidden'; // lock scroll
+        } else {
+          mobileContainer?.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      };
+
+      toggleBtn?.addEventListener('click', () => toggleDrawer(true));
+      closeBtn?.addEventListener('click', () => toggleDrawer(false));
+      overlay?.addEventListener('click', () => toggleDrawer(false));
+      
+      // Close drawer when clicking a link on mobile
+      mobileList?.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).tagName === 'A') toggleDrawer(false);
+      });
+
+      // Scrollspy Logic
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -80% 0px',
+        threshold: 1.0
+      };
+
+      let activeLink: Element | null = null;
+      const allLinks = this.querySelectorAll('a');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            allLinks.forEach(link => link.classList.remove('active'));
+            
+            const id = entry.target.getAttribute('id');
+            const currentLinks = this.querySelectorAll(`a[href="#${id}"]`);
+            
+            currentLinks.forEach(link => {
+              link.classList.add('active');
+              // Auto-scroll tablet nav to keep active item in view
+              if (link.parentElement?.classList.contains('toc-nav-inline')) {
+                link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      headings.forEach(heading => observer.observe(heading));
+    }
+  }
+
+  customElements.define('blog-toc', BlogToc);
+</script>

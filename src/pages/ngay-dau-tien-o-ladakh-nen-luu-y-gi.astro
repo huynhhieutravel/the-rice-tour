@@ -1,0 +1,556 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LadakhChecklist from '@/components/ReactApp/LadakhApp/components/LadakhChecklist.tsx';
+import AuthorCardBlock from '@/components/shortcodes/AuthorCard.astro';
+import { LADAKH_DAY1_CONFIG } from '@/components/ReactApp/LadakhApp/data/ladakhData.ts';
+
+import { env } from 'cloudflare:workers';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+
+let postData: any = null;
+let adminEditUrl = "/admin/posts";
+
+try {
+  const d1Db = env?.dulichcoguu_d1;
+  if (d1Db) {
+    postData = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE slug = ?").bind("ngay-dau-tien-o-ladakh-nen-luu-y-gi").first<any>(),
+      { route: Astro.url.pathname, slug: "ngay-dau-tien-o-ladakh-nen-luu-y-gi", queryType: "fetch_post_by_slug" }
+    );
+    if (postData) {
+      adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+    }
+  }
+} catch (e) {
+  console.log("Could not fetch post metadata:", e);
+}
+
+// Fetch author data for AuthorCard shortcode
+let authorDataMap: Record<string, any> = {};
+try {
+  const d1Db = env?.dulichcoguu_d1;
+  if (d1Db) {
+    const authorRow = await d1Db.prepare('SELECT username as slug, displayName as name, avatar, url, bio as author_snippet FROM users WHERE username = ?').bind('huy-ngo').first<any>();
+    if (authorRow) {
+      authorDataMap = { authors: { 'huy-ngo': authorRow } };
+    }
+  }
+} catch (e) {}
+
+const rawFeaturedImage = postData?.featuredImage || LADAKH_DAY1_CONFIG.heroImage;
+const featuredImage = rawFeaturedImage.startsWith('http') ? rawFeaturedImage : getCanonicalMediaUrl(rawFeaturedImage);
+---
+<BaseLayout
+  title={postData?.title || LADAKH_DAY1_CONFIG.title}
+  description={postData?.description || "Những lưu ý quan trọng cho ngày đầu tiên tại Ladakh."}
+  image={featuredImage}
+  canonical="https://thericetour.com/ngay-dau-tien-o-ladakh-nen-luu-y-gi"
+  adminEditUrl={adminEditUrl}
+  preloadImages={[featuredImage]}
+>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <style is:global>
+        @import "tailwindcss";
+    </style>
+  </Fragment>
+
+  <article class="bg-[#f8fafc] text-[#1e293b] font-sans min-h-screen pb-24">
+    
+    {/* SECTION HEADER - PORTAL STYLE */}
+    <section class="bg-white py-12 md:py-16 px-4 border-b border-stone-200">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        {/* Breadcrumb */}
+        <nav class="flex justify-center text-xs md:text-sm text-stone-500 mb-8 font-medium font-sans">
+          <ol class="flex items-center space-x-2">
+            <li><a href="/" class="hover:text-amber-600 transition">Trang chủ</a></li>
+            <li><span class="text-stone-300">/</span></li>
+            <li><a href="/blog" class="hover:text-amber-600 transition">Blog Du Lịch</a></li>
+            <li><span class="text-stone-300">/</span></li>
+            <li class="text-stone-900 font-bold truncate max-w-[200px] md:max-w-none" aria-current="page">Ngày Đầu Tiên Ở Ladakh</li>
+          </ol>
+        </nav>
+
+        {/* Badge */}
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-900/15 bg-amber-50 text-amber-900 text-xs font-mono font-bold mb-6 uppercase tracking-wider">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-700">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+          </svg>
+          <span>{LADAKH_DAY1_CONFIG.heroChapter}</span>
+        </div>
+
+        {/* Title */}
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-extrabold text-stone-900 leading-tight mb-6">
+          Ngày Đầu Tiên Ở Ladakh <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-800 to-amber-600">
+            Nên Lưu Ý Gì?
+          </span>
+        </h1>
+
+        {/* Sapo */}
+        <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed mt-6">
+          <strong class="text-stone-900">Ngày đầu tiên ở Ladakh nên lưu ý gì</strong> để tránh bị say độ cao và có chuyến đi trọn vẹn? Với kinh nghiệm hơn 20 lần dẫn đoàn đến vùng đất "Tiểu Tây Tạng", HDV Huy Ngô (FIT TOUR) sẽ chia sẻ kinh nghiệm thực tế: từ việc nên ngủ trưa, không được tắm ngay, cho đến cách uống thuốc hỗ trợ hiệu quả để cơ thể làm quen với độ cao 3.500m của dãy Himalaya.
+        </p>
+
+      </div>
+    </section>
+
+    {/* Featured Image - Above Author Card */}
+    <div class="max-w-4xl mx-auto px-4 pt-8 md:pt-12">
+      <img 
+        src={featuredImage} 
+        alt="Phong cảnh núi non hùng vĩ tại Ladakh Ấn Độ" 
+        width={1200}
+        height={600}
+        class="w-full h-auto md:h-[500px] object-cover rounded-3xl shadow-lg border border-stone-200"
+      />
+    </div>
+
+    {/* MAIN CONTENT WORKSPACE */}
+    <main class="max-w-4xl mx-auto px-4 py-6 md:py-10 space-y-12 md:space-y-16">
+
+      {/* Prose Article */}
+      <div class="prose prose-lg md:prose-xl prose-stone mx-auto">
+        
+        <div class="not-prose mb-10">
+          <AuthorCardBlock user="huy-ngo" dataMap={authorDataMap} />
+        </div>
+        
+        <p class="first-letter:text-6xl first-letter:font-serif first-letter:font-bold first-letter:text-amber-800 first-letter:mr-2 first-letter:-mt-2 first-letter:float-left">Nếu bạn đang chuẩn bị cho <a href="/country/ladakh" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300"><a href="/country/ladakh">hành trình khám phá Ladakh cao cấp</a></a> và băn khoăn <strong>ngày đầu tiên ở Ladakh nên lưu ý gì</strong>, thì những chia sẻ từ Huy Ngô – HDV FIT TOUR với hơn 20 lần đến Ladakh – có thể giúp bạn <a href="/dieu-can-biet-khi-du-lich-ladakh" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">tránh được những sai lầm mà rất nhiều du khách lần đầu thường gặp</a>.</p>
+
+        <p>Máy bay vừa hạ cánh xuống Leh.</p>
+
+        <p>Qua ô cửa sổ là những dãy núi đá khổng lồ của Himalaya, bầu trời xanh trong và cảm giác háo hức sau khi đã tìm hiểu kỹ <a href="/du-lich-ladakh" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">cẩm nang đi Leh Ladakh</a>.</p>
+
+        <div class="my-12 flex justify-center">
+          <iframe 
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3326415910863567&show_text=false&width=350" 
+            width="350" 
+            height="622" 
+            style="border:none;overflow:hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+            allowFullScreen="true">
+          </iframe>
+        </div>
+
+        <p>Với nhiều người, phản ứng đầu tiên thường là:</p>
+
+        <blockquote class="border-l-4 border-amber-300 pl-5 italic text-amber-900 bg-amber-50 py-4 pr-4 rounded-r-xl my-8 shadow-sm">
+          <p class="m-0">Tranh thủ đi luôn thôi.</p>
+        </blockquote>
+
+        <p>Một số điểm đến quen thuộc thường được nhắc tới ngay khi vừa hạ cánh:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li><strong>Leh Palace:</strong> Cung điện cổ nằm tĩnh lặng trên ngọn đồi nhìn bao quát toàn cảnh thành phố Leh.</li>
+          <li><strong>Shanti Stupa:</strong> Ngôi bảo tháp trắng thanh bình, nơi lý tưởng để đón ánh hoàng hôn.</li>
+          <li><strong>Chợ Leh (Main Bazaar):</strong> Khu chợ nhộn nhịp mang đậm hơi thở văn hóa địa phương.</li>
+          <li><strong>Hall of Fame:</strong> Bảo tàng lịch sử quân sự đầy tự hào của vùng đất biên cương.</li>
+        </ul>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/ladakh-memories-cua-doan-fit-tour.webp" alt="Kỷ niệm đẹp của đoàn khách FIT TOUR tại Leh" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Bất kỳ ai đến Leh đều muốn lưu lại những kỷ niệm đẹp đẽ nhất.</figcaption>
+        </figure>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/2022/06/kien-truc-bao-thap-shanti-stupa.webp" alt="Bảo tháp Shanti Stupa linh thiêng tại Leh Ladakh" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Bảo tháp Shanti Stupa nằm yên bình giữa thung lũng đá Leh.</figcaption>
+        </figure>
+
+        <p>Thậm chí có người còn muốn lên Khardung La ngay trong ngày đầu tiên.</p>
+
+        <p>Nhưng theo Huy Ngô, điều quan trọng nhất trong ngày đầu tiên không phải là đi đâu.</p>
+
+        <blockquote class="border-l-4 border-amber-300 pl-5 italic text-amber-900 bg-amber-50 py-4 pr-4 rounded-r-xl my-8 shadow-sm">
+          <p class="m-0 mb-2 font-bold">Điều quan trọng nhất trong ngày đầu tiên không phải là đi đâu.</p>
+          <p class="m-0">Mà là để cơ thể thích nghi với độ cao.</p>
+        </blockquote>
+
+        <p>Đây cũng là lý do phần lớn các <a href="/ly-do-ban-nen-du-lich-ladakh-cung-fit-tour" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">lịch trình Ladakh được thiết kế hợp lý</a> đều dành ngày đầu tiên cho việc thích nghi thay vì tham quan dày đặc.</p>
+
+        {/* Checklist Component Moved Up Here */}
+        <div class="my-16 not-prose border-y border-amber-100 py-10 bg-[#fdfbf7] rounded-3xl">
+          <h3 class="text-3xl font-serif font-bold text-center mb-4 text-stone-900 px-4">Kiểm Tra Trạng Thái Sức Khỏe Ngày Đầu</h3>
+          <p class="text-center text-stone-500 mb-6 max-w-[600px] mx-auto text-lg px-4">Hãy thử phân tích xem bạn đã có chuẩn bị tốt nhất cho ngày đầu tiên tại Ladakh chưa nhé.</p>
+          <LadakhChecklist client:visible />
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Vì Sao Ngày Đầu Tiên Ở Ladakh Lại Quan Trọng Đến Vậy?</h2>
+
+        <p>Leh nằm ở độ cao khoảng 3.500 mét so với mực nước biển.</p>
+        
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/route-map-tour-ladakh.webp" alt="Bản đồ hành trình tour Ladakh" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Leh là điểm bắt đầu cho toàn bộ hành trình tại Ladakh.</figcaption>
+        </figure>
+
+        <p>Theo Huy Ngô, đây là độ cao mà phần lớn du khách Việt Nam chưa từng trải nghiệm trước đó.</p>
+        <p>Khi bay từ Delhi lên Leh, bạn gần như được đưa từ vùng đồng bằng lên vùng núi cao chỉ trong hơn một giờ.</p>
+        <p>Điều đó có nghĩa cơ thể không có nhiều thời gian để thích nghi dần với lượng oxy thấp hơn.</p>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/toan-canh-hop-luu-song-indus-va-zanskar-tai-sangam.webp" alt="Toàn cảnh hợp lưu sông Indus và Zanskar tại Sangam" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Cảnh sắc thiên nhiên ngoạn mục tại ngã ba sông Sangam.</figcaption>
+        </figure>
+
+        <p>Nhiều người cảm thấy hoàn toàn bình thường ngay sau khi hạ cánh.</p>
+        <p>Nhưng thực tế, như Huy Ngô thường chia sẻ với khách trước chuyến đi, các triệu chứng say độ cao thường không xuất hiện ngay lập tức.</p>
+        <p>Một số người chỉ bắt đầu cảm thấy đau đầu, mệt mỏi hoặc khó ngủ sau vài giờ đầu tiên ở Leh.</p>
+        <p>Đó là lý do ngày đầu tiên luôn được xem là ngày quan trọng nhất của cả hành trình.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Lưu Ý Quan Trọng Nhất: Nghỉ Ngơi Nhiều Hơn Bạn Nghĩ</h2>
+
+        <p>Nghe có vẻ đơn giản.</p>
+        <p>Nhưng theo Huy Ngô, đây là lời khuyên quan trọng nhất cho bất kỳ ai lần đầu đến Ladakh.</p>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/toan-canh-tu-vien-thiksey-ladakh.webp" alt="Toàn cảnh Tu viện Thiksey Monastery đẹp như tranh vẽ" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Thiksey Monastery - Có thể ngắm nhìn từ xa trước thay vì leo núi ngay.</figcaption>
+        </figure>
+
+        <p>Nếu vừa đáp xuống Leh vào buổi sáng, đừng vội xách máy ảnh đi khắp nơi.</p>
+        <p>Hãy:</p>
+
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Nhận phòng tại các <a href="/noi-o-ladakh" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">khách sạn tốt nhất ở Leh</a>.</li>
+          <li>Uống nước.</li>
+          <li>Ăn nhẹ.</li>
+          <li>Nghỉ ngơi.</li>
+          <li>Ngắm cảnh từ khách sạn.</li>
+        </ul>
+
+        <p>Huy Ngô cho biết rất nhiều du khách cảm thấy mình vẫn khỏe nên muốn tranh thủ đi ngay.</p>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/kien-truc-tu-vien-hemis-ladakh.webp" alt="Kiến trúc Tu viện Hemis ở Ladakh" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Thay vì đi tham quan tu viện Hemis ngay, hãy ưu tiên nghỉ ngơi ở trung tâm Leh.</figcaption>
+        </figure>
+
+        <p>Nhưng chính những người này đôi khi lại là người xuất hiện các triệu chứng khó chịu vào buổi chiều hoặc tối cùng ngày.</p>
+
+        <div class="bg-stone-900 p-6 rounded-2xl text-stone-300 space-y-4 my-10 shadow-md">
+          <div class="font-serif italic text-lg md:text-xl leading-relaxed text-stone-100 m-0">
+            "Khách Việt Nam thường có tâm lý tiếc thời gian nên rủ nhau đi chợ Leh ngay buổi chiều. 10 người đi thì 8 người tối về bỏ cơm vì đau đầu. Những vị khách chịu khó ngủ trưa ngày đầu luôn là những người tươi tắn nhất trong bữa sáng hôm sau."
+          </div>
+          <div class="text-xs font-mono text-amber-500 uppercase tracking-widest m-0">— Anh Sonam (Chủ khách sạn The Grand Dragon Ladakh)</div>
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Kinh Nghiệm Thực Tế Từ Huy Ngô Sau Hơn 20 Lần Đến Ladakh</h2>
+
+        <p>Sau hơn 20 lần đến Ladakh và dẫn nhiều đoàn khách Việt Nam, Huy Ngô luôn có chung một lời khuyên:</p>
+
+        <blockquote class="border-l-4 border-amber-300 pl-5 italic text-amber-900 bg-amber-50 py-4 pr-4 rounded-r-xl my-8 shadow-sm">
+          <p class="m-0">Hai ngày đầu tiên đừng vội.</p>
+        </blockquote>
+
+        <p>Theo anh, đây là giai đoạn cơ thể đang làm quen với độ cao Himalaya.</p>
+        <p>Bạn không cần cố gắng khám phá thật nhiều để tận dụng thời gian.</p>
+        <p>Ngược lại, càng thư thả trong những ngày đầu, hành trình phía sau thường càng dễ chịu hơn.</p>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/suong-mu-tren-ho-pangong-buoi-sang.webp" alt="Sương mù trên hồ Pangong xanh biếc tuyệt đẹp" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Thư giãn ngày đầu sẽ giúp bạn khỏe khoắn để tận hưởng trọn vẹn vẻ đẹp của hồ Pangong vào những ngày sau.</figcaption>
+        </figure>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Hạn Chế Tắm Trong Ngày Đầu Tiên</h3>
+
+        <p>Đây là điều khiến nhiều du khách bất ngờ nhất.</p>
+        <p>Sau hành trình dài từ Việt Nam đến Delhi rồi tiếp tục bay lên Leh, phản xạ tự nhiên của nhiều người là muốn tắm ngay khi nhận phòng.</p>
+        <p>Tuy nhiên, Huy Ngô thường khuyên khách hạn chế tắm trong ngày đầu tiên nếu không thực sự cần thiết.</p>
+        <p>Ở độ cao hơn 3.500m, cơ thể đang phải thích nghi với môi trường mới.</p>
+        <p>Việc tắm có thể khiến nhiệt độ cơ thể thay đổi đột ngột và làm một số người cảm thấy mệt hoặc lạnh hơn.</p>
+        <p>Nếu cảm thấy khó chịu sau chuyến đi dài, việc lau người bằng khăn ấm thường là lựa chọn phù hợp hơn.</p>
+
+        <div class="bg-stone-900 p-6 rounded-2xl text-stone-300 space-y-4 my-10 shadow-md">
+          <div class="font-serif italic text-lg md:text-xl leading-relaxed text-stone-100 m-0">
+            "Nhiều khách quen thói quen ở xứ nóng, lên đây ngày đầu cứ đòi nước thật nóng để tắm. Nước bốc hơi làm giảm lượng oxy trong phòng tắm vốn đã kín, cộng với sốc nhiệt khi bước ra ngoài phòng, rất dễ dẫn đến ngất xỉu hoặc cảm lạnh sâu."
+          </div>
+          <div class="text-xs font-mono text-amber-500 uppercase tracking-widest m-0">— Bác sĩ Tsering (Bệnh viện Sonam Norboo Memorial, Leh)</div>
+        </div>
+
+        <p>Ngày hôm sau, khi cơ thể đã ổn định hơn, việc tắm rửa sẽ thoải mái hơn rất nhiều.</p>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Tranh Thủ Ngủ Trưa Sớm</h3>
+
+        <p>Một trong những việc hữu ích nhất sau khi nhận phòng là ngủ một giấc ngắn.</p>
+        
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/khu-cuoi-lac-da-hai-buouu-tai-thung-lung-nubra.webp" alt="Trải nghiệm cưỡi lạc đà tại Thung lũng Nubra Ladakh" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Dành sức khỏe tốt nhất để cưỡi lạc đà tại Nubra vào những ngày sau.</figcaption>
+        </figure>
+
+        <p>Nhiều khách tới Leh vào buổi sáng và muốn lập tức đi tham quan.</p>
+        <p>Tuy nhiên, một giấc ngủ từ một đến hai giờ thường giúp cơ thể hồi phục tốt hơn rất nhiều so với việc cố gắng đi chơi ngay.</p>
+        <p>Đừng cảm thấy tiếc thời gian.</p>
+        <p>Theo Huy Ngô, đây là mẹo đơn giản nhưng cực kỳ hiệu quả để giảm cảm giác mệt mỏi trong ngày đầu tiên.</p>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Chiều Ngày Đầu Tiên Chỉ Nên Làm Những Việc Nhẹ Nhàng</h3>
+
+        <p>Nếu cảm thấy khỏe sau khi nghỉ ngơi, bạn hoàn toàn có thể ra ngoài.</p>
+        <p>Nhưng hãy chọn những hoạt động đơn giản như:</p>
+
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Đổi tiền.</li>
+          <li>Làm SIM 4G địa phương.</li>
+          <li>Dạo <a href="/cho-leh-ladakh" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">chợ Leh</a>.</li>
+          <li>Uống cà phê.</li>
+          <li>Mua vài món đồ cần thiết.</li>
+        </ul>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/pho-di-bo-main-bazaar-leh-ladakh.webp" alt="Phố đi bộ Main Bazaar sầm uất tại trung tâm thị trấn Leh Ladakh Ấn Độ" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Dạo chợ Leh (Main Bazaar) nhẹ nhàng vào buổi chiều là hoạt động lý tưởng trong ngày đầu.</figcaption>
+        </figure>
+
+        <p>Đây cũng là thời điểm tuyệt vời để làm quen với không khí của Ladakh thay vì cố gắng chinh phục các điểm tham quan nổi tiếng.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Uống Nhiều Nước Hơn Bình Thường</h2>
+
+        <p>Không khí ở Ladakh khô hơn rất nhiều so với Việt Nam.</p>
+        <p>Theo Huy Ngô, đây là nguyên nhân khiến nhiều người bị mất nước mà không nhận ra.</p>
+        <p>Trong những ngày đầu tiên, hãy luôn mang theo chai nước bên mình và uống đều đặn trong ngày.</p>
+        <p>Đừng đợi đến khi khát mới uống.</p>
+        <p>Việc duy trì đủ nước là một trong những cách đơn giản nhất để hỗ trợ cơ thể thích nghi với độ cao.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Đừng Quên Thuốc Say Độ Cao</h2>
+
+        <p>Đây là một trong những vật dụng quan trọng nhất trước chuyến đi Ladakh.</p>
+        <p>Theo Huy Ngô, du khách nên chuẩn bị thuốc hỗ trợ phòng say độ cao từ Việt Nam theo hướng dẫn của bác sĩ hoặc đơn vị tổ chức tour.</p>
+        <p>Việc chuẩn bị sẵn thuốc và sử dụng đúng cách giúp nhiều người yên tâm hơn trong những ngày đầu tiên ở Leh.</p>
+        
+        <div class="bg-stone-900 p-6 rounded-2xl text-stone-300 space-y-4 my-10 shadow-md">
+          <div class="font-serif italic text-lg md:text-xl leading-relaxed text-stone-100 m-0">
+            "Được HDV FIT TOUR nhắc nhở, tôi uống Acetazolamid trước 2 ngày khởi hành. Tới nơi tôi tuân thủ '3 Không': Không tắm, không chạy nhảy, không thức khuya. Kết quả là cả chuyến đi Khardung La 5300m tôi không hề bị đau đầu một chút nào."
+          </div>
+          <div class="text-xs font-mono text-amber-500 uppercase tracking-widest m-0">— Chị Thanh Trúc (Du khách tour Ladakh tháng 8/2023)</div>
+        </div>
+
+        <p>Tuy nhiên, thuốc không thay thế cho việc nghỉ ngơi và uống đủ nước.</p>
+        <p>Đó vẫn là hai yếu tố quan trọng nhất.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Ăn Trưa Nhẹ Và Ăn Tối Sớm</h2>
+
+        <p>Một sai lầm khá phổ biến là ăn quá no ngay sau khi tới Leh.</p>
+        <p>Ở độ cao lớn, cơ thể đang phải thích nghi với môi trường mới.</p>
+        <p>Những bữa ăn quá nhiều dầu mỡ hoặc quá nặng có thể khiến cơ thể cảm thấy khó chịu hơn.</p>
+        <p>Ngày đầu tiên nên ưu tiên:</p>
+
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Soup nóng.</li>
+          <li>Mì nóng.</li>
+          <li>Cơm đơn giản.</li>
+          <li>Các món dễ tiêu hóa.</li>
+        </ul>
+
+        <p>Huy Ngô thường khuyên khách ăn tối sớm và ngủ sớm để cơ thể có thời gian hồi phục tốt hơn.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Có Nên Đi Dạo Không?</h2>
+
+        <p>Có.</p>
+        <p>Nhưng hãy đi thật nhẹ nhàng.</p>
+        <p>Huy Ngô thường đùa với khách:</p>
+
+        <blockquote class="border-l-4 border-amber-300 pl-5 italic text-amber-900 bg-amber-50 py-4 pr-4 rounded-r-xl my-8 shadow-sm">
+          <p class="m-0">Đi nhẹ, nói khẽ, khỏi cười duyên.</p>
+        </blockquote>
+
+        <p>Nghe vui nhưng lại rất đúng với Ladakh.</p>
+        <p>Trong hai ngày đầu tiên bạn nên:</p>
+
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Đi bộ chậm hơn bình thường.</li>
+          <li>Leo cầu thang từ từ.</li>
+          <li>Hạn chế chạy nhảy.</li>
+          <li>Không cố chứng minh thể lực.</li>
+        </ul>
+
+        <p>Ngay cả những người tập thể thao thường xuyên cũng có thể bị ảnh hưởng bởi độ cao.</p>
+        <p>Ladakh không phải nơi thích hợp để thi xem ai khỏe hơn.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Những Điều Cần Tránh Trong Ngày Đầu Tiên</h2>
+
+        <p>Đây mới là phần quan trọng nhất.</p>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Không Lên Khardung La Ngay</h3>
+
+        <p>Theo Huy Ngô, việc <a href="/deo-khardung-la-va-chang-la" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">vượt đèo Khardung La</a> (nằm ở độ cao hơn 5.000 mét) quá sớm khi cơ thể chưa thích nghi tốt có thể khiến nguy cơ xuất hiện các triệu chứng say độ cao tăng lên đáng kể.</p>
+        <p>Đó là lý do các lịch trình Ladakh hợp lý thường để Khardung La vào những ngày sau.</p>
+
+        <figure class="my-12">
+          <img src="https://media.fittour.vn/uploads/trai-nghiem-choi-tuyet-khardungla-ladakh.webp" alt="Đèo Khardung La cao nhất thế giới tại Ladakh Ấn Độ" class="w-full rounded-2xl shadow-md border border-stone-200 m-0" width="1200" height="800" />
+          <figcaption class="text-center text-sm text-stone-500 mt-3 font-mono">Tuyệt đối không nên chinh phục Đèo Khardung La (5.359m) vào ngày đầu tiên.</figcaption>
+        </figure>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Không Chạy Bộ Hoặc Leo Dốc</h3>
+
+        <p>Ngay cả việc leo vài tầng cầu thang nhanh cũng có thể khiến bạn thở dốc hơn bình thường.</p>
+
+        <div class="bg-stone-900 p-6 rounded-2xl text-stone-300 space-y-4 my-10 shadow-md">
+          <div class="font-serif italic text-lg md:text-xl leading-relaxed text-stone-100 m-0">
+            "Khách du lịch rất hay thích nhảy cao ở đèo để chụp hình. Tôi luôn phải nhắc họ: 'Please no jump!'. Khí loãng sẽ làm bạn tụt oxy và xỉu ngay lập tức. Đừng cố chứng tỏ thể lực ở độ cao 5000m."
+          </div>
+          <div class="text-xs font-mono text-amber-500 uppercase tracking-widest m-0">— Tashi (Tài xế bản địa gắn bó 5 năm với các đoàn FIT TOUR)</div>
+        </div>
+
+        <p>Hãy để cơ thể có thời gian thích nghi.</p>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Không Uống Rượu</h3>
+
+        <p>Theo Huy Ngô, rượu làm tăng nguy cơ mất nước và có thể khiến các triệu chứng khó chịu trở nên rõ rệt hơn.</p>
+        <p>Nếu có thể, hãy chờ thêm vài ngày trước khi nghĩ tới việc thưởng thức đồ uống có cồn.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Một Lịch Trình Ngày Đầu Tiên Mà Huy Ngô Thường Áp Dụng</h2>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Buổi sáng</h3>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Đón sân bay.</li>
+          <li>Về khách sạn.</li>
+          <li>Nhận phòng.</li>
+          <li>Uống nước.</li>
+          <li>Nghỉ ngơi.</li>
+        </ul>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Buổi trưa</h3>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Ăn nhẹ.</li>
+          <li>Ngủ trưa.</li>
+          <li>Thích nghi với độ cao.</li>
+        </ul>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Buổi chiều</h3>
+        <p>Nếu cơ thể ổn:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Làm SIM 4G.</li>
+          <li>Đổi tiền.</li>
+          <li>Dạo chợ Leh.</li>
+          <li>Uống cà phê.</li>
+          <li>Đi bộ nhẹ nhàng.</li>
+        </ul>
+
+        <h3 class="text-2xl font-serif font-bold text-stone-800 mt-8 mb-4">Buổi tối</h3>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-stone-700 marker:text-amber-600">
+          <li>Ăn tối sớm.</li>
+          <li>Uống nước.</li>
+          <li>Nghỉ ngơi.</li>
+          <li>Chuẩn bị cho ngày khám phá tiếp theo.</li>
+        </ul>
+
+        <p>Nghe có vẻ không nhiều hoạt động.</p>
+        <p>Nhưng theo Huy Ngô, chính ngày đầu tiên "chậm lại" này thường quyết định bạn sẽ tận hưởng những ngày tiếp theo thoải mái đến đâu.</p>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-12 mb-6">Đừng Xem Ngày Đầu Tiên Là Ngày Du Lịch</h2>
+
+        <p>Sau hơn 20 lần đến Ladakh, Huy Ngô luôn nhắc khách rằng:</p>
+
+        <blockquote class="border-l-4 border-amber-300 pl-5 italic text-amber-900 bg-amber-50 py-4 pr-4 rounded-r-xl my-8 shadow-sm">
+          <p class="m-0">Đừng xem ngày đầu tiên ở Ladakh là ngày du lịch. Hãy xem đó là ngày cơ thể làm quen với Himalaya.</p>
+        </blockquote>
+
+        <p>Có thể bạn sẽ dành phần lớn thời gian để nghỉ ngơi, uống nước, ngủ một giấc ngắn hoặc chỉ đi dạo vài vòng quanh chợ Leh.</p>
+        <p>Nhưng theo Huy Ngô, chính sự chậm lại đó thường là bí quyết để những ngày tiếp theo ở <a href="/ho-pangong-tso" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">Pangong</a>, <a href="/thung-lung-nubra" class="text-amber-700 font-medium hover:text-amber-900 underline underline-offset-4 decoration-amber-300">Nubra Valley</a> hay Khardung La trở nên dễ chịu và đáng nhớ hơn rất nhiều.</p>
+
+        <p>Ladakh vẫn ở đó.</p>
+        <p>Không cần vội trong ngày đầu tiên.</p>
+
+        {/* --- BẮT ĐẦU SNIPPET CỘT MỐC --- */}
+        <div class="my-12 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[#fdfbf7] to-[#f4ede4] border border-amber-900/10 shadow-sm not-prose relative overflow-hidden group">
+          <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/5 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-600/10 transition-colors duration-700"></div>
+          
+          <div class="text-center max-w-2xl mx-auto relative z-10">
+            <h3 class="text-xs font-mono font-bold text-amber-700 uppercase tracking-[0.2em] mb-3">Hành Trình Của Chúng Tôi</h3>
+            <h4 class="text-2xl md:text-3xl font-serif font-bold text-stone-900 leading-tight mb-8">
+              Đồng hành cùng hàng ngàn du khách chinh phục miền đất "Tiểu Tây Tạng"
+            </h4>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
+            <div class="bg-white/60 backdrop-blur-sm p-5 rounded-2xl border border-white/50 text-center shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)]">
+              <div class="text-4xl md:text-5xl font-black font-sans tracking-tighter text-stone-300 mb-1">20+</div>
+              <div class="font-serif italic text-base text-stone-600 mb-2">Năm 2022</div>
+              <p class="text-xs md:text-sm font-sans text-stone-500 m-0">Những bước chân tiên phong khai phá cung đường độc bản.</p>
+            </div>
+            
+            <div class="bg-white/60 backdrop-blur-sm p-5 rounded-2xl border border-white/50 text-center shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)]">
+              <div class="text-4xl md:text-5xl font-black font-sans tracking-tighter text-amber-700/50 mb-1">50+</div>
+              <div class="font-serif italic text-base text-stone-600 mb-2">Năm 2023</div>
+              <p class="text-xs md:text-sm font-sans text-stone-500 m-0">Trở thành đơn vị tổ chức tour Ladakh uy tín hàng đầu.</p>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-amber-200 text-center shadow-lg relative transform md:-translate-y-2">
+              <div class="absolute inset-0 rounded-2xl ring-2 ring-amber-500/20 ring-offset-2 pointer-events-none"></div>
+              <div class="text-5xl md:text-6xl font-black font-sans tracking-tighter text-amber-700 mb-1">80+</div>
+              <div class="font-serif font-bold text-base text-stone-900 mb-2">Đoàn Khách (Hiện tại)</div>
+              <p class="text-xs md:text-sm font-sans text-stone-600 m-0">Khẳng định vị thế chuyên gia với kỷ lục 80+ chuyến đi thành công.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 flex justify-center relative z-10">
+            <a href="/cot-moc-80-chuyen-di-ladakh" class="group inline-flex items-center gap-3 bg-stone-900 text-white px-8 py-4 rounded-full font-sans font-semibold text-sm tracking-wide hover:bg-amber-800 transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1">
+              <span>Xem Hành Trình 80 Đoàn</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        {/* --- KẾT THÚC SNIPPET CỘT MỐC --- */}
+
+        {/* CTA BOX */}
+        <div class="mt-16 bg-gradient-to-br from-amber-50 to-amber-100 p-8 md:p-10 rounded-3xl border border-amber-200 text-center shadow-sm not-prose">
+          <h3 class="text-2xl md:text-3xl font-serif font-bold text-amber-900 mb-4">Bạn Đã Sẵn Sàng Chinh Phục Ladakh?</h3>
+          <p class="text-amber-800 mb-8 max-w-xl mx-auto text-base md:text-lg">Đồng hành cùng HDV Huy Ngô và đội ngũ FIT TOUR với bề dày kinh nghiệm để có một chuyến đi an toàn, khác biệt và trọn vẹn cảm xúc nhất.</p>
+          <a href="/country/ladakh/" class="inline-flex items-center justify-center bg-amber-700 text-white font-semibold px-8 py-4 rounded-full shadow-md hover:bg-amber-800 hover:shadow-lg transition-all transform hover:-translate-y-1">
+            <span>Tham Khảo Lịch Trình Tour Du Lịch Ladakh</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      {/* RELATED POSTS (Learned from EmagazineRelated module) */}
+      <div class="mt-16 border-t border-stone-200 pt-12 not-prose">
+        <h3 class="text-3xl font-serif font-bold text-stone-900 mb-8 text-center">Bài Viết Liên Quan Về Ladakh</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/le-hoi-purnima" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-200 no-underline">
+            <div class="aspect-video w-full overflow-hidden">
+              <img src="https://media.fittour.vn/uploads/2023/06/mua-mat-na-huou-tai-le-hoi-Purnima-ladakh.webp" alt="Lễ hội Purnima ở Ladakh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 m-0" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-700 transition-colors line-clamp-3 mt-0 mb-0">Lễ hội Purnima ở Ladakh: Kỷ niệm Đản sinh Đức Phật Thích Ca</h4>
+            </div>
+          </a>
+
+          <a href="/tu-vien-phyang" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-200 no-underline">
+            <div class="aspect-video w-full overflow-hidden">
+              <img src="https://media.fittour.vn/uploads/2023/01/tu-vien-Phyang-ladakh.webp" alt="Tu viện Phyang Gompa Ladakh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 m-0" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-700 transition-colors line-clamp-3 mt-0 mb-0">Tu viện Phyang Gompa Ladakh – Học viện Phật giáo thế kỷ 16</h4>
+            </div>
+          </a>
+
+          <a href="/cho-leh-ladakh" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-200 no-underline">
+            <div class="aspect-video w-full overflow-hidden">
+              <img src="https://media.fittour.vn/uploads/2022/06/ngoi-tren-quan-ca-phe-o-leh-ladakh.webp" alt="Chợ Leh Ladakh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 m-0" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <h4 class="text-lg font-bold text-stone-800 group-hover:text-amber-700 transition-colors line-clamp-3 mt-0 mb-0">Chợ Leh Ladakh – Hướng dẫn mua sắm và những điều cần biết</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </main>
+  </article>
+</BaseLayout>

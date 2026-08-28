@@ -1,0 +1,35 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { mekongKhanRanScarfLegacyHtml } from '@/data/demo-articles';
+
+const d1Db = env?.dulichcoguu_d1;
+let post;
+try {
+  if (d1Db) post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('khan-ran-nam-bo').first<any>(),
+    { route: Astro.url.pathname, slug: 'khan-ran-nam-bo', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  // Graceful fallback
+}
+
+const adminEditUrl = post?.id ? `/admin/posts/edit?id=${post.id}` : '/admin/posts/edit?id=33735';
+const title = post?.title || 'The Mekong Khăn Rằn: Unweaving a 300-Year Legacy';
+const description = post?.excerpt || 'Curated field guide to the Mekong Khăn Rằn: 300-year history, Long Khanh A weaving village, comparison matrix of 4 Southeast Asian scarves, and authentic ways to wear.';
+const image = post?.featuredImage || undefined;
+
+// If post.content is present and has the 3-column Magazine layout, render it; otherwise render canonical 3-column template khanRanHtml
+const has3Col = post?.content && post.content.includes('Table of Contents');
+const htmlContent = has3Col ? post.content : mekongKhanRanScarfLegacyHtml;
+---
+
+<BaseLayout 
+  title={title} 
+  description={description} 
+  image={image}
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment set:html={htmlContent} />
+</BaseLayout>

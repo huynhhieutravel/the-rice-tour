@@ -1,0 +1,85 @@
+---
+// AstroNativeLayout.astro
+// Giao diện (Layout) SẠCH 100% dành riêng cho các bài viết code tay (.astro files).
+// Nó tự động lấy dữ liệu SEO (Tiêu đề, Mô tả, Ảnh Thumbnail, Schema JSON-LD) từ Database (D1) dựa vào slug.
+// Nhưng bên trong thẻ <body>, nó KHÔNG render bất kỳ HTML thừa nào (không Breadcrumb, không Tiêu đề mặc định, không Prose).
+// Nhường lại 100% không gian màn hình cho code HTML/Tailwind tự do của bạn!
+
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+
+const { slug, isCorporate = false } = Astro.props;
+
+if (!slug) {
+  throw new Error("AstroNativeLayout yêu cầu truyền vào prop 'slug' (ví dụ: slug='ten-bai-viet') để kéo dữ liệu SEO từ Database.");
+}
+
+// 1. Fetch data từ Database
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) {
+  throw new Error("Không tìm thấy kết nối Database D1. (Chỉ chạy được trên môi trường Cloudflare/Wrangler)");
+}
+
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ?").bind(slug).first<any>(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_post_by_slug_for_native_layout" }
+  );
+} catch (e) {
+  console.error("Failed to fetch post from DB:", e);
+  throw new Error("Lỗi truy vấn Database.");
+}
+
+if (!post) {
+  throw new Error(`Không tìm thấy bài viết nào có slug là '${slug}' trong Database. Vui lòng tạo bài viết trong CMS trước để hệ thống lấy dữ liệu SEO.`);
+}
+
+// 2. Chuẩn bị SEO Metadata
+const title = post.seoTitle || post.title;
+const description = post.seoDescription || post.excerpt;
+const image = post.featuredImage;
+
+const currentOrigin = Astro.url.origin;
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
+
+// 3. Chỉ render Schema nếu admin đã cài customSchema hợp lệ
+// Trang AstroNative thường là landing/corporate → không nên auto BlogPosting
+// Global Org Schema đã được render sẵn trong BaseLayout <head>
+let finalSchemaToRender: any = null;
+if (post.customSchema) {
+  try {
+    const parsed = JSON.parse(post.customSchema);
+    const isValidJsonLd = parsed['@context'] ||
+      (Array.isArray(parsed['@graph']) && parsed['@graph'].length > 0);
+    if (isValidJsonLd) {
+      finalSchemaToRender = parsed;
+    }
+  } catch (e) {
+    console.error("Failed to parse custom schema:", e);
+  }
+}
+---
+
+<BaseLayout 
+  title={title} 
+  description={description} 
+  image={image} 
+  preloadImages={image ? [image] : []} 
+  isCorporate={isCorporate}
+>
+  <Fragment slot="schema">
+    {finalSchemaToRender && Object.keys(finalSchemaToRender).length > 0 && (
+      <JsonLdSchema type="custom" data={finalSchemaToRender} />
+    )}
+  </Fragment>
+
+  <!-- 100% KHÔNG GIAN TRỐNG DÀNH CHO CODE ASTRO RIÊNG CỦA SẾP -->
+  <!-- KHÔNG Breadcrumb - KHÔNG Tiêu đề tự động - KHÔNG bị bóp bởi class Prose -->
+  <div class="w-full">
+    <slot />
+  </div>
+</BaseLayout>

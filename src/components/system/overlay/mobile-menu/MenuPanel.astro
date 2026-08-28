@@ -1,0 +1,32 @@
+---
+// src/components/system/overlay/mobile-menu/MenuPanel.astro
+import type { NavItem } from '@/config/navigation/default';
+
+export interface Props {
+  navItems: NavItem[];
+}
+
+const { navItems } = Astro.props;
+---
+
+<div class="w-1/2 h-full flex flex-col px-8 overflow-y-auto pb-20 relative">
+  {/* Back Button */}
+  <button id="system-back-btn" class="min-h-[48px] py-2 flex items-center gap-2 !text-gray-400 hover:!text-white font-medium mb-6 focus:outline-none focus:text-brand-500 transition-colors">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+    Quay lại
+  </button>
+
+  {/* Submenu Panes */}
+  {navItems.map((item, index) => (
+    item.children && item.children.length > 0 && (
+      <div id={`sys-submenu-${index}`} class="submenu-pane absolute top-16 left-8 right-8 hidden flex-col gap-4">
+        <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2 border-b border-gray-800 pb-3">{item.label}</h3>
+        {item.children.map(child => (
+          <a href={child.href || '#'} class="flex items-center min-h-[48px] py-2 text-2xl font-semibold tracking-tight !text-white hover:text-brand-500 focus:text-brand-500 focus:outline-none transition-colors border-b border-gray-800">
+            {child.label}
+          </a>
+        ))}
+      </div>
+    )
+  ))}
+</div>

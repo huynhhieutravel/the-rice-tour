@@ -1,0 +1,86 @@
+---
+import type { NavItem } from '@/config/navigation/default';
+import MegaMenuLinks from '../megamenu/MegaMenuLinks.astro';
+import MegaMenuCards from '../megamenu/MegaMenuCards.astro';
+import MegaMenuLogos from '../megamenu/MegaMenuLogos.astro';
+import MegaMenuDoanhNghiep from '../megamenu/MegaMenuDoanhNghiep.astro';
+
+export interface Props {
+  navItems: NavItem[];
+}
+
+const { navItems } = Astro.props;
+---
+
+<nav class="hidden md:flex space-x-6 lg:space-x-8 items-center h-full">
+  {navItems.map((item) => {
+    const hasDropdown = item.children && item.children.length > 0;
+    const hasMegaMenu = item.megaMenuType && item.megaMenuType !== 'none';
+    const isInteractive = hasDropdown || hasMegaMenu;
+
+    return (
+      <div class={`h-full flex items-center group ${!hasMegaMenu ? 'relative' : 'static'}`}>
+        <a 
+          href={item.href || '#'} 
+          data-action={item.label?.toLowerCase().includes('đăng ký tư vấn') ? 'open-corporate-modal' : undefined}
+          class="text-[17px] text-gray-700 group-hover:text-brand-600 font-bold transition-colors duration-200 flex items-center h-full py-4"
+        >
+          {item.label}
+          {isInteractive && (
+            <svg class="w-4 h-4 ml-1 text-gray-400 group-hover:text-brand-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          )}
+        </a>
+
+        {/* Standard Dropdown (No Mega Menu) */}
+        {hasDropdown && !hasMegaMenu && (
+          <div class="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl border border-gray-100/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-[100] overflow-hidden">
+            <ul class="py-2">
+              {item.children!.map((child) => (
+                <li>
+                  <a href={child.href} class="flex items-center px-4 py-3 min-h-[44px] text-[15px] font-medium text-gray-700 hover:bg-gray-100/80 hover:text-brand-500 transition-colors whitespace-nowrap">
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Mega Menu Dropdowns (Apple Style Popover - Centered on Screen) */}
+        {hasMegaMenu && (
+          <div class="absolute top-[80px] left-0 w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-[100]">
+            <div class="bg-white/95 backdrop-blur-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] rounded-[32px] border border-gray-100/80 overflow-hidden mt-2">
+              
+              {item.megaMenuType === 'links' && item.megaMenuColumns && (
+                <div class="w-[950px] max-w-[95vw]">
+                  <MegaMenuLinks columns={item.megaMenuColumns} />
+                </div>
+              )}
+              
+              {item.megaMenuType === 'cards' && item.megaMenuCards && (
+                <div class="w-[1000px] max-w-[95vw]">
+                  <MegaMenuCards cards={item.megaMenuCards} />
+                </div>
+              )}
+              
+              {item.megaMenuType === 'logos' && item.megaMenuLogos && (
+                <div class="w-[800px] max-w-[95vw]">
+                  <MegaMenuLogos logos={item.megaMenuLogos} stories={item.megaMenuStories} />
+                </div>
+              )}
+
+              {item.megaMenuType === 'doanh-nghiep' && (
+                <div class="w-[1080px] max-w-[95vw]">
+                  <MegaMenuDoanhNghiep />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  })}
+</nav>
+

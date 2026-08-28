@@ -1,0 +1,29 @@
+/* Custom editorial effects */
+.drop-cap-china::first-letter {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.15rem;
+  font-weight: bold;
+  color: #be123c; /* rose-700 */
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes scroll-down {
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 2s ease-in-out infinite;
+}

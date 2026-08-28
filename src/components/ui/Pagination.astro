@@ -1,0 +1,106 @@
+---
+// src/components/ui/Pagination.astro
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+  useQueryParam?: boolean;
+  anchor?: string;
+}
+
+const { currentPage, totalPages, baseUrl, useQueryParam = false, anchor } = Astro.props;
+
+if (totalPages <= 1) {
+  return null;
+}
+
+// Generate an array of page numbers to display
+// We show up to 5 pages at a time, centered around the current page
+const pages = [];
+const maxPagesToShow = 5;
+
+let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+let endPage = startPage + maxPagesToShow - 1;
+
+if (endPage > totalPages) {
+  endPage = totalPages;
+  startPage = Math.max(1, endPage - maxPagesToShow + 1);
+}
+
+for (let i = startPage; i <= endPage; i++) {
+  pages.push(i);
+}
+
+// Helper to construct the URL
+const suffix = anchor ? `#${anchor}` : '';
+const getPageUrl = (page: number) => {
+  const baseWithoutTrailingSlash = baseUrl.replace(/\/$/, '');
+  if (useQueryParam) {
+    if (page === 1) return `${baseWithoutTrailingSlash}/${suffix}`;
+    return `${baseWithoutTrailingSlash}/?page=${page}${suffix}`;
+  }
+  if (page === 1) return `${baseWithoutTrailingSlash}/${suffix}`;
+  return `${baseWithoutTrailingSlash}/page/${page}/${suffix}`;
+};
+---
+
+<nav class="flex justify-center items-center gap-2 mt-12 mb-8" aria-label="Pagination">
+  {/* Previous Button */}
+  {currentPage > 1 ? (
+    <a 
+      href={getPageUrl(currentPage - 1)} 
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-brand-600 transition-colors shadow-sm"
+      aria-label="Trang trước"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </a>
+  ) : (
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 border border-gray-100 text-gray-300 cursor-not-allowed">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </span>
+  )}
+
+  {/* Page Numbers */}
+  {startPage > 1 && (
+    <>
+      <a href={getPageUrl(1)} class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors font-medium text-sm shadow-sm">1</a>
+      {startPage > 2 && <span class="px-1 text-gray-400">...</span>}
+    </>
+  )}
+
+  {pages.map(page => (
+    <a 
+      href={getPageUrl(page)} 
+      class={`inline-flex items-center justify-center w-10 h-10 rounded-full border transition-colors font-medium text-sm shadow-sm ${
+        page === currentPage 
+          ? 'bg-brand-600 border-brand-600 text-white shadow-brand-500/30' 
+          : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-brand-600'
+      }`}
+      aria-current={page === currentPage ? 'page' : undefined}
+    >
+      {page}
+    </a>
+  ))}
+
+  {endPage < totalPages && (
+    <>
+      {endPage < totalPages - 1 && <span class="px-1 text-gray-400">...</span>}
+      <a href={getPageUrl(totalPages)} class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors font-medium text-sm shadow-sm">{totalPages}</a>
+    </>
+  )}
+
+  {/* Next Button */}
+  {currentPage < totalPages ? (
+    <a 
+      href={getPageUrl(currentPage + 1)} 
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-500 hover:bg-gray-50 hover:text-brand-600 transition-colors shadow-sm"
+      aria-label="Trang sau"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  ) : (
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 border border-gray-100 text-gray-300 cursor-not-allowed">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </span>
+  )}
+</nav>

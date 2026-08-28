@@ -1,0 +1,8 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import ComponentLibrary from '@/components/admin/ComponentLibrary.tsx';
+---
+
+<AdminLayout title="Component Library" activeMenu="components">
+  <ComponentLibrary client:load />
+</AdminLayout>

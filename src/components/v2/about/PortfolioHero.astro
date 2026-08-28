@@ -1,0 +1,71 @@
+---
+// src/components/v2/about/PortfolioHero.astro
+---
+
+<section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-black">
+  <!-- Background Image with deep overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://media.fittour.vn/uploads/2022/11/du-khach-chim-dam-voi-ve-dep-cua-nui-non-himalayas.webp" 
+      alt="FIT Tour Journey" 
+      class="w-full h-full object-cover scale-105 opacity-40 transition-transform duration-[20s] ease-out hover:scale-110"
+    />
+    <!-- Deep gradient overlay for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-6 text-center text-white flex flex-col items-center">
+    <h1 class="font-serif text-5xl md:text-7xl lg:text-9xl tracking-tight leading-[1.1] mb-8 font-medium">
+      <span class="block opacity-0 translate-y-12 animate-fade-in-up" style="animation-delay: 0.2s; animation-fill-mode: forwards;">Chúng tôi</span>
+      <span class="block opacity-0 translate-y-12 animate-fade-in-up" style="animation-delay: 0.6s; animation-fill-mode: forwards;">không bán Tour.</span>
+    </h1>
+    
+    <p class="font-sans text-lg md:text-2xl lg:text-3xl font-light tracking-wide text-neutral-300 max-w-3xl mx-auto opacity-0 animate-fade-in" style="animation-delay: 1.5s; animation-fill-mode: forwards;">
+      Chúng tôi <span class="text-white font-medium font-serif italic">điêu khắc</span> những Hành trình.
+    </p>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center opacity-0 animate-fade-in" style="animation-delay: 2.5s; animation-fill-mode: forwards;">
+    <span class="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-4">Khám Phá</span>
+    <div class="w-[1px] h-16 bg-neutral-800 overflow-hidden relative">
+      <div class="absolute top-0 left-0 w-full h-1/2 bg-white animate-scroll-down"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scroll-down {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1.5s ease-out;
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  }
+</style>

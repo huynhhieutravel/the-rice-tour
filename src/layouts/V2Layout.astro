@@ -1,0 +1,171 @@
+---
+import HeadMeta from '@/components/seo/HeadMeta.astro';
+import ResourceHints from '@/components/seo/ResourceHints.astro';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import GtmEventTracker from '@/components/tracking/GtmEventTracker.astro';
+import '@/styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  preloadImages?: string[];
+  adminEditUrl?: string;
+}
+
+const { title, description, image, canonical, noindex, preloadImages, adminEditUrl } = Astro.props;
+const { settings } = await getGlobalSettings();
+const globalSchema = settings.schema;
+const isAdminLoggedIn = (Astro.locals as any).isAdminLoggedIn === true;
+const adminUsername = (Astro.locals as any).adminUsername || 'Admin';
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <HeadMeta 
+      title={title} 
+      description={description} 
+      image={image} 
+      canonical={canonical} 
+      noindex={noindex} 
+    />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter (sans), Playfair Display (serif), Great Vibes (script) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap">
+    </noscript>
+
+    <ResourceHints preloadImages={preloadImages} />
+    <!-- Google Tag Base (Always loaded for Google Ads and Analytics) -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    </script>
+
+    {settings.tracking?.ga && settings.tracking.ga.startsWith('GTM-') && (
+      <script is:inline set:html={`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${settings.tracking.ga}');
+      `} />
+    )}
+    {settings.tracking?.ga && !settings.tracking.ga.startsWith('GTM-') && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${settings.tracking.ga}`}></script>
+        <script set:html={`
+          gtag('js', new Date());
+          gtag('config', '${settings.tracking.ga}');
+        `} />
+      </>
+    )}
+    {settings.tracking?.pixel && (
+      <>
+        <script set:html={`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          var pixelIds = '${settings.tracking.pixel}'.split(',');
+          for (var i = 0; i < pixelIds.length; i++) {
+            var pid = pixelIds[i].trim();
+            if (pid) fbq('init', pid);
+          }
+          fbq('track', 'PageView');
+        `} />
+        <noscript>
+          <Fragment set:html={String(settings.tracking.pixel).split(',').map(pid => pid.trim()).filter(Boolean).map(pid => `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${pid}&ev=PageView&noscript=1" />`).join('')} />
+        </noscript>
+      </>
+    )}
+    {settings.tracking?.headerCode && <Fragment set:html={settings.tracking.headerCode} />}
+    {globalSchema && (globalSchema.includes('<scrip' + 't') ? 
+      <Fragment set:html={globalSchema} /> : 
+      <script type="application/ld+json" set:html={globalSchema} />
+    )}
+    <slot name="head" />
+    <meta name="facebook-domain-verification" content="k43d40vs9hjgei8rndzeo6dzqc81fk" />
+  </head>
+  <body class="flex flex-col min-h-screen overflow-x-clip bg-[#0a0a0a] text-white font-sans antialiased selection:bg-[#c5a365] selection:text-[#0a0a0a]">
+    {settings.tracking?.ga && settings.tracking.ga.startsWith('GTM-') && (
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${settings.tracking.ga}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    )}
+    {isAdminLoggedIn && (
+    <div id="wp-admin-bar" style="position: fixed; top: 0; left: 0; right: 0; height: 32px; background: #1d2327; color: #f0f0f1; z-index: 100000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-size: 13px; display: flex; align-items: center; padding: 0 16px; justify-content: space-between;">
+      <div style="display: flex; align-items: center; height: 100%;">
+        <a href="/admin" style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+          <svg style="margin-right: 6px;" viewBox="0 0 32 32" width="16" height="16" fill="none"><path d="M16 2L4 8v16l12 6 12-6V8L16 2z" fill="#f59e0b"/><path d="M16 2L4 8l12 6 12-6L16 2z" fill="#fbbf24"/><path d="M16 14v16l12-6V8L16 14z" fill="#d97706"/></svg>
+          The Rice Tour CMS
+        </a>
+        {adminEditUrl && (
+          <a href={adminEditUrl} style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+            <svg style="margin-right: 6px;" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            Sửa bài viết
+          </a>
+        )}
+        <a href="/admin/posts/edit" style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+          <span style="font-size: 16px; margin-right: 4px; line-height: 1;">+</span> Tạo mới
+        </a>
+      </div>
+      <div style="display: flex; align-items: center; height: 100%;">
+        <span style="padding: 0 12px; display: flex; align-items: center; height: 100%; color: #f0f0f1; cursor: default;">
+          Xin chào, {adminUsername}
+          <img src={`https://ui-avatars.com/api/?name=${adminUsername}&background=3b82f6&color=fff&size=32`} alt={adminUsername} style="width: 18px; height: 18px; border-radius: 50%; margin-left: 8px;" />
+        </span>
+      </div>
+    </div>
+    )}
+    {isAdminLoggedIn && <style>body { margin-top: 32px !important; }</style>}
+    <script is:inline>
+      // WebMCP API for AI Agent interaction
+      if (typeof navigator !== 'undefined') {
+        // Wait for potential extension injection or immediate execution
+        const initWebMCP = () => {
+          if (navigator.modelContext && navigator.modelContext.provideContext) {
+            navigator.modelContext.provideContext({
+              tools: [
+                {
+                  name: "search_tours",
+                  description: "Tìm kiếm thông tin tour du lịch FIT Tour",
+                  inputSchema: {
+                    type: "object",
+                    properties: {
+                      query: { type: "string", description: "Từ khóa hoặc địa điểm (VD: Nhật Bản, Châu Âu)" }
+                    },
+                    required: ["query"]
+                  },
+                  execute: async (args) => {
+                    window.location.href = `/?s=${encodeURIComponent(args.query)}`;
+                    return { result: `Đang chuyển hướng đến trang tìm kiếm với từ khóa: ${args.query}` };
+                  }
+                }
+              ]
+            });
+          }
+        };
+        // Run immediately and also on DOMContentLoaded just in case
+        initWebMCP();
+        document.addEventListener('DOMContentLoaded', initWebMCP);
+      }
+    </script>
+    <slot name="header" />
+
+    <main id="main-content" class="flex-grow w-full">
+      <slot />
+    </main>
+
+    <slot name="footer" />
+    <GtmEventTracker contentType="general" />
+  </body>
+</html>

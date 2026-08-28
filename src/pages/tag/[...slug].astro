@@ -1,0 +1,100 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Pagination from '@/components/ui/Pagination.astro';
+import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+
+let { slug } = Astro.params;
+const url = new URL(Astro.request.url);
+
+if (!slug) {
+  return Astro.rewrite("/404");
+}
+
+let currentPage = 1;
+// Parse pagination from slug: matches 'ai-cap/page/2'
+slug = slug.replace(/\/+$/, '');
+const pageMatch = slug.match(/^(.*)\/page\/(\d+)$/);
+if (pageMatch) {
+  slug = pageMatch[1];
+  currentPage = parseInt(pageMatch[2], 10);
+}
+
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return new Response("No DB binding", { status: 500 });
+}
+
+// Fetch Tag
+const tagData = await d1Db.prepare("SELECT * FROM Tag WHERE slug = ?").bind(slug).first<any>();
+
+if (!tagData) {
+  return Astro.rewrite("/404");
+}
+
+// Pagination logic
+const POSTS_PER_PAGE = 12;
+const offset = (currentPage - 1) * POSTS_PER_PAGE;
+
+// Fetch total count
+const countRes = await d1Db.prepare(`
+  SELECT COUNT(*) as total
+  FROM Post p
+  JOIN PostTag pt ON (CAST(p.id AS TEXT) = pt.postId OR p.id = pt.postId)
+  WHERE pt.tagId = ? AND (p.status = 'published' OR p.status = 'publish')
+`).bind(tagData.id).first<any>();
+const totalPosts = countRes?.total || 0;
+const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+// Fetch posts for this tag
+const tagPostsRes = await d1Db.prepare(`
+  SELECT p.id, p.slug, p.title, p.excerpt, p.featuredImage 
+  FROM Post p
+  JOIN PostTag pt ON (CAST(p.id AS TEXT) = pt.postId OR p.id = pt.postId)
+  WHERE pt.tagId = ? AND (p.status = 'published' OR p.status = 'publish')
+  ORDER BY p.createdAt DESC
+  LIMIT ? OFFSET ?
+`).bind(tagData.id, POSTS_PER_PAGE, offset).all();
+
+const tagPosts = tagPostsRes.results || [];
+---
+
+<BaseLayout 
+  title={`${tagData.name} - FIT TOUR`} 
+  description={tagData.description || `Tổng hợp bài viết, hình ảnh và kinh nghiệm thực tế về ${tagData.name}. Cập nhật thông tin mới nhất từ FIT TOUR.`}
+>
+  <section class="py-16 md:py-24 bg-slate-50 min-h-[60vh]">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+      <div class="text-center mb-12 lg:mb-16">
+        <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-3 block">THẺ (TAG)</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight capitalize mb-4">{tagData.name}</h1>
+      </div>
+      
+      {tagPosts.length > 0 ? (
+        <>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {tagPosts.map((p: any) => (
+              <a href={`/${p.slug}`} class="group block">
+                <div class="overflow-hidden mb-6 bg-slate-50 rounded-lg">
+                  <img src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : '/placeholder-image.jpg'} alt={p.title} class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-3">{p.title}</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
+              </a>
+            ))}
+          </div>
+          <Pagination 
+            currentPage={currentPage} 
+            totalPages={totalPages} 
+            baseUrl={`/tag/${tagData.slug}`} 
+          />
+        </>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-slate-500">Chưa có bài viết nào được gắn thẻ này.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

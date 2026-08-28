@@ -1,0 +1,16 @@
+{
+  "id": 33735,
+  "order": 6,
+  "slug": "khan-ran-nam-bo",
+  "title_vi": "Khăn rằn Nam Bộ: Biểu tượng 300 năm và Di sản Dệt choàng Long Khánh A",
+  "title_en": "The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta",
+  "archetype": "Archetype 1: Di Sản Làng Nghề & Thủ Công Truyền Thống",
+  "pipeline_status": "published_production",
+  "production_url": "https://thericetour.com/khan-ran-nam-bo",
+  "template_component": "src/pages/khan-ran-nam-bo.astro",
+  "layout": "3-column-magazine",
+  "word_count_vi": 1950,
+  "word_count_en": 2200,
+  "qa_auditor": "Trạm 2 Content QA Passed (0% banned words, 0% Mekong Smile watermark, facts updated 2026)",
+  "published_at": "2026-08-26T08:00:00.000Z"
+}

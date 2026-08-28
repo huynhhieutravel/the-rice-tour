@@ -1,0 +1,107 @@
+<!--
+  Tailwind v4 Safelist — Classes used in DB content (Post.content HTML)
+  These classes are NOT in source code files, so Tailwind cannot detect them automatically.
+  This file ensures they are included in the CSS bundle.
+  
+  WARNING: Do NOT remove this file or any classes — they are used by live posts in production.
+  Last audit: 2026-04-27 — from post: hinh-anh-mua-hoa-dao-o-trung-quoc
+-->
+<div class="
+  absolute relative z-10 inset-0 overflow-hidden
+  flex inline-flex inline-block items-center justify-center
+  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:grid-cols-4
+  gap-5 gap-6 gap-8
+  space-y-2 space-y-4 space-y-6 space-y-8 space-y-10
+  w-5 w-6 w-8 w-10 w-full h-5 h-6 h-8 h-10 h-56 h-full
+  p-8 p-10 px-6 px-12 py-3 py-4 pl-6 pr-12
+  md:p-12 md:p-16
+  mt-6 mt-8 mt-12 mt-16 mb-1 mb-3 ml-2 mr-2 mr-3 mx-1 mx-auto
+  pt-10 pt-16
+  max-w-md max-w-2xl
+  sm:w-auto
+  text-sm text-lg text-xl text-center text-white
+  text-primary text-text-main text-text-muted text-brand-100
+  font-bold font-medium uppercase tracking-wider
+  bg-primary bg-subtle bg-white bg-surface
+  bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-hover)]
+  border border-border border-t border-white/20
+  rounded-full rounded-lg rounded-2xl rounded-3xl rounded-[2rem]
+  shadow-sm shadow-md shadow-2xl
+  shadow-[0_0_40px_rgba(255,255,255,0.3)]
+  ring-1 ring-slate-900/5
+  opacity-10
+  object-cover
+  right-3 top-3
+  transition-all transition-colors transition-transform duration-700
+  hover:bg-primary-hover hover:bg-subtle hover:text-primary-hover hover:text-accent-hover hover:bg-brand-600
+  hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] hover:shadow-md
+  focus:outline-none focus:border-primary focus:ring-4 focus:ring-brand-100
+  group-hover:translate-x-1
+  lg:grid-cols-4 h-48 flex-shrink-0 text-[13px] text-brand-500 !text-white !no-underline inline-flex justify-center flex-grow overflow-hidden leading-snug
+"></div>
+<div class="colored-section-breakout standard-section-breakout"></div>
+<!-- Hero Section cho trang Du Lịch Nước Ngoài (Style tương tự trang chủ) -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://media.fittour.vn/wp-content/uploads/2025/12/khach-du-lich-nuoc-ngoai-o-nepal.jpg" 
+      alt="Khách du lịch nước ngoài ở Nepal" 
+      class="w-full h-full object-cover"
+      fetchpriority="high"
+    />
+    <!-- Subtle overlay to ensure readability if needed -->
+    <div class="absolute inset-0 bg-black/20"></div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="max-w-[1440px] w-full mx-auto px-4 md:px-8 relative z-10 py-12 md:py-24">
+    <div class="w-full lg:w-[55%] max-w-[800px] bg-[#eaddcf]/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-2xl border border-white/20">
+      <h1 class="text-3xl md:text-[40px] font-black text-slate-900 mb-6 tracking-tight leading-tight">Tour du lịch nước ngoài</h1>
+      
+      <div class="space-y-4 text-slate-800 leading-relaxed font-medium text-[16px]">
+        <p><strong>Danh sách Tour du lịch nước ngoài</strong> được Thiết kế riêng của Fit Tour. Với <strong>hơn 13 năm kinh nghiệm chinh phục 35 quốc gia</strong> và danh hiệu "<strong>Best of Bespoke Tour</strong>", chúng tôi không chỉ bán tour, chúng tôi thiết kế những giấc mơ.</p>
+        
+        <p>Từ những bước chân trekking trên dãy Himalayas huyền thoại, cung đường xe máy Royal Enfield đầy bụi bặm, đến những đêm ngắm cực quang lãng mạn. Tất cả đều được gói gọn trong tiêu chuẩn 5 sao trải nghiệm, nói KHÔNG với mua sắm bắt buộc và tập trung tối đa vào nhiếp ảnh & văn hóa bản địa.</p>
+      </div>
+
+      <div class="mt-8 flex flex-col items-start gap-4">
+        <!-- NO Shopping Badge -->
+        <div class="inline-flex items-center px-4 py-2.5 bg-[#5c5c5c] text-white rounded-md font-medium text-[14px] shadow-sm">
+          <!-- Diamond SVG Icon (Outline) -->
+          <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l-5.5 8.5 5.5 11.5 5.5-11.5z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.5 10.5h11"></path>
+          </svg>
+          NO Shopping - Go Deeper
+        </div>
+        
+        <!-- CTA Button scroll to shortcode -->
+        <a href="#lich-khoi-hanh" class="inline-flex items-center px-8 py-3.5 bg-[#f99d45] text-white rounded-lg font-bold text-[16px] hover:bg-[#e68a32] transition-all hover:-translate-y-0.5 hover:shadow-md w-full sm:w-auto justify-center">
+          Xem Ngay Lịch Khởi Hành
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Lịch Khởi Hành (Test API Shortcode) -->
+<section id="lich-khoi-hanh" class="py-20 bg-slate-50 border-t border-slate-100">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+    <div class="mb-12 text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-3">Lịch Khởi Hành Nước Ngoài</h2>
+      <p class="text-slate-500 text-lg">Cập nhật realtime từ hệ thống ERP Fit Tour</p>
+    </div>
+    
+    <!-- Render Shortcode API ở đây -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 overflow-hidden">
+      [lich_khoi_hanh view="table" group_by_month="true" layout="full-width"]
+    </div>
+  </div>
+</section>
+
+<div class="bg-[#0f1115]/80 bg-[#c5a365] bg-[#0f1115] bg-[#050505]/60 bg-[#12151a]/95 bg-[#12151a]/90 bg-[#1a1c22] bg-[#050505] bg-[#050505]/80 bg-[#12151a]"></div>
+<div class="text-[2.5rem] xl:text-[4.2rem]"></div>
+
+<div class="w-[180px] h-[180px] md:w-[200px] md:h-[200px] aspect-square rounded-[20px] rounded-full flex-shrink-0"></div>

@@ -1,0 +1,973 @@
+@reference "./global.css";
+
+/* Premium Reading Experience System for Blog Detail Page */
+
+.custom-blog-prose {
+  /* Vertical Rhythm Variables */
+  --space-block: 1.25rem; /* 20px */
+  --space-section: 2rem; /* 32px */
+
+  /* Semantic Color System overrides */
+  --text-primary: #1e293b; /* slate-800 */
+  --text-secondary: #334155; /* slate-700 */
+  --text-muted: #475569; /* slate-600 */
+  
+  /* Enforce line length limit for readability */
+  max-width: var(--content-width) !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--font-size-body);
+  color: var(--text-secondary);
+}
+
+/* Micro-interaction: Selection */
+.custom-blog-prose ::selection {
+  background-color: var(--color-brand-200, #fed7aa);
+  color: var(--color-brand-900, #7c2d12);
+}
+
+/* Paragraphs & Vertical Rhythm */
+.custom-blog-prose p {
+  line-height: var(--line-height-body);
+  margin-top: 0;
+  margin-bottom: var(--space-block);
+}
+
+.custom-blog-prose p + p {
+  margin-top: var(--space-4);
+}
+
+/* Headings */
+.custom-blog-prose h2 {
+  font-weight: 700;
+  font-size: var(--font-size-h2);
+  margin-top: var(--space-section);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+  line-height: var(--line-height-heading);
+}
+
+.custom-blog-prose h3 {
+  font-weight: 700;
+  font-size: var(--font-size-h3);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.01em;
+}
+
+.custom-blog-prose h4 {
+  font-weight: 600;
+  font-size: var(--font-size-h4);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+/* Lists */
+.custom-blog-prose ul {
+  margin-top: var(--space-block);
+  margin-bottom: var(--space-block);
+  line-height: var(--line-height-body);
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.75rem;
+}
+
+.custom-blog-prose ul::marker {
+  color: var(--text-muted);
+}
+
+.custom-blog-prose ol {
+  margin-top: var(--space-block);
+  margin-bottom: var(--space-block);
+  line-height: var(--line-height-body);
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.75rem;
+}
+
+.custom-blog-prose ol::marker {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.custom-blog-prose li {
+  margin-bottom: var(--space-2);
+}
+
+.custom-blog-prose li p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.custom-blog-prose li > ul,
+.custom-blog-prose li > ol {
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+/* Links */
+.custom-blog-prose a:not([class*="btn-"]) {
+  color: var(--tw-prose-links, var(--color-brand-700, #c2410c));
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+.custom-blog-prose a:not([class*="btn-"]):hover {
+  color: var(--color-brand-800, #9a3412);
+  text-decoration-thickness: 2px;
+}
+
+/* Typography Marks */
+.custom-blog-prose strong,
+.custom-blog-prose b {
+  font-weight: 700;
+  color: var(--tw-prose-bold, var(--text-primary));
+}
+
+.custom-blog-prose em,
+.custom-blog-prose i {
+  font-style: italic;
+}
+
+/* Code */
+.custom-blog-prose pre {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: var(--space-5);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--font-size-sm);
+  margin: var(--space-block) 0;
+  line-height: 1.5;
+}
+
+.custom-blog-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: #f1f5f9;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #db2777; /* pink-600 */
+}
+
+.custom-blog-prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Premium Blockquote */
+.custom-blog-prose blockquote {
+  position: relative;
+  background: linear-gradient(to right, #f8fafc, transparent);
+  border-left: 4px solid var(--color-brand-500, #2563eb);
+  padding: var(--space-6) var(--space-8);
+  margin: var(--space-section) 0;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.custom-blog-prose blockquote p {
+  margin: 0;
+  font-size: var(--font-size-quote); /* 19px */
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.custom-blog-prose blockquote p::before,
+.custom-blog-prose blockquote p::after {
+  display: none;
+}
+
+/* Images & Figures */
+.custom-blog-prose figure {
+  margin: var(--space-10) auto;
+}
+
+.custom-blog-prose figure,
+.coguu-raw-content figure {
+  /* Fix Caption Overlap: Make figure a flex column so figcaption is safely pushed to bottom. 
+     Do NOT use height: 100% or contain: layout here as it breaks CSS Grid auto row height calculations! */
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-blog-prose img {
+  border-radius: var(--radius-lg, 0.75rem);
+  aspect-ratio: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Ghi đè class h-full từ Elementor/Tailwind để không làm tràn figure (gây đè caption) */
+.custom-blog-prose figure img.h-full,
+.custom-blog-prose figure img[class*="h-full"],
+.coguu-raw-content figure img.h-full,
+.coguu-raw-content figure img[class*="h-full"] {
+  height: auto !important;
+  flex-grow: 1;
+  object-fit: cover;
+}
+
+.custom-tour-layout .custom-blog-prose img {
+  aspect-ratio: auto !important;
+}
+
+.custom-tour-layout .custom-blog-prose figure {
+  max-width: 100% !important;
+}
+
+.custom-blog-prose figcaption {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-3);
+  font-style: italic;
+}
+
+/* WordPress Galleries - Convert to CSS Grid */
+.custom-blog-prose .wp-block-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-section) 0;
+  padding: 0;
+  list-style: none;
+  align-items: start;
+}
+
+.custom-blog-prose .wp-block-gallery .wp-block-image,
+.custom-blog-prose .wp-block-gallery figure,
+.custom-blog-prose .wp-block-gallery li,
+.custom-blog-prose .wp-block-gallery .image-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-blog-prose .wp-block-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg, 0.75rem);
+  margin: 0;
+}
+
+/* ===== IMAGE ALIGNMENT (from TipTap Editor) ===== */
+.custom-blog-prose img[data-align="full"],
+.custom-blog-prose figure[data-align="full"] {
+  width: 100%;
+  display: block;
+  margin: var(--space-6) 0;
+}
+
+.custom-blog-prose img[data-align="center"],
+.custom-blog-prose figure[data-align="center"] {
+  display: block;
+  margin: var(--space-6) auto;
+  max-width: 70%;
+}
+
+.custom-blog-prose img[data-align="left"],
+.custom-blog-prose figure[data-align="left"] {
+  float: left;
+  max-width: 45%;
+  margin: var(--space-1) var(--space-6) var(--space-4) 0;
+  border-radius: 0.5rem;
+}
+
+.custom-blog-prose img[data-align="right"],
+.custom-blog-prose figure[data-align="right"] {
+  float: right;
+  max-width: 45%;
+  margin: var(--space-1) 0 var(--space-4) var(--space-6);
+  border-radius: 0.5rem;
+}
+
+.custom-blog-prose .image-caption,
+.custom-blog-prose figcaption,
+.custom-blog-prose .wp-element-caption {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #334155; /* Changed from #475569 to pass WCAG contrast on bg-surface */
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-style: normal;
+  display: block;
+  padding: 0 10%;
+}
+
+/* Clear float after aligned images */
+.custom-blog-prose h2,
+.custom-blog-prose h3,
+.custom-blog-prose hr {
+  clear: both;
+}
+
+/* ==========================================================================
+   RESPONSIVE COMPONENT RULES
+   ========================================================================== */
+
+/* 1. MediaCard (Stacked -> 50/50 -> 33/67) */
+[data-type="media-card"] {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: var(--space-6) 0;
+  background: var(--bg-surface);
+}
+
+[data-type="media-card"] > div:first-child {
+  width: 100%;
+  aspect-ratio: 16/9;
+  flex-shrink: 0;
+}
+
+[data-type="media-card"] > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+[data-type="media-card"] > div:last-child {
+  flex: 1;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  [data-type="media-card"] {
+    flex-direction: row;
+  }
+  [data-type="media-card"] > div:first-child {
+    width: 50%;
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-type="media-card"] > div:first-child {
+    width: 33.33%;
+  }
+}
+
+/* 2. Float Images Disable on Mobile */
+@media (max-width: 767px) {
+  .custom-blog-prose img[data-align="left"],
+  .custom-blog-prose img[data-align="right"] {
+    float: none;
+    max-width: 100%;
+    margin: var(--space-6) 0;
+  }
+}
+
+/* 3. Horizontal Scroll for Tables on Mobile */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--space-8) 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.table-wrapper table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 767px) {
+  .table-wrapper table {
+    min-width: 600px;
+  }
+}
+
+/* ===== MOOD TEXT / EMOTIONAL QUOTES ===== */
+.custom-blog-prose .mood-text,
+.mood-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #64748b;
+  margin: 3rem auto;
+  max-width: 85%;
+  line-height: 1.8;
+  position: relative;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: 0.01em;
+}
+.custom-blog-prose .mood-text::before,
+.mood-text::before {
+  content: "❝";
+  display: block;
+  font-size: 2.5rem;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* ======================================================================== */
+/* MIGRATED HERO SECTION & PARALLAX */
+/* ======================================================================== */
+
+.znews-scroll-wrapper {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  max-width: 100vw;
+}
+
+/* Ảnh nền: position: FIXED, dính cứng viewport, JS sẽ xử lý opacity */
+.znews-sticky-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #111;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  will-change: opacity;
+}
+
+.znews-sticky-bg.is-active {
+  opacity: 1;
+}
+
+/* Gradient nhẹ ở đáy, giúp chữ dễ đọc */
+.znews-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.05) 40%, transparent 100%);
+  z-index: 0;
+}
+
+/* Lớp chứa nội dung: nằm trong flow cuộn bình thường */
+.znews-scroll-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10vh 1rem 15vh 1rem;
+}
+
+@media (min-width: 768px) {
+  .znews-scroll-content {
+    padding: 10vh 5vw 20vh 5vw;
+  }
+}
+
+/* Khối văn bản — nhỏ gọn, bán trong suốt, kiểu Znews */
+.znews-text-box {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .znews-text-box {
+    max-width: 650px;
+    padding: 2rem 2.5rem;
+  }
+}
+
+/* Tuỳ chỉnh font chữ trong khối Znews */
+.znews-text-box h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .znews-text-box h1 {
+    font-size: 3rem;
+  }
+}
+
+.znews-text-box h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: white;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  .znews-text-box h2 {
+    font-size: 2rem;
+  }
+}
+.znews-text-box p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .znews-text-box p {
+    font-size: 1.1rem;
+  }
+}
+.znews-text-box p:last-child {
+  margin-bottom: 0;
+}
+.znews-text-box strong {
+  color: white;
+  font-weight: 700;
+}
+
+/* Mở rộng wrapper ra full màn hình nhưng vẫn giữ nội dung chuẩn ở giữa */
+.colored-section-breakout,
+.standard-section-breakout {
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  margin: 0 calc(50% - 50vw) !important;
+  z-index: 10;
+}
+
+/* Ép nội dung bên trong wrapper trở lại kích thước chuẩn của prose (65ch) */
+.colored-section-breakout > div,
+.standard-section-breakout > div {
+  max-width: var(--content-width, 65ch);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ==========================================================================
+   10. FACEBOOK PROFILE COMPONENT
+   ========================================================================== */
+
+/* Wrapper */
+.fb-profile-wrapper {
+  background-color: #f0f2f5;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #050505;
+  padding-bottom: 3rem;
+}
+
+/* Header Section */
+.fb-header-container {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.fb-cover-container {
+  max-width: 1096px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fb-cover-photo {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  .fb-cover-photo { height: 200px; border-radius: 0; }
+}
+
+.fb-avatar-section {
+  max-width: 1036px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+@media (min-width: 768px) {
+  .fb-avatar-section {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 24px;
+  }
+}
+
+.fb-avatar-img {
+  position: relative;
+  margin-top: -84px !important;
+  width: 168px !important;
+  height: 168px !important;
+  border-radius: 50% !important;
+  border: 4px solid #ffffff;
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.fb-profile-info {
+  text-align: center;
+  margin-top: 16px;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .fb-profile-info {
+    text-align: left;
+    margin-top: 24px;
+    margin-left: 24px;
+    padding-bottom: 0;
+  }
+}
+
+.fb-profile-name {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #050505;
+}
+@media (min-width: 768px) {
+  .fb-profile-name { justify-content: flex-start; }
+}
+
+.fb-blue-tick {
+  color: #0866ff;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.fb-profile-bio {
+  color: #65676b;
+  font-size: 15px;
+  margin-top: 4px;
+  max-width: 400px;
+}
+
+/* Two Column Layout */
+.fb-layout-grid {
+  max-width: 1036px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .fb-layout-grid {
+    grid-template-columns: 360px 1fr;
+  }
+}
+
+/* Box styles (Intro & Posts) */
+.fb-box {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.fb-box-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+  color: #050505;
+}
+
+/* Post specifically */
+.fb-post {
+  padding: 0;
+  overflow: hidden;
+}
+
+.fb-post-header {
+  padding: 16px 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fb-post-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+}
+
+.fb-post-author {
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  margin: 0 !important;
+  color: #050505 !important;
+  line-height: 1.2 !important;
+}
+
+.fb-post-meta {
+  font-size: 13px !important;
+  color: #65676b !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+.fb-post-meta span {
+  font-size: 13px !important;
+  margin: 0 !important;
+}
+.fb-post-meta svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.fb-post-content {
+  padding: 0 16px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #050505;
+}
+/* Override prose styles inside post content */
+.fb-post-content p { margin-top: 0 !important; margin-bottom: 0.5rem !important; }
+.fb-post-content p:last-child { margin-bottom: 0 !important; }
+
+.fb-post-images {
+  width: 100%;
+}
+.fb-post-images img {
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  display: block;
+}
+
+.fb-post-stats {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #65676b;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.fb-post-actions {
+  display: flex;
+  padding: 4px 16px;
+}
+
+.fb-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 36px;
+  color: #65676b;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+
+/* Facebook specific masonry gallery */
+.fb-masonry {
+  columns: 2;
+  gap: 4px;
+  margin-top: 12px;
+  width: 100%;
+}
+.fb-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 4px;
+  display: block;
+  overflow: hidden;
+}
+.fb-masonry-item a {
+  display: block;
+  width: 100%;
+}
+.fb-masonry-item img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover !important;
+  border-radius: 0;
+  margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .fb-masonry {
+    columns: 2;
+  }
+}
+
+/* Force 1 column if there is exactly 1 image */
+.fb-masonry:has(> .fb-masonry-item:only-child) {
+  columns: 1;
+}
+
+.fb-post-content + .fb-masonry {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* 1. Premium Unfold Component */
+.tour-unfold-box {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.unfold-checkbox { display: none; }
+.unfold-content { max-height: 140px; overflow: hidden; position: relative; transition: max-height 0.5s ease; }
+.unfold-overlay { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0)); pointer-events: none; transition: opacity 0.3s ease; }
+.unfold-checkbox:checked ~ .unfold-content { max-height: 2000px; }
+.unfold-checkbox:checked ~ .unfold-content .unfold-overlay { opacity: 0; }
+.unfold-btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 24px; border: 1px solid #d1d5db; background: #fff; cursor: pointer; font-size: 13px; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease; border-radius: 9999px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.unfold-btn:hover { background: #f9fafb; }
+.unfold-btn .btn-text-show { display: inline; }
+.unfold-btn .btn-text-hide { display: none; }
+.unfold-checkbox:checked ~ .unfold-btn-wrapper .unfold-btn .btn-text-show { display: none; }
+.unfold-checkbox:checked ~ .unfold-btn-wrapper .unfold-btn .btn-text-hide { display: inline; }
+.unfold-checkbox:checked ~ .unfold-btn-wrapper .unfold-btn svg { transform: rotate(180deg); }
+
+/* 2. Premium Quote Component */
+.tour-premium-quote {
+  position: relative;
+  background-color: #fff8f2;
+  border-left: 4px solid #ea580c;
+  padding: 1.5rem 2rem 1.5rem 3.5rem;
+  border-radius: 0 1rem 1rem 0;
+  margin: 2rem 0;
+}
+
+.tour-premium-quote .quote-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  color: #fed7aa;
+  opacity: 0.8;
+}
+
+.tour-premium-quote .quote-text {
+  font-size: 1.125rem;
+  font-style: italic;
+  color: #5c2e16;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.625;
+  margin: 0 !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   CUSTOM TOUR LAYOUT (For Cáp Nhĩ Tân / Cửu Trại Câu Clean Templates)
+   ========================================================================== */
+
+.custom-tour-layout { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+.tour-grid-container { display: grid; grid-template-columns: 1fr; gap: 48px; }
+@media (min-width: 1024px) { .tour-grid-container { grid-template-columns: 7fr 4fr; } }
+
+/* Itinerary Details */
+.premium-itinerary-item { border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 12px; background: #fff; }
+.premium-itinerary-summary { display: flex; align-items: center; padding: 16px 20px; cursor: pointer; font-weight: 600; color: #1e293b; }
+.premium-itinerary-summary::-webkit-details-marker { display: none; }
+.itinerary-toggle-icon { font-size: 1.5rem; color: #64748b; margin-left: auto; transition: transform 0.3s; }
+.premium-itinerary-item[open] .itinerary-toggle-icon { transform: rotate(45deg); }
+.premium-itinerary-content { padding: 20px; border-top: 1px solid #e2e8f0; }
+
+/* Sticky pricing card */
+.sticky-price-card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.service-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px; }
+.service-item { display: flex; flex-direction: column; }
+.service-icon { margin-bottom: 8px; }
+.service-title { font-size: 0.875rem; color: #64748b; font-weight: 500; }
+.service-sub { font-size: 1rem; color: #1e293b; font-weight: 600; }
+.price-label { font-size: 0.875rem; color: #64748b; font-weight: 500; margin-bottom: 4px; }
+.price-amount { font-size: 1.875rem; font-weight: 800; line-height: 1; }
+.action-buttons { display: flex; flex-direction: column; gap: 12px; }
+.btn-primary { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 1rem; color: #fff; text-decoration: none; transition: background-color 0.2s; }
+.btn-zalo { background-color: #0068ff; }
+.btn-zalo:hover { background-color: #005ce6; }
+.btn-msg { background-color: #0084ff; }
+.btn-msg:hover { background-color: #0073e6; }
+
+/* Premium CTA bar */
+.premium-cta-bar { background: #fff; border-radius: 12px; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
+.cta-title { font-weight: 700; font-size: 1.125rem; color: #1e293b; }
+.cta-links { display: flex; gap: 24px; }
+.social-btn { display: flex; align-items: center; gap: 12px; text-decoration: none !important; }
+.social-icon-wrapper { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; }
+.social-btn.zalo .social-icon-wrapper { background: #0068ff; }
+.social-btn.msg .social-icon-wrapper { background: #0084ff; }
+.social-text { display: flex; flex-direction: column; }
+.social-name { font-weight: 600; font-size: 0.875rem; color: #1e293b; line-height: 1.2; }
+.social-desc { font-size: 0.75rem; color: #64748b; line-height: 1.2; }
+.cta-form-btn { background: #e67e22; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; }
+.cta-form-btn:hover { background: #d35400; }
+
+/* QR Box */
+.premium-qr-box { display: flex; align-items: center; gap: 24px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+.qr-wrapper { background: white; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; }
+.qr-text { flex: 1; }
+.qr-title { font-weight: 700; font-size: 1.125rem; color: #1e293b; margin-bottom: 4px; }
+.qr-desc { color: #64748b; font-size: 0.875rem; line-height: 1.5; }
+
+/* Mocked Tailwind Utility Classes missing from Astro's purger */
+.bg-\[\#fefaf4\] { background-color: #fefaf4; }
+.text-\[\#004b91\] { color: #004b91 !important; }
+.text-\[\#e67e22\] { color: #e67e22 !important; }
+.border-orange-100 { border-color: #ffedd5; }
+.border-orange-200\/50 { border-color: rgba(254, 215, 170, 0.5); }
+.bg-blue-50 { background-color: #eff6ff; }

@@ -1,0 +1,409 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const seoData = {
+  title: "Tailor-Made Vietnam Trip Planner | The Rice Tour",
+  description: "Design your personalized dream journey to Vietnam. Choose your destinations, travel style, boutique hotels, and activities. Receive a customized itinerary in 24 hours.",
+};
+---
+
+<BaseLayout 
+  title={seoData.title} 
+  description={seoData.description}
+  canonical="https://thericetour.com/tailor-made"
+  image="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-slate-950 text-white py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img 
+        src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1920&q=80" 
+        alt="Vietnam Panorama" 
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/40"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">100% Bespoke Private Journeys</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+        Craft Your Dream Vietnam Expedition
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Tell us what excites you most. Our Vietnam travel specialists will tailor every detail—from private guides and boutique lodges to authentic culinary safaris—within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Multi-step Interactive Form Container -->
+  <section class="py-12 lg:py-20 bg-[#f8fafc]">
+    <div class="max-w-4xl mx-auto px-4">
+      
+      <!-- Trust badges bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-center">
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+          <span class="text-2xl mb-1">⚡</span>
+          <span class="font-bold text-slate-900 text-sm">24h Custom Proposal</span>
+          <span class="text-xs text-slate-500">Fast & Free Quote</span>
+        </div>
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+          <span class="text-2xl mb-1">⭐</span>
+          <span class="font-bold text-slate-900 text-sm">TripAdvisor 5.0 Rating</span>
+          <span class="text-xs text-slate-500">100% Guest Satisfaction</span>
+        </div>
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+          <span class="text-2xl mb-1">🛡️</span>
+          <span class="font-bold text-slate-900 text-sm">24/7 Dedicated Concierge</span>
+          <span class="text-xs text-slate-500">Private Support On Tour</span>
+        </div>
+        <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+          <span class="text-2xl mb-1">🌱</span>
+          <span class="font-bold text-slate-900 text-sm">Sustainable Travel</span>
+          <span class="text-xs text-slate-500">Empowering Local Artisans</span>
+        </div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10 lg:p-12">
+        <form id="tailor-made-form" class="space-y-10">
+          
+          <!-- Anti-bot honeypot -->
+          <input type="text" name="_hp" style="display:none !important;" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_ts" id="form-ts" value="" />
+
+          <!-- Step 1: Destinations -->
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">1</span>
+              <h2 class="text-xl font-bold text-slate-900">Where would you love to visit in Vietnam?</h2>
+            </div>
+            <p class="text-sm text-slate-500 mb-4">Select all regions and destinations that catch your eye:</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" id="destinations-group">
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Hanoi Old Quarter" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🏮</span>
+                <span class="font-semibold text-slate-800 text-sm">Hanoi</span>
+                <span class="text-[11px] text-slate-400">Culture & Coffee</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Ha Long & Lan Ha Bay" class="hidden destination-check" />
+                <span class="text-2xl mb-1">⛵</span>
+                <span class="font-semibold text-slate-800 text-sm">Ha Long Bay</span>
+                <span class="text-[11px] text-slate-400">Luxury Cruises</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Sapa Terraced Mountains" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🌾</span>
+                <span class="font-semibold text-slate-800 text-sm">Sapa Terraces</span>
+                <span class="text-[11px] text-slate-400">Trekking & Tribes</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Ninh Binh Karsts" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🛶</span>
+                <span class="font-semibold text-slate-800 text-sm">Ninh Binh</span>
+                <span class="text-[11px] text-slate-400">Inland Ha Long</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Hoi An Ancient Town" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🏮</span>
+                <span class="font-semibold text-slate-800 text-sm">Hoi An</span>
+                <span class="text-[11px] text-slate-400">Lanterns & Tailors</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Hue Imperial City" class="hidden destination-check" />
+                <span class="text-2xl mb-1">👑</span>
+                <span class="font-semibold text-slate-800 text-sm">Hue Citadel</span>
+                <span class="text-[11px] text-slate-400">Royal Heritage</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Saigon City" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🏙️</span>
+                <span class="font-semibold text-slate-800 text-sm">Saigon (HCMC)</span>
+                <span class="text-[11px] text-slate-400">Vibrant Metropolis</span>
+              </label>
+
+              <label class="destination-card border-2 border-slate-200 hover:border-amber-500 rounded-2xl p-3 cursor-pointer transition-all flex flex-col items-center text-center">
+                <input type="checkbox" name="destinations" value="Mekong Delta Waterways" class="hidden destination-check" />
+                <span class="text-2xl mb-1">🥥</span>
+                <span class="font-semibold text-slate-800 text-sm">Mekong Delta</span>
+                <span class="text-[11px] text-slate-400">Floating Markets</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Duration & Dates -->
+          <div class="border-t border-slate-200 pt-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">2</span>
+              <h2 class="text-xl font-bold text-slate-900">Duration & Estimated Timing</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Ideal Trip Duration</label>
+                <select name="duration" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium">
+                  <option value="7-9 Days">7 – 9 Days (Signature Highlights)</option>
+                  <option value="10-13 Days" selected>10 – 13 Days (Deep Experience)</option>
+                  <option value="14-18 Days">14 – 18 Days (Grand Countrywide Expedition)</option>
+                  <option value="19+ Days">19+ Days (In-Depth Exploration)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Estimated Month / Dates</label>
+                <input 
+                  type="text" 
+                  name="travelDates" 
+                  placeholder="e.g. October 2026 or Spring 2027" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Travel Style & Guests -->
+          <div class="border-t border-slate-200 pt-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">3</span>
+              <h2 class="text-xl font-bold text-slate-900">Travel Style & Party Size</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Number of Adults (12+)</label>
+                <input 
+                  type="number" 
+                  name="adults" 
+                  min="1" 
+                  max="50" 
+                  value="2" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Children (0 - 11)</label>
+                <input 
+                  type="number" 
+                  name="children" 
+                  min="0" 
+                  max="20" 
+                  value="0" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred Accommodation</label>
+                <select name="hotelStandard" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium">
+                  <option value="4-Star Boutique & Character Lodges" selected>4-Star Boutique & Heritage Lodges</option>
+                  <option value="5-Star Luxury & Iconic Resorts">5-Star Luxury & World-class Resorts</option>
+                  <option value="Mix of Boutique & Eco Lodges">Eco Lodges & Mountain Retreats</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2">Estimated Budget per Person (USD)</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer hover:border-amber-500 text-sm font-medium">
+                  <input type="radio" name="budget" value="$1,500 - $2,500" class="mr-1.5" checked /> $1.5k – $2.5k
+                </label>
+                <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer hover:border-amber-500 text-sm font-medium">
+                  <input type="radio" name="budget" value="$2,500 - $3,500" class="mr-1.5" /> $2.5k – $3.5k
+                </label>
+                <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer hover:border-amber-500 text-sm font-medium">
+                  <input type="radio" name="budget" value="$3,500 - $5,000" class="mr-1.5" /> $3.5k – $5.0k
+                </label>
+                <label class="border border-slate-300 rounded-xl p-3 text-center cursor-pointer hover:border-amber-500 text-sm font-medium">
+                  <input type="radio" name="budget" value="$5,000+ Luxury" class="mr-1.5" /> $5.0k+ Luxury
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact & Wishlist -->
+          <div class="border-t border-slate-200 pt-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">4</span>
+              <h2 class="text-xl font-bold text-slate-900">Your Contact Details & Special Requests</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label>
+                <input 
+                  type="text" 
+                  name="customerName" 
+                  required 
+                  placeholder="e.g. Sarah Jenkins" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
+                <input 
+                  type="email" 
+                  name="customerEmail" 
+                  required 
+                  placeholder="e.g. sarah@example.com" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / Phone Number</label>
+                <input 
+                  type="tel" 
+                  name="customerPhone" 
+                  placeholder="e.g. +1 555 123 4567" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Country of Residence</label>
+                <input 
+                  type="text" 
+                  name="country" 
+                  placeholder="e.g. United States, Australia, UK" 
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2">Special Wishes, Dietary Needs, or Must-Do Experiences</label>
+              <textarea 
+                name="notes" 
+                rows="4" 
+                placeholder="Tell us about special occasions (anniversary, honeymoon), culinary preferences (vegetarian, seafood), or specific activities you wish to include..." 
+                class="w-full bg-slate-50 border border-slate-300 rounded-xl p-4 text-slate-800 focus:outline-none focus:border-amber-500 font-medium"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-6 text-center">
+            <button 
+              type="submit" 
+              id="submit-btn" 
+              class="w-full sm:w-auto px-12 py-4 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-slate-950 font-extrabold text-base uppercase tracking-[0.15em] rounded-2xl shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
+            >
+              Request My Free Custom Itinerary →
+            </button>
+            <p class="text-xs text-slate-500 mt-4">
+              🔒 100% Privacy Protected. No spam, ever. Receive a detailed PDF proposal within 24 hours.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive script for checkbox selection and AJAX submit -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const formTs = document.getElementById('form-ts');
+      if (formTs) formTs.value = Date.now().toString();
+
+      // Checkbox visual toggle
+      const cards = document.querySelectorAll('.destination-card');
+      cards.forEach(card => {
+        const checkbox = card.querySelector('.destination-check');
+        card.addEventListener('click', () => {
+          setTimeout(() => {
+            if (checkbox && checkbox.checked) {
+              card.classList.add('border-amber-500', 'bg-amber-50/50', 'ring-2', 'ring-amber-500/20');
+              card.classList.remove('border-slate-200');
+            } else {
+              card.classList.remove('border-amber-500', 'bg-amber-50/50', 'ring-2', 'ring-amber-500/20');
+              card.classList.add('border-slate-200');
+            }
+          }, 10);
+        });
+      });
+
+      // Submit handler
+      const form = document.getElementById('tailor-made-form');
+      const submitBtn = document.getElementById('submit-btn');
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending Your Request...';
+          }
+
+          const formData = new FormData(form);
+          const selectedDests = [];
+          form.querySelectorAll('input[name="destinations"]:checked').forEach(c => selectedDests.push(c.value));
+
+          const payload = {
+            formType: 'tailor_made',
+            customerName: formData.get('customerName'),
+            customerEmail: formData.get('customerEmail'),
+            customerPhone: formData.get('customerPhone'),
+            tourName: 'Custom Tailor-Made Expedition',
+            sourceUrl: window.location.href,
+            _hp: formData.get('_hp'),
+            _ts: formData.get('_ts'),
+            options: {
+              destinations: selectedDests.join(', '),
+              duration: formData.get('duration'),
+              travelDates: formData.get('travelDates'),
+              adults: formData.get('adults'),
+              children: formData.get('children'),
+              hotelStandard: formData.get('hotelStandard'),
+              budget: formData.get('budget'),
+              country: formData.get('country'),
+              notes: formData.get('notes')
+            }
+          };
+
+          try {
+            const res = await fetch('/api/submit-form', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+            if (res.ok && data.success) {
+              alert('🎉 Thank you for your inquiry! Our Vietnam travel designer will contact you via email/WhatsApp with a customized itinerary within 24 hours.');
+              form.reset();
+              cards.forEach(c => {
+                c.classList.remove('border-amber-500', 'bg-amber-50/50', 'ring-2', 'ring-amber-500/20');
+                c.classList.add('border-slate-200');
+              });
+            } else {
+              alert(data.error || 'Submission failed. Please try again or WhatsApp us directly.');
+            }
+          } catch (err) {
+            console.error(err);
+            alert('A network error occurred. Please WhatsApp us at +84 962 333 621 for instant assistance.');
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Request My Free Custom Itinerary →';
+            }
+          }
+        });
+      }
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,578 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+
+let post: any = null;
+if (d1Db) {
+  try {
+    // Thử lấy từ bảng Post trước
+    post = await d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('tuyen-dung-nhan-vien-kinh-doanh').first();
+    // Nếu không có, thử lấy từ bảng Page
+    if (!post) {
+      post = await d1Db.prepare("SELECT * FROM Page WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('tuyen-dung-nhan-vien-kinh-doanh').first();
+    }
+  } catch (e) {
+    console.error("Lỗi lấy dữ liệu tuyển dụng từ D1:", e);
+  }
+}
+
+const pageTitle = post?.title || "Nhân Viên Kinh Doanh | Sales Executive";
+const seoTitle = post?.seoTitle || post?.title || "Tuyển dụng Nhân Viên Kinh Doanh (Sales Executive) | FIT TOUR";
+const seoDesc = post?.seoDescription || "FIT TOUR tuyển dụng Nhân viên Kinh doanh (Sales Executive) du lịch tại TP.HCM. Cơ hội phát triển chuyên nghiệp, thu nhập hấp dẫn.";
+const featuredImage = post?.featuredImage || "https://media.fittour.vn/uploads/2021/08/IMG_0392.webp";
+const adminEditUrl = post?.id ? `/admin/posts/edit?id=${post.id}` : "";
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={featuredImage}
+  canonical="https://thericetour.com/tuyen-dung-nhan-vien-kinh-doanh"
+  adminEditUrl={adminEditUrl}
+>
+  <main class="bg-slate-50 py-16 md:py-24">
+    <div class="container mx-auto px-4 max-w-6xl">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex text-sm text-slate-500 mb-8 font-medium" aria-label="Breadcrumb">
+        <ol class="flex items-center flex-wrap space-x-1 md:space-x-2">
+          <li><a href="/" class="hover:text-brand-600 transition-colors">Trang chủ</a></li>
+          <li><span class="mx-1 md:mx-2 text-slate-400">/</span></li>
+          <li><a href="/tuyen-dung" class="hover:text-brand-600 transition-colors">Tuyển dụng</a></li>
+          <li><span class="mx-1 md:mx-2 text-slate-400">/</span></li>
+          <li class="text-slate-800" aria-current="page">{pageTitle}</li>
+        </ol>
+      </nav>
+
+      <div class="flex flex-col lg:flex-row gap-8 items-start">
+        
+        <!-- Main Content -->
+        <div class="flex-1 w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-slate-100 min-w-0">
+        
+        <!-- Feature Image -->
+        <div class="mb-10 rounded-xl overflow-hidden shadow-sm">
+          <img 
+            src={featuredImage} 
+            alt={pageTitle} 
+            width="1280" 
+            height="720" 
+            class="w-full h-auto object-cover aspect-video"
+            onerror="this.src='https://placehold.co/1280x720/e2e8f0/475569?text=FIT+TOUR+Team'"
+          />
+        </div>
+
+        <div class="mb-8 pb-6 border-b border-slate-200">
+          <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            {pageTitle}
+          </h1>
+          <p class="text-brand-600 font-semibold text-lg">FIT TOUR | BEYOND ORDINARY JOURNEYS</p>
+        </div>
+
+        <div class="prose prose-slate max-w-none prose-headings:text-slate-900 prose-headings:font-bold prose-a:text-brand-600 prose-p:my-3 prose-ul:my-3 prose-li:my-1">
+          
+          <h3 id="thong-tin-vi-tri" class="scroll-mt-24">Thông Tin Vị Trí</h3>
+          <div class="overflow-x-auto my-6">
+            <table class="min-w-full text-left border-collapse border border-slate-200 text-sm md:text-base">
+              <tbody>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold w-1/3">Chức danh</td>
+                  <td class="border border-slate-200 p-3 font-bold">Nhân viên Kinh doanh | Sales Executive</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Bộ phận</td>
+                  <td class="border border-slate-200 p-3">Kinh doanh</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Cấp bậc</td>
+                  <td class="border border-slate-200 p-3">Executive</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Loại hình làm việc</td>
+                  <td class="border border-slate-200 p-3">Toàn thời gian</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Địa điểm làm việc</td>
+                  <td class="border border-slate-200 p-3">19 Lương Hữu Khánh, Phường Phạm Ngũ Lão, Quận 1, TP. HCM</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Báo cáo trực tiếp</td>
+                  <td class="border border-slate-200 p-3">Trưởng nhóm Kinh doanh / Quản lý Kinh doanh</td>
+                </tr>
+                <tr>
+                  <td class="border border-slate-200 p-3 bg-slate-50 font-semibold">Nhu cầu tuyển dụng</td>
+                  <td class="border border-slate-200 p-3">02 vị trí</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Single Clear Role Switcher Banner below Table -->
+          <div class="not-prose bg-amber-50/80 border border-amber-200/80 rounded-2xl p-4 sm:p-5 my-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-start gap-3">
+              <div class="p-2 bg-amber-100 text-amber-800 rounded-xl shrink-0 mt-0.5 sm:mt-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-amber-800 mb-0.5">Dành cho ứng viên cấp Quản lý (3+ năm KN)</p>
+                <p class="text-sm text-slate-700 font-medium mb-0">Bạn đã có kinh nghiệm dẫn dắt đội ngũ Sales du lịch?</p>
+              </div>
+            </div>
+            <a 
+              href="/tuyen-dung-truong-nhom-kinh-doanh-du-lich" 
+              class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#F7931E] hover:bg-amber-600 text-white text-xs sm:text-sm font-bold rounded-xl shadow-sm transition-all active:scale-95 !no-underline"
+            >
+              <span>Ứng tuyển Sales Team Leader</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <h3>Về FIT TOUR</h3>
+          <p>
+            <strong>Công ty TNHH Du lịch Quốc tế Fit Tour (FIT TOUR)</strong> hoạt động trong lĩnh vực du lịch, phát triển và cung cấp các chương trình du lịch trong nước và quốc tế theo nhu cầu thực tế của khách hàng.
+          </p>
+          <p>
+            FIT TOUR tin rằng chất lượng của một hành trình bắt đầu từ chất lượng của người làm nghề. Vì vậy, đội ngũ Sales không chỉ có nhiệm vụ bán sản phẩm, mà cần <strong>hiểu khách hàng, hiểu sản phẩm và có trách nhiệm với những gì mình tư vấn và cam kết</strong>.
+          </p>
+          <p>
+            Sales tại FIT TOUR được kỳ vọng có khả năng khai thác nhu cầu, tư vấn, thiết kế chương trình, tính giá, xây dựng phương án thương mại và phối hợp với Điều hành để chuyển giao chính xác chương trình đã bán.
+          </p>
+
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl my-8">
+            <h4 class="text-slate-800 mt-0 mb-3 font-bold flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Tìm hiểu thêm về môi trường làm việc của chúng tôi
+            </h4>
+            <p class="text-slate-600 text-sm mb-4">Khám phá câu chuyện thương hiệu, đội ngũ nhân sự và các dự án thực tế mà FIT TOUR đã thực hiện để xem bạn có phù hợp với văn hóa của chúng tôi không nhé:</p>
+            <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 not-prose">
+              <a href="/gioi-thieu/" class="flex items-center justify-center text-center px-4 py-3 bg-white hover:bg-brand-50 text-slate-800 hover:text-brand-700 text-sm font-semibold rounded-xl transition-all border border-slate-200 shadow-sm active:scale-95">
+                Về FIT TOUR
+              </a>
+              <a href="/our-team/" class="flex items-center justify-center text-center px-4 py-3 bg-white hover:bg-brand-50 text-slate-800 hover:text-brand-700 text-sm font-semibold rounded-xl transition-all border border-slate-200 shadow-sm active:scale-95">
+                Đội ngũ của chúng tôi
+              </a>
+              <a href="/portfolio/" class="flex items-center justify-center text-center px-4 py-3 bg-white hover:bg-brand-50 text-slate-800 hover:text-brand-700 text-sm font-semibold rounded-xl transition-all border border-slate-200 shadow-sm active:scale-95">
+                Dự án (Portfolio)
+              </a>
+              <a href="/tour-doanh-nghiep/" class="flex items-center justify-center text-center px-4 py-3 bg-white hover:bg-brand-50 text-slate-800 hover:text-brand-700 text-sm font-semibold rounded-xl transition-all border border-slate-200 shadow-sm active:scale-95">
+                Tour Doanh Nghiệp
+              </a>
+            </div>
+          </div>
+
+          <h3 id="muc-tieu" class="scroll-mt-24">Mục Tiêu Vị Trí</h3>
+          <p>
+            Sales Executive chịu trách nhiệm phát triển và chuyển đổi các cơ hội kinh doanh thành booking thông qua hoạt động tư vấn, thiết kế và kinh doanh các chương trình du lịch trong nước và quốc tế.
+          </p>
+          <p>
+            Vị trí này quản lý toàn bộ quy trình bán hàng trong phạm vi trách nhiệm của Sales, từ:
+            <br/>
+            <span class="inline-block bg-slate-100 rounded px-2 py-1 mt-2 text-sm text-slate-700 font-mono">
+              Tiếp nhận nhu cầu → Phân tích nhu cầu → Tư vấn → Thiết kế chương trình → Costing & Báo giá → Follow-up → Đàm phán → Chốt booking → Bàn giao cho Điều hành → Duy trì quan hệ khách hàng
+            </span>
+          </p>
+          <p>
+            Sales Executive được kỳ vọng tạo ra doanh thu và lợi nhuận bền vững, đồng thời đảm bảo tính chính xác, phù hợp và chuyên nghiệp của những gì đã tư vấn cho khách hàng.
+          </p>
+
+          <hr class="my-8 border-slate-200" />
+
+          <h3>Trách Nhiệm Chính</h3>
+          
+          <h4>1. Kinh Doanh & Phát Triển Khách Hàng</h4>
+          <ul>
+            <li>Tiếp nhận, phân loại và quản lý các khách hàng tiềm năng được phân bổ.</li>
+            <li>Chủ động khai thác nhu cầu, mục đích chuyến đi, ngân sách, thời gian, sở thích và các yêu cầu đặc biệt của khách hàng.</li>
+            <li>Tư vấn giải pháp du lịch phù hợp với từng phân khúc khách hàng.</li>
+            <li>Chủ động phát triển khách hàng mới và cơ hội kinh doanh thông qua nguồn lead, khách hàng giới thiệu, network cá nhân và các kênh được công ty phân công.</li>
+            <li>Xây dựng và quản lý pipeline bán hàng; đảm bảo từng cơ hội được theo dõi và xử lý đúng tiến độ.</li>
+            <li>Thực hiện follow-up có hệ thống đối với báo giá, đề xuất và các cơ hội đang chờ quyết định.</li>
+            <li>Đảm bảo mục tiêu doanh số, gross profit và các chỉ tiêu kinh doanh được giao.</li>
+          </ul>
+
+          <h4>2. Tư Vấn & Bán Hàng Theo Nhu Cầu</h4>
+          <ul>
+            <li>Đóng vai trò là Travel Consultant, tập trung vào việc hiểu nhu cầu và xây dựng giải pháp thay vì chỉ giới thiệu sản phẩm có sẵn.</li>
+            <li>Đề xuất điểm đến, tuyến, phong cách du lịch, thời gian và dịch vụ phù hợp với mục tiêu chuyến đi.</li>
+            <li>Trình bày rõ giá trị, phạm vi dịch vụ, điều kiện áp dụng và các hạng mục bao gồm hoặc không bao gồm.</li>
+            <li>Tư vấn dựa trên mức độ phù hợp và giá trị thực tế, không chỉ dựa trên giá bán.</li>
+            <li>Xử lý câu hỏi, phản đối và thương lượng với khách hàng một cách chuyên nghiệp.</li>
+            <li>Đảm bảo thông tin tư vấn minh bạch, chính xác và nhất quán trong toàn bộ quá trình bán hàng.</li>
+            <li><strong>Không đưa ra cam kết vượt quá khả năng cung cấp hoặc điều kiện dịch vụ thực tế.</strong></li>
+          </ul>
+
+          <h4>3. Thiết Kế Chương Trình & Costing</h4>
+          <ul>
+            <li>Xây dựng chương trình du lịch trong nước và quốc tế theo yêu cầu của khách hàng.</li>
+            <li>Ưu tiên phát triển các chương trình outbound và customized travel theo định hướng sản phẩm của FIT TOUR.</li>
+            <li>Đề xuất tuyến điểm, lịch trình, lưu trú, vận chuyển, tham quan, trải nghiệm và các dịch vụ bổ trợ phù hợp.</li>
+            <li>Làm việc với nhà cung cấp và các bộ phận liên quan để xác nhận tình trạng dịch vụ, điều kiện cung cấp và chi phí.</li>
+            <li>Thực hiện costing, tính giá bán và lập báo giá theo quy định của công ty.</li>
+            <li>Kiểm soát sự phù hợp giữa nhu cầu khách hàng, giá thành, giá bán, gross margin và chất lượng dịch vụ.</li>
+            <li>Điều chỉnh chương trình và báo giá theo phản hồi của khách hàng nhưng vẫn đảm bảo tính khả thi và hiệu quả kinh doanh.</li>
+            <li>Chủ động đề xuất phương án thay thế khi ngân sách, tình trạng dịch vụ hoặc yêu cầu khách hàng thay đổi.</li>
+          </ul>
+
+          <h4>4. Quản Lý Quan Hệ Khách Hàng</h4>
+          <ul>
+            <li>Duy trì giao tiếp chuyên nghiệp và phản hồi trong thời gian cam kết.</li>
+            <li>Quản lý đầy đủ thông tin khách hàng, nhu cầu, lịch sử trao đổi, báo giá và trạng thái cơ hội.</li>
+            <li>Theo sát khách hàng trong toàn bộ chu kỳ bán hàng.</li>
+            <li>Duy trì quan hệ sau booking và sau chuyến đi nhằm phát triển khách hàng quay lại và khách hàng giới thiệu.</li>
+            <li>Tiếp nhận phản hồi và phối hợp với các bộ phận liên quan khi có vấn đề phát sinh.</li>
+            <li>Bảo vệ chất lượng quan hệ khách hàng và hình ảnh FIT TOUR trong toàn bộ quá trình làm việc.</li>
+          </ul>
+
+          <h4>5. Bàn Giao & Phối Hợp Triển Khai</h4>
+          <ul>
+            <li>Bàn giao đầy đủ và chính xác thông tin booking cho bộ phận Điều hành sau khi khách hàng xác nhận.</li>
+            <li>Đảm bảo các yêu cầu đặc biệt, dịch vụ, điều kiện thương mại và nội dung đã cam kết được thể hiện rõ trong quá trình bàn giao.</li>
+            <li>Phối hợp với Điều hành, Product và nhà cung cấp để đảm bảo chương trình được triển khai đúng với phương án đã bán.</li>
+            <li>Theo dõi quá trình bàn giao trong phạm vi trách nhiệm của Sales và chủ động làm rõ các nội dung liên quan khi cần thiết.</li>
+            <li>Phối hợp xử lý các vấn đề phát sinh liên quan đến nội dung đã tư vấn hoặc cam kết với khách hàng.</li>
+            <li>Ghi nhận phản hồi thực tế từ khách hàng và thị trường để đóng góp cho việc cải thiện sản phẩm và quy trình bán hàng.</li>
+          </ul>
+
+          <hr class="my-8 border-slate-200" />
+
+          <h3 id="yeu-cau" class="scroll-mt-24">Yêu Cầu Bắt Buộc</h3>
+          
+          <h4>Kinh Nghiệm</h4>
+          <ul>
+            <li>Tối thiểu <strong>02 năm kinh nghiệm</strong> làm việc trong lĩnh vực du lịch.</li>
+            <li>Có kinh nghiệm thực tế trong tư vấn và kinh doanh tour hoặc các sản phẩm dịch vụ du lịch.</li>
+            <li>Ưu tiên ứng viên có kinh nghiệm outbound, customized travel hoặc tour thiết kế riêng.</li>
+            <li>Có hiểu biết thực tế về tuyến điểm, dịch vụ và quy trình tổ chức chương trình du lịch.</li>
+            <li>Có kinh nghiệm xây dựng chương trình, costing và báo giá.</li>
+            <li>Có kinh nghiệm trực tiếp làm việc với khách hàng và quản lý quá trình bán hàng.</li>
+          </ul>
+
+          <h4>Học Vấn</h4>
+          <ul>
+            <li>Không bắt buộc đúng chuyên ngành.</li>
+            <li>Tốt nghiệp Cao đẳng/Đại học chuyên ngành Du lịch, Kinh doanh, Marketing, Quản trị hoặc lĩnh vực liên quan là lợi thế.</li>
+          </ul>
+
+          <h4>Năng Lực Chuyên Môn</h4>
+          <p>Ứng viên cần có khả năng:</p>
+          <ul>
+            <li>Khai thác và phân tích nhu cầu khách hàng.</li>
+            <li>Chuyển nhu cầu thành chương trình hoặc giải pháp du lịch cụ thể.</li>
+            <li>Xây dựng lịch trình phù hợp với tuyến điểm, thời gian và ngân sách.</li>
+            <li>Thực hiện hoặc kiểm tra costing và lập báo giá.</li>
+            <li>Trình bày phương án rõ ràng, logic và thuyết phục.</li>
+            <li>Quản lý pipeline và follow-up theo từng giai đoạn của cơ hội.</li>
+            <li>Xử lý phản đối, thay đổi yêu cầu và các tình huống phát sinh trong quá trình tư vấn.</li>
+            <li>Phối hợp hiệu quả với Điều hành và nhà cung cấp để kiểm tra tính khả thi của chương trình.</li>
+          </ul>
+
+          <h3>Yêu Cầu Ưu Tiên (Lợi Thế)</h3>
+          <ul>
+            <li>Có sẵn tệp khách hàng cá nhân cao cấp (VIP).</li>
+            <li>Có sẵn tệp khách hàng doanh nghiệp (B2B).</li>
+            <li>Có network khách hàng hoặc đối tác trong ngành du lịch.</li>
+            <li>Có kinh nghiệm bán tour quốc tế, outbound hoặc customized travel.</li>
+            <li>Có kinh nghiệm với khách đoàn, khách doanh nghiệp, MICE hoặc incentive travel.</li>
+            <li>Có kinh nghiệm phục vụ khách hàng trung và cao cấp.</li>
+            <li>Có kinh nghiệm sử dụng CRM hoặc hệ thống quản lý sales pipeline.</li>
+            <li>Có khả năng sử dụng tiếng Anh trong giao tiếp và làm việc với khách hàng hoặc đối tác quốc tế.</li>
+            <li>Có khả năng chủ động phát triển khách hàng thay vì phụ thuộc hoàn toàn vào nguồn lead được phân bổ.</li>
+          </ul>
+
+          <h4>Công Cụ & Hệ Thống</h4>
+          <ul>
+            <li>Sử dụng tốt các công cụ văn phòng và nền tảng làm việc trực tuyến.</li>
+            <li>Có khả năng sử dụng CRM hoặc hệ thống quản lý khách hàng và pipeline.</li>
+            <li>Có khả năng làm việc với các công cụ costing, báo giá và quản lý thông tin tour.</li>
+            <li>Sẵn sàng học và sử dụng các hệ thống nội bộ của FIT TOUR.</li>
+          </ul>
+
+          <hr class="my-8 border-slate-200" />
+
+          <h3>Năng Lực Cốt Lõi</h3>
+          <ul>
+            <li><strong>Customer Orientation:</strong> Hiểu nhu cầu thực tế của khách hàng và đưa ra giải pháp phù hợp, cân bằng giữa mong muốn của khách hàng và khả năng cung cấp dịch vụ.</li>
+            <li><strong>Consultative Selling:</strong> Có khả năng khai thác nhu cầu, đặt câu hỏi, xây dựng giải pháp và dẫn dắt khách hàng trong quá trình ra quyết định.</li>
+            <li><strong>Commercial Acumen:</strong> Hiểu mối quan hệ giữa doanh thu, chi phí, giá bán, gross margin, chất lượng sản phẩm và giá trị khách hàng.</li>
+            <li><strong>Product & Destination Knowledge:</strong> Có khả năng học, cập nhật và vận dụng kiến thức về điểm đến, sản phẩm và dịch vụ vào quá trình tư vấn.</li>
+            <li><strong>Communication & Negotiation:</strong> Giao tiếp rõ ràng, chuyên nghiệp, biết lắng nghe và có khả năng thương lượng phù hợp với từng tình huống.</li>
+            <li><strong>Ownership & Problem Solving:</strong> Chủ động chịu trách nhiệm với công việc, cam kết và kết quả; có khả năng phân tích vấn đề và đưa ra phương án xử lý.</li>
+            <li><strong>Attention to Detail & Collaboration:</strong> Cẩn thận với chương trình, giá, điều kiện dịch vụ và thông tin khách hàng; phối hợp hiệu quả với Điều hành, Product và các đối tác liên quan.</li>
+          </ul>
+
+          <h3>Chỉ Số Đánh Giá Hiệu Quả (KPIs)</h3>
+          <p>Hiệu quả của Sales Executive được đánh giá dựa trên cả kết quả kinh doanh và chất lượng thực hiện công việc.</p>
+          <div class="overflow-x-auto my-6">
+            <table class="min-w-full text-left border-collapse border border-slate-200 text-sm">
+              <thead>
+                <tr class="bg-slate-100">
+                  <th class="border border-slate-200 p-3">Nhóm đánh giá</th>
+                  <th class="border border-slate-200 p-3">Chỉ số tham khảo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Revenue</td><td class="border border-slate-200 p-3">Mức độ hoàn thành doanh số được giao</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Gross Profit / Gross Margin</td><td class="border border-slate-200 p-3">Giá trị và hiệu quả lợi nhuận của booking</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Conversion Rate</td><td class="border border-slate-200 p-3">Tỷ lệ chuyển đổi từ cơ hội đủ điều kiện thành booking</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Pipeline</td><td class="border border-slate-200 p-3">Chất lượng, tiến độ và mức độ quản lý cơ hội</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Repeat & Referral</td><td class="border border-slate-200 p-3">Khách hàng quay lại và khách hàng được giới thiệu</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Proposal Quality</td><td class="border border-slate-200 p-3">Mức độ phù hợp, chính xác và khả thi của chương trình</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Handover Quality</td><td class="border border-slate-200 p-3">Mức độ đầy đủ, chính xác và rõ ràng của thông tin bàn giao</td></tr>
+                <tr><td class="border border-slate-200 p-3 font-semibold">Customer Experience</td><td class="border border-slate-200 p-3">Phản hồi và mức độ hài lòng của khách hàng</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm italic text-slate-500">KPI cụ thể được xác định theo từng giai đoạn, nhóm sản phẩm, nguồn khách hàng và phạm vi trách nhiệm của nhân sự.</p>
+
+          <hr class="my-8 border-slate-200" />
+
+          <h3>Quan Hệ Công Việc</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="mt-0">Nội Bộ</h4>
+              <ul>
+                <li>Trưởng nhóm / Quản lý Kinh doanh</li>
+                <li>Đội ngũ Kinh doanh</li>
+                <li>Bộ phận Điều hành</li>
+                <li>Bộ phận Product và các bộ phận liên quan</li>
+                <li>Tài chính và các bộ phận hỗ trợ khác</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="mt-0">Bên Ngoài</h4>
+              <ul>
+                <li>Khách hàng</li>
+                <li>Khách sạn, Hãng hàng không, Đơn vị vận chuyển</li>
+                <li>Đối tác địa phương và đối tác quốc tế</li>
+                <li>Hướng dẫn viên và Các nhà cung cấp dịch vụ du lịch khác</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Lộ Trình Phát Triển</h3>
+          <p class="font-bold text-brand-600">Sales Executive → Senior Sales Executive → Sales Team Leader → Sales Manager</p>
+          <p>Tùy năng lực và định hướng cá nhân, nhân sự có thể phát triển chuyên sâu theo các hướng:</p>
+          <p class="font-mono text-sm">International Travel | Customized Travel | Corporate / MICE | Key Account | Product Development</p>
+          <p class="italic">Việc thăng tiến dựa trên năng lực thực tế, kết quả công việc, khả năng đảm nhận phạm vi trách nhiệm lớn hơn và mức độ đóng góp cho đội ngũ.</p>
+
+          <hr class="my-8 border-slate-200" />
+
+          <h3>Tiêu Chuẩn Làm Nghề Tại FIT TOUR</h3>
+          <p>FIT TOUR không tìm kiếm một hồ sơ hoàn hảo. Chúng tôi tìm kiếm những người có nền tảng phù hợp, thái độ đúng, có khả năng phát triển và thực sự nghiêm túc với nghề.</p>
+          <p>Một Sales tại FIT TOUR được kỳ vọng:</p>
+          <ul>
+            <li>Hiểu khách hàng trước khi đề xuất sản phẩm.</li>
+            <li>Hiểu sản phẩm trước khi tư vấn.</li>
+            <li><strong>Không cam kết những điều không chắc chắn hoặc không thể kiểm soát.</strong></li>
+            <li>Chịu trách nhiệm với những gì mình tư vấn và bán ra.</li>
+            <li>Cân bằng giữa mục tiêu doanh số và giá trị thực tế dành cho khách hàng.</li>
+            <li>Ưu tiên chất lượng và tính phù hợp thay vì bán bằng mọi giá.</li>
+            <li>Chủ động học hỏi và nâng cao năng lực chuyên môn.</li>
+            <li>Có tinh thần xây dựng cùng đội ngũ và cùng phát triển sản phẩm.</li>
+          </ul>
+
+          <h3>Môi Trường & Cơ Hội Phát Triển</h3>
+          <p>FIT TOUR hướng đến một môi trường:</p>
+          <ul>
+            <li>Đề cao tính chuyên nghiệp, trách nhiệm và chất lượng dịch vụ.</li>
+            <li>Đánh giá nhân sự dựa trên năng lực, kết quả và tinh thần trách nhiệm.</li>
+            <li>Khuyến khích nhân sự chủ động đưa ra ý tưởng và giải pháp.</li>
+            <li>Tạo điều kiện để phát triển chuyên môn và định hướng nghề nghiệp lâu dài.</li>
+            <li>Có cơ hội tiếp cận sản phẩm, tuyến điểm và các dự án thực tế của FIT TOUR.</li>
+            <li>Có cơ hội tham gia <strong>Famtrip / Inspection Trip</strong> theo chính sách và yêu cầu của từng chương trình.</li>
+          </ul>
+
+          <h3 id="thu-nhap" class="scroll-mt-24">Thu Nhập & Quyền Lợi</h3>
+          <h4>Thu Nhập</h4>
+          <ul>
+            <li><strong>Lương:</strong> Mức lương cơ bản cạnh tranh theo năng lực và kinh nghiệm.</li>
+            <li><strong>Commission:</strong> Cơ chế hoa hồng theo doanh số và/hoặc hiệu quả kinh doanh theo chính sách FIT TOUR.</li>
+            <li><strong>Thưởng hiệu quả:</strong> Thưởng theo doanh số, lợi nhuận, chiến dịch hoặc kết quả quý/năm theo chính sách từng thời kỳ.</li>
+          </ul>
+          <h4>Chế Độ</h4>
+          <ul>
+            <li><strong>Bảo hiểm:</strong> BHXH, BHYT theo quy định của pháp luật và chính sách FIT TOUR.</li>
+            <li><strong>Nghỉ phép:</strong> Theo quy định của pháp luật và chính sách của công ty.</li>
+            <li>Khám sức khỏe định kỳ.</li>
+            <li>
+              Company Trip, Year-end Party, Teambuilding và các hoạt động nội bộ.
+              
+              <div class="not-prose mt-6 mb-8">
+                <h4 class="text-slate-800 font-bold mb-4 text-base">Khám phá văn hóa & hành trình thực tế của đội ngũ FIT TOUR:</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Card 1 -->
+                  <a href="https://thericetour.com/company-trip-thanh-do" target="_blank" class="group block bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-brand-300 hover:shadow-md transition-all">
+                    <div class="aspect-[16/9] bg-slate-100 overflow-hidden">
+                      <img src="https://media.fittour.vn/uploads/2023/12/company-trip-thanh-do-fit-tour.webp" onerror="this.src='https://placehold.co/600x338/f1f5f9/64748b?text=Company+Trip+Thành+Đô'" alt="Company Trip Thành Đô" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="338" />
+                    </div>
+                    <div class="p-4">
+                      <span class="text-xs font-semibold text-brand-600 mb-1 block uppercase tracking-wide">Company Trip</span>
+                      <h5 class="font-bold text-slate-800 mt-0 mb-1 group-hover:text-brand-600 transition-colors">Mùa Thu Thành Đô - Cửu Trại Câu</h5>
+                      <p class="text-sm text-slate-500 mb-0 line-clamp-2">Khám phá chuyến đi gắn kết đội ngũ FIT TOUR tại thiên đường hạ giới Cửu Trại Câu.</p>
+                    </div>
+                  </a>
+                  <!-- Card 2 -->
+                  <a href="https://thericetour.com/company-trip-giang-nam" target="_blank" class="group block bg-white rounded-xl border border-slate-200 overflow-hidden hover:border-brand-300 hover:shadow-md transition-all">
+                    <div class="aspect-[16/9] bg-slate-100 overflow-hidden">
+                      <img src="https://media.fittour.vn/uploads/2024/12/company-trip-giang-nam-fit-tour.webp" onerror="this.src='https://placehold.co/600x338/f1f5f9/64748b?text=Company+Trip+Giang+Nam'" alt="Company Trip Giang Nam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="338" />
+                    </div>
+                    <div class="p-4">
+                      <span class="text-xs font-semibold text-brand-600 mb-1 block uppercase tracking-wide">Company Trip</span>
+                      <h5 class="font-bold text-slate-800 mt-0 mb-1 group-hover:text-brand-600 transition-colors">Du Xuân Giang Nam - Thượng Hải</h5>
+                      <p class="text-sm text-slate-500 mb-0 line-clamp-2">Chuyến du xuân đón năm mới của đại gia đình FIT TOUR tại vùng đất Giang Nam mộng mơ.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+            </li>
+            <li>Chế độ công đoàn theo chính sách FIT TOUR.</li>
+          </ul>
+
+          <!-- Cross-link Box to Team Leader -->
+          <div class="not-prose bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 my-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-200/70 px-2.5 py-1 rounded-full">Dành cho ứng viên cấp quản lý</span>
+              <h4 class="text-slate-900 font-bold text-lg mt-2.5 mb-1">Bạn có từ 3 năm kinh nghiệm & từng dẫn dắt đội nhóm?</h4>
+              <p class="text-slate-600 text-sm mb-0">Tham khảo ngay vị trí <strong>Trưởng Nhóm Kinh Doanh (Sales Team Leader)</strong> với chế độ đãi ngộ và quyền hạn tương xứng.</p>
+            </div>
+            <a href="/tuyen-dung-truong-nhom-kinh-doanh-du-lich" class="shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-[#F7931E] hover:bg-amber-600 text-white font-bold text-sm rounded-xl transition-all shadow-sm active:scale-95 !no-underline">
+              <span>Xem vị trí Team Leader</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <div class="bg-amber-50 border-l-4 border-amber-500 p-6 my-10 rounded-r-lg">
+            <h3 id="huong-dan-ung-tuyen" class="scroll-mt-24 text-amber-800 mt-0 mb-4 font-bold text-2xl">Hướng Dẫn Ứng Tuyển</h3>
+            
+            <p class="text-amber-900 mb-4"><strong>Ứng viên vui lòng gửi:</strong><br/> CV + Thông tin kinh nghiệm làm việc + Các sản phẩm/chương trình/dự án đã từng phụ trách (nếu có).</p>
+            
+            <ul class="list-none pl-0 space-y-3 mb-6">
+              <li class="flex items-start gap-2">
+                <svg class="w-6 h-6 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <span class="text-amber-900"><strong>Email:</strong> <a href="mailto:info@fittour.com.vn" class="font-bold text-brand-600 hover:underline">info@fittour.com.vn</a></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-6 h-6 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>
+                <span class="text-amber-900"><strong>Tiêu đề email:</strong> <code class="bg-amber-100 text-amber-900 px-2 py-1 rounded">[HCM] - ỨNG TUYỂN SALES EXECUTIVE – [HỌ TÊN]</code></span>
+              </li>
+            </ul>
+            
+            <p class="text-amber-900 text-sm italic mb-0">
+              * FIT TOUR khuyến khích ứng viên chia sẻ thêm những tuyến điểm, nhóm khách hàng, sản phẩm hoặc kết quả kinh doanh mà mình từng trực tiếp phụ trách.
+            </p>
+          </div>
+
+          <div class="text-center mt-12 mb-8">
+            <p class="italic text-slate-600">Chúng tôi chào đón những người muốn làm nghề nghiêm túc, tạo ra sản phẩm tốt và cùng xây dựng những hành trình có giá trị cho khách hàng.</p>
+          </div>
+
+        </div>
+      </div> <!-- End Main Content -->
+
+      <!-- Sticky Sidebar TOC -->
+      <aside class="hidden lg:block w-80 shrink-0">
+        <div class="sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm p-6 border border-slate-100">
+            <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+              Nội Dung Chính
+            </h4>
+            <nav class="flex flex-col gap-3 text-sm font-medium text-slate-600">
+              <a href="#thong-tin-vi-tri" class="hover:text-brand-600 transition-colors">Thông Tin Vị Trí</a>
+              <a href="#muc-tieu" class="hover:text-brand-600 transition-colors">Mục Tiêu & Trách Nhiệm</a>
+              <a href="#yeu-cau" class="hover:text-brand-600 transition-colors">Yêu Cầu Bắt Buộc</a>
+              <a href="#thu-nhap" class="hover:text-brand-600 transition-colors">Thu Nhập & Quyền Lợi</a>
+            </nav>
+            <div class="mt-6 pt-6 border-t border-slate-100">
+              <a href="#huong-dan-ung-tuyen" class="flex justify-center items-center gap-2 w-full px-4 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl transition-colors shadow-sm text-sm">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                Ứng Tuyển Ngay
+              </a>
+            </div>
+
+            <!-- QR Code Section (To rõ & Căn giữa) -->
+            <div class="mt-6 pt-6 border-t border-slate-100 text-center">
+              <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 flex flex-col items-center">
+                <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm mb-3.5 inline-block">
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Ffittour.vn%2Ftuyen-dung-nhan-vien-kinh-doanh&margin=0" 
+                    alt="Mã QR Tuyển dụng Sales Executive" 
+                    width="160" 
+                    height="160" 
+                    class="w-36 h-36 sm:w-40 sm:h-40 object-contain rounded-lg"
+                    loading="lazy" 
+                    decoding="async" 
+                  />
+                </div>
+                <h5 class="text-sm font-bold text-slate-800 mb-1 flex items-center justify-center gap-1.5">
+                  <span>📱 Quét mã xem trên điện thoại</span>
+                </h5>
+                <p class="text-xs text-slate-500 leading-relaxed mb-0">
+                  Lưu lại tin tuyển dụng hoặc chia sẻ nhanh cho bạn bè qua Zalo.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      </div> <!-- End flex container -->
+    </div>
+
+    <!-- Mobile Floating Bottom TOC Dock Bar (Mục lục điều hướng nhanh) -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[94%] max-w-[420px] z-[100] lg:hidden">
+      <div class="bg-[#1c1c1e]/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-[1.25rem] p-1.5 flex items-center justify-between">
+        
+        <!-- 1. Vị Trí -->
+        <a href="#thong-tin-vi-tri" aria-label="Thông tin vị trí" class="flex flex-col items-center justify-center gap-1 min-w-[54px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[19px] h-[19px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4"/>
+            <path d="M12 8h.01"/>
+          </svg>
+          <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Vị Trí</span>
+        </a>
+
+        <!-- 2. Nhiệm Vụ -->
+        <a href="#muc-tieu" aria-label="Mục tiêu và trách nhiệm" class="flex flex-col items-center justify-center gap-1 min-w-[54px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[19px] h-[19px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            <rect width="20" height="14" x="2" y="6" rx="2"/>
+          </svg>
+          <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Nhiệm Vụ</span>
+        </a>
+
+        <!-- 3. Nộp CV Nổi Bật -->
+        <a href="#huong-dan-ung-tuyen" aria-label="Nộp hồ sơ ứng tuyển" class="flex flex-col items-center justify-center gap-1 min-w-[58px] h-[52px] rounded-xl transition-all active:scale-95 group relative -mt-3">
+          <div class="bg-[#F7931E] rounded-full p-2.5 shadow-lg shadow-[#F7931E]/40 border-2 border-[#1c1c1e] group-hover:bg-amber-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <span class="text-[9px] font-bold text-[#F7931E]">Nộp CV</span>
+        </a>
+
+        <!-- 4. Yêu Cầu -->
+        <a href="#yeu-cau" aria-label="Yêu cầu bắt buộc" class="flex flex-col items-center justify-center gap-1 min-w-[54px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[19px] h-[19px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 11 3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Yêu Cầu</span>
+        </a>
+
+        <!-- 5. Quyền Lợi -->
+        <a href="#thu-nhap" aria-label="Thu nhập và quyền lợi" class="flex flex-col items-center justify-center gap-1 min-w-[54px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[19px] h-[19px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Quyền Lợi</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,365 @@
+---
+// src/components/blog/blocks/BlockRenderer.astro
+import type { BlockNode, TextBlock } from '@/types/cms';
+import UnknownBlock from './UnknownBlock.astro';
+import { getOptimizedImageUrl, generateSrcSet } from '@/lib/imageOptimization';
+import { replaceTokens } from '@/lib/contentTokens';
+import CtaBlock from '@/components/ui/CtaBlock.astro';
+import ShortcodeRenderer from '@/components/shortcodes/ShortcodeRenderer.astro';
+import { parseShortcodes } from '@/utils/shortcodes/parser';
+
+// Component Map for robust scale
+const COMPONENT_MAP: Record<string, any> = {
+  cta: CtaBlock,
+  ctaTour: CtaBlock // Backward compatibility
+};
+
+function renderTextNode(node: TextBlock, settings?: any) {
+  if (!node.marks && !settings) return escapeHtml(node.text);
+  
+  let text = escapeHtml(node.text);
+  
+  // Replace tokens if settings are provided
+  if (settings && text.includes('{{')) {
+    // We only replace if there is a '{{', no need to import replaceTokens top-level if not used
+    // Actually we need to import it. We'll add import at top.
+    text = replaceTokens(text, settings); // We don't cache at text-node level, too granular
+  }
+
+  if (!node.marks) return text;
+
+  for (const mark of node.marks) {
+    if (mark.type === 'bold') text = `<strong>${text}</strong>`;
+    if (mark.type === 'italic') text = `<em>${text}</em>`;
+    if (mark.type === 'strike') text = `<del>${text}</del>`;
+    if (mark.type === 'underline') text = `<u>${text}</u>`;
+    if (mark.type === 'code') text = `<code>${text}</code>`;
+    if (mark.type === 'link') {
+      const href = escapeHtml(mark.attrs?.href || '#');
+      const target = mark.attrs?.target ? ` target="${escapeHtml(mark.attrs.target)}"` : '';
+      text = `<a href="${href}"${target}>${text}</a>`;
+    }
+  }
+  return text;
+}
+
+function escapeHtml(unsafe: string) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+interface Props {
+  node: BlockNode;
+  settings?: any;
+  dataMap?: any;
+}
+
+const { node, settings, dataMap } = Astro.props;
+
+let isTextNode = false;
+let textHtml = '';
+let shortcodeNodes: any[] = [];
+
+if (node && !Array.isArray(node)) {
+  if (node.type === 'text') {
+    isTextNode = true;
+    textHtml = renderTextNode(node as TextBlock, settings);
+    if (node.text && node.text.includes('[')) {
+      shortcodeNodes = parseShortcodes(node.text, true);
+    }
+  }
+}
+
+let optimizedImgSrc = '';
+let imgSrcset = '';
+let imgSizes = '(max-width: 768px) 100vw, 65ch';
+
+if (node && !Array.isArray(node) && node.type === 'image' && node.attrs?.src) {
+  const align = node.attrs.align || 'full';
+  if (align === 'left' || align === 'right') {
+    imgSizes = "(max-width: 768px) 100vw, 45%";
+  }
+  optimizedImgSrc = getOptimizedImageUrl(node.attrs.src, 800);
+  imgSrcset = generateSrcSet(node.attrs.src, [400, 800, 1200]);
+}
+---
+
+{!node && null}
+
+{Array.isArray(node) && null}
+
+{isTextNode && shortcodeNodes.length > 0 ? (
+  <Fragment>
+    {shortcodeNodes.map((sn: any) => {
+      if (sn.type === 'shortcode') {
+        return <ShortcodeRenderer node={sn} dataMap={dataMap || {}} />;
+      }
+      return <Fragment set:html={renderTextNode({ ...node, text: sn.content } as TextBlock, settings)} />;
+    })}
+  </Fragment>
+) : isTextNode ? (
+  <Fragment set:html={textHtml} />
+) : null}
+
+{node && !Array.isArray(node) && !isTextNode && (
+  <Fragment>
+
+{node.type === 'doc' && node.content && (
+  <div class="custom-blog-prose">
+    {node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </div>
+)}
+
+{node.type === 'paragraph' && (
+  <p style={node.attrs?.textAlign ? `text-align: ${node.attrs.textAlign}` : ''}>
+    {node.content?.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </p>
+)}
+
+{node.type === 'heading' && node.attrs?.level === 2 && (
+  <h2 id={node.content?.[0]?.text?.toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'section'} style={node.attrs?.textAlign ? `text-align: ${node.attrs.textAlign}` : ''}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </h2>
+)}
+
+{node.type === 'heading' && node.attrs?.level === 3 && (
+  <h3 style={node.attrs?.textAlign ? `text-align: ${node.attrs.textAlign}` : ''}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </h3>
+)}
+
+{node.type === 'heading' && node.attrs?.level > 3 && (
+  <h4 style={node.attrs?.textAlign ? `text-align: ${node.attrs.textAlign}` : ''}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </h4>
+)}
+
+{node.type === 'image' && (
+  <figure>
+    <img 
+      src={optimizedImgSrc} 
+      srcset={imgSrcset}
+      sizes={imgSizes}
+      alt={node.attrs?.alt || ''} 
+      loading="lazy" 
+      decoding="async"
+      data-align={node.attrs?.align || 'full'} 
+    />
+    {node.attrs?.title && <figcaption>{node.attrs.title}</figcaption>}
+  </figure>
+)}
+
+{node.type === 'blockquote' && (
+  <blockquote>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </blockquote>
+)}
+
+{node.type === 'horizontalRule' && (
+  <hr class="border-t-2 border-border border-dashed my-6" />
+)}
+
+{/* --- Custom Extensions --- */}
+
+{node.type === 'callout' && (
+  <div class={`p-6 rounded-2xl mb-8 border-l-4 ${node.attrs?.type === 'warning' ? 'bg-amber-50 border-amber-500 text-amber-900' : 'bg-blue-50 border-blue-500 text-blue-900'}`}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </div>
+)}
+
+{node.type === 'taskList' && (
+  <ul class="list-none space-y-3 my-6 pl-0">
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </ul>
+)}
+
+{node.type === 'taskItem' && (
+  <li class="flex gap-3 items-start">
+    <div class="mt-1 flex-shrink-0 text-brand-500">
+      {node.attrs?.checked ? (
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+      ) : (
+        <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      )}
+    </div>
+    <div>
+      {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+    </div>
+  </li>
+)}
+
+{/* Gallery Placeholder */}
+{node.type === 'gallery' && (
+  <div class="tiptap-gallery-block grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
+    {node.attrs?.images?.map((url: string) => (
+      <img 
+        src={getOptimizedImageUrl(url, 400)} 
+        srcset={generateSrcSet(url, [400, 800])}
+        sizes="(max-width: 768px) 50vw, 33vw"
+        class="w-full h-full object-cover aspect-square rounded-xl m-0 shadow-sm hover:opacity-90 cursor-pointer" 
+        loading="lazy" 
+        decoding="async"
+      />
+    ))}
+  </div>
+)}
+
+{/* Dynamic Components via COMPONENT_MAP */}
+{COMPONENT_MAP[node.type] && (
+  <Fragment>
+    {(() => {
+      const Block = COMPONENT_MAP[node.type];
+      
+      // Auto-map legacy ctaTour to modern CtaBlock layout="compact"
+      if (node.type === 'ctaTour') {
+        const legacyProps = {
+          layout: 'split', // Or 'compact' based on what matches the old design best. The old design was a split card with an image. Let's map it to split.
+          preset: 'tour',
+          title: `Tour Nhật Bản Mùa Lá Đỏ (Tour ID: ${node.attrs?.tourId || '...'})`,
+          content: 'Khám phá cung đường vàng Tokyo - Kyoto - Osaka với trải nghiệm trọn vẹn văn hóa Phù Tang.',
+          image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=400&auto=format&fit=crop',
+          settings: settings
+        };
+        return <Block {...legacyProps} />;
+      }
+      
+      // Standard mapping
+      return <Block {...node.attrs} settings={settings} />;
+    })()}
+  </Fragment>
+)}
+
+{node.type === 'faqBlock' && (
+  <section class="faq-section">
+    <h2 class="faq-title">Câu hỏi thường gặp</h2>
+    <div class="faq-wrapper">
+      {node.attrs?.questions?.map((item: any, idx: number) => (
+        <details class="faq-item" {...(idx === 0 ? { open: true } : {})}>
+          <summary class="faq-summary">
+            {item.q}
+            <span class="icon">+</span>
+          </summary>
+          <div class="content">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+)}
+
+{node.type === 'bulletList' && (
+  <ul>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </ul>
+)}
+
+{node.type === 'wpGallery' && (
+  <ul class="wp-block-gallery">
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </ul>
+)}
+
+{node.type === 'orderedList' && (
+  <ol>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </ol>
+)}
+
+{node.type === 'listItem' && (
+  <li>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+  </li>
+)}
+
+{node.type === 'hardBreak' && (
+  <br />
+)}
+
+{node.type === 'codeBlock' && (
+  <pre>
+    <code>
+      {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+    </code>
+  </pre>
+)}
+
+{node.type === 'table' && (
+  <div class="table-wrapper">
+    <table class="min-w-full border-collapse border border-border">
+      <tbody>
+        {node.content && node.content.map((child: any) => <Astro.self node={child} settings={settings} dataMap={dataMap} />)}
+      </tbody>
+    </table>
+  </div>
+)}
+
+{node.type === 'tableRow' && (
+  <tr>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} />)}
+  </tr>
+)}
+
+{node.type === 'tableHeader' && (
+  <th class="border border-gray-300 bg-gray-50 px-4 py-2 font-bold text-left" colspan={node.attrs?.colspan || 1} rowspan={node.attrs?.rowspan || 1}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} />)}
+  </th>
+)}
+
+{node.type === 'tableCell' && (
+  <td class="border border-gray-300 px-4 py-2" colspan={node.attrs?.colspan || 1} rowspan={node.attrs?.rowspan || 1}>
+    {node.content && node.content.map((child: any) => <Astro.self node={child} />)}
+  </td>
+)}
+
+{node.type === 'youtube' && (
+  <div class="aspect-w-16 aspect-h-9 my-8">
+    <iframe src={node.attrs?.src} class="w-full h-[400px] rounded-lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+)}
+
+{node.type === 'iframe' && (
+  <div class="my-8">
+    <iframe src={node.attrs?.src} width={node.attrs?.width || '100%'} height={node.attrs?.height || '400'} frameborder={node.attrs?.frameborder || '0'} allowfullscreen={node.attrs?.allowfullscreen}></iframe>
+  </div>
+)}
+
+{node.type === 'mediaCard' && (
+  <div data-type="media-card">
+    {node.attrs?.src ? (
+      <div>
+        <img 
+          src={getOptimizedImageUrl(node.attrs.src, 600)} 
+          srcset={generateSrcSet(node.attrs.src, [400, 800])}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          alt={node.attrs?.alt || ''} 
+          loading="lazy" 
+          decoding="async"
+        />
+      </div>
+    ) : (
+      <div></div>
+    )}
+    <div>
+      <div>
+        {node.content && node.content.map((child: any) => <Astro.self node={child} />)}
+      </div>
+    </div>
+  </div>
+)}
+
+{![
+  'doc', 'paragraph', 'heading', 'image', 'blockquote', 'horizontalRule',
+  'bulletList', 'orderedList', 'listItem', 'hardBreak', 'codeBlock',
+  'table', 'tableRow', 'tableHeader', 'tableCell', 'youtube', 'iframe',
+  'callout', 'taskList', 'taskItem', 'gallery', 'ctaTour', 'mediaCard', 'faqBlock', 'text'
+].includes(node.type) && (
+  <UnknownBlock node={node} />
+)}
+
+  </Fragment>
+)}

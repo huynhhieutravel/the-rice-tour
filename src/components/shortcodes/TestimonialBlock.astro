@@ -1,0 +1,36 @@
+---
+interface Props {
+  category?: string;
+  dataMap?: Record<string, any>;
+}
+
+const { category = 'general', dataMap } = Astro.props;
+
+// Data passed from DataLoader
+const testimonials = dataMap?.testimonials?.[category] || [];
+
+// Fallback logic if DB empty (optional, but good for local dev without DB)
+const hasData = testimonials && testimonials.length > 0;
+---
+
+{hasData && (
+  <div class="c-testimonial">
+    <div class="c-testimonial__header">
+      <h2 class="c-testimonial__title">Khách hàng nói gì về chúng tôi?</h2>
+      <p class="c-testimonial__subtitle">Đánh giá thực tế của những khách hàng đã tin tưởng và đồng hành cùng Fit Tour trên mọi nẻo đường.</p>
+    </div>
+    
+    <div class="c-testimonial__grid">
+      {testimonials.map((t: any) => (
+        <div class="c-testimonial__item">
+          <img 
+            src={t.image_url} 
+            alt={t.alt_text || 'Khách hàng đánh giá'} 
+            class="c-testimonial__image" 
+            loading="lazy" 
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+)}

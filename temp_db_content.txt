@@ -1,0 +1,301 @@
+<div class="elementor-tour-wrapper custom-tour-layout max-w-[1200px] mx-auto px-4 py-8 lg:py-12">
+  
+  <nav class="flex text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+    <a href="/" class="hover:text-slate-800 transition-colors">Trang chủ</a>
+    <span class="mx-1 md:mx-2">/</span>
+    <a href="/tours" class="hover:text-slate-800 transition-colors">Tours</a>
+    <span class="mx-1 md:mx-2">/</span>
+    <span class="text-slate-800 font-medium ml-1 md:ml-2">Tour Đạo Thành Á Đinh 8N7Đ trọn gói - KS 4 sao - No Shopping</span>
+  </nav>
+
+  <div class="mobile-image">
+    <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-[16/9] bg-gray-100 relative">
+      <img src="{{TOUR_FEATURED_IMAGE}}" alt="Tour Đạo Thành Á Đinh 8N7Đ" class="w-full h-full object-cover absolute inset-0" width="800" height="450" fetchpriority="high" />
+    </div>
+  </div>
+
+  <div class="tour-grid-container">
+    
+    <div class="tour-main-col">
+      <div class="desktop-image">
+        <div class="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-[16/9] bg-gray-100 relative">
+          <img src="{{TOUR_FEATURED_IMAGE}}" alt="Tour Đạo Thành Á Đinh 8N7Đ" class="w-full h-full object-cover absolute inset-0" width="800" height="450" fetchpriority="high" />
+        </div>
+      </div>
+      
+      [snippet name="trip-planner-box"]
+
+      <section class="tour-highlights-section mb-10 mt-10">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Trải nghiệm hấp dẫn</h2>
+        <div class="highlights-list">
+          
+          <div class="highlight-list-item">
+            <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="highlight-text">Khám phá những cảnh quan nguyên sơ của Đạo Thành Á Đinh, khám phá những viên ngọc ẩn như Hồ Ngọc Trai và các Tu viện</span>
+          </div>
+          <div class="highlight-list-item">
+            <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="highlight-text">Khám phá phong cảnh mê hoặc của Núi Tứ Nữ ở Thành Đô, Di sản Thế giới được UNESCO công nhận</span>
+          </div>
+          <div class="highlight-list-item">
+            <svg class="highlight-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span class="highlight-text">Thưởng thức những kỳ quan ẩm thực của Tứ Xuyên với trải nghiệm Lẩu cay nồng và buổi biểu diễn Opera Tứ Xuyên đầy mê hoặc</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="premium-qr-box">
+        <div class="qr-wrapper">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://fittour.vn/tour/tour-dao-thanh-a-dinh&margin=0" alt="QR Link" width="96" height="96" loading="lazy" />
+        </div>
+        <div class="qr-text">
+          <div class="qr-title">Quét mã QR</div>
+          <div class="qr-desc">Lưu và chia sẻ lịch trình trên thiết bị di động của bạn.</div>
+        </div>
+      </div>
+
+      <div class="premium-quote-box">
+        <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <p class="quote-text">Khám phá vùng đất nguyên sơ Đạo Thành Á Đinh, cảm nhận sự hùng vĩ của núi tuyết Tứ Cô Nương và trải nghiệm văn hóa Tây Tạng.</p>
+      </div>
+
+      <section class="tour-accommodation-section mb-12 mt-10">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Nơi ở của bạn</h2>
+        <div class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100 mb-4">
+            <svg class="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            <div>
+                <p class="font-bold text-slate-800 m-0">Khách sạn 4 Sao Toàn Tuyến</p>
+                <p class="text-sm text-slate-500 m-0">Tiêu chuẩn cao cấp nhất khu vực, đảm bảo sức khoẻ cho du khách</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="tour-itinerary-section mb-12 mt-12">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Lịch trình chi tiết</h2>
+        <div class="tour-itinerary">
+          <div class="flex flex-col gap-4">
+            
+            <details class="premium-itinerary-item" open>
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 1: Việt Nam bay Thành Đô</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p style="margin-bottom:14px">Cuộc phiêu lưu của bạn bắt đầu khi đoàn được chào đón nồng nhiệt tại Sân bay Quốc tế. Lên chuyến bay đi Thành Đô, Trung Quốc.</p><p style="margin-bottom:14px"><em>Thông tin chuyến bay:</em></p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li><strong>Hành lý miễn cước</strong>: 7kg xách tay + 23kg hành lý ký gửi</li><li><strong>Thời lượng</strong>: 3 giờ 10 phút</li></ul><p style="margin-bottom:14px">Khi hạ cánh ở Thành Đô, hướng dẫn viên địa phương của chúng tôi sẽ tạo điều kiện thuận lợi cho việc thông quan và đảm bảo quá trình chuyển tiếp suôn sẻ để có một buổi tối thú vị.</p><p style="margin-bottom:14px">HDV địa phương đón đoàn đưa về thị trấn Ngoạ Long.</p><p style="margin-bottom:14px">Sau đó, chúng ta sẽ về khách sạn nhận phòng và nghỉ ngơi thật xứng đáng. Hãy thoải mái khám phá những con phố sôi động Cam Ly – Ngõ Rộng Ngõ Hẹp hoặc thưởng thức hương vị địa phương khi rảnh rỗi.</p>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 2: Ngoạ Long – Tứ Cô Nương</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="195" data-start="113" style="margin-bottom:14px">🌄 <strong data-end="195" data-start="116">Khám phá vùng đất được mệnh danh là “Alps của Trung Quốc” – Núi Tứ Cô Nương</strong></p><p data-end="420" data-start="197" style="margin-bottom:14px">🍽 <strong data-end="213" data-start="200">Buổi sáng</strong>: Đoàn dùng bữa sáng tại Ngoạ Long, sau đó khởi hành đến với <strong data-end="293" data-start="274">Núi Tứ Cô Nương</strong> – một <strong data-end="331" data-start="300">di sản thiên nhiên thế giới</strong>, nơi quy tụ 85 đỉnh núi tuyết cao trên 5.000m, phủ trắng quanh năm và ẩn mình trong mây.</p><p data-end="603" data-start="422" style="margin-bottom:14px">🗻 <strong data-end="442" data-start="425">Song Kiều Câu</strong> – điểm tham quan nổi bật nhất của khu thắng cảnh, được mệnh danh là nơi có <strong data-end="569" data-start="518">phong cảnh đẹp và đa dạng nhất vùng Tứ Cô Nương</strong>. Du khách sẽ có dịp chiêm ngưỡng:</p><ul data-end="833" data-start="605" style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="680" data-start="605"><p data-end="680" data-start="607" style="margin-bottom:14px">Những <strong data-end="644" data-start="613">rừng cây bách tán xanh ngát</strong> xen lẫn sắc đỏ vàng của lá mùa thu.</p></li><li data-end="731" data-start="681"><p data-end="731" data-start="683" style="margin-bottom:14px"><strong data-end="704" data-start="683">Hồ nước trong vắt</strong> phản chiếu bóng núi tuyết.</p></li><li data-end="833" data-start="732"><p data-end="833" data-start="734" style="margin-bottom:14px">Những con đường gỗ uốn quanh khe núi, suối băng tan róc rách, tạo nên khung cảnh tựa chốn bồng lai.</p></li></ul><p data-end="928" data-start="835" style="margin-bottom:14px">📸 Đây là <strong data-end="868" data-start="845">thiên đường sống ảo</strong> cho những ai yêu thiên nhiên, núi rừng và đam mê nhiếp ảnh.</p><p data-end="1042" data-start="930" style="margin-bottom:14px">🍱 <strong data-end="945" data-start="933">Buổi tối</strong>: Đoàn dùng bữa tại nhà hàng địa phương, thưởng thức các món ăn nóng hổi đặc trưng vùng Tứ Xuyên.</p><p data-end="1204" data-start="1044" style="margin-bottom:14px">🛏 <strong data-end="1073" data-start="1047">Nghỉ đêm tại khách sạn</strong> ở khu vực Ngoạ Long hoặc gần khu thắng cảnh, kết thúc một ngày với trọn vẹn trải nghiệm giữa non cao hùng vĩ và sông núi hữu tình.</p>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 3: Tứ Cô Nương – Nhã Giang</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="192" data-start="106" style="margin-bottom:14px">🗻 <strong data-end="192" data-start="109">Hành trình xuyên cao nguyên – Lạc giữa chốn “thiên đường Tây Tạng” tại Tứ Xuyên</strong></p><p data-end="432" data-start="194" style="margin-bottom:14px">🍽 <strong data-end="210" data-start="197">Buổi sáng</strong>: Quý khách dùng điểm tâm sáng tại khách sạn, sau đó tiếp tục hành trình đến với <strong data-end="304" data-start="291">Nhã Giang</strong>, men theo <strong data-end="332" data-start="315">Trà Mã Cổ Đạo</strong> – cung đường xưa kia từng nối liền Tây Tạng với Trung Nguyên trong hành trình buôn bán trà ngựa cổ.</p><p data-end="500" data-start="434" style="margin-bottom:14px">👁 <strong data-end="500" data-start="437">Những điểm dừng chân ấn tượng trên cung đường ngày hôm nay:</strong></p><ul data-end="1377" data-start="502" style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="715" data-start="502"><p data-end="715" data-start="504" style="margin-bottom:14px">❄️ <strong data-end="525" data-start="507">Núi tuyết Raya</strong> – cao trên 6.000m, được người Tây Tạng tôn kính như một ngọn núi linh thiêng. Từ xa, đỉnh núi phủ tuyết trắng quanh năm hiện ra sừng sững giữa trời mây – một khung cảnh thanh tịnh và kỳ vĩ.</p></li><li data-end="986" data-start="717"><p data-end="986" data-start="719" style="margin-bottom:14px">🏞 <strong data-end="736" data-start="722">Đèo Kazila</strong> – nằm ở độ cao 4.718m, nơi đây mở ra tầm nhìn ngoạn mục với <strong data-end="833" data-start="797">những tầng núi nối tiếp tầng núi</strong>, lớp sau nhạt dần trong sương – như một bức thủy mặc khổng lồ trải dài tới tận chân trời. Bạn sẽ có cảm giác như đang băng qua một “con đường lên trời”.</p></li><li data-end="1175" data-start="988"><p data-end="1175" data-start="990" style="margin-bottom:14px">🌾 <strong data-end="1011" data-start="993">Đồng cỏ Tagong</strong> – được mệnh danh là <strong data-end="1064" data-start="1032">thảo nguyên Tây Tạng thu nhỏ</strong>, trải dài bất tận với những đàn gia súc thong dong trên cỏ non, tạo nên khung cảnh thanh bình đậm chất du mục.</p></li><li data-end="1377" data-start="1177"><p data-end="1377" data-start="1179" style="margin-bottom:14px">🛕 <strong data-end="1216" data-start="1182">Tu viện Tagong (Lhagang Gompa)</strong> – nơi linh thiêng của dòng truyền thừa Phật giáo Tây Tạng, là điểm hành hương nổi tiếng với kiến trúc đặc trưng và không khí tôn nghiêm giữa thiên nhiên bao la.</p></li></ul><p data-end="1556" data-start="1379" style="margin-bottom:14px">🌄 <strong data-end="1394" data-start="1382">Buổi tối</strong>: Đoàn về đến Nhã Giang, nhận phòng khách sạn, nghỉ ngơi sau một ngày trải nghiệm mãn nhãn giữa cao nguyên gió lộng và đất trời bao la của vùng Tây Tạng Tứ Xuyên.</p>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 4: Nhã Giang – Lý Đường</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="175" data-start="94" style="margin-bottom:14px">🛤️ <strong data-end="175" data-start="98">Băng qua cao nguyên Tây Tạng – Chạm đến miền đất truyền thuyết Shangri-La</strong></p><p data-end="364" data-start="177" style="margin-bottom:14px">🌄 <strong data-end="193" data-start="180">Buổi sáng</strong>: Đoàn dùng bữa sáng tại khách sạn, chuẩn bị hành trang tiếp tục hành trình đến với <strong data-end="300" data-start="277">thị trấn Shangri-La</strong> – miền đất được ví như <strong data-end="363" data-start="324">“thiên đường cuối cùng nơi hạ giới”</strong>.</p><p data-end="444" data-start="366" style="margin-bottom:14px">🏞️ <strong data-end="444" data-start="370">Trên đường đi, đoàn ghé qua những điểm đến kỳ vĩ giữa lòng cao nguyên:</strong></p><ul data-end="1229" data-start="446" style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="877" data-start="446"><p data-end="877" data-start="448" style="margin-bottom:14px">🕌 <strong data-end="472" data-start="451">Lý Đường (Litang)</strong> – được mệnh danh là <strong data-end="527" data-start="493">mái nhà của vùng Kham Tây Tạng</strong>, cao hơn cả thủ phủ Lhasa, nơi bầu trời dường như gần hơn bao giờ hết. Đây là <strong data-end="640" data-start="606">nơi giao thoa giữa Tạng và Hán</strong>, nổi bật với <strong data-end="685" data-start="654">những cánh đồng cỏ trải dài</strong>, những đàn gia súc thong dong và dãy núi tuyết vĩnh cửu ôm lấy thị trấn nhỏ. Lý Đường cũng là quê hương của <strong data-end="822" data-start="794">Đức Đạt Lai Lạt Ma thứ 5</strong>, một điểm linh thiêng trong lòng người dân địa phương.</p></li><li data-end="1229" data-start="879"><p data-end="1229" data-start="881" style="margin-bottom:14px">🛕 <strong data-end="917" data-start="884">Trường Thanh Xuân Khoa Nhĩ Tự</strong> – <strong data-end="979" data-start="920">ngôi tự viện lớn nhất của tông phái Hoàng Mạo (Gelugpa)</strong> tại khu vực Kham, được mệnh danh là “<strong data-end="1048" data-start="1017">Thánh địa Phật giáo Kangnan</strong>”. Chùa tọa lạc trên diện tích hơn 500 mẫu, từng có đến hơn 4.000 tu sĩ tu học. Đây là nơi không chỉ linh thiêng mà còn là trung tâm văn hóa và giáo dục Phật giáo nổi bật nhất vùng.</p></li><li data-end="1229" data-start="879">🏯 <strong>Phố Cổ Lạc Thông</strong>: hành lang văn hóa Tạng-Khương-Di và Mông-Tạng. Đây là nơi tập trung sinh sống cũng như là nơi lưu giữ nét văn hoá của người Tặng một cách chân thật và đáng yêu nhất tại Tứ Xuyên.</li></ul><p data-end="1460" data-start="1231" style="margin-bottom:14px">🛌 <strong data-end="1246" data-start="1234">Buổi tối</strong>: Đoàn đến <strong data-end="1271" data-start="1257">Lý Đường</strong>, nhận phòng khách sạn, nghỉ ngơi giữa không gian se lạnh, thanh bình của thị trấn huyền thoại. Một ngày trên cao nguyên khép lại bằng những hình ảnh yên bình, đầy thiêng liêng và cảm hứng.</p>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 5: Lý Đường – Thị trấn Shangri La</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="308" data-start="200" style="margin-bottom:14px"><strong data-end="225" data-start="200">Điểm nhấn trong ngày: </strong>Bạch Tháp Đạo Thành – thị trấn Shangri-La (Hương Cách Lý Lạp) – phố cổ Tây Tạng.</p><p data-end="323" data-start="310" style="margin-bottom:14px"><strong data-end="323" data-start="310">Buổi sáng</strong></p><p data-end="515" data-start="325" style="margin-bottom:14px">Sau bữa sáng tại khách sạn, đoàn khởi hành đến <strong data-end="386" data-start="372">Shangri-La</strong> – thị trấn nổi tiếng nằm trên cao nguyên Tây Tạng với không khí trong lành và khung cảnh thanh bình đặc trưng của vùng Himalaya.</p><p data-end="547" data-start="517" style="margin-bottom:14px">Trên đường đi, đoàn tham quan:</p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="819" data-start="551"><strong data-end="574" data-start="551">Bạch Tháp Đạo Thành</strong> – biểu tượng tâm linh của vùng đất này, nơi thể hiện niềm tin sâu sắc của người dân Tây Tạng vào <strong data-end="700" data-start="672">Phật giáo Kim Cương Thừa</strong>. Những bánh xe cầu nguyện và tháp trắng nổi bật giữa cao nguyên tạo nên khung cảnh rất đặc trưng của văn hóa Tây Tạng.</li><li data-end="986" data-start="823">Tiếp tục hành trình đến <strong data-end="881" data-start="847">Shangri-La (Hương Cách Lý Lạp)</strong> – thị trấn nằm ở độ cao hơn 3.200m, nổi tiếng với bầu không khí thuần khiết và văn hóa Tây Tạng đặc sắc.</li><li data-end="1058" data-start="990">Đoàn <strong data-end="1057" data-start="995">nhận phòng khách sạn và nghỉ ngơi để thích nghi với độ cao</strong>.</li></ul><p data-end="1072" data-start="1060" style="margin-bottom:14px"><strong data-end="1072" data-start="1060">Buổi tối</strong></p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="1114" data-start="1076">Đoàn dùng <strong data-end="1111" data-start="1086">bữa tối tại khách sạn</strong>.</li><li data-end="1250" data-start="1117">Tự do <strong data-end="1148" data-start="1123">dạo phố cổ Shangri-La</strong>, khám phá những ngôi nhà gỗ Tây Tạng, cửa hàng thủ công và quán trà bơ đặc trưng của vùng cao nguyên.</li></ul><figure aria-describedby="caption-attachment-26715" id="attachment_26715"><img alt="Bản đồ Roadmap Khu bảo tồn Đạo Thành - Á Đinh" height="720" src="https://media.fittour.vn/wp-content/uploads/2023/12/ban-do-roadmap-khu-bao-ton-dao-thanh-a-dinh-fittour.jpg" width="1280"/><figcaption id="caption-attachment-26715">Bản đồ Roadmap Khu bảo tồn Đạo Thành – Á Đinh</figcaption></figure>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 6: Trekking Á Đinh: Lạc Nhung – Hồ Sữa – Hồ Ngũ Sắc</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="307" data-start="184" style="margin-bottom:14px"><strong data-end="209" data-start="184">Điểm nhấn trong ngày: </strong>Đạo Thành Á Đinh – Ngưu Trường Lạc Nhung – Hồ Sữa – Hồ Ngũ Sắc – ba ngọn núi tuyết linh thiêng.</p><p data-end="322" data-start="309" style="margin-bottom:14px"><strong data-end="322" data-start="309">Buổi sáng</strong></p><p data-end="506" data-start="324" style="margin-bottom:14px">Sau bữa sáng tại khách sạn, đoàn <strong data-end="370" data-start="357">trả phòng</strong> và khởi hành đến <strong data-end="432" data-start="388">khu bảo tồn thiên nhiên Đạo Thành Á Đinh</strong> – nơi được mệnh danh là <em data-end="506" data-start="457">“vùng đất thuần khiết cuối cùng trên Trái Đất.”</em></p><p data-end="638" data-start="508" style="margin-bottom:14px">Hôm nay du khách sẽ trải nghiệm <strong data-end="593" data-start="540">một trong những cung trekking đẹp nhất Trung Quốc</strong>, khám phá những cảnh sắc nổi bật của Á Đinh:</p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="804" data-start="642"><strong data-end="685" data-start="642">Ngưu Trường Lạc Nhung (Luorong Pasture)</strong> – thảo nguyên rộng lớn nằm giữa thung lũng, nơi có thể chiêm ngưỡng trọn vẹn ba ngọn núi tuyết linh thiêng của Á Đinh.</li><li data-end="951" data-start="808"><strong data-end="830" data-start="808">Hồ Sữa (Milk Lake)</strong> – hồ nước băng tan nằm ở độ cao khoảng <strong data-end="880" data-start="870">4.600m</strong>, nổi bật với màu xanh ngọc đặc trưng giữa những dãy núi tuyết hùng vĩ.</li><li data-end="1114" data-start="955"><strong data-end="987" data-start="955">Hồ Ngũ Sắc (Five Color Lake)</strong> – nằm ở độ cao khoảng <strong data-end="1020" data-start="1010">4.700m</strong>, được xem là hồ linh thiêng của vùng Á Đinh với màu nước thay đổi theo ánh sáng và thời tiết.</li><li data-end="1313" data-start="1118">Từ các điểm trekking, du khách có thể chiêm ngưỡng <strong data-end="1220" data-start="1169">ba ngọn núi tuyết vĩnh cửu nổi tiếng của Á Đinh</strong>:<br data-end="1224" data-start="1221"/><strong data-end="1313" data-start="1226">Tiên Nãi Nhật (Chenrezig), Hạ Nặc Đa Cát (Jampayang) và Ương Mại Dũng (Chanadorje).</strong></li><li data-end="1438" data-start="1317">Du khách có thể <strong data-end="1360" data-start="1333">trekking hoặc cưỡi ngựa</strong> để khám phá sâu hơn khu bảo tồn thiên nhiên (chi phí cưỡi ngựa chưa bao gồm).</li></ul><p data-end="1605" data-start="1440" style="margin-bottom:14px">Toàn bộ hành trình đưa du khách đi qua những thung lũng băng hà, hồ nước trên cao và cảnh quan cao nguyên hùng vĩ, nơi thiên nhiên vẫn giữ được vẻ nguyên sơ hiếm có.</p><p data-end="1619" data-start="1607" style="margin-bottom:14px"><strong data-end="1619" data-start="1607">Buổi tối</strong></p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="1647" data-start="1623">Đoàn trở về khách sạn.</li><li data-end="1682" data-start="1650">Dùng <strong data-end="1666" data-start="1655">bữa tối</strong> và nghỉ ngơi.</li><li data-end="1769" data-start="1685">Tận hưởng bầu không khí trong lành của <strong data-end="1768" data-start="1724">khu bảo tồn thiên nhiên Đạo Thành Á Đinh</strong>.</li></ul>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 7: Á Đinh – Xung Cổ Tự – Hồ Trân Châu – Đạo Thành</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="314" data-start="211" style="margin-bottom:14px"><strong data-end="236" data-start="211">Điểm nhấn trong ngày: </strong>Trekking Á Đinh tuyến ngắn – Hồ Trân Châu – Núi Tiên Nãi Nhật – Xung Cổ Tự.</p><p data-end="329" data-start="316" style="margin-bottom:14px"><strong data-end="329" data-start="316">Buổi sáng</strong></p><p data-end="522" data-start="331" style="margin-bottom:14px">Sau bữa sáng tại khách sạn, đoàn tiếp tục quay lại <strong data-end="426" data-start="382">khu bảo tồn thiên nhiên Đạo Thành Á Đinh</strong> để trải nghiệm <strong data-end="464" data-start="442">cung trekking ngắn</strong>, phù hợp để khám phá những cảnh sắc đặc trưng của Á Đinh.</p><p data-end="562" data-start="524" style="margin-bottom:14px">Các điểm tham quan nổi bật trong ngày:</p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="823" data-start="566"><strong data-end="595" data-start="566">Hồ Trân Châu (Pearl Lake)</strong> – nằm dưới chân núi tuyết <strong data-end="639" data-start="622">Tiên Nãi Nhật</strong>, hồ được hình thành từ nguồn nước băng tan. Men theo những bậc gỗ giữa rừng thông, du khách sẽ dần tiếp cận hồ nước trong xanh, nơi phản chiếu rõ nét núi tuyết và bầu trời cao nguyên.</li><li data-end="1094" data-start="827"><strong data-end="860" data-start="827">Núi Tiên Nãi Nhật (Chenrezig)</strong> – một trong ba ngọn núi tuyết linh thiêng của Á Đinh, được người Tây Tạng tin là hóa thân của <strong data-end="977" data-start="955">Quán Thế Âm Bồ Tát</strong>, biểu tượng của lòng từ bi. Từ khu vực hồ, du khách có thể chiêm ngưỡng trọn vẹn vẻ hùng vĩ của ngọn núi thiêng này.</li><li data-end="1334" data-start="1098"><strong data-end="1132" data-start="1098">Xung Cổ Tự (Chonggu Monastery)</strong> – ngôi chùa cổ nằm ở độ cao khoảng <strong data-end="1178" data-start="1168">3.880m</strong>, giữa thung lũng và rừng thông. Trong tiếng Tạng, Xung Cổ Tự mang ý nghĩa <strong data-end="1275" data-start="1253">“ngôi chùa bên hồ”</strong>, là điểm dừng chân linh thiêng của những người hành hương.</li></ul><p data-end="1416" data-start="1336" style="margin-bottom:14px">Sau khi kết thúc hành trình tham quan, đoàn rời Á Đinh và quay về <strong data-end="1415" data-start="1402">Đạo Thành</strong>.</p><p data-end="1430" data-start="1418" style="margin-bottom:14px"><strong data-end="1430" data-start="1418">Buổi tối</strong></p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="1482" data-start="1434">Đoàn dùng <strong data-end="1479" data-start="1444">bữa tối tại nhà hàng địa phương</strong>.</li><li data-end="1512" data-start="1485">Nghỉ đêm tại <strong data-end="1511" data-start="1498">Đạo Thành</strong>.</li></ul>
+              </div>
+            </details>
+            <details class="premium-itinerary-item">
+              <summary class="premium-itinerary-summary">
+                <div class="itinerary-toggle-icon">+</div>
+                <span>Ngày 8: Đạo Thành – Thành Đô – TP. HCM</span>
+              </summary>
+              <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                <p data-end="294" data-start="165" style="margin-bottom:14px"><strong data-end="190" data-start="165">Điểm nhấn trong ngày: </strong>Sân bay Đạo Thành Á Đinh – sân bay thương mại cao nhất thế giới – hành trình rời cao nguyên Tây Tạng.</p><p data-end="309" data-start="296" style="margin-bottom:14px"><strong data-end="309" data-start="296">Buổi sáng</strong></p><p data-end="490" data-start="311" style="margin-bottom:14px">Sau bữa sáng tại khách sạn, du khách tận hưởng những khoảnh khắc cuối cùng tại <strong data-end="403" data-start="390">Đạo Thành</strong>, vùng cao nguyên nổi tiếng với không khí trong lành và cảnh sắc thiên nhiên nguyên sơ.</p><p data-end="555" data-start="492" style="margin-bottom:14px">Đoàn khởi hành ra sân bay để làm thủ tục cho chuyến bay trở về.</p><p data-end="585" data-start="557" style="margin-bottom:14px">Các điểm nổi bật trong ngày:</p><ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li data-end="758" data-start="589"><strong data-end="643" data-start="589">Sân bay Đạo Thành Á Đinh (Daocheng Yading Airport)</strong> – được mệnh danh là <strong data-end="704" data-start="664">sân bay thương mại cao nhất thế giới</strong>, nằm ở độ cao khoảng <strong data-end="757" data-start="726">4.411m so với mực nước biển</strong>.</li><li data-end="977" data-start="762">Sân bay được xây dựng nhằm kết nối khu vực <strong data-end="827" data-start="805">Đạo Thành – Á Đinh</strong> với các thành phố lớn, giúp rút ngắn thời gian di chuyển từ <strong data-end="914" data-start="888">Thành Đô đến Đạo Thành</strong> từ gần hai ngày đường bộ xuống chỉ còn khoảng <strong data-end="976" data-start="961">65 phút bay</strong>.</li><li data-end="1152" data-start="981">Đoàn làm thủ tục bay về <strong data-end="1045" data-start="1005">Thành Đô – sân bay quốc tế Thiên Phủ</strong>, sau đó nối chuyến trở về <strong data-end="1091" data-start="1072">TP. Hồ Chí Minh</strong>, kết thúc hành trình khám phá cao nguyên Á Đinh – Đạo Thành.</li></ul>
+
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      
+      <div class="custom-blog-prose mt-8 mb-8 text-gray-700 italic border-l-4 border-amber-400 pl-4 bg-amber-50 p-4 rounded-r-lg"><p style="margin-bottom:14px"><em><strong>Ghi chú</strong>: Lịch trình tham quan có thể thay đổi theo tình hình thực tế, Visa nhập cảnh Trung Quốc có thay đổi, nhưng vẫn đảm bảo đầy đủ các điểm hoặc thay thế tương đương theo chương trình tour.</em></p></div>
+
+      <section class="tour-schedule-section mb-12 mt-10">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Lịch khởi hành</h2>
+        <div class="tour-schedule-table">
+          <table style="width:100%;border-collapse:collapse;margin:8px 0 16px 0;font-size:15px">
+<thead>
+<tr style="background:#f57c00;color:#fff">
+<th style="padding:12px 16px;border-bottom:2px solid #e2e8f0;text-align:left;font-weight:600">Ngày khởi hành</th>
+<th style="padding:12px 16px;border-bottom:2px solid #e2e8f0;text-align:left;font-weight:600">Giá vé (người lớn)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">25/04 - 02/05/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">41.990.000 VNĐ</td>
+</tr>
+<tr style="background:#fafafa">
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">20/06 - 27/06/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">38.990.000 VNĐ</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">18/07 - 25/07/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">38.990.000 VNĐ</td>
+</tr>
+<tr style="background:#fafafa">
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">30/08 - 06/09/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">40.990.000 VNĐ</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">17/10 - 24/10/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">41.990.000 VNĐ</td>
+</tr>
+<tr style="background:#fafafa">
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">24/10 - 31/10/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">41.990.000 VNĐ</td>
+</tr>
+<tr>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">30/10 - 06/11/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">41.990.000 VNĐ</td>
+</tr>
+<tr style="background:#fafafa">
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">07/11 - 14/11/2026</td>
+<td style="padding:12px 16px;border-bottom:1px solid #e2e8f0">39.990.000 VNĐ</td>
+</tr>
+</tbody>
+</table>
+        </div>
+      </section>
+
+      <section class="tour-faq-wrapper mb-12 mt-10">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6">Thông Tin Thêm</h2>
+        <div class="flex flex-col gap-4">
+          
+          <details>
+            <summary>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Lưu ý quan trọng cần nắm trước</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-content custom-blog-prose">
+              <p style="margin-bottom:14px">Bắt tay vào một cuộc phiêu lưu phi thường đến Đạo Thành – Á Đinh, một điểm đến có vẻ đẹp và sự hấp dẫn vô song. Tuy nhiên, hãy sẵn sàng đối mặt với những thách thức về địa hình hiểm trở và thời tiết khó lường đi kèm với sức hấp dẫn của Á Đình.</p><p style="margin-bottom:14px"><strong>Độ cao, mạo hiểm cao</strong></p><p style="margin-bottom:14px">Hành trình của chúng ta sẽ dẫn chúng ta đến những điểm đến cao vút <strong>trên 3600m</strong>, nép mình ở phía đông cao nguyên Thanh Hải, khiến nơi đây trở thành một trong những cao nguyên và thành phố cao nhất thế giới. Trong những ngày đầu, bạn có thể gặp các triệu chứng liên quan đến độ cao như chóng mặt, mệt mỏi – hiện tượng thường xuyên xảy ra khi khám phá những vùng có độ cao như Á Đình.</p><p style="margin-bottom:14px"><em>Tham khảo thêm bài viết của chúng tôi: <a href="/say-do-cao/" rel="noopener" target="_blank">Triệu chứng và cách phòng ngừa say độ cao</a>.</em></p><p style="margin-bottom:14px"><strong>Cân nhắc về sức khỏe</strong></p><p style="margin-bottom:14px">Đối với những du khách có tiền sử các vấn đề về tim mạch, tăng huyết áp hoặc các bệnh về hô hấp thì không nên tham gia. <em>Trẻ em dưới 12 tuổi và người lớn trên 70 tuổi</em> nên cân nhắc kỹ lưỡng quyết định của mình trước khi tham gia. Nên kiểm tra sức khỏe và tham khảo ý kiến ​​bác sĩ trước khi đăng ký hành trình. Đội ngũ tư vấn của FIT TOUR sẽ cung cấp thông tin toàn diện, đảm bảo cho bạn có đầy đủ thông tin trước khi đưa ra bất kỳ cam kết nào. Đội ngũ tận tâm của chúng tôi luôn sẵn sàng hỗ trợ mọi thắc mắc.</p><p style="margin-bottom:14px"><strong>Tính linh hoạt trong bối cảnh không chắc chắn</strong></p><p style="margin-bottom:14px">Xin lưu ý rằng chương trình có thể có những thay đổi do lịch trình của hãng hàng không, tình trạng phòng trống của khách sạn hoặc các trường hợp không lường trước được như khủng bố, thiên tai, thay đổi trong chính sách du lịch của chính phủ Trung Quốc hoặc thay đổi trong lịch trình giao thông công cộng (chuyến bay, tàu hỏa, v.v.) . FIT TOUR có quyền điều chỉnh hành trình hoặc hủy chuyến tham quan vì sự thuận tiện và an toàn của khách hàng, từ chối trách nhiệm đối với mọi thiệt hại phát sinh.</p><p style="margin-bottom:14px"><strong>Cuộc phiêu lưu hấp dẫn đang chờ đợi – Tự tin khám phá Đạo Thành – Á Đình!</strong></p>
+            </div>
+          </details>
+          <details open>
+            <summary>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Bao Gồm</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-content custom-blog-prose">
+              <ol style="list-style-type:decimal;padding-left:20px;margin:16px 0"><li>Vé máy bay quốc tế khứ hồi TP HCM – Thành Đô – TP HCM.</li><li>Vé máy bay nội địa khứ hồi: Đạo Thành – Thành Đô.</li><li>Hành lý: 1 kiện 07kg xách tay và hành lý ký gửi 23kg.</li><li>Visa nhập cảnh TRUNG QUỐC</li><li>Xe di chuyển theo hành trình</li><li>Lưu trú: 02 khách/phòng (phòng Twin/Double). Phòng được bố trí khi lẻ nam, nữ. Khách sạn 4 sao</li><li>Ăn uống<ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li>Bữa sáng điểm tâm chọn món và buffet sáng tại khách sạn</li><li>Các bữa ăn chính Set menu</li><li>Nước uống 2chai/ngày</li></ul></li><li>Hướng dẫn viên/ Trưởng đoàn công ty FIT TOUR</li><li>HDV địa phương tại các điểm đến</li><li>Vé tham quan du lịch trọn gói theo chương trình</li><li>Bình Oxy cho các trường hợp khẩn cấp</li><li>Bảo hiểm Du lịch trọn gói</li><li>Nước suôi hằng ngày (02chai/khách/ngày)</li><li>Vé vào Bảo Tàng, tu viện và tất cả các vé thăm quan thắng cảnh</li><li>Quà tặng lưu niệm.</li></ol>
+            </div>
+          </details>
+          <details open>
+            <summary>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Không Bao Gồm</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-content custom-blog-prose">
+              <ul style="list-style-type:disc;padding-left:20px;margin:16px 0"><li>Chi phí các dịch vụ không được liệt kê trong phần Bao gồm.</li><li>Phụ thu phòng đơn: (Áp dụng cho khách yêu cầu ở riêng 1 phòng)</li><li>VAT</li><li>Các chi phí cá nhân</li><li>Tiền Tip cho Tour Leader, Hướng dẫn viên và Lái xe (tối thiểu 50 usd/khách/tour)</li><li>Phụ thu phòng đơn 400 USD/khách – nếu quý khách có nhu cầu ngủ phòng riêng hoặc không có khách ghép chung.</li></ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="tour-sidebar-col">
+      <div class="sticky top-[100px] flex flex-col gap-8">
+        
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 leading-[1.2] mt-0 tracking-tight" style="margin-bottom: 24px;">Tour Đạo Thành Á Đinh 8N7Đ trọn gói - KS 4 sao - No Shopping</h1>
+          <div class="text-gray-600 text-[16px] leading-relaxed font-normal custom-blog-prose space-y-4">
+            <p style="margin-bottom:14px">Tour Đạo Thành Á Đinh 8N7Đ trọn gói bao gồm vé máy bay quốc tế và nội địa, khách sạn 4 sao, visa Trung Quốc, cam kết No Shopping, mang đến một chuyến đi trải nghiệm tuyệt vời.</p>
+          </div>
+        </div>
+
+        <div class="sticky-price-card">
+          <div class="service-grid">
+            <div class="service-item">
+              <div class="service-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div class="service-title">Dịch vụ</div>
+              <div class="service-sub">Trọn gói</div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="service-title">Thời gian</div>
+              <div class="service-sub">8 Ngày 7 Đêm</div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 24px;">
+            <div class="price-label">Giá Từ</div>
+            <div class="price-amount">{{{{TOUR_PRICE_FORMATTED}}}} VNĐ</div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="/zalo" target="_blank" class="btn-primary btn-zalo">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"/></svg>
+              Tư vấn Zalo
+            </a>
+            <a href="/msg" target="_blank" class="btn-primary btn-msg">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.923 1.472 5.518 3.753 7.185v3.42l3.41-1.86a10.871 10.871 0 0 0 2.837.382c5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.096 12.443-2.823-3.003-5.514 3.003 6.068-6.438 2.89 3.002 5.445-3.002-6.066 6.438z"/></svg>
+              Messenger
+            </a>
+          </div>
+          
+          <div class="mt-4 border-t border-gray-100 pt-4 flex flex-col gap-3">
+            <div class="flex items-center gap-3 text-sm text-gray-600">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-green-500"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Lịch khởi hành linh hoạt
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

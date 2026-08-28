@@ -1,0 +1,943 @@
+---
+import { env } from 'cloudflare:workers';
+import { getOptimizedImageUrl } from '@/lib/imageOptimization';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import CtaBlock from '@/components/ui/CtaBlock.astro';
+import SnippetBlock from '@/components/shortcodes/SnippetBlock.astro';
+import LadakhTours from '@/components/ladakh/LadakhTours.astro';
+
+const slug = 'gallery-ladakh';
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return Astro.rewrite("/500");
+}
+
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND status = 'published'").bind(slug).first(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return new Response("Post not found", { status: 404 });
+}
+
+// Fetch Category
+let category = null;
+try {
+  const catRef = await safeQueryCritical(
+    d1Db.prepare("SELECT categoryId FROM PostCategory WHERE postId = ?").bind(post.id).first(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_category_ref" }
+  );
+  if (catRef && catRef.categoryId) {
+    category = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Category WHERE id = ?").bind(catRef.categoryId).first(),
+      { route: Astro.url.pathname, slug, queryType: "fetch_category" }
+    );
+  }
+} catch(e) {
+  console.error("Error fetching category", e);
+}
+
+let anDoSnippet = null;
+try {
+  anDoSnippet = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Snippet WHERE slug = 'testimonial-an-do'").first(),
+    { route: Astro.url.pathname, slug: "testimonial-an-do", queryType: "fetch_snippet" }
+  );
+} catch (e) {
+  console.error("Failed to fetch snippet", e);
+}
+
+const dataMap = {
+  snippets: {
+    'testimonial-an-do': anDoSnippet
+  }
+};
+
+const title = post.seoTitle || post.title;
+const description = post.seoDescription || post.excerpt || post.title;
+const image = post.ogImage || post.featuredImage || '';
+
+Astro.response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+---
+
+<BaseLayout 
+  title={title} 
+  description={description} 
+  image={image}
+  adminEditUrl={`/admin/posts/edit?id=${post.id}`}
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  </Fragment>
+
+<main class="w-full pb-12 lg:pb-20 bg-surface">
+  <div class="site-container pt-8 lg:pt-12">
+    <!-- IGNORE LINKS -->
+    <nav class="flex text-sm text-secondary mb-8" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <li class="inline-flex items-center">
+          <a href="/" class="text-secondary hover:text-brand-700 font-medium transition-colors">Trang chủ</a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-muted mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <a href="/gallery/" class="text-secondary hover:text-brand-700 font-medium transition-colors ms-1 md:ms-2">Gallery</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-muted mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="ms-1 font-semibold text-gray-900 md:ms-2 line-clamp-1">{title}</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+    <!-- END IGNORE LINKS -->
+
+    <header class="mb-8">
+      {category && (
+        <span class="inline-block px-3 py-1 bg-brand-50 text-brand-800 text-xs font-bold uppercase tracking-wider rounded-md mb-4 border border-brand-100">
+          {category.name}
+        </span>
+      )}
+      <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary leading-[1.3] tracking-tight mb-6 lg:max-w-[45ch]">
+        {title}
+      </h1>
+    </header>
+
+    <div class="text-center space-y-6 mb-12">
+    <div class="text-lead max-w-2xl mx-auto space-y-2">
+      <p>Hình ảnh thực tế từ chuyến đi.</p>
+      <p>Nơi cảm hứng thăng hoa và cảm xúc dâng trào…</p>
+    </div>
+    
+    <div class="max-w-md mx-auto mt-8">
+      <div class="relative group">
+        <input type="text" placeholder="Tìm kiếm hình ảnh ..." readonly data-search-trigger data-search-type="gallery" style="cursor:pointer" class="w-full pl-6 pr-12 py-4 rounded-full border border-border focus:outline-none focus:border-primary focus:ring-4 focus:ring-brand-100 shadow-sm transition-all text-text-main bg-subtle" />
+        <button aria-label="Tìm kiếm hình ảnh" data-search-trigger data-search-type="gallery" class="absolute right-3 top-3 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary-hover transition-colors shadow-md">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- IGNORE LINKS -->
+    <div class="text-sm text-text-muted mt-6 bg-subtle py-3 px-6 rounded-full inline-block border border-border">
+      <strong class="text-text-main">Xu hướng:</strong> 
+      <a href="/gallery-ladakh/" class="text-primary hover:text-primary-hover font-medium mx-1 transition-colors">Ladakh</a>,
+      <a href="/gallery-motor-adventure-ladakh/" class="text-primary hover:text-primary-hover font-medium mx-1 transition-colors">Ladakh Motor Advanture</a>,
+      <a href="/gallery-tay-tang/" class="text-primary hover:text-primary-hover font-medium mx-1 transition-colors">Tây Tạng</a>,
+      <a href="/gallery-annapurna-nepal/" class="text-primary hover:text-primary-hover font-medium mx-1 transition-colors">ABC Trek</a>,
+      <a href="/gallery-everest-base-camp/" class="text-primary hover:text-primary-hover font-medium mx-1 transition-colors">EBC Trek</a>...
+    </div>
+    <!-- END IGNORE LINKS -->
+  </div>
+
+  <CtaBlock isLcp={true} layout="gallery_booking" title="Tìm hiểu Tour Ladakh:" subtitle="Chuyến đi khám phá tiểu Tây Tạng của Ấn Độ" content="<br><br><span class='font-bold text-sm mb-2 text-text-main block'>Xem về:</span><ul class='list-disc pl-5 space-y-2 mb-4 text-sm text-text-muted'><li><a href='/country/ladakh/' class='text-highlight hover:text-accent-hover transition-colors font-bold'>Danh sách Tour Ladakh</a></li><li><a href='/du-lich-ladakh' class='text-highlight hover:text-accent-hover transition-colors font-bold'>Kinh nghiệm du lịch Ladakh từ HDV</a></li></ul>" image="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-o-Ladakh.webp" />
+
+  <!-- IGNORE LINKS -->
+  <div class="space-y-10 pt-10 pb-8">
+    <div class="flex justify-center">
+      <a href="/gallery/" class="btn-outline btn-md">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        Xem thêm Gallery ảnh khác
+      </a>
+    </div>
+  </div>
+  <!-- END IGNORE LINKS -->
+  </div>
+
+  <div class="w-full px-4 md:px-8 lg:px-12 max-w-[1600px] mx-auto">
+    <div class="grid-fit-masonry">
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/Binh-yen-o-tu-vien-ladakh.webp" class="feature-image" alt="Bình yên ở tu viện Ladakh" data-caption="Bình yên ở tu viện Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-chuyen-di-Zanskar.webp" class="feature-image" alt="Đặng Thùy Dương và chuyến đi Zanskar" data-caption="Đặng Thùy Dương và chuyến đi Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2022/06/tu-vien-Mulbekh-ladakh.webp" class="feature-image" alt="Tu viện Mulbekh Ladakh" data-caption="Tu viện Mulbekh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/du-khach-den-tu-vien-ladakh-va-giao-luu-cung-cac-tu-si.webp" class="feature-image" alt="Du khách đến tu viện Ladakh và giao lưu cùng các tu sĩ ở đây" data-caption="Du khách đến tu viện Ladakh và giao lưu cùng các tu sĩ ở đây " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2022/06/doan-khach-nuoc-ngoai-cuoi-lac-da.webp" class="feature-image" alt="Đoàn khách nước ngoài cưỡi lạc đà" data-caption="Đoàn khách nước ngoài cưỡi lạc đà " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/05/hanh-trinh-xe-may-o-ladakh.webp" class="feature-image" alt="Hành trình xe máy ở Ladakh" data-caption="Hành trình xe máy ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/mot-vung-lang-que-thanh-binh-o-zanskar-ladakh.webp" class="feature-image" alt="Một vùng làng quê thanh bình ở Zanskar" data-caption="Một vùng làng quê thanh bình ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/doan-khach-fit-tour-tham-du-le-hoi-Ladakh-Purnina-Phat-Dan.webp" class="feature-image" alt="Đoàn khách Fit Tour tham dự lễ hội Purnina Phật Đản ở Ladakh" data-caption="Đoàn khách Fit Tour tham dự lễ hội Purnina Phật Đản ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box min-h-[250px] bg-subtle">
+        <img src="https://media.fittour.vn/uploads/2023/06/vung-thao-nguyen-zanskar.webp" class="feature-image" alt="Vùng thảo nguyên Zanskar" data-caption="Vùng thảo nguyên Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/05/chup-anh-cung-tu-vien-hemis.webp" class="feature-image" alt="Chụp ảnh cùng tu viện Thiksey" data-caption="Chụp ảnh cùng tu viện Thiksey " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-tu-vien-tai-Ladakh.webp" class="feature-image" alt="Đặng Thùy Dương tại một tu viện Ladakh" data-caption="Đặng Thùy Dương tại một tu viện Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/kien-truc-phat-giao-o-leh-ladakh.webp" class="feature-image" alt="Kiến trúc ở Leh Ladakh" data-caption="Kiến trúc ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/con-suoi-gan-thung-lung.webp" class="feature-image" alt="Con sông gần thung lũng" data-caption="Con sông gần thung lũng " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/04/canh-dep-o-deo-khardung-la.webp" class="feature-image" alt="Cảnh đẹp ở đèo Khardung La" data-caption="Cảnh đẹp ở đèo Khardung La " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/mua-mat-na-huou-tai-le-hoi-Purnima-ladakh.webp" class="feature-image" alt="Múa mặt nạ hươu tại lễ hội Phật giáo Purnima Ladakh" data-caption="Múa mặt nạ hươu tại lễ hội Phật giáo Purnima Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-kham-pha-tu-vien-Hemis.webp" class="feature-image" alt="Đặng Thùy Dương khám phá tu viện Hemis" data-caption="Đặng Thùy Dương khám phá tu viện Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/doan-khach-ladakh-cung-chuyen-di-bike-trip.webp" class="feature-image" alt="Đoàn khách Ladakh cùng chuyến đi Bike Trip" data-caption="Đoàn khách Ladakh cùng chuyến đi Bike Trip " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/doan-nguoi-cuoi-lac-da-o-thung-lung-nubra.webp" class="feature-image" alt="Đoàn người cưỡi lạc đà ở thung lũng Nubra" data-caption="Đoàn người cưỡi lạc đà ở thung lũng Nubra " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/nui-tuyen-vung-zanskar-ladakh.webp" class="feature-image" alt="Núi tuyết vùng Zanskar Ladakh" data-caption="Núi tuyết vùng Zanskar Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/05/du-khach-fit-tour-chay-xe-mo-to-qua-cau.webp" class="feature-image" alt="Du khách Fit Tour chạy xe mô tô qua cầu đầy cờ lungta" data-caption="Du khách Fit Tour chạy xe mô tô qua cầu đầy cờ lungta " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/khong-khi-trang-nghiem-le-hoi-Purnima.webp" class="feature-image" alt="Không khí trang nghiêm lễ hội" data-caption="Không khí trang nghiêm lễ hội " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/khong-gian-ben-trong-yen-tinh-tu-vien-Stongdey-Zanskar-ladakh.webp" class="feature-image" alt="Không gian bên trong yên tĩnh của tu viện Stongdey Zanskar Ladakh" data-caption="Không gian bên trong yên tĩnh của tu viện Stongdey Zanskar Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/mua-cham-le-hoi-Purnima.webp" class="feature-image" alt="Múa Cham lễ hội Purnima" data-caption="Múa Cham lễ hội Purnima " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/tu-vien-Stongdey-Zanskar.webp" class="feature-image" alt="Tu viện Stongdey Zanskar Ladakh" data-caption="Tu viện Stongdey Zanskar Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-o-Ladakh.webp" class="feature-image" alt="Đặng Thùy Dương ở Ladakh" data-caption="Đặng Thùy Dương ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/05/tuong-phat-khong-lo-o-tu-vien-Hemis.webp" class="feature-image" alt="Tượng Phật khổng lồ ở tu viện Thiksey Ladakh" data-caption="Tượng Phật khổng lồ ở tu viện Thiksey Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/02/nhung-la-co-cau-nguyen-duoc-treo-trong-le-hoi-losar-o-ladakh.webp" class="feature-image" alt="Những lá cờ cầu nguyện được treo trong lễ hội Losar ở Ladakh" data-caption="Những lá cờ cầu nguyện được treo trong lễ hội Losar ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-nhung-nguoi-dan-o-le-hoi-Ladakh-Purnina-Phat-Dan.webp" class="feature-image" alt="Đặng Thùy Dương và những người dân ở lễ hội Purnina Phật Đản ở Ladakh" data-caption="Đặng Thùy Dương và những người dân ở lễ hội Purnina Phật Đản ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/05/truong-doan-huong-dan-cac-quy-tac-an-toan-moto-trip-ladakh.webp" class="feature-image" alt="Trưởng đoàn hướng dẫn các quy tắc Motor Trip ở Ladakh" data-caption="Trưởng đoàn hướng dẫn các quy tắc Motor Trip ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/tu-vien-Phugtal.webp" class="feature-image" alt="Tu viện Phuktal (Phugtal) Ladakh" data-caption="Tu viện Phuktal (Phugtal) Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-o-cay-cau-bat-ngang-song-Ladakh.webp" class="feature-image" alt="Đặng Thùy Dương chụp ảnh ở cây cầu bắt ngang sông ở Zanskar Ladakh" data-caption="Đặng Thùy Dương chụp ảnh ở cây cầu bắt ngang sông ở Zanskar Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/doan-khach-bike-trip-fit-tour-o-ladakh.webp" class="feature-image" alt="Đoàn khách bike trip Fit Tour ở Ladakh" data-caption="Đoàn khách bike trip Fit Tour ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/cay-cau-go-bat-ngang-song-ladakh.webp" class="feature-image" alt="Cây cầu gỗ bắt ngang sông Ladakh" data-caption="Cây cầu gỗ bắt ngang sông Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/dung-chan-de-chuo-anh-o-doan-duong-zanskar.webp" class="feature-image" alt="Dừng chân để chụp ảnh ở đoạn đường đi qua Zanskar" data-caption="Dừng chân để chụp ảnh ở đoạn đường đi qua Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-dung-chan-ben-nhung-day-nui-tuyet.webp" class="feature-image" alt="Đặng Thùy Dương dừng chân bên những dãy núi tuyết liên vùng Himalayas" data-caption="Đặng Thùy Dương dừng chân bên những dãy núi tuyết liên vùng Himalayas " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fdf2f8,#faf5ff,#eff6ff);aspect-ratio:1/1;padding:2rem;">
+        <p class="mood-text" style="column-span:unset;margin:0;">
+          Có những cung đường không chỉ để đi qua, mà để chinh phục và khắc sâu vào ký ức...
+        </p>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f0fdf4,#ecfeff,#eff6ff);aspect-ratio:1/1;padding:2rem;">
+        <p class="mood-text" style="column-span:unset;margin:0;">
+          Tự do là khi tay lái đón gió ngàn và ánh mắt ôm trọn núi rừng bao la...
+        </p>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/vung-nui-zanskar.webp" class="feature-image" alt="Vùng núi Zanskar" data-caption="Vùng núi Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/du-khach-viet-hao-hung-chup-anh-cung-lac-da-o-ladakh.webp" class="feature-image" alt="Du khách Việt hào hứng chụp ảnh cùng lạc đà ở Ladakh" data-caption="Du khách Việt hào hứng chụp ảnh cùng lạc đà ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/ladakh-bike-trip-tren-doan-duong-ladakh.webp" class="feature-image" alt="Ladakh bike trip trên đoạn đường quốc lộ" data-caption="Ladakh bike trip trên đoạn đường quốc lộ " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-nhung-ngay-tan-huong-o-Zanskar.webp" class="feature-image" alt="Đặng Thùy Dương và những ngày tận hưởng ở vùng đất Zanskar" data-caption="Đặng Thùy Dương và những ngày tận hưởng ở vùng đất Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/con-pho-chinh-o-leh-ladakh.webp" class="feature-image" alt="Con phố chính ở Leh Ladakh" data-caption="Con phố chính ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-chup-anh-o-Ladakh.webp" class="feature-image" alt="Đặng Thùy Dương chụp ảnh ở Ladakh" data-caption="Đặng Thùy Dương chụp ảnh ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/buoi-trinh-dien-le-hoi-o-ladakh.webp" class="feature-image" alt="Buổi trình diễn Lễ hội ở Ladakh" data-caption="Buổi trình diễn Lễ hội ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/04/fit-tour-va-con-deo-cao-nhat-the-gioi-khardungla.webp" class="feature-image" alt="Du lịch có Guu đến đoạn đèo cao nhất thế giới Khardung La Ấn Độ" data-caption="Du lịch có Guu đến đoạn đèo cao nhất thế giới Khardung La Ấn Độ " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/tu-cua-so-nhin-ra-khung-canh-tuyet-dep.webp" class="feature-image" alt="Từ cửa sổ nhìn ra khung cảnh tuyệt đẹp Zanskar" data-caption="Từ cửa sổ nhìn ra khung cảnh tuyệt đẹp Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-tu-vien-o-Zanskar.webp" class="feature-image" alt="Đặng Thùy Dương tại 1 tu viện ở Zanskar" data-caption="Đặng Thùy Dương tại 1 tu viện ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/kien-truc-ben-trong-tu-vien-hemis-fittour.webp" class="feature-image" alt="Kiến trúc bên trong tu viện Hemis" data-caption="Kiến trúc bên trong tu viện Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/05/doan-khach-fit-tour-chay-qua-doan-duong-ladakh.webp" class="feature-image" alt="Đoàn khách Fit Tour chạy qua đoạn đường Ladakh" data-caption="Đoàn khách Fit Tour chạy qua đoạn đường Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/05/mai-cua-cong-tu-vien-hemis.webp" class="feature-image" alt="Mái của cổng tu viện Hemis Ladakh" data-caption="Mái của cổng tu viện Hemis Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/du-khach-dung-chan-o-thanh-ho-tai-ladakh-trong-chuyen-bike-trip.webp" class="feature-image" alt="Du khách dừng chân ở thánh hồ tại Ladakh trong chuyến Bike Trip" data-caption="Du khách dừng chân ở thánh hồ tại Ladakh trong chuyến Bike Trip " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/05/trai-nghiem-mo-to-trio-o-ladakh.webp" class="feature-image" alt="Trải nghiệm Motor Trip ở Ladakh" data-caption="Trải nghiệm Motor Trip ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-du-ky-o-Zanskar.webp" class="feature-image" alt="Đặng Thùy Dương du ký ở Zanskar" data-caption="Đặng Thùy Dương du ký ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-Zanskar4.webp" class="feature-image" alt="Đặng Thùy Dương ở Zanskar" data-caption="Đặng Thùy Dương ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-Zanskar1.webp" class="feature-image" alt="Đặng Thùy Dương ở Zanskar" data-caption="&amp;#8211; Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/05/kien-truc-tu-vien-Hemis-ladakh.webp" class="feature-image" alt="Kiến trúc tu viện Thiksey" data-caption="Kiến trúc tu viện Thiksey " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/nhung-du-khach-check-in-o-tu-vien-tai-vung-zanskar.webp" class="feature-image" alt="Những du khách Fit Tour chụp ảnh tại tu viện vùng Zanskar" data-caption="Những du khách Fit Tour chụp ảnh tại tu viện vùng Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/duong-pho-dong-duc-o-trung-tam-ladakh.webp" class="feature-image" alt="Đường phố đông đúc ở trung tâm Ladakh" data-caption="Đường phố đông đúc ở trung tâm Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/tim-ve-su-binh-yen-giua-khung-canh-vi-dai.webp" class="feature-image" alt="Tìm về sự bình yên giữa khung cảnh vĩ đại" data-caption="Tìm về sự bình yên giữa khung cảnh vĩ đại " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/hoa-van-trang-phuc-truyen-thong-phat-giao-ladakh.webp" class="feature-image" alt="Hoa văn trang phục truyền thống của lễ hội ở Ladakh" data-caption="Hoa văn trang phục truyền thống của lễ hội ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-cac-vi-su-ladakh.webp" class="feature-image" alt="Đặng Thùy Dương và các vị sư Ladakh" data-caption="Đặng Thùy Dương và các vị sư Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/doan-khach-cam-trai-ven-ho-o-ladakh.webp" class="feature-image" alt="Đoàn khách cắm trại ven hồ ở Ladakh" data-caption="Đoàn khách cắm trại ven hồ ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/duong-deo-den-ho-pangong-tso.webp" class="feature-image" alt="Đường đèo đến hồ Pangong Tso" data-caption="Đường đèo đến hồ Pangong Tso " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/doan-duong-bang-qua-co-khung-canh-dep-ngo-ngang.webp" class="feature-image" alt="Đoạn đường đi có khung cảnh đẹp ngỡ ngàng" data-caption="Đoạn đường đi có khung cảnh đẹp ngỡ ngàng " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/du-khach-dung-chan-o-mot-tu-vien-ladakh.webp" class="feature-image" alt="Du khách dừng chân ở một tu viện cùng các vị sư trẻ" data-caption="Du khách dừng chân ở một tu viện cùng các vị sư trẻ " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/cuoi-lac-da-o-thung-lung-nubra-ladakh.webp" class="feature-image" alt="Cưỡi lạc đà ở thung lũng Nubra Ladakh" data-caption="Cưỡi lạc đà ở thung lũng Nubra Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/ngon-nui-xuong-ho-pangong-tso.webp" class="feature-image" alt="Ngọn núi xuống hồ Pangong Tso" data-caption="Ngọn núi xuống hồ Pangong Tso " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-canh-dong-cuu-4.webp" class="feature-image" alt="Đặng Thùy dương và cách đồng cừu 4" data-caption="&amp;#8211; Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-o-tu-vien-hemis.webp" class="feature-image" alt="Đặng Thùy Dương ở tu viện Hemis" data-caption="Đặng Thùy Dương ở tu viện Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/doan-du-khach-dung-chan-o-tu-vien-ladakh.webp" class="feature-image" alt="Đoàn du khách dừng chân ở tu viện Ladakh" data-caption="Đoàn du khách dừng chân ở tu viện Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/ngoi-tren-quan-ca-phe-o-leh-ladakh.webp" class="feature-image" alt="Ngồi trên quán cà phê ở Leh Ladakh" data-caption="Ngồi trên quán cà phê ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/tu-vien-hemis-ladakh-fittour.webp" class="feature-image" alt="Tu viện Hemis ở Ladakh" data-caption="Tu viện Hemis ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-chuyen-phieu-luu-o-Ladakh.webp" class="feature-image" alt="Đặng Thùy Dương và chuyến phiêu lưu ở Ladakh" data-caption="Đặng Thùy Dương và chuyến phiêu lưu ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/kien-truc-tu-vien-o-ladakh.webp" class="feature-image" alt="Kiến trúc tu viện ở Ladakh (Zanskar)" data-caption="Kiến trúc tu viện ở Ladakh (Zanskar) " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/hanh-trinh-road-trip-vung-dat-zanskar-ladakh.webp" class="feature-image" alt="Hành trình Road Trip vùng đất Zanskar ở Ladakh" data-caption="Hành trình Road Trip vùng đất Zanskar ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/mot-chu-ngua-o-gan-khu-cam-trai.webp" class="feature-image" alt="Một chú ngựa ở gần khu cắm trại" data-caption="Một chú ngựa ở gần khu cắm trại " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/khung-canh-nui-non-dep-ngo-ngang-o-zanskar.webp" class="feature-image" alt="Khung cảnh núi non đẹp ngỡ ngàng ở Zanskar" data-caption="Khung cảnh núi non đẹp ngỡ ngàng ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/du-khach-tour-ladakh-tan-huong-khong-khi-o-tu-vien.webp" class="feature-image" alt="Du khách tour Ladakh tận hưởng không khí ở tu viện" data-caption="Du khách tour Ladakh tận hưởng không khí ở tu viện " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/ba-cu-ban-hang-rong-o-leh-ladakh.webp" class="feature-image" alt="Bà cụ bán hàng rong ở Leh Ladakh" data-caption="Bà cụ bán hàng rong ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/cam-nhan-nui-non-vung-zanskar.webp" class="feature-image" alt="Cảm nhận núi non vùng Zanskar" data-caption="Cảm nhận núi non vùng Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/trong-mot-trung-tam-phat-giao-ladakh.webp" class="feature-image" alt="Trong khuôn viên một trung tâm Phật giáo ở Ladakh" data-caption="Trong khuôn viên một trung tâm Phật giáo ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-o-Zanskar.webp" class="feature-image" alt="Đặng Thùy Dương ở Zanskar" data-caption="Đặng Thùy Dương ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/kien-truc-o-leh-ladkh.webp" class="feature-image" alt="Kiến trúc ở Leh Ladakh" data-caption="Kiến trúc ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/doi-cuu-ben-nui-o-zanskar.webp" class="feature-image" alt="Đồi cừu bên núi Zanskar" data-caption="Đồi cừu bên núi Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/duong-pho-dong-duc-leh-ladakh.webp" class="feature-image" alt="Đường phố đông đúc Leh Ladakh" data-caption="Đường phố đông đúc Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/du-khach-di-xe-motor-o-ladakh.webp" class="feature-image" alt="Du khách đi xe mô tô ở Ladakh" data-caption="Du khách đi xe mô tô ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/doan-duong-cao-toc-di-zanskar.webp" class="feature-image" alt="Đoạn đường cao tốc đi Zanskar" data-caption="Đoạn đường cao tốc đi Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/co-lung-ta.webp" class="feature-image" alt="Cờ lung ta ở vùng đất Ladakh" data-caption="Cờ lung ta ở vùng đất Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/hoat-dong-cuoi-lac-da-o-nubra.webp" class="feature-image" alt="Hoạt động cưỡi lạc đà ở Nubra" data-caption="Hoạt động cưỡi lạc đà ở Nubra " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/vung-nui-quanh-doan-duong-ho-thieng-ladakh.webp" class="feature-image" alt="Vùng núi quanh đoạn đường hồ thiêng Ladakh" data-caption="Vùng núi quanh đoạn đường hồ thiêng Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/duong-pho-dong-duc-o-leh-ladakh.webp" class="feature-image" alt="Đường phố đông đúc ở Leh Ladakh" data-caption="Đường phố đông đúc ở Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/dan-doan-ladakh.webp" class="feature-image" alt="Dẫn đoàn ở Ladakh" data-caption="Dẫn đoàn ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-va-canh-dong-cuu-4.webp" class="feature-image" alt="Đặng Thùy dương và cách đồng cừu 4" data-caption="&amp;#8211; Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-Zanskar6.webp" class="feature-image" alt="Đặng Thụy Dương Zanskar" data-caption="&amp;#8211; Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/nui-non-trung-diep-khi-di-may-bay-den-leh.webp" class="feature-image" alt="Núi non trùng điệp khi đi máy bay ở Leh" data-caption="Núi non trùng điệp khi đi máy bay ở Leh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/hanh-trinh-di-xuyen-quoc-lo-lon-o-ladakh.webp" class="feature-image" alt="Hành trình đi xuyên quốc lộ lớn ở Ladakh" data-caption="Hành trình đi xuyên quốc lộ lớn ở Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/09/nguoi-dan-ladakh-chao-don-duc-dat-lai-lat-ma.webp" class="feature-image" alt="Người dân ở Ladakh chào đón Đạt Lai Lạt Ma dịp Tết Losar" data-caption="Người dân ở Ladakh chào đón Đạt Lai Lạt Ma dịp Tết Losar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-tan-huong-khong-khi-nui-non-ladakh.webp" class="feature-image" alt="Đặng Thùy Dương tận hưởng không khí núi non Ladakh" data-caption="Đặng Thùy Dương tận hưởng không khí núi non Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/du-khach-le-hoi-phat-dan-ladakh.webp" class="feature-image" alt="Du khách ở lễ hội Phật đản Ladakh" data-caption="Du khách ở lễ hội Phật đản Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/04/fit-tour-du-lich-co-guu-cung-du-khach-kham-pha-khardung-la.webp" class="feature-image" alt="Fit Tour - Du lịch có Guu cùng du khách khám phá Khardung La" data-caption="Fit Tour &amp;#8211; Du lịch có Guu cùng du khách khám phá Khardung La " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/04/motor-trong-hanh-trinh-bike-trip-ladakh.webp" class="feature-image" alt="Mô tô trong hành trình bike trip tại Ladakh" data-caption="Mô tô trong hành trình bike trip tại Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2022/06/nguoi-dan-ladakh-tro-chuyen.webp" class="feature-image" alt="Người dân Ladakh trò chuyện" data-caption="Người dân Ladakh trò chuyện " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/canh-dep-ngo-ngang-o-zanskar.webp" class="feature-image" alt="Cảnh đẹp ngỡ ngàng ở Zanskar" data-caption="Cảnh đẹp ngỡ ngàng ở Zanskar " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/06/dung-tren-tu-vien-o-Zanskar-nhin-ra-khung-canh-binh-yen.webp" class="feature-image" alt="Từ tu viện ở Zanskar nhìn ra khung cảnh bình yên" data-caption="&amp;#8211; Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2024/05/feedback-khach-hang-ms-thu-van-tour-han-quoc-fit-tour.webp" class="feature-image" alt="Feedback đánh giá của khách hàng Ms Thu Van trong chuyến đi Hàn Quốc tháng 5 năm 2024" data-caption="Feedback đánh giá của khách hàng Ms Thu Van trong chuyến đi Hàn Quốc tháng 5 năm 2024 " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2024/05/feedback-danh-gia-cua-khach-hang-cho-chuyen-di-ai-cap-2024.webp" class="feature-image" alt="Feedback đánh giá của khách hàng về Tour Ai Cập 2024" data-caption="Feedback đánh giá của khách hàng về Tour Ai Cập 2024 " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2023/12/feedback-khach-hang-tour-cap-nhi-tan-thang-12-fit-tour.webp" class="feature-image" alt="Feedback đánh giá của khách hàng về Tour Cáp Nhĩ Tân tháng 12 Fit Tour" data-caption="Feedback đánh giá của khách hàng về Tour Cáp Nhĩ Tân tháng 12 Fit Tour " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/2024/05/feedback-danh-gia-cua-khach-hang-thuy-phan-cho-chuyen-di-ladakh-28-4-2024.webp" class="feature-image" alt="Feedback đánh giá của khách hàng Ms thuy Phan về Tour Ladakh 28 tháng 4 năm 2024" data-caption="Feedback đánh giá của khách hàng Ms thuy Phan về Tour Ladakh 28 tháng 4 năm 2024 " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ca-si-phuong-thanh-va-ekip-doan-phim-thao-luan-tai-ladakh.webp" class="feature-image" alt="Ca Si Phuong Thanh Va Ekip Doan Phim Thao Luan Tai Ladakh" data-caption="Ca Si Phuong Thanh Va Ekip Doan Phim Thao Luan Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ca-si-phuong-thanh-cuoi-ngua-ben-ho-nuoc-xanh-ngoc-tai-ladakh.webp" class="feature-image" alt="Ca Si Phuong Thanh Cuoi Ngua Ben Ho Nuoc Xanh Ngoc Tai Ladakh" data-caption="Ca Si Phuong Thanh Cuoi Ngua Ben Ho Nuoc Xanh Ngoc Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ca-si-phuong-thanh-cuoi-ngua-doc-theo-sa-mac-tuyet-tai-ladakh.webp" class="feature-image" alt="Ca Si Phuong Thanh Cuoi Ngua Doc Theo Sa Mac Tuyet Tai Ladakh" data-caption="Ca Si Phuong Thanh Cuoi Ngua Doc Theo Sa Mac Tuyet Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ca-si-phuong-thanh-buoc-di-giua-su-hung-vi-cua-thung-lung-hoang-mac-ladakh.webp" class="feature-image" alt="Ca Si Phuong Thanh Buoc Di Giua Su Hung Vi Cua Thung Lung Hoang Mac Ladakh" data-caption="Ca Si Phuong Thanh Buoc Di Giua Su Hung Vi Cua Thung Lung Hoang Mac Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-trai-nghiem-cuoi-ngua-thong-dong-ben-bo-ho-tinh-lang-tai-ladakh.webp" class="feature-image" alt="Du Khach Trai Nghiem Cuoi Ngua Thong Dong Ben Bo Ho Tinh Lang Tai Ladakh" data-caption="Du Khach Trai Nghiem Cuoi Ngua Thong Dong Ben Bo Ho Tinh Lang Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/thanh-vien-ekip-fit-tour-rang-ro-voi-chung-nhan-ky-luc-guinness-tai-deo-umling-la.webp" class="feature-image" alt="Thanh Vien Ekip Fit Tour Rang Ro Voi Chung Nhan Ky Luc Guinness Tai Deo Umling La" data-caption="Thanh Vien Ekip Fit Tour Rang Ro Voi Chung Nhan Ky Luc Guinness Tai Deo Umling La " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-tha-dang-trai-tim-giua-nhung-dinh-nui-phu-tuyet-trang-tai-deo-umling-la.webp" class="feature-image" alt="Du Khach Tha Dang Trai Tim Giua Nhung Dinh Nui Phu Tuyet Trang Tai Deo Umling La" data-caption="Du Khach Tha Dang Trai Tim Giua Nhung Dinh Nui Phu Tuyet Trang Tai Deo Umling La " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/thanh-vien-ekip-check-in-tai-bien-bao-deo-umling-la.webp" class="feature-image" alt="Thanh Vien Ekip Check In Tai Bien Bao Deo Umling La" data-caption="Thanh Vien Ekip Check In Tai Bien Bao Deo Umling La " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-tao-dang-cuc-chat-ben-xe-mo-to-royal-enfield-tai-ladakh.webp" class="feature-image" alt="Du Khach Tao Dang Cuc Chat Ben Xe Mo To Royal Enfield Tai Ladakh" data-caption="Du Khach Tao Dang Cuc Chat Ben Xe Mo To Royal Enfield Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-tan-huong-khoanh-khac-tuyet-dep-tai-ladakh-vuong.webp" class="feature-image" alt="Du Khach Tan Huong Khoanh Khac Tuyet Dep Tai Ladakh Vuong" data-caption="Du Khach Tan Huong Khoanh Khac Tuyet Dep Tai Ladakh Vuong " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/hdv-lulu-cung-nhung-nguoi-ban-nhay-len-vui-suong-tai-ladakh.webp" class="feature-image" alt="Hdv Lulu Cung Nhung Nguoi Ban Nhay Len Vui Suong Tai Ladakh" data-caption="Hdv Lulu Cung Nhung Nguoi Ban Nhay Len Vui Suong Tai Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/goc-may-rong-tu-vien-namgyal-tsemo-va-co-cau-nguyen.webp" class="feature-image" alt="Goc May Rong Tu Vien Namgyal Tsemo Va Co Cau Nguyen" data-caption="Goc May Rong Tu Vien Namgyal Tsemo Va Co Cau Nguyen " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/toan-canh-thanh-pho-leh-chieu-toi.webp" class="feature-image" alt="Toan Canh Thanh Pho Leh Chieu Toi" data-caption="Toan Canh Thanh Pho Leh Chieu Toi " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/toan-canh-le-hoi-hemis-va-tu-vien-ladakh.webp" class="feature-image" alt="Toan Canh Le Hoi Hemis Va Tu Vien Ladakh" data-caption="Toan Canh Le Hoi Hemis Va Tu Vien Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/bieu-dien-mua-mat-na-cham-tai-san-hemis.webp" class="feature-image" alt="Bieu Dien Mua Mat Na Cham Tai San Hemis" data-caption="Bieu Dien Mua Mat Na Cham Tai San Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/vu-cong-mat-na-cham-buoc-xuong-bac-thang-hemis.webp" class="feature-image" alt="Vu Cong Mat Na Cham Buoc Xuong Bac Thang Hemis" data-caption="Vu Cong Mat Na Cham Buoc Xuong Bac Thang Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cac-nha-su-tay-tang-cam-lu-huong-nghi-thuc.webp" class="feature-image" alt="Cac Nha Su Tay Tang Cam Lu Huong Nghi Thuc" data-caption="Cac Nha Su Tay Tang Cam Lu Huong Nghi Thuc " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/vu-cong-mat-na-cham-cam-trong-lac-tai-hemis.webp" class="feature-image" alt="Vu Cong Mat Na Cham Cam Trong Lac Tai Hemis" data-caption="Vu Cong Mat Na Cham Cam Trong Lac Tai Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/khach-du-lich-fit-tour-cung-cac-chu-tieu-hemis.webp" class="feature-image" alt="Khach Du Lich Fit Tour Cung Cac Chu Tieu Hemis" data-caption="Khach Du Lich Fit Tour Cung Cac Chu Tieu Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cac-vu-cong-mat-na-cham-bieu-dien-san-hemis.webp" class="feature-image" alt="Cac Vu Cong Mat Na Cham Bieu Dien San Hemis" data-caption="Cac Vu Cong Mat Na Cham Bieu Dien San Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ceo-max-vu-huong-dan-doan-phim-tai-san-hemis.webp" class="feature-image" alt="Ceo Max Vu Huong Dan Doan Phim Tai San Hemis" data-caption="Ceo Max Vu Huong Dan Doan Phim Tai San Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/hai-chu-tieu-dung-truoc-kinh-luan-tu-vien-hemis.webp" class="feature-image" alt="Hai Chu Tieu Dung Truoc Kinh Luan Tu Vien Hemis" data-caption="Hai Chu Tieu Dung Truoc Kinh Luan Tu Vien Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/nguoi-dan-gat-lua-ben-ho-ldakh.webp" class="feature-image" alt="Nguoi Dan Gat Lua Ben Ho Ldakh" data-caption="Nguoi Dan Gat Lua Ben Ho Ldakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/lulu-motor-expedition-ladakh.webp" class="feature-image" alt="Lulu Motor Expedition Ladakh" data-caption="Lulu Motor Expedition Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp" class="feature-image" alt="Hdv Huy Ngo Fittour" data-caption="Hdv Huy Ngo Fittour " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/check-in-chang-la-pass-ladakh.webp" class="feature-image" alt="Check In Chang La Pass Ladakh" data-caption="Check In Chang La Pass Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-ngam-canh-ho-pangong.webp" class="feature-image" alt="Du Khach Ngam Canh Ho Pangong" data-caption="Du Khach Ngam Canh Ho Pangong " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ho-pangong-duoi-bau-troi-xanh-ladakh.webp" class="feature-image" alt="Ho Pangong Duoi Bau Troi Xanh Ladakh" data-caption="Ho Pangong Duoi Bau Troi Xanh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/bien-may-duoi-day-nui-himalaya-ladakh.webp" class="feature-image" alt="Bien May Duoi Day Nui Himalaya Ladakh" data-caption="Bien May Duoi Day Nui Himalaya Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ban-cong-view-ho-pangong-tu-sama-resort-ladakh.webp" class="feature-image" alt="Ban Cong View Ho Pangong Tu Sama Resort Ladakh" data-caption="Ban Cong View Ho Pangong Tu Sama Resort Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/khong-gian-linh-thieng-ben-trong-diskit-monastery.webp" class="feature-image" alt="Khong Gian Linh Thieng Ben Trong Diskit Monastery" data-caption="Khong Gian Linh Thieng Ben Trong Diskit Monastery " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cac-nha-su-nghi-ngoi-trong-khuon-vien-tu-vien-diskit.webp" class="feature-image" alt="Cac Nha Su Nghi Ngoi Trong Khuon Vien Tu Vien Diskit" data-caption="Cac Nha Su Nghi Ngoi Trong Khuon Vien Tu Vien Diskit " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/nha-su-thoi-ken-tren-mai-tu-vien-diskit-ladakh.webp" class="feature-image" alt="Nha Su Thoi Ken Tren Mai Tu Vien Diskit Ladakh" data-caption="Nha Su Thoi Ken Tren Mai Tu Vien Diskit Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/thung-lung-nubra-ladakh-lac-da-hai-buouu-nghi-ngoi.webp" class="feature-image" alt="Thung Lung Nubra Ladakh Lac Da Hai Buouu Nghi Ngoi" data-caption="Thung Lung Nubra Ladakh Lac Da Hai Buouu Nghi Ngoi " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/wilderness-camp-diskit-view-tu-vien-diskit.webp" class="feature-image" alt="Wilderness Camp Diskit View Tu Vien Diskit" data-caption="Wilderness Camp Diskit View Tu Vien Diskit " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/suoi-bang-tan-ladakh.webp" class="feature-image" alt="Suoi Bang Tan Ladakh" data-caption="Suoi Bang Tan Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cuoc-song-nguoi-dan-ladakh.webp" class="feature-image" alt="Cuoc Song Nguoi Dan Ladakh" data-caption="Cuoc Song Nguoi Dan Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ms-van-ngam-thung-lung-ladakh-ben-co-cau-nguyen.webp" class="feature-image" alt="Ms Van Ngam Thung Lung Ladakh Ben Co Cau Nguyen" data-caption="Ms Van Ngam Thung Lung Ladakh Ben Co Cau Nguyen " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-fit-tour-say-hi-tu-cua-so-xe-ladakh.webp" class="feature-image" alt="Du Khach Fit Tour Say Hi Tu Cua So Xe Ladakh" data-caption="Du Khach Fit Tour Say Hi Tu Cua So Xe Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/ms-van-check-in-khardungla-top-ladakh.webp" class="feature-image" alt="Ms Van Check In Khardungla Top Ladakh" data-caption="Ms Van Check In Khardungla Top Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/deo-khardungla-tuyet-phu-trang-ladakh.webp" class="feature-image" alt="Deo Khardungla Tuyet Phu Trang Ladakh" data-caption="Deo Khardungla Tuyet Phu Trang Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-fit-tour-check-in-khardungla-pass.webp" class="feature-image" alt="Du Khach Fit Tour Check In Khardungla Pass" data-caption="Du Khach Fit Tour Check In Khardungla Pass " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/trai-nghiem-choi-tuyet-khardungla-ladakh.webp" class="feature-image" alt="Trai Nghiem Choi Tuyet Khardungla Ladakh" data-caption="Trai Nghiem Choi Tuyet Khardungla Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/mr-long-chup-anh-tai-magnetic-hill-ladakh.webp" class="feature-image" alt="Mr Long Chup Anh Tai Magnetic Hill Ladakh" data-caption="Mr Long Chup Anh Tai Magnetic Hill Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/mr-hieu-check-in-deo-magnetic-hill-ladakh.webp" class="feature-image" alt="Mr Hieu Check In Deo Magnetic Hill Ladakh" data-caption="Mr Hieu Check In Deo Magnetic Hill Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/toan-canh-hop-luu-song-indus-va-zanskar-tai-sangam.webp" class="feature-image" alt="Toan Canh Hop Luu Song Indus Va Zanskar Tai Sangam" data-caption="Toan Canh Hop Luu Song Indus Va Zanskar Tai Sangam " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cung-duong-ven-song-tai-sangam-view-point-ladakh.webp" class="feature-image" alt="Cung Duong Ven Song Tai Sangam View Point Ladakh" data-caption="Cung Duong Ven Song Tai Sangam View Point Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/du-khach-chup-anh-tren-xe-truoc-tu-vien-thiksey.webp" class="feature-image" alt="Du Khach Chup Anh Tren Xe Truoc Tu Vien Thiksey" data-caption="Du Khach Chup Anh Tren Xe Truoc Tu Vien Thiksey " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/bao-thap-shanti-ladakh.webp" class="feature-image" alt="Bao Thap Shanti Ladakh" data-caption="Bao Thap Shanti Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/doan-khach-tham-quan-khong-gian-trung-bay-tai-leh-palace.webp" class="feature-image" alt="Doan Khach Tham Quan Khong Gian Trung Bay Tai Leh Palace" data-caption="Doan Khach Tham Quan Khong Gian Trung Bay Tai Leh Palace " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/toan-canh-tu-vien-thiksey-ladakh.webp" class="feature-image" alt="Toan Canh Tu Vien Thiksey Ladakh" data-caption="Toan Canh Tu Vien Thiksey Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/co-gai-cuoi-ben-hanh-lang-tu-vien-hemis.webp" class="feature-image" alt="Co Gai Cuoi Ben Hanh Lang Tu Vien Hemis" data-caption="Co Gai Cuoi Ben Hanh Lang Tu Vien Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/doan-khach-tham-quan-tu-vien-hemis.webp" class="feature-image" alt="Doan Khach Tham Quan Tu Vien Hemis" data-caption="Doan Khach Tham Quan Tu Vien Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/co-gai-cau-nguyen-tai-tu-vien-hemis.webp" class="feature-image" alt="Co Gai Cau Nguyen Tai Tu Vien Hemis" data-caption="Co Gai Cau Nguyen Tai Tu Vien Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/nha-su-di-bo-tai-tu-vien-hemis.webp" class="feature-image" alt="Nha Su Di Bo Tai Tu Vien Hemis" data-caption="Nha Su Di Bo Tai Tu Vien Hemis " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/cua-hang-thu-cong-o-leh-ladakh.webp" class="feature-image" alt="Cua Hang Thu Cong O Leh Ladakh" data-caption="Cua Hang Thu Cong O Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/check-in-i-love-ladakh-o-leh.webp" class="feature-image" alt="Check In I Love Ladakh O Leh" data-caption="Check In I Love Ladakh O Leh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/pho-di-bo-main-bazaar-leh-ladakh.webp" class="feature-image" alt="Pho Di Bo Main Bazaar Leh Ladakh" data-caption="Pho Di Bo Main Bazaar Leh Ladakh " />
+        <div class="feature-overlay"></div>
+      </div>
+      <div class="feature-box hidden min-h-[250px] bg-subtle">
+        <img data-src="https://media.fittour.vn/uploads/bodhisattva-bakery-va-restaurant-o-leh.webp" class="feature-image" alt="Bodhisattva Bakery Va Restaurant O Leh" data-caption="Bodhisattva Bakery Va Restaurant O Leh " />
+        <div class="feature-overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loadMoreContainer" class="text-center mt-12 mb-8 relative z-[20] flex justify-center w-full">
+    <button id="loadMoreBtn" class="bg-[#c2410c] hover:bg-[#9a3412] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors flex items-center gap-2">
+      <span>Xem thêm ảnh</span>
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      const loadMoreContainer = document.getElementById('loadMoreContainer');
+      
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+          const hiddenBoxes = Array.from(document.querySelectorAll('.feature-box.hidden'));
+          const boxesToReveal = hiddenBoxes.slice(0, 15);
+          
+          boxesToReveal.forEach(box => {
+            box.classList.remove('hidden');
+            const img = box.querySelector('img[data-src]');
+            if (img) {
+              img.src = img.getAttribute('data-src');
+              img.removeAttribute('data-src');
+            }
+          });
+
+          if (hiddenBoxes.length <= 15) {
+            loadMoreContainer.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Full-width Dark Block -->
+  <div class="mt-24 w-full">
+    <LadakhTours />
+  </div>
+
+  <div class="mt-12 mb-8 site-container">
+    <CtaBlock 
+      title="Tìm hiểu Tour Ladakh:"
+      subtitle="Góc nhìn mới mẻ và độc đáo"
+      content="Khám phá các hành trình Tour Tây Tạng đặc biệt, được thiết kế chuyên nghiệp bởi FIT TOUR."
+      buttons={[
+        { label: 'Messenger', type: 'primary', icon: 'messenger', href: '/msg' },
+        { label: 'Zalo', type: 'outline', icon: 'zalo', href: '/zalo' }
+      ]}
+      image="https://media.fittour.vn/uploads/2023/06/Binh-yen-o-tu-vien-ladakh.webp"
+    />
+  </div>
+  <div class="site-container">
+    <SnippetBlock name="testimonial-an-do" dataMap={dataMap} />
+  </div>
+</main>
+
+<script is:inline src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof GLightbox === 'undefined') return;
+    
+    var gallerySelectors = ['.coguu-gallery', '.grid-fit-masonry', '.coguu-gallery-story', '.wp-block-gallery'];
+    var allData = [];
+    var done = [];
+    gallerySelectors.forEach(function(s) {
+      var els = document.querySelectorAll(s);
+      els.forEach(function(el) {
+        if (done.indexOf(el) !== -1) return;
+        done.push(el);
+        var imgs = el.querySelectorAll('img');
+        if (!imgs.length) return;
+        var items = [];
+        var valid = [];
+        for (var i = 0; i < imgs.length; i++) {
+          if (imgs[i].closest('.exclude-lightbox') || imgs[i].closest('a')) continue;
+          var imgUrl = imgs[i].getAttribute('src') || imgs[i].getAttribute('data-src') || '';
+          items.push({href: imgUrl, type: 'image', description: imgs[i].getAttribute('data-caption') || imgs[i].getAttribute('alt') || ''});
+          valid.push(imgs[i]);
+        }
+        if (items.length > 0) allData.push({items: items, imgs: valid});
+      });
+    });
+    if (!allData.length) return;
+
+    requestAnimationFrame(function() {
+      allData.forEach(function(d) {
+        var lb = GLightbox({elements: d.items, touchNavigation: true, loop: true, zoomable: true, descPosition: 'bottom'});
+        for (var j = 0; j < d.imgs.length; j++) {
+          d.imgs[j].style.cursor = 'zoom-in';
+          (function(idx) {
+            d.imgs[idx].addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              // Update href before opening if it was lazy loaded
+              var currentSrc = d.imgs[idx].getAttribute('src');
+              if (currentSrc) {
+                lb.elements[idx].href = currentSrc;
+              }
+              lb.openAt(idx);
+            });
+          })(j);
+        }
+      });
+    });
+  });
+</script>
+
+</BaseLayout>

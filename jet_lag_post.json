@@ -1,0 +1,61 @@
+[
+  {
+    "results": [
+      {
+        "id": "1781570000017",
+        "title": "Jet Lag Khi Du Lịch Alaska: Vì Sao Và 10 Cách Giúp Bạn Thích Nghi",
+        "slug": "jet-lag-khi-du-lich-alaska",
+        "categoryId": "36",
+        "featuredImage": "https://media.fittour.vn/uploads/jet-lag-khi-du-lich-alaska.webp",
+        "excerpt": "Jet Lag là gì? Vì sao đi Alaska dễ bị lệch múi giờ? Khám phá 10 cách giúp cơ thể thích nghi nhanh hơn dựa trên nghiên cứu và kinh nghiệm thực tế.",
+        "content": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"attrs\":{\"textAlign\":null}}]}",
+        "type": "blog",
+        "status": "published",
+        "author": "Huynh Hieu Travel",
+        "metaTitle": null,
+        "metaDescription": null,
+        "createdAt": "2026-07-02T15:36:14.927Z",
+        "updatedAt": "2026-07-02T15:37:48.918Z",
+        "deletedAt": null,
+        "wp_id": null,
+        "contentFormat": "json",
+        "authorId": "admin-uuid-001",
+        "format": "astro-code",
+        "isSticky": 0,
+        "seoTitle": null,
+        "seoDescription": "Jet Lag là gì? Vì sao đi Alaska dễ bị lệch múi giờ? Khám phá 10 cách giúp cơ thể thích nghi nhanh hơn dựa trên nghiên cứu và kinh nghiệm thực tế.",
+        "ogImage": null,
+        "canonicalUrl": null,
+        "readingTime": null,
+        "publishedAt": null,
+        "draftSnapshot": "{\"title\":\"Jet Lag Khi Du Lịch Alaska: Vì Sao Và 10 Cách Giúp Bạn Thích Nghi\",\"slug\":\"jet-lag-khi-du-lich-alaska\",\"categoryId\":\"36\",\"categoryIds\":[\"36\"],\"tagIds\":[\"tag_bd5c4e86-7695-4144-8f39-4c581330b37b\"],\"featuredImage\":\"https://media.fittour.vn/uploads/jet-lag-khi-du-lich-alaska.webp\",\"excerpt\":\"Jet Lag là gì? Vì sao đi Alaska dễ bị lệch múi giờ? Khám phá 10 cách giúp cơ thể thích nghi nhanh hơn dựa trên nghiên cứu và kinh nghiệm thực tế.\",\"content\":\"{\\\"type\\\":\\\"doc\\\",\\\"content\\\":[{\\\"type\\\":\\\"paragraph\\\",\\\"attrs\\\":{\\\"textAlign\\\":null}}]}\",\"format\":\"astro-code\",\"isSticky\":0,\"seoTitle\":null,\"seoDescription\":\"Jet Lag là gì? Vì sao đi Alaska dễ bị lệch múi giờ? Khám phá 10 cách giúp cơ thể thích nghi nhanh hơn dựa trên nghiên cứu và kinh nghiệm thực tế.\",\"canonicalUrl\":null,\"focusKeyword\":null,\"noindex\":0,\"nofollow\":0,\"customSchema\":null,\"isElementor\":0,\"contentFormat\":\"json\",\"authorId\":\"admin-uuid-001\"}",
+        "focusKeyword": null,
+        "noindex": 0,
+        "nofollow": 0,
+        "customSchema": null,
+        "isElementor": 0,
+        "schemaEnabled": 1,
+        "schemaUpdatedAt": null,
+        "schemaUpdatedBy": null
+      }
+    ],
+    "success": true,
+    "meta": {
+      "served_by": "v3-prod",
+      "served_by_region": "APAC",
+      "served_by_colo": "SIN",
+      "served_by_primary": true,
+      "timings": {
+        "sql_duration_ms": 0.4896
+      },
+      "duration": 0.4896,
+      "changes": 0,
+      "last_row_id": 0,
+      "changed_db": false,
+      "size_after": 52277248,
+      "rows_read": 1,
+      "rows_written": 0,
+      "total_attempts": 1
+    }
+  }
+]

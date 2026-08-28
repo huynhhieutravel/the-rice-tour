@@ -1,0 +1,154 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+const title = "Contact Us | The Rice Tour — 24/7 Dedicated Inbound Concierge";
+const description = "Connect with The Rice Tour specialists. Inquire about bespoke private tours, WhatsApp 24/7 assistance, customized itineraries, and travel advice.";
+const canonicalUrl = "https://thericetour.com/contact";
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: "https://thericetour.com/" },
+    { name: "Contact Us", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonicalUrl}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Hero Header -->
+  <section class="bg-slate-950 text-white py-16 lg:py-24 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 mb-6">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">We're Here For You 24/7</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        Let's Start Planning Your Vietnam Journey
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Have questions or looking for insider recommendations? Message our destination specialists on WhatsApp or send an inquiry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Channels Grid -->
+  <section class="py-12 lg:py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <!-- WhatsApp Box -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.201.301-.779.979-.955 1.18-.176.2-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.201-.301.301-.502.1-.201.05-.376-.025-.527-.075-.15-.678-1.635-.93-2.243-.245-.591-.494-.511-.678-.521-.176-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.912 1.23 3.113.15.2 2.123 3.242 5.143 4.547.718.31 1.279.496 1.716.635.721.23 1.377.197 1.896.12.577-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351z"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Instant WhatsApp Chat</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              Connect directly with an English-speaking travel specialist in real-time. Available 24 hours a day, 7 days a week.
+            </p>
+          </div>
+          <a href="/whatsapp" target="_blank" class="block text-center py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow">
+            Chat on WhatsApp →
+          </a>
+        </div>
+
+        <!-- Email Box -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Email Inquiries</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              Send us your flight details, travel plans, or corporate group inquiries. We reply with a detailed proposal within 24h.
+            </p>
+          </div>
+          <a href="mailto:hello@thericetour.com" class="block text-center py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow">
+            hello@thericetour.com
+          </a>
+        </div>
+
+        <!-- Tailor Made Form Box -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-slate-900 text-amber-400 flex items-center justify-center mb-6 shadow-md">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Bespoke Trip Builder</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+              Choose your preferred destinations, accommodation standards, and dates to get a tailor-made proposal.
+            </p>
+          </div>
+          <a href="/tailor-made" class="block text-center py-3 bg-slate-900 hover:bg-black text-amber-400 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow">
+            Start Custom Trip →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Office Locations & Licenses -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+          <div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">
+              Official Head Office
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">The Rice Tour Headquarters</h2>
+          </div>
+          <a 
+            href="https://maps.app.goo.gl/9dNo3sCwDp3r4RJt7" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all border border-slate-200 self-start md:self-auto"
+          >
+            <span>🗺️ Open in Google Maps ↗</span>
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-600 leading-relaxed">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
+            <h3 class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+              <span>📍</span> Headquarters &amp; Operations Office
+            </h3>
+            <p class="font-medium text-slate-800 mb-2">180 Bui Vien Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam</p>
+            <div class="space-y-1.5 text-xs text-slate-600 mt-4 pt-4 border-t border-slate-200">
+              <p><strong>Hotline (Office):</strong> <a href="tel:02888887888" class="text-brand-600 font-bold hover:underline">028.8888.7888</a> (+84 28 8888 7888)</p>
+              <p><strong>24/7 Concierge &amp; Mobile:</strong> <a href="tel:0962333621" class="text-brand-600 font-bold hover:underline">0962.333.621</a> (+84 962 333 621)</p>
+              <p><strong>WhatsApp Support:</strong> <a href="https://wa.me/84962333621" target="_blank" class="text-emerald-600 font-bold hover:underline">+84 962 333 621</a></p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+                <span>🏛️</span> Accreditations &amp; Guarantees
+              </h3>
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>International License:</strong> 79-1588/2023/TCDL-GP LHQT</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>100% No Forced Shopping:</strong> Pure authentic cultural experiences</li>
+                <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>VIP Small Group Standards:</strong> Luxury vehicle with private concierge</li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-amber-700 font-semibold">
+              <span>★ TripAdvisor 5.0 Rating</span>
+              <span>24/7 Real-Time Response</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+          <div>
+            <strong>Company Registration:</strong> The Rice Tour Travel Group Co., Ltd (Vietnam National Authority of Tourism)
+          </div>
+          <div class="text-emerald-600 font-semibold flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Verified Inbound Tour Operator
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

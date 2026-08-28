@@ -1,0 +1,115 @@
+---
+// src/components/system/overlay/mobile-menu/MobileMenu.astro
+import MenuPanel from './MenuPanel.astro';
+import type { NavItem } from '@/config/navigation/default';
+
+export interface Props {
+  navItems: NavItem[];
+  hotline?: string;
+  hotlineLabel?: string;
+}
+
+const { navItems, hotline = '0934 888 854', hotlineLabel = 'Gọi Hotline' } = Astro.props;
+---
+
+{/* Hamburger Button (Must be placed in Header) */}
+{/* It is recommended to leave the button where it belongs in Header to maintain Layout flow, but we can manage its ID here */}
+
+{/* Apple-style Fullscreen Menu Overlay (Black Glassmorphism) */}
+<div id="system-mobile-menu" class="fixed inset-0 z-[55] w-full h-[100dvh] pt-36 pb-8 bg-black/80 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden">
+  
+  {/* Menu Slider Container (for drill-down horizontal slide) */}
+  <div id="system-menu-slider" class="w-[200%] h-full flex transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] transform translate-x-0">
+    
+    {/* Level 1: Main Menu (Root Pane) */}
+    <div class="root-pane w-1/2 h-full flex flex-col px-8 overflow-y-auto pb-20">
+      <nav class="flex flex-col gap-6 mt-4">
+        {navItems.map((item, index) => (
+          <div class="border-b border-gray-800 pb-2 system-nav-item" style={`transition-delay: ${index * 50}ms`}>
+            {item.children && item.children.length > 0 ? (
+              <button class="w-full min-h-[48px] py-2 flex justify-between items-center text-left text-3xl font-semibold tracking-tight !text-white focus:outline-none focus:text-brand-500 system-drill-btn" data-target={`sys-submenu-${index}`}>
+                <span>{item.label}</span>
+                <svg class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            ) : (
+              <a 
+                href={item.href || '#'} 
+                data-action={item.label?.toLowerCase().includes('đăng ký tư vấn') ? 'open-corporate-modal' : undefined}
+                class="flex items-center min-h-[48px] py-2 text-3xl font-semibold tracking-tight !text-white hover:text-brand-500 focus:text-brand-500 focus:outline-none transition-colors"
+              >
+                {item.label}
+              </a>
+            )}
+          </div>
+        ))}
+      </nav>
+      
+      <div class="mt-auto pt-8">
+        <a href={`tel:${hotline.replace(/[^0-9]/g, '')}`} class="block w-full bg-brand-700 hover:bg-brand-600 !text-white text-center py-4 rounded-2xl font-bold text-sm sm:text-base shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-400 transition-colors">
+          {hotlineLabel}: {hotline}
+        </a>
+      </div>
+    </div>
+
+    {/* Level 2: Submenus Pane */}
+    <MenuPanel navItems={navItems} />
+
+  </div>
+</div>
+
+<style>
+  /* Menu Toggle Animation */
+  :global(.menu-open .line-1) { translate: 0 0 !important; rotate: 45deg !important; background-color: #dc2626 !important; }
+  :global(.menu-open .line-2) { opacity: 0; scale: 0.1 !important; }
+  :global(.menu-open .line-3) { translate: 0 0 !important; rotate: -45deg !important; background-color: #dc2626 !important; }
+  
+  /* Item cascade animation */
+  .system-nav-item { opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease; }
+  .menu-active .system-nav-item { opacity: 1; transform: translateY(0); }
+  
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    #system-menu-slider, .system-nav-item, #system-mobile-menu {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  import { MenuStateMachine } from './useMenuStateMachine';
+
+  class SystemMobileNav extends HTMLElement {
+    constructor() {
+      super();
+      // Initialize the state machine
+      const sm = new MenuStateMachine('#system-mobile-menu', '#system-menu-slider', '#system-menu-btn');
+      
+      // Bind global event for hamburger button (if it exists outside)
+      const menuBtn = document.getElementById('system-menu-btn');
+      menuBtn?.addEventListener('click', () => sm.toggle());
+
+      // Bind drill-down buttons
+      const drillBtns = this.querySelectorAll('.system-drill-btn');
+      drillBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = (e.currentTarget as HTMLElement).getAttribute('data-target');
+          if (target) sm.drillDown(target);
+        });
+      });
+
+      // Bind back button
+      const backBtn = this.querySelector('#system-back-btn');
+      backBtn?.addEventListener('click', () => sm.goBack());
+
+      // Click outside to close
+      const container = this.querySelector('#system-mobile-menu');
+      container?.addEventListener('click', (e) => {
+        if (e.target === container || (e.target as HTMLElement).classList.contains('root-pane')) {
+          sm.close();
+        }
+      });
+    }
+  }
+
+  customElements.define('system-mobile-menu', SystemMobileNav);
+</script>

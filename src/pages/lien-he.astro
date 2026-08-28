@@ -1,0 +1,320 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+// SEO Metadata
+const title = "Liên Hệ The Rice Tour / FIT TOUR – Trụ Sở & Hotline Tư Vấn Tour 24/7";
+const description = "Liên hệ The Rice Tour / FIT TOUR. Địa chỉ trụ sở: 180 Bùi Viện, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh. Hotline 24/7: 028.8888.7888 - 0962.333.621.";
+const canonicalUrl = "https://thericetour.com/lien-he";
+
+// Company Info
+const company = {
+  name: "CÔNG TY TNHH DU LỊCH QUỐC TẾ THE RICE TOUR / FIT TOUR",
+  brandName: "The Rice Tour – Du lịch có Guu",
+  address: "180 Bùi Viện, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+  hotline1: "028.8888.7888",
+  hotline1Raw: "02888887888",
+  hotline2: "0962.333.621",
+  hotline2Raw: "0962333621",
+  hotlineMice: "0962.333.621",
+  hotlineMiceRaw: "0962333621",
+  email: "hello@thericetour.com",
+  feedbackZalo: "0962333621",
+  feedbackEmail: "hello@thericetour.com",
+  taxId: "0316127669",
+  license: "79-1588/2023/TCDL-GP LHQT",
+  licenseUrl: "https://media.fittour.vn/wp-content/uploads/2025/10/giay-phep-kinh-doanh-lu-hanh-quoc-te-cap-nhat-2025-fittour.pdf",
+  mapsUrl: "https://maps.app.goo.gl/9dNo3sCwDp3r4RJt7",
+  workingHours: "Thứ Hai – Thứ Bảy: 08:30 – 17:30 (Hotline & WhatsApp hỗ trợ 24/7)"
+};
+
+// Breadcrumb Schema
+const breadcrumbSchema = {
+  items: [
+    { name: "Trang chủ", url: "https://thericetour.com/" },
+    { name: "Liên hệ", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Breadcrumb Bar -->
+  <nav class="bg-white border-b border-slate-100 py-3" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 flex items-center gap-2 text-sm text-slate-500">
+      <a href="/" class="hover:text-amber-600 transition-colors">Trang chủ</a>
+      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-900 font-medium">Liên hệ</span>
+    </div>
+  </nav>
+
+  <main class="bg-[#F8FAFC] py-10 md:py-16 text-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!-- Page Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+          <svg class="w-4 h-4 text-[#F7931E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          Trung Tâm Hỗ Trợ &amp; Tư Vấn Trải Nghiệm
+        </div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          Liên Hệ FIT TOUR
+        </h1>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+          Đội ngũ Trip Planner của <strong class="text-slate-900">FIT TOUR – Du lịch có Guu</strong> luôn sẵn sàng đồng hành cùng Quý khách để thiết kế những hành trình trải nghiệm độc đáo, khác biệt và sâu sắc.
+        </p>
+      </div>
+
+      <!-- Quick Action Cards Grid (3 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Card 1: Hotline B2C -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-5 border border-amber-200 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1">Hotline Đặt Tour Cá Nhân</h2>
+            <p class="text-xs text-slate-500 mb-4">Tư vấn tour quốc tế, trekking, hành hương &amp; tour trải nghiệm sâu.</p>
+            <div class="space-y-2 font-mono">
+              <a href={`tel:${company.hotline1Raw}`} class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 hover:bg-amber-50 text-slate-900 hover:text-amber-800 font-bold text-sm transition-colors border border-slate-100">
+                <span>Hotline 1:</span>
+                <span class="text-amber-700">{company.hotline1}</span>
+              </a>
+              <a href={`tel:${company.hotline2Raw}`} class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 hover:bg-amber-50 text-slate-900 hover:text-amber-800 font-bold text-sm transition-colors border border-slate-100">
+                <span>Hotline 2:</span>
+                <span class="text-amber-700">{company.hotline2}</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500">Hỗ trợ 24/7 (Zalo/Call)</span>
+            <a href="https://zalo.me/0934888854" target="_blank" rel="noopener" class="text-xs font-bold text-brand-700 hover:underline">Chat Zalo →</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Hotline B2B / MICE -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-5 border border-blue-200 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1">Tour Riêng &amp; Doanh Nghiệp</h2>
+            <p class="text-xs text-slate-500 mb-4">Thiết kế tour đoàn riêng, Company Trip, MICE, Incentive &amp; Team Building.</p>
+            <div class="space-y-2 font-mono">
+              <a href={`tel:${company.hotlineMiceRaw}`} class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 text-slate-900 hover:text-blue-800 font-bold text-sm transition-colors border border-slate-100">
+                <span>Hotline MICE:</span>
+                <span class="text-blue-700">{company.hotlineMice}</span>
+              </a>
+              <a href={`mailto:${company.email}`} class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 text-slate-900 hover:text-blue-800 font-semibold text-xs transition-colors border border-slate-100">
+                <span>Email RFP:</span>
+                <span class="text-blue-700 font-mono">{company.email}</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500">Chuyên viên B2B tư vấn</span>
+            <a href="/tour-doanh-nghiep" class="text-xs font-bold text-brand-700 hover:underline">Xem dịch vụ MICE →</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Online Channels -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-5 border border-emerald-200 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1">Kênh Trực Tuyến &amp; Mạng Xã Hội</h2>
+            <p class="text-xs text-slate-500 mb-4">Kết nối nhanh qua các ứng dụng tin nhắn và mạng xã hội chính thức.</p>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="https://zalo.me/0934888854" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-[#0068FF]/10 hover:bg-[#0068FF] text-[#0068FF] hover:text-white font-bold text-xs transition-colors">
+                Zalo Official
+              </a>
+              <a href="/msg" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white font-bold text-xs transition-colors">
+                Messenger
+              </a>
+              <a href="https://www.facebook.com/fittour.com.vn" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-slate-100 hover:bg-slate-800 text-slate-700 hover:text-white font-bold text-xs transition-colors">
+                Facebook Fanpage
+              </a>
+              <a href="https://www.youtube.com/channel/UCI4QJUTzHypV6YWkDRZnUIA" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-rose-50 hover:bg-rose-600 text-rose-700 hover:text-white font-bold text-xs transition-colors">
+                YouTube Channel
+              </a>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-500">Phản hồi tức thì</span>
+            <a href="/tai-khoan-thanh-toan" class="text-xs font-bold text-brand-700 hover:underline">Tài khoản thanh toán →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Section: Head Office & Official Google Maps Embed -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        
+        <!-- Left: Head Office & Legal Info (5 Cols) -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 mb-4">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/></svg>
+              Trụ Sở Chính (Head Office)
+            </div>
+            
+            <h2 class="text-xl font-bold text-slate-900 mb-1">{company.name}</h2>
+            <p class="text-xs text-slate-500 mb-6">{company.brandName}</p>
+
+            <div class="space-y-4 text-sm text-slate-600">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">Địa chỉ trụ sở:</div>
+                  <div class="text-slate-700 leading-snug">{company.address}</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">Giờ làm việc:</div>
+                  <div class="text-slate-700 leading-snug">{company.workingHours}</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900">Hồ sơ pháp lý:</div>
+                  <div class="text-slate-700">Mã số thuế: <strong class="font-mono text-slate-900">{company.taxId}</strong></div>
+                  <div class="text-slate-700">Giấy phép LHQT: <strong class="text-slate-900">{company.license}</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- License Download Link -->
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <a 
+              href={company.licenseUrl} 
+              target="_blank" 
+              rel="noopener"
+              class="inline-flex items-center gap-2 text-xs font-bold text-brand-700 hover:text-brand-800 transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Xem Giấy phép Lữ hành Quốc tế FIT TOUR (PDF) →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Official Google Maps Embed (7 Cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-sm flex flex-col">
+          <div class="font-bold text-slate-900 text-base mb-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Bản Đồ FIT TOUR - HEAD OFFICE
+            </div>
+            <a 
+              href={company.mapsUrl} 
+              target="_blank" 
+              rel="noopener" 
+              class="text-xs font-bold text-brand-700 hover:underline hidden sm:inline"
+            >
+              Mở trong Google Maps ↗
+            </a>
+          </div>
+
+          <div class="w-full flex-1 min-h-[350px] rounded-2xl overflow-hidden border border-slate-200">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5591770976102!2d106.68295688151272!3d10.768417261996607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292d5a134f97%3A0x69e5ff4dd330406a!2sFIT%20TOUR%20-%20HEAD%20OFFICE!5e0!3m2!1svi!2sus!4v1787064031997!5m2!1svi!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 380px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="FIT TOUR - HEAD OFFICE"
+              aria-label="Bản đồ chỉ đường đến FIT TOUR HEAD OFFICE"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feedback & Legal Notice Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        
+        <!-- Feedback Box -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            </div>
+            <h2 class="text-base font-bold text-slate-900">Góp Ý &amp; Chỉnh Sửa Nội Dung</h2>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Mọi ý kiến đóng góp về trải nghiệm, chỉnh sửa thông tin bài viết hoặc phản ánh dịch vụ, Quý khách vui lòng liên hệ ban biên tập:
+          </p>
+          <div class="space-y-2 text-xs font-semibold text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500">Zalo phản ánh:</span>
+              <a href="https://zalo.me/0799664444" class="text-brand-700 font-mono hover:underline">{company.feedbackZalo}</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500">Email ban biên tập:</span>
+              <a href={`mailto:${company.feedbackEmail}`} class="text-brand-700 font-mono hover:underline">{company.feedbackEmail}</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Security Box -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h2 class="text-base font-bold text-slate-900">An Toàn Thanh Toán Tour</h2>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            FIT TOUR chỉ giao dịch qua tài khoản ngân hàng pháp nhân đứng tên <strong class="text-slate-900">CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR</strong> tại Ngân hàng ACB (STK: <strong class="font-mono text-slate-900">8888 6789 68</strong>).
+          </p>
+          <a href="/tai-khoan-thanh-toan" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:text-brand-800 hover:underline">
+            Xem thông tin tài khoản thanh toán &amp; VietQR →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Quick Contact CTA -->
+      <div class="text-center bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <h2 class="text-xl sm:text-2xl font-bold">Bạn Đang Lên Kế Hoạch Cho Chuyến Đi Sắp Tới?</h2>
+          <p class="text-sm text-neutral-300">Hãy để các chuyên gia Trip Planner của FIT TOUR đồng hành biến ý tưởng của bạn thành một hành trình đáng nhớ!</p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a 
+              href={`tel:${company.hotline1Raw}`} 
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#F7931E] hover:bg-[#e07f12] text-slate-950 font-bold text-sm shadow-md transition-all active:scale-95"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Gọi Hotline: {company.hotline1}
+            </a>
+            <a 
+              href="https://zalo.me/0934888854" 
+              target="_blank" 
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all active:scale-95"
+            >
+              Chat Zalo Trực Tuyến
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>

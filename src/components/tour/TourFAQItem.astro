@@ -1,0 +1,47 @@
+---
+export interface Props {
+  title: string;
+  type?: 'success' | 'danger' | 'info' | 'default';
+  open?: boolean;
+}
+const { title, type = 'info', open = false } = Astro.props;
+
+let iconColor = type === 'default' ? '#64748b' : '#3b82f6'; // default info blue
+if (type === 'success') iconColor = '#22c55e';
+if (type === 'danger') iconColor = '#ef4444';
+---
+<details open={open ? true : undefined} class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
+  <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
+    {type === 'success' && (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={iconColor} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    )}
+    {type === 'danger' && (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={iconColor} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+    )}
+        {type === 'default' && (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={iconColor} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    )}
+    {type === 'info' && (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={iconColor} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+    )}
+    <span class={`flex-1 text-lg font-bold ${type === 'success' ? 'text-green-700' : type === 'danger' ? 'text-red-700' : type === 'default' ? 'text-slate-700' : 'text-sky-700'}`}>{title}</span>
+    <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+  </summary>
+  <div class="faq-content custom-blog-prose max-w-none p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100">
+    <slot />
+  </div>
+</details>
+
+<style>
+  .faq-content :global(ol) {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+  }
+  .faq-content :global(ul) {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+  .faq-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+</style>

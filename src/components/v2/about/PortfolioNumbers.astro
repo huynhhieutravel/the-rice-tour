@@ -1,0 +1,84 @@
+---
+// src/components/v2/about/PortfolioNumbers.astro
+---
+
+<section class="py-32 bg-black text-white relative border-t border-neutral-900">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center mb-24">
+      <h2 class="font-sans text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">Thành tựu & Di sản</h2>
+      <p class="font-serif text-3xl md:text-5xl leading-tight text-neutral-200">
+        Những con số biết nói, thay cho hàng vạn lời hoa mỹ về một hành trình tận tâm.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 max-w-6xl mx-auto">
+      
+      <!-- Number 1 -->
+      <div class="flex flex-col items-center text-center group">
+        <div class="relative overflow-hidden">
+          <span class="font-serif text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter text-white bg-clip-text">
+            <span class="counter" data-target="15">0</span><span class="text-brand-500">+</span>
+          </span>
+        </div>
+        <h3 class="font-sans text-xl md:text-2xl font-medium mt-4 mb-2">Năm Mở Đường</h3>
+        <p class="font-sans text-neutral-400 font-light max-w-xs">Tiên phong khai mở những cung đường thám hiểm mới lạ nhất dành cho du khách Việt.</p>
+      </div>
+
+      <!-- Number 2 -->
+      <div class="flex flex-col items-center text-center group">
+        <div class="relative overflow-hidden">
+          <span class="font-serif text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter text-white bg-clip-text">
+            <span class="counter" data-target="500">0</span><span class="text-brand-500">+</span>
+          </span>
+        </div>
+        <h3 class="font-sans text-xl md:text-2xl font-medium mt-4 mb-2">Hành Trình Bespoke</h3>
+        <p class="font-sans text-neutral-400 font-light max-w-xs">Tuyệt tác được "đo ni đóng giày" cho từng cá nhân, không có hai chuyến đi nào giống hệt nhau.</p>
+      </div>
+
+      <!-- Number 3 -->
+      <div class="flex flex-col items-center text-center group">
+        <div class="relative overflow-hidden">
+          <span class="font-serif text-8xl md:text-9xl lg:text-[10rem] font-bold tracking-tighter text-brand-500">
+            ZERO
+          </span>
+        </div>
+        <h3 class="font-sans text-xl md:text-2xl font-medium mt-4 mb-2">Shopping Ép Buộc</h3>
+        <p class="font-sans text-neutral-400 font-light max-w-xs">Trải nghiệm nguyên bản 100%, thời gian của bạn chỉ dành trọn cho cảnh sắc và văn hóa thực sự.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple intersection observer to trigger count up
+  const counters = document.querySelectorAll('.counter');
+  
+  const animateCount = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duration = 2000; // 2 seconds
+    const stepTime = Math.abs(Math.floor(duration / target));
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += Math.ceil(target / 100); // Speed up counting by adding chunks
+      if (current >= target) {
+        el.innerText = target;
+        clearInterval(timer);
+      } else {
+        el.innerText = current;
+      }
+    }, stepTime);
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>

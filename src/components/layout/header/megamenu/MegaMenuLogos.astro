@@ -1,0 +1,68 @@
+---
+import type { MegaMenuLogo, MegaMenuCard } from '@/config/navigation/default';
+
+export interface Props {
+  logos: MegaMenuLogo[];
+  stories?: MegaMenuCard[];
+}
+
+const { logos, stories } = Astro.props;
+---
+
+<div class="flex flex-col w-full p-6">
+  {stories && stories.length > 0 && (
+    <div class="mb-6">
+      <h4 class="text-gray-900 font-bold mb-4 text-[15px] tracking-wide">Câu chuyện khách hàng</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {stories.map((item) => (
+          <a href={item.href} class="group block">
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
+            </div>
+            <h5 class="font-bold text-gray-900 text-[14px] leading-snug group-hover:text-brand-600 transition-colors line-clamp-2">
+              {item.title}
+            </h5>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <h4 class="text-gray-900 font-bold mb-4 text-[15px] tracking-wide">Doanh nghiệp đồng hành</h4>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {logos.map((item) => {
+      let logoUrl = item.logo;
+
+      return (
+        <a href={item.href} class="group/logo flex flex-col border border-transparent hover:border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 rounded-xl p-3 bg-gray-50/50 hover:bg-white cursor-pointer">
+          <div class="h-10 flex items-center mb-3 shrink-0">
+            <img 
+              src={logoUrl} 
+              alt={item.name} 
+              class="max-h-full max-w-[100px] object-contain rounded-md"
+              loading="lazy"
+            />
+          </div>
+          <h5 class="font-bold !text-gray-900 mb-1.5 text-[14px] group-hover/logo:!text-brand-600 transition-colors">{item.name}</h5>
+          <p class="text-[13px] !text-gray-500 leading-relaxed">
+            {item.description}
+          </p>
+        </a>
+      );
+    })}
+  </div>
+  <div class="mt-6 flex justify-center border-t border-gray-100 pt-5">
+    <a href="/cau-chuyen-du-lich/" class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-gray-300 text-sm font-semibold text-gray-700 hover:border-brand-500 hover:text-brand-500 transition-colors">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Xem Tất Cả
+    </a>
+  </div>
+</div>

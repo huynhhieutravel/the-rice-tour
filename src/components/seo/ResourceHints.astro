@@ -1,0 +1,20 @@
+---
+export interface Props {
+  preloadImages?: string[];
+  preconnectDomains?: string[];
+}
+
+const { 
+  preloadImages = [], 
+  preconnectDomains = ['https://media.thericetour.com', 'https://r2.nucuoimekong.com'] 
+} = Astro.props;
+---
+
+{preconnectDomains.map(domain => (
+  <link rel="preconnect" href={domain} />
+  <link rel="dns-prefetch" href={domain} />
+))}
+
+{preloadImages.map(img => (
+  <link rel="preload" href={img} as="image" fetchpriority="high" />
+))}

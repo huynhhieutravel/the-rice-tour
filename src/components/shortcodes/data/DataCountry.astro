@@ -1,0 +1,106 @@
+---
+import { env } from 'cloudflare:workers';
+import OptimizedImage from '@/components/ui/OptimizedImage.astro';
+
+export interface Props {
+  region?: string;
+  limit?: string | number;
+  layout?: 'grid' | 'carousel';
+  title?: string;
+  dataMap?: Record<string, any>;
+}
+
+const { region, limit = '8', layout = 'grid', title, dataMap } = Astro.props;
+const numLimit = parseInt(String(limit), 10) || 8;
+
+let envLocals: any = null;
+try { envLocals = Astro.locals?.runtime?.env; } catch (_) {}
+const d1Db = env?.dulichcoguu_d1 || envLocals?.dulichcoguu_d1;
+
+let countries: any[] = [];
+
+if (d1Db) {
+  try {
+    // Assuming Country table exists with region_slug, title, slug, featuredImage
+    let query = `
+      SELECT c.id, c.slug, c.name as title, c.featuredImage 
+      FROM Country c
+    `;
+    
+    let bindings: any[] = [];
+
+    if (region) {
+      // Depending on schema, might be region_slug or joined with Region table
+      // query += ` WHERE c.region_slug = ?`;
+      // bindings.push(region);
+    }
+
+    query += ` ORDER BY c.name ASC LIMIT ?`;
+    bindings.push(numLimit);
+
+    let statement = d1Db.prepare(query);
+    statement = statement.bind(...bindings);
+
+    const res = await statement.all();
+    if (res && res.results) {
+      countries = res.results as any[];
+    }
+  } catch (e) {
+    console.error("[DataCountry] DB Error:", e);
+  }
+}
+
+if (!countries || countries.length === 0) {
+  return null;
+}
+---
+
+<div class="data-block-wrapper my-12">
+  {title && (
+    <h3 class="text-2xl md:text-3xl font-serif text-slate-900 mb-8 border-l-4 border-[#10b981] pl-4">{title}</h3>
+  )}
+
+  {layout === 'grid' ? (
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      {countries.map((country) => (
+        <a href={`/country/${country.slug}`} class="group block relative rounded-xl overflow-hidden hover:shadow-lg transition-all bg-slate-900 aspect-square">
+          <OptimizedImage 
+            src={country.featuredImage || '/placeholder-image.jpg'} 
+            alt={country.title} 
+            class="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-90"
+            sizes="(max-width: 768px) 50vw, 25vw"
+            loading="lazy"
+            qualityRole="card"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-4">
+            <h4 class="text-lg md:text-xl font-bold text-white text-center group-hover:-translate-y-1 transition-transform">{country.title}</h4>
+          </div>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 hide-scrollbar">
+      {countries.map((country) => (
+        <a href={`/country/${country.slug}`} class="snap-start shrink-0 w-[200px] md:w-[240px] group block relative rounded-xl overflow-hidden hover:shadow-lg transition-all bg-slate-900 aspect-square">
+          <OptimizedImage 
+            src={country.featuredImage || '/placeholder-image.jpg'} 
+            alt={country.title} 
+            class="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-90"
+            loading="lazy"
+            qualityRole="card"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-4">
+            <h4 class="text-lg md:text-xl font-bold text-white text-center group-hover:-translate-y-1 transition-transform">{country.title}</h4>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>

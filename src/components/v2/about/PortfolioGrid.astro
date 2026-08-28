@@ -1,0 +1,74 @@
+---
+// src/components/v2/about/PortfolioGrid.astro
+---
+
+<section class="py-24 md:py-32 bg-black text-white">
+  <div class="container mx-auto px-6">
+    <div class="mb-20">
+      <h2 class="font-serif text-4xl md:text-6xl text-white mb-6">Masterpieces of Travel</h2>
+      <p class="font-sans text-neutral-400 max-w-2xl text-lg font-light">
+        Thay vì liệt kê những giá trị cốt lõi khô khan, chúng tôi biến triết lý của mình thành những tác phẩm nghệ thuật. Mỗi bức tranh là một lát cắt đại diện cho tinh thần FIT Tour.
+      </p>
+    </div>
+
+    <!-- Asymmetrical Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+      
+      <!-- Block 1: Large left -->
+      <div class="lg:col-span-8 group relative overflow-hidden bg-neutral-900 rounded-sm">
+        <div class="aspect-[16/9] lg:aspect-auto lg:h-[600px] overflow-hidden">
+          <img 
+            src="https://media.fittour.vn/uploads/2022/11/du-khach-chim-dam-voi-ve-dep-cua-nui-non-himalayas.webp" 
+            alt="Sự Tĩnh Lặng" 
+            class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105 opacity-80 group-hover:opacity-100"
+          />
+        </div>
+        <!-- Gradient & Content -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12 transition-all duration-500">
+          <span class="text-brand-500 font-sans tracking-widest text-xs uppercase mb-3">Tác phẩm I</span>
+          <h3 class="font-serif text-3xl md:text-5xl text-white mb-4">Sự Tĩnh Lặng</h3>
+          <p class="font-sans text-neutral-300 font-light max-w-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            Giữa thiên nhiên hùng vĩ và khắc nghiệt, sự an toàn của bạn là trách nhiệm tối thượng của chúng tôi. Chúng tôi không bao giờ đánh đổi sự chuẩn bị kỹ lưỡng lấy những rủi ro bốc đồng.
+          </p>
+        </div>
+      </div>
+
+      <!-- Block 2: Top right -->
+      <div class="lg:col-span-4 group relative overflow-hidden bg-neutral-900 rounded-sm">
+        <div class="aspect-square lg:h-[600px] overflow-hidden">
+          <img 
+            src="https://media.fittour.vn/uploads/mua-xuan-pakistan-poster.webp" 
+            alt="Sự Thô Ráp" 
+            class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105 opacity-80 group-hover:opacity-100"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 transition-all duration-500">
+          <span class="text-brand-500 font-sans tracking-widest text-xs uppercase mb-3">Tác phẩm II</span>
+          <h3 class="font-serif text-3xl text-white mb-4">Sự Thô Ráp</h3>
+          <p class="font-sans text-neutral-300 font-light opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            Chúng tôi theo đuổi sự nguyên bản đến trần trụi. Nét văn hóa bản địa chưa bị thương mại hóa tàn phá chính là thứ xa xỉ nhất mà bạn tìm thấy ở FIT Tour.
+          </p>
+        </div>
+      </div>
+
+      <!-- Block 3: Full width bottom -->
+      <div class="lg:col-span-12 group relative overflow-hidden bg-neutral-900 rounded-sm mt-4">
+        <div class="aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+          <img 
+            src="https://media.fittour.vn/uploads/2022/02/nui-himalaya.webp" 
+            alt="Sự Tinh Tế" 
+            class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105 opacity-60 group-hover:opacity-100"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 flex flex-col justify-center items-center text-center p-8 transition-all duration-500">
+          <span class="text-brand-500 font-sans tracking-widest text-xs uppercase mb-3">Tác phẩm III</span>
+          <h3 class="font-serif text-4xl md:text-6xl text-white mb-6">Sự Tinh Tế</h3>
+          <p class="font-sans text-neutral-200 font-light max-w-2xl text-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+            Bespoke không chỉ là may đo lịch trình. Đó là khả năng đọc vị "Guu" của bạn, là ly trà nóng được chuẩn bị sẵn ở trạm nghỉ sườn núi, là những tiểu tiết tạo nên sự độc bản.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+---
+export interface Props {
+  activeTab?: 'Case Study' | 'Portfolio' | 'Zalo' | 'Email' | 'Form Liên Hệ';
+}
+const { activeTab = '' } = Astro.props;
+
+const getTabStyle = (tabName: string) => {
+  const isActive = activeTab === tabName;
+  return {
+    svg: isActive ? "w-5 h-5 text-[#c5a365] drop-shadow-[0_0_8px_rgba(197,163,101,0.8)] transition-all duration-300" : "w-5 h-5 text-gray-500 group-hover:text-white transition-colors duration-300",
+    span: isActive ? "text-[8.5px] font-bold tracking-[0.05em] uppercase text-[#c5a365] transition-colors whitespace-nowrap" : "text-[8.5px] font-bold tracking-[0.05em] uppercase text-gray-500 group-hover:text-white transition-colors whitespace-nowrap",
+    hasDot: isActive
+  };
+};
+
+const tCaseStudy = getTabStyle('Case Study');
+const tPortfolio = getTabStyle('Portfolio');
+const tZalo = getTabStyle('Zalo');
+const tEmail = getTabStyle('Email');
+const tForm = getTabStyle('Form Liên Hệ');
+---
+
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 w-full z-[100] md:hidden bg-[#050505]/90 backdrop-blur-2xl border-t border-[#c5a365]/20 pb-safe pt-2 px-1 shadow-[0_-20px_40px_rgba(0,0,0,0.8)] before:absolute before:inset-x-0 before:top-0 before:h-[1px] before:bg-gradient-to-r before:from-transparent before:via-[#c5a365]/40 before:to-transparent">
+  <div class="flex justify-between items-center max-w-md mx-auto pb-4 md:pb-6">
+        <!-- Case Study -->
+        <a href="https://thericetour.com/hanh-trinh-doanh-nghiep/" class="group flex flex-col items-center gap-1.5 p-1 flex-1 relative">
+          <svg class={tCaseStudy.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span class={tCaseStudy.span}>Case Study</span>
+          {tCaseStudy.hasDot && <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span>}
+        </a>
+        
+        <!-- Portfolio -->
+        <a href="https://thericetour.com/portfolio/" class="group flex flex-col items-center gap-1.5 p-1 flex-1 relative">
+          <svg class={tPortfolio.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94"/><path d="M9.69 8h11.48"/><path d="m7.38 12 5.74-9.94"/><path d="M9.69 16 3.95 6.06"/><path d="M14.31 16H2.83"/><path d="m16.62 12-5.74 9.94"/></svg>
+          <span class={tPortfolio.span}>Portfolio</span>
+          {tPortfolio.hasDot && <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span>}
+        </a>
+
+        <!-- Zalo -->
+        <a href="https://zalo.me/0932076186" target="_blank" class="group flex flex-col items-center gap-1.5 p-1 flex-1 relative">
+          <svg class={tZalo.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          <span class={tZalo.span}>Zalo</span>
+          {tZalo.hasDot && <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span>}
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@fittour.com.vn" class="group flex flex-col items-center gap-1.5 p-1 flex-1 relative">
+          <svg class={tEmail.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class={tEmail.span}>Email</span>
+          {tEmail.hasDot && <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span>}
+        </a>
+
+        <!-- Form Liên Hệ -->
+        <a href="#form-dang-ky" class="group flex flex-col items-center gap-1.5 p-1 flex-1 relative">
+          <svg class={tForm.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span class={tForm.span}>Báo Giá</span>
+          {tForm.hasDot && <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span>}
+        </a>
+    </div>
+</div>
+
+<style is:global>
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+</style>

@@ -1,0 +1,153 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+let settingsMap: Record<string, any> = {};
+try {
+  const d1Db = env?.dulichcoguu_d1;
+  if (d1Db) {
+    const { results } = await d1Db.prepare("SELECT * FROM SiteSetting").all();
+    (results || []).forEach((s: any) => {
+      let parsed = s.value;
+      try { if (typeof parsed === 'string') parsed = JSON.parse(parsed); } catch (e) {}
+      settingsMap[s.key] = parsed;
+    });
+  }
+} catch (e) {
+  console.error('Error fetching settings', e);
+}
+---
+
+<AdminLayout title="Mã nhúng & Tracking" activeMenu="system" activeSubmenu="scripts">
+<style>
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .header h2 { font-size: 24px; font-weight: 700; }
+  
+  .layout-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+  
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .form-group input, .form-group textarea { width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #bfdbfe; }
+  .form-group .hint { display: block; font-size: 12px; color: #64748b; margin-top: 6px; line-height: 1.5; }
+  
+  .btn-submit { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; transition: background 0.2s; }
+  .btn-submit:hover { background: #1d4ed8; }
+
+  /* Tabs CSS */
+  .tabs { display: flex; border-bottom: 1px solid #e2e8f0; margin-bottom: 24px; gap: 8px; }
+  .tab-btn { padding: 12px 20px; background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; font-size: 14px; font-weight: 600; color: #64748b; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+  .tab-btn:hover { color: #0f172a; background: #f8fafc; border-radius: 6px 6px 0 0; }
+  .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
+  .tab-content { display: none; animation: fadeIn 0.3s ease; }
+  .tab-content.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<div class="header">
+  <h2>Mã nhúng & Tracking (Scripts Management)</h2>
+</div>
+
+<div class="layout-grid">
+  <form id="scriptsForm">
+    <div class="card">
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-target="tab-google"><span style="font-size: 16px;">📈</span> Google Analytics</button>
+        <button type="button" class="tab-btn" data-target="tab-facebook"><span style="font-size: 16px;">📘</span> Facebook Pixel</button>
+        <button type="button" class="tab-btn" data-target="tab-custom"><span style="font-size: 16px;">🛠️</span> Script Tự Do</button>
+      </div>
+
+      <!-- Google Tab -->
+      <div id="tab-google" class="tab-content active">
+        <div class="form-group">
+          <label for="tracking_ga">Google Analytics ID / Tag Manager ID</label>
+          <input type="text" id="tracking_ga" value={settingsMap['tracking']?.ga || ''} placeholder="G-XXXXXXXXXX hoặc GTM-XXXXXXXX" />
+          <p class="hint">Nhập mã GA4 (G-XXXX) hoặc GTM (GTM-XXXX). Hệ thống tự động chèn đúng thẻ script và cả thẻ noscript nếu là GTM.</p>
+        </div>
+      </div>
+
+      <!-- Facebook Tab -->
+      <div id="tab-facebook" class="tab-content">
+        <div class="form-group">
+          <label for="tracking_pixel">Facebook Pixel ID</label>
+          <input type="text" id="tracking_pixel" value={settingsMap['tracking']?.pixel || ''} placeholder="1234567890" />
+          <p class="hint">Định dạng số: 123456789. Hệ thống tự động thiết lập theo dõi sự kiện PageView mặc định của Meta.</p>
+        </div>
+      </div>
+
+      <!-- Custom Scripts Tab -->
+      <div id="tab-custom" class="tab-content">
+        <div class="form-group">
+          <label for="tracking_header">Mã nhúng Header (Nhúng nguyên đoạn &lt;script&gt;)</label>
+          <textarea id="tracking_header" rows="6" placeholder="<!-- Paste script tại đây -->" style="font-family: monospace; white-space: pre; overflow-x: auto; background: #f8fafc;">{settingsMap['tracking']?.headerCode || ''}</textarea>
+          <p class="hint">Dùng cho Google Tag Manager, Meta Pixel full code, TikTok Pixel... Code sẽ nằm trong thẻ &lt;head&gt; của website.</p>
+        </div>
+        <div class="form-group">
+          <label for="tracking_footer">Mã nhúng Footer (Trước thẻ &lt;/body&gt;)</label>
+          <textarea id="tracking_footer" rows="6" placeholder="<!-- Paste script tại đây -->" style="font-family: monospace; white-space: pre; overflow-x: auto; background: #f8fafc;">{settingsMap['tracking']?.footerCode || ''}</textarea>
+          <p class="hint">Dùng cho Livechat (Tawk.to, Zalo chat), mã Tracking... Code nằm cuối trang để không ảnh hưởng tốc độ load.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: sticky; bottom: 20px; background: white; padding: 16px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); display: flex; justify-content: flex-end;">
+      <button type="submit" class="btn-submit" id="saveScriptsBtn">Lưu Tất Cả Mã Nhúng</button>
+    </div>
+  </form>
+</div>
+
+<script is:inline>
+  // Tab logic
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+
+  // Save logic
+  document.getElementById('scriptsForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('saveScriptsBtn');
+    btn.innerText = 'Đang lưu...';
+    btn.disabled = true;
+
+    const trackingData = {
+      ga: document.getElementById('tracking_ga')?.value || '',
+      pixel: document.getElementById('tracking_pixel')?.value || '',
+      headerCode: document.getElementById('tracking_header')?.value || '',
+      footerCode: document.getElementById('tracking_footer')?.value || '',
+    };
+
+    try {
+      const payload = [
+        { key: 'tracking', value: trackingData }
+      ];
+
+      const res = await fetch('/api/admin/settings', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const resData = await res.json();
+      
+      if (res.ok && resData.success) {
+        window.AppModal?.alert('Lưu mã nhúng thành công!', 'success') || alert('Lưu cài đặt thành công!');
+      } else {
+        window.AppModal?.alert(resData.error || 'Có lỗi xảy ra khi lưu', 'error') || alert(resData.error || 'Có lỗi xảy ra khi lưu');
+      }
+    } catch (err) {
+      console.error(err);
+      window.AppModal?.alert('Có lỗi xảy ra khi lưu', 'error') || alert('Có lỗi xảy ra khi lưu');
+    } finally {
+      btn.innerText = 'Lưu Tất Cả Mã Nhúng';
+      btn.disabled = false;
+    }
+  });
+</script>
+</AdminLayout>

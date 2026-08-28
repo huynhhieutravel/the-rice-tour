@@ -1,0 +1,4 @@
+{
+  "name": "module-editorial-pipeline",
+  "description": "Hệ thống 4 Agent chuyên trách dây chuyền biên tập nội dung theo phong cách FIT Tour (Du lịch có GUU), thẩm định QA, dịch thuật tiếng Anh và đóng gói lên Template Astro."
+}

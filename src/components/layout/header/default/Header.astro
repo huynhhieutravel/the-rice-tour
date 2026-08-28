@@ -1,0 +1,248 @@
+---
+import AjaxSearch from '@/components/ui/AjaxSearch.astro';
+import Logo from '../shared/Logo.astro';
+import DesktopNav from './DesktopNav.astro';
+import MobileMenu from '@/components/system/overlay/mobile-menu/MobileMenu.astro';
+import { defaultNavItems } from '@/config/navigation/default';
+import { corporateNavItems } from '@/config/navigation/corporate';
+import { env } from 'cloudflare:workers';
+
+export interface Props {
+  isCorporate?: boolean;
+}
+
+const { isCorporate: propIsCorporate = false } = Astro.props;
+
+let activeHeaderNav: any = null;
+let contactConfig: any = null;
+let dbCorporateMenu: any = null;
+
+try {
+  let layoutProfiles: any[] = [];
+  
+  // Quick fetch from D1 (can be cached in KV later)
+  if (env?.dulichcoguu_d1) {
+    const d1Db = env.dulichcoguu_d1;
+    const { results } = await d1Db.prepare("SELECT key, value FROM SiteSetting WHERE key IN ('layout_profiles', 'contact', 'corporate_menu')").all();
+    if (results && results.length > 0) {
+      const dbSettings = results.reduce((acc: any, row: any) => {
+        try { acc[row.key] = typeof row.value === 'string' ? JSON.parse(row.value) : row.value; } catch(e) { acc[row.key] = row.value; }
+        return acc;
+      }, {});
+      
+      layoutProfiles = dbSettings['layout_profiles'] || [];
+      contactConfig = dbSettings['contact'];
+      dbCorporateMenu = dbSettings['corporate_menu'];
+    }
+  }
+
+  // Layout Matching Logic
+  const currentPath = Astro.url.pathname;
+  let matchedProfile = null;
+
+  if (layoutProfiles && layoutProfiles.length > 0) {
+    // 1. Try to find a specific condition match
+    matchedProfile = layoutProfiles.find(profile => {
+      if (profile.isDefault) return false; // Skip defaults in first pass
+      if (!profile.conditions) return false;
+      
+      return profile.conditions.some((cond: any) => {
+        if (cond.type === 'path_starts_with' && cond.value) {
+          return currentPath.startsWith(cond.value);
+        }
+        if (cond.type === 'exact_path' && cond.value) {
+          return currentPath === cond.value;
+        }
+        // Note: category_slug logic would require fetching the post's category. For now, path matching covers most URL structures.
+        return false;
+      });
+    });
+
+    // 2. If no condition matched, find the default profile
+    if (!matchedProfile) {
+      matchedProfile = layoutProfiles.find(p => p.isDefault);
+    }
+    
+    // 3. Fallback to the first one if no default is explicitly set
+    if (!matchedProfile && layoutProfiles.length > 0) {
+      matchedProfile = layoutProfiles[0];
+    }
+    
+    if (matchedProfile && matchedProfile.header_nav && matchedProfile.header_nav.length > 0) {
+      activeHeaderNav = matchedProfile.header_nav;
+    }
+  }
+} catch (e) {
+  console.error("Failed to fetch layout config from backend:", e);
+}
+
+const pagePath = Astro.url.pathname;
+const isCorporatePath = pagePath.startsWith('/tour-doanh-nghiep') || 
+                    pagePath.startsWith('/dia-diem-to-chuc') || 
+                    pagePath.includes('incentive-travel') ||
+                    pagePath.includes('corporate-retreat') ||
+                    pagePath.includes('company-trip') ||
+                    pagePath.includes('mice-events') ||
+                    pagePath.startsWith('/hanh-trinh-doanh-nghiep') ||
+                    pagePath.startsWith('/to-chuc-su-kien-cong-ty-cho-doanh-nghiep');
+
+const isCorporate = propIsCorporate || isCorporatePath;
+
+const finalCorporateMenu = (dbCorporateMenu && Array.isArray(dbCorporateMenu) && dbCorporateMenu.length > 0) ? dbCorporateMenu : corporateNavItems;
+const navItems = activeHeaderNav || (isCorporate ? finalCorporateMenu : defaultNavItems);
+const logoHref = '/';
+const hotline = isCorporate ? '0932 076 186' : (contactConfig?.phone || '0934 888 854');
+const hotlineLabel = isCorporate ? 'Hotline tour doanh nghiệp' : 'Gọi Hotline';
+---
+
+<style>
+  @keyframes ticker-scroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
+  .ticker-track {
+    width: max-content;
+    animation: ticker-scroll 30s linear infinite;
+    will-change: transform;
+  }
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<site-header class="bg-surface sticky top-0 z-[100] border-b border-border shadow-sm transition-all duration-300 block text-[#111827]">
+  {/* Top Bar */}
+  <div id="header-top-bar" class="block bg-[#fcf9f2] border-b border-gray-100 py-2 overflow-hidden transition-all duration-500 max-h-[100px] ease-in-out text-[#111827]">
+    <div class="max-w-[1440px] mx-auto px-4 lg:px-8">
+      {isCorporate ? (
+        <div class="flex flex-col md:flex-row items-center md:gap-6 text-sm text-gray-700 font-medium whitespace-nowrap overflow-hidden w-full relative pb-1 md:pb-0">
+          <div class="flex items-center justify-center gap-2 flex-shrink-0 z-10 bg-[#fcf9f2] pr-0 md:pr-4 w-full md:w-auto pt-1 md:pt-0">
+            <svg class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            6+ năm kinh nghiệm vận hành.
+          </div>
+          <div class="w-full flex-1 overflow-hidden relative flex items-center ticker-container mt-1 md:mt-0" style="mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);">
+            <div class="ticker-track flex items-center whitespace-nowrap text-brand-600 font-semibold tracking-wide">
+              {/* We duplicate the text 4 times to ensure seamless infinite looping on any screen size via -50% transform */}
+              <span class="pr-12">Doanh nghiệp từng đồng hành: Samsung Việt Nam, BOSCH, VIB, ACB, MoMo, Vietcombank, Sacombank, MIRAE ASSET, VIETCAN...</span>
+              <span class="pr-12">Doanh nghiệp từng đồng hành: Samsung Việt Nam, BOSCH, VIB, ACB, MoMo, Vietcombank, Sacombank, MIRAE ASSET, VIETCAN...</span>
+              <span class="pr-12">Doanh nghiệp từng đồng hành: Samsung Việt Nam, BOSCH, VIB, ACB, MoMo, Vietcombank, Sacombank, MIRAE ASSET, VIETCAN...</span>
+              <span class="pr-12">Doanh nghiệp từng đồng hành: Samsung Việt Nam, BOSCH, VIB, ACB, MoMo, Vietcombank, Sacombank, MIRAE ASSET, VIETCAN...</span>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div class="hidden md:flex justify-center items-center gap-12 text-xs text-slate-700 font-semibold tracking-wide">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500">★ ★ ★ ★ ★</span>
+            <span>TripAdvisor 5.0 Excellence Award</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>100% Tailor-Made &amp; Private Tours</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+            <span>Zero Forced Shopping Guarantee</span>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <header class="relative">
+    <div class="max-w-[1440px] mx-auto px-4 lg:px-8 w-full">
+      <div class="flex justify-between items-center h-20 relative">
+        
+        {/* Logo Section */}
+        <div class="flex-shrink-0 flex items-center z-[60] relative header-logo-container">
+          <Logo href={logoHref} />
+        </div>
+
+        {/* Desktop Navigation */}
+        <DesktopNav navItems={navItems} />
+
+        {/* Search */}
+        <div class="hidden md:flex items-center gap-2 z-[60] relative">
+          <AjaxSearch />
+        </div>
+
+        {/* Mobile: Search + Menu button */}
+        <div class="md:hidden flex items-center gap-2 z-[60] relative">
+          <AjaxSearch />
+          <button id="system-menu-btn" class="w-10 h-10 flex flex-col justify-center items-center relative z-[60]" aria-label="Toggle menu" aria-expanded="false">
+            <span class="line-1 w-5 h-0.5 bg-gray-900 rounded-full transition-all duration-300 ease-out absolute -translate-y-1.5"></span>
+            <span class="line-2 w-5 h-0.5 bg-gray-900 rounded-full transition-all duration-300 ease-out absolute"></span>
+            <span class="line-3 w-5 h-0.5 bg-gray-900 rounded-full transition-all duration-300 ease-out absolute translate-y-1.5"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <system-mobile-menu>
+    <MobileMenu navItems={navItems} hotline={hotline} hotlineLabel={hotlineLabel} />
+  </system-mobile-menu>
+</site-header>
+
+<style is:global>
+  /* 
+   * ANTI-BLEED SHIELD
+   * Bảo vệ Header khỏi các CSS lây lan từ content của Elementor (ví dụ: Logo khổng lồ)
+   */
+  site-header .header-logo-container img {
+    height: 52px !important;
+    width: auto !important;
+    display: block !important;
+  }
+  
+  @media (max-width: 768px) {
+    site-header .header-logo-container img {
+      height: 40px !important;
+    }
+  }
+
+  /* Đảm bảo text trên header không bị đè màu */
+  site-header a, site-header span, site-header div {
+    color: inherit;
+  }
+  
+  site-header.is-scrolled #header-top-bar {
+    max-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom-width: 0 !important;
+    opacity: 0 !important;
+  }
+</style>
+
+  <script>
+    class SiteHeader extends HTMLElement {
+      connectedCallback() {
+        // Dùng rAF và Hysteresis để chống lỗi rung/giật (Scroll Jitter)
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              const currentScroll = window.scrollY;
+              // Hysteresis: add class at > 150px, remove at < 50px
+              if (currentScroll > 150) {
+                this.classList.add('is-scrolled');
+              } else if (currentScroll < 50) {
+                this.classList.remove('is-scrolled');
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      }
+    }
+  
+    if (!customElements.get('site-header')) {
+      customElements.define('site-header', SiteHeader);
+    }
+  </script>

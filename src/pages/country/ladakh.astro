@@ -1,0 +1,240 @@
+---
+import { env } from "cloudflare:workers";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import JsonLdSchema from "@/components/seo/JsonLdSchema.astro";
+import { safeQueryCritical } from "@/lib/db-client";
+import PortraitCenterpiece from "@/components/shortcodes/PortraitCenterpiece.astro";
+
+const slug = "ladakh";
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return Astro.rewrite("/500");
+}
+
+let country;
+try {
+  country = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Country WHERE slug = ?").bind(slug).first(),
+    { route: Astro.url.pathname, slug, queryType: "fetch_country_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!country) {
+  return new Response("Country not found", { status: 404 });
+}
+
+const title = country.metaTitle || country.name;
+const description = country.metaDescription || country.name;
+let image = country.featuredImage || country.bannerImage || "";
+const currentOrigin = Astro.url.origin;
+const canonicalUrl = `${currentOrigin}/country/${slug}`;
+const breadcrumbSchema = {
+  items: [
+    { name: "Trang chủ", url: `${currentOrigin}/` },
+    { name: "Khám phá", url: `${currentOrigin}/v2` },
+    { name: title, url: canonicalUrl }
+  ]
+};
+
+Astro.response.headers.set("Cache-Control", "public, s-maxage=3600, stale-while-revalidate=86400");
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  preloadImages={image ? [image] : []}
+  adminEditUrl={`/admin/countries/edit?id=${country.id}`}
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  </Fragment>
+
+<style>
+/* Removed render-blocking @import */
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    #ladakh-page, #ladakh-page .font-sans {
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    #ladakh-page .font-serif, 
+    #ladakh-page h1, 
+    #ladakh-page h2, 
+    #ladakh-page h3,
+    #ladakh-page h4 {
+      font-family: 'Cormorant Garamond', serif !important;
+    }
+</style>
+<div class="bg-[#0a0a0a] min-h-screen text-gray-200 font-sans selection:bg-[#c5a365] selection:text-white" id="ladakh-page"> <section class="relative h-screen w-full flex items-center justify-center overflow-hidden"> <!-- Background --> <div class="absolute inset-0 w-full h-full"> <img fetchpriority="high" alt="Ladakh" class="w-full h-full object-cover object-center opacity-60 scale-105 animate-[slow-zoom_20s_ease-in-out_infinite_alternate]" src="https://media.fittour.vn/uploads/2023/06/nui-tuyen-vung-zanskar-ladakh.webp"/> <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-[#0a0a0a]/20 to-[#0a0a0a]"></div> </div> <!-- Content --> <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row md:items-center justify-between pt-20"> <div class="max-w-2xl"> <h1 class="text-5xl md:text-6xl lg:text-[5rem] font-serif text-white mb-2 leading-none tracking-wide">LADAKH SERIES</h1> <p class="text-[#c5a365] font-serif italic text-2xl md:text-4xl mb-8 tracking-wide uppercase">VÙNG ĐẤT CỦA NHỮNG NGỌN ĐÈO</p> <p class="text-gray-300 font-sans font-light text-base md:text-lg leading-relaxed max-w-lg mb-12">
+Một vùng đất hoang sơ với những ngọn đèo kỳ vĩ, tu viện vượt thời gian và truyền thống ngàn năm. Ladakh là nơi vẻ đẹp nguyên bản hòa quyện cùng sự bình yên sâu thẳm.
+</p> </div> <!-- Desktop Menu Card --> <div class="hidden lg:flex w-[380px] bg-[#050505]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex-col mt-0 relative group shadow-2xl"> <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-2">EXPLORE</p> <h2 class="text-white font-serif text-4xl mb-8 tracking-wide">LADAKH</h2> <div class="flex flex-col gap-2"> <!-- Item 1 --> <a class="group/item flex items-center justify-between p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300" href="#journeys"> <div class="flex items-center gap-4"> <span class="text-[#c5a365] text-xs font-serif italic">01</span> <svg class="w-6 h-6 text-[#c5a365]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg> <div class="flex flex-col"> <span class="text-white text-[11px] font-bold tracking-[0.15em] uppercase mb-1">HÀNH TRÌNH</span> <span class="text-gray-400 text-[10px] font-light">Các chuyến đi độc bản</span> </div> </div> <span class="text-gray-500 group-hover/item:text-white transition-colors">→</span> </a> <!-- Item 2 --> <a class="group/item flex items-center justify-between p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300" href="/gallery-ladakh" target="_blank"> <div class="flex items-center gap-4"> <span class="text-[#c5a365] text-xs font-serif italic">02</span> <svg class="w-6 h-6 text-[#c5a365]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg> <div class="flex flex-col"> <span class="text-white text-[11px] font-bold tracking-[0.15em] uppercase mb-1">THƯ VIỆN</span> <span class="text-gray-400 text-[10px] font-light">Khung hình ấn tượng</span> </div> </div> <span class="text-gray-500 group-hover/item:text-white transition-colors">→</span> </a> <!-- Item 3 --> <a class="group/item flex items-center justify-between p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300" href="https://thericetour.com/du-lich-ladakh" target="_blank"> <div class="flex items-center gap-4"> <span class="text-[#c5a365] text-xs font-serif italic">03</span> <svg class="w-6 h-6 text-[#c5a365]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg> <div class="flex flex-col"> <span class="text-white text-[11px] font-bold tracking-[0.15em] uppercase mb-1">NHẬT KÝ</span> <span class="text-gray-400 text-[10px] font-light">Bài viết &amp; Kinh nghiệm</span> </div> </div> <span class="text-gray-500 group-hover/item:text-white transition-colors">→</span> </a> <!-- Item 4 --> <a class="group/item flex items-center justify-between p-4 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300" href="https://thericetour.com/why-fittour-ladakh" target="_blank"> <div class="flex items-center gap-4"> <span class="text-[#c5a365] text-xs font-serif italic">04</span> <svg class="w-6 h-6 text-[#c5a365]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg> <div class="flex flex-col"> <span class="text-white text-[11px] font-bold tracking-[0.15em] uppercase mb-1">Why FIT TOUR</span> <span class="text-gray-400 text-[10px] font-light">Lời cam kết từ chúng tôi</span> </div> </div> <span class="text-gray-500 group-hover/item:text-white transition-colors">→</span> </a> </div> </div> </div> <!-- Scroll Line --> <div class="absolute bottom-8 left-12 flex flex-col items-center gap-3 opacity-60"> <div class="w-[1px] h-12 bg-white/40 mb-3"></div> <span class="text-[9px] tracking-[0.3em] uppercase [writing-mode:vertical-rl]">CUỘN XUỐNG</span> </div> </section> <section class="py-24 lg:py-32 bg-[#0a0a0a]" id="journeys">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">NHỮNG HÀNH TRÌNH ĐỘC BẢN</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white uppercase tracking-wide">LỰA CHỌN HÀNH TRÌNH</h2>
+      </div>
+    </div>
+    <div class="relative w-full">
+      
+<button data-action="carousel-prev" type="button"  class="hidden md:flex items-center justify-center bg-[#111] text-white rounded-full cursor-pointer hover:bg-[#c5a365] hover:text-black transition-colors" style="position: absolute; left: -24px; top: 40%; transform: translateY(-50%); z-index: 50; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+        <svg style="width: 24px; height: 24px; pointer-events: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+      <button data-action="carousel-next" type="button"  class="hidden md:flex items-center justify-center bg-[#111] text-white rounded-full cursor-pointer hover:bg-[#c5a365] hover:text-black transition-colors" style="position: absolute; right: -24px; top: 40%; transform: translateY(-50%); z-index: 50; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+        <svg style="width: 24px; height: 24px; pointer-events: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+      <div data-component="tour-carousel" class="flex overflow-x-auto -mx-6 px-6 lg:-mx-12 lg:px-12 snap-x snap-mandatory " style="gap: 1.25rem; padding-bottom: 2rem; scrollbar-width: none; scroll-behavior: smooth;">
+        <a href="/tour/tour-ladakh-roadtrip" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden  shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+          <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+            <img src="https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-du-ky-o-Zanskar.webp" alt="01. LADAKH – Vùng Đất Của Các Lạt Ma" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+            <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Văn hóa – Cảnh quan – Trải nghiệm lần đầu</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col grow relative z-10">
+            <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">8N7Đ | Signature Journey</p>
+            <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">01. LADAKH – Vùng Đất Của Các Lạt Ma</h3>
+            <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Land of the Lamas</p>
+            <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình đầu tiên dành cho những ai muốn khám phá vẻ đẹp kinh điển của Ladakh.</p>
+            <div class="pt-4 mt-auto" style="border-top: 1px solid rgba(255,255,255,0.05);">
+              <p class="text-gray-400 leading-relaxed" style="font-size: 11px;"><span class="text-white font-medium">Hành trình:</span> Leh • Nubra • Pangong • Khardung La • Tu viện cổ</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tour/tour-ladakh-khoi-hanh-ha-noi" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden  shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+          <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+            <img src="https://media.fittour.vn/uploads/bien-may-duoi-day-nui-himalaya-ladakh.webp" alt="02. LADAKH – Kingdom Above the Clouds" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+            <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Thám hiểm – Roadtrip – Ít người đặt chân tới</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col grow relative z-10">
+            <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">10N9Đ | Expedition Journey</p>
+            <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">02. LADAKH – Kingdom Above the Clouds</h3>
+            <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Kashmir • Zanskar • Ladakh</p>
+            <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình xuyên qua những vùng đất hùng vĩ và biệt lập nhất của Himalaya.</p>
+            <div class="pt-4 mt-auto" style="border-top: 1px solid rgba(255,255,255,0.05);">
+              <p class="text-gray-400 leading-relaxed" style="font-size: 11px;"><span class="text-white font-medium">Hành trình:</span> Srinagar • Drass • Kargil • Zanskar • Leh</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tour/tour-kashmir-zanskar" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden  shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+          <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+            <img src="https://media.fittour.vn/uploads/nguoi-dan-gat-lua-ben-ho-ldakh.webp" alt="03. LIVING LADAKH" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+            <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Bản địa – Nhiếp ảnh – Trải nghiệm sâu</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col grow relative z-10">
+            <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">Immersive Journey</p>
+            <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">03. LIVING LADAKH</h3>
+            <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Beyond the Tourist Trail</p>
+            <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Dành cho những người muốn sống cùng Ladakh thay vì chỉ ghé thăm.</p>
+            <div class="pt-4 mt-auto" style="border-top: 1px solid rgba(255,255,255,0.05);">
+              <p class="text-gray-400 leading-relaxed" style="font-size: 11px;"><span class="text-white font-medium">Hành trình:</span> Hanle • Changthang • Hồ Tso Moriri • Làng xa xôi</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tour/tour-ladakh-mua-le-hoi-hemis" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden  shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+          <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+            <img src="https://media.fittour.vn/uploads/co-gai-ben-tuong-trang-tu-vien-hemis.webp" alt="04. LADAKH – Path of the Pilgrims" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+            <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Phật giáo Himalaya – Văn hóa – Tâm linh</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col grow relative z-10">
+            <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">Spiritual Journey</p>
+            <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">04. LADAKH – Path of the Pilgrims</h3>
+            <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Journey to the Heart of Himalayan Buddhism</p>
+            <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình theo dấu chân những người hành hương trên Con Đường Phật Giáo Himalaya.</p>
+            <div class="pt-4 mt-auto" style="border-top: 1px solid rgba(255,255,255,0.05);">
+              <p class="text-gray-400 leading-relaxed" style="font-size: 11px;"><span class="text-white font-medium">Hành trình:</span> Thiksey • Hemis • Alchi • Lamayuru • Diskit • Rizong</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tour/tour-motor-ladakh-10n9d-chinh-phuc-deo-cao-nhat" class="group block bg-[#050505] hover:bg-[#111] transition-colors flex flex-col h-full rounded-2xl overflow-hidden  shadow-xl border border-white/5 hover:border-white/20 snap-center" style="flex: 0 0 auto; width: 380px; max-width: 75vw;">
+          <div class="relative w-full overflow-hidden bg-[#111]" style="aspect-ratio: 16/9; flex-shrink: 0;">
+            <img src="https://media.fittour.vn/uploads/2023/10/motor-trip-ladakh-4.webp" alt="05. LADAKH MOTOR ADVENTURE" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+            <div class="absolute bg-black/80 backdrop-blur-sm rounded-full flex items-center justify-center max-w-[calc(100%-2rem)]" style="top: 1rem; left: 1rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-white font-bold uppercase whitespace-nowrap text-ellipsis overflow-hidden block" style="font-size: 9px; letter-spacing: 0.05em; line-height: 1; padding-top: 2px;">Motor – Chinh phục – Phiêu lưu</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col grow relative z-10">
+            <p class="font-bold uppercase mb-2" style="color: #c5a365; font-size: 10px; letter-spacing: 0.2em;">Adventure Journey</p>
+            <h3 class="text-white font-serif mb-2 leading-tight transition-colors" style="font-size: 18px;">05. LADAKH MOTOR ADVENTURE</h3>
+            <p class="text-gray-400 font-serif italic mb-4" style="font-size: 13px;">Beyond Himalaya</p>
+            <p class="text-gray-300 font-light leading-relaxed mb-6 grow" style="font-size: 13px;">Hành trình dành cho những người đam mê mô tô và các cung đường huyền thoại của Himalaya.</p>
+            <div class="pt-4 mt-auto" style="border-top: 1px solid rgba(255,255,255,0.05);">
+              <p class="text-gray-400 leading-relaxed" style="font-size: 11px;"><span class="text-white font-medium">Hành trình:</span> Khardung La • Chang La • Pangong • Hanle • Umling La</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- Phương Thanh E-magazine CTA -->
+<section class="py-16 md:py-24 bg-[#0a0a0a] relative overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center">
+    
+    <!-- Title Section -->
+    <div class="flex flex-col items-center mb-10 md:mb-12 text-center">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-[1px] bg-[#c5a365]/50"></div>
+        <p class="text-[#c5a365] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">E M A G A Z I N E</p>
+        <div class="w-12 h-[1px] bg-[#c5a365]/50"></div>
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.2] tracking-wide mb-4">
+        Ca sĩ Phương Thanh <br class="hidden md:block" /> <span class="text-[#c5a365] italic">và lần 3 đến Ladakh</span>
+      </h2>
+      <p class="text-gray-300 font-sans font-light text-sm md:text-base lg:text-lg italic max-w-lg">
+        Vẫn đồng hành cùng FIT Tour cho chuyến đi đặc biệt.
+      </p>
+    </div>
+
+    <!-- The Image Container -->
+    <a href="https://thericetour.com/phuong-thanh-lan-3-den-ladakh" target="_blank" class="block relative w-full rounded-xl md:rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 mb-10 bg-[#111] group">
+      <img src="https://media.fittour.vn/uploads/quote-hanh-trinh-hanh-xac-do-cao-5000m-ladakh-phuong-thanh.webp" alt="Phương Thanh E-magazine" class="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-1000 ease-out" loading="lazy" />
+      <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-500"></div>
+    </a>
+
+    <!-- The CTA Button -->
+    <a href="https://thericetour.com/phuong-thanh-lan-3-den-ladakh" target="_blank" class="inline-flex items-center justify-center px-10 md:px-14 py-4 md:py-5 bg-[#c5a365] text-black font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase rounded-full shadow-[0_0_30px_rgba(197,163,101,0.2)] hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-300 group">
+      ĐỌC BÀI VIẾT 
+      <span class="ml-3 text-lg leading-none transition-transform group-hover:translate-x-2">→</span>
+    </a>
+
+  </div>
+</section>
+
+
+<PortraitCenterpiece />
+
+ <section class="relative py-32 lg:py-48 flex items-center overflow-hidden border-t border-b border-white/5"> <!-- Background Image --> <div class="absolute inset-0 w-full h-full"> <img alt="Untouched time" class="w-full h-full object-cover" loading="lazy" src="https://media.fittour.vn/uploads/2023/06/nui-tuyen-vung-zanskar-ladakh.webp"/> <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent"></div> <div class="absolute inset-0 bg-black/20"></div> </div> <!-- Content --> <div class="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12"> <div class="max-w-xl"> <h2 class="text-4xl md:text-5xl lg:text-[4.5rem] font-serif text-white leading-[1.15] mb-8 uppercase tracking-wide">
+CÓ NHỮNG NƠI<br/>
+THỜI GIAN NHƯ <span class="text-[#c5a365]">NGƯNG ĐỌNG</span><br/>
+LẠI.
+</h2> <p class="text-gray-300 font-sans font-light text-base md:text-lg leading-relaxed mb-12 max-w-md">
+Giữa sa mạc cằn cỗi trên dãy Himalaya, vạn vật chuyển động theo nhịp điệu của mặt trời, của bốn mùa và của những triết lý ngàn năm.
+</p> <a class="inline-flex items-center gap-4 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-[#c5a365] hover:text-white transition-colors group" href="#destinations">
+DISCOVER LADAKH
+<span class="w-12 h-[1px] bg-[#c5a365] group-hover:bg-white transition-colors relative"> <span class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-current rotate-45"></span> </span> </a> </div> </div> </section> <section class="py-24 lg:py-32 bg-[#0a0a0a]"> <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> <div class="group/hl flex flex-col border border-white/10 bg-[#050505] hover:border-white/30 transition-colors"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="TU VIỆN CỔ KÍNH" class="w-full h-full object-cover opacity-80 group-hover/hl:opacity-100 group-hover/hl:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/2023/06/tu-vien-hemis-ladakh-fittour.webp"/> </div> <div class="p-6 flex flex-col flex-grow"> <h3 class="text-[#c5a365] text-[15px] font-serif font-normal uppercase tracking-[0.15em] mb-4">TU VIỆN CỔ KÍNH</h3> <p class="text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">Những trung tâm tâm linh tĩnh lặng nằm chênh vênh trên vách đá, gìn giữ triết lý ngàn năm.</p> <div class="w-12 h-[1px] bg-[#c5a365]/30 mt-auto"></div> </div> </div><div class="group/hl flex flex-col border border-white/10 bg-[#050505] hover:border-white/30 transition-colors"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="NHỮNG NGỌN ĐÈO KỲ VĨ" class="w-full h-full object-cover opacity-80 group-hover/hl:opacity-100 group-hover/hl:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/du-khach-fit-tour-check-in-khardungla-pass.webp"/> </div> <div class="p-6 flex flex-col flex-grow"> <h3 class="text-[#c5a365] text-[15px] font-serif font-normal uppercase tracking-[0.15em] mb-4">NHỮNG NGỌN ĐÈO KỲ VĨ</h3> <p class="text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">Chinh phục những ngọn đèo hiểm trở và ngoạn mục bậc nhất thế giới.</p> <div class="w-12 h-[1px] bg-[#c5a365]/30 mt-auto"></div> </div> </div><div class="group/hl flex flex-col border border-white/10 bg-[#050505] hover:border-white/30 transition-colors"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="HỒ NƯỚC XANH NGỌC" class="w-full h-full object-cover opacity-80 group-hover/hl:opacity-100 group-hover/hl:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/2024/06/toan-canh-lang-canh-ho-pangong.webp"/> </div> <div class="p-6 flex flex-col flex-grow"> <h3 class="text-[#c5a365] text-[15px] font-serif font-normal uppercase tracking-[0.15em] mb-4">HỒ NƯỚC XANH NGỌC</h3> <p class="text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">Mặt hồ trong vắt tĩnh lặng, phản chiếu bầu trời bao la và vẻ đẹp nguyên sơ.</p> <div class="w-12 h-[1px] bg-[#c5a365]/30 mt-auto"></div> </div> </div><div class="group/hl flex flex-col border border-white/10 bg-[#050505] hover:border-white/30 transition-colors"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="VĂN HÓA DU MỤC" class="w-full h-full object-cover opacity-80 group-hover/hl:opacity-100 group-hover/hl:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/cuoc-song-nguoi-dan-ladakh.webp"/> </div> <div class="p-6 flex flex-col flex-grow"> <h3 class="text-[#c5a365] text-[15px] font-serif font-normal uppercase tracking-[0.15em] mb-4">VĂN HÓA DU MỤC</h3> <p class="text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">Gặp gỡ những người dân bản địa Changpa và trải nghiệm lối sống truyền thống độc đáo.</p> <div class="w-12 h-[1px] bg-[#c5a365]/30 mt-auto"></div> </div> </div> </div> </section> <section class="py-24 lg:py-32 bg-[#050505] border-t border-white/5" id="stories"> <div class="max-w-[1400px] mx-auto px-6 lg:px-12"> <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"> <h2 class="text-3xl md:text-4xl font-serif text-white uppercase tracking-wide">Kinh nghiệm du lịch Ladakh</h2> <a class="inline-flex items-center gap-4 text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 hover:text-white transition-colors group" href="/blog/cam-nang-du-lich-ladakh">
+XEM TẤT CẢ
+<span class="text-lg leading-none transition-transform group-hover:translate-x-1">→</span> </a> </div> <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <a class="group/story flex flex-col border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-colors" href="/cam-nang-du-lich-ladakh"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="Cẩm Nang Du Lịch Ladakh - Hướng Dẫn Cho Người Mới" class="w-full h-full object-cover opacity-80 group-hover/story:opacity-100 group-hover/story:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/cam-nang-du-lich-ladakh-az-tu-fittour.webp"/> </div> <div class="p-6 md:p-8 flex flex-col flex-grow"> <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">CẨM NANG</p> <h3 class="text-white font-serif text-xl lg:text-[22px] leading-snug mb-8">Cẩm Nang Du Lịch Ladakh - Hướng Dẫn Cho Người Mới</h3> <span class="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] uppercase text-[#c5a365] hover:text-white transition-colors mt-auto">
+ĐỌC BÀI VIẾT <span class="text-base leading-none transition-transform group-hover/story:translate-x-1">→</span> </span> </div> </a><a class="group/story flex flex-col border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-colors" href="/doi-tien-ladakh"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="Đi Ladakh Có Cần Đổi Tiền Trước Không? Kinh Nghiệm Thực Tế" class="w-full h-full object-cover opacity-80 group-hover/story:opacity-100 group-hover/story:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/doi-tien-khi-di-ladakh.webp"/> </div> <div class="p-6 md:p-8 flex flex-col flex-grow"> <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">KINH NGHIỆM</p> <h3 class="text-white font-serif text-xl lg:text-[22px] leading-snug mb-8">Đi Ladakh Có Cần Đổi Tiền Trước Không? Kinh Nghiệm Thực Tế</h3> <span class="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] uppercase text-[#c5a365] hover:text-white transition-colors mt-auto">
+ĐỌC BÀI VIẾT <span class="text-base leading-none transition-transform group-hover/story:translate-x-1">→</span> </span> </div> </a><a class="group/story flex flex-col border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-colors" href="/mac-gi-de-chup-hinh-dep-o-ladakh"> <div class="relative w-full aspect-video overflow-hidden bg-[#111]"> <img alt="Mặc Gì Để Chụp Hình Đẹp Ở Ladakh? Chia Sẻ Từ Chuyên Gia" class="w-full h-full object-cover opacity-80 group-hover/story:opacity-100 group-hover/story:scale-105 transition-all duration-700 ease-out" loading="lazy" src="https://media.fittour.vn/uploads/mac-gi-de-chup-hinh-dep-o-ladakh.webp"/> </div> <div class="p-6 md:p-8 flex flex-col flex-grow"> <p class="text-[#c5a365] text-[10px] font-bold tracking-[0.2em] uppercase mb-4">MẸO DU LỊCH</p> <h3 class="text-white font-serif text-xl lg:text-[22px] leading-snug mb-8">Mặc Gì Để Chụp Hình Đẹp Ở Ladakh? Chia Sẻ Từ Chuyên Gia</h3> <span class="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] uppercase text-[#c5a365] hover:text-white transition-colors mt-auto">
+ĐỌC BÀI VIẾT <span class="text-base leading-none transition-transform group-hover/story:translate-x-1">→</span> </span> </div> </a> </div> </div> </section> <section class="relative py-32 lg:py-48 flex items-center justify-center overflow-hidden"> <!-- Background --> <div class="absolute inset-0 w-full h-full"> <img alt="Ladakh Sunset" class="w-full h-full object-cover opacity-50" src="https://media.fittour.vn/uploads/2023/06/nui-tuyen-vung-zanskar-ladakh.webp"/> <div class="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/40 to-[#050505]"></div> </div> <div class="relative z-10 w-full max-w-3xl mx-auto px-6 text-center"> <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-serif text-white uppercase tracking-wide mb-6">SẴN SÀNG KHÁM PHÁ LADAKH?</h2> <p class="text-gray-300 font-light text-base md:text-lg mb-12">Hãy để FIT Tour kiến tạo nên một hành trình hoàn mỹ đến vùng đất của những ngọn đèo.</p> <a class="inline-flex items-center justify-center px-10 py-5 bg-[#c5a365] hover:bg-[#a08453] text-black font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase transition-all duration-300 group mx-auto gap-4" href="https://thericetour.com/msg" target="_blank">
+LIÊN HỆ TƯ VẤN
+<span class="transition-transform duration-300 group-hover:translate-x-1">→</span> </a> </div> </section> <div class="fixed bottom-0 left-0 w-full z-50 lg:hidden bg-[#050505]/80 backdrop-blur-2xl border-t border-[#c5a365]/20 pb-safe pt-2 px-4 shadow-[0_-20px_40px_rgba(0,0,0,0.8)] before:absolute before:inset-x-0 before:top-0 before:h-[1px] before:bg-gradient-to-r before:from-transparent before:via-[#c5a365]/40 before:to-transparent"> <div class="flex justify-between items-center max-w-md mx-auto pb-4"> <!-- Journeys (Active) --> <a class="group flex flex-col items-center gap-1.5 p-2 flex-1 relative" href="#journeys"> <svg class="w-5 h-5 text-[#c5a365] group-hover:drop-shadow-[0_0_8px_rgba(197,163,101,0.8)] transition-all duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg> <span class="text-[9px] font-bold tracking-[0.1em] uppercase text-[#c5a365] transition-colors whitespace-nowrap">Hành Trình</span> <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#c5a365] shadow-[0_0_8px_#c5a365]"></span> </a> <!-- Gallery --> <a class="group flex flex-col items-center gap-1.5 p-2 flex-1 relative" href="/gallery-ladakh" target="_blank"> <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg> <span class="text-[9px] font-bold tracking-[0.1em] uppercase text-gray-500 group-hover:text-white transition-colors whitespace-nowrap">Thư Viện</span> </a> <!-- Stories --> <a class="group flex flex-col items-center gap-1.5 p-2 flex-1 relative" href="https://thericetour.com/du-lich-ladakh" target="_blank"> <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg> <span class="text-[9px] font-bold tracking-[0.1em] uppercase text-gray-500 group-hover:text-white transition-colors whitespace-nowrap">Nhật Ký</span> </a> <!-- Why FIT --> <a class="group flex flex-col items-center gap-1.5 p-2 flex-1 relative" href="https://thericetour.com/why-fittour-ladakh" target="_blank"> <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg> <span class="text-[9px] font-bold tracking-[0.1em] uppercase text-gray-500 group-hover:text-white transition-colors whitespace-nowrap">Why FIT TOUR</span> </a> </div> </div> </div>
+</BaseLayout>

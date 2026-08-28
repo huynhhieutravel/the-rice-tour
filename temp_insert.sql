@@ -1,0 +1,47 @@
+UPDATE Snippet SET html_content = '<div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[94%] max-w-[400px] z-[100] md:hidden">
+  <div class="bg-[#1c1c1e]/90 backdrop-blur-xl border border-white/10 shadow-2xl rounded-[1.25rem] p-1.5 flex items-center justify-between">
+    
+    <a href="https://fittour.vn/hanh-trinh-doanh-nghiep" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        <rect width="20" height="14" x="2" y="6" rx="2"/>
+      </svg>
+      <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Case Study</span>
+    </a>
+
+    <a href="https://fittour.vn/portfolio" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+      </svg>
+      <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Portfolio</span>
+    </a>
+
+    <!-- Zalo prominently in middle -->
+    <a href="https://fittour.vn/bu3" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-[52px] rounded-xl transition-all active:scale-95 group relative -mt-3">
+      <div class="bg-blue-500 rounded-full p-2.5 shadow-lg shadow-blue-500/30 border-2 border-[#1c1c1e] group-hover:bg-blue-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21.4 12.3c0-4.9-4.3-8.8-9.5-8.8-5.3 0-9.5 3.9-9.5 8.8 0 2.8 1.4 5.3 3.6 6.9l-1.3 4.2 4.4-2.5c.9.3 1.9.4 2.9.4 5.2 0 9.4-3.9 9.4-8.9z"/>
+        </svg>
+      </div>
+      <span class="text-[9px] font-medium text-blue-400">Zalo</span>
+    </a>
+
+    <a href="mailto:info@fittour.com.vn" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="20" height="16" x="2" y="4" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+      <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Email</span>
+    </a>
+
+    <!-- Tư vấn -->
+    <button onclick="document.getElementById(''corporate-contact-modal'') ? document.getElementById(''corporate-contact-modal'').classList.remove(''hidden'') : (window.location.href=''/lien-he'')" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-[52px] rounded-xl transition-all hover:bg-white/10 active:scale-95 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-[20px] h-[20px] text-white/70 group-hover:text-amber-500 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/>
+        <path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+      </svg>
+      <span class="text-[9px] font-medium text-white/70 group-hover:text-amber-500 transition-colors">Tư Vấn</span>
+    </button>
+
+  </div>
+</div>' WHERE slug = 'doanh-nghiep-bottom-menu';

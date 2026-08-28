@@ -1,0 +1,16 @@
+---
+export interface Props {
+  day: string;
+  open?: boolean;
+}
+const { day, open = false } = Astro.props;
+---
+<details class="premium-itinerary-item" open={open ? true : undefined}>
+  <summary class="premium-itinerary-summary">
+    <div class="itinerary-toggle-icon">+</div>
+    <span>{day}</span>
+  </summary>
+  <div class="premium-itinerary-content custom-blog-prose max-w-none">
+    <slot />
+  </div>
+</details>

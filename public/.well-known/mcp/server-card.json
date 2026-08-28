@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "FIT Tour CMS",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "sse",
+    "endpoint": "https://fittour.vn/api/mcp/sse"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}

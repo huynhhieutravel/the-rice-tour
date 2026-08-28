@@ -1,0 +1,502 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+// SEO Metadata
+const title = "Tài Khoản Thanh Toán & Hướng Dẫn Chuyển Khoản | FIT TOUR";
+const description = "Thông tin tài khoản ngân hàng chính thức của CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR (Ngân hàng ACB 8888 6789 68) và hướng dẫn thanh toán tour an toàn, nhanh chóng.";
+const canonicalUrl = "https://thericetour.com/tai-khoan-thanh-toan";
+
+// Bank Account Info (Official ACB)
+const bankInfo = {
+  bankName: "Ngân hàng TMCP Á Châu (ACB)",
+  bankShortName: "ACB",
+  accountNumber: "8888 6789 68",
+  accountNumberRaw: "8888678968",
+  accountHolder: "CONG TY TNHH DU LICH QUOC TE FIT TOUR",
+  accountHolderDisplay: "CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR",
+  branch: "Chi nhánh Tân Bình – TP. Hồ Chí Minh",
+  swiftCode: "ASCBVNVX",
+  currency: "VND (Việt Nam Đồng)"
+};
+
+// VietQR Quick Link
+const vietQrUrl = `https://img.vietqr.io/image/ACB-${bankInfo.accountNumberRaw}-compact2.png?accountName=${encodeURIComponent(bankInfo.accountHolder)}&addInfo=${encodeURIComponent('Thanh toan Tour FIT TOUR')}`;
+
+// Company Legal Info
+const companyInfo = {
+  name: "CÔNG TY TNHH DU LỊCH QUỐC TẾ THE RICE TOUR / FIT TOUR",
+  taxId: "0316127669",
+  license: "79-1588/2023/TCDL-GP LHQT (Giấy phép Lữ hành Quốc tế)",
+  address: "180 Bùi Viện, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
+  hotline1: "028.8888.7888",
+  hotline2: "0962.333.621",
+  email: "hello@thericetour.com",
+  website: "thericetour.com"
+};
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Trang chủ", url: "https://thericetour.com/" },
+    { name: "Tài khoản thanh toán", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Breadcrumb Bar -->
+  <nav class="bg-white border-b border-slate-100 py-3" aria-label="Breadcrumb">
+    <div class="max-w-6xl mx-auto px-4 flex items-center gap-2 text-sm text-slate-500">
+      <a href="/" class="hover:text-amber-600 transition-colors">Trang chủ</a>
+      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-slate-900 font-medium">Tài khoản thanh toán</span>
+    </div>
+  </nav>
+
+  <main class="bg-[#F8FAFC] py-10 md:py-16 text-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      
+      <!-- Top Title Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+          <svg class="w-4 h-4 text-[#F7931E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Kênh Thanh Toán Doanh Nghiệp Chính Thức
+        </div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+          Tài Khoản Thanh Toán FIT TOUR
+        </h1>
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+          Quý khách vui lòng chuyển khoản đặt cọc hoặc thanh toán tour vào tài khoản ngân hàng doanh nghiệp chính thức của <strong class="text-slate-900">CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR</strong> để đảm bảo quyền lợi và bảo mật giao dịch tuyệt đối.
+        </p>
+      </div>
+
+      <!-- Main Payment Card & VietQR Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        
+        <!-- Left: Luxury Bank Account Card (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col justify-between bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-lg transition-all duration-300">
+          <div>
+            <!-- Bank Card Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center p-2 font-black text-blue-800 text-xl tracking-tighter shadow-inner">
+                  ACB
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-lg leading-snug">{bankInfo.bankName}</div>
+                  <div class="text-xs text-slate-500">{bankInfo.branch}</div>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                Tài khoản chính thức
+              </span>
+            </div>
+
+            <!-- Virtual Bank Card Visual Mockup -->
+            <div class="my-6 relative overflow-hidden rounded-2xl bg-gradient-to-tr from-[#1A1A1A] via-[#2A2A2A] to-[#3A3A3A] p-6 text-white shadow-xl border border-neutral-700">
+              <!-- Background Ambient Accent -->
+              <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-[#F7931E]/20 blur-3xl pointer-events-none"></div>
+              <div class="absolute -left-10 -top-10 w-36 h-36 rounded-full bg-blue-500/10 blur-2xl pointer-events-none"></div>
+
+              <div class="relative z-10 flex flex-col justify-between h-full space-y-6">
+                <!-- Card Top Row -->
+                <div class="flex justify-between items-center">
+                  <span class="text-xs tracking-widest text-neutral-400 font-mono uppercase">CORPORATE ACCOUNT</span>
+                  <div class="text-base font-black tracking-wider text-[#F7931E] flex items-center gap-1">
+                    FIT TOUR
+                  </div>
+                </div>
+
+                <!-- EMV Chip & Account Number -->
+                <div>
+                  <div class="w-11 h-8 rounded-md bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-300 shadow-sm mb-3 flex items-center justify-center opacity-90">
+                    <div class="w-7 h-5 border border-amber-900/30 rounded-sm"></div>
+                  </div>
+                  <div class="text-xs text-neutral-400 font-mono mb-1">SỐ TÀI KHOẢN</div>
+                  <div class="text-2xl sm:text-3xl font-mono font-bold tracking-wider text-white select-all">
+                    {bankInfo.accountNumber}
+                  </div>
+                </div>
+
+                <!-- Card Bottom Row -->
+                <div class="flex justify-between items-end pt-2 border-t border-neutral-700/60">
+                  <div>
+                    <div class="text-[10px] text-neutral-400 uppercase tracking-wider">CHỦ TÀI KHOẢN</div>
+                    <div class="text-sm sm:text-base font-bold text-amber-300 font-mono tracking-wide">
+                      {bankInfo.accountHolder}
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-[10px] text-neutral-400 uppercase tracking-wider">TIỀN TỆ</div>
+                    <div class="text-xs font-bold text-neutral-200 font-mono">VND</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detail List with 1-Click Copy -->
+            <div class="space-y-3.5 text-sm bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-100">
+              
+              <!-- STK Row -->
+              <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-200/60">
+                <span class="text-slate-500 font-medium">Số tài khoản:</span>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono font-bold text-slate-900 text-base select-all">{bankInfo.accountNumberRaw}</span>
+                  <button 
+                    type="button" 
+                    class="copy-btn inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-slate-700 hover:text-amber-600 hover:border-amber-400 border border-slate-300 rounded-lg shadow-sm active:scale-95 transition-all"
+                    data-copy={bankInfo.accountNumberRaw}
+                    aria-label="Sao chép số tài khoản"
+                  >
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    <span>Sao chép</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Chu Tai Khoan Row -->
+              <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-200/60">
+                <span class="text-slate-500 font-medium">Chủ tài khoản:</span>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-slate-900 text-right select-all">{bankInfo.accountHolderDisplay}</span>
+                  <button 
+                    type="button" 
+                    class="copy-btn inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-slate-700 hover:text-amber-600 hover:border-amber-400 border border-slate-300 rounded-lg shadow-sm active:scale-95 transition-all"
+                    data-copy={bankInfo.accountHolder}
+                    aria-label="Sao chép tên chủ tài khoản"
+                  >
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    <span>Sao chép</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Chi Nhanh Row -->
+              <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-200/60">
+                <span class="text-slate-500 font-medium">Chi nhánh:</span>
+                <span class="font-semibold text-slate-800 text-right">{bankInfo.branch}</span>
+              </div>
+
+              <!-- Swift Code Row -->
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-slate-500 font-medium">SWIFT Code (Quốc tế):</span>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono font-bold text-slate-800 select-all">{bankInfo.swiftCode}</span>
+                  <button 
+                    type="button" 
+                    class="copy-btn inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-slate-700 hover:text-amber-600 hover:border-amber-400 border border-slate-300 rounded-lg shadow-sm active:scale-95 transition-all"
+                    data-copy={bankInfo.swiftCode}
+                    aria-label="Sao chép Swift Code"
+                  >
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    <span>Sao chép</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Notice -->
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2.5 text-xs text-slate-500">
+            <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span>Hỗ trợ chuyển khoản nhanh 24/7 từ tất cả các ngân hàng tại Việt Nam và quốc tế.</span>
+          </div>
+        </div>
+
+        <!-- Right: VietQR Code Generator Box (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md text-center">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 mb-4">
+              <svg class="w-3.5 h-3.5 text-[#F7931E]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z" clip-rule="evenodd"/></svg>
+              Quét Mã QR Thanh Toán Nhanh
+            </div>
+            
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Mã VietQR Chuẩn Quốc Gia</h2>
+            <p class="text-xs text-slate-500 mb-6">Mở ứng dụng Mobile Banking của bất kỳ ngân hàng nào và quét mã để thanh toán tự động, chính xác 100%.</p>
+
+            <!-- QR Display Box -->
+            <div class="relative inline-block p-4 rounded-2xl bg-[#FAFAFA] border-2 border-dashed border-amber-200/80 shadow-inner group mb-6">
+              <img 
+                src={vietQrUrl} 
+                alt="Mã VietQR Thanh Toán FIT TOUR" 
+                class="w-56 h-56 sm:w-64 sm:h-64 object-contain mx-auto rounded-xl block transition-transform group-hover:scale-[1.02] duration-300"
+                width="256"
+                height="256"
+              />
+              <div class="mt-2 text-[11px] font-semibold text-slate-500 tracking-wider uppercase">
+                Ngân Hàng ACB • {bankInfo.accountNumberRaw}
+              </div>
+            </div>
+          </div>
+
+          <!-- QR Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a 
+              href={vietQrUrl} 
+              download="FITTOUR-VietQR-Payment.png" 
+              target="_blank" 
+              rel="noopener"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Tải ảnh mã QR
+            </a>
+            <a 
+              href="https://zalo.me/0934888854" 
+              target="_blank" 
+              rel="noopener"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#0068FF] hover:bg-[#0052cc] text-white text-xs font-bold shadow-md hover:shadow-lg transition-all"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"/></svg>
+              Gửi biên lai qua Zalo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Transfer Syntax Guideline Box -->
+      <div class="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border-l-4 border-[#F7931E] rounded-2xl p-6 sm:p-8 bg-white border border-slate-200 shadow-sm mb-12">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Cú Pháp Nội Dung Chuyển Khoản Mẫu
+            </h2>
+            <p class="text-sm text-slate-600">Để hệ thống tự động ghi nhận và xuất phiếu thu nhanh nhất, Quý khách vui lòng ghi nội dung theo cú pháp:</p>
+            <div class="font-mono text-sm sm:text-base font-bold text-slate-900 bg-amber-100/70 border border-amber-300/80 px-4 py-2.5 rounded-xl inline-block select-all">
+              [Họ tên khách] [Số điện thoại] [Tên Tour / Mã Booking]
+            </div>
+            <p class="text-xs text-slate-500 italic mt-1">Ví dụ: <code class="text-amber-900 font-bold">NGUYEN VAN A 0901234567 TOUR SIKKIM</code> hoặc <code class="text-amber-900 font-bold">TRAN THI B 0912345678 BOOKING 1234</code></p>
+          </div>
+          <button 
+            type="button" 
+            class="copy-btn self-start md:self-center flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold shadow-md hover:shadow-lg transition-all active:scale-95"
+            data-copy="NGUYEN VAN A 0901234567 TOUR SIKKIM"
+            aria-label="Sao chép cú pháp mẫu"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span>Sao chép cú pháp mẫu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4-Step Payment Workflow -->
+      <div class="mb-14">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-2">Quy Trình 4 Bước Đặt Tour & Thanh Toán</h2>
+          <p class="text-sm text-slate-500">Minh bạch, an toàn và nhanh chóng trong từng giao dịch</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center mb-4 text-base shadow-sm">
+              01
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Tư vấn & Chốt hành trình</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Trao đổi và nhận tư vấn chi tiết về lịch trình, dịch vụ bao gồm cùng Trip Planner của FIT TOUR.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center mb-4 text-base shadow-sm">
+              02
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Chuyển khoản đặt cọc</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Thực hiện chuyển khoản vào tài khoản ACB chính thức theo hướng dẫn trên website hoặc quét mã VietQR.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center mb-4 text-base shadow-sm">
+              03
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Xác nhận giao dịch</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Gửi ảnh chụp biên lai/ủy nhiệm chi cho nhân viên tư vấn qua Hotline/Zalo <strong class="text-slate-900">0934 888 854</strong>.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm relative group hover:-translate-y-1 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 font-extrabold flex items-center justify-center mb-4 text-base shadow-sm">
+              04
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Nhận Phiếu thu & Hợp đồng</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Hệ thống CRM FIT TOUR tự động xuất Hóa đơn điện tử (E-Receipt), Hợp đồng và phiếu xác nhận đặt chỗ chính thức.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Flexible Payment Methods Section -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm mb-14">
+        <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Các Hình Thức Thanh Toán Được Chấp Nhận</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Method 1 -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 border border-amber-200">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1.5">Chuyển khoản Ngân hàng (24/7)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Quét mã VietQR hoặc chuyển khoản trực tiếp qua Internet Banking / Mobile Banking nhanh chóng, miễn phí liên ngân hàng.</p>
+            </div>
+          </div>
+
+          <!-- Method 2 -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center flex-shrink-0 border border-blue-200">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1.5">Thẻ Quốc Tế & Quẹt thẻ POS</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Chấp nhận thanh toán qua máy POS tại văn phòng: Thẻ ATM nội địa (Napas), Thẻ tín dụng quốc tế Visa, MasterCard, JCB.</p>
+            </div>
+          </div>
+
+          <!-- Method 3 -->
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center flex-shrink-0 border border-emerald-200">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base mb-1.5">Tiền mặt tại Văn phòng</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Thanh toán trực tiếp bằng tiền mặt và nhận phiếu thu gốc tại trụ sở FIT TOUR: 19 Lương Hữu Khánh, P. Phạm Ngũ Lão, Q.1, TP.HCM.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Legal Info & Google Maps Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        
+        <!-- Legal & Contact Details (6 Cols) -->
+        <div class="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 mb-4">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/></svg>
+              Hồ Sơ Pháp Lý Doanh Nghiệp
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mb-4">{companyInfo.name}</h2>
+            
+            <div class="space-y-3.5 text-sm text-slate-600">
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-slate-900 w-32 flex-shrink-0">Mã số thuế:</span>
+                <span class="font-mono font-bold text-slate-800">{companyInfo.taxId}</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-slate-900 w-32 flex-shrink-0">Giấy phép LHQT:</span>
+                <span class="font-semibold text-slate-800">{companyInfo.license}</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-slate-900 w-32 flex-shrink-0">Địa chỉ trụ sở:</span>
+                <span class="font-semibold text-slate-800">{companyInfo.address}</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-slate-900 w-32 flex-shrink-0">Hotline 24/7:</span>
+                <span class="font-bold text-amber-700">{companyInfo.hotline1} • {companyInfo.hotline2}</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-slate-900 w-32 flex-shrink-0">Email liên hệ:</span>
+                <a href={`mailto:${companyInfo.email}`} class="text-brand-700 font-semibold hover:underline">{companyInfo.email}</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anti-Fraud Security Warning Box -->
+          <div class="mt-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-900 leading-relaxed flex items-start gap-3">
+            <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            <div>
+              <strong class="font-bold block mb-1">CẢNH BÁO PHÒNG CHỐNG MẠO DANH:</strong>
+              FIT TOUR chỉ nhận thanh toán qua tài khoản đứng tên <strong class="underline">CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR</strong>. Quý khách tuyệt đối không chuyển tiền vào tài khoản cá nhân nếu không có thông báo xác nhận bằng văn bản chính thức từ công ty.
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed (6 Cols) -->
+        <div class="lg:col-span-6 bg-white rounded-3xl p-4 sm:p-6 border border-slate-200 shadow-sm flex flex-col">
+          <div class="font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Bản Đồ Chỉ Đường Đến Văn Phòng FIT TOUR
+          </div>
+          <div class="w-full flex-1 min-h-[300px] rounded-2xl overflow-hidden border border-slate-200">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5591770976102!2d106.68295688151272!3d10.768417261996607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292d5a134f97%3A0x69e5ff4dd330406a!2sFIT%20TOUR%20-%20HEAD%20OFFICE!5e0!3m2!1svi!2sus!4v1787064031997!5m2!1svi!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 320px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="FIT TOUR - HEAD OFFICE"
+              aria-label="Bản đồ chỉ đường đến văn phòng FIT TOUR"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Quick Contact Bar -->
+      <div class="text-center bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <h2 class="text-xl sm:text-2xl font-bold">Cần Hỗ Trợ Thanh Toán Hoặc Xuất Hóa Đơn VAT?</h2>
+          <p class="text-sm text-neutral-300">Đội ngũ Chăm sóc khách hàng và Kế toán của FIT TOUR luôn sẵn sàng hỗ trợ Quý khách 24/7.</p>
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a 
+              href="tel:0962333621" 
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#F7931E] hover:bg-[#e07f12] text-slate-950 font-bold text-sm shadow-md transition-all active:scale-95"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Hotline: 0962.333.621
+            </a>
+            <a 
+              href="https://wa.me/84962333621" 
+              target="_blank" 
+              rel="noopener"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all active:scale-95"
+            >
+              Chat WhatsApp / Zalo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive 1-Click Copy Script -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+          const textToCopy = button.getAttribute('data-copy');
+          if (!textToCopy) return;
+
+          try {
+            await navigator.clipboard.writeText(textToCopy);
+            const originalHtml = button.innerHTML;
+            
+            // Show Success Feedback
+            button.innerHTML = `
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-emerald-700 font-bold">Đã chép!</span>
+            `;
+            button.classList.add('border-emerald-400', 'bg-emerald-50');
+
+            setTimeout(() => {
+              button.innerHTML = originalHtml;
+              button.classList.remove('border-emerald-400', 'bg-emerald-50');
+            }, 2000);
+          } catch (err) {
+            console.error('Không thể sao chép:', err);
+          }
+        });
+      });
+    });
+  </script>
+</BaseLayout>

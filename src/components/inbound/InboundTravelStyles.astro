@@ -1,0 +1,85 @@
+---
+// src/components/inbound/InboundTravelStyles.astro
+const travelStyles = [
+  {
+    title: "Living Heritage & Royal Dynasties",
+    tag: "Culture & History",
+    desc: "Explore thousand-year-old temples, Hue imperial palaces, and lantern-lit merchant streets in Hoi An with expert historians.",
+    image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80",
+    link: "/tours?style=culture"
+  },
+  {
+    title: "Boutique Cruises & Secluded Bays",
+    tag: "Luxury Cruise",
+    desc: "Sail through untouched karst labyrinths in Lan Ha and Bai Tu Long aboard intimate boutique wooden junks away from crowds.",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+    link: "/tours?style=cruise"
+  },
+  {
+    title: "Highland Terraces & Ethnic Treks",
+    tag: "Active & Nature",
+    desc: "Hike golden rice terraces in Sapa and Pu Luong, stay in eco-lodges, and share tea with Hmong and Dao artisan families.",
+    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80",
+    link: "/tours?style=trekking"
+  },
+  {
+    title: "Chef-Led Culinary & Street Safaris",
+    tag: "Gastronomy",
+    desc: "Savor Hanoi's secret alleyway recipes, take masterclasses with Michelin chefs, and discover organic herb farms.",
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+    link: "/tours?style=culinary"
+  }
+];
+---
+
+<section class="py-20 lg:py-28 bg-white" id="travel-styles">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3">
+        Tailored To Your Passions
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+        Distinct Ways to Experience Vietnam
+      </h2>
+      <p class="text-gray-600 text-base sm:text-lg mt-3 font-light">
+        Whether you are seeking deep cultural immersion, slow wellness retreats, or culinary expeditions, we handcraft every itinerary around your passions.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {travelStyles.map((style) => (
+        <a 
+          href={style.link} 
+          class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-gray-900 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-end p-6 border border-gray-100"
+        >
+          <!-- Background Image -->
+          <img 
+            src={style.image} 
+            alt={style.title} 
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+
+          <!-- Text overlay -->
+          <div class="relative z-10">
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-500 text-white text-[10px] font-extrabold uppercase tracking-wider mb-2">
+              {style.tag}
+            </span>
+            <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-400 transition-colors leading-snug mb-2">
+              {style.title}
+            </h3>
+            <p class="text-xs text-gray-300 line-clamp-2 leading-relaxed opacity-90">
+              {style.desc}
+            </p>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-400 mt-4 group-hover:translate-x-1 transition-transform">
+              Explore Journeys →
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>

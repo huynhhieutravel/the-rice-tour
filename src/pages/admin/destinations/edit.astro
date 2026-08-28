@@ -1,0 +1,322 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import MediaPickerEventBridge from '@/components/admin/MediaPickerEventBridge';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return new Response("DB Error", { status: 500 });
+
+const id = Astro.url.searchParams.get('id');
+let destination: any = null;
+let message = Astro.url.searchParams.get('success') === '1' ? 'Đã lưu thay đổi điểm đến thành công!' : '';
+let isError = false;
+
+// Handle POST Save
+if (Astro.request.method === 'POST') {
+  try {
+    const formData = await Astro.request.formData();
+    const saveId = formData.get('id') as string;
+    const name = formData.get('name') as string;
+    const slug = formData.get('slug') as string;
+    const region = (formData.get('continent') as string) || 'Vietnam';
+    const featuredImage = (formData.get('featuredImage') as string) || '';
+    const description = (formData.get('description') as string) || '';
+    const bestTimeToVisit = (formData.get('bestTimeToVisit') as string) || '';
+    const visaRequirement = (formData.get('visaRequirement') as string) || '';
+    const currency = (formData.get('currency') as string) || 'USD';
+    const metaTitle = (formData.get('metaTitle') as string) || '';
+    const metaDescription = (formData.get('metaDescription') as string) || '';
+    const display_order = parseInt((formData.get('display_order') as string) || '0') || 0;
+    const tour_ids = formData.getAll('tour_ids') as string[];
+    
+    if (saveId) {
+      const oldDest = await d1Db.prepare("SELECT * FROM Country WHERE id = ?").bind(saveId).first<any>();
+      const oldSlug = oldDest?.slug || slug;
+      
+      await d1Db.prepare(`
+        UPDATE Country SET 
+          name=?, slug=?, continent=?, featuredImage=?, bannerImage=?, 
+          description=?, bestTimeToVisit=?, visaRequirement=?, currency=?, 
+          metaTitle=?, metaDescription=?, display_order=?
+        WHERE id=?
+      `).bind(
+        name, slug, 
+        region,
+        featuredImage, 
+        oldDest?.bannerImage || '',
+        description, 
+        bestTimeToVisit || oldDest?.bestTimeToVisit || '',
+        visaRequirement || oldDest?.visaRequirement || '',
+        currency || oldDest?.currency || 'USD',
+        metaTitle, metaDescription, 
+        display_order,
+        saveId
+      ).run();
+      
+      await d1Db.prepare("DELETE FROM TourCountry WHERE country_slug = ?").bind(oldSlug).run();
+      for (let i = 0; i < tour_ids.length; i++) {
+        await d1Db.prepare("INSERT INTO TourCountry (tour_id, country_slug, display_order) VALUES (?, ?, ?)").bind(tour_ids[i], slug, i).run();
+      }
+      
+      message = 'Đã lưu thay đổi thành công!';
+      return Astro.redirect(`/admin/destinations/edit?id=${saveId}&success=1`);
+    } else {
+      const newId = crypto.randomUUID();
+      await d1Db.prepare(`
+        INSERT INTO Country (
+          id, name, slug, continent, featuredImage, bannerImage, 
+          description, bestTimeToVisit, visaRequirement, currency, 
+          metaTitle, metaDescription, display_order
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).bind(
+        newId, name, slug, region, featuredImage, '', 
+        description, bestTimeToVisit, visaRequirement, currency,
+        metaTitle, metaDescription, display_order
+      ).run();
+      
+      for (let i = 0; i < tour_ids.length; i++) {
+        await d1Db.prepare("INSERT INTO TourCountry (tour_id, country_slug, display_order) VALUES (?, ?, ?)").bind(tour_ids[i], slug, i).run();
+      }
+      
+      message = 'Đã tạo Điểm đến thành công!';
+      return Astro.redirect(`/admin/destinations/edit?id=${newId}&success=1`);
+    }
+  } catch (err: any) {
+    message = 'Lỗi lưu: ' + err.message;
+    isError = true;
+  }
+}
+
+let linkedTours: any[] = [];
+const { results: allTours } = await d1Db.prepare("SELECT id, title, featuredImage, status FROM Tour ORDER BY publishedAt DESC").all<any>();
+if (id) {
+  destination = await d1Db.prepare("SELECT * FROM Country WHERE id = ?").bind(id).first<any>();
+  if (destination) {
+    const tourRows = await d1Db.prepare(`
+      SELECT t.id, t.title, t.slug, t.status, t.featuredImage, t.price_text, t.days, t.publishedAt
+      FROM Tour t
+      INNER JOIN TourCountry tc ON t.id = tc.tour_id
+      WHERE tc.country_slug = ?
+      ORDER BY tc.display_order ASC, t.publishedAt DESC
+    `).bind(destination.slug).all<any>();
+    linkedTours = tourRows.results || [];
+  }
+}
+---
+
+<AdminLayout title={destination ? "Sửa Điểm Đến" : "Thêm Điểm Đến Mới"} activeMenu="tours" activeSubmenu="destinations" hideSidebar={true}>
+  <style>
+    .editor-container { max-width: 1400px; margin: 0 auto; padding: 20px 0; }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0; }
+    .header-title { font-size: 24px; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 12px; }
+    .btn-back { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; border: 1px solid #e2e8f0; color: #64748b; background: #fff; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+    .btn-back:hover { background: #f8fafc; color: #0f172a; }
+    .btn-save { background: #d97706; color: #fff; font-weight: 600; padding: 10px 24px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-save:hover { background: #b45309; }
+    
+    .grid-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; }
+    .card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .card-title { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; }
+    
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; color: #0f172a; background: #fff; outline: none; transition: border-color 0.2s; }
+    .form-control:focus { border-color: #d97706; box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1); }
+    textarea.form-control { min-height: 100px; resize: vertical; line-height: 1.5; }
+    
+    .code-editor textarea { font-family: 'Menlo', 'Monaco', 'Courier New', monospace; font-size: 13px; color: #e2e8f0; background: #0f172a; min-height: 350px; padding: 16px; border-radius: 0 0 8px 8px; }
+
+    .msg-toast { padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; font-weight: 500; font-size: 14px; }
+    .msg-success { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .msg-error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+  </style>
+
+  <div class="editor-container">
+    {message && (
+      <div class={`msg-toast ${isError ? 'msg-error' : 'msg-success'}`}>
+        {message}
+      </div>
+    )}
+
+    <form method="POST" action={`/admin/destinations/edit${id ? `?id=${id}` : ''}`}>
+      {destination && <input type="hidden" name="id" value={destination.id} />}
+      
+      <div class="header-bar">
+        <div class="header-title">
+          <a href="/admin/destinations" class="btn-back">←</a>
+          {destination ? `Sửa Điểm Đến: ${destination.name}` : "Thêm Điểm Đến Mới"}
+        </div>
+        <div style="display: flex; gap: 12px;">
+          {destination && (
+            <a href={`/destination/${destination.slug}`} target="_blank" class="btn-back" style="width: auto; padding: 0 16px; color: #d97706; font-weight: 600; border-color: #fde68a; background: #fef3c7;">Xem trên Web ↗</a>
+          )}
+          <button type="submit" class="btn-save">Lưu Điểm Đến</button>
+        </div>
+      </div>
+
+      <div class="grid-layout">
+        <div>
+          <div class="card code-editor" style="padding: 0; overflow: hidden; margin-bottom: 24px;">
+            <div class="card-title" style="padding: 16px 24px; margin: 0; background: #f8fafc;">
+              <span>📝 Mô tả / Điểm nổi bật (Highlights & Overview)</span>
+              <span style="font-size: 12px; color: #64748b; font-weight: 400; margin-left: auto;">HTML / Text hiển thị cho du khách quốc tế</span>
+            </div>
+            <textarea name="description" spellcheck="false" placeholder="Nhập mô tả về điểm đến (vẻ đẹp, văn hóa, ẩm thực, trải nghiệm đặc trưng)..." style="width:100%; border:none; resize:vertical;">{destination?.description || ''}</textarea>
+          </div>
+          
+          <div class="card" style="padding: 24px; text-align: center; border: 1px solid #e2e8f0; border-radius: 12px; background: #fafafa;">
+             <button type="button" id="seoBtn" style="width: 100%; padding: 12px; background: #fff; border: 1px solid #d97706; color: #d97706; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; transition: all 0.2s;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              Tùy chỉnh SEO Điểm Đến (Google Search Preview)
+            </button>
+          </div>
+
+          <!-- SEO Modal -->
+          <div id="seoModal" style="display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.6); z-index: 1000; align-items: center; justify-content: center;">
+            <div style="background: #fff; border-radius: 16px; width: 90%; max-width: 600px; padding: 32px; position: relative; max-height: 90vh; overflow-y: auto;">
+              <h2 style="margin: 0 0 24px 0; font-size: 20px; font-weight: 700; color: #1e293b;">Tùy chỉnh SEO Điểm Đến</h2>
+              <button type="button" id="closeSeoBtn" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #64748b;">&times;</button>
+              
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+                <div style="font-size: 12px; color: #475569; margin-bottom: 12px; font-weight: 600;">Xem trước trên Google Search</div>
+                <div style="background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                  <div style="font-size: 14px; color: #202124; display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+                    <div style="width: 28px; height: 28px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">🌾</div>
+                    <div>
+                      <div style="line-height: 1.2; font-weight: 500;">The Rice Tour — Authentic Vietnam</div>
+                      <div style="font-size: 12px; color: #4d5156; margin-top: 2px;">https://thericetour.com/destination/<span id="preview-slug">{destination?.slug || 'slug'}</span></div>
+                    </div>
+                  </div>
+                  <div id="preview-title" style="font-size: 20px; color: #1a0dab; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; padding-top: 4px;">{destination?.metaTitle || destination?.name || 'Tên Điểm Đến'}</div>
+                  <div id="preview-desc" style="font-size: 14px; color: #4d5156; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.58;">{destination?.metaDescription || 'Khám phá điểm đến tuyệt mỹ cùng The Rice Tour...'}</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <label style="margin-bottom: 0;">SEO Title</label>
+                  <span id="title-counter" style="font-size: 12px; color: #64748b;">0 / 60</span>
+                </div>
+                <div style="height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 8px; overflow: hidden;">
+                  <div id="title-progress" style="height: 100%; width: 0%; background: #d97706; transition: all 0.3s;"></div>
+                </div>
+                <input type="text" id="seoTitleInput" name="metaTitle" class="form-control" value={destination?.metaTitle || ''} placeholder="VD: Sapa Mountain Treks & Homestays | The Rice Tour" />
+              </div>
+              
+              <div class="form-group">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <label style="margin-bottom: 0;">SEO Description</label>
+                  <span id="desc-counter" style="font-size: 12px; color: #64748b;">0 / 160</span>
+                </div>
+                <div style="height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 8px; overflow: hidden;">
+                  <div id="desc-progress" style="height: 100%; width: 0%; background: #d97706; transition: all 0.3s;"></div>
+                </div>
+                <textarea id="seoDescInput" name="metaDescription" class="form-control" rows="3" placeholder="Đoạn trích giới thiệu hiển thị trên Google...">{destination?.metaDescription || ''}</textarea>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; margin-top: 32px;">
+                <button type="button" id="saveSeoBtn" class="btn-save">Xong</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3 class="card-title">⚙️ Thông tin Điểm Đến</h3>
+            <div class="form-group">
+              <label>Tên Điểm Đến / Vùng Du Lịch</label>
+              <input type="text" name="name" class="form-control" value={destination?.name || ''} placeholder="VD: Mekong Delta Waterways, Hanoi, Sapa..." required />
+            </div>
+            <div class="form-group">
+              <label>Đường dẫn (Slug)</label>
+              <input type="text" name="slug" class="form-control" value={destination?.slug || ''} placeholder="VD: mekong-delta, hanoi-capital" required />
+              {destination && (
+                <div style="font-size: 12px; margin-top: 6px; color: #64748b;">
+                  Permalink: <a href={`/destination/${destination.slug}`} target="_blank" style="color: #d97706; text-decoration: underline;">https://thericetour.com/destination/{destination.slug}</a>
+                </div>
+              )}
+            </div>
+            <div class="form-group">
+              <label>Khu vực / Miền (Region)</label>
+              <select name="continent" class="form-control">
+                <option value="North Vietnam" selected={destination?.continent === 'North Vietnam' || destination?.continent === 'Asia'}>Miền Bắc (North Vietnam)</option>
+                <option value="Central Vietnam" selected={destination?.continent === 'Central Vietnam'}>Miền Trung (Central Vietnam)</option>
+                <option value="South Vietnam" selected={destination?.continent === 'South Vietnam'}>Miền Nam (South Vietnam)</option>
+                <option value="Mekong Delta" selected={destination?.continent === 'Mekong Delta'}>Đồng Bằng Sông Cửu Long (Mekong Delta)</option>
+                <option value="Highlands" selected={destination?.continent === 'Highlands'}>Tây Nguyên & Vùng Cao (Highlands)</option>
+                <option value="Islands & Coast" selected={destination?.continent === 'Islands & Coast'}>Hải đảo & Biển (Islands & Coast)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Thời điểm lý tưởng (Best Time to Visit)</label>
+              <input type="text" name="bestTimeToVisit" class="form-control" value={destination?.bestTimeToVisit || ''} placeholder="VD: September to April" />
+            </div>
+            <div class="form-group">
+              <label>Thứ tự hiển thị</label>
+              <input type="number" name="display_order" class="form-control" value={destination?.display_order || 0} />
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">🖼️ Ảnh Điểm Đến (Featured Image)</h3>
+            
+            <div class="form-group" style="margin-bottom: 12px; position: relative;">
+              <div style="position: relative; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#d97706'" onmouseout="this.style.borderColor='#cbd5e1'" onclick="window.dispatchEvent(new CustomEvent('open-media-picker', { detail: { inputId: 'featuredImageInput', previewId: 'featuredImagePreview', placeholderId: 'featuredImagePlaceholder' } }))">
+                <img id="featuredImagePreview" src={destination?.featuredImage || ''} style={`position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: ${destination?.featuredImage ? 'block' : 'none'};`} />
+                <div id="featuredImagePlaceholder" style={`text-align: center; color: #94a3b8; display: ${destination?.featuredImage ? 'none' : 'block'};`}>
+                  <div style="font-size: 32px; margin-bottom: 8px;">📍</div>
+                  <div style="font-size: 13px; font-weight: 500;">Nhấn để chọn ảnh từ Media Library</div>
+                </div>
+              </div>
+              <input type="hidden" id="featuredImageInput" name="featuredImage" value={destination?.featuredImage || ''} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linked Tours Section -->
+      <div class="card" style="margin-top: 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px;">
+          <h3 class="card-title" style="margin-bottom: 0; border: none; padding: 0;">🗺️ Tours thuộc Điểm Đến này <span id="tourCountBadge" style="background:#fef3c7; color:#92400e; font-size:12px; padding:2px 8px; border-radius:99px; font-weight:600; margin-left:8px;">{linkedTours.length}</span></h3>
+          <button type="button" id="openTourPickerBtn" style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">+ Thêm Tour Liên Kết</button>
+        </div>
+
+        <div id="selectedToursGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+          {linkedTours.map((t) => (
+            <div class="tour-card-item" data-id={t.id} style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+              <input type="hidden" name="tour_ids" value={t.id} />
+              <img src={t.featuredImage || 'https://images.unsplash.com/photo-1528127269322-539801943592?w=100'} style="width: 50px; height: 50px; border-radius: 6px; object-fit: cover;" />
+              <div style="flex: 1; min-width: 0;">
+                <div style="font-weight: 600; font-size: 13px; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{t.title}</div>
+                <div style="font-size: 12px; color: #d97706; font-weight: 600;">{t.price_text || '$0 USD'} • {t.days || ''}</div>
+              </div>
+              <button type="button" onclick="this.closest('.tour-card-item').remove(); updateTourCount();" style="color: #ef4444; background: none; border: none; cursor: pointer; font-size: 18px;">&times;</button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <MediaPickerEventBridge client:only="react" />
+
+  <script is:inline>
+    const seoBtn = document.getElementById('seoBtn');
+    const seoModal = document.getElementById('seoModal');
+    const closeSeoBtn = document.getElementById('closeSeoBtn');
+    const saveSeoBtn = document.getElementById('saveSeoBtn');
+
+    if (seoBtn && seoModal) {
+      seoBtn.addEventListener('click', () => seoModal.style.display = 'flex');
+      closeSeoBtn.addEventListener('click', () => seoModal.style.display = 'none');
+      saveSeoBtn.addEventListener('click', () => seoModal.style.display = 'none');
+    }
+
+    function updateTourCount() {
+      const count = document.querySelectorAll('#selectedToursGrid .tour-card-item').length;
+      const badge = document.getElementById('tourCountBadge');
+      if (badge) badge.textContent = count;
+    }
+  </script>
+</AdminLayout>

@@ -1,0 +1,929 @@
+UPDATE Page SET content = '<!-- Chương 1: Hero -->
+    <section class="bg-[#3a3a3a] text-white pt-12 pb-16 font-sans">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb & Title -->
+        <div class="mb-10">
+          <nav class="flex text-sm text-gray-400 mb-6 font-medium" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-2">
+              <li class="inline-flex items-center">
+                <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+              </li>
+              <li>
+                <span class="mx-2 text-gray-500">/</span>
+              </li>
+              <li>
+                <span class="text-gray-200">Giới Thiệu</span>
+              </li>
+            </ol>
+          </nav>
+          <h1 class="text-4xl md:text-5xl font-black font-sans uppercase tracking-widest text-white">VỀ FIT TOUR</h1>
+        </div>
+
+        <!-- Main Content Box -->
+        <div class="flex flex-col lg:flex-row gap-12 items-stretch mb-16">
+          <!-- Left: Text Box -->
+          <div class="bg-[#e4e4e4] text-[#1a1a1a] rounded-[2rem] p-8 md:p-12 w-full lg:w-3/5">
+            <div class="space-y-4 text-[1.1rem] leading-relaxed">
+              <p class="font-bold text-xl mb-6 font-serif">Không phải mọi chuyến đi đều bắt đầu từ một tấm vé máy bay.</p>
+              <p>Có những hành trình bắt đầu từ nhiều tháng trước ngày khởi hành.</p>
+              <p>Từ một chuyến khảo sát giữa mùa đông ở Ladakh. Một lần quay trở lại Tây Tạng để đánh giá lại tuyến đường sau mùa tuyết. Hay một buổi chiều ngồi cùng đối tác địa phương trên Con Đường Tơ Lụa để điều chỉnh chỉ một điểm dừng chân.</p>
+              <p class="font-bold pt-4">Đó là cách FIT TOUR tạo nên một hành trình.</p>
+              <p>Không ghép từ những lịch trình có sẵn.<br>Mà được thiết kế từ những trải nghiệm đã đi qua.</p>
+            </div>
+          </div>
+          
+          <!-- Right: Logo Image -->
+          <div class="w-full lg:w-2/5 flex justify-center items-center">
+            <img src="https://media.fittour.vn/uploads/favicon-fittour.webp" alt="FIT Tour Logo" class="w-48 md:w-64 opacity-90 hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-gray-500 mb-12"></div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div class="flex items-center gap-4">
+            <span class="text-5xl md:text-6xl font-bold tracking-tighter" style="font-family: ''Inter'', sans-serif;">12+</span>
+            <div class="text-sm md:text-base text-gray-300 leading-tight">
+              Năm<br>kinh nghiệm
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-5xl md:text-6xl font-bold tracking-tighter" style="font-family: ''Inter'', sans-serif;">270</span>
+            <div class="text-sm md:text-base text-gray-300 leading-tight">
+              Điểm đến<br>trên thế giới
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-5xl md:text-6xl font-bold tracking-tighter" style="font-family: ''Inter'', sans-serif;">120</span>
+            <div class="text-sm md:text-base text-gray-300 leading-tight">
+              Đơn vị<br>doanh nghiệp
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-5xl md:text-6xl font-bold tracking-tighter" style="font-family: ''Inter'', sans-serif;">11K</span>
+            <div class="text-sm md:text-base text-gray-300 leading-tight">
+              Travel Mates<br>đồng hành
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Chương 2: Why We Started -->
+    <section class="section-padding px-6 md:px-12 lg:px-24 bg-[#faf9f6] text-[#1c1917]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            <!-- Left: Image -->
+            <div class="w-full md:w-5/12">
+                <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp" alt="Max Vũ - CEO & Founder FIT Tour" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-20">
+                        <p class="text-[#d4af37] font-serif text-2xl mb-1">Max Vũ</p>
+                        <p class="text-white/80 font-mono text-xs uppercase tracking-widest">CEO & Founder FIT TOUR</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Text -->
+            <div class="w-full md:w-7/12">
+                <h3 class="text-4xl md:text-5xl font-serif mb-8 text-[#d4af37] uppercase tracking-widest text-center md:text-left">Why We Started</h3>
+                
+                <div class="space-y-6 text-lg text-stone-600 font-sans font-light leading-relaxed">
+                    <p>FIT TOUR không được tạo ra với mục tiêu trở thành công ty tổ chức nhiều tour nhất.</p>
+                    <p>Chúng tôi tin rằng, những điều đáng nhớ nhất của một hành trình thường không nằm trong lịch trình.</p>
+                    <p>Ở Himalaya, chỉ khi quay trở lại đủ nhiều lần mới biết đâu là nơi đẹp nhất để ngắm khoảnh khắc Nhật Chiếu Kim Sơn. Trên Con Đường Tơ Lụa, có những thành cổ chỉ thực sự bừng sáng vào một thời khắc rất ngắn trong ngày. Và ở mỗi vùng đất, luôn có những trải nghiệm chỉ được khám phá bởi những người dành đủ thời gian để hiểu nơi ấy.</p>
+                    <p>Đó cũng là cách FIT TOUR lựa chọn phát triển. Không phải đi nhiều điểm đến hơn, mà dành nhiều thời gian hơn để thấu hiểu từng điểm đến. Chính sự thấu hiểu ấy đã trở thành nền tảng cho mọi hành trình chúng tôi thiết kế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chương 3: How We Design Journeys -->
+    <section class="section-padding px-6 md:px-12 lg:px-24 bg-stone-900 text-stone-100">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-4xl md:text-5xl font-serif mb-16">How We Design Journeys</h3>
+            
+            <p class="text-xl md:text-2xl font-light italic mb-16 text-stone-300 border-l-2 border-stone-600 pl-6">
+                Một hành trình của FIT TOUR thường bắt đầu nhiều tháng trước ngày khởi hành. Đối với chúng tôi, một hành trình không bao giờ là sản phẩm hoàn thành. Nó luôn được cải tiến sau mỗi lần vận hành.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Research -->
+                <div>
+                    <h4 class="text-2xl font-serif mb-4 text-amber-500">1. Research</h4>
+                    <p class="text-stone-300 leading-relaxed mb-4">Đó có thể là một chuyến khảo sát mùa thu ở Đạo Thành Á Đinh, hay một lần kiểm tra khách sạn mới tại Tây Tạng.</p>
+                    <p class="text-stone-300 leading-relaxed text-sm bg-stone-800 p-4 rounded-sm">
+                        <strong class="text-white block mb-1">Tại sao?</strong>
+                        Chúng tôi khảo sát lại khách sạn ở Tây Tạng không chỉ để đảm bảo chỗ ngủ, mà để chắc chắn khách hàng có không gian phục hồi tốt nhất sau một ngày ở độ cao 4.000m.
+                    </p>
+                </div>
+                <!-- Design -->
+                <div>
+                    <h4 class="text-2xl font-serif mb-4 text-amber-500">2. Design</h4>
+                    <p class="text-stone-300 leading-relaxed mb-4">Lộ trình được tinh chỉnh thay vì rập khuôn từ catalogue có sẵn.</p>
+                    <p class="text-stone-300 leading-relaxed text-sm bg-stone-800 p-4 rounded-sm">
+                        <strong class="text-white block mb-1">Triết lý:</strong>
+                        Chúng tôi thiết kế lộ trình tuyệt đối "No Shopping" để trả lại trọn vẹn quỹ thời gian cho những trải nghiệm nguyên bản.
+                    </p>
+                </div>
+                <!-- Operate -->
+                <div>
+                    <h4 class="text-2xl font-serif mb-4 text-amber-500">3. Operate</h4>
+                    <p class="text-stone-300 leading-relaxed mb-4">Vận hành trực tiếp trên hiện trường thay vì qua đại lý trung gian, kiểm soát rủi ro ở những nơi khắc nghiệt nhất.</p>
+                </div>
+                <!-- Improve -->
+                <div>
+                    <h4 class="text-2xl font-serif mb-4 text-amber-500">4. Improve</h4>
+                    <p class="text-stone-300 leading-relaxed mb-4">Điều chỉnh thời gian dừng chân trên Con Đường Tơ Lụa sau khi lắng nghe phản hồi. Đội ngũ có thể thay đổi chi tiết lịch trình ngay trong đêm dựa trên feedback thực tế.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chương 4: Những Vùng Đất Đã Tạo Nên FIT TOUR -->
+    <section class="py-24 px-6 md:px-12 lg:px-24 bg-[#050505] text-stone-200">
+        <div class="max-w-[1400px] mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="flex justify-center mb-6">
+                    <svg class="w-8 h-8 text-[#d4af37]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 21l5-10 4 6 7-14 3 6M17 21v-4"></path></svg>
+                </div>
+                
+                <div class="flex items-center justify-center gap-6 mb-8">
+                    <div class="h-[1px] bg-stone-800 flex-1 max-w-[250px] hidden md:block"></div>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif text-[#d4af37] uppercase tracking-[0.15em]">Những Vùng Đất Đã Tạo Nên FIT TOUR</h3>
+                    <div class="h-[1px] bg-stone-800 flex-1 max-w-[250px] hidden md:block"></div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto space-y-2 text-xl text-stone-300 font-light italic font-serif mb-12">
+                    <p>Có những điểm đến chỉ ghé qua một lần.</p>
+                    <p>Cũng có những nơi khiến chúng tôi quay trở lại năm này qua năm khác.</p>
+                </div>
+                
+                <div class="w-16 h-[1px] bg-stone-800 mx-auto mb-10"></div>
+                
+                <p class="text-stone-300 font-sans font-medium max-w-2xl mx-auto uppercase tracking-wider text-sm leading-relaxed">
+                    Chính những vùng đất ấy đã góp phần định hình cách FIT TOUR làm du lịch ngày hôm nay.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Card 1: Himalaya -->
+                <div class="group relative aspect-[3/5] md:aspect-[4/5] lg:aspect-[5/8] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://media.fittour.vn/uploads/2022/11/du-khach-chim-dam-voi-ve-dep-cua-nui-non-himalayas.webp" alt="Himalaya" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                    
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end text-center">
+                        <h4 class="text-2xl font-serif text-white mb-1 uppercase tracking-widest">Himalaya</h4>
+                        <p class="text-[0.65rem] tracking-[0.2em] text-[#d4af37] uppercase mb-4">Collection</p>
+                        <div class="w-6 h-[1px] bg-[#d4af37]/50 mx-auto mb-4"></div>
+                        <p class="text-[0.85rem] text-stone-300 font-light italic leading-relaxed mb-6">
+                            Nơi dạy chúng tôi rằng một giờ nghỉ đúng lúc đôi khi quan trọng hơn thêm một điểm tham quan.
+                        </p>
+                        <!-- Arrow Button -->
+                        <div class="mx-auto w-8 h-8 rounded-full border border-stone-500/50 flex items-center justify-center transition-colors group-hover:border-[#d4af37] group-hover:text-[#d4af37]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Silk Road -->
+                <div class="group relative aspect-[3/5] md:aspect-[4/5] lg:aspect-[5/8] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://media.fittour.vn/uploads/mua-xuan-pakistan-poster.webp" alt="Silk Road" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                    
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end text-center">
+                        <h4 class="text-2xl font-serif text-white mb-1 uppercase tracking-widest">Silk Road</h4>
+                        <p class="text-[0.65rem] tracking-[0.2em] text-[#d4af37] uppercase mb-4">Collection</p>
+                        <div class="w-6 h-[1px] bg-[#d4af37]/50 mx-auto mb-4"></div>
+                        <p class="text-[0.85rem] text-stone-300 font-light italic leading-relaxed mb-6">
+                            Nơi mỗi thành phố đều kể một câu chuyện kéo dài hàng nghìn năm.
+                        </p>
+                        <div class="mx-auto w-8 h-8 rounded-full border border-stone-500/50 flex items-center justify-center transition-colors group-hover:border-[#d4af37] group-hover:text-[#d4af37]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Africa -->
+                <div class="group relative aspect-[3/5] md:aspect-[4/5] lg:aspect-[5/8] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://media.fittour.vn/uploads/du-khach-tan-huong-safari-chau-phi.webp" alt="Africa" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                    
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end text-center">
+                        <h4 class="text-2xl font-serif text-white mb-1 uppercase tracking-widest">Africa</h4>
+                        <p class="text-[0.65rem] tracking-[0.2em] text-[#d4af37] uppercase mb-4">Collection</p>
+                        <div class="w-6 h-[1px] bg-[#d4af37]/50 mx-auto mb-4"></div>
+                        <p class="text-[0.85rem] text-stone-300 font-light italic leading-relaxed mb-6">
+                            Nơi thiên nhiên luôn khiến con người trở nên nhỏ bé.
+                        </p>
+                        <div class="mx-auto w-8 h-8 rounded-full border border-stone-500/50 flex items-center justify-center transition-colors group-hover:border-[#d4af37] group-hover:text-[#d4af37]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Middle East -->
+                <div class="group relative aspect-[3/5] md:aspect-[4/5] lg:aspect-[5/8] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://media.fittour.vn/uploads/2022/12/doan-du-khach-fit-tour-du-lich-den-jordan.webp" alt="Middle East" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                    
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end text-center">
+                        <h4 class="text-2xl font-serif text-white mb-1 uppercase tracking-widest">Middle East</h4>
+                        <p class="text-[0.65rem] tracking-[0.2em] text-[#d4af37] uppercase mb-4">Collection</p>
+                        <div class="w-6 h-[1px] bg-[#d4af37]/50 mx-auto mb-4"></div>
+                        <p class="text-[0.85rem] text-stone-300 font-light italic leading-relaxed mb-6">
+                            Nơi những lớp trầm tích của lịch sử vẫn hiện diện trong từng hơi thở đương đại.
+                        </p>
+                        <div class="mx-auto w-8 h-8 rounded-full border border-stone-500/50 flex items-center justify-center transition-colors group-hover:border-[#d4af37] group-hover:text-[#d4af37]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: China Heritage -->
+                <div class="group relative aspect-[3/5] md:aspect-[4/5] lg:aspect-[5/8] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://media.fittour.vn/uploads/2023/12/chu-gau-truc-de-thuong-o-khu-bao-ton-gau-truc-do-giang-yen.webp" alt="China Heritage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+                    
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end text-center">
+                        <h4 class="text-2xl font-serif text-white mb-1 uppercase tracking-widest">China Heritage</h4>
+                        <p class="text-[0.65rem] tracking-[0.2em] text-[#d4af37] uppercase mb-4">Collection</p>
+                        <div class="w-6 h-[1px] bg-[#d4af37]/50 mx-auto mb-4"></div>
+                        <p class="text-[0.85rem] text-stone-300 font-light italic leading-relaxed mb-6">
+                            Một đất nước đủ rộng để mỗi vùng đất đều mang một bản sắc riêng.
+                        </p>
+                        <div class="mx-auto w-8 h-8 rounded-full border border-stone-500/50 flex items-center justify-center transition-colors group-hover:border-[#d4af37] group-hover:text-[#d4af37]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Conclusion -->
+            <div class="mt-20 max-w-3xl mx-auto text-center border-t border-stone-800 pt-12 px-4">
+                <p class="text-lg md:text-xl text-stone-400 font-serif font-light leading-relaxed italic">
+                    "Mỗi vùng đất đều để lại cho chúng tôi một cách nhìn khác về du lịch. Và chính những trải nghiệm ấy tiếp tục định hình cách FIT TOUR thiết kế những hành trình trong tương lai."
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chương 5: Journey Milestones -->
+    <section class="section-padding px-6 md:px-12 lg:px-24 bg-stone-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center md:text-left mb-16 flex flex-col md:flex-row gap-8 items-start justify-between">
+                <h3 class="text-4xl md:text-5xl font-serif text-stone-900 shrink-0">Journey Milestones</h3>
+                <div class="max-w-xl text-stone-600 font-sans font-light leading-relaxed text-base md:text-lg border-l-2 border-stone-300 pl-6 text-left">
+                    <p class="mb-2">Mỗi con số không chỉ là số lượng đoàn đã tổ chức.</p>
+                    <p>Đó là số lần chúng tôi quay trở lại để hiểu một vùng đất nhiều hơn, điều chỉnh một lịch trình tốt hơn và mang đến những trải nghiệm hoàn thiện hơn cho những đoàn khách tiếp theo.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="https://fittour.vn/cot-moc-250-hanh-trinh-den-trung-quoc" target="_blank" class="group block bg-white p-8 border border-stone-200 text-center hover:shadow-xl hover:border-[#c5a365]/30 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <div class="text-5xl font-serif text-stone-900 mb-2 group-hover:text-[#c5a365] transition-colors relative z-10">250+</div>
+                    <div class="text-sm uppercase tracking-widest text-stone-500 group-hover:text-stone-700 transition-colors relative z-10">China Journeys</div>
+                    <div class="absolute inset-0 bg-[#c5a365]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="https://fittour.vn/cot-moc-80-chuyen-di-ladakh" target="_blank" class="group block bg-white p-8 border border-stone-200 text-center hover:shadow-xl hover:border-[#c5a365]/30 transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <div class="text-5xl font-serif text-stone-900 mb-2 group-hover:text-[#c5a365] transition-colors relative z-10">80+</div>
+                    <div class="text-sm uppercase tracking-widest text-stone-500 group-hover:text-stone-700 transition-colors relative z-10">Ladakh Expeditions</div>
+                    <div class="absolute inset-0 bg-[#c5a365]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <div class="bg-white p-8 border border-stone-200 text-center flex items-center justify-center">
+                    <div class="text-stone-400 italic">...and counting</div>
+                </div>
+            </div>
+
+            
+            <!-- Journey Stories Slider -->
+            <div class="relative mt-16 group">
+                <!-- Navigation Buttons -->
+                <button id="storyPrev" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-stone-200 rounded-full flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white shadow-lg transition-all disabled:opacity-0 hidden md:flex">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="storyNext" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm border border-stone-200 rounded-full flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white shadow-lg transition-all disabled:opacity-0 hidden md:flex">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+<div id="storySlider" class="story-slider flex gap-5 overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 cursor-grab active:cursor-grabbing mt-16" style="scrollbar-width: none;">
+
+      <a href="https://fittour.vn/phuong-thanh-lan-3-den-ladakh" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/ca-si-phuong-thanh-tan-bo-giua-thung-lung-da-cuoi-vung-ladakh.webp" alt="Ca sĩ Phương Thanh và lần 3 hành hương trên độ cao 5.000 mét - Phương Thanh x Phần 1" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Ca sĩ Phương Thanh và lần 3 hành hương trên độ cao 5.000 mét - Phương Thanh x Phần 1</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Hành trình tâm linh lần 3 của ca sĩ Phương Thanh tại vùng đất Phật Ladakh. Cùng FIT Tour khám phá chuyến hành hương đầy cảm xúc ở độ cao trên 5.000 mét.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/khach-hang-quay-lai-tay-tang-kailash-3-nam" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/chi-ly-tai-deo-dolma-5600m.webp" alt="Khách Hàng Quay Lại Tây Tạng &#38; Kailash 3 Năm Liên Tiếp: Vì Sao Chị Ly Luôn Chọn?" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Khách Hàng Quay Lại Tây Tạng &#38; Kailash 3 Năm Liên Tiếp: Vì Sao Chị Ly Luôn Chọn?</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Chị Huỳnh Diễm Ly quay lại Tây Tạng và Kora Kailash cùng FIT TOUR suốt 3 năm liên tiếp. Câu chuyện về niềm tin, trải nghiệm và Himalaya. Tìm hiểu ngay.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/4-nam-20-hanh-trinh-cua-chi-thuy-cung-fittour" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2026/01/4-nam-20-hanh-trinh-dong-hanh-chi-thuy-cung-fittour.webp" alt="4 Năm, 20 Hành Trình và Những Niệm An Lành Gửi Lại Thế Giới" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">4 Năm, 20 Hành Trình và Những Niệm An Lành Gửi Lại Thế Giới</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Khám phá hành trình 4 năm với hơn 20 chuyến đi của chị Thúy cùng FIT Tour. Từ Kailash đến Alaska, câu chuyện về niềm tin và triết lý du lịch tử tế.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/private-tour-vuong-quoc-anh" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/private-tour-united-kingdom-family-journey-elite-by-fittour.webp" alt="Một Nước Anh Khác Sau Những Tấm Bưu Thiếp: Hành Trình Private Tour Cùng Nhóm Khách Hàng Thân Thiết" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Một Nước Anh Khác Sau Những Tấm Bưu Thiếp: Hành Trình Private Tour Cùng Nhóm Khách Hàng Thân Thiết</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Một hành trình Anh Quốc được thiết kế riêng cho nhóm khách hàng thân thiết bởi ELITE by FIT TOUR. London, Cotswolds và những trải nghiệm cá nhân hóa ở nước Anh cổ kính.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/du-lich-mong-co-cung-quynh-anh-shyn" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2025/08/kham-pha-mong-co-cung-quynh-anh-shyn.webp" alt="Du Lịch Mông Cổ cùng Quỳnh Anh Shyn – Sống Giữa Vùng Đất của Gió" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Du Lịch Mông Cổ cùng Quỳnh Anh Shyn – Sống Giữa Vùng Đất của Gió</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Du lịch Mông Cổ qua góc nhìn Quỳnh Anh Shyn, cùng đi qua hành trình 700km từ sa mạc đến thảo nguyên, khám phá vẻ đẹp và văn hóa du mục.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/1-ngay-khong-song-khong-wi-fi-o-dao-thanh-a-dinh" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2025/07/ngay-khong-wifi-o-dao-thanh-a-dinh.webp" alt="1 Ngày Không Sóng, Không Wi-Fi ở Đạo Thành Á Đinh" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">1 Ngày Không Sóng, Không Wi-Fi ở Đạo Thành Á Đinh</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Trải nghiệm hành trình đến vùng đất thuần khiết Đạo Thành Á Đinh, nơi không sóng, hay Wi-Fi, nhưng đầy kết nối. Núi tuyết, hồ xanh và tĩnh lặng.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/nhat-ky-road-trip-mong-co" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2025/07/nhat-ky-roadtrip-mong-co.webp" alt="Nhật ký Road Trip Mông Cổ – Gió Luôn Thổi Trên Thảo Nguyên" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Nhật ký Road Trip Mông Cổ – Gió Luôn Thổi Trên Thảo Nguyên</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Nhật ký Road Trip Mông Cổ với 10 khoảnh khắc từ chuyến đi FIT Tour: lều Ger, Orkhon, Mini Gobi... Một góc nhìn khác biệt về du lịch Mông Cổ.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/co-ni" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2025/07/co-ni-va-hanh-trinh-cung-fit-tour-tay-tang.webp" alt="Cô Ni – U80 và Hành Trình Chạm Vào Mái Nhà Thế Giới" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Cô Ni – U80 và Hành Trình Chạm Vào Mái Nhà Thế Giới</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Hành trình truyền cảm hứng của cô Ni – U80 cùng FIT TOUR chinh phục Everest Base Camp. Tuổi tác không giới hạn đam mê khám phá thế giới!</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/nhat-ky-hanh-trinh-hanh-huong-nui-kailash" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2024/07/hanh-trinh-kora-kailash-fittour.webp" alt="Nhật ký hành trình hành hương núi Kailash Tây Tạng Cùng" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Nhật ký hành trình hành hương núi Kailash Tây Tạng Cùng</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Nhật ký hành trình hành hương núi Kailash Tây Tạng Cùng Fit Tour. Chuyến đi này là một cuộc hành hương kora tìm về bản ngã tâm linh đặc biệt.</p>
+              </div>
+          </div>
+      </a>
+      
+      <a href="https://fittour.vn/emagazine-dang-thuy-duong-o-zanskar" target="_blank" class="group block cursor-pointer shrink-0 w-[85vw] sm:w-[60vw] md:w-[450px] lg:w-[500px] snap-center">
+          <div class="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200 group-hover:border-[#c5a365]/40 transition-all duration-500 bg-black">
+              <img src="https://media.fittour.vn/uploads/2023/06/emagazine-nhung-ngay-du-muc-zanskar.webp" alt="Nhật Ký Zanskar, Ladakh - Đặng Thùy Dương Và Hành Trình Đến Vùng Đất Cô Độc Nhất Himalaya" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 px-3 py-1.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full">
+                  <span class="font-mono text-[10px] text-white tracking-widest uppercase">Story</span>
+              </div>
+              
+              <div class="absolute bottom-0 inset-x-0 p-6">
+                  <h4 class="font-serif text-xl text-white font-bold mb-3 leading-snug group-hover:text-[#c5a365] transition-colors">Nhật Ký Zanskar, Ladakh - Đặng Thùy Dương Và Hành Trình Đến Vùng Đất Cô Độc Nhất Himalaya</h4>
+                  <p class="text-stone-300 text-xs line-clamp-3 font-light leading-relaxed">Nhật ký du hành của Đặng Thùy Dương tại Zanskar, Ladakh, qua bài viết Emagazine. Nơi gặp gỡ con người, tu viện, cảnh quan độc đáo của Hiamlaya.</p>
+              </div>
+          </div>
+      </a>
+      
+</div>
+        </div>
+    
+            </div>
+
+            <script>
+                document.addEventListener(''astro:page-load'', () => {
+                    const slider = document.getElementById(''storySlider'');
+                    const btnPrev = document.getElementById(''storyPrev'');
+                    const btnNext = document.getElementById(''storyNext'');
+                    
+                    if(slider && btnPrev && btnNext) {
+                        const scrollAmount = 450 + 20; // card width + gap
+                        
+                        btnPrev.addEventListener(''click'', () => {
+                            slider.scrollBy({ left: -scrollAmount, behavior: ''smooth'' });
+                        });
+                        
+                        btnNext.addEventListener(''click'', () => {
+                            slider.scrollBy({ left: scrollAmount, behavior: ''smooth'' });
+                        });
+                        
+                        // Update button states
+                        slider.addEventListener(''scroll'', () => {
+                            btnPrev.disabled = slider.scrollLeft <= 0;
+                            btnNext.disabled = slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 10);
+                        });
+                        
+                        // Initial check
+                        btnPrev.disabled = true;
+                    }
+                });
+            </script>
+</section>
+
+    <!-- Award Recognition -->
+    <section class="w-full bg-[#050505] py-20 lg:py-32 border-t border-white/5 relative overflow-hidden">
+        <!-- Glow Effect -->
+        <div class="absolute inset-0 bg-[#c5a365]/5 blur-3xl rounded-full translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 lg:gap-20 relative z-10">
+            <!-- Left: Image -->
+            <div class="w-full md:w-1/2 relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-[#c5a365]/20 to-transparent blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <img src="https://media.fittour.vn/uploads/2026/01/FIT-tour-doat-giai-nam-thu-2-lien-tiep-the-best-bespoke-tour.webp" alt="FIT Tour thắng giải Bespoke Tour năm thứ 2 liên tiếp" class="relative w-full rounded-xl border border-white/10 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+            </div>
+            
+            <!-- Right: Text -->
+            <div class="w-full md:w-1/2">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-12 h-[1px] bg-[#c5a365]"></span>
+                    <span class="font-mono text-[10px] text-[#c5a365] tracking-widest uppercase font-bold">Recognition</span>
+                </div>
+                
+                <h3 class="font-serif text-3xl md:text-4xl text-white leading-snug mb-6 uppercase tracking-wider">
+                    Giải Thưởng Bespoke Tour Năm Thứ 2 Liên Tiếp
+                </h3>
+                
+                <p class="text-stone-400 font-sans font-light leading-relaxed mb-8 text-base md:text-lg">
+                    Năm thứ 2 liên tiếp FIT Tour vinh dự giữ ngôi vương <strong>Bespoke Tour</strong> tại HOTLIST Travellive 2025. Sự công nhận này là minh chứng cho triết lý thiết kế hành trình đi chậm, đi kỹ, an toàn và đậm chất bản địa mà chúng tôi luôn theo đuổi trong suốt thập kỷ qua.
+                </p>
+                
+                <a href="https://fittour.vn/fit-tour-thang-giai-bespoke-tour-nam-thu-2-lien-tiep" target="_blank" class="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c5a365] hover:text-white transition-colors group/btn border border-[#c5a365]/30 px-6 py-3 rounded-full hover:bg-[#c5a365]/10">
+                    <span>Đọc bài viết</span>
+                    <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chương 6: The People Behind The Journey -->
+    <section id="team" class="w-full bg-[#0a0a0a] py-24 border-t border-white/5">
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12">
+            
+            <!-- Header -->
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <p class="font-mono text-[10px] text-[#c5a365] uppercase tracking-[0.3em] mb-3 font-semibold">The People Behind The Journey</p>
+                    <h2 class="font-serif text-3xl md:text-5xl text-white tracking-widest uppercase">
+                        Our Team
+                    </h2>
+                </div>
+                <a href="/our-team/" class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c5a365] hover:text-white transition-colors flex items-center gap-2 group">
+                    Xem thêm
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+            </div>
+
+            <!-- Intro Text -->
+            <div class="mt-8 mb-16 max-w-4xl mx-auto text-center">
+                <h3 class="font-serif text-2xl md:text-3xl text-[#d4af37] mb-8 uppercase tracking-widest">Con Người Phía Sau Mỗi Hành Trình</h3>
+                <div class="space-y-4 text-base md:text-lg text-stone-400 font-sans font-light leading-relaxed px-4">
+                    <p>Một hành trình không được tạo nên bởi một người.</p>
+                    <p>Đó là sự phối hợp của Trip Planner, Tour Leader, đội ngũ điều hành, các chuyên gia địa phương và rất nhiều cộng sự phía sau.</p>
+                    <p>Họ là những người khảo sát cung đường, kiểm tra khách sạn, cập nhật lịch trình, xử lý tình huống và đồng hành cùng khách hàng từ ngày đầu tiên cho đến khi hành trình kết thúc.</p>
+                </div>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="team-slider flex md:grid md:grid-cols-3 lg:grid-cols-6 gap-5 overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0 cursor-grab active:cursor-grabbing" style="scrollbar-width: none;">
+                
+                <!-- Member 1 -->
+                <a href="/max-vu" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp" alt="Max Vũ" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">10 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Max Vũ</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">CEO & Founder</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Member 2 -->
+                <a href="/hdv-tieu-sang" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/2025/04/hdv-tieu-van-sang-fittour.webp" alt="Tiêu Văn Sang" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">8 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Tiêu Văn Sang</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">HDV Quốc tế</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Member 3 -->
+                <a href="/hong-trang" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/huong-dan-vien-hong-trang-ao-dai-ben-bien.webp" alt="Võ Thị Hồng Trang" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">6 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Võ Thị Hồng Trang</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">Trip Planner & Guide</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Member 4 -->
+                <a href="/hdv-huy-ngo" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp" alt="Ngô Ngọc Đăng Huy" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">5 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Ngô Ngọc Đăng Huy</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">Trip Planner & Guide</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Member 5 -->
+                <a href="/tran-quoc-thinh" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/2024/05/trip-planner-tran-thinh.webp" alt="Trần Thịnh" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">8 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Trần Thịnh</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">Trip Planner & Guide</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Member 6 -->
+                <a href="/le-thai-binh" class="group block cursor-pointer shrink-0 w-[55vw] sm:w-[40vw] md:w-auto snap-center">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/10 group-hover:border-[#c5a365]/40 transition-all duration-500">
+                        <img src="https://media.fittour.vn/uploads/2025/05/hdv-le-thai-binh-fittour.webp" alt="Lê Thái Bình" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-[80%] group-hover:brightness-100" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-sm border border-white/15 rounded-full">
+                            <span class="font-mono text-[9px] text-[#c5a365] tracking-wider font-bold uppercase">15 năm</span>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 p-4 text-center">
+                            <h3 class="font-serif text-base text-white font-bold mb-0.5 leading-tight">Lê Thái Bình</h3>
+                            <p class="font-mono text-[9px] text-[#c5a365] uppercase tracking-[0.15em] font-bold">HDV Quốc tế</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Chương 7: Corporate Partners -->
+    <section class="w-full bg-[#111111] py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 text-center">
+            <h3 class="font-serif text-2xl md:text-3xl text-[#d4af37] mb-8 uppercase tracking-widest">Đồng Hành Cùng Doanh Nghiệp</h3>
+            
+            <div class="space-y-4 text-base md:text-lg text-stone-400 font-sans font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                <p>Chúng tôi tin rằng một chuyến đi của doanh nghiệp không chỉ là phần thưởng sau những tháng ngày làm việc.</p>
+                <p>Đó còn là cơ hội để những con người trong cùng một tổ chức hiểu nhau hơn thông qua những trải nghiệm được chia sẻ.</p>
+                <p>Vì vậy, mỗi chương trình Corporate Journey đều được thiết kế riêng, phản ánh văn hóa, mục tiêu và câu chuyện của chính doanh nghiệp đó.</p>
+            </div>
+
+            <div class="mb-20 flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6">
+                <a href="https://fittour.vn/tour-doanh-nghiep" target="_blank" class="inline-block px-8 py-3 border border-[#c5a365] text-[#c5a365] hover:bg-[#c5a365] hover:text-black font-mono text-sm uppercase tracking-widest transition-colors duration-300 text-center w-full sm:w-auto">
+                    Khám Phá Tour
+                </a>
+                <a href="https://fittour.vn/hanh-trinh-doanh-nghiep/" target="_blank" class="inline-block px-8 py-3 border border-stone-600 text-stone-300 hover:border-white hover:text-white font-mono text-sm uppercase tracking-widest transition-colors duration-300 text-center w-full sm:w-auto">
+                    Hành Trình Thực Tế
+                </a>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <img src="https://media.fittour.vn/uploads/logo-doi-tac-doanh-nghiep-cung-fittour.webp" alt="Các đối tác doanh nghiệp đồng hành cùng FIT TOUR" class="w-full h-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-500 mix-blend-screen brightness-0 invert">
+            </div>
+        </div>
+    </section>
+
+    <!-- Chương 8: Đánh Giá & Hình Ảnh Khách Hàng -->
+    <section class="w-full bg-[#0a0a0a] pt-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16">
+            <h3 class="font-serif text-2xl md:text-3xl text-[#d4af37] mb-6 uppercase tracking-widest">Tiếng Nói Từ Những Hành Trình</h3>
+            <p class="text-stone-400 font-sans font-light max-w-2xl mx-auto leading-relaxed mb-12">
+                Không gì minh chứng rõ nét hơn cho sự tận tâm của FIT TOUR bằng chính nụ cười và những câu chuyện được kể lại từ những khách hàng đã đồng hành cùng chúng tôi.
+            </p>
+            
+            <!-- Reviews Grid (Google Maps Style) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-16">
+                <!-- Review 1 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-[#fbbc04]">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <span class="text-xs text-stone-500 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Google
+                        </span>
+                    </div>
+                    <p class="text-stone-300 mb-6 text-sm leading-relaxed">"Mình vừa đi tour Giang Nam về. Thật sự ấn tượng với cách sắp xếp lịch trình của FIT Tour. Rất thong thả, không chạy sô, có thời gian để tận hưởng cảnh sắc và uống trà tại Ô Trấn. Bạn Hướng dẫn viên tên Nam siêu nhiệt tình và có tâm, kiến thức về văn hoá lịch sử cực sâu. Đánh giá 5 sao cho chất lượng!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#f2a550] flex items-center justify-center text-white font-bold text-lg">
+                            T
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Thủy Tiên</h4>
+                            <p class="text-stone-500 text-[11px]">2 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-[#fbbc04]">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <span class="text-xs text-stone-500 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Google
+                        </span>
+                    </div>
+                    <p class="text-stone-300 mb-6 text-sm leading-relaxed">"Mình vừa hoàn thành chuyến đi Tân Cương mùa thu cùng FIT Tour. Khung cảnh hoang sơ và đẹp đến nghẹt thở! Dù đi xe đường dài mệt nhưng bác tài xế chạy rất êm, HDV thì chăm sóc đoàn chu đáo từng bữa ăn. Cảm ơn công ty đã tổ chức một chuyến đi hoàn hảo."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#5b8266] flex items-center justify-center text-white font-bold text-lg">
+                            T
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Thủy Trần</h4>
+                            <p class="text-stone-500 text-[11px]">5 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex text-[#fbbc04]">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <span class="text-xs text-stone-500 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> Google
+                        </span>
+                    </div>
+                    <p class="text-stone-300 mb-6 text-sm leading-relaxed">"Mình vừa trải nghiệm chuyến băng tuyết ở Cáp Nhĩ Tân. Lần đầu đi chơi trong thời tiết âm 20 độ, ban đầu hơi e ngại nhưng sự chuẩn bị trang bị giữ ấm của FIT Tour rất kỹ. Không có điểm chê, chắc chắn sẽ tiếp tục đồng hành cùng FIT Tour trong năm tới."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#8c7a6b] flex items-center justify-center text-white font-bold text-lg">
+                            V
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Văn Trung Bùi</h4>
+                            <p class="text-stone-500 text-[11px]">Local Guide • 11 đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12 text-center">
+                <a href="https://fittour.vn/danh-gia-khach-hang-ve-fit-tour" target="_blank" class="inline-block px-8 py-3 border border-white/20 text-white hover:bg-white hover:text-black font-mono text-sm uppercase tracking-widest transition-colors duration-300">
+                    Xem Thêm Đánh Giá Trên Website
+                </a>
+            </div>
+        </div>
+
+        <!-- Slider Image Gallery -->
+        <style>
+            .hide-scrollbar::-webkit-scrollbar { display: none; }
+            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        </style>
+        
+        <div class="relative w-full max-w-[1600px] mx-auto px-4 md:px-8 pb-20 tour-gallery-section group">
+            <button class="tour-gallery-prev absolute left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur border border-white/20 hover:bg-white hover:text-black hidden md:flex items-center justify-center transition-all shadow-lg text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            
+            <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing pb-8">
+                <!-- Image 1 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/11/co-vietnam-tun-g-bay-o-everest-base-camp.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng ở Everest">
+                </div>
+                <!-- Image 2 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/11/fit-tour-va-hanh-trinh-den-everest.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng ở Himalaya">
+                </div>
+                <!-- Image 3 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/09/nhom-8-ladakh-2022.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng Ladakh">
+                </div>
+                <!-- Image 4 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/07/du-khach-chup-anh-o-vung-nui-everest.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng vùng núi cao">
+                </div>
+                <!-- Image 5 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/03/Hopper-Valley.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng ở thung lũng Hopper">
+                </div>
+                <!-- Image 6 -->
+                <div class="flex-shrink-0 snap-center overflow-hidden rounded-2xl w-[85%] sm:w-[60%] md:w-[calc(33.333%-16px)] aspect-[4/3] md:aspect-[3/2]">
+                    <img src="https://media.fittour.vn/uploads/2022/07/doan-khach-trekking-annapurna-nepal-cung-dulichcoguu.webp" class="w-full h-full object-cover pointer-events-none" alt="Khách hàng trekking Annapurna">
+                </div>
+            </div>
+
+            <button class="tour-gallery-next absolute right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur border border-white/20 hover:bg-white hover:text-black hidden md:flex items-center justify-center transition-all shadow-lg text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Script for Image Sliders (Drag to scroll) -->
+    <script>
+        document.addEventListener(''astro:page-load'', () => {
+            
+            // Reusable drag-to-scroll function
+            const enableDragToScroll = (slider) => {
+                if (!slider) return;
+                
+                let isDown = false;
+                let startX = 0;
+                let scrollLeft = 0;
+
+                slider.addEventListener(''mousedown'', (e) => {
+                    isDown = true;
+                    slider.style.cursor = ''grabbing'';
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+                slider.addEventListener(''mouseleave'', () => {
+                    isDown = false;
+                    slider.style.cursor = ''grab'';
+                });
+                slider.addEventListener(''mouseup'', () => {
+                    isDown = false;
+                    slider.style.cursor = ''grab'';
+                });
+                slider.addEventListener(''mousemove'', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+            };
+
+            // Setup Gallery Slider with Prev/Next buttons
+            const gallerySection = document.querySelector(''.tour-gallery-section'');
+            if (gallerySection) {
+                const gallerySlider = gallerySection.querySelector(''.tour-gallery-slider'');
+                const prevBtn = gallerySection.querySelector(''.tour-gallery-prev'');
+                const nextBtn = gallerySection.querySelector(''.tour-gallery-next'');
+                
+                if (gallerySlider) {
+                    enableDragToScroll(gallerySlider);
+                    
+                    const getScrollAmount = () => {
+                        const firstChild = gallerySlider.firstElementChild;
+                        const gap = parseInt(window.getComputedStyle(gallerySlider).gap) || 24;
+                        return firstChild ? firstChild.clientWidth + gap : gallerySlider.clientWidth * 0.5;
+                    };
+
+                    if (prevBtn) {
+                        prevBtn.addEventListener(''click'', () => {
+                            gallerySlider.scrollBy({ left: -getScrollAmount(), behavior: ''smooth'' });
+                        });
+                    }
+                    if (nextBtn) {
+                        nextBtn.addEventListener(''click'', () => {
+                            gallerySlider.scrollBy({ left: getScrollAmount(), behavior: ''smooth'' });
+                        });
+                    }
+                }
+            }
+
+            // Setup Team Slider
+            const teamSlider = document.querySelector(''.team-slider'');
+            if (teamSlider) {
+                // Remove grid classes on mobile to allow horizontal flex scrolling, keep grid on md+
+                enableDragToScroll(teamSlider);
+            }
+        });
+    </script>
+
+
+    <!-- Footer Quote -->
+    <section class="py-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-serif leading-tight text-stone-900 mb-12">
+                FIT TOUR không định nghĩa mình bằng số lượng tour đã bán, mà bằng cách mỗi hành trình được tạo ra.
+            </h2>
+            <div class="h-[1px] w-24 bg-stone-400 mx-auto mb-12"></div>
+            <p class="text-xl md:text-2xl text-stone-500 font-serif italic">
+                "Every journey teaches us something new."
+            </p>
+        </div>
+    </section>' WHERE id = 'c88ee169-0f06-454e-84c5-fa90527a95d6';

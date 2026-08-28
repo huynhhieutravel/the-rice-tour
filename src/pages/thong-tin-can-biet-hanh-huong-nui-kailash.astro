@@ -1,0 +1,467 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { Clock, Calendar, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare(`
+      SELECT p.*, u.url as authorUrl, u.avatar as authorAvatar 
+      FROM Post p 
+      LEFT JOIN "User" u ON p.authorId = u.id 
+      WHERE p.slug = ? AND (p.status = 'published' OR p.status = 'publish')
+    `).bind('thong-tin-can-biet-hanh-huong-nui-kailash').first<any>(),
+    { route: Astro.url.pathname, slug: 'thong-tin-can-biet-hanh-huong-nui-kailash', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Thông Tin Cần Biết Khi Hành Hương Núi Kailash';
+const seoDesc = post.seoDesc || post.excerpt || 'Thông tin cần biết trước khi hành hương núi Kailash: 14 điều cần phải biết, checlist vật phẩm mang theo.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/2025/04/thong-tin-can-biet-khi-hanh-huong-nui-kailash.webp';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || new Date().toISOString();
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#c89845] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full h-[600px] lg:h-[650px] overflow-hidden">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Núi Kailash" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 h-full flex flex-col justify-center pt-20 pb-16">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Kinh nghiệm du lịch</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          {post.title || "Thông Tin Cần Biết Khi Hành Hương Núi Kailash"}
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-amber-400 italic mb-10 max-w-3xl drop-shadow-md">
+          14 Điều Quan Trọng & Checklist Chuẩn Bị
+        </h2>
+        <div class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium" set:html={post.excerpt} />
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={post.authorUrl || "/huynh-hieu"} class="flex items-center gap-3 group">
+            <img src={post.authorAvatar || "https://media.fittour.vn/uploads/huynhhieutravel.webp"} alt={post.author || 'Huynh Hieu Travel'} class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {post.author || 'Huynh Hieu Travel'} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>15 phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🎒</span> Hành trang & Checklist
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">💊</span> Chống Say Độ Cao
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">⚠️</span> 14 Điều Lưu Ý
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">📜</span> Quy tắc ứng xử
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[70vh] overflow-y-auto custom-scrollbar">
+              <a href="#tong-quan-hanh-trinh-kailash" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Tổng Quan Về Hành Trình Kailash
+              </a>
+              <a href="#ai-nen-doc-bai-nay" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Ai Nên Đọc Bài Này?
+              </a>
+              <a href="#timeline-hanh-trinh-kora-3-ngay" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Timeline Hành Trình Kora 3 Ngày
+              </a>
+              <a href="#nhung-dieu-quan-trong-can-biet" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Những Điều Quan Trọng Cần Biết
+              </a>
+              <a href="#chuan-bi-suc-khoe" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Chuẩn Bị Sức Khỏe
+              </a>
+              <a href="#nhung-sai-lam-thuong-gap" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Những Sai Lầm Người Mới Thường Gặp
+              </a>
+              <a href="#dau-hieu-can-bao-truong-doan" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Những Dấu Hiệu Cần Báo Ngay
+              </a>
+              <a href="#khi-nao-nen-dung-kora" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Khi Nào Nên Dừng Kora?
+              </a>
+              <a href="#neu-khong-di-het-kora" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Nếu Không Đi Hết Kora Thì Sao?
+              </a>
+              <a href="#chuan-bi-hanh-ly-checklist" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Chuẩn Bị Hành Lý & Checklist
+              </a>
+              <a href="#thuoc-men" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Thuốc Men & Y Tế
+              </a>
+              <a href="#an-uong-nha-hang" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Nhà Hàng & Ẩm Thực
+              </a>
+              <a href="#thong-tin-thiet-yeu" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Sim, Điện, Đổi Tiền & Porter
+              </a>
+              <a href="#quy-tac-ung-xu" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Quy Tắc Ứng Xử Tại Kailash
+              </a>
+              <a href="#faq-kailash" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Câu Hỏi Thường Gặp (FAQ)
+              </a>
+              <a href="#loi-nhan-fit-tour" class="flex items-center gap-2 text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors font-bold mt-3">
+                <span class="text-slate-400 text-base">🏔️</span> Lời Gửi Gắm Từ FIT TOUR
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-xl border border-amber-100 shrink-0">🌤️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Mùa lý tưởng</div>
+                <div class="text-[13px] font-bold text-slate-800">Tháng 5 - Tháng 10</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">🛑</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Khả năng leo</div>
+                <div class="text-[13px] font-bold text-slate-800">Cấm leo vĩnh viễn</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl border border-emerald-100 shrink-0">💪</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Yêu cầu</div>
+                <div class="text-[13px] font-bold text-slate-800">Thể lực & Thích nghi</div>
+              </div>
+            </div>
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">🎫</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Giấy phép</div>
+                <div class="text-[13px] font-bold text-slate-800">Bắt buộc (3 loại)</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro */}
+          <div id="tong-quan-hanh-trinh-kailash" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Tổng Quan Về Hành Trình Kailash</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+              <p><strong>Kailash – ngọn núi thiêng liêng bậc nhất tại Tây Tạng</strong> – là trung tâm tâm linh của 4 tôn giáo lớn: Hindu, Phật giáo Tây Tạng, Bon và Jain. Tham gia Kora Kailash không chỉ là đi bộ 52km quanh ngọn núi, mà là <strong>cuộc hành hương thanh lọc thân – tâm – trí</strong>, gột rửa nghiệp lực và thử thách ý chí con người giữa cao nguyên khắc nghiệt (độ cao 4.500m - 5.600m).</p>
+            </div>
+          </div>
+
+          <div id="ai-nen-doc-bai-nay" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Ai Nên Đọc Bài Này?</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+              <p>Bài viết này được đúc kết từ kinh nghiệm thực tiễn của đội ngũ chuyên gia FIT TOUR, dành riêng cho:</p>
+              <ul class="list-disc pl-5">
+                <li>Những hành giả chuẩn bị bước vào chuyến hành hương Kora Kailash.</li>
+                <li>Du khách muốn tìm hiểu chi tiết về điều kiện ăn ở, thời tiết, sức khỏe tại Kailash.</li>
+                <li>Những ai cần một <strong>Checklist chuẩn xác nhất</strong> để đóng gói hành lý trước ngày đi.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="timeline-hanh-trinh-kora-3-ngay" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Timeline Hành Trình Kora 3 Ngày (Tóm Tắt)</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+              <p>Kora quanh núi Kailash dài khoảng 52km, thường được chia làm 3 ngày đi bộ. Đây là một thử thách lớn về cả thể lực và sức bền.</p>
+              <div class="space-y-4">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                  <h4 class="font-bold text-slate-800 text-lg mb-1">Ngày 1: Darchen – Dirapuk (20km)</h4>
+                  <p class="text-sm">Bắt đầu từ thị trấn Darchen (4.575m) qua thung lũng Lha Chu, nghỉ đêm tại Dirapuk (5.080m) – nơi có góc nhìn tuyệt đẹp ngắm sườn Bắc Kailash.</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                  <h4 class="font-bold text-slate-800 text-lg mb-1">Ngày 2: Dirapuk – Zuthulpuk (18km)</h4>
+                  <p class="text-sm">Ngày khó khăn nhất! Bạn sẽ vượt qua <strong>đèo Dolma La (5.630m)</strong> – điểm cao nhất của hành trình. Vượt qua đèo, bạn đi xuống thung lũng Lham Chu và nghỉ đêm tại Zuthulpuk (4.820m).</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                  <h4 class="font-bold text-slate-800 text-lg mb-1">Ngày 3: Zuthulpuk – Darchen (14km)</h4>
+                  <p class="text-sm">Chặng cuối dễ dàng hơn, đi dọc dòng sông Dzong Chu, trở về lại Darchen, hoàn thành trọn vẹn 1 vòng Kora linh thiêng.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="nhung-dieu-quan-trong-can-biet" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Những Điều Quan Trọng Cần Biết</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <ul class="list-disc pl-5 space-y-3">
+                  <li><strong>Thời gian lý tưởng:</strong> Tháng 5 đến tháng 10. Trong đó tháng 7–8 là thời điểm ấm áp nhất nhưng có thể mưa.</li>
+                  <li><strong>Giấy tờ bắt buộc:</strong> Hộ chiếu, Visa Trung Quốc, Giấy phép vào Tây Tạng, Giấy phép đến Kailash và giấy phép quân sự. (FIT TOUR sẽ lo trọn gói phần này).</li>
+                  <li><strong>Tuân thủ HDV:</strong> Tây Tạng là khu vực nhạy cảm, bạn tuyệt đối không tự ý tách đoàn hay di chuyển ngoài lịch trình.</li>
+                  <li><strong>Tôn trọng tín ngưỡng:</strong> Kora không dành cho sự hời hợt. Hãy duy trì lòng khiêm cung, hạn chế la hét hay đùa giỡn tại nơi chốn tâm linh.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="chuan-bi-suc-khoe" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Chuẩn Bị Sức Khỏe</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Hành trình ở độ cao trung bình trên 5.000m đòi hỏi bạn phải có nền tảng thể lực cực tốt. Lời khuyên:</p>
+               <ul class="list-disc pl-5 space-y-3">
+                  <li><strong>Tập luyện từ sớm:</strong> Bắt đầu tập đi bộ, leo cầu thang hoặc cardio nhẹ trước chuyến đi ít nhất 6–8 tuần.</li>
+                  <li><strong>Kiểm tra sức khỏe:</strong> Rất quan trọng với những ai có tiền sử huyết áp, tim mạch, hô hấp.</li>
+                  <li><strong>Yoga & Thiền:</strong> Giúp điều hòa nhịp thở rất tốt trên cao nguyên thiếu oxy.</li>
+                  <li><strong>Điều chỉnh thói quen:</strong> Ngừng rượu bia, thuốc lá 1 tuần trước chuyến đi.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="nhung-sai-lam-thuong-gap" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Những Sai Lầm Người Mới Thường Gặp</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <ul class="list-disc pl-5 space-y-3">
+                  <li><strong>Đi quá nhanh:</strong> Cố gắng bắt kịp người khác sẽ làm bạn kiệt sức và dễ say độ cao. Hãy duy trì nhịp độ chậm, đều.</li>
+                  <li><strong>Uống ít nước:</strong> Dù trời lạnh không thấy khát, nhưng không khí khô khiến cơ thể mất nước nhanh. Cần uống 3-4 lít nước ấm mỗi ngày.</li>
+                  <li><strong>Mặc quá nóng:</strong> Khi đi bộ cơ thể sẽ sinh nhiệt. Nên mặc đồ nhiều lớp (layering) để dễ cởi bớt khi nóng và mặc vào khi lạnh.</li>
+                  <li><strong>Mang quá nhiều đồ:</strong> Balo nặng là kẻ thù trên Kora. Chỉ mang những thứ tối cần thiết trong ngày.</li>
+                  <li><strong>Ngủ quá ít:</strong> Việc thiếu ngủ đêm trước Kora làm giảm 50% khả năng thích nghi độ cao của cơ thể.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="dau-hieu-can-bao-truong-doan" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Những Dấu Hiệu Cần Báo Ngay Cho Trưởng Đoàn</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Say độ cao cấp tính (AMS) có thể trở nặng rất nhanh. Đừng cố giấu! Hãy báo ngay cho HDV hoặc trưởng đoàn nếu bạn có các triệu chứng sau:</p>
+               <ul class="list-disc pl-5 space-y-3 font-medium text-rose-600">
+                  <li>Đau đầu tăng dần, không giảm sau khi nghỉ ngơi.</li>
+                  <li>Buồn nôn hoặc nôn mửa.</li>
+                  <li>Khó thở ngay cả khi đang nghỉ ngơi.</li>
+                  <li>Trạng thái lơ mơ, mất phương hướng, buồn ngủ liên tục.</li>
+                  <li>Mất thăng bằng, đi lảo đảo như người say rượu.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="khi-nao-nen-dung-kora" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Khi Nào Nên Dừng Kora?</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Việc bỏ cuộc giữa chừng là điều không ai mong muốn, nhưng <strong>sự an toàn của tính mạng là trên hết</strong>. Bạn bắt buộc phải dừng Kora và quay lại độ cao thấp hơn nếu:</p>
+               <ul class="list-disc pl-5 space-y-2">
+                  <li>Các triệu chứng AMS ở trên ngày càng nghiêm trọng dù đã uống thuốc hay thở oxy.</li>
+                  <li>Mạch đập bất thường, tim đập quá nhanh.</li>
+                  <li>Cảm thấy kiệt quệ hoàn toàn, không thể cất bước tiếp.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="neu-khong-di-het-kora" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Nếu Không Đi Hết Kora Thì Sao?</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Đây là thắc mắc cực kỳ phổ biến. Câu trả lời là: <strong>Hoàn toàn không sao cả!</strong></p>
+               <p>Nếu bạn cảm thấy không đủ sức để vượt đèo Dolma La, bạn có thể quay lại thị trấn Darchen nghỉ ngơi và chờ đoàn hoàn thành Kora. Việc bạn đã nỗ lực đến được Darchen và chiêm bái Kailash bằng mắt thực đã là một phước báu vô cùng lớn mạnh.</p>
+            </div>
+          </div>
+
+          <div id="chuan-bi-hanh-ly-checklist" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Chuẩn Bị Hành Lý & Checklist</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <h3 class="text-lg font-bold">1. Trang phục & Đồ dùng đi bộ</h3>
+               <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Giày trekking:</strong> Cổ cao, chống thấm nước, đế có độ bám, <strong>đã đi quen chân</strong>.</li>
+                  <li>Áo khoác gió chống nước, áo giữ nhiệt, áo lông vũ siêu nhẹ.</li>
+                  <li>Quần trekking nhanh khô, quần lót giữ nhiệt.</li>
+                  <li>Gậy leo núi (rất cần thiết), đèn pin đội đầu cá nhân.</li>
+                  <li>Kính râm chống tia UV, kem chống nắng (chỉ số SPF cao), son dưỡng môi.</li>
+                  <li>Balo nhỏ gọn (daypack) đeo trên lưng mang đồ thiết yếu, và 1 túi trống (duffel bag) gửi porter.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="thuoc-men" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Thuốc Men & Y Tế</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <ul class="list-disc pl-5 space-y-3">
+                  <li><strong>Hoạt huyết dưỡng não / Ginkgo Biloba:</strong> Hỗ trợ tuần hoàn máu, nhưng <strong>cần theo tư vấn bác sĩ</strong> chứ không phải ai cũng phù hợp.</li>
+                  <li><strong>Acetazolamide (Diamox):</strong> Thuốc dự phòng say độ cao phổ biến. <strong>Cần tham khảo bác sĩ trước khi sử dụng</strong> để biết liều lượng và chống chỉ định (vd: dị ứng Sulfa).</li>
+                  <li><strong>Thuốc cơ bản:</strong> Thuốc cảm, tiêu hóa, giảm đau/hạ sốt (Paracetamol), vitamin C, băng gâu, salonpas.</li>
+                  <li><strong>Tuyệt đối:</strong> Đóng thuốc vào hộp chống ẩm nhỏ gọn, ghi rõ liều dùng.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="an-uong-nha-hang" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Nhà Hàng & Ẩm Thực</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Trong 3 ngày Kora, điều kiện ăn uống cực kỳ cơ bản. Các nhà khách dọc đường (guesthouse) chủ yếu phục vụ:</p>
+               <ul class="list-disc pl-5 space-y-2">
+                  <li>Mì gói, cơm chiên, súp nóng, trứng luộc, trà bơ.</li>
+                  <li>Khuyên dùng: Nên mang theo lương khô, chocolate, viên bù điện giải, hạt dinh dưỡng từ Việt Nam.</li>
+                  <li><strong>Nước:</strong> Phải có bình giữ nhiệt (Thermos) để xin nước nóng tại các nhà nghỉ. Nước lạnh sẽ đóng băng hoặc làm bạn viêm họng.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="thong-tin-thiet-yeu" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Sim, Điện, Đổi Tiền & Porter</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <ul class="list-disc pl-5 space-y-3">
+                  <li><strong>Đổi tiền:</strong> Sử dụng Nhân dân tệ (CNY). Bạn nên đổi tiền lẻ tại Việt Nam để dễ mua đồ lặt vặt. <em>(Theo tỷ giá tại thời điểm khởi hành)</em>. Alipay/WeChat rất phổ biến nhưng cần có mạng.</li>
+                  <li><strong>Porter:</strong> Người khuân vác giúp bạn mang hành lý lớn (Duffel bag). Bạn chỉ đeo balo nhỏ. Rất nên thuê để giữ sức vượt đèo!</li>
+                  <li><strong>Thuê ngựa hay đi bộ?</strong> Có dịch vụ thuê ngựa cho Kora, nhưng chỉ đi được một số chặng (không thể cưỡi ngựa khi xuống đèo dốc do nguy hiểm). Đây là lựa chọn tốt nếu thể lực bạn yếu.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="quy-tac-ung-xu" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Quy Tắc Ứng Xử Tại Kailash</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p>Vùng đất linh thiêng đòi hỏi sự tôn trọng tuyệt đối:</p>
+               <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Hỏi trước khi chụp:</strong> Nhiều chánh điện, thiền viện cấm quay phim chụp ảnh. Luôn quan sát biển báo hoặc hỏi HDV trước.</li>
+                  <li><strong>Cư xử đúng mực:</strong> Không bước lên nền chánh điện bằng giày bẩn, không sờ vào tranh tượng.</li>
+                  <li><strong>Bảo vệ môi trường:</strong> Không xả rác, không ngắt hoa. Hãy chỉ để lại những bước chân thành kính.</li>
+               </ul>
+            </div>
+          </div>
+
+          <div id="faq-kailash" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Câu Hỏi Thường Gặp (FAQ) Về Kailash</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <div class="space-y-4">
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">1. Say độ cao (AMS) là gì?</h4>
+                    <p>Acute Mountain Sickness (AMS) là hội chứng thiếu oxy khi lên cao nhanh. Biểu hiện là đau đầu, buồn nôn, khó thở. Hầu hết mọi người khi đến Tây Tạng đều có triệu chứng nhẹ trong 1-2 ngày đầu.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">2. Có được tắm khi đến Tây Tạng không?</h4>
+                    <p>Trong 24 giờ đầu khi mới lên cao nguyên, nhiều hướng dẫn viên khuyến nghị <strong>hạn chế tắm nước nóng kéo dài</strong> để cơ thể tập trung thích nghi với độ cao. Tuy nhiên, điều này chủ yếu nhằm tránh bị cảm lạnh và hao tổn thể lực sau khi tắm, không phải là quy định bắt buộc. Trong lúc Kora 3 ngày, hầu như không có cơ sở vật chất để tắm rửa.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">3. Sóng điện thoại và Wifi có không?</h4>
+                    <p>Có sóng viễn thông Trung Quốc tại Darchen và một số đoạn đầu Kora. Tuy nhiên ở Dirapuk và đèo Dolma La sẽ gần như mất sóng hoàn toàn. Wifi ở guesthouse rất chập chờn hoặc không có.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">4. Có điện để sạc thiết bị không?</h4>
+                    <p>Guesthouse dọc Kora có điện từ máy phát hoặc pin năng lượng mặt trời nhưng chỉ cấp điện vài tiếng buổi tối. <strong>Bắt buộc mang theo sạc dự phòng dung lượng lớn</strong>.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">5. Nhà vệ sinh trên đường Kora như thế nào?</h4>
+                    <p>Rất dã chiến. Là các hố xí thô sơ dựng ngoài trời, hoặc nhiều chỗ bạn sẽ phải "hòa mình vào thiên nhiên". Hãy chuẩn bị tinh thần và mang theo giấy vệ sinh tự hủy, khăn ướt.</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 text-lg">6. Có giặt đồ được không?</h4>
+                    <p>Hoàn toàn không. Bạn hãy mang đủ lượng quần lót / tất dùng một lần để thay mỗi ngày trong 3 ngày Kora.</p>
+                  </div>
+               </div>
+            </div>
+          </div>
+
+          <div id="loi-nhan-fit-tour" class="scroll-mt-28">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-500 pb-2 inline-block mb-6">Lời Gửi Gắm Từ FIT TOUR</h2>
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+               <p class="text-slate-700 leading-relaxed italic border-l-4 border-amber-500 pl-4 bg-amber-50/50 py-3 pr-3 rounded-r-lg font-medium">
+                  Chuyến đi đến Kailash không chỉ là một hành trình địa lý, mà là hành trình hướng vào bên trong. Giữa không gian thiêng liêng của đất trời, mỗi bước chân trên vòng Kora là một lần bạn được đối diện với chính mình, buông bỏ những ưu phiền để cảm nhận sự tĩnh lặng sâu thẳm. <br/><br/>
+                  FIT TOUR hiểu rằng đây là một trải nghiệm đầy thách thức nhưng vô cùng xứng đáng. Sự chuẩn bị kỹ lưỡng hôm nay sẽ giúp bạn an tâm trọn vẹn. Chúng tôi cam kết không chỉ là đơn vị tổ chức, mà là người đồng hành tận tâm, sát cánh bên bạn trong suốt chặng đường chạm đến miền đất thánh.
+               </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div class="bg-slate-900 text-white rounded-2xl p-8 text-center mt-12 shadow-xl relative overflow-hidden group">
+             <div class="relative z-10">
+                <h3 class="text-2xl font-bold font-serif mb-3 text-amber-400">Bạn đã sẵn sàng chinh phục Đất Thánh?</h3>
+                <p class="mb-6 text-white/80 max-w-xl mx-auto text-[15px]">Tham gia cùng FIT TOUR trong hành trình 15 ngày về với Kailash - Nơi giao thoa giữa đất trời và tâm linh.</p>
+                <a href="/tour/tour-hanh-huong-nui-kailash-12n11d" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-3 rounded-full transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
+                   Xem Chi Tiết Tour Kailash 15 Ngày
+                </a>
+             </div>
+             <div class="absolute inset-0 bg-[url('https://media.fittour.vn/uploads/2024/07/dinh-nui-kailash-sung-sung-tu-xa.webp')] opacity-10 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

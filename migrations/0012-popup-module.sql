@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS Popup (
+  id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  description TEXT,
+  link TEXT,
+  image TEXT,
+  pageSlugToMatch TEXT,
+  isActive INTEGER DEFAULT 1,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);

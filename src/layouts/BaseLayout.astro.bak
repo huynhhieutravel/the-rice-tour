@@ -1,0 +1,277 @@
+---
+import { env } from 'cloudflare:workers';
+import HeadMeta from '@/components/seo/HeadMeta.astro';
+import ResourceHints from '@/components/seo/ResourceHints.astro';
+import Header from '@/components/layout/header/default/Header.astro';
+import Footer from '@/components/v2/V2Footer.astro';
+import FloatingToast from '@/components/ReactApp/FloatingToast.tsx';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { replaceTokens } from '@/lib/contentTokens';
+import CorporateContactModal from '@/components/forms/CorporateContactModal.astro';
+import CorporateBottomMenu from '@/components/ui/CorporateBottomMenu.astro';
+import GtmEventTracker from '@/components/tracking/GtmEventTracker.astro';
+import '@/styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  preloadImages?: string[];
+  adminEditUrl?: string;
+  canonicalMdUrl?: string;
+  isCorporate?: boolean;
+  hideGlobalHeader?: boolean;
+  hideGlobalFooter?: boolean;
+}
+
+const { title, description, image, canonical, noindex, preloadImages, adminEditUrl, canonicalMdUrl, isCorporate = false, hideGlobalHeader = false, hideGlobalFooter = false } = Astro.props;
+const isAppView = Astro.url.searchParams.has('appview');
+const finalHideHeader = hideGlobalHeader || isAppView;
+const finalHideFooter = hideGlobalFooter || isAppView;
+const finalNoIndex = noindex || isAppView;
+
+let bottomPadding = 0;
+if (isAppView) {
+  const rawBottom = Astro.url.searchParams.get('bottom');
+  if (rawBottom) {
+    const parsed = parseInt(rawBottom, 10);
+    if (!isNaN(parsed) && parsed >= 0 && parsed <= 300) {
+      bottomPadding = parsed;
+    }
+  }
+}
+
+const { settings } = await getGlobalSettings();
+const globalSchema = settings.schema;
+const isAdminLoggedIn = (Astro.locals as any).isAdminLoggedIn === true;
+const adminUsername = (Astro.locals as any).adminUsername || 'Admin';
+
+// Tự động load Snippet Bottom Menu cho Giao diện Doanh nghiệp
+let corporateBottomMenuHtml = '';
+let corporateBottomMenuCss = '';
+
+if (isCorporate) {
+  try {
+    const d1Db = env?.dulichcoguu_d1;
+    if (d1Db) {
+      const { results: snippetRes } = await d1Db.prepare("SELECT html_content, css_content_scoped FROM Snippet WHERE slug = 'doanh-nghiep-bottom-menu'").all();
+      if (snippetRes && snippetRes.length > 0) {
+        corporateBottomMenuHtml = snippetRes[0].html_content || '';
+        corporateBottomMenuCss = snippetRes[0].css_content_scoped || '';
+      }
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+---
+
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <HeadMeta 
+      title={title} 
+      description={description} 
+      image={image} 
+      canonical={canonical} 
+      noindex={finalNoIndex} 
+    />
+    <!-- Google Tag Base (Always loaded for Google Ads and Analytics) -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    </script>
+    
+    {isAppView && bottomPadding > 0 && (
+      <style is:inline set:html={`
+        body { padding-bottom: ${bottomPadding}px !important; }
+        .breadcrumb-tour { display: none !important; }
+      `} />
+    )}
+
+    {settings.tracking?.ga && settings.tracking.ga.startsWith('GTM-') && (
+      <script is:inline set:html={`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${settings.tracking.ga}');
+      `} />
+    )}
+    {settings.tracking?.ga && !settings.tracking.ga.startsWith('GTM-') && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${settings.tracking.ga}`}></script>
+        <script set:html={`
+          gtag('js', new Date());
+          gtag('config', '${settings.tracking.ga}');
+        `} />
+      </>
+    )}
+    {settings.tracking?.pixel && (
+      <>
+        <script set:html={`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          var pixelIds = '${settings.tracking.pixel}'.split(',');
+          for (var i = 0; i < pixelIds.length; i++) {
+            var pid = pixelIds[i].trim();
+            if (pid) fbq('init', pid);
+          }
+          fbq('track', 'PageView');
+        `} />
+        <noscript>
+          <Fragment set:html={String(settings.tracking.pixel).split(',').map(pid => pid.trim()).filter(Boolean).map(pid => `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${pid}&ev=PageView&noscript=1" />`).join('')} />
+        </noscript>
+      </>
+    )}
+    {settings.tracking?.headerCode && <Fragment set:html={settings.tracking.headerCode} />}
+    {canonicalMdUrl && <link rel="alternate" type="text/markdown" href={canonicalMdUrl} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    </noscript>
+    <ResourceHints preloadImages={preloadImages} />
+    {globalSchema && (globalSchema.includes('<scrip' + 't') ? 
+      <Fragment set:html={globalSchema} /> : 
+      <script type="application/ld+json" set:html={globalSchema} />
+    )}
+    <slot name="schema" />
+    <slot name="head" />
+    <meta name="facebook-domain-verification" content="k43d40vs9hjgei8rndzeo6dzqc81fk" />
+    <meta name="zalo-platform-site-verification" content="O--248RA3Xf_uwW-kVK5Ccx1eX-2jtX4E38r" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-subtle text-primary font-sans antialiased selection:bg-brand-500 selection:text-white">
+    {settings.tracking?.ga && settings.tracking.ga.startsWith('GTM-') && (
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${settings.tracking.ga}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    )}
+    {isAdminLoggedIn && (
+    <div id="wp-admin-bar" style="position: fixed; top: 0; left: 0; right: 0; height: 32px; background: #1d2327; color: #f0f0f1; z-index: 100000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; font-size: 13px; display: flex; align-items: center; padding: 0 16px; justify-content: space-between;">
+      <div style="display: flex; align-items: center; height: 100%;">
+        <a href="/admin" style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#f59e0b'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+          <span style="margin-right: 6px; font-size: 14px;">🌾</span>
+          The Rice Tour CMS
+        </a>
+        {adminEditUrl && (
+          <a href={adminEditUrl} style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+            <svg style="margin-right: 6px;" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            {adminEditUrl.includes('/tours/') ? 'Sửa Tour' : adminEditUrl.includes('/pages/') ? 'Sửa Trang' : 'Sửa bài viết'}
+          </a>
+        )}
+        <a href="/admin/posts/edit" style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
+          <span style="font-size: 16px; margin-right: 4px; line-height: 1;">+</span> Tạo mới
+        </a>
+      </div>
+      <div style="display: flex; align-items: center; height: 100%;">
+        <span style="padding: 0 12px; display: flex; align-items: center; height: 100%; color: #f0f0f1; cursor: default;">
+          Xin chào, {adminUsername}
+          <img src={`https://ui-avatars.com/api/?name=${adminUsername}&background=3b82f6&color=fff&size=32`} alt={adminUsername} style="width: 18px; height: 18px; border-radius: 50%; margin-left: 8px;" />
+        </span>
+      </div>
+    </div>
+    )}
+    {isAdminLoggedIn && <style>body { margin-top: 32px !important; }</style>}
+    <script is:inline>
+      // WebMCP API for AI Agent interaction
+      if (typeof navigator !== 'undefined') {
+        // Wait for potential extension injection or immediate execution
+        const initWebMCP = () => {
+          if (navigator.modelContext && navigator.modelContext.provideContext) {
+            navigator.modelContext.provideContext({
+              tools: [
+                {
+                  name: "search_tours",
+                  description: "Tìm kiếm thông tin tour du lịch FIT Tour",
+                  inputSchema: {
+                    type: "object",
+                    properties: {
+                      query: { type: "string", description: "Từ khóa hoặc địa điểm (VD: Nhật Bản, Châu Âu)" }
+                    },
+                    required: ["query"]
+                  },
+                  execute: async (args) => {
+                    window.location.href = `/?s=${encodeURIComponent(args.query)}`;
+                    return { result: `Đang chuyển hướng đến trang tìm kiếm với từ khóa: ${args.query}` };
+                  }
+                }
+              ]
+            });
+          }
+        };
+        // Run immediately and also on DOMContentLoaded just in case
+        initWebMCP();
+        document.addEventListener('DOMContentLoaded', initWebMCP);
+      }
+    </script>
+
+    <slot name="header">
+      {!finalHideHeader && <Header isCorporate={isCorporate} />}
+    </slot>
+
+    <main id="main-content" class="flex-grow w-full">
+      <slot />
+    </main>
+    
+    <!-- Floating Milestone Promo -->
+    { !isAppView && <FloatingToast client:only="react" /> }
+
+    <slot name="footer">
+      {!finalHideFooter && <Footer />}
+    </slot>
+
+    {isCorporate && corporateBottomMenuHtml ? (
+      <Fragment set:html={corporateBottomMenuHtml} />
+    ) : isCorporate ? (
+      <CorporateBottomMenu />
+    ) : null}
+
+    {isCorporate && <CorporateContactModal />}
+  
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousels = document.querySelectorAll("[data-component='tour-carousel']");
+        carousels.forEach(slider => {
+          const container = slider.parentElement;
+          if(!container) return;
+          const prev = container.querySelector("[data-action='carousel-prev']");
+          const next = container.querySelector("[data-action='carousel-next']");
+          
+          if(prev) prev.onclick = (e) => { e.preventDefault(); slider.scrollBy({left: -380, behavior: 'smooth'}); };
+          if(next) next.onclick = (e) => { e.preventDefault(); slider.scrollBy({left: 380, behavior: 'smooth'}); };
+          
+          let isDown=false, startX=0, scrollLeft=0, isDragging=false;
+          let cachedOffset = 0;
+          slider.addEventListener('mousedown', (e) => {
+            isDown=true; isDragging=false; slider.style.cursor='grabbing'; slider.style.scrollBehavior='auto';
+            cachedOffset = slider.getBoundingClientRect().left;
+            startX = e.pageX - cachedOffset; scrollLeft = slider.scrollLeft;
+          });
+          const stop = () => { isDown=false; slider.style.cursor='grab'; slider.style.scrollBehavior='smooth'; };
+          slider.addEventListener('mouseleave', stop);
+          slider.addEventListener('mouseup', stop);
+          slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault(); isDragging=true;
+            const x = e.pageX - cachedOffset;
+            slider.scrollLeft = scrollLeft - (x - startX)*2;
+          });
+          slider.style.cursor='grab';
+          slider.addEventListener('click', (e) => { if(isDragging){ e.preventDefault(); e.stopPropagation(); } }, true);
+          slider.querySelectorAll('a,img').forEach(l => l.addEventListener('dragstart', e=>e.preventDefault()));
+        });
+      });
+    </script>
+
+    <GtmEventTracker contentType={isCorporate ? 'corporate' : 'general'} />
+  </body>
+
+</html>

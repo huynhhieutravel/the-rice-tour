@@ -1,0 +1,94 @@
+<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <section class="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src="https://media.fittour.vn/uploads/placeholder.webp" 
+          alt="Ảnh bìa bài viết" 
+          class="w-full h-full object-cover object-center opacity-80" 
+          width="1920" 
+          height="1080"
+          fetchpriority="high" 
+          loading="eager" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <span class="w-3 h-3 text-white/70">></span>
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <span class="w-3 h-3 text-white/70">></span>
+          <span class="text-white font-semibold line-clamp-1">Tên Chuyên Mục</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          TIÊU ĐỀ BÀI VIẾT CHÍNH H1
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Đoạn giới thiệu phụ (Subtitle) hấp dẫn tóm tắt nội dung bài viết
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Đoạn Sapo giới thiệu ngắn gọn dẫn dắt vào bài. Dùng một câu thật thu hút để giữ chân người đọc.
+        </p>
+
+      </div>
+    </section>
+
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#section-1" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">1. Phần giới thiệu</a>
+              <a href="#section-2" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">2. Phần nội dung chính</a>
+              <a href="#section-3" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">3. Kết luận</a>
+            </nav>
+          </div>
+        </aside>
+
+        <article class="col-span-1 lg:col-span-9 prose prose-slate max-w-none custom-blog-prose pb-20">
+          
+          <div id="section-1" class="scroll-mt-32">
+            <h2>1. Tiêu đề phần 1 (Heading 2)</h2>
+            <p>Đây là nội dung mẫu cho phần 1. Bạn có thể bắt đầu viết nội dung tại đây. Hãy nhớ cấu trúc bài viết Scrollytelling chú trọng vào hình ảnh lớn và đoạn văn ngắn gọn, dễ đọc.</p>
+            
+            <figure>
+              <img src="https://media.fittour.vn/uploads/placeholder.webp" alt="Ảnh minh hoạ" class="rounded-xl w-full" />
+              <figcaption>Đây là chú thích hình ảnh (Caption). Chú thích nên ngắn gọn nhưng đầy đủ ý nghĩa.</figcaption>
+            </figure>
+          </div>
+
+          <hr class="my-10 border-slate-200" />
+
+          <div id="section-2" class="scroll-mt-32">
+            <h2>2. Tiêu đề phần 2 (Heading 2)</h2>
+            <p>Nội dung phần 2 tiếp nối. Chèn thêm các danh sách (bullets) nếu cần liệt kê:</p>
+            <ul>
+              <li>Điểm nổi bật thứ nhất.</li>
+              <li>Điểm nổi bật thứ hai.</li>
+              <li>Lưu ý quan trọng thứ ba.</li>
+            </ul>
+          </div>
+
+          <hr class="my-10 border-slate-200" />
+
+          <div id="section-3" class="scroll-mt-32">
+            <h2>3. Kết luận</h2>
+            <p>Đoạn kết tóm lược lại thông điệp của bài viết và có thể chèn lời kêu gọi hành động (Call to Action - CTA) để khách hàng liên hệ hoặc xem thêm tour.</p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Snippet (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug TEXT NOT NULL UNIQUE,
+  name TEXT NOT NULL,
+  description TEXT,
+  html_content TEXT,
+  css_content TEXT,
+  css_content_scoped TEXT,
+  status INTEGER DEFAULT 1,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

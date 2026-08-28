@@ -1,0 +1,17 @@
+---
+// src/components/system/footer/sections/FooterLinks.astro
+export interface Props {
+  title: string;
+  links: { name: string; href: string }[];
+}
+
+const { title, links } = Astro.props;
+---
+<div class="flex flex-col gap-6">
+  <h3 class="text-brand-500 font-bold text-lg">{title}</h3>
+  <ul class="space-y-4 text-sm text-gray-300">
+    {links.map(link => (
+      <li><a href={link.href} class="hover:text-white transition-colors">{link.name}</a></li>
+    ))}
+  </ul>
+</div>

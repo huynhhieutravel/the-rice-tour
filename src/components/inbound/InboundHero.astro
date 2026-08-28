@@ -1,0 +1,117 @@
+---
+// src/components/inbound/InboundHero.astro
+---
+<section class="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gray-50">
+  
+  <!-- Background Image with Cinematic Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2000&q=85" 
+      alt="Vietnam Terraces and Karsts" 
+      class="w-full h-full object-cover object-center scale-105 animate-pulse duration-[10000ms]"
+      fetchpriority="high"
+    />
+    <!-- Lighter overlay for a brighter feel, while keeping text readable -->
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/30 to-gray-900/10"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center mt-6">
+    
+    <!-- Top Pill Badge -->
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/20 border border-white/40 backdrop-blur-md mb-6 shadow-lg">
+      <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+      <span class="text-xs uppercase tracking-[0.25em] font-bold text-white">
+        Bespoke Vietnam Inbound Specialist
+      </span>
+    </div>
+
+    <!-- Editorial Main Headline -->
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.1] mb-6 drop-shadow-lg">
+      Authentic Vietnam Journeys, <br class="hidden sm:inline" />
+      <span class="italic font-normal text-brand-300">Hand-Crafted</span> for Curious Souls.
+    </h1>
+
+    <p class="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10 drop-shadow-md">
+      From misty mountain terraces in Sapa and secluded Lan Ha Bay cruises to imperial Hue and Mekong floating life—travel deeper with your 24/7 dedicated local concierge.
+    </p>
+
+    <!-- Quick Search Widget Container - Light Mode -->
+    <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-2xl border border-gray-200 p-4 sm:p-5 rounded-3xl shadow-xl">
+      <form action="/tours" method="GET" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-left">
+        
+        <!-- Keyword Search -->
+        <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
+          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+            🔍 Keyword
+          </label>
+          <input 
+            type="text" 
+            name="q" 
+            placeholder="e.g. Sapa, Cruise..." 
+            class="w-full bg-transparent text-gray-900 text-sm font-semibold placeholder-gray-400 focus:outline-none"
+          />
+        </div>
+
+        <!-- Region Select -->
+        <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
+          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+            📍 Destination
+          </label>
+          <select name="country" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
+            <option value="" class="bg-white text-gray-900">All Vietnam</option>
+            <option value="mien-bac" class="bg-white text-gray-900">North &amp; Hanoi</option>
+            <option value="mien-trung" class="bg-white text-gray-900">Central &amp; Hoi An</option>
+            <option value="mien-nam" class="bg-white text-gray-900">South &amp; Mekong</option>
+          </select>
+        </div>
+
+        <!-- Duration Select -->
+        <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
+          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+            ⏱️ Duration
+          </label>
+          <select name="duration" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
+            <option value="" class="bg-white text-gray-900">Any Duration</option>
+            <option value="short" class="bg-white text-gray-900">3 – 5 Days</option>
+            <option value="medium" class="bg-white text-gray-900">6 – 10 Days</option>
+            <option value="grand" class="bg-white text-gray-900">11+ Days</option>
+          </select>
+        </div>
+
+        <!-- Submit Search Button -->
+        <div class="flex items-center">
+          <button 
+            type="submit" 
+            class="w-full h-full min-h-[52px] bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <span>Explore Tours</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Trust Metric Badges -->
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold text-white/90 drop-shadow-md">
+      <div class="flex items-center gap-2">
+        <span class="text-brand-400">★★★★★</span>
+        <span>TripAdvisor 5.0 Excellence</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+        <span>100% Private &amp; Customizable</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+        <span>Zero Forced Shopping Guarantee</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+        <span>24/7 Dedicated Local Concierge</span>
+      </div>
+    </div>
+
+  </div>
+</section>

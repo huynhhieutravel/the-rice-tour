@@ -1,0 +1,835 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { MapPin, Info, Users, Clock, Calendar, Compass, Share2, Link as LinkIcon, ChevronRight, CheckCircle2 } from 'lucide-react';
+
+const d1Db = env?.dulichcoguu_d1;
+if (!d1Db) return Astro.rewrite("/500");
+
+// Fetch CMS Data for SEO and Metadata
+let post;
+try {
+  post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('noi-o-ladakh').first<any>(),
+    { route: Astro.url.pathname, slug: 'noi-o-ladakh', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  return Astro.rewrite("/500");
+}
+
+if (!post) {
+  return Astro.rewrite("/404");
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Top 18 Tu Viện Nổi Tiếng Nhất Ladakh';
+const seoDesc = post.seoDesc || post.excerpt || 'Khám phá 18 tu viện Phật giáo Tây Tạng linh thiêng và nổi tiếng nhất tại Ladakh, Ấn Độ.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/thiksey-monastery-ladakh.webp';
+
+// --- DATE LOGIC ---
+const dbUpdatedAtStr = post.updatedAt || post.createdAt || post.publishedAt || new Date().toISOString();
+const dbUpdatedAt = new Date(dbUpdatedAtStr.replace(' ', 'T'));
+
+// Last time the Astro template was updated (today)
+const templateUpdatedAt = new Date('2026-06-28T00:00:00.000Z');
+
+// Lấy ngày mới nhất giữa DB và Template
+const displayDate = dbUpdatedAt > templateUpdatedAt ? dbUpdatedAt : templateUpdatedAt;
+
+const datePrefix = "Cập nhật:";
+
+// Format date to local VN timezone
+const formattedDate = new Intl.DateTimeFormat('vi-VN', {
+  timeZone: 'Asia/Ho_Chi_Minh',
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric'
+}).format(displayDate);
+// ------------------
+
+const adminEditUrl = `/admin/posts/edit?id=${post.id}`;
+
+// List of monasteries based on the content
+const groupedAccommodations = [
+  {
+    "id": "region-1",
+    "name": "Trung tâm thị trấn Leh",
+    "cover": "https://media.fittour.vn/uploads/pho-di-bo-main-bazaar-leh-ladakh.webp",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-1",
+        "name": "Dolkhar Resort",
+        "desc": "Được mệnh danh là biểu tượng của boutique luxury tại Leh, Dolkhar Resort gây ấn tượng mạnh với thiết kế thân thiện với môi trường (eco-resort) nhưng vẫn toát lên vẻ sang trọng tuyệt đối.<br/><br/>Resort này nổi bật với kiến trúc truyền thống Ladakhi kết hợp cùng vật liệu bền vững, từng đoạt nhiều giải thưởng danh giá. Không gian yên tĩnh, dịch vụ chuẩn quốc tế và ẩm thực tinh tế tại nhà hàng Tsas biến nơi đây thành lựa chọn hàng đầu cho giới tinh hoa.",
+        "type": "Boutique Luxury",
+        "globalIndex": 1,
+        "suitableFor": [
+          "Luxury",
+          "Couple",
+          "Photographer"
+        ]
+      },
+      {
+        "id": "acc-2",
+        "name": "The Indus Valley Hotel",
+        "desc": "Đây là một trong những khách sạn 5 sao cao cấp đầu tiên và cực kỳ nổi tiếng tại Leh. The Indus Valley luôn là ưu tiên hàng đầu của các đoàn khách quốc tế và tour cao cấp.<br/><br/>Sở hữu vị trí đắc địa gần <a href='https://thericetour.com/cho-leh-ladakh' class='text-amber-700 font-bold hover:underline'>chợ trung tâm Leh</a>, khách sạn cung cấp hệ thống sưởi trung tâm 24/7 (vô cùng quan trọng vào mùa đông), phòng ốc lót gỗ sang trọng, spa, và tầm nhìn tuyệt đẹp ra dãy núi Stok hùng vĩ.",
+        "type": "Khách sạn 5 Sao",
+        "globalIndex": 2,
+        "suitableFor": [
+          "Luxury",
+          "Gia đình",
+          "Senior"
+        ]
+      },
+      {
+        "id": "acc-3",
+        "name": "The Grand Dragon Ladakh",
+        "desc": "Một trong những khách sạn sang trọng và nổi tiếng nhất của Leh, Grand Dragon là nơi tuyệt vời cho những ai muốn đi du lịch đến Ladakh mà không cần tìm hiểu kỹ. Nếu bạn đang tìm kiếm các khách sạn ở Ladakh được trang bị mọi tiện nghi có thể bao gồm hệ thống sưởi trung tâm và quán cà phê 24 giờ.<br/><br/>Grand Dragon là nơi tuyệt vời ngay cả đối với những người muốn xả hơi 1 hoặc 2 đêm khi kết thúc một chuyến trekking khó khăn hoặc một cuộc phiêu lưu hiểm trở. Đây cũng là một trong số ít khách sạn mở cửa suốt mùa đông với vòi sen nước nóng thực sự xa xỉ.",
+        "type": "Khách sạn cao cấp",
+        "globalIndex": 3,
+        "suitableFor": [
+          "Luxury",
+          "Gia đình",
+          "Senior"
+        ]
+      },
+      {
+        "id": "acc-4",
+        "name": "Khách sạn Omasila",
+        "desc": "Là một trong những khách sạn lâu đời nhất của Leh, Omasila từ lâu đã trở thành địa điểm yêu thích của những du khách đến thăm Ladakh thường xuyên, với lượng người hâm mộ chuyên dụng phát triển mỗi mùa.<br/><br/>Sàn gỗ, lối trang trí Ladakhi cổ điển và sân hiên ấn tượng với vô số loài hoa nhìn ra quang cảnh núi non là những gì mọi người yêu thích nhất ở đây. Đây cũng là một trong số ít khách sạn vẫn mở cửa suốt mùa đông Ladakhi khắc nghiệt.",
+        "type": "Khách sạn",
+        "globalIndex": 4,
+        "suitableFor": [
+          "Gia đình",
+          "Couple"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "region-2",
+    "name": "Ngoại ô Leh (Stok & Thiksey)",
+    "cover": "https://media.fittour.vn/uploads/toan-canh-tu-vien-thiksey-ladakh.webp",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-5",
+        "name": "Khách sạn Stok Palace Heritage",
+        "desc": "Nhà của triều đại Namgyal kể từ khi nó được xây dựng vào năm 1820. Cung điện Stok đã được chuyển đổi một phần thành khách sạn di sản với sáu phòng hiện có sẵn cho khách. Một trong những khách sạn xa xỉ độc quyền ở Ladakh, việc ở tại một trong hai Suite của Nữ hoàng và các phòng của Nhà vua là một cách rất hoài cổ để trải nghiệm hoàng gia của Ladakh.<br/><br/>Một ngôi đền cổ và một bảo tàng tư nhân lớn có các bộ sưu tập hoàng gia về vương miện, quần áo, tiền xu và kho vũ khí, v.v., nằm ngay trong khuôn viên.",
+        "type": "Khách sạn di sản",
+        "globalIndex": 5,
+        "suitableFor": [
+          "Luxury",
+          "Photographer",
+          "Couple"
+        ]
+      },
+      {
+        "id": "acc-6",
+        "name": "Trại Chamba",
+        "desc": "Bạn muốn tìm chỗ nghỉ ở Ladakh để cắm trại? Trại Chamba của Ultimate Traveling Camp tại Thiksey cung cấp dịch vụ \"Glamping\" (cắm trại sang trọng). Lều kiểu thực dân của họ thực sự có hệ thống sưởi hoàn chỉnh với phòng tắm riêng. Ngoài ra, còn có lều Tiếp tân, khu vực Ăn uống và thư viện được thiết kế đẹp mắt.<br/><br/>Có dịch vụ quản gia tuyệt vời và ẩm thực tuyệt vời trong một khung cảnh độc đáo, nơi bạn tận hưởng tầm nhìn toàn cảnh ra những ngọn núi phủ tuyết trắng trong khi có thể ngắm nhìn Tu viện Thiksey ngoạn mục trong toàn bộ vinh quang của nó.",
+        "type": "Glamping",
+        "globalIndex": 6,
+        "suitableFor": [
+          "Luxury",
+          "Couple",
+          "Gia đình"
+        ]
+      }
+    ],
+    "distance": "Cách trung tâm Leh khoảng 15 - 20km"
+  },
+  {
+    "id": "region-3",
+    "name": "Thung lũng Nubra",
+    "cover": "https://media.fittour.vn/uploads/trai-nghiem-cuoi-lac-da-hai-buouu-o-nubra-valley.webp",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-7",
+        "name": "Wilderness Camp Diskit",
+        "img": "https://media.fittour.vn/uploads/khu-leu-nghi-duong-wilderness-camp-diskit.webp",
+        "desc": "Nằm giữa <a href='https://thericetour.com/thung-lung-ladakh' class='text-amber-700 font-bold hover:underline'>thung lũng Nubra</a> rộng lớn, Wilderness Camp Diskit mang đến trải nghiệm cắm trại sang trọng và tiện nghi bậc nhất. Vị trí vô cùng thuận lợi khi chỉ cách Tu viện Diskit nổi tiếng một quãng ngắn.<br/><br/>Khu cắm trại cung cấp những chiếc lều cao cấp với đầy đủ tiện nghi, giường nệm êm ái, phòng tắm riêng biệt, kết hợp hài hòa với không gian tĩnh lặng của thiên nhiên hoang dã. Đây là điểm dừng chân lý tưởng để bạn tận hưởng bầu không khí trong lành, ngắm sao và khám phá cồn cát Hunder gần đó.<br/><br/><blockquote class=\"border-l-4 border-amber-600 pl-4 py-1 my-3 bg-amber-50/50 rounded-r-lg italic text-slate-600 text-[14.5px]\">\"Ban ngày băng qua những cung đường cao nhất thế giới, tối đến lại có cảm giác như đang ngồi ăn cơm cùng gia đình giữa Himalaya.\"<br/><span class=\"text-[12px] text-amber-700 font-bold not-italic mt-2 block\">— Chia sẻ từ chuyến đi của đoàn FIT TOUR</span></blockquote>",
+        "type": "Khu cắm trại (Camp)",
+        "link": "/wilderness-camp-diskit",
+        "globalIndex": 7,
+        "suitableFor": [
+          "Couple",
+          "Photographer",
+          "Motor Trip"
+        ]
+      },
+      {
+        "id": "acc-8",
+        "name": "Stone Hedge Hotel",
+        "desc": "Toạ lạc tại làng Hunder xinh đẹp, Stone Hedge Hotel là điểm đến yêu thích của rất nhiều du khách phương Tây (Google Reviews cực kỳ cao). Nơi đây nổi tiếng với thiết kế eco-chic, sử dụng vật liệu đá và gỗ tự nhiên mộc mạc nhưng bên trong lại cực kỳ tiện nghi, hiện đại.<br/><br/>Với các ban công riêng nhìn ra thung lũng, nhà hàng phục vụ thực phẩm hữu cơ địa phương và tiện ích sưởi ấm hoàn hảo, Stone Hedge mang đến trải nghiệm nghỉ dưỡng khác biệt hoàn toàn giữa hoang mạc Nubra.",
+        "type": "Khách sạn",
+        "globalIndex": 8,
+        "suitableFor": [
+          "Couple",
+          "Gia đình",
+          "Luxury"
+        ]
+      },
+      {
+        "id": "acc-9",
+        "name": "The Kyagar",
+        "desc": "Đây chắc chắn là một trong những nơi đáng lưu trú nhất ở Nubra. Nằm tại ngôi làng Sumur thanh bình, The Kyagar là một boutique hotel mang đậm hơi thở văn hoá Con Đường Tơ Lụa. Khách sạn này thu hút rất nhiều nhiếp ảnh gia và những người yêu thích nghệ thuật.<br/><br/>Điểm nhấn là các phòng nghỉ có cửa sổ kính lớn và giếng trời để ngắm sao ban đêm, kết hợp triết lý phát triển bền vững và ẩm thực farm-to-table xuất sắc.",
+        "type": "Boutique Hotel",
+        "globalIndex": 9,
+        "suitableFor": [
+          "Photographer",
+          "Couple",
+          "Luxury"
+        ]
+      },
+      {
+        "id": "acc-10",
+        "name": "Khu nghỉ dưỡng ở sa mạc Himalaya",
+        "desc": "Một chuyến cưỡi lạc đà Bactrian trong sa mạc lạnh giá của Nubra luôn là lựa chọn tuyệt nhất ở Himalaya, và Desert Himalaya Resort mang lại trải nghiệm này ngay trước cửa nhà. Trải rộng trên 6 mẫu Anh, nằm giữa những ngọn núi Karakoram và Ladakh gồ ghề là khu nghỉ mát sang trọng này ở làng Hundar.<br/><br/>Ngoài các lều sang trọng, họ còn có những chiếc lều được lợp bằng cỏ giống như của những người du mục Changpa ở Ladakh.",
+        "type": "Khu nghỉ dưỡng (Resort)",
+        "globalIndex": 10,
+        "suitableFor": [
+          "Gia đình",
+          "Couple",
+          "Motor Trip"
+        ]
+      }
+    ],
+    "distance": "Cách trung tâm Leh khoảng 115 - 150km, qua con đèo Khardung La"
+  },
+  {
+    "id": "region-4",
+    "name": "Hồ Pangong",
+    "cover": "https://media.fittour.vn/uploads/ho-pangong-duoi-bau-troi-xanh-ladakh.webp",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-11",
+        "name": "Sama Resort Pangong",
+        "img": "https://media.fittour.vn/uploads/day-phong-nghi-sama-resort-tai-pangong-lake.webp",
+        "desc": "Một trong những khu nghỉ dưỡng tốt nhất bên bờ <a href='https://thericetour.com/hinh-anh-ho-pangong-tso' class='text-amber-700 font-bold hover:underline'>hồ Pangong Tso</a> tuyệt đẹp. Sama Resort Pangong sở hữu những căn cottage ấm cúng với ô cửa sổ lớn nhìn thẳng ra mặt hồ trong xanh đổi màu theo ánh nắng mặt trời.<br/><br/>So với những khu trại thông thường, Sama Resort mang đến không gian lưu trú ấm áp hơn hẳn trước cái lạnh của vùng hồ, đi kèm nhà hàng tiện nghi và sân hiên cực chill để thưởng thức trà nóng đón bình minh.<br/><br/><blockquote class=\"border-l-4 border-amber-600 pl-4 py-1 my-3 bg-amber-50/50 rounded-r-lg italic text-slate-600 text-[14.5px]\">\"Không cần đi đâu xa, chỉ cần ngồi bên hiên phòng nhìn hồ Pangong dần thay đổi màu sắc dưới ánh mặt trời cũng đủ cảm nhận sự kỳ vĩ của vùng đất này.\"<br/><span class=\"text-[12px] text-amber-700 font-bold not-italic mt-2 block\">— Chia sẻ từ chuyến đi của đoàn FIT TOUR</span></blockquote>",
+        "type": "Resort Sinh Thái",
+        "link": "/sama-resort-pangong",
+        "globalIndex": 11,
+        "suitableFor": [
+          "Couple",
+          "Photographer",
+          "Gia đình"
+        ]
+      },
+      {
+        "id": "acc-12",
+        "name": "Mentok Eco Camp",
+        "desc": "Đã đến Pangong thì khó lòng bỏ qua Mentok Eco Camp. Nằm ngay sát bờ hồ trong xanh như ngọc, đây là một khu cắm trại thân thiện với môi trường, mang đến cho bạn cơ hội chiêm ngưỡng cảnh bình minh và hoàng hôn tuyệt diệu nhất của Pangong Tso.<br/><br/>Các lều ở đây được thiết kế đủ ấm áp để chống lại cái lạnh khắc nghiệt về đêm của vùng hồ, có khu vực vệ sinh khép kín sạch sẽ và nhà hàng phục vụ các món ăn nóng hổi giữa khung cảnh thiên nhiên hùng vĩ.",
+        "type": "Khu cắm trại (Camp)",
+        "globalIndex": 12,
+        "suitableFor": [
+          "Motor Trip",
+          "Photographer"
+        ]
+      }
+    ],
+    "distance": "Cách trung tâm Leh khoảng 160km, qua con đèo Chang La"
+  },
+  {
+    "id": "region-5",
+    "name": "Vùng Changthang (Hanle & Tso Moriri)",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-13",
+        "name": "Sonam & Padma's Guest House (Hanle)",
+        "desc": "Nếu bạn đang ở Ladakh nhưng muốn thoát khỏi mạch du lịch đông đúc, thì Hanle là điểm đến dành cho bạn. Nơi đây cực kỳ nổi tiếng với bầu trời đêm tuyệt đẹp và đài quan sát vật lý thiên văn. Sonam & Padma's Guest House là một trong những lựa chọn lưu trú tốt nhất tại Hanle.<br/><br/>Nhà khách cực kỳ đơn giản nhưng rất thoải mái, sạch sẽ với nội thất đầy màu sắc. Thức ăn được phục vụ mang đậm hương vị nhà làm, nóng hổi và ngon miệng, là chốn dừng chân hoàn hảo sau những chuyến đi dài.",
+        "type": "Nhà khách (Guest House)",
+        "globalIndex": 13,
+        "suitableFor": [
+          "Motor Trip",
+          "Photographer",
+          "Couple"
+        ]
+      },
+      {
+        "id": "acc-14",
+        "name": "Tsomoriri Camp and Resort (Tso Moriri)",
+        "desc": "Hồ Tso Moriri hoang sơ và thiêng liêng đòi hỏi một nơi lưu trú ấm cúng để bạn có thể tận hưởng vẻ đẹp của nó. Tsomoriri Camp and Resort cung cấp những chiếc lều cao cấp với đầy đủ tiện nghi thiết yếu ngay tại khu vực hồ.<br/><br/>Với vị trí tuyệt vời, bạn có thể dễ dàng dạo bộ ra mép hồ, ngắm nhìn đàn sếu cổ đen hay những ngọn núi phủ tuyết trắng soi bóng xuống mặt nước trong vắt.",
+        "type": "Khu cắm trại (Camp)",
+        "globalIndex": 14,
+        "suitableFor": [
+          "Couple",
+          "Motor Trip",
+          "Photographer"
+        ]
+      }
+    ],
+    "distance": "Cách trung tâm Leh khoảng 220 - 250km"
+  },
+  {
+    "id": "region-6",
+    "name": "Thung lũng Sham (Sham Valley)",
+    "icon": "",
+    "items": [
+      {
+        "id": "acc-15",
+        "name": "Khu nghỉ dưỡng dân tộc Ule",
+        "desc": "Không nằm trong danh sách các điểm đến thông thường, ngôi làng Ule Tokpo ngày càng trở thành địa điểm được yêu thích để thư giãn. Ule Ethnic Resort (Khu nghỉ dưỡng dân tộc Ule) ban đầu là một trại lều và hiện đã trở thành một khu nghỉ dưỡng sinh thái được yêu thích.<br/><br/>Họ tạo ra một số lượng lớn các phòng và tiểu xá nằm trên những vách đá nhìn ra bờ sông Indus hoang dã. Nơi đây là căn cứ tuyệt vời để khám phá các tu viện Alchi, Likir và Lamayuru.",
+        "type": "Khu nghỉ dưỡng sinh thái",
+        "globalIndex": 15,
+        "suitableFor": [
+          "Gia đình",
+          "Senior",
+          "Couple"
+        ]
+      }
+    ],
+    "distance": "Cách trung tâm Leh khoảng 60 - 80km"
+  }
+];
+
+
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  adminEditUrl={adminEditUrl}
+  preloadImages={[seoImage]}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-amber-700 selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full h-[600px] lg:h-[650px] overflow-hidden">
+      <div class="absolute inset-0 z-0 bg-slate-900">
+        <img src={seoImage} alt="Nơi ở tại Ladakh" width="1200" height="800" class="w-full h-full object-cover object-center opacity-80" fetchpriority="high" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      {/* Removed Torn Paper Effect because of 404 and low contrast skew */}
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 h-full flex flex-col justify-center pt-20 pb-16">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white">Ladakh</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1] drop-shadow-lg max-w-4xl">
+          Top 15 nơi ở tại Ladakh dành cho khách du lịch
+        </h1>
+        <h2 class="font-serif text-xl sm:text-3xl text-amber-400 italic mb-10 max-w-3xl drop-shadow-md">
+          Khám Phá Khách Sạn, Nhà Khách và Homestay
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-medium">
+          Từ khách sạn sang trọng, homestay ấm cúng đến nhà khách ở Ladakh – <strong class="text-amber-400 font-bold">có nhiều thể loại lưu trú khác nhau</strong>. Thời tiết khắc nghiệt, địa hình hiểm trở khiến việc đến được nơi này rất khó khăn, vì vậy hãy chọn nơi ở phù hợp.</p>
+        
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href="/huynh-hieu" class="flex items-center gap-3 group">
+            <img src="https://media.fittour.vn/uploads/huynhhieutravel.webp" alt="Huynh Hieu" width="40" height="40" class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {post.author || 'Huynh Hieu Travel'} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>12 phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-4 mt-8 pt-6">
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">⛰️</span> 15 Nơi ở
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🪷</span> Đa dạng loại hình
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🎭</span> Homestay ấm cúng
+          </div>
+          <div class="flex items-center gap-2 text-sm text-white font-medium bg-black/60 backdrop-blur-md px-4 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-lg">🧭</span> Hướng dẫn tham quan
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-amber-600 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-700 bg-amber-50 px-3 py-2.5 rounded-lg transition-colors">
+                <span class="text-amber-700 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-2 pb-1">
+                <a href="#danh-sach-noi-o" class="flex items-center gap-2 text-slate-700 hover:text-amber-700 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">📋</span> Phân loại theo vùng
+                </a>
+                <div class="pl-9 pr-3 space-y-1.5 mt-1 border-l border-slate-100 ml-[18px] max-h-[500px] overflow-y-auto custom-scrollbar">
+                  {groupedAccommodations.map((region) => (
+                    <div class="mb-3">
+                      <a href={"#" + region.id} class="block font-bold text-slate-700 hover:text-amber-700 text-[13.5px] py-1 transition-colors leading-tight">
+                        {region.name}
+                      </a>
+                      <div class="pl-3 mt-1 space-y-1 border-l border-slate-100">
+                        {region.items.map((m, i) => (
+                          <a href={"#" + m.id} class="block text-slate-500 hover:text-amber-700 text-[12.5px] py-0.5 transition-colors leading-tight">
+                            {m.globalIndex}. {m.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="pt-2 pb-1">
+                <a href="#kinh-nghiem-luu-tru" class="flex items-center gap-2 text-slate-700 hover:text-amber-700 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">💡</span> Góc nhìn thực tế
+                </a>
+              </div>
+              <div class="pt-2 pb-1">
+                <a href="#thoi-gian-mo-cua" class="flex items-center gap-2 text-slate-700 hover:text-amber-700 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">🗓️</span> Thời gian lưu trú
+                </a>
+              </div>
+              <div class="pt-2 pb-1">
+                <a href="#faq" class="flex items-center gap-2 text-slate-700 hover:text-amber-700 px-3 py-2 rounded-lg transition-colors font-bold">
+                  <span class="text-slate-400 text-base">❓</span> Câu hỏi thường gặp
+                </a>
+              </div>
+            </nav>
+          </div>
+
+
+        </aside>
+
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            <div class="absolute -top-3 left-6 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm hidden">Tổng Quan Nhanh</div>
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-800 text-sm border-l-4 border-emerald-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-100 shrink-0">⛰️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vùng đất</div>
+                <div class="text-[13px] font-bold text-slate-800">Ladakh</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 text-xl border border-blue-100 shrink-0">❄️</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Độ cao TB</div>
+                <div class="text-[13px] font-bold text-slate-800">3.000 - 4.000m</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-600 text-xl border border-rose-100 shrink-0">🪷</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Tôn giáo chính</div>
+                <div class="text-[13px] font-bold text-slate-800">Phật giáo Tây Tạng</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-100 shrink-0">📅</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Thời điểm đẹp nhất</div>
+                <div class="text-[13px] font-bold text-slate-800">Tháng 5 – Tháng 10</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[15.5px] prose-p:text-slate-700">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-600 pb-2 inline-block mb-6">Giới Thiệu</h2>
+            <p>Leh-Ladakh là một vùng núi nằm ẩn mình trong dãy Himalaya hùng vĩ. Khu vực này nổi tiếng với văn hóa, di sản và vẻ đẹp tự nhiên. Hầu hết, những du khách muốn trải nghiệm <a href='https://thericetour.com/du-lich-ladakh' class='text-amber-700 font-bold hover:underline'>chuyến đi du lịch Ladakh</a> đều yêu thích những cuộc phiêu lưu mạo hiểm tại khu vực Jammu & Kashmir.</p>
+            <figure class="my-6 rounded-xl overflow-hidden shadow-sm border border-slate-100"><img src="https://media.fittour.vn/uploads/khach-san-o-leh-ladakh-ngay-dau-tien.webp" alt="Khách sạn tại Leh Ladakh" width="800" height="533" class="w-full h-auto object-cover" loading="lazy" /></figure>
+            <p><strong><em>Có nhiều thể loại lưu trú khác nhau ở Ladakh: khách sạn sang trọng, homestay và nhà khách ở Ladakh</em></strong>.</p>
+            <p>Thời tiết khắc nghiệt, địa hình hiểm trở và thiếu các phương tiện trên đường khiến việc đến được nơi này rất khó khăn. Nếu bạn đang tìm kiếm những nơi lưu trú ở Leh Ladakh, thì hãy bắt đầu khám phá những nơi ở tại Ladakh qua danh sách dưới đây.</p></div>
+
+          <div class="flex items-center justify-center py-4 opacity-40">
+            <div class="w-16 h-px bg-slate-400"></div>
+            <span class="mx-4 text-amber-700 text-xl">🪷</span>
+            <div class="w-16 h-px bg-slate-400"></div>
+          </div>
+
+          {/* Monasteries List */}
+          <div id="danh-sach-noi-o" class="text-center mb-10 lg:mb-14 scroll-mt-24">
+            <span class="text-amber-700 font-bold tracking-wider uppercase text-sm mb-2 block">Review chi tiết</span>
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold text-slate-900">
+              Top 15 Nơi Ở Tuyệt Vời Tại Ladakh
+            </h2>
+          </div>
+
+          <div class="flex flex-col gap-16">
+            {groupedAccommodations.map((region) => (
+              <div id={region.id} class="scroll-mt-24">
+                {/* Region Header */}
+                <div class="mb-8 border-b-2 border-slate-100 pb-3">
+                  <div class="flex items-center gap-3 mb-1">
+                    <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 text-amber-700">
+                      {region.name}
+                    </h2>
+                  </div>
+                  {region.distance && (
+                    <div class="text-sm text-slate-500 font-medium italic">
+                      📍 {region.distance}
+                    </div>
+                  )}
+                </div>
+
+                {region.cover && (
+                  <div class="w-full h-auto mb-8 rounded-xl overflow-hidden border border-slate-200/60 shadow-sm">
+                    <img src={region.cover} alt={region.name} width="800" height="533" class="w-full h-auto object-cover max-h-[350px]" loading="lazy" />
+                  </div>
+                )}
+
+                <div class="flex flex-col gap-10 pl-0 lg:pl-2">
+                  {region.items.map((m, index) => (
+                    <div id={m.id} class="scroll-mt-32 border border-slate-100 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                      {/* Header */}
+                      <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 bg-amber-600 text-white rounded-xl flex items-center justify-center text-xl font-black shadow-sm border-b-4 border-amber-600">
+                          {m.globalIndex}
+                        </div>
+                        <h3 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900">
+                          {m.name}
+                        </h3>
+                        <div class="ml-auto bg-amber-50 text-amber-700 text-[13px] font-bold px-3 py-1.5 rounded-full border border-amber-200 flex items-center gap-1.5 shadow-sm">
+                          <span class="text-xs">🏷️</span> {m.type}
+                        </div>
+                      </div>
+                      {/* Suitable For */}
+                      {m.suitableFor && m.suitableFor.length > 0 && (
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                          <span class="text-[11.5px] text-slate-500 font-bold uppercase tracking-wider">Phù hợp:</span>
+                          {m.suitableFor.map(tag => (
+                            <span class="bg-slate-100 text-slate-600 text-[11.5px] font-semibold px-2 py-0.5 rounded border border-slate-200 flex items-center gap-1">
+                              <svg class="w-3 h-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {m.img && (
+                        <div class="rounded-xl overflow-hidden mb-5 border border-slate-100">
+                          <img src={m.img} alt={m.name} width="800" height="533" class="w-full h-auto object-cover max-h-[400px]" loading="lazy" />
+                        </div>
+                      )}
+                      <div class="text-slate-700 text-[15.5px] leading-relaxed mb-6 font-medium [&>br]:mb-2 [&>p]:mb-3 last:[&>p]:mb-0 mt-4 pt-4 border-t border-slate-100" set:html={m.desc}></div>
+
+                      {/* Button */}
+                      {m.link && (
+                        <a href={m.link} class="inline-flex items-center gap-2 border border-amber-600 text-amber-700 hover:bg-amber-50 px-5 py-2.5 rounded-lg text-sm font-bold transition-colors">
+                          Đọc chi tiết về {m.name} <ChevronRight class="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          
+          {/* ================= NEW SECTIONS ================= */}
+          <div class="flex items-center justify-center py-4 opacity-40 mt-8">
+            <div class="w-16 h-px bg-slate-400"></div>
+            <span class="mx-4 text-amber-700 text-xl">🪷</span>
+            <div class="w-16 h-px bg-slate-400"></div>
+          </div>
+
+          <section id="kinh-nghiem-luu-tru" class="mt-12 scroll-mt-24 space-y-8">
+            <div class="text-center mb-8">
+              <span class="text-amber-700 font-bold tracking-wider uppercase text-sm mb-2 block">Góc Nhìn Thực Tế</span>
+              <h2 class="font-serif text-3xl lg:text-4xl font-bold text-slate-900">Kinh Nghiệm Ở Tại Các Vùng Đặc Biệt</h2>
+            </div>
+            
+            <div class="bg-white p-6 lg:p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6">Có Nên Ở Pangong Qua Đêm?</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 class="font-bold text-emerald-700 mb-3 flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Ưu điểm</h4>
+                  <ul class="space-y-3 text-slate-700 text-[15px] leading-relaxed">
+                    <li>• Đón ánh <strong>bình minh tuyệt đẹp</strong> trên mặt hồ tĩnh lặng mà khách đi trong ngày không thể thấy.</li>
+                    <li>• <strong>Ít khách du lịch:</strong> Buổi chiều muộn và sáng sớm không gian vắng vẻ, yên bình đến lạ kỳ.</li>
+                    <li>• Khung cảnh <strong>bầu trời sao (Milky Way)</strong> ban đêm cực kỳ rực rỡ và choáng ngợp.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-rose-700 mb-3 flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Nhược điểm</h4>
+                  <ul class="space-y-3 text-slate-700 text-[15px] leading-relaxed">
+                    <li>• Rất <strong>lạnh</strong>: Nhiệt độ ban đêm có thể xuống âm độ ngay cả giữa mùa hè.</li>
+                    <li>• Nồng độ <strong>oxy thấp</strong> (độ cao 4.250m) dễ khiến bạn mệt mỏi và say độ cao.</li>
+                    <li>• Điện và nước nóng <strong>giới hạn</strong>, thường chỉ chạy máy phát điện vài tiếng buổi tối.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Có Nên Ở Hanle?</h3>
+                <p class="text-slate-700 text-[15px] leading-relaxed mb-3">Hanle đang là từ khóa cực kỳ "hot" nhờ Đài thiên văn cao nhất Ấn Độ và bầu trời đêm trong vắt nhất thế giới. Tuy nhiên, lưu trú tại Hanle chỉ có các homestay nhỏ và nhà khách cơ bản do dân địa phương mở.</p>
+                <p class="text-slate-700 text-[15px] leading-relaxed font-medium">👉 Phù hợp: Dân nhiếp ảnh, dân mê <a href='https://thericetour.com/nhat-ky-hanh-trinh-ladakh-bang-xe-may' class='text-amber-700 font-bold hover:underline'>phượt xe máy (Motor Trip)</a>, thích trải nghiệm chân thực và không ngại thiếu thốn tiện nghi.</p>
+              </div>
+              <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Có Nên Ở Tso Moriri?</h3>
+                <p class="text-slate-700 text-[15px] leading-relaxed mb-3">Tso Moriri hoang sơ và ít khách hơn Pangong rất nhiều, nằm ở độ cao cao hơn (4.522m). Nơi đây có các khu camp cao cấp nhưng điều kiện tự nhiên rất khắc nghiệt và đường sá xa xôi.</p>
+                <p class="text-slate-700 text-[15px] leading-relaxed font-medium">👉 Phù hợp: Người có sức khỏe tốt, lịch trình dài ngày và muốn khám phá vùng đất hoàn toàn biệt lập.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="thoi-gian-mo-cua" class="mt-16 scroll-mt-24">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-600 pb-2 inline-block mb-6">Mùa Nào Mở Cửa?</h2>
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+              <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-left text-[15px] min-w-[600px]">
+                <thead class="bg-slate-100/80 text-slate-800">
+                  <tr>
+                    <th class="px-6 py-4 font-bold border-b border-slate-200">Tháng</th>
+                    <th class="px-6 py-4 font-bold border-b border-slate-200">Khu cắm trại (Camp)</th>
+                    <th class="px-6 py-4 font-bold border-b border-slate-200">Khách sạn (Hotel / Homestay)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 5</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 6</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 7</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 8</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 9</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-3.5 font-medium">Tháng 10</td><td class="px-6 py-3.5 text-amber-700 font-bold">Một phần (Tùy thời tiết)</td><td class="px-6 py-3.5 text-emerald-700 font-bold">✔ Hoạt động</td>
+                  </tr>
+                  <tr class="bg-slate-50">
+                    <td class="px-6 py-4 font-bold text-slate-900">Mùa Đông (Tháng 11 - T4)</td><td class="px-6 py-4 text-rose-700 font-bold">✘ Đóng cửa</td><td class="px-6 py-4 text-slate-800 font-bold">Chỉ một số ít tại trung tâm Leh</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="faq" class="mt-16 scroll-mt-24 mb-10">
+            <h2 class="font-serif text-2xl lg:text-[28px] font-bold text-slate-900 border-b-2 border-amber-600 pb-2 inline-block mb-8">Câu Hỏi Thường Gặp (FAQ)</h2>
+            <div class="space-y-4">
+              
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-2 p-5 text-slate-900 font-bold cursor-pointer hover:bg-slate-50 transition-colors">
+                  <span class="text-[15.5px]">Leh nên ở mấy đêm?</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                  </span>
+                </summary>
+                <div class="p-5 pt-0 text-slate-700 text-[15px] leading-relaxed border-t border-slate-100 mt-2">
+                  <p>Bạn bắt buộc phải dành <strong>ít nhất 2 đêm đầu tiên</strong> tại Leh (độ cao ~3.500m) ngay khi vừa bay đến để cơ thể thích nghi với độ cao (acclimatization). Tổng cộng cho một chuyến đi 7-8 ngày, bạn có thể ở Leh khoảng 3-4 đêm (chia ra trước và sau khi đi các thung lũng).</p>
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-2 p-5 text-slate-900 font-bold cursor-pointer hover:bg-slate-50 transition-colors">
+                  <span class="text-[15.5px]">Camp (Lều) ở Pangong/Nubra có lạnh không?</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                  </span>
+                </summary>
+                <div class="p-5 pt-0 text-slate-700 text-[15px] leading-relaxed border-t border-slate-100 mt-2">
+                  <p><strong>Có, đặc biệt là vào ban đêm.</strong> Ngay cả giữa mùa hè (tháng 7, 8), ban đêm tại Pangong vẫn cực kỳ buốt giá. Hầu hết các Camp đều trang bị rất nhiều chăn dày và đệm sưởi, tuy nhiên bạn vẫn nên mang theo túi ngủ cá nhân (nếu sợ lạnh) và áo khoác đại hàn.</p>
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-2 p-5 text-slate-900 font-bold cursor-pointer hover:bg-slate-50 transition-colors">
+                  <span class="text-[15.5px]">Có cần phải đặt trước phòng không?</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                  </span>
+                </summary>
+                <div class="p-5 pt-0 text-slate-700 text-[15px] leading-relaxed border-t border-slate-100 mt-2">
+                  <p>Vào mùa cao điểm (tháng 6 đến giữa tháng 9), <strong>bắt buộc phải đặt trước</strong>, đặc biệt là các resort cao cấp, khách sạn có sưởi trung tâm ở Leh, hoặc các khu cắm trại vị trí đẹp ở Pangong. Các homestay nhỏ có thể tìm khi đến nơi, nhưng sẽ rủi ro hết phòng tốt.</p>
+                </div>
+              </details>
+
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-2 p-5 text-slate-900 font-bold cursor-pointer hover:bg-slate-50 transition-colors">
+                  <span class="text-[15.5px]">Homestay ở các khu vực hẻo lánh có nước nóng không?</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                  </span>
+                </summary>
+                <div class="p-5 pt-0 text-slate-700 text-[15px] leading-relaxed border-t border-slate-100 mt-2">
+                  <p>Thường là <strong>không có nước nóng chạy liên tục</strong> qua vòi. Ở các homestay sâu trong các bản như Hanle hay Tso Moriri, chủ nhà thường sẽ đun nước nóng bằng bếp lò và xách cho bạn một xô nước nóng vào sáng sớm để vệ sinh cá nhân.</p>
+                </div>
+              </details>
+              
+              <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex items-center justify-between gap-2 p-5 text-slate-900 font-bold cursor-pointer hover:bg-slate-50 transition-colors">
+                  <span class="text-[15.5px]">Mùa đông đi Ladakh thì ở đâu?</span>
+                  <span class="transition group-open:rotate-180">
+                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                  </span>
+                </summary>
+                <div class="p-5 pt-0 text-slate-700 text-[15px] leading-relaxed border-t border-slate-100 mt-2">
+                  <p>Mùa đông (từ tháng 11 đến tháng 4), nhiệt độ xuống rất thấp (có thể -20 độ). Gần như 100% các khu Camp ở xa sẽ tháo dỡ và đóng cửa. Lựa chọn duy nhất của bạn là <strong>ở lại trung tâm Leh</strong> tại một số ít các khách sạn có Hệ thống sưởi trung tâm (Central Heating) như The Grand Dragon hoặc Indus Valley.</p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+</div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+          {/* Quick Facts */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-[#475569] pl-3 text-sm tracking-wide uppercase">
+              Bảng Thông Tin Nhanh
+            </div>
+            
+            <div class="space-y-5">
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 text-lg">🪷</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Tổng số nơi ở nổi bật</div>
+                  <div class="font-bold text-slate-800 text-[13px]">15+</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 text-lg">🏰</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Khách sạn sang trọng</div>
+                  <div class="font-bold text-slate-800 text-[13px]">The Grand Dragon Ladakh</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-100 text-lg">⏳</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Lưu trú lâu đời</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Khách sạn Omasila</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 border border-slate-200 text-lg">⛰️</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Nghỉ dưỡng thiên nhiên</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Nubra Organic Retreat</div>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 border border-rose-100 text-lg">📸</div>
+                <div>
+                  <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Khách sạn di sản</div>
+                  <div class="font-bold text-slate-800 text-[13px]">Stok Palace Heritage</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Related Articles */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-6 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+              Bài Viết Liên Quan
+            </div>
+            <div class="space-y-4">
+              {[
+                { title: "Vì Sao Ladakh Được Gọi Là Tiểu Tây Tạng Của Ấn Độ?", img: "https://media.fittour.vn/uploads/2023/06/Dang-Thuy-Duong-kham-pha-tu-vien-Hemis.webp", link: "/vi-sao-ladakh-duoc-goi-la-tieu-tay-tang" },
+                { title: "Tại sao gọi Ladakh là Vùng đất của các Lạt Ma", img: "https://media.fittour.vn/uploads/2024/06/tai-sao-ladakh-duoc-goi-la-vung-dat-cua-lat-ma.webp", link: "/tai-sao-goi-ladakh-la-vung-dat-cua-cac-lat-ma" },
+                { title: "Đèo Mig La Pass – Con Đèo Cao Nhất Thế Giới Ở Ladakh", img: "https://media.fittour.vn/uploads/2025/10/dinh-deo-mig-la.webp", link: "/deo-mig-la" },
+                { title: "Cột mốc 80 chuyến đi Ladakh do FIT Tour thiết kế", img: "https://media.fittour.vn/uploads/cot-moc-80-chuyen-di-ladakh-fittour.webp", link: "/cot-moc-80-chuyen-di-ladakh" }
+              ].map((item) => (
+                <a href={item.link} class="flex gap-3 group">
+                  <div class="w-24 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                    <img src={item.img} alt={item.title} width="400" height="267" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-700 transition-colors leading-snug line-clamp-3">
+                    {item.title}
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div class="mt-5 text-center">
+              <a href="/blog" class="text-amber-700 text-xs font-bold hover:underline">Xem tất cả bài viết →</a>
+            </div>
+          </div>
+
+          {/* Share Block */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+            <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+            <div class="flex justify-center gap-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/noi-o-ladakh" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors" title="Chia sẻ lên Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=https://thericetour.com/noi-o-ladakh&text=Khám phá 15 nơi ở tuyệt vời nhất tại Ladakh" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#1DA1F2]/10 text-[#1DA1F2] flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-colors" title="Chia sẻ lên Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.95 4.57a10 10 0 01-2.82.77 4.96 4.96 0 002.16-2.72 9.9 9.9 0 01-3.13 1.2 4.93 4.93 0 00-8.39 4.48A14 14 0 011.67 3.15 4.93 4.93 0 003.2 9.73a4.9 4.9 0 01-2.23-.62v.06a4.93 4.93 0 003.95 4.83 4.92 4.92 0 01-2.22.08 4.93 4.93 0 004.6 3.42A9.87 9.87 0 010 19.54 13.94 13.94 0 007.55 21.7c9.06 0 14-7.5 14-14v-.64a10 10 0 002.4-2.49z"/></svg>
+              </a>
+              <button onclick="navigator.clipboard.writeText('https://thericetour.com/noi-o-ladakh');" title="Sao chép liên kết" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700">
+                <LinkIcon class="w-4 h-4 group-focus:hidden" />
+                <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+              </button>
+            </div>
+          </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

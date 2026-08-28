@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PillarGuide from '../components/kailash/PillarGuide.tsx';
+
+// Lấy dữ liệu SEO từ Database (nếu Admin có tạo bài viết với slug này)
+import { env } from 'cloudflare:workers';
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Cẩm Nang Du Lịch Kailash A-Z | FIT Tour";
+let seoDesc = "Trang cẩm nang chuẩn hóa từ thực nghiệm của Fit Tour thiết kế dành riêng cho phượt thủ tự túc lẫn khách đi tour trọn gói.";
+let pageTitle = "Kinh nghiệm du lịch Kailash - Từ HDV Thực địa FIT Tour";
+let pageSapo = "Kinh nghiệm du lịch Kailash đúc kết từ nhiều chuyến dẫn đoàn thực địa của đội ngũ Hướng Dẫn Viên FIT Tour. Từng nhịp thở ở độ cao 5.000m, từng rủi ro thời tiết và bí quyết sinh tồn đều được ghi chép chân thực nhất để bạn tự tin bước vào hành trình Kora thiêng liêng.";
+let ogImage = "";
+let adminEditUrl = "";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage FROM Page WHERE slug = 'kinh-nghiem-du-lich-kailash' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      pageTitle = postData.title || pageTitle;
+      seoTitle = postData.metaTitle || pageTitle || seoTitle;
+      pageSapo = postData.metaDescription || pageSapo;
+      seoDesc = postData.metaDescription || pageSapo || seoDesc;
+      ogImage = postData.featuredImage || ogImage;
+      adminEditUrl = `/admin/pages/edit?id=${postData.id}`;
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data cho trang Kailash:", e);
+  }
+}
+
+// Hàm render H1 có highlight chữ Kailash
+const renderHighlightTitle = (title: string) => {
+  if (!title.includes('Kailash')) return title;
+  const parts = title.split('Kailash');
+  return `${parts[0]}<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-800 to-amber-600">Kailash</span>${parts[1]}`;
+};
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={ogImage}
+  canonical="https://thericetour.com/kinh-nghiem-du-lich-kailash"
+  adminEditUrl={adminEditUrl}
+>
+  <!-- SECTION MASTER TITLE - STATIC HTML CHO LCP CỰC NHANH -->
+  <section class="bg-white py-16 px-4 border-b border-stone-200 font-sans">
+    <div class="max-w-4xl mx-auto text-center">
+      <nav aria-label="Breadcrumb" class="flex justify-center mb-6">
+        <ol class="flex items-center space-x-2 text-xs md:text-sm text-stone-500 font-medium">
+          <li><a href="/" class="hover:text-amber-700 transition-colors">Trang chủ</a></li>
+          <li><span class="mx-1.5 md:mx-2">/</span></li>
+          
+          <li class="text-amber-800" aria-current="page">Kailash</li>
+        </ol>
+      </nav>
+
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-900/15 bg-amber-50 text-amber-900 text-xs font-mono font-bold mb-4 uppercase tracking-wider">
+        <svg class="w-3.5 h-3.5 text-amber-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+        <span>KAILASH KNOWLEDGE HUB</span>
+      </div>
+      
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-extrabold text-stone-900 leading-tight mb-6" set:html={renderHighlightTitle(pageTitle)}></h1>
+      
+      <p class="text-lg md:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed mb-10 md:mb-14">
+        {pageSapo}
+      </p>
+    </div>
+  </section>
+
+  <!-- MOUNT REACT APP HERE -->
+  <PillarGuide client:only="react" />
+
+</BaseLayout>

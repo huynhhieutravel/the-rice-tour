@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/ladakh-co-may.css';
+import '../styles/blog.css';
+import '../styles/author-card.css';
+import App from '../components/ReactApp/SongIndus/App.tsx';
+
+import Backpack from '../components/ReactApp/SongIndus/components/Backpack.tsx';
+import PhotoGallery from '../components/ReactApp/SongIndus/components/PhotoGallery.tsx';
+import FaqSection from '../components/ReactApp/SongIndus/components/FaqSection.tsx';
+import Guestbook from '../components/ReactApp/SongIndus/components/Guestbook.tsx';
+import RelatedArticles from '../components/ReactApp/SongIndus/components/RelatedArticles.tsx';
+import SignatureTour from '../components/ReactApp/SongIndus/components/SignatureTour.tsx';
+import FooterApp from '../components/ReactApp/SongIndus/components/FooterApp.tsx';
+import FloatingButton from '../components/ReactApp/SongIndus/components/FloatingButton.tsx';
+import { env } from 'cloudflare:workers';
+import { sanitizeElementorHtml } from '../lib/elementorSanitizer';
+import { parseShortcodes } from '../utils/shortcodes/parser';
+import ShortcodeRenderer from '../components/shortcodes/ShortcodeRenderer.astro';
+import { fetchAllShortcodeData } from '../utils/shortcodes/dataLoader';
+
+const d1Db = env?.dulichcoguu_d1;
+
+let seoTitle = "Sông Indus – Dòng Sông Tạo Nên Nền Văn Minh Himalaya";
+let seoDesc = "Hành trình men theo bờ sông huyền thoại từ thượng nguồn Tây Tạng, khám phá điểm hợp lưu Sangam ngoạn mục và thử thách rafting vượt thác trên dòng nước băng giá ở độ cao 3500m.";
+let seoImage = "https://media.fittour.vn/uploads/2021/11/song-indus.webp";
+let adminEditUrl = "";
+let rawHtml = "";
+
+if (d1Db) {
+  try {
+    const stmt = d1Db.prepare(`SELECT id, title, content, seoTitle as metaTitle, seoDescription as metaDescription, featuredImage FROM Post WHERE slug = 'song-indus' LIMIT 1`);
+    const postData = await stmt.first();
+    if (postData) {
+      seoImage = postData.featuredImage || seoImage;
+      if (postData.id) adminEditUrl = `/admin/posts/edit?id=${postData.id}`;
+      rawHtml = postData.content || "";
+    }
+  } catch (e) {
+    console.error("Lỗi lấy SEO data cho trang song-indus:", e);
+  }
+}
+
+// Prepare the old content
+const cleanHtml = sanitizeElementorHtml(rawHtml, seoImage, true);
+const astNodes = parseShortcodes(cleanHtml);
+const dataMap = await fetchAllShortcodeData(astNodes, d1Db);
+
+---
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  image={seoImage}
+  canonical="https://thericetour.com/song-indus"
+  adminEditUrl={adminEditUrl}
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href={seoImage} fetchpriority="high" />
+    <meta property="og:type" content="article" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    </noscript>
+    
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": seoTitle,
+          "description": seoDesc,
+          "image": seoImage,
+          "author": {
+            "@type": "Person",
+            "name": "Huynh Hieu Travel",
+            "url": "https://thericetour.com/author/huynh-hieu"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "FIT Tour",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+            }
+          },
+          "datePublished": "2026-09-01T08:00:00+08:00",
+          "dateModified": "2026-09-01T08:00:00+08:00",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thericetour.com/song-indus"
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <main class="min-h-screen bg-stone-50 text-stone-800 font-sans selection:bg-amber-150 selection:text-amber-900 overflow-x-hidden antialiased">
+    <App client:load featureImage={seoImage} /> 
+
+    <Backpack client:visible />
+    <PhotoGallery client:visible />
+    <FaqSection client:visible />
+    <Guestbook client:visible />
+    <RelatedArticles client:visible />
+    <SignatureTour client:visible />
+    <FooterApp client:visible />
+    <FloatingButton client:load />
+  </main>
+
+</BaseLayout>

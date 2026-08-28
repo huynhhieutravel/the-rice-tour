@@ -1,0 +1,123 @@
+---
+import { env } from 'cloudflare:workers';
+import BlogLayout from '@/layouts/BlogLayout.astro';
+import BlockRenderer from '@/components/blog/blocks/BlockRenderer.astro';
+
+const { slug } = Astro.params;
+const url = new URL(Astro.request.url);
+const secret = url.searchParams.get('secret');
+const expires = url.searchParams.get('expires');
+
+// Secret check
+const expectedSecret = import.meta.env.PUBLIC_PREVIEW_SECRET || import.meta.env.PREVIEW_SECRET || (env as any)?.PREVIEW_SECRET || 'coguu-preview-2026';
+if (secret !== expectedSecret) {
+  return new Response("Unauthorized Preview", { status: 401 });
+}
+
+// Expire check (if expires parameter exists, verify it hasn't passed)
+if (expires && parseInt(expires) < Date.now()) {
+  return new Response("Preview link expired", { status: 403 });
+}
+const d1Db = env?.dulichcoguu_d1;
+
+if (!d1Db) {
+  return new Response("No DB binding", { status: 500 });
+}
+
+// Fetch Post and Category
+const post = await d1Db.prepare("SELECT * FROM Post WHERE slug = ?").bind(slug).first<any>();
+
+if (!post) {
+  return new Response("Post not found", { status: 404 });
+}
+
+// Merge draft snapshot if exists (prioritize draft over published content)
+if (post.draftSnapshot) {
+  try {
+    const draft = JSON.parse(post.draftSnapshot);
+    post.title = draft.title || post.title;
+    post.content = draft.content || post.content;
+    post.excerpt = draft.excerpt || post.excerpt;
+    post.featuredImage = draft.featuredImage || post.featuredImage;
+    post.categoryId = draft.categoryId || post.categoryId;
+    if (draft.format) post.format = draft.format;
+    if (draft.isElementor !== undefined) post.isElementor = draft.isElementor;
+    if (draft.contentFormat) post.contentFormat = draft.contentFormat;
+    if (draft.authorId) post.authorId = draft.authorId;
+    if (draft.customCss) post.customCss = draft.customCss;
+  } catch(e) {
+    console.error("Failed to parse draftSnapshot", e);
+  }
+}
+
+let category = null;
+if (post.categoryId) {
+  category = await d1Db.prepare("SELECT * FROM BlogCategory WHERE id = ?").bind(post.categoryId).first<any>();
+}
+
+// Resolve author profile URL & name
+let authorUrl = '';
+let authorName = post.author || 'Admin';
+if (post.authorId) {
+  try {
+    const authorUser = await d1Db.prepare('SELECT displayName as name, url FROM "User" WHERE id = ?').bind(post.authorId).first<any>();
+    if (authorUser?.url) authorUrl = authorUser.url;
+    if (authorUser?.name) authorName = authorUser.name;
+  } catch (e) {}
+}
+
+// Convert ISO date to readable string for UI display
+const publishDate = new Date(typeof post.createdAt === 'string' ? post.createdAt.replace(' ', 'T') : post.createdAt).toLocaleDateString('vi-VN', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Ho_Chi_Minh' });
+// Raw ISO strings for Schema
+const publishDateIso = post.publishedAt || post.createdAt || null;
+const updatedAtIso = post.updatedAt || post.publishedAt || post.createdAt || null;
+
+// Hybrid Strategy: Detect JSON vs HTML
+let parsedJson = null;
+let isJson = false;
+
+if (post.content && (post.content.trim().startsWith('{') || post.content.trim().startsWith('['))) {
+  try {
+    parsedJson = JSON.parse(post.content);
+    isJson = true;
+  } catch (e) {
+    console.error("Failed to parse post content as JSON", e);
+  }
+}
+
+// 2. Determine layout mode
+// Landing pages and legacy Elementor posts get full-width. Normal posts get sidebar.
+const isLandingPage = post.format === 'landing' || (post.content && post.content.includes('<!-- layout: landing -->'));
+const forceHeader = post.content && post.content.includes('<!-- force-header -->');
+const isLegacyElementor = !isJson && (post.isElementor === 1 || post.format === 'elementor' || (post.content && post.content.includes('data-elementor-type')));
+const isFullWidth = isLandingPage || isLegacyElementor || (post.content && post.content.includes('<!-- layout: full-width -->'));
+
+const corporateSlugs = ['tour-doanh-nghiep', 'dia-diem-to-chuc', 'hanh-trinh-doanh-nghiep', 'to-chuc-su-kien', 'tour-incentive-travel-doanh-nghiep', 'corporate-retreat', 'company-trip', 'mice-events'];
+const isCorporatePost = category && category.slug ? corporateSlugs.includes(category.slug) : false;
+---
+
+<BlogLayout 
+  title={post.title}
+  description={post.excerpt || post.title}
+  image={post.featuredImage}
+  author={authorName}
+  authorUrl={authorUrl}
+  date={publishDate}
+  dateIso={publishDateIso}
+  dateModifiedIso={updatedAtIso}
+  category={category}
+  isFullWidth={isFullWidth}
+  isLandingPage={isLandingPage}
+  forceHeader={forceHeader}
+  customCss={post.customCss}
+  isTiptap={isJson}
+  isCorporate={isCorporatePost}
+  adminEditUrl={`/admin/posts/edit?id=${post.id}`}
+>
+  {isJson && parsedJson ? (
+    <BlockRenderer node={parsedJson} />
+  ) : (
+    <div class="coguu-raw-content" set:html={post.content} />
+  )}
+</BlogLayout>
+

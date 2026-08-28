@@ -1,0 +1,1258 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { Clock, Calendar, ChevronRight, CheckCircle2, Shield, Check, Info, AlertTriangle, MapPin, Ticket, Landmark, Compass, Flag, ShieldCheck, Footprints, Sun, Users } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+let post;
+try {
+  if (d1Db) post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('thien-an-mon').first<any>(),
+    { route: Astro.url.pathname, slug: 'thien-an-mon', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  // Gracefully fallback if DB error or not created yet
+}
+
+// Fallback metadata if post is not yet populated in CMS
+if (!post) {
+  post = {
+    id: 997,
+    title: 'Quảng Trường Thiên An Môn Bắc Kinh: Đặt Chỗ, Khung Giờ & Kinh Nghiệm Tham Quan',
+    excerpt: 'Kinh nghiệm tham quan Quảng trường Thiên An Môn Bắc Kinh: Hướng dẫn đặt chỗ tên thật qua WeChat mini program, 4 khung giờ tham quan, quy trình an ninh và tuyến kết hợp Tử Cấm Thành.',
+    featuredImage: 'https://media.fittour.vn/uploads/duong-pho-bac-kinh-mua-xuan.webp',
+    author: 'Huynh Hieu Travel',
+    createdAt: '2026-08-19T08:00:00.000Z',
+    updatedAt: '2026-08-19T08:00:00.000Z',
+    readingTime: 12
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Quảng Trường Thiên An Môn Bắc Kinh: Đặt Chỗ, Khung Giờ & Kinh Nghiệm Tham Quan';
+const seoDesc = post.seoDesc || post.excerpt || 'Kinh nghiệm tham quan Quảng trường Thiên An Môn Bắc Kinh: Hướng dẫn đặt chỗ tên thật qua WeChat mini program, 4 khung giờ tham quan, quy trình an ninh và tuyến kết hợp Tử Cấm Thành.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/duong-pho-bac-kinh-mua-xuan.webp';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-08-19T08:00:00.000Z';
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "Max Vũ": {
+    name: "Max Vũ",
+    url: "/max-vu",
+    img: "https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp"
+  },
+  "Huy Ngô": {
+    name: "Huy Ngô",
+    url: "/hdv-huy-ngo",
+    img: "https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/huynh-hieu",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["Huynh Hieu Travel"];
+// ------------------
+
+const adminEditUrl = post.id && post.id !== 997 && post.id !== 998 && post.id !== 999 ? `/admin/posts/edit?id=${post.id}` : '#';
+
+// TOC Navigation Structure
+const toc = [
+  { id: "gioi-thieu", title: "Giới thiệu", icon: "🏠" },
+  { id: "thien-an-mon-la-gi", title: "Quảng Trường Thiên An Môn Là Gì?" },
+  { id: "thien-an-mon-co-gi", title: "Thiên An Môn Có Gì?" },
+  { id: "thap-thien-an-mon", title: "• Tháp Thiên An Môn", indent: true },
+  { id: "dai-tuong-niem", title: "• Đài Tưởng Niệm Anh Hùng Nhân Dân", indent: true },
+  { id: "nha-tuong-niem-mao-trach-dong", title: "• Nhà Tưởng Niệm Mao Trạch Đông", indent: true },
+  { id: "bao-tang-quoc-gia", title: "• Bảo Tàng Quốc Gia Trung Quốc", indent: true },
+  { id: "dai-le-duong-nhan-dan", title: "• Đại Lễ Đường Nhân Dân", indent: true },
+  { id: "co-can-dat-cho-khong", title: "Có Cần Đặt Chỗ Vào Quảng Trường Không?" },
+  { id: "nguoi-viet-nam-dat-cho", title: "Người Việt Nam Đặt Chỗ Thế Nào?" },
+  { id: "khong-can-dat-rieng", title: "Trường Hợp Không Cần Đặt Riêng Thiên An Môn" },
+  { id: "checkpoint-thien-an-mon", title: "Checkpoint Thiên An Môn: Đi Đúng Cổng" },
+  { id: "kiem-tra-an-ninh", title: "Kiểm Tra An Ninh Tại Thiên An Môn" },
+  { id: "tu-thien-an-mon-den-tu-cam-thanh", title: "Tuyến Từ Thiên An Môn Đến Tử Cấm Thành" },
+  { id: "co-nen-di-cung-ngay", title: "Thiên An Môn & Tử Cấm Thành: Có Nên Đi Cùng Ngày?" },
+  { id: "sau-tu-cam-thanh-nen-di-dau", title: "Sau Tử Cấm Thành Nên Đi Đâu? (Núi Cảnh Sơn)" },
+  { id: "le-thuong-co", title: "Lễ Thượng Cờ Thiên An Môn Có Đáng Xem?" },
+  { id: "thoi-diem-tham-quan", title: "Nên Đi Thiên An Môn Vào Thời Điểm Nào?" },
+  { id: "gio-mo-cua", title: "Thiên An Môn Mở Cửa Lúc Mấy Giờ?" },
+  { id: "can-mang-gi", title: "Cần Mang Gì Khi Đi Thiên An Môn?" },
+  { id: "bao-tang-quoc-gia-co-nen-ket-hop", title: "Bảo Tàng Quốc Gia Có Nên Kết Hợp Không?" },
+  { id: "co-dang-di-khong", title: "Quảng Trường Thiên An Môn Có Đáng Đi Không?" },
+  { id: "goi-y-lich-trinh", title: "Gợi Ý Lịch Trình Theo Quỹ Thời Gian" },
+  { id: "7-dieu-can-nho", title: "7 Điều Cần Nhớ Trước Khi Đi" },
+  { id: "faq", title: "Câu Hỏi Thường Gặp (FAQ)" },
+  { id: "hanh-trinh-fit-tour", title: "Hành Trình Thiên An Môn Cùng FIT TOUR" }
+];
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[580px] lg:min-h-[660px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src={seoImage} 
+          alt="Quảng trường Thiên An Môn Bắc Kinh Trung Quốc" 
+          class="w-full h-full object-cover object-center opacity-75" 
+          width="1920" 
+          height="1080"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white font-semibold line-clamp-1">Quảng trường Thiên An Môn</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {post.title}
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Kinh nghiệm đặt chỗ, quy trình an ninh và hướng dẫn kết hợp Tử Cấm Thành
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Quảng trường Thiên An Môn là không gian công cộng mang tính biểu tượng tại trung tâm thủ đô Bắc Kinh, <a href="/country/trung-quoc" class="text-amber-400 hover:text-amber-300 underline underline-offset-4" title="Du lịch Trung Quốc">Trung Quốc</a>. Nơi đây là điểm xuất phát lý tưởng cho tuyến tham quan trục lịch sử Nam – Bắc nối liền với Tử Cấm Thành và Núi Cảnh Sơn.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="40" 
+              height="40" 
+              class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" 
+            />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {authorData.name} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>{post.readingTime || 12} phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">📍</span> Trung Tâm Bắc Kinh
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">📐</span> Diện Tích ~440.000 m²
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🎫</span> Đặt Chỗ Tên Thật Trước 1–9 Ngày
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🚩</span> Lễ Thượng Cờ & Hạ Cờ Hàng Ngày
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class={`block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 ${item.indent ? 'pl-2 text-[12.5px] border-l border-transparent hover:border-amber-400' : 'font-semibold text-[13px]'}`}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vị trí</div>
+                <div class="text-[13px] font-bold text-slate-900">Trung tâm Bắc Kinh</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/60 shrink-0">📐</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Kích thước</div>
+                <div class="text-[13px] font-bold text-slate-900">880m × 500m (~44ha)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/60 shrink-0">🎫</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vé vào cửa</div>
+                <div class="text-[13px] font-bold text-slate-900">Miễn phí (Cần đặt chỗ)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-700 text-xl border border-rose-200/60 shrink-0">🛂</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Giấy tờ</div>
+                <div class="text-[13px] font-bold text-slate-900">Hộ chiếu bản gốc</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700 space-y-4">
+            <p>
+              Nhắc tới Bắc Kinh, <strong>Quảng trường Thiên An Môn</strong> gần như là cái tên đầu tiên xuất hiện trong đầu bất kỳ ai. Trái tim của thủ đô Trung Quốc này không chỉ là một khoảng sân khổng lồ, mà còn là "trạm trung chuyển" đưa bạn bước vào trục lịch sử xuyên suốt: từ lầu tháp Thiên An Môn, qua <a href="/tu-cam-thanh" class="text-brand-700 hover:text-brand-800 underline font-medium">Tử Cấm Thành</a> và tiến thẳng đến núi Cảnh Sơn hùng vĩ.
+            </p>
+            <p>
+              Nhưng hãy quên đi khái niệm "thích thì tạt vào" như các quảng trường công cộng khác. Việc đặt chân vào Thiên An Môn hiện nay được vận hành với kỷ luật thép: <strong>đặt vé theo tên thật</strong>, đi đúng <strong>khung giờ</strong>, đúng <strong>cổng an ninh (checkpoint)</strong> và kiểm tra hộ chiếu gắt gao từng bước. Đối với khách quốc tế, nếu không nắm rõ quy trình, bạn rất dễ bị lạc giữa các hàng rào thép hoặc thậm chí bị từ chối vào cửa.
+            </p>
+            <p>
+              Mỗi ngày, hệ thống chia làm 4 khung giờ tham quan khác nhau. Nếu chịu khó dậy sớm, bạn còn có thể săn được suất xem lễ thượng cờ nức tiếng.
+            </p>
+          </div>
+
+          {/* Image Banner */}
+          <figure class="my-8">
+            <img 
+              src="https://media.fittour.vn/uploads/so-do-quang-truong-thien-an-mon.webp" 
+              alt="Sơ đồ Quảng trường Thiên An Môn Bắc Kinh" 
+              class="w-full h-auto rounded-2xl shadow-md border border-slate-200 object-cover" 
+              width="1280" 
+              height="720" 
+              loading="lazy" 
+            />
+            <figcaption class="text-center text-sm text-slate-500 mt-3 italic">
+              Sơ đồ tổng quan Quảng trường Thiên An Môn và các công trình xung quanh
+            </figcaption>
+          </figure>
+
+          {/* Section 1: Quảng Trường Thiên An Môn Là Gì */}
+          <section id="thien-an-mon-la-gi" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Quảng Trường Thiên An Môn Là Gì?
+              </h2>
+            </div>
+            
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Nằm chễm chệ ngay đại lộ Trường An giữa lòng Bắc Kinh, Thiên An Môn là một khoảng không gian khổng lồ trải dài <strong>880m từ Bắc xuống Nam</strong> và rộng <strong>500m</strong>. Theo <a href="https://english.beijing.gov.cn/travellinginbeijing/attractions/202603/t20260325_4566110.html" target="_blank" rel="noopener nofollow" class="text-brand-700 hover:text-brand-800 underline font-medium">thông tin chính thức về Quảng trường Thiên An Môn</a> từ chính quyền thành phố, diện tích toàn khu vực lên tới <strong>440.000 m²</strong> (44 hecta). Nơi đây mở cửa <strong>miễn phí</strong> (từ 05:00 đến 22:00 hàng ngày) và rất dễ dàng kết nối qua tuyến Metro Line 1.
+              </p>
+              <p>
+                Quảng trường được bao bọc bởi những công trình bề thế nhất: Tháp Thiên An Môn ở hướng Bắc, Bảo tàng Quốc gia phía Đông và Đại lễ đường Nhân dân ở phía Tây.
+              </p>
+              <p>
+                Đứng giữa quảng trường, bạn giống như đang đứng ở giao lộ của nhiều thời đại. Ngước nhìn về phía Bắc là Tử Cấm Thành cổ kính; quay lưng lại phía Nam là nhịp sống ồn ào của khu phố Tiền Môn; trong khi hai bên Đông – Tây lại là nhịp thở của một Trung Quốc hiện đại.
+              </p>
+              <p>
+                Tuy rộng lớn, nhưng bạn không cần phải dành cả ngày chỉ để quanh quẩn ở đây. Điểm ăn tiền nhất của Thiên An Môn chính là việc nó đóng vai trò "tiền sảnh" hoàn hảo trước khi bạn bước vào cung điện nguy nga của các triều đại Minh – Thanh.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 2: Thiên An Môn Có Gì */}
+          <section id="thien-an-mon-co-gi" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Thiên An Môn Có Gì? Các Công Trình Xung Quanh Quảng Trường
+              </h2>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Một chuyến tham quan Quảng trường Thiên An Môn không chỉ là đứng giữa quảng trường và chụp ảnh. Xung quanh khu vực này tập trung nhiều công trình quan trọng hàng đầu của đất nước:
+            </p>
+
+            <div class="space-y-6">
+              {/* Tháp Thiên An Môn */}
+              <div id="thap-thien-an-mon" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold text-lg">🏯</span>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">1. Tháp Thiên An Môn (Cổng Thiên An Môn)</h3>
+                </div>
+                <p class="text-slate-700 text-[15px] leading-relaxed">
+                  Tháp Thiên An Môn nằm ở phía Bắc quảng trường và là công trình mang tính biểu tượng cao nhất của khu vực. Hình ảnh tường đỏ, mái ngói vàng và bức chân dung Chủ tịch Mao Trạch Đông phía trên cổng vòm trung tâm đã trở thành một trong những dấu ấn nhận diện nổi tiếng nhất của Bắc Kinh.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Đối với phần lớn du khách, Tháp Thiên An Môn là điểm nhìn và chụp ảnh trên hành trình từ quảng trường đi về phía Tử Cấm Thành. Việc tham quan bên trong lầu tháp Thiên An Môn cần tuân theo quy định vé và tình trạng mở cửa thực tế tại thời điểm chuyến đi.
+                </p>
+              </div>
+
+              {/* Đài Tưởng Niệm */}
+              <div id="dai-tuong-niem" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-600 font-bold text-lg">🏛️</span>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">2. Đài Tưởng Niệm Anh Hùng Nhân Dân</h3>
+                </div>
+                <p class="text-slate-700 text-[15px] leading-relaxed">
+                  Nằm gần trung tâm quảng trường, Đài Tưởng Niệm Anh Hùng Nhân Dân là một đài đá nguyên khối cao lớn, được xây dựng để tưởng niệm những người đã hy sinh trong các giai đoạn lịch sử của Trung Quốc.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Đây là một trong những công trình nằm trên trục cảnh quan chính của quảng trường và thường được quan sát trong khi du khách di chuyển giữa hai phía Đông – Tây.
+                </p>
+              </div>
+
+              {/* Nhà Tưởng Niệm Mao Trạch Đông */}
+              <div id="nha-tuong-niem-mao-trach-dong" class="bg-amber-50/50 p-6 rounded-2xl border border-amber-200/80 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-rose-600 font-bold text-lg">🎖️</span>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">3. Nhà Tưởng Niệm Mao Trạch Đông</h3>
+                </div>
+                <p class="text-slate-700 text-[15px] leading-relaxed">
+                  Nhà tưởng niệm Mao Trạch Đông tọa lạc ở phía Nam khu vực quảng trường, giữa Đài Tưởng niệm và Cổng Tiền Môn.
+                </p>
+                <div class="bg-white p-4 rounded-xl border border-amber-200 text-sm text-slate-700 space-y-1">
+                  <div class="font-bold text-amber-900 flex items-center gap-1.5">
+                    <Info class="w-4 h-4 text-amber-600" /> Lưu ý vận hành năm 2026:
+                  </div>
+                  <p class="text-slate-600 leading-relaxed text-[13.5px]">
+                    Nhà tưởng niệm có các giai đoạn tạm đóng cửa để bảo dưỡng kỹ thuật (chẳng hạn từ tháng 3 đến hết tháng 8/2026). Nếu chuyến đi của bạn diễn ra vào các khung thời gian này, hãy kiểm tra kỹ thông báo chính thức trước ngày tham quan để tránh nhầm lẫn lịch trình.
+                  </p>
+                </div>
+              </div>
+
+              {/* Bảo Tàng Quốc Gia Trung Quốc */}
+              <div id="bao-tang-quoc-gia" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-600 font-bold text-lg">🏺</span>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">4. Bảo Tàng Quốc Gia Trung Quốc</h3>
+                </div>
+                <p class="text-slate-700 text-[15px] leading-relaxed">
+                  Nằm ở phía Đông quảng trường, Bảo tàng Quốc gia là một trong những bảo tàng lớn nhất thế giới, lưu giữ kho tàng đồ sộ về lịch sử, văn hóa và nghệ thuật Trung Hoa từ thời cổ đại đến hiện đại.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Nếu muốn kết hợp Bảo tàng Quốc gia với Thiên An Môn, bạn cần <strong>đặt chỗ riêng</strong> theo hệ thống của bảo tàng. Hiện Bảo tàng Quốc gia áp dụng đặt vé miễn phí theo tên thật, mở đặt trước tối đa 7 ngày. Thời gian tham quan chia theo khung giờ; trong mùa cao điểm hè (từ tháng 6 đến cuối tháng 10), bảo tàng mở cửa phục vụ đến 17:30.
+                </p>
+              </div>
+
+              {/* Đại Lễ Đường Nhân Dân */}
+              <div id="dai-le-duong-nhan-dan" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-purple-600 font-bold text-lg">🏛️</span>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">5. Đại Lễ Đường Nhân Dân</h3>
+                </div>
+                <p class="text-slate-700 text-[15px] leading-relaxed">
+                  Nằm ở phía Tây quảng trường, Đại Lễ Đường Nhân Dân là nơi diễn ra các kỳ họp Quốc hội và các sự kiện chính trị cấp nhà nước quan trọng của Trung Quốc.
+                </p>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Đối với du khách thông thường, đây chủ yếu là một phần của cảnh quan kiến trúc đồ sộ quanh quảng trường hơn là điểm mặc định vào tham quan bên trong. Quy định mở cửa cho công chúng vào từng khu vực phụ thuộc hoàn toàn vào lịch hoạt động thực tế.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 3: Có Cần Đặt Chỗ Không */}
+          <section id="co-can-dat-cho-khong" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Có Cần Đặt Chỗ Vào Quảng Trường Thiên An Môn Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="text-lg font-bold text-slate-900">
+                Câu trả lời là: <strong>CÓ</strong>.
+              </p>
+              <p>
+                Không có vé giấy, cũng không có chuyện mua vé tại quầy. Mọi du khách, kể cả đi cá nhân hay theo đoàn, đều phải <strong>đăng ký trước theo tên thật</strong>. Hệ thống sẽ mở cổng cho phép bạn đặt chỗ trước từ <strong>1 đến 9 ngày</strong>.
+              </p>
+              
+              <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 text-rose-900 text-[14.5px] leading-relaxed my-4">
+                ⚠️ <strong>Cảnh báo:</strong> Đừng xem đặt chỗ Thiên An Môn là thủ tục tùy chọn. Với khách quốc tế, việc đến thẳng rồi “thử vận may” không phải phương án đáng tin cậy; cộng đồng du lịch năm 2026 vẫn liên tục ghi nhận các trường hợp bị từ chối thẳng thừng tại chốt kiểm tra an ninh do không xuất trình được mã đặt chỗ hợp lệ.
+              </div>
+              
+              <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200 shadow-2xs space-y-4 my-6">
+                <div class="font-bold text-slate-900 text-base flex items-center gap-2">
+                  <Clock class="w-5 h-5 text-amber-700" /> 4 Khung Thời Gian Đặt Chỗ Trong Ngày:
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-sm">
+                  <div class="bg-white p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                    <div class="font-bold text-amber-900">1. Lễ Thượng Cờ (Buổi Sớm)</div>
+                    <div class="text-slate-600 text-xs mt-1">Từ khi mở cửa trước lễ thượng cờ đến khi kết thúc nghi lễ.</div>
+                  </div>
+                  <div class="bg-white p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                    <div class="font-bold text-amber-900">2. Khung Buổi Sáng</div>
+                    <div class="text-slate-600 text-xs mt-1">Từ sau lễ thượng cờ đến 12:00 trưa.</div>
+                  </div>
+                  <div class="bg-white p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                    <div class="font-bold text-amber-900">3. Khung Buổi Chiều</div>
+                    <div class="text-slate-600 text-xs mt-1">Bắt đầu từ 12:00 trưa đến trước lễ hạ cờ.</div>
+                  </div>
+                  <div class="bg-white p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                    <div class="font-bold text-amber-900">4. Lễ Hạ Cờ (Hoàng Hôn)</div>
+                    <div class="text-slate-600 text-xs mt-1">Bắt đầu trước thời điểm lễ hạ cờ khoảng 1 giờ đến khi đóng cửa.</div>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-600 italic">
+                  * Lưu ý: Bạn cần chọn đúng mục đích và khung giờ khớp với lịch trình dự kiến, không chỉ đơn thuần là chọn ngày.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 4: Người Việt Nam Đặt Chỗ Thế Nào */}
+          <section id="nguoi-viet-nam-dat-cho" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Người Việt Nam Đặt Chỗ Thiên An Môn Thế Nào?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Nếu đi tự túc, đây chắc chắn là "cửa ải" khiến nhiều người đau đầu nhất:
+              </p>
+              <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-2xs space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center shrink-0 text-sm">📱</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-base">Đặt qua WeChat Mini Program</h3>
+                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                      Hiện tại, hệ thống website đặt chỗ của Thiên An Môn chưa hỗ trợ đầu số quốc tế (+84). Dù có nhiều app như Jingtong hay Beijing Daily, lối thoát an toàn nhất cho khách nước ngoài vẫn là WeChat. Hãy mở app và tìm Mini Program <strong>“天安门广场预约参观” (Thiên An Môn Quảng Trường Dự Ước Tham Quan)</strong> để thao tác.<br/><br/>Tuy nhiên, app này đôi khi vẫn khá "chướng", nhất là lúc yêu cầu nhập quốc tịch hoặc số điện thoại. Bí kíp thực chiến năm 2026: đừng ngại nhờ lễ tân khách sạn hoặc bạn bè người Trung Quốc dùng WeChat của họ đặt hộ. Hệ thống cho phép một người đặt giúp nhiều người, miễn là bạn cung cấp đúng từng con số, từng chữ cái trên hộ chiếu thật khớp.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 pt-3 border-t border-slate-100">
+                  <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center shrink-0 text-sm">📋</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-base">Thông tin cần chuẩn bị</h3>
+                    <ul class="text-slate-600 text-sm mt-1 list-disc pl-5 space-y-1">
+                      <li>Họ và tên đầy đủ (không dấu, theo đúng hộ chiếu).</li>
+                      <li>Số hộ chiếu (Passport Number).</li>
+                      <li>Số điện thoại liên hệ.</li>
+                    </ul>
+                    <p class="text-xs text-slate-500 mt-2">
+                      💡 Mỗi lượt đặt chỗ có thể thêm tối đa <strong>7 người</strong>. Hãy chuẩn bị sẵn danh sách số hộ chiếu của các thành viên trước khi mở hệ thống đặt chỗ.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 5: Không Cần Đặt Riêng */}
+          <section id="khong-can-dat-rieng" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Một Điểm Đặc Biệt: Có Thể Không Cần Đặt Riêng Thiên An Môn
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Có một "đường tắt" cực kỳ tiện lợi mà nhiều du khách thường bỏ quên: <strong>Nếu bạn đã có vé vào các điểm tham quan bên trong khu vực Thiên An Môn, bạn được phép dùng chính mã vé đó để qua cổng an ninh vào quảng trường</strong> mà không cần phải lạch cạch đặt thêm một suất riêng lẻ.
+              </p>
+
+              <div class="bg-blue-50/70 p-5 rounded-xl border border-blue-200 text-slate-700 text-sm space-y-2">
+                <div class="font-bold text-blue-950 flex items-center gap-1.5">
+                  <ShieldCheck class="w-4 h-4 text-blue-700" /> Các điểm nằm trong diện liên kết này gồm:
+                </div>
+                <ul class="list-disc pl-5 space-y-1 text-slate-700 text-[13.5px]">
+                  <li>Bảo tàng Cung điện (Tử Cấm Thành)</li>
+                  <li>Bảo tàng Quốc gia Trung Quốc</li>
+                  <li>Nhà tưởng niệm Mao Trạch Đông</li>
+                  <li>Đại lễ đường Nhân dân</li>
+                </ul>
+                <p class="text-xs text-slate-600 pt-2 border-t border-blue-200/60">
+                  ⚠️ <em>Lưu ý cốt lõi:</em> Đặt chỗ Thiên An Môn <strong>không có giá trị thay thế</strong> vé của các điểm bên trong. Ví dụ: Nếu muốn vào Tử Cấm Thành, bạn vẫn bắt buộc phải mua vé Tử Cấm Thành riêng trên hệ thống Palace Museum.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 6: Checkpoint Thiên An Môn */}
+          <section id="checkpoint-thien-an-mon" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Checkpoint Thiên An Môn: Đi Đúng Cổng Rất Quan Trọng
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Bạn đừng nghĩ quảng trường thì cứ đi bừa từ hướng nào vào cũng được. Thiên An Môn được rào chắn kín kẽ và phân luồng qua từng <strong>chốt kiểm tra (checkpoint)</strong> riêng.
+              </p>
+              <p>
+                Nếu trên mã đặt chỗ ghi cổng Đông, hãy đến đúng cổng Đông. Việc đi lạc cổng không chỉ khiến bạn bị từ chối mà còn bắt bạn phải cuốc bộ một đoạn đường xa tít tắp để vòng lại đúng luồng.
+              </p>
+
+              <div class="overflow-x-auto my-6">
+                <table class="w-full text-left border-collapse bg-white rounded-xl overflow-hidden shadow-2xs border border-slate-200">
+                  <thead class="bg-slate-50 border-b border-slate-200">
+                    <tr>
+                      <th class="py-3 px-4 text-sm font-bold text-slate-900">Khu vực</th>
+                      <th class="py-3 px-4 text-sm font-bold text-slate-900">Gần điểm nào</th>
+                      <th class="py-3 px-4 text-sm font-bold text-slate-900">Phù hợp</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-[14.5px] text-slate-700 divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50/50 transition-colors">
+                      <td class="py-3 px-4 font-semibold text-slate-900">Tiananmen East</td>
+                      <td class="py-3 px-4">Bảo tàng Quốc gia</td>
+                      <td class="py-3 px-4">Đi từ Metro Line 1</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/50 transition-colors">
+                      <td class="py-3 px-4 font-semibold text-slate-900">Tiananmen West</td>
+                      <td class="py-3 px-4">Đại Lễ Đường</td>
+                      <td class="py-3 px-4">Đi từ Metro Line 1</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/50 transition-colors">
+                      <td class="py-3 px-4 font-semibold text-slate-900">Qianmen</td>
+                      <td class="py-3 px-4">Tiền Môn</td>
+                      <td class="py-3 px-4">Kết hợp Tiền Môn</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/50 transition-colors">
+                      <td class="py-3 px-4 font-semibold text-slate-900">Phía Bắc</td>
+                      <td class="py-3 px-4">Gần Tháp Thiên An Môn</td>
+                      <td class="py-3 px-4">Kết nối Tử Cấm Thành</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="font-medium text-slate-900 text-[15px]">
+                Luôn kiểm tra checkpoint trên reservation trước khi đi.
+              </p>
+
+              <div class="p-4 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 text-sm font-medium">
+                👉 <strong>Nguyên tắc vàng:</strong> Luôn kiểm tra lại thông tin checkpoint hiển thị trên mã đặt chỗ trước khi bắt taxi hoặc xuống ga tàu điện ngầm để tránh phải đi bộ vòng quanh hàng rào rất xa.
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 7: Kiểm Tra An Ninh */}
+          <section id="kiem-tra-an-ninh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Quy Trình Kiểm Tra An Ninh Tại Thiên An Môn
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Thiên An Môn có quy trình kiểm tra an ninh nhiều lớp; du khách cần xuất trình giấy tờ và tuân thủ kiểm tra hành lý.
+              </p>
+              
+              <ul class="space-y-2.5 text-slate-800 text-[14.5px] leading-relaxed list-disc pl-5">
+                <li><strong>Hộ chiếu gốc là bắt buộc:</strong> Nên tránh để hộ chiếu ở đáy vali. Hãy để ở túi đeo ngực hoặc ngăn ngoài dễ lấy vì bạn sẽ phải xuất trình qua nhiều chốt an ninh liên tiếp.</li>
+                <li><strong>Danh mục cấm:</strong> Bật lửa, dao kéo, flycam (drone), các loại chất lỏng dễ cháy, bình xịt nén khí và các thiết bị thu phát vô tuyến công suất lớn đều bị cấm mang vào.</li>
+                <li><strong>Hai hệ thống an ninh độc lập:</strong> Nếu bạn đi từ Thiên An Môn sang Tử Cấm Thành, bạn sẽ phải qua kiểm tra an ninh tại Thiên An Môn trước, sau đó tiếp tục qua cổng an ninh riêng của Tử Cấm Thành tại Ngọ Môn.</li>
+              </ul>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 8: Tuyến Đi Đến Tử Cấm Thành */}
+          <section id="tu-thien-an-mon-den-tu-cam-thanh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Tuyến Đi Từ Quảng Trường Thiên An Môn Đến Tử Cấm Thành
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Sẽ thật thiếu sót nếu đi Bắc Kinh mà không thực hiện combo "huyền thoại" này.
+              </p>
+              <p>
+                Cố Cung (Tử Cấm Thành) nằm ngay sau lưng Tháp Thiên An Môn. Tuy nhiên, bạn không thể cứ thế mà đi lại tự do. Toàn bộ luồng khách bị ép đi một chiều duy nhất theo hướng <strong>Nam tiến lên Bắc</strong>. Lộ trình bắt buộc sẽ là:
+              </p>
+
+              <div class="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent p-5 rounded-2xl border border-amber-300 space-y-3 font-medium text-slate-900">
+                <div class="text-amber-800 font-bold text-sm tracking-wide uppercase">Lộ trình di chuyển chuẩn:</div>
+                <div class="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+                  <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs font-bold">Quảng trường Thiên An Môn</span>
+                  <span>➔</span>
+                  <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs font-bold">Cầu Kim Thủy</span>
+                  <span>➔</span>
+                  <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs font-bold">Tháp Thiên An Môn</span>
+                  <span>➔</span>
+                  <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs font-bold">Đoan Môn</span>
+                  <span>➔</span>
+                  <span class="bg-amber-100 text-amber-900 px-3 py-1.5 rounded-lg border border-amber-300 font-bold">Ngọ Môn (Lối vào Cố Cung)</span>
+                </div>
+              </div>
+
+              <div class="bg-rose-50 p-4 rounded-xl border border-rose-200 text-rose-900 text-sm">
+                ⏳ <strong>Mẹo nhỏ sống còn:</strong> Ải an ninh ở đây đôi khi dài dằng dặc, có lúc xếp hàng đến mức chóng mặt. Vì vậy, hãy chừa một khoảng thời gian trống thật rộng rãi (buffer time). Tuyệt đối đừng mua vé Tử Cấm Thành và Thiên An Môn sát rạt giờ nhau, bạn sẽ phải vắt chân lên cổ mà chạy đấy.
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 9: Có Nên Đi Cùng Ngày */}
+          <section id="co-nen-di-cung-ngay" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Thiên An Môn Và Tử Cấm Thành Có Nên Đi Cùng Ngày?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="font-bold text-slate-900 text-base">
+                Chắc chắn rồi. Đây là bộ đôi dính liền nhau về mặt địa lý.
+              </p>
+              <p>
+                Nhưng hãy chuẩn bị tâm lý: đây là một "cuộc hành quân" ngốn của bạn ít nhất <strong>nửa ngày đến trọn một ngày</strong>. Đừng kỳ vọng có thể dạo bước ngắm cảnh nhẹ nhàng rồi tạt qua các điểm khác trong chốc lát.
+              </p>
+              
+              <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
+                <div class="font-bold text-slate-900 text-base">Gợi ý phân bổ thời gian chuẩn:</div>
+                <div class="space-y-3 text-sm">
+                  <div class="flex items-start gap-2">
+                    <span class="font-bold text-amber-800 shrink-0">🌅 Buổi sáng (08:00 – 12:30):</span>
+                    <span class="text-slate-700">Check-in Quảng trường Thiên An Môn ➔ Đi bộ qua Tháp Thiên An Môn & Đoan Môn ➔ Vào Ngọ Môn tham quan trục trung tâm Tử Cấm Thành.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="font-bold text-amber-800 shrink-0">🌇 Buổi chiều (13:30 – 16:30):</span>
+                    <span class="text-slate-700">Khám phá Ngự Hoa Viên ➔ Ra cổng Bắc (Thần Vũ Môn) ➔ Băng qua đường leo lên đỉnh Núi Cảnh Sơn ngắm toàn cảnh Tử Cấm Thành từ trên cao.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 10: Sau Tử Cấm Thành Nên Đi Đâu */}
+          <section id="sau-tu-cam-thanh-nen-di-dau" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Sau Tử Cấm Thành Nên Đi Đâu? Cảnh Sơn Là Lựa Chọn Tự Nhiên Nhất
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Vừa bước ra khỏi cổng Bắc (Thần Vũ Môn) của Tử Cấm Thành, đập ngay vào mắt bạn chính là Công viên Cảnh Sơn. Đây là "điểm chốt sổ" không thể hoàn hảo hơn cho chuyến đi mệt nhoài.
+              </p>
+              <p>
+                Chịu khó leo những bậc thang đá lên đỉnh Vạn Xuân Đình, phần thưởng của bạn sẽ là toàn cảnh Tử Cấm Thành uy nghi lộng lẫy hiện ra dưới chân, với những lớp mái ngói vàng chói lóa trải dài đến tận chân trời. Cảnh tượng này đáng giá từng giọt mồ hôi.
+              </p>
+              <p class="text-sm bg-slate-100 p-4 rounded-xl text-slate-700 border border-slate-200">
+                💡 <strong>Lời khuyên:</strong> Nên tránh việc cố nhồi nhét thêm Thiên Đàn hoặc Di Hòa Viên vào cùng buổi với Thiên An Môn & Tử Cấm Thành. Cộng đồng du lịch 2026 khuyên chỉ nên lên lịch một hoặc tối đa hai điểm lớn mỗi ngày, vì bản thân Tử Cấm Thành thực tế đòi hỏi việc đi bộ mệt hơn tưởng tượng. Lượng đi bộ của cụm Thiên An Môn – Cố Cung – Cảnh Sơn đã là một bài kiểm tra thể lực khá nặng, nhiều người thậm chí phải bỏ qua Cảnh Sơn vì kiệt sức.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 11: Lễ Thượng Cờ */}
+          <section id="le-thuong-co" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Lễ Thượng Cờ Thiên An Môn Có Đáng Xem Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Lễ thượng cờ tại Quảng trường Thiên An Môn là một nghi thức trang nghiêm bậc nhất, diễn ra chính xác vào thời khắc mặt trời mọc mỗi ngày (thời gian thay đổi theo từng ngày trong năm).
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <div class="font-bold text-emerald-800 text-[15px] flex items-center gap-1.5">
+                    <Check class="w-4 h-4 text-emerald-600" /> Nên đi khi:
+                  </div>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Bạn thực sự yêu thích nghi lễ quân đội trang trọng, muốn trải nghiệm không khí hào hùng. Bạn cần chuẩn bị từ rất sớm vì phải đến checkpoint, qua an ninh và ổn định vị trí trước thời điểm nghi lễ (thời gian chuẩn bị thực tế phụ thuộc giờ thượng cờ và checkpoint).
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
+                  <div class="font-bold text-rose-800 text-[15px] flex items-center gap-1.5">
+                    <AlertTriangle class="w-4 h-4 text-rose-600" /> Cân nhắc không đi khi:
+                  </div>
+                  <p class="text-slate-600 text-sm leading-relaxed">
+                    Trong đoàn có người lớn tuổi hoặc trẻ nhỏ, hoặc mục tiêu trọng tâm trong ngày là giữ sức khỏe để đi bộ trọn vẹn Tử Cấm Thành và các điểm di sản khác.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 12: Thời Điểm Tham Quan */}
+          <section id="thoi-diem-tham-quan" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Nên Đi Thiên An Môn Vào Thời Điểm Nào?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Thật khó để nói giờ nào là "tốt nhất", vì nó phụ thuộc hoàn toàn vào sức khỏe và mục đích của bạn:
+              </p>
+              <ul class="space-y-2.5 text-slate-800 text-[14.5px] leading-relaxed list-disc pl-5">
+                <li><strong>Muốn xem lễ thượng cờ:</strong> Phải đi cực sớm, chọn khung giờ "Thượng cờ" và kiểm tra bảng giờ mặt trời mọc chính thức trên hệ thống đặt chỗ.</li>
+                <li><strong>Chỉ tham quan quảng trường hoặc kết hợp Tử Cấm Thành:</strong> Hãy lấy <strong>giờ vé Tử Cấm Thành làm mốc chuẩn</strong>, sau đó đặt khung Thiên An Môn phù hợp. Đừng mặc định rằng đi khung giờ sáng sớm luôn ít đông hơn mọi ngày. Đôi khi, đi vào cuối buổi sáng hoặc giữa buổi chiều (sau 14:00) lại tránh được đợt khách đoàn đổ dồn vào sáng sớm. Nên ưu tiên chọn ngày thường trong tuần.</li>
+                <li><strong>Muốn ngắm hoàng hôn & lễ hạ cờ:</strong> Chọn khung buổi chiều muộn hoặc khung "Hạ cờ".</li>
+              </ul>
+              
+              <div class="bg-rose-50/80 p-5 rounded-2xl border border-rose-200 shadow-2xs space-y-3 mt-6">
+                <div class="font-bold text-rose-900 text-[15.5px] flex items-center gap-2">
+                  <Calendar class="w-5 h-5 text-rose-600" /> Thiên An Môn Tháng 9–10/2026: Cần Lưu Ý Gì?
+                </div>
+                <p class="text-slate-700 text-[14.5px] leading-relaxed">
+                  Nếu đi từ cuối tháng 9 đến đầu tháng 10/2026, cần đặc biệt lưu ý hai giai đoạn cao điểm: <strong class="text-rose-700">Tết Trung Thu (25–27/09)</strong> và <strong class="text-rose-700">Tuần lễ Vàng Quốc khánh (01–07/10)</strong>. Lượng khách tại các điểm trung tâm Bắc Kinh có thể tăng mạnh. Vì vậy, nên đặt chỗ các điểm tham quan quan trọng càng sớm càng tốt, đồng thời hạn chế thiết kế lịch trình quá dày đặc trong một ngày.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 13: Giờ Mở Cửa */}
+          <section id="gio-mo-cua" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Thiên An Môn Mở Cửa Lúc Mấy Giờ?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Quảng trường về cơ bản sẽ mở cửa đón khách từ <strong>05:00 sáng đến 22:00 tối hàng ngày</strong>.
+              </p>
+              <p>
+                Nhưng hãy nhớ, giờ mở cửa chung là một chuyện, còn bạn được vào lúc nào lại là chuyện khác. Tất cả phụ thuộc hoàn toàn vào <strong>khung giờ ghi trên mã đặt chỗ của bạn</strong>. Đừng đi quá sớm hoặc nấn ná quá muộn so với lịch hẹn kẻo rắc rối với lực lượng an ninh.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 14: Cần Mang Gì */}
+          <section id="can-mang-gi" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Cần Mang Gì Khi Đi Thiên An Môn?
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-amber-600 text-base">🛂</span> Hộ chiếu bản gốc
+                </div>
+                <p class="text-slate-600 text-xs mt-1.5 leading-relaxed">
+                  Vật bất ly thân quan trọng nhất. Cần xuất trình tại tất cả các cổng quét an ninh và cổng soát vé.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-blue-600 text-base">📱</span> Mã xác nhận đặt chỗ
+                </div>
+                <p class="text-slate-600 text-xs mt-1.5 leading-relaxed">
+                  Chụp ảnh màn hình lưu trên điện thoại để đề phòng trường hợp mất sóng mạng khi vào khu vực đông người.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-emerald-600 text-base">👟</span> Giày thể thao êm ái
+                </div>
+                <p class="text-slate-600 text-xs mt-1.5 leading-relaxed">
+                  Toàn bộ quảng trường và Cố Cung đều lát đá phẳng rộng lớn, tổng quãng đường đi bộ trong ngày rất dài.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-rose-600 text-base">☀️</span> Mũ nón, ô & nước lọc
+                </div>
+                <p class="text-slate-600 text-xs mt-1.5 leading-relaxed">
+                  Quảng trường không có cây xanh che bóng. Nắng mùa hè phản xạ nhiệt rất mạnh từ nền đá. Các trải nghiệm thực tế vào mùa hè (tháng 7–8/2026) cho thấy nắng nóng và thời gian chờ an ninh có thể khiến hành trình mệt hơn đáng kể. Nếu đi vào giai đoạn này, nên ưu tiên khung giờ sớm, mang nhiều nước và chống nắng, đồng thời tránh xếp quá nhiều điểm ngoài trời vào cùng một buổi.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 15: Bảo Tàng Quốc Gia Có Nên Kết Hợp */}
+          <section id="bao-tang-quoc-gia-co-nen-ket-hop" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Bảo Tàng Quốc Gia Có Nên Kết Hợp Chung Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Bảo tàng Quốc gia là kho tàng lịch sử cực kỳ hoành tráng. Nhưng vì nó quá rộng lớn, <strong>đừng bao giờ xem đây là điểm "tiện chân thì ghé"</strong>.
+              </p>
+              <p>
+                Nhiều người lầm tưởng rằng có thể đi Thiên An Môn, dạo quanh Cố Cung rồi tiện thể tạt vào bảo tàng. Sự thật là đôi chân của bạn sẽ không cho phép. Hãy dành hẳn một buổi khác để thong thả khám phá bảo tàng này.
+              </p>
+              <p>
+                Theo <a href="https://en.chnmuseum.cn/visit_692/" target="_blank" rel="noopener nofollow" class="text-brand-700 hover:text-brand-800 underline font-medium">quy định tham quan và đặt chỗ của Bảo tàng Quốc gia Trung Quốc</a>, vé vào cửa hoàn toàn miễn phí nhưng bắt buộc phải <strong>đặt chỗ theo tên thật (real-name reservation)</strong> tối đa 7 ngày trước ngày đi. Bạn phải chọn 1 trong 3 khung giờ (time slots) và đến đúng giờ đã chọn. Bảo tàng mở cửa từ 09:00 đến 17:00 (riêng mùa cao điểm 1/6 – 31/10 sẽ kéo dài đến 17:30) và luôn yêu cầu xuất trình ID/Hộ chiếu gốc tại cổng.
+              </p>
+              <div class="p-4 bg-amber-50 rounded-xl border border-amber-200 text-sm text-slate-700 leading-relaxed">
+                👉 Nếu đã lên kế hoạch đi <strong>Thiên An Môn ➔ Tử Cấm Thành ➔ Cảnh Sơn</strong>, bạn <strong>không nên nhét thêm Bảo tàng Quốc gia</strong> vào cùng một ngày vì sẽ bị kiệt sức. Hãy dành riêng một buổi khác cho bảo tàng.
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 16: Có Đáng Đi Không */}
+          <section id="co-dang-di-khong" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Quảng Trường Thiên An Môn Có Đáng Đi Không?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p class="font-bold text-slate-900 text-lg">
+                Chắc chắn là có. Dù thủ tục có lằng nhằng đôi chút, nhưng trải nghiệm đứng giữa quảng trường lớn nhất thế giới này vẫn luôn là một cột mốc đáng nhớ.
+              </p>
+              <p>
+                Thiên An Môn không đơn thuần chỉ là một khoảng sân bê tông. Nó giống như lời mở đầu cho một câu chuyện lịch sử vĩ đại: từ một quảng trường lộng gió, đi xuyên qua vòm cổng tháp màu son, và chính thức bước chân vào 500 năm thâm nghiêm của Tử Cấm Thành.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 17: Gợi Ý Lịch Trình */}
+          <section id="goi-y-lich-trinh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Gợi Ý Lịch Trình Thiên An Môn Theo Quỹ Thời Gian
+              </h2>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+                <div class="font-bold text-amber-900 text-base">⏳ Dành khoảng 2 – 3 giờ (Tham khảo):</div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Thiên An Môn ➔ Chụp ảnh Tháp Thiên An Môn ➔ Dạo quanh Tiền Môn / phố cổ Đại Sách Lan. (Chưa đủ thời gian để kết hợp Tử Cấm Thành).
+                </p>
+              </div>
+
+              <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-300 shadow-2xs space-y-1.5">
+                <div class="font-bold text-amber-950 text-base">⏳ Dành khoảng 4 – 5 giờ (Tuyến khuyên dùng nhất):</div>
+                <p class="text-slate-700 text-sm leading-relaxed">
+                  Quảng trường Thiên An Môn ➔ Tháp Thiên An Môn ➔ Đoan Môn ➔ Ngọ Môn ➔ Tham quan trục chính Tử Cấm Thành.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+                <div class="font-bold text-amber-900 text-base">⏳ Dành trọn ngày (Tuyến chi tiết):</div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Thiên An Môn ➔ Tử Cấm Thành ➔ Núi Cảnh Sơn ngắm hoàng hôn ➔ Buổi tối thưởng thức vịt quay Bắc Kinh tại Tiền Môn.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-1.5">
+                <div class="font-bold text-amber-900 text-base">🌅 Tuyến kết hợp xem lễ Thượng Cờ:</div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Lễ Thượng cờ (vào lúc mặt trời mọc) ➔ Ăn sáng nhẹ ➔ Thiên An Môn ➔ Tử Cấm Thành ➔ Cảnh Sơn. (Cần ngủ sớm đêm hôm trước để đảm bảo sức khỏe).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 18: 7 Điều Cần Nhớ */}
+          <section id="7-dieu-can-nho" class="scroll-mt-28">
+            <div class="bg-gradient-to-br from-amber-50 via-white to-amber-50/50 p-6 lg:p-8 rounded-2xl border-2 border-amber-300 shadow-sm space-y-6">
+              <div class="border-l-4 border-amber-600 pl-4">
+                <h2 class="font-serif text-2xl font-bold text-slate-900 leading-tight">
+                  7 Điều Cần Nhớ Trước Khi Đi Thiên An Môn
+                </h2>
+              </div>
+
+              <ol class="space-y-3 text-slate-800 text-[15px] leading-relaxed list-decimal pl-5 font-medium">
+                <li>Quảng trường miễn phí vé vào cửa, nhưng <strong>bắt buộc phải đặt chỗ trước theo tên thật</strong>.</li>
+                <li>Du khách quốc tế nên đặt chỗ qua mini program WeChat <strong>“天安门广场预约参观”</strong>.</li>
+                <li>Bắt buộc mang theo <strong>hộ chiếu bản gốc</strong> để đối chiếu tại các chốt an ninh.</li>
+                <li>Đi đúng <strong>checkpoint (cổng kiểm tra)</strong> đã ghi trên mã đặt chỗ.</li>
+                <li>Lễ thượng cờ có <strong>khung giờ đặt chỗ riêng</strong> và thời gian thay đổi theo từng ngày.</li>
+                <li>Nhà tưởng niệm Mao Trạch Đông có các đợt tạm đóng cửa định kỳ để bảo dưỡng.</li>
+                <li>Nếu kết hợp Tử Cấm Thành, hãy luôn chừa một khoảng đệm đáng kể trước giờ vào Tử Cấm Thành, đặc biệt vào cuối tuần, ngày lễ và mùa cao điểm.</li>
+              </ol>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 19: FAQ */}
+          <section id="faq" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Câu Hỏi Thường Gặp (FAQ)
+              </h2>
+            </div>
+
+            <div class="space-y-3 text-slate-700">
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Quảng trường Thiên An Môn có mất phí vào cửa không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Không. Quảng trường mở cửa hoàn toàn miễn phí cho công chúng, nhưng bắt buộc phải đặt chỗ trước theo tên thật trên hệ thống quản lý.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Người Việt Nam có cần mang hộ chiếu khi vào Thiên An Môn không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Có. Hộ chiếu bản gốc là giấy tờ bắt buộc để nhân viên an ninh quét đối chiếu thông tin đặt chỗ tại cổng kiểm tra.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Có cần đặt vé Tử Cấm Thành riêng không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Có. Đặt chỗ Thiên An Môn và vé tham quan Tử Cấm Thành là hai hệ thống độc lập. Bạn vẫn cần có vé Tử Cấm Thành riêng nếu muốn vào tham quan bên trong cung điện.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Có thể đi Thiên An Môn và Tử Cấm Thành trong cùng một ngày không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Có. Đây là tuyến kết hợp chuẩn mực và thuận tiện nhất vì Tử Cấm Thành nằm ngay phía Bắc Thiên An Môn theo một trục đường thẳng.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Lễ thượng cờ diễn ra lúc mấy giờ?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Giờ thượng cờ khớp chính xác với thời điểm mặt trời mọc mỗi ngày tại Bắc Kinh và có lịch công bố cụ thể trên hệ thống đặt chỗ của Ban Quản lý Thiên An Môn.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Có thể vào Tháp Thiên An Môn không? Đặt quảng trường rồi có được lên Tháp không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Quảng trường, Tháp Thiên An Môn và Tử Cấm Thành là các điểm tham quan có quy định vào cửa độc lập. Nếu muốn lên lầu Tháp Thiên An Môn (Rostrum), hãy kiểm tra quy định đặt vé và giờ mở cửa riêng (ví dụ: mở 08:30–17:00, ngừng kiểm vé lúc 16:30 trong mùa cao điểm 01/04–31/10). Đặt chỗ Quảng trường Thiên An Môn <strong>không có nghĩa</strong> là bạn được lên Tháp.
+                </div>
+              </details>
+
+              <details class="group bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs open:border-amber-400 transition-all">
+                <summary class="font-bold text-slate-900 cursor-pointer flex items-center justify-between text-[15.5px]">
+                  <span>Có thể tìm đường vào Thiên An Môn bằng Google Maps không?</span>
+                  <span class="text-amber-600 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <div class="pt-3 text-[14.5px] text-slate-600 leading-relaxed border-t border-slate-100 mt-3">
+                  Không nên phụ thuộc hoàn toàn vào Google Maps. Trong khu vực kiểm soát an ninh, lối đi thực tế có thể khác tuyến bản đồ thông thường. Hãy ưu tiên checkpoint và hướng dẫn trên reservation.
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 20: Hành Trình Cùng FIT TOUR */}
+          <section id="hanh-trinh-fit-tour" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Hành Trình Thiên An Môn Cùng FIT TOUR
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Hãy coi Thiên An Môn như một nốt nhạc dạo đầu. Nó sẽ đẹp nhất khi bạn xâu chuỗi nó vào một hành trình bài bản, thay vì chỉ tạt qua check-in vội vã.
+              </p>
+              <p>
+                Với người đi lần đầu, cứ "bám" sát trục Nam – Bắc kinh điển: <strong>Quảng trường Thiên An Môn ➔ Tử Cấm Thành ➔ Núi Cảnh Sơn</strong>. Bạn sẽ đi từ nhịp sống hiện đại ồn ào bên ngoài, lặn ngụp vào không gian uy quyền của hoàng thành, rồi cuối cùng phóng tầm mắt thu trọn vẹn sự hùng vĩ đó từ trên đỉnh đồi lộng gió.
+              </p>
+              <p>
+                Với những hành trình Bắc Kinh kết hợp Thiên An Môn, Tử Cấm Thành và Vạn Lý Trường Thành, <strong>FIT TOUR</strong> ưu tiên xây dựng lịch trình tối ưu dựa trên giờ đặt chỗ thực tế, khoảng cách di chuyển và thời gian qua các chốt kiểm tra an ninh.
+              </p>
+              <p class="font-bold text-slate-900 text-base">
+                Thiên An Môn không cần phải đi thật nhanh. Điều quan trọng là đặt đúng chỗ, đi đúng tuyến và dành đủ thời gian để cảm nhận trọn vẹn không gian đặc biệt của trung tâm Bắc Kinh.
+              </p>
+
+              <div class="mt-5 flex flex-col gap-2 bg-amber-50/50 p-4 rounded-xl border border-amber-200/60">
+                <div class="text-slate-800 text-[14.5px]">
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-bac-kinh-5n5d" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Bắc Kinh 5 Ngày 5 Đêm: Khám phá Tử Cấm Thành & Vạn Lý Trường Thành</a>
+                </div>
+                <div class="text-slate-800 text-[14.5px]">
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-trung-quoc-9n8d" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Trung Quốc 9 Ngày 8 Đêm: Bắc Kinh - Thượng Hải - Hàng Châu - Tô Châu</a>
+                </div>
+                <div class="text-slate-800 text-[14.5px]">
+                  <strong>Xem thêm:</strong> <a href="/tour/tour-bac-kinh-tu-ha-noi" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">Tour Bắc Kinh từ Hà Nội trọn gói</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-100 p-4 rounded-xl text-xs text-slate-600 space-y-1 mt-6 border border-slate-200">
+              <div><strong>Lưu ý:</strong> Quy định đặt chỗ, checkpoint, lịch thượng/hạ cờ và yêu cầu an ninh tại Quảng trường Thiên An Môn có thể thay đổi theo sự kiện. Du khách nên kiểm tra <a href="https://tamgw.beijing.gov.cn/" target="_blank" rel="noopener nofollow" class="text-brand-700 hover:text-brand-800 underline font-medium">thông báo chính thức của Ban Quản lý Thiên An Môn</a> hoặc gọi hotline 010-65016000 trước chuyến đi.</div>
+            </div>
+          </section>
+
+          {/* CTA Banner */}
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Khám Phá Bắc Kinh & Thiên An Môn Cùng FIT TOUR
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Đồng hành cùng FIT TOUR trong những hành trình khám phá Bắc Kinh chuyên sâu, tinh tế và chuẩn chỉnh từng khung giờ tham quan.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tour/tour-bac-kinh-5n5d" 
+                target="_blank" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🏯</span> Xem Tour Bắc Kinh 5N5Đ Trọn Gói
+              </a>
+              <a 
+                href="/country/trung-quoc" 
+                target="_blank" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>🇨🇳</span> Cẩm Nang Du Lịch Trung Quốc
+              </a>
+            </div>
+          </div>
+
+          {/* Data Post: China Series */}
+          <div class="mt-12 mb-8">
+            <DataPost source="tag" slug="du-lich-trung-quoc" limit="6" title="Chuỗi Bài Viết: Khám Phá Trung Quốc" />
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            {/* Quick Facts */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Thông tin hữu ích
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚩</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Tên địa danh</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Quảng trường Thiên An Môn (Tiananmen Square)</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-200/60 text-lg">📐</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Diện tích</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Khoảng 440.000 m² (880m × 500m)</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/60 text-lg">🎫</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Quy định đặt chỗ</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Đặt tên thật trước 1–9 ngày qua WeChat</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 border border-purple-200/60 text-lg">🛂</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">An ninh</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Kiểm tra hộ chiếu gốc tại các Checkpoint</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Articles */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Bài Viết Liên Quan
+              </div>
+              <div class="space-y-4">
+                {[
+                  { 
+                    title: "Tử Cấm Thành Bắc Kinh: Cẩm Nang Tham Quan, Giá Vé & Kinh Nghiệm Cố Cung", 
+                    img: "https://media.fittour.vn/uploads/han-phuc-hanh-lang-tu-cam-thanh-bac-kinh.webp", 
+                    link: "/tu-cam-thanh" 
+                  },
+                  { 
+                    title: "Vạn Lý Trường Thành Bắc Kinh: 8 Đoạn Đẹp & Kinh Nghiệm Chọn Nơi Tham Quan", 
+                    img: "https://media.fittour.vn/uploads/van-ly-truong-thanh-bac-kinh.webp", 
+                    link: "/van-ly-truong-thanh" 
+                  },
+                  { 
+                    title: "Địa Mạo Đan Hà Trương Dịch: Kỳ Quan Núi Cầu Vồng 135 Triệu Năm", 
+                    img: "https://media.fittour.vn/uploads/cam-tuc-thanh-hai-ho-thanh-hai-va-cao-nguyen-tay-bac.webp", 
+                    link: "/dia-mao-dan-ha" 
+                  },
+                  { 
+                    title: "Tại Sao Nên Du Lịch Trung Quốc Cùng FIT TOUR?", 
+                    img: "https://media.fittour.vn/uploads/china-sereis-background.webp", 
+                    link: "/why-travel-china-fittour" 
+                  }
+                ].map((item) => (
+                  <a href={item.link} class="flex gap-3 group">
+                    <div class="w-20 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                      <img 
+                        src={item.img} 
+                        alt={item.title} 
+                        width="80" 
+                        height="45" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                        loading="lazy" 
+                      />
+                    </div>
+                    <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-3">
+                      {item.title}
+                    </div>
+                  </a>
+                ))}
+              </div>
+              <div class="mt-5 text-center pt-3 border-t border-slate-100">
+                <a href="/country/trung-quoc" class="text-amber-700 text-xs font-bold hover:underline">Khám phá cẩm nang Trung Quốc →</a>
+              </div>
+            </div>
+
+            {/* Share Block */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/thien-an-mon" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Chia sẻ lên Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/thien-an-mon');" 
+                  aria-label="Sao chép liên kết"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

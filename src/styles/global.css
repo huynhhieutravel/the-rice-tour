@@ -1,0 +1,1276 @@
+@import "tailwindcss";
+@source "./tw-safelist.html";
+@source "./db-dump.html";
+@source "../components/archived";
+@plugin "@tailwindcss/typography";
+
+/* ==========================================================================
+   1. THE RICE TOUR DESIGN SYSTEM - LUXURY INBOUND VARIABLES
+   ========================================================================== */
+:root {
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-rice-gold: #d97706;
+  --color-rice-amber: #f59e0b;
+  --color-vietnam-jade: #0d5c46;
+  /* =================================================================
+     COLOR SYSTEM — Quy tắc VÀNG:
+     1. KHÔNG BAO GIỜ hardcode mã màu (#hex) trực tiếp trong component
+     2. Luôn dùng var(--token-name) để sửa 1 chỗ = đồng bộ toàn bộ
+     3. Mọi cặp text/bg phải đạt WCAG AA (≥ 4.5:1 cho chữ thường)
+     ================================================================= */
+
+  /* --- Brand Colors (Vibrant Orange Core) --- */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+
+  /* --- Semantic Text Colors (WCAG AA trên nền trắng #fff) --- */
+  --color-primary: #111827;    /* text-primary: 16.75:1 ✅ */
+  --text-primary: #111827;     /* alias — giữ cho tương thích */
+  --text-secondary: #4b5563;   /* 7.05:1 ✅ */
+  --text-muted: #4b5563;       /* 5.3:1 ✅ (chỉ dùng cho chú thích nhỏ) */
+
+  /* --- Semantic Background Colors --- */
+  --bg-surface: #ffffff;
+  --bg-subtle: #f8fafc;
+  --border-subtle: #e2e8f0;
+
+  /* --- Component Tokens (Sửa 1 nơi = đồng bộ toàn hệ thống) --- */
+  --badge-text: var(--color-brand-800);   /* Trên bg-brand-50: 7.2:1 ✅ */
+  --badge-bg: var(--color-brand-50);
+  --badge-border: var(--color-brand-100);
+
+  --footer-bg: #111827;                   /* bg-gray-900 */
+  --footer-text: #9ca3af;                 /* text-gray-400: 5.9:1 trên footer-bg ✅ */
+  --footer-text-dim: #9ca3af;             /* text-gray-400: dùng cho copyright, links */
+  --footer-heading: #ffffff;              /* text-white: 16.75:1 ✅ */
+  --footer-border: #1f2937;              /* border-gray-800 */
+
+  --focus-ring: var(--color-brand-500);   /* Viền focus cho a11y */
+
+  /* --- Spacing Scale (8px base) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* --- Container widths --- */
+  --container-xl: 1280px;
+  --padding-inline: clamp(1rem, 4vw, 2.5rem);
+
+  /* --- Responsive Typography --- */
+  --font-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-size-base: clamp(1.0625rem, 0.5vw + 0.875rem, 1.1875rem);
+  --font-size-sm: clamp(0.875rem, 0.3vw + 0.75rem, 0.9375rem);
+  --font-size-quote: clamp(1.1875rem, 0.5vw + 0.9rem, 1.25rem); /* 19px -> 20px */
+  
+  --line-height-body: 1.7;
+  --line-height-heading: 1.3;
+  --radius-lg: 0.75rem;
+  --content-width: 65ch;
+  
+  --font-size-h4: clamp(1.125rem, 0.5vw + 1rem, 1.25rem);  /* 18px -> 20px */
+  --font-size-h3: clamp(1.25rem, 1vw + 1rem, 1.5rem);      /* 20px -> 24px */
+  --font-size-h2: clamp(1.5rem, 1.5vw + 1rem, 1.875rem);   /* 24px -> 30px */
+  --font-size-h1: clamp(1.875rem, 2vw + 1.2rem, 2.25rem);  /* 30px -> 36px */
+  --font-size-hero: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+}
+
+/* Dark Mode is DISABLED visually by removing ThemeToggle, 
+   but we keep the variables here just in case for the future */
+html.dark {
+  --color-primary: #f9fafb; /* text-primary = light text in dark mode */
+  --bg-surface: #111827; 
+  --bg-subtle: #1f2937;  
+  --text-primary: #f9fafb; 
+  --text-secondary: #d1d5db; 
+  --text-muted: #9ca3af; 
+  --border-subtle: #374151; 
+}
+
+/* ==========================================================================
+   2. TAILWIND THEME CONSUMPTION
+   ========================================================================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* text-primary = dark text (#111827), NOT orange brand */
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  --color-surface: var(--bg-surface);
+  --color-subtle: var(--bg-subtle);
+  --color-text-main: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-subtle);
+  
+  --font-sans: var(--font-primary);
+}
+
+/* ==========================================================================
+   3. COMPONENT CLASSES (UI SYSTEM)
+   ========================================================================== */
+@layer components {
+
+  /* --------------------------------------------------
+     TYPOGRAPHY SYSTEM
+  -------------------------------------------------- */
+  .heading-hero {
+    @apply text-[var(--font-size-hero)] font-extrabold text-text-main leading-tight tracking-tight;
+  }
+  .heading-1 {
+    @apply text-[var(--font-size-h1)] font-extrabold text-text-main leading-tight tracking-tight;
+  }
+  .heading-2 {
+    @apply text-[var(--font-size-h2)] font-bold text-text-main leading-snug;
+  }
+  .heading-3 {
+    @apply text-[var(--font-size-h3)] font-semibold text-text-main leading-snug;
+  }
+  
+  /* Landing Page Text */
+  .text-lead {
+    @apply text-lg md:text-xl text-text-muted font-medium;
+  }
+  .text-highlight {
+    @apply text-brand-700 font-bold;
+  }
+  
+  /* Overrides cho snippet (Bảo đảm tỷ lệ tương phản) */
+  .ts-highlight {
+    @apply !text-brand-700 font-bold;
+  }
+  .ts-badge {
+    @apply !text-brand-800 !bg-brand-50 !border-brand-200;
+  }
+
+  /* Typography Environments */
+  /* Cấu hình link chuẩn cho TOÀN BỘ hệ thống (WCAG AA & Brand Color) */
+  .prose {
+    --tw-prose-links: var(--color-brand-700);
+  }
+  .prose a {
+    @apply font-bold transition-colors hover:text-brand-800;
+  }
+
+  /* Dành cho bài viết Blog (do Tiptap sinh ra) */
+  .prose-fit {
+    @apply prose prose-lg prose-orange max-w-[65ch];
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+  }
+  
+  /* Dành cho khối nội dung Landing Page */
+  .landing-fit {
+    @apply w-full max-w-7xl mx-auto px-4 py-8;
+  }
+
+  /* --------------------------------------------------
+     BUTTON SYSTEM
+  -------------------------------------------------- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 cursor-pointer text-white;
+    background: linear-gradient(180deg, #fdba74 0%, #f97316 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 16px -4px rgba(249, 115, 22, 0.5);
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    background: linear-gradient(180deg, #fcd34d 0%, #ea580c 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 24px -4px rgba(249, 115, 22, 0.6);
+  }
+  .btn-primary:active {
+    @apply translate-y-0.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(249, 115, 22, 0.4);
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 cursor-pointer text-white;
+    background: linear-gradient(180deg, #fdba74 0%, #ea580c 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 16px -4px rgba(234, 88, 12, 0.5);
+  }
+  .btn-accent:hover {
+    @apply -translate-y-0.5;
+    background: linear-gradient(180deg, #fcd34d 0%, #f97316 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 10px 24px -4px rgba(234, 88, 12, 0.6);
+  }
+  .btn-accent:active {
+    @apply translate-y-0.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(234, 88, 12, 0.4);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 cursor-pointer bg-white border border-gray-200 text-gray-700 hover:text-primary hover:border-brand-200;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,1);
+  }
+  .btn-outline:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 6px 12px -2px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,1);
+  }
+  .btn-outline:active {
+    @apply translate-y-0.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Apple macOS Squicle CSS Icons */
+  .btn-icon {
+    @apply inline-flex items-center justify-center w-14 h-14 transition-all duration-300 cursor-pointer flex-shrink-0;
+    border-radius: 22.5%;
+  }
+  .btn-icon svg {
+    @apply w-7 h-7 text-white;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  }
+
+  .btn-icon-blue {
+    background: linear-gradient(180deg, #fdba74 0%, #f97316 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 8px 16px -4px rgba(249, 115, 22, 0.5);
+  }
+  .btn-icon-blue:hover { 
+    @apply -translate-y-0.5;
+    background: linear-gradient(180deg, #fcd34d 0%, #ea580c 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7), 0 12px 20px -4px rgba(249, 115, 22, 0.5);
+  }
+  .btn-icon-blue:active { @apply translate-y-0.5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 4px 8px -2px rgba(249, 115, 22, 0.4); }
+
+  .btn-icon-green {
+    background: linear-gradient(180deg, #4ade80 0%, #16a34a 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 16px -4px rgba(22, 163, 74, 0.5);
+  }
+  .btn-icon-green:hover { 
+    @apply -translate-y-0.5;
+    background: linear-gradient(180deg, #86efac 0%, #22c55e 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 12px 20px -4px rgba(22, 163, 74, 0.5);
+  }
+  .btn-icon-green:active { @apply translate-y-0.5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 4px 8px -2px rgba(22, 163, 74, 0.4); }
+
+  .btn-icon-red {
+    background: linear-gradient(180deg, #f87171 0%, #dc2626 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 16px -4px rgba(220, 38, 38, 0.5);
+  }
+  .btn-icon-red:hover { 
+    @apply -translate-y-0.5;
+    background: linear-gradient(180deg, #fca5a5 0%, #ef4444 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 12px 20px -4px rgba(220, 38, 38, 0.5);
+  }
+  .btn-icon-red:active { @apply translate-y-0.5; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 4px 8px -2px rgba(220, 38, 38, 0.4); }
+
+  /* Apple App Icons (Image based) */
+  .btn-app-icon {
+    @apply inline-block w-14 h-14 transition-all duration-300 cursor-pointer flex-shrink-0;
+    border-radius: 22.5%;
+    overflow: hidden;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 4px 10px -2px rgba(0, 0, 0, 0.15);
+  }
+  .btn-app-icon:hover {
+    @apply -translate-y-1;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 10px 20px -4px rgba(0, 0, 0, 0.2);
+  }
+  .btn-app-icon:active {
+    @apply translate-y-0 scale-95;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  }
+  .btn-app-icon img {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Button Sizes */
+  .btn-sm { @apply px-4 py-2 text-sm; }
+  .btn-md { @apply px-6 py-3 text-base; }
+  .btn-lg { @apply px-10 py-4 text-lg; }
+
+  /* Base button class (Fix cho các class cũ đang bị lỗi thiếu flex) */
+  .btn-base {
+    @apply inline-flex items-center justify-center font-bold rounded-lg transition-all duration-300 cursor-pointer;
+  }
+
+  /* --------------------------------------------------
+     PREMIUM CTA SYSTEM (Ảnh Tham Khảo Mới)
+  -------------------------------------------------- */
+  .cta-premium {
+    @apply relative w-full rounded-2xl overflow-hidden shadow-2xl my-16 text-white;
+    background-color: #111827; /* Dark elegant background */
+  }
+  
+  /* Bottom golden accent line */
+  .cta-premium::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1;
+    background: linear-gradient(90deg, #f59e0b 0%, transparent 100%);
+  }
+
+  .cta-premium-bg {
+    @apply absolute inset-0 w-full h-full pointer-events-none z-0;
+  }
+  
+  .cta-premium-bg img {
+    @apply w-full h-full object-cover object-right md:object-[70%_center] opacity-70 mix-blend-luminosity;
+  }
+
+  /* Gradient overlay to ensure text readability */
+  .cta-premium-bg::after {
+    content: '';
+    @apply absolute inset-0 w-full h-full;
+    background: linear-gradient(to right, #111827 45%, rgba(17,24,39,0.8) 60%, transparent 100%);
+  }
+  
+  /* For mobile, gradient from top to bottom */
+  @media (max-width: 768px) {
+    .cta-premium-bg::after {
+      background: linear-gradient(to bottom, #111827 55%, rgba(17,24,39,0.8) 75%, transparent 100%);
+    }
+  }
+
+  .cta-premium-content {
+    @apply relative z-10 p-6 md:p-12 w-full md:max-w-[60%] flex flex-col items-start text-left gap-5;
+  }
+
+  .cta-premium-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/30 text-brand-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2;
+    background: linear-gradient(90deg, rgba(249,115,22,0.1) 0%, transparent 100%);
+  }
+
+  .cta-premium-title {
+    @apply text-xl md:text-3xl font-extrabold !text-white leading-snug w-full;
+  }
+  .cta-premium-title span {
+    @apply !text-[#f59e0b]; /* Golden accent */
+  }
+
+  .cta-premium-subtitle {
+    @apply !text-gray-300 text-sm md:text-base max-w-md leading-relaxed;
+  }
+
+  .cta-premium-features {
+    @apply flex flex-col sm:flex-row gap-4 md:gap-6 py-4 md:py-5 border-t border-b border-gray-700/50 w-full;
+  }
+  .cta-premium-feature {
+    @apply flex items-center gap-3 w-full sm:w-auto;
+  }
+  .cta-premium-feature-icon {
+    @apply w-9 h-9 md:w-10 md:h-10 rounded-full border border-[#f59e0b]/30 text-[#f59e0b] flex items-center justify-center shrink-0;
+    background: rgba(245, 158, 11, 0.1);
+  }
+  .cta-premium-feature-text {
+    @apply flex flex-col;
+  }
+  .cta-premium-feature-title {
+    @apply text-xs md:text-sm font-bold text-white;
+  }
+  .cta-premium-feature-desc {
+    @apply text-[10px] md:text-[11px] text-gray-400;
+  }
+
+  .cta-premium-btn {
+    @apply inline-flex items-center justify-center gap-3 px-6 py-3 md:px-8 md:py-4 mt-2 rounded-xl text-black font-bold text-base md:text-lg transition-all duration-300 cursor-pointer shadow-lg w-full md:w-auto;
+    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+    box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .cta-premium-btn:hover {
+    @apply -translate-y-1 scale-105;
+    box-shadow: 0 15px 35px -5px rgba(245, 158, 11, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  /* Trust badge has been removed per user request */
+
+  /* --------------------------------------------------
+     CTA SYSTEM (RAW HTML COMPONENT)
+  /* --------------------------------------------------
+     CTA SYSTEM (RAW HTML COMPONENT)
+  -------------------------------------------------- */
+
+  /* 0. CTA Related Post (Bài viết liên quan) */
+  .cta-related-post {
+    @apply flex flex-col md:flex-row gap-6 md:gap-10 items-stretch bg-surface p-4 md:p-6 rounded-2xl shadow-sm border border-border my-12 transition-shadow hover:shadow-md;
+  }
+  .cta-related-post-image-wrap {
+    @apply w-full md:w-1/2 flex-shrink-0 flex flex-col justify-start;
+  }
+  .cta-related-post-image {
+    @apply w-full h-auto rounded-xl shadow-sm object-cover aspect-video;
+    margin: 0 !important;
+  }
+  .cta-related-post-content {
+    @apply w-full md:w-1/2 flex flex-col text-left;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .cta-related-post-subtitle {
+    @apply text-base md:text-lg font-bold text-text-main uppercase leading-none;
+    margin-top: -3px !important; 
+    margin-bottom: 0.5rem !important;
+  }
+  .cta-related-post-title {
+    @apply text-xl md:text-2xl font-black text-brand-700 uppercase;
+    line-height: 1.4;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .cta-related-post-divider {
+    @apply w-full border-t border-border;
+    margin-top: auto !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .cta-related-post-btn {
+    @apply inline-flex items-center justify-center bg-brand-700 !text-white !font-bold text-sm md:text-base py-3 px-6 rounded-md transition-all hover:bg-brand-800 shadow-sm w-fit;
+    text-decoration: none !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .cta-related-post-btn:hover {
+    @apply !text-white;
+  }
+
+  /* Section Header (introduces a related tour/post grid) */
+  .cta-section-header {
+    @apply mt-16 mb-6 pt-8 border-t-2 border-brand-100;
+  }
+  .cta-section-subtitle {
+    @apply text-sm md:text-base font-medium text-text-muted tracking-wide uppercase mb-1;
+  }
+  .cta-section-title {
+    @apply text-xl md:text-2xl font-extrabold text-text-main leading-tight;
+  }
+
+  /* 1. CTA Banner (Wide blue banner with background) - Ảnh 3 */
+  .cta-banner {
+    @apply w-full bg-brand-500 text-white rounded-xl p-8 my-12 flex flex-col items-center text-center shadow-lg relative overflow-hidden;
+    background: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-600) 100%);
+  }
+  .cta-banner-content {
+    @apply relative z-10 space-y-4 max-w-2xl mx-auto flex flex-col items-center;
+  }
+  .cta-banner-title {
+    @apply text-3xl md:text-4xl font-extrabold text-white leading-tight;
+  }
+  .cta-banner-subtitle {
+    @apply text-brand-100 text-lg;
+  }
+  .cta-banner-decor {
+    @apply absolute -right-10 -top-10 w-40 h-40 bg-white rounded-full blur-3xl opacity-10 pointer-events-none;
+  }
+
+  /* 2. CTA Image Banner (Full width banner with image background) - Bản nâng cấp của ảnh anh gửi */
+  .cta-image-banner {
+    @apply relative w-full rounded-2xl p-10 md:p-16 my-16 flex flex-col items-center text-center shadow-2xl overflow-hidden;
+    background: linear-gradient(135deg, var(--color-brand-900) 0%, var(--color-primary) 100%);
+  }
+  .cta-image-banner-bg {
+    @apply absolute inset-0 opacity-20 pointer-events-none;
+  }
+  .cta-image-banner-bg img {
+    @apply w-full h-full object-cover mix-blend-overlay;
+  }
+  .cta-image-banner-content {
+    @apply relative z-10 space-y-6 max-w-3xl mx-auto flex flex-col items-center;
+  }
+  .cta-image-banner-title {
+    @apply text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg;
+  }
+  .cta-image-banner-subtitle {
+    @apply text-brand-100 text-xl md:text-2xl font-medium drop-shadow-md;
+  }
+
+  /* 3. CTA Split (2 Columns, white card, image right) - Bản nâng cấp */
+  .cta-split {
+    @apply bg-surface rounded-2xl p-6 md:p-8 my-10 flex flex-col md:flex-row gap-8 md:gap-12 items-center border border-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-shadow hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)];
+  }
+  .cta-split-content {
+    @apply w-full md:w-[55%] flex flex-col items-start text-left gap-4;
+  }
+  
+  /* Header section */
+  .cta-split-header {
+    @apply flex flex-col gap-1 w-full;
+  }
+  .cta-split-label {
+    @apply text-sm text-gray-500;
+  }
+  .cta-split-badge {
+    @apply text-xs font-bold uppercase tracking-wider text-gray-500;
+  }
+  .cta-split-title {
+    @apply text-xl md:text-2xl font-bold text-brand-600 flex items-center gap-2 mt-1 transition-colors hover:text-brand-700;
+  }
+
+  /* Contact Cards (Messenger, Phone, Map) */
+  .cta-split-contacts {
+    @apply flex flex-wrap items-center gap-3 w-full my-2;
+  }
+  .cta-split-contact-card {
+    @apply flex flex-col items-center justify-center gap-1.5 p-3 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer min-w-[90px];
+  }
+  .cta-split-contact-icon {
+    @apply w-8 h-8 flex items-center justify-center;
+  }
+  .cta-split-contact-icon img {
+    @apply w-full h-full object-contain;
+  }
+  .cta-split-contact-label {
+    @apply text-[11px] font-medium text-gray-600;
+  }
+
+  /* Main Action Button (Zalo) */
+  .cta-split-action {
+    @apply w-full flex flex-col gap-3 mt-3;
+  }
+  .cta-split-zalo-btn {
+    @apply relative w-full sm:max-w-[300px] inline-flex items-center gap-3 px-5 py-3 rounded-2xl font-bold text-white text-lg md:text-xl overflow-hidden shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer;
+    background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+    box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  .cta-split-zalo-icon {
+    @apply w-9 h-9 bg-white rounded-xl flex items-center justify-center shrink-0 p-1.5 shadow-sm;
+  }
+  .cta-split-zalo-icon img {
+    @apply w-full h-full object-contain;
+  }
+  .cta-split-zalo-text {
+    @apply flex-1 text-center md:text-left;
+  }
+  .cta-split-zalo-arrow {
+    @apply w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:bg-white/30;
+  }
+  
+  /* Trust Text under button */
+  .cta-split-trust {
+    @apply flex items-center gap-1.5 text-[11px] text-gray-500 font-medium ml-1 mt-2;
+  }
+  .cta-split-trust svg {
+    @apply w-4 h-4 text-brand-500 shrink-0;
+  }
+
+  /* Image Section */
+  .cta-split-image-wrap {
+    @apply w-full md:w-[45%] rounded-2xl overflow-hidden shadow-md flex-shrink-0;
+  }
+  .cta-split-image {
+    @apply w-full h-auto object-cover m-0 transition-transform duration-700 hover:scale-105 block;
+  }
+
+  /* 4. CMS Engine Shortcodes */
+  
+  /* Testimonial Block */
+  .c-testimonial {
+    @apply space-y-10 pt-16 mt-16 border-t border-border w-full;
+  }
+  .c-testimonial__header {
+    @apply text-center space-y-4;
+  }
+  .c-testimonial__title {
+    @apply text-[var(--font-size-h2)] font-bold text-text-main leading-snug;
+  }
+  .c-testimonial__subtitle {
+    @apply text-lg text-text-muted max-w-2xl mx-auto;
+  }
+  .c-testimonial__grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6;
+  }
+  .c-testimonial__item {
+    @apply bg-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow ring-1 ring-border;
+  }
+  .c-testimonial__image {
+    @apply w-full h-56 object-cover hover:scale-105 transition-transform duration-700 block m-0;
+  }
+
+  /* 3. CTA Compact (Horizontal bar for Tours) - Ảnh 4 */
+  .cta-compact {
+    @apply bg-surface rounded-xl p-4 md:p-6 my-8 flex flex-col md:flex-row gap-4 items-center justify-between border border-border shadow-sm;
+  }
+  .cta-compact-content {
+    @apply flex flex-col text-left gap-1;
+  }
+  .cta-compact-title {
+    @apply !m-0 text-base font-bold text-primary;
+  }
+  .cta-compact-text {
+    @apply text-sm text-secondary;
+  }
+  .cta-actions {
+    @apply flex flex-wrap items-center gap-3 shrink-0;
+  }
+
+  /* --------------------------------------------------
+     LAYOUT & CARDS SYSTEM
+  -------------------------------------------------- */
+  .card-fit {
+    @apply bg-surface rounded-2xl shadow-sm border border-border p-6 md:p-10 hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+  }
+  
+  /* Grid Layouts */
+  .grid-fit {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  .grid-fit-masonry {
+    @apply columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6;
+  }
+  /* Column Variants (cho CoguuGallery) */
+  .coguu-gallery-cols-2 { @apply columns-1 sm:columns-2 md:columns-2; }
+  .coguu-gallery-cols-3 { @apply columns-1 sm:columns-2 md:columns-3; }
+  .coguu-gallery-cols-4 { @apply columns-1 sm:columns-2 md:columns-3 lg:columns-4; }
+  .coguu-gallery-cols-5 { @apply columns-1 sm:columns-2 md:columns-3 lg:columns-5; }
+  /* Mood Card trong Gallery */
+  .coguu-gallery-mood {
+    @apply break-inside-avoid;
+  }
+
+  /* === Gallery Story (Grid with Captions) === */
+  
+  /* === Utility: Breakout Full Width cho Gallery nằm trong Prose === */
+  .gallery-breakout {
+    width: 100vw !important;
+    position: relative !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    max-width: 100vw !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 768px) {
+    .gallery-breakout {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .coguu-gallery-story {
+    @apply grid gap-4 md:gap-6 items-start !my-8;
+  }
+  .coguu-gallery-story.cols-2 { @apply grid-cols-1 sm:grid-cols-2; }
+  .coguu-gallery-story.cols-3 { @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3; }
+  .coguu-gallery-story.cols-4 { @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-4; }
+  
+  .gallery-story-item {
+    @apply flex flex-col cursor-pointer !m-0 !p-0;
+  }
+  .gallery-story-image-wrap {
+    @apply relative overflow-hidden !m-0 !p-0;
+  }
+  .gallery-story-image {
+    @apply w-full h-auto transition-transform duration-700 !m-0 !p-0 rounded-md;
+  }
+  .gallery-story-item:hover .gallery-story-image {
+    @apply scale-105;
+  }
+  .gallery-story-caption {
+    @apply !text-xs italic text-center text-gray-600 !mt-3 px-1 !mb-0 !pb-0;
+    font-size: 13px !important; /* Force smaller size, bypassing .prose */
+    line-height: 1.4 !important;
+  }
+  
+  /* Feature Item Box (e.g., inside Masonry Grid) */
+  .feature-box {
+    @apply break-inside-avoid relative rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer;
+  }
+  .feature-image {
+    @apply w-full h-auto object-cover transition-transform duration-700;
+  }
+  .feature-box:hover .feature-image {
+    @apply scale-110;
+  }
+  .feature-overlay {
+    @apply absolute inset-0 bg-black/0 transition-colors duration-300 pointer-events-none;
+  }
+  .feature-box:hover .feature-overlay {
+    @apply bg-black/20;
+  }
+
+  /* --------------------------------------------------
+     LEGACY GUTENBERG FALLBACK CSS
+  -------------------------------------------------- */
+  /* Căn lề cho cột wp-block-columns */
+  .wp-block-columns {
+    @apply grid gap-4 my-8;
+  }
+  .wp-block-columns > * {
+    @apply w-full;
+  }
+  @media (min-width: 768px) {
+    .wp-block-columns {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+  }
+
+  /* Hỗ trợ căn giữa dọc cho cột khi dùng Grid */
+  .wp-block-column.is-vertically-aligned-center {
+    @apply flex flex-col justify-center h-full;
+  }
+
+  /* Căn lề cho hình ảnh Gutenberg */
+  figure.wp-block-image {
+    @apply my-8;
+  }
+  figure.wp-block-image figcaption {
+    @apply text-sm text-center mt-2;
+  }
+
+  /* Khối Blockquote */
+  .custom-blog-prose blockquote, 
+  .wp-block-quote {
+    @apply border-l-4 border-brand-500 pl-4 my-8 italic;
+  }
+
+  /* Các list cơ bản */
+  .custom-blog-prose ul, 
+  .custom-blog-prose ol {
+    @apply my-4 pl-6;
+  }
+
+  /* Kẻ ngang (HR) */
+  .custom-blog-prose hr,
+  .wp-block-separator {
+    @apply my-6 border-t border-border;
+  }
+
+  /* Khoảng cách Heading chuẩn */
+  .custom-blog-prose h2,
+  .custom-blog-prose h3 {
+    @apply mt-8 mb-4;
+  }
+
+  /* Bảo vệ layout khỏi Inline Styles quá khổ */
+  .custom-blog-prose img,
+  .custom-blog-prose video,
+  .custom-blog-prose iframe {
+    @apply max-w-full h-auto;
+  }
+}
+
+/* ==========================================================================
+   4. BASE ELEMENTS
+   ========================================================================== */
+@layer base {
+  body {
+    background-color: var(--bg-subtle);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  /* Global Layout Container (For standard pages) */
+  .site-container {
+    max-width: var(--container-xl);
+    margin-inline: auto;
+    padding-inline: var(--padding-inline);
+    width: 100%;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* Mood Text / Emotional Quotes (Loaded globally for CMS preview) */
+.mood-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #64748b;
+  margin: 3rem auto;
+  max-width: 85%;
+  line-height: 1.6;
+  position: relative;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.mood-text::before {
+  content: "❝";
+  display: block;
+  font-size: 2rem;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   5. COGUU SEARCH MODULE
+   ========================================================================== */
+
+/* --- Trigger Button --- */
+.coguu-search-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.coguu-search-trigger:hover {
+  color: var(--color-brand-500);
+  background: var(--bg-subtle);
+}
+
+/* --- Overlay (backdrop) --- */
+.coguu-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.coguu-search-overlay.active {
+  opacity: 1;
+}
+.coguu-search-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* --- Modal --- */
+.coguu-search-modal {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 70vh;
+  background: var(--bg-surface);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(-10px) scale(0.98);
+  transition: transform 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+.coguu-search-overlay.active .coguu-search-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* --- Input --- */
+.coguu-search-input-wrap {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 12px;
+}
+.coguu-search-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.coguu-search-input-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-primary);
+}
+.coguu-search-input-wrap input::placeholder {
+  color: var(--text-muted);
+}
+.coguu-search-kbd {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: inherit;
+  background: var(--bg-subtle);
+}
+.coguu-search-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.coguu-search-close:hover {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+/* --- Results Container --- */
+.coguu-search-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  scrollbar-width: thin;
+}
+
+/* --- Count --- */
+.coguu-search-count {
+  padding: 4px 12px 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --- Group Label --- */
+.coguu-search-group {
+  margin-bottom: 8px;
+}
+.coguu-search-group-label {
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-brand-500);
+}
+
+/* --- Result Item --- */
+.coguu-search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.coguu-search-item:hover,
+.coguu-search-item.active {
+  background: var(--bg-subtle);
+}
+.coguu-search-item.active {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: -2px;
+}
+
+/* --- Thumbnail --- */
+.coguu-search-thumb {
+  width: 100px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+}
+.coguu-search-thumb-placeholder {
+  width: 100px;
+  height: 56px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* --- Item Text --- */
+.coguu-search-item-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.coguu-search-item-excerpt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Highlight --- */
+.coguu-search-item mark {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--color-brand-500);
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* --- Skeleton Loading --- */
+.coguu-search-skeleton {
+  display: flex;
+  gap: 12px;
+  padding: 10px 12px;
+  align-items: center;
+}
+.coguu-search-skeleton::before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--bg-subtle) 25%, #e2e8f0 50%, var(--bg-subtle) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  flex-shrink: 0;
+}
+.coguu-search-skeleton::after {
+  content: "";
+  flex: 1;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--bg-subtle) 25%, #e2e8f0 50%, var(--bg-subtle) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  animation-delay: 0.2s;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Empty State --- */
+.coguu-search-empty {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* --- Recent Search Items --- */
+.coguu-search-recent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: background 0.15s;
+}
+.coguu-search-recent-item:hover {
+  background: var(--bg-subtle);
+}
+
+/* --- Footer --- */
+.coguu-search-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-top: 1px solid var(--border-color);
+}
+.coguu-search-footer-keys {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+@media (min-width: 768px) {
+  .coguu-search-footer-keys { display: flex; }
+}
+.coguu-search-footer kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-family: inherit;
+  background: var(--bg-subtle);
+  margin: 0 2px;
+}
+
+/* --- Mobile Full-Screen --- */
+@media (max-width: 640px) {
+  .coguu-search-overlay {
+    padding-top: 0;
+    align-items: stretch;
+  }
+  .coguu-search-modal {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+  .coguu-search-results {
+    flex: 1;
+  }
+}
+
+/* --- View All CTA --- */
+.coguu-search-viewall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin: 8px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-600) 100%);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.coguu-search-viewall:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+/* --- Emagazine Related Posts Component --- */
+.emagazine-related-btn {
+  @apply inline-block mt-4 px-8 py-3 bg-brand-600 font-bold rounded-lg hover:bg-brand-700 transition shadow-sm;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.emagazine-related-btn:hover {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   GLOBAL UTILITIES / COMPONENTS (UNPURGEABLE)
+   ========================================================================== */
+
+/* --------------------------------------------------
+   FAQ SYSTEM (APPLE STYLE)
+-------------------------------------------------- */
+.faq-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.faq-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.faq-wrapper {
+  border-top: 1px solid #e5e7eb;
+}
+
+.faq-wrapper details {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-wrapper summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  list-style: none;
+}
+
+.faq-wrapper summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-wrapper .icon {
+  transition: transform 0.3s ease;
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+.faq-wrapper details[open] .icon {
+  transform: rotate(45deg);
+}
+
+.faq-wrapper .content {
+  color: #374151;
+  padding-bottom: 18px;
+  animation: faqFadeIn 0.25s ease;
+  line-height: 1.6;
+}
+
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.iframe-wrapper iframe {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   TEAM AVATAR FIX
+   Đảm bảo container chứa ảnh nhân viên luôn hình vuông để khi bo tròn thành hình tròn hoàn hảo.
+   Chỉ nhắm mục tiêu vào các thẻ div có class chứa "w-[180px]" hoặc "w-[200px]" kết hợp "rounded-full" để KHÔNG làm ảnh hưởng component khác.
+   ========================================================================== */
+div[class*="w-[180px]"][class*="rounded-full"],
+div[class*="w-[200px]"][class*="rounded-full"] {
+  aspect-ratio: 1 / 1 !important;
+}
+html, body { }

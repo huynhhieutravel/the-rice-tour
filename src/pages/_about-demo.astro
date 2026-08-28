@@ -1,0 +1,28 @@
+---
+import V2Layout from '@/layouts/V2Layout.astro';
+import PortfolioHero from '@/components/v2/about/PortfolioHero.astro';
+import PortfolioNumbers from '@/components/v2/about/PortfolioNumbers.astro';
+import PortfolioGrid from '@/components/v2/about/PortfolioGrid.astro';
+import PortfolioProcess from '@/components/v2/about/PortfolioProcess.astro';
+import PortfolioArtisans from '@/components/v2/about/PortfolioArtisans.astro';
+import PortfolioEpilogue from '@/components/v2/about/PortfolioEpilogue.astro';
+
+// SEO data for demo
+const title = "Portfolio Nghệ Thuật | Du lịch có Guu - FIT Tour";
+const description = "Chúng tôi không bán tour. Chúng tôi điêu khắc những hành trình vượt biên giới. Khám phá triết lý Bespoke của FIT Tour.";
+---
+
+<V2Layout 
+  title={title} 
+  description={description} 
+  noindex={true}
+>
+  <main class="bg-black selection:bg-brand-500 selection:text-white">
+    <PortfolioHero />
+    <PortfolioNumbers />
+    <PortfolioGrid />
+    <PortfolioProcess />
+    <PortfolioArtisans />
+    <PortfolioEpilogue />
+  </main>
+</V2Layout>

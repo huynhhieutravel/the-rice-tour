@@ -1,0 +1,102 @@
+---
+// src/components/inbound/InboundJournal.astro
+const articles = [
+  {
+    title: "Vietnam Visa Guide 2026: 90-Day E-Visa, Exemptions & Entry Rules",
+    slug: "vietnam-visa-guide-2026",
+    category: "Visa & Essentials",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+    excerpt: "Everything international travelers need to know about the 90-day Vietnam multiple-entry e-visa, visa-free countries, and international airport arrival tips."
+  },
+  {
+    title: "Best Time to Visit Vietnam: A Complete Month-by-Month Regional Guide",
+    slug: "best-time-to-visit-vietnam",
+    category: "Travel Planning",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80",
+    excerpt: "Understanding Vietnam's microclimates. When to catch golden rice terraces in Sapa, calm seas in Lan Ha Bay, and sun-soaked beaches in central coast."
+  },
+  {
+    title: "Hanoi Street Food Culture: Secret Alleys, Egg Coffee & Master Recipes",
+    slug: "hanoi-street-food-culture",
+    category: "Gastronomy",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+    excerpt: "Dine like a local. An insider’s guide to traditional Pho Gia Truyen, Bun Cha Huong Lien, steaming Banh Cuon, and hidden egg coffee cafes."
+  }
+];
+---
+
+<section class="py-20 lg:py-28 bg-white" id="travel-journal">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3 shadow-sm">
+          Vietnam Travel Journal
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
+          Insider Guides &amp; Inspiration
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg mt-3 font-light leading-relaxed">
+          Expert practical advice, cultural nuances, and travel planning essentials penned by our in-house destination architects.
+        </p>
+      </div>
+
+      <div>
+        <a href="/blog" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-900 hover:text-brand-600 transition-colors">
+          <span>Read All Travel Guides</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {articles.map((a) => (
+        <article class="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+              <img 
+                src={a.image} 
+                alt={a.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <span class="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-md text-brand-600 text-[10.5px] font-extrabold rounded-full border border-gray-100 shadow-sm uppercase tracking-wider">
+                {a.category}
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-gray-400 text-xs font-semibold mb-2">
+                <span>⏱️ {a.readTime}</span>
+              </div>
+
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-3">
+                <a href={`/blog/${a.slug}`}>
+                  {a.title}
+                </a>
+              </h3>
+
+              <p class="text-sm text-gray-600 line-clamp-3 leading-relaxed">
+                {a.excerpt}
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a 
+              href={`/blog/${a.slug}`} 
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 group-hover:text-brand-600 transition-colors uppercase tracking-wider"
+            >
+              <span>Read Full Guide</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

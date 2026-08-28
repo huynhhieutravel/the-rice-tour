@@ -1,0 +1,22 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+---
+
+<AdminLayout title="Bản Đồ Tri Thức" activeMenu="tools" activeSubmenu="graph">
+  <div style="margin: -28px; height: calc(100vh - 56px);">
+    <div id="graph-root" style="height: 100%;"></div>
+  </div>
+
+  <script>
+    import { createElement } from 'react';
+    import { createRoot } from 'react-dom/client';
+    import KnowledgeGraph from '../../../components/admin/KnowledgeGraph';
+
+    const container = document.getElementById('graph-root');
+    if (container) {
+      const root = createRoot(container);
+      root.render(createElement(KnowledgeGraph));
+    }
+  </script>
+</AdminLayout>

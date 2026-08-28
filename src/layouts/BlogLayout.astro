@@ -1,0 +1,425 @@
+---
+import TableOfContents from '@/components/blog/TableOfContents.astro';
+import AuthorBox from '@/components/blog/AuthorBox.astro';
+import RelatedTourWidget from '@/components/blog/RelatedTourWidget.astro';
+import RelatedPosts from '@/components/blog/RelatedPosts.astro';
+import ShareButtons from '@/components/blog/ShareButtons.astro';
+import '../styles/global.css'; // Import Tailwind CSS via Vite
+import '../styles/blog.css'; // Móc file css tùy biến riêng cho Blog
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+const { title, description, image, author, authorUrl, date, dateIso, dateModifiedIso, category, tags = [], relatedPosts = [], views, readTime, customSchema, faqQuestions = [], isFullWidth = false, isLandingPage = false, forceHeader = false, adminEditUrl, customCss, isTiptap = false, isCorporate = false, noindex } = Astro.props;
+
+const relatedTitle = category?.name?.toLowerCase().includes('emagazine') ? 'Emagazine liên quan' : 'Bài viết liên quan';
+
+const htmlStr = Astro.slots.has('default') ? await Astro.slots.render('default') : '';
+console.log("DEBUG HTMLSTR PREVIEW:", htmlStr.substring(0, 150));
+
+// 1. Nhận diện các bài viết thực chất là Landing Page (dù họ có lỡ chọn format=standard nhưng vẫn chèn code landing)
+const isEffectivelyLanding = isLandingPage || htmlStr.includes('<!-- layout: landing -->');
+
+// 2. Nhận diện bài viết CÓ CHỨA Tiêu đề/Hero tự thiết kế (có thẻ h1, hoặc znews, hoặc copy breadcrumb)
+const hasCustomHero = htmlStr.includes('<h1') || htmlStr.includes('znews-scroll-wrapper') || htmlStr.includes('aria-label="Breadcrumb"');
+
+// 3. Quy tắc vàng: CHỈ ẨN Tiêu đề và Breadcrumb mặc định KHI nó là Landing Page VÀ nó đã tự thiết kế Tiêu đề!
+// Nếu bài Landing Page mà không có Tiêu đề tự thiết kế (VD: bài Gallery, bài Hemis), thì PHẢI HIỆN Tiêu đề mặc định!
+// Nếu bài Standard vô tình dùng thẻ h1 trong bài, thì VẪN HIỆN Tiêu đề mặc định!
+const hideTitleAndMeta = isEffectivelyLanding && hasCustomHero;
+const hasCustomRelated = htmlStr.includes('cta-related-post-content') || htmlStr.includes('Xem chi tiết <i class="fas fa-arrow-right') || htmlStr.includes('data-widget_type="posts.classic"');
+
+// Tự động nhận diện các layout đặc biệt (để không ép prose làm bể layout của họ)
+const hasSpecialLayout = htmlStr.includes('znews-scroll-wrapper') || htmlStr.includes('fb-profile-wrapper') || htmlStr.includes('grid-fit-masonry') || htmlStr.includes('layout: landing') || htmlStr.includes('snap-y') || htmlStr.includes('tailwindcss.com');
+// Áp dụng prose cho tất cả bài viết, NGOẠI TRỪ các bài có layout đặc biệt (Znews, FB Profile, Elementor cũ). 
+// Các bài Landing Page hoặc fix tay từ Elementor (format=landing) vẫn CẦN prose để text không bị tràn 100vw.
+const needsProse = !isFullWidth || (isFullWidth && !hasSpecialLayout);
+
+import { generateBlogSchema } from '@/lib/schemaGenerator';
+
+const currentOrigin = Astro.url.origin;
+const currentPath = Astro.url.pathname;
+const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
+
+// Schema Generation
+let finalSchemaToRender: any = null;
+
+if (customSchema) {
+  try {
+    const parsed = JSON.parse(customSchema);
+    // Validate it's actual JSON-LD (must have @context) — not legacy metadata like {"location":"..."}
+    const isValidJsonLd = parsed['@context'] ||
+      (Array.isArray(parsed['@graph']) && parsed['@graph'].length > 0);
+    if (isValidJsonLd) {
+      finalSchemaToRender = parsed;
+    } else {
+      console.warn('[Schema] customSchema exists but is not valid JSON-LD (missing @context). Falling back to auto-schema.');
+    }
+  } catch (e) {
+    console.error("Failed to parse custom schema:", e);
+  }
+}
+
+// Fallback to Dynamic Auto-Standardized Schema if no custom schema or parsing failed
+if (!finalSchemaToRender) {
+  finalSchemaToRender = generateBlogSchema({
+    title,
+    description,
+    canonicalUrl,
+    image,
+    // Prefer ISO dates for schema accuracy; fallback to display date (toIso handles it)
+    datePublished: dateIso || date,
+    dateModified: dateModifiedIso || dateIso || date,
+    authorName: author,
+    authorUrl: authorUrl,
+    category,
+    tags,
+    faqQuestions
+  });
+}
+---
+
+<BaseLayout title={title} description={description} image={image} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} isCorporate={isCorporate} noindex={noindex}>
+  <Fragment slot="schema">
+    {finalSchemaToRender && Object.keys(finalSchemaToRender).length > 0 && (
+      <JsonLdSchema type="custom" data={finalSchemaToRender} />
+    )}
+    {customCss && <style is:inline set:html={customCss}></style>}
+  </Fragment>
+
+  <main class:list={[isLandingPage ? "w-full pb-12 lg:pb-20" : "site-container py-8 lg:py-12"]}>
+    {!hideTitleAndMeta && (
+    <nav class:list={["flex text-sm text-secondary mb-8", (isLandingPage || isFullWidth) && "site-container mt-8"]} aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-2">
+        <li class="inline-flex items-center">
+          <a href="/" class="text-secondary hover:text-brand-700 font-medium transition-colors">Trang chủ</a>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-muted mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="text-primary font-medium ml-1 md:ml-2 truncate max-w-[200px] sm:max-w-xs">{title}</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+    )}
+
+    <!-- Content Layout -->
+    <div class:list={[!isFullWidth && 'grid grid-cols-1 lg:grid-cols-12 gap-10']}>
+      
+      <!-- Main Content -->
+      <article class:list={[
+        !isFullWidth && 'lg:col-span-8 bg-surface shadow-sm border-border',
+        !isFullWidth && 'w-screen relative left-1/2 -translate-x-1/2 sm:w-auto sm:static sm:translate-x-0 px-4 py-6 sm:p-6 md:p-10 sm:rounded-2xl border-y sm:border'
+      ]}>
+        {/* Header metadata — Luôn hiện cho mọi bài viết, TRỪ KHI bài Landing Page đã có Custom Hero */}
+        {!hideTitleAndMeta && (
+        <header class:list={["mb-8", (isLandingPage || isFullWidth) && "site-container"]}>
+          {category && (
+            <span class="inline-block px-3 py-1 bg-brand-50 text-brand-800 text-xs font-bold uppercase tracking-wider rounded-md mb-4 border border-brand-100">
+              {category.name}
+            </span>
+          )}
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-primary leading-[1.3] tracking-tight mb-6 lg:max-w-[45ch]">
+            {title}
+          </h1>
+          
+          <div class="flex flex-wrap items-center gap-6 text-sm text-muted border-t border-border pt-6">
+            <div class="flex items-center gap-3">
+              <img src={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff`} alt={author} class="w-10 h-10 rounded-full bg-subtle object-cover" loading="lazy" decoding="async" />
+              <div>
+                {authorUrl ? (
+                  <a href={authorUrl} class="font-bold text-primary hover:text-brand-700 transition-colors">{author}</a>
+                ) : (
+                  <p class="font-bold text-primary">{author}</p>
+                )}
+                <p class="text-xs text-muted">Content Creator</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              {date}
+            </div>
+            
+            {readTime && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                {readTime} phút đọc
+              </div>
+            )}
+            
+            {views && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                {views} lượt xem
+              </div>
+            )}
+          </div>
+        </header>
+        )}
+
+        {/* Ẩn Featured Image đối với Landing Page vì họ tự thiết kế ảnh Hero ở đầu bài */}
+        {image && !isLandingPage && (
+          <figure class:list={["mb-10 rounded-2xl overflow-hidden shadow-sm aspect-[16/9] bg-slate-100 relative", isFullWidth && "site-container"]}>
+            <img src={image} alt={title} class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" loading="eager" decoding="async" />
+          </figure>
+        )}
+
+        <!-- Prose Content -->
+        <div class:list={[
+          needsProse && 'prose prose-lg prose-brand custom-blog-prose block max-w-none',
+          isFullWidth && needsProse && 'px-4 sm:px-0'
+        ]}>
+          <slot />
+        </div>
+
+      <!-- Wrapper for post-content metadata to ensure they sit above Znews parallax backgrounds -->
+      {!hideTitleAndMeta && ((!isFullWidth && tags && tags.length > 0) || (isFullWidth && ((tags && tags.length > 0) || (!hasCustomRelated && !isLandingPage && relatedPosts && relatedPosts.length > 0)))) ? (
+        <div class:list={['relative z-10', isFullWidth && 'bg-surface rounded-2xl p-6 md:p-10 mt-12 shadow-sm border border-border mx-auto max-w-[1036px]', isLandingPage && 'mb-12 lg:mb-20']} style={isLandingPage ? "margin-bottom: 5rem;" : ""}>
+          <!-- Tags Section -->
+          {tags && tags.length > 0 && (
+            <div class:list={["pt-8 border-t border-border", !isFullWidth && "mt-12"]}>
+              <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Từ khóa nổi bật</div>
+              <div class="flex flex-wrap gap-2">
+                {tags.map((tag: any) => (
+                  <a href={`/tag/${tag.slug}`} class="text-xs px-4 py-2 bg-subtle text-primary font-medium rounded-full hover:bg-brand-500 hover:text-white transition-colors duration-200 shadow-sm whitespace-nowrap">
+                    #{tag.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Full-width Related Posts (below content, since no sidebar) */}
+          {!hasCustomRelated && isFullWidth && !isLandingPage && relatedPosts && relatedPosts.length > 0 && (
+          <div class="mt-12 pt-8 border-t border-border">
+            <div class="font-bold text-primary uppercase tracking-wider text-sm mb-6 border-b border-border pb-3">{relatedTitle}</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {relatedPosts.map((post: any) => (
+                <a href={`/${post.slug}`} class="group flex flex-col gap-3 bg-surface rounded-2xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
+                  <div class="w-full aspect-video overflow-hidden bg-subtle">
+                    <img src={post.image || '/avatar-placeholder.jpg'} alt={post.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <div class="font-bold text-primary text-sm leading-tight group-hover:text-brand-500 transition-colors line-clamp-2 mb-2">{post.title}</div>
+                    <p class="text-xs text-muted mt-auto">{post.date}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+      ) : null}
+    </article>
+
+      <!-- Sidebar (Right Column - 30%) -->
+      {!isFullWidth && (
+        <aside class="lg:col-span-4 flex flex-col gap-8 order-2">
+          <div class="hidden lg:block sticky top-32 space-y-8 self-start max-h-[calc(100vh-140px)] overflow-y-auto hide-scrollbar pb-8">
+          <TableOfContents />
+          <AuthorBox name={author} role="Content Creator" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
+          <RelatedTourWidget />
+          
+          <!-- Auto QR Code Widget -->
+          <div class="bg-surface rounded-2xl p-6 shadow-sm border border-border flex flex-col items-center text-center">
+            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Quét để đọc trên Mobile</div>
+            <div class="p-2 bg-white rounded-xl border border-border inline-block mb-3">
+               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Mã QR Bài Viết" width="150" height="150" class="block" loading="lazy" />
+            </div>
+            <p class="text-xs text-muted">Sử dụng Camera điện thoại để quét mã và tiếp tục đọc.</p>
+          </div>
+
+          {!hasCustomRelated && <RelatedPosts posts={relatedPosts} />}
+          <ShareButtons />
+        </div>
+        <!-- Tablet/Mobile Sidebar (non-sticky, reordered) -->
+        <div class="lg:hidden flex flex-col gap-8">
+          <AuthorBox name={author} role="Content Creator" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
+          <ShareButtons />
+          
+          <div class="bg-surface rounded-2xl p-6 shadow-sm border border-border flex flex-col items-center text-center">
+            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Quét để chia sẻ</div>
+            <div class="p-2 bg-white rounded-xl border border-border inline-block mb-3">
+               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Mã QR Bài Viết" width="150" height="150" class="block" loading="lazy" />
+            </div>
+          </div>
+
+            {!hasCustomRelated && <RelatedPosts posts={relatedPosts} title={relatedTitle} />}
+          </div>
+        </aside>
+      )}
+
+    </div>
+  </main>
+
+  <script is:inline>
+    (function() {
+      // === GLightbox Init: Batch DOM reads THEN batch DOM writes ===
+      function initGalleryLightbox() {
+        var container = document.querySelector('.custom-blog-prose') || document.querySelector('.coguu-raw-content');
+        if (!container) return;
+
+        // PHASE 1: READ all DOM data first (no writes!)
+        // Opt-in mechanism: Only elements matching these selectors will be zoomable
+        var gallerySelectors = ['.coguu-gallery-story', '.coguu-gallery', '.grid-fit-masonry', '.tiptap-gallery-block', '.zoomable-image', '.wp-block-gallery'];
+        var lightboxData = [];
+        var processedGalleries = new Set(); // Prevent duplicate processing
+
+        gallerySelectors.forEach(function(selector) {
+          var galleries = container.querySelectorAll(selector);
+          galleries.forEach(function(gallery) {
+            if (processedGalleries.has(gallery)) return;
+            processedGalleries.add(gallery);
+            
+            var imgs = gallery.querySelectorAll('img.feature-image, img');
+            if (imgs.length === 0) return;
+            var elements = [];
+            for (var i = 0; i < imgs.length; i++) {
+              // Opt-out logic inside gallery: if explicitly marked to ignore
+              if (imgs[i].closest('.exclude-lightbox') || imgs[i].closest('a')) continue;
+              
+              elements.push({ href: imgs[i].getAttribute('src') || '', type: 'image', description: imgs[i].getAttribute('alt') || '' });
+            }
+            if (elements.length > 0) {
+              // Grouped mode for standard galleries, solo mode if it's just a single .zoomable-image
+              var isGrouped = elements.length > 1;
+              lightboxData.push({ elements: elements, imgs: imgs, isGrouped: isGrouped });
+            }
+          });
+        });
+
+        if (lightboxData.length === 0) return;
+
+        // PHASE 2: WRITE all DOM changes in one batch via rAF
+        requestAnimationFrame(function() {
+          lightboxData.forEach(function(lbData) {
+            for (var i = 0; i < lbData.imgs.length; i++) {
+              lbData.imgs[i].style.cursor = 'zoom-in';
+              if (lbData.isGrouped) lbData.imgs[i].classList.add('lightbox-grouped');
+            }
+
+            var lightbox = GLightbox({
+              elements: lbData.elements,
+              touchNavigation: true,
+              loop: true,
+              zoomable: true,
+              descPosition: 'bottom'
+            });
+
+            for (var j = 0; j < lbData.imgs.length; j++) {
+              (function(index) {
+                lbData.imgs[index].addEventListener('click', function(e) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  lightbox.openAt(index);
+                });
+              })(j);
+            }
+          });
+        });
+      }
+
+      // === Defer GLightbox to IDLE time (completely off critical path) ===
+      function loadGLightbox() {
+        if (typeof GLightbox !== 'undefined') {
+          requestAnimationFrame(initGalleryLightbox);
+          return;
+        }
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css';
+        document.head.appendChild(link);
+
+        var script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+        script.onload = function() { requestAnimationFrame(initGalleryLightbox); };
+        document.head.appendChild(script);
+      }
+
+      // === Fix A11y for any search triggers missing aria-label ===
+      function fixSearchA11y() {
+        document.querySelectorAll('button[data-search-trigger]').forEach(function(btn) {
+          if (!btn.getAttribute('aria-label')) btn.setAttribute('aria-label', 'Tìm kiếm');
+        });
+      }
+
+      // === Schedule everything AFTER page is idle ===
+      var idle = window.requestIdleCallback || function(cb) { setTimeout(cb, 200); };
+      idle(function() {
+        loadGLightbox();
+        fixSearchA11y();
+      });
+    })();
+  </script>
+
+  <!-- Znews-style Crossfade using IntersectionObserver & Scroll Bounds to prevent bleeding -->
+  <script is:inline>
+    (function() {
+      var wrappers = document.querySelectorAll('.znews-scroll-wrapper');
+      if (wrappers.length === 0) return;
+
+      // Use scroll event for precise top-edge triggering
+      let scheduledAnimationFrame = false;
+      
+      const onScroll = () => {
+        const vh = window.innerHeight;
+        let bestWrapper = null;
+        let maxVisible = 0;
+
+        wrappers.forEach(w => {
+          const rect = w.getBoundingClientRect();
+          
+          // Safety condition: wrapper must reach near the top (e.g. top <= 100px)
+          // If the top is > 100px, it means the user is at the top of the page 
+          // and seeing the Header, so we DO NOT activate the background!
+          if (rect.top > 100) return;
+          
+          // If the wrapper has completely scrolled out of the top
+          if (rect.bottom < 0) return;
+
+          // Calculate how much of the wrapper is visible
+          const visibleTop = Math.max(0, rect.top);
+          const visibleBottom = Math.min(vh, rect.bottom);
+          const visibleHeight = visibleBottom - visibleTop;
+
+          if (visibleHeight > maxVisible) {
+            maxVisible = visibleHeight;
+            bestWrapper = w;
+          }
+        });
+
+        // Apply active class ONLY to the best wrapper
+        wrappers.forEach(w => {
+          const bg = w.querySelector('.znews-sticky-bg');
+          if (!bg) return;
+          if (w === bestWrapper) {
+            bg.classList.add('is-active');
+          } else {
+            bg.classList.remove('is-active');
+          }
+        });
+        
+        scheduledAnimationFrame = false;
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!scheduledAnimationFrame) {
+          scheduledAnimationFrame = true;
+          requestAnimationFrame(onScroll);
+        }
+      }, { passive: true });
+      
+      window.addEventListener('resize', () => {
+        requestAnimationFrame(onScroll);
+      }, { passive: true });
+
+      // Init on load
+      requestAnimationFrame(onScroll);
+    })();
+  </script>
+  
+</BaseLayout>

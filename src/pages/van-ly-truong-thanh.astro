@@ -1,0 +1,1305 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { Clock, Calendar, ChevronRight, CheckCircle2, Shield, Check } from 'lucide-react';
+import DataPost from '@/components/shortcodes/data/DataPost.astro';
+
+const d1Db = env?.dulichcoguu_d1;
+let post;
+try {
+  if (d1Db) post = await safeQueryCritical(
+    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('van-ly-truong-thanh').first<any>(),
+    { route: Astro.url.pathname, slug: 'van-ly-truong-thanh', queryType: "fetch_post_by_slug" }
+  );
+} catch (e) {
+  // Gracefully fallback if DB error or not created yet
+}
+
+// Fallback metadata if post is not yet populated in CMS
+if (!post) {
+  post = {
+    id: 999,
+    title: 'Vạn Lý Trường Thành Bắc Kinh: 8 Đoạn Đẹp, Cách Đi Và Kinh Nghiệm Chọn Nơi Nào Để Tham Quan',
+    excerpt: 'Vạn Lý Trường Thành không phải một điểm tham quan duy nhất. Khám phá 8 đoạn Trường Thành đẹp nhất tại Bắc Kinh (Mutianyu, Badaling, Jinshanling, Simatai...) cùng kinh nghiệm chọn nơi phù hợp nhất.',
+    featuredImage: 'https://media.fittour.vn/uploads/van-ly-truong-thanh-bac-kinh.webp',
+    author: 'Huynh Hieu Travel',
+    createdAt: '2026-08-17T08:00:00.000Z',
+    updatedAt: '2026-08-17T08:00:00.000Z',
+    readingTime: 14
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const seoTitle = post.seoTitle || post.title || 'Vạn Lý Trường Thành Bắc Kinh: 8 Đoạn Đẹp & Kinh Nghiệm Chọn Nơi Tham Quan';
+const seoDesc = post.seoDesc || post.excerpt || 'Cẩm nang khám phá 8 đoạn Vạn Lý Trường Thành đẹp nhất tại Bắc Kinh: Mutianyu, Badaling, Jinshanling, Simatai, Jiankou... cùng hướng dẫn di chuyển và kinh nghiệm tham quan chi tiết.';
+const seoImage = post.seoImage || post.featuredImage || 'https://media.fittour.vn/uploads/van-ly-truong-thanh-bac-kinh.webp';
+
+// --- DATE LOGIC ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-08-17T08:00:00.000Z';
+const updatedAtStr = post.updatedAt || createdAtStr;
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000; 
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Cập nhật:" : "Xuất bản:";
+
+const formattedDate = displayDate.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// ------------------
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "Max Vũ": {
+    name: "Max Vũ",
+    url: "/max-vu",
+    img: "https://media.fittour.vn/uploads/max-vu-founder-fit-tour.webp"
+  },
+  "Huy Ngô": {
+    name: "Huy Ngô",
+    url: "/hdv-huy-ngo",
+    img: "https://media.fittour.vn/uploads/hdv-huy-ngo-fittour.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/huynh-hieu",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["Huynh Hieu Travel"];
+// ------------------
+
+const adminEditUrl = post.id && post.id !== 999 ? `/admin/posts/edit?id=${post.id}` : '#';
+
+// TOC Navigation Structure
+const toc = [
+  { id: "gioi-thieu", title: "Giới thiệu", icon: "🏠" },
+  { id: "chieu-dai-bac-kinh", title: "Trường Thành Bắc Kinh Dài Bao Nhiêu?" },
+  { id: "8-doan-hang-dau", title: "8 Đoạn Trường Thành Hàng Đầu" },
+  { id: "mutianyu", title: "1. Mutianyu (Mộ Điền Dục)", indent: true },
+  { id: "badaling", title: "2. Badaling (Bát Đạt Lĩnh)", indent: true },
+  { id: "juyongguan", title: "3. Juyongguan (Cư Dung Quan)", indent: true },
+  { id: "jinshanling", title: "4. Jinshanling (Kim Sơn Lĩnh)", indent: true },
+  { id: "huanghuacheng", title: "5. Huanghuacheng (Hoàng Hoa Thành)", indent: true },
+  { id: "simatai", title: "6. Simatai (Tư Mã Đài)", indent: true },
+  { id: "jiankou", title: "7. Jiankou (Tiễn Khấu)", indent: true },
+  { id: "gubeikou", title: "8. Gubeikou (Cổ Bắc Khẩu)", indent: true },
+  { id: "nen-chon-doan-nao", title: "Bảng So Sánh & Gợi Ý Lựa Chọn" },
+  { id: "badaling-hay-mutianyu", title: "Badaling Hay Mutianyu: Nên Đi Đâu?" },
+  { id: "cach-di-den-truong-thanh", title: "Cách Đi Đến Vạn Lý Trường Thành" },
+  { id: "ban-do-dinh-huong", title: "Bản Đồ & 3 Câu Hỏi Định Hướng" },
+  { id: "nen-di-mua-nao", title: "Nên Đi Vào Mùa Nào?" },
+  { id: "chuan-bi-gi", title: "Đi Trường Thành Cần Chuẩn Bị Gì?" },
+  { id: "kinh-nghiem-di-som", title: "Mẹo Quan Trọng: Hãy Đi Thật Sớm" },
+  { id: "truong-thanh-ban-dem", title: "Trải Nghiệm Ban Đêm" },
+  { id: "bao-ton-di-san", title: "Bảo Tồn Di Sản & Văn Hóa Du Lịch" },
+  { id: "ket-luan", title: "Tổng Kết & Lời Khuyên" }
+];
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+>
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src={seoImage} 
+          alt="Vạn Lý Trường Thành Bắc Kinh Trung Quốc" 
+          class="w-full h-full object-cover object-center opacity-80" 
+          width="1920" 
+          height="1080"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+          <ChevronRight class="w-3 h-3" />
+          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+          <ChevronRight class="w-3 h-3" />
+          <span class="text-white font-semibold line-clamp-1">Vạn Lý Trường Thành Bắc Kinh</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {post.title}
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Cẩm nang toàn diện chọn đoạn Trường Thành phù hợp nhất với chuyến đi của bạn
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Vạn Lý Trường Thành là một trong những biểu tượng nổi tiếng nhất của <a href="/country/trung-quoc" class="text-amber-400 hover:text-amber-300 underline underline-offset-4" title="Du lịch Trung Quốc">Trung Quốc</a> và là điểm đến không thể bỏ qua tại Bắc Kinh. Tuy nhiên, một điều nhiều du khách chỉ nhận ra khi lên kế hoạch là <strong>Vạn Lý Trường Thành không phải một điểm tham quan duy nhất</strong>.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <img 
+              src={authorData.img} 
+              alt={authorData.name} 
+              width="40" 
+              height="40" 
+              class="w-10 h-10 rounded-full border-2 border-white/30 object-cover object-top group-hover:border-amber-400 transition-colors" 
+            />
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1">
+              {authorData.name} 
+              <CheckCircle2 class="w-4 h-4 text-blue-400" />
+            </span>
+          </a>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <Calendar class="w-4 h-4 opacity-70" />
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <Clock class="w-4 h-4 text-amber-400" />
+            <span>{post.readingTime || 14} phút đọc</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏛️</span> Di Sản Thế Giới UNESCO
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏰</span> 8 Đoạn Hàng Đầu
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🥾</span> Trekking & Nhiếp Ảnh
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🌙</span> Night Tour
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Mục lục bài viết
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Giới thiệu
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class={`block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 ${item.indent ? 'pl-2 text-[12.5px] border-l border-transparent hover:border-amber-400' : 'font-semibold text-[13px]'}`}
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+            <div class="w-full flex items-center justify-between gap-4 mb-2 lg:hidden">
+              <span class="font-bold text-slate-900 text-sm border-l-4 border-amber-500 pl-2 uppercase">Tổng Quan Nhanh</span>
+            </div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Vị trí</div>
+                <div class="text-[13px] font-bold text-slate-900">6 quận Bắc Kinh</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto">
+              <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/60 shrink-0">📏</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Chiều dài Bắc Kinh</div>
+                <div class="text-[13px] font-bold text-slate-900">Khoảng 573 km</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/60 shrink-0">⏳</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">Niên đại chính</div>
+                <div class="text-[13px] font-bold text-slate-900">Thời nhà Minh (1368–1644)</div>
+              </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+
+            <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+              <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center text-rose-700 text-xl border border-rose-200/60 shrink-0">🏆</div>
+              <div>
+                <div class="text-[11px] text-slate-500 font-medium">UNESCO</div>
+                <div class="text-[13px] font-bold text-slate-900">Di sản Thế giới (1987)</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Text */}
+          <div id="gioi-thieu" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <p>
+              Từ Bắc Kinh, du khách có thể lựa chọn nhiều đoạn Trường Thành với trải nghiệm rất khác nhau. <strong>Badaling</strong> thuận tiện và nổi tiếng, <strong>Mutianyu</strong> cân bằng giữa cảnh quan và khả năng tiếp cận, <strong>Jinshanling</strong> phù hợp với trekking và nhiếp ảnh, trong khi <strong>Simatai</strong> mang đến trải nghiệm đặc biệt về đêm. Xa hơn nữa là <strong>Jiankou</strong> và <strong>Gubeikou</strong>, nơi dành cho những người muốn tìm kiếm cảm giác hoang sơ và thử thách hơn.
+            </p>
+            <p class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
+              Vì vậy, câu hỏi không hẳn là <em>“đoạn Vạn Lý Trường Thành nào đẹp nhất?”</em>, mà là <em>“đoạn nào phù hợp nhất với chuyến đi của bạn?”</em>
+            </p>
+          </div>
+
+          {/* UNESCO & Overview Highlight Box */}
+          <div class="bg-amber-50/80 border border-amber-200/90 p-6 md:p-8 rounded-2xl my-8 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🌟</span>
+              <h3 class="font-serif text-xl font-bold text-slate-900">
+                Những Con Số Ấn Tượng Về Vạn Lý Trường Thành
+              </h3>
+            </div>
+            <ul class="space-y-2.5 text-slate-800 text-[15.5px] leading-relaxed list-disc pl-5">
+              <li><strong>Tổng chiều dài:</strong> Vượt quá 20.000 km trải dài qua nhiều tỉnh thành Trung Quốc.</li>
+              <li><strong>Thời gian xây dựng:</strong> Kéo dài liên tục qua nhiều thế kỷ từ thế kỷ 3 TCN đến thế kỷ 17.</li>
+              <li><strong>Tại Bắc Kinh:</strong> Trải dài 573 km qua 6 quận, bao gồm tường thành, cửa ải, pháo đài và tháp canh cổ.</li>
+              <li><strong>Công nhận toàn cầu:</strong> Được UNESCO ghi danh là Di sản Thế giới từ năm 1987.</li>
+            </ul>
+          </div>
+
+          {/* Section 1: Chiều Dài */}
+          <section id="chieu-dai-bac-kinh" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Vạn Lý Trường Thành Ở Bắc Kinh Dài Bao Nhiêu?
+              </h2>
+            </div>
+            
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Vạn Lý Trường Thành không phải một bức tường được xây dựng trong một thời kỳ duy nhất. Theo UNESCO, hệ thống này được xây dựng liên tục qua nhiều giai đoạn từ khoảng thế kỷ 3 trước Công nguyên đến thế kỷ 17, với tổng chiều dài của toàn bộ hệ thống vượt quá 20.000 km. Phần lớn những gì du khách thường nhìn thấy ngày nay tại Bắc Kinh thuộc các công trình được xây dựng hoặc mở rộng dưới thời nhà Minh (1368–1644).
+              </p>
+              
+              <p>
+                Riêng trong phạm vi Bắc Kinh, Vạn Lý Trường Thành trải qua sáu quận gồm <strong>Pinggu, Miyun, Huairou, Changping, Yanqing và Mentougou</strong>, với tổng chiều dài khoảng <strong>573 km</strong>. Dọc tuyến này tồn tại nhiều dạng di tích khác nhau như tường thành, cửa ải, pháo đài, tháp canh và các công trình phòng thủ.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Huairou</div>
+                  <div class="text-xs text-slate-600">Mutianyu, Jiankou</div>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Yanqing</div>
+                  <div class="text-xs text-slate-600">Badaling</div>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Miyun</div>
+                  <div class="text-xs text-slate-600">Simatai, Gubeikou</div>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Changping</div>
+                  <div class="text-xs text-slate-600">Juyongguan</div>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Hebei / Giáp ranh</div>
+                  <div class="text-xs text-slate-600">Jinshanling</div>
+                </div>
+                <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center shadow-2xs">
+                  <div class="text-amber-700 font-bold text-lg">Huairou / Hồ</div>
+                  <div class="text-xs text-slate-600">Huanghuacheng</div>
+                </div>
+              </div>
+
+              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-[14px] text-slate-700 italic">
+                * Lưu ý: Jinshanling thực chất nằm ở huyện Luanping (tỉnh Hà Bắc), giáp ranh Bắc Kinh. Tuy nhiên, đoạn Trường Thành này thường xuyên được gộp chung vào các tuyến tham quan khởi hành từ Bắc Kinh.
+              </div>
+              <p>
+                Điều này cũng giải thích vì sao trải nghiệm ở mỗi đoạn lại khác nhau. Một đoạn được phục dựng hoàn chỉnh có thể phù hợp cho chuyến tham quan gia đình, trong khi một đoạn khác vẫn giữ vẻ hoang sơ và đòi hỏi người đi phải có thể lực tốt.
+              </p>
+              <p>
+                Vạn Lý Trường Thành được UNESCO ghi danh là Di sản Thế giới từ năm 1987. Giá trị của công trình không chỉ nằm ở quy mô mà còn ở vai trò lịch sử, quân sự, kiến trúc và văn hóa trong suốt nhiều thế kỷ của Trung Quốc.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 2: 8 Đoạn Hàng Đầu */}
+          <section id="8-doan-hang-dau" class="scroll-mt-28 space-y-12">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                8 Đoạn Vạn Lý Trường Thành Hàng Đầu Nên Khám Phá Ở Bắc Kinh
+              </h2>
+            </div>
+            
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Không có một bảng xếp hạng tuyệt đối cho tám đoạn dưới đây. Mỗi nơi mang một đặc điểm riêng, và lựa chọn phù hợp sẽ phụ thuộc vào thời gian, thể lực, sở thích cũng như cách du khách muốn trải nghiệm Vạn Lý Trường Thành.
+            </p>
+
+            {/* 1. Mutianyu */}
+            <div id="mutianyu" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">1</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Mutianyu – Lựa Chọn Cân Bằng Cho Người Lần Đầu
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Mutianyu là một trong những đoạn Vạn Lý Trường Thành nổi tiếng nhất quanh Bắc Kinh và thường được xem là lựa chọn cân bằng giữa cảnh quan, trải nghiệm đi bộ và khả năng tiếp cận.
+                </p>
+                <p>
+                  Khác với hình dung về một công trình nằm giữa vùng núi khô cằn, Mutianyu được bao quanh bởi những dãy núi phủ cây xanh, đặc biệt đẹp vào mùa xuân và mùa thu. Những bức tường đá chạy theo sống núi, nối tiếp qua các tháp canh tạo nên khung cảnh rất đặc trưng của vùng phía bắc Bắc Kinh.
+                </p>
+                <p>
+                  Điểm cộng lớn của Mutianyu là du khách không nhất thiết phải leo toàn bộ từ chân núi. Khu vực này có hệ thống cáp treo và các phương tiện hỗ trợ lên xuống (như máng trượt toboggan), giúp người lớn tuổi hoặc những người không muốn dành quá nhiều sức cho việc leo dốc vẫn có thể trải nghiệm phần đẹp của Trường Thành.
+                </p>
+                <p>
+                  Các trải nghiệm thực tế gần đây trên Reddit cũng thường đánh giá Mutianyu là lựa chọn cân bằng cho người lần đầu: cảnh quan đẹp, có thể đi bộ khá nhiều nhưng không biến cả ngày thành một chuyến trekking quá nặng, đồng thời thường ít áp lực về đám đông hơn Badaling nếu chọn thời điểm phù hợp.
+                </p>
+                <p>
+                  Tuy nhiên, không nên hiểu rằng Mutianyu lúc nào cũng vắng. Những ngày cuối tuần, kỳ nghỉ hoặc giờ cao điểm vẫn có thể khá đông. Một số du khách gần đây cho biết đến khoảng 7:00 sáng giúp họ có được trải nghiệm rất thoáng, trong khi lượng khách bắt đầu tăng rõ rệt từ khoảng 9:00.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người lần đầu đến Vạn Lý Trường Thành, gia đình, người muốn kết hợp đi bộ và ngắm cảnh, du khách muốn một lựa chọn cân bằng.
+              </div>
+            </div>
+
+            {/* 2. Badaling */}
+            <div id="badaling" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">2</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Badaling – Biểu Tượng Nổi Tiếng Và Dễ Tiếp Cận
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Nếu Mutianyu là lựa chọn cân bằng thì Badaling lại là cái tên mang tính biểu tượng nhất khi nhắc đến Vạn Lý Trường Thành ở Bắc Kinh.
+                </p>
+                <p>
+                  Badaling nằm cách trung tâm Bắc Kinh khoảng 60 km về phía tây bắc và là một trong những đoạn được phát triển mạnh về cơ sở hạ tầng du lịch. Đây cũng là đoạn Vạn Lý Trường Thành được UNESCO xác định trong hồ sơ Di sản Thế giới.
+                </p>
+                <p>
+                  Ưu điểm lớn nhất của Badaling là <strong>sự thuận tiện</strong>. Hệ thống giao thông đến đây khá phát triển, cơ sở vật chất hoàn chỉnh và tuyến tham quan tương đối dễ tiếp cận. Vì vậy, đây vẫn là một lựa chọn rất hợp lý cho người lần đầu đến Bắc Kinh, gia đình hoặc những du khách ưu tiên sự thuận tiện hơn trải nghiệm hoang sơ.
+                </p>
+                <p>
+                  Đổi lại, sự nổi tiếng cũng đồng nghĩa với lượng khách lớn. Những thảo luận du lịch gần đây thường mô tả Badaling là đoạn được phục dựng và phát triển mạnh, đồng thời đông khách hơn Mutianyu hoặc Jinshanling vào những thời điểm cao điểm. Tuy nhiên, điều này không có nghĩa Badaling lúc nào cũng đông. Một số du khách chia sẻ rằng nếu đến sớm vào ngày thường, vẫn có thể tìm được những khu vực khá vắng.
+                </p>
+                <p>
+                  Một điểm đáng chú ý khác là Badaling hiện không chỉ có trải nghiệm ban ngày. Khu vực này thường xuyên triển khai chương trình tham quan ban đêm theo mùa (từ khoảng mùa xuân đến mùa thu), kết hợp hệ thống chiếu sáng, biểu diễn và các hoạt động tương tác.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người lần đầu đến Bắc Kinh, gia đình, người ưu tiên giao thông thuận tiện và cơ sở vật chất đầy đủ.
+              </div>
+            </div>
+
+            {/* 3. Juyongguan */}
+            <div id="juyongguan" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">3</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Juyongguan – Cửa Ải Lịch Sử Gần Bắc Kinh
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Juyongguan, hay Cư Dung Quan, không đơn thuần là một đoạn tường thành. Đây là một cửa ải quân sự quan trọng trong hệ thống phòng thủ phía bắc Trung Quốc và mang đến một góc nhìn khác về cách Vạn Lý Trường Thành kết hợp với địa hình và kiến trúc quân sự.
+                </p>
+                <p>
+                  Nếu Mutianyu gây ấn tượng bởi những dãy núi nối tiếp nhau, Juyongguan lại nổi bật với không gian cửa ải, tường thành bao quanh thung lũng cùng các công trình kiến trúc lịch sử.
+                </p>
+                <p>
+                  Đây cũng là lựa chọn đáng cân nhắc nếu du khách quan tâm nhiều đến lịch sử và kiến trúc hơn là một chuyến trekking dài.
+                </p>
+                <p>
+                  Juyongguan cũng thường được đưa vào các chương trình du lịch ban đêm và hoạt động văn hóa theo mùa của Bắc Kinh. Thành phố từng tổ chức các lễ hội và sự kiện lấy cảm hứng từ văn hóa thời Minh tại đây, kết hợp không gian cửa ải với các hoạt động tương tác.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Du khách yêu thích lịch sử, kiến trúc, cửa ải cổ và muốn kết hợp tham quan với các điểm khác quanh Bắc Kinh.
+              </div>
+            </div>
+
+            {/* 4. Jinshanling */}
+            <div id="jinshanling" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">4</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Jinshanling – Dành Cho Trekking Và Nhiếp Ảnh
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Nếu Mutianyu là lựa chọn cân bằng thì Jinshanling lại nghiêng nhiều hơn về trải nghiệm đi bộ và cảnh quan.
+                </p>
+                <p>
+                  Jinshanling nổi tiếng với những dãy núi uốn lượn, các tháp canh nối tiếp nhau và những đoạn tường chạy xa về phía đường chân trời. Chính sự kết hợp giữa công trình cổ và địa hình núi khiến nơi đây trở thành một trong những địa điểm được yêu thích bởi những người chụp ảnh và trekking.
+                </p>
+                <p>
+                  Chính quyền Bắc Kinh cũng giới thiệu Jinshanling như một điểm đến nổi tiếng với nhiếp ảnh, đặc biệt vào mùa thu khi màu sắc của núi rừng tạo nên sự tương phản rõ rệt với tường thành cổ.
+                </p>
+                <p>
+                  Cộng đồng du lịch cũng thường nhắc đến Jinshanling khi so sánh với Mutianyu và Badaling. Điểm hấp dẫn nhất là cảm giác yên tĩnh và ít tính đô thị hơn, nhưng cái giá phải trả là thời gian di chuyển dài hơn. Một số du khách cho biết hành trình từ Bắc Kinh có thể mất khoảng 2–2,5 giờ mỗi chiều tùy phương tiện và giao thông.
+                </p>
+                <p>
+                  Vì vậy, Jinshanling không phải lựa chọn lý tưởng nếu lịch trình Bắc Kinh chỉ có một ngày và du khách muốn dành phần lớn thời gian cho trung tâm thành phố. Nhưng nếu mục tiêu chính của ngày hôm đó là <strong>thực sự đi bộ trên Vạn Lý Trường Thành</strong>, Jinshanling rất đáng cân nhắc.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người thích trekking, nhiếp ảnh, thiên nhiên và muốn tránh không khí quá đông đúc.
+              </div>
+            </div>
+
+            {/* 5. Huanghuacheng */}
+            <div id="huanghuacheng" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">5</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Huanghuacheng – Trường Thành Bên Hồ
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Huanghuacheng mang đến một hình ảnh khác biệt so với phần lớn những đoạn Trường Thành nổi tiếng quanh Bắc Kinh.
+                </p>
+                <p>
+                  Tại đây, hồ nước bao quanh và chia cắt các đoạn tường thành, tạo nên sự kết hợp độc đáo giữa công trình phòng thủ cổ đại và cảnh quan mặt nước. Khung cảnh này khiến Huanghuacheng thường được nhắc đến với tên gọi <em>“Vạn Lý Trường Thành bên hồ” (Great Wall by the Lake)</em>.
+                </p>
+                <p>
+                  Đây là lựa chọn thú vị cho những du khách đã từng xem các hình ảnh quen thuộc của Badaling hoặc Mutianyu và muốn tìm một khung cảnh khác.
+                </p>
+                <p>
+                  Tuy nhiên, Huanghuacheng không nên được xem đơn giản là “một Badaling thứ hai”. Trải nghiệm ở đây thiên về cảnh quan và thiên nhiên hơn, và việc lựa chọn cung đường cần dựa vào thời gian cũng như điều kiện thực tế của khu vực.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người yêu thiên nhiên, nhiếp ảnh, muốn kết hợp núi – hồ – Trường Thành trong cùng một trải nghiệm.
+              </div>
+            </div>
+
+            {/* 6. Simatai */}
+            <div id="simatai" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">6</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Simatai – Vẻ Nguyên Bản Và Trải Nghiệm Ban Đêm
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Simatai nằm tại Miyun, phía đông bắc Bắc Kinh và nổi tiếng với địa hình dốc, những đoạn tường nằm trên các sống núi cùng nhiều công trình mang đặc trưng thời Minh.
+                </p>
+                <p>
+                  Một trong những điểm đặc biệt của Simatai là mức độ bảo tồn các đặc điểm công sự thời Minh. Chính quyền Bắc Kinh từng mô tả đây là đoạn giữ lại tương đối đầy đủ những đặc trưng nguyên bản của công trình phòng thủ thời Minh.
+                </p>
+                <p>
+                  Simatai cũng có mối liên hệ rất chặt với Gubei Water Town (Cổ Bắc Thủy Trấn), tạo thành một tuyến trải nghiệm đặc biệt: ban ngày khám phá Trường Thành, sau đó trở về thị trấn cổ dưới chân núi để nghỉ ngơi và tiếp tục trải nghiệm không gian về đêm.
+                </p>
+                <p>
+                  Đặc biệt, Simatai là một trong những địa điểm nổi tiếng nhất ở Bắc Kinh về trải nghiệm Vạn Lý Trường Thành ban đêm. Chính quyền Bắc Kinh hiện vẫn giới thiệu các chương trình night tour tại đây, trong đó có những tuyến tham quan bằng cáp treo và khu vực được chiếu sáng sau khi trời tối.
+                </p>
+                <p>
+                  Nếu du khách muốn kết hợp Vạn Lý Trường Thành với một đêm nghỉ ở ngoại ô Bắc Kinh, Simatai và Gubei Water Town là một lựa chọn rất đáng cân nhắc.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người thích trải nghiệm khác biệt, muốn tham quan Trường Thành ban đêm hoặc muốn kết hợp Trường Thành với Gubei Water Town.
+              </div>
+            </div>
+
+            {/* 7. Jiankou */}
+            <div id="jiankou" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">7</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Jiankou – Dành Cho Người Thích Thử Thách
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Jiankou là một trong những đoạn có địa hình gồ ghề và dốc nhất trong khu vực Bắc Kinh, nổi tiếng với hình dáng tường thành chạy trên những sống núi hiểm trở.
+                </p>
+                <p>
+                  Khác với Badaling hay Mutianyu, Jiankou không phải lựa chọn dành cho một chuyến tham quan nhẹ nhàng. Những đoạn dốc, bậc đá và địa hình chưa được phát triển theo hướng du lịch đại chúng khiến nơi đây phù hợp hơn với người có kinh nghiệm trekking và chuẩn bị thể lực tốt.
+                </p>
+                <p>
+                  Đây cũng là nơi cần đặc biệt chú ý đến vấn đề an toàn. Không nên tự ý đi vào những khu vực bị đóng hoặc những đoạn chưa được phép tham quan chỉ để tìm kiếm hình ảnh “Trường Thành hoang dã”.
+                </p>
+                <p>
+                  Các dự án bảo tồn Jiankou vẫn đang được triển khai. Chính quyền Bắc Kinh cho biết dự án sửa chữa Jiankou đã được tiến hành theo nhiều giai đoạn trong khuôn khổ chương trình bảo vệ Vạn Lý Trường Thành.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người có kinh nghiệm trekking, thể lực tốt và muốn tìm trải nghiệm thử thách.
+              </div>
+            </div>
+
+            {/* 8. Gubeikou */}
+            <div id="gubeikou" class="scroll-mt-28 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shrink-0">8</span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900">
+                  Vạn Lý Trường Thành Gubeikou – Không Gian Hoang Sơ Và Lịch Sử Quân Sự
+                </h3>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Gubeikou là một khu vực có vị trí chiến lược quan trọng trong lịch sử phòng thủ phía bắc Bắc Kinh. Không gian nơi đây khác khá xa những khu vực được phát triển mạnh cho khách du lịch như Badaling.
+                </p>
+                <p>
+                  Gubeikou thường được lựa chọn bởi những người thích hiking và muốn cảm nhận một phần Trường Thành ít mang tính “khu du lịch” hơn.
+                </p>
+                <p>
+                  Một trong những điểm hấp dẫn là khả năng kết hợp Gubeikou với các tuyến trekking dài hơn, trong đó Jinshanling thường được nhắc đến như một phần của những hành trình khám phá Trường Thành ở khu vực phía đông bắc Bắc Kinh.
+                </p>
+                <p>
+                  Tuy nhiên, “hoang sơ” không đồng nghĩa với “dễ đi”. Du khách cần kiểm tra tình trạng tuyến đường, khu vực được phép tham quan và điều kiện thời tiết trước khi lên đường.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-xl text-slate-900 text-[14.5px]">
+                <strong class="text-amber-900 flex items-center gap-1.5 mb-1">
+                  <Check class="w-4 h-4 text-amber-700" /> Phù hợp với:
+                </strong>
+                Người thích hiking, lịch sử quân sự và những đoạn Trường Thành ít phát triển du lịch đại chúng.
+              </div>
+            </div>
+
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 3: Nên Chọn Đoạn Nào - Bảng So Sánh */}
+          <section id="nen-chon-doan-nao" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Nên Chọn Đoạn Vạn Lý Trường Thành Nào?
+              </h2>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Nếu chỉ có một ngày ở Bắc Kinh, không nhất thiết phải cố gắng đi thật nhiều đoạn Trường Thành. Trải nghiệm tốt thường đến từ việc chọn <strong>một đoạn phù hợp</strong>, dành đủ thời gian để đi bộ, ngắm cảnh và cảm nhận không gian.
+            </p>
+
+            {/* Comparison Table */}
+            <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm bg-white">
+              <table class="w-full text-left text-[14.5px] border-collapse">
+                <thead>
+                  <tr class="bg-slate-900 text-white">
+                    <th class="py-3.5 px-4 font-bold border-b border-slate-800">Bạn muốn trải nghiệm</th>
+                    <th class="py-3.5 px-4 font-bold border-b border-slate-800">Nên cân nhắc</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Lần đầu đến Vạn Lý Trường Thành</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Mutianyu</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-medium">Ưu tiên thuận tiện, dễ đi</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Badaling</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Đi cùng gia đình</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Mutianyu / Badaling</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-medium">Muốn cảnh núi đẹp và cân bằng thời gian</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Mutianyu</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Thích trekking và nhiếp ảnh</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Jinshanling</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-medium">Muốn không gian yên tĩnh hơn</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Jinshanling / Gubeikou</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Muốn trải nghiệm ban đêm</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Simatai / Badaling / Mutianyu tùy mùa</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-medium">Muốn kết hợp Trường Thành với hồ</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Huanghuacheng</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Thích lịch sử cửa ải quân sự</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Juyongguan</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-medium">Muốn trekking thử thách hiểm trở</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Jiankou</td>
+                  </tr>
+                  <tr class="hover:bg-amber-50/50 transition-colors">
+                    <td class="py-3 px-4 font-medium">Muốn kết hợp Trường Thành với thị trấn cổ</td>
+                    <td class="py-3 px-4 font-bold text-amber-800">Simatai + Gubei Water Town</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Nhìn từ những trải nghiệm thực tế gần đây, <strong>Mutianyu thường là lựa chọn cân bằng nhất cho người lần đầu</strong>. Một số du khách trên Reddit gọi đây là sự kết hợp tốt giữa cảnh quan và khả năng tiếp cận, trong khi Jinshanling phù hợp hơn với người chấp nhận dành nhiều thời gian di chuyển để đổi lấy trải nghiệm trekking yên tĩnh hơn.
+            </p>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 4: Badaling Hay Mutianyu */}
+          <section id="badaling-hay-mutianyu" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Badaling Hay Mutianyu: Nên Đi Đâu?
+              </h2>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Đây có lẽ là câu hỏi phổ biến nhất khi lên kế hoạch cho Vạn Lý Trường Thành ở Bắc Kinh.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 hover:border-amber-400 transition-colors shadow-2xs space-y-3">
+                <div class="inline-block px-3 py-1 bg-slate-100 text-slate-800 font-bold text-xs rounded-full uppercase">Biểu tượng & Dễ đi</div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">Chọn Badaling nếu...</h3>
+                <p class="text-slate-600 text-[14.5px] leading-relaxed">
+                  Ưu tiên sự thuận tiện. Đây là một trong những đoạn nổi tiếng nhất, có giao thông tốt, cơ sở vật chất đầy đủ và phù hợp với những người muốn trải nghiệm biểu tượng nổi tiếng nhất của Vạn Lý Trường Thành.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/60 p-6 rounded-2xl border-2 border-amber-300 hover:border-amber-500 transition-colors shadow-2xs space-y-3">
+                <div class="inline-block px-3 py-1 bg-amber-600 text-white font-bold text-xs rounded-full uppercase">Cảnh quan & Cân bằng</div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">Chọn Mutianyu nếu...</h3>
+                <p class="text-slate-700 text-[14.5px] leading-relaxed">
+                  Muốn cân bằng giữa cảnh quan và trải nghiệm. Mutianyu có những tuyến đi bộ đẹp, nhiều góc nhìn ra núi xanh và hệ thống hỗ trợ như cáp treo, máng trượt, phù hợp với hầu hết nhóm du khách.
+                </p>
+              </div>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+              <p>
+                Điều quan trọng là không nên đánh giá hai nơi chỉ bằng mức độ đông khách. Một số du khách gần đây cho rằng Badaling vẫn rất đáng đi vì quy mô và cảm giác hoành tráng, trong khi Mutianyu mang lại trải nghiệm thoải mái hơn. Trải nghiệm thực tế cũng thay đổi rất nhiều theo ngày và giờ tham quan.
+              </p>
+              <div class="p-4 bg-slate-900 text-white rounded-xl space-y-1">
+                <div class="text-amber-400 font-bold text-sm uppercase tracking-wide">💡 Tóm Tắt Lựa Chọn Nhanh:</div>
+                <p class="text-slate-200 text-sm"><strong>Mutianyu:</strong> nếu muốn trải nghiệm cân bằng & cảnh quan thiên nhiên.</p>
+                <p class="text-slate-200 text-sm"><strong>Badaling:</strong> nếu ưu tiên sự thuận tiện và biểu tượng nổi tiếng thế giới.</p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 5: Cách Đi */}
+          <section id="cach-di-den-truong-thanh" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Cách Đi Đến Vạn Lý Trường Thành Từ Bắc Kinh
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Các đoạn Vạn Lý Trường Thành nằm cách trung tâm Bắc Kinh khá xa và thời gian di chuyển phụ thuộc rất nhiều vào đoạn được chọn, phương tiện và tình trạng giao thông.
+              </p>
+              <p>
+                Đây cũng là lý do không nên chỉ nhìn bản đồ và chọn nơi “gần nhất”. Như nhiều du khách chia sẻ trên Reddit, khoảng cách địa lý không phản ánh đầy đủ thời gian và độ phức tạp của hành trình. Một đoạn xa hơn có thể phù hợp hơn nếu mục tiêu là trekking, trong khi một đoạn gần hơn có thể giúp tiết kiệm nửa ngày cho những điểm tham quan khác ở Bắc Kinh.
+              </p>
+            </div>
+
+            {/* Travel Time Table */}
+            <div class="overflow-x-auto my-6">
+              <table class="w-full text-[14.5px] text-slate-700 text-left border-collapse bg-white rounded-xl overflow-hidden shadow-2xs border border-slate-200">
+                <thead class="bg-slate-100 text-slate-900">
+                  <tr>
+                    <th class="py-3 px-4 font-bold border-b border-slate-200">Đoạn Trường Thành</th>
+                    <th class="py-3 px-4 font-bold border-b border-slate-200">Khoảng cách từ trung tâm</th>
+                    <th class="py-3 px-4 font-bold border-b border-slate-200">Thời gian di chuyển ước tính (1 chiều)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="py-3 px-4 font-bold text-amber-800">Badaling / Juyongguan</td>
+                    <td class="py-3 px-4">~ 60 - 70 km</td>
+                    <td class="py-3 px-4">1.5 - 2 giờ</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-bold text-amber-800">Mutianyu / Huanghuacheng</td>
+                    <td class="py-3 px-4">~ 75 - 80 km</td>
+                    <td class="py-3 px-4">1.5 - 2 giờ</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="py-3 px-4 font-bold text-amber-800">Jiankou</td>
+                    <td class="py-3 px-4">~ 80 km</td>
+                    <td class="py-3 px-4">2 - 2.5 giờ</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                    <td class="py-3 px-4 font-bold text-amber-800">Simatai / Gubeikou / Jinshanling</td>
+                    <td class="py-3 px-4">~ 120 - 130 km</td>
+                    <td class="py-3 px-4">2.5 - 3 giờ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="text-[13px] text-slate-500 mt-2 italic">* Thời gian mang tính tham khảo và có thể thay đổi tùy thuộc vào phương tiện cũng như tình trạng kẹt xe tại Bắc Kinh.</div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                <h3 class="font-serif text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <span class="text-amber-600">🚆</span> Đi Tự Túc (Tàu, Xe Buýt, Taxi)
+                </h3>
+                <p class="text-slate-600 text-[14.5px] leading-relaxed">
+                  Du khách có thể kết hợp tàu cao tốc (từ ga Bắc Kinh Bắc đi Badaling), xe buýt du lịch, taxi hoặc các ứng dụng gọi xe như Didi (nên tham khảo trước <a href="/ung-dung-can-cai-truoc-khi-du-lich-trung-quoc" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">các ứng dụng cần cài khi du lịch Trung Quốc</a>) tùy từng đoạn. Badaling và Mutianyu là hai lựa chọn thuận tiện nhất nếu đi độc lập. Với Jinshanling, Gubeikou hoặc Jiankou, việc thuê xe riêng hoặc đi theo <a href="/tour/tour-bac-kinh-tu-ha-noi" class="text-brand-700 hover:text-brand-800 font-semibold underline underline-offset-2">tour Bắc Kinh từ Hà Nội</a> thường giúp đơn giản hóa hành trình hơn, đặc biệt khi muốn bắt đầu trekking ở một điểm và kết thúc ở một điểm khác.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                <h3 class="font-serif text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <span class="text-amber-600">🚐</span> Đi Theo Tour Hoặc Thuê Xe Riêng
+                </h3>
+                <p class="text-slate-600 text-[14.5px] leading-relaxed">
+                  Đây thường là lựa chọn hợp lý nếu nhóm có người lớn tuổi, gia đình có trẻ nhỏ hoặc muốn tối ưu thời gian. Ưu điểm không chỉ nằm ở việc có phương tiện đưa đón tận nơi mà còn ở khả năng chủ động thời gian. Một số tuyến như Jinshanling có thể mất phần lớn một ngày chỉ cho việc di chuyển và trekking, vì vậy việc có xe chờ sẵn giúp hành trình nhẹ nhàng hơn rất nhiều.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/70 p-5 rounded-xl border border-amber-200/80 space-y-2">
+                <h3 class="font-serif text-lg font-bold text-amber-900 flex items-center gap-2">
+                  <span class="text-amber-700">⚠️</span> Không Nên Xếp Quá Nhiều Đoạn Trong Một Ngày
+                </h3>
+                <p class="text-slate-800 text-[14.5px] leading-relaxed">
+                  Có du khách đã thử kết hợp Mutianyu, Jinshanling, Gubei và Simatai trong cùng một ngày. Lịch trình về mặt lý thuyết có thể thực hiện được nếu bắt đầu rất sớm, nhưng thực tế cực kỳ căng và không phù hợp với phần lớn du khách. Nếu mục tiêu là trải nghiệm Vạn Lý Trường Thành một cách trọn vẹn, <strong>một ngày dành cho một đoạn chính thường hợp lý hơn</strong>.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 6: Bản Đồ & 3 Câu Hỏi */}
+          <section id="ban-do-dinh-huong" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Bản Đồ Vạn Lý Trường Thành Bắc Kinh
+              </h2>
+            </div>
+
+            <figure class="my-6">
+              <img 
+                src="https://media.fittour.vn/uploads/ban-do-du-lich-van-ly-truong-thanh.webp" 
+                alt="Bản Đồ Vạn Lý Trường Thành Bắc Kinh" 
+                class="w-full h-auto rounded-xl shadow-sm border border-slate-200" 
+                width="1280" 
+                height="720" 
+                loading="lazy" 
+              />
+              <figcaption class="text-center text-sm text-slate-500 mt-3 italic">Bản đồ vị trí các đoạn Vạn Lý Trường Thành chính quanh Bắc Kinh</figcaption>
+            </figure>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+              <p>
+                Vạn Lý Trường Thành ở Bắc Kinh không chạy qua một tuyến duy nhất gần trung tâm thành phố. Các đoạn nổi tiếng nằm rải rác ở phía bắc và phía đông bắc, chủ yếu trong các khu vực như Yanqing, Changping, Huairou và Miyun.
+              </p>
+              <p>
+                Vì vậy, khi xem bản đồ, nên xác định trước <strong>ba yếu tố quan trọng</strong>:
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs text-center space-y-2">
+                <div class="text-3xl">📍</div>
+                <div class="font-bold text-slate-900 text-[15px]">Bạn đang ở đâu?</div>
+                <div class="text-xs text-slate-500">Vị trí khách sạn tại trung tâm hay ngoại ô Bắc Kinh</div>
+              </div>
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs text-center space-y-2">
+                <div class="text-3xl">⏱️</div>
+                <div class="font-bold text-slate-900 text-[15px]">Bao nhiêu thời gian?</div>
+                <div class="text-xs text-slate-500">Nửa ngày, trọn 1 ngày hay kết hợp qua đêm ở Gubei</div>
+              </div>
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs text-center space-y-2">
+                <div class="text-3xl">🥾</div>
+                <div class="font-bold text-slate-900 text-[15px]">Tham quan hay Trekking?</div>
+                <div class="text-xs text-slate-500">Đi dạo ngắm cảnh nhẹ nhàng hay chinh phục dốc đứng</div>
+              </div>
+            </div>
+
+            <p class="text-slate-600 text-sm italic">
+              * Ba câu hỏi này sẽ giúp bạn lựa chọn đoạn phù hợp hơn nhiều so với việc chỉ tìm kiếm chung chung “Great Wall near me”.
+            </p>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 7: Nên Đi Mùa Nào */}
+          <section id="nen-di-mua-nao" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Nên Đi Vạn Lý Trường Thành Vào Mùa Nào?
+              </h2>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Mỗi mùa mang đến một diện mạo hoàn toàn khác biệt cho Vạn Lý Trường Thành:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-emerald-800 text-base">
+                  <span>🌸</span> Mùa Xuân (Tháng 3 - Tháng 5)
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Thời tiết dễ chịu, cảnh núi bắt đầu đâm chồi xanh mướt và hoa nở rực rỡ quanh Mutianyu. Đây là khoảng thời gian lý tưởng cho những chuyến đi bộ dài ngoài trời.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-amber-800 text-base">
+                  <span>☀️</span> Mùa Hè (Tháng 6 - Tháng 8)
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Cảnh quan xanh tươi tốt nhất nhưng nhiệt độ khá cao, ít bóng râm trên sống núi. Nên ưu tiên đi từ sáng sớm, chuẩn bị đủ nước, mũ rộng vành và kem chống nắng.
+                </p>
+              </div>
+
+              <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-amber-900 text-base">
+                  <span>🍁</span> Mùa Thu (Tháng 9 - Tháng 11) - Được Yêu Thích Nhất
+                </div>
+                <p class="text-slate-700 text-sm leading-relaxed">
+                  Mùa thu thường được nhiều người yêu thích vì thời tiết mát mẻ và màu sắc rực rỡ, đặc biệt tại Jinshanling và Mutianyu. Bầu trời xanh trong vắt và rừng cây chuyển màu tạo nên khung cảnh rất ngoạn mục.
+                </p>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-blue-800 text-base">
+                  <span>❄️</span> Mùa Đông (Tháng 12 - Tháng 2)
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Lượng khách thấp nhất năm, cảnh sắc kỳ vĩ khi có tuyết phủ trắng xóa. Tuy nhiên nhiệt độ xuống rất thấp và gió mạnh trên các tháp canh, cần mặc đồ ấm chuyên dụng.
+                </p>
+              </div>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Không có một mùa duy nhất phù hợp với tất cả mọi người. Nếu ưu tiên <strong>cảnh sắc</strong>, mùa thu là lựa chọn rất đáng cân nhắc; nếu ưu tiên <strong>không gian yên tĩnh</strong>, mùa đông hoặc những ngày thường có thể hấp dẫn hơn.
+            </p>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 8: Cần Chuẩn Bị Gì */}
+          <section id="chuan-bi-gi" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Đi Vạn Lý Trường Thành Cần Chuẩn Bị Gì?
+              </h2>
+            </div>
+
+            <p class="text-slate-700 text-[15.5px] leading-relaxed">
+              Vạn Lý Trường Thành đẹp trên ảnh, nhưng trải nghiệm thực tế đòi hỏi nhiều sức lực hơn những gì du khách có thể hình dung:
+            </p>
+
+            <div class="space-y-3 text-[15px] text-slate-700">
+              <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                <span class="text-xl">👟</span>
+                <div>
+                  <strong class="text-slate-900">Giày có độ bám tốt:</strong> Nhiều đoạn có bậc đá dốc đứng và độ mòn qua hàng thế kỷ khiến bề mặt trơn trượt, đặc biệt ở các đoạn trekking như Jinshanling, Jiankou.
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                <span class="text-xl">💧</span>
+                <div>
+                  <strong class="text-slate-900">Nước uống & đồ ăn nhẹ:</strong> Mang theo đủ nước, nhất là vào mùa hè. Không nên phụ thuộc hoàn toàn vào các quầy bán nước dọc tuyến vì giá cao và ít điểm bán ở các đoạn xa.
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                <span class="text-xl">🧢</span>
+                <div>
+                  <strong class="text-slate-900">Chống nắng:</strong> Kem chống nắng, mũ và kính râm là vật bất ly thân vì trên đỉnh các bức tường thành hầu như không có bóng râm che chắn.
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                <span class="text-xl">🧥</span>
+                <div>
+                  <strong class="text-slate-900">Trang phục mùa đông:</strong> Chú ý đến gió và nhiệt độ. Nhiệt độ và gió trên các đoạn tường thành cao thường khắc nghiệt hơn ở trung tâm Bắc Kinh, đặc biệt là vào mùa đông.
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200">
+                <span class="text-xl">🧗</span>
+                <div>
+                  <strong class="text-slate-900">Đừng đánh giá độ khó dựa trên quãng đường:</strong> Nhiều đoạn đá dốc liên tục có thể khiến bạn mệt hơn đáng kể so với việc đi bộ cùng một quãng đường trên địa hình bằng phẳng.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 9: Đi Thật Sớm */}
+          <section id="kinh-nghiem-di-som" class="scroll-mt-28">
+            <div class="bg-gradient-to-br from-amber-50 via-white to-amber-50/50 p-6 md:p-8 rounded-2xl border border-amber-200/90 shadow-sm space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl">⏰</span>
+                <h2 class="font-serif text-2xl font-bold text-slate-900">
+                  Một Kinh Nghiệm Quan Trọng: Hãy Đi Thật Sớm
+                </h2>
+              </div>
+
+              <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-3">
+                <p>
+                  Nếu chỉ có thể chọn một mẹo khi đi Vạn Lý Trường Thành, đó là <strong>đến thật sớm</strong>.
+                </p>
+                <p>
+                  Các trải nghiệm thực tế được chia sẻ gần đây cho thấy lượng khách có thể thay đổi đáng kể chỉ trong vài giờ. Một du khách đi Mutianyu gần đây cho biết họ đến khoảng <strong>7:00 sáng</strong> và gần như là những người đầu tiên bước lên tường thành, trong khi lượng khách bắt đầu tăng dồn dập từ khoảng 9:00.
+                </p>
+                <p>
+                  Trong dịp lễ, sự khác biệt còn rõ hơn. Một trải nghiệm được ghi nhận vào dịp Tết Nguyên đán cho thấy khoảng 8:00 sáng vẫn khá thoáng đãng, nhưng sau 10:00 lượng khách tăng mạnh và các lối bậc thang bắt đầu chen chúc.
+                </p>
+                <p class="font-medium text-amber-900 bg-amber-100/60 p-3.5 rounded-xl">
+                  👉 Công thức vàng để có ảnh đẹp không dính người: <strong>Ngày thường trong tuần + Khởi hành từ 6:00 - 6:30 sáng</strong>.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 10: Ban Đêm */}
+          <section id="truong-thanh-ban-dem" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Vạn Lý Trường Thành Ban Đêm: Không Chỉ Có Simatai
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Simatai từ lâu đã nổi tiếng với trải nghiệm Vạn Lý Trường Thành về đêm, đặc biệt khi kết hợp cùng thị trấn nước Gubei Water Town dưới chân núi.
+              </p>
+              <p>
+                Tuy nhiên, hiện nay nhiều đoạn khác cũng đã mở rộng các chương trình tour đêm:
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+                <div class="bg-slate-900 text-white p-5 rounded-xl space-y-2 border border-slate-800">
+                  <div class="text-amber-400 font-bold text-sm">🌙 Badaling Night Tour</div>
+                  <p class="text-slate-300 text-xs leading-relaxed">
+                    Chương trình đêm theo mùa với hệ thống chiếu sáng LED hiện đại, trình diễn âm nhạc và tương tác văn hóa (thường diễn ra từ mùa xuân đến mùa thu).
+                  </p>
+                </div>
+                <div class="bg-slate-900 text-white p-5 rounded-xl space-y-2 border border-slate-800">
+                  <div class="text-amber-400 font-bold text-sm">🏮 Mutianyu Night Tour</div>
+                  <p class="text-slate-300 text-xs leading-relaxed">
+                    Triển khai theo đợt mùa hè, với hệ thống chiếu sáng và các hoạt động trải nghiệm ban đêm tại khu vực tháp canh và đường đi bộ.
+                  </p>
+                </div>
+                <div class="bg-slate-900 text-white p-5 rounded-xl space-y-2 border border-slate-800">
+                  <div class="text-amber-400 font-bold text-sm">✨ Simatai & Gubei</div>
+                  <p class="text-slate-300 text-xs leading-relaxed">
+                    Trải nghiệm cổ kính nhất: Cáp treo ngắm toàn cảnh Trường Thành được chiếu sáng trên sống núi cùng đèn lồng thị trấn Cổ Bắc.
+                  </p>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-500 italic">
+                * Do các chương trình ban đêm phụ thuộc vào mùa và lịch vận hành thực tế, du khách nên kiểm tra thông tin cập nhật chính thức trước ngày khởi hành.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 11: Bảo Tồn Di Sản */}
+          <section id="bao-ton-di-san" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Bảo Tồn Vạn Lý Trường Thành: Di Sản Cần Được Giữ Gìn
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Vạn Lý Trường Thành có quy mô khổng lồ và trải qua nhiều vùng địa hình khác nhau, vì vậy công tác bảo tồn luôn là một thách thức lớn.
+              </p>
+              <p>
+                UNESCO nhấn mạnh rằng toàn bộ hệ thống hơn 20.000 km bao gồm các đoạn tường, pháo đài, cửa ải, tháp canh và nhiều thành phần phòng thủ được xây dựng trong những thời kỳ khác nhau. Việc bảo tồn vì thế cần được thực hiện theo hướng có hệ thống, khoa học và phù hợp với đặc điểm của từng khu vực.
+              </p>
+              <p>
+                Tại Bắc Kinh, các chương trình bảo tồn và phục hồi đang được triển khai ở nhiều khu vực. Jiankou là một ví dụ điển hình, với các dự án sửa chữa được thực hiện theo nhiều giai đoạn. Bắc Kinh cũng đang xây dựng Great Wall National Cultural Park nhằm kết hợp bảo tồn di sản với nghiên cứu, giáo dục và phát triển du lịch bền vững.
+              </p>
+
+              <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                <div class="font-bold text-slate-900 text-[15px] flex items-center gap-2">
+                  <Shield class="w-5 h-5 text-emerald-600" /> 4 Nguyên Tắc Du Lịch Có Trách Nhiệm:
+                </div>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700 text-sm">
+                  <li class="flex items-center gap-2">
+                    <span class="text-rose-500 font-bold">✕</span> Không leo vào khu vực bị rào đóng
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-rose-500 font-bold">✕</span> Không nhặt hay lấy gạch đá di tích
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-rose-500 font-bold">✕</span> Không viết, vẽ, khắc lên tường thành
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-rose-500 font-bold">✕</span> Không xả rác, giữ gìn cảnh quan tự nhiên
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200 my-8" />
+
+          {/* Section 12: Kết Luận */}
+          <section id="ket-luan" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Vậy Nên Chọn Đoạn Vạn Lý Trường Thành Nào?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Nếu đây là lần đầu đến Bắc Kinh và chỉ có một ngày dành cho Vạn Lý Trường Thành, <strong>Mutianyu là lựa chọn rất đáng cân nhắc</strong> nhờ sự cân bằng giữa cảnh quan, khả năng tiếp cận và trải nghiệm đi bộ.
+              </p>
+              <p>
+                Nếu muốn ưu tiên sự thuận tiện, giao thông và cơ sở vật chất, <strong>Badaling</strong> là lựa chọn hợp lý. Nếu chuyến đi thiên về trekking và nhiếp ảnh, hãy dành nhiều thời gian hơn cho <strong>Jinshanling</strong>. Nếu muốn trải nghiệm đặc biệt buổi tối, <strong>Simatai</strong> kết hợp Gubei Water Town là gợi ý hàng đầu.
+              </p>
+              <p class="font-medium text-slate-900 text-base">
+                Điều quan trọng nhất là <strong>đừng cố đi tất cả</strong>. Vạn Lý Trường Thành không phải một điểm đến cần “check-in” thật nhanh. Giá trị của nơi này nằm ở cảm giác đứng trên một công trình đã tồn tại qua hàng thế kỷ, nhìn những bức tường chạy theo sống núi và nhận ra quy mô của nó lớn hơn rất nhiều so với những gì một bức ảnh có thể truyền tải.
+              </p>
+              <p>
+                Và đó cũng là lý do <strong>lựa chọn đúng đoạn Trường Thành quan trọng hơn việc lựa chọn đoạn “nổi tiếng nhất”</strong>.
+              </p>
+            </div>
+
+            <div class="bg-slate-100 p-4 rounded-xl text-xs text-slate-600 space-y-1 mt-6 border border-slate-200">
+              <div><strong>Cập nhật thông tin:</strong> 17/08/2026.</div>
+              <div><strong>Lưu ý:</strong> Lịch mở cửa, phương tiện, giá vé và các chương trình tham quan ban đêm tại Vạn Lý Trường Thành có thể thay đổi theo mùa, thời tiết và chính sách vận hành. Du khách nên kiểm tra thông tin chính thức trước chuyến đi.</div>
+            </div>
+          </section>
+
+          {/* CTA Banner */}
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Bạn Đã Sẵn Sàng Khám Phá Kỳ Quan Vạn Lý Trường Thành?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Đồng hành cùng FIT TOUR trong những hành trình khám phá Bắc Kinh và Vạn Lý Trường Thành chuyên sâu, tinh tế và trọn vẹn cảm xúc.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tour/tour-bac-kinh-5n5d" 
+                target="_blank" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🏯</span> Xem Tour Vạn Lý Trường Thành Bắc Kinh
+              </a>
+              <a 
+                href="/country/trung-quoc" 
+                target="_blank" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>🇨🇳</span> Cẩm Nang Du Lịch Trung Quốc
+              </a>
+            </div>
+          </div>
+
+          {/* Data Post: China Series */}
+          <div class="mt-12 mb-8">
+            <DataPost source="tag" slug="du-lich-trung-quoc" limit="6" title="Chuỗi Bài Viết: Khám Phá Trung Quốc" />
+          </div>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            {/* Quick Facts */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Thông tin hữu ích
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">✈️</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Cửa ngõ</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Thủ đô Bắc Kinh (Beijing)</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-200/60 text-lg">🍂</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Mùa đẹp nhất</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Mùa thu (Tháng 9 - 11)</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/60 text-lg">🚅</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Phương tiện</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Tàu cao tốc, Xe buýt, Xe riêng</div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 border border-purple-200/60 text-lg">🏛️</div>
+                  <div>
+                    <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Di sản</div>
+                    <div class="font-bold text-slate-800 text-[13px]">Di sản Thế giới UNESCO (1987)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Articles */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Bài Viết Liên Quan
+              </div>
+              <div class="space-y-4">
+                {[
+                  { 
+                    title: "Địa Mạo Đan Hà Trương Dịch: Kỳ Quan Núi Cầu Vồng 135 Triệu Năm", 
+                    img: "https://media.fittour.vn/uploads/cam-tuc-thanh-hai-ho-thanh-hai-va-cao-nguyen-tay-bac.webp", 
+                    link: "/dia-mao-dan-ha" 
+                  },
+                  { 
+                    title: "Tại Sao Nên Du Lịch Trung Quốc Cùng FIT TOUR?", 
+                    img: "https://media.fittour.vn/uploads/china-sereis-background.webp", 
+                    link: "/why-travel-china-fittour" 
+                  },
+                  { 
+                    title: "Quy Định Mang Pin Dự Phòng Khi Du Lịch Trung Quốc", 
+                    img: "https://media.fittour.vn/uploads/2025/10/quy-dinh-mang-pin-du-phong-du-lich-trung-quoc.webp", 
+                    link: "/quy-dinh-mang-pin-du-phong-khi-du-lich-trung-quoc" 
+                  }
+                ].map((item) => (
+                  <a href={item.link} class="flex gap-3 group">
+                    <div class="w-20 aspect-video rounded-lg bg-slate-100 overflow-hidden shrink-0 border border-slate-200">
+                      <img 
+                        src={item.img} 
+                        alt={item.title} 
+                        width="80" 
+                        height="45" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                        loading="lazy" 
+                      />
+                    </div>
+                    <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-3">
+                      {item.title}
+                    </div>
+                  </a>
+                ))}
+              </div>
+              <div class="mt-5 text-center pt-3 border-t border-slate-100">
+                <a href="/country/trung-quoc" class="text-amber-700 text-xs font-bold hover:underline">Khám phá cẩm nang Trung Quốc →</a>
+              </div>
+            </div>
+
+            {/* Share Block */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Chia sẻ bài viết</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/van-ly-truong-thanh" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Chia sẻ lên Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/van-ly-truong-thanh');" 
+                  aria-label="Sao chép liên kết"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

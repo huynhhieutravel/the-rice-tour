@@ -1,0 +1,141 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+const d1Db = env?.dulichcoguu_d1;
+let shorts: any[] = [];
+
+if (d1Db) {
+  try {
+    const { results } = await d1Db.prepare("SELECT * FROM ShortVideo ORDER BY viewOrder ASC, createdAt DESC").all();
+    shorts = results || [];
+  } catch (e) {
+    console.error('Error fetching shorts:', e);
+  }
+}
+
+function formatDate(dateStr: string) {
+  if (!dateStr) return '—';
+  const safeDate = typeof dateStr === 'string' ? dateStr.replace(' ', 'T') : dateStr;
+  const d = new Date(safeDate);
+  if (isNaN(d.getTime())) return dateStr;
+  const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  const timePart = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  return `${datePart}<br/>${timePart}`;
+}
+---
+
+<AdminLayout title="Shorts Feed" activeMenu="shorts" activeSubmenu="all">
+<style>
+  .posts-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .posts-header h2 { font-size: 24px; font-weight: 700; }
+  .posts-header-right { display: flex; gap: 12px; align-items: center; }
+  .posts-header-right a { padding: 6px 14px; border-radius: 8px; font-size: 13px; border: 1px solid #e2e8f0; background: #fff; color: #64748b; cursor: pointer; text-decoration: none; }
+  .btn-primary { background: #2563eb !important; color: #fff !important; border-color: #2563eb !important; font-weight: 600; padding: 8px 20px !important; border-radius: 8px; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  thead th { text-align: left; padding: 12px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #94a3b8; font-weight: 600; border-bottom: 1px solid #e2e8f0; }
+  th.col-title { width: 45%; }
+  th.col-platform { width: 15%; }
+  th.col-order { width: 10%; }
+  th.col-date { width: 15%; }
+  tbody td { padding: 14px; font-size: 13px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; }
+  tbody tr:hover { background: #f8fafc; }
+  
+  .post-cell { display: flex; align-items: center; gap: 12px; }
+  .post-cell img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: #f1f5f9; }
+  .post-cell .img-placeholder { width: 44px; height: 44px; border-radius: 8px; background: #e2e8f0; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 18px; }
+  .post-cell a { font-weight: 600; color: #0f172a; text-decoration: none; }
+  .post-cell a:hover { color: #2563eb; }
+
+  .cat-badge { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; white-space: nowrap; display: inline-block; background: #f1f5f9; color: #475569; }
+  .cat-badge.tiktok { background:#000; color:#fff; }
+  .cat-badge.youtube { background:#ef4444; color:#fff; }
+  .cat-badge.instagram { background:#d946ef; color:#fff; }
+  .cat-badge.published { background:#dcfce7; color:#16a34a; }
+  .cat-badge.draft { background:#fef3c7; color:#d97706; }
+
+  .date-cell { color: #64748b; font-size: 12px; white-space: nowrap; }
+
+  .row-actions { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
+  .action-link { font-size: 11px; text-decoration: none; cursor: pointer; display: inline-block; background: none; border: none; padding: 0; }
+  .action-edit { color: #2563eb; }
+  .action-delete { color: #ef4444; }
+</style>
+
+<div class="posts-header">
+  <h2>Video Ngắn (Shorts Feed)</h2>
+  <div class="posts-header-right">
+    <a href="/admin/shorts/edit" class="btn-primary">Thêm Video Mới</a>
+  </div>
+</div>
+
+<div class="card" style="overflow:hidden;">
+  <table>
+    <thead>
+      <tr>
+        <th class="col-title">Tiêu đề Video</th>
+        <th class="col-platform">Nền tảng</th>
+        <th class="col-order">Thứ tự</th>
+        <th class="col-date">Ngày tạo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {shorts.length === 0 && (
+        <tr>
+          <td colspan="4" style="text-align:center; padding: 40px; color: #94a3b8;">Chưa có video nào.</td>
+        </tr>
+      )}
+      {shorts.map((item) => (
+        <tr data-id={item.id}>
+          <td>
+            <div class="post-cell">
+              {item.thumbnailUrl ? (
+                <img src={item.thumbnailUrl} alt={item.title || 'Thumbnail'} />
+              ) : (
+                <div class="img-placeholder">📱</div>
+              )}
+              <div style="display:flex; flex-direction:column; gap:2px;">
+                <a href={`/admin/shorts/edit?id=${item.id}`}>
+                  {item.title || '(Chưa có tiêu đề)'}
+                </a>
+                <div class="row-actions">
+                  <a href={`/admin/shorts/edit?id=${item.id}`} class="action-link action-edit">Sửa</a>
+                  <button class="action-link action-delete" onclick={`deleteShort('${item.id}')`}>Xoá</button>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class={`cat-badge ${item.platform}`}>{item.platform.toUpperCase()}</span>
+            <span class={`cat-badge ${item.status}`} style="margin-left: 4px;">{item.status}</span>
+          </td>
+          <td>
+            <strong>{item.viewOrder}</strong>
+          </td>
+          <td class="date-cell" set:html={formatDate(item.createdAt)}></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<script is:inline>
+  async function deleteShort(id) {
+    const confirmed = await window.AppModal.confirm('Bạn có chắc muốn xóa video này không?');
+    if (!confirmed) return;
+    
+    try {
+      const res = await fetch(`/api/admin/shorts/${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        window.location.reload();
+      } else {
+        const data = await res.json();
+        window.AppModal.alert(data.error?.message || 'Có lỗi xảy ra', 'error');
+      }
+    } catch (e) {
+      window.AppModal.alert('Lỗi kết nối', 'error');
+    }
+  }
+</script>
+</AdminLayout>

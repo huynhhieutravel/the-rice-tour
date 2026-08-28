@@ -1,0 +1,44 @@
+---
+import type { MegaMenuCard } from '@/config/navigation/default';
+
+export interface Props {
+  cards: MegaMenuCard[];
+}
+
+const { cards } = Astro.props;
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full p-8">
+  {cards.map((card) => {
+    let imageUrl = card.image;
+    
+    // Auto-prepend media domain for relative wp-content paths (legacy support)
+    if (imageUrl && !imageUrl.startsWith('http') && imageUrl.includes('wp-content')) {
+      imageUrl = 'https://media.fittour.vn' + (imageUrl.startsWith('/') ? '' : '/') + imageUrl;
+    }
+
+    return (
+      <a href={card.href} class="group/card flex flex-col p-3 rounded-[24px] hover:bg-gray-50/80 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 cursor-pointer">
+        <div class="w-full aspect-video shrink-0 overflow-hidden rounded-[16px] mb-5 shadow-sm border border-gray-100/50 bg-gray-100">
+          <img 
+            src={imageUrl} 
+            alt={card.title} 
+            class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy"
+          />
+        </div>
+        <div class="px-1 flex flex-col flex-1">
+          <h4 class="text-[17px] font-semibold !text-gray-900 mb-2 leading-snug group-hover/card:!text-brand-600 transition-colors tracking-tight">
+            {card.title}
+          </h4>
+          <div class="mt-auto pt-2 flex items-center text-[14px] font-medium !text-gray-500 group-hover/card:!text-brand-600 transition-colors">
+            Xem chi tiết
+            <svg class="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </a>
+    );
+  })}
+</div>

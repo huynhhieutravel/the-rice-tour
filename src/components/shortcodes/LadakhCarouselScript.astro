@@ -1,0 +1,108 @@
+---
+// LadakhCarouselScript.astro
+// Script for Ladakh Emagazine Carousel and Tabs
+// Prevents CMS editors from mangling raw JS in the content.
+---
+<script is:inline>
+    if(!window.__injectedGalleryScript) {
+        window.__injectedGalleryScript = true;
+        
+        // 1. Portrait Tabs
+        document.body.addEventListener('click', function(e) {
+            var btn = e.target.closest('.portrait-tab-btn');
+            if (btn) {
+                e.preventDefault();
+                var portraitTabs = document.querySelectorAll('.portrait-tab-btn');
+                var portraitContents = document.querySelectorAll('.portrait-content-item');
+                
+                if (portraitTabs.length > 0 && !portraitTabs[0].hasAttribute('data-tab-idx')) {
+                    portraitTabs.forEach(function(b, i) { b.setAttribute('data-tab-idx', i); });
+                    portraitContents.forEach(function(c, i) { c.setAttribute('data-content-idx', i); });
+                }
+                
+                var idx = btn.getAttribute('data-tab-idx');
+                if (idx !== null) {
+                    portraitTabs.forEach(function(b) {
+                        if (b.getAttribute('data-tab-idx') === idx) {
+                            b.classList.add('border-amber-500', 'bg-amber-500/10', 'text-white', 'shadow-lg');
+                            b.classList.remove('border-stone-800', 'bg-stone-900/40', 'text-stone-400');
+                        } else {
+                            b.classList.remove('border-amber-500', 'bg-amber-500/10', 'text-white', 'shadow-lg');
+                            b.classList.add('border-stone-800', 'bg-stone-900/40', 'text-stone-400');
+                        }
+                    });
+                    portraitContents.forEach(function(content) {
+                        if (content.getAttribute('data-content-idx') === idx) {
+                            content.classList.remove('opacity-0', 'z-0', 'pointer-events-none', 'scale-95');
+                            content.classList.add('opacity-100', 'z-10', 'pointer-events-auto', 'scale-100');
+                        } else {
+                            content.classList.remove('opacity-100', 'z-10', 'pointer-events-auto', 'scale-100');
+                            content.classList.add('opacity-0', 'z-0', 'pointer-events-none', 'scale-95');
+                        }
+                    });
+                }
+            }
+        });
+
+        // 2. Tour Gallery Scroll & Drag
+        setTimeout(function() {
+            var scrollContainer = document.getElementById('tour-gallery-scroll');
+            if (scrollContainer) {
+                var btns = scrollContainer.parentElement.querySelectorAll('button');
+                btns.forEach(function(b) { b.classList.remove('pointer-events-none'); });
+                
+                if(btns.length >= 2) {
+                    btns[0].addEventListener('click', function(e) { e.preventDefault(); scrollContainer.scrollBy({ left: -350, behavior: 'smooth' }); });
+                    btns[1].addEventListener('click', function(e) { e.preventDefault(); scrollContainer.scrollBy({ left: 350, behavior: 'smooth' }); });
+                }
+
+                // Drag to scroll logic
+                var isDown = false;
+                var startX;
+                var scrollLeft;
+                var isDragging = false;
+
+                scrollContainer.addEventListener('mousedown', function(e) {
+                    isDown = true;
+                    isDragging = false;
+                    scrollContainer.style.cursor = 'grabbing';
+                    scrollContainer.style.scrollBehavior = 'auto';
+                    startX = e.pageX - scrollContainer.offsetLeft;
+                    scrollLeft = scrollContainer.scrollLeft;
+                });
+
+                var stopDrag = function() {
+                    isDown = false;
+                    scrollContainer.style.cursor = 'grab';
+                    scrollContainer.style.scrollBehavior = 'smooth';
+                };
+
+                scrollContainer.addEventListener('mouseleave', stopDrag);
+                scrollContainer.addEventListener('mouseup', stopDrag);
+                scrollContainer.addEventListener('mousemove', function(e) {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    isDragging = true;
+                    var x = e.pageX - scrollContainer.offsetLeft;
+                    var walk = (x - startX) * 2;
+                    scrollContainer.scrollLeft = scrollLeft - walk;
+                });
+                scrollContainer.style.cursor = 'grab';
+                scrollContainer.addEventListener('click', function(e) {
+                    if (isDragging) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                }, true);
+                var links = scrollContainer.querySelectorAll('a, img');
+                links.forEach(function(link) {
+                    link.addEventListener('dragstart', function(e) { e.preventDefault(); });
+                });
+                
+                // Allow native touch scrolling by ensuring CSS
+                scrollContainer.style.overflowX = 'auto';
+                scrollContainer.style.WebkitOverflowScrolling = 'touch';
+            }
+        }, 100);
+    }
+</script>

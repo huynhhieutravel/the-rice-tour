@@ -1,0 +1,84 @@
+---
+export interface Props {
+  type: 'product' | 'faq' | 'breadcrumb' | 'localBusiness' | 'article' | 'custom';
+  data: any;
+}
+
+const { type, data } = Astro.props;
+
+let schema = {};
+
+if (type === 'custom') {
+  schema = data;
+} else if (type === 'article') {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": data.headline,
+    "image": data.image,
+    "datePublished": data.datePublished,
+    "dateModified": data.dateModified,
+    "author": data.author
+  };
+} else if (type === 'product') {
+  schema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": data.name,
+    "image": data.image,
+    "description": data.description,
+    "sku": data.sku,
+    ...(data.brand && { "brand": data.brand }),
+    ...(data.provider && { "provider": data.provider }),
+    ...(data.category && { "category": data.category }),
+    ...(data.keywords && { "keywords": data.keywords }),
+    ...(data.areaServed && { "areaServed": data.areaServed }),
+    ...(data.audience && { "audience": data.audience }),
+    "offers": {
+      "@type": "Offer",
+      "url": data.url,
+      "priceCurrency": "VND",
+      "price": data.price,
+      "availability": data.inStock ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
+      "itemCondition": "https://schema.org/NewCondition",
+      ...(data.seller && { "seller": data.seller })
+    },
+    ...(data.rating && {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": data.rating.value,
+        "reviewCount": data.rating.count
+      }
+    }),
+    ...(data.review && { "review": data.review })
+  };
+} else if (type === 'faq') {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": data.questions.map((q: any) => ({
+      "@type": "Question",
+      "name": q.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": q.answer
+      }
+    }))
+  };
+} else if (type === 'breadcrumb') {
+  schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": data.items.map((item: any, index: number) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  };
+}
+---
+
+{Object.keys(schema).length > 0 && (
+  <script type="application/ld+json" is:inline data-cfasync="false" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+)}

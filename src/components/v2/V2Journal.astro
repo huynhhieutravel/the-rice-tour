@@ -1,0 +1,92 @@
+---
+// src/components/v2/V2Journal.astro
+
+const articles = [
+  {
+    category: "MILESTONE",
+    date: "12 MAY 2025",
+    title: "Cột Mốc 80 Chuyến Đi Ladakh",
+    excerpt: "Hành trình nhìn lại 80 chuyến đi đầy cảm xúc, đánh dấu chặng đường dài gắn bó với vùng đất Tiểu Tây Tạng.",
+    image: "https://media.fittour.vn/uploads/lulu-motor-expedition-ladakh.webp",
+    link: "/cot-moc-80-chuyen-di-ladakh"
+  },
+  {
+    category: "INSPIRATION",
+    date: "25 JAN 2026",
+    title: "4 Năm, 20 Hành Trình Cùng FIT Tour",
+    excerpt: "Khám phá hành trình 4 năm với hơn 20 chuyến đi của chị Thúy cùng FIT Tour. Từ Kailash đến Alaska, câu chuyện về niềm tin và triết lý du lịch tử tế.",
+    image: "https://media.fittour.vn/uploads/2026/01/4-nam-20-hanh-trinh-dong-hanh-chi-thuy-cung-fittour.webp",
+    link: "/4-nam-20-hanh-trinh-cua-chi-thuy-cung-fittour"
+  },
+  {
+    category: "PILGRIMAGE",
+    date: "10 APR 2025",
+    title: "Hành Hương Núi Kailash",
+    excerpt: "Nhật ký 14 ngày thiêng liêng trên vùng đất thánh Kailash – nơi được mệnh danh là trung tâm vũ trụ.",
+    image: "https://media.fittour.vn/uploads/2024/07/du-khach-tour-kailash-tan-huong-su-tuyet-voi-tai-song-bang-karola.webp",
+    link: "/nhat-ky-hanh-trinh-hanh-huong-nui-kailash"
+  },
+  {
+    category: "MOTOR EXPEDITION",
+    date: "05 MAR 2025",
+    title: "E-Magazine: Motor Trip",
+    excerpt: "Chinh phục những cung đèo ngoạn mục nhất trên nóc nhà thế giới cùng chiến mã phân khối lớn.",
+    image: "https://media.fittour.vn/uploads/2023/10/motor-trip-ladakh-4.webp",
+    link: "/emagazine-motor-trip-ladakh"
+  }
+];
+---
+
+<section id="journal" class="w-full bg-[#0a0a0a] py-20 border-t border-white/5">
+  <div class="max-w-[1600px] mx-auto px-6 md:px-12">
+    
+    <!-- Header -->
+    <div class="flex items-end justify-between mb-10 pb-4 border-b border-white/10">
+      <h2 class="font-serif text-2xl md:text-3xl text-white tracking-widest uppercase">
+        Expedition Journal
+      </h2>
+      <a href="/blog/" class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c5a365] hover:text-white transition-colors">
+        View All Articles
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory pb-6 md:pb-0" style="scrollbar-width: none;">
+      {articles.map((article) => (
+        <a href={article.link} class="group block cursor-pointer shrink-0 w-[85vw] md:w-auto snap-center">
+          <!-- Image Container -->
+          <div class="relative aspect-video overflow-hidden rounded-md mb-5 border border-white/5">
+            <img 
+              src={article.image} 
+              alt={article.title} 
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[85%] group-hover:brightness-100"
+            />
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+            
+            <!-- Tags over image -->
+            <div class="absolute bottom-4 inset-x-4 flex items-center justify-between">
+              <span class="px-2.5 py-1 border border-white/30 bg-black/40 backdrop-blur-sm text-[9px] font-bold tracking-widest uppercase text-white rounded-sm">
+                {article.category}
+              </span>
+              <span class="font-mono text-[10px] text-[#c5a365] tracking-widest uppercase font-semibold">
+                {article.date}
+              </span>
+            </div>
+          </div>
+          
+          <!-- Text Content -->
+          <div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2 leading-snug group-hover:text-[#c5a365] transition-colors">
+              {article.title}
+            </h3>
+            <p class="text-sm text-white/60 leading-relaxed font-sans line-clamp-2">
+              {article.excerpt}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>

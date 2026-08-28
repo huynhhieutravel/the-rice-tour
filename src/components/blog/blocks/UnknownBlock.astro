@@ -1,0 +1,15 @@
+---
+// src/components/blog/blocks/UnknownBlock.astro
+const { node } = Astro.props;
+const isDev = import.meta.env.DEV;
+
+// In production, we don't render anything to avoid breaking the layout
+// In dev mode, we show a warning box to the developer
+---
+
+{isDev && (
+  <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg my-4 text-sm font-mono overflow-auto">
+    <p class="font-bold mb-2">⚠️ Unknown Block Type: {node?.type}</p>
+    <pre>{JSON.stringify(node, null, 2)}</pre>
+  </div>
+)}

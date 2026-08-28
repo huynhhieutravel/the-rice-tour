@@ -1,0 +1,8 @@
+
+ ⛅️ wrangler 4.85.0
+───────────────────
+Resource location: remote 
+
+🌀 Executing on remote database dulichcoguu-d1 (3874bca8-7df1-45af-ada4-5eb609440401):
+🌀 To execute on your local development database, remove the --remote flag from your wrangler command.
+

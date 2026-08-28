@@ -1,0 +1,511 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import { schemaRegistry, RENDER_PRIORITY_RULES } from '@/config/schemaRegistry';
+
+const d1Db = env?.dulichcoguu_d1;
+const { settings } = await getGlobalSettings();
+
+let message = '';
+let isError = false;
+const currentUser = (Astro.locals as any).user;
+
+// Handle POST — Save Global Schema
+if (Astro.request.method === 'POST') {
+  try {
+    const formData = await Astro.request.formData();
+    const action = formData.get('action') as string;
+
+    if (action === 'save_global') {
+      const schemaValue = formData.get('schema_value') as string;
+      const response = await fetch(`${Astro.url.origin}/api/admin/settings`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Cookie': Astro.request.headers.get('cookie') || ''
+        },
+        body: JSON.stringify([{ key: 'schema', value: schemaValue }])
+      });
+      if (response.ok) {
+        message = '✅ Global Schema đã được lưu và đồng bộ KV cache thành công!';
+      } else {
+        message = '❌ Lỗi khi lưu Schema. Vui lòng thử lại.';
+        isError = true;
+      }
+    }
+  } catch (err: any) {
+    message = '❌ Lỗi: ' + err.message;
+    isError = true;
+  }
+}
+
+// Re-fetch settings after save
+const { settings: freshSettings } = await getGlobalSettings();
+const globalSchema = freshSettings.schema || '';
+const globalSchemaStr = typeof globalSchema === 'string' ? globalSchema : JSON.stringify(globalSchema, null, 2);
+
+// Get schema statistics
+let pageSchemaCount = 0;
+let postSchemaCount = 0;
+try {
+  const pageRes = await d1Db?.prepare("SELECT COUNT(*) as cnt FROM Page WHERE customSchema IS NOT NULL AND customSchema != '' AND schemaEnabled = 1").first<any>();
+  pageSchemaCount = pageRes?.cnt || 0;
+  const postRes = await d1Db?.prepare("SELECT COUNT(*) as cnt FROM Post WHERE customSchema IS NOT NULL AND customSchema != '' AND schemaEnabled = 1").first<any>();
+  postSchemaCount = postRes?.cnt || 0;
+} catch(e) {}
+
+// Get recent custom schemas for reference
+let recentPageSchemas: any[] = [];
+let recentPostSchemas: any[] = [];
+try {
+  const pgRes = await d1Db?.prepare("SELECT title, slug, schemaUpdatedAt, schemaUpdatedBy FROM Page WHERE customSchema IS NOT NULL AND customSchema != '' ORDER BY schemaUpdatedAt DESC LIMIT 5").all();
+  recentPageSchemas = pgRes?.results || [];
+  const ptRes = await d1Db?.prepare("SELECT title, slug, schemaUpdatedAt, schemaUpdatedBy FROM Post WHERE customSchema IS NOT NULL AND customSchema != '' ORDER BY schemaUpdatedAt DESC LIMIT 5").all();
+  recentPostSchemas = ptRes?.results || [];
+} catch(e) {}
+---
+
+<AdminLayout title="Cấu hình Schema" activeMenu="system" activeSubmenu="schema">
+<style>
+  .schema-page { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .page-header { margin-bottom: 28px; }
+  .page-title { font-size: 24px; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .page-subtitle { font-size: 14px; color: #64748b; }
+
+  .tabs { display: flex; gap: 4px; border-bottom: 2px solid #e2e8f0; margin-bottom: 28px; }
+  .tab-btn { padding: 10px 20px; font-size: 14px; font-weight: 600; color: #64748b; background: none; border: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all .2s; border-radius: 8px 8px 0 0; }
+  .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; background: #eff6ff; }
+  .tab-btn:hover:not(.active) { background: #f8fafc; color: #334155; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .card-title { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+
+  /* Registry Table */
+  .registry-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .registry-table th { background: #f8fafc; padding: 10px 14px; text-align: left; font-weight: 700; color: #475569; border-bottom: 2px solid #e2e8f0; }
+  .registry-table td { padding: 12px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+  .registry-table tr:hover td { background: #fafafa; }
+  .badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-p1 { background: #fef3c7; color: #92400e; }
+  .badge-p2 { background: #dbeafe; color: #1e40af; }
+  .badge-p3 { background: #dcfce7; color: #166534; }
+  .badge-p4 { background: #f3e8ff; color: #6b21a8; }
+  .badge-active { background: #dcfce7; color: #166534; }
+  .badge-empty { background: #f1f5f9; color: #94a3b8; }
+  .badge-auto { background: #e0f2fe; color: #0369a1; }
+  .scope-tag { display: inline-block; background: #f1f5f9; color: #475569; border-radius: 4px; padding: 2px 6px; font-size: 10px; font-weight: 600; }
+  .type-list { display: flex; flex-wrap: wrap; gap: 4px; }
+  .type-chip { background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; border-radius: 4px; padding: 1px 6px; font-size: 11px; font-family: monospace; }
+
+  /* Priority Flow */
+  .priority-flow { display: flex; flex-direction: column; gap: 0; }
+  .flow-item { display: flex; align-items: flex-start; gap: 16px; }
+  .flow-line { display: flex; flex-direction: column; align-items: center; }
+  .flow-dot { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; flex-shrink: 0; }
+  .flow-connector { width: 2px; background: #e2e8f0; flex: 1; min-height: 20px; margin: 4px 0; }
+  .flow-content { flex: 1; padding: 4px 0 20px 0; }
+  .flow-label { font-weight: 700; font-size: 14px; color: #0f172a; }
+  .flow-note { font-size: 12px; color: #64748b; margin-top: 2px; }
+
+  /* Schema Editor */
+  .editor-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
+  .schema-textarea { width: 100%; min-height: 480px; padding: 16px; font-family: 'Menlo', 'Monaco', monospace; font-size: 12.5px; line-height: 1.6; color: #e2e8f0; background: #0f172a; border: 1px solid #334155; border-radius: 8px; resize: vertical; outline: none; }
+  .schema-textarea:focus { border-color: #3b82f6; }
+  .validator-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; min-height: 60px; margin-top: 12px; }
+  .btn-primary { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 22px; border-radius: 8px; border: none; cursor: pointer; font-size: 14px; transition: background .2s; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-validate { background: #fff; color: #2563eb; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: 1px solid #bfdbfe; cursor: pointer; font-size: 13px; transition: all .2s; }
+  .btn-validate:hover { background: #eff6ff; }
+  .action-row { display: flex; gap: 10px; align-items: center; margin-top: 14px; }
+  .sidebar-info { display: flex; flex-direction: column; gap: 16px; }
+  .info-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+  .info-card-title { font-size: 12px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-item { background: #f8fafc; border-radius: 8px; padding: 12px; text-align: center; }
+  .stat-number { font-size: 22px; font-weight: 800; color: #2563eb; }
+  .stat-label { font-size: 11px; color: #64748b; margin-top: 2px; }
+  .recent-list { list-style: none; padding: 0; margin: 0; }
+  .recent-list li { padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 12px; color: #334155; display: flex; justify-content: space-between; }
+  .recent-list li:last-child { border-bottom: none; }
+  .hint-block { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; font-size: 12px; color: #1e40af; line-height: 1.6; }
+  .hint-block code { background: #dbeafe; border-radius: 3px; padding: 1px 4px; font-family: monospace; }
+
+  .msg-toast { padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-weight: 500; font-size: 14px; }
+  .msg-success { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+  .msg-error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+</style>
+
+<div class="schema-page">
+  <div class="page-header">
+    <div class="page-title">🔍 Cấu hình Schema (JSON-LD)</div>
+    <div class="page-subtitle">Trung tâm quản lý toàn bộ dữ liệu có cấu trúc (JSON-LD) — giúp Google hiểu đúng nội dung, tăng E-E-A-T và Rich Results.</div>
+  </div>
+
+  {message && (
+    <div class={`msg-toast ${isError ? 'msg-error' : 'msg-success'}`}>{message}</div>
+  )}
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="registry">📋 Schema Registry</button>
+    <button class="tab-btn" data-tab="editor">✏️ Global Schema Editor</button>
+    <button class="tab-btn" data-tab="guide">📖 Hướng dẫn</button>
+  </div>
+
+  {/* ── Tab 1: Schema Registry ── */}
+  <div class="tab-panel active" id="tab-registry">
+
+    {/* Render Priority Flow */}
+    <div class="card">
+      <div class="card-title">⚡ Render Priority Flow</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;">
+        <div class="priority-flow">
+          {RENDER_PRIORITY_RULES.map((rule, i) => (
+            <div class="flow-item">
+              <div class="flow-line">
+                <div class={`flow-dot badge-p${rule.priority}`} style={`background:${['#fef3c7','#dbeafe','#dcfce7','#f3e8ff'][i]};color:${['#92400e','#1e40af','#166534','#6b21a8'][i]}`}>
+                  P{rule.priority}
+                </div>
+                {i < RENDER_PRIORITY_RULES.length - 1 && <div class="flow-connector" />}
+              </div>
+              <div class="flow-content">
+                <div class="flow-label">{rule.label}</div>
+                <div class="flow-note">{rule.note}</div>
+              </div>
+            </div>
+          ))}
+          <div class="flow-item">
+            <div class="flow-line">
+              <div style="width:36px;height:36px;border-radius:8px;background:#0f172a;display:flex;align-items:center;justify-content:center;font-size:14px;">🏁</div>
+            </div>
+            <div class="flow-content">
+              <div class="flow-label" style="color:#0f172a;">Final JSON-LD trong &lt;head&gt;</div>
+              <div class="flow-note">Những gì Google đọc thực sự</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:#475569;background:#f8fafc;border-radius:8px;padding:16px;line-height:1.8;">
+          <strong style="color:#0f172a;">📌 Luật vàng:</strong><br/>
+          • <strong>P1 luôn tồn tại</strong> trên mọi trang, không bị override<br/>
+          • <strong>P3/P4</strong> khi được điền sẽ thay thế hoàn toàn P2<br/>
+          • Để trang có Schema riêng: chỉnh sửa Page/Post trong CMS → phần Custom Schema<br/>
+          • Để sửa Global Schema: dùng tab "Global Schema Editor"
+        </div>
+      </div>
+    </div>
+
+    {/* Registry Table */}
+    <div class="card">
+      <div class="card-title">🗂 Bảng Schema Registry</div>
+      <table class="registry-table">
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Tên & Loại Schema</th>
+            <th>Nguồn dữ liệu</th>
+            <th>Phạm vi</th>
+            <th>Trạng thái</th>
+            <th>Chỉnh sửa</th>
+          </tr>
+        </thead>
+        <tbody>
+          {schemaRegistry.map((entry) => {
+            const isActive = entry.key === 'global_organization' 
+              ? !!globalSchema
+              : entry.key === 'auto_blog'
+              ? true
+              : entry.key === 'custom_page' 
+              ? pageSchemaCount > 0
+              : postSchemaCount > 0;
+            const badgeClass = `badge-p${entry.priority}`;
+            const priorityColors = ['','#fef3c7','#dbeafe','#dcfce7','#f3e8ff'];
+            const priorityTextColors = ['','#92400e','#1e40af','#166534','#6b21a8'];
+            return (
+              <tr>
+                <td>
+                  <span class={`badge ${badgeClass}`} style={`background:${priorityColors[entry.priority]};color:${priorityTextColors[entry.priority]}`}>
+                    P{entry.priority}
+                  </span>
+                </td>
+                <td>
+                  <div style="font-weight:700;font-size:13px;color:#0f172a;margin-bottom:4px;">{entry.label}</div>
+                  <div class="type-list">
+                    {entry.types.map(t => <span class="type-chip">{t}</span>)}
+                  </div>
+                  <div style="font-size:11px;color:#94a3b8;margin-top:4px;">{entry.description}</div>
+                </td>
+                <td>
+                  <code style="font-size:11px;background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#334155;">{entry.source}</code>
+                </td>
+                <td><span class="scope-tag">{entry.scope}</span></td>
+                <td>
+                  {entry.key === 'auto_blog' ? (
+                    <span class="badge badge-auto">AUTO</span>
+                  ) : isActive ? (
+                    <span class="badge badge-active">✓ Có dữ liệu</span>
+                  ) : (
+                    <span class="badge badge-empty">Trống</span>
+                  )}
+                  {(entry.key === 'custom_page') && pageSchemaCount > 0 && (
+                    <div style="font-size:11px;color:#64748b;margin-top:4px;">{pageSchemaCount} Page đang dùng</div>
+                  )}
+                  {(entry.key === 'custom_post') && postSchemaCount > 0 && (
+                    <div style="font-size:11px;color:#64748b;margin-top:4px;">{postSchemaCount} Post đang dùng</div>
+                  )}
+                </td>
+                <td>
+                  {entry.editable && entry.sourceUrl ? (
+                    <a href={entry.sourceUrl} style="font-size:12px;color:#2563eb;font-weight:600;text-decoration:none;">
+                      {entry.key === 'global_organization' ? 'Sửa →' : 'Xem danh sách →'}
+                    </a>
+                  ) : (
+                    <span style="font-size:12px;color:#94a3b8;">Code only</span>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Recent Custom Schemas */}
+    {(recentPageSchemas.length > 0 || recentPostSchemas.length > 0) && (
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div class="card">
+          <div class="card-title">📄 Page có Custom Schema gần đây</div>
+          <ul class="recent-list">
+            {recentPageSchemas.map((p: any) => (
+              <li>
+                <a href={`/admin/pages/edit?slug=${p.slug}`} style="color:#2563eb;text-decoration:none;">{p.title || p.slug}</a>
+                <span style="color:#94a3b8;">{p.schemaUpdatedAt ? new Date(p.schemaUpdatedAt).toLocaleDateString('vi-VN') : 'N/A'}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-title">📝 Post có Custom Schema gần đây</div>
+          <ul class="recent-list">
+            {recentPostSchemas.map((p: any) => (
+              <li>
+                <a href={`/${p.slug}`} target="_blank" style="color:#2563eb;text-decoration:none;">{p.title || p.slug}</a>
+                <span style="color:#94a3b8;">{p.schemaUpdatedAt ? new Date(p.schemaUpdatedAt).toLocaleDateString('vi-VN') : 'N/A'}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
+  </div>
+
+  {/* ── Tab 2: Global Schema Editor ── */}
+  <div class="tab-panel" id="tab-editor">
+    <form method="POST">
+      <input type="hidden" name="action" value="save_global" />
+      <div class="editor-grid">
+        <div>
+          <div class="card" style="padding:20px;">
+            <div class="card-title">🌐 Global Schema (xuất hiện trên mọi trang)</div>
+            <textarea
+              id="globalSchemaTextarea"
+              name="schema_value"
+              class="schema-textarea"
+              placeholder={'{\n  "@context": "https://schema.org",\n  "@graph": [\n    {\n      "@type": "Organization",\n      ...\n    }\n  ]\n}'}
+            >{globalSchemaStr}</textarea>
+            <div id="validatorResult" class="validator-box">
+              <span style="color:#94a3b8;font-size:12px;">Nhấn "Validate" để kiểm tra JSON-LD...</span>
+            </div>
+            <div class="action-row">
+              <button type="button" id="btnValidate" class="btn-validate">🔍 Validate</button>
+              <button type="submit" id="btnSave" class="btn-primary">💾 Lưu Global Schema</button>
+              <span id="saveStatus" style="font-size:12px;color:#64748b;"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-info">
+          <div class="info-card">
+            <div class="info-card-title">📊 Thống kê</div>
+            <div class="stat-grid">
+              <div class="stat-item">
+                <div class="stat-number">{pageSchemaCount}</div>
+                <div class="stat-label">Page có Schema</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">{postSchemaCount}</div>
+                <div class="stat-label">Post có Schema</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-title">💡 Lưu ý quan trọng</div>
+            <div style="font-size:12px;color:#475569;line-height:1.7;">
+              <p style="margin:0 0 8px 0;">Global Schema được nhúng vào <code style="background:#f1f5f9;padding:1px 4px;border-radius:3px;">&lt;head&gt;</code> của <strong>mọi trang</strong>.</p>
+              <p style="margin:0 0 8px 0;">Sau khi Save, hệ thống tự động <strong>invalidate KV cache</strong> để thay đổi có hiệu lực ngay.</p>
+              <p style="margin:0;">Validate JSON trước khi lưu để tránh lỗi runtime.</p>
+            </div>
+          </div>
+
+          <div class="hint-block">
+            <strong>Cấu trúc khuyến nghị:</strong><br/>
+            Dùng <code>@graph</code> để gom nhiều node vào một block duy nhất. Ví dụ:<br/><br/>
+            <code>Organization + TravelAgency + WebSite</code><br/><br/>
+            Đây là chuẩn Schema.org Linked Data tốt nhất.
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {/* ── Tab 3: Hướng dẫn ── */}
+  <div class="tab-panel" id="tab-guide">
+    <div class="card">
+      <div class="card-title">📖 Cách thêm Custom Schema cho Page/Post</div>
+      <div style="font-size:14px;color:#334155;line-height:1.8;">
+        <h3 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 8px 0;">Cho trang Page (Our Team, Portfolio...)</h3>
+        <ol style="padding-left:20px;margin:0 0 20px 0;">
+          <li>Vào <a href="/admin/pages" style="color:#2563eb;">Admin → Pages</a></li>
+          <li>Chọn Page cần thêm Schema → Chỉnh sửa</li>
+          <li>Mở phần <strong>"Cài đặt SEO & Schema"</strong> ở sidebar</li>
+          <li>Dán JSON-LD vào ô <strong>Custom Schema</strong></li>
+          <li>Nhấn <strong>Validate</strong> rồi <strong>Lưu Trang</strong></li>
+        </ol>
+
+        <h3 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 8px 0;">Ví dụ JSON mẫu cho trang Our Team (AboutPage)</h3>
+        <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;font-size:12px;overflow-x:auto;margin:0 0 20px 0;">{`{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://thericetour.com/our-team/#webpage",
+  "name": "Đội Ngũ FIT Tour",
+  "url": "https://thericetour.com/our-team/",
+  "inLanguage": "vi-VN",
+  "mainEntity": {
+    "@id": "https://thericetour.com/#organization"
+  }
+}`}</pre>
+
+        <h3 style="font-size:15px;font-weight:700;color:#0f172a;margin:0 0 8px 0;">Ví dụ JSON mẫu cho Person (Chuyên gia)</h3>
+        <pre style="background:#0f172a;color:#e2e8f0;padding:16px;border-radius:8px;font-size:12px;overflow-x:auto;">{`{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Max Vũ",
+  "jobTitle": "CEO & Founder",
+  "image": "https://media.fittour.vn/...",
+  "worksFor": {
+    "@id": "https://thericetour.com/#organization"
+  },
+  "url": "https://thericetour.com/our-team/"
+}`}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+// ─── 3-Tier JSON-LD Validator ──────────────────────────────────────────────
+const GOOGLE_REQUIRED_FIELDS = {
+  Article:       ['headline', 'image', 'datePublished', 'author'],
+  BlogPosting:   ['headline', 'image', 'datePublished', 'author'],
+  FAQPage:       ['mainEntity'],
+  BreadcrumbList:['itemListElement'],
+  Organization:  ['name', 'url'],
+  TravelAgency:  ['name', 'url'],
+  WebSite:       ['name', 'url'],
+  Person:        ['name'],
+  AboutPage:     ['name'],
+  WebPage:       ['name'],
+};
+
+function validateJsonLd(raw) {
+  const result = { valid: false, level: null, errors: [], warnings: [] };
+  let parsed;
+  try {
+    parsed = JSON.parse(raw.trim());
+    result.level = 1;
+  } catch (e) {
+    result.errors.push('❌ Level 1 — JSON không hợp lệ: ' + e.message.replace(/at position \d+/, '').trim());
+    return result;
+  }
+  const nodes = Array.isArray(parsed['@graph']) ? parsed['@graph'] : [parsed];
+  const rootContext = parsed['@context'];
+  if (!rootContext) {
+    result.errors.push('❌ Level 2 — Thiếu "@context". Google sẽ bỏ qua Schema này.');
+    result.errors.push('   → Thêm: "@context": "https://schema.org"');
+    return result;
+  }
+  const hasType = nodes.some(n => n['@type']);
+  if (!hasType) {
+    result.errors.push('❌ Level 2 — Thiếu "@type". Không xác định được loại thực thể.');
+    return result;
+  }
+  result.level = 2;
+  for (const node of nodes) {
+    const type = node['@type'];
+    if (!type) continue;
+    const required = GOOGLE_REQUIRED_FIELDS[type];
+    if (!required) continue;
+    for (const field of required) {
+      if (!node[field]) {
+        result.warnings.push(`⚠️ Level 3 — "${type}" thiếu field "${field}" (Google khuyến nghị).`);
+      }
+    }
+  }
+  result.level = 3;
+  result.valid = true;
+  return result;
+}
+
+function renderValidation(containerId, raw) {
+  const container = document.getElementById(containerId);
+  if (!container) return true;
+  if (!raw || !raw.trim()) {
+    container.innerHTML = '<span style="color:#64748b;font-size:12px;">Chưa có nội dung để validate.</span>';
+    return true;
+  }
+  const result = validateJsonLd(raw);
+  const lines = [];
+  if (result.errors.length) lines.push(...result.errors.map(e => `<div style="color:#dc2626;font-size:12px;margin:2px 0;">${e}</div>`));
+  if (result.warnings.length) lines.push(...result.warnings.map(w => `<div style="color:#d97706;font-size:12px;margin:2px 0;">${w}</div>`));
+  if (result.valid && result.warnings.length === 0) lines.push('<div style="color:#16a34a;font-size:12.5px;font-weight:600;">✅ JSON-LD hợp lệ — Sẵn sàng cho Google Rich Results</div>');
+  else if (result.valid) lines.push('<div style="color:#16a34a;font-size:12.5px;font-weight:600;">✅ Hợp lệ — Có cảnh báo ở trên (không bắt buộc sửa)</div>');
+  container.innerHTML = lines.join('');
+  return result.valid;
+}
+
+// ─── Tab switching ─────────────────────────────────────────────────────────
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    const tabId = btn.dataset.tab;
+    document.getElementById('tab-' + tabId)?.classList.add('active');
+  });
+});
+
+// ─── Validate button ───────────────────────────────────────────────────────
+const btnValidate = document.getElementById('btnValidate');
+const textarea = document.getElementById('globalSchemaTextarea');
+if (btnValidate && textarea) {
+  btnValidate.addEventListener('click', () => {
+    renderValidation('validatorResult', textarea.value);
+  });
+}
+
+// ─── Block save if invalid ─────────────────────────────────────────────────
+const btnSave = document.getElementById('btnSave');
+if (btnSave && textarea) {
+  btnSave.closest('form')?.addEventListener('submit', (e) => {
+    const canSave = renderValidation('validatorResult', textarea.value);
+    if (!canSave) {
+      e.preventDefault();
+      document.getElementById('saveStatus').textContent = '⛔ Sửa lỗi JSON-LD trước khi lưu!';
+      document.getElementById('saveStatus').style.color = '#dc2626';
+    }
+  });
+}
+</script>
+</AdminLayout>

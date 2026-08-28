@@ -1,0 +1,266 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { env } from 'cloudflare:workers';
+
+let settingsMap: Record<string, any> = {};
+try {
+  const d1Db = env?.dulichcoguu_d1;
+  if (d1Db) {
+    const { results } = await d1Db.prepare("SELECT * FROM SiteSetting").all();
+    (results || []).forEach((s: any) => {
+      let parsed = s.value;
+      try { if (typeof parsed === 'string') parsed = JSON.parse(parsed); } catch (e) {}
+      settingsMap[s.key] = parsed;
+    });
+  }
+} catch (e) {
+  console.error('Error fetching settings', e);
+}
+
+const contactInfo = settingsMap['contact'] || {};
+const socialLinks = settingsMap['social'] || {};
+const socialKeys = Object.keys(socialLinks);
+---
+
+<AdminLayout title="Cài đặt hệ thống" activeMenu="system" activeSubmenu="settings">
+<style>
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .header h2 { font-size: 24px; font-weight: 700; }
+  
+  .layout-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+  .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: #0f172a; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
+  
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .form-group input, .form-group textarea { width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; font-family: inherit; }
+  .form-group input:focus, .form-group textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 2px #bfdbfe; }
+  .form-group .hint { display: block; font-size: 12px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+  
+  .btn-submit { background: #2563eb; color: #fff; font-weight: 600; padding: 10px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+  .btn-submit:hover { background: #1d4ed8; }
+  
+  .btn-secondary { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 600; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .btn-secondary:hover { background: #e2e8f0; }
+
+  .btn-remove { background: #fee2e2; color: #dc2626; border: 1px solid #f87171; font-weight: 600; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .btn-remove:hover { background: #fecaca; }
+
+  .dynamic-row { display: flex; gap: 12px; margin-bottom: 12px; align-items: start; }
+  .dynamic-row > div:first-child { flex: 0 0 150px; }
+  .dynamic-row > div:nth-child(2) { flex: 1; }
+</style>
+
+<div class="header">
+  <h2>Cài đặt hệ thống (Global Configuration)</h2>
+</div>
+
+<div class="layout-grid">
+  <form id="settingsForm">
+    <!-- Contact Group (Fixed Fields) -->
+    <div class="card">
+      <h3>Thông tin liên hệ (Contact)</h3>
+      <p class="hint" style="margin-bottom: 16px;">Sử dụng trong bài viết với biến <code>{'{'}{'{'}contact.phone{'}'}{'}'}</code>, <code>{'{'}{'{'}contact.email{'}'}{'}'}</code></p>
+      
+      <div class="form-group">
+        <label for="contact_phone">Số Điện Thoại Hotline</label>
+        <input type="text" id="contact_phone" value={contactInfo.phone || ''} placeholder="0934 888 854" />
+      </div>
+      <div class="form-group">
+        <label for="contact_email">Email liên hệ</label>
+        <input type="email" id="contact_email" value={contactInfo.email || ''} placeholder="contact@fittour.vn" />
+      </div>
+      <div class="form-group">
+        <label for="contact_address">Địa chỉ văn phòng</label>
+        <textarea id="contact_address" rows="3" placeholder="19 Lương Hữu Khánh, Quận 1...">{contactInfo.address || ''}</textarea>
+      </div>
+    </div>
+
+    <!-- Social Group (Dynamic Fields) -->
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">
+        <h3 style="margin: 0; padding: 0; border: none;">Mạng xã hội (Social Links)</h3>
+        <button type="button" class="btn-secondary" id="addSocialBtn">+ Thêm MXH Mới</button>
+      </div>
+      <p class="hint" style="margin-bottom: 16px;">Sử dụng với biến <code>{'{'}{'{'}social.facebook{'}'}{'}'}</code>, <code>{'{'}{'{'}social.zalo{'}'}{'}'}</code></p>
+
+      <div id="socialContainer">
+        {socialKeys.length === 0 && (
+          <p id="noSocialText" style="font-size: 13px; color: #64748b; font-style: italic;">Chưa có mạng xã hội nào.</p>
+        )}
+        {socialKeys.map((key) => (
+          <div class="dynamic-row social-item">
+            <div>
+              <input type="text" class="social-key" value={key} placeholder="Tên key (vd: facebook)" readonly style="background: #f8fafc;" />
+            </div>
+            <div>
+              <input type="text" class="social-val" value={socialLinks[key]} placeholder="https://..." />
+            </div>
+            <div>
+              <button type="button" class="btn-remove remove-social-btn">Xóa</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- SEO & System Group -->
+    <div class="card">
+      <h3>Thông tin Doanh nghiệp & Tracking (Gợi ý thêm)</h3>
+      <p class="hint" style="margin-bottom: 16px;">Các trường gợi ý giúp quản lý tập trung thay vì hardcode trong code. Sử dụng với biến <code>{'{'}{'{'}company.name{'}'}{'}'}</code> hoặc render script.</p>
+      
+      <div class="form-group">
+        <label for="company_name">Tên Công Ty (Hiển thị Footer)</label>
+        <input type="text" id="company_name" value={settingsMap['company']?.name || ''} placeholder="Công ty TNHH Du lịch FIT Tour" />
+      </div>
+      <div class="form-group">
+        <label for="company_tax">Mã Số Thuế</label>
+        <input type="text" id="company_tax" value={settingsMap['company']?.tax || ''} placeholder="031xxxxxxx" />
+      </div>
+    </div>
+
+    
+    <!-- Corporate Menu (JSON) -->
+    <div class="card">
+      <h3>Menu Doanh Nghiệp (JSON Cấu trúc)</h3>
+      <p class="hint" style="margin-bottom: 16px;">Sửa cẩn thận cú pháp JSON. Dùng để thay đổi hình ảnh và link cho Header Doanh Nghiệp (Mega Menu Cards).</p>
+      
+      <div class="form-group">
+        <label for="corporate_menu">Cấu trúc Menu (JSON Array)</label>
+        <textarea id="corporate_menu" rows="12" placeholder="[
+  {...}
+]" style="font-family: monospace; white-space: pre; overflow-wrap: normal; overflow-x: auto;">{settingsMap['corporate_menu'] ? JSON.stringify(settingsMap['corporate_menu'], null, 2) : ''}</textarea>
+      </div>
+    </div>
+    
+    <!-- Global SEO Schema -->
+
+    <div class="card">
+      <h3>Global SEO Schema (JSON-LD)</h3>
+      <p class="hint" style="margin-bottom: 16px;">Đoạn mã Schema chuẩn của tổ chức sẽ được tự động chèn vào thẻ &lt;head&gt; của tất cả các trang.</p>
+      
+      <div class="form-group">
+        <label for="seo_schema">Mã JSON-LD Schema</label>
+        <textarea id="seo_schema" rows="12" placeholder='{\n  "@context": "https://schema.org",\n  "@type": "Organization",\n...}' style="font-family: monospace; white-space: pre; overflow-wrap: normal; overflow-x: auto;">{settingsMap['schema'] || ''}</textarea>
+      </div>
+    </div>
+    <div style="position: sticky; bottom: 20px; background: white; padding: 16px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); display: flex; justify-content: flex-end;">
+      <button type="submit" class="btn-submit" id="saveAllBtn">Lưu Tất Cả Cài Đặt</button>
+    </div>
+  </form>
+</div>
+
+<script is:inline>
+  // Add new dynamic social row
+  document.getElementById('addSocialBtn').addEventListener('click', () => {
+    const keyName = prompt('Nhập tên MXH (ví dụ: tiktok, instagram, youtube - chỉ chữ thường không dấu):');
+    if (!keyName) return;
+    
+    // Clean keyname
+    const safeKey = keyName.toLowerCase().replace(/[^a-z0-9_]/g, '');
+    if (!safeKey) return alert('Tên không hợp lệ!');
+
+    document.getElementById('noSocialText')?.remove();
+
+    const container = document.getElementById('socialContainer');
+    const row = document.createElement('div');
+    row.className = 'dynamic-row social-item';
+    row.innerHTML = `
+      <div><input type="text" class="social-key" value="${safeKey}" readonly style="background: #f8fafc;" /></div>
+      <div><input type="text" class="social-val" placeholder="https://..." /></div>
+      <div><button type="button" class="btn-remove remove-social-btn">Xóa</button></div>
+    `;
+    container.appendChild(row);
+  });
+
+  // Handle remove
+  document.getElementById('socialContainer').addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-social-btn')) {
+      if (confirm('Bạn có chắc muốn xóa mục này?')) {
+        e.target.closest('.social-item').remove();
+      }
+    }
+  });
+
+  // Save functionality
+  document.getElementById('settingsForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('saveAllBtn');
+    btn.innerText = 'Đang lưu...';
+    btn.disabled = true;
+
+    // 1. Gather Contact Data
+    const contactData = {
+      phone: document.getElementById('contact_phone').value,
+      email: document.getElementById('contact_email').value,
+      address: document.getElementById('contact_address').value,
+    };
+
+    // 2. Gather Social Data
+    const socialData = {};
+    document.querySelectorAll('.social-item').forEach(item => {
+      const k = item.querySelector('.social-key').value;
+      const v = item.querySelector('.social-val').value;
+      if (k) socialData[k] = v;
+    });
+
+    // 3. Gather Company Data
+    const companyData = {
+      name: document.getElementById('company_name')?.value || '',
+      tax: document.getElementById('company_tax')?.value || '',
+    };
+
+    
+    // 4. Gather Schema Data
+    const schemaData = document.getElementById('seo_schema')?.value || '';
+    
+    // 5. Gather Corporate Menu Data
+    let corporateMenuData = '';
+    const rawCorporateMenu = document.getElementById('corporate_menu')?.value;
+    if (rawCorporateMenu) {
+      try {
+        corporateMenuData = JSON.parse(rawCorporateMenu);
+      } catch (e) {
+        alert('Lỗi cú pháp JSON ở Menu Doanh Nghiệp! Vui lòng kiểm tra lại.');
+        btn.innerText = 'Lưu Tất Cả Cài Đặt';
+        btn.disabled = false;
+        return;
+      }
+    }
+
+
+    try {
+      
+      const payload = [
+        { key: 'contact', value: contactData },
+        { key: 'social', value: socialData },
+        { key: 'company', value: companyData },
+        { key: 'schema', value: schemaData },
+        { key: 'corporate_menu', value: corporateMenuData }
+      ];
+
+
+      const res = await fetch('/api/admin/settings', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const resData = await res.json();
+      
+      if (res.ok && resData.success) {
+        window.AppModal?.alert('Lưu cài đặt thành công!', 'success') || alert('Lưu cài đặt thành công!');
+      } else {
+        window.AppModal?.alert(resData.error || 'Có lỗi xảy ra khi lưu', 'error') || alert(resData.error || 'Có lỗi xảy ra khi lưu');
+      }
+    } catch (err) {
+      console.error(err);
+      window.AppModal?.alert('Có lỗi xảy ra khi lưu', 'error') || alert('Có lỗi xảy ra khi lưu');
+    } finally {
+      btn.innerText = 'Lưu Tất Cả Cài Đặt';
+      btn.disabled = false;
+    }
+  });
+</script>
+</AdminLayout>
