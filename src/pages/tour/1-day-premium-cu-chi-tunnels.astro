@@ -881,6 +881,70 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     </div>
   </section>
 
+  <!-- MOBILE STICKY BOTTOM NAVIGATION (Native App Style) -->
+  <nav class="mobile-sticky-bottom-nav" aria-label="Mobile Quick Navigation">
+    <button type="button" class="mobile-nav-item item-itinerary" id="btn-mobile-itinerary" aria-label="Xem lịch trình">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+      </div>
+      <span>Itinerary</span>
+    </button>
+
+    <button type="button" class="mobile-nav-item item-office" id="btn-mobile-office" aria-label="Văn phòng & Bảo đảm">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+      </div>
+      <span>Our Office</span>
+    </button>
+
+    <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-whatsapp" aria-label="Chat WhatsApp">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://m.me/thericetour" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-messenger" aria-label="Chat Messenger">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+      </div>
+      <span>Messenger</span>
+    </a>
+  </nav>
+
+  <!-- MODAL: OUR OFFICE & TRUST (Mobile Click Target) -->
+  <div id="office-trust-modal" class="office-modal-overlay" style="display: none;">
+    <div class="office-modal-card">
+      <div class="office-modal-header">
+        <div class="office-badge">🏢 Trụ sở The Rice Travel Group</div>
+        <button type="button" class="office-modal-close" id="close-office-modal" aria-label="Đóng">&times;</button>
+      </div>
+      <div class="office-modal-body">
+        <div class="office-info-item">
+          <div class="office-info-icon">📍</div>
+          <div>
+            <strong>Văn phòng đón khách tại TP.HCM:</strong>
+            <p>189 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh</p>
+          </div>
+        </div>
+        <div class="office-info-item">
+          <div class="office-info-icon">📜</div>
+          <div>
+            <strong>Giấy phép kinh doanh Lữ hành Quốc tế:</strong>
+            <p>Được cấp bởi Cục Du lịch Quốc gia Việt Nam</p>
+          </div>
+        </div>
+        <div class="office-info-item">
+          <div class="office-info-icon">🛡️</div>
+          <div>
+            <strong>Cam kết bảo hiểm & chất lượng:</strong>
+            <p>Bảo hiểm du lịch trọn gói mức bồi thường cao, 100% không shopping ép buộc, xe 7 chỗ đời mới VIP.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Client-side Interactive Scripts -->
   <script>
     function initTourInteractions() {
@@ -932,7 +996,37 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
         if (next) next.addEventListener("click", () => slider.scrollBy({ left: 380, behavior: "smooth" }));
       });
 
-      // 4. Guest Count & Price Calculation
+      // 4. Mobile Bottom Nav Handlers
+      const btnMobileItinerary = document.getElementById("btn-mobile-itinerary");
+      if (btnMobileItinerary) {
+        btnMobileItinerary.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.getElementById("itinerary") || document.querySelector(".tour-itinerary-section");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
+
+      const btnMobileOffice = document.getElementById("btn-mobile-office");
+      const officeModal = document.getElementById("office-trust-modal");
+      const closeOfficeBtn = document.getElementById("close-office-modal");
+      if (btnMobileOffice && officeModal) {
+        btnMobileOffice.addEventListener("click", (e) => {
+          e.preventDefault();
+          officeModal.style.display = "flex";
+        });
+        if (closeOfficeBtn) {
+          closeOfficeBtn.addEventListener("click", () => {
+            officeModal.style.display = "none";
+          });
+        }
+        officeModal.addEventListener("click", (e) => {
+          if (e.target === officeModal) officeModal.style.display = "none";
+        });
+      }
+
+      // 5. Guest Count & Price Calculation
       const minusBtn = document.getElementById("guest-minus-btn");
       const plusBtn = document.getElementById("guest-plus-btn");
       const countDisplay = document.getElementById("guest-count-display");
