@@ -1,0 +1,1142 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/tour-landing.css";
+import { safeQueryCritical } from '@/lib/db-client';
+
+const slug = 'cooking-class-local-market';
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (env as any)?.DB;
+
+let tour: any;
+if (d1Db) {
+  try {
+    tour = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Tour WHERE slug = ?").bind(slug).first<any>(),
+      { route: Astro.url.pathname, slug, queryType: "fetch_tour_by_slug" }
+    );
+  } catch (e) {
+    console.error("Fetch tour D1 error:", e);
+  }
+}
+
+const tourTitle = "Authentic Vietnamese Cooking Class & Local Market Discovery";
+const seoTitle = tour?.seoTitle || tourTitle;
+const seoDesc = tour?.seoDescription || tour?.excerpt || "Join an authentic market-to-table culinary workshop with the master chefs of Dai Viet Restaurant. Handpick fresh market ingredients, learn traditional fresh spring rolls (Gỏi Cuốn), savor your creations, and enjoy professional photography throughout. Small group max 5 guests.";
+const featuredImage = "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80";
+const basePrice = 1490000;
+const formattedPrice = "1,490,000 VND";
+const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
+const currentOrigin = Astro.url.origin || 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/tour/${slug}`;
+const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={featuredImage}
+  preloadImages={[featuredImage]}
+  adminEditUrl={adminEditUrl}
+  canonical={canonicalUrl}
+  canonicalMdUrl={canonicalMdUrl}
+>
+  <!-- Schema Structured Data for SEO -->
+  <script type="application/ld+json" data-cfasync="false" set:html={JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": tourTitle,
+    "image": featuredImage,
+    "description": seoDesc,
+    "sku": "COOKING-CLASS-MARKET-VIP",
+    "offers": {
+      "@type": "Offer",
+      "url": canonicalUrl,
+      "priceCurrency": "VND",
+      "price": basePrice.toString(),
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  })} />
+
+  <script type="application/ld+json" data-cfasync="false" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": currentOrigin },
+      { "@type": "ListItem", "position": 2, "name": "Tours", "item": `${currentOrigin}/tours` },
+      { "@type": "ListItem", "position": 3, "name": tourTitle, "item": canonicalUrl }
+    ]
+  })} />
+
+  <div class="bg-gray-50/60 min-h-screen">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
+      
+      <!-- BREADCRUMB -->
+      <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="text-gray-900 font-medium truncate">{tourTitle}</span>
+      </nav>
+
+      <!-- TOUR TOP HEADER (TOURRADAR MASTER STANDARD) -->
+      <header class="tour-top-header mb-4 sm:mb-6">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-2.5">
+          {tourTitle}
+        </h1>
+        <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm sm:text-base text-slate-600 font-medium">
+          <div class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-md border border-amber-200 text-sm shadow-xs">
+            <span>★ 5.0</span>
+            <span class="text-slate-700 font-normal">TripAdvisor 5.0 Excellence</span>
+          </div>
+          <div class="inline-flex items-center gap-1">
+            <span>⏱️</span>
+            <span>3.5 – 4 Hours (Daily Morning/Afternoon)</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1">
+            <span>👨‍🍳</span>
+            <span>VIP Small Class (Max 5 participants)</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1 text-emerald-700 font-semibold">
+            <span>✓ 100% No Shopping</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO IMAGE GALLERY (16:9 CINEMATIC RATIO) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 rounded-2xl overflow-hidden shadow-xs mb-6 sm:mb-8">
+        <div class="md:col-span-2 relative aspect-video overflow-hidden bg-slate-100">
+          <img 
+            src={featuredImage} 
+            alt={tourTitle} 
+            class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+            width="1200" 
+            height="750" 
+            loading="eager" 
+            fetchpriority="high" 
+          />
+        </div>
+        <div class="hidden md:flex flex-col gap-2 sm:gap-3">
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" 
+              alt="Fresh aromatic herbs and ingredients selection" 
+              class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+              loading="eager" 
+            />
+          </div>
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
+            <img 
+              src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" 
+              alt="Saigon traditional local market ambiance" 
+              class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+              loading="eager" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <main class="elementor-tour-wrapper custom-tour-layout">
+        <div class="tour-grid-container">
+          
+          <!-- ================= CỘT CHÍNH (TRÁI) ================= -->
+          <div class="tour-main-col">
+            
+            <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
+            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
+              <p class="text-slate-700 text-[16.5px] sm:text-lg leading-relaxed mb-4">
+                <strong class="text-slate-900">Discover the authentic soul of Vietnamese gastronomy from market to table.</strong> Guided directly by veteran head chefs from Dai Viet Restaurant Group and <a href="https://www.google.com/maps?q=Cu+Chi+Tunnes+-+Mekong+Delta,+195+-195A-197+%C4%90%E1%BB%81+Th%C3%A1m,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh&ftid=0x31752f004d8db6fd:0x953f9f5e77bd1fb1&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813469,94286869&g_ep=CAISEjI2LjIyLjIuOTIxMTAxNzU3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwODEzNDY5LDk0Mjg2ODY5QgJWTg%3D%3D&skid=a2041110-0626-4183-8401-518cf9822bb4&g_st=ic" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, this hands-on workshop takes you through a bustling wet market to pick farm-fresh organic herbs, teaches you the secrets of traditional Vietnamese fresh spring rolls (Gỏi Cuốn) and savory dipping sauces, and treats you to a celebratory feast of your own handmade creations with full professional photography.
+              </p>
+              <div class="border-t border-slate-100 pt-3.5">
+                <p class="font-bold text-slate-900 text-lg mb-2.5">The Rice Travel Group's Signature Differences:</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base sm:text-lg text-slate-700">
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold text-lg">✓</span>
+                    <span><strong>Real Restaurant Chefs:</strong> Hands-on training by executive chefs from Dai Viet Restaurant</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold text-lg">✓</span>
+                    <span><strong>VIP Small Class:</strong> Maximum 5 participants per session for 100% individual guidance</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold text-lg">✓</span>
+                    <span><strong>Dedicated Photographer:</strong> Professional photos captured from market to dining table</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold text-lg">✓</span>
+                    <span><strong>Market-to-Table Freshness:</strong> Same-day organic ingredients & souvenir recipe booklet</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- THANH CTA TƯ VẤN PREMIUM (EXACT 1:1 FIT TOUR DESIGN) -->
+            <div class="premium-cta-bar mb-8">
+              <div class="cta-title hidden md:block">Cooking Consultation</div>
+              
+              <div class="cta-links">
+                <a href="https://wa.me/0962333621" target="_blank" rel="noopener noreferrer" class="social-btn zalo">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
+                  </div>
+                  <div class="social-text">
+                    <span class="social-name">Zalo</span>
+                    <span class="social-desc">0962.333.621</span>
+                  </div>
+                </a>
+                
+                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="social-btn msg">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+                  </div>
+                  <div class="social-text">
+                    <span class="social-name">Messenger</span>
+                    <span class="social-desc">The Rice Tour</span>
+                  </div>
+                </a>
+              </div>
+
+              <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name={tourTitle}>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                Fill Form
+              </button>
+            </div>
+
+            <!-- KEY TOUR ATTRIBUTES (TOURRADAR STYLE 2-COL CONCISE GRID) -->
+            <div class="mb-10 pb-8 border-b border-slate-200">
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">Class Highlights</h2>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+                
+                <!-- Item 1 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Small Class Size (Max 5 Pax)</div>
+                    <div class="text-sm text-slate-500 mt-1">100% individual workstation & dedicated chef mentorship</div>
+                  </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Professional Photographer Included</div>
+                    <div class="text-sm text-slate-500 mt-1">Edited photo album of market shopping, cooking & dining</div>
+                  </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Chef-Guided Local Market Tour</div>
+                    <div class="text-sm text-slate-500 mt-1">Learn to select aromatic herbs and fresh produce like a local</div>
+                  </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Authentic Gỏi Cuốn & Sauce Mastery</div>
+                    <div class="text-sm text-slate-500 mt-1">Master rolling technique and balanced sweet-savory sauces</div>
+                  </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V4a2 2 0 10-2 2h2"></path></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Feast on Your Own Creations</div>
+                    <div class="text-sm text-slate-500 mt-1">Sit down for a celebratory lunch or dinner with fellow food lovers</div>
+                  </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="flex items-start gap-3.5">
+                  <div class="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 border border-orange-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">100% No Shopping Guarantee</div>
+                    <div class="text-sm text-slate-500 mt-1">Pure culinary immersion with no forced commercial commissions</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- UNFOLD BOX (GIỚI THIỆU TỔNG QUAN) -->
+            <div class="tour-unfold-box">
+              <input type="checkbox" id="unfold-check" class="unfold-checkbox" />
+              <div class="unfold-content">
+                <p><strong>What makes Vietnamese cuisine revered around the world is its delicate balance of five fundamental taste elements — spicy, sour, bitter, salty, and sweet.</strong></p>
+                <p>At <a href="https://www.google.com/maps?q=Cu+Chi+Tunnes+-+Mekong+Delta,+195+-195A-197+%C4%90%E1%BB%81+Th%C3%A1m,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh&ftid=0x31752f004d8db6fd:0x953f9f5e77bd1fb1&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813469,94286869&g_ep=CAISEjI2LjIyLjIuOTIxMTAxNzU3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwODEzNDY5LDk0Mjg2ODY5QgJWTg%3D%3D&skid=a2041110-0626-4183-8401-518cf9822bb4&g_st=ic" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we believe that true cooking begins at the source: walking into a neighborhood morning market with our executive chef to touch, smell, and select the freshest spearmint, cilantro, rice paper, and succulent shrimp.</p>
+                <p>With an intimate cap of maximum 5 participants per session, you are not watching a demonstration behind a glass window. You will have your own cooking station, cutting board, and personalized guidance from Dai Viet Restaurant's culinary masters. Learn the knife skills, the precise wrapping technique for translucent spring rolls, the chemistry behind authentic dipping sauces, and sit down to enjoy a feast you created with your own hands — with every radiant smile captured by our dedicated photographer.</p>
+                <div class="unfold-overlay"></div>
+              </div>
+              <div class="unfold-btn-wrapper flex justify-center mt-4">
+                <label for="unfold-check" class="unfold-btn">
+                  <span class="btn-text-show">SHOW</span>
+                  <span class="btn-text-hide">HIDE</span>
+                  <svg class="w-4 h-4 ml-1 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </label>
+              </div>
+            </div>
+
+            <!-- QR CODE BOX -->
+            <div class="tour-qr-box mb-8 bg-slate-50 border border-slate-200 p-5 sm:p-6 rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-5 sm:gap-6">
+              <div class="flex-1">
+                <h4 class="text-base font-bold text-slate-800 mb-1">1:1 Consultation with The Rice Travel Group</h4>
+                <p class="text-sm text-slate-500 m-0 leading-relaxed">Scan the QR code or call our hotline to customize your private cooking workshop schedule or dietary preferences (Vegetarian/Vegan/Gluten-Free available).</p>
+              </div>
+              <div class="flex items-center gap-4 shrink-0">
+                <div class="text-center">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://wa.me/0962333621" alt="QR WhatsApp The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
+                </div>
+                <div class="text-center">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUOTE BOX -->
+            <div class="tour-premium-quote">
+              <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
+              <p class="quote-text">
+                “Real cooking starts at the market. When you know how to choose the herbs, balance the fish sauce, and wrap with care, Vietnamese cuisine becomes a lifelong memory.”
+              </p>
+            </div>
+
+            <!-- NƠI Ở / TIÊU CHUẨN BẾP -->
+            <section class="tour-accommodation-section mb-12 mt-10" style="font-family: inherit;">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Kitchen Space & Accompanying Service Standards</h2>
+              <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                  <div style="width: 56px; height: 56px; border-radius: 50%; background: #ffedd5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <span style="font-size: 29.5px;">👨‍🍳</span>
+                  </div>
+                  <div>
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px;">
+                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Professional Kitchen at Dai Viet Restaurant & Transfer</h3>
+                      <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 12.5px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">VIP Culinary</span>
+                    </div>
+                    <p style="font-size: 15.5px; color: #64748b; margin: 0; line-height: 1.5;">
+                      Fully equipped air-conditioned culinary workstations, sanitized chef knives and cookware, same-day fresh organic produce, and a comfortable transfer between market and kitchen.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCOMMODATION SLIDER -->
+                <div class="tour-slider-container">
+                  <div class="tour-slider-track">
+                    <div class="tour-slide">
+                      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80" alt="Vietnamese culinary workshop" class="tour-slide-img" />
+                    </div>
+                    <div class="tour-slide">
+                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Fresh herbs and market ingredient selection" class="tour-slide-img" />
+                    </div>
+                    <div class="tour-slide">
+                      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="Local market stroll with chef" class="tour-slide-img" />
+                    </div>
+                  </div>
+                  <button class="tour-slider-arrow tour-slider-prev" aria-label="Previous Slide">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                  </button>
+                  <button class="tour-slider-arrow tour-slider-next" aria-label="Next Slide">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                  </button>
+                  <div class="tour-slider-dots">
+                    <button class="tour-slider-dot active" aria-label="Slide 1"></button>
+                    <button class="tour-slider-dot" aria-label="Slide 2"></button>
+                    <button class="tour-slider-dot" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="tour-slider-counter">1 / 3</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- LỊCH TRÌNH CHI TIẾT (ACCORDION) -->
+            <section class="tour-itinerary-section mb-12 mt-12" id="itinerary">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Detailed Program & Sequence</h2>
+              
+              <div class="tour-itinerary">
+                <div class="flex flex-col gap-4">
+                  
+                  <!-- STAGE 1 -->
+                  <details class="premium-itinerary-item" open>
+                    <summary class="premium-itinerary-summary">
+                      <div class="itinerary-toggle-icon"></div>
+                      <span>Stage 1: Local Market Visit & Fresh Ingredient Selection (30–60 Mins)</span>
+                    </summary>
+                    <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                      <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
+                        <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
+                          <li>Meet your executive chef instructor at the central meeting point</li>
+                          <li>Explore a vibrant local market and interact with friendly stall keepers</li>
+                          <li>Learn to distinguish authentic Vietnamese herbs (perilla, basil, mint, saw-tooth herb)</li>
+                          <li>Handpick fresh seafood, meats, and seasonal vegetables for class</li>
+                        </ul>
+                      </div>
+
+                      <p style="margin-bottom:14px"><strong>Authentic Market Discovery:</strong> The experience begins not in the kitchen, but in the lively lanes of a traditional Saigon morning market. Accompanied by a professional executive chef from Dai Viet Restaurant Group, you'll immerse yourself in the vibrant morning atmosphere. Learn how locals inspect produce freshness, bargain with a warm smile, and identify the indispensable culinary aromatics that define Vietnamese cuisine.</p>
+                    </div>
+                  </details>
+
+                  <!-- STAGE 2 -->
+                  <details class="premium-itinerary-item">
+                    <summary class="premium-itinerary-summary">
+                      <div class="itinerary-toggle-icon"></div>
+                      <span>Stage 2: Hands-On Cooking Class & Fresh Spring Roll Mastery (2 Hours)</span>
+                    </summary>
+                    <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                      <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
+                        <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
+                          <li>Step into your private kitchen workstation with sanitized tools</li>
+                          <li>Master vegetable julienning, herb washing, and protein preparation</li>
+                          <li>Learn the technique of rolling translucent, tight Fresh Spring Rolls (Gỏi Cuốn)</li>
+                          <li>Concoct signature authentic dipping sauces (Peanut Hoisin & Nước Mắm Chanh Tỏi Ớt)</li>
+                        </ul>
+                      </div>
+
+                      <p style="margin-bottom:14px"><strong>Mastering the Art of Vietnamese Gastronomy:</strong> Returning to the professional kitchen, you'll begin prepping your fresh market bounty. The star of the workshop is mastering authentic Vietnamese Fresh Spring Rolls (Gỏi Cuốn) — arranging the vermicelli, pork, fresh shrimp, and herbs to achieve the signature translucent roll with zero tears. Under the patient, one-on-one tutelage of the chef, you'll balance the rich peanut hoisin sauce and the tangy, fragrant garlic-chili fish sauce dip to perfection.</p>
+
+                      <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4 rounded-r-md">
+                        <p class="font-semibold text-amber-800 mb-1 flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                          </svg>
+                          Dietary Adaptations
+                        </p>
+                        <p class="text-amber-900 text-base m-0">Vegetarian, Vegan, and Gluten-Free alternatives (featuring crispy tofu, braised mushrooms, and plant-based dipping sauces) are readily prepared with prior notice upon booking.</p>
+                      </div>
+                    </div>
+                  </details>
+
+                  <!-- STAGE 3 -->
+                  <details class="premium-itinerary-item">
+                    <summary class="premium-itinerary-summary">
+                      <div class="itinerary-toggle-icon"></div>
+                      <span>Stage 3: Feast on Your Creations & Photo Session (45–60 Mins)</span>
+                    </summary>
+                    <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                      <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
+                        <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
+                          <li>Savor the delicious multi-course meal prepared entirely by your hands</li>
+                          <li>Enjoy ice-cold drinks, jasmine tea, and lively culinary conversations</li>
+                          <li>Professional food plating & chef portrait photoshoot with your photographer</li>
+                          <li>Receive a printed and digital take-home recipe booklet</li>
+                        </ul>
+                      </div>
+
+                      <p style="margin-bottom:14px"><strong>Savoring the Fruits of Your Labor:</strong> Gather around the dining table to feast on the sumptuous dishes you crafted. Throughout the meal, your dedicated photographer captures natural, heartfelt moments — from laughter with the chef to beautiful close-ups of your plated creations. Receive your souvenir recipe booklet so you can effortlessly recreate the taste of Saigon back home for family and friends!</p>
+                    </div>
+                  </details>
+
+                </div>
+              </div>
+              
+              <p style="font-style:italic;color:#64748b;font-size:1.0rem;margin-top:16px;padding:0 12px;">
+                Note: Morning session runs from 08:30 to 12:30; Afternoon session runs from 14:00 to 18:00. Custom timing available upon private request.
+              </p>
+            </section>
+
+            <!-- LỊCH KHỞI HÀNH -->
+            <section class="tour-departure-section mb-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Class Schedule</h2>
+              
+              <div class="lich-khoi-hanh-wrapper font-sans">
+                <div class="departures-container">
+                  <div class="hidden md:block overflow-x-auto">
+                    <table class="w-full text-left border-collapse m-0">
+                      <thead>
+                        <tr class="bg-slate-50">
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Class Title & Code</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Session</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Time</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Price / Pax</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-center">Status</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-right">Book Now</th>
+                        </tr>
+                      </thead>
+                      <tbody class="bg-white">
+                        <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title={tourTitle} data-code="COOKING-MARKET-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:30:00.000Z">
+                          <td class="p-4">
+                            <div class="font-bold text-slate-800 text-base leading-snug">{tourTitle}</div>
+                            <span class="font-mono text-[11.5px] text-slate-500 mt-1 inline-block">COOKING-MARKET-DAILY</span>
+                          </td>
+                          <td class="p-4 text-sm text-slate-600 space-y-1.5">
+                            <div class="flex items-center gap-1.5">
+                              <span class="text-orange-500 shrink-0">👨‍🍳</span>
+                              <span class="font-semibold text-slate-700">Morning / Afternoon</span>
+                            </div>
+                            <div class="text-[12.5px] text-slate-500 mt-0.5">Dai Viet Culinary Studio</div>
+                          </td>
+                          <td class="p-4">
+                            <div class="font-bold text-slate-800">Daily Classes</div>
+                            <div class="text-sm text-slate-500 mt-0.5">08:30 – 12:30 / 14:00 – 18:00</div>
+                          </td>
+                          <td class="p-4 font-bold text-orange-600 whitespace-nowrap text-lg">{formattedPrice}</td>
+                          <td class="p-4 text-center">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-bold border text-green-700 bg-green-50 border-green-200">
+                              Available
+                            </span>
+                          </td>
+                          <td class="p-4 text-right">
+                            <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-sm transition-colors" data-tour-name={tourTitle}>
+                              Book Now
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- MOBILE CARDS -->
+                  <div class="md:hidden space-y-4">
+                    <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title={tourTitle} data-code="COOKING-MARKET-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:30:00.000Z">
+                      <div class="flex justify-between items-start mb-3">
+                        <div class="flex-1 pr-3">
+                          <div class="font-bold text-slate-800 text-base leading-snug mb-1">{tourTitle}</div>
+                          <span class="font-mono text-[11.5px] text-slate-500">COOKING-MARKET-DAILY</span>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md text-[12.5px] font-bold border whitespace-nowrap text-green-700 bg-green-50 border-green-200">
+                          Available
+                        </span>
+                      </div>
+                      <div class="bg-slate-50 rounded-lg p-3 mb-3 space-y-1.5 text-sm">
+                        <div class="flex items-center gap-1.5">
+                          <span class="text-orange-500 shrink-0">👨‍🍳</span>
+                          <span class="font-semibold text-slate-700">Market Tour & Cooking Class</span>
+                        </div>
+                        <div class="text-[12.5px] text-slate-500">Dai Viet Culinary Studio, Dist. 1</div>
+                      </div>
+                      <div class="flex items-center gap-2 text-base text-slate-600 mb-1">
+                        <span>🛫 Daily: 08:30 - 12:30 / 14:00 - 18:00</span>
+                      </div>
+                      <div class="h-px bg-slate-100 w-full my-3"></div>
+                      <div class="flex justify-between items-center">
+                        <div>
+                          <span class="text-sm text-slate-500 block">All-inclusive price</span>
+                          <span class="font-bold text-orange-600 text-lg">{formattedPrice}</span>
+                        </div>
+                        <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-sm" data-tour-name={tourTitle}>
+                          Book Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- THÔNG TIN THÊM -->
+            <section class="tour-faq-section mb-12 mt-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Additional Information</h2>
+              
+              <div class="tour-faq-wrapper flex flex-col gap-4">
+                
+                <details open class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
+                  <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span class="flex-1 text-xl font-bold text-green-700">Workshop Inclusions</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                  </summary>
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
+                    <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
+                      <li>Market visit with round-trip transportation and guidance from a professional chef.</li>
+                      <li>All fresh organic ingredients purchased during the market visit.</li>
+                      <li>Hands-on cooking instruction by executive chefs from Dai Viet Restaurant Group.</li>
+                      <li>Professional photographer accompanying the experience from market to meal.</li>
+                      <li>A delicious multi-course feast featuring the dishes you prepare yourself.</li>
+                      <li>Professionally edited high-resolution photo collection delivered after the class.</li>
+                      <li>Take-home printed & digital recipe booklet.</li>
+                      <li>Complimentary welcome drink, mineral water, and hot jasmine tea.</li>
+                    </ol>
+                  </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
+                  <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    <span class="flex-1 text-xl font-bold text-red-700">Workshop Exclusions</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                  </summary>
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
+                    <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
+                      <li>Extra alcoholic beverages (beer, wine) ordered during lunch/dinner.</li>
+                      <li>Personal market purchases outside of class ingredients.</li>
+                      <li>Gratuities (tips) for the chef and photographer (optional).</li>
+                      <li>VAT tax (if official tax invoice is requested).</li>
+                    </ol>
+                  </div>
+                </details>
+
+                <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
+                  <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <span class="flex-1 text-xl font-bold text-sky-700">Booking & Dietary Policy</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                  </summary>
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base leading-relaxed">
+                    <p>Please book at least 12 hours prior so our chefs can prepare the fresh market logistics and custom dietary alternatives.</p>
+                    <p>Vegetarian, Vegan, and food allergy accommodations are completely free with advance notice.</p>
+                    <p>Cancellation over 24 hours prior: 100% Free of charge.</p>
+                    <p>Cancellation within 24 hours before class: 50% fee.</p>
+                  </div>
+                </details>
+
+              </div>
+            </section>
+
+            <!-- GALLERY ẢNH KHÁCH HÀNG -->
+            <section class="tour-gallery-section mb-12 mt-12 group">
+              <div class="mb-6">
+                <h2 class="text-2xl font-bold text-slate-800 m-0">Customer Cooking Class Moments</h2>
+              </div>
+              <div class="relative">
+                <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Previous photo">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button class="tour-gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0" aria-label="Next photo">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+                <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing">
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Cooking workshop experience" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                  </div>
+
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Fresh market produce selection" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                  </div>
+
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Saigon traditional market exploration" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                  </div>
+
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Culinary memories with the chef" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- ================= CỘT SIDEBAR (PHẢI) ================= -->
+          <div class="tour-sidebar-col">
+            <div class="sticky top-[90px] flex flex-col gap-6">
+
+              <!-- STICKY PRICE CARD (LUXURY REFINED DESIGN) -->
+              <div class="sticky-price-card" style="background:#ffffff; border-radius:24px; box-shadow:0 12px 36px rgba(0,0,0,0.07); border:1px solid #f1f5f9; padding:24px 20px;">
+                
+                <!-- 2 Icon Tiện Ích Chuẩn -->
+                <div class="service-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; border-bottom:1px solid #f1f5f9; padding-bottom:20px; margin-bottom:20px;">
+                  <div class="service-item" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+                    <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
+                      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:15.5px; margin-bottom:2px;">Service</div>
+                    <div class="service-sub" style="font-size:14.5px; color:#64748b;">VIP All-inclusive</div>
+                  </div>
+
+                  <div class="service-item" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+                    <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
+                      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:15.5px; margin-bottom:2px;">Duration</div>
+                    <div class="service-sub" style="font-size:14.5px; color:#64748b;">3.5 – 4 Hours</div>
+                  </div>
+                </div>
+
+                <!-- Khối Giá Lớn -->
+                <div style="margin-bottom: 20px; text-align: left;">
+                  <div class="price-label" style="font-size:14.5px; color:#64748b; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">All-inclusive price from</div>
+                  <div class="price-amount" style="font-size:25.5px; font-weight:800; color:#0f172a; line-height:1.2; letter-spacing:-0.02em; white-space:nowrap;">{formattedPrice}</div>
+                  <div style="font-size:13.5px; color:#94a3b8; margin-top:4px;">Includes market trip, chef instruction, feast & photography</div>
+                </div>
+
+                <!-- Interactive Date & Guest Picker (Styled Super Clean) -->
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:16px; margin-bottom:20px; display:flex; flex-direction:column; gap:12px;">
+                  <div>
+                    <label style="display:block; font-size:13.5px; font-weight:700; color:#334155; margin-bottom:6px;">Select Workshop Date:</label>
+                    <input type="date" id="booking-date-input" style="width:100%; padding:10px 14px; font-size:14.5px; font-weight:600; color:#1e293b; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; outline:none;" value="2026-08-28" />
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:13.5px; font-weight:700; color:#334155; margin-bottom:6px;">Number of Participants (Max 5):</label>
+                    <div style="display:flex; align-items:center; justify-content:space-between; background:#ffffff; border:1px solid #cbd5e1; border-radius:12px; padding:6px 12px;">
+                      <button type="button" id="guest-minus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:19.5px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">−</button>
+                      <span id="guest-count-display" style="font-weight:800; font-size:17.5px; color:#0f172a;">1</span>
+                      <button type="button" id="guest-plus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:19.5px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">+</button>
+                    </div>
+                  </div>
+
+                  <div class="tour-price-calc-box" style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; background:#fff7ed; border-radius:10px; border:1px solid #ffedd5; white-space:nowrap;">
+                    <span class="tour-price-calc-label" style="font-weight:600; color:#9a3412; font-size:14.5px; white-space:nowrap; flex-shrink:0;">Subtotal:</span>
+                    <strong class="tour-price-calc-amount" style="font-size:16px; font-weight:800; color:#ea580c; white-space:nowrap;" id="total-price-display" data-base-price={basePrice}>{formattedPrice}</strong>
+                  </div>
+                </div>
+
+                <!-- 2 Nút Chat Xanh Pill Đẹp -->
+                <div class="action-buttons" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+                  <a href="https://wa.me/0962333621" target="_blank" class="btn-primary btn-zalo" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0068FF; box-shadow:0 4px 14px rgba(0,104,255,0.25); gap:6px;">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
+                    Zalo Consult
+                  </a>
+                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+                    Messenger
+                  </a>
+                </div>
+
+                <!-- Nút Đăng Ký Lớn Nổi Bật -->
+                <button type="button" class="btn-outline js-open-booking-modal" data-tour-name={tourTitle}>
+                  RESERVE YOUR APRON NOW
+                </button>
+
+                <!-- Cam Kết Chất Lượng -->
+                <div style="margin-top:18px; padding-top:16px; border-top:1px solid #f1f5f9; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#475569;">
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> Max 5 participants per session for full hands-on fun
+                  </div>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> Complimentary high-res photo collection after class
+                  </div>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> 100% No Shopping Guarantee
+                  </div>
+                </div>
+
+                <!-- Hotline -->
+                <div style="margin-top:14px; text-align:center; font-size:14.5px; color:#64748b;">
+                  24/7 Hotline: <a href="tel:0962333621" style="font-weight:700; color:#ea580c; text-decoration:none;">0962.333.621</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- CÁC HÀNH TRÌNH NỔI BẬT KHÁC (#journeys) -->
+  <section class="py-12 lg:py-16 bg-slate-50 border-t border-slate-200" id="journeys">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <p class="text-brand-600 text-[11.5px] font-bold tracking-[0.2em] mb-3">THE RICE TRAVEL GROUP</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-wide">Other Outstanding Journeys</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <button data-action="carousel-prev" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Previous Tour">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button data-action="carousel-next" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Next Tour">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative w-full">
+        <div id="tour-gallery-scroll" data-component="tour-carousel" class="flex overflow-x-auto -mx-6 px-6 lg:-mx-12 lg:px-12 snap-x snap-mandatory items-stretch" style="gap: 1.25rem; padding-bottom: 2rem; scrollbar-width: none; scroll-behavior: smooth;">
+          
+          <!-- Card 1 -->
+          <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Ho Chi Minh City Half-Day Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Ho Chi Minh City Half-Day Private Tour</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Colonial heritage, Book Street & Saigon WaterBus sunset cruise</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">1,690,000 VND</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="/tour/half-day-cu-chi-tunnels-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Half-Day Premium Cu Chi Tunnels Discovery</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Hand-dug 200km tunnels, trapdoors & hot cassava with peanut salt</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">1,890,000 VND</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[4/3] w-full overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Full-Day Mekong Delta Tour: Ben Tre & My Tho Discovery</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Four mythical islands, hand-paddled sampan & Đờn Ca Tài Tử</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">2,890,000 VND</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE STICKY BOTTOM NAVIGATION (Native App Style) -->
+  <nav class="mobile-sticky-bottom-nav" aria-label="Mobile Quick Navigation">
+    <button type="button" class="mobile-nav-item item-itinerary" id="btn-mobile-itinerary" aria-label="View Program">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+      </div>
+      <span>Program</span>
+    </button>
+
+    <button type="button" class="mobile-nav-item item-office" id="btn-mobile-office" aria-label="Studio & Trust">
+      <div class="mobile-nav-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+      </div>
+      <span>Our Studio</span>
+    </button>
+
+    <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-whatsapp" aria-label="Chat on WhatsApp">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="https://m.me/thericetour" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-messenger" aria-label="Chat on Messenger">
+      <div class="mobile-nav-icon">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+      </div>
+      <span>Messenger</span>
+    </a>
+  </nav>
+
+  <!-- MODAL: OUR OFFICE & TRUST (Mobile Click Target) -->
+  <div id="office-trust-modal" class="office-modal-overlay" style="display: none;">
+    <div class="office-modal-card">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+        <div class="inline-flex items-center gap-2 bg-orange-50 text-orange-700 font-bold text-sm sm:text-base px-3.5 py-1.5 rounded-full border border-orange-200">
+          <span>🏢</span>
+          <span>Dai Viet Culinary Group & The Rice Tour</span>
+        </div>
+        <button type="button" id="close-office-modal" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center text-xl font-bold transition-colors cursor-pointer border-none" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <!-- Item 1: Studio Location -->
+        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
+            📍
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Dai Viet Culinary Studio</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">195-197 De Tham St., Ben Thanh Ward, District 1, Ho Chi Minh City</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Master Chefs -->
+        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
+            👨‍🍳
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Executive Restaurant Chefs</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">Direct training from certified head chefs operating <strong>Dai Viet Restaurant Group</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Guarantees & Photography -->
+        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
+            🛡️
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Hygiene & Quality Standards</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">Strict food safety protocols, sanitized individual stations, and professional photography included.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons inside modal -->
+      <div class="mt-4 pt-3.5 border-t border-slate-100 flex flex-col gap-2">
+        <a href="tel:0962333621" class="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xs transition-colors" style="text-decoration: none;">
+          <span>📞</span>
+          <span>Call Hotline: 0962.333.621</span>
+        </a>
+        <button type="button" id="btn-close-office-modal-bottom" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-sm transition-colors cursor-pointer border-none">
+          Close window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client-side Interactive Scripts -->
+  <script>
+    function initTourInteractions() {
+      // 1. Slider Accommodation & Vehicles
+      document.querySelectorAll(".tour-accommodation-section").forEach(sec => {
+        const track = sec.querySelector(".tour-slider-track") as HTMLElement;
+        const slides = sec.querySelectorAll(".tour-slide");
+        const prevBtn = sec.querySelector(".tour-slider-prev");
+        const nextBtn = sec.querySelector(".tour-slider-next");
+        const dots = sec.querySelectorAll(".tour-slider-dot");
+        const counter = sec.querySelector(".tour-slider-counter");
+
+        if (!track || slides.length === 0) return;
+
+        let currentIndex = 0;
+        const total = slides.length;
+
+        function updateSlider(idx: number) {
+          currentIndex = (idx + total) % total;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle("active", i === currentIndex));
+          if (counter) counter.textContent = `${currentIndex + 1} / ${total}`;
+        }
+
+        if (prevBtn) prevBtn.addEventListener("click", () => updateSlider(currentIndex - 1));
+        if (nextBtn) nextBtn.addEventListener("click", () => updateSlider(currentIndex + 1));
+        dots.forEach((dot, idx) => dot.addEventListener("click", () => updateSlider(idx)));
+      });
+
+      // 2. Customer Gallery Slider
+      document.querySelectorAll(".tour-gallery-section").forEach(sec => {
+        const slider = sec.querySelector(".tour-gallery-slider") as HTMLElement;
+        const prev = sec.querySelector(".tour-gallery-prev");
+        const next = sec.querySelector(".tour-gallery-next");
+        if (!slider) return;
+
+        const scrollAmount = 340;
+        if (prev) prev.addEventListener("click", () => slider.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
+        if (next) next.addEventListener("click", () => slider.scrollBy({ left: scrollAmount, behavior: "smooth" }));
+      });
+
+      // 3. Journeys Carousel
+      document.querySelectorAll("[data-component='tour-carousel']").forEach(slider => {
+        const container = slider.parentElement?.parentElement;
+        if (!container) return;
+        const prev = container.querySelector("[data-action='carousel-prev']");
+        const next = container.querySelector("[data-action='carousel-next']");
+        if (prev) prev.addEventListener("click", () => slider.scrollBy({ left: -380, behavior: "smooth" }));
+        if (next) next.addEventListener("click", () => slider.scrollBy({ left: 380, behavior: "smooth" }));
+      });
+
+      // 4. Mobile Bottom Nav Handlers
+      const btnMobileItinerary = document.getElementById("btn-mobile-itinerary");
+      if (btnMobileItinerary) {
+        btnMobileItinerary.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.getElementById("itinerary") || document.querySelector(".tour-itinerary-section");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
+
+      const btnMobileOffice = document.getElementById("btn-mobile-office");
+      const officeModal = document.getElementById("office-trust-modal");
+      const closeOfficeBtn = document.getElementById("close-office-modal");
+      const closeOfficeBtnBottom = document.getElementById("btn-close-office-modal-bottom");
+      if (btnMobileOffice && officeModal) {
+        btnMobileOffice.addEventListener("click", (e) => {
+          e.preventDefault();
+          officeModal.style.display = "flex";
+        });
+        if (closeOfficeBtn) {
+          closeOfficeBtn.addEventListener("click", () => {
+            officeModal.style.display = "none";
+          });
+        }
+        if (closeOfficeBtnBottom) {
+          closeOfficeBtnBottom.addEventListener("click", () => {
+            officeModal.style.display = "none";
+          });
+        }
+        officeModal.addEventListener("click", (e) => {
+          if (e.target === officeModal) officeModal.style.display = "none";
+        });
+      }
+
+      // 5. Guest Count & Price Calculation
+      const minusBtn = document.getElementById("guest-minus-btn");
+      const plusBtn = document.getElementById("guest-plus-btn");
+      const countDisplay = document.getElementById("guest-count-display");
+      const priceDisplay = document.getElementById("total-price-display");
+
+      if (minusBtn && plusBtn && countDisplay && priceDisplay) {
+        let currentGuests = 1;
+        const maxGuests = 5;
+        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "1490000", 10);
+
+        function updateGuests(delta: number) {
+          const newGuests = Math.min(Math.max(1, currentGuests + delta), maxGuests);
+          if (newGuests === currentGuests) return;
+          currentGuests = newGuests;
+          countDisplay.textContent = currentGuests.toString();
+
+          const total = basePrice * currentGuests;
+          priceDisplay.textContent = total.toLocaleString("vi-VN") + " VND";
+        }
+
+        minusBtn.onclick = () => updateGuests(-1);
+        plusBtn.onclick = () => updateGuests(1);
+      }
+
+      // 6. Booking Consultation Modal
+      function initBookingModal() {
+        const bookingButtons = document.querySelectorAll('.js-open-booking-modal');
+        if (bookingButtons.length === 0) return;
+
+        let modal = document.getElementById('booking-consult-modal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'booking-consult-modal';
+          modal.style.cssText = 'position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); padding: 20px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; backdrop-filter: blur(6px);';
+
+          const modalContent = document.createElement('div');
+          modalContent.style.cssText = 'background: #ffffff; padding: 32px 28px; border-radius: 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.25); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);';
+
+          const iconWrapper = document.createElement('div');
+          iconWrapper.style.cssText = 'width: 64px; height: 64px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 29.5px;';
+          iconWrapper.innerHTML = '👩‍🍳';
+
+          const title = document.createElement('h3');
+          title.id = 'booking-modal-tour-title';
+          title.style.cssText = 'font-size: 20.5px; font-weight: 800; color: #0f172a; margin: 0 0 8px 0; line-height: 1.35;';
+
+          const desc = document.createElement('p');
+          desc.style.cssText = 'font-size: 15.5px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
+          desc.innerHTML = 'Register for a direct 1:1 consultation with <strong>The Rice Travel Group</strong> to book your cooking class session & custom preferences!';
+
+          const actionGroup = document.createElement('div');
+          actionGroup.style.cssText = 'display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;';
+
+          const waBtn = document.createElement('a');
+          waBtn.href = 'https://wa.me/84962333621';
+          waBtn.target = '_blank';
+          waBtn.rel = 'noopener noreferrer';
+          waBtn.innerHTML = '💬 Chat on WhatsApp 24/7';
+          waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
+
+          const zaloBtn = document.createElement('a');
+          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.target = '_blank';
+          zaloBtn.rel = 'noopener noreferrer';
+          zaloBtn.innerHTML = '💬 Chat Zalo for Consult';
+          zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          const hotlineBtn = document.createElement('a');
+          hotlineBtn.href = 'tel:0962333621';
+          hotlineBtn.innerHTML = '📞 Call Hotline: 0962.333.621';
+          hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          const closeBtn = document.createElement('button');
+          closeBtn.type = 'button';
+          closeBtn.innerText = 'Close';
+          closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 14.5px; width: 100%; transition: background 0.2s;';
+
+          function closeBookingModal() {
+            if (!modal) return;
+            modal.style.opacity = '0';
+            if (modalContent) modalContent.style.transform = 'translateY(20px)';
+            setTimeout(() => { if (modal) modal.style.pointerEvents = 'none'; }, 300);
+          }
+
+          closeBtn.addEventListener('click', closeBookingModal);
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeBookingModal();
+          });
+
+          actionGroup.appendChild(waBtn);
+          actionGroup.appendChild(zaloBtn);
+          actionGroup.appendChild(hotlineBtn);
+
+          modalContent.appendChild(iconWrapper);
+          modalContent.appendChild(title);
+          modalContent.appendChild(desc);
+          modalContent.appendChild(actionGroup);
+          modalContent.appendChild(closeBtn);
+          modal.appendChild(modalContent);
+          document.body.appendChild(modal);
+        }
+
+        bookingButtons.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentTourName = btn.getAttribute('data-tour-name') || document.querySelector('h1')?.textContent || 'Authentic Vietnamese Cooking Class & Local Market Discovery';
+            const titleEl = document.getElementById('booking-modal-tour-title');
+            if (titleEl) titleEl.innerText = currentTourName;
+
+            if (modal) {
+              modal.style.pointerEvents = 'auto';
+              requestAnimationFrame(() => {
+                modal.style.opacity = '1';
+                const firstChild = modal.firstElementChild as HTMLElement;
+                if (firstChild) {
+                  firstChild.style.transform = 'translateY(0)';
+                }
+              });
+            }
+          });
+        });
+      }
+
+      initBookingModal();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTourInteractions);
+    } else {
+      initTourInteractions();
+    }
+    document.addEventListener("astro:page-load", initTourInteractions);
+  </script>
+</BaseLayout>
