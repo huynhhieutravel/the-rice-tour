@@ -2629,20 +2629,84 @@
       "anchorText": "Tours"
     },
     {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "0962.333.621"
+    },
+    {
       "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
-      "anchorText": "1 Day\n              \n            \n            \n              \n                1-Day Premium Cu Chi T"
+      "anchorText": "1 Day\n              \n              \n                \n                  1-Day Premium Cu Chi Tunnels "
     },
     {
       "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
-      "anchorText": "4 Days 3 Nights\n              \n            \n            \n              \n                Sapa Majesti"
+      "anchorText": "4 Days 3 Nights\n              \n              \n                \n                  Sapa Majestic Rice "
     },
     {
       "targetUrl": "/tour/grand-vietnam-discovery-14d13n",
-      "anchorText": "14 Days 13 Nights\n              \n            \n            \n              \n                Grand Viet"
+      "anchorText": "14 Days 13 Nights\n              \n              \n                \n                  Grand Vietnam Dis"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "📞\n          Call Hotline: 0962.333.621"
+    }
+  ],
+  "tour/full-day-mekong-delta-tour-ben-tre-my-tho": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Tours"
     },
     {
       "targetUrl": "tel:0962333621",
       "anchorText": "0962.333.621"
+    },
+    {
+      "targetUrl": "/tour/2-day-mekong-delta-tour",
+      "anchorText": "2 Days 1 Night\n              \n              \n                \n                  2-Day Authentic Meko"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1 Day\n              \n              \n                \n                  1-Day Premium Cu Chi Tunnels "
+    },
+    {
+      "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
+      "anchorText": "4 Days 3 Nights\n              \n              \n                \n                  Sapa Majestic Rice "
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "📞\n          Call Hotline: 0962.333.621"
+    }
+  ],
+  "tour/half-day-cu-chi-tunnels-tour": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Tours"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "0962.333.621"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "1 Day\n              \n              \n                \n                  Full-Day Mekong Delta Tour: B"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1 Day\n              \n              \n                \n                  1-Day Premium Cu Chi Tunnels "
+    },
+    {
+      "targetUrl": "/tour/2-day-mekong-delta-tour",
+      "anchorText": "2 Days 1 Night\n              \n              \n                \n                  2-Day Authentic Meko"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "📞\n          Call Hotline: 0962.333.621"
     }
   ],
   "tour-incentive-travel-doanh-nghiep": [
