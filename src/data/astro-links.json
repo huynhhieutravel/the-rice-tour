@@ -2592,7 +2592,7 @@
   "tour/1-day-premium-cu-chi-tunnels": [
     {
       "targetUrl": "/",
-      "anchorText": "Trang chủ"
+      "anchorText": "Home"
     },
     {
       "targetUrl": "/tours",
@@ -2604,19 +2604,19 @@
     },
     {
       "targetUrl": "/tour/mekong-delta-floating-life-3d2n",
-      "anchorText": "3 Ngày 2 Đêm\n              \n              \n                \n                  Authentic Mekong Delta"
+      "anchorText": "3 Days 2 Nights\n              \n              \n                \n                  Authentic Mekong De"
     },
     {
       "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
-      "anchorText": "4 Ngày 3 Đêm\n              \n              \n                \n                  Sapa Majestic Rice Ter"
+      "anchorText": "4 Days 3 Nights\n              \n              \n                \n                  Sapa Majestic Rice "
     },
     {
       "targetUrl": "/tour/grand-vietnam-discovery-14d13n",
-      "anchorText": "14 Ngày 13 Đêm\n              \n              \n                \n                  Grand Vietnam Discov"
+      "anchorText": "14 Days 13 Nights\n              \n              \n                \n                  Grand Vietnam Dis"
     },
     {
       "targetUrl": "tel:0962333621",
-      "anchorText": "📞\n          Gọi Hotline: 0962.333.621"
+      "anchorText": "📞\n          Call Hotline: 0962.333.621"
     }
   ],
   "tour-incentive-travel-doanh-nghiep": [
