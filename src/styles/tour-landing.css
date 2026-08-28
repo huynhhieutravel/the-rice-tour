@@ -132,9 +132,12 @@
   }
   .elementor-tour-wrapper .cta-links {
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .elementor-tour-wrapper .cta-links .social-btn {
+    flex: 1;
   }
   .elementor-tour-wrapper .cta-form-btn {
     width: 100%;
@@ -1212,3 +1215,12 @@
 /* Modern browsers will still use clip for the main wrapper just in case */
 .elementor-tour-wrapper { overflow-x: clip; }
 
+
+@media (max-width: 768px) {
+  .elementor-tour-wrapper .premium-itinerary-summary {
+    padding: 16px;
+  }
+  .elementor-tour-wrapper .itinerary-toggle-icon {
+    margin-right: 12px;
+  }
+}
