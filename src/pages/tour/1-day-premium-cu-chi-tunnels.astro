@@ -72,7 +72,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
       
       <!-- BREADCRUMB -->
-      <nav class="breadcrumb-tour flex items-center gap-1.5 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
+      <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
         <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
@@ -82,11 +82,11 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
       <!-- TOUR TOP HEADER (TOURRADAR MASTER STANDARD) -->
       <header class="tour-top-header mb-4 sm:mb-6">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-2.5">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-2.5">
           {tourTitle}
         </h1>
-        <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-600 font-medium">
-          <div class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-md border border-amber-200 text-xs shadow-xs">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm sm:text-base text-slate-600 font-medium">
+          <div class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-md border border-amber-200 text-sm shadow-xs">
             <span>★ 5.0</span>
             <span class="text-slate-700 font-normal">TripAdvisor 5.0 Excellence</span>
           </div>
@@ -147,12 +147,12 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             
             <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
             <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
-              <p class="text-slate-700 text-[15px] sm:text-base leading-relaxed mb-4">
+              <p class="text-slate-700 text-[16.5px] sm:text-lg leading-relaxed mb-4">
                 <strong class="text-slate-900">The 1-day Cu Chi Tunnels & Ho Chi Minh City Discovery journey by The Rice Travel Group</strong> takes you on a comprehensive exploration of the monumental 200-km underground military history of Cu Chi, combined with the classic architectural heritage in the heart of Ho Chi Minh City, and ends with a spectacular sunset cruise on the Saigon WaterBus.
               </p>
               <div class="border-t border-slate-100 pt-3.5">
-                <p class="font-bold text-slate-900 text-sm mb-2.5">The Rice Travel Group's Signature Differences:</p>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-[13.5px] text-slate-700">
+                <p class="font-bold text-slate-900 text-base mb-2.5">The Rice Travel Group's Signature Differences:</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm sm:text-[15px] text-slate-700">
                   <li class="flex items-center gap-2">
                     <span class="text-emerald-600 font-bold">✓</span>
                     <span><strong>NO SHOPPING:</strong> 100% No forced shopping stops</span>
@@ -207,7 +207,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- KEY TOUR ATTRIBUTES (TOURRADAR STYLE 2-COL CONCISE GRID) -->
             <div class="mb-10 pb-8 border-b border-slate-200">
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">Tour Highlights</h2>
+              <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Tour Highlights</h2>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                 
@@ -217,8 +217,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">VIP Small Group (Max 5 pax/van)</div>
-                    <div class="text-xs text-slate-500 mt-1">Private 7-seater van, exclusive space</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">VIP Small Group (Max 5 pax/van)</div>
+                    <div class="text-sm text-slate-500 mt-1">Private 7-seater van, exclusive space</div>
                   </div>
                 </div>
 
@@ -228,8 +228,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><circle cx="12" cy="13" r="3"></circle></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Professional Photographer Throughout</div>
-                    <div class="text-xs text-slate-500 mt-1">Complimentary full photo album after the trip</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Professional Photographer Throughout</div>
+                    <div class="text-sm text-slate-500 mt-1">Complimentary full photo album after the trip</div>
                   </div>
                 </div>
 
@@ -239,8 +239,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">The Magnificent 200km Cu Chi Tunnels</div>
-                    <div class="text-xs text-slate-500 mt-1">Experience tunnel crawling & unique underground heritage</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">The Magnificent 200km Cu Chi Tunnels</div>
+                    <div class="text-sm text-slate-500 mt-1">Experience tunnel crawling & unique underground heritage</div>
                   </div>
                 </div>
 
@@ -250,8 +250,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Saigon Heritage & Independence Palace</div>
-                    <div class="text-xs text-slate-500 mt-1">Notre Dame Cathedral, Central Post Office & Ben Thanh Market</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Saigon Heritage & Independence Palace</div>
+                    <div class="text-sm text-slate-500 mt-1">Notre Dame Cathedral, Central Post Office & Ben Thanh Market</div>
                   </div>
                 </div>
 
@@ -261,8 +261,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Saigon WaterBus Cruise</div>
-                    <div class="text-xs text-slate-500 mt-1">Admire the sunset & the city skyline lighting up</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">Saigon WaterBus Cruise</div>
+                    <div class="text-sm text-slate-500 mt-1">Admire the sunset & the city skyline lighting up</div>
                   </div>
                 </div>
 
@@ -272,8 +272,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">100% No Shopping Guarantee</div>
-                    <div class="text-xs text-slate-500 mt-1">Pure experience, absolutely no forced shopping</div>
+                    <div class="font-bold text-slate-900 text-base md:text-[16.5px] leading-tight">100% No Shopping Guarantee</div>
+                    <div class="text-sm text-slate-500 mt-1">Pure experience, absolutely no forced shopping</div>
                   </div>
                 </div>
 
@@ -302,17 +302,17 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- QR CODE BOX -->
             <div class="tour-qr-box mb-8 bg-slate-50 border border-slate-200 p-6 rounded-xl flex items-center justify-between gap-6 flex-wrap md:flex-nowrap">
               <div class="flex-1">
-                <h4 class="text-base font-bold text-slate-800 mb-1">1:1 Itinerary Consultation with The Rice Travel Group</h4>
-                <p class="text-xs text-slate-500 m-0 leading-relaxed">Scan the QR code or call our hotline to instantly connect with our destination experts. We tailor private itineraries based on your family or group's specific requests.</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-1">1:1 Itinerary Consultation with The Rice Travel Group</h4>
+                <p class="text-sm text-slate-500 m-0 leading-relaxed">Scan the QR code or call our hotline to instantly connect with our destination experts. We tailor private itineraries based on your family or group's specific requests.</p>
               </div>
               <div class="flex items-center gap-4 shrink-0">
                 <div class="text-center">
                   <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://wa.me/0962333621" alt="QR WhatsApp The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
-                  <span class="text-[10px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
                 </div>
                 <div class="text-center">
                   <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
-                  <span class="text-[10px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
                 </div>
               </div>
             </div>
@@ -327,18 +327,18 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- NƠI Ở / PHƯƠNG TIỆN ĐỒNG HÀNH -->
             <section class="tour-accommodation-section mb-12 mt-10" style="font-family: inherit;">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Vehicles & Accompanying Service Standards</h2>
+              <h2 class="text-3xl font-bold text-slate-800 mb-6">Vehicles & Accompanying Service Standards</h2>
               <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                 <div style="display: flex; align-items: center; gap: 16px;">
                   <div style="width: 56px; height: 56px; border-radius: 50%; background: #ffedd5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <span style="font-size: 28px;">🚐</span>
+                    <span style="font-size: 29.5px;">🚐</span>
                   </div>
                   <div>
                     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Private Premium 7-Seater Van & WaterBus Cruise</h3>
-                      <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">VIP Service</span>
+                      <h3 style="font-size: 19.5px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Private Premium 7-Seater Van & WaterBus Cruise</h3>
+                      <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 12.5px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">VIP Service</span>
                     </div>
-                    <p style="font-size: 14px; color: #64748b; margin: 0; line-height: 1.5;">
+                    <p style="font-size: 15.5px; color: #64748b; margin: 0; line-height: 1.5;">
                       Modern air-conditioned 7-seater vehicles with door-to-door pickup, cold mineral water throughout the trip, a crispy fresh Banh Mi for breakfast, and tickets for the sunset Saigon WaterBus.
                     </p>
                   </div>
@@ -375,7 +375,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- LỊCH TRÌNH CHI TIẾT (CHUẨN 4 KHỐI ACCORDION FIT TOUR) -->
             <section class="tour-itinerary-section mb-12 mt-12" id="itinerary">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Detailed Itinerary</h2>
+              <h2 class="text-3xl font-bold text-slate-800 mb-6">Detailed Itinerary</h2>
               
               <div class="tour-itinerary">
                 <div class="flex flex-col gap-4">
@@ -416,7 +416,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           </svg>
                           Experience Note
                         </p>
-                        <p class="text-amber-900 text-sm m-0">Crawling through the tunnels is completely optional based on your fitness and preference. You can perfectly choose to take a leisurely stroll above ground under the shade of the primeval Cu Chi forest.</p>
+                        <p class="text-amber-900 text-base m-0">Crawling through the tunnels is completely optional based on your fitness and preference. You can perfectly choose to take a leisurely stroll above ground under the shade of the primeval Cu Chi forest.</p>
                       </div>
                     </div>
                   </details>
@@ -477,7 +477,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           </svg>
                           Photography Throughout
                         </p>
-                        <p class="text-sky-900 text-sm m-0">The Rice Travel Group's professional photographer will accompany you to capture the best street-style angles at these ancient heritage sites.</p>
+                        <p class="text-sky-900 text-base m-0">The Rice Travel Group's professional photographer will accompany you to capture the best street-style angles at these ancient heritage sites.</p>
                       </div>
                     </div>
                   </details>
@@ -508,14 +508,14 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
               </div>
               
-              <p style="font-style:italic;color:#64748b;font-size:0.9rem;margin-top:16px;padding:0 12px;">
+              <p style="font-style:italic;color:#64748b;font-size:1.0rem;margin-top:16px;padding:0 12px;">
                 Note: The order of attractions is subject to flexible changes depending on actual traffic and weather conditions, but still fully guarantees all experiences in the itinerary.
               </p>
             </section>
 
             <!-- LỊCH KHỞI HÀNH -->
             <section class="tour-departure-section mb-12">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Departure Schedule</h2>
+              <h2 class="text-3xl font-bold text-slate-800 mb-6">Departure Schedule</h2>
               
               <div class="lich-khoi-hanh-wrapper font-sans">
                 <div class="departures-container">
@@ -523,39 +523,39 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <table class="w-full text-left border-collapse m-0">
                       <thead>
                         <tr class="bg-slate-50">
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Destination & Tour Code</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Transportation</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Departure</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Price / Pax</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-center">Status</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-right">Book Now</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Destination & Tour Code</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Transportation</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Departure</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base">Price / Pax</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base text-center">Status</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-base text-right">Book Now</th>
                         </tr>
                       </thead>
                       <tbody class="bg-white">
                         <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:00:00.000Z">
                           <td class="p-4">
-                            <div class="font-bold text-slate-800 text-sm leading-snug">{tourTitle}</div>
-                            <span class="font-mono text-[10px] text-slate-500 mt-1 inline-block">CUCHI-SAIGON-DAILY</span>
+                            <div class="font-bold text-slate-800 text-base leading-snug">{tourTitle}</div>
+                            <span class="font-mono text-[11.5px] text-slate-500 mt-1 inline-block">CUCHI-SAIGON-DAILY</span>
                           </td>
-                          <td class="p-4 text-xs text-slate-600 space-y-1.5">
+                          <td class="p-4 text-sm text-slate-600 space-y-1.5">
                             <div class="flex items-center gap-1.5">
                               <span class="text-orange-500 shrink-0">🚐</span>
                               <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                             </div>
-                            <div class="text-[11px] text-slate-500 mt-0.5">HCMC (189 De Tham, Dist. 1)</div>
+                            <div class="text-[12.5px] text-slate-500 mt-0.5">HCMC (189 De Tham, Dist. 1)</div>
                           </td>
                           <td class="p-4">
                             <div class="font-bold text-slate-800">Departure hàng ngày</div>
-                            <div class="text-xs text-slate-500 mt-0.5">08:00 AM – 05:30 PM</div>
+                            <div class="text-sm text-slate-500 mt-0.5">08:00 AM – 05:30 PM</div>
                           </td>
-                          <td class="p-4 font-bold text-orange-600 whitespace-nowrap text-base">{formattedPrice}</td>
+                          <td class="p-4 font-bold text-orange-600 whitespace-nowrap text-lg">{formattedPrice}</td>
                           <td class="p-4 text-center">
-                            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold border text-green-700 bg-green-50 border-green-200">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-bold border text-green-700 bg-green-50 border-green-200">
                               Available
                             </span>
                           </td>
                           <td class="p-4 text-right">
-                            <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs transition-colors" data-tour-name={tourTitle}>
+                            <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-sm transition-colors" data-tour-name={tourTitle}>
                               Book Now
                             </button>
                           </td>
@@ -569,30 +569,30 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:00:00.000Z">
                       <div class="flex justify-between items-start mb-3">
                         <div class="flex-1 pr-3">
-                          <div class="font-bold text-slate-800 text-sm leading-snug mb-1">{tourTitle}</div>
-                          <span class="font-mono text-[10px] text-slate-500">CUCHI-SAIGON-DAILY</span>
+                          <div class="font-bold text-slate-800 text-base leading-snug mb-1">{tourTitle}</div>
+                          <span class="font-mono text-[11.5px] text-slate-500">CUCHI-SAIGON-DAILY</span>
                         </div>
-                        <span class="px-2.5 py-1 rounded-md text-[11px] font-bold border whitespace-nowrap text-green-700 bg-green-50 border-green-200">
+                        <span class="px-2.5 py-1 rounded-md text-[12.5px] font-bold border whitespace-nowrap text-green-700 bg-green-50 border-green-200">
                           Available
                         </span>
                       </div>
-                      <div class="bg-slate-50 rounded-lg p-3 mb-3 space-y-1.5 text-xs">
+                      <div class="bg-slate-50 rounded-lg p-3 mb-3 space-y-1.5 text-sm">
                         <div class="flex items-center gap-1.5">
                           <span class="text-orange-500 shrink-0">🚐</span>
                           <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                         </div>
-                        <div class="text-[11px] text-slate-500">Pickup at 189 De Tham, District 1</div>
+                        <div class="text-[12.5px] text-slate-500">Pickup at 189 De Tham, District 1</div>
                       </div>
-                      <div class="flex items-center gap-2 text-sm text-slate-600 mb-1">
+                      <div class="flex items-center gap-2 text-base text-slate-600 mb-1">
                         <span>🛫 Departure hàng ngày (08:00 - 17:30)</span>
                       </div>
                       <div class="h-px bg-slate-100 w-full my-3"></div>
                       <div class="flex justify-between items-center">
                         <div>
-                          <span class="text-xs text-slate-500 block">Giá trọn gói</span>
-                          <span class="font-bold text-orange-600 text-base">{formattedPrice}</span>
+                          <span class="text-sm text-slate-500 block">Giá trọn gói</span>
+                          <span class="font-bold text-orange-600 text-lg">{formattedPrice}</span>
                         </div>
-                        <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs" data-tour-name={tourTitle}>
+                        <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-sm" data-tour-name={tourTitle}>
                           Book Now ngay
                         </button>
                       </div>
@@ -604,17 +604,17 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- THÔNG TIN THÊM -->
             <section class="tour-faq-section mb-12 mt-12">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Additional Information</h2>
+              <h2 class="text-3xl font-bold text-slate-800 mb-6">Additional Information</h2>
               
               <div class="tour-faq-wrapper flex flex-col gap-4">
                 
                 <details open class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span class="flex-1 text-lg font-bold text-green-700">Tour Inclusions</span>
-                    <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="flex-1 text-xl font-bold text-green-700">Tour Inclusions</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
-                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm">
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
                     <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
                       <li>Xe 7 chỗ máy lạnh riêng biệt đón trả tại 189 Đề Thám, Quận 1 suốt hành trình.</li>
                       <li>Bữa sáng bánh mì tươi thơm ngon phục vụ trên xe.</li>
@@ -631,10 +631,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                    <span class="flex-1 text-lg font-bold text-red-700">Tour Exclusions</span>
-                    <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="flex-1 text-xl font-bold text-red-700">Tour Exclusions</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
-                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm">
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
                     <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
                       <li>Cost of real-bullet shooting at the Cu Chi shooting range (based on personal preference).</li>
                       <li>Personal shopping expenses, drinks outside the itinerary.</li>
@@ -647,10 +647,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                    <span class="flex-1 text-lg font-bold text-sky-700">Booking & Cancellation Policy</span>
-                    <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
+                    <span class="flex-1 text-xl font-bold text-sky-700">Booking & Cancellation Policy</span>
+                    <span class="faq-toggle-icon text-3xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
-                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm leading-relaxed">
+                  <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base leading-relaxed">
                     <p>Please book the tour at least 24 hours in advance so The Rice Travel Group can best arrange the private van and photographer.</p>
                     <p>Cancellation over 48 hours prior: 100% Free of charge.</p>
                     <p>Cancellation within 24–48 hours: 50% cancellation fee.</p>
@@ -664,7 +664,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- GALLERY ẢNH KHÁCH HÀNG -->
             <section class="tour-gallery-section mb-12 mt-12 group">
               <div class="mb-6">
-                <h2 class="text-2xl font-bold text-slate-800 m-0">The Rice Travel Group's Customer Gallery in Cu Chi & Saigon</h2>
+                <h2 class="text-3xl font-bold text-slate-800 m-0">The Rice Travel Group's Customer Gallery in Cu Chi & Saigon</h2>
               </div>
               <div class="relative">
                 <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Previous photo">
@@ -708,55 +708,55 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
                       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Service</div>
-                    <div class="service-sub" style="font-size:13px; color:#64748b;">VIP All-inclusive</div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:15.5px; margin-bottom:2px;">Service</div>
+                    <div class="service-sub" style="font-size:14.5px; color:#64748b;">VIP All-inclusive</div>
                   </div>
 
                   <div class="service-item" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
                     <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
                       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     </div>
-                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Duration</div>
-                    <div class="service-sub" style="font-size:13px; color:#64748b;">1 ngày (8:00 - 17:30)</div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:15.5px; margin-bottom:2px;">Duration</div>
+                    <div class="service-sub" style="font-size:14.5px; color:#64748b;">1 ngày (8:00 - 17:30)</div>
                   </div>
                 </div>
 
                 <!-- Khối Giá Lớn -->
                 <div style="margin-bottom: 20px; text-align: left;">
-                  <div class="price-label" style="font-size:13px; color:#64748b; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">All-inclusive price from</div>
-                  <div class="price-amount" style="font-size:24px; font-weight:800; color:#0f172a; line-height:1.2; letter-spacing:-0.02em; white-space:nowrap;">{formattedPrice}</div>
-                  <div style="font-size:12px; color:#94a3b8; margin-top:4px;">Includes entrance fees, private 7-seater van & photographer</div>
+                  <div class="price-label" style="font-size:14.5px; color:#64748b; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">All-inclusive price from</div>
+                  <div class="price-amount" style="font-size:25.5px; font-weight:800; color:#0f172a; line-height:1.2; letter-spacing:-0.02em; white-space:nowrap;">{formattedPrice}</div>
+                  <div style="font-size:13.5px; color:#94a3b8; margin-top:4px;">Includes entrance fees, private 7-seater van & photographer</div>
                 </div>
 
                 <!-- Interactive Date & Guest Picker (Styled Super Clean) -->
                 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:16px; margin-bottom:20px; display:flex; flex-direction:column; gap:12px;">
                   <div>
-                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Select Departure Date:</label>
-                    <input type="date" id="booking-date-input" style="width:100%; padding:10px 14px; font-size:13px; font-weight:600; color:#1e293b; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; outline:none;" value="2026-08-28" />
+                    <label style="display:block; font-size:13.5px; font-weight:700; color:#334155; margin-bottom:6px;">Select Departure Date:</label>
+                    <input type="date" id="booking-date-input" style="width:100%; padding:10px 14px; font-size:14.5px; font-weight:600; color:#1e293b; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; outline:none;" value="2026-08-28" />
                   </div>
 
                   <div>
-                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Number of Guests (Max 5 pax/van):</label>
+                    <label style="display:block; font-size:13.5px; font-weight:700; color:#334155; margin-bottom:6px;">Number of Guests (Max 5 pax/van):</label>
                     <div style="display:flex; align-items:center; justify-content:space-between; background:#ffffff; border:1px solid #cbd5e1; border-radius:12px; padding:6px 12px;">
-                      <button type="button" id="guest-minus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:18px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">−</button>
-                      <span id="guest-count-display" style="font-weight:800; font-size:16px; color:#0f172a;">1</span>
-                      <button type="button" id="guest-plus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:18px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">+</button>
+                      <button type="button" id="guest-minus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:19.5px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">−</button>
+                      <span id="guest-count-display" style="font-weight:800; font-size:17.5px; color:#0f172a;">1</span>
+                      <button type="button" id="guest-plus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:19.5px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">+</button>
                     </div>
                   </div>
 
                   <div class="tour-price-calc-box" style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; background:#fff7ed; border-radius:10px; border:1px solid #ffedd5; white-space:nowrap;">
-                    <span class="tour-price-calc-label" style="font-weight:600; color:#9a3412; font-size:13px; white-space:nowrap; flex-shrink:0;">Subtotal:</span>
-                    <strong class="tour-price-calc-amount" style="font-size:14.5px; font-weight:800; color:#ea580c; white-space:nowrap;" id="total-price-display" data-base-price={basePrice}>{formattedPrice}</strong>
+                    <span class="tour-price-calc-label" style="font-weight:600; color:#9a3412; font-size:14.5px; white-space:nowrap; flex-shrink:0;">Subtotal:</span>
+                    <strong class="tour-price-calc-amount" style="font-size:16px; font-weight:800; color:#ea580c; white-space:nowrap;" id="total-price-display" data-base-price={basePrice}>{formattedPrice}</strong>
                   </div>
                 </div>
 
                 <!-- 2 Nút Chat Xanh Pill Đẹp -->
                 <div class="action-buttons" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
-                  <a href="https://wa.me/0962333621" target="_blank" class="btn-primary btn-zalo" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:13px; text-decoration:none; background:#0068FF; box-shadow:0 4px 14px rgba(0,104,255,0.25); gap:6px;">
+                  <a href="https://wa.me/0962333621" target="_blank" class="btn-primary btn-zalo" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0068FF; box-shadow:0 4px 14px rgba(0,104,255,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
                     Zalo Consult
                   </a>
-                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:13px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
+                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                     Messenger
                   </a>
@@ -768,7 +768,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </button>
 
                 <!-- Cam Kết Chất Lượng -->
-                <div style="margin-top:18px; padding-top:16px; border-top:1px solid #f1f5f9; display:flex; flex-direction:column; gap:8px; font-size:12px; color:#475569;">
+                <div style="margin-top:18px; padding-top:16px; border-top:1px solid #f1f5f9; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#475569;">
                   <div style="display:flex; align-items:center; gap:6px;">
                     <span style="color:#16a34a; font-weight:bold;">✓</span> Strict limit of max 5 guests / private van
                   </div>
@@ -781,7 +781,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
 
                 <!-- Hotline -->
-                <div style="margin-top:14px; text-align:center; font-size:13px; color:#64748b;">
+                <div style="margin-top:14px; text-align:center; font-size:14.5px; color:#64748b;">
                   24/7 Hotline: <a href="tel:0962333621" style="font-weight:700; color:#ea580c; text-decoration:none;">0962.333.621</a>
                 </div>
 
@@ -800,8 +800,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
-          <p class="text-brand-600 text-[10px] font-bold tracking-[0.2em] mb-3">THE RICE TRAVEL GROUP</p>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-wide">Other Outstanding Journeys</h2>
+          <p class="text-brand-600 text-[11.5px] font-bold tracking-[0.2em] mb-3">THE RICE TRAVEL GROUP</p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 tracking-wide">Other Outstanding Journeys</h2>
         </div>
         <div class="flex items-center gap-3">
           <button data-action="carousel-prev" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Previous Tour">
@@ -821,16 +821,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Mekong Delta" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3 Days 2 Nights</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3 Days 2 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Authentic Mekong Delta Waterways & Floating Market</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Can Tho waterways, Cai Rang floating market & lush fruit orchards</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 19.5px;">Authentic Mekong Delta Waterways & Floating Market</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Can Tho waterways, Cai Rang floating market & lush fruit orchards</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-base">$360 USD / pax</span>
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$360 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -841,16 +841,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=600&q=80" alt="Sapa" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">4 Days 3 Nights</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">4 Days 3 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Sapa Majestic Rice Terraces & Hill Tribe Heritage</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Muong Hoa rice terraces, Fansipan peak & H'Mong ethnic villages</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 19.5px;">Sapa Majestic Rice Terraces & Hill Tribe Heritage</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Muong Hoa rice terraces, Fansipan peak & H'Mong ethnic villages</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-base">$420 USD / pax</span>
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$420 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -861,16 +861,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Grand Vietnam" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">14 Days 13 Nights</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">14 Days 13 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Grand Vietnam Discovery: North to South Expedition</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Trans-Vietnam expedition from Hanoi, Halong, Hue, Hoi An to Saigon</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 19.5px;">Grand Vietnam Discovery: North to South Expedition</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Trans-Vietnam expedition from Hanoi, Halong, Hue, Hoi An to Saigon</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-base">$1,850 USD / pax</span>
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$1,850 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -916,55 +916,55 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
   <div id="office-trust-modal" class="office-modal-overlay" style="display: none;">
     <div class="office-modal-card">
       <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
-        <div class="inline-flex items-center gap-2 bg-orange-50 text-orange-700 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-orange-200">
+        <div class="inline-flex items-center gap-2 bg-orange-50 text-orange-700 font-bold text-sm sm:text-base px-3.5 py-1.5 rounded-full border border-orange-200">
           <span>🏢</span>
           <span>The Rice Travel Group HQ</span>
         </div>
-        <button type="button" id="close-office-modal" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center text-lg font-bold transition-colors cursor-pointer border-none" aria-label="Đóng">&times;</button>
+        <button type="button" id="close-office-modal" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center text-xl font-bold transition-colors cursor-pointer border-none" aria-label="Đóng">&times;</button>
       </div>
 
       <div class="flex flex-col gap-3">
         <!-- Item 1: Office Location -->
         <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0 text-lg shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
             📍
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">189 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, Ho Chi Minh City</p>
+            <h4 class="text-base font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">189 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, Ho Chi Minh City</p>
           </div>
         </div>
 
         <!-- Item 2: License -->
         <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-          <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 text-lg shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
             📜
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">International Tour Operator License</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">Officially licensed by the <strong>Vietnam National Authority of Tourism</strong> (Ministry of Culture, Sports & Tourism).</p>
+            <h4 class="text-base font-bold text-slate-900 mb-0.5">International Tour Operator License</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">Officially licensed by the <strong>Vietnam National Authority of Tourism</strong> (Ministry of Culture, Sports & Tourism).</p>
           </div>
         </div>
 
         <!-- Item 3: Guarantees & Insurance -->
         <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-lg shadow-xs">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-xl shadow-xs">
             🛡️
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Insurance & Quality Guarantee</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">High-coverage travel insurance, <strong>100% No forced shopping</strong>, modern VIP 7-seater van, and professional photographer throughout.</p>
+            <h4 class="text-base font-bold text-slate-900 mb-0.5">Insurance & Quality Guarantee</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">High-coverage travel insurance, <strong>100% No forced shopping</strong>, modern VIP 7-seater van, and professional photographer throughout.</p>
           </div>
         </div>
       </div>
 
       <!-- Quick Action Buttons inside modal -->
       <div class="mt-4 pt-3.5 border-t border-slate-100 flex flex-col gap-2">
-        <a href="tel:0962333621" class="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-colors" style="text-decoration: none;">
+        <a href="tel:0962333621" class="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xs transition-colors" style="text-decoration: none;">
           <span>📞</span>
           <span>Call Hotline: 0962.333.621</span>
         </a>
-        <button type="button" id="btn-close-office-modal-bottom" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-xs transition-colors cursor-pointer border-none">
+        <button type="button" id="btn-close-office-modal-bottom" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-sm transition-colors cursor-pointer border-none">
           Close window
         </button>
       </div>
@@ -1098,15 +1098,15 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           modalContent.style.cssText = 'background: #ffffff; padding: 32px 28px; border-radius: 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.25); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);';
 
           const iconWrapper = document.createElement('div');
-          iconWrapper.style.cssText = 'width: 64px; height: 64px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 28px;';
+          iconWrapper.style.cssText = 'width: 64px; height: 64px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 29.5px;';
           iconWrapper.innerHTML = '✈️';
 
           const title = document.createElement('h3');
           title.id = 'booking-modal-tour-title';
-          title.style.cssText = 'font-size: 19px; font-weight: 800; color: #0f172a; margin: 0 0 8px 0; line-height: 1.35;';
+          title.style.cssText = 'font-size: 20.5px; font-weight: 800; color: #0f172a; margin: 0 0 8px 0; line-height: 1.35;';
 
           const desc = document.createElement('p');
-          desc.style.cssText = 'font-size: 14px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
+          desc.style.cssText = 'font-size: 15.5px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
           desc.innerHTML = 'Register for a direct 1:1 consultation with <strong>The Rice Travel Group</strong> experts to receive custom itinerary advice and exclusive offers!';
 
           const actionGroup = document.createElement('div');
@@ -1117,24 +1117,24 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           waBtn.target = '_blank';
           waBtn.rel = 'noopener noreferrer';
           waBtn.innerHTML = '💬 Chat on WhatsApp 24/7';
-          waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
+          waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           const zaloBtn = document.createElement('a');
           zaloBtn.href = 'https://zalo.me/0962333641';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
           zaloBtn.innerHTML = '💬 Chat Zalo for Consult';
-          zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+          zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
 
           const hotlineBtn = document.createElement('a');
           hotlineBtn.href = 'tel:0962333621';
           hotlineBtn.innerHTML = '📞 Call Hotline: 0962.333.621';
-          hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+          hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
 
           const closeBtn = document.createElement('button');
           closeBtn.type = 'button';
           closeBtn.innerText = 'Close';
-          closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 13px; width: 100%; transition: background 0.2s;';
+          closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 14.5px; width: 100%; transition: background 0.2s;';
 
           function closeBookingModal() {
             if (!modal) return;
