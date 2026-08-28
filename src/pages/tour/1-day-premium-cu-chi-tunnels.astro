@@ -21,7 +21,7 @@ if (d1Db) {
 
 const tourTitle = tour?.title || "1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery";
 const seoTitle = tour?.seoTitle || tourTitle;
-const seoDesc = tour?.seoDescription || tour?.excerpt || "Hành trình 1 ngày cao cấp khám phá Địa đạo Củ Chi 200km và Di sản Sài Gòn, du thuyền Saigon WaterBus ngắm hoàng hôn, nhóm nhỏ xe 7 chỗ riêng biệt và thợ ảnh suốt tuyến.";
+const seoDesc = tour?.seoDescription || tour?.excerpt || "A premium 1-day journey exploring the magnificent 200km Cu Chi Tunnels and Saigon Heritage, followed by a sunset cruise on the Saigon WaterBus. Exclusive VIP small group with a 7-seater van and a professional photographer throughout the trip.";
 const featuredImage = tour?.ogImage || tour?.featuredImage || "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80";
 const basePrice = tour?.price_number || 3090000;
 const formattedPrice = tour?.price_text || "3,090,000 VND";
@@ -62,7 +62,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Trang chủ", "item": currentOrigin },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": currentOrigin },
       { "@type": "ListItem", "position": 2, "name": "Tours", "item": `${currentOrigin}/tours` },
       { "@type": "ListItem", "position": 3, "name": tourTitle, "item": canonicalUrl }
     ]
@@ -73,7 +73,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       
       <!-- BREADCRUMB -->
       <nav class="breadcrumb-tour flex items-center gap-1.5 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-brand-600 transition-colors">Trang chủ</a>
+        <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -92,12 +92,12 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           </div>
           <div class="inline-flex items-center gap-1">
             <span>⏱️</span>
-            <span>1 ngày (08:00 – 17:30)</span>
+            <span>1 Day (08:00 – 17:30)</span>
           </div>
           <span class="text-slate-300 hidden sm:inline">•</span>
           <div class="inline-flex items-center gap-1">
             <span>🚐</span>
-            <span>Nhóm nhỏ VIP (Max 5 khách/xe)</span>
+            <span>VIP Small Group (Max 5 pax/van)</span>
           </div>
           <span class="text-slate-300 hidden sm:inline">•</span>
           <div class="inline-flex items-center gap-1 text-emerald-700 font-semibold">
@@ -148,26 +148,26 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
             <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
               <p class="text-slate-700 text-[15px] sm:text-base leading-relaxed mb-4">
-                <strong class="text-slate-900">Hành trình 1 ngày Cu Chi Tunnels & Ho Chi Minh City Discovery của The Rice Travel Group</strong> đưa quý khách khám phá trọn vẹn di tích lịch sử quân sự kỳ vĩ hơn 200 km dưới lòng đất Củ Chi, kết hợp các công trình di sản kiến trúc cổ điển tại trung tâm TP.HCM và ngắm hoàng hôn rực rỡ trên chuyến du thuyền Saigon WaterBus.
+                <strong class="text-slate-900">The 1-day Cu Chi Tunnels & Ho Chi Minh City Discovery journey by The Rice Travel Group</strong> takes you on a comprehensive exploration of the monumental 200-km underground military history of Cu Chi, combined with the classic architectural heritage in the heart of Ho Chi Minh City, and ends with a spectacular sunset cruise on the Saigon WaterBus.
               </p>
               <div class="border-t border-slate-100 pt-3.5">
-                <p class="font-bold text-slate-900 text-sm mb-2.5">Điểm nhấn khác biệt của The Rice Travel Group:</p>
+                <p class="font-bold text-slate-900 text-sm mb-2.5">The Rice Travel Group's Signature Differences:</p>
                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-[13.5px] text-slate-700">
                   <li class="flex items-center gap-2">
                     <span class="text-emerald-600 font-bold">✓</span>
-                    <span><strong>NO SHOPPING:</strong> 100% không ghé điểm ép mua sắm</span>
+                    <span><strong>NO SHOPPING:</strong> 100% No forced shopping stops</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <span class="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Nhóm nhỏ VIP:</strong> Max 5 khách/xe 7 chỗ riêng biệt</span>
+                    <span><strong>Nhóm nhỏ VIP:</strong> Max 5 pax in a private 7-seater van</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <span class="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Thợ ảnh theo đoàn:</strong> Tặng trọn bộ ảnh kỷ niệm sau tour</span>
+                    <span><strong>Professional Photographer:</strong> Complimentary full photo album after the tour</span>
                   </li>
                   <li class="flex items-center gap-2">
                     <span class="text-emerald-600 font-bold">✓</span>
-                    <span><strong>Trải nghiệm tinh hoa:</strong> Bánh mì tươi & WaterBus hoàng hôn</span>
+                    <span><strong>Curated Experiences:</strong> Fresh Banh Mi & Sunset WaterBus</span>
                   </li>
                 </ul>
               </div>
@@ -175,7 +175,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- THANH CTA TƯ VẤN PREMIUM (EXACT 1:1 FIT TOUR DESIGN) -->
             <div class="premium-cta-bar mb-8">
-              <div class="cta-title hidden md:block">Tư vấn Tour</div>
+              <div class="cta-title hidden md:block">Tour Consultation</div>
               
               <div class="cta-links">
                 <a href="https://wa.me/0962333621" target="_blank" rel="noopener noreferrer" class="social-btn zalo">
@@ -201,13 +201,13 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
               <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name={tourTitle}>
                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
-                Điền Form
+                Fill Form
               </button>
             </div>
 
             <!-- KEY TOUR ATTRIBUTES (TOURRADAR STYLE 2-COL CONCISE GRID) -->
             <div class="mb-10 pb-8 border-b border-slate-200">
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">Điểm nổi bật của Tour (Tour Highlights)</h2>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">Tour Highlights</h2>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                 
@@ -217,8 +217,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Nhóm nhỏ VIP (Max 5 khách/xe)</div>
-                    <div class="text-xs text-slate-500 mt-1">Xe 7 chỗ riêng biệt, không gian riêng tư</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">VIP Small Group (Max 5 pax/van)</div>
+                    <div class="text-xs text-slate-500 mt-1">Private 7-seater van, exclusive space</div>
                   </div>
                 </div>
 
@@ -228,8 +228,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><circle cx="12" cy="13" r="3"></circle></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Thợ ảnh chuyên nghiệp suốt tuyến</div>
-                    <div class="text-xs text-slate-500 mt-1">Tặng trọn bộ ảnh kỷ niệm sau chuyến đi</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Professional Photographer Throughout</div>
+                    <div class="text-xs text-slate-500 mt-1">Complimentary full photo album after the trip</div>
                   </div>
                 </div>
 
@@ -239,8 +239,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Địa Đạo Củ Chi 200 km kỳ vĩ</div>
-                    <div class="text-xs text-slate-500 mt-1">Trải nghiệm chui hầm & di tích ngầm độc đáo</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">The Magnificent 200km Cu Chi Tunnels</div>
+                    <div class="text-xs text-slate-500 mt-1">Experience tunnel crawling & unique underground heritage</div>
                   </div>
                 </div>
 
@@ -250,8 +250,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Di sản Sài Gòn & Dinh Độc Lập</div>
-                    <div class="text-xs text-slate-500 mt-1">Nhà thờ Đức Bà, Bưu điện TT & chợ Bến Thành</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Saigon Heritage & Independence Palace</div>
+                    <div class="text-xs text-slate-500 mt-1">Notre Dame Cathedral, Central Post Office & Ben Thanh Market</div>
                   </div>
                 </div>
 
@@ -261,8 +261,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Du thuyền Saigon WaterBus</div>
-                    <div class="text-xs text-slate-500 mt-1">Ngắm hoàng hôn & skyline thành phố lên đèn</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Saigon WaterBus Cruise</div>
+                    <div class="text-xs text-slate-500 mt-1">Admire the sunset & the city skyline lighting up</div>
                   </div>
                 </div>
 
@@ -272,8 +272,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                   </div>
                   <div>
-                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">Cam kết 100% No Shopping</div>
-                    <div class="text-xs text-slate-500 mt-1">Thuần túy trải nghiệm, không ép mua sắm</div>
+                    <div class="font-bold text-slate-900 text-sm md:text-[15px] leading-tight">100% No Shopping Guarantee</div>
+                    <div class="text-xs text-slate-500 mt-1">Pure experience, absolutely no forced shopping</div>
                   </div>
                 </div>
 
@@ -284,10 +284,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="tour-unfold-box">
               <input type="checkbox" id="unfold-check" class="unfold-checkbox" />
               <div class="unfold-content">
-                <p><strong>Hành trình 1 ngày Cu Chi Tunnels & Ho Chi Minh City Discovery của The Rice Travel Group</strong> đưa quý khách bắt đầu từ Địa đạo Củ Chi — một trong những công trình quân sự kỳ vĩ và độc đáo bậc nhất của Việt Nam.</p>
-                <p>Trải dài hơn 200 km trong lòng đất và được đào hoàn toàn bằng tay, mạng lưới địa đạo đứng vững như một minh chứng sống động cho trí tuệ, sự kiên cường và ý chí bất khuất của con người Việt Nam.</p>
-                <p>Sau khi tìm hiểu những câu chuyện lịch sử tại Củ Chi, The Rice Travel Group đưa quý khách trở lại trung tâm TP. Hồ Chí Minh để cảm nhận một khía cạnh hoàn toàn khác của Sài Gòn — năng động, hiện đại nhưng vẫn lưu giữ trọn vẹn những nét văn hóa và kiến trúc di sản đặc sắc.</p>
-                <p>Điểm nhấn đặc biệt của hành trình tại TP.HCM là chuyến trải nghiệm <strong>Saigon WaterBus vào lúc chiều muộn</strong>. Từ trên dòng sông lộng gió, quý khách sẽ có góc nhìn toàn cảnh về thành phố, chiêm ngưỡng hoàng hôn tuyệt đẹp buông xuống sông Sài Gòn và chụp những bức ảnh kỷ niệm ấn tượng nhất trong chuyến đi.</p>
+                <p><strong>The 1-day Cu Chi Tunnels & Ho Chi Minh City Discovery journey by The Rice Travel Group</strong> starts with the Cu Chi Tunnels — one of the most magnificent and unique military architectures in Vietnam.</p>
+                <p>Stretching over 200 km underground and excavated entirely by hand, this tunnel network stands as a vivid testament to the wisdom, resilience, and indomitable spirit of the Vietnamese people.</p>
+                <p>After uncovering the historical tales in Cu Chi, The Rice Travel Group brings you back to the heart of Ho Chi Minh City to experience a completely different side of Saigon — dynamic, modern, yet perfectly preserving its distinct culture and heritage architecture.</p>
+                <p>A special highlight of the HCMC itinerary is the <strong>Saigon WaterBus experience in the late afternoon</strong>. From the breezy river, you will have a panoramic view of the city, admire the gorgeous sunset over the Saigon River, and capture the most impressive memorial photos of your trip.</p>
                 <div class="unfold-overlay"></div>
               </div>
               <div class="unfold-btn-wrapper flex justify-center mt-4">
@@ -302,8 +302,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- QR CODE BOX -->
             <div class="tour-qr-box mb-8 bg-slate-50 border border-slate-200 p-6 rounded-xl flex items-center justify-between gap-6 flex-wrap md:flex-nowrap">
               <div class="flex-1">
-                <h4 class="text-base font-bold text-slate-800 mb-1">Tư vấn lịch trình 1:1 cùng The Rice Travel Group</h4>
-                <p class="text-xs text-slate-500 m-0 leading-relaxed">Quét mã QR hoặc gọi hotline để kết nối ngay với chuyên viên tư vấn tuyến điểm. Thiết kế lịch trình riêng theo yêu cầu của gia đình và nhóm bạn.</p>
+                <h4 class="text-base font-bold text-slate-800 mb-1">1:1 Itinerary Consultation with The Rice Travel Group</h4>
+                <p class="text-xs text-slate-500 m-0 leading-relaxed">Scan the QR code or call our hotline to instantly connect with our destination experts. We tailor private itineraries based on your family or group's specific requests.</p>
               </div>
               <div class="flex items-center gap-4 shrink-0">
                 <div class="text-center">
@@ -321,13 +321,13 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="tour-premium-quote">
               <svg class="quote-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
               <p class="quote-text">
-                “Hành trình kết nối sự kiên cường hào hùng của di tích lịch sử ngầm Củ Chi với nhịp sống sôi động, hiện đại và hoàng hôn rực rỡ trên sông Sài Gòn.”
+                “A journey connecting the heroic resilience of the Cu Chi underground historical site with the vibrant, modern pace of life and a dazzling sunset over the Saigon River.”
               </p>
             </div>
 
             <!-- NƠI Ở / PHƯƠNG TIỆN ĐỒNG HÀNH -->
             <section class="tour-accommodation-section mb-12 mt-10" style="font-family: inherit;">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Phương tiện & Tiêu chuẩn Dịch vụ đồng hành</h2>
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Vehicles & Accompanying Service Standards</h2>
               <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                 <div style="display: flex; align-items: center; gap: 16px;">
                   <div style="width: 56px; height: 56px; border-radius: 50%; background: #ffedd5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
@@ -335,11 +335,11 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
                   <div>
                     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Xe 7 chỗ cao cấp riêng biệt & Du thuyền WaterBus</h3>
+                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Private Premium 7-Seater Van & WaterBus Cruise</h3>
                       <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">VIP Service</span>
                     </div>
                     <p style="font-size: 14px; color: #64748b; margin: 0; line-height: 1.5;">
-                      Phương tiện xe 7 chỗ máy lạnh đời mới đón trả tận nơi, nước suối lạnh suốt tuyến, bữa sáng bánh mì tươi giòn và vé Saigon WaterBus hoàng hôn.
+                      Modern air-conditioned 7-seater vehicles with door-to-door pickup, cold mineral water throughout the trip, a crispy fresh Banh Mi for breakfast, and tickets for the sunset Saigon WaterBus.
                     </p>
                   </div>
                 </div>
@@ -348,19 +348,19 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <div class="tour-slider-container">
                   <div class="tour-slider-track">
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80" alt="Xe 7 chỗ cao cấp The Rice Tour" class="tour-slide-img" />
+                      <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80" alt="The Rice Tour Premium 7-seater Van" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Bánh mì tươi Sài Gòn phục vụ trên xe" class="tour-slide-img" />
+                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Fresh Saigon Banh Mi served on board" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="Du thuyền Saigon WaterBus ngắm hoàng hôn" class="tour-slide-img" />
+                      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="Saigon WaterBus Cruise ngắm hoàng hôn" class="tour-slide-img" />
                     </div>
                   </div>
-                  <button class="tour-slider-arrow tour-slider-prev" aria-label="Slide trước">
+                  <button class="tour-slider-arrow tour-slider-prev" aria-label="Previous Slide">
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                   </button>
-                  <button class="tour-slider-arrow tour-slider-next" aria-label="Slide tiếp theo">
+                  <button class="tour-slider-arrow tour-slider-next" aria-label="Next Slide">
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                   </button>
                   <div class="tour-slider-dots">
@@ -375,7 +375,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- LỊCH TRÌNH CHI TIẾT (CHUẨN 4 KHỐI ACCORDION FIT TOUR) -->
             <section class="tour-itinerary-section mb-12 mt-12" id="itinerary">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Lịch trình chi tiết</h2>
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Detailed Itinerary</h2>
               
               <div class="tour-itinerary">
                 <div class="flex flex-col gap-4">
@@ -384,29 +384,29 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <details class="premium-itinerary-item" open>
                     <summary class="premium-itinerary-summary">
                       <div class="itinerary-toggle-icon">+</div>
-                      <span>Buổi Sáng: Làng Sơn Mài & Huyền Thoại Địa Đạo Củ Chi 200 km</span>
+                      <span>Morning: Lacquerware Village & The Legend of the 200km Cu Chi Tunnels</span>
                     </summary>
                     <div class="premium-itinerary-content custom-blog-prose max-w-none">
                       <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
-                        <p class="font-bold text-slate-800 mb-2">Điểm nhấn trong chặng:</p>
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
                         <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
-                          <li>Thưởng thức Bánh mì Việt Nam nóng giòn do The Rice chuẩn bị</li>
-                          <li>Ghé thăm Làng nghề sơn mài Đại Việt Củ Chi truyền thống</li>
-                          <li>Khám phá nắp hầm bí mật, giếng ngầm và hệ thống đường hầm 200 km</li>
-                          <li>Trực tiếp trải nghiệm bò chui hầm thực tế & thử tài bắn súng thể thao</li>
+                          <li>Enjoy crispy, hot Vietnamese Banh Mi prepared by The Rice</li>
+                          <li>Visit the traditional Dai Viet Cu Chi Lacquerware Village</li>
+                          <li>Discover the secret trapdoors, underground wells, and the 200km tunnel system</li>
+                          <li>Experience real tunnel crawling & test your skills at the sport shooting range</li>
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>08:00 AM — Đón khách tại 189 Đề Thám, Quận 1:</strong> Khởi hành từ trung tâm Sài Gòn bằng xe 7 chỗ máy lạnh riêng. Trên quãng đường 60-70 phút di chuyển ra ngoại thành, quý khách thưởng thức món bánh mì Việt Nam nóng giòn được chuẩn bị bởi đội ngũ bếp của The Rice Travel Group.</p>
+                      <p style="margin-bottom:14px"><strong>08:00 AM — Pickup at 189 De Tham, District 1:</strong> Depart from downtown Saigon in a private air-conditioned 7-seater van. During the 60-70 minute drive to the outskirts, you will enjoy a hot, crispy Vietnamese Banh Mi prepared by The Rice Travel Group's culinary team.</p>
                       
-                      <p style="margin-bottom:14px"><strong>09:15 AM — Ghé thăm Làng nghề Sơn Mài Đại Việt Củ Chi:</strong> Dừng chân nhẹ nhàng tại làng nghề sơn mài truyền thống. Tận mắt xem các nghệ nhân khéo léo tạo nên những bức tranh sơn mài cẩn ốc, đồ thủ công mỹ nghệ và trang sức đá quý tinh hoa.</p>
+                      <p style="margin-bottom:14px"><strong>09:15 AM — Visit Dai Viet Cu Chi Lacquerware Village:</strong> Take a gentle stop at a traditional lacquer village. Witness artisans skillfully creating exquisite mother-of-pearl inlaid lacquer paintings, fine handicrafts, and gemstone jewelry.</p>
                       
-                      <p style="margin-bottom:14px"><strong>10:00 AM — Khám phá Di tích Lịch sử Địa đạo Củ Chi:</strong></p>
+                      <p style="margin-bottom:14px"><strong>10:00 AM — Explore the Cu Chi Tunnels Historical Site:</strong></p>
                       <ul style="list-style-type:disc; padding-left:20px; margin-bottom:14px;">
-                        <li>Xem phim tư liệu lịch sử về cuộc sống và tinh thần chiến đấu kiên cường của quân dân Củ Chi.</li>
-                        <li>Khám phá các nắp hầm bí mật ngụy trang tinh tế, giếng nước ngầm, hội trường dưới đất và xác xe tăng Mỹ còn nguyên vẹn giữa rừng.</li>
-                        <li>Trực tiếp trải nghiệm chui hầm thực tế qua các tầng địa đạo ngầm, xem lỗ thông hơi mô phỏng tổ mối và xưởng chế tạo vũ khí tự tạo từ phế liệu chiến tranh.</li>
-                        <li>Thử tài bắn súng thể thao với súng trường AK-47 hoặc M16 tại trường bắn (chi phí tự túc theo sở thích cá nhân).</li>
+                        <li>Watch a historical documentary about the life and resilient fighting spirit of the Cu Chi troops and locals.</li>
+                        <li>Discover subtly camouflaged secret trapdoors, underground water wells, subterranean meeting halls, and an intact wrecked American tank in the middle of the jungle.</li>
+                        <li>Directly experience crawling through the underground tunnel layers, see termite-mound-simulated ventilation holes, and visit the weapon workshop making homemade arms from war scraps.</li>
+                        <li>Test your marksmanship with AK-47 or M16 rifles at the shooting range (optional personal expense).</li>
                       </ul>
 
                       <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4 rounded-r-md">
@@ -414,9 +414,9 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
                           </svg>
-                          Lưu ý trải nghiệm
+                          Experience Note
                         </p>
-                        <p class="text-amber-900 text-sm m-0">Trải nghiệm bò chui hầm địa đạo là tự chọn theo thể lực và sở thích. Quý khách hoàn toàn có thể chọn đi dạo thư thả trên mặt đất dưới bóng mát của rừng nguyên sinh Củ Chi.</p>
+                        <p class="text-amber-900 text-sm m-0">Crawling through the tunnels is completely optional based on your fitness and preference. You can perfectly choose to take a leisurely stroll above ground under the shade of the primeval Cu Chi forest.</p>
                       </div>
                     </div>
                   </details>
@@ -425,23 +425,23 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <details class="premium-itinerary-item">
                     <summary class="premium-itinerary-summary">
                       <div class="itinerary-toggle-icon">+</div>
-                      <span>Buổi Trưa: Trải Nghiệm Khoai Mì Kháng Chiến & Bữa Trưa Đặc Sản</span>
+                      <span>Noon: Resistance-Era Tapioca Experience & Specialty Lunch</span>
                     </summary>
                     <div class="premium-itinerary-content custom-blog-prose max-w-none">
                       <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
-                        <p class="font-bold text-slate-800 mb-2">Điểm nhấn trong chặng:</p>
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
                         <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
-                          <li>Thưởng thức khoai mì luộc chấm muối mè dân dã tại căn cứ</li>
-                          <li>Dùng bữa trưa đậm đà phong vị miền Nam tại nhà hàng tuyển chọn</li>
-                          <li>Nghỉ ngơi thư giãn trên xe riêng 7 chỗ trở về trung tâm TP.HCM</li>
+                          <li>Taste rustic boiled tapioca with peanut-sesame salt at the base</li>
+                          <li>Enjoy a flavorful Southern-style lunch at a selected restaurant</li>
+                          <li>Relax comfortably in the private 7-seater van back to HCMC center</li>
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>12:00 PM — Thưởng thức Khoai mì luộc & Trà nóng Củ Chi:</strong> Quý khách cùng quây quần dưới lán tre mộc mạc giữa rừng Củ Chi thưởng thức món khoai mì luộc dẻo thơm chấm muối mè đậu phộng — món ăn gắn liền với năm tháng kháng chiến, kèm tách trà lài nóng hổi.</p>
+                      <p style="margin-bottom:14px"><strong>12:00 PM — Enjoy Boiled Tapioca & Hot Cu Chi Tea:</strong> Gather under a rustic bamboo shelter in the Cu Chi forest to enjoy soft, fragrant boiled tapioca dipped in peanut-sesame salt — a dish closely associated with the resistance years, accompanied by a hot cup of jasmine tea.</p>
                       
-                      <p style="margin-bottom:14px"><strong>12:30 PM — Dùng bữa trưa đặc sản:</strong> Đoàn dùng bữa trưa phong phú với các món ngon miền Nam tại nhà hàng địa phương sạch sẽ, mát mẻ được tuyển chọn kỹ càng.</p>
+                      <p style="margin-bottom:14px"><strong>12:30 PM — Specialty Lunch:</strong> The group enjoys a hearty lunch featuring Southern delicacies at a carefully selected, clean, and cool local restaurant.</p>
                       
-                      <p style="margin-bottom:14px"><strong>01:30 PM — Khởi hành về trung tâm Sài Gòn:</strong> Xe 7 chỗ riêng đưa quý khách trở lại khu vực Quận 1 trong không gian êm ái, máy lạnh riêng tư.</p>
+                      <p style="margin-bottom:14px"><strong>01:30 PM — Depart back to downtown Saigon:</strong> The private 7-seater van drives you back to District 1 in a smooth, private, and air-conditioned environment.</p>
                     </div>
                   </details>
 
@@ -449,25 +449,25 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <details class="premium-itinerary-item">
                     <summary class="premium-itinerary-summary">
                       <div class="itinerary-toggle-icon">+</div>
-                      <span>Buổi Chiều: Hành Trình Di Sản Kiến Trúc Sài Gòn & Dinh Độc Lập</span>
+                      <span>Afternoon: Saigon Architectural Heritage Journey & Independence Palace</span>
                     </summary>
                     <div class="premium-itinerary-content custom-blog-prose max-w-none">
                       <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
-                        <p class="font-bold text-slate-800 mb-2">Điểm nhấn trong chặng:</p>
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
                         <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
-                          <li>Chiêm ngưỡng Nhà thờ Đức Bà & Bưu điện Trung tâm kiến trúc Pháp cổ</li>
-                          <li>Dạo bước trên Đường sách Nguyễn Văn Bình thanh bình</li>
-                          <li>Tham quan Dinh Độc Lập — chứng nhân lịch sử hào hùng</li>
-                          <li>Khám phá Chợ Bến Thành và hòa mình vào nhịp sống Sài Gòn</li>
+                          <li>Admire the ancient French architecture of Notre Dame Cathedral & Central Post Office</li>
+                          <li>Stroll along the peaceful Nguyen Van Binh Book Street</li>
+                          <li>Visit Independence Palace — a heroic historical witness</li>
+                          <li>Explore Ben Thanh Market and immerse in Saigon's vibrant rhythm</li>
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>02:30 PM — Khám phá Quần thể Di sản Văn hóa & Kiến trúc Trung tâm Sài Gòn:</strong></p>
+                      <p style="margin-bottom:14px"><strong>02:30 PM — Explore the Cultural & Architectural Heritage Complex of Downtown Saigon:</strong></p>
                       <ul style="list-style-type:disc; padding-left:20px; margin-bottom:14px;">
-                        <li><strong>Nhà thờ Đức Bà & Bưu điện Trung tâm:</strong> Tuyệt tác kiến trúc cổ điển hơn 130 năm tuổi giữa lòng thành phố mang phong cách Gothic - Phục Hưng.</li>
-                        <li><strong>Đường sách Nguyễn Văn Bình:</strong> Điểm hẹn văn hóa rợp bóng mát yêu thích của người dân và giới trẻ Sài Gòn.</li>
-                        <li><strong>Dinh Độc Lập:</strong> Tòa dinh thự lịch sử với kiến trúc độc đáo, nơi lưu giữ những dấu mốc chuyển giao lịch sử quan trọng của dân tộc.</li>
-                        <li><strong>Chợ Bến Thành:</strong> Biểu tượng giao thương lâu đời với vô vàn món quà lưu niệm và đặc sản địa phương đặc sắc.</li>
+                        <li><strong>Nhà thờ Đức Bà & Bưu điện Trung tâm:</strong> A classic architectural masterpiece over 130 years old in the heart of the city featuring Gothic-Renaissance style.</li>
+                        <li><strong>Đường sách Nguyễn Văn Bình:</strong> A favorite shaded cultural rendezvous for locals and the youth of Saigon.</li>
+                        <li><strong>Dinh Độc Lập:</strong> A historical mansion with unique architecture, preserving crucial historical transitional milestones of the nation.</li>
+                        <li><strong>Chợ Bến Thành:</strong> A long-standing trading icon packed with countless souvenirs and distinctive local specialties.</li>
                       </ul>
 
                       <div class="bg-sky-50 border-l-4 border-sky-500 p-4 my-4 rounded-r-md">
@@ -475,9 +475,9 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
                           </svg>
-                          Nhiếp ảnh Suốt Tuyến
+                          Photography Throughout
                         </p>
-                        <p class="text-sky-900 text-sm m-0">Thợ ảnh chuyên nghiệp của The Rice Travel Group sẽ đồng hành ghi lại những góc máy street-style đẹp nhất cho bạn tại các công trình di sản cổ kính.</p>
+                        <p class="text-sky-900 text-sm m-0">The Rice Travel Group's professional photographer will accompany you to capture the best street-style angles at these ancient heritage sites.</p>
                       </div>
                     </div>
                   </details>
@@ -486,22 +486,22 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <details class="premium-itinerary-item">
                     <summary class="premium-itinerary-summary">
                       <div class="itinerary-toggle-icon">+</div>
-                      <span>Chiều Muộn: Hoàng Hôn Sông Sài Gòn Trên Tuyến Saigon WaterBus</span>
+                      <span>Late Afternoon: Saigon River Sunset on the Saigon WaterBus</span>
                     </summary>
                     <div class="premium-itinerary-content custom-blog-prose max-w-none">
                       <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
-                        <p class="font-bold text-slate-800 mb-2">Điểm nhấn trong chặng:</p>
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
                         <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
-                          <li>Du ngoạn sông Sài Gòn trên tuyến buýt sông hiện đại</li>
-                          <li>Ngắm hoàng hôn buông xuống và skyline các tòa cao ốc hiện đại</li>
-                          <li>Tận hưởng làn gió mát lành và chụp ảnh lưu niệm cực đẹp</li>
-                          <li>Thợ ảnh The Rice bàn giao trọn bộ ảnh kỷ niệm sau tour</li>
+                          <li>Cruise the Saigon River on the modern river bus route</li>
+                          <li>Watch the sunset and the skyline of modern skyscrapers</li>
+                          <li>Enjoy the cool breeze and take stunning memorial photos</li>
+                          <li>The Rice photographer hands over the full memorial photo album after the tour</li>
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>04:30 PM — Trải nghiệm Saigon WaterBus:</strong> Đoàn di chuyển ra bến tàu Bạch Đằng, lên chuyến WaterBus ngắm hoàng hôn rực rỡ và chiêm ngưỡng vẻ đẹp skyline thành phố hiện đại soi bóng xuống dòng sông Sài Gòn.</p>
+                      <p style="margin-bottom:14px"><strong>04:30 PM — Saigon WaterBus Experience:</strong> The group heads to Bach Dang pier and boards the WaterBus to admire the radiant sunset and the stunning beauty of the modern city skyline reflecting on the Saigon River.</p>
                       
-                      <p style="margin-bottom:14px"><strong>05:30 PM — Kết thúc hành trình:</strong> Xe đưa quý khách về điểm hẹn ban đầu tại Quận 1. Hướng dẫn viên và thợ ảnh chia tay đoàn, gửi tặng toàn bộ link tải bộ ảnh kỷ niệm chất lượng cao sau chuyến đi!</p>
+                      <p style="margin-bottom:14px"><strong>05:30 PM — End of the journey:</strong> The vehicle returns you to the original meeting point in District 1. The guide and photographer bid you farewell, sending you the full download link for the high-quality memorial photo album right after the trip!</p>
                     </div>
                   </details>
 
@@ -509,13 +509,13 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
               </div>
               
               <p style="font-style:italic;color:#64748b;font-size:0.9rem;margin-top:16px;padding:0 12px;">
-                Lưu ý: Thứ tự các điểm tham quan có thể thay đổi linh hoạt tùy theo điều kiện giao thông và thời tiết thực tế nhưng vẫn đảm bảo trọn vẹn mọi trải nghiệm trong chương trình.
+                Note: The order of attractions is subject to flexible changes depending on actual traffic and weather conditions, but still fully guarantees all experiences in the itinerary.
               </p>
             </section>
 
             <!-- LỊCH KHỞI HÀNH -->
             <section class="tour-departure-section mb-12">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Lịch khởi hành</h2>
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Departure Schedule</h2>
               
               <div class="lich-khoi-hanh-wrapper font-sans">
                 <div class="departures-container">
@@ -523,16 +523,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <table class="w-full text-left border-collapse m-0">
                       <thead>
                         <tr class="bg-slate-50">
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Điểm đến & Mã Tour</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Phương tiện</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Khởi hành</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Giá / Khách</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-center">Tình trạng</th>
-                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-right">Đăng ký</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Destination & Tour Code</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Transportation</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Departure</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm">Price / Pax</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-center">Status</th>
+                          <th class="p-4 font-bold text-slate-700 border-b border-slate-200 text-sm text-right">Book Now</th>
                         </tr>
                       </thead>
                       <tbody class="bg-white">
-                        <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
+                        <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:00:00.000Z">
                           <td class="p-4">
                             <div class="font-bold text-slate-800 text-sm leading-snug">{tourTitle}</div>
                             <span class="font-mono text-[10px] text-slate-500 mt-1 inline-block">CUCHI-SAIGON-DAILY</span>
@@ -540,23 +540,23 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <td class="p-4 text-xs text-slate-600 space-y-1.5">
                             <div class="flex items-center gap-1.5">
                               <span class="text-orange-500 shrink-0">🚐</span>
-                              <span class="font-semibold text-slate-700">Xe 7 chỗ riêng & WaterBus</span>
+                              <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                             </div>
-                            <div class="text-[11px] text-slate-500 mt-0.5">TP.HCM (189 Đề Thám, Q1)</div>
+                            <div class="text-[11px] text-slate-500 mt-0.5">HCMC (189 De Tham, Dist. 1)</div>
                           </td>
                           <td class="p-4">
-                            <div class="font-bold text-slate-800">Khởi hành hàng ngày</div>
-                            <div class="text-xs text-slate-500 mt-0.5">08:00 AM – 17:30 PM</div>
+                            <div class="font-bold text-slate-800">Departure hàng ngày</div>
+                            <div class="text-xs text-slate-500 mt-0.5">08:00 AM – 05:30 PM</div>
                           </td>
                           <td class="p-4 font-bold text-orange-600 whitespace-nowrap text-base">{formattedPrice}</td>
                           <td class="p-4 text-center">
                             <span class="inline-block px-3 py-1 rounded-full text-xs font-bold border text-green-700 bg-green-50 border-green-200">
-                              Mở bán
+                              Available
                             </span>
                           </td>
                           <td class="p-4 text-right">
                             <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs transition-colors" data-tour-name={tourTitle}>
-                              Đăng ký
+                              Book Now
                             </button>
                           </td>
                         </tr>
@@ -566,25 +566,25 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
                   <!-- MOBILE CARDS -->
                   <div class="md:hidden space-y-4">
-                    <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
+                    <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="Ho Chi Minh City" data-date="2026-08-28T08:00:00.000Z">
                       <div class="flex justify-between items-start mb-3">
                         <div class="flex-1 pr-3">
                           <div class="font-bold text-slate-800 text-sm leading-snug mb-1">{tourTitle}</div>
                           <span class="font-mono text-[10px] text-slate-500">CUCHI-SAIGON-DAILY</span>
                         </div>
                         <span class="px-2.5 py-1 rounded-md text-[11px] font-bold border whitespace-nowrap text-green-700 bg-green-50 border-green-200">
-                          Mở bán
+                          Available
                         </span>
                       </div>
                       <div class="bg-slate-50 rounded-lg p-3 mb-3 space-y-1.5 text-xs">
                         <div class="flex items-center gap-1.5">
                           <span class="text-orange-500 shrink-0">🚐</span>
-                          <span class="font-semibold text-slate-700">Xe 7 chỗ riêng & WaterBus</span>
+                          <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                         </div>
-                        <div class="text-[11px] text-slate-500">Đón tại 189 Đề Thám, Quận 1</div>
+                        <div class="text-[11px] text-slate-500">Pickup at 189 De Tham, District 1</div>
                       </div>
                       <div class="flex items-center gap-2 text-sm text-slate-600 mb-1">
-                        <span>🛫 Khởi hành hàng ngày (08:00 - 17:30)</span>
+                        <span>🛫 Departure hàng ngày (08:00 - 17:30)</span>
                       </div>
                       <div class="h-px bg-slate-100 w-full my-3"></div>
                       <div class="flex justify-between items-center">
@@ -593,7 +593,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <span class="font-bold text-orange-600 text-base">{formattedPrice}</span>
                         </div>
                         <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs" data-tour-name={tourTitle}>
-                          Đăng ký ngay
+                          Book Now ngay
                         </button>
                       </div>
                     </div>
@@ -604,14 +604,14 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
             <!-- THÔNG TIN THÊM -->
             <section class="tour-faq-section mb-12 mt-12">
-              <h2 class="text-2xl font-bold text-slate-800 mb-6">Thông Tin Thêm</h2>
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Additional Information</h2>
               
               <div class="tour-faq-wrapper flex flex-col gap-4">
                 
                 <details open class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span class="flex-1 text-lg font-bold text-green-700">Giá Tour Bao Gồm</span>
+                    <span class="flex-1 text-lg font-bold text-green-700">Tour Inclusions</span>
                     <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
                   <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm">
@@ -620,10 +620,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                       <li>Bữa sáng bánh mì tươi thơm ngon phục vụ trên xe.</li>
                       <li>Hướng dẫn viên tiếng Anh/Việt am hiểu sâu sắc lịch sử và văn hóa.</li>
                       <li>Thợ chụp ảnh chuyên nghiệp đi cùng đoàn, gửi link tải bộ ảnh chất lượng cao sau tour.</li>
-                      <li>Vé tham quan toàn bộ các điểm trong chương trình (Địa đạo Củ Chi, Dinh Độc Lập).</li>
-                      <li>Vé du thuyền Saigon WaterBus ngắm hoàng hôn trên sông Sài Gòn.</li>
-                      <li>Thưởng thức khoai mì luộc chấm muối mè đậu phộng và trà nóng tại Củ Chi.</li>
-                      <li>Nước suối đóng chai và khăn lạnh phục vụ suốt chuyến đi.</li>
+                      <li>All entrance fees for attractions in the itinerary (Cu Chi Tunnels, Independence Palace).</li>
+                      <li>Saigon WaterBus ticket for sunset viewing on the Saigon River.</li>
+                      <li>Enjoy boiled tapioca with peanut-sesame salt and hot tea in Cu Chi.</li>
+                      <li>Bottled mineral water and cold towels served throughout the trip.</li>
                     </ol>
                   </div>
                 </details>
@@ -631,15 +631,15 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                    <span class="flex-1 text-lg font-bold text-red-700">Giá Tour Không Bao Gồm</span>
+                    <span class="flex-1 text-lg font-bold text-red-700">Tour Exclusions</span>
                     <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
                   <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm">
                     <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
-                      <li>Chi phí bắn súng đạn thật tại trường bắn Củ Chi (tùy theo sở thích cá nhân).</li>
-                      <li>Chi phí mua sắm cá nhân, đồ uống ngoài chương trình.</li>
-                      <li>Tiền bồi dưỡng (tip) cho hướng dẫn viên và lái xe (tùy tâm).</li>
-                      <li>Thuế VAT (nếu cần xuất hóa đơn tài chính).</li>
+                      <li>Cost of real-bullet shooting at the Cu Chi shooting range (based on personal preference).</li>
+                      <li>Personal shopping expenses, drinks outside the itinerary.</li>
+                      <li>Gratuities (tips) for the guide and driver (optional).</li>
+                      <li>VAT tax (if a financial invoice is required).</li>
                     </ol>
                   </div>
                 </details>
@@ -647,14 +647,14 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm">
                   <summary class="flex items-center gap-3 p-4 font-semibold cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors list-none [&::-webkit-details-marker]:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                    <span class="flex-1 text-lg font-bold text-sky-700">Quy Định Đặt Chỗ & Hoàn Hủy</span>
+                    <span class="flex-1 text-lg font-bold text-sky-700">Booking & Cancellation Policy</span>
                     <span class="faq-toggle-icon text-2xl font-light text-slate-400 group-open:rotate-45 transition-transform duration-300">+</span>
                   </summary>
                   <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-sm leading-relaxed">
-                    <p>Quý khách vui lòng đặt tour trước tối thiểu 24 giờ để The Rice Travel Group sắp xếp xe riêng và thợ chụp ảnh chu đáo nhất.</p>
-                    <p>Hủy tour trước 48 giờ: Miễn phí 100%.</p>
-                    <p>Hủy tour trong vòng 24–48 giờ: Phí hủy 50% giá trị tour.</p>
-                    <p>Hủy tour trong vòng 24 giờ trước giờ khởi hành: Phí hủy 100%.</p>
+                    <p>Please book the tour at least 24 hours in advance so The Rice Travel Group can best arrange the private van and photographer.</p>
+                    <p>Cancellation over 48 hours prior: 100% Free of charge.</p>
+                    <p>Cancellation within 24–48 hours: 50% cancellation fee.</p>
+                    <p>Cancellation within 24 hours before departure: 100% cancellation fee.</p>
                   </div>
                 </details>
 
@@ -664,18 +664,18 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- GALLERY ẢNH KHÁCH HÀNG -->
             <section class="tour-gallery-section mb-12 mt-12 group">
               <div class="mb-6">
-                <h2 class="text-2xl font-bold text-slate-800 m-0">Hình ảnh khách hàng The Rice Travel Group tại Củ Chi & Sài Gòn</h2>
+                <h2 class="text-2xl font-bold text-slate-800 m-0">The Rice Travel Group's Customer Gallery in Cu Chi & Saigon</h2>
               </div>
               <div class="relative">
-                <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Xem ảnh trước">
+                <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Previous photo">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
-                <button class="tour-gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0" aria-label="Xem ảnh tiếp">
+                <button class="tour-gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0" aria-label="Next photo">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
                 <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing">
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Bưu điện trung tâm Sài Gòn" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Saigon Central Post Office" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
@@ -683,11 +683,11 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Hoàng hôn trên sông Sài Gòn" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Sunset on the Saigon River" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Địa đạo Củ Chi rợp bóng cây" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Tree-shaded Cu Chi Tunnels" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -708,35 +708,35 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
                       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Dịch vụ</div>
-                    <div class="service-sub" style="font-size:13px; color:#64748b;">Trọn gói VIP</div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Service</div>
+                    <div class="service-sub" style="font-size:13px; color:#64748b;">VIP All-inclusive</div>
                   </div>
 
                   <div class="service-item" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
                     <div class="service-icon" style="width:48px; height:48px; border-radius:50%; background:#fff7ed; color:#ea580c; display:flex; align-items:center; justify-content:center; margin-bottom:8px;">
                       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     </div>
-                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Thời gian</div>
+                    <div class="service-title" style="font-weight:700; color:#1e293b; font-size:14px; margin-bottom:2px;">Duration</div>
                     <div class="service-sub" style="font-size:13px; color:#64748b;">1 ngày (8:00 - 17:30)</div>
                   </div>
                 </div>
 
                 <!-- Khối Giá Lớn -->
                 <div style="margin-bottom: 20px; text-align: left;">
-                  <div class="price-label" style="font-size:13px; color:#64748b; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">Giá trọn gói từ</div>
+                  <div class="price-label" style="font-size:13px; color:#64748b; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px;">All-inclusive price from</div>
                   <div class="price-amount" style="font-size:24px; font-weight:800; color:#0f172a; line-height:1.2; letter-spacing:-0.02em; white-space:nowrap;">{formattedPrice}</div>
-                  <div style="font-size:12px; color:#94a3b8; margin-top:4px;">Bao gồm vé tham quan, xe 7 chỗ riêng & thợ ảnh</div>
+                  <div style="font-size:12px; color:#94a3b8; margin-top:4px;">Includes entrance fees, private 7-seater van & photographer</div>
                 </div>
 
                 <!-- Interactive Date & Guest Picker (Styled Super Clean) -->
                 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:16px; margin-bottom:20px; display:flex; flex-direction:column; gap:12px;">
                   <div>
-                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Chọn ngày khởi hành:</label>
+                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Select Departure Date:</label>
                     <input type="date" id="booking-date-input" style="width:100%; padding:10px 14px; font-size:13px; font-weight:600; color:#1e293b; background:#ffffff; border:1px solid #cbd5e1; border-radius:10px; outline:none;" value="2026-08-28" />
                   </div>
 
                   <div>
-                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Số lượng khách (Tối đa 5 khách/xe):</label>
+                    <label style="display:block; font-size:12px; font-weight:700; color:#334155; margin-bottom:6px;">Number of Guests (Max 5 pax/van):</label>
                     <div style="display:flex; align-items:center; justify-content:space-between; background:#ffffff; border:1px solid #cbd5e1; border-radius:12px; padding:6px 12px;">
                       <button type="button" id="guest-minus-btn" style="width:36px; height:36px; border-radius:10px; background:#f1f5f9; border:none; font-weight:700; font-size:18px; color:#334155; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;">−</button>
                       <span id="guest-count-display" style="font-weight:800; font-size:16px; color:#0f172a;">1</span>
@@ -745,7 +745,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
 
                   <div class="tour-price-calc-box" style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; background:#fff7ed; border-radius:10px; border:1px solid #ffedd5; white-space:nowrap;">
-                    <span class="tour-price-calc-label" style="font-weight:600; color:#9a3412; font-size:13px; white-space:nowrap; flex-shrink:0;">Tạm tính:</span>
+                    <span class="tour-price-calc-label" style="font-weight:600; color:#9a3412; font-size:13px; white-space:nowrap; flex-shrink:0;">Subtotal:</span>
                     <strong class="tour-price-calc-amount" style="font-size:14.5px; font-weight:800; color:#ea580c; white-space:nowrap;" id="total-price-display" data-base-price={basePrice}>{formattedPrice}</strong>
                   </div>
                 </div>
@@ -754,7 +754,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <div class="action-buttons" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
                   <a href="https://wa.me/0962333621" target="_blank" class="btn-primary btn-zalo" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:13px; text-decoration:none; background:#0068FF; box-shadow:0 4px 14px rgba(0,104,255,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
-                    Tư vấn Zalo
+                    Zalo Consult
                   </a>
                   <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:13px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
@@ -764,25 +764,25 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
                 <!-- Nút Đăng Ký Lớn Nổi Bật -->
                 <button type="button" class="btn-outline js-open-booking-modal" data-tour-name={tourTitle}>
-                  ĐĂNG KÝ GIỮ CHỖ NGAY
+                  BOOK YOUR SEAT NOW
                 </button>
 
                 <!-- Cam Kết Chất Lượng -->
                 <div style="margin-top:18px; padding-top:16px; border-top:1px solid #f1f5f9; display:flex; flex-direction:column; gap:8px; font-size:12px; color:#475569;">
                   <div style="display:flex; align-items:center; gap:6px;">
-                    <span style="color:#16a34a; font-weight:bold;">✓</span> Giới hạn tối đa 5 khách / xe riêng
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> Strict limit of max 5 guests / private van
                   </div>
                   <div style="display:flex; align-items:center; gap:6px;">
-                    <span style="color:#16a34a; font-weight:bold;">✓</span> Tặng trọn bộ ảnh kỷ niệm sau tour
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> Complimentary full photo album after the tour
                   </div>
                   <div style="display:flex; align-items:center; gap:6px;">
-                    <span style="color:#16a34a; font-weight:bold;">✓</span> Cam kết 100% No Shopping ép buộc
+                    <span style="color:#16a34a; font-weight:bold;">✓</span> 100% No Shopping Guarantee ép buộc
                   </div>
                 </div>
 
                 <!-- Hotline -->
                 <div style="margin-top:14px; text-align:center; font-size:13px; color:#64748b;">
-                  Hotline 24/7: <a href="tel:0962333621" style="font-weight:700; color:#ea580c; text-decoration:none;">0962.333.621</a>
+                  24/7 Hotline: <a href="tel:0962333621" style="font-weight:700; color:#ea580c; text-decoration:none;">0962.333.621</a>
                 </div>
 
               </div>
@@ -801,13 +801,13 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <p class="text-brand-600 text-[10px] font-bold tracking-[0.2em] mb-3">THE RICE TRAVEL GROUP</p>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-wide">Các Hành Trình Nổi Bật Khác</h2>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-wide">Other Outstanding Journeys</h2>
         </div>
         <div class="flex items-center gap-3">
-          <button data-action="carousel-prev" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Tour trước">
+          <button data-action="carousel-prev" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Previous Tour">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
           </button>
-          <button data-action="carousel-next" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Tour tiếp">
+          <button data-action="carousel-next" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Next Tour">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </button>
         </div>
@@ -821,16 +821,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Mekong Delta" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3 Ngày 2 Đêm</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3 Days 2 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Authentic Mekong Delta Waterways & Floating Market</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Sông nước Cần Thơ, chợ nổi Cái Răng & vườn trái cây miệt vườn</p>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Can Tho waterways, Cai Rang floating market & lush fruit orchards</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">Giá trọn gói từ</span>
-                  <span class="text-orange-600 font-extrabold text-base">$360 USD / khách</span>
+                  <span class="text-xs text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-base">$360 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -841,16 +841,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=600&q=80" alt="Sapa" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">4 Ngày 3 Đêm</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">4 Days 3 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Sapa Majestic Rice Terraces & Hill Tribe Heritage</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Ruộng bậc thang Mường Hoa, đỉnh Fansipan & bản làng H'Mông</p>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Muong Hoa rice terraces, Fansipan peak & H'Mong ethnic villages</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">Giá trọn gói từ</span>
-                  <span class="text-orange-600 font-extrabold text-base">$420 USD / khách</span>
+                  <span class="text-xs text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-base">$420 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -861,16 +861,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Grand Vietnam" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">14 Ngày 13 Đêm</span>
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">14 Days 13 Nights</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Grand Vietnam Discovery: North to South Expedition</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Hành trình xuyên Việt từ Hà Nội, Hạ Long, Huế, Hội An đến Sài Gòn</p>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 13px;">Trans-Vietnam expedition from Hanoi, Halong, Hue, Hoi An to Saigon</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span class="text-xs text-slate-400">Giá trọn gói từ</span>
-                  <span class="text-orange-600 font-extrabold text-base">$1,850 USD / khách</span>
+                  <span class="text-xs text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-base">$1,850 USD / pax</span>
                 </div>
               </div>
             </div>
@@ -883,28 +883,28 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
   <!-- MOBILE STICKY BOTTOM NAVIGATION (Native App Style) -->
   <nav class="mobile-sticky-bottom-nav" aria-label="Mobile Quick Navigation">
-    <button type="button" class="mobile-nav-item item-itinerary" id="btn-mobile-itinerary" aria-label="Xem lịch trình">
+    <button type="button" class="mobile-nav-item item-itinerary" id="btn-mobile-itinerary" aria-label="View Itinerary">
       <div class="mobile-nav-icon">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
       </div>
       <span>Itinerary</span>
     </button>
 
-    <button type="button" class="mobile-nav-item item-office" id="btn-mobile-office" aria-label="Văn phòng & Bảo đảm">
+    <button type="button" class="mobile-nav-item item-office" id="btn-mobile-office" aria-label="Office & Guarantees">
       <div class="mobile-nav-icon">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
       </div>
       <span>Our Office</span>
     </button>
 
-    <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-whatsapp" aria-label="Chat WhatsApp">
+    <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-whatsapp" aria-label="Chat on WhatsApp">
       <div class="mobile-nav-icon">
         <svg fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
       </div>
       <span>WhatsApp</span>
     </a>
 
-    <a href="https://m.me/thericetour" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-messenger" aria-label="Chat Messenger">
+    <a href="https://m.me/thericetour" target="_blank" rel="noopener noreferrer" class="mobile-nav-item item-messenger" aria-label="Chat on Messenger">
       <div class="mobile-nav-icon">
         <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
       </div>
@@ -918,7 +918,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
         <div class="inline-flex items-center gap-2 bg-orange-50 text-orange-700 font-bold text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-orange-200">
           <span>🏢</span>
-          <span>Trụ sở The Rice Travel Group</span>
+          <span>The Rice Travel Group HQ</span>
         </div>
         <button type="button" id="close-office-modal" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center text-lg font-bold transition-colors cursor-pointer border-none" aria-label="Đóng">&times;</button>
       </div>
@@ -930,8 +930,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             📍
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Văn phòng đón khách tại TP.HCM</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">189 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh</p>
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
+            <p class="text-xs text-slate-600 leading-relaxed m-0">189 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, Ho Chi Minh City</p>
           </div>
         </div>
 
@@ -941,8 +941,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             📜
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Giấy phép Lữ hành Quốc tế</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">Được cấp phép chính thức bởi <strong>Cục Du lịch Quốc gia Việt Nam</strong> (Bộ VHTTDL).</p>
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">International Tour Operator License</h4>
+            <p class="text-xs text-slate-600 leading-relaxed m-0">Officially licensed by the <strong>Vietnam National Authority of Tourism</strong> (Ministry of Culture, Sports & Tourism).</p>
           </div>
         </div>
 
@@ -952,8 +952,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             🛡️
           </div>
           <div class="text-left">
-            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Cam kết bảo hiểm & chất lượng</h4>
-            <p class="text-xs text-slate-600 leading-relaxed m-0">Bảo hiểm du lịch trọn gói mức cao, <strong>100% Không shopping ép buộc</strong>, xe 7 chỗ VIP đời mới và thợ ảnh suốt tuyến.</p>
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Insurance & Quality Guarantee</h4>
+            <p class="text-xs text-slate-600 leading-relaxed m-0">High-coverage travel insurance, <strong>100% No forced shopping</strong>, modern VIP 7-seater van, and professional photographer throughout.</p>
           </div>
         </div>
       </div>
@@ -962,10 +962,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       <div class="mt-4 pt-3.5 border-t border-slate-100 flex flex-col gap-2">
         <a href="tel:0962333621" class="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-colors" style="text-decoration: none;">
           <span>📞</span>
-          <span>Gọi Hotline: 0962.333.621</span>
+          <span>Call Hotline: 0962.333.621</span>
         </a>
         <button type="button" id="btn-close-office-modal-bottom" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-xs transition-colors cursor-pointer border-none">
-          Đóng cửa sổ
+          Close window
         </button>
       </div>
     </div>
@@ -1107,7 +1107,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
           const desc = document.createElement('p');
           desc.style.cssText = 'font-size: 14px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
-          desc.innerHTML = 'Đăng ký tư vấn trực tiếp 1:1 với chuyên viên <strong>The Rice Travel Group</strong> để nhận tư vấn lịch trình riêng và giá ưu đãi!';
+          desc.innerHTML = 'Register for a direct 1:1 consultation with <strong>The Rice Travel Group</strong> experts to receive custom itinerary advice and exclusive offers!';
 
           const actionGroup = document.createElement('div');
           actionGroup.style.cssText = 'display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;';
@@ -1116,24 +1116,24 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           waBtn.href = 'https://wa.me/84962333621';
           waBtn.target = '_blank';
           waBtn.rel = 'noopener noreferrer';
-          waBtn.innerHTML = '💬 Chat WhatsApp 24/7';
+          waBtn.innerHTML = '💬 Chat on WhatsApp 24/7';
           waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           const zaloBtn = document.createElement('a');
           zaloBtn.href = 'https://zalo.me/0962333641';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
-          zaloBtn.innerHTML = '💬 Chat Zalo Tư Vấn';
+          zaloBtn.innerHTML = '💬 Chat Zalo for Consult';
           zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
 
           const hotlineBtn = document.createElement('a');
           hotlineBtn.href = 'tel:0962333621';
-          hotlineBtn.innerHTML = '📞 Gọi Hotline: 0962.333.621';
+          hotlineBtn.innerHTML = '📞 Call Hotline: 0962.333.621';
           hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;';
 
           const closeBtn = document.createElement('button');
           closeBtn.type = 'button';
-          closeBtn.innerText = 'Đóng lại';
+          closeBtn.innerText = 'Close';
           closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 13px; width: 100%; transition: background 0.2s;';
 
           function closeBookingModal() {
