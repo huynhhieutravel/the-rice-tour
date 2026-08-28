@@ -68,49 +68,109 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     ]
   })} />
 
-  <div class="bg-gray-50 min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <div class="bg-gray-50/60 min-h-screen">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
       
       <!-- BREADCRUMB -->
-      <nav class="breadcrumb-tour flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+      <nav class="breadcrumb-tour flex items-center gap-1.5 text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
         <a href="/" class="hover:text-brand-600 transition-colors">Trang chủ</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         <span class="text-gray-900 font-medium truncate">{tourTitle}</span>
       </nav>
 
-      <main class="elementor-tour-wrapper custom-tour-layout">
-        
-        <!-- ẢNH COVER MOBILE (Dual Placement) -->
-        <div class="mobile-image relative w-full rounded-2xl overflow-hidden shadow-lg mb-6 md:hidden">
+      <!-- TOUR TOP HEADER (TOURRADAR MASTER STANDARD) -->
+      <header class="tour-top-header mb-4 sm:mb-6">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-2.5">
+          {tourTitle}
+        </h1>
+        <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-600 font-medium">
+          <div class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-md border border-amber-200 text-xs shadow-xs">
+            <span>★ 5.0</span>
+            <span class="text-slate-700 font-normal">TripAdvisor 5.0 Excellence</span>
+          </div>
+          <div class="inline-flex items-center gap-1">
+            <span>⏱️</span>
+            <span>1 ngày (08:00 – 17:30)</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1">
+            <span>🚐</span>
+            <span>Nhóm nhỏ VIP (Max 5 khách/xe)</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1 text-emerald-700 font-semibold">
+            <span>✓ 100% No Shopping</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO IMAGE GALLERY (TOURRADAR 1-BIG + 2-SMALL GRID ON DESKTOP / RESPONSIVE BANNER ON MOBILE) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 rounded-2xl overflow-hidden shadow-xs mb-6 sm:mb-8">
+        <div class="md:col-span-2 relative aspect-[16/10] overflow-hidden bg-slate-100">
           <img 
             src={featuredImage} 
             alt={tourTitle} 
-            class="w-full h-auto block rounded-2xl" 
-            width="800" 
-            height="450" 
+            class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+            width="1200" 
+            height="750" 
             loading="eager" 
             fetchpriority="high" 
           />
         </div>
+        <div class="hidden md:flex flex-col gap-2 sm:gap-3">
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-[16/10]">
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" 
+              alt="Bánh mì tươi & khoai mì lán tre" 
+              class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+              loading="eager" 
+            />
+          </div>
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-[16/10]">
+            <img 
+              src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" 
+              alt="Hoàng hôn sông Sài Gòn trên Saigon WaterBus" 
+              class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
+              loading="eager" 
+            />
+          </div>
+        </div>
+      </div>
 
+      <main class="elementor-tour-wrapper custom-tour-layout">
         <div class="tour-grid-container">
           
           <!-- ================= CỘT CHÍNH (TRÁI) ================= -->
           <div class="tour-main-col">
             
-            <!-- ẢNH COVER DESKTOP (Dual Placement) -->
-            <div class="desktop-image relative w-full rounded-2xl overflow-hidden shadow-lg mb-8 hidden md:block">
-              <img 
-                src={featuredImage} 
-                alt={tourTitle} 
-                class="w-full h-auto block rounded-2xl" 
-                width="1200" 
-                height="600" 
-                loading="eager" 
-                fetchpriority="high" 
-              />
+            <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
+            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
+              <p class="text-slate-700 text-[15px] sm:text-base leading-relaxed mb-4">
+                <strong class="text-slate-900">Hành trình 1 ngày Cu Chi Tunnels & Ho Chi Minh City Discovery của The Rice Travel Group</strong> đưa quý khách khám phá trọn vẹn di tích lịch sử quân sự kỳ vĩ hơn 200 km dưới lòng đất Củ Chi, kết hợp các công trình di sản kiến trúc cổ điển tại trung tâm TP.HCM và ngắm hoàng hôn rực rỡ trên chuyến du thuyền Saigon WaterBus.
+              </p>
+              <div class="border-t border-slate-100 pt-3.5">
+                <p class="font-bold text-slate-900 text-sm mb-2.5">Điểm nhấn khác biệt của The Rice Travel Group:</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-[13.5px] text-slate-700">
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span><strong>NO SHOPPING:</strong> 100% không ghé điểm ép mua sắm</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span><strong>Nhóm nhỏ VIP:</strong> Max 5 khách/xe 7 chỗ riêng biệt</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span><strong>Thợ ảnh theo đoàn:</strong> Tặng trọn bộ ảnh kỷ niệm sau tour</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-emerald-600 font-bold">✓</span>
+                    <span><strong>Trải nghiệm tinh hoa:</strong> Bánh mì tươi & WaterBus hoàng hôn</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <!-- THANH CTA TƯ VẤN PREMIUM (EXACT 1:1 FIT TOUR DESIGN) -->
@@ -637,28 +697,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
           <!-- ================= CỘT SIDEBAR (PHẢI) ================= -->
           <div class="tour-sidebar-col">
-            <div class="sticky top-[100px] flex flex-col gap-6">
-              
-              <div>
-                <h1 class="text-2xl md:text-3xl font-extrabold text-slate-800 leading-[1.2] mt-0 tracking-tight" style="margin-bottom: 20px;">
-                  {tourTitle}
-                </h1>
-                <div class="text-gray-600 text-[15px] leading-relaxed font-normal custom-blog-prose mb-6">
-                  <p style="margin-bottom:14px">
-                    <strong>Hành trình 1 ngày Cu Chi Tunnels & Ho Chi Minh City Discovery của The Rice Travel Group</strong> đưa quý khách khám phá trọn vẹn di tích lịch sử quân sự kỳ vĩ hơn 200 km dưới lòng đất Củ Chi, kết hợp các công trình di sản kiến trúc cổ điển tại trung tâm TP.HCM và ngắm hoàng hôn rực rỡ trên chuyến du thuyền Saigon WaterBus.
-                  </p>
-                  <p style="margin-bottom:12px"><strong>Điểm nhấn khác biệt của The Rice Travel Group:</strong></p>
-                  <ul style="list-style-type:disc; padding-left:20px; margin-bottom:14px; display:flex; flex-direction:column; gap:8px;">
-                    <li><strong>NO SHOPPING:</strong> Cam kết 100% không ghé điểm mua sắm thương mại ép buộc.</li>
-                    <li><strong>Nhóm nhỏ VIP (Max 5 khách/xe):</strong> Xe 7 chỗ riêng biệt đời mới, đón trả tận nơi tiện lợi.</li>
-                    <li><strong>Thợ ảnh đi cùng suốt tuyến:</strong> Tặng trọn bộ ảnh kỷ niệm chất lượng cao sau tour.</li>
-                    <li><strong>Trải nghiệm tinh hoa:</strong> Bánh mì tươi & khoai mì lán tre, khám phá địa đạo Củ Chi và du ngoạn Saigon WaterBus lúc hoàng hôn.</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="sticky top-[90px] flex flex-col gap-6">
 
               <!-- STICKY PRICE CARD (LUXURY REFINED DESIGN) -->
-              <div class="sticky-price-card" style="background:#ffffff; border-radius:24px; box-shadow:0 12px 36px rgba(0,0,0,0.07); border:1px solid #f1f5f9; padding:28px 24px;">
+              <div class="sticky-price-card" style="background:#ffffff; border-radius:24px; box-shadow:0 12px 36px rgba(0,0,0,0.07); border:1px solid #f1f5f9; padding:24px 20px;">
                 
                 <!-- 2 Icon Tiện Ích Chuẩn -->
                 <div class="service-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; border-bottom:1px solid #f1f5f9; padding-bottom:20px; margin-bottom:20px;">

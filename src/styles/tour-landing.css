@@ -604,24 +604,24 @@
 .elementor-tour-wrapper .tour-grid-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 28px;
   position: relative;
   align-items: flex-start;
 }
 .elementor-tour-wrapper .tour-main-col {
-  order: 2;
+  order: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 .elementor-tour-wrapper .tour-sidebar-col {
-  order: 1;
+  order: 2;
   width: 100%;
   position: relative;
 }
 .elementor-tour-wrapper .mobile-image {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .elementor-tour-wrapper .desktop-image {
   display: none;
@@ -631,7 +631,7 @@
   .elementor-tour-wrapper .tour-grid-container {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 56px;
+    gap: 36px;
   }
   .elementor-tour-wrapper .tour-main-col {
     grid-column: span 8 / span 8;
@@ -646,7 +646,7 @@
   }
   .elementor-tour-wrapper .desktop-image {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 }
 
@@ -965,9 +965,9 @@
 }
 
 .custom-tour-layout {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 8px 20px 48px;
+  padding: 0;
 }
 
 /* Fix color contrast for Elementor migrated inline styles */
