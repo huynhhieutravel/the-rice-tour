@@ -1,0 +1,1073 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/tour-landing.css";
+import { safeQueryCritical } from '@/lib/db-client';
+
+const slug = '2-day-mekong-delta-tour';
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (env as any)?.DB;
+
+let tour: any;
+if (d1Db) {
+  try {
+    tour = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Tour WHERE slug = ?").bind(slug).first<any>(),
+      { route: Astro.url.pathname, slug, queryType: "fetch_tour_by_slug" }
+    );
+  } catch (e) {
+    console.error("Fetch tour D1 error:", e);
+  }
+}
+
+const tourTitle = tour?.title || "2-Day Authentic Mekong Delta Tour: Cai Rang Floating Market & Riverside Heritage";
+const seoTitle = tour?.seoTitle || tourTitle;
+const seoDesc = tour?.seoDescription || tour?.excerpt || "A slow-paced 2-day authentic Mekong Delta private journey. Experience sunrise at Cai Rang Floating Market, lush fruit orchards, Đờn Ca Tài Tử folk music, and DIY crispy bánh khọt. Private VIP group (max 5 guests) with dedicated photographer throughout.";
+const featuredImage = tour?.ogImage || tour?.featuredImage || "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80";
+const basePrice = tour?.price_number || 4990000;
+const formattedPrice = tour?.price_text || "4,990,000 VND";
+const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
+const currentOrigin = Astro.url.origin || 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/tour/${slug}`;
+const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={featuredImage}
+  preloadImages={[featuredImage]}
+  adminEditUrl={adminEditUrl}
+  canonical={canonicalUrl}
+  canonicalMdUrl={canonicalMdUrl}
+>
+  <!-- Schema Structured Data for SEO -->
+  <script type="application/ld+json" data-cfasync="false" set:html={JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": tourTitle,
+    "image": featuredImage,
+    "description": seoDesc,
+    "sku": "MEKONG-CANTHO-2D1N",
+    "offers": {
+      "@type": "Offer",
+      "url": canonicalUrl,
+      "priceCurrency": "VND",
+      "price": basePrice.toString(),
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  })} />
+
+  <script type="application/ld+json" data-cfasync="false" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": currentOrigin },
+      { "@type": "ListItem", "position": 2, "name": "Tours", "item": `${currentOrigin}/tours` },
+      { "@type": "ListItem", "position": 3, "name": tourTitle, "item": canonicalUrl }
+    ]
+  })} />
+
+  <div class="bg-gray-50/60 min-h-screen">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
+      
+      <!-- BREADCRUMB -->
+      <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/tours" class="hover:text-brand-600 transition-colors">Tours</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="text-gray-900 font-medium truncate">{tourTitle}</span>
+      </nav>
+
+      <!-- TOUR TOP HEADER -->
+      <header class="tour-top-header mb-4 sm:mb-6">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-2.5">
+          {tourTitle}
+        </h1>
+        <div class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm sm:text-base text-slate-600 font-medium">
+          <div class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 font-bold px-2.5 py-1 rounded-md border border-amber-200 text-sm shadow-xs">
+            <span>★ 5.0</span>
+            <span class="text-slate-700 font-normal">TripAdvisor 5.0 Excellence</span>
+          </div>
+          <div class="inline-flex items-center gap-1">
+            <span>⏱️</span>
+            <span>2 Days 1 Night</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1">
+            <span>🚐</span>
+            <span>VIP Small Group (Max 5 pax/van)</span>
+          </div>
+          <span class="text-slate-300 hidden sm:inline">•</span>
+          <div class="inline-flex items-center gap-1 text-emerald-700 font-semibold">
+            <span>✓</span>
+            <span>100% No Shopping</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO IMAGE GALLERY (16:9 CINEMATIC RATIO) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 rounded-2xl overflow-hidden shadow-xs mb-6 sm:mb-8">
+        <!-- Image 1 (Main) -->
+        <div class="md:col-span-2 relative aspect-video overflow-hidden bg-slate-100">
+          <img 
+            src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80" 
+            alt="Sunrise on Cai Rang Floating Market in Mekong Delta" 
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+            loading="eager" 
+          />
+        </div>
+        <div class="hidden md:flex flex-col gap-2 sm:gap-3">
+          <!-- Image 2 (Top Right) -->
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
+              alt="Lush tropical fruit orchards in Mekong Delta" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+              loading="eager" 
+            />
+          </div>
+          <!-- Image 3 (Bottom Right) -->
+          <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
+            <img 
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" 
+              alt="Hands-on DIY crispy Banh Khọt pancakes" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+              loading="eager" 
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT WRAPPER -->
+      <div class="elementor-tour-wrapper">
+        <div class="tour-grid-container">
+          
+          <!-- LEFT COLUMN (MAIN TOUR CONTENT) -->
+          <main class="tour-main-content">
+            
+            <!-- THÔNG TIN NHANH TOUR (QUICK SPECS) -->
+            <section class="tour-quick-info mb-8">
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4 bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">📍</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Route</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">HCMC – My Tho – Can Tho</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">👥</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Group Size</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">Max 5 Guests</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">🏨</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Hotel</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">3-Star Hotel (1 Night)</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">🚐</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Vehicle</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">Private 7-Seater Van</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">📸</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Photographer</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">Dedicated Throughout</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-xl">🛡️</span>
+                  <div>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider block font-semibold">Shopping Guarantee</span>
+                    <span class="font-bold text-slate-900 text-sm sm:text-base">100% No Forced Stops</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SIGNATURE DIFFERENCES -->
+              <div class="border-t border-slate-100 pt-3.5 mt-4">
+                <p class="font-bold text-slate-900 text-lg mb-2.5">The Rice Travel Group's Signature Differences:</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700 text-base">
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-600 font-bold">✓</span>
+                    <span><strong>Private VIP small group (max 5)</strong> — unhurried, tailor-made pace</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-600 font-bold">✓</span>
+                    <span><strong>Dedicated photographer</strong> capturing every golden sunrise moment</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-600 font-bold">✓</span>
+                    <span><strong>Hands-on "Bánh Khọt" workshop</strong> pressed by your own hands</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-brand-600 font-bold">✓</span>
+                    <span><strong>Live "Đờn Ca Tài Tử" folk music</strong> under lush orchard canopies</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- THANH CTA TƯ VẤN PREMIUM -->
+            <div class="premium-cta-bar mb-8">
+              <div class="cta-title hidden md:block">Tour Consultation</div>
+              
+              <div class="cta-links">
+                <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="social-btn zalo">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
+                  </div>
+                  <div class="social-text">
+                    <span class="social-name">WhatsApp</span>
+                    <span class="social-desc">+84 962.333.621</span>
+                  </div>
+                </a>
+                
+                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="social-btn msg">
+                  <div class="social-icon-wrapper">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+                  </div>
+                  <div class="social-text">
+                    <span class="social-name">Messenger</span>
+                    <span class="social-desc">The Rice Tour</span>
+                  </div>
+                </a>
+              </div>
+
+              <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name={tourTitle}>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                Fill Form
+              </button>
+            </div>
+
+            <!-- ĐIỂM NỔI BẬT CỦA TOUR (6 HIGHLIGHT CARDS) -->
+            <section class="tour-highlights-section mb-12">
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">Tour Highlights</h2>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">1</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Sunrise at Cai Rang Floating Market</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">Witness hundreds of traditional wooden boats trading fresh tropical produce in the magical morning dawn on the Hau River.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">2</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">170-Year-Old Vinh Trang Pagoda</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">Marvel at the breathtaking architectural harmony blending Vietnamese, Khmer, and European Renaissance aesthetics in My Tho.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">3</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Thoi Son Islet & Sampan Canals</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">Drift peacefully on a traditional hand-paddled sampan boat through narrow waterways shaded by verdant water coconut palms.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">4</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">UNESCO "Đờn Ca Tài Tử" Folk Music</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">Listen to live Southern Vietnamese folk music performed by local masters while sipping hot honey tea in a tranquil orchard.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">5</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Hands-on "Bánh Khọt" Workshop</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">Press and fry your own crispy, golden mini pancakes with savory shrimp and fresh herbs under local culinary guidance.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-base shrink-0">6</div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-1">Dedicated Tour Photographer</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">A professional photographer accompanies your group throughout both days, delivering a complete curated photo & video album.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- UNFOLD BOX (GIỚI THIỆU TỔNG QUAN) -->
+            <div class="tour-unfold-box">
+              <input type="checkbox" id="unfold-check" class="unfold-checkbox" />
+              <div class="unfold-content">
+                <p><strong>A journey slow enough to feel the real Mekong Delta</strong> — watching the sunrise over Cai Rang Floating Market, wandering through lush fruit orchards, drifting to the sound of "Đờn Ca Tài Tử" folk music, and pressing your own crispy "bánh khọt" by hand.</p>
+                <p>All of it packed into 2 days and 1 night, on a private tour for up to 5 guests, with a professional guide and a dedicated photographer by your side.</p>
+                <p>The journey begins as the private van leaves Saigon, making a relaxed refreshment stop at Mekong Restop before stepping into the authentic rhythm of river life. From the historic 170-year-old Vinh Trang Pagoda to the serene orchard shade of Thoi Son Island, every experience is unhurried and deeply immersive.</p>
+                <p>In Can Tho, enjoy the evening breeze along Ninh Kieu Wharf, taste authentic Southern river specialties, and wake up at dawn to board wooden boats into the heart of Cai Rang Floating Market at its most vibrant peak. <strong>The Rice Travel Group</strong> ensures every moment is authentic, intimate, and free from rushed shopping traps.</p>
+                <div class="unfold-overlay"></div>
+              </div>
+              <div class="unfold-btn-wrapper flex justify-center mt-4">
+                <label for="unfold-check" class="unfold-btn">
+                  <span class="btn-text-show">SHOW MORE</span>
+                  <span class="btn-text-hide">HIDE</span>
+                  <svg class="w-4 h-4 ml-1 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </label>
+              </div>
+            </div>
+
+            <!-- QR CODE BOX (CLEAN COLUMN ON MOBILE) -->
+            <div class="tour-qr-box mb-8 bg-slate-50 border border-slate-200 p-5 sm:p-6 rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-5 sm:gap-6">
+              <div class="flex-1">
+                <h4 class="text-base font-bold text-slate-800 mb-1">1:1 Itinerary Consultation with The Rice Travel Group</h4>
+                <p class="text-sm text-slate-500 m-0 leading-relaxed">Scan the QR code or call our hotline to instantly connect with our destination experts. We tailor private itineraries based on your family or group's specific requests.</p>
+              </div>
+              <div class="flex items-center gap-4 shrink-0">
+                <div class="text-center">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://wa.me/84962333621" alt="QR WhatsApp The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
+                </div>
+                <div class="text-center">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUOTE BOX -->
+            <div class="quote-box" style="position: relative; margin: 32px 0; padding: 28px 32px 28px 64px; background: #fffaf5; border-radius: 16px; border: 1px solid #fed7aa; box-shadow: 0 4px 20px rgba(234, 88, 12, 0.05);">
+              <span style="position: absolute; left: 20px; top: 16px; font-size: 48px; line-height: 1; font-family: serif; color: #ea580c; opacity: 0.35;">“</span>
+              <p style="margin: 0; font-size: 17.5px; line-height: 1.7; font-style: italic; color: #7c2d12; font-weight: 500;">
+                The river does not hurry, yet it arrives everywhere. In the Mekong Delta, life is measured not by minutes on a clock, but by gentle morning tides, floating smiles, and the warm aroma of crispy pancakes.
+              </p>
+            </div>
+
+            <!-- TIÊU CHUẨN XE & DỊCH VỤ -->
+            <section class="tour-service-standards mb-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Vehicles & Accommodation Standards</h2>
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div style="display: flex; gap: 20px; align-items: center; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                  <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=400&q=80" alt="Private AC 7-Seater Van" style="width: 140px; height: 95px; object-fit: cover; border-radius: 12px; flex-shrink: 0;" />
+                  <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap;">
+                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Private Premium 7-Seater Van & River Cruisers</h3>
+                      <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; font-size: 12.5px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">VIP Service</span>
+                    </div>
+                    <p style="font-size: 15.5px; color: #64748b; margin: 0; line-height: 1.5;">
+                      Modern air-conditioned 7-seater van throughout the journey. Exclusive private traditional motorboats and sampans in My Tho and Cai Rang Floating Market.
+                    </p>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 20px; align-items: center; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="3-Star Hotel in Can Tho" style="width: 140px; height: 95px; object-fit: cover; border-radius: 12px; flex-shrink: 0;" />
+                  <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap;">
+                      <h3 style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.3;">Comfortable 3-Star Central Can Tho Hotel</h3>
+                      <span style="display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0; background: #f0fdf4; color: #166534; border: 1px solid #dcfce7; font-size: 12.5px; font-weight: 700; padding: 2px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px;">1 Night Included</span>
+                    </div>
+                    <p style="font-size: 15.5px; color: #64748b; margin: 0; line-height: 1.5;">
+                      Well-appointed 3-star hotel located in central Can Tho near Ninh Kieu Wharf. Includes private ensuite bathroom, air-conditioning, Wi-Fi, and delicious breakfast buffet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- LỊCH TRÌNH CHI TIẾT (ACCORDION CHUẨN FIT TOUR) -->
+            <section class="tour-itinerary-section mb-12 mt-12" id="itinerary">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Detailed Itinerary</h2>
+              
+              <div class="tour-itinerary">
+                <div class="flex flex-col gap-4">
+                  
+                  <!-- DAY 1 -->
+                  <details class="premium-itinerary-item" open>
+                    <summary class="premium-itinerary-summary">
+                      <div class="itinerary-toggle-icon"></div>
+                      <span>Day 1 — Ho Chi Minh City · My Tho · Can Tho</span>
+                    </summary>
+                    <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                      <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
+                        <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
+                          <li>Recharge at scenic Mekong Restop on the way to the Delta</li>
+                          <li>Marvel at the 170-year-old architectural synthesis of Vinh Trang Pagoda</li>
+                          <li>Cruise Tien River to Thoi Son Islet & enjoy an unhurried orchard lunch</li>
+                          <li>Check in 3-star Can Tho hotel and soak in the evening breeze of Ninh Kieu Wharf</li>
+                        </ul>
+                      </div>
+
+                      <p style="margin-bottom:14px"><strong>08:00 AM — Departure from Saigon:</strong> The journey begins as your private air-conditioned 7-seater van leaves downtown Saigon. Enjoy a relaxing drive south through the lush scenery of Long An and Tien Giang provinces.</p>
+                      
+                      <p style="margin-bottom:14px"><strong>09:15 AM — Refreshment at Mekong Restop:</strong> Make a brief refreshment stop at the peaceful garden setting of Mekong Restop — the perfect place to recharge before stepping into the authentic rhythm of river life.</p>
+                      
+                      <p style="margin-bottom:14px"><strong>10:00 AM — Explore Vinh Trang Pagoda:</strong> Visit the 170-year-old Vinh Trang Pagoda in My Tho. Marvel at the unique architectural synthesis where Asian Buddhist serenity meets European Renaissance and Roman motifs in a way found nowhere else in the Delta.</p>
+                      
+                      <p style="margin-bottom:14px"><strong>11:00 AM — Wooden Boat to Thoi Son Islet:</strong> Board a private traditional wooden boat to cruise across the expansive Tien River towards Thoi Son Island. Walk beneath lush fruit trees, sip fresh honey tea, and savor a peaceful, authentic Southern Vietnamese lunch prepared with fresh local river specialties.</p>
+
+                      <p style="margin-bottom:14px"><strong>02:30 PM — Scenic Transfer to Can Tho:</strong> Re-board your private van and continue your journey to Can Tho — the vibrant heart of the Western Mekong Delta. Arrive around 04:30 PM, check in to your 3-star hotel, and relax.</p>
+
+                      <p style="margin-bottom:14px"><strong>06:30 PM — Ninh Kieu Wharf & Can Tho Evening:</strong> Stroll along the pedestrian bridge at Ninh Kieu Wharf, take in the cool breeze over the Hau River, and enjoy a flavorful dinner featuring Can Tho specialties before turning in for an early rest in preparation for tomorrow's dawn sunrise.</p>
+                    </div>
+                  </details>
+
+                  <!-- DAY 2 -->
+                  <details class="premium-itinerary-item">
+                    <summary class="premium-itinerary-summary">
+                      <div class="itinerary-toggle-icon"></div>
+                      <span>Day 2 — Cai Rang Floating Market · Fruit Orchard · Back to Saigon</span>
+                    </summary>
+                    <div class="premium-itinerary-content custom-blog-prose max-w-none">
+                      <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
+                        <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
+                        <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
+                          <li>Sunrise boat cruise into Cai Rang Floating Market at its peak bustle</li>
+                          <li>The Rice Travel Group dedicated photographer capturing candid moments</li>
+                          <li>Hand-paddled sampan through shady green water coconut canals</li>
+                          <li>Live UNESCO "Đờn Ca Tài Tử" folk performance & DIY Bánh Khọt workshop</li>
+                        </ul>
+                      </div>
+
+                      <p style="margin-bottom:14px"><strong>06:00 AM — Hotel Breakfast:</strong> Fuel up with a hearty breakfast at your hotel, saving energy for the most extraordinary morning of the expedition.</p>
+                      
+                      <p style="margin-bottom:14px"><strong>06:30 AM — Sunrise at Cai Rang Floating Market:</strong> Board your private boat and glide into Cai Rang Floating Market at its most alive hour. Hundreds of wooden boats loaded with fresh watermelons, pineapples, pumpkins, and dragon fruits weave past one another. Savor a steaming bowl of floating noodle soup or a cup of iced Vietnamese coffee right on the water.</p>
+
+                      <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-4 rounded-r-md">
+                        <p class="font-semibold text-amber-800 mb-1 flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                          </svg>
+                          Photographer In Action
+                        </p>
+                        <p class="text-amber-900 text-base m-0"><a href="https://maps.app.goo.gl/hQdTTGcC1nuAN3da7?g_st=ic" target="_blank" rel="noopener noreferrer" class="underline font-bold text-amber-900">The Rice Travel Group's</a> photographer accompanies you on the boat, capturing every glowing beam of sunrise on the water and your candid smiles amidst the floating market.</p>
+                      </div>
+                      
+                      <p style="margin-bottom:14px"><strong>08:30 AM — Riverside Fruit Orchard & DIY Bánh Khọt:</strong> Leave the bustling market behind and enter a lush riverside fruit orchard. Pick ripe tropical fruits straight from the trees, paddle a small sampan through winding green canals, settle in for a soulful live "Đờn Ca Tài Tử" performance, then gather around the hearth to press and fry golden, crispy <em>bánh khọt</em> with your own hands.</p>
+                      
+                      <p style="margin-bottom:14px"><strong>12:00 PM — Hearty Mekong Lunch:</strong> Enjoy a celebratory lunch filled with fresh regional specialties in the orchard pavilion.</p>
+
+                      <p style="margin-bottom:14px"><strong>01:30 PM — Return to Ho Chi Minh City:</strong> The private van departs Can Tho on the expressway back to Saigon, arriving at your original pickup point between 04:30 PM and 05:00 PM. Full high-resolution photo collection delivered to your inbox shortly after!</p>
+                    </div>
+                  </details>
+
+                </div>
+              </div>
+              
+              <p style="font-style:italic;color:#64748b;font-size:1.0rem;margin-top:16px;padding:0 12px;">
+                Note: The order of attractions and boat timings are subject to flexible adjustments based on seasonal tides, weather, and traffic conditions, while fully ensuring all signature experiences.
+              </p>
+            </section>
+
+            <!-- LỊCH KHỞI HÀNH -->
+            <section class="tour-departure-section mb-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Departure Schedule</h2>
+              
+              <div class="lich-khoi-hanh-wrapper font-sans">
+                <div class="departures-container">
+                  <div class="departure-card">
+                    <div class="date-badge">
+                      <span class="day">DAILY</span>
+                      <span class="month">2026</span>
+                    </div>
+                    <div class="flight-details">
+                      <div class="destination">Private VIP Group · Daily Departures</div>
+                      <div class="flight-code font-bold text-brand-600">Pickup 08:00 AM at 189 De Tham, District 1</div>
+                      <div class="duration text-slate-500">2 Days 1 Night · Private 7-Seater Van & Boat</div>
+                    </div>
+                    <div class="seats-info">
+                      <span class="seats-left text-emerald-600 font-bold">100% Guaranteed</span>
+                      <span class="seats-label">Private departures available every day</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price-text">{formattedPrice}</div>
+                      <button type="button" class="btn-book js-open-booking-modal" data-tour-name={tourTitle}>Book Private</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- GIÁ TOUR BAO GỒM & KHÔNG BAO GỒM -->
+            <section class="tour-inclusions-section mb-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Inclusions & Policies</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-6">
+                  <h3 class="font-bold text-emerald-900 text-lg mb-4 flex items-center gap-2">
+                    <span class="text-emerald-600">✓</span> What's Included
+                  </h3>
+                  <ul class="space-y-2.5 text-slate-700 text-base">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>Private 7-seater AC vehicle for the full 2-day journey</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>3-star central Can Tho hotel accommodation (1 night)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>Private traditional wooden boat & sampan charters</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>All sightseeing tickets, orchard tasting, and Đờn Ca Tài Tử</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>Hands-on Bánh Khọt cooking workshop experience</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>Professional licensed English-speaking guide</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>Dedicated tour photographer with full photo album delivery</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span>High-coverage comprehensive travel insurance</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                  <h3 class="font-bold text-slate-900 text-lg mb-4 flex items-center gap-2">
+                    <span class="text-slate-400">✕</span> What's Excluded
+                  </h3>
+                  <ul class="space-y-2.5 text-slate-600 text-base">
+                    <li class="flex items-start gap-2">
+                      <span class="text-slate-400 font-bold">✕</span>
+                      <span>Personal beverage expenses and shopping</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-slate-400 font-bold">✕</span>
+                      <span>Gratuities / tips for guide and driver (optional)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-slate-400 font-bold">✕</span>
+                      <span>Single room supplement (if solo traveler requests private room)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section class="tour-faq-section mb-12 mt-12">
+              <h2 class="text-2xl font-bold text-slate-800 mb-6">Frequently Asked Questions</h2>
+              
+              <div class="tour-faq-wrapper flex flex-col gap-4">
+                <details class="faq-item group">
+                  <summary class="faq-summary">
+                    <div class="faq-icon">+</div>
+                    <span class="faq-heading">What is the best time to visit Cai Rang Floating Market?</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>The market is at its liveliest between 06:00 AM and 07:30 AM when local wholesale traders exchange goods under the cool dawn light. Our Day 2 itinerary departs at 06:30 AM specifically to catch this peak vibrant atmosphere and golden photography lighting.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item group">
+                  <summary class="faq-summary">
+                    <div class="faq-icon">+</div>
+                    <span class="faq-heading">Can dietary restrictions (vegetarian / vegan / gluten-free) be accommodated?</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>Absolutely. Because this is a private tour for up to 5 guests, our culinary team and local restaurants can fully customize all meals and the Bánh Khọt cooking session to suit vegetarian, vegan, halal, or allergy requirements.</p>
+                  </div>
+                </details>
+
+                <details class="faq-item group">
+                  <summary class="faq-summary">
+                    <div class="faq-icon">+</div>
+                    <span class="faq-heading">How and when do I receive the photos taken by the photographer?</span>
+                  </summary>
+                  <div class="faq-content">
+                    <p>Your dedicated photographer takes hundreds of candid high-resolution photos and video clips during the tour. After minor color grading, our team sends a private Google Drive download link to your email/WhatsApp within 24 to 48 hours after tour completion.</p>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <!-- GALLERY ẢNH KHÁCH HÀNG -->
+            <section class="tour-gallery-section mb-12 mt-12 group">
+              <div class="mb-6">
+                <h2 class="text-2xl font-bold text-slate-800 m-0">The Rice Travel Group's Customer Gallery in Mekong Delta</h2>
+              </div>
+              <div class="relative">
+                <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Previous photo">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <div class="tour-gallery-slider flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none py-2 px-1">
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" alt="Cai Rang Market Sunrise" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Mekong Fruit Orchards" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Banh Khot Workshop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Can Tho River Life" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                </div>
+                <button class="tour-gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0" aria-label="Next photo">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+              </div>
+            </section>
+
+          </main>
+
+          <!-- RIGHT COLUMN (STICKY PRICE CARD) -->
+          <aside class="tour-sidebar">
+            <div class="sticky-price-card">
+              <div class="price-header">
+                <span class="price-label">All-Inclusive Price (VIP Private)</span>
+                <div class="price-amount">{formattedPrice} <span class="text-xs text-slate-400 font-normal">/ guest</span></div>
+              </div>
+
+              <!-- GUEST SELECTOR -->
+              <div class="guest-selector-box mb-4 bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-bold text-slate-700 block uppercase">Group Size</span>
+                  <span class="text-xs text-slate-500">Max 5 guests / van</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button type="button" id="guest-minus-btn" class="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-bold text-slate-700 hover:bg-slate-100 transition-colors">−</button>
+                  <span id="guest-count-display" class="font-bold text-slate-900 text-base min-w-[20px] text-center">1</span>
+                  <button type="button" id="guest-plus-btn" class="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-bold text-slate-700 hover:bg-slate-100 transition-colors">+</button>
+                </div>
+              </div>
+
+              <div class="total-price-box mb-6 flex items-center justify-between px-1">
+                <span class="text-sm text-slate-500 font-medium">Estimated Total:</span>
+                <span id="total-price-display" class="text-xl font-extrabold text-orange-600" data-base-price={basePrice}>{formattedPrice}</span>
+              </div>
+
+              <div class="service-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; border-bottom:1px solid #f1f5f9; padding-bottom:20px; margin-bottom:20px;">
+                <div class="service-item">
+                  <div class="service-icon" style="font-size:20px; margin-bottom:4px;">🏨</div>
+                  <div class="service-title" style="font-weight:700; color:#1e293b; font-size:17px;">3-Star Hotel</div>
+                  <div class="service-desc" style="font-size:14px; color:#64748b;">1 Night in Can Tho</div>
+                </div>
+                <div class="service-item">
+                  <div class="service-icon" style="font-size:20px; margin-bottom:4px;">🚤</div>
+                  <div class="service-title" style="font-weight:700; color:#1e293b; font-size:17px;">Private Boats</div>
+                  <div class="service-desc" style="font-size:14px; color:#64748b;">Cai Rang & Sampans</div>
+                </div>
+                <div class="service-item">
+                  <div class="service-icon" style="font-size:20px; margin-bottom:4px;">📸</div>
+                  <div class="service-title" style="font-weight:700; color:#1e293b; font-size:17px;">Photographer</div>
+                  <div class="service-desc" style="font-size:14px; color:#64748b;">Full Album Handover</div>
+                </div>
+                <div class="service-item">
+                  <div class="service-icon" style="font-size:20px; margin-bottom:4px;">🥞</div>
+                  <div class="service-title" style="font-weight:700; color:#1e293b; font-size:17px;">DIY Bánh Khọt</div>
+                  <div class="service-desc" style="font-size:14px; color:#64748b;">Culinary Workshop</div>
+                </div>
+              </div>
+
+              <!-- BUTTON BOOKING / CONSULTATION -->
+              <button type="button" class="btn-sidebar-book js-open-booking-modal w-full mb-3" data-tour-name={tourTitle}>
+                Book Private Tour (Max 5 Pax)
+              </button>
+
+              <div class="action-buttons" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+                <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="btn-sidebar-zalo flex items-center justify-center gap-1.5" style="background:#25D366; color:#ffffff; font-weight:700; padding:10px; border-radius:10px; text-decoration:none; font-size:14px;">
+                  <span>💬 WhatsApp</span>
+                </a>
+                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="btn-sidebar-zalo flex items-center justify-center gap-1.5" style="background:#0068FF; color:#ffffff; font-weight:700; padding:10px; border-radius:10px; text-decoration:none; font-size:14px;">
+                  <span>💬 Zalo</span>
+                </a>
+              </div>
+
+              <div class="text-center pt-2">
+                <span class="text-xs text-emerald-700 font-semibold flex items-center justify-center gap-1">
+                  <span>🛡️</span> 100% No Forced Shopping Guarantee
+                </span>
+                <span class="text-[11.5px] text-slate-400 block mt-1">24/7 Hotline: 0962.333.621</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHER OUTSTANDING JOURNEYS SECTION -->
+    <section class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200 mt-12" id="journeys">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <p class="text-brand-600 text-[11.5px] font-bold tracking-[0.2em] mb-3">THE RICE TRAVEL GROUP</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 tracking-wide">Other Outstanding Journeys</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <button data-action="carousel-prev" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Previous Tour">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button data-action="carousel-next" class="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white transition-colors" aria-label="Next Tour">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- CAROUSEL WRAPPER -->
+      <div class="overflow-x-auto snap-x snap-mandatory scrollbar-none flex gap-6 pb-6 -mx-4 px-4 sm:mx-0 sm:px-0" data-component="tour-carousel">
+        
+        <!-- CARD 1 -->
+        <div class="snap-start flex-shrink-0 w-[300px] sm:w-[360px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <a href="/tour/1-day-premium-cu-chi-tunnels" class="block group flex flex-col h-full">
+            <div class="relative aspect-[4/3] w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="1-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-xs text-slate-800 font-bold text-xs uppercase tracking-wider px-3 py-1.5 rounded-md shadow-xs">
+                1 Day
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">1-Day Premium Cu Chi Tunnels & Saigon Discovery</h3>
+                <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Underground 200km tunnels, French architecture & Saigon WaterBus sunset</p>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-xs text-slate-400 font-medium">All-Inclusive</span>
+                <span class="text-brand-600 font-bold" style="font-size: 17.5px;">3,090,000 VND</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="snap-start flex-shrink-0 w-[300px] sm:w-[360px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <a href="/tour/sapa-rice-terraces-trek-4d3n" class="block group flex flex-col h-full">
+            <div class="relative aspect-[4/3] w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=600&q=80" alt="Sapa Rice Terraces" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-xs text-slate-800 font-bold text-xs uppercase tracking-wider px-3 py-1.5 rounded-md shadow-xs">
+                4 Days 3 Nights
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Sapa Majestic Rice Terraces & Hill Tribe Heritage</h3>
+                <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Muong Hoa rice terraces, Fansipan peak & H'Mong ethnic villages</p>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-xs text-slate-400 font-medium">All-Inclusive</span>
+                <span class="text-brand-600 font-bold" style="font-size: 17.5px;">8,890,000 VND</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="snap-start flex-shrink-0 w-[300px] sm:w-[360px] bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <a href="/tour/grand-vietnam-discovery-14d13n" class="block group flex flex-col h-full">
+            <div class="relative aspect-[4/3] w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Grand Vietnam Discovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-xs text-slate-800 font-bold text-xs uppercase tracking-wider px-3 py-1.5 rounded-md shadow-xs">
+                14 Days 13 Nights
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Grand Vietnam Discovery: North to South Expedition</h3>
+                <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Trans-Vietnam expedition from Hanoi, Halong, Hue, Hoi An to Saigon</p>
+              </div>
+              <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-xs text-slate-400 font-medium">All-Inclusive</span>
+                <span class="text-brand-600 font-bold" style="font-size: 17.5px;">32,900,000 VND</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER TRUST & VERIFICATION BAR -->
+    <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12 border-t border-slate-200">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-xs">
+          <div class="w-12 h-12 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center font-bold text-xl shrink-0">
+            📍
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">189 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-xs">
+          <div class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl shrink-0">
+            📜
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">International Tour Operator License</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">Officially licensed by the <strong>Vietnam National Authority of Tourism</strong> (Ministry of Culture, Sports & Tourism).</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-xs">
+          <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl shrink-0">
+            🛡️
+          </div>
+          <div class="text-left">
+            <h4 class="text-sm font-bold text-slate-900 mb-0.5">Insurance & Quality Guarantee</h4>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">High-coverage travel insurance, <strong>100% No forced shopping</strong>, modern VIP 7-seater van, and professional photographer throughout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE FLOATING CONTACT & ITINERARY BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2.5 flex items-center justify-around shadow-lg">
+      <button id="btn-mobile-itinerary" class="flex flex-col items-center gap-1 text-slate-600 hover:text-brand-600 text-xs font-semibold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+        <span>Itinerary</span>
+      </button>
+
+      <button id="btn-mobile-office" class="flex flex-col items-center gap-1 text-slate-600 hover:text-brand-600 text-xs font-semibold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+        <span>Our Office</span>
+      </button>
+
+      <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-emerald-600 hover:text-emerald-700 text-xs font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+        <span>WhatsApp</span>
+      </a>
+
+      <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 text-blue-600 hover:text-blue-700 text-xs font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
+        <span>Messenger</span>
+      </a>
+    </div>
+
+    <!-- MODAL OFFICE TRUST -->
+    <div id="office-trust-modal" style="position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); padding: 20px; backdrop-filter: blur(6px);">
+      <div style="background: #ffffff; padding: 28px 24px; border-radius: 24px; max-width: 440px; width: 100%; text-align: left; box-shadow: 0 20px 50px rgba(0,0,0,0.25); position: relative;">
+        <button type="button" id="close-office-modal" style="position: absolute; right: 16px; top: 16px; background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #64748b; cursor: pointer;">✕</button>
+        
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 24px;">📍</div>
+        <h3 style="font-size: 19px; font-weight: 800; color: #0f172a; margin: 0 0 6px 0;">The Rice Travel Group Departure Office</h3>
+        <p style="font-size: 14.5px; color: #64748b; margin: 0 0 16px 0; line-height: 1.5;">189 De Tham Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
+        
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; margin-bottom: 16px;">
+          <p style="margin: 0 0 6px 0; font-size: 13.5px; color: #334155;"><strong>International Tour Operator License:</strong> Officially certified by the Vietnam National Authority of Tourism.</p>
+          <p style="margin: 0; font-size: 13.5px; color: #334155;"><strong>Hotline 24/7:</strong> <a href="tel:0962333621" style="color: #ea580c; font-weight: 700; text-decoration: none;">0962.333.621</a></p>
+        </div>
+
+        <a href="https://maps.app.goo.gl/hQdTTGcC1nuAN3da7?g_st=ic" target="_blank" rel="noopener noreferrer" style="background: #ea580c; color: #ffffff; text-decoration: none; padding: 12px 20px; border-radius: 12px; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
+          <span>🗺️ Open Google Maps</span>
+        </a>
+        <button type="button" id="btn-close-office-modal-bottom" style="background: #f1f5f9; color: #64748b; border: none; padding: 10px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 14px; width: 100%;">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERACTION SCRIPTS -->
+  <script>
+    function initTourInteractions() {
+      // 1. Customer Gallery Slider
+      document.querySelectorAll(".tour-gallery-section").forEach(sec => {
+        const slider = sec.querySelector(".tour-gallery-slider") as HTMLElement;
+        const prev = sec.querySelector(".tour-gallery-prev");
+        const next = sec.querySelector(".tour-gallery-next");
+        if (!slider) return;
+
+        const scrollAmount = 340;
+        if (prev) prev.addEventListener("click", () => slider.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
+        if (next) next.addEventListener("click", () => slider.scrollBy({ left: scrollAmount, behavior: "smooth" }));
+      });
+
+      // 2. Journeys Carousel
+      document.querySelectorAll("[data-component='tour-carousel']").forEach(slider => {
+        const container = slider.parentElement?.parentElement;
+        if (!container) return;
+        const prev = container.querySelector("[data-action='carousel-prev']");
+        const next = container.querySelector("[data-action='carousel-next']");
+        if (prev) prev.addEventListener("click", () => slider.scrollBy({ left: -380, behavior: "smooth" }));
+        if (next) next.addEventListener("click", () => slider.scrollBy({ left: 380, behavior: "smooth" }));
+      });
+
+      // 3. Mobile Bottom Nav Handlers
+      const btnMobileItinerary = document.getElementById("btn-mobile-itinerary");
+      if (btnMobileItinerary) {
+        btnMobileItinerary.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.getElementById("itinerary") || document.querySelector(".tour-itinerary-section");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      }
+
+      const btnMobileOffice = document.getElementById("btn-mobile-office");
+      const officeModal = document.getElementById("office-trust-modal");
+      const closeOfficeBtn = document.getElementById("close-office-modal");
+      const closeOfficeBtnBottom = document.getElementById("btn-close-office-modal-bottom");
+      if (btnMobileOffice && officeModal) {
+        btnMobileOffice.addEventListener("click", (e) => {
+          e.preventDefault();
+          officeModal.style.display = "flex";
+        });
+        if (closeOfficeBtn) {
+          closeOfficeBtn.addEventListener("click", () => {
+            officeModal.style.display = "none";
+          });
+        }
+        if (closeOfficeBtnBottom) {
+          closeOfficeBtnBottom.addEventListener("click", () => {
+            officeModal.style.display = "none";
+          });
+        }
+        officeModal.addEventListener("click", (e) => {
+          if (e.target === officeModal) officeModal.style.display = "none";
+        });
+      }
+
+      // 4. Guest Count & Price Calculation
+      const minusBtn = document.getElementById("guest-minus-btn");
+      const plusBtn = document.getElementById("guest-plus-btn");
+      const countDisplay = document.getElementById("guest-count-display");
+      const priceDisplay = document.getElementById("total-price-display");
+
+      if (minusBtn && plusBtn && countDisplay && priceDisplay) {
+        let currentGuests = 1;
+        const maxGuests = 5;
+        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "4990000", 10);
+
+        function updateGuests(delta: number) {
+          const newGuests = Math.min(Math.max(1, currentGuests + delta), maxGuests);
+          if (newGuests === currentGuests) return;
+          currentGuests = newGuests;
+          countDisplay.textContent = currentGuests.toString();
+
+          const total = basePrice * currentGuests;
+          priceDisplay.textContent = total.toLocaleString("vi-VN") + " VND";
+        }
+
+        minusBtn.onclick = () => updateGuests(-1);
+        plusBtn.onclick = () => updateGuests(1);
+      }
+
+      // 5. Booking Consultation Modal
+      function initBookingModal() {
+        const bookingButtons = document.querySelectorAll('.js-open-booking-modal');
+        if (bookingButtons.length === 0) return;
+
+        let modal = document.getElementById('booking-consult-modal');
+        if (!modal) {
+          modal = document.createElement('div');
+          modal.id = 'booking-consult-modal';
+          modal.style.cssText = 'position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); padding: 20px; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; backdrop-filter: blur(6px);';
+
+          const modalContent = document.createElement('div');
+          modalContent.style.cssText = 'background: #ffffff; padding: 32px 28px; border-radius: 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.25); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);';
+
+          const iconWrapper = document.createElement('div');
+          iconWrapper.style.cssText = 'width: 64px; height: 64px; border-radius: 50%; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 29.5px;';
+          iconWrapper.innerHTML = '🚤';
+
+          const title = document.createElement('h3');
+          title.id = 'booking-modal-tour-title';
+          title.style.cssText = 'font-size: 20.5px; font-weight: 800; color: #0f172a; margin: 0 0 8px 0; line-height: 1.35;';
+
+          const desc = document.createElement('p');
+          desc.style.cssText = 'font-size: 15.5px; color: #64748b; margin: 0 0 24px 0; line-height: 1.6;';
+          desc.innerHTML = 'Register for a direct 1:1 consultation with <strong>The Rice Travel Group</strong> experts to receive custom itinerary advice and exclusive offers!';
+
+          const actionGroup = document.createElement('div');
+          actionGroup.style.cssText = 'display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;';
+
+          const waBtn = document.createElement('a');
+          waBtn.href = 'https://wa.me/84962333621';
+          waBtn.target = '_blank';
+          waBtn.rel = 'noopener noreferrer';
+          waBtn.innerHTML = '💬 Chat on WhatsApp 24/7';
+          waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
+
+          const zaloBtn = document.createElement('a');
+          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.target = '_blank';
+          zaloBtn.rel = 'noopener noreferrer';
+          zaloBtn.innerHTML = '💬 Chat Zalo for Consult';
+          zaloBtn.style.cssText = 'background: #0068FF; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          const hotlineBtn = document.createElement('a');
+          hotlineBtn.href = 'tel:0962333621';
+          hotlineBtn.innerHTML = '📞 Call Hotline: 0962.333.621';
+          hotlineBtn.style.cssText = 'background: #ea580c; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px;';
+
+          const closeBtn = document.createElement('button');
+          closeBtn.type = 'button';
+          closeBtn.innerText = 'Close';
+          closeBtn.style.cssText = 'background: #f1f5f9; color: #64748b; border: none; padding: 11px 20px; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 14.5px; width: 100%; transition: background 0.2s;';
+
+          function closeBookingModal() {
+            if (!modal) return;
+            modal.style.opacity = '0';
+            if (modalContent) modalContent.style.transform = 'translateY(20px)';
+            setTimeout(() => { if (modal) modal.style.pointerEvents = 'none'; }, 300);
+          }
+
+          closeBtn.addEventListener('click', closeBookingModal);
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeBookingModal();
+          });
+
+          actionGroup.appendChild(waBtn);
+          actionGroup.appendChild(zaloBtn);
+          actionGroup.appendChild(hotlineBtn);
+
+          modalContent.appendChild(iconWrapper);
+          modalContent.appendChild(title);
+          modalContent.appendChild(desc);
+          modalContent.appendChild(actionGroup);
+          modalContent.appendChild(closeBtn);
+          modal.appendChild(modalContent);
+          document.body.appendChild(modal);
+        }
+
+        bookingButtons.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentTourName = btn.getAttribute('data-tour-name') || document.querySelector('h1')?.textContent || '2-Day Authentic Mekong Delta Tour';
+            const titleEl = document.getElementById('booking-modal-tour-title');
+            if (titleEl) titleEl.innerText = currentTourName;
+
+            if (modal) {
+              modal.style.pointerEvents = 'auto';
+              requestAnimationFrame(() => {
+                modal.style.opacity = '1';
+                const firstChild = modal.firstElementChild as HTMLElement;
+                if (firstChild) {
+                  firstChild.style.transform = 'translateY(0)';
+                }
+              });
+            }
+          });
+        });
+      }
+
+      initBookingModal();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTourInteractions);
+    } else {
+      initTourInteractions();
+    }
+    document.addEventListener("astro:page-load", initTourInteractions);
+  </script>
+</BaseLayout>
