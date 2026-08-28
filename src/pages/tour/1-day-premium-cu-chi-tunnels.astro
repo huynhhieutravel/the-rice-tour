@@ -139,7 +139,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </a>
               </div>
 
-              <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery">
+              <button type="button" class="cta-form-btn js-open-booking-modal" data-tour-name={tourTitle}>
                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                 Điền Form
               </button>
@@ -472,9 +472,9 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                         </tr>
                       </thead>
                       <tbody class="bg-white">
-                        <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery" data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
+                        <tr class="lkh-row border-b border-slate-200 hover:bg-slate-50/80 transition-colors last:border-b-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
                           <td class="p-4">
-                            <div class="font-bold text-slate-800 text-sm leading-snug">1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery</div>
+                            <div class="font-bold text-slate-800 text-sm leading-snug">{tourTitle}</div>
                             <span class="font-mono text-[10px] text-slate-500 mt-1 inline-block">CUCHI-SAIGON-DAILY</span>
                           </td>
                           <td class="p-4 text-xs text-slate-600 space-y-1.5">
@@ -495,7 +495,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                             </span>
                           </td>
                           <td class="p-4 text-right">
-                            <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs transition-colors" data-tour-name="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery">
+                            <button type="button" class="js-open-booking-modal px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs transition-colors" data-tour-name={tourTitle}>
                               Đăng ký
                             </button>
                           </td>
@@ -506,10 +506,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
                   <!-- MOBILE CARDS -->
                   <div class="md:hidden space-y-4">
-                    <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery" data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
+                    <div class="lkh-card bg-white py-4 border-b border-slate-200 last:border-0" data-title={tourTitle} data-code="CUCHI-SAIGON-DAILY" data-dest="TP. Hồ Chí Minh" data-date="2026-08-28T08:00:00.000Z">
                       <div class="flex justify-between items-start mb-3">
                         <div class="flex-1 pr-3">
-                          <div class="font-bold text-slate-800 text-sm leading-snug mb-1">1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery</div>
+                          <div class="font-bold text-slate-800 text-sm leading-snug mb-1">{tourTitle}</div>
                           <span class="font-mono text-[10px] text-slate-500">CUCHI-SAIGON-DAILY</span>
                         </div>
                         <span class="px-2.5 py-1 rounded-md text-[11px] font-bold border whitespace-nowrap text-green-700 bg-green-50 border-green-200">
@@ -532,7 +532,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <span class="text-xs text-slate-500 block">Giá trọn gói</span>
                           <span class="font-bold text-orange-600 text-base">{formattedPrice}</span>
                         </div>
-                        <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs" data-tour-name="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery">
+                        <button type="button" class="js-open-booking-modal px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs" data-tour-name={tourTitle}>
                           Đăng ký ngay
                         </button>
                       </div>
@@ -721,7 +721,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
 
                 <!-- Nút Đăng Ký Lớn Nổi Bật -->
-                <button type="button" class="btn-outline js-open-booking-modal" data-tour-name="1-Day Premium Cu Chi Tunnels & Ho Chi Minh City Discovery">
+                <button type="button" class="btn-outline js-open-booking-modal" data-tour-name={tourTitle}>
                   ĐĂNG KÝ GIỮ CHỖ NGAY
                 </button>
 
