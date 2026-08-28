@@ -2619,6 +2619,32 @@
       "anchorText": "📞\n          Call Hotline: 0962.333.621"
     }
   ],
+  "tour/2-day-mekong-delta-tour": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Tours"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1 Day\n              \n            \n            \n              \n                1-Day Premium Cu Chi T"
+    },
+    {
+      "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
+      "anchorText": "4 Days 3 Nights\n              \n            \n            \n              \n                Sapa Majesti"
+    },
+    {
+      "targetUrl": "/tour/grand-vietnam-discovery-14d13n",
+      "anchorText": "14 Days 13 Nights\n              \n            \n            \n              \n                Grand Viet"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "0962.333.621"
+    }
+  ],
   "tour-incentive-travel-doanh-nghiep": [
     {
       "targetUrl": "/",
