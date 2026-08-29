@@ -2649,6 +2649,36 @@
       "anchorText": "📞\n          Call Hotline: 0962.333.621"
     }
   ],
+  "tour/cooking-class-local-market": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Tours"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "0962.333.621"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Half Day\n              \n              \n                \n                  Ho Chi Minh City Half-Day "
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half Day\n              \n              \n                \n                  Half-Day Premium Cu Chi Tu"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "1 Day\n              \n              \n                \n                  Full-Day Mekong Delta Tour: B"
+    },
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "📞\n          Call Hotline: 0962.333.621"
+    }
+  ],
   "tour/full-day-mekong-delta-tour-ben-tre-my-tho": [
     {
       "targetUrl": "/",
