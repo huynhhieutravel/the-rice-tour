@@ -8,14 +8,13 @@ published_date: "2026-07-28T20:44:00"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Culinary Reviews", "Local Specialties"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/com-tam-long-xuyen.jpg"
+featured_image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)
 
 > 🏷️ **Category:** Culinary Reviews | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Long Xuyen Broken Rice](https://r2.nucuoimekong.com/wp-content/uploads/com-tam-long-xuyen.jpg)
 
 ---
 

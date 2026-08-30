@@ -9,12 +9,35 @@ const INTERNAL_DOMAINS = ['media.thericetour.com', 'thericetour.com', 'localhost
 
 const R2_OLD_HOSTNAME = 'pub-fe90037727604a2586cc601e6a3c6575.r2.dev';
 
+export const DEFAULT_BRAND_FALLBACK_IMAGE = 'https://media.thericetour.com/uploads/logo-the-rice.webp';
+export const DEFAULT_TRAVEL_FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80';
+
 /**
- * Map R2 dev URL → media.fittour.vn (safe, URL-parser based, not string replace)
+ * Check if an image URL is tainted with legacy/competitor agency watermarks or branding
+ */
+export function isTaintedImageUrl(url?: string | null): boolean {
+  if (!url) return false;
+  const lower = url.toLowerCase();
+  return (
+    lower.includes('nucuoimekong') ||
+    lower.includes('nu-cuoi-me-kong') ||
+    lower.includes('ncmk') ||
+    lower.includes('mekong-smile') ||
+    lower.includes('mekongsmile') ||
+    lower.includes('doi-tac')
+  );
+}
+
+/**
+ * Map R2 dev URL → media.thericetour.com (safe, URL-parser based, not string replace)
  * Use this when you need the original image on the new domain without resizing (e.g. og:image)
  */
-export function getCanonicalMediaUrl(input: string): string {
-  if (!input) return '';
+export function getCanonicalMediaUrl(input: string, fallbackUrl?: string): string {
+  if (!input) return fallbackUrl || DEFAULT_TRAVEL_FALLBACK_IMAGE;
+  
+  if (isTaintedImageUrl(input)) {
+    return fallbackUrl || DEFAULT_TRAVEL_FALLBACK_IMAGE;
+  }
   
   if (!input.startsWith('http://') && !input.startsWith('https://')) {
     return input;

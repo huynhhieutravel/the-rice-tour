@@ -8,14 +8,13 @@ published_date: "2026-08-03T11:24:06"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/bien-can-tho-1.jpg"
+featured_image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026 Update)
 
 > 🏷️ **Category:** Entertainment & Leisure | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![Can Tho Beach](https://r2.nucuoimekong.com/wp-content/uploads/bien-can-tho-1.jpg)
 
 ---
 

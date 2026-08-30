@@ -7,7 +7,7 @@ export interface Props {
   noindex?: boolean;
 }
 
-import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
+import { getCanonicalMediaUrl, isTaintedImageUrl, DEFAULT_TRAVEL_FALLBACK_IMAGE, DEFAULT_BRAND_FALLBACK_IMAGE } from '@/lib/imageOptimization';
 
 let defaultPath = Astro.url.pathname;
 if (defaultPath.length > 1 && defaultPath.endsWith('/')) {
@@ -21,8 +21,10 @@ const {
   noindex = false
 } = Astro.props;
 
-// Xử lý fallback cho OG image khi biến image bị rỗng (null hoặc "")
-const finalImage = image || 'https://media.thericetour.com/uploads/logo-the-rice.webp';
+// Xử lý fallback cho OG image: tự động loại bỏ ảnh dính logo Mekong Smile / Nụ Cười Mê Kông cũ
+const finalImage = (!image || isTaintedImageUrl(image)) 
+  ? DEFAULT_TRAVEL_FALLBACK_IMAGE 
+  : image;
 const ogImage = getCanonicalMediaUrl(finalImage);
 
 // Xử lý Robots Meta

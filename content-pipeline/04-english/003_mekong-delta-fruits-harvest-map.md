@@ -8,14 +8,13 @@ published_date: "2026-08-12T16:05:28"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Mekong Delta", "Local Specialties"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/trai-cay-mien-tay.jpg"
+featured_image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide
 
 > 🏷️ **Category:** Mekong Delta, Local Specialties | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![Map of Mekong Delta specialty fruits](https://r2.nucuoimekong.com/wp-content/uploads/trai-cay-mien-tay.jpg)
 
 ---
 

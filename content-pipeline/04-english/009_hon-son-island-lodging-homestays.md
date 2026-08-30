@@ -8,14 +8,13 @@ published_date: "2026-08-04T09:53:13"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Homestay", "Toplist"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/homestay-hon-son.jpg"
+featured_image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries
 
 > 🏷️ **Category:** Itineraries & Guides | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![Hon Son Homestay](https://r2.nucuoimekong.com/wp-content/uploads/homestay-hon-son.jpg)
 
 ---
 

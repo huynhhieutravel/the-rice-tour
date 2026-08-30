@@ -1,6 +1,7 @@
 ---
 title: "Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)"
 slug: "tau-truong-tuyen"
+featured_image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
 subtitle: "Dine on the tranquil waters of the Hau River, blending exceptional Mekong cuisine with live Don Ca Tai Tu performances under the stars."
 lead: "For a quintessential Can Tho evening, nothing surpasses the experience of dining aboard a floating restaurant on the Hau River. The Truong Tuyen Cruise (Tàu Du Lịch Trường Tuyến) stands out as one of the most reliable and atmospheric venues for this. Offering a perfect fusion of fresh regional seafood, panoramic views of the illuminated Ninh Kieu Wharf, and the soulful melodies of traditional Southern music, it guarantees a memorable 2026 night out."
 badges: ["Dining Cruise", "Can Tho", "River Experience", "Culinary"]

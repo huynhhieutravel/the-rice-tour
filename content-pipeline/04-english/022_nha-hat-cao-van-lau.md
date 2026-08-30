@@ -1,6 +1,7 @@
 ---
 title: "Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu"
 slug: "nha-hat-cao-van-lau"
+featured_image: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&w=1200&q=80"
 subtitle: "A tribute to Don Ca Tai Tu and a modern architectural landmark shaping the cultural landscape of the Mekong Delta."
 lead: "Situated at the heart of Hung Vuong Square in Bac Lieu City (now under the jurisdiction of Ca Mau province as of 2025), the Cao Van Lau Theater—affectionately known as the 'Three Conical Hats Theater'—is a monumental tribute to Southern Vietnam's traditional music. Recognized for holding the record for the largest conical hat structures in Vietnam, this cultural epicenter serves as the vibrant soul of Don Ca Tai Tu (Southern amateur music) in 2026."
 badges: ["Architecture", "Cultural Heritage", "Bac Lieu", "Don Ca Tai Tu"]

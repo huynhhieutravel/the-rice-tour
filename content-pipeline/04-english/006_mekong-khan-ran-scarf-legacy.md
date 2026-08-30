@@ -8,7 +8,7 @@ published_date: "2026-08-05T16:46:01"
 modified_date: "2026-08-23T07:00:00"
 categories: ["Indigenous Culture", "Bespoke Travel Guide", "Traditional Crafts"]
 tags: ["Mekong Delta", "Khăn rằn", "Long Khanh A Village", "Dong Thap", "Intangible Cultural Heritage", "Vietnam Travel 2026"]
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-nam-bo-nu-cuoi-me-kong.webp"
+featured_image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80"
 phase: 1
 status: "english_translated"
 reading_time: 12

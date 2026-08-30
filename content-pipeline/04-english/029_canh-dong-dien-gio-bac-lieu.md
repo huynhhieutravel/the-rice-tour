@@ -1,6 +1,7 @@
 ---
 title: "Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)"
 slug: "canh-dong-dien-gio-bac-lieu"
+featured_image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80"
 subtitle: "Experience the collision of modern sustainable engineering and the raw beauty of the Mekong Delta's coastline."
 lead: "Stretching along the muddy coastlines of the Mekong Delta, the Bac Lieu Wind Farm has transformed from a purely industrial renewable energy project into one of the most sought-after photography destinations in Southern Vietnam. With massive white turbines rising from the ocean, this 'European-style' landscape offers travelers a stunning visual contrast to the traditional pagodas and floating markets of the region."
 badges: ["Eco-Tourism", "Photography", "Bac Lieu", "Landmark"]

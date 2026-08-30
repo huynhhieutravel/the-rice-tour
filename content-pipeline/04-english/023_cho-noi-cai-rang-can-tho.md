@@ -1,6 +1,7 @@
 ---
 title: "Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide"
 slug: "cho-noi-cai-rang-can-tho"
+featured_image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
 subtitle: "Navigate the vibrant chaos of the Mekong Delta’s largest floating market with our insider tips on boat rentals, prime visiting hours, and avoiding tourist traps."
 lead: "As the commercial heart of the Mekong Delta's waterways, the Cai Rang Floating Market remains an enduring symbol of riverine culture. Despite modern infrastructural changes reducing the fleet of traditional merchant boats, the market still welcomes hundreds of tourist vessels daily. This comprehensive 2026 guide unravels the logistics of visiting—from boat chartering costs to deciphering the unique 'bẹo' pole advertising system—ensuring an authentic and seamless expedition."
 badges: ["Cultural Icon", "Can Tho", "Photography", "Culinary"]

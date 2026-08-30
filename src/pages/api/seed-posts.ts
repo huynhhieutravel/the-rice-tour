@@ -284,7 +284,7 @@ export const GET: APIRoute = async () => {
       id: '33735',
       title: 'The Mekong Khăn Rằn: Unweaving a 300-Year Legacy',
       slug: 'khan-ran-nam-bo',
-      featuredImage: 'https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-nam-bo-nu-cuoi-me-kong.webp',
+      featuredImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
       excerpt: 'Behind its modest black-and-white checkered pattern lies a three-century-old odyssey of cultural intersection among the indigenous tribes of the lower Mekong.',
       content: khanRanHtml,
       status: 'published',

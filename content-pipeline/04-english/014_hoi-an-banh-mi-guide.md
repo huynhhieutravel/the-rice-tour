@@ -8,14 +8,13 @@ published_date: "2026-07-29T11:55:46"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Culinary Reviews", "Toplist"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/banh-mi-hoi-an-1.jpg"
+featured_image: "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)
 
 > 🏷️ **Category:** Culinary Reviews | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Hoi An Banh Mi](https://r2.nucuoimekong.com/wp-content/uploads/banh-mi-hoi-an-1.jpg)
 
 ---
 

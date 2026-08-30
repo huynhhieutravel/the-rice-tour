@@ -8,14 +8,13 @@ published_date: "2026-07-27T10:19:07"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Famous Destinations", "Local Heritage"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/lang-hoa-sa-dec-1.jpg"
+featured_image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Sa Dec Flower Village](https://r2.nucuoimekong.com/wp-content/uploads/lang-hoa-sa-dec-1.jpg)
 
 ---
 

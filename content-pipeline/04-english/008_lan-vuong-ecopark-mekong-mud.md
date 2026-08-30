@@ -8,14 +8,13 @@ published_date: "2026-08-04T10:21:13"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/khu-du-lich-lan-vuong.jpg"
+featured_image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![Lan Vuong Eco-Park](https://r2.nucuoimekong.com/wp-content/uploads/khu-du-lich-lan-vuong.jpg)
 
 ---
 

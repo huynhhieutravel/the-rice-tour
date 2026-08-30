@@ -1,6 +1,7 @@
 ---
 title: "Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)"
 slug: "dinh-cau-phu-quoc"
+featured_image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
 subtitle: "A mystical shrine perched on rocky shores, offering breathtaking sunsets and a deep dive into the maritime soul of Phu Quoc."
 lead: "Perched dramatically on a rocky outcrop where the Duong Dong River meets the Gulf of Thailand, Dinh Cau (Dinh Cau Shrine) is the spiritual epicenter of Phu Quoc Island. Beyond its religious significance to local fishermen, it offers travelers the most spectacular, uninterrupted sunset views on the island. Discover why this iconic landmark remains a must-visit destination in 2026."
 badges: ["Spiritual Landmark", "Phu Quoc", "Sunset Spot", "Heritage"]

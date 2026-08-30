@@ -8,14 +8,13 @@ published_date: "2026-08-12T18:09:36"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Discovery & Experience"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/nam-du-co-gi-choi.jpg"
+featured_image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes
 
 > 🏷️ **Category:** Discovery & Experience, Itineraries & Guides | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![The Ultimate Nam Du Expedition](https://r2.nucuoimekong.com/wp-content/uploads/nam-du-co-gi-choi.jpg)
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner"
 slug: "mercury-phu-quoc-resort-villas"
+featured_image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
 subtitle: "An oasis of tranquility combining beachfront serenity with private villa exclusivity, curated for The Rice Tour’s bespoke island expeditions."
 lead: "As a premier lodging partner for The Rice Tour in Phu Quoc, Mercury Phu Quoc Resort & Villas offers the quintessential island escape. Whether you are seeking a family-friendly coastal retreat or a private villa sanctuary, this resort seamlessly balances luxury and comfort, serving as the perfect base camp for your 2026 Pearl Island exploration."
 badges: ["Accommodation Partner", "Resort & Villas", "Phu Quoc", "Beachfront"]

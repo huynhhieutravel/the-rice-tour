@@ -8,14 +8,13 @@ published_date: "2026-07-29T21:17:00"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/pizza-hu-tieu.png"
+featured_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Sau Hoai Rice Noodle Oven](https://r2.nucuoimekong.com/wp-content/uploads/pizza-hu-tieu.png)
 
 ---
 

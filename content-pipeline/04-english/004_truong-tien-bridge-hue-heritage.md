@@ -8,14 +8,13 @@ published_date: "2026-08-12T11:24:52"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/cau-trang-tien-1.jpg"
+featured_image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
-> 🖼️ **Featured Image:** ![Truong Tien Bridge in Hue](https://r2.nucuoimekong.com/wp-content/uploads/cau-trang-tien-1.jpg)
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)"
 slug: "chua-som-rong-soc-trang"
+featured_image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80"
 subtitle: "A transcendental journey into the heart of Khmer Theravada Buddhism, where monumental statues meet intricate artistry."
 lead: "Tucked away in the serene province of Soc Trang, Som Rong Pagoda (Wat Pătum Wôngsa Som Rông) stands as a monumental testament to Khmer architectural brilliance. Featuring the largest reclining Buddha in Vietnam and a mesmerizing stupa, this sacred sanctuary offers travelers a profound glimpse into the spiritual and cultural heritage of the Mekong Delta in 2026."
 badges: ["Khmer Heritage", "Spiritual Marvel", "Soc Trang", "Photography"]

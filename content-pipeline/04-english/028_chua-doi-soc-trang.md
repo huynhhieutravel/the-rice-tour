@@ -1,6 +1,7 @@
 ---
 title: "The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith"
 slug: "chua-doi-soc-trang"
+featured_image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"
 subtitle: "Step into a mystical realm where century-old Khmer architecture coexists with thousands of giant fruit bats hanging from ancient mahogany trees."
 lead: "Nestled in the lush outskirts of Soc Trang City, the Bat Pagoda (Wat Mahatup) is one of the most enigmatic and visually arresting spiritual sites in the Mekong Delta. Renowned not only for its stunning Khmer architectural heritage—dating back over 400 years—but also for the thousands of wild fruit bats that have chosen its tranquil grounds as their sanctuary, this pagoda offers a truly unique 2026 travel experience."
 badges: ["Khmer Heritage", "Wildlife", "Soc Trang", "Spiritual"]

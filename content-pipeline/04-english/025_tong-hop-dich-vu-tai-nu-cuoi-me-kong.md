@@ -1,6 +1,7 @@
 ---
 title: "The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix"
 slug: "the-rice-tour-comprehensive-travel-services"
+featured_image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
 subtitle: "Beyond mere sightseeing, we architect highly personalized, immersive journeys across Vietnam. Discover our full spectrum of 2026 inbound travel solutions."
 lead: "Travel is more than a geographic transition; it is a highly personalized cultural immersion. At The Rice Tour, we pride ourselves on orchestrating flawless, bespoke travel ecosystems. From luxurious private charters traversing the Mekong Delta to meticulously curated heritage tours in Central Vietnam, our 2026 service portfolio is designed to exceed the expectations of the most discerning global travelers."
 badges: ["Travel Services", "Inbound Operator", "Vietnam Tours", "Bespoke Travel"]

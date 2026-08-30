@@ -1,6 +1,7 @@
 ---
 title: "Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup"
 slug: "dac-san-bun-nuoc-leo-soc-trang"
+featured_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
 subtitle: "A culinary exploration of the fermented fish noodle soup that perfectly embodies the cultural fusion of the Khmer, Kinh, and Hoa people."
 lead: "To truly understand the cultural tapestry of the Mekong Delta, one must taste its food. Bún Nước Lèo Sóc Trăng (Soc Trang Fermented Fish Noodle Soup) is the region's culinary crown jewel—a dish where the pungent depth of Khmer fermented fish (mắm bò hóc) harmonizes with Kinh fresh herbs and Hoa roast pork. Join us on a gastronomic journey to discover the best bowls in Soc Trang for 2026."
 badges: ["Culinary Guide", "Soc Trang", "Local Cuisine", "Food Safari"]

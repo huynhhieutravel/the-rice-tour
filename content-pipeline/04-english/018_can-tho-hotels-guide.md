@@ -8,14 +8,13 @@ published_date: "2026-07-27T11:40:57"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Hotels", "Toplist"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/khach-san-can-tho.jpg"
+featured_image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Can Tho Hotels: The 2026 Curated Lodging Matrix
 
 > 🏷️ **Category:** Hotels, Toplist | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Can Tho Hotels](https://r2.nucuoimekong.com/wp-content/uploads/khach-san-can-tho.jpg)
 
 ---
 

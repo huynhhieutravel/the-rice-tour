@@ -8,14 +8,13 @@ published_date: "2026-07-26T11:19:02"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Toplist", "Local Heritage"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/cho-can-tho.jpg"
+featured_image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
 phase: 3
 ---
 
 # Can Tho Markets: The 2026 Definitive Commercial Matrix
 
 > 🏷️ **Category:** Toplist, Local Heritage | 📅 **Last Updated:** 2026-08-27
-> 🖼️ **Featured Image:** ![Can Tho Markets](https://r2.nucuoimekong.com/wp-content/uploads/cho-can-tho.jpg)
 
 ---
 
