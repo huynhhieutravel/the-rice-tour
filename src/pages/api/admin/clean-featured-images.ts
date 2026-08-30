@@ -79,9 +79,30 @@ export const GET: APIRoute = async () => {
     }
   }
 
+  // 3. Ensure Editor role has 'delete' permission on media in SiteSetting and KV
+  try {
+    const setting = await d1Db.prepare("SELECT value FROM SiteSetting WHERE key = 'role_permissions'").first();
+    if (setting && setting.value) {
+      const matrix = JSON.parse(setting.value as string);
+      if (matrix.roles?.editor) {
+        if (!matrix.roles.editor.permissions.media?.includes('delete')) {
+          matrix.roles.editor.permissions.media = [...(matrix.roles.editor.permissions.media || []), 'delete'];
+          await d1Db.prepare("UPDATE SiteSetting SET value = ? WHERE key = 'role_permissions'").bind(JSON.stringify(matrix)).run();
+          results.push({ action: 'updated_role_setting', role: 'editor', permissions: matrix.roles.editor.permissions });
+        }
+      }
+    }
+    const sessionKV = (env as any)?.SESSION;
+    if (sessionKV) {
+      await sessionKV.delete('iam:roles');
+    }
+  } catch (err) {
+    console.error('Failed to sync role permissions in SiteSetting:', err);
+  }
+
   return new Response(JSON.stringify({
     success: true,
-    message: `Sanitized featured images for all posts. Direct updates: ${Object.keys(cleanPostImages).length}, Sweep sanitized: ${sweepCount}`,
+    message: `Sanitized featured images for all posts. Direct updates: ${Object.keys(cleanPostImages).length}, Sweep sanitized: ${sweepCount}. Editor media delete permission granted.`,
     details: results
   }), {
     status: 200,

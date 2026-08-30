@@ -36,7 +36,7 @@ export const DEFAULT_ROLES: RoleMatrix = {
       permissions: {
         post: ['view', 'create', 'edit'],
         tour: ['view', 'create', 'edit'],
-        media: ['view', 'create', 'edit']
+        media: ['view', 'create', 'edit', 'delete']
       }
     },
     author: {
