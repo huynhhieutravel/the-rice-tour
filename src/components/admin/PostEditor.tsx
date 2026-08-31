@@ -18,6 +18,7 @@ import { FaqBlock } from './extensions/FaqBlock';
 import imageCompression from 'browser-image-compression';
 import { WpGallery } from './extensions/WpGallery';
 import MediaPickerModal from './MediaPickerModal';
+import PostRevisionModal, { type PostRevisionItem } from './PostRevisionModal';
 import slugify from 'slugify';
 import './PostEditor.css';
 
@@ -107,6 +108,54 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
   const [isEditingLink, setIsEditingLink] = useState(false);
   const [linkInputUrl, setLinkInputUrl] = useState('');
   const [activeLinkUrl, setActiveLinkUrl] = useState('');
+
+  // Revisions & Version History State
+  const [isRevisionModalOpen, setIsRevisionModalOpen] = useState(false);
+  const [revisionCount, setRevisionCount] = useState<number>(0);
+
+  const loadRevisionCount = useCallback(async (targetPostId: string) => {
+    if (!targetPostId) return;
+    try {
+      const res = await fetch(`/api/admin/posts/${targetPostId}/revisions`);
+      const json = await res.json();
+      if (json.success && json.data) {
+        setRevisionCount(json.data.total || (json.data.revisions ? json.data.revisions.length : 0));
+      }
+    } catch (e) {}
+  }, []);
+
+  const handleRestoreRevision = (rev: PostRevisionItem) => {
+    setTitle(rev.title || '');
+    if (rev.slug) setSlug(rev.slug);
+    setFeaturedImage(rev.featuredImage || '');
+    setSeoTitle(rev.seoTitle || '');
+    setSeoDescription(rev.seoDescription || '');
+    setCanonicalUrl(rev.canonicalUrl || '');
+    setFocusKeyword(rev.focusKeyword || '');
+    if (rev.format) setFormat(rev.format);
+    if (rev.authorId) setAuthorId(rev.authorId);
+
+    const isHtml = rev.contentFormat === 'html' || editorMode === 'raw' || (typeof rev.content === 'string' && rev.content.trim().startsWith('<') && !rev.content.trim().startsWith('{'));
+
+    if (isHtml) {
+      setRawHtml(rev.content || '');
+      setEditorMode('raw');
+    } else if (editor && rev.content) {
+      let parsedContent = rev.content;
+      try {
+        if (typeof rev.content === 'string') {
+          parsedContent = JSON.parse(rev.content);
+        }
+      } catch (e) {}
+      editor.commands.setContent(parsedContent);
+      setEditorMode('tiptap');
+    }
+
+    setIsDirty(true);
+    if (typeof window.AppModal?.alert === 'function') {
+      window.AppModal.alert(`✅ Đã nạp lại dữ liệu bản lưu (${new Date(rev.createdAt).toLocaleTimeString('vi-VN')}) vào Editor. Bạn hãy kiểm tra lại và bấm Update khi hoàn tất.`);
+    }
+  };
 
 
   // Auto-resize title textarea
@@ -268,6 +317,7 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
   // Load Post Data
   useEffect(() => {
     if (postId) {
+      loadRevisionCount(postId);
       fetch(`/api/admin/posts/${postId}`)
         .then(res => res.json())
         .then(resData => {
@@ -531,6 +581,7 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
         if (resData.data?.id) {
           setPostId(resData.data.id);
           window.history.replaceState({}, '', `/admin/posts/edit?id=${resData.data.id}`);
+          loadRevisionCount(resData.data.id);
         }
       } else {
         const res = await fetch(`/api/admin/posts/${postId}`, {
@@ -549,6 +600,7 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
           setDraftSnapshot(null);
           window.AppModal.alert('✅ Đã cập nhật bài viết thành công!');
         }
+        loadRevisionCount(postId);
       }
       if (!isDraftSave) {
         setDraftSnapshot(null);
@@ -759,6 +811,30 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
           </span>
           <button onClick={() => editor?.chain().focus().undo().run()} disabled={!editor?.can().undo()} style={{padding:'4px 8px', borderRadius:'6px', background:'#fff', border:'1px solid #d1d5db', cursor:'pointer'}}>↩</button>
           <button onClick={() => editor?.chain().focus().redo().run()} disabled={!editor?.can().redo()} style={{padding:'4px 8px', borderRadius:'6px', background:'#fff', border:'1px solid #d1d5db', cursor:'pointer'}}>↪</button>
+
+          {postId && (
+            <button 
+              type="button" 
+              onClick={() => setIsRevisionModalOpen(true)} 
+              className="btn-revisions" 
+              title="Xem lịch sử và so sánh phiên bản cũ"
+              style={{
+                padding: '6px 12px', 
+                borderRadius: '6px', 
+                background: '#fff', 
+                color: '#1e293b', 
+                border: '1px solid #d1d5db', 
+                cursor: 'pointer', 
+                fontWeight: '600', 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '4px',
+                fontSize: '13px'
+              }}
+            >
+              🕒 Lịch sử {revisionCount > 0 ? `(${revisionCount})` : ''}
+            </button>
+          )}
           
           {draftSnapshot && (
              <div style={{ position: 'relative' }}>
@@ -1250,6 +1326,47 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
 
             <hr className="pdivider" />
 
+            {/* Lịch sử phiên bản (Revisions) */}
+            <div className="psection" style={{ background: '#f8fafc', padding: '12px 16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#475569', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Lịch sử bản lưu
+                </span>
+                <span style={{ fontSize: '11px', background: '#e2e8f0', color: '#475569', padding: '2px 6px', borderRadius: '4px', fontWeight: 600 }}>
+                  {revisionCount} bản
+                </span>
+              </div>
+              <p style={{ margin: '0 0 10px 0', fontSize: '12px', color: '#64748b', lineHeight: 1.4 }}>
+                Tự động lưu lại mỗi khi nhấn Update. So sánh khác biệt và khôi phục khi cần.
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsRevisionModalOpen(true)}
+                disabled={!postId}
+                style={{
+                  width: '100%',
+                  padding: '8px 12px',
+                  borderRadius: '6px',
+                  background: '#ffffff',
+                  border: '1px solid #cbd5e1',
+                  color: '#1e293b',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  cursor: postId ? 'pointer' : 'not-allowed',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '6px',
+                  boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                  transition: 'all 0.15s'
+                }}
+              >
+                🕒 Xem & So sánh Diff
+              </button>
+            </div>
+
+            <hr className="pdivider" />
+
             {categoryIds.some(id => categories.find(c => String(c.id) === String(id))?.slug === 'hanh-trinh-doanh-nghiep') && (
               <>
                 <div className="psection" style={{ background: '#fdf4ff', padding: '16px', borderRadius: '8px', border: '1px solid #fbcfe8' }}>
@@ -1518,6 +1635,25 @@ export default function PostEditor({ initialPostId }: PostEditorProps) {
         onClose={() => setIsMediaModalOpen(false)} 
         onSelect={handleMediaSelected} 
         initialSearch={mediaInitialSearch}
+      />
+
+      {/* Post Revision & Diff Modal */}
+      <PostRevisionModal
+        isOpen={isRevisionModalOpen}
+        onClose={() => setIsRevisionModalOpen(false)}
+        postId={postId}
+        currentData={{
+          title,
+          content: editor ? editor.getJSON() : {},
+          editorMode,
+          rawHtml,
+          featuredImage,
+          seoTitle,
+          seoDescription,
+          focusKeyword,
+          format
+        }}
+        onRestore={handleRestoreRevision}
       />
     </>
   );

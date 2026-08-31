@@ -22,7 +22,8 @@ const image = post?.featuredImage || undefined;
 
 // If post.content is present and has the 3-column Magazine layout, render it; otherwise render canonical 3-column template khanRanHtml
 const has3Col = post?.content && post.content.includes('Table of Contents');
-const htmlContent = has3Col ? post.content : mekongKhanRanScarfLegacyHtml;
+const rawSource = has3Col ? post.content : mekongKhanRanScarfLegacyHtml;
+const htmlContent = (rawSource || '').replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
 ---
 
 <BaseLayout 

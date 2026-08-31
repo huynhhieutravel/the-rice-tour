@@ -117,7 +117,7 @@ const isCorporatePost = category && category.slug ? corporateSlugs.includes(cate
   {isJson && parsedJson ? (
     <BlockRenderer node={parsedJson} />
   ) : (
-    <div class="coguu-raw-content" set:html={post.content} />
+    <div class="coguu-raw-content" set:html={typeof post.content === 'string' ? post.content.replace(/\{\/\*[\s\S]*?\*\/\}/g, '') : ''} />
   )}
 </BlogLayout>
 

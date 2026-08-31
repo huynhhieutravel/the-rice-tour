@@ -150,6 +150,31 @@ CREATE INDEX IF NOT EXISTS idx_post_slug ON Post(slug);
 CREATE INDEX IF NOT EXISTS idx_post_category ON Post(categoryId);
 CREATE INDEX IF NOT EXISTS idx_post_status ON Post(status);
 
+-- 5.1 Post Revisions (Version History & Diff)
+CREATE TABLE IF NOT EXISTS PostRevision (
+    id TEXT PRIMARY KEY,
+    postId TEXT NOT NULL REFERENCES Post(id) ON DELETE CASCADE,
+    title TEXT NOT NULL,
+    slug TEXT,
+    content TEXT NOT NULL,
+    contentFormat TEXT DEFAULT 'json',
+    format TEXT DEFAULT 'standard',
+    excerpt TEXT,
+    featuredImage TEXT,
+    seoTitle TEXT,
+    seoDescription TEXT,
+    canonicalUrl TEXT,
+    focusKeyword TEXT,
+    authorId TEXT,
+    authorName TEXT,
+    savedBy TEXT,
+    revisionType TEXT DEFAULT 'manual',
+    wordCount INTEGER DEFAULT 0,
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_post_revision_post ON PostRevision(postId, createdAt DESC);
+
 -- 6. Tags
 CREATE TABLE IF NOT EXISTS Tag (
     id TEXT PRIMARY KEY,

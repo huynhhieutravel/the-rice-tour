@@ -91,7 +91,10 @@ export const POST: APIRoute = withErrorHandler(async ({ request, locals }) => {
   }
   
   const status = data.status || 'draft';
-  const content = data.content ? (typeof data.content === 'string' ? data.content : JSON.stringify(data.content)) : JSON.stringify({ type: 'doc', content: [] });
+  let content = data.content ? (typeof data.content === 'string' ? data.content : JSON.stringify(data.content)) : JSON.stringify({ type: 'doc', content: [] });
+  if (typeof content === 'string') {
+    content = content.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
+  }
 
   // Detect raw HTML for fallback defaults only
   const contentStr = typeof content === 'string' ? content.trim() : '';

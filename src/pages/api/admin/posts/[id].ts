@@ -96,8 +96,11 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
   if (!slug) {
     slug = existing.slug || slugify(title || 'post', { lower: true, strict: true, locale: 'vi' }) || Date.now().toString(36);
   }
-  const status = data.status || existing.status || 'draft';
-  const content = typeof data.content === 'object' ? JSON.stringify(data.content) : data.content;
+  let content = typeof data.content === 'object' ? JSON.stringify(data.content) : data.content;
+  if (typeof content === 'string') {
+    // Strip any raw JSX comments from HTML content
+    content = content.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
+  }
 
   // Detect raw HTML for fallback defaults only
   const contentStr = typeof content === 'string' ? content.trim() : '';
@@ -187,7 +190,102 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
   const userAgent = request.headers.get('User-Agent') || null;
   await logAudit(d1Db, user?.userId || user?.id, null, 'edit_post', ipAddress, userAgent, { postId: id });
 
-  return apiSuccess({ id, updatedAt });
+  // Snapshot Post Revision khi người dùng lưu thủ công (không phải auto-draft)
+  let createdRevisionId: string | null = null;
+  if (!data.isDraftSave && !data.isDraftDiscard) {
+    try {
+      // Đảm bảo bảng tồn tại
+      await d1Db.prepare(`
+        CREATE TABLE IF NOT EXISTS PostRevision (
+          id TEXT PRIMARY KEY,
+          postId TEXT NOT NULL,
+          title TEXT NOT NULL,
+          slug TEXT,
+          content TEXT NOT NULL,
+          contentFormat TEXT DEFAULT 'json',
+          format TEXT DEFAULT 'standard',
+          excerpt TEXT,
+          featuredImage TEXT,
+          seoTitle TEXT,
+          seoDescription TEXT,
+          canonicalUrl TEXT,
+          focusKeyword TEXT,
+          authorId TEXT,
+          authorName TEXT,
+          savedBy TEXT,
+          revisionType TEXT DEFAULT 'manual',
+          wordCount INTEGER DEFAULT 0,
+          createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+      `).run();
+
+      // Kiểm tra bản revision gần nhất để tránh duplicate
+      const latestRev = await d1Db.prepare(
+        "SELECT id, title, content, seoTitle, seoDescription, featuredImage FROM PostRevision WHERE postId = ? ORDER BY createdAt DESC LIMIT 1"
+      ).bind(id).first<any>();
+
+      const isChanged = !latestRev || 
+        latestRev.title !== title || 
+        latestRev.content !== content || 
+        latestRev.seoTitle !== seoTitle || 
+        latestRev.seoDescription !== seoDescription ||
+        latestRev.featuredImage !== featuredImage;
+
+      if (isChanged) {
+        // Tính Word Count
+        let rawText = title || '';
+        if (content) {
+          try {
+            const parsed = JSON.parse(content);
+            const extractText = (node: any): string => {
+              if (!node) return '';
+              if (node.text) return node.text;
+              if (node.content && Array.isArray(node.content)) {
+                return node.content.map(extractText).join(' ');
+              }
+              return '';
+            };
+            rawText += ' ' + extractText(parsed);
+          } catch {
+            rawText += ' ' + String(content).replace(/<[^>]*>?/gm, ' ');
+          }
+        }
+        const wordCount = rawText.trim().split(/\s+/).filter(Boolean).length;
+        const revId = crypto.randomUUID();
+        const savedBy = user?.displayName || user?.username || 'Admin';
+        const revisionType = status === 'published' ? 'publish' : 'manual';
+
+        await d1Db.prepare(`
+          INSERT INTO PostRevision (
+            id, postId, title, slug, content, contentFormat, format, excerpt,
+            featuredImage, seoTitle, seoDescription, canonicalUrl, focusKeyword,
+            authorId, authorName, savedBy, revisionType, wordCount, createdAt
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(
+          revId, id, title || '', slug || '', content || '', contentFormat, format, excerpt || '',
+          featuredImage || '', seoTitle || '', seoDescription || '', canonicalUrl || '', focusKeyword || '',
+          authorId || null, authorName || '', savedBy, revisionType, wordCount, updatedAt
+        ).run();
+
+        createdRevisionId = revId;
+
+        // Retention Policy: Giữ tối đa 30 bản ghi gần nhất cho bài viết này
+        await d1Db.prepare(`
+          DELETE FROM PostRevision 
+          WHERE postId = ? 
+          AND id NOT IN (
+            SELECT id FROM (
+              SELECT id FROM PostRevision WHERE postId = ? ORDER BY createdAt DESC LIMIT 30
+            )
+          )
+        `).bind(id, id).run();
+      }
+    } catch (revErr) {
+      console.warn(`[PUT /posts/${id}] Snapshot revision failed (non-fatal):`, revErr);
+    }
+  }
+
+  return apiSuccess({ id, updatedAt, revisionId: createdRevisionId });
 });
 
 // DELETE: Soft delete (default) or Permanent delete (?permanent=1)

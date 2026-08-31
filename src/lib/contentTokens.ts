@@ -3,8 +3,11 @@
 // Content is admin-controlled so we use a lightweight server-safe sanitizer.
 
 function serverSanitize(html: string): string {
-  // Block dangerous protocols in href/src attributes
+  if (!html) return '';
+  // Strip JSX comments (e.g. {/* Breadcrumb */}, {/* Author Meta */}) so they never leak into rendered HTML
   return html
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, '')
+    // Block dangerous protocols in href/src attributes
     .replace(/\b(href|src)\s*=\s*["']javascript:/gi, '$1="')
     .replace(/\b(href|src)\s*=\s*["']data:/gi, '$1="')
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')

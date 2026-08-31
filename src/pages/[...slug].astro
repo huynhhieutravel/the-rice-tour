@@ -420,6 +420,9 @@ if (!isCategory) {
     isLandingPage = true;
     isFullWidth = true;
   }
+  // Strip any leaked JSX comments from raw HTML
+  pageContent = pageContent.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
+
   if (post.featuredImage) {
     pageContent = pageContent.replace(/\{\{PAGE_FEATURED_IMAGE\}\}/g, post.featuredImage);
   } else {
@@ -434,6 +437,9 @@ if (!isCategory) {
   cleanHtml = (!isJson && contentVersion <= 1)
     ? sanitizeElementorHtml(rawSafeHtml, isLandingPage ? undefined : post.featuredImage, !isLandingPage)
     : rawSafeHtml;
+
+  // Final check to guarantee no raw JSX comments appear in production HTML
+  cleanHtml = cleanHtml.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
 
   // Parse CMS Engine Shortcodes
   // Parse CMS Engine Shortcodes

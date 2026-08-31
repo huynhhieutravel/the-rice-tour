@@ -97,8 +97,9 @@ if (contentHtml) {
   contentHtml = contentHtml.replace(/{{TOUR_TITLE}}/g, tour.title || '');
 }
 
-// Strip legacy breadcrumb from content HTML
+// Strip legacy breadcrumb and leaked JSX comments from content HTML
 contentHtml = contentHtml.replace(/<nav[^>]*aria-label="Breadcrumb"[^>]*>[\s\S]*?<\/nav>/gi, '');
+contentHtml = contentHtml.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
 
 const isElementor = tour.format === 'elementor' || (tour.content && tour.content.includes('elementor-'));
 

@@ -12,7 +12,6 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -21,7 +20,6 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates
         </h1>
@@ -32,7 +30,6 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           Once envisioned as the 'Land of Happiness' along the untamed waters of the Vàm Cỏ Đông river, the Happy Land Entertainment Complex has weathered significant turbulence. As of 2026, this grand project no longer operates as a regular tourist attraction for individual travelers.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -47,7 +44,6 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -412,7 +408,6 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -421,7 +416,6 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes
         </h1>
@@ -432,7 +426,6 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           Far removed from the neon corridors of mass tourism, the 21 islands of the Nam Du archipelago emerge from the southwestern gulf as a rugged sanctuary of limestone cliffs, crystalline turquoise waters, and ancient seafaring traditions.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -447,7 +440,6 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -860,7 +852,6 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -869,7 +860,6 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide
         </h1>
@@ -880,7 +870,6 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           Fed by the ceaseless alluvial embrace of the Mekong and Bassac rivers, the Southern Delta yields the most biodiverse fruit basket in Southeast Asia. This is your definitive 2026 harvest map to navigating orchards across 13 provinces.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -895,7 +884,6 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -1313,7 +1301,6 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -1322,7 +1309,6 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide
         </h1>
@@ -1333,7 +1319,6 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           Spanning the tranquil waters of the Perfume River, the Truong Tien Bridge is far more than a transport artery. It is the poetic heart of Hue—a testament to Gustave Eiffel's metallurgical mastery, the resilience of imperial memory, and the romantic soul of Central Vietnam.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -1348,7 +1333,6 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -1695,7 +1679,6 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -1704,7 +1687,6 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">My Quynh Safari (2026): The Definitive Guide to the Zoo & Water Park</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           My Quynh Safari (2026): The Definitive Guide to the Zoo & Water Park
         </h1>
@@ -1715,7 +1697,6 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           Spanning over 50 hectares in Duc Hoa (Tay Ninh / Long An border), My Quynh Safari represents Southern Vietnam's premier semi-wild zoological sanctuary. Here is your curated 2026 field manual for exploring African wildlife, botanical gardens, and aquatic recreation.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -1730,7 +1711,6 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -2163,7 +2143,6 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -2172,7 +2151,6 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta
         </h1>
@@ -2183,7 +2161,6 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           The khăn rằn is far more than a ubiquitous souvenir scattered across the tourist markets of the Mekong Delta. It is a silent witness to the era of untamed wilderness reclamation, an emblem of wartime resilience, and the lifeblood of a century-old weaving village recently crowned as a National Intangible Cultural Heritage.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -2198,7 +2175,6 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -2663,7 +2639,6 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -2672,7 +2647,6 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of 'The Lover' (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of 'The Lover' (2026)
         </h1>
@@ -2683,7 +2657,6 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           Rising gracefully along the Sa Dec riverfront, the Huynh Thuy Le Ancient House stands as an exquisite monument to Sino-French architectural fusion and the immortal romance chronicled in Marguerite Duras’s world-renowned novel, L'Amant.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -2698,7 +2671,6 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -3061,7 +3033,6 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3070,7 +3041,6 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics
         </h1>
@@ -3081,7 +3051,6 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           Breaking sharply from conventional passive retreats, Lan Vuong Eco-Park immerses voyagers directly into the elemental thrill of the Mekong—where monkey bridges, swamp fisheries, and team-building camaraderie forge indelible memories.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3096,7 +3065,6 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -3451,7 +3419,6 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3460,7 +3427,6 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries
         </h1>
@@ -3471,7 +3437,6 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           Defying monotonous concrete assimilation, the untamed island of Hon Son (Kien Giang) invites the discerning voyager to experience bespoke coastal living—where cliffside wooden cabins and beachfront acoustic campfires replace commercial resort glitz.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3486,7 +3451,6 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -3909,7 +3873,6 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3918,7 +3881,6 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)
         </h1>
@@ -3929,7 +3891,6 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           Perched gracefully at the confluence of the Hau and Can Tho rivers, Can Tho Beach offers an artificial riverine oasis where golden sunsets, watercraft excursions, and cable-stayed bridge vistas converge beneath the Southern evening sky.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3944,7 +3905,6 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -4283,7 +4243,6 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -4292,7 +4251,6 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Buu Long Tourist Area: The Miniature Ha Long Bay of Dong Nai (2026 Guide)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Buu Long Tourist Area: The Miniature Ha Long Bay of Dong Nai (2026 Guide)
         </h1>
@@ -4303,7 +4261,6 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -4318,7 +4275,6 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -4676,7 +4632,6 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -4685,7 +4640,6 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Da Lat Specialties: The Definitive Highland Culinary Guide (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Da Lat Specialties: The Definitive Highland Culinary Guide (2026)
         </h1>
@@ -4696,7 +4650,6 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -4711,7 +4664,6 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -5074,7 +5026,6 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5083,7 +5034,6 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)
         </h1>
@@ -5094,7 +5044,6 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5109,7 +5058,6 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -5463,7 +5411,6 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5472,7 +5419,6 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)
         </h1>
@@ -5483,7 +5429,6 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5498,7 +5443,6 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -5860,7 +5804,6 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5869,7 +5812,6 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)
         </h1>
@@ -5880,7 +5822,6 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5895,7 +5836,6 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6237,7 +6177,6 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6246,7 +6185,6 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Fermented Fish Hotpot: The Ultimate 'Lau Mam' Guide (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Fermented Fish Hotpot: The Ultimate 'Lau Mam' Guide (2026)
         </h1>
@@ -6257,7 +6195,6 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -6272,7 +6209,6 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6603,7 +6539,6 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6612,7 +6547,6 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Ba Chua Xu Temple: The Spiritual Epicenter of the Mekong Delta (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Ba Chua Xu Temple: The Spiritual Epicenter of the Mekong Delta (2026)
         </h1>
@@ -6623,7 +6557,6 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -6638,7 +6571,6 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6965,7 +6897,6 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6974,7 +6905,6 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Hotels: The 2026 Curated Lodging Matrix</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Hotels: The 2026 Curated Lodging Matrix
         </h1>
@@ -6985,7 +6915,6 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -7000,7 +6929,6 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -7378,7 +7306,6 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -7387,7 +7314,6 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)
         </h1>
@@ -7398,7 +7324,6 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -7413,7 +7338,6 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -7751,7 +7675,6 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -7760,7 +7683,6 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Markets: The 2026 definitive Commercial Matrix</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Markets: The 2026 definitive Commercial Matrix
         </h1>
@@ -7771,7 +7693,6 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -7786,7 +7707,6 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8168,7 +8088,6 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8177,7 +8096,6 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)
         </h1>
@@ -8188,7 +8106,6 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -8203,7 +8120,6 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8570,7 +8486,6 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8579,7 +8494,6 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu
         </h1>
@@ -8590,7 +8504,6 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -8605,7 +8518,6 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8968,7 +8880,6 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8977,7 +8888,6 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide
         </h1>
@@ -8988,7 +8898,6 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -9003,7 +8912,6 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -9352,7 +9260,6 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -9361,7 +9268,6 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner
         </h1>
@@ -9372,7 +9278,6 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -9387,7 +9292,6 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -9733,7 +9637,6 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -9742,7 +9645,6 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix
         </h1>
@@ -9753,7 +9655,6 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -9768,7 +9669,6 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -10136,7 +10036,6 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10145,7 +10044,6 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)
         </h1>
@@ -10156,7 +10054,6 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10171,7 +10068,6 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -10505,7 +10401,6 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10514,7 +10409,6 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup
         </h1>
@@ -10525,7 +10419,6 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10540,7 +10433,6 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -10900,7 +10792,6 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10909,7 +10800,6 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith
         </h1>
@@ -10920,7 +10810,6 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10935,7 +10824,6 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -11277,7 +11165,6 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -11286,7 +11173,6 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)
         </h1>
@@ -11297,7 +11183,6 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -11312,7 +11197,6 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -11659,7 +11543,6 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -11668,7 +11551,6 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)</span>
         </div>
 
-        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)
         </h1>
@@ -11679,7 +11561,6 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
-        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -11694,7 +11575,6 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           </div>
         </div>
 
-        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
