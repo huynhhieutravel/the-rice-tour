@@ -6,36 +6,36 @@
     
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
       <div class="max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3">
-          Geographic Wonders
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3 shadow-sm">
+          Signature Regions
         </div>
         <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
-          Explore Vietnam by Region
+          Explore Our Core Destinations
         </h2>
         <p class="text-gray-600 text-base sm:text-lg mt-3 font-light">
-          Three distinct geographic worlds stretching over 3,200 kilometers of coastline, each offering its own culinary soul, climate, and cultural tapestry.
+          From the underground labyrinth of Cu Chi to the lush waterways of Ben Tre and Can Tho, explore Southern Vietnam with the local masters.
         </p>
       </div>
 
       <!-- Tab Buttons -->
       <div class="flex items-center gap-2 p-1.5 bg-gray-200 rounded-2xl w-fit" id="dest-tab-buttons">
         <button 
-          data-target="north" 
+          data-target="cuchi" 
           class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-brand-600 text-white shadow-sm"
         >
-          North Vietnam
+          Cu Chi Tunnels
         </button>
         <button 
-          data-target="central" 
+          data-target="mekong" 
           class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-gray-600 hover:text-brand-600"
         >
-          Central Coast
+          Mekong Delta
         </button>
         <button 
-          data-target="south" 
+          data-target="saigon" 
           class="dest-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-gray-600 hover:text-brand-600"
         >
-          South &amp; Mekong
+          Saigon Heritage
         </button>
       </div>
     </div>
@@ -43,138 +43,153 @@
     <!-- Tab Panels -->
     <div id="dest-tab-panels">
       
-      <!-- Panel 1: North -->
-      <div class="dest-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-north">
+      <!-- Panel 1: Cu Chi -->
+      <div class="dest-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-cuchi">
         <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
           <img 
-            src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" 
-            alt="North Vietnam Highlands" 
+            src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
+            alt="Cu Chi Underground Tunnels Secret Entrance" 
             class="w-full h-full object-cover"
           />
           <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
             <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
-            <p class="text-xs text-gray-700">Hanoi Old Quarter · Lan Ha &amp; Ha Long Bay · Sapa Terraced Valleys · Ninh Binh Karsts</p>
+            <p class="text-xs text-gray-700">Secret Trapdoors · Ben Dinh &amp; Ben Duoc · Underground Bunkers · Boiled Cassava Tea Tasting</p>
           </div>
         </div>
 
         <div class="lg:col-span-5 flex flex-col justify-center">
-          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Highland Mystique &amp; Ancient Capitals</span>
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Underground Guerrilla Engineering</span>
           <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
-            Northern Highlands &amp; Thousand-Year Hanoi
+            Cu Chi Historic Tunnels &amp; Countryside
           </h3>
           <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
-            Northern Vietnam is where dramatic limestone peaks meet emerald valleys and timeless artisan villages. Walk through the fragrant coffee quarters of Hanoi, cruise quiet waters in Lan Ha Bay aboard a private junk, and trek across golden rice amphitheaters in Sapa.
+            Journey beyond the surface into a 250-kilometer subterranean network of living quarters, command posts, kitchens, and hospitals that survived relentless bombardment. Travel in VIP private vans with veteran-trained guides.
           </p>
           
           <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Boutique cruising away from tourist crowds in Lan Ha Bay</span>
+              <span>Authentic trapdoor discovery &amp; tunnel crawling experience</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Private treks through Muong Hoa valley and ethnic craft villages</span>
+              <span>Less-crowded Ben Duoc exploration with historic diorama briefing</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Curated Hanoi street gastronomy tours with local culinary experts</span>
+              <span>Included travel photography &amp; private air-conditioned vehicle</span>
             </li>
           </ul>
 
-          <a href="/tours?country=mien-bac" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
-            <span>Explore Northern Tours</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
+          <div class="flex flex-wrap gap-3">
+            <a href="/tour/half-day-cu-chi-tunnels-tour" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+              <span>Half-Day Tour ($49)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/tour/1-day-premium-cu-chi-tunnels" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-sm">
+              <span>Full-Day Premium ($89)</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Panel 2: Central (Hidden by default) -->
-      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-central">
+      <!-- Panel 2: Mekong (Hidden by default) -->
+      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-mekong">
         <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
           <img 
-            src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80" 
-            alt="Central Vietnam Hoi An" 
+            src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" 
+            alt="Mekong Delta Water Coconut Sampan Canal" 
             class="w-full h-full object-cover"
           />
           <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
             <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
-            <p class="text-xs text-gray-700">Hue Imperial Citadel · Lantern-lit Hoi An Old Town · Golden Bridge Da Nang · Phong Nha Caves</p>
+            <p class="text-xs text-gray-700">Hand-rowed Sampan · Honey Bee Farms · Vinh Trang Pagoda · Cai Rang Floating Market</p>
           </div>
         </div>
 
         <div class="lg:col-span-5 flex flex-col justify-center">
-          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Royal Legacies &amp; Coastal Charm</span>
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Tropical Waterways &amp; Slow Living</span>
           <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
-            Central Heritage Coast &amp; Ancient Hoi An
+            Mekong Delta (Ben Tre &amp; Can Tho)
           </h3>
           <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
-            Step back into the realm of emperors in Hue, cycle past emerald paddy fields to UNESCO-protected Hoi An, and discover the world's most spectacular underground cave kingdoms in Phong Nha.
+            Glide beneath lush nipa palm arches in a traditional wooden sampan, cycle along tranquil island hamlets, savor freshly caught crispy elephant ear fish, and witness sunrise commerce at Cai Rang floating market.
           </p>
           
           <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Private access to royal garden houses and imperial banquets in Hue</span>
+              <span>100% No forced tourist shopping or commercial diversions</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Master tailor fittings &amp; twilight lantern boat rides in Hoi An</span>
+              <span>Traditional coconut candy making &amp; honey tea tastings</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Exclusive caving expeditions into Phong Nha national park</span>
+              <span>Boutique riverside resort stay on 2-day expeditions</span>
             </li>
           </ul>
 
-          <a href="/tours?country=mien-trung" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
-            <span>Explore Central Tours</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
+          <div class="flex flex-wrap gap-3">
+            <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+              <span>Full-Day Ben Tre ($95)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/tour/2-day-mekong-delta-tour" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-sm">
+              <span>2-Day 1-Night ($195)</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Panel 3: South (Hidden by default) -->
-      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-south">
+      <!-- Panel 3: Saigon (Hidden by default) -->
+      <div class="dest-panel hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="panel-saigon">
         <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative aspect-[16/10]">
           <img 
-            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" 
-            alt="Mekong Delta Waterways" 
+            src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" 
+            alt="Saigon Heritage & Cooking Class" 
             class="w-full h-full object-cover"
           />
           <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl text-gray-900 border border-gray-100 hidden sm:block shadow-lg">
             <span class="text-brand-600 text-xs font-bold uppercase tracking-wider block mb-1">Key Highlights</span>
-            <p class="text-xs text-gray-700">Saigon Modern Hub · Cu Chi Historic Tunnels · Cai Rang Floating Market · Phu Quoc Beaches</p>
+            <p class="text-xs text-gray-700">Notre Dame Cathedral · War Remnants Museum · Chef Wet Market Tour · Hands-on Cooking</p>
           </div>
         </div>
 
         <div class="lg:col-span-5 flex flex-col justify-center">
-          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Tropical Waterways &amp; Urban Pulse</span>
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Colonial Heritage &amp; Culinary Soul</span>
           <h3 class="font-serif text-3xl font-bold text-gray-900 mb-4 leading-tight">
-            Southern Metropolis &amp; Mekong Waterways
+            Saigon Heritage &amp; Culinary Masterclasses
           </h3>
           <p class="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
-            Experience the energetic rhythm of modern Saigon before slowing down completely in the lush labyrinth of the Mekong Delta, where life has flowed along riverbanks for centuries.
+            Immerse yourself in Ho Chi Minh City's vibrant past and culinary present. Walk architectural landmarks, sip slow-drip Robusta coffee in hidden alleys, and cook signature Vietnamese dishes alongside master chefs.
           </p>
           
           <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Private wooden sampan navigation through secluded palm-fringed canals</span>
+              <span>Curated walking tour of French colonial landmarks &amp; Chinatown</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Sunrise breakfast at vibrant Cai Rang floating market</span>
+              <span>Chef-led market shopping &amp; cooking masterclass with recipe booklet</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="w-6 h-6 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center text-xs font-bold">✓</span>
-              <span>Luxury beach extensions on pristine Phu Quoc island</span>
+              <span>Private roundtrip hotel transfers in luxury van</span>
             </li>
           </ul>
 
-          <a href="/tours?country=mien-nam" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
-            <span>Explore Southern Tours</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
+          <div class="flex flex-wrap gap-3">
+            <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-md">
+              <span>Saigon City Tour ($45)</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="/tour/cooking-class-local-market" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-bold text-xs uppercase tracking-wider rounded-2xl w-fit transition-all shadow-sm">
+              <span>Cooking Class ($55)</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -185,24 +200,25 @@
 
 <script is:inline>
   const tabButtons = document.querySelectorAll('.dest-tab-btn');
-  const panels = document.querySelectorAll('.dest-panel');
+  const tabPanels = document.querySelectorAll('.dest-panel');
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-target');
       
+      // Update buttons
       tabButtons.forEach(b => {
         b.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
         b.classList.add('text-gray-600');
       });
-      btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
       btn.classList.remove('text-gray-600');
+      btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
 
-      panels.forEach(p => {
+      // Update panels
+      tabPanels.forEach(p => {
         p.classList.add('hidden');
         p.classList.remove('grid');
       });
-
       const activePanel = document.getElementById(`panel-${target}`);
       if (activePanel) {
         activePanel.classList.remove('hidden');

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { COMPANY_INFO } from '@/config/company';
 
-const title = "About Us | The Rice Tour — Curated Vietnam Inbound Journeys";
-const description = "Discover the story of The Rice Tour. We craft bespoke, authentic, and sustainable private travel experiences across Vietnam for curious international travelers.";
+const title = "About Us | The Rice Tour — Authentic Inbound Vietnam Journeys";
+const description = "Discover the story of The Rice Tour. We craft intimate, authentic, and slow-paced private travel experiences across Vietnam for discerning international travelers.";
 const canonicalUrl = "https://thericetour.com/about-us";
 
 const breadcrumbSchema = {
@@ -12,128 +13,300 @@ const breadcrumbSchema = {
     { name: "About Us", url: canonicalUrl }
   ]
 };
+
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About The Rice Tour",
+  "description": description,
+  "url": canonicalUrl,
+  "mainEntity": {
+    "@type": "TravelAgency",
+    "name": COMPANY_INFO.brandName,
+    "alternateName": COMPANY_INFO.legalNameEn,
+    "telephone": COMPANY_INFO.phoneIntl,
+    "email": COMPANY_INFO.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "180 Bui Vien Street, Ben Thanh Ward",
+      "addressLocality": "District 1",
+      "addressRegion": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    }
+  }
+};
 ---
 
 <BaseLayout title={title} description={description} canonical={canonicalUrl}>
   <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+  <script type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} />
 
   <!-- Hero Header -->
-  <section class="relative bg-slate-950 text-white py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-30">
+  <section class="relative bg-slate-950 text-white py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
       <img 
-        src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1920&q=80" 
-        alt="Sapa Terraces and Culture" 
-        class="w-full h-full object-cover"
+        src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" 
+        alt="Hand-paddled sampan cruise in the Mekong Delta with The Rice Tour" 
+        class="w-full h-full object-cover object-center opacity-40 scale-105"
+        loading="eager"
+        fetchpriority="high"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/40"></div>
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 backdrop-blur-md mb-6">
-        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">Our Heritage & Philosophy</span>
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">Rooted in Vietnam • Crafted with Guu</span>
       </div>
-      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-        Rooted in Vietnam, Crafted for Discerning Travelers
+      <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+        Authentic Vietnam Journeys, Handcrafted for Curious Travelers
       </h1>
-      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-light">
-        In Vietnamese culture, the rice grain is more than sustenance—it represents life, patience, community, and the timeless beauty of our homeland.
+      <p class="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+        The Rice Tour was founded with a single mission: to replace rushed, generic tour buses with slow, intimate, and culturally immersive private expeditions across Vietnam.
       </p>
     </div>
   </section>
 
-  <!-- Narrative Section -->
+  <!-- Narrative Section: The Philosophy of "The Rice" -->
   <section class="py-16 lg:py-24 bg-white text-slate-800">
-    <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-        <div>
-          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Our Origin Story</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">
-            Beyond Standard Sightseeing: A Quest for Authenticity
-          </h2>
-          <p class="text-slate-600 leading-relaxed mb-4">
-            Founded by a collective of passionate Vietnamese travel architects, <strong>The Rice Tour</strong> was born from a simple belief: the most transformative journeys happen when you slow down, venture beyond generic tour buses, and engage with the living heartbeat of Vietnam.
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Our Core Story</span>
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold text-slate-900 leading-tight">
+              Why We Are Named "The Rice Tour"
+            </h2>
+          </div>
+          <p class="text-slate-600 leading-relaxed text-[15.5px]">
+            In Vietnamese civilization, the rice grain (<em>Hạt Gạo</em>) is far more than everyday nourishment. It embodies the soul of our people — symbolizing patience, community spirit, craftsmanship, and a deep, harmonious bond with nature.
           </p>
-          <p class="text-slate-600 leading-relaxed">
-            Whether it is waking up to mist rising over Sapa’s centuries-old rice terraces, sharing a cup of green tea with a village elder in Hue, or gliding along the emerald waters of Lan Ha Bay aboard a boutique wooden junk, we design experiences that linger in your memory for a lifetime.
+          <p class="text-slate-600 leading-relaxed text-[15.5px]">
+            Just as cultivating rice demands meticulous care, seasonal wisdom, and dedication from seed to harvest, we craft each travel itinerary with the same level of care. Every route is thoughtfully curated so you don't just visit Vietnam — you connect with its people, taste its authentic cuisine, and understand its living history.
           </p>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center gap-6">
+            <div>
+              <span class="block text-2xl font-serif font-bold text-slate-900">100%</span>
+              <span class="text-xs text-slate-500 font-medium uppercase tracking-wider">Inbound Specialists</span>
+            </div>
+            <div class="h-8 w-px bg-slate-200"></div>
+            <div>
+              <span class="block text-2xl font-serif font-bold text-slate-900">VIP Max 5</span>
+              <span class="text-xs text-slate-500 font-medium uppercase tracking-wider">Small Group Privacy</span>
+            </div>
+            <div class="h-8 w-px bg-slate-200"></div>
+            <div>
+              <span class="block text-2xl font-serif font-bold text-emerald-600">5.0 ★</span>
+              <span class="text-xs text-slate-500 font-medium uppercase tracking-wider">TripAdvisor Rating</span>
+            </div>
+          </div>
         </div>
-        <div class="relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
+
+        <div class="lg:col-span-6 relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] bg-slate-100">
             <img 
-              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=80" 
-              alt="Vietnamese Culture and Landscape" 
-              class="w-full h-full object-cover"
+              src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" 
+              alt="Artisan making traditional steamed rice paper in Mekong craft village" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
             />
           </div>
-          <div class="absolute -bottom-6 -left-6 bg-amber-500 text-slate-950 p-6 rounded-2xl shadow-xl max-w-[240px] hidden sm:block">
-            <span class="block text-2xl font-serif font-black">100%</span>
-            <span class="text-xs font-bold uppercase tracking-wider">Locally Owned & Managed</span>
+          <div class="absolute -bottom-6 -left-6 bg-amber-500 text-slate-950 p-6 rounded-2xl shadow-xl max-w-[260px] hidden sm:block">
+            <span class="block text-2xl font-serif font-black">100% Private</span>
+            <span class="text-xs font-bold uppercase tracking-wider">No Shopping Guarantee</span>
           </div>
         </div>
       </div>
 
-      <!-- Core Pillars -->
-      <div class="border-t border-slate-100 pt-16">
+      <!-- Core Pillars Grid -->
+      <div class="border-t border-slate-100 pt-16 mb-20">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Why Travel With Us</span>
-          <h2 class="font-serif text-3xl font-bold text-slate-900">The Rice Tour Commitments</h2>
+          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">The Rice Tour Difference</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
+            Our 4 Travel Commitments
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+          <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200/80 hover:border-amber-300 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
-                1
+              <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-sm">
+                🛡️
               </div>
-              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">No Forced Shopping</h3>
-              <p class="text-slate-600 text-sm leading-relaxed">
-                Zero commission shopping stops. We believe your precious vacation time should be spent experiencing authentic culture, scenic beauty, and local cuisine.
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">100% No Forced Shopping</h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Zero commission tourist trap stops. Your precious vacation time is 100% devoted to authentic historical sites, nature, and cultural interactions.
               </p>
             </div>
           </div>
 
-          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+          <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200/80 hover:border-amber-300 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
-                2
+              <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-sm">
+                🚐
               </div>
-              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Tailor-Made Mastery</h3>
-              <p class="text-slate-600 text-sm leading-relaxed">
-                Every itinerary is 100% customizable. You dictate the pace, accommodation styles, dietary requirements, and specific passions.
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">VIP Small Group Standards</h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Travel in brand-new, air-conditioned 7-seater private vans with maximum 5 guests. Dedicated driver, chilled mineral water, and flexible pacing throughout.
               </p>
             </div>
           </div>
 
-          <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 flex flex-col justify-between">
+          <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200/80 hover:border-amber-300 hover:shadow-md transition-all flex flex-col justify-between">
             <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-6">
-                3
+              <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-sm">
+                📸
               </div>
-              <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Responsible Tourism</h3>
-              <p class="text-slate-600 text-sm leading-relaxed">
-                We actively support ethnic minority families, employ local village guides, and practice leave-no-trace environmental stewardship.
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Dedicated Photographer</h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Every tour includes an experienced photographer capturing high-resolution candid memories, delivered via private download link after the journey.
               </p>
             </div>
           </div>
 
+          <div class="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200/80 hover:border-amber-300 hover:shadow-md transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-sm">
+                🍲
+              </div>
+              <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Authentic Culinary Heritage</h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                From fresh morning Saigon Bánh Mì served on board to farm-to-table Southern feasts prepared by culinary artisans — food is at the heart of our tours.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Real Field Experiences Gallery Grid -->
+      <div class="border-t border-slate-100 pt-16 mb-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-amber-600 text-xs uppercase tracking-[0.2em] font-bold block mb-2">Real Traveler Moments</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
+            Unfiltered Vietnam in Every Frame
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md bg-slate-100">
+            <img 
+              src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
+              alt="Travelers exploring secret underground tunnel trapdoors in Cu Chi" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Cu Chi Secret Trapdoors</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md bg-slate-100">
+            <img 
+              src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" 
+              alt="Girls waving on hand-rowed sampan through lush water coconut waterways" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Mekong Delta Sampan Cruises</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md bg-slate-100">
+            <img 
+              src="https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp" 
+              alt="Seven-story pagoda tower at historic Vinh Trang Temple" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-semibold">170-Year-Old Vinh Trang Pagoda</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-md bg-slate-100">
+            <img 
+              src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+              alt="Tourists walking along shady primeval forest trails with traditional checkered scarves" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Jungle Pathways & Heritage</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Legal Entity & Operations Details -->
+      <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full inline-block mb-3">
+              Licensed & Accredited
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">
+              Official Inbound Tour Operator
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Operating under strict international safety standards and official Vietnamese tourism licensing.
+            </p>
+            <div class="space-y-2 text-xs text-slate-700">
+              <p><strong>Corporate Entity:</strong> {COMPANY_INFO.legalNameEn}</p>
+              <p><strong>Tên pháp nhân:</strong> {COMPANY_INFO.legalNameVi}</p>
+              <p><strong>Tour Operator License:</strong> <span class="font-mono font-bold text-amber-700">{COMPANY_INFO.licenseNumber}</span></p>
+              <p><strong>Headquarters:</strong> {COMPANY_INFO.headquartersEn}</p>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 space-y-4">
+            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">
+              24/7 Travel Concierge Hub
+            </h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Our travel specialists are located right in the heart of District 1, Ho Chi Minh City, providing around-the-clock on-ground support for all travelers.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a 
+                href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}`} 
+                target="_blank" 
+                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all"
+              >
+                <span>WhatsApp: {COMPANY_INFO.whatsapp}</span>
+              </a>
+              <a 
+                href={`mailto:${COMPANY_INFO.email}`} 
+                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-amber-400 font-bold text-xs uppercase tracking-wider transition-all"
+              >
+                <span>{COMPANY_INFO.email}</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- CTA Box -->
-      <div class="mt-20 p-10 bg-slate-950 text-white rounded-3xl text-center relative overflow-hidden shadow-2xl">
+      <div class="p-10 sm:p-14 bg-slate-950 text-white rounded-3xl text-center relative overflow-hidden shadow-2xl">
         <div class="relative z-10 max-w-2xl mx-auto">
-          <h2 class="font-serif text-2xl sm:text-3xl font-bold mb-4 text-white">Ready to Discover the Real Vietnam?</h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-            Tell us about your dream trip and let our specialists build your bespoke itinerary.
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold mb-4 text-white">
+            Ready to Experience the Real Vietnam?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 font-light">
+            Whether you are traveling solo, as a couple, or with family — let our travel architects design your ideal private journey.
           </p>
           <div class="flex flex-wrap items-center justify-center gap-4">
             <a href="/tailor-made" class="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg">
-              Start Custom Trip →
+              Design Tailor-Made Trip →
             </a>
-            <a href="/whatsapp" target="_blank" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-xl backdrop-blur-md border border-white/20 transition-all">
-              WhatsApp Us 24/7
+            <a href="/tours" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-xl backdrop-blur-md border border-white/20 transition-all">
+              Explore Curated Tours
             </a>
           </div>
         </div>

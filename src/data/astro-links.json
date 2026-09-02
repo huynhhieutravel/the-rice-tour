@@ -136,11 +136,11 @@
   "about-us": [
     {
       "targetUrl": "/tailor-made",
-      "anchorText": "Start Custom Trip →"
+      "anchorText": "Design Tailor-Made Trip →"
     },
     {
-      "targetUrl": "/whatsapp",
-      "anchorText": "WhatsApp Us 24/7"
+      "targetUrl": "/tours",
+      "anchorText": "Explore Curated Tours"
     }
   ],
   "am-thuc-ladakh": [
@@ -399,28 +399,6 @@
     {
       "targetUrl": "/company-trip-nhat-ban-cung-good-year/",
       "anchorText": "Xem Chi Tiết"
-    }
-  ],
-  "contact": [
-    {
-      "targetUrl": "/whatsapp",
-      "anchorText": "Chat on WhatsApp →"
-    },
-    {
-      "targetUrl": "mailto:hello@thericetour.com",
-      "anchorText": "hello@thericetour.com"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "Start Custom Trip →"
-    },
-    {
-      "targetUrl": "tel:02888887888",
-      "anchorText": "028.8888.7888"
-    },
-    {
-      "targetUrl": "tel:0962333621",
-      "anchorText": "0962.333.621"
     }
   ],
   "corporate-retreat": [
@@ -2637,12 +2615,12 @@
       "anchorText": "1 Day\n              \n              \n                \n                  1-Day Premium Cu Chi Tunnels "
     },
     {
-      "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
-      "anchorText": "4 Days 3 Nights\n              \n              \n                \n                  Sapa Majestic Rice "
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half Day\n              \n              \n                \n                  Half-Day Cu Chi Tunnels Pr"
     },
     {
-      "targetUrl": "/tour/grand-vietnam-discovery-14d13n",
-      "anchorText": "14 Days 13 Nights\n              \n              \n                \n                  Grand Vietnam Dis"
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "Full Day\n              \n              \n                \n                  Full-Day Mekong Delta Priv"
     },
     {
       "targetUrl": "tel:0962333621",
@@ -2701,8 +2679,8 @@
       "anchorText": "1 Day\n              \n              \n                \n                  1-Day Premium Cu Chi Tunnels "
     },
     {
-      "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
-      "anchorText": "4 Days 3 Nights\n              \n              \n                \n                  Sapa Majestic Rice "
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half Day\n              \n              \n                \n                  Half-Day Cu Chi Tunnels Pr"
     },
     {
       "targetUrl": "tel:0962333621",
@@ -3889,22 +3867,34 @@
   ],
   "components/inbound/InboundDestinationTabs": [
     {
-      "targetUrl": "/tours?country=mien-bac",
-      "anchorText": "Explore Northern Tours"
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Tour ($49)"
     },
     {
-      "targetUrl": "/tours?country=mien-trung",
-      "anchorText": "Explore Central Tours"
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "Full-Day Premium ($89)"
     },
     {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "Explore Southern Tours"
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "Full-Day Ben Tre ($95)"
+    },
+    {
+      "targetUrl": "/tour/2-day-mekong-delta-tour",
+      "anchorText": "2-Day 1-Night ($195)"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Saigon City Tour ($45)"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class ($55)"
     }
   ],
   "components/inbound/InboundFeaturedTours": [
     {
       "targetUrl": "/tours",
-      "anchorText": "[Dynamic Text]"
+      "anchorText": "View All Journeys"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3977,18 +3967,18 @@
       "anchorText": "Trip Planner"
     },
     {
-      "targetUrl": "/contact",
+      "targetUrl": "/privacy-policy",
       "anchorText": "Privacy Policy"
     },
     {
-      "targetUrl": "/contact",
+      "targetUrl": "/terms-of-service",
       "anchorText": "Terms of Service"
     }
   ],
   "components/inbound/InboundJournal": [
     {
       "targetUrl": "/blog",
-      "anchorText": "Read All Travel Guides"
+      "anchorText": "Read All Guides"
     }
   ],
   "components/inbound/InboundNavbar": [
@@ -4055,6 +4045,30 @@
     {
       "targetUrl": "/whatsapp",
       "anchorText": "Chat on WhatsApp 24/7"
+    }
+  ],
+  "components/inbound/InboundPlannerWidget": [
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Request Itinerary →"
+    }
+  ],
+  "components/inbound/InboundSeoText": [
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Vietnam tours"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "Cu Chi tunnels"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "Mekong Delta"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Saigon's history and street food"
     }
   ],
   "components/kailash/PillarGuide": [
@@ -4479,12 +4493,12 @@
       "anchorText": "Bespoke Travel Inquiry"
     },
     {
-      "targetUrl": "/contact",
-      "anchorText": "Booking & Cancellation Terms"
+      "targetUrl": "/privacy-policy",
+      "anchorText": "Privacy Policy"
     },
     {
-      "targetUrl": "/contact",
-      "anchorText": "Responsible Travel Pledge"
+      "targetUrl": "/terms-of-service",
+      "anchorText": "Terms of Service"
     },
     {
       "targetUrl": "tel:02888887888",

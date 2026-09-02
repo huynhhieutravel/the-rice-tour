@@ -4,26 +4,26 @@ const reviews = [
   {
     author: "Eleanor & David Vance",
     country: "London, United Kingdom 🇬🇧",
-    tour: "Grand Vietnam Discovery 14D",
+    tour: "Full-Day Mekong Delta Discovery",
     rating: 5,
     title: "The trip of a lifetime without any tour bus stress",
-    content: "From the moment we landed in Hanoi to our final sunset in the Mekong Delta, everything was orchestrated flawlessly. Our private guides were knowledgeable, funny, and took us to secret noodle stalls we would never have found on our own. The Lan Ha Bay cruise was magical!"
+    content: "From the moment our private van picked us up at our hotel to the peaceful hand-rowed sampan ride in Ben Tre, everything was orchestrated flawlessly. Our private guide was knowledgeable, funny, and took amazing photos for us. 100% no shopping traps!"
   },
   {
     author: "Marcus Schneider",
     country: "Munich, Germany 🇩🇪",
-    tour: "Sapa & Tonkinese Alps 4D",
+    tour: "Half-Day Cu Chi Tunnels Private Tour",
     rating: 5,
-    title: "Incredible trek through Sapa's golden terraces",
-    content: "The Rice Tour organized our trekking through Muong Hoa valley with a local Red Dao guide. The boutique mountain lodge had breathtaking panoramic views. Genuine hospitality and zero tourist traps—exactly what we were looking for."
+    title: "Incredible historical depth and VIP comfort",
+    content: "The Rice Tour gave us an eye-opening look into the Cu Chi tunnels. Traveling in a spacious private van with only 4 people made all the difference. Crawling through the secret bunker and hearing real history from our guide was unforgettable."
   },
   {
     author: "Sarah & Brian Miller",
     country: "California, United States 🇺🇸",
-    tour: "Tailor-Made 10-Day Family Journey",
+    tour: "Cooking Class & Local Market Tour",
     rating: 5,
-    title: "Exceptional 24/7 concierge support on WhatsApp",
-    content: "Traveling with two teenagers can be challenging, but The Rice Tour adapted our itinerary seamlessly when our daughter wanted more cycling and cooking classes. Their WhatsApp support responded within minutes every single time. Highly recommend!"
+    title: "Exceptional cooking masterclass and 24/7 concierge support",
+    content: "The chef took us through a vibrant local morning market to handpick fresh herbs and spices. Cooking authentic Pho and crispy Banh Xeo from scratch was a highlight of our Vietnam trip. Their WhatsApp concierge support was responsive and delightful!"
   }
 ];
 ---
@@ -42,13 +42,13 @@ const reviews = [
             <span class="font-serif text-2xl font-bold text-gray-900">TripAdvisor Excellence</span>
             <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-extrabold uppercase border border-emerald-100">5.0 / 5.0</span>
           </div>
-          <p class="text-sm text-gray-500 mt-1">Rated #1 Boutique Inbound Tour Operator by International Travelers</p>
+          <p class="text-sm text-gray-500 mt-1">Rated #1 Boutique Private Tour Operator by International Guests</p>
         </div>
       </div>
 
       <div class="flex items-center gap-3">
-        <span class="text-brand-500 text-lg">★★★★★</span>
-        <span class="text-xs font-bold uppercase tracking-wider text-gray-700">100% Five-Star Guest Reviews</span>
+        <span class="text-amber-500 text-lg">★★★★★</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-gray-700">100% Five-Star Verified Guest Reviews</span>
       </div>
     </div>
 
@@ -68,7 +68,7 @@ const reviews = [
         <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <div class="text-brand-500 text-sm">
+              <div class="text-amber-500 text-sm">
                 {"★".repeat(r.rating)}
               </div>
               <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">{r.tour}</span>

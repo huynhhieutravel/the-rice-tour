@@ -2,8 +2,12 @@ import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
 
 export const DELETE: APIRoute = async ({ params, locals }) => {
+  const user = (locals as any).user;
   const authorize = (locals as any).authorize;
-  if (!authorize('delete', 'tours')) return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
+  const isAllowed = user?.role === 'super_admin' || user?.role === 'admin' || (authorize && (authorize('delete', 'tour') || authorize('delete', 'tours')));
+  if (!isAllowed) {
+    return new Response(JSON.stringify({ success: false, error: 'Forbidden: Bạn không có quyền xóa điểm đến' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
+  }
   
   const d1Db = env?.dulichcoguu_d1;
   if (!d1Db) return new Response(JSON.stringify({ success: false, error: 'DB missing' }), { status: 500 });

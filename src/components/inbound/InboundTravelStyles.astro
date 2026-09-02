@@ -2,32 +2,32 @@
 // src/components/inbound/InboundTravelStyles.astro
 const travelStyles = [
   {
-    title: "Living Heritage & Royal Dynasties",
+    title: "Living Heritage & Colonial Saigon",
     tag: "Culture & History",
-    desc: "Explore thousand-year-old temples, Hue imperial palaces, and lantern-lit merchant streets in Hoi An with expert historians.",
-    image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80",
-    link: "/tours?style=culture"
+    desc: "Explore historic Notre Dame, Central Post Office, War Remnants Museum, and hidden vintage cafe apartments with expert historians.",
+    image: "https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp",
+    link: "/tour/ho-chi-minh-city-half-day-private-tour"
   },
   {
-    title: "Boutique Cruises & Secluded Bays",
-    tag: "Luxury Cruise",
-    desc: "Sail through untouched karst labyrinths in Lan Ha and Bai Tu Long aboard intimate boutique wooden junks away from crowds.",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
-    link: "/tours?style=cruise"
+    title: "Cu Chi Secret Underground Legend",
+    tag: "Historical Heroism",
+    desc: "Crawl through authentic guerrilla tunnels, discover camouflaged trapdoors, and learn subterranean defense strategies in Ben Dinh & Ben Duoc.",
+    image: "https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp",
+    link: "/tour/1-day-premium-cu-chi-tunnels"
   },
   {
-    title: "Highland Terraces & Ethnic Treks",
-    tag: "Active & Nature",
-    desc: "Hike golden rice terraces in Sapa and Pu Luong, stay in eco-lodges, and share tea with Hmong and Dao artisan families.",
-    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80",
-    link: "/tours?style=trekking"
+    title: "Mekong Waterways & Floating Life",
+    tag: "River & Delta Discovery",
+    desc: "Hand-row wooden sampans beneath lush water coconut canopies, visit traditional bee farms, and cruise Cai Rang floating market at sunrise.",
+    image: "https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp",
+    link: "/tour/full-day-mekong-delta-tour-ben-tre-my-tho"
   },
   {
-    title: "Chef-Led Culinary & Street Safaris",
-    tag: "Gastronomy",
-    desc: "Savor Hanoi's secret alleyway recipes, take masterclasses with Michelin chefs, and discover organic herb farms.",
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
-    link: "/tours?style=culinary"
+    title: "Chef-Led Culinary & Local Markets",
+    tag: "Gastronomy & Cooking",
+    desc: "Select fresh herbs in local morning markets, make crispy Banh Xeo and Pho from scratch with master chefs, and receive custom recipe booklets.",
+    image: "https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp",
+    link: "/tour/cooking-class-local-market"
   }
 ];
 ---
@@ -35,51 +35,151 @@ const travelStyles = [
 <section class="py-20 lg:py-28 bg-white" id="travel-styles">
   <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
     
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3">
-        Tailored To Your Passions
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-3 shadow-sm">
+          Tailored To Your Passions
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+          Distinct Ways to Experience Vietnam
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg mt-3 font-light">
+          Whether you are seeking subterranean history, tranquil delta waterways, or authentic culinary masterclasses, we handcraft every itinerary around your passions.
+        </p>
       </div>
-      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-        Distinct Ways to Experience Vietnam
-      </h2>
-      <p class="text-gray-600 text-base sm:text-lg mt-3 font-light">
-        Whether you are seeking deep cultural immersion, slow wellness retreats, or culinary expeditions, we handcraft every itinerary around your passions.
-      </p>
+
+      <!-- Slider Nav Arrows -->
+      <div class="hidden sm:flex items-center gap-2">
+        <button 
+          id="styles-slide-prev"
+          aria-label="Previous styles"
+          class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-600 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button 
+          id="styles-slide-next"
+          aria-label="Next styles"
+          class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-600 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {travelStyles.map((style) => (
-        <a 
-          href={style.link} 
-          class="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-gray-900 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-end p-6 border border-gray-100"
-        >
-          <!-- Background Image -->
-          <img 
-            src={style.image} 
-            alt={style.title} 
-            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+    <!-- Mobile Swipe Indicator -->
+    <div class="flex sm:hidden items-center justify-between text-xs text-gray-500 font-medium -mt-6 mb-4 px-1">
+      <span class="inline-flex items-center gap-1.5 text-brand-600 font-bold text-[11px] uppercase tracking-wider">
+        <span>👈</span> Swipe collections
+      </span>
+      <span class="text-[11px] text-gray-400 font-semibold">4 Styles</span>
+    </div>
 
-          <!-- Text overlay -->
-          <div class="relative z-10">
-            <span class="inline-block px-3 py-1 rounded-full bg-brand-500 text-white text-[10px] font-extrabold uppercase tracking-wider mb-2">
+    <div 
+      id="styles-carousel-track"
+      class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 pt-1 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 hide-scrollbar scroll-smooth select-none cursor-grab active:cursor-grabbing"
+    >
+      {travelStyles.map((style) => (
+        <article class="w-[82vw] max-w-[340px] sm:w-[320px] md:w-[340px] lg:w-[350px] shrink-0 snap-start group bg-white rounded-3xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-500 flex flex-col justify-between">
+          
+          <!-- Image Header with 16:9 Ratio -->
+          <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
+            <img 
+              src={style.image} 
+              alt={style.title} 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-black/10"></div>
+            
+            <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-white/95 backdrop-blur-md text-brand-700 text-[10.5px] font-extrabold uppercase tracking-wider rounded-full border border-white shadow-sm">
               {style.tag}
             </span>
-            <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-400 transition-colors leading-snug mb-2">
-              {style.title}
-            </h3>
-            <p class="text-xs text-gray-300 line-clamp-2 leading-relaxed opacity-90">
-              {style.desc}
-            </p>
-            <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-400 mt-4 group-hover:translate-x-1 transition-transform">
-              Explore Journeys →
-            </span>
           </div>
-        </a>
+
+          <!-- Content Body Below Image -->
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-2.5">
+                <a href={style.link}>
+                  {style.title}
+                </a>
+              </h3>
+
+              <p class="text-xs sm:text-sm text-gray-600 line-clamp-3 leading-relaxed mb-4 font-normal">
+                {style.desc}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Curated Style</span>
+              <a 
+                href={style.link} 
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:text-brand-700 transition-colors uppercase tracking-wider group-hover:translate-x-1 duration-300"
+              >
+                <span>View Itinerary</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </article>
       ))}
     </div>
 
   </div>
 </section>
+
+<script is:inline>
+  (function() {
+    const track = document.getElementById('styles-carousel-track');
+    const prevBtn = document.getElementById('styles-slide-prev');
+    const nextBtn = document.getElementById('styles-slide-next');
+
+    if (!track) return;
+
+    const getScrollStep = () => {
+      const card = track.querySelector('a');
+      return card ? (card.offsetWidth + 20) * 1.5 : 350;
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    // Mouse drag support for desktop
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      track.scrollLeft = scrollLeft - walk;
+    });
+  })();
+</script>

@@ -17,6 +17,57 @@ const currentTab = Astro.url.searchParams.get('status') || 'all';
 let counts = { all: 0, published: 0, draft: 0, trash: 0 };
 
 if (d1Db) {
+  // Ensure essential system pages exist in D1 Page table for CMS management
+  const corePages = [
+    {
+      id: 'page_privacy_policy',
+      title: 'Privacy & Data Protection Policy',
+      slug: 'privacy-policy',
+      status: 'published',
+      seoTitle: 'Privacy Policy | The Rice Tour — Inbound Data Protection',
+      seoDescription: 'Privacy Policy of The Rice Tour. Learn how we collect, protect, and process your personal and travel data in full compliance with international standards and Vietnamese law.'
+    },
+    {
+      id: 'page_about_us',
+      title: 'About Us | The Rice Tour Story & Commitments',
+      slug: 'about-us',
+      status: 'published',
+      featuredImage: 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+      seoTitle: 'About Us | The Rice Tour — Authentic Inbound Vietnam Journeys',
+      seoDescription: 'Discover the story of The Rice Tour. We craft intimate, authentic, and slow-paced private travel experiences across Vietnam for discerning international travelers.'
+    },
+    {
+      id: 'page_contact_us',
+      title: 'Contact Us | 24/7 Dedicated Inbound Concierge',
+      slug: 'contact',
+      status: 'published',
+      seoTitle: 'Contact Us | The Rice Tour — 24/7 Dedicated Inbound Concierge',
+      seoDescription: 'Connect with The Rice Tour specialists. Inquire about bespoke private Vietnam tours, 24/7 WhatsApp assistance, customized itineraries, and travel advice.'
+    },
+    {
+      id: 'page_terms_of_service',
+      title: 'Terms of Service & Booking Conditions',
+      slug: 'terms-of-service',
+      status: 'published',
+      seoTitle: 'Terms of Service & Booking Conditions | The Rice Tour',
+      seoDescription: 'Terms of Service and Booking Conditions for The Rice Tour. Understand our transparent booking procedures, payment policies, cancellation terms, and travel standards.'
+    }
+  ];
+
+  for (const cp of corePages) {
+    try {
+      const existing = await d1Db.prepare("SELECT id FROM Page WHERE slug = ?").bind(cp.slug).first();
+      if (!existing) {
+        await d1Db.prepare(`
+          INSERT INTO Page (id, title, slug, status, featuredImage, seoTitle, seoDescription, updatedAt)
+          VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+        `).bind(cp.id, cp.title, cp.slug, cp.status, cp.featuredImage || null, cp.seoTitle, cp.seoDescription).run();
+      }
+    } catch (e) {
+      console.error('Error ensuring core page:', cp.slug, e);
+    }
+  }
+
   try {
     const { results: countResults } = await d1Db.prepare("SELECT status, COUNT(*) as count FROM Page GROUP BY status").all();
     if (countResults) {
@@ -134,12 +185,17 @@ function formatDate(dateStr: string) {
   .cat-badge.trash { background:#fef2f2; color:#ef4444; }
 
   .date-cell { color: #64748b; font-size: 12px; white-space: nowrap; }
-  .row-actions { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
-  .action-link { font-size: 11px; text-decoration: none; cursor: pointer; display: inline-block; background: none; border: none; padding: 0; }
+  .row-actions { display: flex; gap: 10px; align-items: center; margin-top: 5px; }
+  .action-link { font-size: 12px; text-decoration: none; cursor: pointer; display: inline-block; background: none; border: none; padding: 0; font-weight: 500; }
   .action-edit { color: #2563eb; }
+  .action-edit:hover { text-decoration: underline; }
   .action-delete { color: #ef4444; }
+  .action-delete:hover { text-decoration: underline; }
+  .action-restore { color: #16a34a; }
+  .action-restore:hover { text-decoration: underline; }
   .action-view { color: #64748b; }
-  td input[type="checkbox"], th input[type="checkbox"] { width: 16px; height: 16px; accent-color: #2563eb; }
+  .action-view:hover { text-decoration: underline; }
+  td input[type="checkbox"], th input[type="checkbox"] { width: 16px; height: 16px; accent-color: #2563eb; cursor: pointer; }
   
   .page-btn { padding: 4px 10px; border: 1px solid #e2e8f0; border-radius: 6px; text-decoration: none; color: #64748b; font-size: 13px; background: #fff; line-height: 1; display: inline-flex; align-items: center; justify-content: center; min-width: 28px; font-weight: 600; }
   .page-btn:hover { border-color: #cbd5e1; color: #0f172a; }
@@ -157,7 +213,7 @@ function formatDate(dateStr: string) {
       <option value="50" selected={limit === 50}>50 items</option>
       <option value="100" selected={limit === 100}>100 items</option>
     </select>
-    <a href="/admin/pages/edit" class="btn-primary">Tạo Page Mới</a>
+    <a href="/admin/pages/edit" class="btn-primary">+ Tạo Page Mới</a>
   </div>
 </div>
 
@@ -173,6 +229,22 @@ function formatDate(dateStr: string) {
     <form class="filters" method="GET" action="/admin/pages" style="align-items: center;">
       {currentTab !== 'all' && <input type="hidden" name="status" value={currentTab} />}
       
+      <!-- Bulk Actions Controls -->
+      <select id="bulkActionSelect" style="padding: 7px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 12px; background: #fff; font-weight: 500;">
+        <option value="">Hành động hàng loạt</option>
+        {currentTab === 'trash' ? (
+          <>
+            <option value="restore">♻️ Khôi phục</option>
+            <option value="delete">🗑️ Xóa vĩnh viễn</option>
+          </>
+        ) : (
+          <>
+            <option value="trash">🗑️ Chuyển vào Thùng rác</option>
+          </>
+        )}
+      </select>
+      <button type="button" id="bulkApplyBtn" class="filter-btn">Áp dụng</button>
+
       <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
         <span style="font-size: 12px; color: #64748b; font-weight: 600;">{filteredTotal} pages</span>
         {totalPages > 1 && (
@@ -195,11 +267,11 @@ function formatDate(dateStr: string) {
       </div>
     </form>
 
-    <div class="card" style="overflow:hidden;">
+    <div class="card" style="overflow:hidden; border-radius: 12px; border: 1px solid #e2e8f0; background: #fff;">
       <table>
         <thead>
           <tr>
-            <th class="col-check"><input type="checkbox" id="selectAllCheckbox" /></th>
+            <th class="col-check"><input type="checkbox" id="selectAllCheckbox" title="Chọn tất cả" /></th>
             <th class="col-title">Tên Trang</th>
             <th class="col-date">Cập nhật ⬇</th>
           </tr>
@@ -226,8 +298,21 @@ function formatDate(dateStr: string) {
                       {p.title || '(Chưa có tên)'} <span class={`cat-badge ${p.status}`} style="font-size: 10px; padding: 2px 6px;">{p.status}</span>
                     </a>
                     <div class="row-actions">
-                      <a href={`/admin/pages/edit?id=${p.id}`} class="action-link action-edit">Sửa</a>
-                      <a href={`/${p.slug}`} target="_blank" class="action-link action-view">Xem thử</a>
+                      {currentTab === 'trash' ? (
+                        <>
+                          <button type="button" class="action-link action-restore" onclick={`handleSingleAction('restore', '${p.id}', '${(p.title || '').replace(/'/g, "\\'")}')`}>♻️ Khôi phục</button>
+                          <span style="color:#cbd5e1;">|</span>
+                          <button type="button" class="action-link action-delete" onclick={`handleSingleAction('delete', '${p.id}', '${(p.title || '').replace(/'/g, "\\'")}')`}>🗑️ Xóa vĩnh viễn</button>
+                        </>
+                      ) : (
+                        <>
+                          <a href={`/admin/pages/edit?id=${p.id}`} class="action-link action-edit">Sửa</a>
+                          <span style="color:#cbd5e1;">|</span>
+                          <a href={`/${p.slug}`} target="_blank" class="action-link action-view">Xem thử ↗</a>
+                          <span style="color:#cbd5e1;">|</span>
+                          <button type="button" class="action-link action-delete" onclick={`handleSingleAction('trash', '${p.id}', '${(p.title || '').replace(/'/g, "\\'")}')`}>Xoá</button>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -241,4 +326,89 @@ function formatDate(dateStr: string) {
     </div>
   </div>
 </div>
+
+<script is:inline>
+  // Select All Checkboxes
+  const selectAll = document.getElementById('selectAllCheckbox');
+  const checkboxes = document.querySelectorAll('.post-checkbox');
+
+  if (selectAll) {
+    selectAll.addEventListener('change', (e) => {
+      checkboxes.forEach(cb => {
+        cb.checked = e.target.checked;
+      });
+    });
+  }
+
+  // Handle Single Action (Trash, Restore, Permanent Delete)
+  window.handleSingleAction = async function(action, id, title) {
+    let confirmMsg = '';
+    if (action === 'trash') confirmMsg = `Bạn có chắc muốn chuyển trang "${title}" vào Thùng rác không?`;
+    else if (action === 'restore') confirmMsg = `Bạn có muốn khôi phục trang "${title}" không?`;
+    else if (action === 'delete') confirmMsg = `CẢNH BÁO: Bạn có chắc muốn XÓA VĨNH VIỄN trang "${title}" không? Thao tác này không thể hoàn tác!`;
+
+    if (!confirm(confirmMsg)) return;
+
+    try {
+      const res = await fetch('/api/admin/pages/action', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action, ids: [id] })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        window.location.reload();
+      } else {
+        const errMsg = data.message || (typeof data.error === 'string' ? data.error : data.error?.message) || JSON.stringify(data.error) || 'Thao tác thất bại';
+        alert('Lỗi: ' + errMsg);
+      }
+    } catch (err) {
+      alert('Lỗi kết nối máy chủ: ' + err.message);
+    }
+  };
+
+  // Handle Bulk Action
+  const bulkApplyBtn = document.getElementById('bulkApplyBtn');
+  const bulkActionSelect = document.getElementById('bulkActionSelect');
+
+  if (bulkApplyBtn && bulkActionSelect) {
+    bulkApplyBtn.addEventListener('click', async () => {
+      const action = bulkActionSelect.value;
+      if (!action) {
+        alert('Vui lòng chọn một hành động hàng loạt.');
+        return;
+      }
+
+      const selectedIds = Array.from(document.querySelectorAll('.post-checkbox:checked')).map(cb => cb.value);
+      if (selectedIds.length === 0) {
+        alert('Vui lòng chọn ít nhất một trang để thực hiện.');
+        return;
+      }
+
+      let confirmMsg = '';
+      if (action === 'trash') confirmMsg = `Bạn có chắc muốn chuyển ${selectedIds.length} trang đã chọn vào Thùng rác?`;
+      else if (action === 'restore') confirmMsg = `Khôi phục ${selectedIds.length} trang đã chọn?`;
+      else if (action === 'delete') confirmMsg = `CẢNH BÁO: XÓA VĨNH VIỄN ${selectedIds.length} trang đã chọn? Thao tác này không thể hoàn tác!`;
+
+      if (!confirm(confirmMsg)) return;
+
+      try {
+        const res = await fetch('/api/admin/pages/action', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action, ids: selectedIds })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          window.location.reload();
+        } else {
+          const errMsg = data.message || (typeof data.error === 'string' ? data.error : data.error?.message) || JSON.stringify(data.error) || 'Thao tác thất bại';
+          alert('Lỗi: ' + errMsg);
+        }
+      } catch (err) {
+        alert('Lỗi kết nối máy chủ: ' + err.message);
+      }
+    });
+  }
+</script>
 </AdminLayout>

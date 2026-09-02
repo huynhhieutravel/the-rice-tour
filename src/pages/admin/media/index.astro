@@ -21,7 +21,7 @@ if (d1Db) {
 const initialData = mediaList.map(item => {
   const cleanFilename = item.filename ? item.filename.replace(/^uploads\//, '') : '';
   return {
-    id: item.id,
+    id: String(item.id),
     src: item.url,
     name: cleanFilename,
     size: item.sizeBytes ? (item.sizeBytes / 1024).toFixed(1) + ' KB' : 'Unknown',
@@ -88,16 +88,91 @@ const initialData = mediaList.map(item => {
 
   .media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px; align-content: start;}
   .empty-state{grid-column: 1 / -1; padding: 60px; text-align: center; color: #64748b; font-size: 15px; border: 2px dashed #e2e8f0; border-radius: 12px; background: #f8fafc;}
-  .media-card{background:#fff;border-radius:10px;border:2px solid #e2e8f0;overflow:hidden;cursor:pointer;transition:all .15s;position:relative}
-  .media-card:hover{border-color:#93c5fd;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
-  .media-card.selected{border-color:#2563eb;box-shadow:0 0 0 2px rgba(37,99,235,.3)}
-  .media-card .thumb{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#f1f5f9}
-  .media-card .info{padding:8px 10px}
-  .media-card .fname{font-size:11px;font-weight:500;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .media-card .fmeta{font-size:10px;color:#9ca3af;margin-top:2px}
-  .media-card .check-mark{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.8);background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;opacity:0;transition:opacity .15s}
-  .media-card:hover .check-mark{opacity:1}
-  .media-card.selected .check-mark{opacity:1;background:#2563eb;border-color:#2563eb}
+  .media-card{
+    background: #fff;
+    border-radius: 12px;
+    border: 2.5px solid #e2e8f0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    user-select: none;
+  }
+  .media-card:hover{
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  }
+  .media-card.selected{
+    border-color: #2563eb !important;
+    background: #eff6ff !important;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.35), 0 8px 20px rgba(37,99,235,.18) !important;
+  }
+  .media-card.active-edit{
+    border-color: #f97316 !important;
+    box-shadow: 0 0 0 3px rgba(249,115,22,.35) !important;
+  }
+  .media-card .thumb{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    background: #f1f5f9;
+  }
+  .media-card.selected .thumb{
+    opacity: 0.92;
+  }
+  .media-card .info{
+    padding: 8px 10px;
+    background: inherit;
+  }
+  .media-card .fname{
+    font-size: 11px;
+    font-weight: 500;
+    color: #0f172a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .media-card.selected .fname{
+    color: #1d4ed8;
+    font-weight: 700;
+  }
+  .media-card .fmeta{
+    font-size: 10px;
+    color: #9ca3af;
+    margin-top: 2px;
+  }
+  .media-card .check-mark{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    background: rgba(15,23,42,0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0;
+    transition: all .15s ease;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  }
+  .media-card:hover .check-mark{
+    opacity: 1;
+    background: rgba(15,23,42,0.6);
+  }
+  .media-card.selected .check-mark{
+    opacity: 1 !important;
+    background: #2563eb !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.5) !important;
+  }
 
   /* Detail panel */
   .detail-panel{background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:20px;position:sticky;top:80px;display:none;max-height:calc(100vh - 120px);overflow-y:auto}
@@ -255,6 +330,7 @@ const initialData = mediaList.map(item => {
 <script is:inline src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js"></script>
 <script is:inline define:vars={{ initialData }}>
 let MEDIA_DATA = (initialData || []).map(m => {
+  m.id = String(m.id);
   const d = new Date(m.date);
   m.displayDate = d.toLocaleDateString('vi-VN', { month: 'short', day: 'numeric', year: 'numeric' }) + ' ' + d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
   return m;
@@ -419,26 +495,32 @@ function renderGrid() {
   const endIdx = startIdx + itemsPerPage;
   const paginatedData = displayData.slice(startIdx, endIdx);
 
-  grid.innerHTML = paginatedData.map(m => `
-    <div class="media-card ${selectedIds.has(m.id)?'selected':''} ${activeId===m.id?'selected':''}" 
+  grid.innerHTML = paginatedData.map(m => {
+    const isSelected = selectedIds.has(String(m.id));
+    const isActive = activeId !== null && String(activeId) === String(m.id);
+    return `
+    <div class="media-card ${isSelected ? 'selected' : ''} ${isActive ? 'active-edit' : ''}" 
          data-id="${m.id}" onclick="handleCardClick(event, '${m.id}')">
-      <div class="check-mark" onclick="toggleSelection('${m.id}', event)">${selectedIds.has(m.id)?'✓':'✓'}</div>
+      <div class="check-mark" onclick="toggleSelection('${m.id}', event)" title="Chọn ảnh">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
       <img class="thumb" src="${m.src}" alt="${m.alt}" loading="lazy" />
       <div class="info"><div class="fname">${m.name}</div><div class="fmeta">${m.size} · ${m.dim}</div></div>
     </div>
-  `).join('');
+  `}).join('');
 }
 
 // INTERACTIONS
 function toggleSelection(id, event) {
   flushAutoSave();
   if (event) event.stopPropagation();
-  if (selectedIds.has(id)) {
-    selectedIds.delete(id);
+  const strId = String(id);
+  if (selectedIds.has(strId)) {
+    selectedIds.delete(strId);
   } else {
-    selectedIds.add(id);
+    selectedIds.add(strId);
   }
-  lastClickedId = id;
+  lastClickedId = strId;
   activeId = null;
   document.getElementById('detailPanel').classList.remove('visible');
   document.getElementById('mediaBody').classList.remove('has-detail');
@@ -448,17 +530,18 @@ function toggleSelection(id, event) {
 
 function handleCardClick(e, id) {
   flushAutoSave();
+  const strId = String(id);
   const displayData = getDisplayData();
   
   if (e.shiftKey && lastClickedId !== null) {
     // Chọn nhiều bằng Shift
     const startIdx = displayData.findIndex(x => String(x.id) === String(lastClickedId));
-    const endIdx = displayData.findIndex(x => String(x.id) === String(id));
+    const endIdx = displayData.findIndex(x => String(x.id) === String(strId));
     if (startIdx !== -1 && endIdx !== -1) {
       const min = Math.min(startIdx, endIdx);
       const max = Math.max(startIdx, endIdx);
       for (let i = min; i <= max; i++) {
-        selectedIds.add(displayData[i].id);
+        selectedIds.add(String(displayData[i].id));
       }
     }
     activeId = null;
@@ -466,17 +549,17 @@ function handleCardClick(e, id) {
     document.getElementById('mediaBody').classList.remove('has-detail');
   } else if (e.ctrlKey || e.metaKey) {
     // Multi-select từng cái
-    if (selectedIds.has(id)) selectedIds.delete(id); else selectedIds.add(id);
-    lastClickedId = id;
+    if (selectedIds.has(strId)) selectedIds.delete(strId); else selectedIds.add(strId);
+    lastClickedId = strId;
     activeId = null;
     document.getElementById('detailPanel').classList.remove('visible');
     document.getElementById('mediaBody').classList.remove('has-detail');
   } else {
     // Chọn 1 cái để Edit
     selectedIds.clear();
-    lastClickedId = id;
-    activeId = id;
-    openDetail(id);
+    lastClickedId = strId;
+    activeId = strId;
+    openDetail(strId);
   }
   updateBulk();
   renderGrid();
@@ -505,7 +588,7 @@ function deselectAll() {
 window.copySelectedLinks = function() {
   const displayData = getDisplayData();
   const links = displayData
-    .filter(m => selectedIds.has(m.id))
+    .filter(m => selectedIds.has(String(m.id)))
     .map(m => m.src)
     .join('\n');
   
@@ -526,7 +609,7 @@ async function deleteSelected() {
     body: JSON.stringify({ ids: idsArray })
   }).then(r => r.json()).then(resData => {
     if (resData.success) {
-      MEDIA_DATA = MEDIA_DATA.filter(m => !selectedIds.has(m.id));
+      MEDIA_DATA = MEDIA_DATA.filter(m => !selectedIds.has(String(m.id)));
       deselectAll();
     } else {
       window.AppModal.alert(resData.error?.message || 'Lỗi khi xóa', 'error');

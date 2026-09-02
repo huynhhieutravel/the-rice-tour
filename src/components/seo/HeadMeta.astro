@@ -35,22 +35,19 @@ const ogImage = getCanonicalMediaUrl(finalImage);
 let isGlobalIndex = false;
 try {
   // 1. Check process.env (Node SSR fallback)
-  if (typeof process !== 'undefined' && process.env && process.env.ROBOTS_INDEX) {
+  if (typeof process !== 'undefined' && process.env?.ROBOTS_INDEX) {
     isGlobalIndex = String(process.env.ROBOTS_INDEX) === 'true';
   }
   // 2. Check import.meta.env
-  else if (import.meta.env && import.meta.env.ROBOTS_INDEX !== undefined) {
+  else if (import.meta.env.ROBOTS_INDEX !== undefined) {
     isGlobalIndex = String(import.meta.env.ROBOTS_INDEX) === 'true';
   }
   // 3. Try to get from cloudflare:workers (Cloudflare Edge)
   else {
-    // Cannot dynamically import cloudflare:workers easily in all environments,
-    // so we rely on Astro.locals if available
     const rt = (Astro.locals as any)?.runtime;
     if (rt?.env?.ROBOTS_INDEX !== undefined) {
       isGlobalIndex = String(rt.env.ROBOTS_INDEX) === 'true';
     } else {
-      // Force true for production if env var missing but we know it's prod
       isGlobalIndex = false;
     }
   }

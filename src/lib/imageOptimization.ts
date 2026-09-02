@@ -10,7 +10,7 @@ const INTERNAL_DOMAINS = ['media.thericetour.com', 'thericetour.com', 'localhost
 const R2_OLD_HOSTNAME = 'pub-fe90037727604a2586cc601e6a3c6575.r2.dev';
 
 export const DEFAULT_BRAND_FALLBACK_IMAGE = 'https://media.thericetour.com/uploads/logo-the-rice.webp';
-export const DEFAULT_TRAVEL_FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80';
+export const DEFAULT_TRAVEL_FALLBACK_IMAGE = 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp';
 
 /**
  * Check if an image URL is tainted with legacy/competitor agency watermarks or branding

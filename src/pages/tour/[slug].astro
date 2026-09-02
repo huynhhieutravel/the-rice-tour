@@ -36,7 +36,7 @@ if (!tour) {
 // Sanitize inputs
 const title = tour.seoTitle || tour.title;
 const description = tour.seoDescription || tour.excerpt || tour.title;
-const image = tour.ogImage || tour.featuredImage || '';
+const image = tour.featuredImage || tour.ogImage || '';
 
 // Cloudflare Edge Cache (Cache 1 hour, stale-while-revalidate 24 hours)
 const isAdminLoggedIn = (Astro.locals as any).isAdminLoggedIn === true;

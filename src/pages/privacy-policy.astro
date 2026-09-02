@@ -1,0 +1,232 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { COMPANY_INFO } from '@/config/company';
+
+const title = "Privacy Policy | The Rice Tour — Inbound Data Protection";
+const description = "Privacy Policy of The Rice Tour. Learn how we collect, protect, and process your personal and travel data in full compliance with international standards and Vietnamese law.";
+const canonicalUrl = "https://thericetour.com/privacy-policy";
+const lastUpdated = "January 15, 2026";
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: "https://thericetour.com/" },
+    { name: "Privacy Policy", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonicalUrl}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Hero Header -->
+  <section class="bg-slate-950 text-white py-14 sm:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 mb-5 backdrop-blur-sm">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">Legal & Transparency</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        Privacy & Data Protection Policy
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
+        Effective Date: <strong class="text-amber-300">{lastUpdated}</strong> • Applicable to all services provided by {COMPANY_INFO.brandName}
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-14 sm:py-20 bg-slate-50 text-slate-800 font-sans">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200 shadow-sm leading-relaxed space-y-10">
+        
+        <!-- Summary Callout -->
+        <div class="p-6 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-sm text-slate-700">
+          <h2 class="text-base font-bold text-amber-900 mb-2 flex items-center gap-2">
+            <span>🛡️</span> Our Core Privacy Pledge
+          </h2>
+          <p class="mb-0">
+            <strong>{COMPANY_INFO.brandName}</strong> (operated by <strong>{COMPANY_INFO.legalNameEn}</strong>) is fully committed to protecting your personal privacy. We never sell, lease, or monetize your personal travel data. All information collected is strictly used to design, operate, and safeguard your private travel experiences in Vietnam.
+          </p>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            1. Who We Are (Data Controller)
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            For the purposes of applicable data protection regulations (including Vietnam Decree 13/2023/ND-CP on Personal Data Protection and international privacy frameworks), the data controller is:
+          </p>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <p><strong>Corporate Entity:</strong> {COMPANY_INFO.legalNameEn}</p>
+            <p><strong>Tên pháp nhân (Việt Nam):</strong> {COMPANY_INFO.legalNameVi}</p>
+            <p><strong>Tour Operator License:</strong> {COMPANY_INFO.licenseNumber}</p>
+            <p><strong>Headquarters:</strong> {COMPANY_INFO.headquartersEn}</p>
+            <p><strong>Contact Email:</strong> <a href={`mailto:${COMPANY_INFO.email}`} class="text-amber-700 font-bold hover:underline">{COMPANY_INFO.email}</a></p>
+            <p><strong>Hotline / WhatsApp:</strong> <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" class="text-emerald-700 font-bold hover:underline">{COMPANY_INFO.whatsapp}</a></p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            2. Personal Data We Collect
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Depending on how you interact with our website, communicate with our concierges, or book a journey, we may collect the following categories of information:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-sm sm:text-base text-slate-700">
+            <li>
+              <strong>Identity & Contact Information:</strong> Full name, nationality, email address, WhatsApp / mobile telephone number, country of residence, and preferred language.
+            </li>
+            <li>
+              <strong>Travel & Logistics Requirements:</strong> Desired travel dates, group size, accommodation preferences, flight arrival/departure details, and hotel pickup/drop-off addresses in Vietnam.
+            </li>
+            <li>
+              <strong>Official Travel Documentation (Upon Booking Confirmation):</strong> Passport copies/numbers, expiration dates, and visa details — strictly required for arranging mandatory passenger manifests, national park permits, domestic flight tickets, and cruise registrations in Vietnam.
+            </li>
+            <li>
+              <strong>Dietary, Accessibility & Special Requests:</strong> Information regarding food allergies, vegetarian/vegan diets, or physical mobility considerations provided by you to ensure your safety and comfort.
+            </li>
+            <li>
+              <strong>Technical & Browsing Data:</strong> Anonymized IP addresses, browser types, and usage metrics collected via privacy-preserving analytics to secure our platform and diagnose technical issues.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            3. How We Use Your Information (Purposes)
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            We process your personal information strictly for legitimate commercial and travel operational purposes, including:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block mb-1">✈️ Tour Customization & Booking</strong>
+              <span>Designing bespoke itineraries, securing private vehicles, hiring licensed tour guides, and reserving accommodations.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block mb-1">💬 24/7 Concierge Communication</strong>
+              <span>Answering inquiries, sharing pre-trip briefing packs, and providing real-time support via WhatsApp during your stay.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block mb-1">💳 Billing & Invoicing</strong>
+              <span>Issuing official electronic invoices (VAT / e-Invoices) and processing secure transactions through authorized payment gateways.</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block mb-1">⚖️ Legal & Regulatory Compliance</strong>
+              <span>Complying with Vietnamese tourism administration rules, port authority registries, and immigration reporting.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            4. Data Sharing & Third-Party Disclosures
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            We maintain a strict policy against selling, renting, or disclosing your personal details to advertising networks. Information is only shared with verified partners directly involved in fulfilling your itinerary:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-sm sm:text-base text-slate-700">
+            <li><strong>Licensed Transport Providers:</strong> Dedicated chauffeurs receiving pickup coordinates and passenger names.</li>
+            <li><strong>Hospitality & Activity Suppliers:</strong> Boutique hotels, river cruise operators, and local cooking workshop chefs.</li>
+            <li><strong>Regulatory Authorities:</strong> Vietnamese Immigration and Port Authorities when legally mandated for harbor clearances (e.g. Mekong waterways, Ha Long / Lan Ha Bay cruises).</li>
+          </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            5. Data Retention Period
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            We retain personal data only for as long as necessary to fulfill the purposes outlined in this policy:
+          </p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200">
+              <thead class="bg-slate-100 text-slate-800 font-bold">
+                <tr>
+                  <th class="p-3 border border-slate-200">Data Category</th>
+                  <th class="p-3 border border-slate-200">Retention Period</th>
+                  <th class="p-3 border border-slate-200">Purpose</th>
+                </tr>
+              </thead>
+              <tbody class="text-slate-600">
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">General Inquiries & Quotes</td>
+                  <td class="p-3 border border-slate-200">Up to 24 months</td>
+                  <td class="p-3 border border-slate-200">Assisting with future trip planning & itinerary iterations</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">Confirmed Booking Records</td>
+                  <td class="p-3 border border-slate-200">5 years</td>
+                  <td class="p-3 border border-slate-200">Vietnamese commercial, tax, and accounting law compliance</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">Passport Copies (Permits)</td>
+                  <td class="p-3 border border-slate-200">Deleted 30 days post-tour</td>
+                  <td class="p-3 border border-slate-200">Destroyed once all travel permissions are completed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            6. Your Privacy Rights
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Under applicable data protection laws, you possess the following fundamental rights:
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-sm sm:text-base text-slate-700">
+            <li><strong>Right of Access:</strong> Request a copy of the personal information we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete details.</li>
+            <li><strong>Right to Erasure:</strong> Request the deletion of your personal records where there is no legal obligation for us to retain them.</li>
+            <li><strong>Right to Withdraw Consent:</strong> Revoke consent for direct marketing or optional communications at any time.</li>
+          </ul>
+          <p class="text-slate-600 text-sm sm:text-base pt-2">
+            To exercise any of these rights, simply contact our Data Protection Officer at <a href={`mailto:${COMPANY_INFO.email}`} class="text-amber-700 font-bold hover:underline">{COMPANY_INFO.email}</a>. We respond to all verified requests within <strong>72 business hours</strong>.
+          </p>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            7. Data Security & Storage
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Our platform is deployed on world-class Cloudflare enterprise infrastructure featuring:
+          </p>
+          <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base text-slate-700">
+            <li>Full HTTPS/TLS 1.3 encryption across all website pages and inquiry endpoints.</li>
+            <li>Strict role-based access control (RBAC) ensuring only authorized travel concierges access booking files.</li>
+            <li>Zero-trust database segregation and automated firewall threat mitigations.</li>
+          </ul>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            8. Contact Us Regarding Privacy
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            If you have questions, concerns, or feedback regarding this Privacy Policy, please reach out to our dedicated team:
+          </p>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-700">
+            <p class="font-bold text-slate-900 mb-1">{COMPANY_INFO.brandName} — Privacy & Legal Team</p>
+            <p><strong>Email:</strong> <a href={`mailto:${COMPANY_INFO.email}`} class="text-amber-700 font-bold hover:underline">{COMPANY_INFO.email}</a></p>
+            <p><strong>Hotline:</strong> {COMPANY_INFO.phone}</p>
+            <p><strong>Address:</strong> {COMPANY_INFO.headquartersEn}</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</BaseLayout>

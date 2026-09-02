@@ -1,0 +1,234 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { COMPANY_INFO } from '@/config/company';
+
+const title = "Terms of Service & Booking Conditions | The Rice Tour";
+const description = "Terms of Service and Booking Conditions for The Rice Tour. Understand our transparent booking procedures, payment policies, cancellation terms, and travel standards.";
+const canonicalUrl = "https://thericetour.com/terms-of-service";
+const lastUpdated = "January 15, 2026";
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: "https://thericetour.com/" },
+    { name: "Terms of Service", url: canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonicalUrl}>
+  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+
+  <!-- Hero Header -->
+  <section class="bg-slate-950 text-white py-14 sm:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 mb-5 backdrop-blur-sm">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-amber-300">Legal Agreement & Booking Policy</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        Terms of Service & Booking Conditions
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
+        Effective Date: <strong class="text-amber-300">{lastUpdated}</strong> • Official Tour Operator License: <strong class="text-amber-300">{COMPANY_INFO.licenseNumber}</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-14 sm:py-20 bg-slate-50 text-slate-800 font-sans">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200 shadow-sm leading-relaxed space-y-10">
+        
+        <!-- Summary Callout -->
+        <div class="p-6 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-sm text-slate-700">
+          <h2 class="text-base font-bold text-amber-900 mb-2 flex items-center gap-2">
+            <span>📜</span> Transparency First
+          </h2>
+          <p class="mb-0">
+            Welcome to <strong>{COMPANY_INFO.brandName}</strong>. These Terms of Service govern the booking, operation, and delivery of our private tours, tailor-made itineraries, and concierge services operated by <strong>{COMPANY_INFO.legalNameEn}</strong>. By confirming a booking or utilizing our website, you acknowledge and agree to the following terms.
+          </p>
+        </div>
+
+        <!-- Section 1: The Operator -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            1. Tour Operator & Legal Identity
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            All services are directly managed, operated, and legally backed by:
+          </p>
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <p><strong>Brand Name:</strong> {COMPANY_INFO.brandName}</p>
+            <p><strong>Corporate Entity:</strong> {COMPANY_INFO.legalNameEn}</p>
+            <p><strong>Tên pháp nhân (Việt Nam):</strong> {COMPANY_INFO.legalNameVi}</p>
+            <p><strong>Tour Operator License:</strong> {COMPANY_INFO.licenseNumber} (Issued by Vietnam National Authority of Tourism / Ho Chi Minh City Department of Tourism)</p>
+            <p><strong>Operations Hub:</strong> {COMPANY_INFO.headquartersEn}</p>
+            <p><strong>Corporate Bank:</strong> {COMPANY_INFO.bank.bankName} — A/C: {COMPANY_INFO.bank.accountNumber} ({COMPANY_INFO.bank.accountHolder})</p>
+          </div>
+        </section>
+
+        <!-- Section 2: Booking & Payment Terms -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            2. Booking Procedures & Payment Terms
+          </h2>
+          <div class="space-y-4 text-sm sm:text-base text-slate-700">
+            <p>
+              <strong>2.1 Inquiries & Quotations:</strong> All price quotes provided via our website, WhatsApp, or email are valid for 14 days from the date of issuance unless specified otherwise due to seasonal hotel/cruise rate changes.
+            </p>
+            <p>
+              <strong>2.2 Confirmation Deposit:</strong>
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>Day Tours & Short Excursions (1–2 Days):</strong> A 30% deposit is required upon confirmation. The remaining 70% can be paid on the day of departure or 48 hours prior.</li>
+              <li><strong>Multi-Day Bespoke Expeditions (3+ Days):</strong> A 50% deposit is required upon itinerary finalization to secure luxury boutique accommodations, private boats, and regional permits. The remaining 50% balance is due 14 days prior to your arrival date.</li>
+            </ul>
+            <p>
+              <strong>2.3 Accepted Payment Methods:</strong>
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li>International Credit / Debit Cards (Visa, MasterCard, JCB, American Express) processed securely via encrypted gateway.</li>
+              <li>Direct International Bank Wire Transfer (SWIFT / Telegraphic Transfer).</li>
+              <li>Domestic Vietnam Bank Transfer (ACB Corporate Account).</li>
+              <li>Cash payments (USD / VND) accepted at our Operations Office in District 1, Ho Chi Minh City.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 3: Cancellation & Refund Policy -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            3. Cancellation, Rescheduling & Refund Policy
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            We understand travel plans can shift. We maintain a clear, fair cancellation scale based on the notice period provided before your scheduled departure date:
+          </p>
+
+          <div class="overflow-x-auto my-4">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200">
+              <thead class="bg-slate-100 text-slate-800 font-bold">
+                <tr>
+                  <th class="p-3 border border-slate-200">Notice Period Before Tour</th>
+                  <th class="p-3 border border-slate-200">Refund Amount</th>
+                  <th class="p-3 border border-slate-200">Applicable Conditions</th>
+                </tr>
+              </thead>
+              <tbody class="text-slate-600">
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">More than 30 days</td>
+                  <td class="p-3 border border-slate-200 text-emerald-700 font-bold">100% Refund</td>
+                  <td class="p-3 border border-slate-200">Minus 3% bank/card processing transaction fee</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">15 – 30 days</td>
+                  <td class="p-3 border border-slate-200 text-emerald-700 font-bold">70% Refund</td>
+                  <td class="p-3 border border-slate-200">Or 100% credit voucher valid for 18 months</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">7 – 14 days</td>
+                  <td class="p-3 border border-slate-200 text-amber-700 font-bold">50% Refund</td>
+                  <td class="p-3 border border-slate-200">To cover non-refundable hotel/cruise deposits</td>
+                </tr>
+                <tr>
+                  <td class="p-3 border border-slate-200 font-semibold text-slate-800">Less than 7 days / No-Show</td>
+                  <td class="p-3 border border-slate-200 text-red-600 font-bold">Non-refundable</td>
+                  <td class="p-3 border border-slate-200">Vehicle, private guide, and meals are pre-allocated</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-600">
+            <strong class="text-slate-900 block mb-1">🌊 Force Majeure & Severe Weather:</strong>
+            In the event of extreme weather events (typhoons, severe flash floods) or governmental travel restrictions, {COMPANY_INFO.brandName} will offer complimentary date rescheduling or a full refund minus non-recoverable third-party expenses.
+          </div>
+        </section>
+
+        <!-- Section 4: Accompanying Standards & 100% Guarantee -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            4. Service Standards & No Forced Shopping Pledge
+          </h2>
+          <div class="space-y-3 text-sm sm:text-base text-slate-700">
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-emerald-50/50 border border-emerald-200/60">
+              <span class="text-emerald-700 text-lg">🛡️</span>
+              <div>
+                <strong class="text-slate-900 block">100% No Forced Shopping Guarantee:</strong>
+                <p class="text-xs sm:text-sm text-slate-600 mb-0 mt-0.5">
+                  We guarantee zero commission shopping stops, factory traps, or unwanted commercial diversions. 100% of your tour time is dedicated to authentic cultural, historical, and scenic exploration.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-amber-700 text-lg">🚐</span>
+              <div>
+                <strong class="text-slate-900 block">Small Group & Private Vehicle Standards:</strong>
+                <p class="text-xs sm:text-sm text-slate-600 mb-0 mt-0.5">
+                  All road transport is conducted in modern, air-conditioned vehicles (maximum 5 guests in luxury 7-seater vans). Chilled mineral water and cold refreshment towels are replenished throughout the day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Traveler Responsibilities -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            5. Traveler Responsibilities & Documentation
+          </h2>
+          <ul class="list-disc pl-5 space-y-2 text-sm sm:text-base text-slate-700">
+            <li>
+              <strong>Passport & Visa Validity:</strong> Travelers are responsible for possessing a valid passport with at least 6 months remaining validity from their date of entry into Vietnam, alongside the required Vietnam e-Visa or visa exemption documentation.
+            </li>
+            <li>
+              <strong>Travel Insurance:</strong> While The Rice Tour provides comprehensive passenger vehicle liability insurance under our Tour Operator License, we strongly advise all international guests to obtain comprehensive personal travel and medical insurance.
+            </li>
+            <li>
+              <strong>Health & Dietary Notifications:</strong> Guests must inform our concierge of any serious medical conditions, physical mobility limitations, or severe food allergies (e.g. peanuts, shellfish, gluten) prior to departure so appropriate arrangements can be made with our chefs and transport team.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 6: Limitation of Liability -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            6. Limitation of Liability
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            {COMPANY_INFO.brandName} acts with the highest standard of duty and care. However, we cannot be held liable for personal injury, property loss, or flight delays resulting from circumstances beyond our reasonable control, including airline cancellations, natural disasters, acts of civil unrest, or individual disregard of safety briefings given by our licensed guides.
+          </p>
+        </section>
+
+        <!-- Section 7: Governing Law & Dispute Resolution -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            7. Governing Law & Dispute Resolution
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            These terms and any contracts formed under them shall be governed by and construed in accordance with the laws of the Socialist Republic of Vietnam. Any unresolved disputes arising from our services shall be submitted to the jurisdiction of the competent courts in Ho Chi Minh City, Vietnam.
+          </p>
+        </section>
+
+        <!-- Section 8: Contact & Inquiries -->
+        <section class="space-y-3">
+          <h2 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
+            8. Contact Us Regarding Terms
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            If you have any questions regarding our terms, payment schedules, or special group agreements, our concierge is available 24/7:
+          </p>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-700">
+            <p class="font-bold text-slate-900 mb-1">{COMPANY_INFO.brandName} Concierge & Legal Operations</p>
+            <p><strong>Hotline:</strong> {COMPANY_INFO.phone} / {COMPANY_INFO.hotline}</p>
+            <p><strong>WhatsApp 24/7:</strong> <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" class="text-emerald-700 font-bold hover:underline">{COMPANY_INFO.whatsapp}</a></p>
+            <p><strong>Email:</strong> <a href={`mailto:${COMPANY_INFO.email}`} class="text-amber-700 font-bold hover:underline">{COMPANY_INFO.email}</a></p>
+            <p><strong>Address:</strong> {COMPANY_INFO.headquartersEn}</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</BaseLayout>

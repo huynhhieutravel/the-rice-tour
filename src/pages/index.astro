@@ -4,20 +4,23 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
 import InboundNavbar from '@/components/inbound/InboundNavbar.astro';
 import InboundHero from '@/components/inbound/InboundHero.astro';
+import InboundAsSeenOn from '@/components/inbound/InboundAsSeenOn.astro';
 import InboundFeaturedTours from '@/components/inbound/InboundFeaturedTours.astro';
 import InboundTravelStyles from '@/components/inbound/InboundTravelStyles.astro';
 import InboundDestinationTabs from '@/components/inbound/InboundDestinationTabs.astro';
+import InboundMeetInsider from '@/components/inbound/InboundMeetInsider.astro';
 import InboundWhyUs from '@/components/inbound/InboundWhyUs.astro';
 import InboundPlannerWidget from '@/components/inbound/InboundPlannerWidget.astro';
 import InboundReviews from '@/components/inbound/InboundReviews.astro';
 import InboundJournal from '@/components/inbound/InboundJournal.astro';
+import InboundSeoText from '@/components/inbound/InboundSeoText.astro';
 import InboundFooter from '@/components/inbound/InboundFooter.astro';
 
 const seoData = {
   title: "The Rice Tour | Authentic Vietnam Inbound Journeys & Bespoke Expeditions",
   description: "The Rice Tour is Vietnam's premier boutique inbound travel designer. Curated luxury & cultural journeys, 100% tailor-made itineraries, and 24/7 dedicated concierge.",
   canonical: "https://thericetour.com/",
-  image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+  image: "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp"
 };
 
 const orgSchema = {
@@ -60,17 +63,23 @@ const orgSchema = {
     <!-- Hero Section with Quick Search -->
     <InboundHero />
 
+    <!-- Trust Logos Strip -->
+    <InboundAsSeenOn />
+
     <!-- Signature Tours Grid -->
     <InboundFeaturedTours />
 
     <!-- Travel By Styles -->
     <InboundTravelStyles />
 
+    <!-- Why Choose The Rice Tour (Philosophy & Commitments) -->
+    <InboundWhyUs />
+
     <!-- Interactive Destination Explorer -->
     <InboundDestinationTabs />
 
-    <!-- Why Choose The Rice Tour (Philosophy & Commitments) -->
-    <InboundWhyUs />
+    <!-- Meet The Local Insider (Founder Intro) -->
+    <InboundMeetInsider />
 
     <!-- Interactive Custom Trip Planner Widget -->
     <InboundPlannerWidget />
@@ -80,6 +89,9 @@ const orgSchema = {
 
     <!-- Travel Guides & Inspiration Journal -->
     <InboundJournal />
+
+    <!-- SEO Text Block (Your Trusted Inbound Tour Operator) -->
+    <InboundSeoText />
   </main>
 
   <!-- Luxury Obsidian Footer -->

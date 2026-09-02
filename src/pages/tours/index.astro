@@ -107,6 +107,24 @@ function formatPriceUSD(priceNumber: number | null, priceText: string | null): s
   return "Inquire for Pricing";
 }
 
+function formatLocationBadge(tour: any): string {
+  const slug = tour?.slug?.toLowerCase() || '';
+  if (slug.includes('cu-chi')) return 'Cu Chi';
+  if (slug.includes('mekong')) return 'Mekong Delta';
+  if (slug.includes('cooking')) return 'Saigon';
+  if (slug.includes('ho-chi-minh') || slug.includes('saigon')) return 'Saigon';
+  if (slug.includes('sapa')) return 'Sapa';
+  if (slug.includes('ha-long') || slug.includes('halong') || slug.includes('lan-ha')) return 'Ha Long Bay';
+  if (slug.includes('hoi-an') || slug.includes('hue') || slug.includes('da-nang')) return 'Central Vietnam';
+  if (slug.includes('hanoi')) return 'Hanoi';
+
+  const rawName = tour?.country_name || '';
+  if (rawName) {
+    return rawName.split('(')[0].trim();
+  }
+  return 'South Vietnam';
+}
+
 function getPaginationUrl(newPage: number) {
   const url = new URL(Astro.url);
   url.searchParams.set('page', newPage.toString());
@@ -317,11 +335,9 @@ const seoData = {
                         ⏱️ {t.days}
                       </span>
                     )}
-                    {t.country_name && (
-                      <span class="absolute bottom-3 left-3 bg-amber-500 text-slate-950 text-[10.5px] font-extrabold px-2.5 py-0.5 rounded-md shadow-sm">
-                        {t.country_name}
-                      </span>
-                    )}
+                    <span class="absolute bottom-3 left-3 bg-amber-500 text-slate-950 text-[10.5px] font-extrabold px-2.5 py-0.5 rounded-md shadow-sm">
+                      📍 {formatLocationBadge(t)}
+                    </span>
                   </div>
 
                   <!-- Info -->

@@ -24,8 +24,16 @@ export const DEFAULT_ROLES: RoleMatrix = {
       isSystem: true,
       permissions: {
         post: ['view', 'create', 'edit', 'delete'],
+        page: ['view', 'create', 'edit', 'delete'],
         tour: ['view', 'create', 'edit', 'delete'],
+        destination: ['view', 'create', 'edit', 'delete'],
+        country: ['view', 'create', 'edit', 'delete'],
         media: ['view', 'create', 'edit', 'delete'],
+        category: ['view', 'create', 'edit', 'delete'],
+        tag: ['view', 'create', 'edit', 'delete'],
+        snippet: ['view', 'create', 'edit', 'delete'],
+        popup: ['view', 'create', 'edit', 'delete'],
+        submission: ['view', 'create', 'edit', 'delete'],
         user: ['view', 'create', 'edit', 'disable'], // Cannot delete
         system: ['manage_roles', 'manage_settings']
       }
@@ -35,7 +43,10 @@ export const DEFAULT_ROLES: RoleMatrix = {
       isSystem: true,
       permissions: {
         post: ['view', 'create', 'edit'],
+        page: ['view', 'create', 'edit'],
         tour: ['view', 'create', 'edit'],
+        destination: ['view', 'create', 'edit'],
+        country: ['view', 'create', 'edit'],
         media: ['view', 'create', 'edit', 'delete']
       }
     },
@@ -61,8 +72,8 @@ export const DEFAULT_ROLES: RoleMatrix = {
 export function authorize(user: any, action: string, resource: string, context?: any): boolean {
   if (!user || !user.role) return false;
 
-  // Root Authority Bypass
-  if (user.role === 'super_admin') return true;
+  // Root Authority Bypass: super_admin & admin have full access across all CMS modules
+  if (user.role === 'super_admin' || user.role === 'admin') return true;
 
   const roleData = user.permissions;
   if (!roleData) return false;

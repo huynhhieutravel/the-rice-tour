@@ -2,224 +2,43 @@
 // src/components/inbound/InboundPlannerWidget.astro
 ---
 <section class="py-20 lg:py-28 bg-white text-gray-900 relative overflow-hidden" id="plan-trip">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-[1024px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <div class="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+    <div class="bg-brand-50 border border-brand-100 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-xl relative overflow-hidden text-center">
       <!-- Decorative background accent -->
-      <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-50 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -top-40 -left-40 w-96 h-96 bg-white/60 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-brand-700 border border-brand-200 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+          Bespoke Trip Designer
+        </div>
         
-        <!-- Left Column: Value Proposition -->
-        <div class="lg:col-span-5">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200 text-xs font-bold uppercase tracking-widest mb-4">
-            Bespoke Trip Designer
-          </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+          Ready to Handcraft Your Vietnam Journey?
+        </h2>
+
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-10 font-light">
+          Tell us your wishes and travel style. Our local destination experts will design a personalized, day-by-day itinerary with verified boutique lodges — 100% free with no obligations.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-lg shadow-[#25D366]/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Chat on WhatsApp
+          </a>
           
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-            Ready to Handcraft Your Vietnam Journey?
-          </h2>
-
-          <p class="text-gray-600 text-base leading-relaxed mb-8 font-light">
-            Tell us your wishes and travel style. Our licensed destination specialists will design a personalized, day-by-day itinerary with verified boutique lodges within 24 hours.
-          </p>
-
-          <div class="space-y-4 text-sm text-gray-700">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold">✓</div>
-              <span>100% Free Consultation &amp; Itinerary Proposal</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold">✓</div>
-              <span>Unlimited revisions until you are completely thrilled</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold">✓</div>
-              <span>Direct WhatsApp communication with your travel architect</span>
-            </div>
-          </div>
+          <a href="/tailor-made" class="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            Request Itinerary →
+          </a>
         </div>
-
-        <!-- Right Column: Interactive Quick Inquiry Form -->
-        <div class="lg:col-span-7 bg-gray-50 border border-gray-200 p-6 sm:p-8 rounded-3xl shadow-sm">
-          <form id="home-inquiry-form" class="space-y-6">
-            
-            <input type="text" name="_hp" style="display:none !important;" tabindex="-1" autocomplete="off" />
-            <input type="hidden" name="_ts" id="home-form-ts" value="" />
-
-            <!-- Row 1: Destinations Selection -->
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-2.5">
-                1. Where do you want to explore? (Select multiple)
-              </label>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-gray-700">
-                <label class="p-2.5 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl cursor-pointer flex items-center gap-2 shadow-sm transition-colors">
-                  <input type="checkbox" name="destinations" value="Hanoi & Halong Bay" class="rounded text-brand-600" checked />
-                  <span>Hanoi &amp; Halong</span>
-                </label>
-                <label class="p-2.5 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl cursor-pointer flex items-center gap-2 shadow-sm transition-colors">
-                  <input type="checkbox" name="destinations" value="Sapa Terraces" class="rounded text-brand-600" checked />
-                  <span>Sapa Terraces</span>
-                </label>
-                <label class="p-2.5 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl cursor-pointer flex items-center gap-2 shadow-sm transition-colors">
-                  <input type="checkbox" name="destinations" value="Hue & Hoi An" class="rounded text-brand-600" checked />
-                  <span>Hue &amp; Hoi An</span>
-                </label>
-                <label class="p-2.5 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl cursor-pointer flex items-center gap-2 shadow-sm transition-colors">
-                  <input type="checkbox" name="destinations" value="Saigon & Mekong" class="rounded text-brand-600" checked />
-                  <span>Saigon &amp; Mekong</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Row 2: Duration & Timing -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-1.5">
-                  2. Trip Duration
-                </label>
-                <select name="duration" class="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
-                  <option value="7-9 Days" class="bg-white">7 – 9 Days (Highlights)</option>
-                  <option value="10-14 Days" class="bg-white" selected>10 – 14 Days (Grand Discovery)</option>
-                  <option value="15+ Days" class="bg-white">15+ Days (In-Depth Adventure)</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-1.5">
-                  3. Approximate Travel Dates
-                </label>
-                <input 
-                  type="text" 
-                  name="travelDates" 
-                  placeholder="e.g. October 2026 or Spring 2027" 
-                  class="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500" 
-                />
-              </div>
-            </div>
-
-            <!-- Row 3: Contact Info -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-1.5">
-                  Your Full Name *
-                </label>
-                <input 
-                  type="text" 
-                  name="customerName" 
-                  required 
-                  placeholder="e.g. Eleanor Vance" 
-                  class="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500" 
-                />
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-1.5">
-                  Email Address *
-                </label>
-                <input 
-                  type="email" 
-                  name="customerEmail" 
-                  required 
-                  placeholder="e.g. eleanor@example.com" 
-                  class="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500" 
-                />
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-brand-700 mb-1.5">
-                WhatsApp Phone Number (with Country Code)
-              </label>
-              <input 
-                type="tel" 
-                name="customerPhone" 
-                placeholder="e.g. +44 7123 456789 or +1 555 123 4567" 
-                class="w-full bg-white border border-gray-200 rounded-xl p-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500" 
-              />
-            </div>
-
-            <!-- Submit Button -->
-            <button 
-              type="submit" 
-              id="home-submit-btn" 
-              class="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer"
-            >
-              Request My Free Custom Itinerary Proposal →
-            </button>
-
-            <p class="text-[11px] text-center text-gray-500">
-              🔒 Privacy Guaranteed. No spam. Receive a detailed proposal within 24 hours.
-            </p>
-
-          </form>
-        </div>
+        
+        <p class="mt-6 text-[11px] text-gray-500 uppercase tracking-widest font-bold">
+          No automated bots. Real human conversation.
+        </p>
 
       </div>
-
     </div>
+
   </div>
 </section>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const tsInput = document.getElementById('home-form-ts');
-    if (tsInput) tsInput.value = Date.now().toString();
-
-    const homeForm = document.getElementById('home-inquiry-form');
-    const homeBtn = document.getElementById('home-submit-btn');
-
-    if (homeForm) {
-      homeForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (homeBtn) {
-          homeBtn.disabled = true;
-          homeBtn.textContent = 'Sending Your Inquiry...';
-        }
-
-        const formData = new FormData(homeForm);
-        const selectedDests = [];
-        homeForm.querySelectorAll('input[name="destinations"]:checked').forEach(c => selectedDests.push(c.value));
-
-        const payload = {
-          formType: 'tailor_made_homepage',
-          customerName: formData.get('customerName'),
-          customerEmail: formData.get('customerEmail'),
-          customerPhone: formData.get('customerPhone'),
-          tourName: 'Bespoke Custom Journey Inquiry',
-          sourceUrl: window.location.href,
-          _hp: formData.get('_hp'),
-          _ts: formData.get('_ts'),
-          options: {
-            destinations: selectedDests.join(', '),
-            duration: formData.get('duration'),
-            travelDates: formData.get('travelDates')
-          }
-        };
-
-        try {
-          const res = await fetch('/api/submit-form', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          const data = await res.json();
-          if (res.ok && data.success) {
-            alert('🎉 Thank you for your inquiry! Our Vietnam travel designer will reach out via WhatsApp/Email with a customized itinerary within 24 hours.');
-            homeForm.reset();
-          } else {
-            alert(data.error || 'Submission failed. Please WhatsApp us directly.');
-          }
-        } catch (err) {
-          console.error(err);
-          alert('Network error. Please chat with us on WhatsApp at +84 962 333 621.');
-        } finally {
-          if (homeBtn) {
-            homeBtn.disabled = false;
-            homeBtn.textContent = 'Request My Free Custom Itinerary Proposal →';
-          }
-        }
-      });
-    }
-  });
-</script>

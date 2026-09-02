@@ -19,12 +19,12 @@ if (d1Db) {
   }
 }
 
-const tourTitle = "Half-Day Premium Cu Chi Tunnels Discovery";
+const tourTitle = tour?.title || "Half-Day Premium Cu Chi Tunnels Discovery";
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "A premium half-day journey exploring the historic 200km underground Cu Chi Tunnels. Max 5 guests in a private 7-seater van, fresh homemade Banh Mi breakfast, expert guide, boiled cassava tasting, and a dedicated photographer throughout.";
-const featuredImage = "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80";
-const basePrice = 1890000;
-const formattedPrice = "1,890,000 VND";
+const featuredImage = tour?.featuredImage || tour?.ogImage || "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp";
+const basePrice = tour?.price_number || 1890000;
+const formattedPrice = tour?.price_text || "1,890,000 VND";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
@@ -122,16 +122,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
         <div class="hidden md:flex flex-col gap-2 sm:gap-3">
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" 
-              alt="Fresh homemade Vietnamese Banh Mi breakfast" 
+              src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
+              alt="Group posing at secret tunnel entrance in Cu Chi" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
             />
           </div>
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" 
-              alt="Historic primeval forest of Cu Chi" 
+              src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+              alt="Guide showing punji stick traps at Cu Chi Tunnels" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
             />
@@ -348,13 +348,19 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <div class="tour-slider-container">
                   <div class="tour-slider-track">
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80" alt="Private 7-Seater Van to Cu Chi" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Tour group listening to briefing in underground hall at Cu Chi Tunnels" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Fresh Homemade Vietnamese Banh Mi" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" alt="Tourists walking on jungle path at Cu Chi Tunnels" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="Historic Cu Chi Forest Canopy" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" alt="Guide explaining Cu Chi tunnel cross-section model diorama" class="tour-slide-img" />
+                    </div>
+                    <div class="tour-slide">
+                      <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Group posing at secret tunnel entrance in Cu Chi" class="tour-slide-img" />
+                    </div>
+                    <div class="tour-slide">
+                      <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Two girls posing with rusted tank at Cu Chi Tunnels" class="tour-slide-img" />
                     </div>
                   </div>
                   <button class="tour-slider-arrow tour-slider-prev" aria-label="Previous Slide">
@@ -367,8 +373,10 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <button class="tour-slider-dot active" aria-label="Slide 1"></button>
                     <button class="tour-slider-dot" aria-label="Slide 2"></button>
                     <button class="tour-slider-dot" aria-label="Slide 3"></button>
+                    <button class="tour-slider-dot" aria-label="Slide 4"></button>
+                    <button class="tour-slider-dot" aria-label="Slide 5"></button>
                   </div>
-                  <div class="tour-slider-counter">1 / 3</div>
+                  <div class="tour-slider-counter">1 / 5</div>
                 </div>
               </div>
             </section>
@@ -651,19 +659,19 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </button>
                 <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing">
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Cu Chi Secret Trapdoor Exploration" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Cu Chi Secret Trapdoor Exploration" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Fresh Banh Mi served on the van" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Fresh Banh Mi served on the van" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Tree-shaded forest path of Cu Chi" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Tree-shaded forest path of Cu Chi" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Boiled cassava with peanut salt" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" alt="Boiled cassava with peanut salt" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -796,7 +804,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Mekong Delta Ben Tre & My Tho" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Mekong Delta Ben Tre & My Tho" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -816,7 +824,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/1-day-premium-cu-chi-tunnels" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -836,7 +844,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/2-day-mekong-delta-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="2-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="2-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">2 Days 1 Night</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">

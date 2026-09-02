@@ -19,12 +19,12 @@ if (d1Db) {
   }
 }
 
-const tourTitle = "Ho Chi Minh City Half-Day Private Tour with Photographer & Saigon WaterBus";
+const tourTitle = tour?.title || "Ho Chi Minh City Half-Day Private Tour with Photographer & Saigon WaterBus";
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "Discover the vibrant energy, French colonial heritage, and sunset river cruise of Ho Chi Minh City in a 4-hour private tour. Max 5 guests in a luxury 7-seater van, accompanied by an expert local guide and a dedicated photographer throughout.";
-const featuredImage = "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80";
-const basePrice = 1690000;
-const formattedPrice = "1,690,000 VND";
+const featuredImage = tour?.featuredImage || tour?.ogImage || "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp";
+const basePrice = tour?.price_number || 1690000;
+const formattedPrice = tour?.price_text || "1,690,000 VND";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
@@ -122,7 +122,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
         <div class="hidden md:flex flex-col gap-2 sm:gap-3">
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" 
+              src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
               alt="Cultural atmosphere on Nguyen Van Binh Book Street" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
@@ -130,7 +130,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           </div>
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" 
+              src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" 
               alt="Authentic street food and local handicraft stalls" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
@@ -347,13 +347,13 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 <div class="tour-slider-container">
                   <div class="tour-slider-track">
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80" alt="Sunset skyline over Saigon River" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Sunset skyline over Saigon River" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" alt="Nguyen Van Binh Book Street" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Nguyen Van Binh Book Street" class="tour-slide-img" />
                     </div>
                     <div class="tour-slide">
-                      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" alt="Saigon WaterBus scenic river views" class="tour-slide-img" />
+                      <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Saigon WaterBus scenic river views" class="tour-slide-img" />
                     </div>
                   </div>
                   <button class="tour-slider-arrow tour-slider-prev" aria-label="Previous Slide">
@@ -652,19 +652,19 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </button>
                 <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing">
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="Sunset skyline over Saigon River" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Sunset skyline over Saigon River" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Nguyen Van Binh Book Street atmosphere" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Nguyen Van Binh Book Street atmosphere" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Scenic Saigon WaterBus ride" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Scenic Saigon WaterBus ride" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
 
                   <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Authentic Ben Thanh Market delicacies" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                    <img src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" alt="Authentic Ben Thanh Market delicacies" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -797,7 +797,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/1-day-premium-cu-chi-tunnels" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -817,7 +817,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/half-day-cu-chi-tunnels-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -837,7 +837,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
               <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
