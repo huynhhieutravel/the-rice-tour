@@ -8,8 +8,8 @@ const canonicalTours = [
     slug: 'half-day-cu-chi-tunnels-tour',
     title: 'Half-Day Cu Chi Tunnels Luxury Private Tour',
     days: 'Half Day (5 Hours)',
-    price_number: 49,
-    price_text: '$49 USD',
+    price_number: 75,
+    price_text: '$75 USD',
     featuredImage: 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
     excerpt: 'Explore authentic underground tunnel complexes, secret trapdoors, ventilation mounds, and historic battle sites with an expert historical guide. Chilled refreshments & VIP vehicle.',
     country_name: 'Cu Chi & Countryside',
@@ -21,8 +21,8 @@ const canonicalTours = [
     slug: '1-day-premium-cu-chi-tunnels',
     title: '1-Day Premium Cu Chi Tunnels & Saigon Countryside Private Tour',
     days: 'Full Day (8 Hours)',
-    price_number: 89,
-    price_text: '$89 USD',
+    price_number: 122,
+    price_text: '$122 USD',
     featuredImage: 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
     excerpt: 'Comprehensive exploration of Ben Dinh & Ben Duoc tunnel systems, local organic rubber plantations, rice paper workshops, and riverside lunch.',
     country_name: 'Cu Chi & Countryside',
@@ -34,8 +34,8 @@ const canonicalTours = [
     slug: 'full-day-mekong-delta-tour-ben-tre-my-tho',
     title: 'Full-Day Mekong Delta Private Discovery (Ben Tre & My Tho Waterways)',
     days: 'Full Day (8–9 Hours)',
-    price_number: 95,
-    price_text: '$95 USD',
+    price_number: 114,
+    price_text: '$114 USD',
     featuredImage: 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
     excerpt: 'Hand-rowed wooden sampan through tranquil water coconut canals, traditional honey bee farm, coconut candy workshop, horse carriage ride, and elephant ear fish lunch.',
     country_name: 'Mekong Delta',
@@ -47,8 +47,8 @@ const canonicalTours = [
     slug: '2-day-mekong-delta-tour',
     title: '2-Day 1-Night Mekong Delta Slow Living & Floating Market Private Journey',
     days: '2 Days / 1 Night',
-    price_number: 195,
-    price_text: '$195 USD',
+    price_number: 197,
+    price_text: '$197 USD',
     featuredImage: 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
     excerpt: 'Experience Cai Rang bustling floating market at sunrise, tranquil boutique riverside eco-resort stay, cycling island hamlets, and culinary home cooking.',
     country_name: 'Mekong Delta',
@@ -60,8 +60,8 @@ const canonicalTours = [
     slug: 'ho-chi-minh-city-half-day-private-tour',
     title: 'Saigon Heritage & Hidden Alleys Half-Day Private Tour',
     days: 'Half Day (4–5 Hours)',
-    price_number: 45,
-    price_text: '$45 USD',
+    price_number: 67,
+    price_text: '$67 USD',
     featuredImage: 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp',
     excerpt: 'Iconic Notre Dame Cathedral, Central Post Office, War Remnants Museum, hidden colonial cafe alleys, and Chinatown Binh Tay Market.',
     country_name: 'Ho Chi Minh City',
@@ -73,8 +73,8 @@ const canonicalTours = [
     slug: 'cooking-class-local-market',
     title: 'Authentic Vietnamese Cooking Class & Local Market Cultural Experience',
     days: 'Half Day (4 Hours)',
-    price_number: 55,
-    price_text: '$55 USD',
+    price_number: 59,
+    price_text: '$59 USD',
     featuredImage: 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp',
     excerpt: 'Chef-guided wet market ingredient tour, hands-on cooking of 4 signature Vietnamese dishes (Pho, Fresh Spring Rolls, Banh Xeo), and recipe booklet.',
     country_name: 'Saigon Culinary',
@@ -98,13 +98,13 @@ try {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
           `).bind(ct.id, ct.title, ct.slug, ct.status, ct.featuredImage, ct.price_number, ct.price_text, ct.days, ct.excerpt, ct.country_slug).run();
         } else {
-          // Keep canonical image and price synchronized if currently empty
+          // Keep canonical image and price synchronized
           await d1Db.prepare(`
             UPDATE Tour 
             SET title = COALESCE(title, ?),
                 featuredImage = COALESCE(featuredImage, ?),
-                price_number = COALESCE(price_number, ?),
-                price_text = COALESCE(price_text, ?),
+                price_number = ?,
+                price_text = ?,
                 days = COALESCE(days, ?)
             WHERE slug = ?
           `).bind(ct.title, ct.featuredImage, ct.price_number, ct.price_text, ct.days, ct.slug).run();
@@ -138,7 +138,13 @@ if (!tours || tours.length === 0) {
 
 function formatUSD(num: number | null, text: string | null) {
   if (text && text.includes('$')) return text;
-  if (num) return `$${num.toLocaleString('en-US')} USD`;
+  if (num) {
+    if (num > 1000) {
+      const usd = Math.ceil(num / 25400);
+      return `$${usd.toLocaleString('en-US')} USD`;
+    }
+    return `$${num.toLocaleString('en-US')} USD`;
+  }
   return "Inquire for Pricing";
 }
 
@@ -181,7 +187,7 @@ function formatLocationBadge(tour: any): string {
       <div class="flex items-center gap-3">
         <a 
           href="/tours" 
-          class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
+          class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
         >
           <span>View All Journeys</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -192,14 +198,14 @@ function formatLocationBadge(tour: any): string {
           <button 
             id="tour-slide-prev"
             aria-label="Previous tours"
-            class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-600 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
+            class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-800 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
           </button>
           <button 
             id="tour-slide-next"
             aria-label="Next tours"
-            class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-600 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
+            class="w-11 h-11 rounded-2xl border border-gray-200 bg-white hover:bg-brand-50 hover:border-brand-300 text-gray-700 hover:text-brand-800 flex items-center justify-center transition-all shadow-sm active:scale-95 cursor-pointer"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
           </button>
@@ -216,7 +222,7 @@ function formatLocationBadge(tour: any): string {
         <article class="w-[82vw] max-w-[320px] sm:w-[320px] md:w-[340px] lg:w-[350px] shrink-0 snap-start group bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
           
           <!-- Image Header -->
-          <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+          <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
             <img 
               src={t.featuredImage || "https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp"} 
               alt={t.title} 
@@ -234,7 +240,7 @@ function formatLocationBadge(tour: any): string {
               )}
             </div>
 
-            <span class="absolute bottom-3.5 left-3.5 px-2.5 py-0.5 bg-brand-500 text-white text-[10.5px] font-extrabold rounded-lg shadow uppercase tracking-wide">
+            <span class="absolute bottom-3.5 left-3.5 px-2.5 py-0.5 bg-brand-700 text-white text-[10.5px] font-extrabold rounded-lg shadow uppercase tracking-wide">
               📍 {formatLocationBadge(t)}
             </span>
           </div>
@@ -263,11 +269,11 @@ function formatLocationBadge(tour: any): string {
             <!-- Card Bottom: Price & Action -->
             <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-2">
               <div>
-                <span class="block text-[10px] uppercase font-bold text-gray-400 tracking-wider">Starting from</span>
+                <span class="block text-[10px] uppercase font-bold text-gray-600 tracking-wider">Starting from</span>
                 <span class="font-serif text-lg font-bold text-gray-900">
                   {formatUSD(t.price_number, t.price_text)}
                 </span>
-                <span class="text-[9.5px] text-gray-500 block">/ guest (private vehicle)</span>
+                <span class="text-[9.5px] text-gray-600 block">/ guest (private vehicle)</span>
               </div>
 
               <a 
@@ -288,14 +294,14 @@ function formatLocationBadge(tour: any): string {
         <div class="absolute -top-12 -right-12 w-40 h-40 bg-brand-200/50 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative z-10">
-          <div class="w-10 h-10 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg font-black mb-4 shadow-sm border border-brand-200">
+          <div class="w-10 h-10 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg font-black mb-4 shadow-sm border border-brand-200">
             ✨
           </div>
-          <span class="text-brand-600 text-[11px] font-bold uppercase tracking-widest block mb-1.5">Bespoke Concierge</span>
+          <span class="text-brand-800 text-[11px] font-bold uppercase tracking-widest block mb-1.5">Bespoke Concierge</span>
           <h3 class="font-serif text-xl font-bold text-gray-900 mb-2.5 leading-snug">
             Looking for a Tailor-Made Private Journey?
           </h3>
-          <p class="text-gray-600 text-xs leading-relaxed mb-4 font-light">
+          <p class="text-gray-700 text-xs leading-relaxed mb-4 font-light">
             Share your travel dates, preferred pace, and special interests. Our local travel architects craft your customized itinerary within 24 hours.
           </p>
         </div>
@@ -307,7 +313,7 @@ function formatLocationBadge(tour: any): string {
           >
             Design My Custom Trip →
           </a>
-          <p class="text-[10px] text-center text-gray-500 mt-2 font-medium">
+          <p class="text-[10px] text-center text-gray-600 mt-2 font-medium">
             ⚡ 100% Free · No Obligation Proposal
           </p>
         </div>

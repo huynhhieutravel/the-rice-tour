@@ -217,11 +217,11 @@ if (node && !Array.isArray(node) && node.type === 'image' && node.attrs?.src) {
       // Auto-map legacy ctaTour to modern CtaBlock layout="compact"
       if (node.type === 'ctaTour') {
         const legacyProps = {
-          layout: 'split', // Or 'compact' based on what matches the old design best. The old design was a split card with an image. Let's map it to split.
+          layout: 'split',
           preset: 'tour',
-          title: `Tour Nhật Bản Mùa Lá Đỏ (Tour ID: ${node.attrs?.tourId || '...'})`,
-          content: 'Khám phá cung đường vàng Tokyo - Kyoto - Osaka với trải nghiệm trọn vẹn văn hóa Phù Tang.',
-          image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=400&auto=format&fit=crop',
+          title: `Vietnam Heritage Expedition (Tour ID: ${node.attrs?.tourId || '...'})`,
+          content: 'Experience authentic culture, secret waterways, and boutique hospitality with The Rice Tour.',
+          image: 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
           settings: settings
         };
         return <Block {...legacyProps} />;
@@ -235,7 +235,7 @@ if (node && !Array.isArray(node) && node.type === 'image' && node.attrs?.src) {
 
 {node.type === 'faqBlock' && (
   <section class="faq-section">
-    <h2 class="faq-title">Câu hỏi thường gặp</h2>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
     <div class="faq-wrapper">
       {node.attrs?.questions?.map((item: any, idx: number) => (
         <details class="faq-item" {...(idx === 0 ? { open: true } : {})}>

@@ -26,8 +26,89 @@ if (!destination) {
   return new Response("Destination not found", { status: 404 });
 }
 
-// Fetch Linked Tours
-let linkedTours: any[] = [];
+const CANONICAL_INBOUND_TOURS = [
+  {
+    id: 'tour_cuchi_halfday',
+    slug: 'half-day-cu-chi-tunnels-tour',
+    title: 'Half-Day Cu Chi Tunnels Luxury Private Tour',
+    days: 'Half Day (5 Hours)',
+    price_number: 75,
+    price_text: '$75 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+    excerpt: 'Explore authentic underground tunnel complexes, secret trapdoors, ventilation mounds, and historic battle sites with an expert historical guide. Chilled refreshments & VIP vehicle.',
+    country_name: 'Cu Chi & Saigon',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  },
+  {
+    id: 'tour_cuchi_1day',
+    slug: '1-day-premium-cu-chi-tunnels',
+    title: '1-Day Premium Cu Chi Tunnels & Saigon Heritage Discovery',
+    days: 'Full Day (8 Hours)',
+    price_number: 122,
+    price_text: '$122 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+    excerpt: 'Comprehensive exploration of Ben Dinh & Ben Duoc tunnel systems, local organic rubber plantations, rice paper workshops, and Saigon WaterBus sunset cruise.',
+    country_name: 'Cu Chi & Saigon',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  },
+  {
+    id: 'tour_mekong_fullday',
+    slug: 'full-day-mekong-delta-tour-ben-tre-my-tho',
+    title: 'Full-Day Mekong Delta Tour: Ben Tre & My Tho Discovery',
+    days: 'Full Day (8–9 Hours)',
+    price_number: 114,
+    price_text: '$114 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp',
+    excerpt: 'Hand-rowed wooden sampan through tranquil water coconut canals, traditional honey bee farm, coconut candy workshop, horse carriage ride, and elephant ear fish lunch.',
+    country_name: 'Mekong Delta',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  },
+  {
+    id: 'tour_mekong_2day',
+    slug: '2-day-mekong-delta-tour',
+    title: '2-Day Authentic Mekong Delta Tour: Cai Rang Sunrise & Can Tho',
+    days: '2 Days / 1 Night',
+    price_number: 197,
+    price_text: '$197 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+    excerpt: 'Experience Cai Rang bustling floating market at sunrise, tranquil boutique riverside hotel stay, cycling island hamlets, and DIY Banh Khot cooking.',
+    country_name: 'Mekong Delta',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  },
+  {
+    id: 'tour_saigon_heritage',
+    slug: 'ho-chi-minh-city-half-day-private-tour',
+    title: 'Ho Chi Minh City Half-Day Private Heritage & Street Life Tour',
+    days: 'Half Day (4–5 Hours)',
+    price_number: 67,
+    price_text: '$67 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp',
+    excerpt: 'Iconic Notre Dame Cathedral, Central Post Office, War Remnants Museum, hidden colonial cafe alleys, and Chinatown Binh Tay Market.',
+    country_name: 'Ho Chi Minh City',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  },
+  {
+    id: 'tour_cooking_class',
+    slug: 'cooking-class-local-market',
+    title: 'Authentic Vietnamese Cooking Class & Local Market Experience',
+    days: 'Half Day (4 Hours)',
+    price_number: 59,
+    price_text: '$59 USD',
+    featuredImage: 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp',
+    excerpt: 'Chef-guided wet market ingredient tour, hands-on cooking of 4 signature Vietnamese dishes (Pho, Fresh Spring Rolls, Banh Xeo), and recipe booklet.',
+    country_name: 'Saigon Culinary',
+    country_slug: 'south-vietnam',
+    status: 'published'
+  }
+];
+
+// Fetch Linked Tours from D1
+let dbLinkedTours: any[] = [];
 try {
   const res = await safeQueryOptional(
     d1Db.prepare(`
@@ -39,9 +120,38 @@ try {
     { results: [] },
     { route: Astro.url.pathname, slug, queryType: "fetch_destination_linked_tours" }
   );
-  linkedTours = res?.results || [];
+  dbLinkedTours = res?.results || [];
 } catch (e) {
   console.error('TourCountry query error:', e);
+}
+
+// Assemble final tour list for this destination
+let linkedTours: any[] = [];
+const normSlug = (slug || '').toLowerCase();
+
+if (normSlug === 'south-vietnam' || normSlug === 'saigon' || normSlug === 'ho-chi-minh-city') {
+  linkedTours = [...CANONICAL_INBOUND_TOURS];
+} else if (normSlug === 'mekong-delta') {
+  linkedTours = CANONICAL_INBOUND_TOURS.filter(t => t.slug.includes('mekong') || t.slug.includes('cooking'));
+} else if (normSlug === 'cu-chi' || normSlug === 'cu-chi-tunnels') {
+  linkedTours = CANONICAL_INBOUND_TOURS.filter(t => t.slug.includes('cu-chi'));
+} else {
+  linkedTours = CANONICAL_INBOUND_TOURS.filter(t => t.country_slug === normSlug);
+}
+
+// Merge any D1 tours
+if (dbLinkedTours.length > 0) {
+  const existingSlugs = new Set(linkedTours.map(t => t.slug));
+  for (const dt of dbLinkedTours) {
+    if (!existingSlugs.has(dt.slug)) {
+      linkedTours.push(dt);
+    }
+  }
+}
+
+// If still empty, guarantee all 6 signature tours
+if (linkedTours.length === 0) {
+  linkedTours = [...CANONICAL_INBOUND_TOURS];
 }
 
 // Other Destinations
@@ -61,9 +171,86 @@ try {
   console.error('Other destinations query error:', e);
 }
 
+const DESTINATION_CANONICAL_IMAGES: Record<string, string> = {
+  'south-vietnam': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'ho-chi-minh-city': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'saigon': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'mekong-delta': 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp',
+  'cu-chi-tunnels': 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+  'cu-chi': 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+  'ben-tre': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'my-tho': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'can-tho': 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+  'central-vietnam': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'hoi-an': 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp',
+  'north-vietnam': 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+  'hanoi': 'https://media.thericetour.com/uploads/white-horse-carriage-decorated-colorful-thoi-son-village.webp',
+};
+
+function getCleanDestinationImage(dest: any): string {
+  const slugKey = (dest?.slug || '').toLowerCase();
+  if (DESTINATION_CANONICAL_IMAGES[slugKey]) {
+    return DESTINATION_CANONICAL_IMAGES[slugKey];
+  }
+  const currentImg = dest?.featuredImage || '';
+  if (
+    currentImg.startsWith('https://media.thericetour.com/uploads/') &&
+    !currentImg.includes('airport') &&
+    !currentImg.includes('plane')
+  ) {
+    return currentImg;
+  }
+  const name = (dest?.name || '').toLowerCase();
+  if (name.includes('mekong') || name.includes('waterway') || name.includes('river')) {
+    return 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp';
+  }
+  if (name.includes('cu chi') || name.includes('tunnel')) {
+    return 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp';
+  }
+  if (name.includes('saigon') || name.includes('south') || name.includes('ho chi minh')) {
+    return 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
+  }
+  return 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp';
+}
+
+const TOUR_CANONICAL_IMAGES: Record<string, string> = {
+  '1-day-premium-cu-chi-tunnels': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'half-day-cu-chi-tunnels-tour': 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+  'full-day-mekong-delta-tour-ben-tre-my-tho': 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp',
+  '2-day-mekong-delta-tour': 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+  'cooking-class-local-market': 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp',
+  'ho-chi-minh-city-half-day-private-tour': 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp',
+};
+
+function getCleanTourImage(tour: any): string {
+  const slugKey = (tour?.slug || '').toLowerCase();
+  if (TOUR_CANONICAL_IMAGES[slugKey]) {
+    return TOUR_CANONICAL_IMAGES[slugKey];
+  }
+  const currentImg = tour?.featuredImage || tour?.ogImage || '';
+  if (
+    currentImg.startsWith('https://media.thericetour.com/uploads/') &&
+    !currentImg.includes('airport') &&
+    !currentImg.includes('plane')
+  ) {
+    return currentImg;
+  }
+  const title = (tour?.title || '').toLowerCase();
+  if (title.includes('cu chi')) {
+    return 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp';
+  }
+  if (title.includes('mekong') || title.includes('ben tre') || title.includes('my tho')) {
+    return 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp';
+  }
+  if (title.includes('cooking') || title.includes('market')) {
+    return 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp';
+  }
+  return 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
+}
+
 const title = destination.metaTitle || `${destination.name} Tours & Expeditions | The Rice Tour`;
 const description = destination.metaDescription || `Explore bespoke journeys and authentic travel experiences in ${destination.name} with The Rice Tour.`;
-const image = destination.featuredImage || 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp';
+const image = getCleanDestinationImage(destination);
 ---
 
 <BaseLayout title={title} description={description} image={image}>
@@ -81,13 +268,13 @@ const image = destination.featuredImage || 'https://media.thericetour.com/upload
 
   <main class="destination-detail bg-gray-50 text-gray-900 min-h-screen">
     <!-- Hero Banner -->
-    <section class="relative h-[60vh] min-h-[440px] flex items-end pb-14 overflow-hidden border-b border-gray-200">
+    <section class="relative h-[55vh] min-h-[420px] flex items-end pb-12 overflow-hidden border-b border-gray-200">
       <img 
         src={image} 
         alt={destination.name} 
         class="absolute inset-0 w-full h-full object-cover object-center scale-105" 
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/40 to-gray-950/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-950/85 via-gray-950/45 to-gray-950/20"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-white">
         <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-300 mb-4">
@@ -98,7 +285,7 @@ const image = destination.featuredImage || 'https://media.thericetour.com/upload
           <span class="text-white/80">{destination.name}</span>
         </nav>
 
-        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white tracking-tight mb-4 drop-shadow-lg">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight mb-4 drop-shadow-md">
           {destination.name}
         </h1>
 
@@ -112,109 +299,152 @@ const image = destination.featuredImage || 'https://media.thericetour.com/upload
             </span>
           )}
           <span class="px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 font-semibold">
-            ✈️ Featured Journeys: <strong class="text-brand-300">{linkedTours.length} {linkedTours.length === 1 ? 'Tour' : 'Tours'}</strong>
+            🌾 Available Tours: <strong class="text-brand-300">{linkedTours.length} Signature {linkedTours.length === 1 ? 'Trip' : 'Trips'}</strong>
           </span>
         </div>
       </div>
     </section>
 
-    <!-- Overview Section -->
+    <!-- ============================================================ -->
+    <!-- 1. FEATURED TOURS SECTION (PLACED PROMINENTLY AT THE TOP) -->
+    <!-- ============================================================ -->
+    <section class="py-14 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="featured-tours">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-gray-200">
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-50 text-brand-700 border border-brand-200 mb-2">
+            ✨ Handcrafted Itineraries
+          </span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-1">
+            Featured Journeys in {destination.name}
+          </h2>
+        </div>
+        <p class="text-gray-600 text-sm mt-2 md:mt-0 max-w-md">
+          Small-group VIP (Max 5 guests), dedicated private photographer, and 100% genuine local immersion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {linkedTours.map((tour) => {
+          const tourImg = getCleanTourImage(tour);
+          return (
+            <article class="group bg-white rounded-3xl overflow-hidden border border-gray-200/90 hover:border-brand-400/80 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col">
+              <div class="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
+                <img 
+                  src={tourImg} 
+                  alt={tour.title} 
+                  loading="lazy" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/90 text-white backdrop-blur-sm shadow-sm">
+                    VIP Max 5
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-600/90 text-white backdrop-blur-sm shadow-sm">
+                    📸 Pro Photo
+                  </span>
+                </div>
+
+                {tour.days && (
+                  <div class="absolute bottom-3 left-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-gray-900 shadow-sm">
+                      ⏱️ {tour.days}
+                    </span>
+                  </div>
+                )}
+                {tour.price_text && (
+                  <div class="absolute bottom-3 right-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-brand-600 text-white shadow-sm">
+                      {tour.price_text}
+                    </span>
+                  </div>
+                )}
+              </div>
+              
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-3 leading-snug">
+                    <a href={`/tour/${tour.slug}`}>
+                      {tour.title}
+                    </a>
+                  </h3>
+                  <p class="text-gray-600 text-sm line-clamp-3 mb-5 leading-relaxed">
+                    {tour.excerpt || 'An authentic journey through picturesque landscapes, deep history, and rich local food.'}
+                  </p>
+                </div>
+                
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span class="text-xs text-gray-500 font-medium">100% No Shopping</span>
+                  <a href={`/tour/${tour.slug}`} class="inline-flex items-center gap-1.5 text-brand-600 hover:text-brand-700 font-bold text-sm group/link">
+                    View Details 
+                    <span class="transition-transform group-hover/link:translate-x-1">➔</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <!-- Tailor-Made Fast CTA Banner -->
+      <div class="mt-12 bg-gradient-to-r from-stone-900 to-stone-800 rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+        <div class="space-y-1 text-center md:text-left">
+          <div class="text-amber-400 text-xs font-bold uppercase tracking-wider">Bespoke Travel Concierge</div>
+          <h3 class="text-xl sm:text-2xl font-serif font-bold">Want a private customized itinerary for {destination.name}?</h3>
+          <p class="text-stone-300 text-xs sm:text-sm font-light">Tell our destination designers your preferred dates, hotel style, and group size.</p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="/tailor-made" class="px-6 py-3 rounded-full bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm transition-all shadow-md">
+            Design Custom Trip ➔
+          </a>
+          <a href="/whatsapp" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-sm transition-all">
+            WhatsApp 24/7
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 2. OVERVIEW & INSIDER GUIDE SECTION (BELOW TOURS)           -->
+    <!-- ============================================================ -->
     {destination.description && (
-      <section class="py-14 border-b border-gray-200 bg-white">
+      <section class="py-14 border-t border-b border-gray-200 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Destination Guide</span>
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mt-1">
+              About {destination.name} & Local Travel Tips
+            </h2>
+          </div>
           <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed font-light font-sans" set:html={destination.description}>
           </div>
         </div>
       </section>
     )}
 
-    <!-- Linked Tours Section -->
-    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Curated Itineraries</span>
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mt-2">
-            Signature Journeys in {destination.name}
-          </h2>
-        </div>
-        <p class="text-gray-600 text-sm mt-2 md:mt-0 max-w-md">
-          Private, flexible, and all-inclusive guided experiences crafted by local insiders.
-        </p>
-      </div>
-
-      {linkedTours.length === 0 ? (
-        <div class="bg-white rounded-3xl p-12 text-center border border-gray-200 shadow-sm">
-          <div class="text-4xl mb-4">🌾</div>
-          <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Bespoke Expeditions Available</h3>
-          <p class="text-gray-600 max-w-lg mx-auto mb-6">
-            We are designing new public itineraries for {destination.name}. In the meantime, our private concierges can tailor a fully customized journey for your group.
-          </p>
-          <a href="/tailor-made" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-600 text-white font-bold hover:bg-brand-700 transition-colors shadow-md">
-            Design Tailor-Made Trip ➔
-          </a>
-        </div>
-      ) : (
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {linkedTours.map((tour) => (
-            <article class="group bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-200 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col">
-              <div class="relative h-60 overflow-hidden bg-gray-100">
-                <img 
-                  src={tour.featuredImage || 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp'} 
-                  alt={tour.title} 
-                  loading="lazy" 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-                {tour.days && (
-                  <div class="absolute bottom-3 left-4">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-gray-900 shadow-sm">
-                      ⏱️ {tour.days}
-                    </span>
-                  </div>
-                )}
-                {tour.price_text && (
-                  <div class="absolute bottom-3 right-4">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white shadow-sm">
-                      From {tour.price_text}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div class="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="text-xl font-serif font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-3">
-                    <a href={`/tour/${tour.slug}`}>
-                      {tour.title}
-                    </a>
-                  </h3>
-                  <p class="text-gray-600 text-sm line-clamp-3 mb-4 leading-relaxed">
-                    {tour.excerpt || 'An authentic journey through picturesque landscapes and rich local culture.'}
-                  </p>
-                </div>
-                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-xs text-gray-500 font-medium">100% Private Tour</span>
-                  <a href={`/tour/${tour.slug}`} class="text-brand-600 font-bold text-sm hover:underline flex items-center gap-1">
-                    View Details ➔
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
-    </section>
-
-    <!-- Other Destinations -->
+    <!-- ============================================================ -->
+    <!-- 3. OTHER DESTINATIONS SECTION                              -->
+    <!-- ============================================================ -->
     {otherDestinations.length > 0 && (
-      <section class="py-16 border-t border-gray-200 bg-white">
+      <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-8">
-            Explore More Vietnam Destinations
-          </h2>
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Keep Exploring</span>
+              <h2 class="text-2xl font-serif font-bold text-gray-900 mt-1">
+                More Vietnam Destinations
+              </h2>
+            </div>
+            <a href="/destinations" class="text-brand-600 font-bold text-sm hover:underline">
+              View All Destinations ➔
+            </a>
+          </div>
+
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             {otherDestinations.map((od) => (
-              <a href={`/destination/${od.slug}`} class="group relative rounded-2xl overflow-hidden h-40 border border-gray-200 hover:border-brand-300 shadow-sm hover:shadow-lg transition-all block">
-                <img src={od.featuredImage} alt={od.name} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <a href={`/destination/${od.slug}`} class="group relative rounded-2xl overflow-hidden aspect-[16/9] w-full border border-gray-200 hover:border-brand-300 shadow-sm hover:shadow-lg transition-all block">
+                <img src={getCleanDestinationImage(od)} alt={od.name} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-gray-950/30 to-transparent"></div>
                 <div class="absolute bottom-3 left-3 right-3">
                   <div class="text-sm font-serif font-bold text-white group-hover:text-brand-300 transition-colors truncate">{od.name}</div>

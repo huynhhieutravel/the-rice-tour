@@ -21,10 +21,14 @@ export function isTaintedImageUrl(url?: string | null): boolean {
   return (
     lower.includes('nucuoimekong') ||
     lower.includes('nu-cuoi-me-kong') ||
+    lower.includes('nucoimekong') ||
     lower.includes('ncmk') ||
     lower.includes('mekong-smile') ||
     lower.includes('mekongsmile') ||
-    lower.includes('doi-tac')
+    lower.includes('doi-tac') ||
+    lower.includes('unsplash.com') ||
+    lower.includes('pexels.com') ||
+    lower.includes('pixabay.com')
   );
 }
 
@@ -51,14 +55,16 @@ export function getCanonicalMediaUrl(input: string, fallbackUrl?: string): strin
       url.hostname = cdnUrl.hostname;
     }
     
-    // Strip WordPress thumbnail suffixes (e.g. -768x432.jpg -> .jpg)
-    // because the R2 bucket only contains original images.
     let finalUrlStr = url.toString();
-    finalUrlStr = finalUrlStr.replace(/(-\d+x\d+)(\.[a-z]+)(\?.*)?$/i, '$2$3');
+    
+    // Only strip legacy WordPress thumbnail suffixes for old WP media domains, not for media.thericetour.com
+    if (url.hostname.includes('fittour.vn') || url.pathname.includes('/wp-content/')) {
+      finalUrlStr = finalUrlStr.replace(/(-\d+x\d+)(\.[a-z]+)(\?.*)?$/i, '$2$3');
+    }
     
     return finalUrlStr;
   } catch {
-    return input.replace(/(-\d+x\d+)(\.[a-z]+)(\?.*)?$/i, '$2$3');
+    return input;
   }
 }
 

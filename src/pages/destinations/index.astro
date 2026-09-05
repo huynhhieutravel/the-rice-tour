@@ -21,6 +21,68 @@ const query = `
 const res = await d1Db.prepare(query).all<any>();
 let destinations = res.results || [];
 
+const DESTINATION_CANONICAL_IMAGES: Record<string, string> = {
+  'south-vietnam': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'ho-chi-minh-city': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'saigon': 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
+  'mekong-delta': 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp',
+  'cu-chi-tunnels': 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+  'cu-chi': 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+  'ben-tre': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'my-tho': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'can-tho': 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+  'central-vietnam': 'https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp',
+  'hoi-an': 'https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp',
+  'north-vietnam': 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp',
+  'hanoi': 'https://media.thericetour.com/uploads/white-horse-carriage-decorated-colorful-thoi-son-village.webp',
+};
+
+const DESTINATION_EXACT_TOUR_COUNT: Record<string, number> = {
+  'south-vietnam': 6,
+  'saigon': 6,
+  'ho-chi-minh-city': 6,
+  'mekong-delta': 3,
+  'cu-chi': 2,
+  'cu-chi-tunnels': 2,
+};
+
+function getDestinationTourCount(dest: any): number {
+  const slug = (dest?.slug || '').toLowerCase();
+  if (DESTINATION_EXACT_TOUR_COUNT[slug]) {
+    return DESTINATION_EXACT_TOUR_COUNT[slug];
+  }
+  return dest.tour_count || 0;
+}
+
+function getCleanDestinationImage(dest: any): string {
+  const slugKey = (dest?.slug || '').toLowerCase();
+  if (DESTINATION_CANONICAL_IMAGES[slugKey]) {
+    return DESTINATION_CANONICAL_IMAGES[slugKey];
+  }
+
+  const currentImg = dest?.featuredImage || '';
+  if (
+    currentImg.startsWith('https://media.thericetour.com/uploads/') &&
+    !currentImg.includes('airport') &&
+    !currentImg.includes('plane')
+  ) {
+    return currentImg;
+  }
+
+  const name = (dest?.name || '').toLowerCase();
+  if (name.includes('mekong') || name.includes('waterway') || name.includes('river')) {
+    return 'https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp';
+  }
+  if (name.includes('cu chi') || name.includes('tunnel')) {
+    return 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp';
+  }
+  if (name.includes('saigon') || name.includes('south') || name.includes('ho chi minh')) {
+    return 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
+  }
+
+  return 'https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp';
+}
+
 function getPlainText(html: string) {
   if (!html) return '';
   return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 160);
@@ -43,8 +105,8 @@ const description = "Discover the most enchanting destinations in Vietnam: from 
   />
 
   <main class="destinations-page bg-gray-50 text-gray-900 min-h-screen">
-    <!-- Hero Section -->
-    <section class="relative py-20 md:py-28 overflow-hidden bg-white border-b border-gray-200">
+    <!-- Hero Section with Header Safe Spacing -->
+    <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-white border-b border-gray-200">
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-brand-50 text-brand-700 border border-brand-200 mb-6 shadow-sm">
           🌾 Vietnam Signature Regions
@@ -61,64 +123,68 @@ const description = "Discover the most enchanting destinations in Vietnam: from 
     <!-- Destinations Grid -->
     <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {destinations.map((dest) => (
-          <article class="group relative bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-200 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col">
-            <!-- Destination Image -->
-            <div class="relative h-64 overflow-hidden bg-gray-100">
-              <img 
-                src={dest.featuredImage || 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80'} 
-                alt={dest.name} 
-                loading="lazy" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
-              
-              <!-- Region Badge -->
-              <div class="absolute top-4 left-4">
-                <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-brand-700 border border-gray-200 shadow-sm">
-                  {dest.continent || 'Vietnam'}
-                </span>
-              </div>
-
-              <!-- Tour Count Badge -->
-              {dest.tour_count > 0 && (
-                <div class="absolute top-4 right-4">
-                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white shadow-sm">
-                    {dest.tour_count} {dest.tour_count === 1 ? 'Tour' : 'Tours'}
+        {destinations.map((dest) => {
+          const cardImg = getCleanDestinationImage(dest);
+          const tourCount = getDestinationTourCount(dest);
+          return (
+            <article class="group relative bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-brand-200 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col">
+              <!-- Destination Image -->
+              <div class="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
+                <img 
+                  src={cardImg} 
+                  alt={dest.name} 
+                  loading="lazy" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
+                
+                <!-- Region Badge -->
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-brand-700 border border-gray-200 shadow-sm">
+                    {dest.continent || 'Vietnam'}
                   </span>
                 </div>
-              )}
-            </div>
 
-            <!-- Content Area -->
-            <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h2 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-3">
-                  <a href={`/destination/${dest.slug}`} class="focus:outline-none">
-                    <span class="absolute inset-0 z-0"></span>
-                    {dest.name}
-                  </a>
-                </h2>
-                <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                  {getPlainText(dest.description) || 'Explore the timeless landscapes and rich local culture with our expert private guides.'}
-                </p>
-              </div>
-
-              <div class="pt-4 border-t border-gray-100 flex items-center justify-between z-10">
-                {dest.bestTimeToVisit ? (
-                  <div class="text-xs text-gray-500">
-                    <span class="text-gray-700 font-medium">Best time:</span> {dest.bestTimeToVisit}
+                <!-- Tour Count Badge -->
+                {tourCount > 0 && (
+                  <div class="absolute top-4 right-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white shadow-sm">
+                      {tourCount} {tourCount === 1 ? 'Tour' : 'Tours'}
+                    </span>
                   </div>
-                ) : (
-                  <div></div>
                 )}
-                <span class="text-brand-600 text-sm font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
               </div>
-            </div>
-          </article>
-        ))}
+
+              <!-- Content Area -->
+              <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-2xl font-serif font-bold text-gray-900 group-hover:text-brand-600 transition-colors mb-3">
+                    <a href={`/destination/${dest.slug}`} class="focus:outline-none">
+                      <span class="absolute inset-0 z-0"></span>
+                      {dest.name}
+                    </a>
+                  </h2>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                    {getPlainText(dest.description) || 'Explore the timeless landscapes and rich local culture with our expert private guides.'}
+                  </p>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between z-10">
+                  {dest.bestTimeToVisit ? (
+                    <div class="text-xs text-gray-500">
+                      <span class="text-gray-700 font-medium">Best time:</span> {dest.bestTimeToVisit}
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
+                  <span class="text-brand-600 text-sm font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
 

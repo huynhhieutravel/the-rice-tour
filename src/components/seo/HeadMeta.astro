@@ -7,6 +7,7 @@ export interface Props {
   noindex?: boolean;
 }
 
+import { env } from 'cloudflare:workers';
 import { getCanonicalMediaUrl, isTaintedImageUrl, DEFAULT_TRAVEL_FALLBACK_IMAGE, DEFAULT_BRAND_FALLBACK_IMAGE } from '@/lib/imageOptimization';
 
 let defaultPath = Astro.url.pathname;
@@ -29,30 +30,23 @@ const ogImage = getCanonicalMediaUrl(finalImage);
 
 // Xử lý Robots Meta
 // Global toggle qua Environment Variable:
-//   - Mặc định: noindex (staging mode)  
-//   - Khi go-live: thêm ROBOTS_INDEX = "true" vào wrangler.toml [vars] hoặc Cloudflare Dashboard
-//   - Per-post: field noindex trong DB vẫn hoạt động độc lập
-let isGlobalIndex = false;
+//   - Mặc định: index (production live) nếu ROBOTS_INDEX === 'true'
+let isGlobalIndex = true;
 try {
-  // 1. Check process.env (Node SSR fallback)
-  if (typeof process !== 'undefined' && process.env?.ROBOTS_INDEX) {
+  if (env?.ROBOTS_INDEX !== undefined) {
+    isGlobalIndex = String(env.ROBOTS_INDEX) === 'true';
+  } else if (typeof process !== 'undefined' && process.env?.ROBOTS_INDEX) {
     isGlobalIndex = String(process.env.ROBOTS_INDEX) === 'true';
-  }
-  // 2. Check import.meta.env
-  else if (import.meta.env.ROBOTS_INDEX !== undefined) {
+  } else if (import.meta.env.ROBOTS_INDEX !== undefined) {
     isGlobalIndex = String(import.meta.env.ROBOTS_INDEX) === 'true';
-  }
-  // 3. Try to get from cloudflare:workers (Cloudflare Edge)
-  else {
+  } else {
     const rt = (Astro.locals as any)?.runtime;
     if (rt?.env?.ROBOTS_INDEX !== undefined) {
       isGlobalIndex = String(rt.env.ROBOTS_INDEX) === 'true';
-    } else {
-      isGlobalIndex = false;
     }
   }
 } catch (e) {
-  isGlobalIndex = false;
+  isGlobalIndex = true;
 }
 
 const robotsContent = noindex 
@@ -62,18 +56,20 @@ const robotsContent = noindex
     : "noindex, nofollow"; // Staging mode (default)
 ---
 
-<!-- Favicon: Chiến lược Multi-format chuẩn Googlebot -->
+<!-- Essential Encoding & Viewport (Must be first 1024 bytes) -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Favicon: Multi-format Googlebot Compliant -->
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
 <link rel="shortcut icon" href="/favicon-48.png" />
 
-<!-- Bắt buộc -->
+<!-- Primary SEO Meta -->
 <title>{title}</title>
 <meta name="description" content={description} />
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Robots & Indexing & Verification -->
 <meta name="msvalidate.01" content="8F832FC6B1D0E38480967492438B78F2" />

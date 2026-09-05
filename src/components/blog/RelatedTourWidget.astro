@@ -1,19 +1,17 @@
 ---
-// Local Component: RelatedTourWidget (Chỉ dùng riêng trong Sidebar của Blog)
-// Bản chất là wrapper cho Business Component <TourCard> để nhúng data cụ thể
-
+// Local Component: RelatedTourWidget (Featured Inbound Tour in Blog Sidebar)
 import TourCard from '@/components/tour/TourCard.astro';
 ---
 
 <div class="space-y-4">
-  <div class="font-bold text-primary uppercase tracking-wider text-sm border-b border-border pb-3">Tour Đề Xuất</div>
+  <div class="font-bold text-primary uppercase tracking-wider text-sm border-b border-border pb-3">Featured Experience</div>
   <TourCard 
-    title="Tour Nhật Bản mùa hoa anh đào"
-    price="28.990.000đ"
-    rating="4.8"
-    reviews="128"
-    duration="5N4Đ"
-    image="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop"
-    url="#"
+    title="Mekong Delta Authentic Riverways & Secret Canals"
+    price="$197 USD"
+    rating="4.9"
+    reviews="142"
+    duration="2 Days 1 Night"
+    image="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp"
+    url="/tours"
   />
 </div>

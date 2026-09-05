@@ -13,6 +13,7 @@ import { sanitizeElementorHtml } from '@/lib/elementorSanitizer';
 import { parseShortcodes } from '@/utils/shortcodes/parser';
 import { fetchAllShortcodeData } from '@/utils/shortcodes/dataLoader';
 import ShortcodeRenderer from '@/components/shortcodes/ShortcodeRenderer.astro';
+import BlogCardImage from '@/components/blog/BlogCardImage.astro';
 
 // CMS Engine Shortcodes
 import { 
@@ -458,9 +459,9 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
   ) : (
   <BaseLayout 
     title={categoryData.name} 
-    description={categoryData.description || `Khám phá các bài viết, cẩm nang và kinh nghiệm du lịch về chuyên mục ${categoryData.name}. Cập nhật mới nhất từ FIT TOUR.`}
+    description={categoryData.description || `Explore curated travel stories, destination guides, and insider insights for ${categoryData.name} from The Rice Tour.`}
   >
-    <section class="py-16 md:py-24 bg-slate-50 min-h-[60vh]">
+    <section class="py-12 md:py-20 bg-slate-50 min-h-[60vh]">
       <div class="max-w-[1200px] mx-auto px-4 md:px-8">
         <div class="text-center mb-12 lg:mb-16">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight capitalize mb-4">{categoryData.name}</h1>
@@ -469,7 +470,7 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
         
         {categoryData.availableLocations && categoryData.availableLocations.length > 0 && (
           <div class="mb-10 grid grid-cols-3 gap-2 max-w-sm mx-auto md:max-w-none md:flex md:flex-wrap md:justify-center">
-            <a href={`/${categoryData.slug}`} class={`text-center px-3 py-2.5 rounded-full text-sm font-semibold transition-all ${!locationFilter ? 'bg-[#ea580c] text-white shadow-sm' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}>Tất cả</a>
+            <a href={`/${categoryData.slug}`} class={`text-center px-3 py-2.5 rounded-full text-sm font-semibold transition-all ${!locationFilter ? 'bg-[#ea580c] text-white shadow-sm' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}>All Stories</a>
             {(categoryData.quickCountries || []).map((country: string) => (
               <a href={`/${categoryData.slug}?location=${encodeURIComponent(country)}`} class={`text-center px-3 py-2.5 rounded-full text-sm font-semibold transition-all ${locationFilter === country ? 'bg-[#ea580c] text-white shadow-sm' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}>
                 {country}
@@ -477,7 +478,7 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
             ))}
             <div class="relative flex items-center">
               <select id="location-dropdown" class="w-full appearance-none bg-white border border-slate-200 text-slate-600 text-sm font-semibold rounded-full pl-3 py-2.5 pr-8 cursor-pointer hover:border-slate-300 transition-all focus:outline-none focus:ring-2 focus:ring-[#ea580c]/30 focus:border-[#ea580c]">
-                <option value="">Khác ▼</option>
+                <option value="">More ▼</option>
                 {categoryData.availableLocations.map((loc: string) => (
                   <option value={`/${categoryData.slug}?location=${encodeURIComponent(loc)}`} selected={locationFilter === loc}>
                     {loc}
@@ -493,18 +494,20 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
           <>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
               {categoryPosts.map((p: any) => (
-                <a href={`/${p.slug}`} class="group block">
-                  <div class="overflow-hidden mb-6 bg-slate-50 rounded-lg relative">
-                    <img src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : '/placeholder-image.jpg'} alt={p.title} class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                <a href={`/${p.slug}`} class="group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <div class="relative">
+                    <BlogCardImage src={p.featuredImage} alt={p.title} title={p.title} />
                     {p.locationStr && (
-                      <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                      <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 z-10">
                         <svg class="w-3.5 h-3.5 text-[#ea580c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         {p.locationStr}
                       </div>
                     )}
                   </div>
-                  <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-3">{p.title}</h3>
-                  <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
+                  <div class="p-6">
+                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-2">{p.title}</h3>
+                    <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
+                  </div>
                 </a>
               ))}
             </div>
@@ -517,7 +520,7 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
           </>
         ) : (
           <div class="text-center py-12">
-            <p class="text-slate-500">Chưa có bài viết nào trong chuyên mục này.</p>
+            <p class="text-slate-500">No guides available yet in this category.</p>
           </div>
         )}
       </div>

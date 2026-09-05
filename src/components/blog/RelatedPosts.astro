@@ -2,7 +2,7 @@
 // Component RelatedPosts
 import { getOptimizedImageUrl, generateSrcSet } from '@/lib/imageOptimization';
 
-const { posts = [], title = "Bài viết liên quan" } = Astro.props;
+const { posts = [], title = "Related Guides" } = Astro.props;
 
 if (!posts || posts.length === 0) {
   return null;

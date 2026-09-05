@@ -2,6 +2,7 @@
 // src/pages/index.astro - The Rice Tour Homepage
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { COMPANY_INFO } from '@/config/company';
 import InboundNavbar from '@/components/inbound/InboundNavbar.astro';
 import InboundHero from '@/components/inbound/InboundHero.astro';
 import InboundAsSeenOn from '@/components/inbound/InboundAsSeenOn.astro';
@@ -23,23 +24,69 @@ const seoData = {
   image: "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp"
 };
 
-const orgSchema = {
+const homepageSchemaGraph = {
   "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "The Rice Tour",
-  "url": "https://thericetour.com",
-  "logo": "https://thericetour.com/logo.png",
-  "image": seoData.image,
-  "description": seoData.description,
-  "telephone": "+84909123456",
-  "email": "hello@thericetour.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "18 Ngo Quyen Street, Hoan Kiem",
-    "addressLocality": "Hanoi",
-    "addressCountry": "VN"
-  },
-  "priceRange": "$$$$"
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://thericetour.com/#agency",
+      "name": COMPANY_INFO.brandName,
+      "alternateName": "The Rice Travel Group",
+      "url": "https://thericetour.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://thericetour.com/#logo",
+        "url": "https://media.thericetour.com/uploads/logo-the-rice.webp",
+        "caption": "The Rice Tour Logo"
+      },
+      "image": seoData.image,
+      "description": "Boutique inbound travel designer crafting authentic, slow-paced private journeys across Vietnam with a maximum of 5 guests per departure.",
+      "telephone": "+84962333621",
+      "email": COMPANY_INFO.email,
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "195 De Tham Street, Pham Ngu Lao Ward",
+        "addressLocality": "District 1",
+        "addressRegion": "Ho Chi Minh City",
+        "postalCode": "700000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.7675397,
+        "longitude": 106.6931428
+      },
+      "hasMap": "https://maps.app.goo.gl/f147oCPxWWumzxpW6",
+      "sameAs": [
+        "https://www.facebook.com/thericetravel"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thericetour.com/#website",
+      "url": "https://thericetour.com",
+      "name": COMPANY_INFO.brandName,
+      "description": "Authentic Vietnam Inbound Journeys & Bespoke Expeditions",
+      "publisher": {
+        "@id": "https://thericetour.com/#agency"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thericetour.com/#webpage",
+      "url": "https://thericetour.com",
+      "name": seoData.title,
+      "isPartOf": {
+        "@id": "https://thericetour.com/#website"
+      },
+      "about": {
+        "@id": "https://thericetour.com/#agency"
+      },
+      "description": seoData.description
+    }
+  ]
 };
 ---
 
@@ -50,9 +97,10 @@ const orgSchema = {
   canonical={seoData.canonical}
   hideGlobalHeader={true}
   hideGlobalFooter={true}
+  preloadImages={[seoData.image]}
 >
   <Fragment slot="head">
-    <JsonLdSchema type="website" data={orgSchema} />
+    <JsonLdSchema type="custom" data={homepageSchemaGraph} />
   </Fragment>
 
   <!-- Luxury Floating Navbar -->

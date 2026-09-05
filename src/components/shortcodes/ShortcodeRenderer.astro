@@ -3,23 +3,12 @@ import type { ASTNode } from '../../utils/shortcodes/parser';
 import TestimonialBlock from './TestimonialBlock.astro';
 import SnippetBlock from './SnippetBlock.astro';
 import CtaBlock from '../ui/CtaBlock.astro';
-import EmagazineRelated from './EmagazineRelated.astro';
 import YoutubeEmbed from './YoutubeEmbed.astro';
-import LichKhoiHanhBlock from './LichKhoiHanhBlock.astro';
 import RelatedBlog from '../RelatedBlog.astro';
-import PortraitCenterpiece from './PortraitCenterpiece.astro';
-import LadakhCarouselScript from './LadakhCarouselScript.astro';
-import PakistanPortrait from './PakistanPortrait.astro';
-import PakistanDiscoveryGrid from './PakistanDiscoveryGrid.astro';
-import PakistanStories from './PakistanStories.astro';
-import PakistanCTA from './PakistanCTA.astro';
 import AuthorCard from './AuthorCard.astro';
-import CorporateFormBlock from './CorporateFormBlock.astro';
-import CorporateTripsBlock from './CorporateTripsBlock.astro';
 import DataPost from './data/DataPost.astro';
 import DataTour from './data/DataTour.astro';
 import DataCountry from './data/DataCountry.astro';
-import KailashPillarGuide from './KailashPillarGuide.astro';
 
 interface Props {
   node: ASTNode;
@@ -33,24 +22,12 @@ const SHORTCODE_MAP: Record<string, any> = {
   'testimonial': TestimonialBlock,
   'snippet': SnippetBlock,
   'cta': CtaBlock,
-  'emagazine-related': EmagazineRelated,
   'youtube': YoutubeEmbed,
-  'lich_khoi_hanh': LichKhoiHanhBlock,
   'blog-related': RelatedBlog,
-  'ladakh-co-may-portrait': PortraitCenterpiece,
-  'ladakh-carousel-script': LadakhCarouselScript,
-  'kailash-pillar-guide': KailashPillarGuide,
-  'pakistan-portrait-centerpiece': PakistanPortrait,
-  'pakistan-discovery-grid': PakistanDiscoveryGrid,
-  'pakistan-stories': PakistanStories,
-  'pakistan-cta': PakistanCTA,
   'author-card': AuthorCard,
-  'corporate-form': CorporateFormBlock,
-  'corporate-trips': CorporateTripsBlock,
   'data_post': DataPost,
   'data_tour': DataTour,
   'data_country': DataCountry,
-
 };
 
 const Component = node.type === 'shortcode' ? SHORTCODE_MAP[node.name] : null;

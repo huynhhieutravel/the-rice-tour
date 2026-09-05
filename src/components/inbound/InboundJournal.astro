@@ -4,36 +4,36 @@ import { env } from 'cloudflare:workers';
 
 const canonicalArticles = [
   {
-    title: "Vietnam Visa Guide 2026: 90-Day E-Visa, Exemptions & Entry Rules",
-    slug: "vietnam-visa-guide-2026",
-    category_name: "Visa & Essentials",
-    readingTime: 5,
-    featuredImage: "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp",
-    excerpt: "Everything international travelers need to know about the 90-day Vietnam multiple-entry e-visa, visa-free countries, and international airport arrival tips."
-  },
-  {
-    title: "Best Time to Visit Southern Vietnam: Cu Chi, Saigon & Mekong Waterways",
-    slug: "best-time-to-visit-vietnam",
-    category_name: "Travel Planning",
-    readingTime: 6,
-    featuredImage: "https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp",
-    excerpt: "Understanding the dry and floating water seasons in the Mekong Delta. When to capture serene reflections and explore fruit orchards at their peak."
-  },
-  {
-    title: "Southern Vietnamese Gastronomy: Crispy Banh Xeo, Fresh Spring Rolls & Elephant Ear Fish",
-    slug: "hanoi-street-food-culture",
-    category_name: "Gastronomy",
+    title: "The Mekong Khăn Rằn: Unweaving a 300-Year Heritage & Modern Styling Guide",
+    slug: "khan-ran-nam-bo",
+    category_name: "Cultural Heritage",
     readingTime: 6,
     featuredImage: "https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp",
-    excerpt: "Dine with authentic flavor. A deep dive into Southern herbs, traditional rice paper steaming, crispy savory pancakes, and Mekong river specialties."
+    excerpt: "An intimate field guide to the iconic black-and-white checkered scarf of the Mekong Delta, 300-year history, and artisanal weaving villages."
   },
   {
-    title: "Cu Chi Tunnels Historical Guide: Ben Dinh vs Ben Duoc Complete Walkthrough",
-    slug: "cu-chi-tunnels-ben-dinh-ben-duoc",
-    category_name: "Culture & Heritage",
-    readingTime: 7,
+    title: "Cu Chi Tunnels: Ultimate Insider Field Guide & Ben Dinh vs Ben Duoc",
+    slug: "tour/half-day-cu-chi-tunnels-tour",
+    category_name: "Historical Expeditions",
+    readingTime: 5,
     featuredImage: "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp",
-    excerpt: "An insider exploration comparing the guerrilla tunnel systems of Ben Dinh and Ben Duoc, war relics, and visiting logistics from Saigon."
+    excerpt: "Comparing guerrilla underground systems, trap mechanics, war history, and logistics from Ho Chi Minh City."
+  },
+  {
+    title: "Mekong Delta Waterways: Ben Tre & My Tho Island Life Exploration",
+    slug: "destination/mekong-delta",
+    category_name: "Nature & Ecology",
+    readingTime: 7,
+    featuredImage: "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp",
+    excerpt: "Rowing through narrow Nypa palm canals, tasting raw honey, and experiencing living river culture in the delta heartland."
+  },
+  {
+    title: "Saigon Historic Quarters: French Architecture & Street Life",
+    slug: "tour/ho-chi-minh-city-half-day-private-tour",
+    category_name: "City Discovery",
+    readingTime: 5,
+    featuredImage: "https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp",
+    excerpt: "Discover Saigon's hidden alleyways, historic landmark monuments, and centuries-old local culinary traditions."
   }
 ];
 
@@ -107,11 +107,11 @@ if (!articles || articles.length === 0) {
     </div>
 
     <!-- Mobile Swipe Indicator -->
-    <div class="flex sm:hidden items-center justify-between text-xs text-gray-500 font-medium -mt-6 mb-4 px-1">
-      <span class="inline-flex items-center gap-1.5 text-brand-600 font-bold text-[11px] uppercase tracking-wider">
+    <div class="flex sm:hidden items-center justify-between text-xs text-gray-700 font-medium -mt-6 mb-4 px-1">
+      <span class="inline-flex items-center gap-1.5 text-brand-800 font-bold text-[11px] uppercase tracking-wider">
         <span>👈</span> Swipe guides
       </span>
-      <span class="text-[11px] text-gray-400 font-semibold">{articles.length} Articles</span>
+      <span class="text-[11px] text-gray-700 font-bold">{articles.length} Articles</span>
     </div>
 
     <!-- Articles Horizontal Carousel Track -->
@@ -122,25 +122,25 @@ if (!articles || articles.length === 0) {
       {articles.map((a: any) => (
         <article class="w-[82vw] max-w-[340px] sm:w-[340px] md:w-[360px] lg:w-[380px] shrink-0 snap-start group bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:border-brand-200 transition-all duration-300 flex flex-col justify-between">
           <div>
-            <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+            <div class="relative aspect-[16/9] overflow-hidden bg-gray-100">
               <img 
                 src={a.featuredImage || "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp"} 
                 alt={a.title} 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
-              <span class="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-md text-brand-600 text-[10.5px] font-extrabold rounded-full border border-gray-100 shadow-sm uppercase tracking-wider">
+              <span class="absolute top-4 left-4 px-3 py-1 bg-white/95 backdrop-blur-md text-brand-800 text-[10.5px] font-extrabold rounded-full border border-gray-100 shadow-sm uppercase tracking-wider">
                 {a.category_name || "Travel Guide"}
               </span>
             </div>
 
             <div class="p-6">
-              <div class="flex items-center gap-2 text-gray-400 text-xs font-semibold mb-2">
+              <div class="flex items-center gap-2 text-gray-700 text-xs font-semibold mb-2">
                 <span>⏱️ {a.readingTime ? `${a.readingTime} min read` : '5 min read'}</span>
               </div>
 
               <h3 class="font-serif text-lg sm:text-xl font-bold text-gray-900 group-hover:text-brand-600 transition-colors leading-snug mb-3 line-clamp-2">
-                <a href={`/${a.slug}`}>
+                <a href={`/${a.slug}`} class="block py-1">
                   {a.title}
                 </a>
               </h3>
@@ -156,7 +156,7 @@ if (!articles || articles.length === 0) {
           <div class="p-6 pt-0">
             <a 
               href={`/${a.slug}`} 
-              class="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 group-hover:text-brand-600 transition-colors uppercase tracking-wider"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 group-hover:text-brand-600 transition-colors uppercase tracking-wider py-2"
             >
               <span>Read Full Guide</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>

@@ -2,6 +2,7 @@
 import { env } from 'cloudflare:workers';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Pagination from '@/components/ui/Pagination.astro';
+import BlogCardImage from '@/components/blog/BlogCardImage.astro';
 import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
 
 let { slug } = Astro.params;
@@ -61,13 +62,13 @@ const tagPosts = tagPostsRes.results || [];
 ---
 
 <BaseLayout 
-  title={`${tagData.name} - FIT TOUR`} 
-  description={tagData.description || `Tổng hợp bài viết, hình ảnh và kinh nghiệm thực tế về ${tagData.name}. Cập nhật thông tin mới nhất từ FIT TOUR.`}
+  title={`${tagData.name} - The Rice Tour`} 
+  description={tagData.description || `Explore curated stories, images, and field notes tagged with ${tagData.name} from The Rice Tour.`}
 >
   <section class="py-16 md:py-24 bg-slate-50 min-h-[60vh]">
     <div class="max-w-[1200px] mx-auto px-4 md:px-8">
       <div class="text-center mb-12 lg:mb-16">
-        <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-3 block">THẺ (TAG)</span>
+        <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-3 block">TAGGED TOPIC</span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight capitalize mb-4">{tagData.name}</h1>
       </div>
       
@@ -75,12 +76,12 @@ const tagPosts = tagPostsRes.results || [];
         <>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {tagPosts.map((p: any) => (
-              <a href={`/${p.slug}`} class="group block">
-                <div class="overflow-hidden mb-6 bg-slate-50 rounded-lg">
-                  <img src={p.featuredImage ? getCanonicalMediaUrl(p.featuredImage) : '/placeholder-image.jpg'} alt={p.title} class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+              <a href={`/${p.slug}`} class="group block bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300">
+                <BlogCardImage src={p.featuredImage} alt={p.title} title={p.title} />
+                <div class="p-6">
+                  <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-2">{p.title}</h3>
+                  <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
                 </div>
-                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-[#ea580c] transition-colors leading-tight line-clamp-3">{p.title}</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed line-clamp-3">{p.excerpt}</p>
               </a>
             ))}
           </div>
@@ -92,7 +93,7 @@ const tagPosts = tagPostsRes.results || [];
         </>
       ) : (
         <div class="text-center py-12">
-          <p class="text-slate-500">Chưa có bài viết nào được gắn thẻ này.</p>
+          <p class="text-slate-500">No stories tagged with this topic yet.</p>
         </div>
       )}
     </div>

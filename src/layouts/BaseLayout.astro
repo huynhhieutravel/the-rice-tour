@@ -2,9 +2,11 @@
 import { env } from 'cloudflare:workers';
 import HeadMeta from '@/components/seo/HeadMeta.astro';
 import ResourceHints from '@/components/seo/ResourceHints.astro';
+import InboundNavbar from '@/components/inbound/InboundNavbar.astro';
+import InboundFooter from '@/components/inbound/InboundFooter.astro';
 import Header from '@/components/layout/header/default/Header.astro';
 import Footer from '@/components/v2/V2Footer.astro';
-import FloatingToast from '@/components/ReactApp/FloatingToast.tsx';
+import FloatingToast from '@/components/ui/FloatingToast.tsx';
 import { getGlobalSettings } from '@/lib/settingsHelper';
 import { replaceTokens } from '@/lib/contentTokens';
 import CorporateContactModal from '@/components/forms/CorporateContactModal.astro';
@@ -68,8 +70,9 @@ if (isCorporate) {
 }
 ---
 
-<html lang="vi" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
+    <ResourceHints preloadImages={preloadImages} />
     <HeadMeta 
       title={title} 
       description={description} 
@@ -140,7 +143,6 @@ if (isCorporate) {
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
     </noscript>
-    <ResourceHints preloadImages={preloadImages} />
     {globalSchema && (globalSchema.includes('<scrip' + 't') ? 
       <Fragment set:html={globalSchema} /> : 
       <script type="application/ld+json" set:html={globalSchema} />
@@ -164,16 +166,16 @@ if (isCorporate) {
         {adminEditUrl && (
           <a href={adminEditUrl} style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
             <svg style="margin-right: 6px;" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
-            {adminEditUrl.includes('/tours/') ? 'Sửa Tour' : adminEditUrl.includes('/pages/') ? 'Sửa Trang' : 'Sửa bài viết'}
+            {adminEditUrl.includes('/tours/') ? 'Edit Tour' : adminEditUrl.includes('/pages/') ? 'Edit Page' : 'Edit Article'}
           </a>
         )}
         <a href="/admin/posts/edit" style="color: #f0f0f1; text-decoration: none; padding: 0 12px; display: flex; align-items: center; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='#2c3338'; this.style.color='#72aee6'" onmouseout="this.style.background='transparent'; this.style.color='#f0f0f1'">
-          <span style="font-size: 16px; margin-right: 4px; line-height: 1;">+</span> Tạo mới
+          <span style="font-size: 16px; margin-right: 4px; line-height: 1;">+</span> New Post
         </a>
       </div>
       <div style="display: flex; align-items: center; height: 100%;">
         <span style="padding: 0 12px; display: flex; align-items: center; height: 100%; color: #f0f0f1; cursor: default;">
-          Xin chào, {adminUsername}
+          Hello, {adminUsername}
           <img src={`https://ui-avatars.com/api/?name=${adminUsername}&background=3b82f6&color=fff&size=32`} alt={adminUsername} style="width: 18px; height: 18px; border-radius: 50%; margin-left: 8px;" />
         </span>
       </div>
@@ -190,11 +192,11 @@ if (isCorporate) {
               tools: [
                 {
                   name: "search_tours",
-                  description: "Tìm kiếm thông tin tour du lịch FIT Tour",
+                  description: "Search Vietnam Inbound Tours with The Rice Tour",
                   inputSchema: {
                     type: "object",
                     properties: {
-                      query: { type: "string", description: "Từ khóa hoặc địa điểm (VD: Nhật Bản, Châu Âu)" }
+                      query: { type: "string", description: "Keyword or destination (e.g., Cu Chi, Mekong Delta, Saigon)" }
                     },
                     required: ["query"]
                   },
@@ -214,7 +216,9 @@ if (isCorporate) {
     </script>
 
     <slot name="header">
-      {!finalHideHeader && <Header isCorporate={isCorporate} />}
+      {!finalHideHeader && (
+        isCorporate ? <Header isCorporate={true} /> : <InboundNavbar />
+      )}
     </slot>
 
     <main id="main-content" class="flex-grow w-full">
@@ -225,7 +229,9 @@ if (isCorporate) {
     { !isAppView && <FloatingToast client:only="react" /> }
 
     <slot name="footer">
-      {!finalHideFooter && <Footer />}
+      {!finalHideFooter && (
+        isCorporate ? <Footer /> : <InboundFooter />
+      )}
     </slot>
 
     {isCorporate && corporateBottomMenuHtml ? (

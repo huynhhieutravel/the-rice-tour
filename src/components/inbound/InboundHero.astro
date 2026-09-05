@@ -8,8 +8,12 @@
     <img 
       src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" 
       alt="Authentic Vietnam Private Tour Mekong Waterways" 
-      class="w-full h-full object-cover object-center scale-105 animate-pulse duration-[10000ms]"
+      class="w-full h-full object-cover object-center"
       fetchpriority="high"
+      loading="eager"
+      decoding="async"
+      width="1920"
+      height="1080"
     />
     <!-- Lighter overlay for a brighter feel, while keeping text readable -->
     <div class="absolute inset-0 bg-gradient-to-t from-gray-950/75 via-gray-950/40 to-gray-950/20"></div>
@@ -20,9 +24,9 @@
     
     <!-- Top Pill Badge -->
     <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/20 border border-white/40 backdrop-blur-md mb-6 shadow-lg">
-      <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+      <span class="w-2 h-2 rounded-full bg-amber-400"></span>
       <span class="text-xs uppercase tracking-[0.25em] font-bold text-white">
-        Boutique Vietnam Inbound Specialist
+        The Rice Tour • Boutique Vietnam Inbound Specialist
       </span>
     </div>
 
@@ -33,7 +37,7 @@
     </h1>
 
     <p class="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10 drop-shadow-md">
-      From authentic Cu Chi underground tunnels and serene Mekong sampan waterways to Saigon heritage and cooking masterclasses—travel with your 24/7 dedicated local concierge.
+      From authentic Cu Chi underground tunnels and serene Mekong sampan waterways to Saigon heritage and cooking masterclasses—travel with your 24/7 dedicated local concierge at The Rice Tour.
     </p>
 
     <!-- Quick Search Widget Container - Light Mode -->
@@ -42,23 +46,25 @@
         
         <!-- Keyword Search -->
         <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
-          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+          <label for="hero-search-q" class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-800 mb-1">
             🔍 Keyword
           </label>
           <input 
+            id="hero-search-q"
             type="text" 
             name="q" 
             placeholder="e.g. Cu Chi, Mekong..." 
+            aria-label="Search tours by keyword"
             class="w-full bg-transparent text-gray-900 text-sm font-semibold placeholder-gray-400 focus:outline-none"
           />
         </div>
 
         <!-- Region Select -->
         <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
-          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+          <label for="hero-search-dest" class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-800 mb-1">
             📍 Destination
           </label>
-          <select name="country" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
+          <select id="hero-search-dest" name="country" aria-label="Select destination region" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
             <option value="" class="bg-white text-gray-900">All Destinations</option>
             <option value="south-vietnam" class="bg-white text-gray-900">Cu Chi &amp; Countryside</option>
             <option value="south-vietnam" class="bg-white text-gray-900">Mekong Delta</option>
@@ -68,10 +74,10 @@
 
         <!-- Duration Select -->
         <div class="bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-2xl p-3 transition-colors">
-          <label class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-600 mb-1">
+          <label for="hero-search-dur" class="block text-[10.5px] uppercase tracking-wider font-bold text-brand-800 mb-1">
             ⏱️ Duration
           </label>
-          <select name="duration" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
+          <select id="hero-search-dur" name="duration" aria-label="Select tour duration" class="w-full bg-transparent text-gray-900 text-sm font-semibold focus:outline-none cursor-pointer">
             <option value="" class="bg-white text-gray-900">Any Duration</option>
             <option value="half-day" class="bg-white text-gray-900">Half Day (4–5h)</option>
             <option value="full-day" class="bg-white text-gray-900">Full Day (8h)</option>
@@ -79,14 +85,14 @@
           </select>
         </div>
 
-        <!-- Submit Search Button -->
-        <div class="flex items-center">
+        <!-- Submit Button -->
+        <div class="flex items-end">
           <button 
             type="submit" 
-            class="w-full h-full min-h-[52px] bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
+            class="w-full h-full min-h-[52px] bg-brand-700 hover:bg-brand-800 text-white font-extrabold text-xs uppercase tracking-widest rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 transform active:scale-98 cursor-pointer"
           >
             <span>Explore Tours</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </button>
         </div>
 

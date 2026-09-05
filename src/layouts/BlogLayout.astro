@@ -87,12 +87,12 @@ if (!finalSchemaToRender) {
     {customCss && <style is:inline set:html={customCss}></style>}
   </Fragment>
 
-  <main class:list={[isLandingPage ? "w-full pb-12 lg:pb-20" : "site-container py-8 lg:py-12"]}>
+  <main class:list={[isLandingPage ? "w-full pb-12 lg:pb-20" : "site-container pt-8 sm:pt-10 pb-12 lg:pb-16"]}>
     {!hideTitleAndMeta && (
-    <nav class:list={["flex text-sm text-secondary mb-8", (isLandingPage || isFullWidth) && "site-container mt-8"]} aria-label="Breadcrumb">
+    <nav class:list={["flex text-sm text-secondary mb-8", (isLandingPage || isFullWidth) && "site-container mt-4"]} aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2">
         <li class="inline-flex items-center">
-          <a href="/" class="text-secondary hover:text-brand-700 font-medium transition-colors">Trang chủ</a>
+          <a href="/" class="text-secondary hover:text-brand-700 font-medium transition-colors">Home</a>
         </li>
         <li aria-current="page">
           <div class="flex items-center">
@@ -135,7 +135,7 @@ if (!finalSchemaToRender) {
                 ) : (
                   <p class="font-bold text-primary">{author}</p>
                 )}
-                <p class="text-xs text-muted">Content Creator</p>
+                <p class="text-xs text-muted">Travel Specialist</p>
               </div>
             </div>
             
@@ -147,14 +147,14 @@ if (!finalSchemaToRender) {
             {readTime && (
               <div class="flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                {readTime} phút đọc
+                {readTime} min read
               </div>
             )}
             
             {views && (
               <div class="flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                {views} lượt xem
+                {views} views
               </div>
             )}
           </div>
@@ -182,7 +182,7 @@ if (!finalSchemaToRender) {
           <!-- Tags Section -->
           {tags && tags.length > 0 && (
             <div class:list={["pt-8 border-t border-border", !isFullWidth && "mt-12"]}>
-              <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Từ khóa nổi bật</div>
+              <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Key Topics</div>
               <div class="flex flex-wrap gap-2">
                 {tags.map((tag: any) => (
                   <a href={`/tag/${tag.slug}`} class="text-xs px-4 py-2 bg-subtle text-primary font-medium rounded-full hover:bg-brand-500 hover:text-white transition-colors duration-200 shadow-sm whitespace-nowrap">
@@ -221,16 +221,16 @@ if (!finalSchemaToRender) {
         <aside class="lg:col-span-4 flex flex-col gap-8 order-2">
           <div class="hidden lg:block sticky top-32 space-y-8 self-start max-h-[calc(100vh-140px)] overflow-y-auto hide-scrollbar pb-8">
           <TableOfContents />
-          <AuthorBox name={author} role="Content Creator" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
+          <AuthorBox name={author} role="Travel Specialist" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
           <RelatedTourWidget />
           
           <!-- Auto QR Code Widget -->
           <div class="bg-surface rounded-2xl p-6 shadow-sm border border-border flex flex-col items-center text-center">
-            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Quét để đọc trên Mobile</div>
+            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Scan to Read on Mobile</div>
             <div class="p-2 bg-white rounded-xl border border-border inline-block mb-3">
-               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Mã QR Bài Viết" width="150" height="150" class="block" loading="lazy" />
+               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Article QR Code" width="150" height="150" class="block" loading="lazy" />
             </div>
-            <p class="text-xs text-muted">Sử dụng Camera điện thoại để quét mã và tiếp tục đọc.</p>
+            <p class="text-xs text-muted">Scan with your smartphone camera to continue reading.</p>
           </div>
 
           {!hasCustomRelated && <RelatedPosts posts={relatedPosts} />}
@@ -238,13 +238,13 @@ if (!finalSchemaToRender) {
         </div>
         <!-- Tablet/Mobile Sidebar (non-sticky, reordered) -->
         <div class="lg:hidden flex flex-col gap-8">
-          <AuthorBox name={author} role="Content Creator" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
+          <AuthorBox name={author} role="Travel Specialist" avatar={`https://ui-avatars.com/api/?name=${encodeURIComponent(author || 'Admin')}&background=f59e0b&color=fff&size=150`} profileUrl={authorUrl} />
           <ShareButtons />
           
           <div class="bg-surface rounded-2xl p-6 shadow-sm border border-border flex flex-col items-center text-center">
-            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Quét để chia sẻ</div>
+            <div class="text-sm font-bold text-primary uppercase tracking-wider mb-4">Scan to Share</div>
             <div class="p-2 bg-white rounded-xl border border-border inline-block mb-3">
-               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Mã QR Bài Viết" width="150" height="150" class="block" loading="lazy" />
+               <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(canonicalUrl)}`} alt="Article QR Code" width="150" height="150" class="block" loading="lazy" />
             </div>
           </div>
 
