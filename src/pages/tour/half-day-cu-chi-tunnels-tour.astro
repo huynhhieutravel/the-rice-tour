@@ -23,8 +23,8 @@ const tourTitle = tour?.title || "Half-Day Premium Cu Chi Tunnels Discovery";
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "A premium half-day journey exploring the historic 200km underground Cu Chi Tunnels. Max 5 guests in a private 7-seater van, fresh homemade Banh Mi breakfast, expert guide, boiled cassava tasting, and a dedicated photographer throughout.";
 const featuredImage = tour?.featuredImage || tour?.ogImage || "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp";
-const basePrice = tour?.price_number || 1890000;
-const formattedPrice = tour?.price_text || "1,890,000 VND";
+const basePrice = tour?.price_number && tour.price_number < 1000 ? tour.price_number : 75;
+const formattedPrice = tour?.price_text && tour.price_text.includes('$') ? tour.price_text : "$75 USD";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
@@ -51,7 +51,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     "offers": {
       "@type": "Offer",
       "url": canonicalUrl,
-      "priceCurrency": "VND",
+      "priceCurrency": "USD",
       "price": basePrice.toString(),
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
@@ -69,7 +69,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
   })} />
 
   <div class="bg-gray-50/60 min-h-screen">
-    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-16">
       
       <!-- BREADCRUMB -->
       <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
@@ -148,7 +148,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
             <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
               <p class="text-slate-700 text-[16.5px] sm:text-lg leading-relaxed mb-4">
-                <strong class="text-slate-900">Some journeys are more than just travel — they are a chance to reach out and touch history.</strong> The Cu Chi Tunnels, a network of over 200 kilometers of hand-dug underground passages, stand as a living testament to the extraordinary will of the Vietnamese people. At <a href="https://www.google.com/maps/place/Cu+Chi+Tunnes+-+Mekong+Delta/@10.7675397,106.6937879,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f004d8db6fd:0x953f9f5e77bd1fb1!8m2!3d10.7675397!4d106.6937879!16s%2Fg%2F11npvw2gjf!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we offer a half-day journey to explore this legendary site in our own way: small groups of no more than 5 guests, accompanied by a professional guide and dedicated photographer — so you truly feel and understand the history, rather than simply passing through it.
+                <strong class="text-slate-900">Some journeys are more than just travel — they are a chance to reach out and touch history.</strong> The Cu Chi Tunnels, a network of over 200 kilometers of hand-dug underground passages, stand as a living testament to the extraordinary will of the Vietnamese people. At <a href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we offer a half-day journey to explore this legendary site in our own way: small groups of no more than 5 guests, accompanied by a professional guide and dedicated photographer — so you truly feel and understand the history, rather than simply passing through it.
               </p>
               <div class="border-t border-slate-100 pt-3.5">
                 <p class="font-bold text-slate-900 text-lg mb-2.5">The Rice Travel Group's Signature Differences:</p>
@@ -188,7 +188,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
                 </a>
                 
-                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="social-btn msg">
+                <a href="https://zalo.me/0962333621" target="_blank" rel="noopener noreferrer" class="social-btn msg">
                   <div class="social-icon-wrapper">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                   </div>
@@ -286,7 +286,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
               <div class="unfold-content">
                 <p><strong>Some journeys are more than just travel — they are a chance to reach out and touch history.</strong></p>
                 <p>The Cu Chi Tunnels, a network of over 200 kilometers of hand-dug underground passages, stand as a living testament to the extraordinary will, ingenuity, and resilience of the Vietnamese people.</p>
-                <p>At <a href="https://www.google.com/maps/place/Cu+Chi+Tunnes+-+Mekong+Delta/@10.7675397,106.6937879,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f004d8db6fd:0x953f9f5e77bd1fb1!8m2!3d10.7675397!4d106.6937879!16s%2Fg%2F11npvw2gjf!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we offer a dedicated half-day journey to explore this legendary site in our own way: small groups of no more than 5 guests in a private 7-seater van, accompanied by a professional guide and a dedicated photographer — so you truly feel and understand the history, rather than simply passing through it.</p>
+                <p>At <a href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we offer a dedicated half-day journey to explore this legendary site in our own way: small groups of no more than 5 guests in a private 7-seater van, accompanied by a professional guide and a dedicated photographer — so you truly feel and understand the history, rather than simply passing through it.</p>
                 <p>The morning unfolds gently with freshly baked Vietnamese bánh mì prepared by our kitchen team, a stop at a traditional lacquerware workshop, an insightful historical documentary screening, hands-on exploration of the secret trapdoors, and an authentic tasting of boiled cassava dipped in peanut salt beneath the primeval forest canopy.</p>
                 <div class="unfold-overlay"></div>
               </div>
@@ -311,7 +311,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
                 </div>
                 <div class="text-center">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333621" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
                 </div>
               </div>
@@ -392,20 +392,20 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <details class="premium-itinerary-item" open>
                     <summary class="premium-itinerary-summary">
                       <div class="itinerary-toggle-icon"></div>
-                      <span>08:00 AM — Pickup at 189 De Tham, Homemade Bánh Mì & Lacquerware Stop</span>
+                      <span>08:00 AM — Pickup at 195 De Tham, Homemade Bánh Mì & Lacquerware Stop</span>
                     </summary>
                     <div class="premium-itinerary-content custom-blog-prose max-w-none">
                       <div class="bg-slate-50 p-4 rounded-md mb-6 border border-slate-200">
                         <p class="font-bold text-slate-800 mb-2">Stage Highlights:</p>
                         <ul class="list-disc pl-5 text-slate-700 m-0 space-y-1">
-                          <li>Pickup at 189 De Tham Street, District 1 in a private 7-seater van</li>
+                          <li>Pickup at 195 De Tham Street, District 1 in a private 7-seater van</li>
                           <li>Freshly made crispy Bánh Mì prepared by The Rice Travel Group's kitchen team</li>
                           <li>Visit Dai Viet Cu Chi Lacquerware Workshop & see master artisans at work</li>
                           <li>First set of candid travel photos captured by your dedicated photographer</li>
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>08:00 AM — Guest Pickup at 189 De Tham Street, District 1:</strong> Your private air-conditioned 7-seater vehicle departs from central Saigon. Settle into your spacious seat and enjoy freshly baked Vietnamese bánh mì prepared by The Rice Travel Group's kitchen team throughout the 60–70 minute scenic drive to the northwestern outskirts.</p>
+                      <p style="margin-bottom:14px"><strong>08:00 AM — Guest Pickup at 195 De Tham Street, District 1:</strong> Your private air-conditioned 7-seater vehicle departs from central Saigon. Settle into your spacious seat and enjoy freshly baked Vietnamese bánh mì prepared by The Rice Travel Group's kitchen team throughout the 60–70 minute scenic drive to the northwestern outskirts.</p>
                       
                       <p style="margin-bottom:14px"><strong>09:15 AM — Stop at Dai Viet Cu Chi Lacquerware Workshop:</strong> Before stepping into the historic combat zone, take a gentle pause at a traditional lacquerware workshop. Watch skilled craftsmen painstakingly create mother-of-pearl lacquer paintings, hand-embroidered art, and gemstone jewelry — a relaxing cultural introduction that eases your mind into the soul of Cu Chi.</p>
                     </div>
@@ -486,7 +486,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 
                       <p style="margin-bottom:14px"><strong>12:30 PM — Savor Boiled Cassava with Peanut-Sesame Salt:</strong> Gather around a rustic bamboo pavilion under the Cu Chi forest canopy to savor the exact staple sustenance that kept fighters alive during the war: warm, soft boiled cassava dipped in crushed peanut-sesame salt, paired with a cup of hot jasmine tea. Simple, tranquil, and deeply memorable.</p>
                       
-                      <p style="margin-bottom:14px"><strong>01:00 PM — 02:00 PM — Return Transfer to Central Saigon:</strong> Board your private van for the relaxing return trip back to Ho Chi Minh City, arriving at 189 De Tham Street around 02:00 PM – 02:30 PM. Your guide and photographer bid you a warm farewell, sending over the complete high-resolution photo album right to your device!</p>
+                      <p style="margin-bottom:14px"><strong>01:00 PM — 02:00 PM — Return Transfer to Central Saigon:</strong> Board your private van for the relaxing return trip back to Ho Chi Minh City, arriving at 195 De Tham Street around 02:00 PM – 02:30 PM. Your guide and photographer bid you a warm farewell, sending over the complete high-resolution photo album right to your device!</p>
                     </div>
                   </details>
 
@@ -527,7 +527,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                               <span class="text-orange-500 shrink-0">🚐</span>
                               <span class="font-semibold text-slate-700">Private 7-seater Van</span>
                             </div>
-                            <div class="text-[12.5px] text-slate-500 mt-0.5">Pickup at 189 De Tham, Dist. 1</div>
+                            <div class="text-[12.5px] text-slate-500 mt-0.5">Pickup at 195 De Tham, Dist. 1</div>
                           </td>
                           <td class="p-4">
                             <div class="font-bold text-slate-800">Daily Departure</div>
@@ -566,7 +566,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <span class="text-orange-500 shrink-0">🚐</span>
                           <span class="font-semibold text-slate-700">Private 7-seater Van</span>
                         </div>
-                        <div class="text-[12.5px] text-slate-500">Pickup at 189 De Tham, District 1</div>
+                        <div class="text-[12.5px] text-slate-500">Pickup at 195 De Tham, District 1</div>
                       </div>
                       <div class="flex items-center gap-2 text-base text-slate-600 mb-1">
                         <span>🛫 Daily Departure (08:00 - 14:00)</span>
@@ -601,7 +601,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </summary>
                   <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
                     <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
-                      <li>Private 7-seat air-conditioned vehicle, door-to-door from 189 De Tham, central Saigon.</li>
+                      <li>Private 7-seat air-conditioned vehicle, door-to-door from 195 De Tham, central Saigon.</li>
                       <li>Fresh homemade Vietnamese Bánh Mì breakfast served on board.</li>
                       <li>Professional English/Vietnamese speaking guide with deep historical knowledge.</li>
                       <li>Dedicated photographer — full edited high-resolution photo set delivered after the trip.</li>
@@ -740,7 +740,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
                     Zalo Consult
                   </a>
-                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
+                  <a href="https://zalo.me/0962333621" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                     Messenger
                   </a>
@@ -803,8 +803,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 1 -->
           <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Mekong Delta Ben Tre & My Tho" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -814,7 +814,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">2,890,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$114 USD</span>
                 </div>
               </div>
             </div>
@@ -823,8 +823,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 2 -->
           <a href="/tour/1-day-premium-cu-chi-tunnels" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="1-Day Premium Cu Chi Tunnels & Saigon" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -834,7 +834,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">3,090,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$122 USD</span>
                 </div>
               </div>
             </div>
@@ -843,7 +843,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 3 -->
           <a href="/tour/2-day-mekong-delta-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
                 <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="2-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">2 Days 1 Night</span>
               </div>
@@ -854,7 +854,27 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">4,990,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$197 USD</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Ho Chi Minh City Half-Day Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Ho Chi Minh City Half-Day Private Tour</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Colonial heritage, Book Street & Saigon WaterBus sunset cruise</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$67 USD</span>
                 </div>
               </div>
             </div>
@@ -915,7 +935,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           </div>
           <div class="text-left">
             <h4 class="text-sm font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
-            <p class="text-sm text-slate-600 leading-relaxed m-0">189 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">195 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
           </div>
         </div>
 
@@ -1051,7 +1071,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       if (minusBtn && plusBtn && countDisplay && priceDisplay) {
         let currentGuests = 1;
         const maxGuests = 5;
-        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "1890000", 10);
+        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "75", 10);
 
         function updateGuests(delta: number) {
           const newGuests = Math.min(Math.max(1, currentGuests + delta), maxGuests);
@@ -1060,7 +1080,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           countDisplay.textContent = currentGuests.toString();
 
           const total = basePrice * currentGuests;
-          priceDisplay.textContent = total.toLocaleString("vi-VN") + " VND";
+          priceDisplay.textContent = "$" + total.toLocaleString("en-US") + " USD";
         }
 
         minusBtn.onclick = () => updateGuests(-1);
@@ -1104,7 +1124,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           const zaloBtn = document.createElement('a');
-          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.href = 'https://zalo.me/0962333621';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
           zaloBtn.innerHTML = '💬 Chat Zalo for Consult';

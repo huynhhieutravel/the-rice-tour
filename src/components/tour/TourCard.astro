@@ -37,11 +37,11 @@ const reviews = Astro.props.reviews || (15 + (hash % 70)).toString();
 const showHotBadge = (hash % 3 === 0);
 
 const defaultQuotes = [
-  "Hành trình khám phá những vùng đất mới, nơi giao thoa của lịch sử, văn hóa và cảnh sắc thiên nhiên tuyệt mỹ.",
-  "Đắm chìm trong vẻ đẹp nguyên sơ và trải nghiệm những khoảnh khắc đáng nhớ nhất cùng những người bạn đồng hành.",
-  "Một chuyến đi không chỉ là điểm đến, mà là những câu chuyện tuyệt vời bạn sẽ mang theo suốt cuộc đời.",
-  "Mở rộng tầm mắt và trái tim với những trải nghiệm văn hóa độc bản, chỉ có tại vùng đất diệu kỳ này.",
-  "Đánh thức giác quan với những khung cảnh hùng vĩ, sắc màu văn hóa và nền ẩm thực địa phương bản sắc."
+  "An intimate journey uncovering timeless heritage, local artisans, and breathtaking landscapes.",
+  "Immerse yourself in authentic cultural traditions and unforgettable private excursions.",
+  "More than a journey — a curated story of Vietnam you will cherish for a lifetime.",
+  "Expand your horizons with bespoke cultural encounters crafted with distinct elegance.",
+  "Awaken your senses with stunning riverways, historic landmarks, and refined local flavors."
 ];
 
 const fallbackQuote = defaultQuotes[hash % defaultQuotes.length];
@@ -53,7 +53,7 @@ let cleanDesc = description
   .replace(/<[^>]*>/g, '')
   .replace(/\s+/g, ' ')
   .trim();
-if (!cleanDesc || cleanDesc.includes('Đang cập nhật')) {
+if (!cleanDesc || cleanDesc.includes('Đang cập nhật') || cleanDesc.includes('Updating')) {
   cleanDesc = fallbackQuote;
 } else if (cleanDesc.length > 120) {
   cleanDesc = cleanDesc.substring(0, 115) + '...';
@@ -79,7 +79,7 @@ const srcset = generateSrcSet(image, [400, 800, 1200]);
     <!-- Conditional Badge -->
     {showHotBadge && (
       <div class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm">
-        Hot
+        Popular
       </div>
     )}
   </div>
@@ -101,7 +101,6 @@ const srcset = generateSrcSet(image, [400, 800, 1200]);
     <!-- Title -->
     <div class="font-bold text-primary text-lg mb-2 leading-snug line-clamp-2 group-hover:text-brand-500 transition-colors">
       <a href={url} class="focus:outline-none">
-        <!-- Span absolute to make the whole card clickable for better UX, but we use a real button below -->
         <span class="absolute inset-0 z-10" aria-hidden="true"></span>
         {title}
       </a>
@@ -117,13 +116,12 @@ const srcset = generateSrcSet(image, [400, 800, 1200]);
     <!-- Price & Action (Push to bottom) -->
     <div class="mt-auto pt-4 border-t border-border flex flex-col gap-3 z-20 relative">
       <div class="flex items-center gap-2">
-        <span class="text-sm text-muted">Giá từ:</span>
+        <span class="text-sm text-muted">From:</span>
         <span class="text-brand-500 font-extrabold text-xl">{price}</span>
       </div>
       
-      <!-- Sử dụng Core UI Component -->
       <Button href={url} variant="primary" size="sm" class="w-full justify-center text-center">
-        Xem chi tiết
+        Explore Itinerary
       </Button>
     </div>
   </div>

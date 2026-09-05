@@ -71,11 +71,8 @@ if (contentHtml) {
   if (formattedPrice) {
     if (/^\d+$/.test(formattedPrice.trim())) {
       const num = Number(formattedPrice.trim());
-      if (num < 50000) {
-        formattedPrice = `$${num.toLocaleString('en-US')} USD`;
-      } else {
-        formattedPrice = num.toLocaleString('vi-VN') + ' đ';
-      }
+      const usd = num > 1000 ? Math.ceil(num / 25400) : num;
+      formattedPrice = `$${usd.toLocaleString('en-US')} USD`;
     }
   }
 
@@ -84,11 +81,8 @@ if (contentHtml) {
   }
   if (!formattedPrice && tour.price_number) {
     const num = Number(tour.price_number);
-    if (num < 50000) {
-      formattedPrice = `$${num.toLocaleString('en-US')} USD`;
-    } else {
-      formattedPrice = num.toLocaleString('vi-VN') + ' đ';
-    }
+    const usd = num > 1000 ? Math.ceil(num / 25400) : num;
+    formattedPrice = `$${usd.toLocaleString('en-US')} USD`;
   }
   
   contentHtml = contentHtml.replace(/{{TOUR_PRICE_FORMATTED}}/g, formattedPrice);
@@ -153,7 +147,8 @@ if (contentHtml) {
   }
 }
 
-const productPriceNumber = Number(tour.price_number) || 0;
+const rawPrice = Number(tour.price_number) || 0;
+const productPriceNumber = rawPrice > 1000 ? Math.ceil(rawPrice / 25400) : rawPrice;
 const tourCategory = tour.destination ? `Tour ${tour.destination}` : "Vietnam Inbound Tour";
 
 const productSchema = {
@@ -194,7 +189,7 @@ const productSchema = {
   )}
 
   <div class="bg-gray-50 min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-16">
       <nav class="breadcrumb-tour flex items-center gap-2 text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
         <a href="/" class="hover:text-brand-600 transition-colors">Home</a>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -260,7 +255,7 @@ const productSchema = {
           <div style="width: 32px; height: 32px; border-radius: 8px; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px;">📍</div>
           <div>
             <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Headquarters Office</div>
-            <div style="font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4;">180 Bui Vien Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam</div>
+            <div style="font-size: 13px; font-weight: 600; color: #1e293b; line-height: 1.4;">195 De Tham Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam</div>
           </div>
         </div>
 
@@ -276,7 +271,7 @@ const productSchema = {
           <div style="width: 32px; height: 32px; border-radius: 8px; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px;">📞</div>
           <div>
             <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Office &amp; 24/7 Concierge Hotline</div>
-            <div style="font-size: 13px; font-weight: 700; color: #ea580c;">028.8888.7888 / 0962.333.621 (WhatsApp)</div>
+            <div style="font-size: 13px; font-weight: 700; color: #ea580c;">+84 962 333 621 (WhatsApp 24/7 / Hotline)</div>
           </div>
         </div>
       </div>
@@ -294,7 +289,7 @@ const productSchema = {
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <a href="https://maps.app.goo.gl/edrxP7cFszb5Pdck7" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px; border-radius: 12px; background: #f1f5f9; color: #1e293b; font-weight: 700; font-size: 13px; text-decoration: none; border: 1px solid #cbd5e1;">
+        <a href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px; border-radius: 12px; background: #f1f5f9; color: #1e293b; font-weight: 700; font-size: 13px; text-decoration: none; border: 1px solid #cbd5e1;">
           <span>🗺️ Google Maps</span>
         </a>
         <a href="https://wa.me/84962333621" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px; border-radius: 12px; background: #25D366; color: #ffffff; font-weight: 700; font-size: 13px; text-decoration: none; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
@@ -499,7 +494,7 @@ const productSchema = {
           waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           var zaloBtn = document.createElement('a');
-          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.href = 'https://zalo.me/0962333621';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
           zaloBtn.innerHTML = '💬 Chat Zalo Tư Vấn';

@@ -9,6 +9,15 @@ if (!d1Db) {
   return new Response("Database binding not available", { status: 500 });
 }
 
+const canonicalPrices: Record<string, { price_number: number, price_text: string }> = {
+  'half-day-cu-chi-tunnels-tour': { price_number: 75, price_text: '$75 USD' },
+  '1-day-premium-cu-chi-tunnels': { price_number: 122, price_text: '$122 USD' },
+  'full-day-mekong-delta-tour-ben-tre-my-tho': { price_number: 114, price_text: '$114 USD' },
+  '2-day-mekong-delta-tour': { price_number: 197, price_text: '$197 USD' },
+  'ho-chi-minh-city-half-day-private-tour': { price_number: 67, price_text: '$67 USD' },
+  'cooking-class-local-market': { price_number: 59, price_text: '$59 USD' },
+};
+
 // 1. Get URL search params for filtering and pagination
 const searchParams = Astro.url.searchParams;
 const selectedCountry = searchParams.get('country') || '';
@@ -101,9 +110,18 @@ try {
 }
 
 // Utils
-function formatPriceUSD(priceNumber: number | null, priceText: string | null): string {
+function formatPriceUSD(priceNumber: number | null, priceText: string | null, slug?: string): string {
+  if (slug && canonicalPrices[slug]) {
+    return canonicalPrices[slug].price_text;
+  }
   if (priceText && priceText.includes('$')) return priceText;
-  if (priceNumber) return `$${priceNumber.toLocaleString('en-US')} USD`;
+  if (priceNumber) {
+    if (priceNumber > 1000) {
+      const usd = Math.ceil(priceNumber / 25400);
+      return `$${usd.toLocaleString('en-US')} USD`;
+    }
+    return `$${priceNumber.toLocaleString('en-US')} USD`;
+  }
   return "Inquire for Pricing";
 }
 
@@ -137,7 +155,7 @@ const seoData = {
   title: "Curated Vietnam Inbound Tours & Expeditions | The Rice Tour",
   description: "Browse our private tailor-made itineraries across Vietnam: Sapa rice terraces, Ha Long luxury cruises, ancient Hoi An, and Mekong waterways.",
   canonicalUrl: `https://thericetour.com/tours`,
-  ogImageUrl: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+  ogImageUrl: "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp",
   schemaType: "custom" as const
 };
 ---
@@ -162,7 +180,7 @@ const seoData = {
   <div class="relative w-full bg-slate-950 overflow-hidden">
     <div class="absolute inset-0 opacity-40">
       <img 
-        src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1920&q=80" 
+        src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
         alt="Vietnam Expeditions" 
         class="w-full h-full object-cover"
       />
@@ -323,9 +341,9 @@ const seoData = {
                 <div class="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                   
                   <!-- Thumbnail -->
-                  <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <div class="relative aspect-[16/9] overflow-hidden bg-slate-100">
                     <img 
-                      src={t.featuredImage || "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80"} 
+                      src={t.featuredImage || "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp"} 
                       alt={t.title} 
                       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                       loading="lazy"
@@ -359,7 +377,7 @@ const seoData = {
                       <div>
                         <span class="block text-[10px] uppercase font-bold text-slate-400">From</span>
                         <span class="font-bold text-base text-amber-700">
-                          {formatPriceUSD(t.price_number, t.price_text)}
+                          {formatPriceUSD(t.price_number, t.price_text, t.slug)}
                         </span>
                       </div>
                       <a 

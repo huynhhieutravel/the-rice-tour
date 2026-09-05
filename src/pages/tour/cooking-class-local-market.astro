@@ -23,8 +23,8 @@ const tourTitle = tour?.title || "Authentic Vietnamese Cooking Class & Local Mar
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "Join an authentic market-to-table culinary workshop with the master chefs of Dai Viet Restaurant. Handpick fresh market ingredients, learn traditional fresh spring rolls (Gỏi Cuốn), savor your creations, and enjoy professional photography throughout. Small group max 5 guests.";
 const featuredImage = tour?.featuredImage || tour?.ogImage || "https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp";
-const basePrice = tour?.price_number || 1490000;
-const formattedPrice = tour?.price_text || "1,490,000 VND";
+const basePrice = tour?.price_number && tour.price_number < 1000 ? tour.price_number : 59;
+const formattedPrice = tour?.price_text && tour.price_text.includes('$') ? tour.price_text : "$59 USD";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
@@ -51,7 +51,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     "offers": {
       "@type": "Offer",
       "url": canonicalUrl,
-      "priceCurrency": "VND",
+      "priceCurrency": "USD",
       "price": basePrice.toString(),
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
@@ -69,7 +69,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
   })} />
 
   <div class="bg-gray-50/60 min-h-screen">
-    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-16">
       
       <!-- BREADCRUMB -->
       <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
@@ -122,16 +122,16 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
         <div class="hidden md:flex flex-col gap-2 sm:gap-3">
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" 
-              alt="Fresh aromatic herbs and ingredients selection" 
+              src="https://media.thericetour.com/uploads/banh-khot-mini-pancakes-shrimp-batter-pan-cooking.webp" 
+              alt="Vietnamese Banh Khot mini crispy pancakes sizzling in pan" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
             />
           </div>
           <div class="relative flex-1 overflow-hidden bg-slate-100 aspect-video">
             <img 
-              src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" 
-              alt="Saigon traditional local market ambiance" 
+              src="https://media.thericetour.com/uploads/flames-food-fun-host-holding-live-spiny-lobster-seafood-tank.webp" 
+              alt="Fresh live seafood selection with chef at Dai Viet Restaurant" 
               class="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
               loading="eager" 
             />
@@ -148,7 +148,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
             <!-- GIỚI THIỆU TỔNG QUAN & ĐIỂM NHẤN KHÁC BIỆT -->
             <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 mb-6 shadow-xs">
               <p class="text-slate-700 text-[16.5px] sm:text-lg leading-relaxed mb-4">
-                <strong class="text-slate-900">Discover the authentic soul of Vietnamese gastronomy from market to table.</strong> Guided directly by veteran head chefs from Dai Viet Restaurant Group and <a href="https://www.google.com/maps?q=Cu+Chi+Tunnes+-+Mekong+Delta,+195+-195A-197+%C4%90%E1%BB%81+Th%C3%A1m,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh&ftid=0x31752f004d8db6fd:0x953f9f5e77bd1fb1&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813469,94286869&g_ep=CAISEjI2LjIyLjIuOTIxMTAxNzU3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwODEzNDY5LDk0Mjg2ODY5QgJWTg%3D%3D&skid=a2041110-0626-4183-8401-518cf9822bb4&g_st=ic" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, this hands-on workshop takes you through a bustling wet market to pick farm-fresh organic herbs, teaches you the secrets of traditional Vietnamese fresh spring rolls (Gỏi Cuốn) and savory dipping sauces, and treats you to a celebratory feast of your own handmade creations with full professional photography.
+                <strong class="text-slate-900">Discover the authentic soul of Vietnamese gastronomy from market to table.</strong> Guided directly by veteran head chefs from Dai Viet Restaurant Group and <a href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, this hands-on workshop takes you through a bustling wet market to pick farm-fresh organic herbs, teaches you the secrets of traditional Vietnamese fresh spring rolls (Gỏi Cuốn) and savory dipping sauces, and treats you to a celebratory feast of your own handmade creations with full professional photography.
               </p>
               <div class="border-t border-slate-100 pt-3.5">
                 <p class="font-bold text-slate-900 text-lg mb-2.5">The Rice Travel Group's Signature Differences:</p>
@@ -188,7 +188,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
                 </a>
                 
-                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="social-btn msg">
+                <a href="https://zalo.me/0962333621" target="_blank" rel="noopener noreferrer" class="social-btn msg">
                   <div class="social-icon-wrapper">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                   </div>
@@ -285,7 +285,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
               <input type="checkbox" id="unfold-check" class="unfold-checkbox" />
               <div class="unfold-content">
                 <p><strong>What makes Vietnamese cuisine revered around the world is its delicate balance of five fundamental taste elements — spicy, sour, bitter, salty, and sweet.</strong></p>
-                <p>At <a href="https://www.google.com/maps?q=Cu+Chi+Tunnes+-+Mekong+Delta,+195+-195A-197+%C4%90%E1%BB%81+Th%C3%A1m,+B%E1%BA%BFn+Th%C3%A0nh,+H%E1%BB%93+Ch%C3%AD+Minh&ftid=0x31752f004d8db6fd:0x953f9f5e77bd1fb1&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813469,94286869&g_ep=CAISEjI2LjIyLjIuOTIxMTAxNzU3MBgAIIgnKkksOTQyOTc2OTksOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsMTAwODEzNDY5LDk0Mjg2ODY5QgJWTg%3D%3D&skid=a2041110-0626-4183-8401-518cf9822bb4&g_st=ic" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we believe that true cooking begins at the source: walking into a neighborhood morning market with our executive chef to touch, smell, and select the freshest spearmint, cilantro, rice paper, and succulent shrimp.</p>
+                <p>At <a href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-600 hover:underline">The Rice Travel Group</a>, we believe that true cooking begins at the source: walking into a neighborhood morning market with our executive chef to touch, smell, and select the freshest spearmint, cilantro, rice paper, and succulent shrimp.</p>
                 <p>With an intimate cap of maximum 5 participants per session, you are not watching a demonstration behind a glass window. You will have your own cooking station, cutting board, and personalized guidance from Dai Viet Restaurant's culinary masters. Learn the knife skills, the precise wrapping technique for translucent spring rolls, the chemistry behind authentic dipping sauces, and sit down to enjoy a feast you created with your own hands — with every radiant smile captured by our dedicated photographer.</p>
                 <div class="unfold-overlay"></div>
               </div>
@@ -310,7 +310,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
                 </div>
                 <div class="text-center">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333621" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
                 </div>
               </div>
@@ -341,33 +341,6 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                       Fully equipped air-conditioned culinary workstations, sanitized chef knives and cookware, same-day fresh organic produce, and a comfortable transfer between market and kitchen.
                     </p>
                   </div>
-                </div>
-
-                <!-- ACCOMMODATION SLIDER -->
-                <div class="tour-slider-container">
-                  <div class="tour-slider-track">
-                    <div class="tour-slide">
-                      <img src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" alt="Vietnamese culinary workshop" class="tour-slide-img" />
-                    </div>
-                    <div class="tour-slide">
-                      <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Fresh herbs and market ingredient selection" class="tour-slide-img" />
-                    </div>
-                    <div class="tour-slide">
-                      <img src="https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp" alt="Local market stroll with chef" class="tour-slide-img" />
-                    </div>
-                  </div>
-                  <button class="tour-slider-arrow tour-slider-prev" aria-label="Previous Slide">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                  </button>
-                  <button class="tour-slider-arrow tour-slider-next" aria-label="Next Slide">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                  </button>
-                  <div class="tour-slider-dots">
-                    <button class="tour-slider-dot active" aria-label="Slide 1"></button>
-                    <button class="tour-slider-dot" aria-label="Slide 2"></button>
-                    <button class="tour-slider-dot" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="tour-slider-counter">1 / 3</div>
                 </div>
               </div>
             </section>
@@ -608,37 +581,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
               </div>
             </section>
 
-            <!-- GALLERY ẢNH KHÁCH HÀNG -->
-            <section class="tour-gallery-section mb-12 mt-12 group">
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold text-slate-800 m-0">Customer Cooking Class Moments</h2>
-              </div>
-              <div class="relative">
-                <button class="tour-gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0" aria-label="Previous photo">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-                <button class="tour-gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 backdrop-blur border border-slate-200 hover:bg-orange-500 hover:text-white flex items-center justify-center text-slate-700 shadow-md transition-all opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0" aria-label="Next photo">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                <div class="tour-gallery-slider flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:gap-6 hide-scrollbar cursor-grab active:cursor-grabbing">
-                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://media.thericetour.com/uploads/man-making-rice-paper-steam-traditional-village-mekong.webp" alt="Cooking workshop experience" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
-                  </div>
 
-                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://media.thericetour.com/uploads/white-horse-carriage-decorated-colorful-thoi-son-village.webp" alt="Fresh market produce selection" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
-                  </div>
-
-                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://media.thericetour.com/uploads/woman-holding-beehive-frame-thoi-son-bee-farm.webp" alt="Saigon traditional market exploration" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
-                  </div>
-
-                  <div class="flex-shrink-0 snap-center overflow-hidden rounded-xl bg-slate-100 w-[85%] sm:w-[60%] md:w-[calc(50%-12px)]" style="aspect-ratio: 16/9;">
-                    <img src="https://media.thericetour.com/uploads/seven-story-pagoda-tower-vinh-trang-temple-my-tho.webp" alt="Culinary memories with the chef" class="w-full h-full object-cover pointer-events-none" loading="lazy" />
-                  </div>
-                </div>
-              </div>
-            </section>
 
           </div>
 
@@ -703,7 +646,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
                     Zalo Consult
                   </a>
-                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
+                  <a href="https://zalo.me/0962333621" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                     Messenger
                   </a>
@@ -766,8 +709,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 1 -->
           <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Ho Chi Minh City Half-Day Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Ho Chi Minh City Half-Day Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -777,7 +720,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">1,690,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$67 USD</span>
                 </div>
               </div>
             </div>
@@ -786,8 +729,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 2 -->
           <a href="/tour/half-day-cu-chi-tunnels-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -797,7 +740,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">1,890,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$75 USD</span>
                 </div>
               </div>
             </div>
@@ -806,8 +749,8 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           <!-- Card 3 -->
           <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
                 <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
@@ -817,7 +760,27 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">2,890,000 VND</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$114 USD</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="/tour/1-day-premium-cu-chi-tunnels" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="1-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">1-Day Premium Cu Chi Tunnels & Saigon Discovery</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Underground 200km tunnels, French architecture & Saigon WaterBus sunset</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$122 USD</span>
                 </div>
               </div>
             </div>
@@ -878,7 +841,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           </div>
           <div class="text-left">
             <h4 class="text-sm font-bold text-slate-900 mb-0.5">Dai Viet Culinary Studio</h4>
-            <p class="text-sm text-slate-600 leading-relaxed m-0">195-197 De Tham St., Ben Thanh Ward, District 1, Ho Chi Minh City</p>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">195 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
           </div>
         </div>
 
@@ -1014,7 +977,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       if (minusBtn && plusBtn && countDisplay && priceDisplay) {
         let currentGuests = 1;
         const maxGuests = 5;
-        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "1490000", 10);
+        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "59", 10);
 
         function updateGuests(delta: number) {
           const newGuests = Math.min(Math.max(1, currentGuests + delta), maxGuests);
@@ -1023,7 +986,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           countDisplay.textContent = currentGuests.toString();
 
           const total = basePrice * currentGuests;
-          priceDisplay.textContent = total.toLocaleString("vi-VN") + " VND";
+          priceDisplay.textContent = "$" + total.toLocaleString("en-US") + " USD";
         }
 
         minusBtn.onclick = () => updateGuests(-1);
@@ -1067,7 +1030,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           const zaloBtn = document.createElement('a');
-          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.href = 'https://zalo.me/0962333621';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
           zaloBtn.innerHTML = '💬 Chat Zalo for Consult';

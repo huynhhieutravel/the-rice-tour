@@ -23,8 +23,8 @@ const tourTitle = tour?.title || "1-Day Premium Cu Chi Tunnels & Ho Chi Minh Cit
 const seoTitle = tour?.seoTitle || tourTitle;
 const seoDesc = tour?.seoDescription || tour?.excerpt || "A premium 1-day journey exploring the magnificent 200km Cu Chi Tunnels and Saigon Heritage, followed by a sunset cruise on the Saigon WaterBus. Exclusive VIP small group with a 7-seater van and a professional photographer throughout the trip.";
 const featuredImage = tour?.featuredImage || tour?.ogImage || "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp";
-const basePrice = tour?.price_number || 3090000;
-const formattedPrice = tour?.price_text || "3,090,000 VND";
+const basePrice = tour?.price_number && tour.price_number < 1000 ? tour.price_number : 122;
+const formattedPrice = tour?.price_text && tour.price_text.includes('$') ? tour.price_text : "$122 USD";
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
@@ -51,7 +51,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
     "offers": {
       "@type": "Offer",
       "url": canonicalUrl,
-      "priceCurrency": "VND",
+      "priceCurrency": "USD",
       "price": basePrice.toString(),
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
@@ -69,7 +69,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
   })} />
 
   <div class="bg-gray-50/60 min-h-screen">
-    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 py-3 sm:py-6">
+    <div class="max-w-[1240px] mx-auto px-3.5 sm:px-5 lg:px-6 pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-16">
       
       <!-- BREADCRUMB -->
       <nav class="breadcrumb-tour flex items-center gap-1.5 text-sm sm:text-base text-gray-500 mb-3 sm:mb-4" aria-label="Breadcrumb">
@@ -188,7 +188,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </div>
                 </a>
                 
-                <a href="https://zalo.me/0962333641" target="_blank" rel="noopener noreferrer" class="social-btn msg">
+                <a href="https://zalo.me/0962333621" target="_blank" rel="noopener noreferrer" class="social-btn msg">
                   <div class="social-icon-wrapper">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                   </div>
@@ -311,7 +311,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">WhatsApp 24/7</span>
                 </div>
                 <div class="text-center">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333641" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://zalo.me/0962333621" alt="QR Zalo The Rice Tour" class="w-20 h-20 rounded border border-slate-200 p-1 bg-white" width="90" height="90" />
                   <span class="text-[11.5px] text-slate-500 block mt-1 font-semibold">Zalo Official</span>
                 </div>
               </div>
@@ -405,7 +405,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                         </ul>
                       </div>
 
-                      <p style="margin-bottom:14px"><strong>08:00 AM — Pickup at 189 De Tham, District 1:</strong> Depart from downtown Saigon in a private air-conditioned 7-seater van. During the 60-70 minute drive to the outskirts, you will enjoy a hot, crispy Vietnamese Banh Mi prepared by The Rice Travel Group's culinary team.</p>
+                      <p style="margin-bottom:14px"><strong>08:00 AM — Pickup at 195 De Tham, District 1:</strong> Depart from downtown Saigon in a private air-conditioned 7-seater van. During the 60-70 minute drive to the outskirts, you will enjoy a hot, crispy Vietnamese Banh Mi prepared by The Rice Travel Group's culinary team.</p>
                       
                       <p style="margin-bottom:14px"><strong>09:15 AM — Visit Dai Viet Cu Chi Lacquerware Village:</strong> Take a gentle stop at a traditional lacquer village. Witness artisans skillfully creating exquisite mother-of-pearl inlaid lacquer paintings, fine handicrafts, and gemstone jewelry.</p>
                       
@@ -550,7 +550,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                               <span class="text-orange-500 shrink-0">🚐</span>
                               <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                             </div>
-                            <div class="text-[12.5px] text-slate-500 mt-0.5">HCMC (189 De Tham, Dist. 1)</div>
+                            <div class="text-[12.5px] text-slate-500 mt-0.5">HCMC (195 De Tham, Dist. 1)</div>
                           </td>
                           <td class="p-4">
                             <div class="font-bold text-slate-800">Daily Departure</div>
@@ -589,7 +589,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                           <span class="text-orange-500 shrink-0">🚐</span>
                           <span class="font-semibold text-slate-700">Private 7-seater Van & WaterBus</span>
                         </div>
-                        <div class="text-[12.5px] text-slate-500">Pickup at 189 De Tham, District 1</div>
+                        <div class="text-[12.5px] text-slate-500">Pickup at 195 De Tham, District 1</div>
                       </div>
                       <div class="flex items-center gap-2 text-base text-slate-600 mb-1">
                         <span>🛫 Daily Departure (08:00 - 17:30)</span>
@@ -624,7 +624,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                   </summary>
                   <div class="p-6 md:p-7 text-slate-600 bg-white border-t border-slate-100 text-base">
                     <ol style="list-style: decimal; padding-left: 20px; line-height: 1.8;">
-                      <li>Private air-conditioned 7-seater van with pickup/drop-off at 189 De Tham, District 1 throughout the trip.</li>
+                      <li>Private air-conditioned 7-seater van with pickup/drop-off at 195 De Tham, District 1 throughout the trip.</li>
                       <li>Delicious fresh Banh Mi breakfast served on the van.</li>
                       <li>English/Vietnamese speaking guide with deep historical and cultural knowledge.</li>
                       <li>Professional photographer accompanying the group, providing a high-quality photo album download link after the tour.</li>
@@ -764,7 +764,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 12.3c0-4.9-4.3-8.8-9.5-8.8s-9.5 3.9-9.5 8.8c0 4.1 2.9 7.6 6.8 8.6.2.1.5.3.4.6-.1.4-.4 1.3-.5 1.8-.1.3-.2.4.1.6.3.1.5-.1.8-.3 1.3-.8 2.8-1.8 3.3-2.1.3-.2.6-.2.9-.1 2.3.8 5-.4 6.3-2.3.8-1.5 1-4.1.9-6.8z"></path></svg>
                     Zalo Consult
                   </a>
-                  <a href="https://zalo.me/0962333641" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
+                  <a href="https://zalo.me/0962333621" target="_blank" class="btn-primary btn-msg" style="display:flex; align-items:center; justify-content:center; padding:12px 10px; border-radius:12px; color:#ffffff; font-weight:700; font-size:14.5px; text-decoration:none; background:#0077CC; box-shadow:0 4px 14px rgba(0,119,204,0.25); gap:6px;">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.518 3.735 7.169V22l3.419-1.876c.905.251 1.861.386 2.846.386 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.004 12.443l-2.557-2.729-4.992 2.729 5.492-5.831 2.619 2.729 4.93-2.729-5.492 5.831z"></path></svg>
                     Messenger
                   </a>
@@ -825,60 +825,80 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
         <div id="tour-gallery-scroll" data-component="tour-carousel" class="flex overflow-x-auto -mx-6 px-6 lg:-mx-12 lg:px-12 snap-x snap-mandatory items-stretch" style="gap: 1.25rem; padding-bottom: 2rem; scrollbar-width: none; scroll-behavior: smooth;">
           
           <!-- Card 1 -->
-          <a href="/tour/mekong-delta-floating-life-3d2n" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+          <a href="/tour/half-day-cu-chi-tunnels-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="Mekong Delta" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">3 Days 2 Nights</span>
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Half-Day Premium Cu Chi Tunnels" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Authentic Mekong Delta Waterways & Floating Market</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Can Tho waterways, Cai Rang floating market & lush fruit orchards</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Half-Day Premium Cu Chi Tunnels Discovery</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Hand-dug 200km tunnels, trapdoors & hot cassava with peanut salt</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">$360 USD / pax</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$75 USD</span>
                 </div>
               </div>
             </div>
           </a>
 
           <!-- Card 2 -->
-          <a href="/tour/sapa-rice-terraces-trek-4d3n" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+          <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" alt="Sapa" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">4 Days 3 Nights</span>
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp" alt="Full-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1 Day</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Sapa Majestic Rice Terraces & Hill Tribe Heritage</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Muong Hoa rice terraces, Fansipan peak & H'Mong ethnic villages</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Full-Day Mekong Delta Tour: Ben Tre & My Tho Discovery</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Four mythical islands, hand-paddled sampan & Đờn Ca Tài Tử</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">$420 USD / pax</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$114 USD</span>
                 </div>
               </div>
             </div>
           </a>
 
           <!-- Card 3 -->
-          <a href="/tour/grand-vietnam-discovery-14d13n" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+          <a href="/tour/2-day-mekong-delta-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
             <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
-              <div class="relative aspect-[4/3] w-full overflow-hidden">
-                <img src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" alt="Grand Vietnam" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
-                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">14 Days 13 Nights</span>
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/girls-smiling-red-polka-dress-rowing-boat-mekong-canal.webp" alt="2-Day Mekong Delta Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">2 Days 1 Night</span>
               </div>
               <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Grand Vietnam Discovery: North to South Expedition</h3>
-                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Trans-Vietnam expedition from Hanoi, Halong, Hue, Hoi An to Saigon</p>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">2-Day Authentic Mekong Delta Tour: Cai Rang Sunrise & Can Tho</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Cai Rang floating market sunrise, DIY Bánh Khọt & 3-star riverside hotel</p>
                 </div>
                 <div class="flex items-center justify-between border-t border-slate-100 pt-4">
                   <span class="text-sm text-slate-400">All-inclusive price from</span>
-                  <span class="text-orange-600 font-extrabold text-lg">$1,850 USD / pax</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$197 USD</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="snap-start shrink-0 block group/card" style="width: calc(100% - 2rem); max-width: 380px;">
+            <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm flex flex-col h-full hover:border-orange-500/40 hover:shadow-md transition-all">
+              <div class="relative aspect-[16/9] w-full overflow-hidden">
+                <img src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" alt="Ho Chi Minh City Half-Day Tour" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-700" loading="lazy" />
+                <span class="absolute top-4 left-4 bg-white/95 text-slate-800 text-[12.5px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Half Day</span>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-slate-800 font-bold mb-2 leading-tight transition-colors" style="font-size: 18px;">Ho Chi Minh City Half-Day Private Tour</h3>
+                  <p class="text-slate-500 italic mb-4" style="font-size: 14.5px;">Colonial heritage, Book Street & Saigon WaterBus sunset cruise</p>
+                </div>
+                <div class="flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span class="text-sm text-slate-400">All-inclusive price from</span>
+                  <span class="text-orange-600 font-extrabold text-lg">$67 USD</span>
                 </div>
               </div>
             </div>
@@ -939,7 +959,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           </div>
           <div class="text-left">
             <h4 class="text-sm font-bold text-slate-900 mb-0.5">HCMC Departure Office</h4>
-            <p class="text-sm text-slate-600 leading-relaxed m-0">189 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
+            <p class="text-sm text-slate-600 leading-relaxed m-0">195 De Tham St., Pham Ngu Lao Ward, District 1, Ho Chi Minh City</p>
           </div>
         </div>
 
@@ -1075,7 +1095,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
       if (minusBtn && plusBtn && countDisplay && priceDisplay) {
         let currentGuests = 1;
         const maxGuests = 5;
-        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "3090000", 10);
+        const basePrice = parseInt(priceDisplay.getAttribute("data-base-price") || "122", 10);
 
         function updateGuests(delta: number) {
           const newGuests = Math.min(Math.max(1, currentGuests + delta), maxGuests);
@@ -1084,7 +1104,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           countDisplay.textContent = currentGuests.toString();
 
           const total = basePrice * currentGuests;
-          priceDisplay.textContent = total.toLocaleString("vi-VN") + " VND";
+          priceDisplay.textContent = "$" + total.toLocaleString("en-US") + " USD";
         }
 
         minusBtn.onclick = () => updateGuests(-1);
@@ -1128,7 +1148,7 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
           waBtn.style.cssText = 'background: #25D366; color: #ffffff; text-decoration: none; padding: 13px 20px; border-radius: 12px; font-weight: 700; font-size: 15.5px; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);';
 
           const zaloBtn = document.createElement('a');
-          zaloBtn.href = 'https://zalo.me/0962333641';
+          zaloBtn.href = 'https://zalo.me/0962333621';
           zaloBtn.target = '_blank';
           zaloBtn.rel = 'noopener noreferrer';
           zaloBtn.innerHTML = '💬 Chat Zalo for Consult';

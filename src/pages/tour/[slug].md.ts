@@ -51,7 +51,9 @@ export async function GET({ params, request, url }: any) {
     }
     
     if (tour.price_number) {
-      md += `## Price\n${new Intl.NumberFormat('vi-VN').format(tour.price_number)} VNĐ\n\n`;
+      const num = Number(tour.price_number);
+      const usd = num > 1000 ? Math.ceil(num / 25400) : num;
+      md += `## Price\n$${usd.toLocaleString('en-US')} USD\n\n`;
     } else if (tour.price_text) {
       md += `## Price\n${tour.price_text}\n\n`;
     }
