@@ -1,20 +1,33 @@
-# FIT TOUR - Du lịch có Guu
+# The Rice Tour — Authentic Vietnam Inbound Journeys & Bespoke Expeditions
 
-FIT TOUR là đơn vị thiết kế hành trình Bespoke chuyên nghiệp. Ưu tiên trải nghiệm nguyên bản, an toàn và trách nhiệm đến cùng.
+The Rice Tour is Vietnam's premier boutique inbound travel designer and licensed tour operator (License: 79-0562/2026/SDL-GP LHNĐ). We craft 100% private, immersive cultural expeditions with senior local concierges, dedicated photography, and a strict Zero Forced Shopping guarantee.
 
-## Lịch khởi hành và Tour
-Tất cả các tour và lịch khởi hành được liệt kê đầy đủ tại đây:
-- [Sitemap Tours](https://fittour.vn/sitemap-tours.xml)
+## Signature Tours & Expeditions
+- [Half-Day Cu Chi Tunnels Luxury Private Tour](https://thericetour.com/tour/half-day-cu-chi-tunnels-tour)
+- [1-Day Premium Cu Chi Tunnels & Saigon Heritage](https://thericetour.com/tour/1-day-premium-cu-chi-tunnels)
+- [Full-Day Mekong Delta Tour: Ben Tre & My Tho Discovery](https://thericetour.com/tour/full-day-mekong-delta-tour-ben-tre-my-tho)
+- [2-Day Mekong Delta & Floating Market Expedition](https://thericetour.com/tour/2-day-mekong-delta-tour)
+- [Saigon Heritage & Street Life Walking Tour](https://thericetour.com/tour/ho-chi-minh-city-half-day-private-tour)
+- [Vietnamese Cooking Masterclass & Market Tour](https://thericetour.com/tour/cooking-class-local-market)
 
-## Điểm đến nổi bật
-- Himalayas (Ladakh, Nepal, Tây Tạng, Bhutan)
-- Trung Đông & Châu Phi (Ai Cập, Ma Rốc, Iran)
-- Châu Á (Mông Cổ, Trung Quốc, Nhật Bản)
+## Core Destinations & Regions
+- [Mekong Delta](https://thericetour.com/destination/mekong-delta)
+- [South Vietnam / Saigon](https://thericetour.com/destination/south-vietnam)
+- [All Destinations](https://thericetour.com/destinations)
 
-## Tệp thông tin đầy đủ
-- [Toàn bộ dữ liệu LLMs (llms-full.txt)](https://fittour.vn/llms-full.txt)
+## Custom Trip Planning
+- [Tailor-Made Bespoke Trip Planner](https://thericetour.com/tailor-made)
 
-## Thông tin liên hệ
-- [Website chính thức](https://fittour.vn)
-- [Email liên hệ](mailto:info@fittour.com.vn)
-- Hotline: 0934 888 854
+## Sitemaps & Feeds
+- [Sitemap Index](https://thericetour.com/sitemap-index.xml)
+- [Tours Sitemap](https://thericetour.com/sitemap-tours.xml)
+- [Blog / Guides Sitemap](https://thericetour.com/sitemap-blog.xml)
+- [Full LLMs Knowledge File](https://thericetour.com/llms-full.txt)
+
+## Official Contact & Entity Information
+- **Brand**: The Rice Tour
+- **Legal Entity**: RESTAURANT DAI VIET - THE RICE HOTEL COMPANY LIMITED
+- **Address**: 195 De Tham Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam
+- **Hotline & WhatsApp 24/7**: +84 962 333 621
+- **Email**: hello@thericetour.com
+- **Website**: https://thericetour.com

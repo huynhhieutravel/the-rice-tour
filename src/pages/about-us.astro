@@ -7,39 +7,51 @@ const title = "About Us | The Rice Tour — Authentic Inbound Vietnam Journeys";
 const description = "Discover the story of The Rice Tour. We craft intimate, authentic, and slow-paced private travel experiences across Vietnam for discerning international travelers.";
 const canonicalUrl = "https://thericetour.com/about-us";
 
-const breadcrumbSchema = {
-  items: [
-    { name: "Home", url: "https://thericetour.com/" },
-    { name: "About Us", url: canonicalUrl }
-  ]
-};
-
-const aboutPageSchema = {
+const aboutPageGraph = {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About The Rice Tour",
-  "description": description,
-  "url": canonicalUrl,
-  "mainEntity": {
-    "@type": "TravelAgency",
-    "name": COMPANY_INFO.brandName,
-    "alternateName": COMPANY_INFO.legalNameEn,
-    "telephone": COMPANY_INFO.phoneIntl,
-    "email": COMPANY_INFO.email,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "180 Bui Vien Street, Ben Thanh Ward",
-      "addressLocality": "District 1",
-      "addressRegion": "Ho Chi Minh City",
-      "addressCountry": "VN"
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${canonicalUrl}#webpage`,
+      "url": canonicalUrl,
+      "name": title,
+      "isPartOf": {
+        "@id": "https://thericetour.com/#website"
+      },
+      "breadcrumb": {
+        "@id": `${canonicalUrl}#breadcrumb`
+      },
+      "mainEntity": {
+        "@id": "https://thericetour.com/#agency"
+      },
+      "description": description
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonicalUrl}#breadcrumb`,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thericetour.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": canonicalUrl
+        }
+      ]
     }
-  }
+  ]
 };
 ---
 
 <BaseLayout title={title} description={description} canonical={canonicalUrl}>
-  <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
-  <script type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} />
+  <Fragment slot="head">
+    <JsonLdSchema type="custom" data={aboutPageGraph} />
+  </Fragment>
 
   <!-- Hero Header -->
   <section class="relative bg-slate-950 text-white py-20 lg:py-32 overflow-hidden">
@@ -260,7 +272,7 @@ const aboutPageSchema = {
             </p>
             <div class="space-y-2 text-xs text-slate-700">
               <p><strong>Corporate Entity:</strong> {COMPANY_INFO.legalNameEn}</p>
-              <p><strong>Tên pháp nhân:</strong> {COMPANY_INFO.legalNameVi}</p>
+              <p><strong>Registered Legal Entity (VN):</strong> {COMPANY_INFO.legalNameVi}</p>
               <p><strong>Tour Operator License:</strong> <span class="font-mono font-bold text-amber-700">{COMPANY_INFO.licenseNumber}</span></p>
               <p><strong>Headquarters:</strong> {COMPANY_INFO.headquartersEn}</p>
             </div>

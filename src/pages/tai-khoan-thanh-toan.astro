@@ -3,8 +3,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
 
 // SEO Metadata
-const title = "Tài Khoản Thanh Toán & Hướng Dẫn Chuyển Khoản | FIT TOUR";
-const description = "Thông tin tài khoản ngân hàng chính thức của CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR (Ngân hàng ACB 8888 6789 68) và hướng dẫn thanh toán tour an toàn, nhanh chóng.";
+const title = "Tài Khoản Thanh Toán & Hướng Dẫn Chuyển Khoản | The Rice Tour";
+const description = "Thông tin tài khoản ngân hàng chính thức của CÔNG TY TNHH NHÀ HÀNG KHÁCH SẠN ĐẠI VIỆT - THE RICE (Ngân hàng ACB 8888 6789 68) và hướng dẫn thanh toán an toàn, nhanh chóng.";
 const canonicalUrl = "https://thericetour.com/tai-khoan-thanh-toan";
 
 // Bank Account Info (Official ACB)
@@ -13,15 +13,15 @@ const bankInfo = {
   bankShortName: "ACB",
   accountNumber: "8888 6789 68",
   accountNumberRaw: "8888678968",
-  accountHolder: "CONG TY TNHH DU LICH QUOC TE FIT TOUR",
-  accountHolderDisplay: "CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR",
-  branch: "Chi nhánh Tân Bình – TP. Hồ Chí Minh",
+  accountHolder: "CONG TY TNHH NHA HANG KHACH SAN DAI VIET - THE RICE",
+  accountHolderDisplay: "CÔNG TY TNHH NHÀ HÀNG KHÁCH SẠN ĐẠI VIỆT - THE RICE",
+  branch: "TP. Hồ Chí Minh",
   swiftCode: "ASCBVNVX",
   currency: "VND (Việt Nam Đồng)"
 };
 
 // VietQR Quick Link
-const vietQrUrl = `https://img.vietqr.io/image/ACB-${bankInfo.accountNumberRaw}-compact2.png?accountName=${encodeURIComponent(bankInfo.accountHolder)}&addInfo=${encodeURIComponent('Thanh toan Tour FIT TOUR')}`;
+const vietQrUrl = `https://img.vietqr.io/image/ACB-${bankInfo.accountNumberRaw}-compact2.png?accountName=${encodeURIComponent(bankInfo.accountHolder)}&addInfo=${encodeURIComponent('Thanh toan Tour The Rice')}`;
 
 // Company Legal Info
 const companyInfo = {
@@ -29,8 +29,8 @@ const companyInfo = {
   nameEn: "RESTAURANT DAI VIET - THE RICE HOTEL COMPANY LIMITED",
   taxId: "0316127669",
   license: "79-0562/2026/SDL-GP LHNĐ (Giấy phép kinh doanh Lữ hành)",
-  address: "180 Bùi Viện, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh",
-  hotline1: "028.8888.7888",
+  address: "195 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
+  hotline1: "0962.333.621",
   hotline2: "0962.333.621",
   email: "hello@thericetour.com",
   website: "thericetour.com"
@@ -247,7 +247,7 @@ const breadcrumbSchema = {
               Tải ảnh mã QR
             </a>
             <a 
-              href="https://zalo.me/0934888854" 
+              href="https://zalo.me/0962333621" 
               target="_blank" 
               rel="noopener"
               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#0068FF] hover:bg-[#0052cc] text-white text-xs font-bold shadow-md hover:shadow-lg transition-all"
@@ -365,7 +365,7 @@ const breadcrumbSchema = {
             </div>
             <div>
               <h3 class="font-bold text-slate-900 text-base mb-1.5">Tiền mặt tại Văn phòng</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">Thanh toán trực tiếp bằng tiền mặt và nhận phiếu thu gốc tại trụ sở FIT TOUR: 19 Lương Hữu Khánh, P. Phạm Ngũ Lão, Q.1, TP.HCM.</p>
+              <p class="text-xs text-slate-600 leading-relaxed">Thanh toán trực tiếp bằng tiền mặt và nhận phiếu thu gốc tại văn phòng The Rice Tour: 195 Đề Thám, P. Phạm Ngũ Lão, Q.1, TP.HCM.</p>
             </div>
           </div>
 
@@ -413,7 +413,7 @@ const breadcrumbSchema = {
             <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
             <div>
               <strong class="font-bold block mb-1">CẢNH BÁO PHÒNG CHỐNG MẠO DANH:</strong>
-              FIT TOUR chỉ nhận thanh toán qua tài khoản đứng tên <strong class="underline">CÔNG TY TNHH DU LỊCH QUỐC TẾ FIT TOUR</strong>. Quý khách tuyệt đối không chuyển tiền vào tài khoản cá nhân nếu không có thông báo xác nhận bằng văn bản chính thức từ công ty.
+              The Rice Tour chỉ nhận thanh toán qua tài khoản đứng tên <strong class="underline">CÔNG TY TNHH NHÀ HÀNG KHÁCH SẠN ĐẠI VIỆT - THE RICE</strong> tại Ngân hàng ACB (STK: <strong>8888 6789 68</strong>). Quý khách tuyệt đối không chuyển tiền vào tài khoản cá nhân nếu không có thông báo xác nhận bằng văn bản chính thức từ công ty.
             </div>
           </div>
         </div>
@@ -426,7 +426,7 @@ const breadcrumbSchema = {
               Bản Đồ The Rice Travel Group - HEAD OFFICE
             </div>
             <a 
-              href="https://maps.app.goo.gl/edrxP7cFszb5Pdck7" 
+              href="https://maps.app.goo.gl/f147oCPxWWumzxpW6" 
               target="_blank" 
               rel="noopener" 
               class="text-xs font-bold text-brand-700 hover:underline"
@@ -436,7 +436,7 @@ const breadcrumbSchema = {
           </div>
           <div class="w-full flex-1 min-h-[300px] rounded-2xl overflow-hidden border border-slate-200">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.583244315236!2d106.69196199999999!3d10.766567299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f006d3ff171%3A0x7657bf1593b4e5fa!2sThe%20Rice%20Travel%20Group!5e0!3m2!1svi!2s!4v1787961467166!5m2!1svi!2s" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.8926485808776!2d106.69314282849224!3d10.767539699333524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f004d8db6fd%3A0x953f9f5e77bd1fb1!2sCu%20Chi%20Tunnes%20-%20Mekong%20Delta!5e0!3m2!1svi!2s!4v1788533256541!5m2!1svi!2s" 
               width="100%" 
               height="100%" 
               style="border:0; min-height: 320px;" 

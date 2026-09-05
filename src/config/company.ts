@@ -16,13 +16,13 @@ export const COMPANY_INFO = {
   licenseTitleEn: "Tour Operator License",
   
   // Địa chỉ & Liên hệ
-  headquarters: "180 Bùi Viện, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh, Việt Nam",
-  headquartersEn: "180 Bui Vien Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam",
-  mapsUrl: "https://maps.app.goo.gl/edrxP7cFszb5Pdck7",
-  mapsEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.583244315236!2d106.69196199999999!3d10.766567299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f006d3ff171%3A0x7657bf1593b4e5fa!2sThe%20Rice%20Travel%20Group!5e0!3m2!1svi!2s!4v1787961467166!5m2!1svi!2s",
+  headquarters: "195 Đề Thám, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh, Việt Nam",
+  headquartersEn: "195 De Tham Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam",
+  mapsUrl: "https://maps.app.goo.gl/f147oCPxWWumzxpW6",
+  mapsEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.8926485808776!2d106.69314282849224!3d10.767539699333524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f004d8db6fd%3A0x953f9f5e77bd1fb1!2sCu%20Chi%20Tunnes%20-%20Mekong%20Delta!5e0!3m2!1svi!2s!4v1788533256541!5m2!1svi!2s",
   
-  phone: "028.8888.7888",
-  phoneIntl: "+84 28 8888 7888",
+  phone: "0962.333.621",
+  phoneIntl: "+84 962 333 621",
   hotline: "0962.333.621",
   hotlineIntl: "+84 962 333 621",
   whatsapp: "+84 962 333 621",

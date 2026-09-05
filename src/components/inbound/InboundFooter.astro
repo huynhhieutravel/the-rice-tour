@@ -1,106 +1,159 @@
 ---
 // src/components/inbound/InboundFooter.astro
+import { COMPANY_INFO } from '@/config/company';
 ---
-<footer class="bg-gray-900 text-white pt-20 pb-12 border-t border-gray-800 relative overflow-hidden font-sans">
+<footer class="bg-gray-950 text-white pt-16 pb-12 border-t border-gray-800/80 relative overflow-hidden font-sans">
   <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
     <!-- Top Row: 4 Main Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-gray-800">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-gray-800/80">
       
-      <!-- Col 1: Brand & Philosophy (4 cols) -->
+      <!-- Col 1: Brand & Guarantees (4 cols) -->
       <div class="lg:col-span-4">
-        <a href="/" class="flex items-center gap-3 mb-5 group">
-          <img src="https://media.thericetour.com/uploads/logo-the-rice-light.webp" alt="The Rice Tour" class="h-[52px] w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+        <a href="/" class="flex items-center gap-3 mb-5 group" aria-label="The Rice Tour Home">
+          <img 
+            src="https://media.thericetour.com/uploads/logo-the-rice-light.webp" 
+            alt="The Rice Tour" 
+            class="h-[52px] w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
+          />
         </a>
 
-        <p class="text-sm text-gray-400 leading-relaxed mb-6 font-light max-w-sm">
-          Vietnam's premier inbound travel designer. We craft bespoke private journeys, celebrate cultural authenticity, and guarantee zero forced commercial shopping stops.
+        <p class="text-sm text-gray-300/90 leading-relaxed mb-6 font-light max-w-sm">
+          Vietnam's premier boutique inbound travel designer. We craft 100% private, immersive journeys with senior local concierges, dedicated photography, and zero forced shopping.
         </p>
 
-        <div class="inline-flex items-center gap-3 p-3 rounded-2xl bg-white/5 border border-white/10">
-          <span class="text-xl">🦉</span>
-          <div class="text-xs">
-            <span class="font-bold text-white block">TripAdvisor 5.0 Rating</span>
-            <span class="text-brand-400">★★★★★</span>
-            <span class="text-gray-400 text-[11px] ml-1">Certificate of Excellence</span>
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs text-brand-300 font-medium">
+            <span>✨</span> 100% Private Small-Group (Max 5 Guests)
+          </div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs text-emerald-300 font-medium">
+            <span>🌱</span> Zero Forced Shopping Guarantee
           </div>
         </div>
       </div>
 
-      <!-- Col 2: Destinations (2.5 cols) -->
+      <!-- Col 2: Signature Tours (3 cols) -->
+      <div class="lg:col-span-3">
+        <h3 class="font-serif text-brand-400 text-sm font-bold uppercase tracking-wider mb-5">Signature Tours</h3>
+        <ul class="space-y-2.5 text-sm text-gray-300/90 font-light">
+          <li>
+            <a href="/tour/half-day-cu-chi-tunnels-tour" class="hover:text-brand-300 transition-colors">
+              Half-Day Cu Chi Tunnels Tour
+            </a>
+          </li>
+          <li>
+            <a href="/tour/1-day-premium-cu-chi-tunnels" class="hover:text-brand-300 transition-colors">
+              1-Day Premium Cu Chi &amp; Saigon
+            </a>
+          </li>
+          <li>
+            <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="hover:text-brand-300 transition-colors">
+              Full-Day Mekong Delta Discovery
+            </a>
+          </li>
+          <li>
+            <a href="/tour/2-day-mekong-delta-tour" class="hover:text-brand-300 transition-colors">
+              2-Day Mekong &amp; Floating Market
+            </a>
+          </li>
+          <li>
+            <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="hover:text-brand-300 transition-colors">
+              Saigon Heritage &amp; Street Life
+            </a>
+          </li>
+          <li>
+            <a href="/tour/cooking-class-local-market" class="hover:text-brand-300 transition-colors">
+              Vietnamese Cooking Masterclass
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Explore & Plan (2.5 cols) -->
       <div class="lg:col-span-2">
-        <h4 class="font-serif text-brand-400 text-base font-bold uppercase tracking-wider mb-5">Destinations</h4>
-        <ul class="space-y-2.5 text-sm text-gray-400 font-medium">
-          <li><a href="/tours?country=mien-bac" class="hover:text-brand-300 transition-colors">Hanoi &amp; North Karsts</a></li>
-          <li><a href="/tours?country=mien-bac" class="hover:text-brand-300 transition-colors">Ha Long &amp; Lan Ha Bay</a></li>
-          <li><a href="/tours?country=mien-bac" class="hover:text-brand-300 transition-colors">Sapa Terraced Mountains</a></li>
-          <li><a href="/tours?country=mien-trung" class="hover:text-brand-300 transition-colors">Hue &amp; Ancient Hoi An</a></li>
-          <li><a href="/tours?country=mien-nam" class="hover:text-brand-300 transition-colors">Saigon &amp; Mekong Delta</a></li>
-          <li><a href="/tours?country=mien-nam" class="hover:text-brand-300 transition-colors">Phu Quoc Secluded Beach</a></li>
+        <h3 class="font-serif text-brand-400 text-sm font-bold uppercase tracking-wider mb-5">Explore &amp; Plan</h3>
+        <ul class="space-y-2.5 text-sm text-gray-300/90 font-light">
+          <li>
+            <a href="/tours" class="hover:text-brand-300 transition-colors font-medium text-white">
+              All Vietnam Tours ➔
+            </a>
+          </li>
+          <li>
+            <a href="/destinations" class="hover:text-brand-300 transition-colors">
+              Destinations Guide
+            </a>
+          </li>
+          <li>
+            <a href="/destination/south-vietnam" class="hover:text-brand-300 transition-colors">
+              South Vietnam
+            </a>
+          </li>
+          <li>
+            <a href="/destination/mekong-delta" class="hover:text-brand-300 transition-colors">
+              Mekong Delta
+            </a>
+          </li>
+          <li>
+            <a href="/tailor-made" class="text-brand-400 hover:text-brand-300 font-medium flex items-center gap-1">
+              <span>⚡</span> Tailor-Made Trip
+            </a>
+          </li>
+          <li>
+            <a href="/about-us" class="hover:text-brand-300 transition-colors">
+              About Our Story
+            </a>
+          </li>
+          <li>
+            <a href="/blog" class="hover:text-brand-300 transition-colors">
+              Travel Guides
+            </a>
+          </li>
         </ul>
       </div>
 
-      <!-- Col 3: Travel Essentials (2.5 cols) -->
+      <!-- Col 4: 24/7 Dedicated Concierge & Registration (3 cols) -->
       <div class="lg:col-span-3">
-        <h4 class="font-serif text-brand-400 text-base font-bold uppercase tracking-wider mb-5">Travel Essentials</h4>
-        <ul class="space-y-2.5 text-sm text-gray-400 font-medium">
-          <li><a href="/tailor-made" class="text-brand-400 hover:text-brand-300 font-bold flex items-center gap-1.5"><span>⚡</span> Tailor-Made Trip Planner</a></li>
-          <li><a href="/vietnam-visa-guide-2026" class="hover:text-brand-300 transition-colors">Vietnam Visa Guide 2026</a></li>
-          <li><a href="/best-time-to-visit-vietnam" class="hover:text-brand-300 transition-colors">Best Time to Visit Vietnam</a></li>
-          <li><a href="/about-us" class="hover:text-brand-300 transition-colors">About Our Story &amp; Ethics</a></li>
-          <li><a href="/contact" class="hover:text-brand-300 transition-colors">Booking &amp; Cancellation Terms</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: 24/7 Dedicated Concierge (3.5 cols) -->
-      <div class="lg:col-span-3">
-        <h4 class="font-serif text-brand-400 text-base font-bold uppercase tracking-wider mb-5">Private Concierge</h4>
+        <h3 class="font-serif text-brand-400 text-sm font-bold uppercase tracking-wider mb-5">Private Concierge</h3>
         
-        <div class="flex flex-col gap-4 text-sm text-gray-400">
+        <div class="flex flex-col gap-4 text-sm text-gray-300/90">
           <a 
             href="/whatsapp" 
             target="_blank" 
+            rel="noopener noreferrer"
             class="flex items-center gap-3 p-3.5 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-white transition-all group"
           >
             <div class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.201.301-.779.979-.955 1.18-.176.2-.351.226-.652.075-.301-.15-1.272-.469-2.424-1.496-.895-.798-1.5-1.784-1.676-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.201-.301.301-.502.1-.201.05-.376-.025-.527-.075-.15-.678-1.635-.93-2.243-.245-.591-.494-.511-.678-.521-.176-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.912 1.23 3.113.15.2 2.123 3.242 5.143 4.547.718.31 1.279.496 1.716.635.721.23 1.377.197 1.896.12.577-.087 1.78-.727 2.03-1.43.251-.703.251-1.305.176-1.43-.075-.125-.276-.201-.577-.351z"/></svg>
             </div>
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block">WhatsApp 24/7 Support</span>
-              <span class="font-bold text-sm text-white">+84 962 333 621</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block">WhatsApp 24/7 Concierge</span>
+              <span class="font-bold text-sm text-white">{COMPANY_INFO.hotlineIntl}</span>
             </div>
           </a>
 
           <div>
-            <span class="block text-xs uppercase font-bold text-gray-500 mb-1">Office Hotline</span>
-            <a href="tel:02888887888" class="text-white hover:text-brand-400 transition-colors font-bold text-sm">
-              028.8888.7888 <span class="text-xs text-gray-400 font-normal">(+84 28 8888 7888)</span>
+            <span class="block text-xs uppercase font-bold text-gray-400 mb-0.5">Email Support</span>
+            <a href={`mailto:${COMPANY_INFO.email}`} class="text-white hover:text-brand-300 transition-colors font-medium">
+              {COMPANY_INFO.email}
             </a>
           </div>
 
-          <div>
-            <span class="block text-xs uppercase font-bold text-gray-500 mb-1">Email Inquiries</span>
-            <a href="mailto:hello@thericetour.com" class="text-white hover:text-brand-400 transition-colors font-medium">
-              hello@thericetour.com
-            </a>
-          </div>
-
-          <div class="text-xs text-gray-400 space-y-1.5 pt-2">
-            <p><strong>RESTAURANT DAI VIET - THE RICE HOTEL COMPANY LIMITED</strong></p>
-            <p class="text-gray-400">CÔNG TY TNHH NHÀ HÀNG KHÁCH SẠN ĐẠI VIỆT - THE RICE</p>
-            <p><strong>Headquarters:</strong> 180 Bui Vien St, Ben Thanh Ward, District 1, Ho Chi Minh City</p>
-            <p class="text-brand-400 font-semibold pt-1">License: 79-0562/2026/SDL-GP LHNĐ</p>
+          <div class="text-xs text-gray-400 space-y-1 pt-1">
+            <p class="font-semibold text-gray-300">{COMPANY_INFO.legalNameVi}</p>
+            <p>{COMPANY_INFO.headquartersEn}</p>
+            <p class="text-brand-400 font-medium">{COMPANY_INFO.licenseTitleEn || 'Tour Operator License'}: {COMPANY_INFO.licenseNumber}</p>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- Bottom Row: Copyright & Credits -->
-    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-      <p>&copy; {new Date().getFullYear()} RESTAURANT DAI VIET - THE RICE HOTEL CO., LTD. All rights reserved. Registered Tour Operator.</p>
-      <div class="flex items-center gap-6">
-        <a href="/tailor-made" class="hover:text-brand-400 transition-colors">Trip Planner</a>
+    <!-- Bottom Row: Copyright & Legal Links -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+      <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.brandName}. All rights reserved.</p>
+      <div class="flex flex-wrap items-center gap-5 sm:gap-6">
+        <a href="/about-us" class="hover:text-brand-400 transition-colors">About Us</a>
+        <a href="/contact" class="hover:text-brand-400 transition-colors">Contact</a>
         <a href="/privacy-policy" class="hover:text-brand-400 transition-colors">Privacy Policy</a>
         <a href="/terms-of-service" class="hover:text-brand-400 transition-colors">Terms of Service</a>
       </div>
