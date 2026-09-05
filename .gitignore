@@ -34,3 +34,4 @@ gsc-reports/
 .wrangler_config/
 
 scratch/
+trace.json
