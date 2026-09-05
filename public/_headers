@@ -1,6 +1,6 @@
-# Cloudflare Cache Strategy
+# Cloudflare Cache Strategy for The Rice Tour
 
-# Cache static assets (images, fonts, CSS, JS) for 1 year by default
+# Static assets (hashed JS, CSS, Fonts, Images)
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
@@ -13,28 +13,58 @@
 /scripts/*
   Cache-Control: public, max-age=31536000, immutable
 
-/brand-fittour/*
-  Cache-Control: public, max-age=31536000, immutable
+# Favicon assets
+/favicon*
+  Cache-Control: public, max-age=2592000, immutable
 
-# Do not aggressively cache text configuration files
+# Config & Discovery files
 /robots.txt
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=3600, s-maxage=3600
 
 /llms.txt
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=3600, s-maxage=86400
 
-# Dynamic pages (SSR) should have different caching depending on their logic
-# But for SSG pages, we can let Cloudflare cache them.
+/sitemap*.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+# Edge HTML Page Caching (SSR with Cloudflare Tiered Cache)
 /
   Cache-Control: public, max-age=3600, s-maxage=86400
 
-/blog/*
+/tours
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/destinations
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/destination/*
   Cache-Control: public, max-age=3600, s-maxage=86400
 
 /tour/*
   Cache-Control: public, max-age=3600, s-maxage=86400
 
-# Do not cache admin panel and preview modes
+/blog
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/blog/*
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/about-us
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/contact
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/tailor-made
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/privacy-policy
+  Cache-Control: public, max-age=86400, s-maxage=604800
+
+/terms-of-service
+  Cache-Control: public, max-age=86400, s-maxage=604800
+
+# Admin Panel & Preview Mode (Never Cache)
 /admin/*
   Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
 

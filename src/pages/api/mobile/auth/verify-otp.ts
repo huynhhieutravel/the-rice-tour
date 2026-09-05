@@ -22,7 +22,7 @@ export const POST: APIRoute = async ({ request }) => {
         email: 'vip@fittour.com.vn',
         phone: identifier,
         gender: 'male',
-        address: '19 Lương Hữu Khánh, Q1, TP.HCM',
+        address: '195 Đề Thám, Q1, TP.HCM',
         avatar_url: 'https://media.fittour.vn/avatar_placeholder.jpg'
       };
 

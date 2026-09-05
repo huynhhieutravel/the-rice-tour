@@ -16,9 +16,6 @@ export const GET: APIRoute = async () => {
     <loc>https://thericetour.com/sitemap-blog.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://thericetour.com/sitemap-tags.xml</loc>
-  </sitemap>
-  <sitemap>
     <loc>https://thericetour.com/sitemap-categories.xml</loc>
   </sitemap>
 </sitemapindex>`;

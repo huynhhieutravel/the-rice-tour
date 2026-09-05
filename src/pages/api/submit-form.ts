@@ -26,11 +26,14 @@ async function sendTelegramNotification(data: any) {
   if (data.options) {
     try {
       const opts = typeof data.options === 'string' ? JSON.parse(data.options) : data.options;
-      if (opts.month) lines.push(`📅 <b>Tháng đi:</b> ${esc(opts.month)}`);
-      if (opts.companyName) lines.push(`🏢 <b>Công ty:</b> ${esc(opts.companyName)}`);
-      if (opts.destination) lines.push(`📍 <b>Điểm đến:</b> ${esc(opts.destination)}`);
+      if (opts.destination || opts.destinations) lines.push(`📍 <b>Điểm đến:</b> ${esc(opts.destinations || opts.destination)}`);
+      if (opts.duration) lines.push(`⏱️ <b>Thời lượng:</b> ${esc(opts.duration)}`);
+      if (opts.travelDates || opts.month) lines.push(`📅 <b>Ngày/Tháng đi:</b> ${esc(opts.travelDates || opts.month)}`);
+      if (opts.adults || opts.children) lines.push(`👥 <b>Số khách:</b> ${esc(opts.adults || '0')} người lớn, ${esc(opts.children || '0')} trẻ em`);
       if (opts.hotelStandard) lines.push(`🏨 <b>Lưu trú:</b> ${esc(opts.hotelStandard)}`);
       if (opts.budget) lines.push(`💰 <b>Ngân sách:</b> ${esc(opts.budget)}`);
+      if (opts.country) lines.push(`🌍 <b>Quốc tịch / Nơi ở:</b> ${esc(opts.country)}`);
+      if (opts.companyName) lines.push(`🏢 <b>Công ty:</b> ${esc(opts.companyName)}`);
       if (opts.setupType) lines.push(`🎯 <b>Loại hình:</b> ${esc(opts.setupType)}`);
       if (opts.contactChannel) lines.push(`💬 <b>Kênh liên hệ:</b> ${esc(opts.contactChannel)}`);
       if (opts.notes) lines.push(`📝 <b>Ghi chú:</b> ${esc(opts.notes)}`);
@@ -58,6 +61,8 @@ async function sendTelegramNotification(data: any) {
         chat_id: TELEGRAM_CHAT_ID,
         text,
         parse_mode: 'HTML',
+        disable_web_page_preview: true,
+        link_preview_options: { is_disabled: true },
       }),
     });
     if (!res.ok) {

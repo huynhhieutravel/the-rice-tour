@@ -9,7 +9,7 @@ export const GET: APIRoute = async ({ request, locals }) => {
   const authorize = (locals as any).authorize;
   if (!authorize('manage_settings', 'system')) return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
   
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1;
   if (!d1Db) return new Response(JSON.stringify({ success: false, error: 'DB not found' }), { status: 500 });
   
   try {
@@ -57,7 +57,7 @@ export const PATCH: APIRoute = async ({ request, locals }) => {
   const authorize = (locals as any).authorize;
   if (!authorize('manage_settings', 'system')) return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
   
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1;
   if (!d1Db) return new Response(JSON.stringify({ success: false, error: 'DB not found' }), { status: 500 });
   
   try {
@@ -91,7 +91,7 @@ export const DELETE: APIRoute = async ({ request, locals }) => {
   const authorize = (locals as any).authorize;
   if (!authorize('manage_settings', 'system')) return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
   
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1;
   if (!d1Db) return new Response(JSON.stringify({ success: false, error: 'DB not found' }), { status: 500 });
   
   try {

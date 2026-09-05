@@ -3,7 +3,7 @@ import { env } from 'cloudflare:workers';
 import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
 
 export const GET: APIRoute = async () => {
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (env as any)?.DB;
   let items: any[] = [];
   
   if (d1Db) {

@@ -16,7 +16,7 @@ try {
   statusFilter = url.searchParams.get('status') || '';
   const offset = (page - 1) * limit;
 
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1;
   if (d1Db) {
     // Count by status
     const countsResult = await d1Db.prepare('SELECT status, COUNT(*) as count FROM FormSubmission GROUP BY status').all();

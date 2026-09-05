@@ -3,7 +3,7 @@ import { env } from 'cloudflare:workers';
 import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
 
 export const GET: APIRoute = async () => {
-  const d1Db = env.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (env as any)?.DB;
   let items: any[] = [];
   
   if (d1Db) {
@@ -22,7 +22,7 @@ export const GET: APIRoute = async () => {
 
   for (const item of items) {
     if (!item.slug) continue;
-    xml += `  <url>\n    <loc>https://thericetour.com/country/${item.slug}</loc>\n`;
+    xml += `  <url>\n    <loc>https://thericetour.com/destination/${item.slug}</loc>\n`;
     if (item.updatedAt) {
       try {
         const dateStr = typeof item.updatedAt === 'string' ? item.updatedAt.replace(' ', 'T') : item.updatedAt;

@@ -12,7 +12,7 @@ function escXml(str: string): string {
 }
 
 export const GET: APIRoute = async ({ request }) => {
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (env as any)?.DB;
   if (!d1Db) return new Response("Database missing", { status: 500 });
 
   try {

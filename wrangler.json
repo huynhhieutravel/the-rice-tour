@@ -45,7 +45,7 @@
 		"PUBLIC_ENABLE_IMAGE_RESIZING": "false",
 		"PUBLIC_CDN_BASE": "https://media.thericetour.com",
 		"PUBLIC_IMAGE_VERSION": "v1",
-		"ROBOTS_INDEX": "false",
+		"ROBOTS_INDEX": "true",
 		"BRAND_NAME": "The Rice Tour",
 		"BRAND_TAGLINE": "Authentic Vietnam Inbound Journeys & Bespoke Experiences",
 		"SUPPORT_EMAIL": "hello@thericetour.com",
