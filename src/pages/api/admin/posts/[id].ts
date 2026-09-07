@@ -96,6 +96,7 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
   if (!slug) {
     slug = existing.slug || slugify(title || 'post', { lower: true, strict: true, locale: 'vi' }) || Date.now().toString(36);
   }
+  const status = data.status || existing.status || 'draft';
   let content = typeof data.content === 'object' ? JSON.stringify(data.content) : data.content;
   if (typeof content === 'string') {
     // Strip any raw JSX comments from HTML content
