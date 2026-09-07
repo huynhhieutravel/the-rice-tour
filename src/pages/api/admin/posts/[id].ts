@@ -81,7 +81,7 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
 
   const data: any = await request.json();
   
-  const existing = await d1Db.prepare("SELECT id, status, authorId, slug FROM Post WHERE id = ?").bind(id).first<any>();
+  const existing = await d1Db.prepare("SELECT * FROM Post WHERE id = ?").bind(id).first<any>();
   if (!existing) {
     return apiError("Post not found", 404);
   }
@@ -91,13 +91,19 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
     return apiError('Bạn không có quyền cập nhật bài viết này.', 403);
   }
 
-  const title = data.title;
+  if (data.isDraftDiscard) {
+    return apiSuccess({ id, discarded: true });
+  }
+
+  const title = data.title !== undefined ? data.title : existing.title;
   let slug = data.slug ? String(data.slug).trim() : '';
   if (!slug) {
     slug = existing.slug || slugify(title || 'post', { lower: true, strict: true, locale: 'vi' }) || Date.now().toString(36);
   }
   const status = data.status || existing.status || 'draft';
-  let content = typeof data.content === 'object' ? JSON.stringify(data.content) : data.content;
+  let content = data.content !== undefined 
+    ? (typeof data.content === 'object' ? JSON.stringify(data.content) : data.content) 
+    : existing.content;
   if (typeof content === 'string') {
     // Strip any raw JSX comments from HTML content
     content = content.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
@@ -107,20 +113,20 @@ export const PUT: APIRoute = withErrorHandler(async ({ request, params, locals }
   const contentStr = typeof content === 'string' ? content.trim() : '';
   const isRawHtml = contentStr.startsWith('<') && !contentStr.startsWith('{');
 
-  const isElementor = data.isElementor ? 1 : 0;
-  const contentFormat = data.contentFormat || (isRawHtml ? 'html' : 'json');
+  const isElementor = data.isElementor !== undefined ? (data.isElementor ? 1 : 0) : (existing.isElementor ? 1 : 0);
+  const contentFormat = data.contentFormat || (isRawHtml ? 'html' : (existing.contentFormat || 'json'));
 
-  const excerpt = data.excerpt || '';
-  const featuredImage = data.featuredImage || '';
-  const format = data.format || (isRawHtml ? 'landing' : 'standard');
-  const isSticky = data.isSticky ? 1 : 0;
-  const seoTitle = data.seoTitle || null;
-  const seoDescription = data.seoDescription || null;
-  const canonicalUrl = data.canonicalUrl || null;
-  const focusKeyword = data.focusKeyword || null;
-  const noindex = data.noindex ? 1 : 0;
-  const nofollow = data.nofollow ? 1 : 0;
-  const customSchema = data.customSchema || null;
+  const excerpt = data.excerpt !== undefined ? data.excerpt : (existing.excerpt || '');
+  const featuredImage = data.featuredImage !== undefined ? data.featuredImage : (existing.featuredImage || '');
+  const format = data.format !== undefined ? data.format : (isRawHtml ? 'landing' : (existing.format || 'standard'));
+  const isSticky = data.isSticky !== undefined ? (data.isSticky ? 1 : 0) : (existing.isSticky ? 1 : 0);
+  const seoTitle = data.seoTitle !== undefined ? data.seoTitle : existing.seoTitle;
+  const seoDescription = data.seoDescription !== undefined ? data.seoDescription : existing.seoDescription;
+  const canonicalUrl = data.canonicalUrl !== undefined ? data.canonicalUrl : existing.canonicalUrl;
+  const focusKeyword = data.focusKeyword !== undefined ? data.focusKeyword : existing.focusKeyword;
+  const noindex = data.noindex !== undefined ? (data.noindex ? 1 : 0) : (existing.noindex ? 1 : 0);
+  const nofollow = data.nofollow !== undefined ? (data.nofollow ? 1 : 0) : (existing.nofollow ? 1 : 0);
+  const customSchema = data.customSchema !== undefined ? data.customSchema : existing.customSchema;
   const updatedAt = new Date().toISOString();
 
   // Author Attribution
