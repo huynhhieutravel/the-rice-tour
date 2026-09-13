@@ -1,0 +1,22 @@
+{
+  "id": 34009,
+  "order": 9,
+  "slug": "saigon-hop-on-hop-off-bus-guide",
+  "slug_vi": "xe-bus-2-tang-hop-on-hop-off-sai-gon",
+  "title_vi": "Xe Bus 2 Tầng Hop-On Hop-Off Sài Gòn: Lộ Trình Di Sản, Bảng Giá Vé 2026 & Kinh Nghiệm Ngắm Thành Phố Trên Tầng Mui Trần",
+  "title_en": "Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes",
+  "archetype": "Archetype 4: Cẩm Nang Thực Địa & Kinh Nghiệm Du Lịch Chuyên Sâu",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/saigon-hop-on-hop-off-bus-guide",
+  "local_preview_url": "http://localhost:4321/saigon-hop-on-hop-off-bus-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "saigonHopOnHopOffBusGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2150,
+  "word_count_en": 2250,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 bus tariffs & Ben Thanh West Gate boarding)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:30:00.000Z"
+}

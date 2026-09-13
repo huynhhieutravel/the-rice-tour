@@ -1,0 +1,22 @@
+{
+  "id": 34008,
+  "order": 8,
+  "slug": "ben-thanh-market-shopping-guide",
+  "slug_vi": "kinh-nghiem-mua-sam-cho-ben-thanh",
+  "title_vi": "Kinh Nghiệm Mua Sắm & Trả Giá Chợ Bến Thành 2026: Bí Quyết Chọn Đồ Thủ Công & Quà Lưu Niệm Tinh Tế",
+  "title_en": "Ben Thanh Market Shopping Guide: Civilized Bargaining & Artisan Finds (2026)",
+  "archetype": "Archetype 4: Cẩm Nang Thực Địa & Kinh Nghiệm Du Lịch Chuyên Sâu",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/ben-thanh-market-shopping-guide",
+  "local_preview_url": "http://localhost:4321/ben-thanh-market-shopping-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "benThanhMarketShoppingGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2000,
+  "word_count_en": 2100,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 vendor pricing & QR payments)",
+  "tour_conversions": [
+    "/tour/cooking-class-local-market"
+  ],
+  "published_at": "2026-09-07T18:25:00.000Z"
+}

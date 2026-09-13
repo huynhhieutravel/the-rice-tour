@@ -1,0 +1,22 @@
+{
+  "id": 34005,
+  "order": 5,
+  "slug": "independence-palace-saigon-guide",
+  "slug_vi": "dinh-doc-lap-sai-gon",
+  "title_vi": "Dinh Độc Lập: Đỉnh Cao Kiến Trúc Nhiệt Đới Hiện Đại & Dấu Ấn Lịch Sử Sài Gòn",
+  "title_en": "The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon",
+  "archetype": "Archetype 1: Di Tích Lịch Sử & Công Trình Kiến Trúc Biểu Tượng",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/independence-palace-saigon-guide",
+  "local_preview_url": "http://localhost:4321/independence-palace-saigon-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "independencePalaceSaigonGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2100,
+  "word_count_en": 2200,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 entry tariffs & bunker access)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:25:00.000Z"
+}

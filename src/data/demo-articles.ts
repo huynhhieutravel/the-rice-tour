@@ -12,6 +12,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -20,6 +21,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates
         </h1>
@@ -30,6 +32,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           Once envisioned as the 'Land of Happiness' along the untamed waters of the Vàm Cỏ Đông river, the Happy Land Entertainment Complex has weathered significant turbulence. As of 2026, this grand project no longer operates as a regular tourist attraction for individual travelers.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -44,6 +47,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -361,6 +365,13 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/truong-tien-bridge-hue-heritage" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Truong Tien Bridge Hue Heritage: Eiffel's Iron Lace, Dynastic Memory & 2026 Engineering Heritage
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -396,6 +407,984 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Within a gentle 1-kilometer radius, colonial elegance, tropical modernism, and a visionary 2026 underground transit hub converge in timeless harmony.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">14 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> Centennial Urban Heartland
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎨</span> Indochine Art Deco Heritage
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚇</span> 2026 Metro Central Hub
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> Curated Walking Sanctuary
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis</a>
+  <a href="#historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads</a>
+  <a href="#definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius</a>
+  <a href="#ben-thanh-market-the-living-mirror-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Market: The Living Mirror of Saigon</a>
+  <a href="#hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion</a>
+  <a href="#the-independence-palace-high-zenith-of-tropical-modernism" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Independence Palace: High Zenith of Tropical Modernism</a>
+  <a href="#mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality</a>
+  <a href="#ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Central Metro Station: The 2026 Subterranean Landmark</a>
+  <a href="#curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis</a>
+  <a href="#epicurean-mapping-and-neighborhood-life" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epicurean Mapping & Neighborhood Life</a>
+  <a href="#classic-daytime-market-stalls-inside-south-and-east-gates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Classic Daytime Market Stalls (Inside South & East Gates)</a>
+  <a href="#phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)</a>
+  <a href="#secret-vintage-apartment-hideaways" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Secret Vintage Apartment Hideaways</a>
+  <a href="#curated-walking-itineraries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Walking Itineraries</a>
+  <a href="#option-a-the-half-day-heritage-and-art-stroll-4-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option A: The Half-Day Heritage & Art Stroll (4 Hours)</a>
+  <a href="#option-b-the-complete-full-day-immersion-8-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option B: The Complete Full-Day Immersion (8 Hours)</a>
+  <a href="#field-notes-for-the-discerning-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026 Guidelines)</a>
+  <a href="#epilogue-preserving-the-timeless-soul-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Preserving the Timeless Soul of Saigon</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Epicenter Coordinates</div>
+        <div class="text-[13px] font-bold text-slate-900">Quach Thi Trang Square, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Historical Genesis</div>
+        <div class="text-[13px] font-bold text-slate-900">1914 (Centennial New Market)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Exploration Radius</div>
+        <div class="text-[13px] font-bold text-slate-900">1.2 km (Ideal Walking Stroll)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Admission Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">Free – 65,000 VND / landmark</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Here, the century-old chime of the clock tower harmonizes with the modern hum of the underground metro, where quiet Indochine colonnades cast long shadows across the ceaseless energy of a city that never sleeps.
+</div><p>The urban quarter cradling Ben Thanh Market has long evolved beyond its identity as a bustling commercial marketplace; it stands as the veritable <strong>cultural and architectural heart of Ho Chi Minh City</strong>. Within a gentle walking radius of 300 to 1,200 meters from the iconic four-dial clock tower, travelers are treated to a captivating layered narrative: early 20th-century colonial elegance, mid-century tropical modernism at its zenith, and a visionary underground transit metropolis newly completed in 2026.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">📍 Epicenter Coordinates</th><th class="p-4 font-bold text-left">⏳ Historical Genesis</th><th class="p-4 font-bold text-left">🚶 Exploration Radius</th><th class="p-4 font-bold text-left">🎟️ 2026 Admission Baseline</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Quach Thi Trang Square, District 1, HCMC</strong></td><td class="p-4"><strong>1914 (Inauguration of New Market)</strong></td><td class="p-4"><strong>1.2 km (Ideal Walking Stroll)</strong></td><td class="p-4"><strong>0 – 65,000 VND / landmark</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis
+          </h2>
+        </div>
+      <ul>
+<li><strong>112 Years of Resilience:</strong> The age of the contemporary Ben Thanh Market edifice since its grand inaugural festivities in late March 1914.</li>
+<li><strong>4 Main Gates &amp; 12 Side Portals:</strong> Aligned precisely with the cardinal directions (East, West, South, North), crowned by historic Bien Hoa ceramic bas-reliefs illustrating the pastoral bounty of the Mekong.</li>
+<li><strong>32-Meter Subterranean Depth:</strong> The depth of the four-story Ben Thanh Central Underground Metro Station—Southeast Asia&#39;s premier transit landmark, seamlessly integrated with the surface esplanade.</li>
+<li><strong>99 Arched Windows:</strong> The legendary architectural trademark of the Hui Bon Hoa mansion (now the HCMC Museum of Fine Arts), situated a mere 350-meter stroll from the market.</li>
+<li><strong>Zero Admission Fees:</strong> Enjoying spiritual reflection at the century-old Mariamman Hindu Temple or marveling at the lotus-shaped underground skylight of the new metro station costs nothing.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
+          </h2>
+        </div>
+      <p>To truly comprehend the allure of the Ben Thanh district, one must trace more than two centuries of dramatic urban evolution.</p>
+<p>In the early 19th century, the ancestral precursor to Ben Thanh was a riverine trading dock along the Ben Nghe canal, nestled beneath the ramparts of the historic Gia Dinh Citadel. The very name <strong>&quot;Bến Thành&quot;</strong> (literally <em>Wharf of the Citadel</em>) arose from its utilitarian purpose: the landing pier where royal troops, merchant junks, and wandering voyagers arrived to provision the fortress. When French naval forces captured Gia Dinh in 1859, the waterside market was consumed by fire. The colonial administration subsequently rebuilt the market using timber posts and thatched roofs along the Charner Canal (now Nguyen Hue Boulevard), but the rapid influx of merchants quickly overwhelmed the confined canal banks.</p>
+<p>In 1911, the French Governor-General resolved to drain a sprawling, malarial marshland known as <em>Marais Boresse</em> (Bo Rua Lake) to construct an ambitious, grand central market. The celebrated French engineering firm <strong>Brossard et Maupin</strong> was commissioned for the monumental endeavor. Employing cutting-edge reinforced concrete and vaulted iron trusses, the construction took three years. On March 28, 29, and 30, 1914, the inauguration of the &quot;New Saigon Market&quot; was celebrated with fireworks, floral processions, and over a hundred thousand visitors arriving from across the Southern Delta.</p>
+<p>Fast forward to the mid-2020s and into 2026, the precinct underwent its second great renaissance: the expansive square before the south gate was pedestrianized into a granite-paved urban concourse, integrated directly with the subterranean halls of <strong>Ben Thanh Central Metro Station (Line 1)</strong>. Today, historic memories and future velocity converse effortlessly across every boulevard corner.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius
+          </h2>
+        </div>
+      
+          <div id="ben-thanh-market-the-living-mirror-of-saigon" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . Ben Thanh Market: The Living Mirror of Saigon
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> Intersecting Le Loi, Phan Chu Trinh, Phan Boi Chau, and Le Thanh Ton Streets.</li>
+<li><strong>Iconic Architecture:</strong> The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam&#39;s natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.</li>
+<li><strong>Conscious Travel Insight:</strong> Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.</li>
+</ul>
+
+          <div id="hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> 97A Pho Duc Chinh Street, Nguyen Thai Binh Ward, District 1 (350 meters from the market via Le Thi Hong Gam).</li>
+<li><strong>Gilded Heritage:</strong> This magnificent three-mansion estate once served as the private residence and headquarters of <strong>Hui Bon Hoa</strong> (popularly known as <em>Chú Hỏa</em>), the legendary Chinese-Vietnamese merchant whose real estate empire defined colonial Saigon. Designed between 1929 and 1934 by French architect Rivera, the complex represents an opulent marriage of <strong>Western Art Deco, Beaux-Arts flourishes, and traditional Feng Shui geomancy</strong>.</li>
+<li><strong>Curated Highlights:</strong><ul>
+<li>One of Saigon&#39;s earliest antique timber-cage elevators, embellished with ornate gilded brass fretwork.</li>
+<li>Stained glass transom panels that filter tropical sunbeams into vibrant geometric tapestries across geometric encaustic cement tiles.</li>
+<li>Vietnam&#39;s premier modern art collection, anchored by Nguyen Gia Tri&#39;s lacquer masterpiece <em>Spring Garden of North, Central, and South Vietnam</em>, juxtaposed against classical Cham stone sculptures.</li>
+</ul>
+</li>
+</ul>
+
+          <div id="the-independence-palace-high-zenith-of-tropical-modernism" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
+              . The Independence Palace: High Zenith of Tropical Modernism
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> 135 Nam Ky Khoi Nghia Street, Ben Thanh Ward, District 1 (700 meters north of the market).</li>
+<li><strong>Architectural Magnitude:</strong> Erected upon the historic grounds of the former colonial Norodom Palace, the contemporary palace was conceived by master architect <strong>Ngo Viet Thu</strong>—the first Vietnamese laureate of the coveted <em>Grand Prix de Rome</em> (1955). Inaugurated in 1966, the structure brilliantly reconciles mid-century modernist clean lines with Eastern philosophical symbolism:<ul>
+<li>The overall footprint forms the Sino-Vietnamese ideogram <strong>CÁT</strong> (吉 - Fortune and Auspiciousness).</li>
+<li>The elevated central balcony frames the character <strong>KHẨU</strong> (口 - Freedom of Expression).</li>
+<li>The central flagpole stands as the vertical stroke of <strong>TRUNG</strong> (中 - Loyalty and Integrity).</li>
+<li>Concrete facade louvers evoke slender bamboo culms (<em>đốt trúc</em>), ingeniously deflecting harsh equatorial glare while drawing prevailing monsoons through airy colonnades.</li>
+</ul>
+</li>
+<li><strong>The Underground Bunker:</strong> Descend into the fortified subterranean command center, preserved with vintage map tables, radio teleprinters, and blast doors that bear silent witness to the climatic denouement of the Vietnam War in April 1975.</li>
+</ul>
+
+          <div id="mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.4</span>
+              . Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> 45 Truong Dinh Street, Ben Thanh Ward, District 1 (200 meters west of the market).</li>
+<li><strong>Sacred Sanctuary:</strong> Established in the early 20th century by Tamil merchant communities from South India, this temple is dedicated to Goddess Mariamman, the celestial bringer of fertility, health, and monsoon rains.</li>
+<li><strong>Dravidian Artistry:</strong> The towering <em>gopuram</em> gateway ascends in tiered majesty, populated by hand-painted sculptures of Hindu deities depicted in saturated hues. Stepping across the threshold, the fragrant warmth of burning incense and camphor oil offers an immediate sensory departure from District 1&#39;s urban bustle. Behind the main altar, devotees practice the contemplative ritual of pressing their foreheads and open palms against the sacred granite sanctuary walls to absorb positive spiritual vibrations.</li>
+</ul>
+
+          <div id="ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.5</span>
+              . Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> Deep beneath Quach Thi Trang Square.</li>
+<li><strong>Contemporary Marvel:</strong> Descending 32 meters across four underground levels, this 236-meter-long terminal anchors the city&#39;s newly inaugurated urban transit network. Its architectural showpiece is the <strong>Lotus Toplight</strong>—a monumental circular skylight engineered from structural architectural glass. By day, sunlight cascades into the subterranean concourse, offering commuters looking upward a striking sightline to the century-old clock tower resting on the plaza above.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Landmark</th><th class="p-4 font-bold text-left">Distance from Market</th><th class="p-4 font-bold text-left">Recommended Duration</th><th class="p-4 font-bold text-left">Signature Style / Unique Feature</th><th class="p-4 font-bold text-left">Golden Visiting Window</th><th class="p-4 font-bold text-left">2026 Reference Admission</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Market</strong></td><td class="p-4"><em>Epicenter (0m)</em></td><td class="p-4">1.5 – 2.0 hours</td><td class="p-4">1914 clock tower, Bien Hoa ceramics, spice &amp; fabric maze</td><td class="p-4">07:30 – 09:30 AM (early pulse)</td><td class="p-4">Free admission</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>HCMC Museum of Fine Arts</strong></td><td class="p-4">350 meters (5-min walk)</td><td class="p-4">2.0 – 2.5 hours</td><td class="p-4">Hui Bon Hoa mansion, antique elevator, lacquer masterpieces</td><td class="p-4">08:30 – 11:00 AM (soft light)</td><td class="p-4">30,000 VND / person</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Independence Palace</strong></td><td class="p-4">700 meters (9-min walk)</td><td class="p-4">2.0 – 3.0 hours</td><td class="p-4">Ngo Viet Thu&#39;s Tropical Modernism, wartime bunker network</td><td class="p-4">14:00 – 16:00 PM (gentle heat)</td><td class="p-4">65,000 VND / full access</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Mariamman Temple</strong></td><td class="p-4">200 meters (3-min walk)</td><td class="p-4">45 – 60 mins</td><td class="p-4">Dravidian Gopuram gateway, stone wall meditation ritual</td><td class="p-4">08:00 – 10:00 AM (tranquil)</td><td class="p-4">Free (voluntary donation)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Metro Station</strong></td><td class="p-4">Directly at South Gate</td><td class="p-4">30 – 45 mins</td><td class="p-4">Lotus glass skylight, futuristic concourse 2026</td><td class="p-4">16:30 – 18:00 PM (dusk rays)</td><td class="p-4">Per Metro transit ticket</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epicurean-mapping-and-neighborhood-life" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Epicurean Mapping & Neighborhood Life
+          </h2>
+        </div>
+      <p>No encounter with Ben Thanh is complete without immersing your palate in the rich gastronomic mosaic of the southern delta.</p>
+
+          <div id="classic-daytime-market-stalls-inside-south-and-east-gates" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.1</span>
+              . Classic Daytime Market Stalls (Inside South & East Gates)
+            </h3>
+          </div>
+        <p>The market&#39;s daytime culinary court represents a vibrant orchestra of aromas and textures:</p>
+<ul>
+<li><strong>Bún Riêu Gánh Ben Thanh:</strong> A fragrant crab noodle soup characterized by rich crimson tomato broth scented with fermented rice vinegar, brimming with fresh freshwater crab patties, tender cha ca, and golden fried tofu.</li>
+<li><strong>Mekong Riverine Bún Mắm:</strong> The pungent, soul-warming essence of the Mekong Delta distilled into a simmering broth of fermented mud carp and snakehead fish, paired with succulent black tiger prawns, crispy pork belly, and crisp water lily stems.</li>
+<li><strong>Traditional Chè Dessert Stalls:</strong> Refreshing dessert bowls layered with mung bean paste, candied lotus seeds, water chestnut rubies, and freshly squeezed coconut cream—an indispensable midday salvation in tropical warmth.</li>
+</ul>
+
+          <div id="phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.2</span>
+              . Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)
+            </h3>
+          </div>
+        <p>As the clock tower tolls 18:00, the streets flanking the market transform into an open-air banquet. Sizzling charcoal braziers infuse the dusk air with aromas of grilled lemongrass beef wrapped in betel leaves (<em>bò lá lốt</em>), while tables groan beneath platters of Can Gio sea mud crabs, sea snails sautéed in garlic butter, and chilled craft beer brewed from local Mekong botanicals.</p>
+
+          <div id="secret-vintage-apartment-hideaways" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.3</span>
+              . Secret Vintage Apartment Hideaways
+            </h3>
+          </div>
+        <p>For travelers seeking a contemplative pause, slip into the encaustic-tiled stairwells of aging residential buildings along Pasteur, Le Loi, or Ly Tu Trong Streets. Tucked behind vintage louvered doors are artisan pour-over cafes where one can savor single-origin Arabica from the misty highlands of Da Lat, peering through weathered shutters as Saigon&#39;s evening traffic flows like ribbons of light below.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-walking-itineraries" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Curated Walking Itineraries
+          </h2>
+        </div>
+      
+        <h3 id="option-a-the-half-day-heritage-and-art-stroll-4-hours" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Option A: The Half-Day Heritage & Art Stroll (4 Hours)
+        </h3>
+      <ul>
+<li><strong>08:00 – 09:00 AM:</strong> Begin your morning with a steaming bowl of <em>bún riêu</em> beside Ben Thanh Market; study the South Gate ceramic reliefs in soft morning sunlight.</li>
+<li><strong>09:15 – 10:45 AM:</strong> Cross Le Thi Hong Gam to the <strong>HCMC Museum of Fine Arts</strong>; capture shadows angling through stained glass windows and admire lacquer treasures.</li>
+<li><strong>11:00 – 12:00 PM:</strong> Pause for quiet contemplation at <strong>Mariamman Hindu Temple</strong>, before descending into the illuminated halls of <strong>Ben Thanh Central Metro Station</strong>.</li>
+</ul>
+
+        <h3 id="option-b-the-complete-full-day-immersion-8-hours" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Option B: The Complete Full-Day Immersion (8 Hours)
+        </h3>
+      <ul>
+<li><strong>Morning (08:00 – 12:00 PM):</strong> Ben Thanh Market ➡️ Mariamman Hindu Temple ➡️ Fine Arts Museum.</li>
+<li><strong>Midday (12:00 – 14:00 PM):</strong> Authentic Indochine lunch on Pho Duc Chinh Street, followed by artisanal Vietnamese coffee in a hidden vintage apartment.</li>
+<li><strong>Afternoon (14:30 – 17:00 PM):</strong> Explore the grand halls and subterranean military bunkers of the <strong>Independence Palace</strong>. Walk down Le Loi Boulevard to witness golden hour rays piercing the lotus skylight of the Metro Station.</li>
+<li><strong>Evening (17:30 – 20:30 PM):</strong> Savor street food along Phan Boi Chau Street, culminating with a bespoke craft cocktail at an open-air rooftop lounge overlooking the illuminated market clock tower.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="field-notes-for-the-discerning-traveler-2026-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Field Notes for the Discerning Traveler (2026 Guidelines)
+          </h2>
+        </div>
+      <ol>
+<li><strong>Sacred Protocol &amp; Dress Code:</strong> Modest attire covering shoulders and knees is mandatory when entering Mariamman Hindu Temple and recommended at the Independence Palace. Remove your footwear before stepping past the threshold of the Hindu sanctuary.</li>
+<li><strong>Graceful Market Etiquette:</strong> In Ben Thanh Market, handcrafted textiles, lacquerware, and souvenirs often include an initial bargaining buffer. Approach bargaining with an engaging smile and sincere respect for artisanal labor; negotiating a modest 15% to 25% adjustment usually arrives at an amicable, balanced price.</li>
+<li><strong>Personal Awareness:</strong> While District 1 is safe and well-patrolled, when framing photographs along bustling street corners, maintain a secure grip on your camera or smartphone.</li>
+<li><strong>2026 Urban Connectivity:</strong> Leverage the newly opened Metro Line 1 from Ben Thanh Central Station to reach the riverside cultural quarter of Thao Dien in under 15 minutes.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-preserving-the-timeless-soul-of-saigon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: Preserving the Timeless Soul of Saigon
+          </h2>
+        </div>
+      <p>No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.</p>
+<p>Take your time walking down these tamarind-canopied boulevards. Allow your senses to be awakened by a Saigon that is both humble and grand, timeless yet boldly accelerating into the future—a true pilgrimage for the thoughtful traveler.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Preserving the Timeless Soul of Saigon</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Heart of Saigon</div>
+        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Ward, District 1, HCMC</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Golden Visiting Hours</div>
+        <div class="font-bold text-slate-800 text-[13px]">07:30 – 10:30 AM & 16:30 – 21:00 PM</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Experience</div>
+        <div class="font-bold text-slate-800 text-[13px]">Indochine heritage stroll & secret cafes</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Modern Transit</div>
+        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Central Metro Station Line 1</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/things-to-do-near-ben-thanh-market" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/things-to-do-near-ben-thanh-market');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
+export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> Colonial Gilded Mansion
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎨</span> Art Deco & Oriental Feng Shui
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏆</span> National Lacquer Treasures
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Curated Field Notes
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-the-hui-bon-hoa-estate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Hui Bon Hoa Estate</a>
+  <a href="#the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan</a>
+  <a href="#deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy</a>
+  <a href="#the-exterior-classical-pilasters-crowned-by-emerald-dragon-tiles" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles</a>
+  <a href="#the-interior-encaustic-tiles-and-prismatic-lightwells" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Interior: Encaustic Tiles and Prismatic Lightwells</a>
+  <a href="#the-parisian-antique-elevator-technological-aristocracy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Parisian Antique Elevator: Technological Aristocracy</a>
+  <a href="#navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Three Pavilions: A Millennial Artistic Odyssey</a>
+  <a href="#the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"</a>
+  <a href="#curated-field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#epilogue-a-serene-dialogue-with-the-past" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Serene Dialogue with the Past</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Mansion Coordinates</div>
+        <div class="text-[13px] font-bold text-slate-900">97A Pho Duc Chinh, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Construction Era</div>
+        <div class="text-[13px] font-bold text-slate-900">1929 – 1934 (Architect Rivera)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Walk from Ben Thanh</div>
+        <div class="text-[13px] font-bold text-slate-900">350 meters (5-minute stroll)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Reference Tariff</div>
+        <div class="text-[13px] font-bold text-slate-900">30,000 VND / adult (15,000 student)</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
+</div><p>Located less than a five-minute stroll across Le Thi Hong Gam Street from the four-dial clock tower, the <strong>Ho Chi Minh City Museum of Fine Arts</strong> forms an indispensable cultural pillar in the comprehensive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>. Here, early 20th-century French architectural sophistication coalesces with traditional Sino-Vietnamese spiritual sensibilities, creating one of Southeast Asia&#39;s most evocative aesthetic havens.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">📍 Mansion Coordinates</th><th class="p-4 font-bold text-left">🏛️ Architectural Style</th><th class="p-4 font-bold text-left">⏳ Construction Era</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Tariff</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>97A Pho Duc Chinh, Nguyen Thai Binh Ward, District 1</strong></td><td class="p-4"><strong>Art Deco with Beaux-Arts &amp; Oriental Accents</strong></td><td class="p-4"><strong>1929 – 1934 (Architect Rivera)</strong></td><td class="p-4"><strong>30,000 VND / adult (15,000 VND student)</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-the-hui-bon-hoa-estate" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of the Hui Bon Hoa Estate
+          </h2>
+        </div>
+      <ul>
+<li><strong>99 Legendary Portals:</strong> Folk traditions recount that the mansion was intentionally crafted with 99 windows and gateways—a numeral symbolizing eternal prosperity and completeness in southern Chinese geomancy.</li>
+<li><strong>3 Grand Villas:</strong> Arranged in an intimate U-shaped courtyard, the estate encloses a quiet, leafy central garden that effortlessly shields visitors from the vehicular roar of District 1.</li>
+<li><strong>Saigon&#39;s Antique Timber Elevator:</strong> A mahogany-lined, wrought-brass elevator carriage imported directly from Paris in the early 1930s—a marvel of engineering that stood as one of the city&#39;s earliest mechanical lifts.</li>
+<li><strong>22,000+ Preserved Works:</strong> A formidable chronological repository spanning ancient Cham sandstone iconography, prehistoric Oc Eo gold artifacts, wartime sketches, and modern Vietnamese lacquer paintings.</li>
+<li><strong>Inscribed National Treasure:</strong> The permanent home of master painter Nguyen Gia Tri’s monumental lacquer masterpiece, <em>Spring Garden of North, Central, and South Vietnam</em>.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan
+          </h2>
+        </div>
+      <p>To appreciate the palatial grandeur of 97A Pho Duc Chinh, one must understand the man who commissioned it. <strong>Hui Bon Hoa</strong> (famously remembered in southern folklore as <em>Chú Hỏa</em>, 1845 – 1901) was an immigrant entrepreneur of Hokkien descent who rose from modest origins to become the fourth figure in Saigon&#39;s mythic quartet of tycoons: <em>&quot;Nhat Sy, Nhi Phuong, Tam Xuong, Tu Hoa&quot;</em>.</p>
+<p>Guided by unyielding business ethics and uncanny urban foresight, Hui Bon Hoa and his sons established the powerhouse trading firm <em>Hui Bon Hoa Frères</em>. The family amassed a staggering portfolio of over 20,000 properties, dramatically shaping the modern skyline of colonial Saigon. Beyond their private fortune, the dynasty financed enduring philanthropic landmarks that still anchor public life today: Tu Du Maternity Hospital, Cho Quan Hospital (now the Hospital for Tropical Diseases), the iconic Majestic Hotel on the riverfront, and the Saigon Emergency Center.</p>
+<p>In 1929, the heirs commissioned renowned French architect <strong>Rivera</strong> to design a palatial family estate near the historic Ben Nghe canal. Utilizing bespoke materials imported from Marseille, Genoa, and Venice, the construction spanned half a decade before reaching completion in 1934. In 1987, the municipal government repurposed the complex into the City Museum of Fine Arts, formally opening its portals to the global public in 1991.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy
+          </h2>
+        </div>
+      <p>The enduring magic of the estate lies in its brilliant equilibrium between European avant-garde and indigenous environmental adaptation:</p>
+
+          <div id="the-exterior-classical-pilasters-crowned-by-emerald-dragon-tiles" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
+            </h3>
+          </div>
+        <p>Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.</p>
+
+          <div id="the-interior-encaustic-tiles-and-prismatic-lightwells" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . The Interior: Encaustic Tiles and Prismatic Lightwells
+            </h3>
+          </div>
+        <p>Cross the threshold, and you immediately step upon an exquisite carpet of <strong>handmade encaustic cement tiles</strong>. Every salon, corridor, and mezzanine boasts a distinct tessellated geometric motif, shifting effortlessly from ochre yellow to marine indigo and cinnabar red.</p>
+<p>Equally breathtaking are the arched clerestory windows fitted with vibrant stained glass. As equatorial sunlight filters through these kaleidoscopic panels, vivid amber and cerulean beams dance across weathered plaster walls, creating an atmosphere of contemplative, church-like tranquility.</p>
+
+          <div id="the-parisian-antique-elevator-technological-aristocracy" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
+              . The Parisian Antique Elevator: Technological Aristocracy
+            </h3>
+          </div>
+        <p>Positioned at the core of the central lightwell in Building 1, the vintage lift carriage features intricate brass latticework encasing polished dark timber. Standing before it, one can easily imagine the lavish lifestyle of Saigon’s Roaring Twenties, when this private lift was the envy of Indochina’s merchant elite.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Navigating the Three Pavilions: A Millennial Artistic Odyssey
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Pavilion</th><th class="p-4 font-bold text-left">Curatorial Focus</th><th class="p-4 font-bold text-left">Pinnacle Highlights</th><th class="p-4 font-bold text-left">Recommended Stroll</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 1 (Main Mansion)</strong></td><td class="p-4">Modern &amp; Contemporary Vietnamese Art (20th – 21st Century)</td><td class="p-4"><em>Spring Garden</em> (Nguyen Gia Tri), silk paintings by Nguyen Phan Chanh, wartime sketches</td><td class="p-4">Bask in stained-glass light on the 2nd and 3rd floor loggias</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 2 (Rear Villa)</strong></td><td class="p-4">Rotating Special Exhibitions &amp; International Dialogues</td><td class="p-4">Contemporary installations, private retrospectives, global exchanges</td><td class="p-4">Encounter cutting-edge experimental Vietnamese art</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 3 (Antiquities)</strong></td><td class="p-4">Ancient Indigenous Heritage &amp; Archaeological Sculpture</td><td class="p-4">7th–12th century Cham stone carvings, Oc Eo artifacts, Ly-Tran glazed pottery</td><td class="p-4">Contemplate the prehistoric and medieval riverine civilizations</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    
+        <h3 id="the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"
+        </h3>
+      <p>Enshrined in a temperature-controlled gallery on the second floor of Building 1 rests the 200 x 540 cm lacquer masterpiece by master <strong>Nguyen Gia Tri</strong>. Crafted over two decades (1969 – 1989), the panoramic composition depicts graceful maidens from Vietnam&#39;s three regions dancing in idyllic spring harmony. Through countless layers of natural mountain lacquer (<em>sơn ta</em>), burnished gold leaf, and inlaid duck eggshells, the canvas exudes a luminous, three-dimensional depth that mesmerizes art historians worldwide.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Curated Field Notes for the Discerning Traveler (2026)
+          </h2>
+        </div>
+      <ul>
+<li><strong>Golden Light Window:</strong> Visit between <strong>08:30 and 10:30 AM</strong> or <strong>15:00 and 16:30 PM</strong>. During these windows, low-angled sunlight casts dramatic linear shadows across the tiled verandas, creating exceptional conditions for architectural photography.</li>
+<li><strong>Conservation Etiquette:</strong> Refrain from touching the fragile lacquer surfaces and historic stone carvings. Flash photography is strictly forbidden to preserve delicate natural pigments and antique silk fibers.</li>
+<li><strong>Neighborhood Connections:</strong> After your museum immersion, cross the street to sample iced Vietnamese drip coffee with condensed milk at the vintage cafes along Le Thi Hong Gam Street, before continuing north toward the <a href="/independence-palace-saigon-guide">Independence Palace</a> or descending into the lotus skylight of the <a href="/ben-thanh-central-metro-station-guide">Ben Thanh Metro Station</a>.</li>
+<li><strong>Curated Private Excursion:</strong> For an insightful narrative unravelling the Hui Bon Hoa family lore alongside certified cultural specialists, consider reserving the <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a> curated by The Rice Tour.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-a-serene-dialogue-with-the-past" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: A Serene Dialogue with the Past
+          </h2>
+        </div>
+      <p>The Ho Chi Minh City Museum of Fine Arts is far more than an exhibition hall of mounted canvases; the estate itself is a living monument to architectural romance. In an era of rapid technological acceleration, spending two mindful hours listening to the breeze whisper through 99 louvered shutters reminds the traveler that genuine beauty remains forever anchored in patience, craft, and historical memory.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: A Serene Dialogue with the Past</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historical Identity</div>
+        <div class="font-bold text-slate-800 text-[13px]">Private Estate of Hui Bon Hoa Frères</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Sunlight Hours</div>
+        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM & 15:00 – 16:30 PM</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎨</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Key Masterpiece</div>
+        <div class="font-bold text-slate-800 text-[13px]">Spring Garden of North, Central & South</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛗</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pioneering Feature</div>
+        <div class="font-bold text-slate-800 text-[13px]">Saigon's Earliest Timber-Cage Elevator</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/hcmc-museum-of-fine-arts-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/hcmc-museum-of-fine-arts-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -408,6 +1397,7 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -416,6 +1406,7 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes
         </h1>
@@ -426,6 +1417,7 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           Far removed from the neon corridors of mass tourism, the 21 islands of the Nam Du archipelago emerge from the southwestern gulf as a rugged sanctuary of limestone cliffs, crystalline turquoise waters, and ancient seafaring traditions.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -440,6 +1432,7 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -805,6 +1798,13 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/truong-tien-bridge-hue-heritage" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Truong Tien Bridge Hue Heritage: Eiffel's Iron Lace, Dynastic Memory & 2026 Engineering Heritage
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -840,6 +1840,468 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🍲</span> Centennial Market Stalls
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🔥</span> Phan Boi Chau Charcoal Night
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🦐</span> Alluvial Mekong Produce
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Gastronomic Field Notes
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-ben-thanhs-food-court" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of Ben Thanh’s Food Court</a>
+  <a href="#southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil</a>
+  <a href="#deconstructing-5-heritage-stalls-inside-the-market-daytime" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deconstructing 5 Heritage Stalls Inside the Market (Daytime)</a>
+  <a href="#east-gate-bun-rieu-freshwater-crab-alchemy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">East Gate Bún Riêu: Freshwater Crab Alchemy</a>
+  <a href="#mekong-delta-bun-mam-the-essence-of-the-great-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mekong Delta Bún Mắm: The Essence of the Great River</a>
+  <a href="#goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls</a>
+  <a href="#central-vietnamese-steamed-rice-cakes-the-hue-connection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Vietnamese Steamed Rice Cakes: The Hue Connection</a>
+  <a href="#ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance</a>
+  <a href="#phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky</a>
+  <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
+  <a href="#field-notes-for-conscious-gourmands-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for Conscious Gourmands (2026)</a>
+  <a href="#epilogue-the-warmth-of-living-memory" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Warmth of Living Memory</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Epicenter</div>
+        <div class="text-[13px] font-bold text-slate-900">South & East Portals, Ben Thanh</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Operational Window</div>
+        <div class="text-[13px] font-bold text-slate-900">06:00 – 18:00 (Day) & 18:00 – 23:30 (Night)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">30,000 – 120,000 VND / dish</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌟</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Must-Taste Icon</div>
+        <div class="text-[13px] font-bold text-slate-900">East Gate Bún Riêu & Lemongrass Beef</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.
+</div><p>Highlighted in our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the historic market&#39;s daytime food court and its adjacent evening dining alleys along Phan Boi Chau and Phan Chu Trinh Streets represent a <strong>living gastronomy museum</strong>. Here, ancestral culinary techniques from Chinese Chợ Lớn immigrants, Khmer riverine traditions, and southern Vietnamese delta farmers coalesce into an irresistible feast for the senses.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">🍲 Culinary Heritage</th><th class="p-4 font-bold text-left">🕒 Operational Hours</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Tariffs</th><th class="p-4 font-bold text-left">🌟 Signature Highlights</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Southern Delta, Teochew &amp; Khmer Fusion</strong></td><td class="p-4"><strong>06:00 – 18:00 (Market) &amp; 18:00 – 23:30 (Street)</strong></td><td class="p-4"><strong>30,000 – 120,000 VND / dish</strong></td><td class="p-4"><strong>East Gate Bún Riêu &amp; Grilled Betel Beef</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-ben-thanhs-food-court" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of Ben Thanh’s Food Court
+          </h2>
+        </div>
+      <ul>
+<li><strong>50+ Generational Stalls:</strong> Tightly clustered within the South and East portals, certified under Ho Chi Minh City’s rigorous 2026 street food hygiene and safety standards.</li>
+<li><strong>5 Decades of Simmering Broth:</strong> The pedigree of the iconic bún riêu shoulder-pole vendor near the East Gate, where heads of state and street sweepers have sat side by side since 1978.</li>
+<li><strong>16 Southern Sweet Soups:</strong> Showcased in jewel-toned glass bowls at Ba Muoi’s traditional dessert stall, serving market crowds since 1968.</li>
+<li><strong>100% Market-Fresh Daily Logistics:</strong> Ingredients arrive at 04:00 AM every morning from the wholesale agricultural hubs of Thu Duc and the seafood terminals of Binh Dien.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
+          </h2>
+        </div>
+      <p>Southern Vietnamese cookery is fundamentally celebratory and generous. Liberated from the strict ceremonial conventions of the imperial north, cooks of the lower Mekong celebrate sensory immediacy: sweetness is deep and unapologetic (drawn from pure sugarcane and young coconut water), spiciness is sharp and vibrant from red bird’s-eye chilis, sourness is refreshing through fermented rice vinegar or tamarind pods, and umami is anchored in fragrant fermented river fish pastes (<em>mắm</em>).</p>
+<p>Over a century of metropolitan convergence, Ben Thanh Market has synthesized the fiery wok artistry of Cantonese settlers with the indigenous herbal wisdom of the Khmer, yielding a regional street gastronomy unmatched anywhere in Southeast Asia.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="deconstructing-5-heritage-stalls-inside-the-market-daytime" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Deconstructing 5 Heritage Stalls Inside the Market (Daytime)
+          </h2>
+        </div>
+      
+          <div id="east-gate-bun-rieu-freshwater-crab-alchemy" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . East Gate Bún Riêu: Freshwater Crab Alchemy
+            </h3>
+          </div>
+        <ul>
+<li><strong>Location:</strong> Flanking the East Portal on Phan Boi Chau Street.</li>
+<li><strong>The Broth Blueprint:</strong> Free from artificial coloring, the brilliant amber broth owes its hue to natural annatto seed oil sautéed with vine-ripened tomatoes. Simmered overnight with pork marrow bones and fermented rice vinegar (<em>giấm bỗng</em>), the soup balances delicate acidity with deep animal savoriness.</li>
+<li><strong>The Signature Crab Cake:</strong> Northern variations feature fragile flakes of crab floating on the surface; Ben Thanh’s version binds river paddy crab meat with minced pork shoulder, crushed dried river shrimp, and duck eggs, steamed into dense, succulent medallions that melt on the tongue.</li>
+</ul>
+
+          <div id="mekong-delta-bun-mam-the-essence-of-the-great-river" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . Mekong Delta Bún Mắm: The Essence of the Great River
+            </h3>
+          </div>
+        <ul>
+<li><strong>Fermented Broth Mastery:</strong> The broth derives its potent soul from simmered snakeskin gourami (<em>mắm cá sặc</em>) and mud carp (<em>mắm cá linh</em>) transported from Chau Doc on the Cambodian border, deodorized skillfully with bruised lemongrass culms and minced bird&#39;s-eye chilies.</li>
+<li><strong>Abundant Garnishes:</strong> Each steaming bowl is a lavish aquatic harvest: snappy Ben Tre tiger prawns, scored squid fillets, dill-infused clown featherback fishcakes, and crispy golden pork belly. An accompanying platter brims with river botanicals: water lily stems, bitter herbs, water hyacinth shoots, and shredded banana blossom.</li>
+</ul>
+
+          <div id="goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
+              . Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls
+            </h3>
+          </div>
+        <p>Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine vermicelli, and fresh garlic chives rolled into tight, crystalline cylinders. Dip each bite into warm fermented soybean paste infused with coconut cream and crushed roasted peanuts for an exceptionally refreshing midday respite.</p>
+
+          <div id="central-vietnamese-steamed-rice-cakes-the-hue-connection" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.4</span>
+              . Central Vietnamese Steamed Rice Cakes: The Hue Connection
+            </h3>
+          </div>
+        <p>Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety <em>bánh bèo</em>. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.</p>
+
+          <div id="ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.5</span>
+              . Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
+            </h3>
+          </div>
+        <p>Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (<em>chè sương sa hạt lựu</em>), warm lotus seed porridge (<em>chè thưng</em>), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
+          </h2>
+        </div>
+      <p>When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:</p>
+<ul>
+<li><strong>Bò Nướng Lá Lốt (Beef in Betel Leaves):</strong> Minced prime beef seasoned with lemongrass and five-spice powder wrapped tightly in wild betel leaves, sizzling over open charcoal braziers. As the leaves char lightly, their pungent herbal oils seal the juices inside. Wrap each roll in thin woven rice vermicelli (<em>bánh hỏi</em>) with pickled daikon and dunk into crushed pineapple anchovy sauce.</li>
+<li><strong>Open-Flame Charcoal Seafood:</strong> Tables groan beneath Can Gio mud crabs, garlic-butter sea snails, and giant freshwater prawns grilled directly on iron grates, washed down with locally crafted Saigon botanical ales.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Iconic Dish</th><th class="p-4 font-bold text-left">Sensory Profile</th><th class="p-4 font-bold text-left">Core Ingredients</th><th class="p-4 font-bold text-left">Serving Window</th><th class="p-4 font-bold text-left">2026 Reference Price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>East Gate Bún Riêu</strong></td><td class="p-4">Tart, savory, velvety richness</td><td class="p-4">Paddy crab, pork bone broth, tomatoes, tofu</td><td class="p-4">06:30 – 17:00</td><td class="p-4">55,000 – 65,000 VND / bowl</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Mekong River Bún Mắm</strong></td><td class="p-4">Bold, pungent, herbal complexity</td><td class="p-4">Fermented carp, tiger prawns, roast pork</td><td class="p-4">08:00 – 18:00</td><td class="p-4">75,000 – 90,000 VND / bowl</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Gỏi Cuốn (Spring Rolls)</strong></td><td class="p-4">Crisp, herbal, nutty umami</td><td class="p-4">Rice paper, poached prawns, pork, hoisin dip</td><td class="p-4">All day</td><td class="p-4">15,000 – 20,000 VND / roll</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Grilled Betel Leaf Beef</strong></td><td class="p-4">Smoky, aromatic, peppery</td><td class="p-4">Minced beef, wild betel leaves, anchovy dip</td><td class="p-4">18:00 – 23:30</td><td class="p-4">70,000 – 95,000 VND / set</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Chè Sương Sa Hạt Lựu</strong></td><td class="p-4">Sweet, crunchy, luscious coconut</td><td class="p-4">Water chestnut rubies, agar agar, coconut milk</td><td class="p-4">07:00 – 18:00</td><td class="p-4">30,000 – 40,000 VND / glass</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="field-notes-for-conscious-gourmands-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Field Notes for Conscious Gourmands (2026)
+          </h2>
+        </div>
+      <ol>
+<li><strong>Cashless Tap-to-Pay:</strong> Every certified vendor inside the market now supports VietQR and contactless card payments, eliminating the hassle of counting physical banknotes.</li>
+<li><strong>Navigating Peak Rush:</strong> Stalls reach peak capacity between 11:30 and 13:00. Arrive between <strong>08:30 and 10:30 AM</strong> or <strong>14:30 and 16:00 PM</strong> for leisurely seating and personalized attention from generational cooks.</li>
+<li><strong>Local Condiment Wisdom:</strong> When indulging in bún riêu or bún mắm, squeeze a wedge of fresh lime and stir in a spoonful of chili paste to brighten the herbal complexity of the broth.</li>
+<li><strong>Hands-On Market Immersion:</strong> To navigate the produce aisles alongside master chefs and prepare classic Vietnamese banquets from scratch, consider reserving the <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Tour</a> operated by The Rice Tour.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-the-warmth-of-living-memory" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: The Warmth of Living Memory
+          </h2>
+        </div>
+      <p>Culinary mastery is rarely born in isolation; it is forged across decades of devotion by matriarchs who guard family recipes with quiet dignity. At Ben Thanh Market, every ladle of broth and every delicate rice paper roll handed to you represents the culinary soul of the Southern Delta—an unhurried gift for travelers who journey with appetite and reverence.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Warmth of Living Memory</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Gastronomic genius is rarely born in isolation; it is forged across decades of devotion by matriarchs who guard family recipes with quiet dignity. At Ben Thanh Market, every ladle of broth and every delicate rice paper roll handed to you represents the culinary soul of the Southern Delta—an unhurried gift for travelers who journey with appetite and reverence.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Culinary Court</div>
+        <div class="font-bold text-slate-800 text-[13px]">East Gate Stalls & Phan Boi Chau Street</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Off-Peak Tasting Hours</div>
+        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM & 14:30 – 16:00 PM</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍲</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Legacy Vendor</div>
+        <div class="font-bold text-slate-800 text-[13px]">Ba Muoi Dessert Stall (Since 1968)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Payment Method</div>
+        <div class="font-bold text-slate-800 text-[13px]">VietQR & Tap-to-Pay Widely Accepted</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-market-food-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-market-food-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -852,6 +2314,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -860,6 +2323,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide
         </h1>
@@ -870,6 +2334,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           Fed by the ceaseless alluvial embrace of the Mekong and Bassac rivers, the Southern Delta yields the most biodiverse fruit basket in Southeast Asia. This is your definitive 2026 harvest map to navigating orchards across 13 provinces.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -884,6 +2349,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -1254,6 +2720,13 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/truong-tien-bridge-hue-heritage" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Truong Tien Bridge Hue Heritage: Eiffel's Iron Lace, Dynastic Memory & 2026 Engineering Heritage
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -1289,6 +2762,444 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">13 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚶</span> Curated 4.5km Slow Stroll
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> 6 Iconic Urban Monuments
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌅</span> Bach Dang River Sunset
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Field Expedition
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-the-route" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Route</a>
+  <a href="#slow-travel-philosophy-embracing-the-city-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Slow Travel Philosophy: Embracing the City on Foot</a>
+  <a href="#detailed-four-stage-itinerary-breakdown" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detailed Four-Stage Itinerary Breakdown</a>
+  <a href="#stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers</a>
+  <a href="#stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats</a>
+  <a href="#stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes</a>
+  <a href="#stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts</a>
+  <a href="#curated-time-block-and-budget-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Time-Block & Budget Matrix (2026 Reference)</a>
+  <a href="#field-checklist-for-conscious-voyagers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Checklist for Conscious Voyagers (2026)</a>
+  <a href="#epilogue-falling-in-love-with-saigon-one-step-at-a-time" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Falling in Love with Saigon One Step at a Time</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Total Stroll Distance</div>
+        <div class="text-[13px] font-bold text-slate-900">4.5 km (4 Leisurely Stages)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Expedition Duration</div>
+        <div class="text-[13px] font-bold text-slate-900">12 Hours (07:30 AM – 20:30 PM)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⚡</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Physical Intensity</div>
+        <div class="text-[13px] font-bold text-slate-900">Gentle & Restorative (All Ages)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Estimated Budget</div>
+        <div class="text-[13px] font-bold text-slate-900">500,000 – 850,000 VND / person</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.
+</div><p>As an anchor itinerary within our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, this <strong>One-Day Heritage Walking Tour</strong> has been curated by The Rice Tour to guide conscious voyagers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">🚶 Total Stroll Distance</th><th class="p-4 font-bold text-left">⏳ Expedition Duration</th><th class="p-4 font-bold text-left">⚡ Physical Intensity</th><th class="p-4 font-bold text-left">🎟️ 2026 Estimated Budget</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4.5 km (4 Leisurely Stages)</strong></td><td class="p-4"><strong>12 Hours (07:30 AM – 20:30 PM)</strong></td><td class="p-4"><strong>Gentle &amp; Restorative (All Ages)</strong></td><td class="p-4"><strong>500,000 – 850,000 VND / person</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-the-route" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of the Route
+          </h2>
+        </div>
+      <ul>
+<li><strong>6 Iconic Monuments:</strong> Seamlessly links Ben Thanh Market, Mariamman Hindu Temple, HCMC Museum of Fine Arts, Independence Palace, Ben Thanh Metro Station, and Bach Dang Riverfront Park.</li>
+<li><strong>3 Architectural Golden Eras:</strong> Guides you across French Colonial Beaux-Arts, 1930s Indochine Art Deco, and 1960s Tropical Modernism.</li>
+<li><strong>Under 15 Minutes Between Stops:</strong> Every consecutive stage is separated by short, shaded walks beneath century-old dipterocarp and mahogany trees.</li>
+<li><strong>1 Breathtaking River Sunset:</strong> Concludes the afternoon at Bach Dang Wharf watching the dusk sky silhouette the futuristic skyline of Thu Thiem Peninsula.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="slow-travel-philosophy-embracing-the-city-on-foot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Slow Travel Philosophy: Embracing the City on Foot
+          </h2>
+        </div>
+      <p>Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.</p>
+<p>This itinerary harmonizes with the sun: cool morning light is devoted to open markets and sacred shrines; the blazing midday heat is spent safely ensconced within air-conditioned museum galleries and quiet apartment cafes; the breezy afternoon explores the palatial gardens of the Independence Palace; and the evening celebrates open-air dining and elevated skyline cocktails.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="detailed-four-stage-itinerary-breakdown" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Detailed Four-Stage Itinerary Breakdown
+          </h2>
+        </div>
+      
+        <h3 id="stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers
+        </h3>
+      <ul>
+<li><strong>07:30 – 09:00 AM:</strong> Begin at Ben Thanh Market’s East Portal. Indulge in a steaming bowl of <a href="/ben-thanh-market-food-guide">authentic bún riêu</a>, laden with river crab cakes. Stroll around the South Portal clock tower to admire the 1952 Bien Hoa ceramic reliefs in the crisp morning light.</li>
+<li><strong>09:15 – 10:15 AM:</strong> Walk 200 meters down Truong Dinh Street to <strong>Mariamman Hindu Temple</strong>. Shed your footwear at the threshold, absorb the warmth of camphor incense, and admire the vibrant hand-painted deities ascending the tiered Gopuram tower.</li>
+</ul>
+
+        <h3 id="stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats
+        </h3>
+      <ul>
+<li><strong>10:30 AM – 12:00 PM:</strong> Cross Le Thi Hong Gam Street to the <strong><a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a> (97A Pho Duc Chinh)</strong>. Spend 90 minutes exploring Hui Bon Hoa’s 99-window estate, marveling at stained glass reflections and viewing the monumental national treasure <em>Spring Garden of North, Central, and South Vietnam</em>.</li>
+<li><strong>12:15 – 13:45 PM:</strong> Savor an authentic Indochine lunch featuring fresh spring rolls and claypot dishes near Nguyen Thai Binh Street. Afterwards, ascend the encaustic tile stairways of a vintage Pasteur Street apartment block to sip single-origin Vietnamese pour-over coffee in a quiet sanctuary.</li>
+</ul>
+
+        <h3 id="stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes
+        </h3>
+      <ul>
+<li><strong>14:00 – 16:00 PM:</strong> Stroll beneath tree-shaded Nam Ky Khoi Nghia Boulevard to the <strong>Independence Palace</strong>. Unpack master architect Ngo Viet Thu’s Tropical Modernism, decipher Eastern philosophical ideograms (Cat, Khau, Trung), and step into the reinforced subterranean wartime telecommunication bunkers.</li>
+<li><strong>16:15 – 17:00 PM:</strong> Return to the renovated plaza before Ben Thanh Market. Ride the escalators down into the <strong>2026 Ben Thanh Central Metro Station</strong>, gazing up through the massive circular Lotus Toplight skylight as dusk rays pierce the glass concourse.</li>
+<li><strong>17:00 – 17:45 PM:</strong> Walk down Le Loi Boulevard past the Saigon Opera House, reaching <strong>Bach Dang Riverfront Park</strong>. Rest along the granite promenade, catching cooling river winds as the sun sets over the Saigon River.</li>
+</ul>
+
+        <h3 id="stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts
+        </h3>
+      <ul>
+<li><strong>18:00 – 19:30 PM:</strong> Circle back to Phan Boi Chau Street flanking Ben Thanh Market. Feast on betel-leaf wrapped beef grilled over open charcoal embers and fresh coastal shellfish.</li>
+<li><strong>19:45 – 20:30 PM:</strong> Conclude your expedition at an open-air rooftop lounge overlooking the square, sipping a signature botanical cocktail as the illuminated clock tower presides over evening traffic below.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-time-block-and-budget-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Curated Time-Block & Budget Matrix (2026 Reference)
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Time Window</th><th class="p-4 font-bold text-left">Landmark</th><th class="p-4 font-bold text-left">Core Experience</th><th class="p-4 font-bold text-left">Admission Tariff 2026</th><th class="p-4 font-bold text-left">Estimated Dining Expense</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>07:30 – 09:00</strong></td><td class="p-4">Ben Thanh Market</td><td class="p-4">Bún riêu breakfast, ceramic reliefs</td><td class="p-4">Free entry</td><td class="p-4">60,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>09:15 – 10:15</strong></td><td class="p-4">Mariamman Temple</td><td class="p-4">Gopuram contemplation, shrine blessing</td><td class="p-4">Free (voluntary)</td><td class="p-4">20,000 VND (incense)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>10:30 – 12:00</strong></td><td class="p-4">Fine Arts Museum</td><td class="p-4">Hui Bon Hoa mansion, lacquer treasures</td><td class="p-4">30,000 VND</td><td class="p-4">—</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>12:15 – 13:45</strong></td><td class="p-4">Vintage Apartments</td><td class="p-4">Indochine lunch &amp; artisan pour-over</td><td class="p-4">Free</td><td class="p-4">180,000 – 220,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>14:00 – 16:00</strong></td><td class="p-4">Independence Palace</td><td class="p-4">Modernist halls, wartime command bunker</td><td class="p-4">65,000 VND</td><td class="p-4">—</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>16:15 – 17:45</strong></td><td class="p-4">Metro &amp; Bach Dang</td><td class="p-4">Lotus skylight concourse &amp; river sunset</td><td class="p-4">15,000 VND (metro ticket)</td><td class="p-4">30,000 VND (coconut)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>18:00 – 20:30</strong></td><td class="p-4">Phan Boi Chau &amp; Rooftop</td><td class="p-4">Charcoal street feast &amp; evening cocktail</td><td class="p-4">Free</td><td class="p-4">250,000 – 350,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>TOTALS</strong></td><td class="p-4"><strong>Full 12-Hour Stroll</strong></td><td class="p-4"><strong>6 Heritage Icons + 4 Gastronomic Stops</strong></td><td class="p-4"><strong>~110,000 VND</strong></td><td class="p-4"><strong>~540,000 – 680,000 VND</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="field-checklist-for-conscious-voyagers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Field Checklist for Conscious Voyagers (2026)
+          </h2>
+        </div>
+      <ul>
+<li><input disabled="" type="checkbox"> <strong>Comfortable Walking Footwear:</strong> With 4.5km of strolling, breathable sneakers or ergonomic leather sandals are vital.</li>
+<li><input disabled="" type="checkbox"> <strong>Respectful Cultural Attire:</strong> Ensure garments cover shoulders and knees for temple and palace admissions.</li>
+<li><input disabled="" type="checkbox"> <strong>Sun &amp; Rain Defense:</strong> UV-blocking sunglasses, mineral sunscreen, and a lightweight compact umbrella (essential for shielding both equatorial sun and sudden tropical showers).</li>
+<li><input disabled="" type="checkbox"> <strong>Cashless Payments:</strong> All certified venues on this route support contactless card payments and VietQR; carry 100,000 – 200,000 VND in small notes purely for street refreshments.</li>
+<li><input disabled="" type="checkbox"> <strong>Elevate with Expert Guidance:</strong> To uncover the deeper human stories behind each landmark with certified cultural historians, reserve the private <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Tour</a> curated by The Rice Tour.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-falling-in-love-with-saigon-one-step-at-a-time" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: Falling in Love with Saigon One Step at a Time
+          </h2>
+        </div>
+      <p>A day spent walking the avenues surrounding Ben Thanh permanently shatters the myth that Saigon is merely an overwhelming sea of motorbikes. Every alleyway traversed, every centuries-old mahogany tree passed cradles deep alluvial strata of lived human history. As night settles and you gaze out over the illuminated roundabout, you realize you have come to know Saigon through its most gracious, timeless rhythms.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Falling in Love with Saigon One Step at a Time</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                A day spent walking the avenues surrounding Ben Thanh permanently shatters the myth that Saigon is merely an overwhelming sea of motorbikes. Every alleyway traversed, every centuries-old mahogany tree passed cradles deep alluvial strata of lived human history. As night settles and you gaze out over the illuminated roundabout, you realize you have come to know Saigon through its most gracious, timeless rhythms.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Starting & Ending Hub</div>
+        <div class="font-bold text-slate-800 text-[13px]">Quach Thi Trang Plaza, Ben Thanh</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Season</div>
+        <div class="font-bold text-slate-800 text-[13px]">Dry Season (December – April)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pacing Rule</div>
+        <div class="font-bold text-slate-800 text-[13px]">Under 15 mins between landmarks</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Transit Integration</div>
+        <div class="font-bold text-slate-800 text-[13px]">Subterranean Metro Line 1 Passage</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-one-day-walking-tour" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-one-day-walking-tour');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -1301,6 +3212,7 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -1309,6 +3221,7 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide
         </h1>
@@ -1319,6 +3232,7 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           Spanning the tranquil waters of the Perfume River, the Truong Tien Bridge is far more than a transport artery. It is the poetic heart of Hue—a testament to Gustave Eiffel's metallurgical mastery, the resilience of imperial memory, and the romantic soul of Central Vietnam.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -1333,6 +3247,7 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -1632,6 +3547,13 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -1667,6 +3589,431 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Few architectural monuments mirror the tectonic shifts of modern history with the stoic poetry of the Independence Palace. Situated amidst 12 hectares of ancient dipterocarp forest, this masterpiece of Tropical Modernism remains the definitive symbol of Saigon’s dramatic journey from war to peace.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">13 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> Special National Monument
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">📐</span> Tropical Modernist Masterpiece
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎖️</span> Subterranean Wartime Bunkers
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Curated Heritage Stroll
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-the-palace-grounds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Palace Grounds</a>
+  <a href="#historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Historical Stratigraphy: From Colonial Norodom Palace to National Reunification</a>
+  <a href="#deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram</a>
+  <a href="#floorplan-sino-vietnamese-ideograms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Floorplan Sino-Vietnamese Ideograms</a>
+  <a href="#the-concrete-bamboo-louver-curtain-rem-hoa-a" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)</a>
+  <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
+  <a href="#field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#epilogue-a-concrete-hymn-to-sovereignty-and-peace" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Concrete Hymn to Sovereignty and Peace</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Palace Coordinates</div>
+        <div class="text-[13px] font-bold text-slate-900">135 Nam Ky Khoi Nghia, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📐</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Chief Architect</div>
+        <div class="text-[13px] font-bold text-slate-900">Ngo Viet Thu (Grand Prix de Rome)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Walk from Market</div>
+        <div class="text-[13px] font-bold text-slate-900">700 meters (9-minute shaded walk)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Admission</div>
+        <div class="text-[13px] font-bold text-slate-900">65,000 VND / adult (Palace & Bunkers)</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  Few architectural monuments on earth mirror the tectonic shifts of modern history with the stoic poetry of the Independence Palace. Situated amidst 12 hectares of ancient dipterocarp forest in the beating heart of District 1, this masterpiece of Tropical Modernism remains the definitive symbol of Saigon’s dramatic journey from war to peace.
+</div><p>Enshrined as a focal monument in our curated guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the <strong>Independence Palace (Reunification Convention Hall)</strong> stands just 700 meters north of the central market along tree-canopied Nam Ky Khoi Nghia Boulevard. As Vietnam’s premier Special National Relic, the estate encapsulates an extraordinary dialogue between avant-garde mid-century architecture and ancient Eastern philosophical cosmology.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">📍 Palace Coordinates</th><th class="p-4 font-bold text-left">🏛️ Architectural Doctrine</th><th class="p-4 font-bold text-left">⏳ Inaugural Year</th><th class="p-4 font-bold text-left">🎟️ 2026 Comprehensive Tariff</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>135 Nam Ky Khoi Nghia, Ben Thanh Ward, District 1</strong></td><td class="p-4"><strong>Tropical Modernism with Eastern Symbology</strong></td><td class="p-4"><strong>1966 (Architect Ngo Viet Thu)</strong></td><td class="p-4"><strong>65,000 VND / adult comprehensive</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-the-palace-grounds" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of the Palace Grounds
+          </h2>
+        </div>
+      <ul>
+<li><strong>12-Hectare Urban Forest:</strong> An expansive estate embracing over 4,000 towering centennial trees, acting as an emerald thermal regulator in the core of District 1.</li>
+<li><strong>100+ Historic Salons:</strong> Diplomatic banquet chambers, state credential rooms, cabinet chambers, and presidential residential quarters preserved in pristine mid-century decorative finish.</li>
+<li><strong>500kg Bomb Resistance:</strong> The structural rating of the reinforced subterranean bunker network, built with armored steel bulkheads and self-contained ventilation.</li>
+<li><strong>1955 Grand Prix de Rome:</strong> Master architect Ngo Viet Thu achieved France&#39;s supreme architectural accolade before returning to his homeland to conceive this enduring legacy.</li>
+<li><strong>Tanks 390 &amp; 843:</strong> Replicas of the legendary armor units that breached the wrought-iron gates at 11:30 AM on April 30, 1975, forever concluding the Vietnam War.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
+          </h2>
+        </div>
+      <p>The palatial grounds have served as the fulcrum of southern governance across three distinct epochs:</p>
+<p>In 1868, French Governor Lagrandière laid the foundation stone for the palatial <strong>Norodom Palace</strong>, designed in grandiose Neo-Baroque fashion to project French colonial supremacy across Indochina. For over eight decades, it stood as the residence of colonial governors and French high commissioners.</p>
+<p>In 1954, following the Geneva Accords, the palace was transferred to the southern administration and rechristened the <strong>Independence Palace</strong>. In February 1962, a mutinous aerial bombardment collapsed the entire left wing of the nineteenth-century colonial structure. Recognizing the impossibility of restoring the fractured masonry, the government cleared the site and inaugurated a prestigious architectural competition. Vietnamese architect <strong>Ngo Viet Thu</strong> triumphed with a visionary design that broke completely with Western neoclassical mimicry, initiating construction on July 1, 1962, and celebrating its formal inauguration on October 31, 1966.</p>
+<p>On April 30, 1975, the historic breakthrough of the palace gates sealed the end of a thirty-year conflict, cementing the monument’s place as an immutable crossroads of global history.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
+          </h2>
+        </div>
+      <p>Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:</p>
+
+          <div id="floorplan-sino-vietnamese-ideograms" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . Floorplan Sino-Vietnamese Ideograms
+            </h3>
+          </div>
+        <ul>
+<li><strong>The Ideogram CÁT (吉 - Auspiciousness):</strong> The primary structural footprint outlines the character <em>Cát</em>, symbolizing eternal fortune and peace for the nation.</li>
+<li><strong>The Ideogram KHẨU (口 - Free Speech):</strong> The central presidential balcony on the second level frames the square character <em>Khẩu</em>, embodying the imperative of free speech and democratic dialogue.</li>
+<li><strong>The Ideogram TRUNG (中 - Loyalty):</strong> The vertical flagpole rising precisely through the center of the balcony forms the stroke <em>Trung</em>, championing unbending fidelity to the homeland.</li>
+<li><strong>The Ideogram CHỦ (主 - Sovereignty):</strong> The rooftop pavilion topped by the national flag finishes the character <em>Chủ</em>, declaring undisputed national independence.</li>
+</ul>
+
+          <div id="the-concrete-bamboo-louver-curtain-rem-hoa-a" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . The Concrete Bamboo Louver Curtain (Rèm Hoa Đá)
+            </h3>
+          </div>
+        <p>Enclosing the second and third floor balconies is a distinctive sunscreen facade sculpted into slender <strong>concrete bamboo joints (<em>đốt trúc</em>)</strong>. This ingenious structural invention evokes the unyielding resilience of Vietnamese rural bamboo groves while solving a critical equatorial challenge: it deflects harsh midday solar radiation, draws cross-ventilating monsoons through deep covered loggias, and affords diplomats privacy from the public avenues outside.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Curated Interior Exploration: From Grand Salons to Underground Bunkers
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Sector</th><th class="p-4 font-bold text-left">Level</th><th class="p-4 font-bold text-left">Function &amp; Key Artworks</th><th class="p-4 font-bold text-left">Historical Significance</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>State Banquet Chamber</strong></td><td class="p-4">Ground Level</td><td class="p-4">500-guest capacity, hand-woven carpets, monumental lacquer panels</td><td class="p-4">Venue for bilateral state dinners and diplomatic assemblies</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>National Credentials Salon</strong></td><td class="p-4">Level 2</td><td class="p-4">Masterpiece lacquer panel <em>&quot;Binh Ngo Dai Cao&quot;</em> with pure gold leaf by Nguyen Van Minh</td><td class="p-4">The ceremonial hall where foreign ambassadors presented credentials</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Wartime Command Bunker</strong></td><td class="p-4">Subterranean (-2)</td><td class="p-4">1-meter-thick steel-reinforced walls, teleprinters, vintage tactical map tables</td><td class="p-4">Emergency defense operations center during aerial bombardments</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rooftop Heliport</strong></td><td class="p-4">Roof Level</td><td class="p-4">Red targets marking the two bomb impacts from pilot Nguyen Thanh Trung on April 8, 1975</td><td class="p-4">Unrivaled vistas over the tree canopy toward Le Duan Boulevard</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Historical Exhibition Wing</strong></td><td class="p-4">East Pavilion</td><td class="p-4">Archival exhibition: &quot;From Norodom Palace to Independence Palace 1868–1966&quot;</td><td class="p-4">Rare original colonial photographs and diplomatic treaty artifacts</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Field Notes for the Discerning Traveler (2026)
+          </h2>
+        </div>
+      <ul>
+<li><strong>Optimal Stroll Window:</strong> Arrive between <strong>14:00 and 16:30 PM</strong>. The afternoon sun dips beneath the giant mahogany canopy, casting dramatic architectural shadows through the bamboo louvers and providing a cooler ambiance for garden exploration.</li>
+<li><strong>Dress Code &amp; Etiquette:</strong> Modest attire with covered shoulders and knees is mandatory. Large backpacks must be checked at the security counter near the gate.</li>
+<li><strong>Smart Audio Guides:</strong> Multi-language interactive audio wands (English, French, German, Japanese, Mandarin) are available at the reception desk for 50,000 VND, offering insightful curatorial narratives at your own pace.</li>
+<li><strong>Seamless Walking Connection:</strong> Combine your palace visit with the <a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a> or follow our curated <a href="/ben-thanh-one-day-walking-tour">One-Day Walking Tour</a>.</li>
+<li><strong>Curated Expert Excursion:</strong> For a private tour led by accredited architectural historians, reserve the <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a> hosted by The Rice Tour.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-a-concrete-hymn-to-sovereignty-and-peace" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: A Concrete Hymn to Sovereignty and Peace
+          </h2>
+        </div>
+      <p>The Independence Palace is far more than an exhibition of antique rotary phones and diplomatic chairs; it is an enduring concrete hymn to national sovereignty. Surrounded by the forward rush of Saigon&#39;s new metro lines and futuristic skyline in 2026, resting beneath its ancient trees offers the contemplative traveler a rare moment to appreciate how deeply resilience and hope are etched into the stone of this proud city.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Where Architecture Mirrors History</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Standing beneath the open sky on the second-floor meditation terrace or walking through the subterranean reinforced concrete bunkers, one realizes the Independence Palace is far more than a museum. It is an unvarnished diary of a nation—where every bronze relief, every open louvered breeze, and every quiet corridor whispers of resilience, peace, and cultural dignity.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Park Estate</div>
+        <div class="font-bold text-slate-800 text-[13px]">12-Hectare Ancient Canopy</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Visiting Window</div>
+        <div class="font-bold text-slate-800 text-[13px]">08:00 – 10:30 AM (Cool morning light)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📐</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Architectural Philosophy</div>
+        <div class="font-bold text-slate-800 text-[13px]">Sino-Vietnamese Ideogrammatic Harmony</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎖️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Highlight Sector</div>
+        <div class="font-bold text-slate-800 text-[13px]">Underground Command Center</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/independence-palace-saigon-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/independence-palace-saigon-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -1679,6 +4026,7 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -1687,6 +4035,7 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">My Quynh Safari (2026): The Definitive Guide to the Zoo & Water Park</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           My Quynh Safari (2026): The Definitive Guide to the Zoo & Water Park
         </h1>
@@ -1697,6 +4046,7 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           Spanning over 50 hectares in Duc Hoa (Tay Ninh / Long An border), My Quynh Safari represents Southern Vietnam's premier semi-wild zoological sanctuary. Here is your curated 2026 field manual for exploring African wildlife, botanical gardens, and aquatic recreation.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -1711,6 +4061,7 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -2096,6 +4447,13 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -2131,6 +4489,442 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Ben Thanh Central Metro Station: Navigating Saigon’s Futuristic Underground Pulse</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Ben Thanh Central Metro Station: Navigating Saigon’s Futuristic Underground Pulse
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Architecture, Underpass Network & Essential Commuter Logistics for Saigon Line 1 (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Descending beneath Quach Thi Trang Square, the Ben Thanh Central Station represents a monumental leap into Saigon's urban future. As the four-story subterranean heart of the newly commissioned Metro Line 1, this architectural marvel harmonizes public transit with modern civic spaces.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚇</span> 4-Level Underground Transit Hub
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏮</span> Iconic Lotus Skylight Dome
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎟️</span> Smart IC Card & VietQR Gate
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Operational Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#record-breaking-architectural-dimensions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Record-Breaking Architectural Dimensions</a>
+  <a href="#subterranean-renaissance-reimagining-the-urban-landscape" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Subterranean Renaissance: Reimagining the Urban Landscape</a>
+  <a href="#navigating-the-four-tier-subterranean-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Four-Tier Subterranean Labyrinth</a>
+  <a href="#level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B1: The Commercial Concourse & Ticketing Mezzanine</a>
+  <a href="#the-architectural-centerpiece-the-lotus-toplight" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Architectural Centerpiece: The Lotus Toplight</a>
+  <a href="#level-b2-line-1-boarding-platforms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B2: Line 1 Boarding Platforms</a>
+  <a href="#curated-line-1-route-and-fare-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Line 1 Route & Fare Matrix (2026 Reference)</a>
+  <a href="#curated-transit-insights-for-conscious-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Transit Insights for Conscious Travelers (2026)</a>
+  <a href="#epilogue-the-velocity-of-a-renewed-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Velocity of a Renewed Metropolis</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Station Epicenter</div>
+        <div class="text-[13px] font-bold text-slate-900">Quach Thi Trang Roundabout, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Operational Line</div>
+        <div class="text-[13px] font-bold text-slate-900">Metro Line 1 (Ben Thanh – Suoi Tien)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Transit Hours</div>
+        <div class="text-[13px] font-bold text-slate-900">05:00 AM – 23:00 PM Daily</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Ticket Fare</div>
+        <div class="text-[13px] font-bold text-slate-900">6,000 – 20,000 VND / trip</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  If Ben Thanh Market's clock tower embodies the romance of 20th-century nostalgia, the cavernous terminal directly beneath its foundations heralds Saigon’s bold technological future. Here, equatorial sunlight cascades through a monumental glass lotus skylight into the subterranean depths, transforming mass transit into a poetic architectural dialogue.
+</div><p>Enshrined as the crowning technological triumph within our guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the newly inaugurated <strong>Ben Thanh Central Metro Station (Urban Railway Line 1)</strong> represents a milestone in Southeast Asian urban infrastructure. Descending four tiers into the southern delta&#39;s earth, this intermodal hub seamlessly integrates ancient heritage with 21st-century rapid transit.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">📍 Epicenter Location</th><th class="p-4 font-bold text-left">🚇 Subterranean Scale</th><th class="p-4 font-bold text-left">🕒 Daily Schedule</th><th class="p-4 font-bold text-left">🎟️ 2026 Fare Baseline</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Quach Thi Trang Concourse, South Portal</strong></td><td class="p-4"><strong>32m Depth (4 Levels) – 236m Length</strong></td><td class="p-4"><strong>05:00 AM – 23:00 PM (4–8 min intervals)</strong></td><td class="p-4"><strong>7,000 – 20,000 VND (Day Pass: 40,000 VND)</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="record-breaking-architectural-dimensions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Record-Breaking Architectural Dimensions
+          </h2>
+        </div>
+      <ul>
+<li><strong>32-Meter Subterranean Depth:</strong> Vietnam’s deepest underground engineering project, equivalent to a 10-story skyscraper descending into bedrock.</li>
+<li><strong>236-Meter Concourse Length:</strong> Stretching gracefully from the market’s South Portal through the greenery of September 23rd Park.</li>
+<li><strong>The 21-Meter Lotus Toplight:</strong> A circular skylight rising 6 meters above the granite plaza, engineered with curved laminated structural glass to channel natural sunlight deep into the central hall.</li>
+<li><strong>Four-Line Junction:</strong> Designed to integrate Line 1 (Ben Thanh – Suoi Tien), Line 2 (Ben Thanh – Tham Luong), Line 3A, and Line 4 into a unified subterranean transit ecosystem.</li>
+<li><strong>14-Minute Transit to Thao Dien:</strong> Shrinking an exhausting 45-minute rush-hour taxi commute across congested bridges into a smooth, climate-controlled glide.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="subterranean-renaissance-reimagining-the-urban-landscape" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Subterranean Renaissance: Reimagining the Urban Landscape
+          </h2>
+        </div>
+      <p>Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.</p>
+<p>Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll across a pristine, granite-paved public concourse. Steps away from the historic market entrances, sleek escalator portals invite commuters down into an immaculate underground city of retail promenades, artisan kiosks, and transit platforms.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="navigating-the-four-tier-subterranean-labyrinth" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Navigating the Four-Tier Subterranean Labyrinth
+          </h2>
+        </div>
+      <pre><code class="language-mermaid">graph TD
+    Plaza[&quot;Surface: Granite Esplanade &amp; Lotus Glass Skylight&quot;]
+    Plaza --&gt; B1[&quot;Level B1: Ticketing Concourse, Smart Gates, Retail Promenade&quot;]
+    B1 --&gt; B2[&quot;Level B2: Line 1 Platforms (To Opera House, Ba Son, Thao Dien)&quot;]
+    B2 --&gt; B3[&quot;Level B3: Technical Operations &amp; Inter-Line Transfer Hall&quot;]
+    B3 --&gt; B4[&quot;Level B4: Future Line 2 Platforms &amp; Transit Junction&quot;]
+</code></pre>
+
+          <div id="level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . Level B1: The Commercial Concourse & Ticketing Mezzanine
+            </h3>
+          </div>
+        <p>The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques.</p>
+
+          <div id="the-architectural-centerpiece-the-lotus-toplight" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . The Architectural Centerpiece: The Lotus Toplight
+            </h3>
+          </div>
+        <p>Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures an astonishing sightline: the amber tiles of the 1914 Ben Thanh clock tower rising against equatorial clouds—a breathtaking visual metaphor uniting two centuries of Saigon history.</p>
+
+          <div id="level-b2-line-1-boarding-platforms" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
+              . Level B2: Line 1 Boarding Platforms
+            </h3>
+          </div>
+        <p>Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maintains whisper-quiet acoustics and an ambient temperature of 23°C. Electric trainsets depart every four to eight minutes, whisking passengers northeast along the Saigon River.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-line-1-route-and-fare-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Curated Line 1 Route & Fare Matrix (2026 Reference)
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Key Station</th><th class="p-4 font-bold text-left">Transit Time from Ben Thanh</th><th class="p-4 font-bold text-left">Signature Destination / Cultural Highlight</th><th class="p-4 font-bold text-left">Single Fare 2026</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Opera House</strong></td><td class="p-4">2 minutes</td><td class="p-4">Continental Hotel, Lam Son Square, Nguyen Hue Walking Street</td><td class="p-4">7,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ba Son Terminal</strong></td><td class="p-4">4 minutes</td><td class="p-4">Historic Naval Shipyards, Thu Thiem 2 Bridge, Riverfront Marina</td><td class="p-4">8,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Van Thanh / Tan Cang</strong></td><td class="p-4">8 minutes</td><td class="p-4">Landmark 81 Tower, Riverside Ecological Park</td><td class="p-4">12,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Thao Dien Station</strong></td><td class="p-4">13 minutes</td><td class="p-4">Bohemian art galleries, international bistros, riverfront lounges</td><td class="p-4">16,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>New Eastern Bus Terminal</strong></td><td class="p-4">28 minutes</td><td class="p-4">Interprovincial terminal connecting Central &amp; Northern Vietnam</td><td class="p-4">20,000 VND</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-transit-insights-for-conscious-travelers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Curated Transit Insights for Conscious Travelers (2026)
+          </h2>
+        </div>
+      <ol>
+<li><strong>Selecting Your Fare Media:</strong><ul>
+<li>For casual journeys: Purchase single-journey tokens via automated ticketing machines accepting contactless Visa/Mastercard.</li>
+<li>For comprehensive urban explorations: Opt for the <strong>Unlimited 1-Day Pass (40,000 VND)</strong> at the information counter for boundless hops across the network.</li>
+</ul>
+</li>
+<li><strong>Onboard Protocol:</strong> Chewing gum, food consumption, and smoking are strictly prohibited. Dedicated priority seating is reserved across every carriage for seniors, pregnant women, and travelers with mobility needs.</li>
+<li><strong>Curated Transit Connection:</strong> Pair your morning heritage walk through our <a href="/ben-thanh-one-day-walking-tour">One-Day Walking Tour</a> with a late afternoon metro ride departing Ben Thanh at 16:30 PM to Ba Son Station to witness dusk settling over the Saigon River.</li>
+<li><strong>Bespoke City Journeys:</strong> To integrate walking heritage immersion with private metro guidance led by certified cultural guides, reserve the <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a> hosted by The Rice Tour.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-the-velocity-of-a-renewed-metropolis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: The Velocity of a Renewed Metropolis
+          </h2>
+        </div>
+      <p>Ben Thanh Central Metro Station is far more than an underground web of rails and escalators; it is the physical manifestation of Ho Chi Minh City’s soaring contemporary ambition. Gazing upward through the lotus skylight at the century-old market tower while listening to the whisper of arriving electric trains, the thoughtful traveler realizes that Saigon’s true greatness lies in its capacity to honor its roots while fearlessly accelerating into tomorrow.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Subterranean Beat of Modern Saigon</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                The launch of Ben Thanh Central Station is more than an engineering milestone; it is the symbolic bridge connecting Saigon’s storied colonial avenues with a world-class transit future. Descending into its cool, luminous chambers reminds us that the city's vitality flows as dynamically beneath the earth as it does along its sunlit boulevards.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Subterranean Depth</div>
+        <div class="font-bold text-slate-800 text-[13px]">32 Meters Below Street Level (4 Floors)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏮</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Central Atrium</div>
+        <div class="font-bold text-slate-800 text-[13px]">Glass Lotus Skylight (Giếng trời Hoa Sen)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Underground Passages</div>
+        <div class="font-bold text-slate-800 text-[13px]">Direct exits to Ben Thanh, Le Loi, Park 23/9</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ticketing Tech</div>
+        <div class="font-bold text-slate-800 text-[13px]">Tap-to-pay EMV, VietQR, IC Single/Day Pass</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-central-metro-station-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-central-metro-station-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -2143,6 +4937,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -2151,6 +4946,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta
         </h1>
@@ -2161,6 +4957,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           The khăn rằn is far more than a ubiquitous souvenir scattered across the tourist markets of the Mekong Delta. It is a silent witness to the era of untamed wilderness reclamation, an emblem of wartime resilience, and the lifeblood of a century-old weaving village recently crowned as a National Intangible Cultural Heritage.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -2175,6 +4972,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -2592,6 +5390,13 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -2639,6 +5444,7 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -2647,6 +5453,7 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of 'The Lover' (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of 'The Lover' (2026)
         </h1>
@@ -2657,6 +5464,7 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           Rising gracefully along the Sa Dec riverfront, the Huynh Thuy Le Ancient House stands as an exquisite monument to Sino-French architectural fusion and the immortal romance chronicled in Marguerite Duras’s world-renowned novel, L'Amant.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -2671,6 +5479,7 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -2986,6 +5795,13 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -3021,6 +5837,905 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality in District 1</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality in District 1
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Raja Gopuram Spire, Sacred Stone Wall Rituals & The Chettiar Legacy (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Just 250 meters from the bustling aisles of Ben Thanh Market, the incandescent crimson towers of the Mariamman Hindu Temple rise into the southern sky. For over a century, this sanctuary has stood as a sacred crossroad where Tamil Chettiar traders and multi-ethnic Saigon communities converge in quiet reverence.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">11 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🛕</span> 12-Meter Raja Gopuram Tower
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">✨</span> Sacred Stone Whispering Wall
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🥥</span> Daily Puja Aarti Rituals
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> Tamil Heritage Sanctuary
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-the-sacred-compound" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Sacred Compound</a>
+  <a href="#footprints-of-the-tamil-chettiar-community-in-old-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Footprints of the Tamil Chettiar Community in Old Saigon</a>
+  <a href="#deciphering-south-indian-dravidian-temple-art" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering South Indian Dravidian Temple Art</a>
+  <a href="#the-gopuram-gateway-between-the-earthly-and-divine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gopuram: Gateway Between the Earthly and Divine</a>
+  <a href="#the-inner-sanctum-the-abode-of-goddess-mariamman" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Inner Sanctum: The Abode of Goddess Mariamman</a>
+  <a href="#the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis</a>
+  <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
+  <a href="#conscious-traveler-protocol-and-field-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Conscious Traveler Protocol & Field Guidelines (2026)</a>
+  <a href="#epilogue-the-universal-language-of-reverence" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Universal Language of Reverence</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Sanctuary Coordinates</div>
+        <div class="text-[13px] font-bold text-slate-900">45 Truong Dinh, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Foundation Era</div>
+        <div class="text-[13px] font-bold text-slate-900">Late 19th Century (Tamil Chettiar)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Distance to Market</div>
+        <div class="text-[13px] font-bold text-slate-900">250 meters (3-minute walk)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Admission & Rituals</div>
+        <div class="text-[13px] font-bold text-slate-900">Free Entry (Respectful Modest Dress)</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  Turn off the roaring stream of motorbikes on Le Thanh Ton Street into Truong Dinh, and urban velocity recedes instantly into timeless devotion. The spicy warmth of incense and peanut oil mingles with the resonant toll of brass bells as the tiered Gopuram gateway reveals a vibrant sanctuary of South Indian spirituality.
+</div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the <strong>Mariamman Hindu Temple (popularly known to locals as Chùa Bà Ấn Độ)</strong> sits proudly at 45 Truong Dinh Street, a mere 200-meter stroll from the market&#39;s West Gate. For over a century, this jewel of Dravidian architecture has stood not only as the spiritual nerve center for the city&#39;s Indian diaspora but also as a shining symbol of southern Vietnam’s remarkable religious harmony.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">📍 Temple Coordinates</th><th class="p-4 font-bold text-left">🕉️ Faith &amp; Enshrined Deity</th><th class="p-4 font-bold text-left">⏳ Founding Era</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Policy</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>45 Truong Dinh, Ben Thanh Ward, District 1</strong></td><td class="p-4"><strong>South Indian Hinduism (Goddess Mariamman)</strong></td><td class="p-4"><strong>Early 20th Century (Tamil Chettiar)</strong></td><td class="p-4"><strong>Free Entry (Voluntary Offerings)</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-the-sacred-compound" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of the Sacred Compound
+          </h2>
+        </div>
+      <ul>
+<li><strong>100+ Years of Unbroken Worship:</strong> Erected by Tamil Chettiar merchants in the early 1900s upon the site of an earlier humble timber shrine.</li>
+<li><strong>200-Meter Proximity:</strong> An effortless three-minute walk from Ben Thanh Market, tucked between quiet boutique shops and leafy cafe alleyways.</li>
+<li><strong>Dozens of Hand-Carved Deities:</strong> Embellishing the 12-meter-high Gopuram pyramid gateway, sculpted according to ancient Tamil sacred canons.</li>
+<li><strong>Tri-Cultural Devotion:</strong> A rare sacred space where ethnic Indian, Vietnamese, and Chinese devotees pray side by side in mutual reverence.</li>
+<li><strong>The Singular Stone-Pressing Ritual:</strong> A contemplative local custom of pressing one&#39;s forehead and palms against the rear granite sanctum wall to absorb positive vibrations.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="footprints-of-the-tamil-chettiar-community-in-old-saigon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Footprints of the Tamil Chettiar Community in Old Saigon
+          </h2>
+        </div>
+      <p>To understand why a resplendent Dravidian temple graces the very heart of District 1, one must trace the waves of late 19th-century maritime migration.</p>
+<p>During the French colonial era, commercial open-door policies drew thousands of Tamil traders—predominantly from the entrepreneurial <strong>Chettiar caste</strong> of Tamil Nadu—to the booming river port of Saigon. Setting up counting houses, money-changing bureaus, and textile emporiums near Ben Thanh Market, they formed a prosperous and tightly-knit community.</p>
+<p>To maintain their ancestral faith, the Chettiar merchants funded the construction of the Mariamman Temple, dispatching master sculptors and stonemasons from southern India to fashion the ornate deities and terracotta reliefs in exact adherence to ancient Vedic scriptures.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="deciphering-south-indian-dravidian-temple-art" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Deciphering South Indian Dravidian Temple Art
+          </h2>
+        </div>
+      <p>Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:</p>
+
+          <div id="the-gopuram-gateway-between-the-earthly-and-divine" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . The Gopuram: Gateway Between the Earthly and Divine
+            </h3>
+          </div>
+        <p>Soaring above the street is the <strong>Gopuram</strong>—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.</p>
+
+          <div id="the-inner-sanctum-the-abode-of-goddess-mariamman" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . The Inner Sanctum: The Abode of Goddess Mariamman
+            </h3>
+          </div>
+        <p>Shedding your footwear at the threshold, you step into a cool, arched central hall. In the inner sanctum (<em>garbhagriha</em>) rests the sacred black stone statue of <strong>Goddess Mariamman</strong>, draped in shimmering yellow silk and crowned with fragrant garlands of fresh marigolds. In Hindu mythology, Mariamman is an incarnation of Parvati—the mother goddess of fertility, monsoon rains, healing, and familial harmony.</p>
+<p>Flanking her are guardian deities Maduraiveeran and Pechiamman, while surrounding alcoves enshrine Ganesha, Murugan, and the ornate ceremonial Silver Chariot used during the annual autumn festival.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis
+          </h2>
+        </div>
+      <p>The most mesmerizing phenomenon at Mariamman Temple is not merely its architecture, but a unique ritual born from decades of cultural convergence.</p>
+<p>Directly behind the central altar runs an unadorned, solid granite barrier wall. Throughout the day, a continuous procession of devotees—Vietnamese mothers, Chinese merchants, and Indian elders alike—approach the wall, remove their hats, and press their foreheads and open palms firmly against the cold stone. With eyes closed in silent prayer, they remain motionless for several minutes.</p>
+<p>Local belief holds that this granite wall directly absorbs the spiritual resonance of the sacred mantras chanted daily inside the sanctum. Devotees believe that physical contact with the stone dispels mental turbulence, calms worldly anxieties, and draws protective vitality from the divine mother into their daily lives.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-sacred-exploration-matrix" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Curated Sacred Exploration Matrix
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Sacred Sector</th><th class="p-4 font-bold text-left">Location</th><th class="p-4 font-bold text-left">Deity / Sacred Feature</th><th class="p-4 font-bold text-left">Spiritual Experience</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Gopuram Gateway</strong></td><td class="p-4">Exterior Facade</td><td class="p-4">Sculpted Hindu pantheon, Shiva, Ganesha</td><td class="p-4">Admire multi-tiered South Indian bas-reliefs</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Central Sanctum</strong></td><td class="p-4">Heart of Main Hall</td><td class="p-4">Black stone Goddess Mariamman</td><td class="p-4">Witness morning incense rituals &amp; marigold offerings</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rear Granite Wall</strong></td><td class="p-4">Behind Inner Altar</td><td class="p-4">Chanted-infused structural granite</td><td class="p-4">Practice the meditative stone-pressing prayer</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lord Ganesha Shrine</strong></td><td class="p-4">Left Mezzanine</td><td class="p-4">Elephant-headed deity of intellect</td><td class="p-4">Seek auspicious blessings for education &amp; commerce</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Silver Chariot</strong></td><td class="p-4">Side Pavilion</td><td class="p-4">Elaborate 20th-century embossed silver carriage</td><td class="p-4">Inspect the regal carriage used in annual festival processions</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="conscious-traveler-protocol-and-field-guidelines-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Conscious Traveler Protocol & Field Guidelines (2026)
+          </h2>
+        </div>
+      <ul>
+<li><strong>Mandatory Footwear Removal:</strong> Remove all shoes and sandals before stepping across the raised timber threshold; storage shelves are provided outside.</li>
+<li><strong>Modest Attire:</strong> Garments must cover shoulders and knees. Sleeveless shirts, low-cut tops, and short shorts are strictly prohibited within the temple grounds.</li>
+<li><strong>Offerings &amp; Donations:</strong> Admission is completely free. Should you wish to make a traditional offering, vendors outside sell fresh coconuts, marigold garlands, and bananas for 20,000 to 40,000 VND.</li>
+<li><strong>Optimal Visiting Window:</strong> Arrive between <strong>08:00 and 10:00 AM</strong> when morning rituals (<em>puja</em>) take place amidst tranquil lighting and uncrowded verandas.</li>
+<li><strong>Neighbourhood Connections:</strong> After your visit, stroll 3 minutes back to sample authentic <a href="/ben-thanh-market-food-guide">Ben Thanh market stalls</a> or proceed toward the <a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a>.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-the-universal-language-of-reverence" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: The Universal Language of Reverence
+          </h2>
+        </div>
+      <p>The Mariamman Hindu Temple stands as a radiant testament to Saigon&#39;s timeless capacity for cultural inclusion. Within these cool colonnades, language, nationality, and creed dissolve before the universal pursuit of inner tranquility. Taking a contemplative pause here reminds the voyager that mindful travel is ultimately a pilgrimage into the quiet sanctuaries of the human spirit.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Harmony of Inclusive Faith</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                In the quiet courtyard of Mariamman Temple, the fragrant smoke of camphor and sandalwood mingles with the ambient hum of Saigon’s avenues. Watching Vietnamese, Sino-Vietnamese, and Indian pilgrims offer lotus blossoms side by side reveals the greatest truth of Saigon: it is a city whose soul is defined by welcoming warmth, generosity, and harmonious coexistence.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historic Enclave</div>
+        <div class="font-bold text-slate-800 text-[13px]">45 Truong Dinh Street, Ben Thanh Ward</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Puja Aarti Times</div>
+        <div class="font-bold text-slate-800 text-[13px]">09:30 AM & 18:30 PM (Daily Fire Ritual)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🙏</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Unique Practice</div>
+        <div class="font-bold text-slate-800 text-[13px]">Pressing head against back stone wall to pray</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">👗</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Dress Code</div>
+        <div class="font-bold text-slate-800 text-[13px]">Cover shoulders & knees, remove footwear outside</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/mariamman-hindu-temple-saigon" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/mariamman-hindu-temple-saigon');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
+export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Bargaining with Grace: The Smart Traveler’s Guide to Shopping at Ben Thanh Market</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Bargaining with Grace: The Smart Traveler’s Guide to Shopping at Ben Thanh Market
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          With over 1,400 active stalls sheltered beneath its soaring timber-trussed roof, Ben Thanh Market is both a bustling commercial bazaar and an intimate microcosm of Vietnamese tradecraft. Navigating its vibrant labyrinth requires discernment, cultural appreciation, and the gracious art of civilized negotiation.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🧵</span> Bespoke Silk & Ao Dai Tailoring
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">☕</span> Highland Robusta & Arabica Beans
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎨</span> Lacquerware & Bamboo Handicrafts
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Civilized Buyer's Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#key-curated-dimensions-of-market-commerce" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of Market Commerce</a>
+  <a href="#navigating-the-four-cardinal-shopping-quadrants" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Four Cardinal Shopping Quadrants</a>
+  <a href="#the-south-gate-le-loi-boulevard-silks-and-master-lacquerware" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The South Gate (Le Loi Boulevard): Silks & Master Lacquerware</a>
+  <a href="#the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices</a>
+  <a href="#the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather</a>
+  <a href="#the-north-gate-le-thanh-ton-street-orchard-bounty" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The North Gate (Le Thanh Ton Street): Orchard Bounty</a>
+  <a href="#bargaining-with-grace-cultural-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bargaining with Grace: Cultural Guidelines</a>
+  <a href="#honor-the-morning-opening-rite-mo-hang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Honor the Morning Opening Rite (*Mở Hàng*)</a>
+  <a href="#the-15-to-25-equilibrium" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The 15% to 25% Equilibrium</a>
+  <a href="#the-gentle-walk-away" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gentle Walk-Away</a>
+  <a href="#detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Counterfeits</a>
+  <a href="#consumer-protections-and-traveler-rights-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Consumer Protections & Traveler Rights (2026)</a>
+  <a href="#epilogue-carrying-home-the-warmth-of-southern-hospitality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Carrying Home the Warmth of Southern Hospitality</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Market Epicenter</div>
+        <div class="text-[13px] font-bold text-slate-900">Intersection of 4 Iconic Gates, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Prime Shopping Hours</div>
+        <div class="text-[13px] font-bold text-slate-900">08:30 – 16:30 (Daytime Stalls)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🤝</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Negotiation Guideline</div>
+        <div class="text-[13px] font-bold text-slate-900">Respectful 20% – 30% discount baseline</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Payment Flexibility</div>
+        <div class="text-[13px] font-bold text-slate-900">VietQR, Mobile Banking & Cash</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
+  Shopping inside the vaulted avenues of Ben Thanh Market has never been a sterile commercial transaction. It is a graceful cultural dance between buyer and seller, where an engaging smile, genuine appreciation for traditional craft, and mutual respect unlock the finest artisanal treasures of southern Vietnam.
+</div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, stepping into the historic market places you at the center of an intoxicating labyrinth of over 1,400 vibrant retail stalls. For conscious voyagers, shopping here is an opportunity to acquire authentic handmade heirlooms and connect directly with the multi-generational trade guilds of the Southern Delta.</p>
+<hr>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">🏪 Merchant Stalls</th><th class="p-4 font-bold text-left">🕒 Trading Hours</th><th class="p-4 font-bold text-left">💳 2026 Payment Standards</th><th class="p-4 font-bold text-left">🤝 Respectful Negotiation Buffer</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1,400+ Certified Vendors</strong></td><td class="p-4"><strong>07:00 AM – 18:00 PM (Daily)</strong></td><td class="p-4"><strong>100% Contactless Cards &amp; VietQR</strong></td><td class="p-4"><strong>15% – 25% Balanced Adjustment</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-curated-dimensions-of-market-commerce" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Key Curated Dimensions of Market Commerce
+          </h2>
+        </div>
+      <ul>
+<li><strong>1,400 Grid Stalls:</strong> Meticulously organized into specialized guild quadrants accessible through the four cardinal gates.</li>
+<li><strong>4 Electronic Verification Scales:</strong> Positioned by municipal market authorities at each portal, empowering shoppers to self-verify weighed items with pinpoint accuracy.</li>
+<li><strong>24-Hour Express Tailoring:</strong> Bespoke <em>áo dài</em> and linen safari suits tailored overnight for international travelers on tight itineraries.</li>
+<li><strong>100% Cashless Operations:</strong> Every vendor terminal is equipped with tap-to-pay technology and dual-currency digital receipts.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="navigating-the-four-cardinal-shopping-quadrants" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Navigating the Four Cardinal Shopping Quadrants
+          </h2>
+        </div>
+      <pre><code class="language-mermaid">graph TD
+    Market[&quot;BEN THANH RETAIL LABYRINTH&quot;]
+    Market --&gt; South[&quot;SOUTH GATE: Silks, 24h Bespoke Tailoring, Eggshell Lacquerware, Mother-of-Pearl&quot;]
+    Market --&gt; East[&quot;EAST GATE: Whole-Bean Highland Coffee, Lotus Teas, Cashews, Sun-Dried Seafood&quot;]
+    Market --&gt; West[&quot;WEST GATE: Handcrafted Leather Goods, Woven Rattan Bags, Hill-Tribe Textiles&quot;]
+    Market --&gt; North[&quot;NORTH GATE: Tropical Fruits (Ri6 Durian, Mangosteens, Pomelos) &amp; Fresh Botanicals&quot;]
+</code></pre>
+
+          <div id="the-south-gate-le-loi-boulevard-silks-and-master-lacquerware" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.1</span>
+              . The South Gate (Le Loi Boulevard): Silks & Master Lacquerware
+            </h3>
+          </div>
+        <p>Entering beneath the iconic clock tower, you are immediately enveloped in vibrant textiles. Bolts of shimmering mulberry silk from Bao Loc and Van Phuc drape from ceiling beams alongside bespoke tailors capable of cutting and stitching an exquisite traditional <em>áo dài</em> within 12 to 24 hours. Surrounding stalls showcase handcrafted lacquer boxes inlaid with mother-of-pearl and natural duck eggshells.</p>
+
+          <div id="the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.2</span>
+              . The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices
+            </h3>
+          </div>
+        <p>Follow your nose into the aromatic domain of whole-bean Vietnamese coffees. Merchants roast Arabica from the misty highlands of Da Lat and rich Robusta from Buon Ma Thuot on-site, grinding beans to your exact brewing preference. Nearby bins overflow with silk-skinned Binh Phuoc cashews and white peppercorns from Phu Quoc Island.</p>
+
+          <div id="the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.3</span>
+              . The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather
+            </h3>
+          </div>
+        <p>A haven for sustainable, natural accessories: hand-plaited water hyacinth and rattan tote bags, full-grain leather wallets, and hand-embroidered conical hats.</p>
+
+          <div id="the-north-gate-le-thanh-ton-street-orchard-bounty" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.4</span>
+              . The North Gate (Le Thanh Ton Street): Orchard Bounty
+            </h3>
+          </div>
+        <p>Vibrant fruit pyramids showcasing southern Vietnam&#39;s seasonal harvest: Ri6 golden durians, sweet mangosteens, and green-skin pomelos fresh from Tien Giang province.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="bargaining-with-grace-cultural-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Bargaining with Grace: Cultural Guidelines
+          </h2>
+        </div>
+      <p>Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:</p>
+
+          <div id="honor-the-morning-opening-rite-mo-hang" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
+              . Honor the Morning Opening Rite (Mở Hàng)
+            </h3>
+          </div>
+        <p>Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.</p>
+
+          <div id="the-15-to-25-equilibrium" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
+              . The 15% to 25% Equilibrium
+            </h3>
+          </div>
+        <p>Souvenir, textile, and handicraft stalls often quote an initial price that factors in a modest negotiation buffer. Proposing a polite 15% to 25% adjustment usually reaches an equitable midpoint. </p>
+<ul>
+<li><em>Local Tip:</em> Frame your counteroffer with a genuine smile and a warm phrase: <em>&quot;Em mua kỷ niệm, chị bớt chút may mắn nhé!&quot;</em> (I&#39;m purchasing a keepsake; please grant a little lucky discount).</li>
+</ul>
+
+          <div id="the-gentle-walk-away" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
+              . The Gentle Walk-Away
+            </h3>
+          </div>
+        <p>If a mutually agreeable price cannot be reached, bow your head slightly, offer a sincere thank you, and calmly step toward the next stall. In many instances, the vendor will gracefully call you back and accept your counteroffer.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Detecting Authentic Artisanship vs. Mass-Produced Counterfeits
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Handicraft</th><th class="p-4 font-bold text-left">Hallmarks of Authentic Craft</th><th class="p-4 font-bold text-left">Warning Signs of Industrial Fakes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Eggshell Lacquerware</strong></td><td class="p-4">Smooth, translucent depth, natural microscopic eggshell fractures, subtle resin scent</td><td class="p-4">Printed vinyl stickers covered in thick synthetic epoxy, harsh chemical odor</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bao Loc Natural Silk</strong></td><td class="p-4">Fluid drape, immediate cool touch against skin, shimmering prismatic refraction, wrinkle-resistant</td><td class="p-4">Stiff polyester blends, synthetic static cling, unyielding artificial sheen</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Single-Origin Coffee</strong></td><td class="p-4">Uniform cinnamon-brown beans, dry non-oily surface, herbal floral aromatics</td><td class="p-4">Oily pitch-black beans roasted with artificial butter and chemical flavorings</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Binh Phuoc Cashews</strong></td><td class="p-4">Plump, intact thin papery skin, crisp buttery crunch, no rancid oil trace</td><td class="p-4">Chemically bleached white kernels, shriveled or chewy texture</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="consumer-protections-and-traveler-rights-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Consumer Protections & Traveler Rights (2026)
+          </h2>
+        </div>
+      <ol>
+<li><strong>Verify Weight at Public Scales:</strong> If purchasing dried fruits, cashews, or spices by weight, feel free to verify your purchase at the electronic scales installed beside each of the four main gates.</li>
+<li><strong>24/7 Consumer Support:</strong> QR complaint placards with hotlines to District 1 market authorities are displayed across every aisle to immediately arbitrate service or pricing disputes.</li>
+<li><strong>Secure Contactless Billing:</strong> All stalls support tap-to-pay international card terminals and display clear digital currency conversion rates.</li>
+<li><strong>Curated Culinary Market Tours:</strong> To navigate market stalls alongside master chefs and source authentic culinary ingredients for private cooking classes, book the <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Tour</a> operated by The Rice Tour.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-carrying-home-the-warmth-of-southern-hospitality" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: Carrying Home the Warmth of Southern Hospitality
+          </h2>
+        </div>
+      <p>The greatest souvenir carried away from Ben Thanh Market is not merely an exquisite silk scarf or a fragrant pouch of roasted highland coffee; it is the lingering warmth of human connection with generational merchants who proudly safeguard their craft. Step into these historic corridors with curiosity, bargain with dignity, and you will find Saigon opening its heart to you in return.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Gracious Commerce of the Market</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                A visit to Ben Thanh Market is far more than a transactional shopping trip; it is an intimate encounter with the hardworking artisans and vendors who keep Saigon's merchant traditions alive. When approached with a smile, cultural curiosity, and mutual respect, every exchange becomes an unforgettable story to carry home.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Retail Sectors</div>
+        <div class="font-bold text-slate-800 text-[13px]">North: Flowers/Fruit; South: Textiles; East: Food; West: Crafts</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bargaining Etiquette</div>
+        <div class="font-bold text-slate-800 text-[13px]">Smile genuinely; avoid sharp haggling before 9:00 AM</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">☕</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Authenticity Tip</div>
+        <div class="font-bold text-slate-800 text-[13px]">Request whole bean inspection before grinding</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛍️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Top Souvenirs</div>
+        <div class="font-bold text-slate-800 text-[13px]">Hand-embroidered linen, artisan lacquer, dried Mekong mango</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-market-shopping-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-market-shopping-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -3033,6 +6748,7 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3041,6 +6757,7 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics
         </h1>
@@ -3051,6 +6768,7 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           Breaking sharply from conventional passive retreats, Lan Vuong Eco-Park immerses voyagers directly into the elemental thrill of the Mekong—where monkey bridges, swamp fisheries, and team-building camaraderie forge indelible memories.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3065,6 +6783,7 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -3372,6 +7091,13 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -3419,6 +7145,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3427,6 +7154,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries
         </h1>
@@ -3437,6 +7165,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           Defying monotonous concrete assimilation, the untamed island of Hon Son (Kien Giang) invites the discerning voyager to experience bespoke coastal living—where cliffside wooden cabins and beachfront acoustic campfires replace commercial resort glitz.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3451,6 +7180,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -3826,6 +7556,13 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -3861,6 +7598,515 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Gliding 4 meters above urban avenues, viewing Saigon from the open deck of a double-decker bus unlocks a completely elevated sensory perspective. From the gilded Renaissance contours of the Central Post Office to the sweeping river breeze across Ba Son Bridge at dusk, this curated transit circuit connects the city’s colonial memory with its modern horizon.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚌</span> Open-Top Double-Decker Fleet
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎧</span> 9-Language GPS Audio Guide
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌉</span> Ba Son Bridge River Panorama
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Heritage Circuit Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Saigon Unveiled from an Open Deck</a>
+  <a href="#fleet-architecture-and-bespoke-onboard-amenities" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Fleet Architecture & Bespoke Onboard Amenities</a>
+  <a href="#signature-features-onboard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Features Onboard:</a>
+  <a href="#comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comprehensive Analysis of the Two Signature Routes (2026 Edition)</a>
+  <a href="#route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)</a>
+  <a href="#route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)</a>
+  <a href="#daytime-vs-twilight-night-voyages-comparative-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Daytime vs. Twilight Night Voyages: Comparative Matrix</a>
+  <a href="#official-2026-ticket-tariff-schedule" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official 2026 Ticket Tariff Schedule</a>
+  <a href="#curated-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler</a>
+  <a href="#the-strategy-of-seat-selection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Strategy of Seat Selection</a>
+  <a href="#the-golden-departure-windows" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Golden Departure Windows</a>
+  <a href="#vital-safety-protocols" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Vital Safety Protocols</a>
+  <a href="#seamless-itinerary-integration-around-ben-thanh-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Seamless Itinerary Integration Around Ben Thanh Market</a>
+  <a href="#epilogue-the-urban-rhythm-from-above" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Urban Rhythm from Above</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Main Hub at Ben Thanh</div>
+        <div class="text-[13px] font-bold text-slate-900">West Gate (23 Phan Chu Trinh)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Operating Schedule</div>
+        <div class="text-[13px] font-bold text-slate-900">08:00 – 22:30 Daily (Every 30 mins)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Loop Duration</div>
+        <div class="text-[13px] font-bold text-slate-900">60 mins (District 1) / 120 mins (Chợ Lớn)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Ticket Range</div>
+        <div class="text-[13px] font-bold text-slate-900">200,000 – 450,000 VND / passenger</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Central Boarding Terminals:</strong> Ben Thanh West Gate (23 Phan Chu Trinh) &amp; Saigon Opera House (Lam Son Square)<br>🎟️ <strong>2026 Tariff Baseline:</strong> 200,000 – 500,000 VND / person<br>⏳ <strong>Circuit Duration:</strong> 60 minutes (District 1 Core Loop) or 120 minutes (Saigon – Chợ Lớn Chinatown Circuit)</p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-saigon-unveiled-from-an-open-deck" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Saigon Unveiled from an Open Deck
+          </h2>
+        </div>
+      <p>In the bustling epicenter of District 1, where rivers of vintage mopeds and electric scooters weave through tree-lined French boulevards, experiencing Saigon from four meters above street level on an open-top double-decker bus offers an enchanting shift in perception. Free from the constraints of tinted car windows or the rush of street crossings, voyagers are embraced by river breezes, brush past the sprawling branches of century-old African mahogany trees, and gaze unhurriedly upon the curved Renaissance cornices of the Central Post Office, the red-brick spires of Notre-Dame Cathedral, and the dramatic sweep of the Saigon River illuminated beneath the modern arches of Ba Son Bridge.</p>
+<p>Following the unified 2026 opening of the Ben Thanh Central Metro Station and the revitalized Quach Thi Trang Plaza, the double-decker bus service has become an indispensable scenic artery, harmoniously linking Saigon&#39;s protected colonial heritage with its 21st-century architectural renaissance.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="fleet-architecture-and-bespoke-onboard-amenities" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Fleet Architecture & Bespoke Onboard Amenities
+          </h2>
+        </div>
+      <p>The Saigon double-decker fleet complies with international sightseeing standards, featuring a climate-controlled lower salon and an expansive open-air upper deck offering 360-degree panoramic vantage points.</p>
+
+        <h3 id="signature-features-onboard" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Signature Features Onboard:
+        </h3>
+      <ol>
+<li><strong>GPS-Synchronized Multi-Lingual Audio Commentary:</strong> Automatically triggered by satellite geo-coordinates, delivering vivid cultural and architectural insights in 9 languages (English, French, German, Spanish, Russian, Japanese, Mandarin, Korean, and Vietnamese).</li>
+<li><strong>High-Speed Wi-Fi &amp; Individual USB Charging Ports:</strong> Ensuring travelers remain seamlessly connected to navigation apps and camera equipment throughout the loop.</li>
+<li><strong>Thoughtful Seasonal Amenities:</strong> Complimentary handcrafted palm-leaf conical hats (<em>nón lá</em>) for midday sun protection, along with durable rain ponchos during sudden tropical afternoon showers.</li>
+<li><strong>Attentive Cabin Crew:</strong> Courteous onboard concierges assist with ticketing validation, transfer schedules, and localized navigation advice.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Comprehensive Analysis of the Two Signature Routes (2026 Edition)
+          </h2>
+        </div>
+      <p>The system currently operates two distinct circuits tailored to different cultural curiosities:</p>
+
+        <h3 id="route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)
+        </h3>
+      <p>A refined loop through the colonial heart of District 1, passing Saigon&#39;s most celebrated historic monuments.</p>
+<ul>
+<li><strong>Operating Hours:</strong> 08:00 – 22:30 daily (Departures every 30 minutes).</li>
+<li><strong>Primary Boarding Terminals:</strong><ul>
+<li>Daytime (08:00 – 16:00): Central Post Office (2 Cong Xa Paris Square).</li>
+<li>Twilight &amp; Evening (16:00 – 22:30): 92–96 Nguyen Hue Walking Boulevard.</li>
+</ul>
+</li>
+<li><strong>Duration:</strong> 60 minutes for a complete uninterrupted loop.</li>
+<li><strong>Key Heritage Monuments En Route:</strong><ol>
+<li>Saigon Opera House &amp; Continental Hotel (Lam Son Square)</li>
+<li>Nguyen Hue Walking Promenade &amp; City Hall</li>
+<li>Bach Dang Riverside Wharf &amp; Thu Ngu Flagpole</li>
+<li>Ba Son Cable-Stayed Bridge (Sweeping vistas over the eastern Thu Thiem peninsula)</li>
+<li>HCMC Museum of History &amp; Botanical Gardens</li>
+<li>War Remnants Museum</li>
+<li>Independence Palace (Reunification Hall)</li>
+<li>Notre-Dame Cathedral &amp; Central Post Office</li>
+<li>Bui Vien Walking Corridor</li>
+<li><strong>Ben Thanh Market:</strong> Glides around Quach Thi Trang Roundabout with direct pickup opposite the West Portal.</li>
+</ol>
+</li>
+</ul>
+
+        <h3 id="route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)
+        </h3>
+      <p>Designed for curious voyagers seeking to delve into the historic Ba Tàu heritage of Districts 5 and 6, where ornate Cantonese guildhalls, smoky incense coils, and centennial herbal apothecaries define the streetscape.</p>
+<ul>
+<li><strong>Operating Hours:</strong> 08:00 – 22:00 daily (Departures every 45 minutes).</li>
+<li><strong>Ben Thanh Boarding Point:</strong> 23 Phan Chu Trinh Street (West Gate of Ben Thanh Market).</li>
+<li><strong>Chinatown Terminal:</strong> Front Portal of Binh Tay Market (57A Thap Muoi, District 6).</li>
+<li><strong>Duration:</strong> 120 minutes for a comprehensive cross-city voyage.</li>
+<li><strong>Cultural Highlights Along the Path:</strong><ul>
+<li>Nguyen Trai and Cong Quynh heritage shopping corridors.</li>
+<li>The vibrant fragrance and colors of the Ho Thi Ky wholesale flower market.</li>
+<li>Ancient assembly halls including Nghia An Pagoda and Phuc Kien Guildhall.</li>
+<li>The monumental octagonal clock tower of Binh Tay Market.</li>
+<li>A breezy return cruise along Vo Van Kiet Boulevard flanking the tranquil Tau Hu Canal.</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="daytime-vs-twilight-night-voyages-comparative-matrix" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Daytime vs. Twilight Night Voyages: Comparative Matrix
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Evaluation Factor</th><th class="p-4 font-bold text-left">Midday Heritage Voyage (08:30 – 16:00)</th><th class="p-4 font-bold text-left">Sunset &amp; Illumination Circuit (16:30 – 22:30)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Atmospheric Ambience</strong></td><td class="p-4">Crisp natural daylight accentuates intricate plaster reliefs on colonial mansions</td><td class="p-4">Refreshingly breezy; illuminated by glittering architectural LEDs and skyline towers</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Photographic Vantages</strong></td><td class="p-4">Ochre walls of the Post Office; deep green mahogany canopies along Le Duan</td><td class="p-4">Golden hour over Ba Son Bridge; shimmering reflections across the Saigon River</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Physical Comfort</strong></td><td class="p-4">Tropical heat requires sunscreen, shades, and conical hat</td><td class="p-4">Highly relaxing, cool river winds, acoustic music floating from rooftop lounges</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Passenger Volume</strong></td><td class="p-4">Moderate occupancy; effortless access to front-row open deck seating</td><td class="p-4">High demand; arrive 15–20 minutes prior to ensure premier top-deck seating</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="official-2026-ticket-tariff-schedule" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Official 2026 Ticket Tariff Schedule
+          </h2>
+        </div>
+      <p>Tickets can be acquired directly at terminal kiosks or via digital e-wallets and international credit cards (Visa/Mastercard/VietQR):</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Ticket Tier</th><th class="p-4 font-bold text-left">Validity Period</th><th class="p-4 font-bold text-left">Adult Fare (VND)</th><th class="p-4 font-bold text-left">Child Fare (Age 6–11)</th><th class="p-4 font-bold text-left">Included Privileges</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Route 1 Single Loop (District 1)</strong></td><td class="p-4">60 mins (No hop-off)</td><td class="p-4"><strong>200,000</strong></td><td class="p-4"><strong>150,000</strong></td><td class="p-4">Audio guide, conical hat, bottled spring water, transit insurance</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Route 2 Single Loop (Chợ Lớn)</strong></td><td class="p-4">120 mins (No hop-off)</td><td class="p-4"><strong>250,000</strong></td><td class="p-4"><strong>180,000</strong></td><td class="p-4">Full Chinatown immersion, multi-lingual audio commentary</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4-Hour Hop-On Hop-Off Pass</strong></td><td class="p-4">4 consecutive hours</td><td class="p-4"><strong>300,000</strong></td><td class="p-4"><strong>200,000</strong></td><td class="p-4">Unlimited hop-on/hop-off privileges at all designated city stops</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>24-Hour All-Access Pass</strong></td><td class="p-4">24 continuous hours</td><td class="p-4"><strong>450,000</strong></td><td class="p-4"><strong>350,000</strong></td><td class="p-4">Comprehensive day-and-night exploration across museums and night circuits</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Combo Bus + Saigon Waterbus</strong></td><td class="p-4">Same-day validation</td><td class="p-4"><strong>500,000</strong></td><td class="p-4"><strong>400,000</strong></td><td class="p-4">1 bus loop + 1 sunset river cruise departing Bach Dang Pier</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <p><em>(Note: Children under 6 years or under 1.0 meter in height ride complimentary when sharing a seat with a paying adult).</em></p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-field-notes-for-the-discerning-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Curated Field Notes for the Discerning Traveler
+          </h2>
+        </div>
+      <p>To maximize your journey aloft, bear these hard-earned local observations in mind:</p>
+
+          <div id="the-strategy-of-seat-selection" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . The Strategy of Seat Selection
+            </h3>
+          </div>
+        <ul>
+<li><strong>The Front Three Rows (Top Deck):</strong> Delivers uninterrupted forward vistas and dramatic cinematic framing. However, during high noon, direct sun exposure and headwinds require firm eyewear and secured hats.</li>
+<li><strong>The Right-Hand Side:</strong> Because Vietnam drives on the right side of the road, seats along the starboard side travel closest to sidewalk monuments, allowing close-up views of the Continental Hotel facade, Opera House colonnades, and Central Post Office arches.</li>
+<li><strong>Mid-Deck Seating:</strong> The most vibration-resistant section of the vehicle, offering the clearest audio reception through the commentary jacks.</li>
+</ul>
+
+          <div id="the-golden-departure-windows" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . The Golden Departure Windows
+            </h3>
+          </div>
+        <ul>
+<li><strong>16:30 – 17:00 (The Ba Son Sunset Run):</strong> Timed perfectly so that the coach summits the Ba Son Bridge just as the equatorial sun dips beneath the western horizon, casting molten copper light across the water.</li>
+<li><strong>19:30 – 20:30 (The Dazzling Night Cruise):</strong> Captures the illuminated kinetic energy of Nguyen Hue Boulevard, illuminated colonial municipal halls, and riverside skyscrapers.</li>
+</ul>
+
+          <div id="vital-safety-protocols" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
+              . Vital Safety Protocols
+            </h3>
+          </div>
+        <ul>
+<li><strong>Remain seated while in transit:</strong> Saigon’s stately African mahogany and tamarind trees feature low-hanging boughs over older avenues. Standing on the open deck while the bus is in motion is strictly prohibited to prevent injuries.</li>
+<li><strong>Secure lightweight electronics:</strong> Cross-winds atop the Ba Son Bridge can be powerful; keep a firm two-handed grip on cameras and mobile phones when recording panoramic clips.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="seamless-itinerary-integration-around-ben-thanh-market" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            7. Seamless Itinerary Integration Around Ben Thanh Market
+          </h2>
+        </div>
+      <ul>
+<li><strong>15:00 – 16:30:</strong> Afternoon epicurean tasting inside the East Gate of Ben Thanh Market (savoring artisan fresh spring rolls, crab vermicelli, or crushed ice desserts).</li>
+<li><strong>16:45:</strong> Stroll 3 minutes to the West Gate Terminal at 23 Phan Chu Trinh Street to board the twilight coach.</li>
+<li><strong>17:00 – 18:00:</strong> Relish the 60-minute sunset loop traversing historical boulevards and the Ba Son Bridge.</li>
+<li><strong>18:15:</strong> Disembark at Ben Thanh, effortlessly transitioning to dinner along Le Loi Boulevard or descending into the subterranean Ben Thanh Central Metro Station.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-the-urban-rhythm-from-above" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            8. Epilogue: The Urban Rhythm from Above
+          </h2>
+        </div>
+      <p>Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. Look upward: past the neon shop signs, French iron balconies rest serenely beneath flowering flame trees, and temple incense mingles with the river breeze. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Urban Rhythm from Above</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Prime Boarding Terminals</div>
+        <div class="font-bold text-slate-800 text-[13px]">Central Post Office & Ben Thanh West Gate</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Sunset Window</div>
+        <div class="font-bold text-slate-800 text-[13px]">16:30 – 17:30 PM (Golden hour bridge crossing)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎧</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Onboard Technology</div>
+        <div class="font-bold text-slate-800 text-[13px]">Multi-lingual automated audio narration & USB ports</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎁</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Complimentary Amenities</div>
+        <div class="font-bold text-slate-800 text-[13px]">Traditional conical hat, mineral water & rain poncho</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/saigon-hop-on-hop-off-bus-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/saigon-hop-on-hop-off-bus-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -3873,6 +8119,7 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -3881,6 +8128,7 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)
         </h1>
@@ -3891,6 +8139,7 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           Perched gracefully at the confluence of the Hau and Can Tho rivers, Can Tho Beach offers an artificial riverine oasis where golden sunsets, watercraft excursions, and cable-stayed bridge vistas converge beneath the Southern evening sky.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -3905,6 +8154,7 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -4196,6 +8446,13 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -4231,6 +8488,905 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Tucked behind peeling ochre facades and shadowy corridors within a ten-minute radius of Ben Thanh Market, mid-century residential blocks have undergone an enchanting renaissance. Here, independent baristas, ceramicists, and antique collectors breathe vibrant creative life into colonial apartments.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">☕</span> Artisan Drip & Salted Foam Brews
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> Mid-Century Heritage Enclaves
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> Balcony Jungle Sanctuaries
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎨</span> 2026 Creative Field Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Allure of Saigon’s Hidden Perches</a>
+  <a href="#adaptive-heritage-the-renaissance-of-residential-blocks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Adaptive Heritage: The Renaissance of Residential Blocks</a>
+  <a href="#architectural-hallmarks-of-old-central-apartments" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Architectural Hallmarks of Old Central Apartments:</a>
+  <a href="#four-iconic-heritage-apartment-buildings-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Iconic Heritage Apartment Buildings Near Ben Thanh</a>
+  <a href="#ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Thiep – The Artisanal & Bohemian Labyrinth</a>
+  <a href="#ly-tu-trong-the-creative-vanguard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ly Tu Trong – The Creative Vanguard</a>
+  <a href="#ton-that-dam-the-cinematic-riverfront-relic" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Dam – The Cinematic Riverfront Relic</a>
+  <a href="#the-balcony-flats-of-pasteur-and-le-loi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Balcony Flats of Pasteur & Le Loi</a>
+  <a href="#the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Beverage Matrix: From Traditional Phin to Specialty Third Wave</a>
+  <a href="#conscious-voyager-etiquette-for-residential-walk-ups" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Conscious Voyager Etiquette for Residential Walk-Ups</a>
+  <a href="#epilogue-the-timeless-pause" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Timeless Pause</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Walking Radius</div>
+        <div class="text-[13px] font-bold text-slate-900">300m – 800m from Ben Thanh</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Building Eras</div>
+        <div class="text-[13px] font-bold text-slate-900">1920s French & 1960s Modernist Cư Xá</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">☕</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Beverage Spectrum</div>
+        <div class="text-[13px] font-bold text-slate-900">Robusta Phin, V60 Pour-over, Cold Drip</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💵</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Price Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">45,000 – 95,000 VND / beverage</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 300m – 800m from Ben Thanh Market (Ton That Thiep, Ly Tu Trong, Ton That Dam, Pasteur)<br>☕ <strong>Signature Experience:</strong> Handcrafted Vietnamese brews (Traditional Phin, Pour-over, Salted Foam Coffee, Cold Drip)<br>💵 <strong>2026 Price Baseline:</strong> 45,000 – 95,000 VND / beverage</p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-the-allure-of-saigons-hidden-perches" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: The Allure of Saigon’s Hidden Perches
+          </h2>
+        </div>
+      <p>If there is a quintessential ritual that defines the contemporary soul of Saigon, it is not found within polished, air-conditioned corporate chains lining wide boulevards. Instead, it thrives in the shadowy alcoves of vintage residential walk-ups—locally known as <em>cư xá</em>—where time-worn staircases ascend into an enchanting parallel universe. Within a gentle ten-minute stroll of Ben Thanh Market, several historic apartment complexes built between the late French colonial period and the buoyant 1960s have quietly evolved into magnetic creative sanctuaries.</p>
+<p>Stepping through a modest ground-floor motor scooter garage and leaving the bustling din of Le Loi Boulevard behind, one climbs worn granito stairs whose edges have been softened by decades of footfalls. Above, heavy wooden louvered doors open to reveal serene spaces where the aroma of freshly roasted highland Arabica and sweet condensed milk mingles with vinyl jazz records, hand-turned pottery, and emerald foliage framing iron French balconies. For the intentional traveler, these vertical villages offer an intimate, poetic glimpse into the living heart of southern urban culture.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="adaptive-heritage-the-renaissance-of-residential-blocks" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Adaptive Heritage: The Renaissance of Residential Blocks
+          </h2>
+        </div>
+      <p>The phenomenon of converting legacy residential flats into independent boutique cafes took root in the early 2010s and has reached aesthetic maturity by 2026. Rather than razing these multi-generational blocks, young Vietnamese designers and hospitality artisans have championed adaptive reuse, celebrating original raw textures rather than concealing them.</p>
+
+        <h3 id="architectural-hallmarks-of-old-central-apartments" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Architectural Hallmarks of Old Central Apartments:
+        </h3>
+      <ul>
+<li><strong>Tropical Modernist &amp; Indochinese Fusion:</strong> High ceilings exceeding 3.8 meters, open-air lightwells that draw tropical cross-breezes through the building’s core, and geometric floor tiles pressed by hand in centennial kiln workshops.</li>
+<li><strong>Poetic Domestic Coexistence:</strong> These buildings remain living residential communities. It is entirely common to pass an elder peeling pomelo on a cane lounger on the second-floor breezeway, right next to a micro-roastery humming with a state-of-the-art lever espresso machine.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="four-iconic-heritage-apartment-buildings-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Four Iconic Heritage Apartment Buildings Near Ben Thanh
+          </h2>
+        </div>
+      <p>Here are the four most evocative historic walk-ups waiting to be explored within walking distance of the market:</p>
+
+          <div id="ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . 42 Ton That Thiep – The Artisanal & Bohemian Labyrinth
+            </h3>
+          </div>
+        <p>Located just 400 meters from Ben Thanh Market, adjacent to the historic Sri Thenday Yuttha Pani Hindu Temple, this atmospheric block was once a residential enclave for regional merchants. Its open, banister-free cement stairs curve gracefully around a leafy courtyard.</p>
+<ul>
+<li><strong>Coordinates:</strong> 42 Ton That Thiep Street, Ben Nghe Ward, District 1.</li>
+<li><strong>Interior Vibe:</strong> Raw brickwork, ceramic workshops, herbal apothecary teas, and minimalist vintage timber furniture.</li>
+<li><strong>The Signature Vantage:</strong> Securing a window seat on the second or third floor, looking down upon the leafy canopy of tamarind trees while watching the gentle flow of pedestrians below.</li>
+<li><strong>Recommended Pour:</strong> Rich Saigon Egg Coffee whipped to velvety perfection, or 24-hour Cold Drip paired with artisan ginger butter biscuits.</li>
+</ul>
+
+          <div id="ly-tu-trong-the-creative-vanguard" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . 26 Ly Tu Trong – The Creative Vanguard
+            </h3>
+          </div>
+        <p>Occupying the corner of Ly Tu Trong and Dong Khoi streets, diagonally across from the Vincom Center, this imposing French colonial apartment block features one of the oldest functioning cast-iron cage elevators in Southeast Asia.</p>
+<ul>
+<li><strong>Coordinates:</strong> 26 Ly Tu Trong Street, Ben Nghe Ward, District 1 (650m from Ben Thanh).</li>
+<li><strong>Interior Vibe:</strong> Industrial chic, high exposed steel beams, independent art galleries, and Third Wave coffee ateliers.</li>
+<li><strong>The Signature Vantage:</strong> Soaring arched casement windows looking out toward the leafy historic canopy of Chi Lang Park.</li>
+<li><strong>Recommended Pour:</strong> Single-origin pour-over utilizing wet-processed Arabica from Cau Dat, or sparkling espresso tonic infused with organic Vietnamese citrus peel.</li>
+</ul>
+
+          <div id="ton-that-dam-the-cinematic-riverfront-relic" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
+              . 14 Ton That Dam – The Cinematic Riverfront Relic
+            </h3>
+          </div>
+        <p>Overlooking the tranquil waters of the Ben Nghe Canal and the neoclassical State Bank of Vietnam, 14 Ton That Dam is arguably the most atmospheric and photogenic pre-war building in District 1. Its pine staircases creak gently underfoot, while its long corridors glow with afternoon amber light.</p>
+<ul>
+<li><strong>Coordinates:</strong> 14 Ton That Dam Street, Nguyen Thai Binh Ward, District 1 (750m southeast of Ben Thanh).</li>
+<li><strong>Interior Vibe:</strong> 1970s retro nostalgia, antique oil lamps, secondhand poetry collections, and handcrafted wooden rocking chairs.</li>
+<li><strong>The Signature Vantage:</strong> The narrow exterior balcony overlooking Vo Van Kiet Boulevard at twilight, framing a dramatic contrast between the historic building&#39;s faded arches and the gleaming glass spine of Bitexco Financial Tower behind it.</li>
+<li><strong>Recommended Pour:</strong> Salted Foam Vietnamese Coffee (<em>Cà phê muối</em>) balancing bold bitter tones with savory sweet cream, or iced lotus-seed tea.</li>
+</ul>
+
+          <div id="the-balcony-flats-of-pasteur-and-le-loi" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
+              . The Balcony Flats of Pasteur & Le Loi
+            </h3>
+          </div>
+        <p>Flanking the grand boulevard that approaches Ben Thanh Market&#39;s South Clock Tower, these elevated mezzanine flats feature verdant wrought-iron balconies that hover just above street level.</p>
+<ul>
+<li><strong>Coordinates:</strong> 158 Pasteur &amp; 130 Le Loi Boulevard, District 1.</li>
+<li><strong>Interior Vibe:</strong> Lush urban jungle sanctuaries abundant in monsteras and trailing ferns.</li>
+<li><strong>The Signature Vantage:</strong> Watching the silent electric glint of Metro Line 1 trains gliding along Le Loi Boulevard while savoring morning tranquility.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. The Beverage Matrix: From Traditional Phin to Specialty Third Wave
+          </h2>
+        </div>
+      <p>The apartment cafes surrounding Ben Thanh are serious guardians of Vietnam’s evolving coffee heritage:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Beverage Typology</th><th class="p-4 font-bold text-left">Extraction Craft &amp; Provenance</th><th class="p-4 font-bold text-left">Flavor Profile</th><th class="p-4 font-bold text-left">2026 Price Baseline</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Traditional Iced Milk Coffee (<em>Cà Phê Sữa Đá</em>)</strong></td><td class="p-4">Highland Dak Lak natural Robusta, brewed via slow aluminum gravity phin</td><td class="p-4">Viscous, deep chocolate notes, caramel finish</td><td class="p-4">45,000 – 60,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Salted Cream Coffee (<em>Cà Phê Muối</em>)</strong></td><td class="p-4">Dense phin concentrate crowned with whipped cream and pink Himalayan salt</td><td class="p-4">Velvety sweet-savory balance, toasted nut richness</td><td class="p-4">55,000 – 70,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Specialty Pour-Over (V60 / Chemex)</strong></td><td class="p-4">Hand-sorted Cau Dat Arabica or heirloom Typica filtered through paper</td><td class="p-4">Floral, bright citrus acidity, jasmine blossoms</td><td class="p-4">75,000 – 95,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tropical Cascara &amp; Fruit Cold Brew</strong></td><td class="p-4">20-hour steep infused with peach, lychee, or fresh calamansi</td><td class="p-4">Effervescent, naturally sweet, low acidity</td><td class="p-4">65,000 – 85,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Highland Lotus Herbal Infusion</strong></td><td class="p-4">Organic green tea dried within whole lotus blossoms, served with candied ginger</td><td class="p-4">Clean, grounding, restorative after long walks</td><td class="p-4">60,000 – 80,000 VND</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="conscious-voyager-etiquette-for-residential-walk-ups" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Conscious Voyager Etiquette for Residential Walk-Ups
+          </h2>
+        </div>
+      <p>Because these historic apartment buildings are shared homes rather than commercial shopping centers, considerate conduct ensures this unique culture continues to flourish:</p>
+<ol>
+<li><strong>Honor Domestic Tranquility:</strong> Lower your voice when traversing internal landings, especially where families keep doors propped open for afternoon ventilation.</li>
+<li><strong>Observe Parking Protocols:</strong> Ground-floor parking attendants issue paper or electronic parking chits (typically 10,000 – 20,000 VND). Note building closing hours (usually 22:30 – 23:00).</li>
+<li><strong>Respectful Photography:</strong> While capturing cafe interiors and public balconies is warmly welcomed, never point long lenses directly into private family living quarters without permission.</li>
+<li><strong>Embrace Digital Cashless Payments:</strong> In 2026, every boutique cafe accepts contactless credit cards, Apple Pay, and local VietQR transfers effortlessly.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-the-timeless-pause" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Epilogue: The Timeless Pause
+          </h2>
+        </div>
+      <p>In a metropolis that hurtles forward with dazzling speed, the vintage apartment cafes near Ben Thanh Market serve as precious temporal anchors. Lingering over an amber glass of slow-dripping coffee while afternoon rain patters against weathered green shutters, one discovers that Saigon’s true charm lies not in its speed, but in its capacity for stillness. Here, between the past and the present, the city invites you to sit, breathe, and simply be.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Timeless Pause</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                In a metropolis that hurtles forward with dazzling speed, the vintage apartment cafes near Ben Thanh Market serve as precious temporal anchors. Lingering over an amber glass of slow-dripping coffee while afternoon rain patters against weathered green shutters, one discovers that Saigon’s true charm lies in its capacity for stillness.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Epicenter Buildings</div>
+        <div class="font-bold text-slate-800 text-[13px]">42 Ton That Thiep, 26 Ly Tu Trong, 14 Ton That Dam</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Golden Morning Window</div>
+        <div class="font-bold text-slate-800 text-[13px]">08:30 – 11:00 AM (Quiet reading & soft light)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🪜</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Architectural Charm</div>
+        <div class="font-bold text-slate-800 text-[13px]">Centennial iron-cage elevators & mosaic cement tiles</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🤫</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Resident Etiquette</div>
+        <div class="font-bold text-slate-800 text-[13px]">Tread softly past residential doorways</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/secret-apartment-cafes-near-ben-thanh" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/secret-apartment-cafes-near-ben-thanh');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
+export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails, Clocktower Panoramas & Nightlife Guide</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails, Clocktower Panoramas & Nightlife Guide
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Twilight Cocktails, Clocktower Panoramas & Nightlife Guide (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          As equatorial twilight yields to indigo dusk, Saigon’s iconic District 1 undergoes an intoxicating nocturnal metamorphosis. Perched high above the animated kinetic currents of Quach Thi Trang Square or concealed behind secret speakeasies, a refined constellation of open-air sky lounges invites the discerning voyager to toast the city beneath a canopy of stars.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🍸</span> Artisan Botanical Mixology
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌃</span> Panoramic Clocktower Vistas
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🎷</span> Hidden Speakeasy Enclaves
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Nightlife Field Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: When Saigon Kindles Her Constellations</a>
+  <a href="#terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Terroir Mixology: The Rise of Vietnamese Craft Cocktails</a>
+  <a href="#signature-indigenous-elements-in-the-2026-glass" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Indigenous Elements in the 2026 Glass:</a>
+  <a href="#four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh</a>
+  <a href="#the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)</a>
+  <a href="#heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang</a>
+  <a href="#grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Grand Panoramas on Le Loi & Nam Ky Khoi Nghia</a>
+  <a href="#the-subterranean-realm-hidden-alleyway-speakeasies" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Subterranean Realm: Hidden Alleyway Speakeasies</a>
+  <a href="#anatomy-of-the-secret-bar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Anatomy of the Secret Bar:</a>
+  <a href="#curated-beverage-tariff-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Beverage Tariff Matrix (2026 Reference)</a>
+  <a href="#field-protocols-for-nocturnal-elegance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Protocols for Nocturnal Elegance</a>
+  <a href="#epilogue-toasting-the-eternal-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Toasting the Eternal Metropolis</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Walking Radius</div>
+        <div class="text-[13px] font-bold text-slate-900">200m – 700m from Ben Thanh</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🍸</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Cocktail Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">180,000 – 380,000 VND / signature</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌅</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Golden Twilight Hour</div>
+        <div class="text-[13px] font-bold text-slate-900">17:30 – 19:00 PM (Sunset transition)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">👔</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Dress Standard</div>
+        <div class="text-[13px] font-bold text-slate-900">Smart Casual (Tailored shirts & footwear)</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 200m – 700m from Ben Thanh Market (Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang)<br>🍸 <strong>Signature Vibe:</strong> Breezy open-air terraces overlooking the historic clocktower &amp; hidden apothecary cocktail parlors<br>💵 <strong>2026 Price Baseline:</strong> 180,000 – 380,000 VND / signature cocktail</p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-when-saigon-kindles-her-constellations" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: When Saigon Kindles Her Constellations
+          </h2>
+        </div>
+      <p>When the amber sun descends behind the ancient African mahogany canopies along Le Duan Boulevard and the gilded cupola of Ben Thanh Market blazes with evening illumination, District 1 casts off its daytime hustle and reveals its true glamour. For the voyager seeking elevated encounters, the consummate conclusion to a day of architectural discovery is not found amidst congested ground-level crowds, but within the whisper-quiet ascent of an express elevator rising to an open-air rooftop, or slipping past an unmarked antique bookcase into a hidden speakeasy.</p>
+<p>From these breezy open-deck perches flanking Quach Thi Trang Square, one surveys the most mesmerizing urban choreography in Southeast Asia: rivers of scooter headlights flowing like molten ribbons around the roundabout, the historic tile roof of the market mirrored against the sleek glass concourse of the subterranean Metro, and distant illuminated towers piercing the humid equatorial night.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Terroir Mixology: The Rise of Vietnamese Craft Cocktails
+          </h2>
+        </div>
+      <p>Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.</p>
+
+        <h3 id="signature-indigenous-elements-in-the-2026-glass" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Signature Indigenous Elements in the 2026 Glass:
+        </h3>
+      <ul>
+<li><strong>Southern Delta Botanicals:</strong> Artisanal gins distilled with river herbs, cracked Phu Quoc wild peppercorns, aromatic Tra Bong cinnamon, shredded kaffir lime leaf, and tart calamansi infused with mountain honey.</li>
+<li><strong>Homages to Classic Street Traditions:</strong> Clever reinterpretations of morning rituals—from bourbon washed in Robusta coffee butter to delicate saline foams crafted from handcrafted sea salt.</li>
+<li><strong>Intimate Sonic Scapes:</strong> Loud, frenetic commercial tracks are replaced by warm analog vinyl selectors, mellow bossa nova, and late-night jazz trios, cultivating spaces where authentic human dialogue flourishes.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh
+          </h2>
+        </div>
+      <p>Here are four exceptional sky bars delivering cinematic perspectives across the historic market and District 1 skyline:</p>
+
+          <div id="the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)
+            </h3>
+          </div>
+        <p>Perched atop boutique design hotels flanking the eastern and southern perimeters of the market, these intimate open-air terraces deliver an unobstructed, eye-level vantage over the market’s centennial concrete belfry.</p>
+<ul>
+<li><strong>Coordinates:</strong> Phan Boi Chau &amp; Le Lai corridors (under 100 meters from the market).</li>
+<li><strong>The Magic Hour:</strong> Arrive promptly at 18:00 to witness the exact second the South Clock Tower switches on its golden lamps as commuters emerge from the illuminated metro pavilion below.</li>
+<li><strong>Atmospheric Decor:</strong> Low-slung teak daybeds, potted travel palms, and glowing amber hurricane lanterns creating an intimate botanical oasis aloft.</li>
+<li><strong>Signature Libation:</strong> <em>The Ben Thanh Sunset Spritz</em> (Aperol, artisanal Dalat sparkling wine, fresh Ben Tre pink pomelo juice, and bruised rosemary syrup).</li>
+</ul>
+
+          <div id="heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang
+            </h3>
+          </div>
+        <p>Stationed on the fourth and fifth floors of colonial-era masonry edifices, these relaxed rooftop terraces offer a bohemian, arts-steeped sensibility.</p>
+<ul>
+<li><strong>Coordinates:</strong> 38–44 Ton That Thiep Street (350m east of Ben Thanh).</li>
+<li><strong>The Magic Hour:</strong> Twilight vistas overlooking the ornate tiled gables of the adjacent Hindu temple, with the illuminated monolith of Bitexco Tower rising dramatically in the immediate background.</li>
+<li><strong>Atmospheric Decor:</strong> Salvaged encaustic tiles, handcrafted timber tables, and acoustic jazz duos on weekend evenings.</li>
+<li><strong>Signature Libation:</strong> <em>Mekong Botanical Tonic</em> (Locally crafted dry gin, steeped wild mountain herbs, handcrafted elderflower tonic, and dehydrated river citrus).</li>
+</ul>
+
+          <div id="grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
+              . Grand Panoramas on Le Loi & Nam Ky Khoi Nghia
+            </h3>
+          </div>
+        <p>Tailored for voyagers desiring five-star elegance and comprehensive 360-degree panoramas embracing the Municipal Theater, City Hall, and Independence Palace grounds.</p>
+<ul>
+<li><strong>Coordinates:</strong> Upper penthouses along the Le Loi corridor (300m from the market).</li>
+<li><strong>The Magic Hour:</strong> Watching dramatic equatorial thunderheads drift eastward over the Thu Thiem peninsula at dusk.</li>
+<li><strong>Atmospheric Decor:</strong> Backlit onyx cocktail bars, world-class cellar selections, and bespoke mixology stations.</li>
+<li><strong>Signature Libation:</strong> <em>The Heritage Old Fashioned</em> (Oak-rested bourbon, Vietnamese agarwood bitters, caramelized An Giang palm sugar, and flamed orange rind).</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-subterranean-realm-hidden-alleyway-speakeasies" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. The Subterranean Realm: Hidden Alleyway Speakeasies
+          </h2>
+        </div>
+      <p>If sky bars celebrate open horizons, Saigon’s secret <strong>Speakeasies</strong> around Ben Thanh cater to the thrill of discovery:</p>
+
+        <h3 id="anatomy-of-the-secret-bar" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Anatomy of the Secret Bar:
+        </h3>
+      <ol>
+<li><strong>The Disguised Threshold:</strong> The entrance may be camouflaged behind a vintage refrigerator door in a late-night Cantonese noodle house, concealed behind a tailored suiting closet, or hidden down an unnumbered residential corridor on Pasteur Street.</li>
+<li><strong>Cloistered Intimacy:</strong> Windowless, shadowy salons lined in velvet banquettes, antique crystal decanters, and soft candlelight reflecting across brass fixtures.</li>
+<li><strong>Bespoke Mixology:</strong> Eschewing rigid printed menus, guests consult directly with intuitive bartenders to articulate their exact flavor preference (smoky, floral, bittersweet, or complex citrus) for a one-of-a-kind tailored creation.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="curated-beverage-tariff-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Curated Beverage Tariff Matrix (2026 Reference)
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Beverage Classification</th><th class="p-4 font-bold text-left">Ingredients &amp; Extraction Complexity</th><th class="p-4 font-bold text-left">2026 Tariff Baseline (VND)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Signature Terroir Cocktails</strong></td><td class="p-4">Premium spirits infused with regional Vietnamese botanicals</td><td class="p-4"><strong>220,000 – 320,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Classic Heritage Standards</strong></td><td class="p-4">Negroni, Boulevardier, Sazerac, and Dry Martini to global standards</td><td class="p-4"><strong>200,000 – 280,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bespoke Omakase Mixology</strong></td><td class="p-4">Fully tailored libations based on individual palate preferences</td><td class="p-4"><strong>280,000 – 380,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Regional Craft Beers (Pint/Bottle)</strong></td><td class="p-4">Small-batch IPA, wheat, and seasonal porters from local micro-breweries</td><td class="p-4"><strong>110,000 – 160,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Botanical Zero-Proof Mocktails</strong></td><td class="p-4">House-distilled floral hydrosols, cold-pressed tropical juices, and sparkling water</td><td class="p-4"><strong>140,000 – 190,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Artisan Small Plates (Tapas)</strong></td><td class="p-4">Sun-dried upland beef, artisanal Dalat cheeses, and wild truffle shoestring potatoes</td><td class="p-4"><strong>150,000 – 290,000</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="field-protocols-for-nocturnal-elegance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Field Protocols for Nocturnal Elegance
+          </h2>
+        </div>
+      <p>To ensure an unhurried, distinguished evening:</p>
+<ol>
+<li><strong>The Prime Twilight Window (17:30 – 18:30):</strong> This golden half-hour allows you to watch the sunset blush dissolve into city illumination. Advance reservations are strongly advised for parties of three or more on Thursday through Saturday evenings.</li>
+<li><strong>Attire Standards:</strong> Upscale venues observe a <strong>Smart Casual</strong> policy. Avoid beachwear, athletic tank tops, and rubber flip-flops. Collared shirts, tailored trousers, and leather footwear ensure seamless admission.</li>
+<li><strong>Responsible Nocturnal Mobility:</strong> Never operate motor vehicles after consuming alcoholic beverages. Premium ride-hailing services (GrabCar Plus, Xanh SM Luxury) and the air-conditioned concourses of Metro Line 1 (operating until 23:00) offer safe, effortless returns to your accommodation.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-toasting-the-eternal-metropolis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            7. Epilogue: Toasting the Eternal Metropolis
+          </h2>
+        </div>
+      <p>Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and the timeless promise of wonder.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Toasting the Eternal Metropolis</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and wonder.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Epicenter Boulevards</div>
+        <div class="font-bold text-slate-800 text-[13px]">Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍹</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Botanical Signatures</div>
+        <div class="font-bold text-slate-800 text-[13px]">Phu Quoc black pepper, Tra Bong cinnamon, pomelo gin</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Night Transit</div>
+        <div class="font-bold text-slate-800 text-[13px]">Metro Line 1 operating until 23:00 PM</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Acoustic Atmosphere</div>
+        <div class="font-bold text-slate-800 text-[13px]">Live jazz, deep soul & vinyl selector nights</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/best-rooftop-bars-near-ben-thanh" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/best-rooftop-bars-near-ben-thanh');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -4243,6 +9399,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -4251,6 +9408,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Buu Long Tourist Area: The Miniature Ha Long Bay of Dong Nai (2026 Guide)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Buu Long Tourist Area: The Miniature Ha Long Bay of Dong Nai (2026 Guide)
         </h1>
@@ -4261,6 +9419,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -4275,6 +9434,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -4585,6 +9745,13 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -4620,6 +9787,463 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries & Design Stays</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries & Design Stays
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Saigon’s Premier Indochine Sanctuaries & Design Stays (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          For the discerning voyager, accommodation in Saigon is far more than a nocturnal resting place—it is the emotional anchor of the journey. Travelers with a discerning eye seek out intimate boutique sanctuaries and protected heritage mansions tucked along the tamarind-shaded avenues surrounding Ben Thanh Market, where colonial romance and contemporary tropical luxury converge in exquisite harmony.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">13 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> Historic Colonial Mansions
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏊</span> Skyline Infinity Lap Pools
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🫖</span> Complimentary Afternoon High Tea
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Luxury Field Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-hospitality-imbued-with-heritage" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Hospitality Imbued with Heritage</a>
+  <a href="#core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Core Hallmarks of a Bespoke Saigon Boutique Hotel</a>
+  <a href="#five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh</a>
+  <a href="#the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia</a>
+  <a href="#silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Silverland Yen Hotel – A Zen Oasis Behind the North Gate</a>
+  <a href="#hotel-continental-saigon-vietnams-oldest-grand-hotel-inaugurated-1880" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)</a>
+  <a href="#la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">La Siesta Premium Sai Gon – Sophisticated Indochine Glamour</a>
+  <a href="#fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Fusion Original Saigon Centre – Modernist Artistry on the Metro Line</a>
+  <a href="#comparative-matrix-premier-sanctuaries-at-a-glance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comparative Matrix: Premier Sanctuaries at a Glance</a>
+  <a href="#strategic-reservation-guidance-for-the-discerning-guest" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Strategic Reservation Guidance for the Discerning Guest</a>
+  <a href="#epilogue-awakening-to-saigons-living-grace" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Awakening to Saigon’s Living Grace</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Market Proximity</div>
+        <div class="text-[13px] font-bold text-slate-900">200m – 900m Walking Radius</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Architectural Range</div>
+        <div class="text-[13px] font-bold text-slate-900">1880 Belle Époque to Tropical Zen</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Pedestrian Access</div>
+        <div class="text-[13px] font-bold text-slate-900">Direct link to Metro Line 1 & Quach Thi Trang</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💵</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">2,200,000 – 6,800,000 VND / night</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 200m – 900m from Ben Thanh Market (Dong Khoi, Thu Khoa Huan, Ly Tu Trong, Le Loi)<br>🛏️ <strong>Architectural Typologies:</strong> 19th-century French Colonial, Neo-Indochine &amp; Tropical Modernism<br>💵 <strong>2026 Tariff Baseline:</strong> 2,200,000 – 6,800,000 VND / night</p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-hospitality-imbued-with-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Hospitality Imbued with Heritage
+          </h2>
+        </div>
+      <p>For the voyager who journeys with intention, an urban retreat is not merely a logistical necessity—it is an intimate prism through which a metropolis reveals its spirit. While Saigon’s modern skyline bristles with standardized corporate steel towers, the city’s authentic character lingers along the leafy avenues surrounding Ben Thanh Market. Here, hidden behind antique timber casements and cascading tropical philodendrons, a curated collection of boutique design hotels and restored colonial mansions offers a sophisticated refuge from the kinetic street level.</p>
+<p>In these sanctuaries, every encaustic cement tile pressed in historic Mekong kilns, every repurposed teak beam harvested from the legendary Ba Son naval shipyards, and every stone-carved soaking tub resting upon an open-air balcony tells a multi-layered story. Stepping across their thresholds, travelers discover the romantic aura of the &quot;Pearl of the Orient&quot; elevated by seamless 2026 digital connectivity and warm southern Vietnamese hospitality.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Core Hallmarks of a Bespoke Saigon Boutique Hotel
+          </h2>
+        </div>
+      <p>To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:</p>
+<ol>
+<li><strong>Unmistakable Architectural Identity:</strong> Design that eschews sterile corporate formulas in favor of authentic local vernacular—handcrafted ceramic accents, French wrought-iron transoms, lacquer artwork, or serene Zen water gardens.</li>
+<li><strong>Intimate Scale &amp; Bespoke Concierge Care:</strong> Ranging from 30 to 120 guest chambers, ensuring that hotel concierges address voyagers by name, anticipate dining preferences, and curate private off-the-beaten-track city strolls.</li>
+<li><strong>Effortless Pedestrian Mobility (<em>Walkability</em>):</strong> Situated within a 12-minute shaded walk from Ben Thanh Market, the subterranean Metro central interchange, and major fine arts museums.</li>
+<li><strong>Refined Epicurean &amp; Wellness Rituals:</strong> Featuring chef-driven regional fusion dining, open-air twilight sky lounges, complimentary afternoon high tea, and indigenous herbal spa therapies.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh
+          </h2>
+        </div>
+      <p>Here are the five preeminent boutique addresses evaluated and recommended for the 2026 season:</p>
+
+          <div id="the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia
+            </h3>
+          </div>
+        <p>Stationed along quiet Ho Huan Nghiep Street connecting Dong Khoi with the Saigon River, The Myst is an architectural triumph celebrating the 200-year legacy of Saigon’s historic Ba Son naval shipyards.</p>
+<ul>
+<li><strong>Coordinates:</strong> 6–8 Ho Huan Nghiep Street, Ben Nghe Ward, District 1 (850m from Ben Thanh).</li>
+<li><strong>Architectural DNA:</strong> A striking exterior punctuated by staggered picture windows draped in wild tropical vines; reclaimed ironwood floors; open-air private balconies featuring deep stone soaking tubs overlooking the winding river.</li>
+<li><strong>Signature Amenity:</strong> A 14th-floor turquoise mosaic rooftop lap pool, complemented by a lavish, complimentary afternoon high tea buffet served daily to all in-house guests.</li>
+<li><strong>2026 Tariff Baseline:</strong> 3,800,000 – 6,500,000 VND / night.</li>
+</ul>
+
+          <div id="silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . Silverland Yen Hotel – A Zen Oasis Behind the North Gate
+            </h3>
+          </div>
+        <p>Tucked on tree-lined Thu Khoa Huan Street, merely three minutes on foot from Ben Thanh’s North Portal and the shaded green lawns of Tao Dan Park, Silverland Yen delivers an atmosphere of serene, minimalist mindfulness.</p>
+<ul>
+<li><strong>Coordinates:</strong> 73–75 Thu Khoa Huan Street, Ben Thanh Ward, District 1 (250m from the market).</li>
+<li><strong>Architectural DNA:</strong> Light blond woods, smooth granite slabs, and murmuring interior waterfalls that dissolve equatorial humidity the moment one enters the lobby.</li>
+<li><strong>Signature Amenity:</strong> A rooftop open-air heated Jacuzzi offering direct perspectives toward Ben Thanh’s clocktower, coupled with afternoon tea with live acoustic melodies.</li>
+<li><strong>2026 Tariff Baseline:</strong> 2,200,000 – 3,800,000 VND / night.</li>
+</ul>
+
+          <div id="hotel-continental-saigon-vietnams-oldest-grand-hotel-inaugurated-1880" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
+              . Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)
+            </h3>
+          </div>
+        <p>The immortal icon of French colonial hospitality, occupying prime frontage on Dong Khoi Street opposite the Saigon Opera House. It famously sheltered novelist Graham Greene while he penned his masterpiece <em>The Quiet American</em>.</p>
+<ul>
+<li><strong>Coordinates:</strong> 132–134 Dong Khoi Street, Ben Nghe Ward, District 1 (750m from Ben Thanh).</li>
+<li><strong>Architectural DNA:</strong> Solid half-meter-thick brick masonry walls maintaining cool interior temperatures naturally; 4-meter-high ceilings with vintage wooden fans; an interior courtyard sheltered beneath centennial frangipani trees.</li>
+<li><strong>Historical Ritual:</strong> Savoring a morning espresso at the street-level Continental Corner terrace, observing the parade of city life just as correspondents did in the 1950s.</li>
+<li><strong>2026 Tariff Baseline:</strong> 3,200,000 – 5,500,000 VND / night.</li>
+</ul>
+
+          <div id="la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
+              . La Siesta Premium Sai Gon – Sophisticated Indochine Glamour
+            </h3>
+          </div>
+        <p>Located along Ly Tu Trong Street, La Siesta Premium encapsulates the zenith of Neo-Indochine elegance, layering deep emerald greens with midnight lacquer timber and polished brass appointments.</p>
+<ul>
+<li><strong>Coordinates:</strong> 180–188 Ly Tu Trong Street, Ben Thanh Ward, District 1 (350m from the market).</li>
+<li><strong>Architectural DNA:</strong> A sweeping spiral lobby staircase, bespoke lacquer murals depicting vintage Saigon street scenes, and Carrara white marble bathrooms.</li>
+<li><strong>Signature Amenity:</strong> A breathtaking 12th-floor sky bar and infinity horizon pool framing panoramic sunset vistas across District 1.</li>
+<li><strong>2026 Tariff Baseline:</strong> 2,800,000 – 4,800,000 VND / night.</li>
+</ul>
+
+          <div id="fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">5</span>
+              . Fusion Original Saigon Centre – Modernist Artistry on the Metro Line
+            </h3>
+          </div>
+        <p>Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on Le Loi Boulevard, offering direct indoor climate-controlled access to the Ben Thanh Metro Station concourse.</p>
+<ul>
+<li><strong>Coordinates:</strong> 65 Le Loi Boulevard, Ben Nghe Ward, District 1 (200m from Ben Thanh).</li>
+<li><strong>Architectural DNA:</strong> Floor-to-ceiling portraits honoring Vietnam’s traditional <em>áo dài</em>; contemporary minimalist geometries enriched with warm terracotta and charcoal palettes.</li>
+<li><strong>Signature Amenity:</strong> Flexible all-day breakfast dining, cutting-edge fitness center, and direct private elevator transit into the Takashimaya luxury shopping gallery.</li>
+<li><strong>2026 Tariff Baseline:</strong> 3,500,000 – 6,800,000 VND / night.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="comparative-matrix-premier-sanctuaries-at-a-glance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Comparative Matrix: Premier Sanctuaries at a Glance
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Sanctuary Name</th><th class="p-4 font-bold text-left">Walking Distance to Market</th><th class="p-4 font-bold text-left">Design Aesthetic</th><th class="p-4 font-bold text-left">Key Differentiating Highlight</th><th class="p-4 font-bold text-left">2026 Tariff Baseline (VND)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Myst Dong Khoi</strong></td><td class="p-4">850m (11-min walk)</td><td class="p-4">Shipyard Heritage &amp; Tropical Vines</td><td class="p-4">Balcony outdoor stone tub &amp; daily high tea</td><td class="p-4"><strong>3,800,000 – 6,500,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Silverland Yen Hotel</strong></td><td class="p-4">250m (3-min walk)</td><td class="p-4">Zen Modern &amp; Natural Woods</td><td class="p-4">Rooftop clocktower Jacuzzi &amp; Tao Dan proximity</td><td class="p-4"><strong>2,200,000 – 3,800,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Hotel Continental</strong></td><td class="p-4">750m (9-min walk)</td><td class="p-4">Classical French Belle Époque (1880)</td><td class="p-4">Centennial courtyard frangipani &amp; literary heritage</td><td class="p-4"><strong>3,200,000 – 5,500,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>La Siesta Premium</strong></td><td class="p-4">350m (4-min walk)</td><td class="p-4">Neo-Indochine Glamour</td><td class="p-4">Rooftop infinity sunset pool &amp; herbal spa</td><td class="p-4"><strong>2,800,000 – 4,800,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Fusion Original</strong></td><td class="p-4">200m (2-min walk)</td><td class="p-4">Contemporary Pan-Asian Art</td><td class="p-4">Direct subterranean Metro tunnel connection</td><td class="p-4"><strong>3,500,000 – 6,800,000</strong></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="strategic-reservation-guidance-for-the-discerning-guest" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Strategic Reservation Guidance for the Discerning Guest
+          </h2>
+        </div>
+      <ol>
+<li><strong>Advance Booking during the Dry Season (Nov – Apr):</strong> Due to the limited room count of boutique properties (typically 50–100 suites), premier river-view and balcony categories sell out 3 to 5 weeks ahead.</li>
+<li><strong>Requesting High Floor Balcony Suites:</strong> When confirming your reservation, request an upper-floor placement with an exterior balcony overlooking either interior green gardens or leafy boulevards for maximum natural ventilation.</li>
+<li><strong>Maximizing Value-Added Privileges:</strong> Many boutique design hotels include complimentary à la carte cooked-to-order breakfasts, late checkout privileges, and private Tan Son Nhat airport transfers for stays spanning 3 nights or longer.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-awakening-to-saigons-living-grace" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Epilogue: Awakening to Saigon’s Living Grace
+          </h2>
+        </div>
+      <p>After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Awakening to Saigon’s Living Grace</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Sanctuary Corridors</div>
+        <div class="font-bold text-slate-800 text-[13px]">Ho Huan Nghiep, Thu Khoa Huan, Dong Khoi, Ly Tu Trong, Le Loi</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛎️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Concierge Standard</div>
+        <div class="font-bold text-slate-800 text-[13px]">Bespoke butler service & private airport transfers</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛏️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Highlights</div>
+        <div class="font-bold text-slate-800 text-[13px]">Open-air balcony stone tubs & salvage shipyard timber</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Peak Booking Window</div>
+        <div class="font-bold text-slate-800 text-[13px]">3–4 weeks in advance (Nov – Apr dry season)</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/boutique-hotels-near-ben-thanh" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/boutique-hotels-near-ben-thanh');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const daLatSpecialtiesHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -4632,6 +10256,7 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -4640,6 +10265,7 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Da Lat Specialties: The Definitive Highland Culinary Guide (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Da Lat Specialties: The Definitive Highland Culinary Guide (2026)
         </h1>
@@ -4650,6 +10276,7 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -4664,6 +10291,7 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -4979,6 +10607,13 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -5026,6 +10661,7 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5034,6 +10670,7 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)
         </h1>
@@ -5044,6 +10681,7 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5058,6 +10696,7 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -5364,6 +11003,13 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -5399,6 +11045,826 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">14 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏛️</span> 112-Year Living Heritage
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🍜</span> Centennial Food Court
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚇</span> 2026 Metro Direct Access
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 15 Curated Experiences
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-far-more-than-a-commodity-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Far More Than a Commodity Bazaar</a>
+  <a href="#master-map-15-experiences-across-four-golden-windows" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Map: 15 Experiences Across Four Golden Windows</a>
+  <a href="#time-window-1-early-morning-awakening-0630-0930" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)</a>
+  <a href="#time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)</a>
+  <a href="#time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)</a>
+  <a href="#time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)</a>
+  <a href="#comparative-itinerary-schedules-4-hour-express-vs-full-day" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comparative Itinerary Schedules: 4-Hour Express vs. Full Day</a>
+  <a href="#key-takeaways-and-field-advice-from-the-rice-tour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Key Takeaways & Field Advice from The Rice Tour</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Geographic Scope</div>
+        <div class="text-[13px] font-bold text-slate-900">Ben Thanh Epicenter & 1km Radius</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Suggested Duration</div>
+        <div class="text-[13px] font-bold text-slate-900">4 Hours to 24-Hour Immersion</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">2026 Budget Baseline</div>
+        <div class="text-[13px] font-bold text-slate-900">250,000 – 850,000 VND / Guest</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌙</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Night Market Shift</div>
+        <div class="text-[13px] font-bold text-slate-900">18:00 – 23:30 Daily</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Geographic Scope:</strong> Ben Thanh Market epicenter &amp; within a 1km radius in District 1<br>🌟 <strong>Recommended Duration:</strong> From 4 hours (highlights) to a full 24-hour immersion<br>🎟️ <strong>Estimated Budget:</strong> 250,000 – 850,000 VND ($10 – $34 USD) per person for a comprehensive itinerary  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-far-more-than-a-commodity-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Far More Than a Commodity Bazaar
+          </h2>
+        </div>
+      <p>When first-time visitors hear of Ben Thanh Market, many picture a crowded marketplace packed with souvenir stalls, rolled textiles, and aggressive touts. Yet to those attuned to the authentic cadence of Saigon, this 112-year-old landmark and its encircling boulevards form one of Southeast Asia&#39;s most captivating urban cultural theaters. Here, within a few hundred footsteps, one transitions effortlessly from early 20th-century Indochinese colonial architecture to the sunlit subterranean concourses of the brand-new 2026 Metro Line 1, and from a humble traditional sweet soup vendor to an opulent rooftop lounge overlooking the meandering Saigon River.</p>
+<p>If you are pondering <strong>what to do in and around Ben Thanh Market</strong>, set aside conventional tourist assumptions and prepare to awaken every sense. Below are 15 hand-curated experiences documented by The Rice Tour, sequenced chronologically across four golden windows from morning twilight to midnight revelry.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="master-map-15-experiences-across-four-golden-windows" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Master Map: 15 Experiences Across Four Golden Windows
+          </h2>
+        </div>
+      
+        <h3 id="time-window-1-early-morning-awakening-0630-0930" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
+        </h3>
+      <h4 id="catching-the-dawn-and-photographing-the-south-gate-clock-tower-without-crowds">1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds</h4><p>Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.</p>
+<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">2. Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
+<h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">3. Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
+<hr>
+
+        <h3 id="time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          ☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)
+        </h3>
+      <h4 id="navigating-the-labyrinth-of-1400-heritage-stalls-under-historic-rafters">4. Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters</h4><p>Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.</p>
+<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Ba Muoi)</h4><p>Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
+<h4 id="descending-32-meters-into-ben-thanh-central-metro-station-to-marvel-at-the-lotus-skylight">6. Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"</h4><p>When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon&#39;s futuristic 2026 urban infrastructure.</p>
+<h4 id="contemplating-art-masterpieces-in-the-mansion-of-99-windows-hcmc-museum-of-fine-arts">7. Contemplating Art Masterpieces in the Mansion of 99 Windows (HCMC Museum of Fine Arts)</h4><p>A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa (Uncle Hoa). Here, vintage encaustic cement tiles, the city’s earliest private iron-cage elevator, and the designated National Treasure lacquer masterpiece &quot;Spring Garden of Central, South, and North&quot; by Nguyen Gia Tri await art connoisseurs.</p>
+<hr>
+
+        <h3 id="time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)
+        </h3>
+      <h4 id="seeking-serenity-and-scented-jasmine-at-mariamman-hindu-temple">8. Seeking Serenity and Scented Jasmine at Mariamman Hindu Temple</h4><p>Located on Truong Dinh Street, this 1885 South Indian sanctuary offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.</p>
+<h4 id="climbing-to-a-secret-apartment-hideaway-cafe-on-ly-tu-trong">9. Climbing to a Secret Apartment Hideaway Cafe on Ly Tu Trong</h4><p>Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like <em>Cong Ca Phe</em> and <em>The Workshop</em> overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.</p>
+<h4 id="hopping-on-the-top-deck-of-the-open-air-hop-on-hop-off-sunset-bus">10. Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus</h4><p>At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird&#39;s-eye views of District 1.</p>
+<hr>
+
+        <h3 id="time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)
+        </h3>
+      <h4 id="feasting-on-flaming-seafood-along-phan-boi-chau-night-market">11. Feasting on Flaming Seafood Along Phan Boi Chau Night Market</h4><p>As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (<em>banh xeo</em>) amidst crackling flames and lively international crowds.</p>
+<h4 id="sipping-craft-cocktails-overlooking-the-illuminated-clock-tower-at-twilight">12. Sipping Craft Cocktails Overlooking the Illuminated Clock Tower at Twilight</h4><p>Ascend to <em>The Daun Rooftop</em> or <em>Broma Not a Bar</em> along Le Loi Boulevard. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.</p>
+<h4 id="late-night-supper-golden-roasted-quail-on-dong-du-or-broken-rice-on-nguyen-trai">13. Late-Night Supper: Golden Roasted Quail on Dong Du or Broken Rice on Nguyen Trai</h4><p>End your nocturnal culinary adventure with late-night classics favored by locals: aromatic crispy butter-roasted quail paired with salted lime-pepper dip, or a plate of smoky grilled pork chop broken rice (<em>com tam suon bi cha</em>) served well past midnight.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="comparative-itinerary-schedules-4-hour-express-vs-full-day" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Comparative Itinerary Schedules: 4-Hour Express vs. Full Day
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Itinerary</th><th class="p-4 font-bold text-left">Morning Focus</th><th class="p-4 font-bold text-left">Midday Focus</th><th class="p-4 font-bold text-left">Evening Focus</th><th class="p-4 font-bold text-left">Estimated Spend (VND)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4">Photo op at Clock Tower + Breakfast at East Gate</td><td class="p-4">Metro station visit + Che Ba Muoi sweet soup</td><td class="p-4">Quick shopping at craft section</td><td class="p-4">150,000 – 250,000</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Full-Day In-Depth (Cultural Explorer)</strong></td><td class="p-4">Dawn photography + Park coffee + Food court tour</td><td class="p-4">Metro Lotus Skylight + Fine Arts Museum</td><td class="p-4">Rooftop cocktail + Night Market seafood feast</td><td class="p-4">600,000 – 1,200,000</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="key-takeaways-and-field-advice-from-the-rice-tour" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Key Takeaways & Field Advice from The Rice Tour
+          </h2>
+        </div>
+      <ol>
+<li><strong>Morning Light Matters:</strong> The market exterior faces south, making 06:30 – 08:30 the crispest window for clear natural illumination without harsh glare.</li>
+<li><strong>Beat the Midday Heat:</strong> Spend 11:30 to 14:00 inside air-conditioned sanctuaries like the underground Metro retail concourses or the nearby Takashimaya / Saigon Centre complex.</li>
+<li><strong>Guard Your Personal Effects:</strong> While the market perimeter is well-patrolled, always keep bags slung diagonally across your chest when navigating dense aisles or pedestrian crosswalks.</li>
+</ol>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Living Pulse of Saigon</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                To truly experience Ben Thanh Market is not merely to buy a souvenir, but to surrender to its living rhythm: to sit on a low stool at dawn sipping sweet milk coffee, to marvel at century-old rafters, and to watch the city dance beneath neon lights at dusk. It is where Saigon's past, present, and future embrace with timeless warmth.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Heart of Saigon</div>
+        <div class="font-bold text-slate-800 text-[13px]">District 1, Ho Chi Minh City</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Peak Photography Window</div>
+        <div class="font-bold text-slate-800 text-[13px]">06:30 – 08:00 AM (Golden Dawn)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍲</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Must-Try Gastronomy</div>
+        <div class="font-bold text-slate-800 text-[13px]">Bun Rieu Cua, Banh Beo & Che Ba Muoi</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Subterranean Link</div>
+        <div class="font-bold text-slate-800 text-[13px]">Direct access to Metro Line 1</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/things-to-do-in-ben-thanh-market" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/things-to-do-in-ben-thanh-market');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
+export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          The Definitive A-Z Survival Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Stepping into Saigon's centennial market can feel overwhelming without advance intelligence. From decoding stall numbering systems and verified parking basements to mastering civilized bargaining etiquette, this comprehensive field manual ensures an effortless, authentic voyage.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">15 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🧭</span> Comprehensive A-Z Handbook
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🕒</span> Dual Day & Night Schedules
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🛡️</span> Verified Scam Defenses
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Field Logistics
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Stepping into Saigon's Beating Heart Like an Insider</a>
+  <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
+  <a href="#the-historic-covered-hall-bazaar-0600-1800" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Historic Covered Hall Bazaar (06:00 – 18:00)</a>
+  <a href="#the-open-air-night-street-bazaar-1800-2330" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Open-Air Night Street Bazaar (18:00 – 23:30)</a>
+  <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
+  <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
+  <a href="#master-bargaining-rules-the-smiling-negotiation-code" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Bargaining Rules: The "Smiling Negotiation" Code</a>
+  <a href="#hygiene-and-dining-safety-in-the-culinary-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Hygiene & Dining Safety in the Culinary Hall</a>
+  <a href="#safety-scams-and-emergency-contacts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Safety, Scams & Emergency Contacts</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Exact Location</div>
+        <div class="text-[13px] font-bold text-slate-900">Le Loi Blvd, Ben Thanh, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Covered Day Market</div>
+        <div class="text-[13px] font-bold text-slate-900">06:00 – 18:00 (1,400+ Stalls)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌙</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Outdoor Night Market</div>
+        <div class="text-[13px] font-bold text-slate-900">18:00 – 23:30 (East & West Gates)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Admission Tariff</div>
+        <div class="text-[13px] font-bold text-slate-900">Free Public Entry</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exact Address:</strong> Le Loi Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam<br>🕒 <strong>Operational Hours:</strong> Covered Day Market (06:00 – 18:00) | Outdoor Night Street Market (18:00 – 23:30)<br>💡 <strong>Scope:</strong> Comprehensive intelligence spanning parking lots, currency exchange, bargaining tactics, and personal security  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-stepping-into-saigons-beating-heart-like-an-insider" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Stepping into Saigon's Beating Heart Like an Insider
+          </h2>
+        </div>
+      <p>Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.</p>
+<p>In truth, Ben Thanh Market is only intimidating when entered unprepared. Armed with insider knowledge, local behavioral codes, and ground-tested field wisdom, your journey through this historic bazaar becomes effortless, highly rewarding, and culturally rich. Here is the <strong>definitive A-Z survival handbook</strong> compiled by The Rice Tour, updated with the latest 2026 infrastructure transformations.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="operating-hours-and-two-distinct-daily-rhythms" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Operating Hours & Two Distinct Daily Rhythms
+          </h2>
+        </div>
+      <p>Ben Thanh operates under two starkly different daily personalities:</p>
+
+          <div id="the-historic-covered-hall-bazaar-0600-1800" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . The Historic Covered Hall Bazaar (06:00 – 18:00)
+            </h3>
+          </div>
+        <ul>
+<li><strong>What happens:</strong> All 1,400 interior stalls operate at full capacity. This is the optimal window to browse artisanal textiles, lacquerware, hand-carved coffee filters, cashews, dried fruits, and explore the bustling heritage food court.</li>
+<li><strong>Insider Sweet Spot (08:30 – 10:30 AM):</strong> The air is cool, stallholders have completed their morning displays, and interactions are warm, leisurely, and unhurried.</li>
+</ul>
+
+          <div id="the-open-air-night-street-bazaar-1800-2330" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . The Open-Air Night Street Bazaar (18:00 – 23:30)
+            </h3>
+          </div>
+        <ul>
+<li><strong>What happens:</strong> At 18:00, the main heavy wooden gates shutter. Immediately, Phan Boi Chau Street (East Gate) and Phan Chu Trinh Street (West Gate) transform into illuminated pedestrian corridors flanked by open charcoal grills and bustling souvenir stalls.</li>
+<li><strong>Insider Sweet Spot (19:30 – 21:30 PM):</strong> When evening breezes soften the tropical humidity and the neon lights reflect upon sizzling pans of fresh seafood.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="official-parking-map-and-scam-avoidance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Official Parking Map & Scam Avoidance
+          </h2>
+        </div>
+      <p>One of the most persistent headaches for independent travelers on scooters or rental cars is predatory roadside parking attendants charging exorbitant fees (30,000 – 50,000 VND). Memorize these legitimate, municipally regulated parking hubs:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Parking Facility</th><th class="p-4 font-bold text-left">Vehicle Type</th><th class="p-4 font-bold text-left">Official Fee (2026)</th><th class="p-4 font-bold text-left">Walking Distance</th><th class="p-4 font-bold text-left">Pros &amp; Field Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Central Metro Station Basement</strong></td><td class="p-4">Scooters &amp; E-Bikes</td><td class="p-4">5,000 – 10,000 VND</td><td class="p-4">Direct internal tunnel connection</td><td class="p-4">Brand-new, air-conditioned, 24/7 CCTV, IC card gates</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Centre / Takashimaya Basement</strong></td><td class="p-4">Scooters &amp; Passenger Cars</td><td class="p-4">Scooter: 10,000 VND / 4h<br>Car: 50,000 VND / 2h</td><td class="p-4">250m (3-min walk)</td><td class="p-4">Premium underground parking, secure, sheltered pedestrian subway link</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>September 23rd Park Facility (Le Lai St)</strong></td><td class="p-4">Scooters &amp; Tour Buses</td><td class="p-4">6,000 – 10,000 VND</td><td class="p-4">150m (2-min walk)</td><td class="p-4">Sheltered surface parking, spacious ingress, operates until 23:00</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Kumho / Diamond Plaza Garage</strong></td><td class="p-4">Passenger Cars</td><td class="p-4">40,000 – 50,000 VND / block</td><td class="p-4">800m (Walk along Le Duan)</td><td class="p-4">Reliable overflow option when central District 1 parking fills up</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
+          </h2>
+        </div>
+      <p>Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary <strong>Ha Tam Gold Shop</strong> (<em>Tiem vang Ha Tam</em>) and neighboring <strong>Mai Van</strong>:</p>
+<ul>
+<li><strong>Why Locals Choose It:</strong> Ha Tam consistently quotes foreign exchange rates matching or exceeding official bank rates for USD, EUR, AUD, JPY, SGD, and THB, with zero service commission and instantaneous counting machines.</li>
+<li><strong>Operational Protocol:</strong> Expect a queue of locals and expat traders during peak afternoon hours. Bring crisp, uncreased, tear-free banknotes (especially 100 USD bills) to secure the highest tiered rates.</li>
+<li><strong>Safety Precaution:</strong> Upon receiving Vietnamese Dong stacks, step into an interior corner or discreetly place the cash into an inner pouch <em>before</em> stepping out onto the public sidewalk.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="master-bargaining-rules-the-smiling-negotiation-code" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Master Bargaining Rules: The "Smiling Negotiation" Code
+          </h2>
+        </div>
+      <p>Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social performance. To shop ethically without overpaying, keep these golden guidelines in mind:</p>
+<ol>
+<li><strong>The Morning &quot;Mo Hang&quot; Respect:</strong> Avoid aggressive bargaining between 06:00 and 08:30 AM. In Vietnamese merchant culture, the first transaction of the day (<em>mo hang</em>) sets the cosmic tone for daily fortune. If you negotiate aggressively or walk away after inspecting goods during this time, vendors may feel frustrated.</li>
+<li><strong>The 30% – 50% Rule of Thumb:</strong> For apparel, silk scarves, imitation watches, and non-perishable souvenirs, vendors frequently quote prices 30% to 50% above fair value. Counter-offer pleasantly at roughly 50% of the initial quote, then settle around 60% – 70%.</li>
+<li><strong>Fixed-Price Exceptions:</strong> Stalls bearing prominent &quot;Fixed Price&quot; (<em>Gia Co Dinh</em>) signs, official government-regulated food stalls, and branded coffee dispensaries do not negotiate.</li>
+<li><strong>The Polite Walkaway:</strong> If a merchant remains stubborn on an exorbitant price, offer a warm smile, thank them in Vietnamese (<em>&quot;Cam on chi&quot;</em>), and slowly walk away. More often than not, they will call you back with a substantial concession.</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="hygiene-and-dining-safety-in-the-culinary-hall" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            6. Hygiene & Dining Safety in the Culinary Hall
+          </h2>
+        </div>
+      <p>Ben Thanh’s interior food court is a sensory feast. To dine like a seasoned gastronome while ensuring digestive peace:</p>
+<ul>
+<li><strong>Look for Fast Turnover:</strong> Choose vendors with stainless-steel countertops, boiling cauldrons, and bustling queues of local office workers. Rapid turnover ensures fresh ingredients.</li>
+<li><strong>Hydration Etiquette:</strong> Avoid unsealed tap water; request bottled mineral water or freshly cracked whole coconuts.</li>
+<li><strong>Must-Try Specialties:</strong> Do not miss <em>Bun Rieu Cua Dong</em> (East Gate aisle), <em>Banh Beo Hue</em> with crispy pork crackling, and legendary iced sweet soups (<em>Che Ba Muoi</em>).</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="safety-scams-and-emergency-contacts" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            7. Safety, Scams & Emergency Contacts
+          </h2>
+        </div>
+      <ul>
+<li><strong>Crossbody Bags:</strong> Keep zippers facing forward and tucked under your forearm. Motorbike snatch thieves target exposed shoulder straps along the outer perimeter boulevards.</li>
+<li><strong>Shoe Shine &amp; Coconut Hustlers:</strong> If a street hustler squirts cleaner onto your sneakers or places a bamboo pole across your shoulder unsolicited, firmly say <em>&quot;No, thank you&quot;</em> and keep walking without breaking stride.</li>
+<li><strong>Tourist Police Hotlines:</strong><ul>
+<li>District 1 Police: <code>+84 28 3829 7643</code></li>
+<li>Emergency Ambulance: <code>115</code></li>
+<li>HCMC Tourism Information Center: <code>+84 28 3925 1080</code> (Located at September 23rd Park)</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Mastering the Art of Market Travel</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Armed with cultural understanding and practical wisdom, Ben Thanh transforms from a bewildering maze into an open book of southern Vietnamese life. Walk with curiosity, bargain with a smile, and savor the unforgettable tapestry of flavors and human connections waiting around every turn.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Centennial Market</div>
+        <div class="font-bold text-slate-800 text-[13px]">Inaugurated March 1914</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚪</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Main Portals</div>
+        <div class="font-bold text-slate-800 text-[13px]">4 Main Gates (South, North, East, West)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💡</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Insider Sweet Spot</div>
+        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM (Cool & unhurried)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Modern Transit</div>
+        <div class="font-bold text-slate-800 text-[13px]">Direct escalator from Metro concourse</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-market-ultimate-travel-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-market-ultimate-travel-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -5411,6 +11877,7 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5419,6 +11886,7 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)
         </h1>
@@ -5429,6 +11897,7 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5443,6 +11912,7 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -5757,6 +12227,13 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -5792,6 +12269,460 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">14 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🛡️</span> Consumer Protection Manual
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">⚠️</span> 7 Traps Decoded & Neutralized
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏷️</span> Civilized Price Counter-Offers
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Security Protocols
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar</a>
+  <a href="#anatomy-of-the-7-most-common-scams-and-traps" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Anatomy of the 7 Most Common Scams & Traps</a>
+  <a href="#scam-1-the-astronomical-price-hike-300-500-inflation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)</a>
+  <a href="#scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)</a>
+  <a href="#scam-3-the-aggressive-shoe-repair-hustle" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 3: The Aggressive "Shoe Repair Hustle"</a>
+  <a href="#scam-4-the-bait-and-switch-on-dried-delicacies-and-coffee" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 4: The Bait-and-Switch on Dried Delicacies & Coffee</a>
+  <a href="#scam-5-distraction-pickpocketing-in-bottlenecks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 5: Distraction Pickpocketing in Bottlenecks</a>
+  <a href="#scam-6-unregulated-copycat-metermonkey-taxis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 6: Unregulated "Copycat" Metermonkey Taxis</a>
+  <a href="#scam-7-confusing-polymer-banknote-denominations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 7: Confusing Polymer Banknote Denominations</a>
+  <a href="#verified-price-reference-benchmark-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Verified Price Reference Benchmark (2026 Edition)</a>
+  <a href="#emergency-directory-and-247-tourist-assistance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Emergency Directory & 24/7 Tourist Assistance</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Critical Perimeter</div>
+        <div class="text-[13px] font-bold text-slate-900">All 4 Gates & Quach Thi Trang Square</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚨</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Risk Typology</div>
+        <div class="text-[13px] font-bold text-slate-900">Price Inflation & Curbside Soliciting</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛡️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Golden Rule</div>
+        <div class="text-[13px] font-bold text-slate-900">Negotiate 40–50% or seek Fixed Price</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">👮</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Market Police Desk</div>
+        <div class="text-[13px] font-bold text-slate-900">South Gate Station (Phan Chu Trinh)</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Critical Radius:</strong> East, West, South, North Gates of Ben Thanh Market &amp; Quach Thi Trang Square<br>🚨 <strong>Risk Assessment:</strong> Moderate (predominantly pickpocketing, price inflation, and unauthorized street soliciting)<br>🛡️ <strong>Handbook Objective:</strong> Equipping travelers with sharp defensive intuition to ensure an enriching, hassle-free journey  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+          </h2>
+        </div>
+      <p>Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.</p>
+<p>Excessive overcharging, physical tugging at sleeves, product bait-and-switch, and curb-side petty scams have left unwary travelers feeling frustrated. To guarantee that your Saigon memories remain unblemished, master these <strong>7 common tourist traps</strong> and learn exactly how seasoned travelers neutralize each one.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="anatomy-of-the-7-most-common-scams-and-traps" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Anatomy of the 7 Most Common Scams & Traps
+          </h2>
+        </div>
+      
+        <h3 id="scam-1-the-astronomical-price-hike-300-500-inflation" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> The moment an uninitiated foreign accent is detected, certain vendors selling silk scarves, imitation watches, luggage, or casual tees will inflate quotes by 3x to 5x. A cotton Saigon souvenir T-shirt worth 80,000 – 100,000 VND ($3 – $4) can easily be quoted at 450,000 – 600,000 VND ($18 – $24).</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Never accept the first verbal quote. Browse 2 to 3 adjacent stalls to gauge the baseline price.</li>
+<li>Counter-offer confidently at 40% – 50% of the initial quote, eventually settling around 60% if the vendor negotiates in good faith.</li>
+<li>Seek out stalls displaying official <strong>&quot;Fixed Price Shop&quot;</strong> signs endorsed by the municipal market management board.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> Frequently active around the South and West Gate sidewalks. A friendly vendor carrying traditional bamboo shoulder poles (<em>don ganh</em>) laden with coconuts will approach smilingly, place the pole across your shoulders, set a conical hat (<em>non la</em>) upon your head, and insist you pose for photos. Seconds later, they chop open two coconuts, shove them into your hands, and aggressively demand 150,000 – 250,000 VND ($6 – $10) per nut.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Politely but firmly decline to touch the bamboo pole or let strangers place hats on you.</li>
+<li>If you genuinely want a chilled coconut, explicitly ask <em>&quot;How much for one?&quot;</em> before the machete touches the husk. The fair 2026 street price is 25,000 – 35,000 VND ($1 – $1.40 USD).</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-3-the-aggressive-shoe-repair-hustle" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 3: The Aggressive "Shoe Repair Hustle"
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> While you are strolling leisurely through September 23rd Park or waiting at pedestrian lights, a man carrying a wooden shoe-repair kit will point frantically at your sneakers, claim the sole is tearing off, or surreptitiously apply a dab of solvent or glue onto your toe cap. Before you can object, they pull your shoe off to &quot;fix&quot; it, subsequently demanding 300,000 – 700,000 VND ($12 – $28 USD) for three drops of cheap adhesive.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>If a shoe-shiner approaches your feet, take an immediate step back, wave your hand horizontally, and state clearly: <em>&quot;No, thank you.&quot;</em></li>
+<li>If they persist, walk directly into the nearest hotel lobby, air-conditioned convenience store, or security desk.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-4-the-bait-and-switch-on-dried-delicacies-and-coffee" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 4: The Bait-and-Switch on Dried Delicacies & Coffee
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> At certain dried fruit, roasted cashew, and weasel coffee kiosks, the front-row sample trays feature pristine, jumbo-sized, premium-grade products. Yet once you agree to purchase a kilo to take home, the seller packs pre-sealed plastic bags from hidden cupboards beneath the counter containing inferior, broken, or near-expiry batches.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Explicitly request that the vendor scoop and vacuum-seal your purchase directly from the display bin you just sampled.</li>
+<li>Inspect vacuum seals, clarity of the package, and expiration date stamps before handing over payment.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-5-distraction-pickpocketing-in-bottlenecks" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 5: Distraction Pickpocketing in Bottlenecks
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> Operating in tandem teams of two or three during peak evening hours (20:00 – 21:30) or congested market aisles. One accomplice bumps into you or drops coins to create a momentary disturbance, while their counterpart behind deftly unzips a backpack or extracts an iPhone from a rear pocket.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Carry backpacks and sling bags across your chest with your hand resting lightly over the primary zipper.</li>
+<li>Never keep mobile phones or cash wallets in rear trouser pockets or loose outer jacket sleeves.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-6-unregulated-copycat-metermonkey-taxis" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 6: Unregulated "Copycat" Metermonkey Taxis
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> Circling the market perimeter at night, rogue cabs sport painted decals nearly identical to reputable fleets like <em>Mai Linh</em> (green) or <em>Vinasun</em> (white/red stripes). Once inside, you&#39;ll discover a tampered digital taximeter that spins at triple speed, or a driver taking elaborate detours through peripheral wards.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Book rides through verified ride-hailing apps (Grab, Be, Xanh SM) to lock in fixed, upfront pricing.</li>
+<li>If hailing a street taxi, verify the official hotline numbers printed on the door: Mai Linh (<code>028.38.38.38.38</code>) or Vinasun (<code>028.38.27.27.27</code>), and ensure the driver presses the official meter upon departure.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="scam-7-confusing-polymer-banknote-denominations" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Scam 7: Confusing Polymer Banknote Denominations
+        </h3>
+      <ul>
+<li><strong>The Modus Operandi:</strong> The Vietnamese 500,000 VND note (teal blue) looks remarkably similar to the 20,000 VND note in dim lighting. Similarly, the 10,000 VND and 200,000 VND bills share reddish-brown undertones. Distracted tourists handing over cash in shadowy night markets are occasionally shortchanged or given badly torn banknotes that commercial banks refuse to exchange.</li>
+<li><strong>The Defense Strategy:</strong>  <ul>
+<li>Count your change methodically under good lighting before walking away from the counter.</li>
+<li>Check the count of zeros: 500,000 VND has five zeros; 20,000 VND has four.</li>
+</ul>
+</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="verified-price-reference-benchmark-2026-edition" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Verified Price Reference Benchmark (2026 Edition)
+          </h2>
+        </div>
+      <p>To navigate commerce with confidence, refer to this ground-verified pricing guide:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Item / Service</th><th class="p-4 font-bold text-left">Fair Market Price (2026)</th><th class="p-4 font-bold text-left">Common Inflated Quote</th><th class="p-4 font-bold text-left">Field Recommendation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Cotton Saigon Souvenir T-Shirt</strong></td><td class="p-4">80,000 – 120,000 VND</td><td class="p-4">250,000 – 400,000 VND</td><td class="p-4">Multi-item purchases unlock wholesale discounts</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Hand-painted Conical Hat (<em>Non La</em>)</strong></td><td class="p-4">50,000 – 80,000 VND</td><td class="p-4">150,000 – 200,000 VND</td><td class="p-4">Check the tightness of inner palm stitching</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Jumbo Roasted Salted Cashews (500g)</strong></td><td class="p-4">110,000 – 140,000 VND</td><td class="p-4">220,000 – 300,000 VND</td><td class="p-4">Select whole, unbroken, vacuum-sealed jars</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Artisanal Ground Robusta/Arabica (1kg)</strong></td><td class="p-4">250,000 – 450,000 VND</td><td class="p-4">600,000 – 900,000 VND</td><td class="p-4">Request bean grinding on the spot</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bowl of Crab Noodle Soup (<em>Bun Rieu</em>)</strong></td><td class="p-4">50,000 – 65,000 VND</td><td class="p-4">80,000 – 100,000 VND</td><td class="p-4">Confirm bowl price before seating</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Che Ba Muoi Shaved Ice Dessert</strong></td><td class="p-4">30,000 – 40,000 VND</td><td class="p-4">Fair &amp; Fixed Price</td><td class="p-4">Renowned family stall with zero bargaining needed</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Chilled Fresh Coconut (Curb-side)</strong></td><td class="p-4">25,000 – 35,000 VND</td><td class="p-4">100,000 – 200,000 VND</td><td class="p-4">Only accept once verbal price is agreed</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="emergency-directory-and-247-tourist-assistance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Emergency Directory & 24/7 Tourist Assistance
+          </h2>
+        </div>
+      <p>If you encounter threats, severe extortion, or property loss, remain calm and contact municipal security:</p>
+<ul>
+<li><strong>Ben Thanh Market Security Office:</strong> South Gate Head Office (<code>+84 28 3829 2096</code>)</li>
+<li><strong>Ben Thanh Ward Police Station (District 1):</strong> 114 Nguyen Du Street (<code>+84 28 3829 7643</code>)</li>
+<li><strong>Ho Chi Minh City Tourist Police Unit:</strong> Tourist grievance response (<code>+84 28 3925 1080</code>)</li>
+<li><strong>Municipal Tourism Inspection Hotline:</strong> Dial <code>1022</code> (Press ext. 8 for foreign language tourist support)</li>
+</ul>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Travel with Awareness and Heart</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Awareness is not about viewing every merchant with suspicion; it is about cultivating the grounded confidence that allows you to engage with generosity while protecting your peace. When you know the fair value of goods and respect local boundaries, your interactions inside Ben Thanh become joyful, authentic, and mutually rewarding.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Watch Out Areas</div>
+        <div class="font-bold text-slate-800 text-[13px]">South Gate pavement & Fruit pole vendors</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🥥</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Fair Coconut Price</div>
+        <div class="font-bold text-slate-800 text-[13px]">25,000 – 35,000 VND / fruit</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Payment Safety</div>
+        <div class="font-bold text-slate-800 text-[13px]">Inspect banknote denominations carefully</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bag Security</div>
+        <div class="font-bold text-slate-800 text-[13px]">Sling diagonally across chest in crowds</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/ben-thanh-market-scams-safety-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/ben-thanh-market-scams-safety-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -5804,6 +12735,7 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -5812,6 +12744,7 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)
         </h1>
@@ -5822,6 +12755,7 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -5836,6 +12770,7 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6130,6 +13065,13 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -6177,6 +13119,7 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6185,6 +13128,7 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Fermented Fish Hotpot: The Ultimate 'Lau Mam' Guide (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Fermented Fish Hotpot: The Ultimate 'Lau Mam' Guide (2026)
         </h1>
@@ -6195,6 +13139,7 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -6209,6 +13154,7 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6492,6 +13438,13 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -6527,6 +13480,423 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          Insider Exchange Rates, Banknote Quality Rules & Security Guide at Ha Tam Gold Shop (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Across the West Gate of Ben Thanh Market lies Saigon's premier open currency exchange nexus: Ha Tam Gold Shop. Learn how to secure near-zero spread market rates for USD, EUR, JPY, and AUD with zero commission and lightning-fast execution.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">13 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">💵</span> Near-Zero Spread Rates
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">⚡</span> Sub-60s Transaction Speed
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚫</span> Zero Hidden Commissions
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Currency Field Notes
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-saigons-miniature-financial-street" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Saigon's Miniature Financial Street</a>
+  <a href="#ha-tam-vs-mai-van-the-west-gate-twin-titans" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Ha Tam vs. Mai Van: The West Gate Twin Titans</a>
+  <a href="#rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport</a>
+  <a href="#crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)</a>
+  <a href="#the-usd-big-head-vs-small-head-reality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The USD "Big Head" vs. "Small Head" Reality</a>
+  <a href="#physical-condition-of-paper-currency" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Physical Condition of Paper Currency</a>
+  <a href="#large-denominations-yield-superior-rates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Large Denominations Yield Superior Rates</a>
+  <a href="#five-step-security-protocol-for-large-cash-transactions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Five-Step Security Protocol for Large Cash Transactions</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Exact Coordinates</div>
+        <div class="text-[13px] font-bold text-slate-900">2 Nguyen An Ninh, Ben Thanh, District 1</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Operating Schedule</div>
+        <div class="text-[13px] font-bold text-slate-900">07:30 – 20:30 Daily (7 Days/Week)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💱</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Top Currencies</div>
+        <div class="text-[13px] font-bold text-slate-900">USD, EUR, AUD, JPY, SGD, THB, KRW</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛡️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Security Rating</div>
+        <div class="text-[13px] font-bold text-slate-900">High CCTV & Regulated Transactions</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Primary Location:</strong> 2 Nguyen An Ninh Street (Corner of Phan Chu Trinh, directly facing Ben Thanh Market West Gate)<br>🕒 <strong>Trading Hours:</strong> 07:30 AM – 08:30 PM Daily (Open Saturdays, Sundays &amp; Public Holidays)<br>💡 <strong>Scope:</strong> Banknote quality requirements, queue etiquette, rate comparisons, and cash security measures  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-saigons-miniature-financial-street" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Saigon's Miniature Financial Street
+          </h2>
+        </div>
+      <p>Ask any seasoned expatriate, diplomat, or frequent international traveler where to secure the absolute best currency exchange rates in Ho Chi Minh City, and nine out of ten will point you to the same bustling intersection: <strong>Ha Tam Gold Shop</strong> (<em>Tiem Vang Ha Tam</em>), nestled at the corner of Nguyen An Ninh and Phan Chu Trinh streets directly across from Ben Thanh Market&#39;s West Gate.</p>
+<p>For decades, despite the proliferation of international credit cards and multi-currency mobile wallets, this unassuming corner remains continuously lined with savvy travelers, overseas Vietnamese (<em>Viet Kieu</em>), and local merchants. The explanation is straightforward: <strong>Ha Tam consistently quotes near-zero spread market rates for major global currencies, charges absolutely zero hidden transaction commissions, and completes counting and payout in under 60 seconds</strong>.</p>
+<p>However, carrying substantial physical currency in a bustling marketplace demands insider caution. Below is the definitive field guide compiled by The Rice Tour for 2026.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="ha-tam-vs-mai-van-the-west-gate-twin-titans" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Ha Tam vs. Mai Van: The West Gate Twin Titans
+          </h2>
+        </div>
+      <p>Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants dominate the currency exchange landscape:</p>
+<ol>
+<li><strong>Ha Tam Gold Shop (No. 2 Nguyen An Ninh):</strong>  <ul>
+<li>The primary anchor with the highest trading volume in southern Vietnam. Quotations for heavyweight currencies—such as USD, EUR, AUD, JPY, SGD, THB, and KRW—are consistently the most competitive. Tellers utilize high-speed optical note counters and supply handwritten or printed conversion slips.</li>
+</ul>
+</li>
+<li><strong>Mai Van Gold Shop (No. 1A Nguyen An Ninh - Immediately Adjacent):</strong>  <ul>
+<li>Positioned right next door to Ha Tam. When Ha Tam’s queue spills out onto the public sidewalk, experienced locals frequently step over to Mai Van. Rates typically match 99.5% of Ha Tam’s quote, but with shorter waiting times and a slightly less hectic counter environment.</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Evaluation Criteria</th><th class="p-4 font-bold text-left">Ha Tam Gold Shop (Ben Thanh)</th><th class="p-4 font-bold text-left">Commercial Banks (Vietcombank, BIDV)</th><th class="p-4 font-bold text-left">Airport Exchange Kiosks (SGN Airport)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Exchange Rate (VND Value)</strong></td><td class="p-4">⭐⭐⭐⭐⭐ Highest market rate, razor-thin buy/sell spread</td><td class="p-4">⭐⭐⭐⭐ Official pegged rate, moderate spread</td><td class="p-4">⭐⭐ Lowest rate; travelers lose 5% – 10% in spread</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Service Commission Fee</strong></td><td class="p-4">0 VND (Completely free)</td><td class="p-4">Often minimal or hidden in paperwork</td><td class="p-4">Frequently levies airport licensing fees</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Paperwork Requirements</strong></td><td class="p-4">None: Hand over cash -&gt; receive VND (30 seconds)</td><td class="p-4">Tedious: Passport, outbound flight ticket, proof of purpose</td><td class="p-4">Fast, but mandatory passport scanning</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Currencies Accepted</strong></td><td class="p-4">Vast: USD, EUR, GBP, JPY, AUD, CAD, SGD, THB, KRW, TWD, CNY, MYR...</td><td class="p-4">Restricted primarily to major Tier-1 currencies</td><td class="p-4">Wide variety, but punitive exchange margins</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Operating Hours</strong></td><td class="p-4">07:30 AM – 08:30 PM (7 days a week)</td><td class="p-4">Banking hours only (Mon – Fri, 08:00 – 16:30)</td><td class="p-4">24/7 matching international flight schedules</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)
+          </h2>
+        </div>
+      <p>Nearly 80% of foreign travelers are unaware that Vietnamese currency merchants enforce rigorous physical standards for paper cash:</p>
+
+          <div id="the-usd-big-head-vs-small-head-reality" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
+              . The USD "Big Head" vs. "Small Head" Reality
+            </h3>
+          </div>
+        <ul>
+<li><strong>Older Series USD (Small Head - Pre-2003/2006):</strong> 100 USD bills featuring the smaller portrait of Benjamin Franklin are either rejected outright or discounted by 100,000 – 300,000 VND ($4 – $12) per note due to counterfeit vulnerability.</li>
+<li><strong>New Series USD (Big Head / 3D Blue Security Ribbon - 2013 Series onward):</strong> Guaranteed to receive top-tier, prime exchange quotes. Always request crisp, modern notes from your home bank before traveling.</li>
+</ul>
+
+          <div id="physical-condition-of-paper-currency" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
+              . Physical Condition of Paper Currency
+            </h3>
+          </div>
+        <ul>
+<li>Ha Tam inspects notes with both ultraviolet light and keen tactile scrutiny. Banknotes that are <strong>torn, pinholed, stamped with ink, annotated with ballpoint pen, stained with oil, or showing heavy mold</strong> will be refused or assessed a 5% – 10% restoration surcharge.</li>
+<li><em>Pro-Tip:</em> Store foreign bills unfolded inside a flat travel wallet or rigid envelope; avoid folding them into tight rolls.</li>
+</ul>
+
+          <div id="large-denominations-yield-superior-rates" class="scroll-mt-28 space-y-2 pt-4">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
+              . Large Denominations Yield Superior Rates
+            </h3>
+          </div>
+        <ul>
+<li>$100 and $50 USD notes receive the maximum exchange value.</li>
+<li>Lower denominations ($1, $5, $10, $20) command slightly lower conversion tiers. This tiering applies equally to Euro and Japanese Yen.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="five-step-security-protocol-for-large-cash-transactions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            5. Five-Step Security Protocol for Large Cash Transactions
+          </h2>
+        </div>
+      <p>Given the dense foot traffic surrounding Nguyen An Ninh Street, opportunistic petty thieves occasionally monitor exchange counters. Adhere strictly to this 5-step safety drill:</p>
+<ol>
+<li><strong>Pre-sort at Your Hotel:</strong> Count and separate the exact sum of foreign cash you wish to convert before leaving your room. Never pull out thick stacks of foreign currency in public view.</li>
+<li><strong>Polite Counter Inquiry:</strong> Step up to the glass partition, show the bills, and ask: <em>&quot;What is the rate for 100 today?&quot;</em>. The teller will display the exact quotation on a digital desktop calculator.</li>
+<li><strong>Machine Verification:</strong> Watch the high-speed counting machine as it counts your notes. The teller will hand over banded stacks of crisp polymer Vietnamese Dong (typically 500,000 VND bills) along with a calculation slip.</li>
+<li><strong>Count Before Leaving the Glass:</strong> Methodically recount your bills against the slip right at the counter edge. Do not let the press of people behind you rush your inspection.</li>
+<li><strong>Conceal BEFORE Stepping onto the Pavement:</strong> Never exit the shop holding visible bundles of cash. Place the money directly into a secure inner zippered jacket pocket or front-facing chest bag, ensure the zip is fastened, and then calmly walk out. For sums exceeding 50,000,000 VND (~$2,000 USD), travel with a companion or summon a ride directly to the storefront.</li>
+</ol>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Financial Savvy on the Southern Frontier</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Navigating the lively bustle of Ha Tam Gold Shop is an essential ritual of the seasoned traveler in Saigon. Stepping away with freshly minted Vietnamese Dong in hand, you are fully prepared to immerse yourself in the rich culinary and artisan treasures of the Mekong Delta with confidence and fiscal peace of mind.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
+        <div class="font-bold text-slate-800 text-[13px]">Directly opposite West Gate</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💵</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Banknote Standards</div>
+        <div class="font-bold text-slate-800 text-[13px]">Crisp, unmarked, uncreased bills only</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">👥</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Alternative Option</div>
+        <div class="font-bold text-slate-800 text-[13px]">Mai Van Gold Shop (Next door at 1A)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💡</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pro-Tip</div>
+        <div class="font-bold text-slate-800 text-[13px]">Count and pocket cash before leaving counter</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/money-exchange-ben-thanh-ha-tam-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/money-exchange-ben-thanh-ha-tam-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -6539,6 +13909,7 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6547,6 +13918,7 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Ba Chua Xu Temple: The Spiritual Epicenter of the Mekong Delta (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Ba Chua Xu Temple: The Spiritual Epicenter of the Mekong Delta (2026)
         </h1>
@@ -6557,6 +13929,7 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -6571,6 +13944,7 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -6850,6 +14224,13 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -6885,6 +14266,398 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          6 Official Basements, Regulated Municipal Rates & Curbside Scam Prevention (2026 Master Guide)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          District 1's dense urban grid makes finding legitimate parking a major headache. Navigate directly to 6 verified, surveillance-guarded facilities—from the state-of-the-art Metro basement to climate-controlled malls—and avoid aggressive curbside parking touts.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">12 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🅿️</span> 6 Regulated Parking Hubs
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🛵</span> Scooter & Car Basements
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🛡️</span> Zero Curbside Rip-Offs
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Parking Tariff Map
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-the-battle-for-parking-in-saigons-heritage-heart" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Battle for Parking in Saigon’s Heritage Heart</a>
+  <a href="#master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs</a>
+  <a href="#practical-recommendations-by-vehicle-class" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Recommendations by Vehicle Class</a>
+  <a href="#a-for-motorbike-and-scooter-riders" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A. For Motorbike & Scooter Riders</a>
+  <a href="#b-for-rental-cars-and-private-drivers-sedans-and-suvs" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">B. For Rental Cars & Private Drivers (Sedans & SUVs)</a>
+  <a href="#how-to-spot-rogue-parking-traps-and-3-step-counteraction" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">How to Spot Rogue Parking Traps & 3-Step Counteraction</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Survey Zone</div>
+        <div class="text-[13px] font-bold text-slate-900">500m Perimeter of Market Gates</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛵</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Official Scooter Tariff</div>
+        <div class="text-[13px] font-bold text-slate-900">5,000 – 10,000 VND / entry</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚗</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Official Car Tariff</div>
+        <div class="text-[13px] font-bold text-slate-900">35,000 – 50,000 VND / 2-hour block</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚇</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Top Regulated Facility</div>
+        <div class="text-[13px] font-bold text-slate-900">Ben Thanh Metro Central Basement</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Survey Radius:</strong> 500-meter perimeter surrounding the four main gates of Ben Thanh Market<br>🛵 <strong>Supported Vehicles:</strong> Motorbikes, e-scooters, passenger cars (sedans/SUVs), and chartered tourist buses<br>⚠️ <strong>Critical Advisory:</strong> Strictly avoid unauthorized curbside touts lacking electronic tickets or security surveillance to prevent being gouged 30,000 – 50,000 VND per scooter  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-the-battle-for-parking-in-saigons-heritage-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: The Battle for Parking in Saigon’s Heritage Heart
+          </h2>
+        </div>
+      <p>District 1 represents Vietnam&#39;s densest urban commercial zone, with Ben Thanh Market serving as its bustling gravitational center. With thousands of shoppers, food lovers, and international visitors converging hourly—combined with newly pedestrianized boulevards across Quach Thi Trang Square—locating secure, municipally regulated parking for scooters or cars is a notorious friction point.</p>
+<p>Exploiting travelers&#39; unfamiliarity, opportunistic curbside operators routinely ambush drivers along Phan Chu Trinh, Nguyen An Ninh, and Le Thanh Ton streets. Pulling over to check a map often invites an assertive stranger gesturing you onto the pavement, demanding an upfront extortionate fee of 30,000 – 50,000 VND ($1.20 – $2.00 USD) without providing a valid receipt or offering only a chalk mark on your seat. In the event of helmet theft or paint scratches, these rogue operators vanish without accountability.</p>
+<p>To ensure your cultural exploration begins smoothly, The Rice Tour provides the <strong>master directory of 6 verified parking hubs in 2026</strong>, complete with official regulated tariffs and navigational guidance.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Facility Name</th><th class="p-4 font-bold text-left">Exact Location</th><th class="p-4 font-bold text-left">Vehicle Types</th><th class="p-4 font-bold text-left">Scooter Fee (VND)</th><th class="p-4 font-bold text-left">Car Fee (VND)</th><th class="p-4 font-bold text-left">Operating Hours</th><th class="p-4 font-bold text-left">Security Rating</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1. Ben Thanh Central Metro Basement</strong></td><td class="p-4">Direct access beneath Quach Thi Trang Square</td><td class="p-4">Scooters, E-Bikes</td><td class="p-4">5,000 – 10,000 / entry</td><td class="p-4">Cars temporarily not admitted</td><td class="p-4">05:30 – 23:30</td><td class="p-4">⭐⭐⭐⭐⭐ (Guarded, IC smart cards, AI license plate CCTV)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2. Saigon Centre / Takashimaya Basement</strong></td><td class="p-4">Ingress via Pasteur or Nam Ky Khoi Nghia</td><td class="p-4">Scooters &amp; Passenger Cars</td><td class="p-4">10,000 / first 4h<br>(+5,000 / extra hour)</td><td class="p-4">50,000 / first 2h<br>(+30,000 / extra hour)</td><td class="p-4">09:00 – 22:30</td><td class="p-4">⭐⭐⭐⭐⭐ (Premier parking in Saigon, climate-controlled)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>3. September 23rd Park Surface Lot</strong></td><td class="p-4">Gate 1 on Le Lai Street (Opposite New World Hotel)</td><td class="p-4">Scooters, Tourist Coaches</td><td class="p-4">6,000 (day)<br>10,000 (night)</td><td class="p-4">Accommodates 16–45 seat coaches</td><td class="p-4">06:00 – 23:00</td><td class="p-4">⭐⭐⭐⭐ (Canopy shade, wide turning lanes, easy ingress)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4. Kumho Asiana / mPlaza Saigon Garage</strong></td><td class="p-4">39 Le Duan Street (Corner of Hai Ba Trung)</td><td class="p-4">Cars &amp; Scooters</td><td class="p-4">10,000 / entry</td><td class="p-4">40.000 / 2-hour block</td><td class="p-4">24/7</td><td class="p-4">⭐⭐⭐⭐⭐ (Top overflow hub when central lots reach capacity)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>5. Tao Dan Park / Hoa Lu Facility</strong></td><td class="p-4">Huyen Tran Cong Chua Street Gate</td><td class="p-4">Scooters &amp; Cars</td><td class="p-4">6,000 / entry</td><td class="p-4">35,000 – 50,000 / entry</td><td class="p-4">06:00 – 22:00</td><td class="p-4">⭐⭐⭐⭐ (Near Independence Palace, shaded by ancient trees)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>6. Saigon General Hospital Parking</strong></td><td class="p-4">125 Le Loi Blvd (Directly opposite East Gate)</td><td class="p-4">Scooters</td><td class="p-4">5,000 – 8,000 / entry</td><td class="p-4">Cars not admitted</td><td class="p-4">06:00 – 21:30</td><td class="p-4">⭐⭐⭐ (Closest proximity to market, but fills rapidly)</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="practical-recommendations-by-vehicle-class" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Practical Recommendations by Vehicle Class
+          </h2>
+        </div>
+      
+        <h3 id="a-for-motorbike-and-scooter-riders" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          A. For Motorbike & Scooter Riders
+        </h3>
+      <h4 id="the-gold-standard-ben-thanh-central-metro-underground-basement">1. The Gold Standard: Ben Thanh Central Metro Underground Basement</h4><ul>
+<li><strong>How to enter:</strong> Approach via Le Loi Boulevard or Ham Nghi Street and follow municipal Metro Line 1 subterranean access signage.</li>
+<li><strong>Key Advantage:</strong> Direct subterranean access to the market area via shaded, climate-controlled escalators. Fully automated optical barrier gates register your vehicle&#39;s license plate instantaneously, eliminating any possibility of vehicle theft or substitution.</li>
+</ul>
+<h4 id="the-outdoor-convenient-choice-september-23rd-park-le-lai-st">2. The Outdoor Convenient Choice: September 23rd Park (Le Lai St)</h4><ul>
+<li><strong>How to enter:</strong> Cruise along Le Lai Street towards the market roundabout; the entrance gate is located on your right beneath the lush tree canopy.</li>
+<li><strong>Key Advantage:</strong> Exceptional capacity that rarely fills up even during weekend evenings. Once parked, cross the designated pedestrian zebra crossing directly into the South Gate entrance.</li>
+</ul>
+
+        <h3 id="b-for-rental-cars-and-private-drivers-sedans-and-suvs" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          B. For Rental Cars & Private Drivers (Sedans & SUVs)
+        </h3>
+      <p><strong>Crucial Legal Notice:</strong> All curb spaces surrounding Ben Thanh Market along Le Loi, Phan Boi Chau, and Phan Chu Trinh strictly prohibit stopping and parking (<em>Cam Dung, Cam Do</em>), enforced via high-resolution 24/7 municipal AI traffic cameras. Do not attempt street parking.</p>
+<h4 id="saigon-centre-takashimaya-basement-250m-from-market">1. Saigon Centre / Takashimaya Basement (250m from Market)</h4><ul>
+<li><strong>Car Ingress:</strong> Turn into Basement level B2 from Pasteur Street (just past the Le Loi intersection) or via Nam Ky Khoi Nghia.</li>
+<li><strong>Amenities:</strong> Overhead LED green/red space occupancy indicators, generous lane clearances, and a seamless 3-minute stroll down Le Loi Boulevard to the market.</li>
+</ul>
+<h4 id="diamond-plaza-and-mplaza-garages-le-duan-boulevard-800m-away">2. Diamond Plaza & mPlaza Garages (Le Duan Boulevard - 800m away)</h4><ul>
+<li>Ideal when combining your market visit with a broader architectural walking tour encompassing Notre-Dame Cathedral and the Independence Palace.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="how-to-spot-rogue-parking-traps-and-3-step-counteraction" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. How to Spot Rogue Parking Traps & 3-Step Counteraction
+          </h2>
+        </div>
+      <p>Avoid extortion by recognizing the telltale signs of illicit parking operations:</p>
+<ol>
+<li><strong>Aggressive Street Flaggers:</strong> Individuals standing directly in the roadway at alley mouths along Phan Chu Trinh or Huu Nghi shouting: <em>&quot;Turn in here, the market lots are full!&quot;</em></li>
+<li><strong>Missing Electronic Receipts:</strong> They tear unprinted slips of plain paper lacking official municipal revenue stamps or scrawl chalk numbers across your leather seat.</li>
+<li><strong>Upfront Extortion:</strong> Demanding 30,000 to 50,000 VND upfront before you even turn off your ignition.</li>
+</ol>
+<p><strong>Your 3-Step Tactical Counteraction:</strong></p>
+<ul>
+<li><strong>Step 1:</strong> Keep your scooter running. Firmly shake your head and announce: <em>&quot;No thank you, I am parking in the Metro basement.&quot;</em></li>
+<li><strong>Step 2:</strong> Maintain forward trajectory toward the regulated facilities in Section 2.</li>
+<li><strong>Step 3:</strong> To report unlawful curb extortion, dial the District 1 Urban Governance Hotline at <code>+84 28 3829 7643</code>.</li>
+</ul>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Seamless Mobility in the City Core</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                A memorable urban journey begins with effortless arrival and ends with unburdened peace of mind. By choosing verified municipal and commercial parking garages, your vehicle remains safeguarded beneath high-tech surveillance, leaving you free to wander the historic heart of Saigon with complete serenity.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Closest Facility</div>
+        <div class="font-bold text-slate-800 text-[13px]">Saigon General Hospital (125 Le Loi)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏢</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Premier Mall Parking</div>
+        <div class="font-bold text-slate-800 text-[13px]">Takashimaya / Saigon Centre Basement</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌳</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Shaded Surface Lot</div>
+        <div class="font-bold text-slate-800 text-[13px]">September 23rd Park Gate 1 (Le Lai)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⚠️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Warning Sign</div>
+        <div class="font-bold text-slate-800 text-[13px]">Refuse chalk-mark sidewalk operators</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/parking-guide-near-ben-thanh-market" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/parking-guide-near-ben-thanh-market');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -6897,6 +14670,7 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -6905,6 +14679,7 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Hotels: The 2026 Curated Lodging Matrix</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Hotels: The 2026 Curated Lodging Matrix
         </h1>
@@ -6915,6 +14690,7 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -6929,6 +14705,7 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -7259,6 +15036,13 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -7294,6 +15078,405 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 
 </div>`;
 
+export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          5 Best Transfer Options from SGN to District 1: Express Bus 109, Reputable Cabs & VIP Private Cars (2026)
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Arriving at Tan Son Nhat Airport (SGN) can be daunting with unlicensed taxi touts and complex terminal pickup lanes. Here is your definitive breakdown of the 5 fastest, safest, and most cost-effective routes straight to Ben Thanh Market in District 1.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 7, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">14 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">✈️</span> SGN -> District 1 Transit
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚌</span> Yellow Express Bus 109
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🚕</span> Vinasun & Mai Linh Verified
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> 2026 Ground Transit Guide
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-your-gateway-ride-into-saigons-vibrant-heart" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Your Gateway Ride into Saigon’s Vibrant Heart</a>
+  <a href="#master-comparison-of-5-airport-transfer-options-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Comparison of 5 Airport Transfer Options (2026 Rates)</a>
+  <a href="#step-by-step-logistics-and-insider-tactics" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Step-by-Step Logistics & Insider Tactics</a>
+  <a href="#option-1-yellow-bus-109-the-smart-travelers-favorite" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)</a>
+  <a href="#option-2-app-based-ride-hailing-grab-be-xanh-sm-the-tcp-garage-drill" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 2: App-Based Ride-Hailing (Grab / Be / Xanh SM) — The TCP Garage Drill</a>
+  <a href="#option-3-traditional-regulated-taxis-ground-floor-convenience" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 3: Traditional Regulated Taxis (Ground-Floor Convenience)</a>
+  <a href="#time-of-day-traffic-advisories" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Time-of-Day Traffic Advisories</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+            
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Transit Distance</div>
+        <div class="text-[13px] font-bold text-slate-900">7.5 km – 8.5 km to Ben Thanh</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏱️</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Transit Duration</div>
+        <div class="text-[13px] font-bold text-slate-900">25 – 45 mins (Traffic dependent)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💰</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Fare Spectrum</div>
+        <div class="text-[13px] font-bold text-slate-900">15,000 VND (Bus) – 350,000 VND (VIP Sedan)</div>
+      </div>
+    </div>
+    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
+  
+
+    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
+      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚌</div>
+      <div>
+        <div class="text-[11px] text-slate-500 font-medium">Optimal Public Route</div>
+        <div class="text-[13px] font-bold text-slate-900">Air-conditioned Yellow Bus 109</div>
+      </div>
+    </div>
+    
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Route:</strong> Tan Son Nhat International Airport (SGN) -&gt; Central Ben Thanh Market (District 1)<br>📏 <strong>Distance:</strong> Approximately 7.5 km – 8.5 km (4.7 – 5.3 miles)<br>⏱️ <strong>Travel Time:</strong> 25 minutes (late night / early dawn) to 55 – 70 minutes (rush-hour traffic)<br>💰 <strong>Budget Spectrum:</strong> 5,000 VND ($0.20 USD) public bus to 220,000 VND ($9.00 USD) private luxury sedan  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-your-gateway-ride-into-saigons-vibrant-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            1. Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
+          </h2>
+        </div>
+      <p>As your flight touches down at Tan Son Nhat International Airport (SGN), most travelers share an identical maiden destination: <strong>District 1</strong>, anchored by the historic clock tower of Ben Thanh Market. As the epicenter of Saigon’s hospitality, heritage dining, cultural attractions, and municipal transit crossroads, reaching Ben Thanh smoothly sets the rhythm for your entire journey.</p>
+<p>However, exiting the arrivals terminal into the humid tropical warmth can be overwhelming. International arrivals are often greeted by aggressive unlicensed taxi touts, sprawling queues for ride-hailing pickups, and a labyrinth of lane designations (Lanes A, B, C, D). Without an advance tactical plan, unsuspecting travelers risk paying 300,000 – 500,000 VND ($12 – $20 USD) for an unlicensed rogue cab or wasting an hour wandering confusing parking garages.</p>
+<p>To ensure your journey commences with ease and fiscal transparency, The Rice Tour details <strong>the 5 best transfer options in 2026</strong>, rigorously evaluated for speed, comfort, and value.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="master-comparison-of-5-airport-transfer-options-2026-rates" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            2. Master Comparison of 5 Airport Transfer Options (2026 Rates)
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif">
+              <th class="p-4 font-bold text-left">Transfer Method</th><th class="p-4 font-bold text-left">Fare / Ticket (2026)</th><th class="p-4 font-bold text-left">Travel Duration</th><th class="p-4 font-bold text-left">Airport Pickup Point</th><th class="p-4 font-bold text-left">Drop-Off Point at Ben Thanh</th><th class="p-4 font-bold text-left">Suitability Rating</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1. Yellow Bus 109 (Airport Express)</strong></td><td class="p-4">15,000 VND (&lt;5km)<br>20,000 VND (full route)</td><td class="p-4">35 – 45 mins</td><td class="p-4">Column B17–B20 (Domestic) &amp; Column 12 (International)</td><td class="p-4">Ben Thanh Transit Hub (Ham Nghi / Le Loi)</td><td class="p-4">⭐⭐⭐⭐⭐ Top pick for solo &amp; budget travelers; spacious luggage racks</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2. Public Bus 152 (Local Commuter)</strong></td><td class="p-4">5,000 VND ($0.20)<br>(+5,000 VND per large suitcase)</td><td class="p-4">45 – 55 mins</td><td class="p-4">Column 4 (Domestic) &amp; Column 12 (International)</td><td class="p-4">Ben Thanh Bus Terminal (Le Lai St)</td><td class="p-4">⭐⭐⭐ Ultra-cheap, but older rolling stock and frequent commuter stops</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>3. Ride-Hailing Apps (Grab / Be / Xanh SM)</strong></td><td class="p-4">110,000 – 160,000 VND (Standard 4-seater)</td><td class="p-4">30 – 45 mins</td><td class="p-4">Floors 3, 4, or 5 of TCP Parking Garage (Domestic)</td><td class="p-4">Direct to your hotel doorstep</td><td class="p-4">⭐⭐⭐⭐ Fixed upfront fare, but requires walking to the multi-story garage</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4. Reputable Taxis (Vinasun / Mai Linh)</strong></td><td class="p-4">130,000 – 180,000 VND (+10,000 airport gate fee)</td><td class="p-4">30 – 45 mins</td><td class="p-4">Ground Lane D1/D2 (Domestic) &amp; Taxi Queue (International)</td><td class="p-4">Direct to your hotel doorstep</td><td class="p-4">⭐⭐⭐⭐ Quick ground-floor boarding; no stairs or elevator queues</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>5. Pre-booked Private Transfer</strong></td><td class="p-4">220,000 – 350,000 VND (All-inclusive)</td><td class="p-4">25 – 40 mins</td><td class="p-4">Chauffeur holding personal name placard at exit</td><td class="p-4">Hotel reception VIP entrance</td><td class="p-4">⭐⭐⭐⭐⭐ Effortless, zero-stress transition after long-haul flights</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="step-by-step-logistics-and-insider-tactics" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            3. Step-by-Step Logistics & Insider Tactics
+          </h2>
+        </div>
+      
+        <h3 id="option-1-yellow-bus-109-the-smart-travelers-favorite" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)
+        </h3>
+      <ul>
+<li><strong>Fleet Quality:</strong> Bright yellow modern European-standard low-floor buses equipped with powerful air conditioning, complimentary onboard Wi-Fi, and spacious center luggage bays. Drivers and attendants communicate functional English.</li>
+<li><strong>Operating Hours:</strong> 05:45 AM to 23:45 PM daily; departures every 15 to 20 minutes.</li>
+<li><strong>Scenic Route:</strong> SGN Airport -&gt; Truong Son -&gt; Tran Quoc Hoan -&gt; Hoang Van Thu -&gt; Nguyen Van Troi -&gt; Nam Ky Khoi Nghia -&gt; Ham Nghi -&gt; Ben Thanh Central Station.</li>
+<li><strong>How to Board:</strong>  <ul>
+<li><em>International Terminal:</em> Walk out past the currency booths, cross the pedestrian walkway to Column 12.</li>
+<li><em>Domestic Terminal:</em> Exit terminal doors, look across Lane B towards Columns B17 – B20.</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="option-2-app-based-ride-hailing-grab-be-xanh-sm-the-tcp-garage-drill" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Option 2: App-Based Ride-Hailing (Grab / Be / Xanh SM) — The TCP Garage Drill
+        </h3>
+      <p>If you book a ride via smartphone app at the Domestic Terminal, understand airport traffic regulations:</p>
+<ul>
+<li><strong>Vital Rule:</strong> App-hailed 4-wheel passenger cars are <strong>prohibited</strong> from ground-level curbside pick-up (Lanes A and B).</li>
+<li><strong>Navigation:</strong> Exit the terminal, walk across the ground-level roadways directly into the <strong>TCP Multi-Story Parking Garage</strong>. Take the elevator or stairs to <strong>Floor 3, 4, or 5</strong>, and proceed to the designated pickup pillar indicated on your phone app.</li>
+<li><strong>Surcharge Note:</strong> The app fare excludes the municipal airport toll fee (10,000 – 15,000 VND), which the driver will legitimately add to your cash or card tally upon exit.</li>
+</ul>
+
+        <h3 id="option-3-traditional-regulated-taxis-ground-floor-convenience" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
+          Option 3: Traditional Regulated Taxis (Ground-Floor Convenience)
+        </h3>
+      <p>If you are traveling with elderly companions, young children, or multiple heavy bags:</p>
+<ul>
+<li><strong>The Two Trusted Fleets:</strong><ul>
+<li><strong>Vinasun Taxi:</strong> White sedan bodies with distinct red and green horizontal side stripes. Dispatch hotline: <code>028 38 27 27 27</code>.</li>
+<li><strong>Mai Linh Taxi:</strong> All-green sedan bodies. Dispatch hotline: <code>028 38 38 38 38</code>.</li>
+</ul>
+</li>
+<li><strong>How to Board:</strong> Follow terminal overhead signage towards ground-level Lane D1 / D2. Uniformed fleet marshals will hand you an official queue voucher with the vehicle number.</li>
+<li><strong>Crucial Warning:</strong> Completely ignore freelance men lingering near baggage claim claiming <em>&quot;Taxi here! Grab car ready!&quot;</em>. These are illegal pirate drivers whose calibrated meters run triple speed.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="time-of-day-traffic-advisories" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            4. Time-of-Day Traffic Advisories
+          </h2>
+        </div>
+      <ol>
+<li><strong>Peak Traffic Congestion (07:30 – 09:00 AM &amp; 16:30 – 19:00 PM):</strong><br>Bottlenecks along Truong Son and Hoang Van Thu avenues can double travel times. Allow a minimum of <strong>60 to 75 minutes</strong> to reach District 1 during peak commuter hours.</li>
+<li><strong>Late-Night Flights (After 23:30 PM):</strong><br>Public bus routes 109 and 152 terminate service around 23:45 PM. Official taxis at Lane D or app rides provide the safest, fastest option, whisking you to Ben Thanh in 20 – 25 minutes along clear, breezy avenues.</li>
+<li><strong>Motion Sickness Advisory:</strong> Travelers sensitive to tropical fumes and sudden braking should opt for Bus 109 or the electric VinFast fleet (Xanh SM), which run whisper-quiet with zero tailpipe smell.</li>
+</ol>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Welcoming Gateway to Saigon</h3>
+              <p class="text-slate-300 text-base leading-relaxed m-0">
+                Gliding from the runway into the tree-shaded corridors of District 1 marks the opening stanza of your Vietnamese odyssey. With reliable ground logistics and transparent pricing, your transition into the city is smooth, calm, and filled with eager anticipation for the adventures ahead.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Arrival Airport</div>
+        <div class="font-bold text-slate-800 text-[13px]">Tan Son Nhat (SGN), Tan Binh Dist</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚌</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bus 109 Frequency</div>
+        <div class="font-bold text-slate-800 text-[13px]">Every 20 – 30 mins (05:45 – 23:45)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚗</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ride-Hailing Pickup</div>
+        <div class="font-bold text-slate-800 text-[13px]">Floors 3–5, TCP Garage (Domestic)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛑</div>
+      <div>
+        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Drop-Off Epicenter</div>
+        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Transit Hub, Ham Nghi St</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+        </div>
+      </a>
+    
+
+      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/tan-son-nhat-airport-to-ben-thanh-transfer-guide" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/tan-son-nhat-airport-to-ben-thanh-transfer-guide');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;
+
 export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
@@ -7306,6 +15489,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -7314,6 +15498,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)
         </h1>
@@ -7324,6 +15509,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -7338,6 +15524,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -7628,6 +15815,13 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -7675,6 +15869,7 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -7683,6 +15878,7 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Can Tho Markets: The 2026 definitive Commercial Matrix</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Can Tho Markets: The 2026 definitive Commercial Matrix
         </h1>
@@ -7693,6 +15889,7 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -7707,6 +15904,7 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8041,6 +16239,13 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -8088,6 +16293,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8096,6 +16302,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)
         </h1>
@@ -8106,6 +16313,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -8120,6 +16328,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8439,6 +16648,13 @@ Ready to explore the hidden gems of Soc Trang? Our expert guides at The Rice Tou
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -8486,6 +16702,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8494,6 +16711,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu
         </h1>
@@ -8504,6 +16722,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -8518,6 +16737,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -8833,6 +17053,13 @@ Discover the musical soul of the Mekong Delta with The Rice Tour. Our bespoke it
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -8880,6 +17107,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -8888,6 +17116,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide
         </h1>
@@ -8898,6 +17127,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -8912,6 +17142,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -9213,6 +17444,13 @@ Want to experience Cai Rang Floating Market without the hassle of haggling and l
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -9260,6 +17498,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -9268,6 +17507,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner
         </h1>
@@ -9278,6 +17518,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -9292,6 +17533,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -9590,6 +17832,13 @@ Ready to experience the pinnacle of Phu Quoc hospitality? Book your 2026 island 
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -9637,6 +17886,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -9645,6 +17895,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix
         </h1>
@@ -9655,6 +17906,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -9669,6 +17921,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -9989,6 +18242,13 @@ Do not settle for a generic vacation. Let our travel architects design your defi
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -10036,6 +18296,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10044,6 +18305,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)
         </h1>
@@ -10054,6 +18316,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10068,6 +18331,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -10354,6 +18618,13 @@ Experience the magic of Phu Quoc beyond the luxury resorts. The Rice Tour&#39;s 
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -10401,6 +18672,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10409,6 +18681,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup
         </h1>
@@ -10419,6 +18692,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10433,6 +18707,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -10745,6 +19020,13 @@ Food is the gateway to culture. The Rice Tour designs exclusive culinary expedit
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -10792,6 +19074,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -10800,6 +19083,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith
         </h1>
@@ -10810,6 +19094,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -10824,6 +19109,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -11118,6 +19404,13 @@ Delve into the rich cultural and natural mysteries of Soc Trang. Our expert-guid
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -11165,6 +19458,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -11173,6 +19467,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)
         </h1>
@@ -11183,6 +19478,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -11197,6 +19493,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -11496,6 +19793,13 @@ Let The Rice Tour optimize your Bac Lieu itinerary. Our expert guides know exact
         </div>
       </a>
     
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
               </div>
             </div>
 
@@ -11543,6 +19847,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
+        {/* Breadcrumb */}
         <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
           <a href="/" class="hover:text-white transition-colors">Home</a>
           <span class="text-white/40">/</span>
@@ -11551,6 +19856,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           <span class="text-white font-semibold line-clamp-1">Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)</span>
         </div>
 
+        {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
           Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)
         </h1>
@@ -11561,6 +19867,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.
         </p>
 
+        {/* Author Meta */}
         <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
           <div class="flex items-center gap-3">
             <span class="font-bold text-white flex items-center gap-1">
@@ -11575,6 +19882,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           </div>
         </div>
 
+        {/* Badges Line */}
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
@@ -11863,6 +20171,13 @@ Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-d
       <a href="/nam-du-island-expedition-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes
+        </div>
+      </a>
+    
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
         </div>
       </a>
     

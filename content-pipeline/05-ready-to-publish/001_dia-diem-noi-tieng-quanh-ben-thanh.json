@@ -1,0 +1,23 @@
+{
+  "id": 34001,
+  "order": 1,
+  "slug": "things-to-do-near-ben-thanh-market",
+  "slug_vi": "dia-diem-noi-tieng-quanh-ben-thanh",
+  "title_vi": "Những Địa Điểm Nổi Tiếng Quanh Bến Thành: Cẩm Nang Khám Phá Trái Tim Sài Gòn 2026",
+  "title_en": "Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide",
+  "archetype": "Archetype 5: Lịch Trình Khám Phá & Cẩm Nang Tổng Hợp (Pillar Guide Master)",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/things-to-do-near-ben-thanh-market",
+  "local_preview_url": "http://localhost:4321/things-to-do-near-ben-thanh-market",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "thingsToDoNearBenThanhMarketHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2350,
+  "word_count_en": 2450,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 metro & prices)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour",
+    "/tour/cooking-class-local-market"
+  ],
+  "published_at": "2026-09-07T18:12:00.000Z"
+}

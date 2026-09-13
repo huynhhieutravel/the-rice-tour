@@ -1,0 +1,21 @@
+{
+  "id": 34004,
+  "order": 4,
+  "slug": "ben-thanh-one-day-walking-tour",
+  "slug_vi": "lich-trinh-di-bo-ben-thanh-1-ngay",
+  "title_vi": "Lộ Trình Đi Bộ 1 Ngày Quanh Bến Thành: Di Sản, Cà Phê Cổ & Hoàng Hôn Bến Bạch Đằng",
+  "title_en": "One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset",
+  "archetype": "Archetype 5: Lịch Trình Khám Phá & Cẩm Nang Tổng Hợp",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/ben-thanh-one-day-walking-tour",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "benThanhOneDayWalkingTourHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2000,
+  "word_count_en": 2150,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, 2026 data verified)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:17:30.000Z"
+}

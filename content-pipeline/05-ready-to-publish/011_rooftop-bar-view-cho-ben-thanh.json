@@ -1,0 +1,22 @@
+{
+  "id": 34011,
+  "order": 11,
+  "slug": "best-rooftop-bars-near-ben-thanh",
+  "slug_vi": "rooftop-bar-view-cho-ben-thanh",
+  "title_vi": "Rooftop Bar & Speakeasy Quanh Bến Thành: Bản Đồ Thưởng Thức Cocktail & Ngắm Toàn Cảnh Sài Gòn Về Đêm 2026",
+  "title_en": "Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails, Clocktower Panoramas & Nightlife Guide",
+  "archetype": "Archetype 4: Cẩm Nang Thực Địa & Kinh Nghiệm Du Lịch Chuyên Sâu",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/best-rooftop-bars-near-ben-thanh",
+  "local_preview_url": "http://localhost:4321/best-rooftop-bars-near-ben-thanh",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "bestRooftopBarsNearBenThanhHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2100,
+  "word_count_en": 2200,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 cocktail matrices & Ben Thanh viewpoints)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:30:00.000Z"
+}

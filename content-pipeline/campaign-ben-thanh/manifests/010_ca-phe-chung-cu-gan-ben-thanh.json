@@ -1,0 +1,22 @@
+{
+  "id": 34010,
+  "order": 10,
+  "slug": "secret-apartment-cafes-near-ben-thanh",
+  "slug_vi": "ca-phe-chung-cu-gan-ben-thanh",
+  "title_vi": "Cà Phê Chung Cư Cổ Quanh Bến Thành: Bản Đồ Những Góc Trú Ẩn Di Sản Giữa Lòng Sài Gòn 2026",
+  "title_en": "Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors",
+  "archetype": "Archetype 3: Văn Hóa Ẩm Thực & Trải Nghiệm Ẩm Thực Bản Địa",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/secret-apartment-cafes-near-ben-thanh",
+  "local_preview_url": "http://localhost:4321/secret-apartment-cafes-near-ben-thanh",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "secretApartmentCafesNearBenThanhHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2050,
+  "word_count_en": 2150,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 apartment coordinates & beverage pricing)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:30:00.000Z"
+}

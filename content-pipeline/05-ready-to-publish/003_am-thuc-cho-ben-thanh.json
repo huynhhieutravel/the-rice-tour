@@ -1,0 +1,21 @@
+{
+  "id": 34003,
+  "order": 3,
+  "slug": "ben-thanh-market-food-guide",
+  "slug_vi": "am-thuc-cho-ben-thanh",
+  "title_vi": "Thiên Đường Ẩm Thực Chợ Bến Thành: Bóc Tách Hương Vị Sạp Chợ Trăm Năm & Phố Đêm Phan Bội Châu",
+  "title_en": "The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies",
+  "archetype": "Archetype 3: Ẩm Thực Bản Địa (Culinary Deep Dive)",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/ben-thanh-market-food-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "benThanhMarketFoodGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 1950,
+  "word_count_en": 2100,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, 2026 data verified)",
+  "tour_conversions": [
+    "/tour/cooking-class-local-market"
+  ],
+  "published_at": "2026-09-07T18:17:15.000Z"
+}

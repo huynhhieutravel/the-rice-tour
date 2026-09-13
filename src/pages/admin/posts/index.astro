@@ -11,7 +11,25 @@ import {
   huynhThuyLeAncientHouseHtml,
   lanVuongEcoparkMekongMudHtml,
   honSonIslandLodgingHomestaysHtml,
-  canThoBeachArtificialOasisHtml
+  canThoBeachArtificialOasisHtml,
+  thingsToDoNearBenThanhMarketHtml,
+  hcmcMuseumOfFineArtsGuideHtml,
+  benThanhMarketFoodGuideHtml,
+  benThanhOneDayWalkingTourHtml,
+  independencePalaceSaigonGuideHtml,
+  benThanhCentralMetroStationGuideHtml,
+  mariammanHinduTempleSaigonHtml,
+  benThanhMarketShoppingGuideHtml,
+  saigonHopOnHopOffBusGuideHtml,
+  secretApartmentCafesNearBenThanhHtml,
+  bestRooftopBarsNearBenThanhHtml,
+  boutiqueHotelsNearBenThanhHtml,
+  thingsToDoInBenThanhMarketHtml,
+  benThanhMarketUltimateTravelGuideHtml,
+  benThanhMarketScamsSafetyGuideHtml,
+  moneyExchangeBenThanhHaTamGuideHtml,
+  parkingGuideNearBenThanhMarketHtml,
+  tanSonNhatAirportToBenThanhTransferGuideHtml
 } from '@/data/demo-articles';
 
 const d1Db = env?.dulichcoguu_d1;
@@ -59,10 +77,11 @@ if (d1Db) {
     }
 
     // Auto-seed or repair demo articles if content is missing or table is empty
-    const { results: checkPosts } = await d1Db.prepare("SELECT id FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10')").all();
+    const { results: checkPosts } = await d1Db.prepare("SELECT id, content FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10', 'demo_11', 'demo_12', 'demo_13', 'demo_14', 'demo_15', 'demo_16', 'demo_17', 'demo_18', 'demo_19', 'demo_20', 'demo_21', 'demo_22', 'demo_23', 'demo_24', 'demo_25', 'demo_26', 'demo_27', 'demo_28')").all();
     const existingIds = checkPosts?.map(p => String(p.id)) || [];
+    const needsRepair = existingIds.length < 28 || checkPosts?.some(p => !p.content || !p.content.includes('Quick Expedition Facts'));
 
-    if (existingIds.length < 10) {
+    if (needsRepair) {
       try {
         const now = new Date().toISOString();
         const demoData = [
@@ -75,7 +94,25 @@ if (d1Db) {
           { id: 'demo_7', title: 'Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of The Lover (2026)', slug: 'huynh-thuy-le-ancient-house', html: huynhThuyLeAncientHouseHtml },
           { id: 'demo_8', title: 'Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics', slug: 'lan-vuong-ecopark-mekong-mud', html: lanVuongEcoparkMekongMudHtml },
           { id: 'demo_9', title: 'The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries', slug: 'hon-son-island-lodging-homestays', html: honSonIslandLodgingHomestaysHtml },
-          { id: 'demo_10', title: 'Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)', slug: 'can-tho-beach-artificial-oasis', html: canThoBeachArtificialOasisHtml }
+          { id: 'demo_10', title: 'Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)', slug: 'can-tho-beach-artificial-oasis', html: canThoBeachArtificialOasisHtml },
+          { id: 'demo_11', title: 'Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide', slug: 'things-to-do-near-ben-thanh-market', html: thingsToDoNearBenThanhMarketHtml },
+          { id: 'demo_12', title: 'HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa', slug: 'hcmc-museum-of-fine-arts-guide', html: hcmcMuseumOfFineArtsGuideHtml },
+          { id: 'demo_13', title: 'The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies', slug: 'ben-thanh-market-food-guide', html: benThanhMarketFoodGuideHtml },
+          { id: 'demo_14', title: 'One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset', slug: 'ben-thanh-one-day-walking-tour', html: benThanhOneDayWalkingTourHtml },
+          { id: 'demo_15', title: 'The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon', slug: 'independence-palace-saigon-guide', html: independencePalaceSaigonGuideHtml },
+          { id: 'demo_16', title: 'Ben Thanh Central Metro Station: Navigating Saigon’s Subterranean Marvel (2026)', slug: 'ben-thanh-central-metro-station-guide', html: benThanhCentralMetroStationGuideHtml },
+          { id: 'demo_17', title: 'Mariamman Hindu Temple: A Vivid Sanctuary of South Indian Heritage in Saigon', slug: 'mariamman-hindu-temple-saigon', html: mariammanHinduTempleSaigonHtml },
+          { id: 'demo_18', title: 'Ben Thanh Market Shopping Guide: Civilized Bargaining & Artisan Finds (2026)', slug: 'ben-thanh-market-shopping-guide', html: benThanhMarketShoppingGuideHtml },
+          { id: 'demo_19', title: 'Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Panoramic Field Notes', slug: 'saigon-hop-on-hop-off-bus-guide', html: saigonHopOnHopOffBusGuideHtml },
+          { id: 'demo_20', title: 'Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries & Drip Brews', slug: 'secret-apartment-cafes-near-ben-thanh', html: secretApartmentCafesNearBenThanhHtml },
+          { id: 'demo_21', title: 'Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails & Nightlife Guide', slug: 'best-rooftop-bars-near-ben-thanh', html: bestRooftopBarsNearBenThanhHtml },
+          { id: 'demo_22', title: 'Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries', slug: 'boutique-hotels-near-ben-thanh', html: boutiqueHotelsNearBenThanhHtml },
+          { id: 'demo_23', title: 'Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)', slug: 'things-to-do-in-ben-thanh-market', html: thingsToDoInBenThanhMarketHtml },
+          { id: 'demo_24', title: 'Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook', slug: 'ben-thanh-market-ultimate-travel-guide', html: benThanhMarketUltimateTravelGuideHtml },
+          { id: 'demo_25', title: 'Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual', slug: 'ben-thanh-market-scams-safety-guide', html: benThanhMarketScamsSafetyGuideHtml },
+          { id: 'demo_26', title: 'Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026', slug: 'money-exchange-ben-thanh-ha-tam-guide', html: moneyExchangeBenThanhHaTamGuideHtml },
+          { id: 'demo_27', title: 'Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention', slug: 'parking-guide-near-ben-thanh-market', html: parkingGuideNearBenThanhMarketHtml },
+          { id: 'demo_28', title: 'Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)', slug: 'tan-son-nhat-airport-to-ben-thanh-transfer-guide', html: tanSonNhatAirportToBenThanhTransferGuideHtml }
         ];
 
         for (const item of demoData) {

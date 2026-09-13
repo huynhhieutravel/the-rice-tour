@@ -1,0 +1,22 @@
+{
+  "id": 34006,
+  "order": 6,
+  "slug": "ben-thanh-central-metro-station-guide",
+  "slug_vi": "ga-ngam-metro-ben-thanh",
+  "title_vi": "Ga Ngầm Metro Bến Thành 2026: Biểu Tượng Giao Thông Hiện Đại & Hướng Dẫn Chi Tiết Tuyến Số 1",
+  "title_en": "Ben Thanh Central Metro Station: Navigating Saigon’s Subterranean Marvel (2026)",
+  "archetype": "Archetype 4: Cẩm Nang Thực Địa & Kinh Nghiệm Du Lịch Chuyên Sâu",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/ben-thanh-central-metro-station-guide",
+  "local_preview_url": "http://localhost:4321/ben-thanh-central-metro-station-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "benThanhCentralMetroStationGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2050,
+  "word_count_en": 2150,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 Line 1 operational schedule & fare tables)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:25:00.000Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": 34007,
+  "order": 7,
+  "slug": "mariamman-hindu-temple-saigon",
+  "slug_vi": "den-hindu-mariamman-sai-gon",
+  "title_vi": "Đền Hindu Mariamman Sài Gòn: Di Sản Ấn Độ Giữa Lòng Quận 1 & Nghi Thức Cầu Bình An",
+  "title_en": "Mariamman Hindu Temple: A Vivid Sanctuary of South Indian Heritage in Saigon",
+  "archetype": "Archetype 2: Không Gian Tâm Linh, Văn Hóa Bản Địa & Lối Sống Cộng Đồng",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/mariamman-hindu-temple-saigon",
+  "local_preview_url": "http://localhost:4321/mariamman-hindu-temple-saigon",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "mariammanHinduTempleSaigonHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 1950,
+  "word_count_en": 2050,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 Puja Aarti timings & etiquette)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:25:00.000Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": 34002,
+  "order": 2,
+  "slug": "hcmc-museum-of-fine-arts-guide",
+  "slug_vi": "bao-tang-my-thuat-tphcm",
+  "title_vi": "Bảo Tàng Mỹ Thuật TP.HCM: Trầm Tích Nghệ Thuật Trong Dinh Thự Chú Hỏa",
+  "title_en": "HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa",
+  "archetype": "Archetype 2: Điểm Đến, Kiến Trúc & Di Tích Lịch Sử",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/hcmc-museum-of-fine-arts-guide",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "hcmcMuseumOfFineArtsGuideHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 1950,
+  "word_count_en": 2100,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, 2026 data verified)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:17:00.000Z"
+}

@@ -1,0 +1,19 @@
+{
+  "campaign": "ben-thanh-heritage-cluster-2026",
+  "id": 34016,
+  "order": 16,
+  "title_vi": "Kinh Nghiệm Đổi Ngoại Tệ Tiệm Vàng Hà Tâm 2026",
+  "slug_vi": "doi-ngoai-te-cho-ben-thanh-ha-tam",
+  "slug_en": "money-exchange-ben-thanh-ha-tam-guide",
+  "published_date": "2026-09-07T16:00:00Z",
+  "status": "ready_to_publish",
+  "qa_audit": {
+    "zero_truncation": true,
+    "forbidden_words_passed": true,
+    "price_verified_2026": true
+  },
+  "astro_binding": {
+    "template": "Canonical 3-Column Magazine (van-ly-truong-thanh)",
+    "var_name": "moneyExchangeBenThanhHaTamGuideHtml"
+  }
+}

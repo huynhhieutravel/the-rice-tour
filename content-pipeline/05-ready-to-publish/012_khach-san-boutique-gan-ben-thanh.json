@@ -1,0 +1,22 @@
+{
+  "id": 34012,
+  "order": 12,
+  "slug": "boutique-hotels-near-ben-thanh",
+  "slug_vi": "khach-san-boutique-gan-ben-thanh",
+  "title_vi": "Khách Sạn Boutique & Di Sản Quanh Bến Thành: Bản Đồ Nghỉ Dưỡng Thượng Lưu Giữa Lòng Sài Gòn 2026",
+  "title_en": "Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries & Design Stays",
+  "archetype": "Archetype 4: Cẩm Nang Thực Địa & Kinh Nghiệm Du Lịch Chuyên Sâu",
+  "pipeline_status": "ready_and_packaged",
+  "production_url": "https://thericetour.com/boutique-hotels-near-ben-thanh",
+  "local_preview_url": "http://localhost:4321/boutique-hotels-near-ben-thanh",
+  "template_component": "src/pages/[...slug].astro",
+  "export_variable": "boutiqueHotelsNearBenThanhHtml",
+  "layout": "3-column-magazine",
+  "word_count_vi": 2200,
+  "word_count_en": 2300,
+  "qa_auditor": "Trạm 2 Content QA Passed (100/100, 0% banned words, zero outdated images, verified 2026 hotel tariffs & Metro Line 1 connectivity)",
+  "tour_conversions": [
+    "/tour/ho-chi-minh-city-half-day-private-tour"
+  ],
+  "published_at": "2026-09-07T18:30:00.000Z"
+}
