@@ -505,8 +505,54 @@ if (!isCategory) {
     'khu-du-lich-happy-land-ben-luc-long-an': happyLandBenLucTravelGuideHtml
   };
 
+  const demoArticlesFeaturedImages: Record<string, string> = {
+    'things-to-do-near-ben-thanh-market': 'https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp',
+    'dia-diem-noi-tieng-quanh-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp',
+    'hcmc-museum-of-fine-arts-guide': 'https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp',
+    'bao-tang-my-thuat-tphcm': 'https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp',
+    'ben-thanh-market-food-guide': 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp',
+    'am-thuc-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp',
+    'ben-thanh-one-day-walking-tour': 'https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp',
+    'lich-trinh-di-bo-ben-thanh-1-ngay': 'https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp',
+    'independence-palace-saigon-guide': 'https://media.thericetour.com/uploads/reunification-palace-saigon.webp',
+    'dinh-doc-lap-sai-gon': 'https://media.thericetour.com/uploads/reunification-palace-saigon.webp',
+    'ben-thanh-central-metro-station-guide': 'https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp',
+    'ga-ngam-metro-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp',
+    'mariamman-hindu-temple-saigon': 'https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp',
+    'den-hindu-mariamman-sai-gon': 'https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp',
+    'ben-thanh-market-shopping-guide': 'https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp',
+    'kinh-nghiem-mua-sam-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp',
+    'saigon-hop-on-hop-off-bus-guide': 'https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp',
+    'xe-bus-2-tang-hop-on-hop-off-sai-gon': 'https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp',
+    'secret-apartment-cafes-near-ben-thanh': 'https://media.thericetour.com/uploads/apartment-cafe.webp',
+    'ca-phe-chung-cu-gan-ben-thanh': 'https://media.thericetour.com/uploads/apartment-cafe.webp',
+    'best-rooftop-bars-near-ben-thanh': 'https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp',
+    'rooftop-bar-view-cho-ben-thanh': 'https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp',
+    'boutique-hotels-near-ben-thanh': 'https://media.thericetour.com/uploads/hotel-continental-saigon.webp',
+    'khach-san-boutique-gan-ben-thanh': 'https://media.thericetour.com/uploads/hotel-continental-saigon.webp',
+    'things-to-do-in-ben-thanh-market': 'https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp',
+    'cho-ben-thanh-co-gi-choi': 'https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp',
+    'ben-thanh-market-ultimate-travel-guide': 'https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp',
+    'kinh-nghiem-di-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp',
+    'ben-thanh-market-scams-safety-guide': 'https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp',
+    'canh-bao-lua-dao-chat-chem-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp',
+    'money-exchange-ben-thanh-ha-tam-guide': 'https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp',
+    'doi-ngoai-te-cho-ben-thanh-ha-tam': 'https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp',
+    'parking-guide-near-ben-thanh-market': 'https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp',
+    'bai-gui-xe-quanh-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp',
+    'tan-son-nhat-airport-to-ben-thanh-transfer-guide': 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp',
+    'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp'
+  };
+
+  if (!post.featuredImage && demoArticlesFeaturedImages[post.slug]) {
+    post.featuredImage = demoArticlesFeaturedImages[post.slug];
+  }
+  if (!post.ogImage && post.featuredImage) {
+    post.ogImage = post.featuredImage;
+  }
+
   let pageContent = post.content || '';
-  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('Quick Expedition Facts'))) {
+  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('instagram-embed-wrapper'))) {
     pageContent = demoArticlesMap[post.slug];
     isLandingPage = true;
     isFullWidth = true;
@@ -974,4 +1020,19 @@ const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.i
   });
 </script>
 
- 
+<script is:inline>
+  function processInstagramEmbeds() {
+    if (document.querySelector('.instagram-media')) {
+      if (!window.instgrm) {
+        const s = document.createElement('script');
+        s.src = '//www.instagram.com/embed.js';
+        s.async = true;
+        document.head.appendChild(s);
+      } else {
+        window.instgrm.Embeds.process();
+      }
+    }
+  }
+  processInstagramEmbeds();
+  document.addEventListener('astro:page-load', processInstagramEmbeds);
+</script>

@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Subterranean Metro Line 1 Passage"
 epilogue_title: "Falling in Love with Saigon One Step at a Time"
 epilogue: "A day spent walking the avenues surrounding Ben Thanh permanently shatters the myth that Saigon is merely an overwhelming sea of motorbikes. Every alleyway traversed, every centuries-old mahogany tree passed cradles deep alluvial strata of lived human history. As night settles and you gaze out over the illuminated roundabout, you realize you have come to know Saigon through its most gracious, timeless rhythms."
+
+featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp"
 ---
 
 # One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset
@@ -80,6 +82,17 @@ As an anchor itinerary within our definitive guide to [things to do near Ben Tha
 
 Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 This itinerary harmonizes with the sun: cool morning light is devoted to open markets and sacred shrines; the blazing midday heat is spent safely ensconced within air-conditioned museum galleries and quiet apartment cafes; the breezy afternoon explores the palatial gardens of the Independence Palace; and the evening celebrates open-air dining and elevated skyline cocktails.
 
 ---

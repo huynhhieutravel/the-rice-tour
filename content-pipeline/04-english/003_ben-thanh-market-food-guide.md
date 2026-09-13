@@ -47,6 +47,8 @@ sidebar_facts:
     val: "VietQR & Tap-to-Pay Widely Accepted"
 epilogue_title: "The Warmth of Living Memory"
 epilogue: "Gastronomic genius is rarely born in isolation; it is forged across decades of devotion by matriarchs who guard family recipes with fierce pride. At Ben Thanh Market, every ladle of broth and every delicate rice paper roll handed to you represents the culinary soul of the Southern Delta—an unhurried gift for travelers who journey with appetite and reverence."
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp"
 ---
 
 # The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies
@@ -110,6 +112,17 @@ Glistening under glass cases are bowls of vibrant southern desserts: ruby water 
 
 When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 - **Bò Nướng Lá Lốt (Beef in Betel Leaves):** Minced prime beef seasoned with lemongrass and five-spice powder wrapped tightly in wild betel leaves, sizzling over open charcoal braziers. As the leaves char lightly, their pungent herbal oils seal the juices inside. Wrap each roll in thin woven rice vermicelli (*bánh hỏi*) with pickled daikon and dunk into crushed pineapple anchovy sauce.
 - **Open-Flame Charcoal Seafood:** Tables groan beneath Can Gio mud crabs, garlic-butter sea snails, and giant freshwater prawns grilled directly on iron grates, washed down with locally crafted Saigon botanical ales.
 

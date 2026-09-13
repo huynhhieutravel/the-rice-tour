@@ -8,7 +8,7 @@ published_date: "2026-08-12T18:09:36"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Khám phá và trải nghiệm"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/nam-du-co-gi-choi.jpg"
+featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp"
 phase: 2
 ---
 
@@ -33,6 +33,17 @@ phase: 2
 
 Quần đảo Nam Du bao gồm 21 hòn đảo lớn nhỏ nằm tĩnh lặng trên vùng biển Tây Nam của Tổ quốc. Trái ngược với nhịp sống hối hả và sự thương mại hóa mạnh mẽ của những điểm du lịch lân cận, Nam Du vẫn giữ được nét hoang sơ của một làng chài ven biển với những rạn san hô tự nhiên, những bãi đá nhấp nhô và bóng dừa nghiêng mình trong gió.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Hòn Lớn (hay còn gọi là Củ Tron) là trái tim của quần đảo, nơi tập trung các dịch vụ lưu trú, ăn uống và cầu cảng chính. Từ Hòn Lớn, hệ thống tàu cá và cano sẽ tiếp tục tỏa đi kết nối với các đảo nhỏ mang vẻ đẹp thuần khiết khác như Hòn Mấu, Hòn Dầu, Hòn Ngang hay Hai Bờ Đập.
 
 <figure>

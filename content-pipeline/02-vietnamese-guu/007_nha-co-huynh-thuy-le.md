@@ -8,7 +8,7 @@ published_date: "2026-08-04T19:09:27"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Điểm du lịch nổi tiếng"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/nha-co-huynh-thuy-le-4.jpg"
+featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp"
 phase: 2
 ---
 
@@ -34,6 +34,17 @@ phase: 2
 
 Giữa nhịp sống hối hả của thành phố hoa Sa Đéc, **Nhà cổ Huỳnh Thủy Lê** (hay còn gọi là Nhà cổ Huỳnh Phủ) vẫn đứng tĩnh lặng bên bờ sông, như một chứng nhân bảo tồn ký ức của giới phong lưu Nam Kỳ lục tỉnh xưa. Công trình này không chỉ thu hút những kiến trúc sư đam mê tìm hiểu sự giao thoa văn hóa Đông - Tây, mà còn là chốn hành hương của những tâm hồn lãng mạn muốn tìm lại dấu vết của câu chuyện tình buồn vang danh thế giới trong tiểu thuyết *L'Amant (Người Tình)*.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/nha-co-sa-dec.jpg" alt="Nhà cổ Huỳnh Thủy Lê">
   <figcaption>Mặt tiền mang đậm phong cách kiến trúc Phục Hưng Pháp của Nhà cổ Huỳnh Thủy Lê nhìn từ đường Nguyễn Huệ.</figcaption>

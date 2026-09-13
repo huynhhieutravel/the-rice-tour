@@ -8,7 +8,7 @@ published_date: "2026-07-28T20:44:00"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Culinary Reviews", "Local Specialties"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 If Saigon’s *Cơm Tấm* (Broken Rice) is a flamboyant, oversized spectacle dominated by a massive grilled pork chop, the Long Xuyen variation is an exercise in meticulous, bite-sized harmony. Born in the bustling riverside capital of An Giang province, this dish reflects the pragmatic yet highly refined palate of the Mekong Delta’s merchant class.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately distinguishable. The rice grains are milled significantly finer—almost resembling couscous—allowing them to absorb the accompanying scallion oil and sweet fish sauce with unprecedented efficiency. 
 
 ---

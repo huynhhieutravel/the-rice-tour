@@ -5,9 +5,16 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp" 
+          alt="Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -412,9 +419,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp" 
+          alt="Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -633,7 +647,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Iconic Architecture:</strong> The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam&#39;s natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.</li>
 <li><strong>Conscious Travel Insight:</strong> Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.</li>
 </ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
@@ -650,7 +673,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 </ul>
 </li>
 </ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="the-independence-palace-high-zenith-of-tropical-modernism" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
@@ -668,7 +700,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 </li>
 <li><strong>The Underground Bunker:</strong> Descend into the fortified subterranean command center, preserved with vintage map tables, radio teleprinters, and blast doors that bear silent witness to the climatic denouement of the Vietnam War in April 1975.</li>
 </ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.4</span>
@@ -680,7 +721,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Sacred Sanctuary:</strong> Established in the early 20th century by Tamil merchant communities from South India, this temple is dedicated to Goddess Mariamman, the celestial bringer of fertility, health, and monsoon rains.</li>
 <li><strong>Dravidian Artistry:</strong> The towering <em>gopuram</em> gateway ascends in tiered majesty, populated by hand-painted sculptures of Hindu deities depicted in saturated hues. Stepping across the threshold, the fragrant warmth of burning incense and camphor oil offers an immediate sensory departure from District 1&#39;s urban bustle. Behind the main altar, devotees practice the contemplative ritual of pressing their foreheads and open palms against the sacred granite sanctuary walls to absorb positive spiritual vibrations.</li>
 </ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.5</span>
@@ -692,7 +742,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Contemporary Marvel:</strong> Descending 32 meters across four underground levels, this 236-meter-long terminal anchors the city&#39;s newly inaugurated urban transit network. Its architectural showpiece is the <strong>Lotus Toplight</strong>—a monumental circular skylight engineered from structural architectural glass. By day, sunlight cascades into the subterranean concourse, offering commuters looking upward a striking sightline to the century-old clock tower resting on the plaza above.</li>
 </ul>
 <hr>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
             3. Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
@@ -958,9 +1017,16 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp" 
+          alt="HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -1047,7 +1113,6 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
                   <a href="#key-curated-dimensions-of-the-hui-bon-hoa-estate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Hui Bon Hoa Estate</a>
   <a href="#the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan</a>
   <a href="#deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy</a>
-  <a href="#the-exterior-classical-pilasters-crowned-by-emerald-dragon-tiles" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles</a>
   <a href="#the-interior-encaustic-tiles-and-prismatic-lightwells" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Interior: Encaustic Tiles and Prismatic Lightwells</a>
   <a href="#the-parisian-antique-elevator-technological-aristocracy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Parisian Antique Elevator: Technological Aristocracy</a>
   <a href="#navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Three Pavilions: A Millennial Artistic Odyssey</a>
@@ -1159,15 +1224,18 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The enduring magic of the estate lies in its brilliant equilibrium between European avant-garde and indigenous environmental adaptation:</p>
-
-          <div id="the-exterior-classical-pilasters-crowned-by-emerald-dragon-tiles" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
-            </h3>
-          </div>
-        <p>Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### 2.1. The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
+Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.
           <div id="the-interior-encaustic-tiles-and-prismatic-lightwells" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
@@ -1390,9 +1458,16 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp" 
+          alt="The Ultimate Nam Du Expedition: Logistics, Itineraries & 2026 Travel Field Notes" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -1559,8 +1634,17 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The Nam Du Archipelago comprises 21 scattered islands and islets resting in the tranquil expanse of Vietnam&#39;s southwestern waters. In stark contrast to the frenetic pace and rampant commercialization of neighboring destinations, Nam Du preserves the rugged authenticity of a coastal fishing village, defined by pristine coral reefs, dramatic rocky outcrops, and coconut palms swaying in the maritime breeze.</p>
-<p>Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, anchoring the primary harbor, accommodations, and culinary hubs. From Hon Lon, a network of fishing boats and speedboats branches out, connecting travelers to lesser-known, untamed paradises such as Hon Mau, Hon Dau, Hon Ngang, and Hai Bo Dap.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, anchoring the primary harbor, accommodations, and culinary hubs. From Hon Lon, a network of fishing boats and speedboats branches out, connecting travelers to lesser-known, untamed paradises such as Hon Mau, Hon Dau, Hon Ngang, and Hai Bo Dap.
         <h3 id="administrative-note-post-redistricting-update" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           Administrative Note (Post-Redistricting Update)
         </h3>
@@ -1845,9 +1929,16 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp" 
+          alt="The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -2100,11 +2191,18 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:</p>
-<ul>
-<li><strong>Bò Nướng Lá Lốt (Beef in Betel Leaves):</strong> Minced prime beef seasoned with lemongrass and five-spice powder wrapped tightly in wild betel leaves, sizzling over open charcoal braziers. As the leaves char lightly, their pungent herbal oils seal the juices inside. Wrap each roll in thin woven rice vermicelli (<em>bánh hỏi</em>) with pickled daikon and dunk into crushed pineapple anchovy sauce.</li>
-<li><strong>Open-Flame Charcoal Seafood:</strong> Tables groan beneath Can Gio mud crabs, garlic-butter sea snails, and giant freshwater prawns grilled directly on iron grates, washed down with locally crafted Saigon botanical ales.</li>
-</ul>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+- **Bò Nướng Lá Lốt (Beef in Betel Leaves):** Minced prime beef seasoned with lemongrass and five-spice powder wrapped tightly in wild betel leaves, sizzling over open charcoal braziers. As the leaves char lightly, their pungent herbal oils seal the juices inside. Wrap each roll in thin woven rice vermicelli (*bánh hỏi*) with pickled daikon and dunk into crushed pineapple anchovy sauce.
+- **Open-Flame Charcoal Seafood:** Tables groan beneath Can Gio mud crabs, garlic-butter sea snails, and giant freshwater prawns grilled directly on iron grates, washed down with locally crafted Saigon botanical ales.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -2307,9 +2405,16 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp" 
+          alt="The 24 Signature Fruits of the Mekong Delta: 2026 Harvest Map & Orchard Guide" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -2547,7 +2652,16 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
             </h3>
           </div>
         <p>Making a fleeting appearance exclusively between January and March, the Lo Ren Star Apple (<em>Vú sữa Lò Rèn</em>) from Dong Thap features an exquisitely thin, polished skin. A gentle massage of the fruit releases a milky, profoundly sweet nectar. It is a delicate, cooling delicacy, perfect for tempering the onset of the summer heat.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="macapuno-coconut-tra-vinh" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
@@ -2767,9 +2881,16 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp" 
+          alt="One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -2957,8 +3078,17 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.</p>
-<p>This itinerary harmonizes with the sun: cool morning light is devoted to open markets and sacred shrines; the blazing midday heat is spent safely ensconced within air-conditioned museum galleries and quiet apartment cafes; the breezy afternoon explores the palatial gardens of the Independence Palace; and the evening celebrates open-air dining and elevated skyline cocktails.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+This itinerary harmonizes with the sun: cool morning light is devoted to open markets and sacred shrines; the blazing midday heat is spent safely ensconced within air-conditioned museum galleries and quiet apartment cafes; the breezy afternoon explores the palatial gardens of the Independence Palace; and the evening celebrates open-air dining and elevated skyline cocktails.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="detailed-four-stage-itinerary-breakdown" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -3205,9 +3335,16 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp" 
+          alt="Truong Tien Bridge (Hue): Architectural Legacy & 2026 Maintenance Guide" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -3368,8 +3505,17 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The Truong Tien Bridge transcends its function as a vital transit artery; it stands as an enduring historical witness, an inextricably woven thread in the cultural fabric of Hue. Arching gracefully over the languid Perfume River (<em>Sông Hương</em>), its six silver-painted steel spans have served as an endless muse for poets, musicians, and photographers for over a century.</p>
-<p>When venturing to the ancient capital, traversing the Truong Tien Bridge on foot—while the distant tolling of the Thien Mu Pagoda bell echoes across the water and royal dragon boats glide silently below—is a deeply visceral experience that every bespoke traveler must undertake.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+When venturing to the ancient capital, traversing the Truong Tien Bridge on foot—while the distant tolling of the Thien Mu Pagoda bell echoes across the water and royal dragon boats glide silently below—is a deeply visceral experience that every bespoke traveler must undertake.
         <h3 id="trang-tien-or-truong-tien-deciphering-the-nomenclature" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           Trang Tien or Truong Tien? Deciphering the Nomenclature
         </h3>
@@ -3594,9 +3740,16 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/reunification-palace-saigon.webp" 
+          alt="The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -3683,7 +3836,6 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
                   <a href="#key-curated-dimensions-of-the-palace-grounds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Palace Grounds</a>
   <a href="#historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Historical Stratigraphy: From Colonial Norodom Palace to National Reunification</a>
   <a href="#deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram</a>
-  <a href="#floorplan-sino-vietnamese-ideograms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Floorplan Sino-Vietnamese Ideograms</a>
   <a href="#the-concrete-bamboo-louver-curtain-rem-hoa-a" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)</a>
   <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
   <a href="#field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026)</a>
@@ -3794,20 +3946,21 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:</p>
-
-          <div id="floorplan-sino-vietnamese-ideograms" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . Floorplan Sino-Vietnamese Ideograms
-            </h3>
-          </div>
-        <ul>
-<li><strong>The Ideogram CÁT (吉 - Auspiciousness):</strong> The primary structural footprint outlines the character <em>Cát</em>, symbolizing eternal fortune and peace for the nation.</li>
-<li><strong>The Ideogram KHẨU (口 - Free Speech):</strong> The central presidential balcony on the second level frames the square character <em>Khẩu</em>, embodying the imperative of free speech and democratic dialogue.</li>
-<li><strong>The Ideogram TRUNG (中 - Loyalty):</strong> The vertical flagpole rising precisely through the center of the balcony forms the stroke <em>Trung</em>, championing unbending fidelity to the homeland.</li>
-<li><strong>The Ideogram CHỦ (主 - Sovereignty):</strong> The rooftop pavilion topped by the national flag finishes the character <em>Chủ</em>, declaring undisputed national independence.</li>
-</ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### 2.1. Floorplan Sino-Vietnamese Ideograms
+- **The Ideogram CÁT (吉 - Auspiciousness):** The primary structural footprint outlines the character *Cát*, symbolizing eternal fortune and peace for the nation.
+- **The Ideogram KHẨU (口 - Free Speech):** The central presidential balcony on the second level frames the square character *Khẩu*, embodying the imperative of free speech and democratic dialogue.
+- **The Ideogram TRUNG (中 - Loyalty):** The vertical flagpole rising precisely through the center of the balcony forms the stroke *Trung*, championing unbending fidelity to the homeland.
+- **The Ideogram CHỦ (主 - Sovereignty):** The rooftop pavilion topped by the national flag finishes the character *Chủ*, declaring undisputed national independence.
           <div id="the-concrete-bamboo-louver-curtain-rem-hoa-a" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
@@ -4019,9 +4172,16 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/reunification-palace-saigon.webp" 
+          alt="My Quynh Safari (2026): The Definitive Guide to the Zoo & Water Park" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -4300,7 +4460,16 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
             </h3>
           </div>
         <p>If the adrenaline of the safari demands a contemplative pause, the Japanese-inspired Bonsai gardens, seamlessly integrated with massive Koi ponds, offer a sanctuary of stillness. The landscape is masterfully curated with rustic wooden bridges and monolithic natural stones, providing a flawless backdrop for documenting family memories.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
           <div id="the-adrenaline-zone" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
@@ -4494,9 +4663,16 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp" 
+          alt="Ben Thanh Central Metro Station: Navigating Saigon’s Futuristic Underground Pulse" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -4684,8 +4860,17 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.</p>
-<p>Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll across a pristine, granite-paved public concourse. Steps away from the historic market entrances, sleek escalator portals invite commuters down into an immaculate underground city of retail promenades, artisan kiosks, and transit platforms.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll across a pristine, granite-paved public concourse. Steps away from the historic market entrances, sleek escalator portals invite commuters down into an immaculate underground city of retail promenades, artisan kiosks, and transit platforms.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="navigating-the-four-tier-subterranean-labyrinth" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -4930,9 +5115,16 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp" 
+          alt="The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -5148,12 +5340,19 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Throughout the resistance wars against French and American forces, the <em>khăn rằn</em> transcended its daily utility to become an immortal military and cultural emblem of the southern battlefield:</p>
-<ul>
-<li><strong>A Silent Identifier:</strong> Amidst the dense foliage of the U Minh forest or the flooded plains of Dong Thap Muoi, the checkered scarf served as a covert insignia among guerilla factions and urban operatives.</li>
-<li><strong>The Ultimate Survival Tool:</strong> The scarf was ingeniously utilized to filter heavy alluvial silt from river water before boiling, as a makeshift tourniquet for battlefield injuries, as a wrapper for foraging rations, and even as camouflage beneath enemy artillery.</li>
-<li><strong>The Legend of the &quot;Long-Haired Army&quot;:</strong> The indelible image of southern female guerillas—clad in the humble black <em>áo bà ba</em>, wearing the iconic floppy hat, and with the <em>khăn rằn</em> wrapped defiantly around their necks—remains a profound symbol of the indomitable courage of Vietnamese women.</li>
-</ul>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+- **A Silent Identifier:** Amidst the dense foliage of the U Minh forest or the flooded plains of Dong Thap Muoi, the checkered scarf served as a covert insignia among guerilla factions and urban operatives.
+- **The Ultimate Survival Tool:** The scarf was ingeniously utilized to filter heavy alluvial silt from river water before boiling, as a makeshift tourniquet for battlefield injuries, as a wrapper for foraging rations, and even as camouflage beneath enemy artillery.
+- **The Legend of the "Long-Haired Army":** The indelible image of southern female guerillas—clad in the humble black *áo bà ba*, wearing the iconic floppy hat, and with the *khăn rằn* wrapped defiantly around their necks—remains a profound symbol of the indomitable courage of Vietnamese women.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-comparative-matrix-the-four-iconic-scarves-of-southeast-asia" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -5437,9 +5636,16 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp" 
+          alt="Huynh Thuy Le Ancient House: Architectural Heritage & The Muse of 'The Lover' (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -5604,7 +5810,16 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Amidst the relentless rhythm of the floral city of Sa Dec, the <strong>Huynh Thuy Le Ancient House</strong> (also known as the Huynh Family Mansion) stands in silent vigil along the riverbank, an enduring guardian of the opulent memories of the Southern elite. This edifice captivates not only architectural purists studying the fusion of East and West, but also serves as a pilgrimage site for romantic souls seeking the echoes of a tragic love affair that resonated globally in Marguerite Duras’s novel, <em>L&#39;Amant (The Lover)</em>.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
         <h3 id="the-genesis-and-evolution-of-the-huynh-dynasty" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           The Genesis and Evolution of the Huynh Dynasty
         </h3>
@@ -5842,9 +6057,16 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp" 
+          alt="Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality in District 1" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -5931,7 +6153,6 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
                   <a href="#key-curated-dimensions-of-the-sacred-compound" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Sacred Compound</a>
   <a href="#footprints-of-the-tamil-chettiar-community-in-old-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Footprints of the Tamil Chettiar Community in Old Saigon</a>
   <a href="#deciphering-south-indian-dravidian-temple-art" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering South Indian Dravidian Temple Art</a>
-  <a href="#the-gopuram-gateway-between-the-earthly-and-divine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gopuram: Gateway Between the Earthly and Divine</a>
   <a href="#the-inner-sanctum-the-abode-of-goddess-mariamman" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Inner Sanctum: The Abode of Goddess Mariamman</a>
   <a href="#the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis</a>
   <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
@@ -6042,15 +6263,18 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:</p>
-
-          <div id="the-gopuram-gateway-between-the-earthly-and-divine" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . The Gopuram: Gateway Between the Earthly and Divine
-            </h3>
-          </div>
-        <p>Soaring above the street is the <strong>Gopuram</strong>—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### 2.1. The Gopuram: Gateway Between the Earthly and Divine
+Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.
           <div id="the-inner-sanctum-the-abode-of-goddess-mariamman" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
@@ -6273,9 +6497,16 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp" 
+          alt="Bargaining with Grace: The Smart Traveler’s Guide to Shopping at Ben Thanh Market" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -6366,7 +6597,6 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
   <a href="#the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather</a>
   <a href="#the-north-gate-le-thanh-ton-street-orchard-bounty" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The North Gate (Le Thanh Ton Street): Orchard Bounty</a>
   <a href="#bargaining-with-grace-cultural-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bargaining with Grace: Cultural Guidelines</a>
-  <a href="#honor-the-morning-opening-rite-mo-hang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Honor the Morning Opening Rite (*Mở Hàng*)</a>
   <a href="#the-15-to-25-equilibrium" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The 15% to 25% Equilibrium</a>
   <a href="#the-gentle-walk-away" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gentle Walk-Away</a>
   <a href="#detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Counterfeits</a>
@@ -6512,15 +6742,18 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:</p>
-
-          <div id="honor-the-morning-opening-rite-mo-hang" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . Honor the Morning Opening Rite (Mở Hàng)
-            </h3>
-          </div>
-        <p>Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### 2.1. Honor the Morning Opening Rite (*Mở Hàng*)
+Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.
           <div id="the-15-to-25-equilibrium" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
@@ -6741,9 +6974,16 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp" 
+          alt="Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -6904,8 +7144,17 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Over the past decade, the agrarian eco-tourism model in the Mekong Delta has exploded, spawning hundreds of similar establishments. Yet, the <strong>Lan Vuong Ecological Resort</strong> relentlessly maintains its dominance in the &quot;Visceral Physical Experience&quot; sector. Unlike tranquil, contemplative resorts, Lan Vuong greets travelers with the deafening roar of aquatic obstacle courses, the unmistakable earthy scent of low-tide mud, and the chaotic energy of team-building battalions numbering in the hundreds.</p>
-<p>To visit Lan Vuong is to consciously shed urban propriety. You don the traditional brown <em>áo bà ba</em> (the Southern peasant tunic) and prepare for a day of authentic, unapologetic mud-wrestling.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+To visit Lan Vuong is to consciously shed urban propriety. You don the traditional brown *áo bà ba* (the Southern peasant tunic) and prepare for a day of authentic, unapologetic mud-wrestling.
         <h3 id="crucial-note-regarding-2026-administrative-boundaries" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           Crucial Note Regarding 2026 Administrative Boundaries
         </h3>
@@ -7138,9 +7387,16 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp" 
+          alt="The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -7362,12 +7618,19 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
             </h3>
           </div>
         <p>To document Hon Son without dedicating ink to Rai Ca (<em>The Otter</em>) is a dereliction of duty. Rai Ca does not merely peddle sleeping quarters; it curates an &quot;ecosystem of unbridled youth.&quot;</p>
-<p><strong>The Highlights:</strong></p>
-<ul>
-<li>The compound features a decommissioned minibus transformed into a tactical bar, illuminated by lanterns strung across ancient coconut palms.</li>
-<li>The hallmark Rai Ca experience involves deploying on motorized skiffs for afternoon coral diving, followed by grilling sea urchins and wild octopus directly on the sand while acoustic guitars dictate the rhythm. An astronomical telescope for stargazing serves as a unique nocturnal asset.</li>
-</ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+**The Highlights:**
+- The compound features a decommissioned minibus transformed into a tactical bar, illuminated by lanterns strung across ancient coconut palms.
+- The hallmark Rai Ca experience involves deploying on motorized skiffs for afternoon coral diving, followed by grilling sea urchins and wild octopus directly on the sand while acoustic guitars dictate the rhythm. An astronomical telescope for stargazing serves as a unique nocturnal asset.
           <div id="bacs-homestay-contemporary-minimalist-refuge" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
@@ -7603,9 +7866,16 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp" 
+          alt="Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -7691,7 +7961,6 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#introduction-saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Saigon Unveiled from an Open Deck</a>
   <a href="#fleet-architecture-and-bespoke-onboard-amenities" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Fleet Architecture & Bespoke Onboard Amenities</a>
-  <a href="#signature-features-onboard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Features Onboard:</a>
   <a href="#comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comprehensive Analysis of the Two Signature Routes (2026 Edition)</a>
   <a href="#route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)</a>
   <a href="#route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)</a>
@@ -7777,17 +8046,21 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The Saigon double-decker fleet complies with international sightseeing standards, featuring a climate-controlled lower salon and an expansive open-air upper deck offering 360-degree panoramic vantage points.</p>
-
-        <h3 id="signature-features-onboard" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Signature Features Onboard:
-        </h3>
-      <ol>
-<li><strong>GPS-Synchronized Multi-Lingual Audio Commentary:</strong> Automatically triggered by satellite geo-coordinates, delivering vivid cultural and architectural insights in 9 languages (English, French, German, Spanish, Russian, Japanese, Mandarin, Korean, and Vietnamese).</li>
-<li><strong>High-Speed Wi-Fi &amp; Individual USB Charging Ports:</strong> Ensuring travelers remain seamlessly connected to navigation apps and camera equipment throughout the loop.</li>
-<li><strong>Thoughtful Seasonal Amenities:</strong> Complimentary handcrafted palm-leaf conical hats (<em>nón lá</em>) for midday sun protection, along with durable rain ponchos during sudden tropical afternoon showers.</li>
-<li><strong>Attentive Cabin Crew:</strong> Courteous onboard concierges assist with ticketing validation, transfer schedules, and localized navigation advice.</li>
-</ol>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### Signature Features Onboard:
+1. **GPS-Synchronized Multi-Lingual Audio Commentary:** Automatically triggered by satellite geo-coordinates, delivering vivid cultural and architectural insights in 9 languages (English, French, German, Spanish, Russian, Japanese, Mandarin, Korean, and Vietnamese).
+2. **High-Speed Wi-Fi & Individual USB Charging Ports:** Ensuring travelers remain seamlessly connected to navigation apps and camera equipment throughout the loop.
+3. **Thoughtful Seasonal Amenities:** Complimentary handcrafted palm-leaf conical hats (*nón lá*) for midday sun protection, along with durable rain ponchos during sudden tropical afternoon showers.
+4. **Attentive Cabin Crew:** Courteous onboard concierges assist with ticketing validation, transfer schedules, and localized navigation advice.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -8112,9 +8385,16 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/apartment-cafe.webp" 
+          alt="Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -8275,8 +8555,17 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>&quot;Does Can Tho have a beach?&quot; – A question that seems geographically absurd for a metropolis anchored deep within the landlocked expanse of the Mekong Delta, yet yields an answer that consistently astonishes voyagers. It is not an ocean of crashing saltwater surf; rather, &quot;Can Tho Beach&quot; (<em>Biển Cần Thơ</em>) is a massive, meticulously engineered artificial bathing zone situated squarely at the confluence of the Hau and Can Tho rivers.</p>
-<p>Officially commissioned in 2014, this infrastructure quenched the &quot;thirst for the sea&quot; harbored by the Delta&#39;s populace. Millions of cubic meters of silt-free white sand were imported to forge a gentle 400-meter shoreline, fracturing the urban concrete and birthing an entirely incongruous recreational expanse in the heart of the city.</p>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+Officially commissioned in 2014, this infrastructure quenched the "thirst for the sea" harbored by the Delta's populace. Millions of cubic meters of silt-free white sand were imported to forge a gentle 400-meter shoreline, fracturing the urban concrete and birthing an entirely incongruous recreational expanse in the heart of the city.
         <h3 id="the-convergence-of-ocean-and-river" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           The Convergence of "Ocean" and "River"
         </h3>
@@ -8493,9 +8782,16 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/apartment-cafe.webp" 
+          alt="Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -8581,7 +8877,6 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#introduction-the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Allure of Saigon’s Hidden Perches</a>
   <a href="#adaptive-heritage-the-renaissance-of-residential-blocks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Adaptive Heritage: The Renaissance of Residential Blocks</a>
-  <a href="#architectural-hallmarks-of-old-central-apartments" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Architectural Hallmarks of Old Central Apartments:</a>
   <a href="#four-iconic-heritage-apartment-buildings-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Iconic Heritage Apartment Buildings Near Ben Thanh</a>
   <a href="#ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Thiep – The Artisanal & Bohemian Labyrinth</a>
   <a href="#ly-tu-trong-the-creative-vanguard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ly Tu Trong – The Creative Vanguard</a>
@@ -8664,15 +8959,19 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The phenomenon of converting legacy residential flats into independent boutique cafes took root in the early 2010s and has reached aesthetic maturity by 2026. Rather than razing these multi-generational blocks, young Vietnamese designers and hospitality artisans have championed adaptive reuse, celebrating original raw textures rather than concealing them.</p>
-
-        <h3 id="architectural-hallmarks-of-old-central-apartments" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Architectural Hallmarks of Old Central Apartments:
-        </h3>
-      <ul>
-<li><strong>Tropical Modernist &amp; Indochinese Fusion:</strong> High ceilings exceeding 3.8 meters, open-air lightwells that draw tropical cross-breezes through the building’s core, and geometric floor tiles pressed by hand in centennial kiln workshops.</li>
-<li><strong>Poetic Domestic Coexistence:</strong> These buildings remain living residential communities. It is entirely common to pass an elder peeling pomelo on a cane lounger on the second-floor breezeway, right next to a micro-roastery humming with a state-of-the-art lever espresso machine.</li>
-</ul>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### Architectural Hallmarks of Old Central Apartments:
+- **Tropical Modernist & Indochinese Fusion:** High ceilings exceeding 3.8 meters, open-air lightwells that draw tropical cross-breezes through the building’s core, and geometric floor tiles pressed by hand in centennial kiln workshops.
+- **Poetic Domestic Coexistence:** These buildings remain living residential communities. It is entirely common to pass an elder peeling pomelo on a cane lounger on the second-floor breezeway, right next to a micro-roastery humming with a state-of-the-art lever espresso machine.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="four-iconic-heritage-apartment-buildings-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -8940,9 +9239,16 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp" 
+          alt="Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails, Clocktower Panoramas & Nightlife Guide" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -9028,7 +9334,6 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#introduction-when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: When Saigon Kindles Her Constellations</a>
   <a href="#terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Terroir Mixology: The Rise of Vietnamese Craft Cocktails</a>
-  <a href="#signature-indigenous-elements-in-the-2026-glass" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Indigenous Elements in the 2026 Glass:</a>
   <a href="#four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh</a>
   <a href="#the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)</a>
   <a href="#heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang</a>
@@ -9112,16 +9417,20 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.</p>
-
-        <h3 id="signature-indigenous-elements-in-the-2026-glass" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Signature Indigenous Elements in the 2026 Glass:
-        </h3>
-      <ul>
-<li><strong>Southern Delta Botanicals:</strong> Artisanal gins distilled with river herbs, cracked Phu Quoc wild peppercorns, aromatic Tra Bong cinnamon, shredded kaffir lime leaf, and tart calamansi infused with mountain honey.</li>
-<li><strong>Homages to Classic Street Traditions:</strong> Clever reinterpretations of morning rituals—from bourbon washed in Robusta coffee butter to delicate saline foams crafted from handcrafted sea salt.</li>
-<li><strong>Intimate Sonic Scapes:</strong> Loud, frenetic commercial tracks are replaced by warm analog vinyl selectors, mellow bossa nova, and late-night jazz trios, cultivating spaces where authentic human dialogue flourishes.</li>
-</ul>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### Signature Indigenous Elements in the 2026 Glass:
+- **Southern Delta Botanicals:** Artisanal gins distilled with river herbs, cracked Phu Quoc wild peppercorns, aromatic Tra Bong cinnamon, shredded kaffir lime leaf, and tart calamansi infused with mountain honey.
+- **Homages to Classic Street Traditions:** Clever reinterpretations of morning rituals—from bourbon washed in Robusta coffee butter to delicate saline foams crafted from handcrafted sea salt.
+- **Intimate Sonic Scapes:** Loud, frenetic commercial tracks are replaced by warm analog vinyl selectors, mellow bossa nova, and late-night jazz trios, cultivating spaces where authentic human dialogue flourishes.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -9392,9 +9701,16 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp" 
+          alt="Buu Long Tourist Area: The Miniature Ha Long Bay of Dong Nai (2026 Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -9559,8 +9875,17 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Long before it became a sculpted ecological sanctuary, the landscape of <strong>Buu Long Tourist Area</strong> was a rugged, untamed quarry. Prior to 1975, local residents heavily mined the limestone cliffs. Recognizing the profound cultural and geological value of these formations, local authorities transformed the 84-hectare expanse into a protected national heritage site by 1990. Today, it stands as a poetic juxtaposition of man-made preservation and natural splendor, earning its moniker as the &quot;Miniature Ha Long Bay of the South.&quot;</p>
-<p>For the discerning traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the discerning traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="2026-transit-and-logistics-navigating-to-buu-long" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -9792,9 +10117,16 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/hotel-continental-saigon.webp" 
+          alt="Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries & Design Stays" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -9963,13 +10295,20 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:</p>
-<ol>
-<li><strong>Unmistakable Architectural Identity:</strong> Design that eschews sterile corporate formulas in favor of authentic local vernacular—handcrafted ceramic accents, French wrought-iron transoms, lacquer artwork, or serene Zen water gardens.</li>
-<li><strong>Intimate Scale &amp; Bespoke Concierge Care:</strong> Ranging from 30 to 120 guest chambers, ensuring that hotel concierges address voyagers by name, anticipate dining preferences, and curate private off-the-beaten-track city strolls.</li>
-<li><strong>Effortless Pedestrian Mobility (<em>Walkability</em>):</strong> Situated within a 12-minute shaded walk from Ben Thanh Market, the subterranean Metro central interchange, and major fine arts museums.</li>
-<li><strong>Refined Epicurean &amp; Wellness Rituals:</strong> Featuring chef-driven regional fusion dining, open-air twilight sky lounges, complimentary afternoon high tea, and indigenous herbal spa therapies.</li>
-</ol>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+1. **Unmistakable Architectural Identity:** Design that eschews sterile corporate formulas in favor of authentic local vernacular—handcrafted ceramic accents, French wrought-iron transoms, lacquer artwork, or serene Zen water gardens.
+2. **Intimate Scale & Bespoke Concierge Care:** Ranging from 30 to 120 guest chambers, ensuring that hotel concierges address voyagers by name, anticipate dining preferences, and curate private off-the-beaten-track city strolls.
+3. **Effortless Pedestrian Mobility (*Walkability*):** Situated within a 12-minute shaded walk from Ben Thanh Market, the subterranean Metro central interchange, and major fine arts museums.
+4. **Refined Epicurean & Wellness Rituals:** Featuring chef-driven regional fusion dining, open-air twilight sky lounges, complimentary afternoon high tea, and indigenous herbal spa therapies.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -10249,9 +10588,16 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/hotel-continental-saigon.webp" 
+          alt="Da Lat Specialties: The Definitive Highland Culinary Guide (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -10414,8 +10760,17 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Perched 1,500 meters above sea level on the Langbiang Plateau, Da Lat’s culinary identity is inextricably bound to its crisp, alpine climate and its volcanic red basalt soil. Unlike the sweet-leaning palate of the Mekong Delta or the heavily spiced dishes of Central Vietnam, the gastronomy of this misty city is designed for one primary function: thermal comfort. </p>
-<p>For the 2026 culinary traveler, Da Lat is no longer just a haven of French colonial nostalgia; it is a dynamic intersection of indigenous highland agriculture and generational street food mastery.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the 2026 culinary traveler, Da Lat is no longer just a haven of French colonial nostalgia; it is a dynamic intersection of indigenous highland agriculture and generational street food mastery.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-warmth-in-a-bowl-soups-and-broths" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -10654,9 +11009,16 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp" 
+          alt="Sau Hoai Rice Noodle Oven: The Heritage of Can Tho's 'Pizza Hu Tieu' (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -10819,8 +11181,17 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>In the labyrinthine waterways surrounding the Cai Rang Floating Market, the <strong>Sau Hoai Rice Noodle Oven</strong> stands as a living museum of Mekong Delta culinary heritage. For over four decades, the Hoai family has maintained a delicate, analog rhythm in a rapidly industrializing region. While modern factories churn out dried noodles by the ton, Sau Hoai preserves the tactile, labor-intensive art of hand-milled, sun-dried <em>Hu Tieu</em>.</p>
-<p>For the cultural voyager in 2026, this is not merely a rest stop; it is an immersive study in agricultural ingenuity, culminating in one of the most innovative street food crossovers in the region: the so-called &quot;Pizza Hu Tieu.&quot;</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the cultural voyager in 2026, this is not merely a rest stop; it is an immersive study in agricultural ingenuity, culminating in one of the most innovative street food crossovers in the region: the so-called "Pizza Hu Tieu."<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-architecture-of-the-noodle-a-craft-unveiled" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -11050,9 +11421,16 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp" 
+          alt="Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -11221,8 +11599,18 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
         <h3 id="time-window-1-early-morning-awakening-0630-0930" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
         </h3>
-      <h4 id="catching-the-dawn-and-photographing-the-south-gate-clock-tower-without-crowds">1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds</h4><p>Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.</p>
-<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">2. Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
+      <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+#### 1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds
+Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">2. Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
 <h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">3. Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
 <hr>
 
@@ -11440,9 +11828,16 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp" 
+          alt="Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -11528,7 +11923,6 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#introduction-stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Stepping into Saigon's Beating Heart Like an Insider</a>
   <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
-  <a href="#the-historic-covered-hall-bazaar-0600-1800" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Historic Covered Hall Bazaar (06:00 – 18:00)</a>
   <a href="#the-open-air-night-street-bazaar-1800-2330" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Open-Air Night Street Bazaar (18:00 – 23:30)</a>
   <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
   <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
@@ -11609,18 +12003,19 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Ben Thanh operates under two starkly different daily personalities:</p>
-
-          <div id="the-historic-covered-hall-bazaar-0600-1800" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The Historic Covered Hall Bazaar (06:00 – 18:00)
-            </h3>
-          </div>
-        <ul>
-<li><strong>What happens:</strong> All 1,400 interior stalls operate at full capacity. This is the optimal window to browse artisanal textiles, lacquerware, hand-carved coffee filters, cashews, dried fruits, and explore the bustling heritage food court.</li>
-<li><strong>Insider Sweet Spot (08:30 – 10:30 AM):</strong> The air is cool, stallholders have completed their morning displays, and interactions are warm, leisurely, and unhurried.</li>
-</ul>
-
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dc7TpCMqVRI/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dc7TpCMqVRI/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+### 1. The Historic Covered Hall Bazaar (06:00 – 18:00)
+- **What happens:** All 1,400 interior stalls operate at full capacity. This is the optimal window to browse artisanal textiles, lacquerware, hand-carved coffee filters, cashews, dried fruits, and explore the bustling heritage food court.
+- **Insider Sweet Spot (08:30 – 10:30 AM):** The air is cool, stallholders have completed their morning displays, and interactions are warm, leisurely, and unhurried.
           <div id="the-open-air-night-street-bazaar-1800-2330" class="scroll-mt-28 space-y-2 pt-4">
             <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
@@ -11870,9 +12265,16 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp" 
+          alt="Banh Mi Hoi An: The Definitive Artisan Bread Guide (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -12032,8 +12434,17 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>While Saigon claims the industrial birth of the <em>Banh Mi</em>, it is within the mustard-yellow alleys of Hoi An that the sandwich achieves its absolute artisanal zenith. Praised by the late Anthony Bourdain as &quot;a symphony in a sandwich,&quot; the Hoi An Banh Mi diverges radically from its southern counterpart. </p>
-<p>For the 2026 epicurean, understanding this sandwich requires looking beyond the hype. The bread itself is distinct—shorter, sharply pointed at the ends, and baked in wood-fired ovens to achieve a glass-like crust that shatters upon impact, protecting a remarkably dense, chewy crumb capable of absorbing heavily spiced pork gravies without disintegrating.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dc7TpCMqVRI/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dc7TpCMqVRI/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the 2026 epicurean, understanding this sandwich requires looking beyond the hype. The bread itself is distinct—shorter, sharply pointed at the ends, and baked in wood-fired ovens to achieve a glass-like crust that shatters upon impact, protecting a remarkably dense, chewy crumb capable of absorbing heavily spiced pork gravies without disintegrating.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-master-ovens-2026-curated-tiers" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -12274,9 +12685,16 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp" 
+          alt="Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -12537,27 +12955,25 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>To navigate commerce with confidence, refer to this ground-verified pricing guide:</p>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Item / Service</th><th class="p-4 font-bold text-left">Fair Market Price (2026)</th><th class="p-4 font-bold text-left">Common Inflated Quote</th><th class="p-4 font-bold text-left">Field Recommendation</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Cotton Saigon Souvenir T-Shirt</strong></td><td class="p-4">80,000 – 120,000 VND</td><td class="p-4">250,000 – 400,000 VND</td><td class="p-4">Multi-item purchases unlock wholesale discounts</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Hand-painted Conical Hat (<em>Non La</em>)</strong></td><td class="p-4">50,000 – 80,000 VND</td><td class="p-4">150,000 – 200,000 VND</td><td class="p-4">Check the tightness of inner palm stitching</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Jumbo Roasted Salted Cashews (500g)</strong></td><td class="p-4">110,000 – 140,000 VND</td><td class="p-4">220,000 – 300,000 VND</td><td class="p-4">Select whole, unbroken, vacuum-sealed jars</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Artisanal Ground Robusta/Arabica (1kg)</strong></td><td class="p-4">250,000 – 450,000 VND</td><td class="p-4">600,000 – 900,000 VND</td><td class="p-4">Request bean grinding on the spot</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bowl of Crab Noodle Soup (<em>Bun Rieu</em>)</strong></td><td class="p-4">50,000 – 65,000 VND</td><td class="p-4">80,000 – 100,000 VND</td><td class="p-4">Confirm bowl price before seating</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Che Ba Muoi Shaved Ice Dessert</strong></td><td class="p-4">30,000 – 40,000 VND</td><td class="p-4">Fair &amp; Fixed Price</td><td class="p-4">Renowned family stall with zero bargaining needed</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Chilled Fresh Coconut (Curb-side)</strong></td><td class="p-4">25,000 – 35,000 VND</td><td class="p-4">100,000 – 200,000 VND</td><td class="p-4">Only accept once verbal price is agreed</td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+| Item / Service | Fair Market Price (2026) | Common Inflated Quote | Field Recommendation |
+| :--- | :--- | :--- | :--- |
+| **Cotton Saigon Souvenir T-Shirt** | 80,000 – 120,000 VND | 250,000 – 400,000 VND | Multi-item purchases unlock wholesale discounts |
+| **Hand-painted Conical Hat (*Non La*)** | 50,000 – 80,000 VND | 150,000 – 200,000 VND | Check the tightness of inner palm stitching |
+| **Jumbo Roasted Salted Cashews (500g)** | 110,000 – 140,000 VND | 220,000 – 300,000 VND | Select whole, unbroken, vacuum-sealed jars |
+| **Artisanal Ground Robusta/Arabica (1kg)** | 250,000 – 450,000 VND | 600,000 – 900,000 VND | Request bean grinding on the spot |
+| **Bowl of Crab Noodle Soup (*Bun Rieu*)** | 50,000 – 65,000 VND | 80,000 – 100,000 VND | Confirm bowl price before seating |
+| **Che Ba Muoi Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
+| **Chilled Fresh Coconut (Curb-side)** | 25,000 – 35,000 VND | 100,000 – 200,000 VND | Only accept once verbal price is agreed |<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="emergency-directory-and-247-tourist-assistance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -12728,9 +13144,16 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp" 
+          alt="Long Xuyen Broken Rice: The Unsung Masterpiece of An Giang (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -12891,8 +13314,17 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>If Saigon’s <em>Cơm Tấm</em> (Broken Rice) is a flamboyant, oversized spectacle dominated by a massive grilled pork chop, the Long Xuyen variation is an exercise in meticulous, bite-sized harmony. Born in the bustling riverside capital of An Giang province, this dish reflects the pragmatic yet highly refined palate of the Mekong Delta’s merchant class.</p>
-<p>For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately distinguishable. The rice grains are milled significantly finer—almost resembling couscous—allowing them to absorb the accompanying scallion oil and sweet fish sauce with unprecedented efficiency. </p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DSM0DK4D0pk/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately distinguishable. The rice grains are milled significantly finer—almost resembling couscous—allowing them to absorb the accompanying scallion oil and sweet fish sauce with unprecedented efficiency. <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-anatomy-of-the-plate" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13112,9 +13544,16 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp" 
+          alt="Can Tho Fermented Fish Hotpot: The Ultimate 'Lau Mam' Guide (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -13272,8 +13711,17 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>To the uninitiated, <em>Lẩu Mắm</em> (Fermented Fish Hotpot) is an olfactory shock. To the people of the Mekong Delta, it is the undisputed king of communal dining—a boiling cauldron that encapsulates the region’s agricultural biodiversity and its historical reliance on preserved river fish.</p>
-<p>Can Tho, as the logistical and cultural capital of the Delta, is the ultimate arena for this dish. For the 2026 culinary adventurer, understanding <em>Lẩu Mắm</em> requires venturing beyond the initial pungency to appreciate the incredibly complex, savory depths of a broth built upon fermented Gourami or Snakehead fish, tempered with coconut water, lemongrass, and pork bones.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+Can Tho, as the logistical and cultural capital of the Delta, is the ultimate arena for this dish. For the 2026 culinary adventurer, understanding *Lẩu Mắm* requires venturing beyond the initial pungency to appreciate the incredibly complex, savory depths of a broth built upon fermented Gourami or Snakehead fish, tempered with coconut water, lemongrass, and pork bones.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-botanical-matrix-the-true-star-of-the-show" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13485,9 +13933,16 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp" 
+          alt="Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -13654,17 +14109,20 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants dominate the currency exchange landscape:</p>
-<ol>
-<li><strong>Ha Tam Gold Shop (No. 2 Nguyen An Ninh):</strong>  <ul>
-<li>The primary anchor with the highest trading volume in southern Vietnam. Quotations for heavyweight currencies—such as USD, EUR, AUD, JPY, SGD, THB, and KRW—are consistently the most competitive. Tellers utilize high-speed optical note counters and supply handwritten or printed conversion slips.</li>
-</ul>
-</li>
-<li><strong>Mai Van Gold Shop (No. 1A Nguyen An Ninh - Immediately Adjacent):</strong>  <ul>
-<li>Positioned right next door to Ha Tam. When Ha Tam’s queue spills out onto the public sidewalk, experienced locals frequently step over to Mai Van. Rates typically match 99.5% of Ha Tam’s quote, but with shorter waiting times and a slightly less hectic counter environment.</li>
-</ul>
-</li>
-</ol>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+1. **Ha Tam Gold Shop (No. 2 Nguyen An Ninh):**  
+   - The primary anchor with the highest trading volume in southern Vietnam. Quotations for heavyweight currencies—such as USD, EUR, AUD, JPY, SGD, THB, and KRW—are consistently the most competitive. Tellers utilize high-speed optical note counters and supply handwritten or printed conversion slips.
+2. **Mai Van Gold Shop (No. 1A Nguyen An Ninh - Immediately Adjacent):**  
+   - Positioned right next door to Ha Tam. When Ha Tam’s queue spills out onto the public sidewalk, experienced locals frequently step over to Mai Van. Rates typically match 99.5% of Ha Tam’s quote, but with shorter waiting times and a slightly less hectic counter environment.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13902,9 +14360,16 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp" 
+          alt="Ba Chua Xu Temple: The Spiritual Epicenter of the Mekong Delta (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -14063,8 +14528,17 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Anchored at the base of the imposing Sam Mountain near the Cambodian border, the <strong>Temple of Ba Chua Xu</strong> (The Lady of the Realm) is not merely a local shrine—it is the beating spiritual heart of the entire Mekong Delta. Drawing an estimated 5 million pilgrims annually, this sanctuary represents a profound synthesis of indigenous animism, orthodox Buddhism, and deeply rooted local mythology.</p>
-<p>For the cultural observer in 2026, the temple offers an unfiltered, highly kinetic window into the devotional mechanics of Southern Vietnam. It is a place of intense sensory overload: the thick, unbroken haze of sandalwood incense, the glittering mounds of offered gold leaf, and the rhythmic chanting of thousands seeking prosperity, fertility, and protection.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the cultural observer in 2026, the temple offers an unfiltered, highly kinetic window into the devotional mechanics of Southern Vietnam. It is a place of intense sensory overload: the thick, unbroken haze of sandalwood incense, the glittering mounds of offered gold leaf, and the rhythmic chanting of thousands seeking prosperity, fertility, and protection.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-evolution-of-the-lotus-shrine" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -14271,9 +14745,16 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp" 
+          alt="Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -14467,11 +14948,19 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
         <h3 id="a-for-motorbike-and-scooter-riders" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
           A. For Motorbike & Scooter Riders
         </h3>
-      <h4 id="the-gold-standard-ben-thanh-central-metro-underground-basement">1. The Gold Standard: Ben Thanh Central Metro Underground Basement</h4><ul>
-<li><strong>How to enter:</strong> Approach via Le Loi Boulevard or Ham Nghi Street and follow municipal Metro Line 1 subterranean access signage.</li>
-<li><strong>Key Advantage:</strong> Direct subterranean access to the market area via shaded, climate-controlled escalators. Fully automated optical barrier gates register your vehicle&#39;s license plate instantaneously, eliminating any possibility of vehicle theft or substitution.</li>
-</ul>
-<h4 id="the-outdoor-convenient-choice-september-23rd-park-le-lai-st">2. The Outdoor Convenient Choice: September 23rd Park (Le Lai St)</h4><ul>
+      <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+#### 1. The Gold Standard: Ben Thanh Central Metro Underground Basement
+- **How to enter:** Approach via Le Loi Boulevard or Ham Nghi Street and follow municipal Metro Line 1 subterranean access signage.
+- **Key Advantage:** Direct subterranean access to the market area via shaded, climate-controlled escalators. Fully automated optical barrier gates register your vehicle's license plate instantaneously, eliminating any possibility of vehicle theft or substitution.<h4 id="the-outdoor-convenient-choice-september-23rd-park-le-lai-st">2. The Outdoor Convenient Choice: September 23rd Park (Le Lai St)</h4><ul>
 <li><strong>How to enter:</strong> Cruise along Le Lai Street towards the market roundabout; the entrance gate is located on your right beneath the lush tree canopy.</li>
 <li><strong>Key Advantage:</strong> Exceptional capacity that rarely fills up even during weekend evenings. Once parked, cross the designated pedestrian zebra crossing directly into the South Gate entrance.</li>
 </ul>
@@ -14663,9 +15152,16 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/tan-son-nhat-airport.webp" 
+          alt="Can Tho Hotels: The 2026 Curated Lodging Matrix" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -14828,8 +15324,17 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>As the undisputed capital of the Mekong Delta, Can Tho has rapidly transitioned from a purely transit-oriented city to a standalone destination demanding multi-night stays. The hospitality sector in 2026 reflects this maturity. Gone are the days when visitors were restricted to utilitarian guesthouses; the current landscape offers everything from colonial-revival luxury perched on the Hau River to fiercely independent, design-forward boutique hideaways.</p>
-<p>For the discerning traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.</p>
-<hr>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+For the discerning traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="tier-1-the-riverfront-patriarchs-luxury-and-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -15083,9 +15588,16 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/tan-son-nhat-airport.webp" 
+          alt="Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -15241,8 +15753,17 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
           </h2>
         </div>
       <p>As your flight touches down at Tan Son Nhat International Airport (SGN), most travelers share an identical maiden destination: <strong>District 1</strong>, anchored by the historic clock tower of Ben Thanh Market. As the epicenter of Saigon’s hospitality, heritage dining, cultural attractions, and municipal transit crossroads, reaching Ben Thanh smoothly sets the rhythm for your entire journey.</p>
-<p>However, exiting the arrivals terminal into the humid tropical warmth can be overwhelming. International arrivals are often greeted by aggressive unlicensed taxi touts, sprawling queues for ride-hailing pickups, and a labyrinth of lane designations (Lanes A, B, C, D). Without an advance tactical plan, unsuspecting travelers risk paying 300,000 – 500,000 VND ($12 – $20 USD) for an unlicensed rogue cab or wasting an hour wandering confusing parking garages.</p>
-<p>To ensure your journey commences with ease and fiscal transparency, The Rice Tour details <strong>the 5 best transfer options in 2026</strong>, rigorously evaluated for speed, comfort, and value.</p>
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+However, exiting the arrivals terminal into the humid tropical warmth can be overwhelming. International arrivals are often greeted by aggressive unlicensed taxi touts, sprawling queues for ride-hailing pickups, and a labyrinth of lane designations (Lanes A, B, C, D). Without an advance tactical plan, unsuspecting travelers risk paying 300,000 – 500,000 VND ($12 – $20 USD) for an unlicensed rogue cab or wasting an hour wandering confusing parking garages.<p>To ensure your journey commences with ease and fiscal transparency, The Rice Tour details <strong>the 5 best transfer options in 2026</strong>, rigorously evaluated for speed, comfort, and value.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -15482,9 +16003,16 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80" 
+          alt="Sa Dec Flower Village: The Botanical Matrix of the Mekong (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -15862,9 +16390,16 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" 
+          alt="Can Tho Markets: The 2026 definitive Commercial Matrix" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -16286,9 +16821,16 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=80" 
+          alt="Som Rong Pagoda: The Majestic Khmer Architectural Marvel of Soc Trang (2026)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -16695,9 +17237,16 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&w=1200&q=80" 
+          alt="Cao Van Lau Theater: The Iconic 'Conical Hat' Architectural Masterpiece of Bac Lieu" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -17100,9 +17649,16 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80" 
+          alt="Cai Rang Floating Market: The Ultimate 2026 Exploration and Survival Guide" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -17491,9 +18047,16 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" 
+          alt="Mercury Phu Quoc Resort & Villas: The Premium 2026 Accommodation Partner" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -17879,9 +18442,16 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80" 
+          alt="The Rice Tour 2026: Comprehensive Inbound Travel Services Matrix" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -18289,9 +18859,16 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" 
+          alt="Dinh Cau Phu Quoc: The Spiritual Guardian of the Pearl Island (2026 Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -18665,9 +19242,16 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80" 
+          alt="Bun Nuoc Leo Soc Trang: The Definitive 2026 Guide to the Delta's Masterpiece Noodle Soup" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -19067,9 +19651,16 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80" 
+          alt="The Bat Pagoda (Chua Doi): Soc Trang’s Enigmatic Sanctuary of Nature and Faith" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -19451,9 +20042,16 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80" 
+          alt="Bac Lieu Wind Farm: The Photogenic Coastal Turbine Field of the Mekong (2026 Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
@@ -19840,9 +20438,16 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" 
+          alt="Truong Tuyen Cruise: The Premier Can Tho River Dining Experience (2026 Guide)" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">

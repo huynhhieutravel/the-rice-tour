@@ -47,6 +47,8 @@ sidebar_facts:
     val: "500kg Bomb-Resistant Subterranean Bunker"
 epilogue_title: "A Concrete Hymn to Sovereignty and Peace"
 epilogue: "The Independence Palace is far more than a stage where geopolitical chapters drew to a close; it is a profound testament to Vietnamese architectural ingenuity. Standing upon its emerald lawns under the shade of centennial trees, one gains a renewed, contemplative appreciation for the fragile and priceless gift of national reconciliation."
+
+featured_image: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp"
 ---
 
 # The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon
@@ -93,6 +95,17 @@ On April 30, 1975, the historic breakthrough of the palace gates sealed the end 
 
 Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. Floorplan Sino-Vietnamese Ideograms
 - **The Ideogram CÁT (吉 - Auspiciousness):** The primary structural footprint outlines the character *Cát*, symbolizing eternal fortune and peace for the nation.
 - **The Ideogram KHẨU (口 - Free Speech):** The central presidential balcony on the second level frames the square character *Khẩu*, embodying the imperative of free speech and democratic dialogue.

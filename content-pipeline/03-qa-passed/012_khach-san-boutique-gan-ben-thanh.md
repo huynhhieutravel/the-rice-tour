@@ -8,7 +8,7 @@ read_time: 13
 author: "The Rice Tour Editorial"
 categories: ["Khách Sạn & Nghỉ Dưỡng", "Cẩm Nang Du Lịch Sài Gòn", "Kinh Nghiệm Thực Địa"]
 tags: ["Khách sạn boutique", "Khách sạn di sản", "Chợ Bến Thành", "Quận 1", "Indochine Heritage", "Du lịch có GUU"]
-featured_image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80"
+featured_image: "https://media.thericetour.com/uploads/hotel-continental-saigon.webp"
 qa_status: "passed_100"
 qa_auditor: "Trạm 2 Content QA Auditor"
 audit_notes: "Checked 100% compliance. Zero banned words. Verified 2026 hotel tariffs, walkability to Ben Thanh, architectural heritage notes, and concierge amenities."
@@ -35,6 +35,17 @@ Tại đây, mỗi viên gạch bông lát sàn, mỗi cánh cửa chớp gỗ s
 
 Một khách sạn boutique di sản xuất sắc quanh Chợ Bến Thành phải đáp ứng những tiêu chí khắt khe:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 1. **Bản sắc kiến trúc độc bản:** Không sao chép khuôn mẫu. Thiết kế phải tôn vinh văn hóa bản địa qua các chất liệu truyền thống (gốm nung Lái Thiêu, gỗ tàu đắm Ba Son, hoa sắt Art Deco, tranh lụa hoặc phù điêu sơn mài).
 2. **Quy mô vừa phải & Dịch vụ cá nhân hóa (Bespoke Concierge):** Thường dao động từ 30 đến 120 phòng, đảm bảo sự riêng tư tuyệt đối và nhân viên có thể gọi tên từng vị khách, thấu hiểu sở thích ẩm thực cũng như lịch trình của họ.
 3. **Vị trí đi bộ thuận tiện (Walkability):** Tọa lạc trong cự ly đi bộ dưới 12 phút tới Chợ Bến Thành, ga ngầm Metro và các bảo tàng nghệ thuật lân cận.

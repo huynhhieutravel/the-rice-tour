@@ -8,7 +8,7 @@ published_date: "2026-08-03T11:24:06"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Điểm du lịch nổi tiếng"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/bien-can-tho-1.jpg"
+featured_image: "https://media.thericetour.com/uploads/apartment-cafe.webp"
 phase: 2
 ---
 
@@ -33,6 +33,17 @@ phase: 2
 
 "Cần Thơ có biển không?" – Câu hỏi tưởng chừng như vô lý đối với một thành phố nằm sâu trong đất liền vùng Đồng bằng sông Cửu Long, lại có một câu trả lời khiến nhiều lữ khách bất ngờ. Không phải là biển khơi với sóng vỗ rì rào nước mặn, "Biển Cần Thơ" thực chất là một bãi tắm nhân tạo quy mô lớn, được quy hoạch bài bản ngay tại ngã ba sông Hậu và sông Cần Thơ.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Chính thức đi vào hoạt động từ năm 2014, công trình này đã giải tỏa "cơn khát biển" của người dân miền Tây sông nước. Hàng triệu khối cát trắng không bùn được vận chuyển về đây, tạo nên một đường bờ "biển" thoai thoải dài 400 mét, mở ra một không gian giải trí hoàn toàn khác biệt giữa lòng đô thị.
 
 <figure>

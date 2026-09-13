@@ -8,7 +8,7 @@ published_date: "2026-08-05T16:46:01"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Văn hóa và lễ hội"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-nam-bo-nu-cuoi-me-kong.webp"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp"
 phase: 2
 ---
 
@@ -33,6 +33,17 @@ phase: 2
 
 Trải qua hơn ba thế kỷ hình thành và phát triển, chiếc khăn rằn không chỉ đơn thuần là một vật dụng che nắng, lau mồ hôi, mà đã vươn mình trở thành một biểu tượng bất diệt của văn hóa Nam Bộ. Cùng với chiếc áo bà ba, khăn rằn mang trong mình hơi thở của sự cần mẫn, chất phác và tinh thần kiên cường của những con người đã dãi nắng dầm sương mở cõi đất phương Nam.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Bước sang năm 2026, khi các xu hướng thời trang đến rồi đi, khăn rằn vẫn giữ vững vị thế là món quà lưu niệm mang tính biểu tượng nhất, đồng thời là một di sản văn hóa cần được bảo tồn mạnh mẽ giữa nhịp sống hiện đại.
 
 <figure>

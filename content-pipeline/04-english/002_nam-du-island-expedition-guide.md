@@ -8,7 +8,7 @@ published_date: "2026-08-12T18:09:36"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Discovery & Experience"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp"
 phase: 3
 ---
 
@@ -32,6 +32,17 @@ phase: 3
 
 The Nam Du Archipelago comprises 21 scattered islands and islets resting in the tranquil expanse of Vietnam's southwestern waters. In stark contrast to the frenetic pace and rampant commercialization of neighboring destinations, Nam Du preserves the rugged authenticity of a coastal fishing village, defined by pristine coral reefs, dramatic rocky outcrops, and coconut palms swaying in the maritime breeze.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, anchoring the primary harbor, accommodations, and culinary hubs. From Hon Lon, a network of fishing boats and speedboats branches out, connecting travelers to lesser-known, untamed paradises such as Hon Mau, Hon Dau, Hon Ngang, and Hai Bo Dap.
 
 <figure>

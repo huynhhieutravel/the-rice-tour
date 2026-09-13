@@ -8,7 +8,7 @@ read_time: 12
 author: "The Rice Tour Editorial"
 categories: ["Cẩm Nang Du Lịch Sài Gòn", "Kinh Nghiệm Thực Địa", "Phương Tiện Di Chuyển"]
 tags: ["Xe bus 2 tầng", "Hop on Hop off", "Chợ Bến Thành", "Quận 1", "Sài Gòn City Tour", "Du lịch có GUU"]
-featured_image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80"
+featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp"
 qa_status: "passed_100"
 qa_auditor: "Trạm 2 Content QA Auditor"
 audit_notes: "Checked zero banned words, verified 2026 ticketing, route coordinates around Ben Thanh West Gate, and Ba Son bridge panorama."
@@ -35,6 +35,17 @@ Giữa nhịp sống đô thị cuộn chảy không ngừng của trung tâm Qu
 
 Hệ thống xe bus hai tầng tại TP. Hồ Chí Minh được vận hành bởi đội xe tiêu chuẩn quốc tế với khoang tầng dưới trang bị điều hòa mát lạnh và khoang tầng trên thiết kế không mui (open-top deck), mang lại góc nhìn toàn cảnh 360 độ.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### Những tiện ích độc bản trên xe:
 1. **Hệ thống tai nghe thuyết minh đa ngôn ngữ GPS:** Xe tự động kích hoạt bài thuyết minh lịch sử – văn hóa tại từng tọa độ đi qua, hỗ trợ tới 9 ngôn ngữ chuẩn mực (Việt, Anh, Pháp, Đức, Tây Ban Nha, Nga, Nhật, Trung, Hàn).
 2. **Wi-Fi tốc độ cao & Cổng sạc USB tại từng ghế ngồi:** Hỗ trợ du khách liên tục cập nhật định vị và lưu giữ những khung hình khoảnh khắc mà không lo ngại tình trạng cạn pin thiết bị.

@@ -8,7 +8,7 @@ published_date: "2026-08-05T16:46:01"
 modified_date: "2026-08-23T07:00:00"
 categories: ["Indigenous Culture", "Bespoke Travel Guide", "Traditional Crafts"]
 tags: ["Mekong Delta", "Khăn rằn", "Long Khanh A Village", "Dong Thap", "Intangible Cultural Heritage", "Vietnam Travel 2026"]
-featured_image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp"
 phase: 1
 status: "english_translated"
 reading_time: 12
@@ -58,6 +58,17 @@ The term *rằn* in the southern dialect translates to distinct, intersecting st
 
 Throughout the resistance wars against French and American forces, the *khăn rằn* transcended its daily utility to become an immortal military and cultural emblem of the southern battlefield:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 - **A Silent Identifier:** Amidst the dense foliage of the U Minh forest or the flooded plains of Dong Thap Muoi, the checkered scarf served as a covert insignia among guerilla factions and urban operatives.
 - **The Ultimate Survival Tool:** The scarf was ingeniously utilized to filter heavy alluvial silt from river water before boiling, as a makeshift tourniquet for battlefield injuries, as a wrapper for foraging rations, and even as camouflage beneath enemy artillery.
 - **The Legend of the "Long-Haired Army":** The indelible image of southern female guerillas—clad in the humble black *áo bà ba*, wearing the iconic floppy hat, and with the *khăn rằn* wrapped defiantly around their necks—remains a profound symbol of the indomitable courage of Vietnamese women.

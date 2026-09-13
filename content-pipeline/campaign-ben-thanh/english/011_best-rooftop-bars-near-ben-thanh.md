@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Live jazz, deep soul & vinyl selector nights"
 epilogue_title: "Toasting the Eternal Metropolis"
 epilogue: "Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and the timeless promise of wonder."
+
+featured_image: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp"
 ---
 
 # Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails, Clocktower Panoramas & Nightlife Guide
@@ -70,6 +72,17 @@ From these breezy open-deck perches flanking Quach Thi Trang Square, one surveys
 
 Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### Signature Indigenous Elements in the 2026 Glass:
 - **Southern Delta Botanicals:** Artisanal gins distilled with river herbs, cracked Phu Quoc wild peppercorns, aromatic Tra Bong cinnamon, shredded kaffir lime leaf, and tart calamansi infused with mountain honey.
 - **Homages to Classic Street Traditions:** Clever reinterpretations of morning rituals—from bourbon washed in Robusta coffee butter to delicate saline foams crafted from handcrafted sea salt.

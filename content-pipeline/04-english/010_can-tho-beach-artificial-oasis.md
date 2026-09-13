@@ -8,7 +8,7 @@ published_date: "2026-08-03T11:24:06"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/apartment-cafe.webp"
 phase: 3
 ---
 
@@ -32,6 +32,17 @@ phase: 3
 
 "Does Can Tho have a beach?" – A question that seems geographically absurd for a metropolis anchored deep within the landlocked expanse of the Mekong Delta, yet yields an answer that consistently astonishes voyagers. It is not an ocean of crashing saltwater surf; rather, "Can Tho Beach" (*Biển Cần Thơ*) is a massive, meticulously engineered artificial bathing zone situated squarely at the confluence of the Hau and Can Tho rivers.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Officially commissioned in 2014, this infrastructure quenched the "thirst for the sea" harbored by the Delta's populace. Millions of cubic meters of silt-free white sand were imported to forge a gentle 400-meter shoreline, fracturing the urban concrete and birthing an entirely incongruous recreational expanse in the heart of the city.
 
 <figure>

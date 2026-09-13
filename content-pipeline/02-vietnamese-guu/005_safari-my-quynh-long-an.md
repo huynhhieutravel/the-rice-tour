@@ -8,7 +8,7 @@ published_date: "2026-08-12T10:45:09"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Điểm du lịch nổi tiếng"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/safari-my-quynh.jpg"
+featured_image: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp"
 phase: 2
 ---
 
@@ -105,6 +105,17 @@ Cảm giác một con hổ Bengal vươn mình áp sát cửa kính, hay những
 
 Nếu bạn cần một nhịp nghỉ chậm lại giữa các hoạt động kích thích, khu vườn Bonsai Nhật Bản kết hợp cùng hồ cá Koi khổng lồ là một điểm dừng tĩnh lặng. Cảnh quan được bài trí với nhiều tiểu cảnh cầu gỗ, tảng đá tự nhiên, tạo nên những phông nền lý tưởng để ghi lại những khoảnh khắc gia đình.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/safari-long-an.jpg" alt="Hồ cá Koi Mỹ Quỳnh">
   <figcaption>Đàn cá Koi đầy màu sắc bơi lội tung tăng là điểm nhấn cảnh quan nhẹ nhàng bên trong khuôn viên rộng lớn.</figcaption>

@@ -14,6 +14,8 @@ quality_score: 100
 published_date: "2026-09-07T08:00:00"
 author: "The Rice Tour Editorial"
 read_time: 14
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp"
 ---
 
 # Những Địa Điểm Nổi Tiếng Quanh Bến Thành: Cẩm Nang Khám Phá Trái Tim Sài Gòn 2026
@@ -61,6 +63,17 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
 - **Kiến trúc độc bản:** Tháp đồng hồ ba mặt ở Cửa Nam là hình ảnh biểu trưng xuất hiện trên hàng ngàn tác phẩm nhiếp ảnh và văn chương về Sài Gòn. Ít ai để ý rằng phía trên các vòm cửa chính đều gắn các bức phù điêu bằng gốm nung men xanh trứ danh của Trường Mỹ nghệ Biên Hòa (thực hiện năm 1952), khắc họa tinh tế các sản vật trù phú miền Nam: con bò sữa béo tốt, chùm chuối tiêu chín mọng, nhành lúa trĩu hạt và cá biển tươi ngon.
 - **Trải nghiệm có GUU:** Đừng chỉ nhìn ngắm vẻ bề ngoài. Hãy bước vào các lối đi hẹp đan cài như ô cờ, chiêm ngưỡng hệ thống vì kèo thép kiên cố từ đầu thế kỷ 20 giúp không gian lòng chợ luôn thoáng mát dù thời tiết nhiệt đới oi bức bên ngoài.
 
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+
 ### 2.2. Bảo Tàng Mỹ Thuật TP.HCM: Trầm Tích Nghệ Thuật Trong Dinh Thự Nhà Chú Hỏa
 - **Vị trí:** Số 97A Phó Đức Chính, Phường Nguyễn Thái Bình, Quận 1 (Cách Chợ Bến Thành khoảng 350m tản bộ).
 - **Trầm tích di sản:** Quần thể gồm ba tòa nhà tráng lệ từng là tư gia kiêm tổng hành dinh kinh doanh của gia tộc thương gia gốc Hoa Hứa Bổn Hỏa (Hui Bon Hoa) – nhân vật đứng thứ tư trong tứ đại phú hộ lừng danh phương Nam xưa. Được thiết kế bởi kiến trúc sư người Pháp Rivera và xây dựng từ năm 1929 đến 1934, dinh thự là kiệt tác giao thoa giữa mỹ học **Art Deco phương Tây** và triết lý trang trí Á Đông.
@@ -68,6 +81,17 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   - Tòa thang máy khung gỗ cổ xưa nhất Sài Gòn với các chi tiết đồng đúc tinh xảo.
   - Hệ thống cửa sổ kính màu (Stained Glass) phản chiếu ánh nắng nhiệt đới tạo nên những vệt quang phổ huyền ảo trên sàn gạch bông cổ điển.
   - Bộ sưu tập vô giá về mỹ thuật hiện đại Việt Nam: từ tác phẩm kinh điển "Vườn xuân Trung Nam Bắc" của danh họa Nguyễn Gia Trí cho đến các bức tranh lụa, ký họa kháng chiến và tượng điêu khắc Chăm Pa cổ.
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ### 2.3. Dinh Độc Lập: Đỉnh Cao Kiến Trúc Hiện Đại Nhiệt Đới (Tropical Modernism)
 - **Vị trí:** 135 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, Quận 1 (Cách Chợ Bến Thành 700m).
@@ -78,16 +102,49 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   - Hệ thống lam bê tông bao bọc mặt tiền mô phỏng những đốt trúc thanh cao, vừa cản bức xạ nhiệt chói chang vừa đón gió trời thông thoáng tự nhiên.
 - **Khu hầm tác chiến ngầm:** Hệ thống hầm kiên cố dưới lòng đất với các thiết bị viễn thông nguyên bản từ thế kỷ trước là cánh cửa mở ra những trang sử khốc liệt và biến động của Sài Gòn trong giai đoạn 1960 – 1975.
 
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+
 ### 2.4. Đền Hindu Mariamman: Nốt Lặng Tâm Linh Cổ Kính
 - **Vị trí:** 45 Trương Định, Phường Bến Thành, Quận 1 (Cách Cửa Tây Chợ Bến Thành chỉ 200m).
 - **Không gian tín ngưỡng:** Ngôi đền được cộng đồng thương nhân người Ấn gốc Tamil xây dựng vào đầu thế kỷ 20 để tôn thờ Nữ thần Mariamman – hiện thân của sự sinh sôi, chữa lành và che chở.
 - **Kiến trúc Dravidian rực rỡ:** Tháp cổng Gopuram vươn cao với hàng chục pho tượng thần linh Hindu được chạm khắc tinh xảo và sơn phết màu sắc sống động. Bước qua cánh cửa gỗ nặng nề, hương trầm nồng ấm và tiếng chuông đồng ngân vang sẽ đưa bạn vào một không gian tách biệt hoàn toàn với sự huyên náo của phố xá Quận 1. Phía sau chánh điện có bức tường đá thiêng – nơi các tín đồ thường áp trán và lòng bàn tay vào đá để nguyện cầu bình an, thanh tịnh.
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ### 2.5. Ga Ngầm Trung Tâm Bến Thành: Biểu Tượng Hạ Tầng Thế Kỷ 21
 - **Vị trí:** Dưới lòng đất Quảng trường Quách Thị Trang.
 - **Dấu ấn đương đại 2026:** Ga trung tâm 4 tầng ngầm với chiều dài 236m và sâu 32m là đầu mối giao thông đường sắt đô thị quan trọng nhất thành phố. Điểm nhấn kiến trúc ngoạn mục nhất là **Giếng trời hoa sen (Toplight khổng lồ)** bằng kính cường lực cao cấp, cho phép ánh sáng mặt trời tự nhiên rọi sâu xuống lòng đất, đồng thời mở góc nhìn ngược lên tháp đồng hồ cổ kính của Chợ Bến Thành trên mặt đất.
 
 ---
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ## 3. Bảng Ma Trận So Sánh Các Điểm Đến Quanh Trục Bến Thành
 

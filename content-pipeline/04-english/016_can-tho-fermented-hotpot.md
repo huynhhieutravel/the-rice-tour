@@ -8,7 +8,7 @@ published_date: "2026-07-28T09:28:52"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Toplist", "Local Specialties"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 To the uninitiated, *Lẩu Mắm* (Fermented Fish Hotpot) is an olfactory shock. To the people of the Mekong Delta, it is the undisputed king of communal dining—a boiling cauldron that encapsulates the region’s agricultural biodiversity and its historical reliance on preserved river fish.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DXbolQLlP7G/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Can Tho, as the logistical and cultural capital of the Delta, is the ultimate arena for this dish. For the 2026 culinary adventurer, understanding *Lẩu Mắm* requires venturing beyond the initial pungency to appreciate the incredibly complex, savory depths of a broth built upon fermented Gourami or Snakehead fish, tempered with coconut water, lemongrass, and pork bones.
 
 ---

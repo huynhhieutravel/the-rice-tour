@@ -8,7 +8,7 @@ published_date: "2026-08-04T19:09:27"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp"
 phase: 3
 ---
 
@@ -33,6 +33,17 @@ phase: 3
 
 Amidst the relentless rhythm of the floral city of Sa Dec, the **Huynh Thuy Le Ancient House** (also known as the Huynh Family Mansion) stands in silent vigil along the riverbank, an enduring guardian of the opulent memories of the Southern elite. This edifice captivates not only architectural purists studying the fusion of East and West, but also serves as a pilgrimage site for romantic souls seeking the echoes of a tragic love affair that resonated globally in Marguerite Duras’s novel, *L'Amant (The Lover)*.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/nha-co-sa-dec.jpg" alt="Huynh Thuy Le Ancient House">
   <figcaption>The striking French Renaissance-inspired facade of the Huynh Thuy Le Ancient House, viewed from Nguyen Hue street.</figcaption>

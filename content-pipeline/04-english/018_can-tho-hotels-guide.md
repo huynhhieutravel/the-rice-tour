@@ -8,7 +8,7 @@ published_date: "2026-07-27T11:40:57"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Hotels", "Toplist"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/tan-son-nhat-airport.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 As the undisputed capital of the Mekong Delta, Can Tho has rapidly transitioned from a purely transit-oriented city to a standalone destination demanding multi-night stays. The hospitality sector in 2026 reflects this maturity. Gone are the days when visitors were restricted to utilitarian guesthouses; the current landscape offers everything from colonial-revival luxury perched on the Hau River to fiercely independent, design-forward boutique hideaways.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C45sUHcy5wu/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the discerning traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.
 
 ---

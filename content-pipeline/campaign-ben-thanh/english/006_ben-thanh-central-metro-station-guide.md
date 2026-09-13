@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Full-Height Glass Platform Screen Doors"
 epilogue_title: "The Velocity of a Renewed Metropolis"
 epilogue: "Ben Thanh Central Metro Station is far more than an underground web of rails and escalators; it is the physical manifestation of Ho Chi Minh City’s soaring contemporary ambition. Gazing upward through the lotus skylight at the century-old market tower while listening to the whisper of arriving electric trains, the thoughtful traveler realizes that Saigon’s true greatness lies in its capacity to honor its roots while fearlessly accelerating into tomorrow."
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp"
 ---
 
 # Ben Thanh Central Metro Station: Navigating Saigon’s Futuristic Underground Pulse
@@ -81,6 +83,17 @@ Enshrined as the crowning technological triumph within our guide to [things to d
 
 Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll across a pristine, granite-paved public concourse. Steps away from the historic market entrances, sleek escalator portals invite commuters down into an immaculate underground city of retail promenades, artisan kiosks, and transit platforms.
 
 ---

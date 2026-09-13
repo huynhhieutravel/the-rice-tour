@@ -268,6 +268,7 @@ const articleMetadata = {
   },
 
   "things-to-do-near-ben-thanh-market": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp",
     subtitle: "An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses",
     lead: "If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Within a gentle 1-kilometer radius, colonial elegance, tropical modernism, and a visionary 2026 underground transit hub converge in timeless harmony.",
     readTime: 14,
@@ -294,6 +295,7 @@ const articleMetadata = {
   },
 
   "hcmc-museum-of-fine-arts-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp",
     subtitle: "A Mesmerizing Intersection of French Art Deco and Southern Feng Shui",
     lead: "Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.",
     readTime: 12,
@@ -320,6 +322,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-market-food-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp",
     subtitle: "Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers",
     lead: "If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.",
     readTime: 12,
@@ -346,6 +349,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-one-day-walking-tour": {
+    featuredImage: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp",
     subtitle: "A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset",
     lead: "The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.",
     readTime: 13,
@@ -372,6 +376,7 @@ const articleMetadata = {
   },
 
   "independence-palace-saigon-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp",
     subtitle: "Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)",
     lead: "Few architectural monuments mirror the tectonic shifts of modern history with the stoic poetry of the Independence Palace. Situated amidst 12 hectares of ancient dipterocarp forest, this masterpiece of Tropical Modernism remains the definitive symbol of Saigon’s dramatic journey from war to peace.",
     readTime: 13,
@@ -398,6 +403,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-central-metro-station-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp",
     subtitle: "Architecture, Underpass Network & Essential Commuter Logistics for Saigon Line 1 (2026)",
     lead: "Descending beneath Quach Thi Trang Square, the Ben Thanh Central Station represents a monumental leap into Saigon's urban future. As the four-story subterranean heart of the newly commissioned Metro Line 1, this architectural marvel harmonizes public transit with modern civic spaces.",
     readTime: 12,
@@ -424,6 +430,7 @@ const articleMetadata = {
   },
 
   "mariamman-hindu-temple-saigon": {
+    featuredImage: "https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp",
     subtitle: "Raja Gopuram Spire, Sacred Stone Wall Rituals & The Chettiar Legacy (2026)",
     lead: "Just 250 meters from the bustling aisles of Ben Thanh Market, the incandescent crimson towers of the Mariamman Hindu Temple rise into the southern sky. For over a century, this sanctuary has stood as a sacred crossroad where Tamil Chettiar traders and multi-ethnic Saigon communities converge in quiet reverence.",
     readTime: 11,
@@ -450,6 +457,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-market-shopping-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp",
     subtitle: "Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)",
     lead: "With over 1,400 active stalls sheltered beneath its soaring timber-trussed roof, Ben Thanh Market is both a bustling commercial bazaar and an intimate microcosm of Vietnamese tradecraft. Navigating its vibrant labyrinth requires discernment, cultural appreciation, and the gracious art of civilized negotiation.",
     readTime: 12,
@@ -476,6 +484,7 @@ const articleMetadata = {
   },
 
   "saigon-hop-on-hop-off-bus-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp",
     subtitle: "Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes",
     lead: "Gliding 4 meters above urban avenues, viewing Saigon from the open deck of a double-decker bus unlocks a completely elevated sensory perspective. From the gilded Renaissance contours of the Central Post Office to the sweeping river breeze across Ba Son Bridge at dusk, this curated transit circuit connects the city’s colonial memory with its modern horizon.",
     readTime: 12,
@@ -502,6 +511,7 @@ const articleMetadata = {
   },
 
   "secret-apartment-cafes-near-ben-thanh": {
+    featuredImage: "https://media.thericetour.com/uploads/apartment-cafe.webp",
     subtitle: "Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors (2026)",
     lead: "Tucked behind peeling ochre facades and shadowy corridors within a ten-minute radius of Ben Thanh Market, mid-century residential blocks have undergone an enchanting renaissance. Here, independent baristas, ceramicists, and antique collectors breathe vibrant creative life into colonial apartments.",
     readTime: 12,
@@ -528,6 +538,7 @@ const articleMetadata = {
   },
 
   "best-rooftop-bars-near-ben-thanh": {
+    featuredImage: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp",
     subtitle: "Twilight Cocktails, Clocktower Panoramas & Nightlife Guide (2026)",
     lead: "As equatorial twilight yields to indigo dusk, Saigon’s iconic District 1 undergoes an intoxicating nocturnal metamorphosis. Perched high above the animated kinetic currents of Quach Thi Trang Square or concealed behind secret speakeasies, a refined constellation of open-air sky lounges invites the discerning voyager to toast the city beneath a canopy of stars.",
     readTime: 12,
@@ -554,6 +565,7 @@ const articleMetadata = {
   },
 
   "boutique-hotels-near-ben-thanh": {
+    featuredImage: "https://media.thericetour.com/uploads/hotel-continental-saigon.webp",
     subtitle: "Saigon’s Premier Indochine Sanctuaries & Design Stays (2026)",
     lead: "For the discerning voyager, accommodation in Saigon is far more than a nocturnal resting place—it is the emotional anchor of the journey. Travelers with a discerning eye seek out intimate boutique sanctuaries and protected heritage mansions tucked along the tamarind-shaded avenues surrounding Ben Thanh Market, where colonial romance and contemporary tropical luxury converge in exquisite harmony.",
     readTime: 13,
@@ -580,6 +592,7 @@ const articleMetadata = {
   },
 
   "things-to-do-in-ben-thanh-market": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp",
     subtitle: "15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows",
     lead: "Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual.",
     readTime: 14,
@@ -606,6 +619,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-market-ultimate-travel-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp",
     subtitle: "The Definitive A-Z Survival Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics",
     lead: "Stepping into Saigon's centennial market can feel overwhelming without advance intelligence. From decoding stall numbering systems and verified parking basements to mastering civilized bargaining etiquette, this comprehensive field manual ensures an effortless, authentic voyage.",
     readTime: 15,
@@ -632,6 +646,7 @@ const articleMetadata = {
   },
 
   "ben-thanh-market-scams-safety-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp",
     subtitle: "7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols",
     lead: "While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence.",
     readTime: 14,
@@ -658,6 +673,7 @@ const articleMetadata = {
   },
 
   "money-exchange-ben-thanh-ha-tam-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp",
     subtitle: "Insider Exchange Rates, Banknote Quality Rules & Security Guide at Ha Tam Gold Shop (2026)",
     lead: "Across the West Gate of Ben Thanh Market lies Saigon's premier open currency exchange nexus: Ha Tam Gold Shop. Learn how to secure near-zero spread market rates for USD, EUR, JPY, and AUD with zero commission and lightning-fast execution.",
     readTime: 13,
@@ -684,6 +700,7 @@ const articleMetadata = {
   },
 
   "parking-guide-near-ben-thanh-market": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp",
     subtitle: "6 Official Basements, Regulated Municipal Rates & Curbside Scam Prevention (2026 Master Guide)",
     lead: "District 1's dense urban grid makes finding legitimate parking a major headache. Navigate directly to 6 verified, surveillance-guarded facilities—from the state-of-the-art Metro basement to climate-controlled malls—and avoid aggressive curbside parking touts.",
     readTime: 12,
@@ -710,6 +727,7 @@ const articleMetadata = {
   },
 
   "tan-son-nhat-airport-to-ben-thanh-transfer-guide": {
+    featuredImage: "https://media.thericetour.com/uploads/tan-son-nhat-airport.webp",
     subtitle: "5 Best Transfer Options from SGN to District 1: Express Bus 109, Reputable Cabs & VIP Private Cars (2026)",
     lead: "Arriving at Tan Son Nhat Airport (SGN) can be daunting with unlicensed taxi touts and complex terminal pickup lanes. Here is your definitive breakdown of the 5 fastest, safest, and most cost-effective routes straight to Ben Thanh Market in District 1.",
     readTime: 14,
@@ -965,15 +983,23 @@ function processMarkdownToMagazineHtml(file) {
   const leadSnippet = meta.lead || "A curated field guide designed for intentional voyagers seeking deep cultural resonance and seamless navigation across Vietnam's iconic landscapes.";
   const readTime = meta.readTime || 10;
   const pubDate = fm.published_date ? new Date(fm.published_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Aug 26, 2026';
+  const featuredImage = meta.featuredImage || fm.featured_image || "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp";
 
   const fullHtml = `<!-- layout: landing -->
 <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
-      <div class="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-[#1a1c23] to-[#0f172a]">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="${featuredImage}" 
+          alt="${title}" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
       </div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">

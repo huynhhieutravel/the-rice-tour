@@ -8,7 +8,7 @@ published_date: "2026-08-04T10:21:13"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Điểm du lịch nổi tiếng"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/khu-du-lich-lan-vuong.jpg"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp"
 phase: 2
 ---
 
@@ -33,6 +33,17 @@ phase: 2
 
 Trong thập kỷ qua, mô hình du lịch sinh thái miệt vườn tại Nam Bộ đã bùng nổ với hàng trăm cơ sở ra đời. Tuy nhiên, Khu du lịch sinh thái Lan Vương vẫn giữ vững được vị thế dẫn đầu trong phân khúc "Trải nghiệm vận động thực tế". Khác với những khu nghỉ dưỡng tĩnh lặng, Lan Vương chào đón lữ khách bằng những tiếng hò reo vang vọng từ các trò chơi dưới nước, mùi bùn non đặc trưng của những con mương cạn, và sự náo nhiệt của những đoàn Team building lên đến hàng trăm người.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Đến với Lan Vương là chấp nhận rũ bỏ sự chỉn chu của chốn đô thị, khoác lên mình bộ đồ bà ba nâu sòng và sẵn sàng cho một ngày "lấm bùn" đúng nghĩa.
 
 <figure>

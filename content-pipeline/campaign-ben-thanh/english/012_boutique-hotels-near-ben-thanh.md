@@ -47,6 +47,8 @@ sidebar_facts:
     val: "3–4 weeks in advance (Nov – Apr dry season)"
 epilogue_title: "Awakening to Saigon’s Living Grace"
 epilogue: "After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself."
+
+featured_image: "https://media.thericetour.com/uploads/hotel-continental-saigon.webp"
 ---
 
 # Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries & Design Stays
@@ -70,6 +72,17 @@ In these sanctuaries, every encaustic cement tile pressed in historic Mekong kil
 
 To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 1. **Unmistakable Architectural Identity:** Design that eschews sterile corporate formulas in favor of authentic local vernacular—handcrafted ceramic accents, French wrought-iron transoms, lacquer artwork, or serene Zen water gardens.
 2. **Intimate Scale & Bespoke Concierge Care:** Ranging from 30 to 120 guest chambers, ensuring that hotel concierges address voyagers by name, anticipate dining preferences, and curate private off-the-beaten-track city strolls.
 3. **Effortless Pedestrian Mobility (*Walkability*):** Situated within a 12-minute shaded walk from Ben Thanh Market, the subterranean Metro central interchange, and major fine arts museums.

@@ -8,7 +8,7 @@ published_date: "2026-08-02T16:57:02"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Culinary Reviews", "Local Specialties"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/hotel-continental-saigon.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 Perched 1,500 meters above sea level on the Langbiang Plateau, Da Lat’s culinary identity is inextricably bound to its crisp, alpine climate and its volcanic red basalt soil. Unlike the sweet-leaning palate of the Mekong Delta or the heavily spiced dishes of Central Vietnam, the gastronomy of this misty city is designed for one primary function: thermal comfort. 
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DO5CuaIgKzj/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the 2026 culinary traveler, Da Lat is no longer just a haven of French colonial nostalgia; it is a dynamic intersection of indigenous highland agriculture and generational street food mastery.
 
 ---

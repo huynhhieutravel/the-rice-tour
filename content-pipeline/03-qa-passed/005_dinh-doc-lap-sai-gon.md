@@ -14,6 +14,8 @@ quality_score: 100
 published_date: "2026-09-07T10:00:00"
 author: "The Rice Tour Editorial"
 read_time: 13
+
+featured_image: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp"
 ---
 
 # Dinh Độc Lập Sài Gòn: Đỉnh Cao Kiến Trúc Nhiệt Đới & Trầm Tích Lịch Sử Phương Nam
@@ -58,6 +60,17 @@ Vào lúc 11 giờ 30 phút ngày 30 tháng 4 năm 1975, chiếc xe tăng mang s
 
 Khác biệt hoàn toàn với các công trình thời thuộc địa rập khuôn phương Tây, Dinh Độc Lập là một bài thơ kiến trúc thâm trầm mang đậm tư tưởng Á Đông:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. Mặt Bằng Tạo Hình Các Hán Tự Triết Học
 - **Chữ CÁT (吉 - Tốt lành):** Toàn bộ mặt bằng tổng thể của khối nhà chính tạo nên hình chữ Cát, ngụ ý mang lại vận khí hanh thông, thái bình thịnh trị cho đất nước.
 - **Chữ KHẨU (口 - Lời nói tự do):** Tầng bao lơn danh dự ở tầng 2 tạo thành hình chữ Khẩu, thể hiện tư tưởng tôn trọng tiếng nói của nhân dân và tự do ngôn luận.

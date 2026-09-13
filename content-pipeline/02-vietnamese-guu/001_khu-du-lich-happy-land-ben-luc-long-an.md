@@ -8,7 +8,7 @@ published_date: "2026-08-12T21:17:52"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Điểm du lịch nổi tiếng"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/happy-land-1.jpg"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp"
 phase: 2
 ---
 

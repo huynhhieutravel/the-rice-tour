@@ -8,7 +8,7 @@ published_date: "2026-08-12T10:45:09"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp"
 phase: 3
 ---
 
@@ -104,6 +104,17 @@ The visceral thrill of a Bengal tiger pressing its weight against reinforced gla
 
 If the adrenaline of the safari demands a contemplative pause, the Japanese-inspired Bonsai gardens, seamlessly integrated with massive Koi ponds, offer a sanctuary of stillness. The landscape is masterfully curated with rustic wooden bridges and monolithic natural stones, providing a flawless backdrop for documenting family memories.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/safari-long-an.jpg" alt="My Quynh Koi Pond">
   <figcaption>A kaleidoscope of Koi fish gliding through the water provides a soothing visual contrast to the vast, untamed reserve.</figcaption>

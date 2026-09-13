@@ -8,7 +8,7 @@ published_date: "2026-07-29T21:17:00"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 In the labyrinthine waterways surrounding the Cai Rang Floating Market, the **Sau Hoai Rice Noodle Oven** stands as a living museum of Mekong Delta culinary heritage. For over four decades, the Hoai family has maintained a delicate, analog rhythm in a rapidly industrializing region. While modern factories churn out dried noodles by the ton, Sau Hoai preserves the tactile, labor-intensive art of hand-milled, sun-dried *Hu Tieu*.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the cultural voyager in 2026, this is not merely a rest stop; it is an immersive study in agricultural ingenuity, culminating in one of the most innovative street food crossovers in the region: the so-called "Pizza Hu Tieu."
 
 ---

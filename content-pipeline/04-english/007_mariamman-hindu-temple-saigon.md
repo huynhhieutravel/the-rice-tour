@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Yellow marigolds & green coconuts"
 epilogue_title: "The Universal Language of Reverence"
 epilogue: "The Mariamman Hindu Temple stands as a radiant testament to Saigon's timeless capacity for cultural inclusion. Within these cool colonnades, language, nationality, and creed dissolve before the universal pursuit of inner tranquility. Taking a contemplative pause here reminds the voyager that mindful travel is ultimately a pilgrimage into the quiet sanctuaries of the human spirit."
+
+featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp"
 ---
 
 # Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality in District 1
@@ -91,6 +93,17 @@ To maintain their ancestral faith, the Chettiar merchants funded the constructio
 
 Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. The Gopuram: Gateway Between the Earthly and Divine
 Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.
 

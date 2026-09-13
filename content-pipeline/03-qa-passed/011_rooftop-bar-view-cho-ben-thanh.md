@@ -8,7 +8,7 @@ read_time: 12
 author: "The Rice Tour Editorial"
 categories: ["Đời Sống Đêm Sài Gòn", "Cẩm Nang Du Lịch Sài Gòn", "Kinh Nghiệm Thực Địa"]
 tags: ["Rooftop Bar", "Speakeasy Bar", "Chợ Bến Thành", "Quận 1", "Cocktail Sài Gòn", "Du lịch có GUU"]
-featured_image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80"
+featured_image: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp"
 qa_status: "passed_100"
 qa_auditor: "Trạm 2 Content QA Auditor"
 audit_notes: "Checked 100% compliance. Zero banned words. Verified 2026 cocktail matrices, rooftop coordinates overlooking Ben Thanh roundabout, and safe transit notes."
@@ -35,6 +35,17 @@ Từ trên những sân thượng tầng thượng (rooftop) quanh quảng trư�
 
 Đời sống quán bar tại khu vực Bến Thành năm 2026 đã bước qua giai đoạn của những dòng đồ uống công nghiệp đại trà. Thay vào đó, đây là lãnh địa của các bartender tài năng—những người nghệ sĩ pha chế coi ly cocktail như một tác phẩm kể chuyện về văn hóa và thổ nhưỡng Việt Nam.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### Điểm nhấn nguyên liệu địa phương trong ly cocktail 2026:
 - **Hương vị nhiệt đới & Thảo mộc phương Nam:** Rượu Gin thủ công sông Mê Kông chưng cất cùng hoa hồi Lạng Sơn, tiêu đen Phú Quốc giã dập, quế Trà Bồng, lá chanh sần và quả tắc vàng ngâm mật ong rừng.
 - **Biến tấu từ thức uống đường phố:** Những ly cocktail sáng tạo lấy cảm hứng từ trà đào cam sả, cà phê sữa đá ủ rượu Rum mộc, hoặc bọt kem muối biển tinh tế.

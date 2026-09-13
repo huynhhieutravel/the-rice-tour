@@ -10,6 +10,8 @@ status: "rewritten-guu"
 published_date: "2026-09-07T10:30:00"
 author: "The Rice Tour Editorial"
 read_time: 12
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp"
 ---
 
 # Ga Ngầm Metro Bến Thành 2026: Trải Nghiệm Tuyến Tàu Đô Thị Đầu Tiên Của TP.HCM
@@ -42,6 +44,17 @@ Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm 
 
 Sau hơn một thập kỷ thi công với công nghệ đào hầm TBM (Tunnel Boring Machine) tiên tiến của Nhật Bản cùng hàng ngàn kỹ sư, công nhân Việt Nam, Ga trung tâm Bến Thành đã hoàn thành việc tái thiết toàn bộ cảnh quan quảng trường Quách Thị Trang. 
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Khu vực lầy lội hồ Bồ Rùa thời phong kiến, bùng binh giao thông đông đúc thời Pháp thuộc nay đã lột xác thành một quảng trường đi bộ lát đá granite phẳng phiu trên mặt đất, kết nối trực tiếp với không gian thương mại và đường sắt ngầm hiện đại bên dưới.
 
 Sự xuất hiện của ga metro đã thay đổi căn bản cách thức tiếp cận di sản của du khách: từ ga Bến Thành, bạn chỉ cần bước lên mặt đất vài bước chân là đã chạm vào Chợ Bến Thành, tản bộ 5 phút đến [Bảo tàng Mỹ thuật TP.HCM](/bao-tang-my-thuat-tphcm), hoặc rảo bước 9 phút đến [Dinh Độc Lập](/dinh-doc-lap-sai-gon).

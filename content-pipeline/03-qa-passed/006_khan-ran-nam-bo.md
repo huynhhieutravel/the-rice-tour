@@ -11,6 +11,8 @@ tags: ["Khăn rằn", "Làng nghề Long Khánh A", "Đồng Tháp", "Di sản p
 phase: 3
 status: "qa_passed"
 reading_time: 14
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp"
 ---
 
 # Khăn rằn Nam Bộ: Biểu tượng 300 năm và Di sản Dệt choàng Long Khánh A (Cập nhật 2026)
@@ -52,6 +54,17 @@ Từ *"rằn"* trong phương ngữ Nam Bộ có nghĩa là sọc đan chéo. T�
 
 Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên trên công năng sinh hoạt hằng ngày để trở thành một biểu tượng quân sự và văn hóa bất tử của chiến trường miền Nam:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbpaAa5CW0n/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 - **Ám hiệu nhận diện thầm lặng:** Giữa rừng tràm U Minh hay cánh đồng ngập nước Đồng Tháp Mười, chiếc khăn rằn quàng cổ là dấu hiệu nhận diện đồng đội của các chiến sĩ giao liên và biệt động thành.
 - **Vật dụng đa năng nơi chiến hào:** Khăn được dùng để lọc nước phù sa trước khi đun sôi, làm băng cứu thương tạm thời, gói cơm vắt hành quân và ngụy trang dưới làn pháo kích.
 - **Huyền thoại "Đội quân tóc dài":** Hình ảnh những nữ du kích miền Nam trong chiếc áo bà ba đen, nón tai bèo và chiếc khăn rằn kiêu hãnh quàng cổ đã trở thành biểu tượng sống động về lòng quả cảm phi thường của phụ nữ Việt Nam.

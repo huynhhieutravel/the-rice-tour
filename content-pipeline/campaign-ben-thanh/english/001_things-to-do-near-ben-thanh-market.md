@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Ben Thanh Central Metro Station Line 1"
 epilogue_title: "Preserving the Timeless Soul of Saigon"
 epilogue: "No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home."
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp"
 ---
 
 # Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide
@@ -96,6 +98,17 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
 - **Iconic Architecture:** The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam's natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.
 - **Conscious Travel Insight:** Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.
 
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWrXmkKjI3V/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+
 ### 2.2. HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
 - **Location:** 97A Pho Duc Chinh Street, Nguyen Thai Binh Ward, District 1 (350 meters from the market via Le Thi Hong Gam).
 - **Gilded Heritage:** This magnificent three-mansion estate once served as the private residence and headquarters of **Hui Bon Hoa** (popularly known as *Chú Hỏa*), the legendary Chinese-Vietnamese merchant whose real estate empire defined colonial Saigon. Designed between 1929 and 1934 by French architect Rivera, the complex represents an opulent marriage of **Western Art Deco, Beaux-Arts flourishes, and traditional Feng Shui geomancy**.
@@ -103,6 +116,17 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   - One of Saigon's earliest antique timber-cage elevators, embellished with ornate gilded brass fretwork.
   - Stained glass transom panels that filter tropical sunbeams into vibrant geometric tapestries across geometric encaustic cement tiles.
   - Vietnam's premier modern art collection, anchored by Nguyen Gia Tri's lacquer masterpiece *Spring Garden of North, Central, and South Vietnam*, juxtaposed against classical Cham stone sculptures.
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C2m7S13hOJl/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ### 2.3. The Independence Palace: High Zenith of Tropical Modernism
 - **Location:** 135 Nam Ky Khoi Nghia Street, Ben Thanh Ward, District 1 (700 meters north of the market).
@@ -113,16 +137,49 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   - Concrete facade louvers evoke slender bamboo culms (*đốt trúc*), ingeniously deflecting harsh equatorial glare while drawing prevailing monsoons through airy colonnades.
 - **The Underground Bunker:** Descend into the fortified subterranean command center, preserved with vintage map tables, radio teleprinters, and blast doors that bear silent witness to the climatic denouement of the Vietnam War in April 1975.
 
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWQMOPbkwxc/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
+
 ### 2.4. Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
 - **Location:** 45 Truong Dinh Street, Ben Thanh Ward, District 1 (200 meters west of the market).
 - **Sacred Sanctuary:** Established in the early 20th century by Tamil merchant communities from South India, this temple is dedicated to Goddess Mariamman, the celestial bringer of fertility, health, and monsoon rains.
 - **Dravidian Artistry:** The towering *gopuram* gateway ascends in tiered majesty, populated by hand-painted sculptures of Hindu deities depicted in saturated hues. Stepping across the threshold, the fragrant warmth of burning incense and camphor oil offers an immediate sensory departure from District 1's urban bustle. Behind the main altar, devotees practice the contemplative ritual of pressing their foreheads and open palms against the sacred granite sanctuary walls to absorb positive spiritual vibrations.
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV7fGDWE7NX/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ### 2.5. Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
 - **Location:** Deep beneath Quach Thi Trang Square.
 - **Contemporary Marvel:** Descending 32 meters across four underground levels, this 236-meter-long terminal anchors the city's newly inaugurated urban transit network. Its architectural showpiece is the **Lotus Toplight**—a monumental circular skylight engineered from structural architectural glass. By day, sunlight cascades into the subterranean concourse, offering commuters looking upward a striking sightline to the century-old clock tower resting on the plaza above.
 
 ---
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C6c2x2NyzO6/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 
 ## 3. Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
 

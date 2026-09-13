@@ -8,7 +8,7 @@ published_date: "2026-07-27T14:37:36"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Culture and Festivals", "Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 Anchored at the base of the imposing Sam Mountain near the Cambodian border, the **Temple of Ba Chua Xu** (The Lady of the Realm) is not merely a local shrine—it is the beating spiritual heart of the entire Mekong Delta. Drawing an estimated 5 million pilgrims annually, this sanctuary represents a profound synthesis of indigenous animism, orthodox Buddhism, and deeply rooted local mythology.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the cultural observer in 2026, the temple offers an unfiltered, highly kinetic window into the devotional mechanics of Southern Vietnam. It is a place of intense sensory overload: the thick, unbroken haze of sandalwood incense, the glittering mounds of offered gold leaf, and the rhythmic chanting of thousands seeking prosperity, fertility, and protection.
 
 ---

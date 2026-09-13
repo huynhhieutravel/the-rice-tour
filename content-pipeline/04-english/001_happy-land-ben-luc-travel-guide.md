@@ -8,7 +8,7 @@ published_date: "2026-08-12T21:17:52"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp"
 phase: 3
 ---
 

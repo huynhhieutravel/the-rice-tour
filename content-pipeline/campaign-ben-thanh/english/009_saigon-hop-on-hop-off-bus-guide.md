@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Traditional conical hat, mineral water & rain poncho"
 epilogue_title: "The Urban Rhythm from Above"
 epilogue: "Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. Look upward: past the neon shop signs, French iron balconies rest serenely beneath flowering flame trees, and temple incense mingles with the river breeze. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul."
+
+featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp"
 ---
 
 # Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes
@@ -70,6 +72,17 @@ Following the unified 2026 opening of the Ben Thanh Central Metro Station and th
 
 The Saigon double-decker fleet complies with international sightseeing standards, featuring a climate-controlled lower salon and an expansive open-air upper deck offering 360-degree panoramic vantage points.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### Signature Features Onboard:
 1. **GPS-Synchronized Multi-Lingual Audio Commentary:** Automatically triggered by satellite geo-coordinates, delivering vivid cultural and architectural insights in 9 languages (English, French, German, Spanish, Russian, Japanese, Mandarin, Korean, and Vietnamese).
 2. **High-Speed Wi-Fi & Individual USB Charging Ports:** Ensuring travelers remain seamlessly connected to navigation apps and camera equipment throughout the loop.

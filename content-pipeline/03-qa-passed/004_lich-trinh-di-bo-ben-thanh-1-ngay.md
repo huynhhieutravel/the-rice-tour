@@ -14,6 +14,8 @@ quality_score: 100
 published_date: "2026-09-07T09:30:00"
 author: "The Rice Tour Editorial"
 read_time: 13
+
+featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp"
 ---
 
 # Lộ Trình Đi Bộ 1 Ngày Quanh Bến Thành: Di Sản, Cà Phê Cổ & Hoàng Hôn Bến Bạch Đằng
@@ -45,6 +47,17 @@ Là một hợp phần cốt lõi trong hệ thống [những địa điểm n�
 
 Tại sao lại là đi bộ? Trung tâm Quận 1 sở hữu một mật độ di sản dày đặc mà việc di chuyển bằng xe máy hay taxi sẽ vô tình tước đi của bạn những chi tiết quý giá: một bức phù điêu gốm Biên Hòa ẩn dưới mái ngói chợ cũ, một cánh cửa gỗ lá sách màu xanh rêu trong con hẻm nhỏ, hay mùi hương trầm nồng ấm thoảng ra từ một ngôi đền cổ bên góc đường Trương Định.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 Lộ trình được sắp xếp nương theo nhịp điệu của mặt trời phương Nam: buổi sáng sớm nắng êm đềm dành cho chợ và đền đài; giữa trưa oi ả được nép mình trong các phòng trưng bày máy lạnh của bảo tàng và quán cà phê chung cư cổ; buổi chiều mát dịu dành cho công viên Dinh Độc Lập và sông nước Bạch Đằng; buổi tối hòa mình vào phố đêm sôi động.
 
 ---

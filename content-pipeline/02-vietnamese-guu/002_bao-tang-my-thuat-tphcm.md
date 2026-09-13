@@ -10,6 +10,8 @@ status: "rewritten-guu"
 published_date: "2026-09-07T08:30:00"
 author: "The Rice Tour Editorial"
 read_time: 12
+
+featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp"
 ---
 
 # Bảo Tàng Mỹ Thuật TP.HCM: Trầm Tích Nghệ Thuật Trong Dinh Thự Chú Hỏa
@@ -52,6 +54,17 @@ Năm 1929, các người con của Chú Hỏa đã mời kiến trúc sư ngư�
 
 Điểm cuốn hút bất tận của Bảo tàng Mỹ thuật TP.HCM chính là sự dung hòa kỳ tài giữa mỹ học phương Tây hiện đại với triết lý kiến trúc bản địa:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. Ngoại Thất: Giao Thoa Giữa Cột Thức Châu Âu Và Mái Ngói Lưu Ly
 Nhìn từ mặt tiền đường Phó Đức Chính, tòa nhà chính hiện lên uy nghi với các hàng cột thức Hy Lạp cổ điển nhưng phần mái lại uốn lượn lợp ngói âm dương tráng men lưu ly xanh biếc, điểm xuyết họa tiết cá chép hóa rồng và phù điêu gốm Biên Hòa. Sự đối thoại giữa hình khối vuông vức của phong trào Art Deco thập niên 1930 với những đường cong mềm mại của mái ngói Á Đông tạo nên một cá tính thị giác không thể hòa lẫn.
 

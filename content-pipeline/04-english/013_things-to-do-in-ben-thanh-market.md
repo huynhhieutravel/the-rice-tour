@@ -8,7 +8,7 @@ read_time: 14
 author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Activities & Experiences", "Pillar Guide"]
 tags: ["Things to do in Ben Thanh", "Ben Thanh Market activities", "District 1", "Saigon nightlife", "Cultured Travel"]
-featured_image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1600&q=80"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp"
 subtitle: "15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows"
 lead: "Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia’s most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual."
 badges:
@@ -71,6 +71,17 @@ If you are pondering **what to do in and around Ben Thanh Market**, set aside co
 
 ### 🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 #### 1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds
 Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.
 

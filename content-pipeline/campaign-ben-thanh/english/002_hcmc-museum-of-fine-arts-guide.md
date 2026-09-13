@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Saigon's Earliest Timber-Cage Elevator"
 epilogue_title: "A Serene Dialogue with the Past"
 epilogue: "The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship."
+
+featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp"
 ---
 
 # HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa
@@ -91,6 +93,17 @@ In 1929, the heirs commissioned renowned French architect **Rivera** to design a
 
 The enduring magic of the estate lies in its brilliant equilibrium between European avant-garde and indigenous environmental adaptation:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DcSNx0vjfpy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
 Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.
 

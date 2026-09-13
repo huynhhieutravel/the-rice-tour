@@ -10,6 +10,8 @@ status: "rewritten-guu"
 published_date: "2026-09-07T11:00:00"
 author: "The Rice Tour Editorial"
 read_time: 12
+
+featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp"
 ---
 
 # Đền Hindu Mariamman Sài Gòn: Ngôi Đền Ấn Độ Giáo Cổ Kính Bên Hông Bến Thành
@@ -52,6 +54,17 @@ Thời kỳ này, chính sách mở cửa thương mại của chính quyền th
 
 Bước đến số 45 Trương Định, du khách sẽ ngay lập tức nhận diện những đặc trưng kiến trúc độc bản không thể trộn lẫn của Ấn Độ giáo:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DVKcNtSCVHC/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. Tháp Cổng Gopuram: Chiếc Thang Nối Liền Trần Thế Và Thần Linh
 Mặt tiền đền nổi bật với ngọn tháp cổng **Gopuram** hình kim tự tháp bậc thang vươn cao lên bầu trời. Tháp được chia thành nhiều tầng, mỗi tầng được phủ kín bởi các pho tượng thần linh Hindu được tạc nổi tinh xảo: Thần Sáng tạo Brahma, Thần Bảo hộ Vishnu, Thần Hủy diệt và Tái sinh Shiva, Thần Đầu voi Ganesha biểu trưng cho trí tuệ, cùng các vũ nữ thiên giới Apsara mềm mại trong những tư thế múa linh thiêng. Tất cả đều được sơn phết bằng các gam màu nguyên bản rực rỡ như vàng nghệ, xanh ngọc bích, đỏ son và trắng ngà.
 

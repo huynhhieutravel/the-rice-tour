@@ -8,7 +8,7 @@ published_date: "2026-08-12T11:24:52"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp"
 phase: 3
 ---
 
@@ -32,6 +32,17 @@ phase: 3
 
 The Truong Tien Bridge transcends its function as a vital transit artery; it stands as an enduring historical witness, an inextricably woven thread in the cultural fabric of Hue. Arching gracefully over the languid Perfume River (*Sông Hương*), its six silver-painted steel spans have served as an endless muse for poets, musicians, and photographers for over a century.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/Dcz0lOyEhXG/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 When venturing to the ancient capital, traversing the Truong Tien Bridge on foot—while the distant tolling of the Thien Mu Pagoda bell echoes across the water and royal dragon boats glide silently below—is a deeply visceral experience that every bespoke traveler must undertake.
 
 <figure>

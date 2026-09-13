@@ -14,6 +14,8 @@ quality_score: 100
 published_date: "2026-09-07T09:00:00"
 author: "The Rice Tour Editorial"
 read_time: 12
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp"
 ---
 
 # Thiên Đường Ẩm Thực Chợ Bến Thành: Bóc Tách Hương Vị Sạp Chợ Trăm Năm & Phố Đêm Phan Bội Châu
@@ -75,6 +77,17 @@ Tủ kính trưng bày hàng chục âu chè óng ánh như một bảng màu h�
 
 Khi ánh hoàng hôn buông xuống và tháp đồng hồ Bến Thành rực sáng đèn vàng, hai dãy phố bên hông chợ chuyển mình thành đại tiệc ẩm thực đêm náo nhiệt:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 - **Bò nướng lá lốt bánh hỏi:** Từng cuộn thịt bò tẩm ướp sả non, ngũ vị hương bọc trong lá lốt xanh thẫm, nướng xèo xèo trên than hoa đượm lửa. Khi chín tới, mỡ bò tươm ra làm bóng lớp lá lốt cháy xém thơm lừng khó cưỡng. Cuốn cùng bánh hỏi trắng muốt, chuối chát, khế chua và chấm đẫm mắm nêm pha dứa băm nhuyễn.
 - **Hải sản nướng mọi:** Những mâm ghẹ Cần Giờ, ốc hương, sò dương, tôm càng xanh được nướng trực tiếp trên than củi, giữ trọn vẹn vị ngọt nguyên bản của biển khơi phương Nam, chấm muối tiêu chanh ớt xanh cay nồng.
 

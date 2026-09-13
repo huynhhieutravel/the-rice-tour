@@ -8,7 +8,7 @@ read_time: 12
 author: "The Rice Tour Editorial"
 categories: ["Văn Hóa Cà Phê", "Cẩm Nang Du Lịch Sài Gòn", "Không Gian Sáng Tạo"]
 tags: ["Cà phê chung cư", "Chung cư cũ Sài Gòn", "Chợ Bến Thành", "Quận 1", "Specialty Coffee", "Du lịch có GUU"]
-featured_image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80"
+featured_image: "https://media.thericetour.com/uploads/apartment-cafe.webp"
 ---
 
 # Cà Phê Chung Cư Cổ Quanh Bến Thành: Bản Đồ Những Góc Trú Ẩn Di Sản Giữa Lòng Sài Gòn 2026
@@ -32,6 +32,17 @@ Bước qua cánh cổng sắt hoen rỉ, bỏ lại sau lưng dòng xe cộ huy
 
 Hiện tượng biến đổi chung cư cũ thành không gian cà phê độc lập tại Sài Gòn bắt đầu nhen nhóm từ đầu những năm 2010 và đạt đến độ chín muồi về thẩm mỹ vào giai đoạn 2025–2026. Thay vì đập bỏ để xây dựng các khối tháp bê tông đồng dạng, những kiến trúc sư và nghệ sĩ trẻ Sài Gòn đã chọn cách "tái sinh di sản" (adaptive reuse).
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/C03pZvkvS4A/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### Đặc trưng kiến trúc của các chung cư quanh Bến Thành:
 - **Giao thoa Pháp – Art Deco – Hiện đại nhiệt đới:** Nhiều tòa nhà sở hữu trần cao trên 3.8 mét, sàn lát gạch bông hoa văn hình học sản xuất thủ công từ xưởng gạch Bát Tràng hay Đồng Nai thế kỷ trước, cùng giếng trời hút gió tự nhiên ở lõi trung tâm.
 - **Sự cộng sinh thú vị giữa cũ và mới:** Du khách sẽ bắt gặp hình ảnh một cụ già ngồi thong thả nhặt rau trên chiếc ghế bố trước cửa nhà, kế bên là một quán cà phê specialty với dàn máy pha hiện đại và những bức tranh sơn dầu đương đại treo trên nền tường gạch thô.

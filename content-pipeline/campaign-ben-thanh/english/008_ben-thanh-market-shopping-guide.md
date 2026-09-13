@@ -47,6 +47,8 @@ sidebar_facts:
     val: "Bao Loc Raw Silk & Eggshell Lacquer"
 epilogue_title: "Carrying Home the Warmth of Southern Hospitality"
 epilogue: "The greatest souvenir carried away from Ben Thanh Market is not merely an exquisite silk scarf or a fragrant pouch of roasted highland coffee; it is the lingering warmth of human connection with generational merchants who proudly safeguard their craft. Step into these historic corridors with curiosity, bargain with dignity, and you will find Saigon opening its heart to you in return."
+
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp"
 ---
 
 # Bargaining with Grace: The Smart Traveler’s Guide to Shopping at Ben Thanh Market
@@ -105,6 +107,17 @@ Vibrant fruit pyramids showcasing southern Vietnam's seasonal harvest: Ri6 golde
 
 Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DV5CI9OjQtB/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 ### 2.1. Honor the Morning Opening Rite (*Mở Hàng*)
 Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.
 

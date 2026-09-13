@@ -8,7 +8,7 @@ published_date: "2026-08-12T16:05:28"
 modified_date: "2026-08-26T06:00:00"
 categories: ["Về miền Tây","Đặc sản địa phương"]
 tags: []
-featured_image: "https://r2.nucuoimekong.com/wp-content/uploads/trai-cay-mien-tay.jpg"
+featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp"
 phase: 2
 ---
 
@@ -89,6 +89,17 @@ Nhắc đến sầu riêng miền Tây là phải nhắc đến giống Ri6 huy�
 
 Chỉ xuất hiện ngắn ngủi từ tháng 1 đến tháng 3, vú sữa Lò Rèn (Đồng Tháp) sở hữu lớp vỏ mỏng, căng bóng. Khi dùng tay vò nhẹ, dòng sữa trắng đục tứa ra ngọt lịm. Đây là thức quà thanh tao, giải nhiệt tuyệt vời trong những ngày chớm hè.
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/trai-cay-mien-tay-nam-bo-vu-sua-lo-ren.jpg" alt="Vú sữa Lò Rèn">
   <figcaption>Giọt sữa ngọt ngào từ vú sữa Lò Rèn Vĩnh Kim, một đặc sản nổi tiếng đòi hỏi kỹ thuật canh tác tỉ mỉ.</figcaption>

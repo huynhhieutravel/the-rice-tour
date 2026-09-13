@@ -8,7 +8,7 @@ published_date: "2026-08-03T09:51:45"
 modified_date: "2026-08-27T10:00:00"
 categories: ["Famous Destinations"]
 tags: []
-featured_image: "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+featured_image: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp"
 phase: 3
 ---
 
@@ -31,6 +31,17 @@ phase: 3
 
 Long before it became a sculpted ecological sanctuary, the landscape of **Buu Long Tourist Area** was a rugged, untamed quarry. Prior to 1975, local residents heavily mined the limestone cliffs. Recognizing the profound cultural and geological value of these formations, local authorities transformed the 84-hectare expanse into a protected national heritage site by 1990. Today, it stands as a poetic juxtaposition of man-made preservation and natural splendor, earning its moniker as the "Miniature Ha Long Bay of the South."
 
+
+<div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
+  <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+  <div style="padding:16px;">
+    <a href="https://www.instagram.com/p/DLNWPcgzBCm/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</div>
 For the discerning traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.
 
 <figure>
