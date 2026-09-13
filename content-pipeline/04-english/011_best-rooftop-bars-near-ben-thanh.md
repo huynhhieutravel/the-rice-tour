@@ -60,7 +60,7 @@ featured_image: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-mar
 
 ---
 
-## 1. Introduction: When Saigon Kindles Her Constellations
+## Introduction: When Saigon Kindles Her Constellations
 
 When the amber sun descends behind the ancient African mahogany canopies along Le Duan Boulevard and the gilded cupola of Ben Thanh Market blazes with evening illumination, District 1 casts off its daytime hustle and reveals its true glamour. For the voyager seeking elevated encounters, the consummate conclusion to a day of architectural discovery is not found amidst congested ground-level crowds, but within the whisper-quiet ascent of an express elevator rising to an open-air rooftop, or slipping past an unmarked antique bookcase into a hidden speakeasy.
 
@@ -68,7 +68,7 @@ From these breezy open-deck perches flanking Quach Thi Trang Square, one surveys
 
 ---
 
-## 2. Terroir Mixology: The Rise of Vietnamese Craft Cocktails
+## Terroir Mixology: The Rise of Vietnamese Craft Cocktails
 
 Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.
 
@@ -90,11 +90,11 @@ Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved bey
 
 ---
 
-## 3. Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh
+## Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh
 
 Here are four exceptional sky bars delivering cinematic perspectives across the historic market and District 1 skyline:
 
-### 1. The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)
+### The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)
 Perched atop boutique design hotels flanking the eastern and southern perimeters of the market, these intimate open-air terraces deliver an unobstructed, eye-level vantage over the market’s centennial concrete belfry.
 
 - **Coordinates:** Phan Boi Chau & Le Lai corridors (under 100 meters from the market).
@@ -102,7 +102,7 @@ Perched atop boutique design hotels flanking the eastern and southern perimeters
 - **Atmospheric Decor:** Low-slung teak daybeds, potted travel palms, and glowing amber hurricane lanterns creating an intimate botanical oasis aloft.
 - **Signature Libation:** *The Ben Thanh Sunset Spritz* (Aperol, artisanal Dalat sparkling wine, fresh Ben Tre pink pomelo juice, and bruised rosemary syrup).
 
-### 2. Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang
+### Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang
 Stationed on the fourth and fifth floors of colonial-era masonry edifices, these relaxed rooftop terraces offer a bohemian, arts-steeped sensibility.
 
 - **Coordinates:** 38–44 Ton That Thiep Street (350m east of Ben Thanh).
@@ -110,7 +110,7 @@ Stationed on the fourth and fifth floors of colonial-era masonry edifices, these
 - **Atmospheric Decor:** Salvaged encaustic tiles, handcrafted timber tables, and acoustic jazz duos on weekend evenings.
 - **Signature Libation:** *Mekong Botanical Tonic* (Locally crafted dry gin, steeped wild mountain herbs, handcrafted elderflower tonic, and dehydrated river citrus).
 
-### 3. Grand Panoramas on Le Loi & Nam Ky Khoi Nghia
+### Grand Panoramas on Le Loi & Nam Ky Khoi Nghia
 Tailored for voyagers desiring five-star elegance and comprehensive 360-degree panoramas embracing the Municipal Theater, City Hall, and Independence Palace grounds.
 
 - **Coordinates:** Upper penthouses along the Le Loi corridor (300m from the market).
@@ -120,7 +120,7 @@ Tailored for voyagers desiring five-star elegance and comprehensive 360-degree p
 
 ---
 
-## 4. The Subterranean Realm: Hidden Alleyway Speakeasies
+## The Subterranean Realm: Hidden Alleyway Speakeasies
 
 If sky bars celebrate open horizons, Saigon’s secret **Speakeasies** around Ben Thanh cater to the thrill of discovery:
 
@@ -131,7 +131,7 @@ If sky bars celebrate open horizons, Saigon’s secret **Speakeasies** around Be
 
 ---
 
-## 5. Curated Beverage Tariff Matrix (2026 Reference)
+## Curated Beverage Tariff Matrix (2026 Reference)
 
 | Beverage Classification | Ingredients & Extraction Complexity | 2026 Tariff Baseline (VND) |
 | :--- | :--- | :--- |
@@ -144,7 +144,7 @@ If sky bars celebrate open horizons, Saigon’s secret **Speakeasies** around Be
 
 ---
 
-## 6. Field Protocols for Nocturnal Elegance
+## Field Protocols for Nocturnal Elegance
 
 To ensure an unhurried, distinguished evening:
 
@@ -154,6 +154,6 @@ To ensure an unhurried, distinguished evening:
 
 ---
 
-## 7. Epilogue: Toasting the Eternal Metropolis
+## Epilogue: Toasting the Eternal Metropolis
 
 Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and the timeless promise of wonder.

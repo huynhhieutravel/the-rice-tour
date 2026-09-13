@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/currency-exchange-near-be
 
 ---
 
-## 1. Dẫn Nhập: "Phố Wall Ngoại Tệ" Thu Nhỏ Của Sài Gòn
+## Dẫn Nhập: "Phố Wall Ngoại Tệ" Thu Nhỏ Của Sài Gòn
 
 Nếu hỏi bất kỳ người Sài Gòn sành sỏi hay một khách du lịch kỳ cựu nào về địa chỉ đổi ngoại tệ có tỷ giá tốt nhất thành phố, 9 trên 10 câu trả lời sẽ chỉ về cùng một tọa độ: **Tiệm vàng Hà Tâm** nằm ngay góc đường Nguyễn An Ninh và Phan Chu Trinh, đối diện Cửa Tây Chợ Bến Thành. 
 
@@ -30,7 +30,7 @@ Tuy nhiên, giao dịch tiền mặt tại một khu vực nhộn nhịp như B�
 
 ---
 
-## 2. Tiệm Vàng Hà Tâm & Mai Vân: Cặp Đôi Nổi Tiếng Nhất Cửa Tây
+## Tiệm Vàng Hà Tâm & Mai Vân: Cặp Đôi Nổi Tiếng Nhất Cửa Tây
 
 Tại khu vực Cửa Tây, có hai tiệm vàng đổi ngoại tệ nằm san sát nhau tạo nên thương hiệu của cả con phố:
 
@@ -52,7 +52,7 @@ Tại khu vực Cửa Tây, có hai tiệm vàng đổi ngoại tệ nằm san s
 
 ---
 
-## 3. So Sánh: Đổi Tiền Tại Hà Tâm vs. Ngân Hàng vs. Sân Bay
+## So Sánh: Đổi Tiền Tại Hà Tâm vs. Ngân Hàng vs. Sân Bay
 
 | Tiêu Chí So Sánh | Tiệm Vàng Hà Tâm (Bến Thành) | Ngân Hàng Thương Mại (Vietcombank, BIDV) | Quầy Thu Đổi Ngoại Tệ Sân Bay (Tân Sơn Nhất) |
 | :--- | :--- | :--- | :--- |
@@ -64,25 +64,25 @@ Tại khu vực Cửa Tây, có hai tiệm vàng đổi ngoại tệ nằm san s
 
 ---
 
-## 4. Những Quy Tắc "Ngầm" Về Tình Trạng Tiền Mặt (Tránh Bị Ép Giá)
+## Những Quy Tắc "Ngầm" Về Tình Trạng Tiền Mặt (Tránh Bị Ép Giá)
 
 Đây là điều mà 80% du khách không để ý dẫn đến việc bị từ chối giao dịch hoặc bị trừ tỷ giá:
 
-### 1. Phân biệt USD "Đầu To" vs. "Đầu Nhỏ"
+### Phân biệt USD "Đầu To" vs. "Đầu Nhỏ"
 - **USD Seri Cũ (Đầu Nhỏ - Phát hành trước năm 2003/2006):** Các tờ 100 USD in hình chân dung Benjamin Franklin khổ nhỏ thường bị tiệm vàng từ chối hoặc thu mua với tỷ giá thấp hơn từ 100.000 – 300.000 VNĐ / tờ, do lo ngại tiền giả thế hệ cũ.
 - **USD Seri Mới (Đầu To / Dải Xanh 3D - Series 2013 trở lại đây):** Được thu đổi với tỷ giá cao nhất. Luôn mang theo các tờ USD dải băng xanh bảo an mới nhất.
 
-### 2. Tình Trạng Vật Lý Của Tờ Tiền
+### Tình Trạng Vật Lý Của Tờ Tiền
 - Tiệm vàng Hà Tâm kiểm tra tiền rất khắt khe bằng máy soi hồng ngoại và mắt thường. Tờ tiền **bị rách viền, thủng lỗ kim, có vết mực bút bi vẽ bậy, bị ố vàng loang lổ hoặc ẩm mốc** sẽ bị trả lại hoặc trừ phí hao mòn 5% – 10%.
 - Lời khuyên: Giữ tiền giấy ngoại tệ phẳng phiu trong ví dài hoặc phong bì cứng, không gấp nếp quá chặt.
 
-### 3. Mệnh Giá Nhỏ Tỷ Giá Sẽ Khác Mệnh Giá Lớn
+### Mệnh Giá Nhỏ Tỷ Giá Sẽ Khác Mệnh Giá Lớn
 - Các tờ 100 USD và 50 USD luôn có tỷ giá quy đổi tốt nhất.
 - Các tờ tiền lẻ như 1 USD, 2 USD, 5 USD, 10 USD, 20 USD sẽ có tỷ giá thu mua thấp hơn một bậc. Điều này cũng áp dụng tương tự với Euro và Yên Nhật.
 
 ---
 
-## 5. Quy Trình Giao Dịch & 5 Bước An Toàn Tuyệt Đối
+## Quy Trình Giao Dịch & 5 Bước An Toàn Tuyệt Đối
 
 Vì lượng người đổ về góc đường Nguyễn An Ninh rất đông, kẻ gian có thể trà trộn để rình rập du khách mang theo lượng tiền mặt lớn. Hãy thực hiện đúng 5 bước sau:
 

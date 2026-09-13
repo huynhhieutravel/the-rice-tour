@@ -33,7 +33,7 @@ Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm 
 
 ---
 
-## 1. Không Gian Đô Thị Ngầm: Bước Chuyển Mình Kỳ Vĩ Của Hạ Tầng Phương Nam
+## Không Gian Đô Thị Ngầm: Bước Chuyển Mình Kỳ Vĩ Của Hạ Tầng Phương Nam
 
 Sau hơn một thập kỷ thi công với công nghệ đào hầm TBM (Tunnel Boring Machine) tiên tiến của Nhật Bản cùng hàng ngàn kỹ sư, công nhân Việt Nam, Ga trung tâm Bến Thành đã hoàn thành việc tái thiết toàn bộ cảnh quan quảng trường Quách Thị Trang. 
 
@@ -54,7 +54,7 @@ Sự xuất hiện của ga metro đã thay đổi căn bản cách thức tiế
 
 ---
 
-## 2. Giải Mã Kiến Trúc 4 Tầng Ngầm Dưới Lòng Bến Thành
+## Giải Mã Kiến Trúc 4 Tầng Ngầm Dưới Lòng Bến Thành
 
 ```mermaid
 graph TD
@@ -65,20 +65,20 @@ graph TD
     B3 --> B4["Tầng B4: Ke ga Tuyến số 2 (Bến Thành - Tham Lương) & Tuyến tương lai"]
 ```
 
-### 2.1. Tầng B1: Sảnh Đón Khách & Phố Thương Mại Ngầm
+### Tầng B1: Sảnh Đón Khách & Phố Thương Mại Ngầm
 Tầng B1 là không gian công cộng rộng lớn nhất, nơi đặt hệ thống máy bán vé tự động đa ngôn ngữ, quầy hỗ trợ du khách của The Rice Tour / Sở Du lịch, và cổng soát vé thông minh hỗ trợ thanh toán một chạm bằng thẻ ngân hàng, thẻ IC hoặc mã QR. 
 
 Khu phố ngầm tại đây tập trung các tiệm cà phê đặc sản Việt Nam, tiệm bánh mì truyền thống và các cửa hàng lưu niệm thủ công mỹ nghệ chuẩn mực, phục vụ hành khách trước khi lên tàu.
 
-### 2.2. Giếng Trời Hoa Sen (Toplight Khổng Lồ)
+### Giếng Trời Hoa Sen (Toplight Khổng Lồ)
 Điểm nhấn kiến trúc biểu tượng của tầng B1 chính là khu vực giếng trời hoa sen. Thiết kế vòm kính trong suốt cho phép ánh sáng ban ngày rọi thẳng xuống sàn đá hoa cương, tạo hiệu ứng thị giác kỳ ảo. Khi đứng từ dưới sảnh nhìn ngược lên, bạn sẽ thấy tháp đồng hồ Chợ Bến Thành uy nghi in bóng trên nền trời xanh – một khoảnh khắc giao thoa ngoạn mục giữa quá khứ trăm năm và nhịp thở tương lai.
 
-### 2.3. Tầng B2: Ke Ga Tuyến Số 1
+### Tầng B2: Ke Ga Tuyến Số 1
 Nơi đoàn tàu metro đón trả khách với hệ thống cửa chắn ke ga tự động (Platform Screen Doors - PSD) bằng kính chịu lực toàn phần, đảm bảo an toàn tuyệt đối và duy trì nhiệt độ mát mẻ 24/24 trong sảnh chờ.
 
 ---
 
-## 3. Bảng Ma Trận Lộ Trình & Giá Vé Tuyến Metro Số 1 (Năm 2026)
+## Bảng Ma Trận Lộ Trình & Giá Vé Tuyến Metro Số 1 (Năm 2026)
 
 | Ga Đến Trọng Điểm | Thời Gian Từ Bến Thành | Điểm Nhấn Tham Quan / Trải Nghiệm | Giá Vé Lượt 2026 |
 | :--- | :--- | :--- | :--- |
@@ -90,7 +90,7 @@ Nơi đoàn tàu metro đón trả khách với hệ thống cửa chắn ke ga 
 
 ---
 
-## 4. Hướng Dẫn Trải Nghiệm Thực Tế Cho Người Du Hành Có GUU (Field Notes 2026)
+## Hướng Dẫn Trải Nghiệm Thực Tế Cho Người Du Hành Có GUU (Field Notes 2026)
 
 1. **Lựa chọn loại vé thông minh:**
    - Nếu bạn chỉ đi thử nghiệm 1 – 2 chặng: Mua vé lượt tại máy bán vé tự động (chấp nhận tiền mặt, thẻ Visa/Mastercard hoặc quét mã VietQR).

@@ -159,15 +159,19 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
       <p>Once envisioned as the &quot;Land of Happiness&quot; along the untamed waters of the Vàm Cỏ Đông river, the <strong>Happy Land Entertainment Complex</strong> (formerly situated in Ben Luc District, Long An) has weathered significant turbulence. As of 2026, this grand project <strong>no longer operates as a regular tourist attraction for individual travelers</strong>.</p>
 <p>For those mapping out a contemplative journey through the Mekong Delta or seeking a weekend retreat near Ho Chi Minh City, staying abreast of these operational shifts is paramount to preserving the rhythm of your itinerary.</p>
 
-        <h3 id="is-happy-land-still-open-to-the-public" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Is Happy Land Still Open to the Public?
-        </h3>
+        <div id="is-happy-land-still-open-to-the-public" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Is Happy Land Still Open to the Public?
+          </h3>
+        </div>
       <p>The short answer is: <strong>No.</strong> While the complex briefly opened its gates for a short-lived event early in 2026, no fixed operational schedules have been established since.</p>
 <p>The project is currently undergoing a prolonged phase of restructuring and legal enforcement. Recent field observations reveal that vast sections of the interior lie dormant, with creeping signs of decay due to a lack of routine maintenance. Though this does not spell permanent closure, Happy Land is currently entirely unsuited for inclusion in any bespoke voyage.</p>
 
-        <h3 id="updated-administrative-coordinates-since-2025" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Updated Administrative Coordinates (Since 2025)
-        </h3>
+        <div id="updated-administrative-coordinates-since-2025" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Updated Administrative Coordinates (Since 2025)
+          </h3>
+        </div>
       <p>Should you consult older travel logs, Happy Land&#39;s address is often listed as: <em>Thanh Duc Commune, Ben Luc District, Long An Province</em>.</p>
 <p>However, following a major administrative reshuffle in 2025, the regional boundaries were drastically redrawn. The former Thanh Duc Commune, along with neighboring areas, was consolidated, and the project&#39;s precise coordinates now fall within: <strong>Binh Duc Commune, Tay Ninh Province</strong>. Understanding this geographical shift is crucial for accurate navigation and mapping.</p>
 <hr>
@@ -179,18 +183,22 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
         </div>
       <p>Though its gates remain shut, Happy Land once boasted a sprawling &quot;Vietnamese Cultural Zone,&quot; meticulously reconstructing iconic architectural marvels from the North, Central, and South regions. Below is a glimpse into the cultural legacy that once animated this space.</p>
 
-        <h3 id="architectural-replicas-of-the-north-and-central-regions" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Architectural Replicas of the North and Central Regions
-        </h3>
+        <div id="architectural-replicas-of-the-north-and-central-regions" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Architectural Replicas of the North and Central Regions
+          </h3>
+        </div>
       <ul>
 <li><strong>One Pillar Pagoda (<em>Chùa Một Cột</em>):</strong> A delicate, scaled-down homage to Hanoi&#39;s timeless symbol, rising serenely from a tranquil lotus pond.</li>
 <li><strong>Hoi An Ancient Town:</strong> Rows of mustard-yellow facades, crowned with traditional yin-yang roof tiles and illuminated by the signature crimson lanterns. This enclave once served as a nostalgic sanctuary for photography enthusiasts.</li>
 <li><strong>Cham Towers:</strong> A striking recreation of the terracotta brick sanctuaries of the ancient Champa kingdom, echoing the spiritual havens found in Ninh Thuan and Khanh Hoa.</li>
 </ul>
 
-        <h3 id="the-soul-of-the-southern-riverine" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Soul of the Southern Riverine
-        </h3>
+        <div id="the-soul-of-the-southern-riverine" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Soul of the Southern Riverine
+          </h3>
+        </div>
       <p>The crown jewel of the complex was undoubtedly its tribute to the waterborne culture of the Mekong Delta.</p>
 <ul>
 <li><strong>Simulated Floating Market:</strong> A vibrant diorama of bustling wooden boats and bamboo poles (<em>cây bẹo</em>) laden with hanging produce. Naturally, this architectural homage could only echo—not fully capture—the raw, chaotic spirit of genuine trading hubs like Cai Rang or Long Xuyen.</li>
@@ -225,7 +233,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-notes-and-travel-warnings" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2026 Field Notes & Travel Warnings
+            Field Notes & Travel Warnings
           </h2>
         </div>
       <p>From the perspective of seasoned expedition leaders, we strongly advise adhering to the following principles if you are drawn to this area:</p>
@@ -573,7 +581,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
+            Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
           </h2>
         </div>
       <p>To truly comprehend the allure of the Ben Thanh district, one must trace more than two centuries of dramatic urban evolution.</p>
@@ -584,17 +592,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius
+            Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius
           </h2>
         </div>
       
-          <div id="ben-thanh-market-the-living-mirror-of-saigon" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . Ben Thanh Market: The Living Mirror of Saigon
-            </h3>
-          </div>
-        <ul>
+        <div id="ben-thanh-market-the-living-mirror-of-saigon" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ben Thanh Market: The Living Mirror of Saigon
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> Intersecting Le Loi, Phan Chu Trinh, Phan Boi Chau, and Le Thanh Ton Streets.</li>
 <li><strong>Iconic Architecture:</strong> The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam&#39;s natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.</li>
 <li><strong>Conscious Travel Insight:</strong> Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.</li>
@@ -609,13 +616,12 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
-            </h3>
-          </div>
-        <ul>
+        <div id="hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> 97A Pho Duc Chinh Street, Nguyen Thai Binh Ward, District 1 (350 meters from the market via Le Thi Hong Gam).</li>
 <li><strong>Gilded Heritage:</strong> This magnificent three-mansion estate once served as the private residence and headquarters of <strong>Hui Bon Hoa</strong> (popularly known as <em>Chú Hỏa</em>), the legendary Chinese-Vietnamese merchant whose real estate empire defined colonial Saigon. Designed between 1929 and 1934 by French architect Rivera, the complex represents an opulent marriage of <strong>Western Art Deco, Beaux-Arts flourishes, and traditional Feng Shui geomancy</strong>.</li>
 <li><strong>Curated Highlights:</strong><ul>
@@ -635,13 +641,12 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="the-independence-palace-high-zenith-of-tropical-modernism" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
-              . The Independence Palace: High Zenith of Tropical Modernism
-            </h3>
-          </div>
-        <ul>
+        <div id="the-independence-palace-high-zenith-of-tropical-modernism" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Independence Palace: High Zenith of Tropical Modernism
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> 135 Nam Ky Khoi Nghia Street, Ben Thanh Ward, District 1 (700 meters north of the market).</li>
 <li><strong>Architectural Magnitude:</strong> Erected upon the historic grounds of the former colonial Norodom Palace, the contemporary palace was conceived by master architect <strong>Ngo Viet Thu</strong>—the first Vietnamese laureate of the coveted <em>Grand Prix de Rome</em> (1955). Inaugurated in 1966, the structure brilliantly reconciles mid-century modernist clean lines with Eastern philosophical symbolism:<ul>
 <li>The overall footprint forms the Sino-Vietnamese ideogram <strong>CÁT</strong> (吉 - Fortune and Auspiciousness).</li>
@@ -662,13 +667,12 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.4</span>
-              . Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
-            </h3>
-          </div>
-        <ul>
+        <div id="mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> 45 Truong Dinh Street, Ben Thanh Ward, District 1 (200 meters west of the market).</li>
 <li><strong>Sacred Sanctuary:</strong> Established in the early 20th century by Tamil merchant communities from South India, this temple is dedicated to Goddess Mariamman, the celestial bringer of fertility, health, and monsoon rains.</li>
 <li><strong>Dravidian Artistry:</strong> The towering <em>gopuram</em> gateway ascends in tiered majesty, populated by hand-painted sculptures of Hindu deities depicted in saturated hues. Stepping across the threshold, the fragrant warmth of burning incense and camphor oil offers an immediate sensory departure from District 1&#39;s urban bustle. Behind the main altar, devotees practice the contemplative ritual of pressing their foreheads and open palms against the sacred granite sanctuary walls to absorb positive spiritual vibrations.</li>
@@ -683,13 +687,12 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.5</span>
-              . Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
-            </h3>
-          </div>
-        <ul>
+        <div id="ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> Deep beneath Quach Thi Trang Square.</li>
 <li><strong>Contemporary Marvel:</strong> Descending 32 meters across four underground levels, this 236-meter-long terminal anchors the city&#39;s newly inaugurated urban transit network. Its architectural showpiece is the <strong>Lotus Toplight</strong>—a monumental circular skylight engineered from structural architectural glass. By day, sunlight cascades into the subterranean concourse, offering commuters looking upward a striking sightline to the century-old clock tower resting on the plaza above.</li>
 </ul>
@@ -706,7 +709,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 </div>
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
+            Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
           </h2>
         </div>
       
@@ -731,59 +734,60 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epicurean-mapping-and-neighborhood-life" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Epicurean Mapping & Neighborhood Life
+            Epicurean Mapping & Neighborhood Life
           </h2>
         </div>
       <p>No encounter with Ben Thanh is complete without immersing your palate in the rich gastronomic mosaic of the southern delta.</p>
 
-          <div id="classic-daytime-market-stalls-inside-south-and-east-gates" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.1</span>
-              . Classic Daytime Market Stalls (Inside South & East Gates)
-            </h3>
-          </div>
-        <p>The market&#39;s daytime culinary court represents a vibrant orchestra of aromas and textures:</p>
+        <div id="classic-daytime-market-stalls-inside-south-and-east-gates" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Classic Daytime Market Stalls (Inside South & East Gates)
+          </h3>
+        </div>
+      <p>The market&#39;s daytime culinary court represents a vibrant orchestra of aromas and textures:</p>
 <ul>
 <li><strong>Bún Riêu Gánh Ben Thanh:</strong> A fragrant crab noodle soup characterized by rich crimson tomato broth scented with fermented rice vinegar, brimming with fresh freshwater crab patties, tender cha ca, and golden fried tofu.</li>
 <li><strong>Mekong Riverine Bún Mắm:</strong> The pungent, soul-warming essence of the Mekong Delta distilled into a simmering broth of fermented mud carp and snakehead fish, paired with succulent black tiger prawns, crispy pork belly, and crisp water lily stems.</li>
 <li><strong>Traditional Chè Dessert Stalls:</strong> Refreshing dessert bowls layered with mung bean paste, candied lotus seeds, water chestnut rubies, and freshly squeezed coconut cream—an indispensable midday salvation in tropical warmth.</li>
 </ul>
 
-          <div id="phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.2</span>
-              . Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)
-            </h3>
-          </div>
-        <p>As the clock tower tolls 18:00, the streets flanking the market transform into an open-air banquet. Sizzling charcoal braziers infuse the dusk air with aromas of grilled lemongrass beef wrapped in betel leaves (<em>bò lá lốt</em>), while tables groan beneath platters of Can Gio sea mud crabs, sea snails sautéed in garlic butter, and chilled craft beer brewed from local Mekong botanicals.</p>
+        <div id="phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)
+          </h3>
+        </div>
+      <p>As the clock tower tolls 18:00, the streets flanking the market transform into an open-air banquet. Sizzling charcoal braziers infuse the dusk air with aromas of grilled lemongrass beef wrapped in betel leaves (<em>bò lá lốt</em>), while tables groan beneath platters of Can Gio sea mud crabs, sea snails sautéed in garlic butter, and chilled craft beer brewed from local Mekong botanicals.</p>
 
-          <div id="secret-vintage-apartment-hideaways" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.3</span>
-              . Secret Vintage Apartment Hideaways
-            </h3>
-          </div>
-        <p>For travelers seeking a contemplative pause, slip into the encaustic-tiled stairwells of aging residential buildings along Pasteur, Le Loi, or Ly Tu Trong Streets. Tucked behind vintage louvered doors are artisan pour-over cafes where one can savor single-origin Arabica from the misty highlands of Da Lat, peering through weathered shutters as Saigon&#39;s evening traffic flows like ribbons of light below.</p>
+        <div id="secret-vintage-apartment-hideaways" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Secret Vintage Apartment Hideaways
+          </h3>
+        </div>
+      <p>For travelers seeking a contemplative pause, slip into the encaustic-tiled stairwells of aging residential buildings along Pasteur, Le Loi, or Ly Tu Trong Streets. Tucked behind vintage louvered doors are artisan pour-over cafes where one can savor single-origin Arabica from the misty highlands of Da Lat, peering through weathered shutters as Saigon&#39;s evening traffic flows like ribbons of light below.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-walking-itineraries" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Curated Walking Itineraries
+            Curated Walking Itineraries
           </h2>
         </div>
       
-        <h3 id="option-a-the-half-day-heritage-and-art-stroll-4-hours" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Option A: The Half-Day Heritage & Art Stroll (4 Hours)
-        </h3>
+        <div id="option-a-the-half-day-heritage-and-art-stroll-4-hours" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Option A: The Half-Day Heritage & Art Stroll (4 Hours)
+          </h3>
+        </div>
       <ul>
 <li><strong>08:00 – 09:00 AM:</strong> Begin your morning with a steaming bowl of <em>bún riêu</em> beside Ben Thanh Market; study the South Gate ceramic reliefs in soft morning sunlight.</li>
 <li><strong>09:15 – 10:45 AM:</strong> Cross Le Thi Hong Gam to the <strong>HCMC Museum of Fine Arts</strong>; capture shadows angling through stained glass windows and admire lacquer treasures.</li>
 <li><strong>11:00 – 12:00 PM:</strong> Pause for quiet contemplation at <strong>Mariamman Hindu Temple</strong>, before descending into the illuminated halls of <strong>Ben Thanh Central Metro Station</strong>.</li>
 </ul>
 
-        <h3 id="option-b-the-complete-full-day-immersion-8-hours" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Option B: The Complete Full-Day Immersion (8 Hours)
-        </h3>
+        <div id="option-b-the-complete-full-day-immersion-8-hours" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Option B: The Complete Full-Day Immersion (8 Hours)
+          </h3>
+        </div>
       <ul>
 <li><strong>Morning (08:00 – 12:00 PM):</strong> Ben Thanh Market ➡️ Mariamman Hindu Temple ➡️ Fine Arts Museum.</li>
 <li><strong>Midday (12:00 – 14:00 PM):</strong> Authentic Indochine lunch on Pho Duc Chinh Street, followed by artisanal Vietnamese coffee in a hidden vintage apartment.</li>
@@ -794,7 +798,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-notes-for-the-discerning-traveler-2026-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Field Notes for the Discerning Traveler (2026 Guidelines)
+            Field Notes for the Discerning Traveler (2026 Guidelines)
           </h2>
         </div>
       <ol>
@@ -1134,7 +1138,7 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan
+            The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan
           </h2>
         </div>
       <p>To appreciate the palatial grandeur of 97A Pho Duc Chinh, one must understand the man who commissioned it. <strong>Hui Bon Hoa</strong> (famously remembered in southern folklore as <em>Chú Hỏa</em>, 1845 – 1901) was an immigrant entrepreneur of Hokkien descent who rose from modest origins to become the fourth figure in Saigon&#39;s mythic quartet of tycoons: <em>&quot;Nhat Sy, Nhi Phuong, Tam Xuong, Tu Hoa&quot;</em>.</p>
@@ -1144,7 +1148,7 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy
+            Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy
           </h2>
         </div>
       <p>The enduring magic of the estate lies in its brilliant equilibrium between European avant-garde and indigenous environmental adaptation:</p>
@@ -1158,29 +1162,27 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
+### The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
 Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.
-          <div id="the-interior-encaustic-tiles-and-prismatic-lightwells" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . The Interior: Encaustic Tiles and Prismatic Lightwells
-            </h3>
-          </div>
-        <p>Cross the threshold, and you immediately step upon an exquisite carpet of <strong>handmade encaustic cement tiles</strong>. Every salon, corridor, and mezzanine boasts a distinct tessellated geometric motif, shifting effortlessly from ochre yellow to marine indigo and cinnabar red.</p>
+        <div id="the-interior-encaustic-tiles-and-prismatic-lightwells" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Interior: Encaustic Tiles and Prismatic Lightwells
+          </h3>
+        </div>
+      <p>Cross the threshold, and you immediately step upon an exquisite carpet of <strong>handmade encaustic cement tiles</strong>. Every salon, corridor, and mezzanine boasts a distinct tessellated geometric motif, shifting effortlessly from ochre yellow to marine indigo and cinnabar red.</p>
 <p>Equally breathtaking are the arched clerestory windows fitted with vibrant stained glass. As equatorial sunlight filters through these kaleidoscopic panels, vivid amber and cerulean beams dance across weathered plaster walls, creating an atmosphere of contemplative, church-like tranquility.</p>
 
-          <div id="the-parisian-antique-elevator-technological-aristocracy" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
-              . The Parisian Antique Elevator: Technological Aristocracy
-            </h3>
-          </div>
-        <p>Positioned at the core of the central lightwell in Building 1, the vintage lift carriage features intricate brass latticework encasing polished dark timber. Standing before it, one can easily imagine the lavish lifestyle of Saigon’s Roaring Twenties, when this private lift was the envy of Indochina’s merchant elite.</p>
+        <div id="the-parisian-antique-elevator-technological-aristocracy" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Parisian Antique Elevator: Technological Aristocracy
+          </h3>
+        </div>
+      <p>Positioned at the core of the central lightwell in Building 1, the vintage lift carriage features intricate brass latticework encasing polished dark timber. Standing before it, one can easily imagine the lavish lifestyle of Saigon’s Roaring Twenties, when this private lift was the envy of Indochina’s merchant elite.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Navigating the Three Pavilions: A Millennial Artistic Odyssey
+            Navigating the Three Pavilions: A Millennial Artistic Odyssey
           </h2>
         </div>
       
@@ -1200,15 +1202,17 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
         </table>
       </div>
     
-        <h3 id="the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"
-        </h3>
+        <div id="the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"
+          </h3>
+        </div>
       <p>Enshrined in a temperature-controlled gallery on the second floor of Building 1 rests the 200 x 540 cm lacquer masterpiece by master <strong>Nguyen Gia Tri</strong>. Crafted over two decades (1969 – 1989), the panoramic composition depicts graceful maidens from Vietnam&#39;s three regions dancing in idyllic spring harmony. Through countless layers of natural mountain lacquer (<em>sơn ta</em>), burnished gold leaf, and inlaid duck eggshells, the canvas exudes a luminous, three-dimensional depth that mesmerizes art historians worldwide.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Curated Field Notes for the Discerning Traveler (2026)
+            Curated Field Notes for the Discerning Traveler (2026)
           </h2>
         </div>
       <ul>
@@ -1548,22 +1552,26 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
   </div>
 </div>
 Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, anchoring the primary harbor, accommodations, and culinary hubs. From Hon Lon, a network of fishing boats and speedboats branches out, connecting travelers to lesser-known, untamed paradises such as Hon Mau, Hon Dau, Hon Ngang, and Hai Bo Dap.
-        <h3 id="administrative-note-post-redistricting-update" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Administrative Note (Post-Redistricting Update)
-        </h3>
+        <div id="administrative-note-post-redistricting-update" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Administrative Note (Post-Redistricting Update)
+          </h3>
+        </div>
       <p>Amidst sweeping geographical reclassifications, <strong>the Nam Du Archipelago now falls under the Kien Hai Special District, An Giang Province</strong>. While older travel maps and faded local signboards may still display &quot;Kien Giang Province,&quot; it is essential to use the updated administrative details when researching legalities, making bookings, or purchasing ferry tickets. The actual maritime distance from Rach Gia Port to the An Son – Nam Du area is approximately 90 kilometers.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="transit-guide-setting-sail" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2026 Transit Guide: Setting Sail
+            Transit Guide: Setting Sail
           </h2>
         </div>
       <p>Embarking on a journey to Nam Du demands meticulous planning, particularly regarding ferry schedules and an acquired tolerance for the ocean&#39;s swell.</p>
 
-        <h3 id="from-rach-gia-to-nam-du" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          From Rach Gia to Nam Du
-        </h3>
+        <div id="from-rach-gia-to-nam-du" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            From Rach Gia to Nam Du
+          </h3>
+        </div>
       <p>This remains the most popular and efficient maritime route. Superdong is currently the primary operator, with voyage times ranging from 2 to 2.5 hours, heavily dependent on sea conditions.</p>
 <p><strong>High-Speed Ferry Fares (Rach Gia – Nam Du, effective from June 20, 2026):</strong></p>
 
@@ -1590,9 +1598,11 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
 </ul>
 <p><em>Field Note:</em> Departure times indicate when the vessel lifts its anchor. You must arrive at the port at least 45 minutes prior for document verification. Crucially, schedules are subject to unannounced changes or total cancellations dictated by the port authority&#39;s weather forecasts.</p>
 
-        <h3 id="the-phu-quoc-nam-du-connection" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Phu Quoc – Nam Du Connection
-        </h3>
+        <div id="the-phu-quoc-nam-du-connection" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Phu Quoc – Nam Du Connection
+          </h3>
+        </div>
       <p>For voyagers aiming to craft a comprehensive loop of the southwestern islands, the Phu Quoc – Nam Du route offers a morning departure at 08:00 AM and a return leg at 2:00 PM. Due to time constraints, this route is incompatible with a day trip; a minimum stay of 1 to 2 nights on Nam Du is essential.</p>
 <hr>
 
@@ -1602,20 +1612,26 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
           </h2>
         </div>
       
-        <h3 id="bai-chet-hon-lon-the-logistical-hub" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Bai Chet (Hon Lon) – The Logistical Hub
-        </h3>
+        <div id="bai-chet-hon-lon-the-logistical-hub" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bai Chet (Hon Lon) – The Logistical Hub
+          </h3>
+        </div>
       <p>Bai Chet anchors the main pier. The moment you step off the ferry, you are engulfed by the vibrant cacophony of seafood stalls, motorbike rental vendors, and densely packed guesthouses. This enclave acts as an indispensable staging ground. Fill your fuel tank, rehydrate, and procure necessary provisions here before venturing into the more isolated corners of the island.</p>
 
-        <h3 id="bai-cay-men-the-tranquil-cove" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Bai Cay Men – The Tranquil Cove
-        </h3>
+        <div id="bai-cay-men-the-tranquil-cove" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bai Cay Men – The Tranquil Cove
+          </h3>
+        </div>
       <p>Cradled between rocky cliffs and rows of towering, curved coconut palms, Bai Cay Men (<em>Bãi Cây Mến</em>) is widely regarded as the most breathtaking beach on Hon Lon. Stripped of the chaotic energy of Bai Chet, it offers calm waters, gently sloping sands, and an atmosphere isolated enough to escape the midday heat.
 <em>Field Tip:</em> The golden hours for this cove are early morning or post 3:30 PM. Refrain from swimming too far from the shore in areas lacking local supervision.</p>
 
-        <h3 id="hon-mau-and-hon-dau-coral-sanctuaries" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Hon Mau & Hon Dau – Coral Sanctuaries
-        </h3>
+        <div id="hon-mau-and-hon-dau-coral-sanctuaries" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Hon Mau & Hon Dau – Coral Sanctuaries
+          </h3>
+        </div>
       <p>Joining a shared boat tour to hop between islands is a non-negotiable experience in Nam Du.</p>
 <ul>
 <li><strong>Hon Mau</strong> unveils small, secluded beaches woven into the fabric of a traditional fishing village. Here, smooth black pebbles gleam beneath crystalline waters, forming a unique coastal ecosystem.</li>
@@ -1623,9 +1639,11 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
 </ul>
 <p><em>Responsible Travel Warning:</em> It is strictly forbidden to stand on the coral reefs, harvest coral to take ashore, or participate in bringing starfish out of the water for photographs.</p>
 
-        <h3 id="hon-ngang-the-voice-of-the-fishing-village" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Hon Ngang – The Voice of the Fishing Village
-        </h3>
+        <div id="hon-ngang-the-voice-of-the-fishing-village" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Hon Ngang – The Voice of the Fishing Village
+          </h3>
+        </div>
       <p>Hon Ngang may lack the allure of white sandy beaches, yet it possesses profound anthropological value. It is the most densely populated enclave, serving as the mooring ground for hundreds of trawlers and fishing vessels. Since 2025, regular ferry connections between Hon Lon and Hon Ngang have transformed this island into an essential stop for documentary photography enthusiasts and those craving the freshest seafood straight from the floating rafts.</p>
 <hr>
 
@@ -1657,7 +1675,7 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="survival-guide-and-budgeting" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2026 Survival Guide & Budgeting
+            Survival Guide & Budgeting
           </h2>
         </div>
       <p>To ensure a seamless expedition, adhere to these fundamental principles:</p>
@@ -1999,7 +2017,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
+            Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
           </h2>
         </div>
       <p>Southern Vietnamese cookery is fundamentally celebratory and generous. Liberated from the strict ceremonial conventions of the imperial north, cooks of the lower Mekong celebrate sensory immediacy: sweetness is deep and unapologetic (drawn from pure sugarcane and young coconut water), spiciness is sharp and vibrant from red bird’s-eye chilis, sourness is refreshing through fermented rice vinegar or tamarind pods, and umami is anchored in fragrant fermented river fish pastes (<em>mắm</em>).</p>
@@ -2008,61 +2026,56 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="deconstructing-5-heritage-stalls-inside-the-market-daytime" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Deconstructing 5 Heritage Stalls Inside the Market (Daytime)
+            Deconstructing 5 Heritage Stalls Inside the Market (Daytime)
           </h2>
         </div>
       
-          <div id="east-gate-bun-rieu-freshwater-crab-alchemy" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . East Gate Bún Riêu: Freshwater Crab Alchemy
-            </h3>
-          </div>
-        <ul>
+        <div id="east-gate-bun-rieu-freshwater-crab-alchemy" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            East Gate Bún Riêu: Freshwater Crab Alchemy
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> Flanking the East Portal on Phan Boi Chau Street.</li>
 <li><strong>The Broth Blueprint:</strong> Free from artificial coloring, the brilliant amber broth owes its hue to natural annatto seed oil sautéed with vine-ripened tomatoes. Simmered overnight with pork marrow bones and fermented rice vinegar (<em>giấm bỗng</em>), the soup balances delicate acidity with deep animal savoriness.</li>
 <li><strong>The Signature Crab Cake:</strong> Northern variations feature fragile flakes of crab floating on the surface; Ben Thanh’s version binds river paddy crab meat with minced pork shoulder, crushed dried river shrimp, and duck eggs, steamed into dense, succulent medallions that melt on the tongue.</li>
 </ul>
 
-          <div id="mekong-delta-bun-mam-the-essence-of-the-great-river" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . Mekong Delta Bún Mắm: The Essence of the Great River
-            </h3>
-          </div>
-        <ul>
+        <div id="mekong-delta-bun-mam-the-essence-of-the-great-river" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Mekong Delta Bún Mắm: The Essence of the Great River
+          </h3>
+        </div>
+      <ul>
 <li><strong>Fermented Broth Mastery:</strong> The broth derives its potent soul from simmered snakeskin gourami (<em>mắm cá sặc</em>) and mud carp (<em>mắm cá linh</em>) transported from Chau Doc on the Cambodian border, deodorized skillfully with bruised lemongrass culms and minced bird&#39;s-eye chilies.</li>
 <li><strong>Abundant Garnishes:</strong> Each steaming bowl is a lavish aquatic harvest: snappy Ben Tre tiger prawns, scored squid fillets, dill-infused clown featherback fishcakes, and crispy golden pork belly. An accompanying platter brims with river botanicals: water lily stems, bitter herbs, water hyacinth shoots, and shredded banana blossom.</li>
 </ul>
 
-          <div id="goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
-              . Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls
-            </h3>
-          </div>
-        <p>Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine vermicelli, and fresh garlic chives rolled into tight, crystalline cylinders. Dip each bite into warm fermented soybean paste infused with coconut cream and crushed roasted peanuts for an exceptionally refreshing midday respite.</p>
+        <div id="goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls
+          </h3>
+        </div>
+      <p>Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine vermicelli, and fresh garlic chives rolled into tight, crystalline cylinders. Dip each bite into warm fermented soybean paste infused with coconut cream and crushed roasted peanuts for an exceptionally refreshing midday respite.</p>
 
-          <div id="central-vietnamese-steamed-rice-cakes-the-hue-connection" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.4</span>
-              . Central Vietnamese Steamed Rice Cakes: The Hue Connection
-            </h3>
-          </div>
-        <p>Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety <em>bánh bèo</em>. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.</p>
+        <div id="central-vietnamese-steamed-rice-cakes-the-hue-connection" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Central Vietnamese Steamed Rice Cakes: The Hue Connection
+          </h3>
+        </div>
+      <p>Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety <em>bánh bèo</em>. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.</p>
 
-          <div id="ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.5</span>
-              . Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
-            </h3>
-          </div>
-        <p>Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (<em>chè sương sa hạt lựu</em>), warm lotus seed porridge (<em>chè thưng</em>), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.</p>
+        <div id="ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
+          </h3>
+        </div>
+      <p>Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (<em>chè sương sa hạt lựu</em>), warm lotus seed porridge (<em>chè thưng</em>), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
+            Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
           </h2>
         </div>
       <p>When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:</p>
@@ -2081,7 +2094,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures
+            Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures
           </h2>
         </div>
       
@@ -2106,7 +2119,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-notes-for-conscious-gourmands-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Field Notes for Conscious Gourmands (2026)
+            Field Notes for Conscious Gourmands (2026)
           </h2>
         </div>
       <ol>
@@ -2482,31 +2495,28 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           </h2>
         </div>
       
-          <div id="green-skin-pomelo-the-emerald-of-the-delta" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . Green-skin Pomelo – The Emerald of the Delta
-            </h3>
-          </div>
-        <p>The Green-skin Pomelo (<em>Bưởi da xanh</em>) is the crowning agricultural jewel of the Ben Tre region (now administratively merged into Vinh Long). Its defining characteristic is a vibrant green rind that remains verdant even at full ripeness, protecting luscious, rosy-pink vesicles that are bursting with a perfectly balanced sweetness and contain few, if any, seeds.
+        <div id="green-skin-pomelo-the-emerald-of-the-delta" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Green-skin Pomelo – The Emerald of the Delta
+          </h3>
+        </div>
+      <p>The Green-skin Pomelo (<em>Bưởi da xanh</em>) is the crowning agricultural jewel of the Ben Tre region (now administratively merged into Vinh Long). Its defining characteristic is a vibrant green rind that remains verdant even at full ripeness, protecting luscious, rosy-pink vesicles that are bursting with a perfectly balanced sweetness and contain few, if any, seeds.
 <em>Purchasing Tip:</em> Seek out fruits with taut, glossy skin and well-defined dimples. A superior pomelo will feel remarkably heavy and dense in your hand.</p>
 
-          <div id="ri6-durian-the-king-of-fruits" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Ri6 Durian – The King of Fruits
-            </h3>
-          </div>
-        <p>A discourse on Mekong Delta durians is incomplete without reverence for the legendary Ri6 cultivar, originating from Binh Hoa Phuoc (Vinh Long). Distinguishing itself from Thai varieties, the Ri6 boasts brilliant saffron-yellow flesh, remarkably flat seeds, a decadently creamy texture, and an intoxicatingly pungent aroma that is entirely unmistakable.
+        <div id="ri6-durian-the-king-of-fruits" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ri6 Durian – The King of Fruits
+          </h3>
+        </div>
+      <p>A discourse on Mekong Delta durians is incomplete without reverence for the legendary Ri6 cultivar, originating from Binh Hoa Phuoc (Vinh Long). Distinguishing itself from Thai varieties, the Ri6 boasts brilliant saffron-yellow flesh, remarkably flat seeds, a decadently creamy texture, and an intoxicatingly pungent aroma that is entirely unmistakable.
 <em>Tasting Note:</em> We highly recommend indulging directly at the source—orchards that offer a &quot;quality guarantee&quot; (replacing any subpar fruit immediately) ensure a flawless tasting experience.</p>
 
-          <div id="lo-ren-star-apple-vinh-kim" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Lo Ren Star Apple (Vinh Kim)
-            </h3>
-          </div>
-        <p>Making a fleeting appearance exclusively between January and March, the Lo Ren Star Apple (<em>Vú sữa Lò Rèn</em>) from Dong Thap features an exquisitely thin, polished skin. A gentle massage of the fruit releases a milky, profoundly sweet nectar. It is a delicate, cooling delicacy, perfect for tempering the onset of the summer heat.</p>
+        <div id="lo-ren-star-apple-vinh-kim" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Lo Ren Star Apple (Vinh Kim)
+          </h3>
+        </div>
+      <p>Making a fleeting appearance exclusively between January and March, the Lo Ren Star Apple (<em>Vú sữa Lò Rèn</em>) from Dong Thap features an exquisitely thin, polished skin. A gentle massage of the fruit releases a milky, profoundly sweet nectar. It is a delicate, cooling delicacy, perfect for tempering the onset of the summer heat.</p>
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DWfxIGLFvye/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
@@ -2517,53 +2527,47 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="macapuno-coconut-tra-vinh" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
-              . Macapuno Coconut (Tra Vinh)
-            </h3>
-          </div>
-        <p>The Macapuno Coconut (<em>Dừa sáp</em>) from Cau Ke (now under Vinh Long) is a fascinating botanical mutation. Rather than yielding clear coconut water, it is densely packed with thick, wax-like, gelatinous flesh, while its liquid is viscous and syrupy. A smoothie blending this waxy coconut with crushed ice and condensed milk ranks among the most decadent tropical desserts imaginable.</p>
+        <div id="macapuno-coconut-tra-vinh" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Macapuno Coconut (Tra Vinh)
+          </h3>
+        </div>
+      <p>The Macapuno Coconut (<em>Dừa sáp</em>) from Cau Ke (now under Vinh Long) is a fascinating botanical mutation. Rather than yielding clear coconut water, it is densely packed with thick, wax-like, gelatinous flesh, while its liquid is viscous and syrupy. A smoothie blending this waxy coconut with crushed ice and condensed milk ranks among the most decadent tropical desserts imaginable.</p>
 
-          <div id="ha-chau-burmese-grape-phong-dien" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">5</span>
-              . Ha Chau Burmese Grape (Phong Dien)
-            </h3>
-          </div>
-        <p>The Ha Chau Burmese Grape (<em>Dâu Hạ Châu</em>) is visually arresting with its pale golden hue, renowned for a masterful balance of subtle tartness and clean sweetness. Should you find yourself in Phong Dien (Can Tho) during May, you can wander beneath sprawling canopies where clusters of this fruit cascade heavily from trunk to branch tip.</p>
+        <div id="ha-chau-burmese-grape-phong-dien" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ha Chau Burmese Grape (Phong Dien)
+          </h3>
+        </div>
+      <p>The Ha Chau Burmese Grape (<em>Dâu Hạ Châu</em>) is visually arresting with its pale golden hue, renowned for a masterful balance of subtle tartness and clean sweetness. Should you find yourself in Phong Dien (Can Tho) during May, you can wander beneath sprawling canopies where clusters of this fruit cascade heavily from trunk to branch tip.</p>
 
-          <div id="lai-vung-pink-mandarin" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">6</span>
-              . Lai Vung Pink Mandarin
-            </h3>
-          </div>
-        <p>From late December leading up to the Lunar New Year, the Lai Vung region (Dong Thap) seemingly dons a vibrant new wardrobe. The Pink Mandarin (<em>Quýt hồng</em>) features a thin, red-orange rind, bursting with succulent juices and a potent fragrance that instantly evokes the festive spirit of Tet.</p>
+        <div id="lai-vung-pink-mandarin" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Lai Vung Pink Mandarin
+          </h3>
+        </div>
+      <p>From late December leading up to the Lunar New Year, the Lai Vung region (Dong Thap) seemingly dons a vibrant new wardrobe. The Pink Mandarin (<em>Quýt hồng</em>) features a thin, red-orange rind, bursting with succulent juices and a potent fragrance that instantly evokes the festive spirit of Tet.</p>
 
-          <div id="soc-trang-purple-longan" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">7</span>
-              . Soc Trang Purple Longan
-            </h3>
-          </div>
-        <p>The Purple Longan (<em>Nhãn tím</em>) is a stunning natural mutation discovered in Soc Trang (now under Can Tho). Every element—from the fruit’s skin and young leaves to the branches—is suffused with a striking purple pigment. While its sweetness and flesh profile mirror the classic &#39;cow-hide&#39; longan (<em>nhãn tiêu da bò</em>), its arresting visual appeal ensures this rarity remains perpetually in high demand and short supply.</p>
+        <div id="soc-trang-purple-longan" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Soc Trang Purple Longan
+          </h3>
+        </div>
+      <p>The Purple Longan (<em>Nhãn tím</em>) is a stunning natural mutation discovered in Soc Trang (now under Can Tho). Every element—from the fruit’s skin and young leaves to the branches—is suffused with a striking purple pigment. While its sweetness and flesh profile mirror the classic &#39;cow-hide&#39; longan (<em>nhãn tiêu da bò</em>), its arresting visual appeal ensures this rarity remains perpetually in high demand and short supply.</p>
 
-          <div id="bay-nui-palmyra-palm" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">8</span>
-              . Bay Nui Palmyra Palm
-            </h3>
-          </div>
-        <p>When journeying through the Seven Mountains Region (<em>Vùng Bảy Núi</em>, An Giang), the Palmyra Palm (<em>Thốt nốt</em>) commands attention. The translucent endosperm of the young palm seed is as tender and chewy as artisan jelly. While freshly harvested palm sap is an exceptional thirst quencher, its rapid fermentation means locals often boil it down into fragrant, caramelized discs of palm sugar—an essential ingredient for crafting traditional sweet soups (<em>chè</em>) or caramelizing fish.</p>
+        <div id="bay-nui-palmyra-palm" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bay Nui Palmyra Palm
+          </h3>
+        </div>
+      <p>When journeying through the Seven Mountains Region (<em>Vùng Bảy Núi</em>, An Giang), the Palmyra Palm (<em>Thốt nốt</em>) commands attention. The translucent endosperm of the young palm seed is as tender and chewy as artisan jelly. While freshly harvested palm sap is an exceptional thirst quencher, its rapid fermentation means locals often boil it down into fragrant, caramelized discs of palm sugar—an essential ingredient for crafting traditional sweet soups (<em>chè</em>) or caramelizing fish.</p>
 
-          <div id="wild-mangrove-apple-trai-ban" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">9</span>
-              . Wild Mangrove Apple (Trái Bần)
-            </h3>
-          </div>
-        <p>Thriving untamed along the brackish riverbanks, the Mangrove Apple (<em>Trái bần</em>) is not intended as a dessert; rather, it is the rustic soul of riverine gastronomy. Its sharp, tart flavor, underscored by a subtle astringency, is the irreplaceable foundation for the legendary sour catfish soup (<em>canh chua cá bông lau</em>) or the iconic <em>lẩu bần</em> (mangrove apple hotpot)—culinary masterpieces unrivaled elsewhere.</p>
+        <div id="wild-mangrove-apple-trai-ban" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Wild Mangrove Apple (Trái Bần)
+          </h3>
+        </div>
+      <p>Thriving untamed along the brackish riverbanks, the Mangrove Apple (<em>Trái bần</em>) is not intended as a dessert; rather, it is the rustic soul of riverine gastronomy. Its sharp, tart flavor, underscored by a subtle astringency, is the irreplaceable foundation for the legendary sour catfish soup (<em>canh chua cá bông lau</em>) or the iconic <em>lẩu bần</em> (mangrove apple hotpot)—culinary masterpieces unrivaled elsewhere.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -2901,7 +2905,7 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="slow-travel-philosophy-embracing-the-city-on-foot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Slow Travel Philosophy: Embracing the City on Foot
+            Slow Travel Philosophy: Embracing the City on Foot
           </h2>
         </div>
       <p>Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.</p>
@@ -2919,38 +2923,46 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="detailed-four-stage-itinerary-breakdown" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Detailed Four-Stage Itinerary Breakdown
+            Detailed Four-Stage Itinerary Breakdown
           </h2>
         </div>
       
-        <h3 id="stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers
-        </h3>
+        <div id="stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers
+          </h3>
+        </div>
       <ul>
 <li><strong>07:30 – 09:00 AM:</strong> Begin at Ben Thanh Market’s East Portal. Indulge in a steaming bowl of <a href="/ben-thanh-market-food-guide">authentic bún riêu</a>, laden with river crab cakes. Stroll around the South Portal clock tower to admire the 1952 Bien Hoa ceramic reliefs in the crisp morning light.</li>
 <li><strong>09:15 – 10:15 AM:</strong> Walk 200 meters down Truong Dinh Street to <strong>Mariamman Hindu Temple</strong>. Shed your footwear at the threshold, absorb the warmth of camphor incense, and admire the vibrant hand-painted deities ascending the tiered Gopuram tower.</li>
 </ul>
 
-        <h3 id="stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats
-        </h3>
+        <div id="stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats
+          </h3>
+        </div>
       <ul>
 <li><strong>10:30 AM – 12:00 PM:</strong> Cross Le Thi Hong Gam Street to the <strong><a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a> (97A Pho Duc Chinh)</strong>. Spend 90 minutes exploring Hui Bon Hoa’s 99-window estate, marveling at stained glass reflections and viewing the monumental national treasure <em>Spring Garden of North, Central, and South Vietnam</em>.</li>
 <li><strong>12:15 – 13:45 PM:</strong> Savor an authentic Indochine lunch featuring fresh spring rolls and claypot dishes near Nguyen Thai Binh Street. Afterwards, ascend the encaustic tile stairways of a vintage Pasteur Street apartment block to sip single-origin Vietnamese pour-over coffee in a quiet sanctuary.</li>
 </ul>
 
-        <h3 id="stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes
-        </h3>
+        <div id="stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes
+          </h3>
+        </div>
       <ul>
 <li><strong>14:00 – 16:00 PM:</strong> Stroll beneath tree-shaded Nam Ky Khoi Nghia Boulevard to the <strong>Independence Palace</strong>. Unpack master architect Ngo Viet Thu’s Tropical Modernism, decipher Eastern philosophical ideograms (Cat, Khau, Trung), and step into the reinforced subterranean wartime telecommunication bunkers.</li>
 <li><strong>16:15 – 17:00 PM:</strong> Return to the renovated plaza before Ben Thanh Market. Ride the escalators down into the <strong>2026 Ben Thanh Central Metro Station</strong>, gazing up through the massive circular Lotus Toplight skylight as dusk rays pierce the glass concourse.</li>
 <li><strong>17:00 – 17:45 PM:</strong> Walk down Le Loi Boulevard past the Saigon Opera House, reaching <strong>Bach Dang Riverfront Park</strong>. Rest along the granite promenade, catching cooling river winds as the sun sets over the Saigon River.</li>
 </ul>
 
-        <h3 id="stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts
-        </h3>
+        <div id="stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts
+          </h3>
+        </div>
       <ul>
 <li><strong>18:00 – 19:30 PM:</strong> Circle back to Phan Boi Chau Street flanking Ben Thanh Market. Feast on betel-leaf wrapped beef grilled over open charcoal embers and fresh coastal shellfish.</li>
 <li><strong>19:45 – 20:30 PM:</strong> Conclude your expedition at an open-air rooftop lounge overlooking the square, sipping a signature botanical cocktail as the illuminated clock tower presides over evening traffic below.</li>
@@ -2959,7 +2971,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-time-block-and-budget-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Curated Time-Block & Budget Matrix (2026 Reference)
+            Curated Time-Block & Budget Matrix (2026 Reference)
           </h2>
         </div>
       
@@ -2987,7 +2999,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-checklist-for-conscious-voyagers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Field Checklist for Conscious Voyagers (2026)
+            Field Checklist for Conscious Voyagers (2026)
           </h2>
         </div>
       <ul>
@@ -3322,9 +3334,11 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
   </div>
 </div>
 When venturing to the ancient capital, traversing the Truong Tien Bridge on foot—while the distant tolling of the Thien Mu Pagoda bell echoes across the water and royal dragon boats glide silently below—is a deeply visceral experience that every bespoke traveler must undertake.
-        <h3 id="trang-tien-or-truong-tien-deciphering-the-nomenclature" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Trang Tien or Truong Tien? Deciphering the Nomenclature
-        </h3>
+        <div id="trang-tien-or-truong-tien-deciphering-the-nomenclature" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Trang Tien or Truong Tien? Deciphering the Nomenclature
+          </h3>
+        </div>
       <p>The duality between the names &quot;Trang Tien&quot; and &quot;Truong Tien&quot; remains a fascinating cultural idiosyncrasy for foreign and domestic travelers alike. Historically and administratively, <strong>Truong Tien</strong> is the officially recognized nomenclature. The title originates from the bridge&#39;s proximity to a former royal mint (<em>Trường Tiền</em>) established by the Nguyen Dynasty.</p>
 <p>Conversely, in regional vernacular and folk poetry, the moniker <strong>Trang Tien</strong> dominates (with &quot;Trang&quot; being a localized phonetic corruption of &quot;Truong&quot;). Furthermore, this resilient structure has borne the names Thanh Thai (the Emperor who decreed its construction), Clémenceau (a French Prime Minister), and Nguyen Hoang during various tumultuous chapters of Vietnamese history.</p>
 <hr>
@@ -3709,7 +3723,7 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
+            Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
           </h2>
         </div>
       <p>The palatial grounds have served as the fulcrum of southern governance across three distinct epochs:</p>
@@ -3720,7 +3734,7 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
+            Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
           </h2>
         </div>
       <p>Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:</p>
@@ -3734,23 +3748,22 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Floorplan Sino-Vietnamese Ideograms
+### Floorplan Sino-Vietnamese Ideograms
 - **The Ideogram CÁT (吉 - Auspiciousness):** The primary structural footprint outlines the character *Cát*, symbolizing eternal fortune and peace for the nation.
 - **The Ideogram KHẨU (口 - Free Speech):** The central presidential balcony on the second level frames the square character *Khẩu*, embodying the imperative of free speech and democratic dialogue.
 - **The Ideogram TRUNG (中 - Loyalty):** The vertical flagpole rising precisely through the center of the balcony forms the stroke *Trung*, championing unbending fidelity to the homeland.
 - **The Ideogram CHỦ (主 - Sovereignty):** The rooftop pavilion topped by the national flag finishes the character *Chủ*, declaring undisputed national independence.
-          <div id="the-concrete-bamboo-louver-curtain-rem-hoa-a" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . The Concrete Bamboo Louver Curtain (Rèm Hoa Đá)
-            </h3>
-          </div>
-        <p>Enclosing the second and third floor balconies is a distinctive sunscreen facade sculpted into slender <strong>concrete bamboo joints (<em>đốt trúc</em>)</strong>. This ingenious structural invention evokes the unyielding resilience of Vietnamese rural bamboo groves while solving a critical equatorial challenge: it deflects harsh midday solar radiation, draws cross-ventilating monsoons through deep covered loggias, and affords diplomats privacy from the public avenues outside.</p>
+        <div id="the-concrete-bamboo-louver-curtain-rem-hoa-a" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Concrete Bamboo Louver Curtain (Rèm Hoa Đá)
+          </h3>
+        </div>
+      <p>Enclosing the second and third floor balconies is a distinctive sunscreen facade sculpted into slender <strong>concrete bamboo joints (<em>đốt trúc</em>)</strong>. This ingenious structural invention evokes the unyielding resilience of Vietnamese rural bamboo groves while solving a critical equatorial challenge: it deflects harsh midday solar radiation, draws cross-ventilating monsoons through deep covered loggias, and affords diplomats privacy from the public avenues outside.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Curated Interior Exploration: From Grand Salons to Underground Bunkers
+            Curated Interior Exploration: From Grand Salons to Underground Bunkers
           </h2>
         </div>
       
@@ -3775,7 +3788,7 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Field Notes for the Discerning Traveler (2026)
+            Field Notes for the Discerning Traveler (2026)
           </h2>
         </div>
       <ul>
@@ -4107,9 +4120,11 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
       <p>Situated roughly 40-45 kilometers from the urban sprawl of Ho Chi Minh City, <strong>My Quynh Safari</strong> has emerged as a multifaceted ecological entertainment hub. Far beyond a mere animal sanctuary or traditional zoo, the complex seamlessly integrates a semi-wild safari experience, an expansive water park, and dynamic outdoor obstacle courses.</p>
 <p>For families seeking a weekend retreat from the relentless tropical heat without enduring a grueling cross-country journey, My Quynh Safari presents an exceptionally rational choice. However, to optimize both your budget and your stamina, an intimate understanding of its tiered ticketing and service structure is essential.</p>
 
-        <h3 id="crucial-note-regarding-administrative-boundaries" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Crucial Note Regarding Administrative Boundaries
-        </h3>
+        <div id="crucial-note-regarding-administrative-boundaries" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Crucial Note Regarding Administrative Boundaries
+          </h3>
+        </div>
       <p>When scouring the internet for intel, many travelers instinctively search for &quot;My Quynh Safari Long An.&quot; However, following a comprehensive administrative realignment, this territory now officially falls under <strong>Hau Nghia Commune, Tay Ninh Province</strong>.</p>
 <p><em>Navigation Tip:</em> When consulting Google Maps or digital routing applications, ensure you drop the pin precisely on &quot;My Quynh Safari&quot; rather than searching by its antiquated administrative address to avoid misdirection. The most reliable overland route from Ho Chi Minh City is navigating National Route 22 to the Cu Chi overpass, then diverting onto Provincial Road 8 to merge onto Nguyen Thien Khiem street.</p>
 <hr>
@@ -4121,13 +4136,12 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
         </div>
       <p>The most distinctive operational trait of My Quynh Safari, distinguishing it from conventional theme parks, is its <strong>fragmented ticketing policy</strong>. Rather than purchasing a comprehensive &quot;All-in-one&quot; passport at the gate, visitors pay a la carte for specific zones. This modular approach is financially advantageous for those who simply wish to stroll and observe, yet it demands meticulous budget forecasting for families intent on experiencing everything.</p>
 
-          <div id="general-admission-mandatory" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . General Admission (Mandatory)
-            </h3>
-          </div>
-        <p>This foundational ticket grants access solely to the traditional enclosed zoo, the Bonsai gardens, and the Koi ponds.</p>
+        <div id="general-admission-mandatory" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            General Admission (Mandatory)
+          </h3>
+        </div>
+      <p>This foundational ticket grants access solely to the traditional enclosed zoo, the Bonsai gardens, and the Koi ponds.</p>
 
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
@@ -4145,13 +4159,12 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
         </table>
       </div>
     
-          <div id="the-semi-wild-safari-expedition" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . The Semi-Wild Safari Expedition
-            </h3>
-          </div>
-        <p>This is the undeniable soul of the reserve. Here, you board specially modified, steel-mesh buses that plunge deep into the free-roaming territories of lions, bears, and tigers.</p>
+        <div id="the-semi-wild-safari-expedition" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Semi-Wild Safari Expedition
+          </h3>
+        </div>
+      <p>This is the undeniable soul of the reserve. Here, you board specially modified, steel-mesh buses that plunge deep into the free-roaming territories of lions, bears, and tigers.</p>
 
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
@@ -4169,13 +4182,12 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
         </table>
       </div>
     
-          <div id="water-park-and-amusement-zones" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Water Park & Amusement Zones
-            </h3>
-          </div>
-        <p>Should your expedition extend into the sweltering afternoon, the water park serves as an indispensable refuge.</p>
+        <div id="water-park-and-amusement-zones" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Water Park & Amusement Zones
+          </h3>
+        </div>
+      <p>Should your expedition extend into the sweltering afternoon, the water park serves as an indispensable refuge.</p>
 
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
@@ -4200,23 +4212,21 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       
-          <div id="the-armored-safari-trek" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The Armored Safari Trek
-            </h3>
-          </div>
-        <p>Subverting the archaic model of caged captivity, the semi-wild sanctuary turns the tables. Here, it is the humans who are &quot;caged&quot; within secure armored buses, crawling methodically into the sprawling, uninhibited habitats of apex predators and towering herbivores.</p>
+        <div id="the-armored-safari-trek" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Armored Safari Trek
+          </h3>
+        </div>
+      <p>Subverting the archaic model of caged captivity, the semi-wild sanctuary turns the tables. Here, it is the humans who are &quot;caged&quot; within secure armored buses, crawling methodically into the sprawling, uninhibited habitats of apex predators and towering herbivores.</p>
 <p>The visceral thrill of a Bengal tiger pressing its weight against reinforced glass, or a herd of giraffes languidly crossing the vehicle&#39;s path, guarantees unadulterated exhilaration for young explorers.</p>
 <p><em>Absolute Safety Protocol:</em> DO NOT pry open the mesh windows, DO NOT extend limbs outside the vehicle, and strictly refrain from hurling food or foreign objects at the wildlife.</p>
 
-          <div id="zen-sanctuary-bonsai-gardens-and-koi-ponds" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Zen Sanctuary: Bonsai Gardens & Koi Ponds
-            </h3>
-          </div>
-        <p>If the adrenaline of the safari demands a contemplative pause, the Japanese-inspired Bonsai gardens, seamlessly integrated with massive Koi ponds, offer a sanctuary of stillness. The landscape is masterfully curated with rustic wooden bridges and monolithic natural stones, providing a flawless backdrop for documenting family memories.</p>
+        <div id="zen-sanctuary-bonsai-gardens-and-koi-ponds" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Zen Sanctuary: Bonsai Gardens & Koi Ponds
+          </h3>
+        </div>
+      <p>If the adrenaline of the safari demands a contemplative pause, the Japanese-inspired Bonsai gardens, seamlessly integrated with massive Koi ponds, offer a sanctuary of stillness. The landscape is masterfully curated with rustic wooden bridges and monolithic natural stones, providing a flawless backdrop for documenting family memories.</p>
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DcyK2WfzT3E/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
@@ -4227,13 +4237,12 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-          <div id="the-adrenaline-zone" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . The Adrenaline Zone
-            </h3>
-          </div>
-        <p>Beyond the aquatic park, the outdoor amusement sector challenges the bold with high-octane installations: free-fall drop towers, roller coasters, a zipline soaring over the lake, and interconnected trampoline labyrinths.
+        <div id="the-adrenaline-zone" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Adrenaline Zone
+          </h3>
+        </div>
+      <p>Beyond the aquatic park, the outdoor amusement sector challenges the bold with high-octane installations: free-fall drop towers, roller coasters, a zipline soaring over the lake, and interconnected trampoline labyrinths.
 <em>Expert Warning:</em> All outdoor mechanical apparatuses are subject to immediate, unannounced shutdowns if park management detects approaching thunderstorms or heavy squalls, a vital protocol to prevent electrical hazards and slip-and-fall incidents.</p>
 <hr>
 
@@ -4585,7 +4594,7 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="subterranean-renaissance-reimagining-the-urban-landscape" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Subterranean Renaissance: Reimagining the Urban Landscape
+            Subterranean Renaissance: Reimagining the Urban Landscape
           </h2>
         </div>
       <p>Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.</p>
@@ -4603,7 +4612,7 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="navigating-the-four-tier-subterranean-labyrinth" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Navigating the Four-Tier Subterranean Labyrinth
+            Navigating the Four-Tier Subterranean Labyrinth
           </h2>
         </div>
       <pre><code class="language-mermaid">graph TD
@@ -4614,34 +4623,31 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
     B3 --&gt; B4[&quot;Level B4: Future Line 2 Platforms &amp; Transit Junction&quot;]
 </code></pre>
 
-          <div id="level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.1</span>
-              . Level B1: The Commercial Concourse & Ticketing Mezzanine
-            </h3>
-          </div>
-        <p>The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques.</p>
+        <div id="level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Level B1: The Commercial Concourse & Ticketing Mezzanine
+          </h3>
+        </div>
+      <p>The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques.</p>
 
-          <div id="the-architectural-centerpiece-the-lotus-toplight" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . The Architectural Centerpiece: The Lotus Toplight
-            </h3>
-          </div>
-        <p>Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures an astonishing sightline: the amber tiles of the 1914 Ben Thanh clock tower rising against equatorial clouds—a breathtaking visual metaphor uniting two centuries of Saigon history.</p>
+        <div id="the-architectural-centerpiece-the-lotus-toplight" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Architectural Centerpiece: The Lotus Toplight
+          </h3>
+        </div>
+      <p>Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures an astonishing sightline: the amber tiles of the 1914 Ben Thanh clock tower rising against equatorial clouds—a breathtaking visual metaphor uniting two centuries of Saigon history.</p>
 
-          <div id="level-b2-line-1-boarding-platforms" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
-              . Level B2: Line 1 Boarding Platforms
-            </h3>
-          </div>
-        <p>Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maintains whisper-quiet acoustics and an ambient temperature of 23°C. Electric trainsets depart every four to eight minutes, whisking passengers northeast along the Saigon River.</p>
+        <div id="level-b2-line-1-boarding-platforms" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Level B2: Line 1 Boarding Platforms
+          </h3>
+        </div>
+      <p>Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maintains whisper-quiet acoustics and an ambient temperature of 23°C. Electric trainsets depart every four to eight minutes, whisking passengers northeast along the Saigon River.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-line-1-route-and-fare-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Curated Line 1 Route & Fare Matrix (2026 Reference)
+            Curated Line 1 Route & Fare Matrix (2026 Reference)
           </h2>
         </div>
       
@@ -4666,7 +4672,7 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-transit-insights-for-conscious-travelers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Curated Transit Insights for Conscious Travelers (2026)
+            Curated Transit Insights for Conscious Travelers (2026)
           </h2>
         </div>
       <ol>
@@ -5027,32 +5033,30 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-300-year-genesis-from-the-sacred-krama-to-a-southern-icon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. A 300-Year Genesis: From the Sacred Krama to a Southern Icon
+            A 300-Year Genesis: From the Sacred Krama to a Southern Icon
           </h2>
         </div>
       
-          <div id="the-spiritual-imprint-of-lord-vishnu" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.1</span>
-              . The Spiritual Imprint of Lord Vishnu
-            </h3>
-          </div>
-        <p>Many travelers, upon holding the checkered scarf, assume it is a purely Vietnamese invention born from the early migrants. However, from an anthropological perspective, the <em>khăn rằn</em> traces its direct lineage to the <strong>Krama</strong>, the ancestral scarf of the indigenous Khmer people in the lower Mekong basin.</p>
+        <div id="the-spiritual-imprint-of-lord-vishnu" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Spiritual Imprint of Lord Vishnu
+          </h3>
+        </div>
+      <p>Many travelers, upon holding the checkered scarf, assume it is a purely Vietnamese invention born from the early migrants. However, from an anthropological perspective, the <em>khăn rằn</em> traces its direct lineage to the <strong>Krama</strong>, the ancestral scarf of the indigenous Khmer people in the lower Mekong basin.</p>
 <p>In ancient Khmer Hinduism, Lord <strong>Vishnu</strong> is the supreme protector, the embodiment of compassion who often rests upon the seven-headed serpent, Naga. The Krama, meticulously woven with intersecting grid patterns, was designed to mimic the scales of this divine serpent. The early Khmer believed that carrying the Krama was akin to receiving the invisible, divine protection of Vishnu against wild beasts, monsoons, and the unpredictable perils of the riverine wilderness.</p>
 
-          <div id="a-natural-evolution-in-the-age-of-reclamation" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.2</span>
-              . A Natural Evolution in the Age of Reclamation
-            </h3>
-          </div>
-        <p>When Vietnamese pioneers embarked on the arduous journey to reclaim the marshlands of the Mekong Delta in the 17th and 18th centuries, the unforgiving environment—characterized by labyrinthine canals and a punishing bipolar climate of monsoon rains and scorching sun—necessitated cultural adaptation. The <em>áo bà ba</em> (the traditional slit-sided silk tunic) paired with a checkered scarf draped over the shoulder became the ultimate survival attire for those taming the wild frontier.</p>
+        <div id="a-natural-evolution-in-the-age-of-reclamation" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            A Natural Evolution in the Age of Reclamation
+          </h3>
+        </div>
+      <p>When Vietnamese pioneers embarked on the arduous journey to reclaim the marshlands of the Mekong Delta in the 17th and 18th centuries, the unforgiving environment—characterized by labyrinthine canals and a punishing bipolar climate of monsoon rains and scorching sun—necessitated cultural adaptation. The <em>áo bà ba</em> (the traditional slit-sided silk tunic) paired with a checkered scarf draped over the shoulder became the ultimate survival attire for those taming the wild frontier.</p>
 <p>The term <em>rằn</em> in the southern dialect translates to distinct, intersecting stripes. The traditional black-and-white palette was not merely a pragmatic choice for washing out the heavy alum mud, but also a poignant reflection of the pioneers&#39; unpretentious and resilient character.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-checkered-scarf-in-wartime-an-emblem-of-unyielding-resilience" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience
+            The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience
           </h2>
         </div>
       <p>Throughout the resistance wars against French and American forces, the <em>khăn rằn</em> transcended its daily utility to become an immortal military and cultural emblem of the southern battlefield:</p>
@@ -5072,7 +5076,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-comparative-matrix-the-four-iconic-scarves-of-southeast-asia" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. A Comparative Matrix: The Four Iconic Scarves of Southeast Asia
+            A Comparative Matrix: The Four Iconic Scarves of Southeast Asia
           </h2>
         </div>
       <p>To navigate the rich tapestry of regional textiles without confusion, we present a curated comparison of the prominent checkered scarves found across the region:</p>
@@ -5098,30 +5102,28 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-bespoke-field-guide-exploring-the-century-old-weaving-village-of-long-khanh-a" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A
+            A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A
           </h2>
         </div>
       <p>For travelers seeking to witness the authentic, meticulous creation of a traditional <em>khăn rằn</em>, a pilgrimage to the <strong>Long Khanh A Weaving Village (Hong Ngu District, Dong Thap Province)</strong> is an absolute imperative.</p>
 
-          <div id="logistical-essentials-for-2026" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.1</span>
-              . Logistical Essentials for 2026
-            </h3>
-          </div>
-        <ul>
+        <div id="logistical-essentials-for-2026" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Logistical Essentials for 2026
+          </h3>
+        </div>
+      <ul>
 <li><strong>Location:</strong> Situated on the Long Khanh riverine islet, amidst the mighty Tien River, approximately 65 km from Cao Lanh City and 12 km from Hong Ngu City.</li>
 <li><strong>The Journey:</strong> From Hong Ngu City, navigate to the Long Khanh ferry terminal for a brief 10-minute crossing. Upon reaching the islet, the newly paved roads offer a seamless route for a motorbike or bicycle exploration through the artisan hamlets.</li>
 <li><strong>The Golden Hours:</strong> Aim to arrive between <strong>7:30 AM and 10:30 AM</strong>. This window unveils a spectacular visual feast: vibrant yards of yarn drying under the morning sun, accompanied by the rhythmic, enchanting clatter of wooden looms.</li>
 </ul>
 
-          <div id="the-six-step-artisanal-mastery" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4.2</span>
-              . The Six-Step Artisanal Mastery
-            </h3>
-          </div>
-        <p>Unlike mass-produced textiles, an authentic Long Khanh A scarf undergoes an incredibly laborious manual process:</p>
+        <div id="the-six-step-artisanal-mastery" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Six-Step Artisanal Mastery
+          </h3>
+        </div>
+      <p>Unlike mass-produced textiles, an authentic Long Khanh A scarf undergoes an incredibly laborious manual process:</p>
 <ol>
 <li><strong>Unspooling:</strong> Massive spools of cotton thread are meticulously unraveled into smaller, manageable skeins using traditional wooden reels.</li>
 <li><strong>Dyeing:</strong> The skeins are submerged in boiling vats of pigment, allowing the colors to penetrate the very core of the fiber before being wrung dry.</li>
@@ -5134,38 +5136,46 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-voyagers-guide-four-authentic-ways-to-wear-the-khan-ran" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn
+            The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn
           </h2>
         </div>
       <p>Wearing the <em>khăn rằn</em> correctly transcends mere comfort; it is an unspoken nod to the local culture, projecting the poised demeanor of a seasoned explorer:</p>
 
-        <h3 id="style-1-the-classic-southern-drape" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Style 1: The Classic Southern Drape
-        </h3>
+        <div id="style-1-the-classic-southern-drape" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Style 1: The Classic Southern Drape
+          </h3>
+        </div>
       <ul>
 <li><strong>The Technique:</strong> Drape the scarf around the back of your neck, allowing both ends to fall naturally and symmetrically across your chest.</li>
 <li><strong>The Vibe:</strong> Ideal for a leisurely stroll through a floating market or orchard. It exudes a relaxed elegance while keeping the ends accessible for wiping away the tropical heat.</li>
 </ul>
 
-        <h3 id="style-2-the-expedition-side-knot" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Style 2: The Expedition Side-Knot
-        </h3>
+        <div id="style-2-the-expedition-side-knot" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Style 2: The Expedition Side-Knot
+          </h3>
+        </div>
       <ul>
 <li><strong>The Technique:</strong> Wrap the scarf once around your neck, thread one end through the loop, and secure it with a loose knot positioned over one shoulder.</li>
 <li><strong>The Vibe:</strong> Exceptionally pragmatic for motorbike journeys, rowing sampans, or jungle trekking. It secures the fabric against strong winds and provides a subtle layer of warmth during the crisp morning hours.</li>
 </ul>
 
-        <h3 id="style-3-the-traditional-laborers-headband" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Style 3: The Traditional Laborer’s Headband
-        </h3>
+        <div id="style-3-the-traditional-laborers-headband" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Style 3: The Traditional Laborer’s Headband
+          </h3>
+        </div>
       <ul>
 <li><strong>The Technique:</strong> Fold the scarf lengthwise into a 5–7 cm band. Place it across your forehead, wrap the ends to the back of your head, and tie it firmly.</li>
 <li><strong>The Vibe:</strong> The ultimate barrier against stinging sweat when kayaking, cycling through rural villages, or engaging in intense physical excursions under a relentless sun.</li>
 </ul>
 
-        <h3 id="style-4-the-ultimate-sun-shield" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Style 4: The Ultimate Sun Shield
-        </h3>
+        <div id="style-4-the-ultimate-sun-shield" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Style 4: The Ultimate Sun Shield
+          </h3>
+        </div>
       <ul>
 <li><strong>The Technique:</strong> Drape the scarf entirely over your head, pull the edges forward to shield your cheeks, cross the ends under your chin, and tie them gently at the nape of your neck.</li>
 <li><strong>The Vibe:</strong> Essential for prolonged exposure on riverboats, offering unparalleled protection for your head and neck from the piercing tropical glare.</li>
@@ -5174,7 +5184,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-tips-for-the-conscious-traveler-sourcing-and-caring-for-your-scarf" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf
+            Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf
           </h2>
         </div>
       <ul>
@@ -5514,9 +5524,11 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-        <h3 id="the-genesis-and-evolution-of-the-huynh-dynasty" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Genesis and Evolution of the Huynh Dynasty
-        </h3>
+        <div id="the-genesis-and-evolution-of-the-huynh-dynasty" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Genesis and Evolution of the Huynh Dynasty
+          </h3>
+        </div>
       <p>The mansion was erected in 1895 by Mr. Huynh Cam Thuan, an immensely wealthy Fujianese (Chinese) merchant who commanded the regional rice trade. In its original incarnation, it was a traditional three-bay wooden structure, typical of the Southwestern delta.</p>
 <p>In 1917, driven by a desire to project the family&#39;s soaring power and status, Mr. Thuan commissioned a comprehensive overhaul. The exterior shell was encased in solid brickwork bearing Roman-Renaissance motifs, while the inner sanctum retained its intricately carved Chinese wooden core. This audacious architectural marriage forged a rare masterpiece of East-meets-West eclecticism, preserved almost immaculately to this day.</p>
 <p>Mr. Huynh Thuy Le (the inheriting son) resided here, and it is he who became the archetype for the male protagonist in the celebrated novel.</p>
@@ -5545,9 +5557,11 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
         </table>
       </div>
     
-        <h3 id="stepping-across-the-threshold-of-time" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Stepping Across the Threshold of Time
-        </h3>
+        <div id="stepping-across-the-threshold-of-time" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Stepping Across the Threshold of Time
+          </h3>
+        </div>
       <p>As the traveler crosses the heavy wooden threshold, a stark spatial contrast is immediately apparent. Opposing the cold, white-washed brick exterior, the interior is awash in the warm, somber hues of precious timber. Natural light filters through the stained glass of louvered doors, casting a glow upon the imposing, gold-leafed ancestral altar. Here, every microscopic detail—from the mahogany daybed (<em>sập gụ</em>) and tea cabinets to the antique gramophone—has remained frozen in its precise position for over a century.</p>
 <hr>
 
@@ -5558,9 +5572,11 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
         </div>
       <p>It is undeniable that the international renown of this residence stems largely from the autobiographical novel <strong>&quot;The Lover&quot; (L&#39;Amant - 1984)</strong> by French author Marguerite Duras. The masterpiece claimed the prestigious Prix Goncourt and has been translated into over 40 languages.</p>
 
-        <h3 id="a-tear-stained-romance-on-the-my-thuan-ferry" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          A Tear-Stained Romance on the My Thuan Ferry
-        </h3>
+        <div id="a-tear-stained-romance-on-the-my-thuan-ferry" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            A Tear-Stained Romance on the My Thuan Ferry
+          </h3>
+        </div>
       <p>In 1929, aboard the My Thuan ferry crossing the Tien River, a 16-year-old French schoolgirl (Marguerite) locked eyes with the wealthy, 32-year-old heir of the Huynh family. They plummeted into an intense, clandestine romance, defying an insurmountable barrage of age disparities, racial divides, and crushing social prejudices.</p>
 <p>However, the Huynh dynasty of that era was profoundly conservative. They refused to accept a foreign daughter-in-law of impoverished origins. Bowing to the immense pressure of his authoritative father, Huynh Thuy Le was forced to sever ties with Marguerite and enter into an arranged marriage with a Chinese woman of equal social standing. Marguerite accepted a substantial sum from the Huynh family to clear her mother&#39;s debts and boarded a ship back to France, heartbroken.</p>
 <p>Decades later, in the twilight of their lives, Huynh Thuy Le visited Paris with his wife. He placed a phone call to Marguerite, delivering a single, devastating declaration:</p>
@@ -5575,17 +5591,21 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           </h2>
         </div>
       
-        <h3 id="navigating-from-ho-chi-minh-city" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Navigating from Ho Chi Minh City
-        </h3>
+        <div id="navigating-from-ho-chi-minh-city" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Navigating from Ho Chi Minh City
+          </h3>
+        </div>
       <ul>
 <li><strong>By Coach:</strong> Depart from the Mien Tay Bus Station (HCMC) via reputable carriers bound for Sa Dec (e.g., Phuong Trang, Phu Vinh Long). The journey takes approximately 3 hours. From the Sa Dec terminal, a brief 5-minute taxi ride will deliver you to Nguyen Hue street.</li>
 <li><strong>Private Transport:</strong> Navigate the HCMC - Trung Luong Expressway, exit onto National Route 1A toward the My Thuan bridge, and follow the directional signage into Sa Dec City.</li>
 </ul>
 
-        <h3 id="code-of-conduct-at-the-heritage-site" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Code of Conduct at the Heritage Site
-        </h3>
+        <div id="code-of-conduct-at-the-heritage-site" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Code of Conduct at the Heritage Site
+          </h3>
+        </div>
       <p>Unlike raucous eco-tourism parks, the atmosphere within the Huynh Thuy Le Ancient House demands a measured, respectful reverence:</p>
 <ol>
 <li><strong>Strictly No Touching or Repositioning Artifacts:</strong> The wooden and ceramic antiquities housed here boast a lineage exceeding 100 years.</li>
@@ -5915,7 +5935,7 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="footprints-of-the-tamil-chettiar-community-in-old-saigon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Footprints of the Tamil Chettiar Community in Old Saigon
+            Footprints of the Tamil Chettiar Community in Old Saigon
           </h2>
         </div>
       <p>To understand why a resplendent Dravidian temple graces the very heart of District 1, one must trace the waves of late 19th-century maritime migration.</p>
@@ -5925,7 +5945,7 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="deciphering-south-indian-dravidian-temple-art" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Deciphering South Indian Dravidian Temple Art
+            Deciphering South Indian Dravidian Temple Art
           </h2>
         </div>
       <p>Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:</p>
@@ -5939,21 +5959,20 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. The Gopuram: Gateway Between the Earthly and Divine
+### The Gopuram: Gateway Between the Earthly and Divine
 Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.
-          <div id="the-inner-sanctum-the-abode-of-goddess-mariamman" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . The Inner Sanctum: The Abode of Goddess Mariamman
-            </h3>
-          </div>
-        <p>Shedding your footwear at the threshold, you step into a cool, arched central hall. In the inner sanctum (<em>garbhagriha</em>) rests the sacred black stone statue of <strong>Goddess Mariamman</strong>, draped in shimmering yellow silk and crowned with fragrant garlands of fresh marigolds. In Hindu mythology, Mariamman is an incarnation of Parvati—the mother goddess of fertility, monsoon rains, healing, and familial harmony.</p>
+        <div id="the-inner-sanctum-the-abode-of-goddess-mariamman" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Inner Sanctum: The Abode of Goddess Mariamman
+          </h3>
+        </div>
+      <p>Shedding your footwear at the threshold, you step into a cool, arched central hall. In the inner sanctum (<em>garbhagriha</em>) rests the sacred black stone statue of <strong>Goddess Mariamman</strong>, draped in shimmering yellow silk and crowned with fragrant garlands of fresh marigolds. In Hindu mythology, Mariamman is an incarnation of Parvati—the mother goddess of fertility, monsoon rains, healing, and familial harmony.</p>
 <p>Flanking her are guardian deities Maduraiveeran and Pechiamman, while surrounding alcoves enshrine Ganesha, Murugan, and the ornate ceremonial Silver Chariot used during the annual autumn festival.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis
+            The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis
           </h2>
         </div>
       <p>The most mesmerizing phenomenon at Mariamman Temple is not merely its architecture, but a unique ritual born from decades of cultural convergence.</p>
@@ -5963,7 +5982,7 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-sacred-exploration-matrix" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Curated Sacred Exploration Matrix
+            Curated Sacred Exploration Matrix
           </h2>
         </div>
       
@@ -5988,7 +6007,7 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="conscious-traveler-protocol-and-field-guidelines-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Conscious Traveler Protocol & Field Guidelines (2026)
+            Conscious Traveler Protocol & Field Guidelines (2026)
           </h2>
         </div>
       <ul>
@@ -6330,7 +6349,7 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="navigating-the-four-cardinal-shopping-quadrants" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Navigating the Four Cardinal Shopping Quadrants
+            Navigating the Four Cardinal Shopping Quadrants
           </h2>
         </div>
       <pre><code class="language-mermaid">graph TD
@@ -6341,42 +6360,38 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
     Market --&gt; North[&quot;NORTH GATE: Tropical Fruits (Ri6 Durian, Mangosteens, Pomelos) &amp; Fresh Botanicals&quot;]
 </code></pre>
 
-          <div id="the-south-gate-le-loi-boulevard-silks-and-master-lacquerware" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.1</span>
-              . The South Gate (Le Loi Boulevard): Silks & Master Lacquerware
-            </h3>
-          </div>
-        <p>Entering beneath the iconic clock tower, you are immediately enveloped in vibrant textiles. Bolts of shimmering mulberry silk from Bao Loc and Van Phuc drape from ceiling beams alongside bespoke tailors capable of cutting and stitching an exquisite traditional <em>áo dài</em> within 12 to 24 hours. Surrounding stalls showcase handcrafted lacquer boxes inlaid with mother-of-pearl and natural duck eggshells.</p>
+        <div id="the-south-gate-le-loi-boulevard-silks-and-master-lacquerware" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The South Gate (Le Loi Boulevard): Silks & Master Lacquerware
+          </h3>
+        </div>
+      <p>Entering beneath the iconic clock tower, you are immediately enveloped in vibrant textiles. Bolts of shimmering mulberry silk from Bao Loc and Van Phuc drape from ceiling beams alongside bespoke tailors capable of cutting and stitching an exquisite traditional <em>áo dài</em> within 12 to 24 hours. Surrounding stalls showcase handcrafted lacquer boxes inlaid with mother-of-pearl and natural duck eggshells.</p>
 
-          <div id="the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.2</span>
-              . The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices
-            </h3>
-          </div>
-        <p>Follow your nose into the aromatic domain of whole-bean Vietnamese coffees. Merchants roast Arabica from the misty highlands of Da Lat and rich Robusta from Buon Ma Thuot on-site, grinding beans to your exact brewing preference. Nearby bins overflow with silk-skinned Binh Phuoc cashews and white peppercorns from Phu Quoc Island.</p>
+        <div id="the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices
+          </h3>
+        </div>
+      <p>Follow your nose into the aromatic domain of whole-bean Vietnamese coffees. Merchants roast Arabica from the misty highlands of Da Lat and rich Robusta from Buon Ma Thuot on-site, grinding beans to your exact brewing preference. Nearby bins overflow with silk-skinned Binh Phuoc cashews and white peppercorns from Phu Quoc Island.</p>
 
-          <div id="the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.3</span>
-              . The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather
-            </h3>
-          </div>
-        <p>A haven for sustainable, natural accessories: hand-plaited water hyacinth and rattan tote bags, full-grain leather wallets, and hand-embroidered conical hats.</p>
+        <div id="the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather
+          </h3>
+        </div>
+      <p>A haven for sustainable, natural accessories: hand-plaited water hyacinth and rattan tote bags, full-grain leather wallets, and hand-embroidered conical hats.</p>
 
-          <div id="the-north-gate-le-thanh-ton-street-orchard-bounty" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1.4</span>
-              . The North Gate (Le Thanh Ton Street): Orchard Bounty
-            </h3>
-          </div>
-        <p>Vibrant fruit pyramids showcasing southern Vietnam&#39;s seasonal harvest: Ri6 golden durians, sweet mangosteens, and green-skin pomelos fresh from Tien Giang province.</p>
+        <div id="the-north-gate-le-thanh-ton-street-orchard-bounty" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The North Gate (Le Thanh Ton Street): Orchard Bounty
+          </h3>
+        </div>
+      <p>Vibrant fruit pyramids showcasing southern Vietnam&#39;s seasonal harvest: Ri6 golden durians, sweet mangosteens, and green-skin pomelos fresh from Tien Giang province.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="bargaining-with-grace-cultural-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Bargaining with Grace: Cultural Guidelines
+            Bargaining with Grace: Cultural Guidelines
           </h2>
         </div>
       <p>Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:</p>
@@ -6390,31 +6405,29 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Honor the Morning Opening Rite (*Mở Hàng*)
+### Honor the Morning Opening Rite (*Mở Hàng*)
 Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.
-          <div id="the-15-to-25-equilibrium" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.2</span>
-              . The 15% to 25% Equilibrium
-            </h3>
-          </div>
-        <p>Souvenir, textile, and handicraft stalls often quote an initial price that factors in a modest negotiation buffer. Proposing a polite 15% to 25% adjustment usually reaches an equitable midpoint. </p>
+        <div id="the-15-to-25-equilibrium" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The 15% to 25% Equilibrium
+          </h3>
+        </div>
+      <p>Souvenir, textile, and handicraft stalls often quote an initial price that factors in a modest negotiation buffer. Proposing a polite 15% to 25% adjustment usually reaches an equitable midpoint. </p>
 <ul>
 <li><em>Local Tip:</em> Frame your counteroffer with a genuine smile and a warm phrase: <em>&quot;Em mua kỷ niệm, chị bớt chút may mắn nhé!&quot;</em> (I&#39;m purchasing a keepsake; please grant a little lucky discount).</li>
 </ul>
 
-          <div id="the-gentle-walk-away" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2.3</span>
-              . The Gentle Walk-Away
-            </h3>
-          </div>
-        <p>If a mutually agreeable price cannot be reached, bow your head slightly, offer a sincere thank you, and calmly step toward the next stall. In many instances, the vendor will gracefully call you back and accept your counteroffer.</p>
+        <div id="the-gentle-walk-away" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Gentle Walk-Away
+          </h3>
+        </div>
+      <p>If a mutually agreeable price cannot be reached, bow your head slightly, offer a sincere thank you, and calmly step toward the next stall. In many instances, the vendor will gracefully call you back and accept your counteroffer.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Detecting Authentic Artisanship vs. Mass-Produced Counterfeits
+            Detecting Authentic Artisanship vs. Mass-Produced Counterfeits
           </h2>
         </div>
       
@@ -6438,7 +6451,7 @@ Southern merchants hold deep spiritual reverence for their first customer of the
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="consumer-protections-and-traveler-rights-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Consumer Protections & Traveler Rights (2026)
+            Consumer Protections & Traveler Rights (2026)
           </h2>
         </div>
       <ol>
@@ -6772,9 +6785,11 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
   </div>
 </div>
 To visit Lan Vuong is to consciously shed urban propriety. You don the traditional brown *áo bà ba* (the Southern peasant tunic) and prepare for a day of authentic, unapologetic mud-wrestling.
-        <h3 id="crucial-note-regarding-2026-administrative-boundaries" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Crucial Note Regarding 2026 Administrative Boundaries
-        </h3>
+        <div id="crucial-note-regarding-2026-administrative-boundaries" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Crucial Note Regarding 2026 Administrative Boundaries
+          </h3>
+        </div>
       <p>The cartography of the Mekong Delta has undergone significant tectonic shifts. Countless travelers still punch &quot;Lan Vuong Ben Tre&quot; into their search engines; however, following the latest administrative redistricting, An Hoi Ward is now officially governed by <strong>Vinh Long Province</strong>. Internalizing this detail ensures seamless navigation when utilizing modern GPS applications.</p>
 <hr>
 
@@ -6802,9 +6817,11 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
         </table>
       </div>
     
-        <h3 id="the-art-of-team-building-at-lan-vuong" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Art of Team Building at Lan Vuong
-        </h3>
+        <div id="the-art-of-team-building-at-lan-vuong" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Art of Team Building at Lan Vuong
+          </h3>
+        </div>
       <p>Lan Vuong is the undisputed Mecca for event management agencies. Sprawling across more than 10 hectares with expansive grass fields, the complex can simultaneously host multiple corporate battalions of up to 500 personnel each.</p>
 <p><strong>Tactical Advice for Expedition Leaders / HR Directors:</strong></p>
 <ol>
@@ -6831,7 +6848,7 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-survival-guide" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2026 Field Survival Guide
+            Field Survival Guide
           </h2>
         </div>
       <p>To ensure a day of uninhibited chaos without logistical breakdowns, travelers must memorize the &quot;Rule of 3 Preparations&quot;:</p>
@@ -7194,13 +7211,12 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           </h2>
         </div>
       
-          <div id="sohora-sea-mountain-bungalow-the-cliffside-enclave" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . Sohora Sea Mountain Bungalow: The Cliffside Enclave
-            </h3>
-          </div>
-        <p>Suspended precariously along the trekking route to the summit of Ma Thien Lanh, Sohora (formerly known as Lamien Homestay) is a masterclass in custom wooden architecture that physically embraces the natural bedrock.</p>
+        <div id="sohora-sea-mountain-bungalow-the-cliffside-enclave" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Sohora Sea Mountain Bungalow: The Cliffside Enclave
+          </h3>
+        </div>
+      <p>Suspended precariously along the trekking route to the summit of Ma Thien Lanh, Sohora (formerly known as Lamien Homestay) is a masterclass in custom wooden architecture that physically embraces the natural bedrock.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>Unobstructed 180-degree panoramas commanding the Kien Hai maritime expanse. Floor-to-ceiling glass facades allow you to absorb the dawn directly from your mattress.</li>
@@ -7208,13 +7224,12 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 </ul>
 <p><strong>Field Logistics:</strong> Due to its severe elevation, navigating the access roads demands high-level motorbike handling skills. It is fundamentally engineered for agile youth and couples rather than the elderly.</p>
 
-          <div id="rai-ca-homestay-a-radiant-youth-on-the-shore" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Rai Ca Homestay: A Radiant Youth on the Shore
-            </h3>
-          </div>
-        <p>To document Hon Son without dedicating ink to Rai Ca (<em>The Otter</em>) is a dereliction of duty. Rai Ca does not merely peddle sleeping quarters; it curates an &quot;ecosystem of unbridled youth.&quot;</p>
+        <div id="rai-ca-homestay-a-radiant-youth-on-the-shore" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Rai Ca Homestay: A Radiant Youth on the Shore
+          </h3>
+        </div>
+      <p>To document Hon Son without dedicating ink to Rai Ca (<em>The Otter</em>) is a dereliction of duty. Rai Ca does not merely peddle sleeping quarters; it curates an &quot;ecosystem of unbridled youth.&quot;</p>
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVx5MNrgGD_/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
@@ -7228,65 +7243,60 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
 **The Highlights:**
 - The compound features a decommissioned minibus transformed into a tactical bar, illuminated by lanterns strung across ancient coconut palms.
 - The hallmark Rai Ca experience involves deploying on motorized skiffs for afternoon coral diving, followed by grilling sea urchins and wild octopus directly on the sand while acoustic guitars dictate the rhythm. An astronomical telescope for stargazing serves as a unique nocturnal asset.
-          <div id="bacs-homestay-contemporary-minimalist-refuge" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Bac's Homestay: Contemporary Minimalist Refuge
-            </h3>
-          </div>
-        <p>Anchored at Bai Bac—undeniably the softest, most expansive stretch of sand on Hon Son—Bac&#39;s Homestay injects a refreshing wave of modern Minimalism that manages to remain fiercely intimate.</p>
+        <div id="bacs-homestay-contemporary-minimalist-refuge" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bac's Homestay: Contemporary Minimalist Refuge
+          </h3>
+        </div>
+      <p>Anchored at Bai Bac—undeniably the softest, most expansive stretch of sand on Hon Son—Bac&#39;s Homestay injects a refreshing wave of modern Minimalism that manages to remain fiercely intimate.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>Luminous wooden interiors and 4-star standard bedding guarantee profound physical recovery following rigorous ocean exploration.</li>
 <li>The homestay&#39;s galley is legendary for the matriarch&#39;s masterful seafood execution. Flash-steamed squid with scallions or the delicately sweet grouper hotpot routinely secure 5-star traveler ratings.</li>
 </ul>
 
-          <div id="sao-bien-coffee-and-homestay-cocobay" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
-              . Sao Bien Coffee & Homestay (Cocobay)
-            </h3>
-          </div>
-        <p>Positioned mid-elevation along the serpentine coastal pass, Sao Bien represents the seamless hybridization of a specialized coffee outpost and a lodging facility.</p>
+        <div id="sao-bien-coffee-and-homestay-cocobay" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Sao Bien Coffee & Homestay (Cocobay)
+          </h3>
+        </div>
+      <p>Positioned mid-elevation along the serpentine coastal pass, Sao Bien represents the seamless hybridization of a specialized coffee outpost and a lodging facility.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>The ultimate strategic coordinate for intercepting the Hon Son sunset. Precisely at 17:30, the sprawling bay below is saturated in violent shades of orange and gold.</li>
 <li>An open-air architecture that captures relentless ocean gales, making it the premier staging ground for cohorts who intend to play music until dawn.</li>
 </ul>
 
-          <div id="thuongs-house-the-perfect-dawn-interceptor" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">5</span>
-              . Thuong's House: The Perfect Dawn Interceptor
-            </h3>
-          </div>
-        <p>Straddling the absolute edge of the surf, Thuong&#39;s House utilizes massive glass panels to weaponize its visual dominance. You are precisely three strides from your doorframe to the saltwater.</p>
+        <div id="thuongs-house-the-perfect-dawn-interceptor" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Thuong's House: The Perfect Dawn Interceptor
+          </h3>
+        </div>
+      <p>Straddling the absolute edge of the surf, Thuong&#39;s House utilizes massive glass panels to weaponize its visual dominance. You are precisely three strides from your doorframe to the saltwater.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>The compound boasts a sprawling, elevated terrace thrusting out over the ocean—an impeccable theater for staging family BBQ operations.</li>
 <li>Elite logistical support: The proprietors facilitate the direct procurement of marine life from fishing trawlers making dawn landfall, executing custom culinary preparation for a negligible surcharge.</li>
 </ul>
 
-          <div id="thanh-duyen-homestay-the-pulse-of-the-fishing-village" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">6</span>
-              . Thanh Duyen Homestay: The Pulse of the Fishing Village
-            </h3>
-          </div>
-        <p>If your mandate is to experience the unfiltered, abrasive reality of an authentic fisherman, Thanh Duyen is your harbor. Devoid of pretense or gloss, Thanh Duyen delivers the raw, fervent hospitality of the island&#39;s indigenous population.</p>
+        <div id="thanh-duyen-homestay-the-pulse-of-the-fishing-village" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Thanh Duyen Homestay: The Pulse of the Fishing Village
+          </h3>
+        </div>
+      <p>If your mandate is to experience the unfiltered, abrasive reality of an authentic fisherman, Thanh Duyen is your harbor. Devoid of pretense or gloss, Thanh Duyen delivers the raw, fervent hospitality of the island&#39;s indigenous population.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>Aggressively economical tariffs suitable for student budgets.</li>
 <li>Mr. Duyen (the operator) acts as the ultimate &quot;local fixer,&quot; routinely deploying guests to classified rock formations for angling, crab hunting, or hacking through uncharted primary jungle routes omitted from conventional tourist maps.</li>
 </ul>
 
-          <div id="fly-up-resort-high-altitude-luxury" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">7</span>
-              . Fly Up Resort: High-Altitude Luxury
-            </h3>
-          </div>
-        <p>Despite adopting the &quot;Resort&quot; nomenclature, Fly Up vigorously defends the ethos of an ecological homestay. It is the ultimate tactical upgrade for honeymooning couples or those harboring uncompromising standards for modern amenities.</p>
+        <div id="fly-up-resort-high-altitude-luxury" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Fly Up Resort: High-Altitude Luxury
+          </h3>
+        </div>
+      <p>Despite adopting the &quot;Resort&quot; nomenclature, Fly Up vigorously defends the ethos of an ecological homestay. It is the ultimate tactical upgrade for honeymooning couples or those harboring uncompromising standards for modern amenities.</p>
 <p><strong>The Highlights:</strong></p>
 <ul>
 <li>Commands a strictly regulated private beach, completely neutralizing the threat of overcrowding or civilian waste.</li>
@@ -7617,7 +7627,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-saigon-unveiled-from-an-open-deck" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Saigon Unveiled from an Open Deck
+            Introduction: Saigon Unveiled from an Open Deck
           </h2>
         </div>
       <p>In the bustling epicenter of District 1, where rivers of vintage mopeds and electric scooters weave through tree-lined French boulevards, experiencing Saigon from four meters above street level on an open-top double-decker bus offers an enchanting shift in perception. Free from the constraints of tinted car windows or the rush of street crossings, voyagers are embraced by river breezes, brush past the sprawling branches of century-old African mahogany trees, and gaze unhurriedly upon the curved Renaissance cornices of the Central Post Office, the red-brick spires of Notre-Dame Cathedral, and the dramatic sweep of the Saigon River illuminated beneath the modern arches of Ba Son Bridge.</p>
@@ -7626,7 +7636,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="fleet-architecture-and-bespoke-onboard-amenities" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Fleet Architecture & Bespoke Onboard Amenities
+            Fleet Architecture & Bespoke Onboard Amenities
           </h2>
         </div>
       <p>The Saigon double-decker fleet complies with international sightseeing standards, featuring a climate-controlled lower salon and an expansive open-air upper deck offering 360-degree panoramic vantage points.</p>
@@ -7648,14 +7658,16 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Comprehensive Analysis of the Two Signature Routes (2026 Edition)
+            Comprehensive Analysis of the Two Signature Routes (2026 Edition)
           </h2>
         </div>
       <p>The system currently operates two distinct circuits tailored to different cultural curiosities:</p>
 
-        <h3 id="route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)
-        </h3>
+        <div id="route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)
+          </h3>
+        </div>
       <p>A refined loop through the colonial heart of District 1, passing Saigon&#39;s most celebrated historic monuments.</p>
 <ul>
 <li><strong>Operating Hours:</strong> 08:00 – 22:30 daily (Departures every 30 minutes).</li>
@@ -7680,9 +7692,11 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)
-        </h3>
+        <div id="route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)
+          </h3>
+        </div>
       <p>Designed for curious voyagers seeking to delve into the historic Ba Tàu heritage of Districts 5 and 6, where ornate Cantonese guildhalls, smoky incense coils, and centennial herbal apothecaries define the streetscape.</p>
 <ul>
 <li><strong>Operating Hours:</strong> 08:00 – 22:00 daily (Departures every 45 minutes).</li>
@@ -7702,7 +7716,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="daytime-vs-twilight-night-voyages-comparative-matrix" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Daytime vs. Twilight Night Voyages: Comparative Matrix
+            Daytime vs. Twilight Night Voyages: Comparative Matrix
           </h2>
         </div>
       
@@ -7726,7 +7740,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="official-2026-ticket-tariff-schedule" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Official 2026 Ticket Tariff Schedule
+            Official 2026 Ticket Tariff Schedule
           </h2>
         </div>
       <p>Tickets can be acquired directly at terminal kiosks or via digital e-wallets and international credit cards (Visa/Mastercard/VietQR):</p>
@@ -7753,41 +7767,38 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-field-notes-for-the-discerning-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Curated Field Notes for the Discerning Traveler
+            Curated Field Notes for the Discerning Traveler
           </h2>
         </div>
       <p>To maximize your journey aloft, bear these hard-earned local observations in mind:</p>
 
-          <div id="the-strategy-of-seat-selection" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The Strategy of Seat Selection
-            </h3>
-          </div>
-        <ul>
+        <div id="the-strategy-of-seat-selection" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Strategy of Seat Selection
+          </h3>
+        </div>
+      <ul>
 <li><strong>The Front Three Rows (Top Deck):</strong> Delivers uninterrupted forward vistas and dramatic cinematic framing. However, during high noon, direct sun exposure and headwinds require firm eyewear and secured hats.</li>
 <li><strong>The Right-Hand Side:</strong> Because Vietnam drives on the right side of the road, seats along the starboard side travel closest to sidewalk monuments, allowing close-up views of the Continental Hotel facade, Opera House colonnades, and Central Post Office arches.</li>
 <li><strong>Mid-Deck Seating:</strong> The most vibration-resistant section of the vehicle, offering the clearest audio reception through the commentary jacks.</li>
 </ul>
 
-          <div id="the-golden-departure-windows" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . The Golden Departure Windows
-            </h3>
-          </div>
-        <ul>
+        <div id="the-golden-departure-windows" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Golden Departure Windows
+          </h3>
+        </div>
+      <ul>
 <li><strong>16:30 – 17:00 (The Ba Son Sunset Run):</strong> Timed perfectly so that the coach summits the Ba Son Bridge just as the equatorial sun dips beneath the western horizon, casting molten copper light across the water.</li>
 <li><strong>19:30 – 20:30 (The Dazzling Night Cruise):</strong> Captures the illuminated kinetic energy of Nguyen Hue Boulevard, illuminated colonial municipal halls, and riverside skyscrapers.</li>
 </ul>
 
-          <div id="vital-safety-protocols" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Vital Safety Protocols
-            </h3>
-          </div>
-        <ul>
+        <div id="vital-safety-protocols" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Vital Safety Protocols
+          </h3>
+        </div>
+      <ul>
 <li><strong>Remain seated while in transit:</strong> Saigon’s stately African mahogany and tamarind trees feature low-hanging boughs over older avenues. Standing on the open deck while the bus is in motion is strictly prohibited to prevent injuries.</li>
 <li><strong>Secure lightweight electronics:</strong> Cross-winds atop the Ba Son Bridge can be powerful; keep a firm two-handed grip on cameras and mobile phones when recording panoramic clips.</li>
 </ul>
@@ -7795,7 +7806,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="seamless-itinerary-integration-around-ben-thanh-market" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            7. Seamless Itinerary Integration Around Ben Thanh Market
+            Seamless Itinerary Integration Around Ben Thanh Market
           </h2>
         </div>
       <ul>
@@ -7808,7 +7819,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue-the-urban-rhythm-from-above" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            8. Epilogue: The Urban Rhythm from Above
+            Epilogue: The Urban Rhythm from Above
           </h2>
         </div>
       <p>Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. Look upward: past the neon shop signs, French iron balconies rest serenely beneath flowering flame trees, and temple incense mingles with the river breeze. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul.</p>
@@ -8129,9 +8140,11 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
   </div>
 </div>
 Officially commissioned in 2014, this infrastructure quenched the "thirst for the sea" harbored by the Delta's populace. Millions of cubic meters of silt-free white sand were imported to forge a gentle 400-meter shoreline, fracturing the urban concrete and birthing an entirely incongruous recreational expanse in the heart of the city.
-        <h3 id="the-convergence-of-ocean-and-river" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Convergence of "Ocean" and "River"
-        </h3>
+        <div id="the-convergence-of-ocean-and-river" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Convergence of "Ocean" and "River"
+          </h3>
+        </div>
       <p>The most profound paradox of Can Tho Beach lies not in its imported sand, but in the experiential anomaly of <strong>&quot;bathing in freshwater while absorbing the pulse of riverine life.&quot;</strong> Stripped of the stinging salinity of the ocean, travelers plunge into the cool, mineral-rich alluvial waters of the Hau River. Replacing the deafening roar of oceanic swells, the acoustic backdrop here is the rhythmic, mechanical chugging of wooden cargo boats ferrying agricultural bounties upriver.</p>
 <p>This profound cultural hybridization renders Can Tho Beach an absolutely singular coordinate—an atmosphere entirely irreplicable in coastal strongholds like Vung Tau or Nha Trang.</p>
 <hr>
@@ -8160,9 +8173,11 @@ Officially commissioned in 2014, this infrastructure quenched the "thirst for th
         </table>
       </div>
     
-        <h3 id="the-million-dollar-vista-the-illumination-of-can-tho-bridge" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The "Million-Dollar" Vista: The Illumination of Can Tho Bridge
-        </h3>
+        <div id="the-million-dollar-vista-the-illumination-of-can-tho-bridge" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The "Million-Dollar" Vista: The Illumination of Can Tho Bridge
+          </h3>
+        </div>
       <p>If one must isolate a singular mandate for deploying to Can Tho Beach, it is the <strong>unobstructed, frontal visual command of the Can Tho Bridge</strong>.</p>
 <p>As twilight initiates, the entire beachfront is bathed in the violent, glowing embers of the sunset reflecting off the Hau River. When total darkness falls, thousands of LED nodes strung along the bridge&#39;s massive stay cables ignite, carving a luminous ribbon across the night sky. Sitting firmly on the sand, armed with a cocktail or a chilled coconut, and staring down this colossal feat of modern engineering constitutes a visual experience of immense gravity.</p>
 <hr>
@@ -8496,7 +8511,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-the-allure-of-saigons-hidden-perches" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: The Allure of Saigon’s Hidden Perches
+            Introduction: The Allure of Saigon’s Hidden Perches
           </h2>
         </div>
       <p>If there is a quintessential ritual that defines the contemporary soul of Saigon, it is not found within polished, air-conditioned corporate chains lining wide boulevards. Instead, it thrives in the shadowy alcoves of vintage residential walk-ups—locally known as <em>cư xá</em>—where time-worn staircases ascend into an enchanting parallel universe. Within a gentle ten-minute stroll of Ben Thanh Market, several historic apartment complexes built between the late French colonial period and the buoyant 1960s have quietly evolved into magnetic creative sanctuaries.</p>
@@ -8505,7 +8520,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="adaptive-heritage-the-renaissance-of-residential-blocks" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Adaptive Heritage: The Renaissance of Residential Blocks
+            Adaptive Heritage: The Renaissance of Residential Blocks
           </h2>
         </div>
       <p>The phenomenon of converting legacy residential flats into independent boutique cafes took root in the early 2010s and has reached aesthetic maturity by 2026. Rather than razing these multi-generational blocks, young Vietnamese designers and hospitality artisans have championed adaptive reuse, celebrating original raw textures rather than concealing them.</p>
@@ -8525,18 +8540,17 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="four-iconic-heritage-apartment-buildings-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Four Iconic Heritage Apartment Buildings Near Ben Thanh
+            Four Iconic Heritage Apartment Buildings Near Ben Thanh
           </h2>
         </div>
       <p>Here are the four most evocative historic walk-ups waiting to be explored within walking distance of the market:</p>
 
-          <div id="ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . 42 Ton That Thiep – The Artisanal & Bohemian Labyrinth
-            </h3>
-          </div>
-        <p>Located just 400 meters from Ben Thanh Market, adjacent to the historic Sri Thenday Yuttha Pani Hindu Temple, this atmospheric block was once a residential enclave for regional merchants. Its open, banister-free cement stairs curve gracefully around a leafy courtyard.</p>
+        <div id="ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ton That Thiep – The Artisanal & Bohemian Labyrinth
+          </h3>
+        </div>
+      <p>Located just 400 meters from Ben Thanh Market, adjacent to the historic Sri Thenday Yuttha Pani Hindu Temple, this atmospheric block was once a residential enclave for regional merchants. Its open, banister-free cement stairs curve gracefully around a leafy courtyard.</p>
 <ul>
 <li><strong>Coordinates:</strong> 42 Ton That Thiep Street, Ben Nghe Ward, District 1.</li>
 <li><strong>Interior Vibe:</strong> Raw brickwork, ceramic workshops, herbal apothecary teas, and minimalist vintage timber furniture.</li>
@@ -8544,13 +8558,12 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Recommended Pour:</strong> Rich Saigon Egg Coffee whipped to velvety perfection, or 24-hour Cold Drip paired with artisan ginger butter biscuits.</li>
 </ul>
 
-          <div id="ly-tu-trong-the-creative-vanguard" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . 26 Ly Tu Trong – The Creative Vanguard
-            </h3>
-          </div>
-        <p>Occupying the corner of Ly Tu Trong and Dong Khoi streets, diagonally across from the Vincom Center, this imposing French colonial apartment block features one of the oldest functioning cast-iron cage elevators in Southeast Asia.</p>
+        <div id="ly-tu-trong-the-creative-vanguard" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ly Tu Trong – The Creative Vanguard
+          </h3>
+        </div>
+      <p>Occupying the corner of Ly Tu Trong and Dong Khoi streets, diagonally across from the Vincom Center, this imposing French colonial apartment block features one of the oldest functioning cast-iron cage elevators in Southeast Asia.</p>
 <ul>
 <li><strong>Coordinates:</strong> 26 Ly Tu Trong Street, Ben Nghe Ward, District 1 (650m from Ben Thanh).</li>
 <li><strong>Interior Vibe:</strong> Industrial chic, high exposed steel beams, independent art galleries, and Third Wave coffee ateliers.</li>
@@ -8558,13 +8571,12 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Recommended Pour:</strong> Single-origin pour-over utilizing wet-processed Arabica from Cau Dat, or sparkling espresso tonic infused with organic Vietnamese citrus peel.</li>
 </ul>
 
-          <div id="ton-that-dam-the-cinematic-riverfront-relic" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . 14 Ton That Dam – The Cinematic Riverfront Relic
-            </h3>
-          </div>
-        <p>Overlooking the tranquil waters of the Ben Nghe Canal and the neoclassical State Bank of Vietnam, 14 Ton That Dam is arguably the most atmospheric and photogenic pre-war building in District 1. Its pine staircases creak gently underfoot, while its long corridors glow with afternoon amber light.</p>
+        <div id="ton-that-dam-the-cinematic-riverfront-relic" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ton That Dam – The Cinematic Riverfront Relic
+          </h3>
+        </div>
+      <p>Overlooking the tranquil waters of the Ben Nghe Canal and the neoclassical State Bank of Vietnam, 14 Ton That Dam is arguably the most atmospheric and photogenic pre-war building in District 1. Its pine staircases creak gently underfoot, while its long corridors glow with afternoon amber light.</p>
 <ul>
 <li><strong>Coordinates:</strong> 14 Ton That Dam Street, Nguyen Thai Binh Ward, District 1 (750m southeast of Ben Thanh).</li>
 <li><strong>Interior Vibe:</strong> 1970s retro nostalgia, antique oil lamps, secondhand poetry collections, and handcrafted wooden rocking chairs.</li>
@@ -8572,13 +8584,12 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Recommended Pour:</strong> Salted Foam Vietnamese Coffee (<em>Cà phê muối</em>) balancing bold bitter tones with savory sweet cream, or iced lotus-seed tea.</li>
 </ul>
 
-          <div id="the-balcony-flats-of-pasteur-and-le-loi" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
-              . The Balcony Flats of Pasteur & Le Loi
-            </h3>
-          </div>
-        <p>Flanking the grand boulevard that approaches Ben Thanh Market&#39;s South Clock Tower, these elevated mezzanine flats feature verdant wrought-iron balconies that hover just above street level.</p>
+        <div id="the-balcony-flats-of-pasteur-and-le-loi" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Balcony Flats of Pasteur & Le Loi
+          </h3>
+        </div>
+      <p>Flanking the grand boulevard that approaches Ben Thanh Market&#39;s South Clock Tower, these elevated mezzanine flats feature verdant wrought-iron balconies that hover just above street level.</p>
 <ul>
 <li><strong>Coordinates:</strong> 158 Pasteur &amp; 130 Le Loi Boulevard, District 1.</li>
 <li><strong>Interior Vibe:</strong> Lush urban jungle sanctuaries abundant in monsteras and trailing ferns.</li>
@@ -8588,7 +8599,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The Beverage Matrix: From Traditional Phin to Specialty Third Wave
+            The Beverage Matrix: From Traditional Phin to Specialty Third Wave
           </h2>
         </div>
       <p>The apartment cafes surrounding Ben Thanh are serious guardians of Vietnam’s evolving coffee heritage:</p>
@@ -8614,7 +8625,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="conscious-voyager-etiquette-for-residential-walk-ups" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Conscious Voyager Etiquette for Residential Walk-Ups
+            Conscious Voyager Etiquette for Residential Walk-Ups
           </h2>
         </div>
       <p>Because these historic apartment buildings are shared homes rather than commercial shopping centers, considerate conduct ensures this unique culture continues to flourish:</p>
@@ -8628,7 +8639,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue-the-timeless-pause" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue: The Timeless Pause
+            Epilogue: The Timeless Pause
           </h2>
         </div>
       <p>In a metropolis that hurtles forward with dazzling speed, the vintage apartment cafes near Ben Thanh Market serve as precious temporal anchors. Lingering over an amber glass of slow-dripping coffee while afternoon rain patters against weathered green shutters, one discovers that Saigon’s true charm lies not in its speed, but in its capacity for stillness. Here, between the past and the present, the city invites you to sit, breathe, and simply be.</p>
@@ -8941,7 +8952,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-when-saigon-kindles-her-constellations" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: When Saigon Kindles Her Constellations
+            Introduction: When Saigon Kindles Her Constellations
           </h2>
         </div>
       <p>When the amber sun descends behind the ancient African mahogany canopies along Le Duan Boulevard and the gilded cupola of Ben Thanh Market blazes with evening illumination, District 1 casts off its daytime hustle and reveals its true glamour. For the voyager seeking elevated encounters, the consummate conclusion to a day of architectural discovery is not found amidst congested ground-level crowds, but within the whisper-quiet ascent of an express elevator rising to an open-air rooftop, or slipping past an unmarked antique bookcase into a hidden speakeasy.</p>
@@ -8950,7 +8961,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Terroir Mixology: The Rise of Vietnamese Craft Cocktails
+            Terroir Mixology: The Rise of Vietnamese Craft Cocktails
           </h2>
         </div>
       <p>Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.</p>
@@ -8971,18 +8982,17 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh
+            Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh
           </h2>
         </div>
       <p>Here are four exceptional sky bars delivering cinematic perspectives across the historic market and District 1 skyline:</p>
 
-          <div id="the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)
-            </h3>
-          </div>
-        <p>Perched atop boutique design hotels flanking the eastern and southern perimeters of the market, these intimate open-air terraces deliver an unobstructed, eye-level vantage over the market’s centennial concrete belfry.</p>
+        <div id="the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)
+          </h3>
+        </div>
+      <p>Perched atop boutique design hotels flanking the eastern and southern perimeters of the market, these intimate open-air terraces deliver an unobstructed, eye-level vantage over the market’s centennial concrete belfry.</p>
 <ul>
 <li><strong>Coordinates:</strong> Phan Boi Chau &amp; Le Lai corridors (under 100 meters from the market).</li>
 <li><strong>The Magic Hour:</strong> Arrive promptly at 18:00 to witness the exact second the South Clock Tower switches on its golden lamps as commuters emerge from the illuminated metro pavilion below.</li>
@@ -8990,13 +9000,12 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Signature Libation:</strong> <em>The Ben Thanh Sunset Spritz</em> (Aperol, artisanal Dalat sparkling wine, fresh Ben Tre pink pomelo juice, and bruised rosemary syrup).</li>
 </ul>
 
-          <div id="heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang
-            </h3>
-          </div>
-        <p>Stationed on the fourth and fifth floors of colonial-era masonry edifices, these relaxed rooftop terraces offer a bohemian, arts-steeped sensibility.</p>
+        <div id="heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang
+          </h3>
+        </div>
+      <p>Stationed on the fourth and fifth floors of colonial-era masonry edifices, these relaxed rooftop terraces offer a bohemian, arts-steeped sensibility.</p>
 <ul>
 <li><strong>Coordinates:</strong> 38–44 Ton That Thiep Street (350m east of Ben Thanh).</li>
 <li><strong>The Magic Hour:</strong> Twilight vistas overlooking the ornate tiled gables of the adjacent Hindu temple, with the illuminated monolith of Bitexco Tower rising dramatically in the immediate background.</li>
@@ -9004,13 +9013,12 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Signature Libation:</strong> <em>Mekong Botanical Tonic</em> (Locally crafted dry gin, steeped wild mountain herbs, handcrafted elderflower tonic, and dehydrated river citrus).</li>
 </ul>
 
-          <div id="grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Grand Panoramas on Le Loi & Nam Ky Khoi Nghia
-            </h3>
-          </div>
-        <p>Tailored for voyagers desiring five-star elegance and comprehensive 360-degree panoramas embracing the Municipal Theater, City Hall, and Independence Palace grounds.</p>
+        <div id="grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Grand Panoramas on Le Loi & Nam Ky Khoi Nghia
+          </h3>
+        </div>
+      <p>Tailored for voyagers desiring five-star elegance and comprehensive 360-degree panoramas embracing the Municipal Theater, City Hall, and Independence Palace grounds.</p>
 <ul>
 <li><strong>Coordinates:</strong> Upper penthouses along the Le Loi corridor (300m from the market).</li>
 <li><strong>The Magic Hour:</strong> Watching dramatic equatorial thunderheads drift eastward over the Thu Thiem peninsula at dusk.</li>
@@ -9021,14 +9029,16 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-subterranean-realm-hidden-alleyway-speakeasies" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The Subterranean Realm: Hidden Alleyway Speakeasies
+            The Subterranean Realm: Hidden Alleyway Speakeasies
           </h2>
         </div>
       <p>If sky bars celebrate open horizons, Saigon’s secret <strong>Speakeasies</strong> around Ben Thanh cater to the thrill of discovery:</p>
 
-        <h3 id="anatomy-of-the-secret-bar" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Anatomy of the Secret Bar:
-        </h3>
+        <div id="anatomy-of-the-secret-bar" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Anatomy of the Secret Bar:
+          </h3>
+        </div>
       <ol>
 <li><strong>The Disguised Threshold:</strong> The entrance may be camouflaged behind a vintage refrigerator door in a late-night Cantonese noodle house, concealed behind a tailored suiting closet, or hidden down an unnumbered residential corridor on Pasteur Street.</li>
 <li><strong>Cloistered Intimacy:</strong> Windowless, shadowy salons lined in velvet banquettes, antique crystal decanters, and soft candlelight reflecting across brass fixtures.</li>
@@ -9038,7 +9048,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="curated-beverage-tariff-matrix-2026-reference" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Curated Beverage Tariff Matrix (2026 Reference)
+            Curated Beverage Tariff Matrix (2026 Reference)
           </h2>
         </div>
       
@@ -9064,7 +9074,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="field-protocols-for-nocturnal-elegance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Field Protocols for Nocturnal Elegance
+            Field Protocols for Nocturnal Elegance
           </h2>
         </div>
       <p>To ensure an unhurried, distinguished evening:</p>
@@ -9077,7 +9087,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue-toasting-the-eternal-metropolis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            7. Epilogue: Toasting the Eternal Metropolis
+            Epilogue: Toasting the Eternal Metropolis
           </h2>
         </div>
       <p>Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and the timeless promise of wonder.</p>
@@ -9411,14 +9421,18 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
         </div>
       <p>Situated conveniently close to the southern metropolis, Buu Long remains highly accessible for both spontaneous weekend retreats and planned day trips.</p>
 
-        <h3 id="by-private-vehicle-motorbikecar" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          By Private Vehicle (Motorbike/Car)
-        </h3>
+        <div id="by-private-vehicle-motorbikecar" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            By Private Vehicle (Motorbike/Car)
+          </h3>
+        </div>
       <p>From Ho Chi Minh City, navigate towards Pham Van Dong Avenue, merging onto National Highway 1A. Proceed straight until you cross the Hoa An Bridge. At the ensuing roundabout, take Huynh Van Nghe Street. Continue for approximately 2.4 kilometers, and the majestic gates of the ecological park will appear on your right.</p>
 
-        <h3 id="by-public-bus" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          By Public Bus
-        </h3>
+        <div id="by-public-bus" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            By Public Bus
+          </h3>
+        </div>
       <p>For a carbon-conscious journey, the public transit network offers a reliable route. From Mien Tay Bus Station, board Route 601, or take Route 5 from Cho Lon Bus Station heading to Bien Hoa. Upon reaching the Bien Hoa city terminal, transfer to Route 7, which conveniently drops you directly at the Buu Long entrance.</p>
 <hr>
 
@@ -9429,20 +9443,26 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
         </div>
       <p>The true soul of Buu Long is segmented into distinct geographical and spiritual clusters, each offering a unique atmospheric experience.</p>
 
-        <h3 id="the-twin-waters-long-an-and-long-van-lakes" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Twin Waters: Long An & Long Van Lakes
-        </h3>
+        <div id="the-twin-waters-long-an-and-long-van-lakes" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Twin Waters: Long An & Long Van Lakes
+          </h3>
+        </div>
       <p>Nestled in the southeastern quadrant, these artificial lakes form the lifeblood of the park. Long An Lake, sprawling across 18.5 hectares at the foot of Long An Mountain, mirrors the imposing limestone karsts above. The neighboring Long Van Lake rests peacefully between Binh Dien and Long An mountains. The crystalline, windless waters here provide a canvas for quiet contemplation and leisurely swan boat rides.</p>
 
-        <h3 id="binh-dien-mountain-and-buu-phong-ancient-pagoda" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Binh Dien Mountain & Buu Phong Ancient Pagoda
-        </h3>
+        <div id="binh-dien-mountain-and-buu-phong-ancient-pagoda" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Binh Dien Mountain & Buu Phong Ancient Pagoda
+          </h3>
+        </div>
       <p>Spanning 8.7 hectares in the northeast, Binh Dien Mountain is characterized by its ancient, sprawling banyan trees and bizarre rock formations resembling dragons, tigers, and tortoises. </p>
 <p>The crown jewel of this cluster is the <strong>Buu Phong Ancient Pagoda</strong>. Featuring a rare hexagonal architectural design and three four-story stupas, this sacred site exudes a palpable sense of mysticism. Scattered statues of sleeping Buddhas enhance the solemnity of the forest, making it a focal point for local spiritual gatherings.</p>
 
-        <h3 id="long-an-mountain-and-long-son-thach-dong-pagoda" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Long An Mountain & Long Son Thach Dong Pagoda
-        </h3>
+        <div id="long-an-mountain-and-long-son-thach-dong-pagoda" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Long An Mountain & Long Son Thach Dong Pagoda
+          </h3>
+        </div>
       <p>Rising 52 meters above sea level, the eastern Long An cluster is thickly forested and rugged. Here lies the <strong>Long Son Thach Dong Pagoda</strong>, seemingly carved directly into the chaotic pile of boulders. The juxtaposition of ancient masonry against the raw, jagged earth creates a profound visual impact. It is here that travelers often pause, capturing the quiet interplay of light and stone.</p>
 <hr>
 
@@ -9472,9 +9492,11 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
 <li><strong>Weather Matrices:</strong> The ideal visiting window is during the dry season (December to April). If visiting during the monsoon (May to November), sudden but brief downpours are common; carry a lightweight poncho.</li>
 </ol>
 
-        <h3 id="regional-synergy" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Regional Synergy
-        </h3>
+        <div id="regional-synergy" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Regional Synergy
+          </h3>
+        </div>
       <p>If your itinerary permits, Buu Long pairs exceptionally well with other Dong Nai heritage sites such as the Chua Chan Mountain or the Nam Cat Tien National Park. </p>
 <p>To walk through Buu Long is to witness the deliberate healing of a fractured landscape. What was once a scarred quarry is now a testament to ecological restoration—a living, breathing sanctuary waiting to be respectfully explored.</p>
 
@@ -9777,7 +9799,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-hospitality-imbued-with-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Hospitality Imbued with Heritage
+            Introduction: Hospitality Imbued with Heritage
           </h2>
         </div>
       <p>For the voyager who journeys with intention, an urban retreat is not merely a logistical necessity—it is an intimate prism through which a metropolis reveals its spirit. While Saigon’s modern skyline bristles with standardized corporate steel towers, the city’s authentic character lingers along the leafy avenues surrounding Ben Thanh Market. Here, hidden behind antique timber casements and cascading tropical philodendrons, a curated collection of boutique design hotels and restored colonial mansions offers a sophisticated refuge from the kinetic street level.</p>
@@ -9786,7 +9808,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Core Hallmarks of a Bespoke Saigon Boutique Hotel
+            Core Hallmarks of a Bespoke Saigon Boutique Hotel
           </h2>
         </div>
       <p>To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:</p>
@@ -9807,18 +9829,17 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh
+            Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh
           </h2>
         </div>
       <p>Here are the five preeminent boutique addresses evaluated and recommended for the 2026 season:</p>
 
-          <div id="the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia
-            </h3>
-          </div>
-        <p>Stationed along quiet Ho Huan Nghiep Street connecting Dong Khoi with the Saigon River, The Myst is an architectural triumph celebrating the 200-year legacy of Saigon’s historic Ba Son naval shipyards.</p>
+        <div id="the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia
+          </h3>
+        </div>
+      <p>Stationed along quiet Ho Huan Nghiep Street connecting Dong Khoi with the Saigon River, The Myst is an architectural triumph celebrating the 200-year legacy of Saigon’s historic Ba Son naval shipyards.</p>
 <ul>
 <li><strong>Coordinates:</strong> 6–8 Ho Huan Nghiep Street, Ben Nghe Ward, District 1 (850m from Ben Thanh).</li>
 <li><strong>Architectural DNA:</strong> A striking exterior punctuated by staggered picture windows draped in wild tropical vines; reclaimed ironwood floors; open-air private balconies featuring deep stone soaking tubs overlooking the winding river.</li>
@@ -9826,13 +9847,12 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>2026 Tariff Baseline:</strong> 3,800,000 – 6,500,000 VND / night.</li>
 </ul>
 
-          <div id="silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Silverland Yen Hotel – A Zen Oasis Behind the North Gate
-            </h3>
-          </div>
-        <p>Tucked on tree-lined Thu Khoa Huan Street, merely three minutes on foot from Ben Thanh’s North Portal and the shaded green lawns of Tao Dan Park, Silverland Yen delivers an atmosphere of serene, minimalist mindfulness.</p>
+        <div id="silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Silverland Yen Hotel – A Zen Oasis Behind the North Gate
+          </h3>
+        </div>
+      <p>Tucked on tree-lined Thu Khoa Huan Street, merely three minutes on foot from Ben Thanh’s North Portal and the shaded green lawns of Tao Dan Park, Silverland Yen delivers an atmosphere of serene, minimalist mindfulness.</p>
 <ul>
 <li><strong>Coordinates:</strong> 73–75 Thu Khoa Huan Street, Ben Thanh Ward, District 1 (250m from the market).</li>
 <li><strong>Architectural DNA:</strong> Light blond woods, smooth granite slabs, and murmuring interior waterfalls that dissolve equatorial humidity the moment one enters the lobby.</li>
@@ -9840,13 +9860,12 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>2026 Tariff Baseline:</strong> 2,200,000 – 3,800,000 VND / night.</li>
 </ul>
 
-          <div id="hotel-continental-saigon-vietnams-oldest-grand-hotel-inaugurated-1880" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)
-            </h3>
-          </div>
-        <p>The immortal icon of French colonial hospitality, occupying prime frontage on Dong Khoi Street opposite the Saigon Opera House. It famously sheltered novelist Graham Greene while he penned his masterpiece <em>The Quiet American</em>.</p>
+        <div id="hotel-continental-saigon-vietnams-oldest-grand-hotel-inaugurated-1880" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)
+          </h3>
+        </div>
+      <p>The immortal icon of French colonial hospitality, occupying prime frontage on Dong Khoi Street opposite the Saigon Opera House. It famously sheltered novelist Graham Greene while he penned his masterpiece <em>The Quiet American</em>.</p>
 <ul>
 <li><strong>Coordinates:</strong> 132–134 Dong Khoi Street, Ben Nghe Ward, District 1 (750m from Ben Thanh).</li>
 <li><strong>Architectural DNA:</strong> Solid half-meter-thick brick masonry walls maintaining cool interior temperatures naturally; 4-meter-high ceilings with vintage wooden fans; an interior courtyard sheltered beneath centennial frangipani trees.</li>
@@ -9854,13 +9873,12 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>2026 Tariff Baseline:</strong> 3,200,000 – 5,500,000 VND / night.</li>
 </ul>
 
-          <div id="la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
-              . La Siesta Premium Sai Gon – Sophisticated Indochine Glamour
-            </h3>
-          </div>
-        <p>Located along Ly Tu Trong Street, La Siesta Premium encapsulates the zenith of Neo-Indochine elegance, layering deep emerald greens with midnight lacquer timber and polished brass appointments.</p>
+        <div id="la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            La Siesta Premium Sai Gon – Sophisticated Indochine Glamour
+          </h3>
+        </div>
+      <p>Located along Ly Tu Trong Street, La Siesta Premium encapsulates the zenith of Neo-Indochine elegance, layering deep emerald greens with midnight lacquer timber and polished brass appointments.</p>
 <ul>
 <li><strong>Coordinates:</strong> 180–188 Ly Tu Trong Street, Ben Thanh Ward, District 1 (350m from the market).</li>
 <li><strong>Architectural DNA:</strong> A sweeping spiral lobby staircase, bespoke lacquer murals depicting vintage Saigon street scenes, and Carrara white marble bathrooms.</li>
@@ -9868,13 +9886,12 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>2026 Tariff Baseline:</strong> 2,800,000 – 4,800,000 VND / night.</li>
 </ul>
 
-          <div id="fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">5</span>
-              . Fusion Original Saigon Centre – Modernist Artistry on the Metro Line
-            </h3>
-          </div>
-        <p>Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on Le Loi Boulevard, offering direct indoor climate-controlled access to the Ben Thanh Metro Station concourse.</p>
+        <div id="fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Fusion Original Saigon Centre – Modernist Artistry on the Metro Line
+          </h3>
+        </div>
+      <p>Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on Le Loi Boulevard, offering direct indoor climate-controlled access to the Ben Thanh Metro Station concourse.</p>
 <ul>
 <li><strong>Coordinates:</strong> 65 Le Loi Boulevard, Ben Nghe Ward, District 1 (200m from Ben Thanh).</li>
 <li><strong>Architectural DNA:</strong> Floor-to-ceiling portraits honoring Vietnam’s traditional <em>áo dài</em>; contemporary minimalist geometries enriched with warm terracotta and charcoal palettes.</li>
@@ -9885,7 +9902,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="comparative-matrix-premier-sanctuaries-at-a-glance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Comparative Matrix: Premier Sanctuaries at a Glance
+            Comparative Matrix: Premier Sanctuaries at a Glance
           </h2>
         </div>
       
@@ -9910,7 +9927,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="strategic-reservation-guidance-for-the-discerning-guest" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Strategic Reservation Guidance for the Discerning Guest
+            Strategic Reservation Guidance for the Discerning Guest
           </h2>
         </div>
       <ol>
@@ -9922,7 +9939,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue-awakening-to-saigons-living-grace" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue: Awakening to Saigon’s Living Grace
+            Epilogue: Awakening to Saigon’s Living Grace
           </h2>
         </div>
       <p>After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself.</p>
@@ -10254,18 +10271,22 @@ For the 2026 culinary traveler, Da Lat is no longer just a haven of French colon
         </div>
       <p>When the morning fog still clings to the pine valleys, the locals turn to steaming bowls of complex broths.</p>
 
-        <h3 id="banh-can-mini-pancake-with-quail-egg" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Banh Can (Mini Pancake with Quail Egg)
-        </h3>
+        <div id="banh-can-mini-pancake-with-quail-egg" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Banh Can (Mini Pancake with Quail Egg)
+          </h3>
+        </div>
       <p>Baked in porous clay molds over glowing charcoal, <em>Banh Can</em> is the quintessential Da Lat morning ritual. </p>
 <ul>
 <li><strong>The Technique:</strong> Rice flour batter is poured into terracotta cups, cracked with a quail egg, and served with a dipping broth made of fish sauce, copious scallions, and xiu mai (pork meatballs).</li>
 <li><strong>2026 Insider Spot:</strong> Banh Can Le (27/44 Yersin) – expect to wait at least 20 minutes, as each batch is fired to order.</li>
 </ul>
 
-        <h3 id="banh-mi-xiu-mai-pork-meatball-baguette" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Banh Mi Xiu Mai (Pork Meatball Baguette)
-        </h3>
+        <div id="banh-mi-xiu-mai-pork-meatball-baguette" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Banh Mi Xiu Mai (Pork Meatball Baguette)
+          </h3>
+        </div>
       <p>A far cry from the stuffed, cold-cut baguettes of Saigon, Da Lat’s iteration deconstructs the sandwich.</p>
 <ul>
 <li><strong>The Experience:</strong> The baguette is served piping hot alongside a bowl of bone broth containing succulent pork meatballs, pork rind, and fiery highland chili paste.</li>
@@ -10280,14 +10301,18 @@ For the 2026 culinary traveler, Da Lat is no longer just a haven of French colon
         </div>
       <p>As the temperature plummets post-sunset, the culinary scene shifts to open flames.</p>
 
-        <h3 id="banh-trang-nuong-vietnamese-pizza" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Banh Trang Nuong (Vietnamese Pizza)
-        </h3>
+        <div id="banh-trang-nuong-vietnamese-pizza" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Banh Trang Nuong (Vietnamese Pizza)
+          </h3>
+        </div>
       <p>Often trivialized as a tourist novelty, authentic <em>Banh Trang Nuong</em> requires immense dexterity. A thin rice paper disc is placed over coals, layered with quail eggs, fermented shrimp paste, scallions, and dried beef, then rotated continuously to achieve uniform crispness without charring.</p>
 
-        <h3 id="kem-bo-avocado-ice-cream" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Kem Bo (Avocado Ice Cream)
-        </h3>
+        <div id="kem-bo-avocado-ice-cream" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Kem Bo (Avocado Ice Cream)
+          </h3>
+        </div>
       <p>A paradoxical dessert for a cold city. The volcanic soil of Lam Dong produces butter-soft, high-fat avocados. When blended without ice and topped with a scoop of coconut ice cream, the result is a dense, velvety treat.</p>
 <ul>
 <li><strong>2026 Insider Spot:</strong> Kem Bo Thanh Thao (76 Nguyen Van Troi).</li>
@@ -10646,24 +10671,32 @@ For the cultural voyager in 2026, this is not merely a rest stop; it is an immer
         </div>
       <p>The lifecycle of a Sau Hoai noodle is dictated entirely by the sun and the delta’s humidity. Visitors arriving before 09:00 AM are privy to the complete, unadulterated process.</p>
 
-        <h3 id="step-1-the-rice-slurry-xay-bot" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Step 1: The Rice Slurry (Xay Bot)
-        </h3>
+        <div id="step-1-the-rice-slurry-xay-bot" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Step 1: The Rice Slurry (Xay Bot)
+          </h3>
+        </div>
       <p>Locally sourced Mekong rice is soaked overnight and stone-milled into a velvety slurry. The ratio of water to starch is a fiercely guarded family secret, adjusting dynamically based on the morning’s ambient temperature.</p>
 
-        <h3 id="step-2-the-steam-bath-trang-banh" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Step 2: The Steam Bath (Trang Banh)
-        </h3>
+        <div id="step-2-the-steam-bath-trang-banh" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Step 2: The Steam Bath (Trang Banh)
+          </h3>
+        </div>
       <p>The slurry is ladled onto a taut cloth stretched over boiling water. Within seconds, it coagulates into a translucent, gelatinous disc. This requires immense physical dexterity, as the artisan must swiftly lift the hot disc with a bamboo roller without tearing the fragile matrix.</p>
 
-        <h3 id="step-3-solar-curing-phoi-banh" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Step 3: Solar Curing (Phoi Banh)
-        </h3>
+        <div id="step-3-solar-curing-phoi-banh" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Step 3: Solar Curing (Phoi Banh)
+          </h3>
+        </div>
       <p>The discs are laid out on large bamboo lattices (<em>liếp</em>) and surrendered to the intense tropical sun. The timing here is critical; overexposure results in brittle noodles, while underexposure leads to spoilage.</p>
 
-        <h3 id="step-4-the-mechanical-cut-cat-soi" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Step 4: The Mechanical Cut (Cat Soi)
-        </h3>
+        <div id="step-4-the-mechanical-cut-cat-soi" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Step 4: The Mechanical Cut (Cat Soi)
+          </h3>
+        </div>
       <p>Once perfectly cured, the semi-hardened rice sheets are fed into a hand-cranked cutting machine, emerging as the uniform, elastic strands that define Southern Vietnamese <em>Hu Tieu</em>.</p>
 <hr>
 
@@ -11007,7 +11040,7 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-far-more-than-a-commodity-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Far More Than a Commodity Bazaar
+            Introduction: Far More Than a Commodity Bazaar
           </h2>
         </div>
       <p>When first-time visitors hear of Ben Thanh Market, many picture a crowded marketplace packed with souvenir stalls, rolled textiles, and aggressive touts. Yet to those attuned to the authentic cadence of Saigon, this 112-year-old landmark and its encircling boulevards form one of Southeast Asia&#39;s most captivating urban cultural theaters. Here, within a few hundred footsteps, one transitions effortlessly from early 20th-century Indochinese colonial architecture to the sunlit subterranean concourses of the brand-new 2026 Metro Line 1, and from a humble traditional sweet soup vendor to an opulent rooftop lounge overlooking the meandering Saigon River.</p>
@@ -11016,13 +11049,15 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="master-map-15-experiences-across-four-golden-windows" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Master Map: 15 Experiences Across Four Golden Windows
+            Master Map: 15 Experiences Across Four Golden Windows
           </h2>
         </div>
       
-        <h3 id="time-window-1-early-morning-awakening-0630-0930" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
-        </h3>
+        <div id="time-window-1-early-morning-awakening-0630-0930" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
+          </h3>
+        </div>
       <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
@@ -11034,38 +11069,44 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
   </div>
 </div>
 #### 1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds
-Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">2. Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
-<h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">3. Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
+Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
+<h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
 <hr>
 
-        <h3 id="time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          ☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)
-        </h3>
-      <h4 id="navigating-the-labyrinth-of-1400-heritage-stalls-under-historic-rafters">4. Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters</h4><p>Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.</p>
-<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Ba Muoi)</h4><p>Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
-<h4 id="descending-32-meters-into-ben-thanh-central-metro-station-to-marvel-at-the-lotus-skylight">6. Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"</h4><p>When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon&#39;s futuristic 2026 urban infrastructure.</p>
-<h4 id="contemplating-art-masterpieces-in-the-mansion-of-99-windows-hcmc-museum-of-fine-arts">7. Contemplating Art Masterpieces in the Mansion of 99 Windows (HCMC Museum of Fine Arts)</h4><p>A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa (Uncle Hoa). Here, vintage encaustic cement tiles, the city’s earliest private iron-cage elevator, and the designated National Treasure lacquer masterpiece &quot;Spring Garden of Central, South, and North&quot; by Nguyen Gia Tri await art connoisseurs.</p>
+        <div id="time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            ☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)
+          </h3>
+        </div>
+      <h4 id="navigating-the-labyrinth-of-1400-heritage-stalls-under-historic-rafters">Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters</h4><p>Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.</p>
+<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Ba Muoi)</h4><p>Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
+<h4 id="descending-32-meters-into-ben-thanh-central-metro-station-to-marvel-at-the-lotus-skylight">Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"</h4><p>When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon&#39;s futuristic 2026 urban infrastructure.</p>
+<h4 id="contemplating-art-masterpieces-in-the-mansion-of-99-windows-hcmc-museum-of-fine-arts">Contemplating Art Masterpieces in the Mansion of 99 Windows (HCMC Museum of Fine Arts)</h4><p>A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa (Uncle Hoa). Here, vintage encaustic cement tiles, the city’s earliest private iron-cage elevator, and the designated National Treasure lacquer masterpiece &quot;Spring Garden of Central, South, and North&quot; by Nguyen Gia Tri await art connoisseurs.</p>
 <hr>
 
-        <h3 id="time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)
-        </h3>
-      <h4 id="seeking-serenity-and-scented-jasmine-at-mariamman-hindu-temple">8. Seeking Serenity and Scented Jasmine at Mariamman Hindu Temple</h4><p>Located on Truong Dinh Street, this 1885 South Indian sanctuary offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.</p>
-<h4 id="climbing-to-a-secret-apartment-hideaway-cafe-on-ly-tu-trong">9. Climbing to a Secret Apartment Hideaway Cafe on Ly Tu Trong</h4><p>Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like <em>Cong Ca Phe</em> and <em>The Workshop</em> overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.</p>
-<h4 id="hopping-on-the-top-deck-of-the-open-air-hop-on-hop-off-sunset-bus">10. Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus</h4><p>At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird&#39;s-eye views of District 1.</p>
+        <div id="time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)
+          </h3>
+        </div>
+      <h4 id="seeking-serenity-and-scented-jasmine-at-mariamman-hindu-temple">Seeking Serenity and Scented Jasmine at Mariamman Hindu Temple</h4><p>Located on Truong Dinh Street, this 1885 South Indian sanctuary offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.</p>
+<h4 id="climbing-to-a-secret-apartment-hideaway-cafe-on-ly-tu-trong">Climbing to a Secret Apartment Hideaway Cafe on Ly Tu Trong</h4><p>Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like <em>Cong Ca Phe</em> and <em>The Workshop</em> overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.</p>
+<h4 id="hopping-on-the-top-deck-of-the-open-air-hop-on-hop-off-sunset-bus">Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus</h4><p>At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird&#39;s-eye views of District 1.</p>
 <hr>
 
-        <h3 id="time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)
-        </h3>
-      <h4 id="feasting-on-flaming-seafood-along-phan-boi-chau-night-market">11. Feasting on Flaming Seafood Along Phan Boi Chau Night Market</h4><p>As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (<em>banh xeo</em>) amidst crackling flames and lively international crowds.</p>
-<h4 id="sipping-craft-cocktails-overlooking-the-illuminated-clock-tower-at-twilight">12. Sipping Craft Cocktails Overlooking the Illuminated Clock Tower at Twilight</h4><p>Ascend to <em>The Daun Rooftop</em> or <em>Broma Not a Bar</em> along Le Loi Boulevard. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.</p>
-<h4 id="late-night-supper-golden-roasted-quail-on-dong-du-or-broken-rice-on-nguyen-trai">13. Late-Night Supper: Golden Roasted Quail on Dong Du or Broken Rice on Nguyen Trai</h4><p>End your nocturnal culinary adventure with late-night classics favored by locals: aromatic crispy butter-roasted quail paired with salted lime-pepper dip, or a plate of smoky grilled pork chop broken rice (<em>com tam suon bi cha</em>) served well past midnight.</p>
+        <div id="time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)
+          </h3>
+        </div>
+      <h4 id="feasting-on-flaming-seafood-along-phan-boi-chau-night-market">Feasting on Flaming Seafood Along Phan Boi Chau Night Market</h4><p>As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (<em>banh xeo</em>) amidst crackling flames and lively international crowds.</p>
+<h4 id="sipping-craft-cocktails-overlooking-the-illuminated-clock-tower-at-twilight">Sipping Craft Cocktails Overlooking the Illuminated Clock Tower at Twilight</h4><p>Ascend to <em>The Daun Rooftop</em> or <em>Broma Not a Bar</em> along Le Loi Boulevard. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.</p>
+<h4 id="late-night-supper-golden-roasted-quail-on-dong-du-or-broken-rice-on-nguyen-trai">Late-Night Supper: Golden Roasted Quail on Dong Du or Broken Rice on Nguyen Trai</h4><p>End your nocturnal culinary adventure with late-night classics favored by locals: aromatic crispy butter-roasted quail paired with salted lime-pepper dip, or a plate of smoky grilled pork chop broken rice (<em>com tam suon bi cha</em>) served well past midnight.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="comparative-itinerary-schedules-4-hour-express-vs-full-day" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Comparative Itinerary Schedules: 4-Hour Express vs. Full Day
+            Comparative Itinerary Schedules: 4-Hour Express vs. Full Day
           </h2>
         </div>
       
@@ -11087,7 +11128,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-takeaways-and-field-advice-from-the-rice-tour" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Key Takeaways & Field Advice from The Rice Tour
+            Key Takeaways & Field Advice from The Rice Tour
           </h2>
         </div>
       <ol>
@@ -11401,7 +11442,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-stepping-into-saigons-beating-heart-like-an-insider" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Stepping into Saigon's Beating Heart Like an Insider
+            Introduction: Stepping into Saigon's Beating Heart Like an Insider
           </h2>
         </div>
       <p>Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.</p>
@@ -11410,7 +11451,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="operating-hours-and-two-distinct-daily-rhythms" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Operating Hours & Two Distinct Daily Rhythms
+            Operating Hours & Two Distinct Daily Rhythms
           </h2>
         </div>
       <p>Ben Thanh operates under two starkly different daily personalities:</p>
@@ -11424,16 +11465,15 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 1. The Historic Covered Hall Bazaar (06:00 – 18:00)
+### The Historic Covered Hall Bazaar (06:00 – 18:00)
 - **What happens:** All 1,400 interior stalls operate at full capacity. This is the optimal window to browse artisanal textiles, lacquerware, hand-carved coffee filters, cashews, dried fruits, and explore the bustling heritage food court.
 - **Insider Sweet Spot (08:30 – 10:30 AM):** The air is cool, stallholders have completed their morning displays, and interactions are warm, leisurely, and unhurried.
-          <div id="the-open-air-night-street-bazaar-1800-2330" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . The Open-Air Night Street Bazaar (18:00 – 23:30)
-            </h3>
-          </div>
-        <ul>
+        <div id="the-open-air-night-street-bazaar-1800-2330" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Open-Air Night Street Bazaar (18:00 – 23:30)
+          </h3>
+        </div>
+      <ul>
 <li><strong>What happens:</strong> At 18:00, the main heavy wooden gates shutter. Immediately, Phan Boi Chau Street (East Gate) and Phan Chu Trinh Street (West Gate) transform into illuminated pedestrian corridors flanked by open charcoal grills and bustling souvenir stalls.</li>
 <li><strong>Insider Sweet Spot (19:30 – 21:30 PM):</strong> When evening breezes soften the tropical humidity and the neon lights reflect upon sizzling pans of fresh seafood.</li>
 </ul>
@@ -11441,7 +11481,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="official-parking-map-and-scam-avoidance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Official Parking Map & Scam Avoidance
+            Official Parking Map & Scam Avoidance
           </h2>
         </div>
       <p>One of the most persistent headaches for independent travelers on scooters or rental cars is predatory roadside parking attendants charging exorbitant fees (30,000 – 50,000 VND). Memorize these legitimate, municipally regulated parking hubs:</p>
@@ -11466,7 +11506,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
+            Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
           </h2>
         </div>
       <p>Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary <strong>Ha Tam Gold Shop</strong> (<em>Tiem vang Ha Tam</em>) and neighboring <strong>Mai Van</strong>:</p>
@@ -11479,7 +11519,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="master-bargaining-rules-the-smiling-negotiation-code" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Master Bargaining Rules: The "Smiling Negotiation" Code
+            Master Bargaining Rules: The "Smiling Negotiation" Code
           </h2>
         </div>
       <p>Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social performance. To shop ethically without overpaying, keep these golden guidelines in mind:</p>
@@ -11493,7 +11533,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="hygiene-and-dining-safety-in-the-culinary-hall" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Hygiene & Dining Safety in the Culinary Hall
+            Hygiene & Dining Safety in the Culinary Hall
           </h2>
         </div>
       <p>Ben Thanh’s interior food court is a sensory feast. To dine like a seasoned gastronome while ensuring digestive peace:</p>
@@ -11506,7 +11546,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="safety-scams-and-emergency-contacts" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            7. Safety, Scams & Emergency Contacts
+            Safety, Scams & Emergency Contacts
           </h2>
         </div>
       <ul>
@@ -11844,9 +11884,11 @@ For the 2026 epicurean, understanding this sandwich requires looking beyond the 
         </div>
       <p>The alleys of the Ancient Town are saturated with vendors, but true mastery is concentrated in a select few ovens.</p>
 
-        <h3 id="tier-1-the-global-icons" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Tier 1: The Global Icons
-        </h3>
+        <div id="tier-1-the-global-icons" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Tier 1: The Global Icons
+          </h3>
+        </div>
       <p>These are the heavyweights, institutions that have defined the global perception of the sandwich.</p>
 <ol>
 <li><p><strong>Banh Mi Phuong (2B Phan Chau Trinh)</strong></p>
@@ -11865,9 +11907,11 @@ For the 2026 epicurean, understanding this sandwich requires looking beyond the 
 </li>
 </ol>
 
-        <h3 id="tier-2-the-local-sanctuaries" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Tier 2: The Local Sanctuaries
-        </h3>
+        <div id="tier-2-the-local-sanctuaries" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Tier 2: The Local Sanctuaries
+          </h3>
+        </div>
       <p>Where the residents of Hoi An quietly consume their morning staples.</p>
 <ol start="3">
 <li><p><strong>Banh Mi Lanh (Near Nam Quang Pagoda)</strong></p>
@@ -12219,7 +12263,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+            Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
           </h2>
         </div>
       <p>Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.</p>
@@ -12228,13 +12272,15 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="anatomy-of-the-7-most-common-scams-and-traps" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Anatomy of the 7 Most Common Scams & Traps
+            Anatomy of the 7 Most Common Scams & Traps
           </h2>
         </div>
       
-        <h3 id="scam-1-the-astronomical-price-hike-300-500-inflation" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)
-        </h3>
+        <div id="scam-1-the-astronomical-price-hike-300-500-inflation" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> The moment an uninitiated foreign accent is detected, certain vendors selling silk scarves, imitation watches, luggage, or casual tees will inflate quotes by 3x to 5x. A cotton Saigon souvenir T-shirt worth 80,000 – 100,000 VND ($3 – $4) can easily be quoted at 450,000 – 600,000 VND ($18 – $24).</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12245,9 +12291,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)
-        </h3>
+        <div id="scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> Frequently active around the South and West Gate sidewalks. A friendly vendor carrying traditional bamboo shoulder poles (<em>don ganh</em>) laden with coconuts will approach smilingly, place the pole across your shoulders, set a conical hat (<em>non la</em>) upon your head, and insist you pose for photos. Seconds later, they chop open two coconuts, shove them into your hands, and aggressively demand 150,000 – 250,000 VND ($6 – $10) per nut.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12257,9 +12305,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-3-the-aggressive-shoe-repair-hustle" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 3: The Aggressive "Shoe Repair Hustle"
-        </h3>
+        <div id="scam-3-the-aggressive-shoe-repair-hustle" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 3: The Aggressive "Shoe Repair Hustle"
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> While you are strolling leisurely through September 23rd Park or waiting at pedestrian lights, a man carrying a wooden shoe-repair kit will point frantically at your sneakers, claim the sole is tearing off, or surreptitiously apply a dab of solvent or glue onto your toe cap. Before you can object, they pull your shoe off to &quot;fix&quot; it, subsequently demanding 300,000 – 700,000 VND ($12 – $28 USD) for three drops of cheap adhesive.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12269,9 +12319,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-4-the-bait-and-switch-on-dried-delicacies-and-coffee" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 4: The Bait-and-Switch on Dried Delicacies & Coffee
-        </h3>
+        <div id="scam-4-the-bait-and-switch-on-dried-delicacies-and-coffee" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 4: The Bait-and-Switch on Dried Delicacies & Coffee
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> At certain dried fruit, roasted cashew, and weasel coffee kiosks, the front-row sample trays feature pristine, jumbo-sized, premium-grade products. Yet once you agree to purchase a kilo to take home, the seller packs pre-sealed plastic bags from hidden cupboards beneath the counter containing inferior, broken, or near-expiry batches.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12281,9 +12333,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-5-distraction-pickpocketing-in-bottlenecks" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 5: Distraction Pickpocketing in Bottlenecks
-        </h3>
+        <div id="scam-5-distraction-pickpocketing-in-bottlenecks" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 5: Distraction Pickpocketing in Bottlenecks
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> Operating in tandem teams of two or three during peak evening hours (20:00 – 21:30) or congested market aisles. One accomplice bumps into you or drops coins to create a momentary disturbance, while their counterpart behind deftly unzips a backpack or extracts an iPhone from a rear pocket.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12293,9 +12347,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-6-unregulated-copycat-metermonkey-taxis" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 6: Unregulated "Copycat" Metermonkey Taxis
-        </h3>
+        <div id="scam-6-unregulated-copycat-metermonkey-taxis" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 6: Unregulated "Copycat" Metermonkey Taxis
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> Circling the market perimeter at night, rogue cabs sport painted decals nearly identical to reputable fleets like <em>Mai Linh</em> (green) or <em>Vinasun</em> (white/red stripes). Once inside, you&#39;ll discover a tampered digital taximeter that spins at triple speed, or a driver taking elaborate detours through peripheral wards.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12305,9 +12361,11 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 </li>
 </ul>
 
-        <h3 id="scam-7-confusing-polymer-banknote-denominations" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Scam 7: Confusing Polymer Banknote Denominations
-        </h3>
+        <div id="scam-7-confusing-polymer-banknote-denominations" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Scam 7: Confusing Polymer Banknote Denominations
+          </h3>
+        </div>
       <ul>
 <li><strong>The Modus Operandi:</strong> The Vietnamese 500,000 VND note (teal blue) looks remarkably similar to the 20,000 VND note in dim lighting. Similarly, the 10,000 VND and 200,000 VND bills share reddish-brown undertones. Distracted tourists handing over cash in shadowy night markets are occasionally shortchanged or given badly torn banknotes that commercial banks refuse to exchange.</li>
 <li><strong>The Defense Strategy:</strong>  <ul>
@@ -12320,7 +12378,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="verified-price-reference-benchmark-2026-edition" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Verified Price Reference Benchmark (2026 Edition)
+            Verified Price Reference Benchmark (2026 Edition)
           </h2>
         </div>
       <p>To navigate commerce with confidence, refer to this ground-verified pricing guide:</p>
@@ -12346,7 +12404,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="emergency-directory-and-247-tourist-assistance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Emergency Directory & 24/7 Tourist Assistance
+            Emergency Directory & 24/7 Tourist Assistance
           </h2>
         </div>
       <p>If you encounter threats, severe extortion, or property loss, remain calm and contact municipal security:</p>
@@ -12682,19 +12740,25 @@ For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately
         </div>
       <p>The brilliance of Long Xuyen broken rice lies in its hyper-fragmentation. Every element is reduced to a uniform size, ensuring that every spoonful contains a perfect ratio of flavors and textures.</p>
 
-        <h3 id="the-meat-caramelized-and-julienned" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Meat: Caramelized and Julienned
-        </h3>
+        <div id="the-meat-caramelized-and-julienned" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Meat: Caramelized and Julienned
+          </h3>
+        </div>
       <p>Instead of a monolithic slab of grilled pork, Long Xuyen utilizes pork belly or lean shoulder that is marinated in palm sugar, soy, and garlic, then braised and grilled before being meticulously sliced into thin strips. This exposes more surface area, resulting in a deeper caramelization.</p>
 
-        <h3 id="the-egg-braised-not-fried" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Egg: Braised, Not Fried
-        </h3>
+        <div id="the-egg-braised-not-fried" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Egg: Braised, Not Fried
+          </h3>
+        </div>
       <p>You will rarely find a sunny-side-up egg here. The protein complement is a duck egg, hard-boiled and then slow-braised in a coconut water reduction alongside the pork, rendering the whites deeply stained and intensely savory. It is then quartered before serving.</p>
 
-        <h3 id="the-accoutrements" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Accoutrements
-        </h3>
+        <div id="the-accoutrements" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Accoutrements
+          </h3>
+        </div>
       <p>A generous ladle of scallion oil (<em>mỡ hành</em>) acts as the binding agent, while the pickled vegetables—usually a mix of daikon, carrot, and occasionally morning glory stems—provide the necessary acidic counterpoint to the fatty pork.</p>
 <hr>
 
@@ -13393,7 +13457,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-saigons-miniature-financial-street" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Saigon's Miniature Financial Street
+            Introduction: Saigon's Miniature Financial Street
           </h2>
         </div>
       <p>Ask any seasoned expatriate, diplomat, or frequent international traveler where to secure the absolute best currency exchange rates in Ho Chi Minh City, and nine out of ten will point you to the same bustling intersection: <strong>Ha Tam Gold Shop</strong> (<em>Tiem Vang Ha Tam</em>), nestled at the corner of Nguyen An Ninh and Phan Chu Trinh streets directly across from Ben Thanh Market&#39;s West Gate.</p>
@@ -13403,7 +13467,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="ha-tam-vs-mai-van-the-west-gate-twin-titans" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Ha Tam vs. Mai Van: The West Gate Twin Titans
+            Ha Tam vs. Mai Van: The West Gate Twin Titans
           </h2>
         </div>
       <p>Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants dominate the currency exchange landscape:</p>
@@ -13424,7 +13488,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport
+            Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport
           </h2>
         </div>
       
@@ -13449,40 +13513,37 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)
+            Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)
           </h2>
         </div>
       <p>Nearly 80% of foreign travelers are unaware that Vietnamese currency merchants enforce rigorous physical standards for paper cash:</p>
 
-          <div id="the-usd-big-head-vs-small-head-reality" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . The USD "Big Head" vs. "Small Head" Reality
-            </h3>
-          </div>
-        <ul>
+        <div id="the-usd-big-head-vs-small-head-reality" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The USD "Big Head" vs. "Small Head" Reality
+          </h3>
+        </div>
+      <ul>
 <li><strong>Older Series USD (Small Head - Pre-2003/2006):</strong> 100 USD bills featuring the smaller portrait of Benjamin Franklin are either rejected outright or discounted by 100,000 – 300,000 VND ($4 – $12) per note due to counterfeit vulnerability.</li>
 <li><strong>New Series USD (Big Head / 3D Blue Security Ribbon - 2013 Series onward):</strong> Guaranteed to receive top-tier, prime exchange quotes. Always request crisp, modern notes from your home bank before traveling.</li>
 </ul>
 
-          <div id="physical-condition-of-paper-currency" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Physical Condition of Paper Currency
-            </h3>
-          </div>
-        <ul>
+        <div id="physical-condition-of-paper-currency" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Physical Condition of Paper Currency
+          </h3>
+        </div>
+      <ul>
 <li>Ha Tam inspects notes with both ultraviolet light and keen tactile scrutiny. Banknotes that are <strong>torn, pinholed, stamped with ink, annotated with ballpoint pen, stained with oil, or showing heavy mold</strong> will be refused or assessed a 5% – 10% restoration surcharge.</li>
 <li><em>Pro-Tip:</em> Store foreign bills unfolded inside a flat travel wallet or rigid envelope; avoid folding them into tight rolls.</li>
 </ul>
 
-          <div id="large-denominations-yield-superior-rates" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . Large Denominations Yield Superior Rates
-            </h3>
-          </div>
-        <ul>
+        <div id="large-denominations-yield-superior-rates" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Large Denominations Yield Superior Rates
+          </h3>
+        </div>
+      <ul>
 <li>$100 and $50 USD notes receive the maximum exchange value.</li>
 <li>Lower denominations ($1, $5, $10, $20) command slightly lower conversion tiers. This tiering applies equally to Euro and Japanese Yen.</li>
 </ul>
@@ -13490,7 +13551,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="five-step-security-protocol-for-large-cash-transactions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Five-Step Security Protocol for Large Cash Transactions
+            Five-Step Security Protocol for Large Cash Transactions
           </h2>
         </div>
       <p>Given the dense foot traffic surrounding Nguyen An Ninh Street, opportunistic petty thieves occasionally monitor exchange counters. Adhere strictly to this 5-step safety drill:</p>
@@ -14161,7 +14222,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-the-battle-for-parking-in-saigons-heritage-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: The Battle for Parking in Saigon’s Heritage Heart
+            Introduction: The Battle for Parking in Saigon’s Heritage Heart
           </h2>
         </div>
       <p>District 1 represents Vietnam&#39;s densest urban commercial zone, with Ben Thanh Market serving as its bustling gravitational center. With thousands of shoppers, food lovers, and international visitors converging hourly—combined with newly pedestrianized boulevards across Quach Thi Trang Square—locating secure, municipally regulated parking for scooters or cars is a notorious friction point.</p>
@@ -14171,7 +14232,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs
+            Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs
           </h2>
         </div>
       
@@ -14197,13 +14258,15 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="practical-recommendations-by-vehicle-class" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Practical Recommendations by Vehicle Class
+            Practical Recommendations by Vehicle Class
           </h2>
         </div>
       
-        <h3 id="a-for-motorbike-and-scooter-riders" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          A. For Motorbike & Scooter Riders
-        </h3>
+        <div id="a-for-motorbike-and-scooter-riders" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            A. For Motorbike & Scooter Riders
+          </h3>
+        </div>
       <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQBTGJrk7p5/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
@@ -14216,27 +14279,29 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 </div>
 #### 1. The Gold Standard: Ben Thanh Central Metro Underground Basement
 - **How to enter:** Approach via Le Loi Boulevard or Ham Nghi Street and follow municipal Metro Line 1 subterranean access signage.
-- **Key Advantage:** Direct subterranean access to the market area via shaded, climate-controlled escalators. Fully automated optical barrier gates register your vehicle's license plate instantaneously, eliminating any possibility of vehicle theft or substitution.<h4 id="the-outdoor-convenient-choice-september-23rd-park-le-lai-st">2. The Outdoor Convenient Choice: September 23rd Park (Le Lai St)</h4><ul>
+- **Key Advantage:** Direct subterranean access to the market area via shaded, climate-controlled escalators. Fully automated optical barrier gates register your vehicle's license plate instantaneously, eliminating any possibility of vehicle theft or substitution.<h4 id="the-outdoor-convenient-choice-september-23rd-park-le-lai-st">The Outdoor Convenient Choice: September 23rd Park (Le Lai St)</h4><ul>
 <li><strong>How to enter:</strong> Cruise along Le Lai Street towards the market roundabout; the entrance gate is located on your right beneath the lush tree canopy.</li>
 <li><strong>Key Advantage:</strong> Exceptional capacity that rarely fills up even during weekend evenings. Once parked, cross the designated pedestrian zebra crossing directly into the South Gate entrance.</li>
 </ul>
 
-        <h3 id="b-for-rental-cars-and-private-drivers-sedans-and-suvs" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          B. For Rental Cars & Private Drivers (Sedans & SUVs)
-        </h3>
+        <div id="b-for-rental-cars-and-private-drivers-sedans-and-suvs" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            B. For Rental Cars & Private Drivers (Sedans & SUVs)
+          </h3>
+        </div>
       <p><strong>Crucial Legal Notice:</strong> All curb spaces surrounding Ben Thanh Market along Le Loi, Phan Boi Chau, and Phan Chu Trinh strictly prohibit stopping and parking (<em>Cam Dung, Cam Do</em>), enforced via high-resolution 24/7 municipal AI traffic cameras. Do not attempt street parking.</p>
-<h4 id="saigon-centre-takashimaya-basement-250m-from-market">1. Saigon Centre / Takashimaya Basement (250m from Market)</h4><ul>
+<h4 id="saigon-centre-takashimaya-basement-250m-from-market">Saigon Centre / Takashimaya Basement (250m from Market)</h4><ul>
 <li><strong>Car Ingress:</strong> Turn into Basement level B2 from Pasteur Street (just past the Le Loi intersection) or via Nam Ky Khoi Nghia.</li>
 <li><strong>Amenities:</strong> Overhead LED green/red space occupancy indicators, generous lane clearances, and a seamless 3-minute stroll down Le Loi Boulevard to the market.</li>
 </ul>
-<h4 id="diamond-plaza-and-mplaza-garages-le-duan-boulevard-800m-away">2. Diamond Plaza & mPlaza Garages (Le Duan Boulevard - 800m away)</h4><ul>
+<h4 id="diamond-plaza-and-mplaza-garages-le-duan-boulevard-800m-away">Diamond Plaza & mPlaza Garages (Le Duan Boulevard - 800m away)</h4><ul>
 <li>Ideal when combining your market visit with a broader architectural walking tour encompassing Notre-Dame Cathedral and the Independence Palace.</li>
 </ul>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="how-to-spot-rogue-parking-traps-and-3-step-counteraction" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. How to Spot Rogue Parking Traps & 3-Step Counteraction
+            How to Spot Rogue Parking Traps & 3-Step Counteraction
           </h2>
         </div>
       <p>Avoid extortion by recognizing the telltale signs of illicit parking operations:</p>
@@ -14579,25 +14644,23 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
         </div>
       <p>For those seeking uncompromised comfort with unobstructed views of the Hau River.</p>
 
-          <div id="azerai-can-tho-con-au-islet" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">1</span>
-              . Azerai Can Tho (Con Au Islet)
-            </h3>
-          </div>
-        <ul>
+        <div id="azerai-can-tho-con-au-islet" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Azerai Can Tho (Con Au Islet)
+          </h3>
+        </div>
+      <ul>
 <li><strong>The Profile:</strong> Unrivaled exclusivity. Accessible only by private speedboat, this resort occupies its own islet, offering a masterclass in understated, tropical modernist architecture integrated into the mangrove ecosystem.</li>
 <li><strong>2026 Rate Matrix:</strong> Starting at 5,000,000 VND/night.</li>
 <li><strong>The Verdict:</strong> The absolute pinnacle of Delta luxury, ideal for extended retreats, though logistically detached from the immediate bustle of the city center.</li>
 </ul>
 
-          <div id="victoria-can-tho-resort-cai-khe-ward" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">2</span>
-              . Victoria Can Tho Resort (Cai Khe Ward)
-            </h3>
-          </div>
-        <ul>
+        <div id="victoria-can-tho-resort-cai-khe-ward" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Victoria Can Tho Resort (Cai Khe Ward)
+          </h3>
+        </div>
+      <ul>
 <li><strong>The Profile:</strong> A heavily nostalgic, Indochine-style property. With its dark wood verandas, expansive manicured lawns, and a legendary riverfront pool, Victoria maintains a stately, old-world cadence.</li>
 <li><strong>2026 Rate Matrix:</strong> Starting at 2,800,000 VND/night.</li>
 <li><strong>The Verdict:</strong> Perfect for classic romantics and families. Their private Lady Hau cruise boat remains the most elegant way to approach the Cai Rang Floating Market.</li>
@@ -14611,24 +14674,22 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
         </div>
       <p>For travelers who prioritize immediate access to the urban core and Ninh Kieu Wharf.</p>
 
-          <div id="ttc-hotel-premium-can-tho-hai-ba-trung-street" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">3</span>
-              . TTC Hotel – Premium Can Tho (Hai Ba Trung Street)
-            </h3>
-          </div>
-        <ul>
+        <div id="ttc-hotel-premium-can-tho-hai-ba-trung-street" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            TTC Hotel – Premium Can Tho (Hai Ba Trung Street)
+          </h3>
+        </div>
+      <ul>
 <li><strong>The Profile:</strong> The tallest vantage point directly overlooking the Ninh Kieu Wharf. It offers functional, business-class luxury with unparalleled proximity to the night market.</li>
 <li><strong>2026 Rate Matrix:</strong> Starting at 1,200,000 VND/night.</li>
 </ul>
 
-          <div id="kp-hotel-nam-ky-khoi-nghia-street" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">4</span>
-              . KP Hotel (Nam Ky Khoi Nghia Street)
-            </h3>
-          </div>
-        <ul>
+        <div id="kp-hotel-nam-ky-khoi-nghia-street" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            KP Hotel (Nam Ky Khoi Nghia Street)
+          </h3>
+        </div>
+      <ul>
 <li><strong>The Profile:</strong> A rising star in the boutique sector. KP focuses on highly efficient spatial design, minimalist aesthetics, and an exceptional in-house specialty coffee program.</li>
 <li><strong>2026 Rate Matrix:</strong> Starting at 850,000 VND/night.</li>
 </ul>
@@ -14963,7 +15024,7 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-your-gateway-ride-into-saigons-vibrant-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
+            Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
           </h2>
         </div>
       <p>As your flight touches down at Tan Son Nhat International Airport (SGN), most travelers share an identical maiden destination: <strong>District 1</strong>, anchored by the historic clock tower of Ben Thanh Market. As the epicenter of Saigon’s hospitality, heritage dining, cultural attractions, and municipal transit crossroads, reaching Ben Thanh smoothly sets the rhythm for your entire journey.</p>
@@ -14982,7 +15043,7 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="master-comparison-of-5-airport-transfer-options-2026-rates" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Master Comparison of 5 Airport Transfer Options (2026 Rates)
+            Master Comparison of 5 Airport Transfer Options (2026 Rates)
           </h2>
         </div>
       
@@ -15007,13 +15068,15 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="step-by-step-logistics-and-insider-tactics" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Step-by-Step Logistics & Insider Tactics
+            Step-by-Step Logistics & Insider Tactics
           </h2>
         </div>
       
-        <h3 id="option-1-yellow-bus-109-the-smart-travelers-favorite" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)
-        </h3>
+        <div id="option-1-yellow-bus-109-the-smart-travelers-favorite" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)
+          </h3>
+        </div>
       <ul>
 <li><strong>Fleet Quality:</strong> Bright yellow modern European-standard low-floor buses equipped with powerful air conditioning, complimentary onboard Wi-Fi, and spacious center luggage bays. Drivers and attendants communicate functional English.</li>
 <li><strong>Operating Hours:</strong> 05:45 AM to 23:45 PM daily; departures every 15 to 20 minutes.</li>
@@ -15025,9 +15088,11 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
 </li>
 </ul>
 
-        <h3 id="option-2-app-based-ride-hailing-grab-be-xanh-sm-the-tcp-garage-drill" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Option 2: App-Based Ride-Hailing (Grab / Be / Xanh SM) — The TCP Garage Drill
-        </h3>
+        <div id="option-2-app-based-ride-hailing-grab-be-xanh-sm-the-tcp-garage-drill" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Option 2: App-Based Ride-Hailing (Grab / Be / Xanh SM) — The TCP Garage Drill
+          </h3>
+        </div>
       <p>If you book a ride via smartphone app at the Domestic Terminal, understand airport traffic regulations:</p>
 <ul>
 <li><strong>Vital Rule:</strong> App-hailed 4-wheel passenger cars are <strong>prohibited</strong> from ground-level curbside pick-up (Lanes A and B).</li>
@@ -15035,9 +15100,11 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
 <li><strong>Surcharge Note:</strong> The app fare excludes the municipal airport toll fee (10,000 – 15,000 VND), which the driver will legitimately add to your cash or card tally upon exit.</li>
 </ul>
 
-        <h3 id="option-3-traditional-regulated-taxis-ground-floor-convenience" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Option 3: Traditional Regulated Taxis (Ground-Floor Convenience)
-        </h3>
+        <div id="option-3-traditional-regulated-taxis-ground-floor-convenience" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Option 3: Traditional Regulated Taxis (Ground-Floor Convenience)
+          </h3>
+        </div>
       <p>If you are traveling with elderly companions, young children, or multiple heavy bags:</p>
 <ul>
 <li><strong>The Two Trusted Fleets:</strong><ul>
@@ -15052,7 +15119,7 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="time-of-day-traffic-advisories" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Time-of-Day Traffic Advisories
+            Time-of-Day Traffic Advisories
           </h2>
         </div>
       <ol>
@@ -15376,9 +15443,11 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
         </div>
       <p>Spanning over 313 hectares, the village operates as the primary floral artery for all of Southern Vietnam, supplying everything from ornamental bonsai to industrial-scale marigold yields.</p>
 
-        <h3 id="the-lunar-new-year-core-tet-season" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Lunar New Year Core (Tet Season)
-        </h3>
+        <div id="the-lunar-new-year-core-tet-season" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Lunar New Year Core (Tet Season)
+          </h3>
+        </div>
       <p>In the immediate weeks preceding the Lunar New Year (<em>Tết</em>), the village enters overdrive. The landscape is dominated by auspicious blooms:</p>
 <ul>
 <li><strong>Chrysanthemums (Cúc Mâm Xôi):</strong> The undisputed king of Tet, engineered to form perfect, dense golden hemispheres.</li>
@@ -15386,9 +15455,11 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 <li><strong>Bougainvillea (Hoa Giấy):</strong> Sa Dec boasts mutant strains grafted to produce up to five distinct colors on a single trunk.</li>
 </ul>
 
-        <h3 id="the-year-round-perennials" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Year-Round Perennials
-        </h3>
+        <div id="the-year-round-perennials" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Year-Round Perennials
+          </h3>
+        </div>
       <p>Beyond the Tet frenzy, Sa Dec maintains a robust year-round output, focusing heavily on intricate bonsai (often utilizing ancient tamarind or starfruit bases) and a staggering variety of over 50 rose species, including highly prized French and Bulgarian cultivars that have adapted to the tropical heat.</p>
 <hr>
 
@@ -15739,18 +15810,22 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
         </div>
       <p>The defining characteristic of Mekong commerce is waterborne trade.</p>
 
-        <h3 id="cai-rang-floating-market" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Cai Rang Floating Market
-        </h3>
+        <div id="cai-rang-floating-market" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Cai Rang Floating Market
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> The undisputed titan of riverine commerce. Despite a slight reduction in boat density in recent years due to improved road infrastructure, Cai Rang remains the largest wholesale floating market in the region.</li>
 <li><strong>The Mechanics:</strong> Commerce is conducted via <em>cây bẹo</em> (a bamboo pole on which vendors impale a sample of what they are selling—be it a pineapple, a cabbage, or a sweet potato).</li>
 <li><strong>2026 Field Note:</strong> Do not arrive at 08:00 AM. The true wholesale frenzy peaks between 05:00 AM and 06:30 AM.</li>
 </ul>
 
-        <h3 id="phong-dien-floating-market" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Phong Dien Floating Market
-        </h3>
+        <div id="phong-dien-floating-market" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Phong Dien Floating Market
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> The quieter, more intimate counterpoint to Cai Rang. Located further out (about 17km from the city center), Phong Dien operates with non-motorized rowing boats and focuses heavily on retail and breakfast transactions.</li>
 <li><strong>The Verdict:</strong> If Cai Rang is an industrial wholesale hub, Phong Dien is a communal village gathering. It is rapidly becoming the favored choice for photographers seeking authentic, unhurried interactions.</li>
@@ -15764,17 +15839,21 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
         </div>
       <p>When the sun dictates a retreat from the river, commerce moves to land.</p>
 
-        <h3 id="can-tho-ancient-market-cho-co-can-tho" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Can Tho Ancient Market (Chợ Cổ Cần Thơ)
-        </h3>
+        <div id="can-tho-ancient-market-cho-co-can-tho" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Can Tho Ancient Market (Chợ Cổ Cần Thơ)
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> Also known as the Hang Duong Market. Constructed around 1915 alongside the Binh Thuy Ancient House, this structure is a masterclass in French colonial-era market architecture, featuring a soaring, vaulted iron roof designed to maximize airflow.</li>
 <li><strong>The Goods:</strong> Primarily focused on tourist-oriented souvenirs, high-quality silk garments, and regional handicrafts.</li>
 </ul>
 
-        <h3 id="xuan-khanh-market" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Xuan Khanh Market
-        </h3>
+        <div id="xuan-khanh-market" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Xuan Khanh Market
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> The gritty, unapologetic stomach of the city. Xuan Khanh is where the locals actually shop for their daily provisions.</li>
 <li><strong>The Experience:</strong> It is an intense sensory environment—expect the scent of fermented fish (<em>mắm</em>), the gleam of freshly butchered pork, and mountains of indigenous greens like water lilies and sesbania flowers.</li>
@@ -15788,18 +15867,22 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
         </div>
       <p>As evening falls, the commercial energy pivots entirely toward gastronomy.</p>
 
-        <h3 id="tay-do-night-market-ninh-kieu-wharf" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Tay Do Night Market (Ninh Kieu Wharf)
-        </h3>
+        <div id="tay-do-night-market-ninh-kieu-wharf" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Tay Do Night Market (Ninh Kieu Wharf)
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> The most famous, and consequently the most crowded, night market in the Delta. Stretching along the Hau River promenade, it is a gauntlet of street food, cheap apparel, and organized chaos.</li>
 <li><strong>The Culinary Focus:</strong> Excellent for introductory street food: grilled rice paper (<em>bánh tráng nướng</em>), fresh sugarcane juice, and an endless array of skewers.</li>
 <li><strong>2026 Insider Tip:</strong> The interior apparel section is highly repetitive; spend your time at the outer culinary ring facing the river.</li>
 </ul>
 
-        <h3 id="tran-phu-night-market" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Tran Phu Night Market
-        </h3>
+        <div id="tran-phu-night-market" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Tran Phu Night Market
+          </h3>
+        </div>
       <ul>
 <li><strong>The Profile:</strong> A specialized seafood corridor. Located slightly away from the main tourist strip, this is a kilometers-long stretch of open-air restaurants displaying live tanks of river prawns, snakehead fish, and various snails.</li>
 <li><strong>The Verdict:</strong> Considerably more expensive than standard street food, but essential for those seeking fresh, large-format aquatic dining.</li>
@@ -16125,7 +16208,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-som-rong-pagoda" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Som Rong Pagoda
+            Introduction to Som Rong Pagoda
           </h2>
         </div>
       <p>Located in Ward 5, Soc Trang City, <strong>Som Rong Pagoda</strong> (officially known as Wat Pătum Wôngsa Som Rông) is a crowning jewel of Khmer Theravada Buddhism in the Mekong Delta. Originally constructed around 1785 using bamboo and lá nipa, the pagoda has undergone several major renovations over its 240-year history to become the magnificent architectural complex it is today. </p>
@@ -16140,23 +16223,27 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-architectural-masterpieces" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Architectural Masterpieces
+            The Architectural Masterpieces
           </h2>
         </div>
       
-        <h3 id="the-grand-sala-and-main-hall" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Grand Sala and Main Hall
-        </h3>
+        <div id="the-grand-sala-and-main-hall" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Grand Sala and Main Hall
+          </h3>
+        </div>
       <p>The Main Hall (Chánh điện) is the spiritual epicenter of the pagoda. Its sweeping multi-tiered roof is adorned with intricate Naga (serpent) motifs, symbolizing protection. Inside, the altar houses multiple Buddha statues, illuminated by natural light and golden accents, creating an atmosphere of profound serenity. The walls are meticulously painted with frescoes depicting the life of Siddhartha Gautama, offering a visual narrative of Buddhist teachings.</p>
 
-        <h3 id="the-majestic-stupa-bao-thap" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Majestic Stupa (Bảo Tháp)
-        </h3>
+        <div id="the-majestic-stupa-bao-thap" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Majestic Stupa (Bảo Tháp)
+          </h3>
+        </div>
       <p>Completed in recent years, the stupa at Som Rong Pagoda is a breathtaking structure that blends traditional Khmer design with modern aesthetics. Painted in a striking palette of grey and gold, the stupa features four gates facing the cardinal directions, each guarded by mythical creatures. The intricate bas-reliefs and the sheer scale of the stupa make it a favorite backdrop for photographers, especially during the golden hour when the fading sun casts dramatic shadows across its textured surface.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-giant-reclining-buddha" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Giant Reclining Buddha
+            The Giant Reclining Buddha
           </h2>
         </div>
       <p>The undeniable centerpiece of Som Rong Pagoda is the monumental <strong>Reclining Buddha statue</strong>, which was inaugurated in recent years. Measuring an astonishing 73 meters in length, 22 meters in height, and weighing over 490 tons, it is currently the largest reclining Buddha in Vietnam.</p>
@@ -16168,19 +16255,23 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="experiencing-khmer-culture-in-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Experiencing Khmer Culture in 2026
+            Experiencing Khmer Culture in 2026
           </h2>
         </div>
       <p>Visiting Som Rong Pagoda offers more than just architectural appreciation; it is a deep dive into the living culture of the Khmer Krom people. </p>
 
-        <h3 id="festivals-and-celebrations" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Festivals and Celebrations
-        </h3>
+        <div id="festivals-and-celebrations" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Festivals and Celebrations
+          </h3>
+        </div>
       <p>If you visit during major Khmer festivals such as <strong>Chol Chnam Thmay</strong> (New Year, usually in April), <strong>Sen Dolta</strong> (Ancestor Worship, around August/September), or <strong>Ok Om Bok</strong> (Moon Worship, November), the pagoda transforms into a vibrant hub of community activity. You can witness traditional music, classical Apsara dancing, and the famous Ngo boat racing rituals.</p>
 
-        <h3 id="photography-and-etiquette" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Photography and Etiquette
-        </h3>
+        <div id="photography-and-etiquette" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Photography and Etiquette
+          </h3>
+        </div>
       <p>Som Rong Pagoda is incredibly photogenic. However, as a place of active worship, visitors must adhere to strict etiquette:</p>
 <ul>
 <li>Always remove your shoes before entering the Main Hall or Sala.</li>
@@ -16191,7 +16282,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-nearby-attractions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Nearby Attractions
+            Travel Logistics and Nearby Attractions
           </h2>
         </div>
       <p>Soc Trang is approximately 230 kilometers from Ho Chi Minh City, making it accessible via a 4-5 hour drive along the national highway. </p>
@@ -16216,7 +16307,7 @@ While in Soc Trang, you should also explore other architectural wonders such as 
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>Som Rong Pagoda is a transcendent destination where the spiritual depth of Khmer Buddhism converges with awe-inspiring artistry. Whether you seek a moment of quiet reflection beneath the gaze of the giant Reclining Buddha or wish to marvel at the intricate details of the grand stupa, this sanctuary promises an unforgettable cultural expedition in the heart of the Mekong Delta.</p>
@@ -16519,7 +16610,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-cao-van-lau-theater" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Cao Van Lau Theater
+            Introduction to Cao Van Lau Theater
           </h2>
         </div>
       <p>The <strong>Cao Van Lau Theater</strong> is undeniably the most striking architectural landmark in Bac Lieu City. Dominating the spacious Hung Vuong Square, the theater’s design is inspired by the <em>Nón Lá</em> (the traditional Vietnamese conical hat), an enduring symbol of Vietnamese culture and the grace of Southern women. </p>
@@ -16534,43 +16625,51 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-architectural-masterpiece" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Architectural Masterpiece
+            The Architectural Masterpiece
           </h2>
         </div>
       
-        <h3 id="the-three-conical-hats-design" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The "Three Conical Hats" Design
-        </h3>
+        <div id="the-three-conical-hats-design" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The "Three Conical Hats" Design
+          </h3>
+        </div>
       <p>The theater&#39;s structural concept is brilliant in its simplicity and profound in its symbolism. The complex consists of three distinct cylindrical buildings, each crowned with a massive, stylized conical hat roof. </p>
 <ul>
 <li><strong>The Significance of Three:</strong> In Vietnamese culture, the number three holds deep meaning, often associated with stability (&quot;firm as a three-legged stool&quot;) and representing the unity of the three regions of Vietnam (North, Central, and South). It also symbolizes the harmony between the Kinh, Khmer, and Hoa ethnic groups coexisting in the Mekong Delta.</li>
 <li><strong>Record-Breaking Scale:</strong> In 2014, the Vietnam Records Organization (VietKings) officially recognized the theater as having the &quot;three largest conical hat structures in Vietnam.&quot;</li>
 </ul>
 
-        <h3 id="the-surrounding-complex" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Surrounding Complex
-        </h3>
+        <div id="the-surrounding-complex" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Surrounding Complex
+          </h3>
+        </div>
       <p>The theater sits within the expansive Hung Vuong Square, bordered by meticulously manicured gardens, a serene artificial lake, and walking paths. The reflection of the three giant hats on the water&#39;s surface, particularly when illuminated by the state-of-the-art LED lighting system at night, creates a cinematic and mesmerizing visual spectacle.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-cultural-heartbeat-of-bac-lieu" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Cultural Heartbeat of Bac Lieu
+            The Cultural Heartbeat of Bac Lieu
           </h2>
         </div>
       
-        <h3 id="a-fusion-of-artistic-troupes" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          A Fusion of Artistic Troupes
-        </h3>
+        <div id="a-fusion-of-artistic-troupes" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            A Fusion of Artistic Troupes
+          </h3>
+        </div>
       <p>The theater is not merely an architectural shell; it is a thriving cultural institution. In 2017, it became the unified home for two major local artistic groups: the Cao Van Lau Cai Luong Troupe and the Khmer General Arts Troupe. Today, a robust ensemble of over 80 actors, musicians, and artists continually breathe life into the venue.</p>
 
-        <h3 id="don-ca-tai-tu-and-cai-luong-performances" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Don Ca Tai Tu and Cai Luong Performances
-        </h3>
+        <div id="don-ca-tai-tu-and-cai-luong-performances" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Don Ca Tai Tu and Cai Luong Performances
+          </h3>
+        </div>
       <p>For travelers seeking authentic cultural immersion, attending a performance at the Cao Van Lau Theater is paramount. The acoustics inside the main auditoriums are engineered to enhance the soulful melodies of traditional instruments like the <em>đàn bầu</em> (monochord) and <em>đàn kìm</em> (moon lute). On Saturday nights, the theater often hosts free or subsidized performances, allowing both locals and tourists to revel in the golden eras of Cai Luong theater.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="visitor-guidelines-and-photography-2026-updates" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Visitor Guidelines and Photography (2026 Updates)
+            Visitor Guidelines and Photography (2026 Updates)
           </h2>
         </div>
       <p>The Cao Van Lau Theater is incredibly photogenic, but timing your visit is crucial for the best experience.</p>
@@ -16582,7 +16681,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-nearby-attractions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Nearby Attractions
+            Travel Logistics and Nearby Attractions
           </h2>
         </div>
       <p>Bac Lieu is approximately 280 kilometers from Ho Chi Minh City. With the completion of recent expressway extensions in 2025, travel time has been significantly reduced.</p>
@@ -16606,7 +16705,7 @@ Maximize your Bac Lieu itinerary by visiting the <strong>Bac Lieu Wind Farm</str
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>The Cao Van Lau Theater is a profound architectural statement that bridges the past and the future. It honors the deep roots of Southern Vietnamese music while providing a modern, world-class venue for its continuation. A visit here is a multisensory journey—where the eyes feast on architectural grandeur and the ears are serenaded by the timeless, nostalgic echoes of <em>Da Co Hoai Lang</em>.</p>
@@ -16907,7 +17006,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-cai-rang-floating-market" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Cai Rang Floating Market
+            Introduction to Cai Rang Floating Market
           </h2>
         </div>
       <p>Located on the Can Tho River, approximately 6 kilometers from the iconic Ninh Kieu Wharf, <strong>Cai Rang Floating Market</strong> is the largest and most bustling floating market in the Mekong Delta. The name &quot;Cai Rang&quot; traces its roots back to the Khmer word <em>karan</em> (meaning an earthen stove), a nod to the historical trade of pottery and clay stoves in the region. </p>
@@ -16922,7 +17021,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="navigating-the-logistics-boat-rentals-in-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Navigating the Logistics: Boat Rentals in 2026
+            Navigating the Logistics: Boat Rentals in 2026
           </h2>
         </div>
       <p>Renting a boat is the only way to truly experience the floating market. Visitors typically depart from Ninh Kieu Wharf. Here is the updated pricing matrix for 2026 to help you avoid tourist traps:</p>
@@ -16947,7 +17046,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-cultural-nuances-deciphering-the-beo-system" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Cultural Nuances: Deciphering the "Bẹo" System
+            The Cultural Nuances: Deciphering the "Bẹo" System
           </h2>
         </div>
       <p>The chaotic beauty of the market is governed by a brilliant, century-old advertising system known as the <strong>Cây Bẹo</strong> (bamboo pole). With hundreds of boats bobbing on the water, merchants hang their goods on a tall bamboo pole at the bow of their boat, allowing buyers to identify what is being sold from afar.</p>
@@ -16961,28 +17060,34 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="unmissable-signature-experiences" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Unmissable Signature Experiences
+            Unmissable Signature Experiences
           </h2>
         </div>
       
-        <h3 id="breakfast-on-the-water" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Breakfast on the Water
-        </h3>
+        <div id="breakfast-on-the-water" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Breakfast on the Water
+          </h3>
+        </div>
       <p>One of the most cinematic and memorable experiences is enjoying breakfast served directly from a swaying sampan. The signature dish is <em>Hủ Tiếu</em> (pork and tapioca noodle soup), costing around 40,000 - 50,000 VND per bowl. Enjoying a steaming bowl of noodles while balancing on the river, followed by a robust Vietnamese iced coffee (cà phê sữa đá), is a sensory delight.</p>
 
-        <h3 id="pineapple-tasting-on-the-roof" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Pineapple Tasting on the Roof
-        </h3>
+        <div id="pineapple-tasting-on-the-roof" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Pineapple Tasting on the Roof
+          </h3>
+        </div>
       <p>Many merchant boats selling pineapples offer an experiential treat. For a small fee, the owner will expertly peel the pineapple right before your eyes. You can climb atop the boat&#39;s wooden roof, savor the incredibly sweet, fresh fruit, and enjoy a panoramic view of the bustling market—a perfect photo opportunity.</p>
 
-        <h3 id="visiting-a-traditional-noodle-factory" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Visiting a Traditional Noodle Factory
-        </h3>
+        <div id="visiting-a-traditional-noodle-factory" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Visiting a Traditional Noodle Factory
+          </h3>
+        </div>
       <p>Most boat itineraries include a stop at a riverside family-run factory (like Sáu Hoài or Chín Của). Here, you can witness the entire process of making rice noodles, from milling the rice to drying the batter on bamboo mats. You can even try your hand at operating the manual noodle-cutting machine.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>The Cai Rang Floating Market is a living, breathing museum of the Mekong Delta&#39;s aquatic heritage. While it is undoubtedly a major tourist attraction in 2026, looking past the surface reveals a resilient community that still relies on the river&#39;s ebb and flow. By waking up before dawn and navigating the waters with respect, you become part of a centuries-old tradition that continues to define the spirit of Southern Vietnam.</p>
@@ -17286,7 +17391,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-mercury-phu-quoc" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Mercury Phu Quoc
+            Introduction to Mercury Phu Quoc
           </h2>
         </div>
       <p>When orchestrating complex itineraries on Phu Quoc Island, <strong>The Rice Tour</strong> prioritizes accommodations that offer impeccable service, logistical convenience, and profound relaxation. <strong>Mercury Phu Quoc Resort &amp; Villas</strong> consistently exceeds these criteria, making it one of our most trusted partners for 2026.</p>
@@ -17301,61 +17406,73 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="why-the-rice-tour-chooses-mercury-phu-quoc" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Why The Rice Tour Chooses Mercury Phu Quoc
+            Why The Rice Tour Chooses Mercury Phu Quoc
           </h2>
         </div>
       <p>Our partnership with Mercury Phu Quoc is grounded in the resort&#39;s ability to seamlessly integrate into our bespoke travel itineraries. Here is why it remains a top recommendation for our inbound guests:</p>
 
-        <h3 id="the-perfect-beachfront-rhythm" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Perfect Beachfront Rhythm
-        </h3>
+        <div id="the-perfect-beachfront-rhythm" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Perfect Beachfront Rhythm
+          </h3>
+        </div>
       <p>Phu Quoc itineraries are often packed with dynamic activities—island hopping in the South, exploring the safari, and indulging in night markets. Mercury Phu Quoc provides the perfect counterbalance. Returning to the resort feels like retreating to a private haven where you can unwind by the ocean, ensuring the travel pace never feels rushed.</p>
 
-        <h3 id="versatile-accommodation-models" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Versatile Accommodation Models
-        </h3>
+        <div id="versatile-accommodation-models" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Versatile Accommodation Models
+          </h3>
+        </div>
       <p>The resort&#39;s hybrid model of standard resort rooms and private villas is a logistical dream for travel planners:</p>
 <ul>
 <li><strong>For Couples:</strong> Deluxe Ocean View rooms offer intimate spaces with breathtaking sunset vistas.</li>
 <li><strong>For Families and Groups:</strong> The 3-to-4 bedroom pool villas provide exclusive, shared living spaces, allowing multi-generational families to stay connected while maintaining privacy.</li>
 </ul>
 
-        <h3 id="flawless-logistics-for-group-travel" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Flawless Logistics for Group Travel
-        </h3>
+        <div id="flawless-logistics-for-group-travel" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Flawless Logistics for Group Travel
+          </h3>
+        </div>
       <p>For our larger tour groups, efficiency is paramount. Mercury Phu Quoc excels in streamlining group check-ins, offering expansive dining venues that can accommodate our customized culinary requests, and providing ample space for specialized group activities.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="signature-amenities-and-experiences" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Signature Amenities and Experiences
+            Signature Amenities and Experiences
           </h2>
         </div>
       
-        <h3 id="the-infinity-pool-and-beach-bar" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Infinity Pool & Beach Bar
-        </h3>
+        <div id="the-infinity-pool-and-beach-bar" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Infinity Pool & Beach Bar
+          </h3>
+        </div>
       <p>The resort’s centerpiece is its expansive infinity pool that seems to spill directly into the ocean. Adjacent to it is the Beach Bar, the ultimate vantage point to witness Phu Quoc&#39;s legendary sunsets while sipping on a signature Mekong-inspired cocktail.</p>
 
-        <h3 id="wellness-and-rejuvenation" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Wellness and Rejuvenation
-        </h3>
+        <div id="wellness-and-rejuvenation" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Wellness and Rejuvenation
+          </h3>
+        </div>
       <p>After a day of exploring the coral reefs of the An Thoi archipelago, guests can retreat to the resort&#39;s holistic Spa. The treatments utilize local organic ingredients, offering traditional Vietnamese massages that perfectly alleviate travel fatigue.</p>
 
-        <h3 id="culinary-excellence" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Culinary Excellence
-        </h3>
+        <div id="culinary-excellence" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Culinary Excellence
+          </h3>
+        </div>
       <p>The on-site restaurants celebrate the island&#39;s abundant seafood. Through our partnership, The Rice Tour guests can enjoy exclusive dining experiences, from private beach BBQs to curated menus that blend Western fine dining with robust Southern Vietnamese flavors.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="integrating-mercury-into-your-2026-itinerary" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Integrating Mercury into Your 2026 Itinerary
+            Integrating Mercury into Your 2026 Itinerary
           </h2>
         </div>
       <p>Whether you are planning a comprehensive 4-Day/3-Night exploration of the Pearl Island or a leisurely week-long retreat, Mercury Phu Quoc serves as the ideal anchor. Its central location on the western coast means you are perfectly positioned halfway between the bustling Duong Dong town and the natural wonders of the South Island.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>Choosing the right accommodation is pivotal to the success of any island expedition. Mercury Phu Quoc Resort &amp; Villas does not merely offer a place to sleep; it provides an immersive environment of tropical luxury and restorative peace. It is a partner that shares The Rice Tour&#39;s commitment to delivering flawless, memorable, and culturally enriching travel experiences.</p>
@@ -17659,7 +17776,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-the-rice-tours-philosophy" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to The Rice Tour's Philosophy
+            Introduction to The Rice Tour's Philosophy
           </h2>
         </div>
       <p>At <strong>The Rice Tour</strong>, we believe that a profound travel experience is architected through meticulous attention to detail, deep local knowledge, and an unwavering commitment to authenticity. We do not sell off-the-shelf packages; we curate narratives. </p>
@@ -17670,13 +17787,15 @@ We specialize in FIT travel, meaning every itinerary is highly flexible, tailore
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="core-tour-offerings-exploring-the-authentic-vietnam" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. Core Tour Offerings: Exploring the Authentic Vietnam
+            Core Tour Offerings: Exploring the Authentic Vietnam
           </h2>
         </div>
       
-        <h3 id="the-mekong-delta-masterpieces" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Mekong Delta Masterpieces
-        </h3>
+        <div id="the-mekong-delta-masterpieces" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Mekong Delta Masterpieces
+          </h3>
+        </div>
       <p>As our geographical heartland, we possess unparalleled expertise in the Mekong Delta. We take you beyond the crowded tourist traps to experience the true rhythm of river life.</p>
 <ul>
 <li><strong>Floating Market Expeditions:</strong> Sunrise private boat charters to Cai Rang and Phong Dien.</li>
@@ -17684,9 +17803,11 @@ We specialize in FIT travel, meaning every itinerary is highly flexible, tailore
 <li><strong>Cross-Border River Cruises:</strong> Seamless speedboat and luxury cruise connections from Can Tho and Chau Doc directly to Phnom Penh, Cambodia.</li>
 </ul>
 
-        <h3 id="central-heritage-and-coastal-retreats" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Central Heritage & Coastal Retreats
-        </h3>
+        <div id="central-heritage-and-coastal-retreats" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Central Heritage & Coastal Retreats
+          </h3>
+        </div>
       <p>We connect the dots between Vietnam&#39;s most iconic UNESCO World Heritage sites and pristine coastlines.</p>
 <ul>
 <li><strong>The Imperial Journey:</strong> Curated historical tours of Hue&#39;s Citadel and the Royal Tombs, featuring exclusive dining experiences in restored royal residences.</li>
@@ -17694,9 +17815,11 @@ We specialize in FIT travel, meaning every itinerary is highly flexible, tailore
 <li><strong>Coastal Luxury:</strong> Bespoke beach retreats in Da Nang, Nha Trang, and the newly redefined Phu Quoc Island.</li>
 </ul>
 
-        <h3 id="northern-expeditions" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Northern Expeditions
-        </h3>
+        <div id="northern-expeditions" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Northern Expeditions
+          </h3>
+        </div>
       <p>For those seeking dramatic landscapes and diverse ethnic cultures, our Northern itineraries are unmatched.</p>
 <ul>
 <li><strong>Hanoi Old Quarter Immersion:</strong> Culinary street-food safaris and deep historical walking tours.</li>
@@ -17706,14 +17829,16 @@ We specialize in FIT travel, meaning every itinerary is highly flexible, tailore
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="specialized-travel-services" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Specialized Travel Services
+            Specialized Travel Services
           </h2>
         </div>
       <p>Beyond standard itineraries, The Rice Tour offers a suite of specialized services to ensure complete logistical peace of mind.</p>
 
-        <h3 id="private-transport-logistics" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Private Transport Logistics
-        </h3>
+        <div id="private-transport-logistics" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Private Transport Logistics
+          </h3>
+        </div>
       <p>We maintain a fleet of premium, late-model vehicles to ensure your comfort on the road.</p>
 <ul>
 <li><strong>Luxury Limousine Vans:</strong> Ideal for small groups and families prioritizing space and comfort.</li>
@@ -17721,15 +17846,19 @@ We specialize in FIT travel, meaning every itinerary is highly flexible, tailore
 <li><strong>Helicopter and Seaplane Charters:</strong> For the ultimate VIP experience and aerial views of Ha Long Bay or Vung Tau.</li>
 </ul>
 
-        <h3 id="corporate-travel-and-mice" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Corporate Travel & MICE
-        </h3>
+        <div id="corporate-travel-and-mice" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Corporate Travel & MICE
+          </h3>
+        </div>
       <p>(Meetings, Incentives, Conferences, and Exhibitions)
 The Rice Tour expertly handles large-scale logistics for corporate retreats, team-building expeditions, and executive offsites. We combine professional conference facilities with unique, localized team-building activities—such as culinary competitions in the Mekong or regattas in Nha Trang.</p>
 
-        <h3 id="ticketing-and-concierge-services" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Ticketing and Concierge Services
-        </h3>
+        <div id="ticketing-and-concierge-services" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Ticketing and Concierge Services
+          </h3>
+        </div>
       <p>Our 24/7 concierge desk is always at your disposal to handle the minutiae of travel.</p>
 <ul>
 <li><strong>Domestic Flights:</strong> Securing the best routes and managing unexpected schedule changes.</li>
@@ -17739,7 +17868,7 @@ The Rice Tour expertly handles large-scale logistics for corporate retreats, tea
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-2026-commitment-to-sustainable-tourism" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The 2026 Commitment to Sustainable Tourism
+            The 2026 Commitment to Sustainable Tourism
           </h2>
         </div>
       <p>As we navigate the travel landscape of 2026, The Rice Tour is deeply committed to sustainable and responsible tourism. </p>
@@ -17750,7 +17879,7 @@ The Rice Tour expertly handles large-scale logistics for corporate retreats, tea
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>Your journey to Vietnam should be as unique as you are. The Rice Tour&#39;s comprehensive matrix of services guarantees that from the moment you land until your final departure, you are enveloped in the warmth of Vietnamese hospitality and the precision of world-class travel management. </p>
@@ -18049,7 +18178,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-dinh-cau-shrine" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Dinh Cau Shrine
+            Introduction to Dinh Cau Shrine
           </h2>
         </div>
       <p><strong>Dinh Cau</strong> (often referred to as Dinh Cau Temple or Shrine) is arguably the most recognizable natural and cultural landmark in Phu Quoc. Located right at the mouth of the Duong Dong River, the shrine is built atop a massive, uniquely shaped rock formation that juts out into the azure sea, shaded by an ancient, twisted frangipani tree.</p>
@@ -18064,7 +18193,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-architectural-and-natural-harmony" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Architectural and Natural Harmony
+            The Architectural and Natural Harmony
           </h2>
         </div>
       <p>Dinh Cau is a masterpiece of environmental integration. The shrine does not dominate the landscape; rather, it feels like an organic extension of the rugged coastline.</p>
@@ -18076,7 +18205,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-ultimate-sunset-vantage-point" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Ultimate Sunset Vantage Point
+            The Ultimate Sunset Vantage Point
           </h2>
         </div>
       <p>While Dinh Cau is fundamentally a place of worship, it is equally famous as the premier sunset viewing location on Phu Quoc Island. </p>
@@ -18088,7 +18217,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-night-market-and-culinary-scene" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The Night Market and Culinary Scene
+            The Night Market and Culinary Scene
           </h2>
         </div>
       <p>As the sun sets, the area surrounding Dinh Cau transitions into a vibrant hub of culinary activity. </p>
@@ -18100,7 +18229,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-etiquette" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Etiquette
+            Travel Logistics and Etiquette
           </h2>
         </div>
       <ul>
@@ -18111,7 +18240,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>Dinh Cau is more than just a scenic viewpoint; it is the spiritual anchor of Phu Quoc. It encapsulates the island&#39;s dual identity—a serene natural paradise and a vibrant, deeply traditional fishing community. Standing on the rocky precipice as the sun dips below the horizon, one can truly feel the timeless rhythm of the Pearl Island.</p>
@@ -18415,61 +18544,73 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-anatomy-of-a-masterpiece" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. The Anatomy of a Masterpiece
+            The Anatomy of a Masterpiece
           </h2>
         </div>
       <p><em>Bún Nước Lèo</em> translates literally to &quot;noodles in broth,&quot; but this humble name completely belies the complexity of the dish. It is a masterclass in balancing intense flavors and diverse textures, representing the harmonious coexistence of the three major ethnic groups in Soc Trang: the Khmer, the Kinh (Vietnamese), and the Hoa (Chinese).</p>
 
-        <h3 id="the-soul-of-the-dish-the-broth" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Soul of the Dish: The Broth
-        </h3>
+        <div id="the-soul-of-the-dish-the-broth" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Soul of the Dish: The Broth
+          </h3>
+        </div>
       <p>The absolute foundation of <em>Bún Nước Lèo</em> is the broth, which derives its unique umami depth from <strong>Mắm Bò Hóc</strong> (prahok), a traditional Khmer fermented fish paste. </p>
 <ul>
 <li><strong>The Secret Technique:</strong> To prevent the broth from being overly pungent or cloudy, local chefs use a technique called <em>&quot;ngải bún&quot;</em>. They add a specific type of fingerroot (ngải bún) and lemongrass to clarify the broth and neutralize the fishy odor, leaving behind a fragrant, golden liquid that is profoundly savory yet surprisingly light.</li>
 </ul>
 
-        <h3 id="the-toppings-a-triumvirate-of-cultures" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Toppings: A Triumvirate of Cultures
-        </h3>
+        <div id="the-toppings-a-triumvirate-of-cultures" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Toppings: A Triumvirate of Cultures
+          </h3>
+        </div>
       <p>A standard bowl is an assembly of premium local ingredients:</p>
 <ul>
 <li><strong>From the Khmer &amp; Kinh:</strong> Fresh, de-boned snakehead fish (cá lóc) harvested from the local rivers, and plump river shrimp (tép bạc đất) boiled and peeled.</li>
 <li><strong>From the Hoa:</strong> Crispy roasted pork belly (heo quay), cut into bite-sized pieces. The contrast between the crispy skin and the hot broth is a textural delight.</li>
 </ul>
 
-        <h3 id="the-greens-the-essential-crunch" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Greens: The Essential Crunch
-        </h3>
+        <div id="the-greens-the-essential-crunch" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Greens: The Essential Crunch
+          </h3>
+        </div>
       <p>No Mekong Delta noodle soup is complete without an overflowing basket of fresh herbs and vegetables. You must add blanched bean sprouts, shredded banana blossom, water lily stems (cọng súng), and garlic chives (hẹ). A squeeze of fresh kumquat and a dash of fiery minced chili complete the symphony.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-2026-curated-michelin-equivalent-stops" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The 2026 Curated Michelin-Equivalent Stops
+            The 2026 Curated Michelin-Equivalent Stops
           </h2>
         </div>
       <p>For travelers embarking on a culinary safari through Soc Trang, here are the definitively best establishments to experience authentic <em>Bún Nước Lèo</em>:</p>
 
-        <h3 id="bun-nuoc-leo-cay-nhan" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Bún Nước Lèo Cây Nhãn
-        </h3>
+        <div id="bun-nuoc-leo-cay-nhan" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bún Nước Lèo Cây Nhãn
+          </h3>
+        </div>
       <p>Arguably the most famous establishment in the province, named after the large longan tree shading the eatery.</p>
 <ul>
 <li><strong>Why it’s special:</strong> They are renowned for their impeccably clear broth and generous portions of thick-cut roasted pork. The ambiance is bustling and unapologetically local.</li>
 <li><strong>Location:</strong> Vo Dinh Sam Street, Soc Trang City.</li>
 </ul>
 
-        <h3 id="bun-nuoc-leo-thao" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Bún Nước Lèo Thảo
-        </h3>
+        <div id="bun-nuoc-leo-thao" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bún Nước Lèo Thảo
+          </h3>
+        </div>
       <p>A favorite among food purists who prefer a slightly more intense, traditional Khmer flavor profile.</p>
 <ul>
 <li><strong>Why it’s special:</strong> The <em>mắm</em> flavor here is more pronounced, and they are famous for serving the dish with incredibly fresh, large river shrimp.</li>
 <li><strong>Location:</strong> Phu Loi Street, Soc Trang City.</li>
 </ul>
 
-        <h3 id="bun-nuoc-leo-ca-ong" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Bún Nước Lèo Cá Đồng
-        </h3>
+        <div id="bun-nuoc-leo-ca-ong" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bún Nước Lèo Cá Đồng
+          </h3>
+        </div>
       <p>Perfect for those who prefer the delicate sweetness of fresh river fish over heavier meats.</p>
 <ul>
 <li><strong>Why it’s special:</strong> They exclusively use wild-caught snakehead fish, ensuring the meat is firm and naturally sweet, elevating the broth to new heights.</li>
@@ -18478,7 +18619,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="how-to-eat-like-a-local" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. How to Eat Like a Local
+            How to Eat Like a Local
           </h2>
         </div>
       <p>Eating <em>Bún Nước Lèo</em> requires a specific ritual to maximize the flavor:</p>
@@ -18491,14 +18632,14 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="culinary-tourism-in-soc-trang" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Culinary Tourism in Soc Trang
+            Culinary Tourism in Soc Trang
           </h2>
         </div>
       <p>While <em>Bún Nước Lèo</em> is the undisputed king, a culinary tour of Soc Trang should also include other local marvels. Do not leave the province without purchasing freshly baked <strong>Bánh Pía</strong> (a flaky pastry filled with durian, mung bean, and salted egg yolk) and trying <strong>Bún Cà Ri</strong> (Khmer-style chicken curry noodles). </p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Epilogue
+            Epilogue
           </h2>
         </div>
       <p><em>Bún Nước Lèo Sóc Trăng</em> is not just a meal; it is a consumable piece of history. It tells the story of centuries of cultural migration, adaptation, and harmony in the Mekong Delta. A steaming bowl of this complex, fragrant soup is the ultimate reward for any traveler venturing deep into the heart of Southern Vietnam.</p>
@@ -18799,7 +18940,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-the-bat-pagoda-wat-mahatup" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to the Bat Pagoda (Wat Mahatup)
+            Introduction to the Bat Pagoda (Wat Mahatup)
           </h2>
         </div>
       <p>Officially known in Khmer as <strong>Wat Mahatup</strong> (meaning &quot;gathered by the virtue of monks&quot;), the Bat Pagoda is a cornerstone of Theravada Buddhism in the Mekong Delta. Built in 1569, it has stood the test of time, surviving wars and a devastating fire in 2007 (after which it was meticulously restored to its former glory).</p>
@@ -18814,25 +18955,29 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-architectural-splendor" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Architectural Splendor
+            The Architectural Splendor
           </h2>
         </div>
       <p>The Bat Pagoda is a textbook example of classic Khmer temple architecture, characterized by vibrant colors, intricate carvings, and deep symbolic meaning.</p>
 
-        <h3 id="the-main-hall-chanh-ien" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Main Hall (Chánh Điện)
-        </h3>
+        <div id="the-main-hall-chanh-ien" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Main Hall (Chánh Điện)
+          </h3>
+        </div>
       <p>Approaching the Main Hall, visitors are greeted by a striking, multi-tiered roof painted in brilliant shades of gold and orange, designed to resemble a stylized Naga (serpent) slithering downwards. The Naga represents protection and the bridge between the human world and the heavens.
 Inside, the hall houses a massive monolithic stone Buddha statue resting on a lotus pedestal. The walls are covered in vivid murals depicting the life journey of Siddhartha Gautama—from his birth to his attainment of Nirvana.</p>
 
-        <h3 id="the-stupas-and-the-grounds" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Stupas and the Grounds
-        </h3>
+        <div id="the-stupas-and-the-grounds" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Stupas and the Grounds
+          </h3>
+        </div>
       <p>Surrounding the main hall are various stupas holding the ashes of past head monks. The entire complex is enveloped in a primeval forest of towering ancient mahogany (sao) and hopea (dầu) trees, providing a cool, shaded canopy even during the intense heat of the dry season.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-enigma-of-the-bats" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Enigma of the Bats
+            The Enigma of the Bats
           </h2>
         </div>
       <p>The defining feature of Wat Mahatup is, undeniably, the bats. </p>
@@ -18844,14 +18989,14 @@ Inside, the hall houses a massive monolithic stone Buddha statue resting on a lo
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-pig-with-five-claws-a-local-legend" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The Pig with Five Claws: A Local Legend
+            The Pig with Five Claws: A Local Legend
           </h2>
         </div>
       <p>Beyond the bats, the pagoda is famous for another peculiar phenomenon: the graves of pigs with five claws. In local Khmer folklore, a pig born with five claws is considered a manifestation of a mischievous spirit or bad luck. Families owning such a pig will often bring it to the Bat Pagoda, where the monks bless it and care for it until it dies of natural causes. Visitors can walk behind the main compound to see the small, well-kept graves dedicated to these unique animals.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-etiquette" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Etiquette
+            Travel Logistics and Etiquette
           </h2>
         </div>
       <p>Soc Trang is an easy detour for travelers exploring the lower Mekong Delta, often combined with trips to Can Tho or Bac Lieu.</p>
@@ -18867,7 +19012,7 @@ Inside, the hall houses a massive monolithic stone Buddha statue resting on a lo
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>The Bat Pagoda is a rare destination where architectural beauty, profound spirituality, and a touch of the bizarre coalesce perfectly. It stands as a testament to the Khmer people&#39;s deep respect for all living creatures, offering modern travelers a sanctuary of peace and a fascinating glimpse into the mystical folklore of the Mekong Delta.</p>
@@ -19168,7 +19313,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-the-bac-lieu-wind-farm" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to the Bac Lieu Wind Farm
+            Introduction to the Bac Lieu Wind Farm
           </h2>
         </div>
       <p>Located in Vinh Trach Dong commune, about 20 kilometers from the center of Bac Lieu City, the <strong>Bac Lieu Wind Farm</strong> (Cánh Đồng Điện Gió Bạc Liêu) was initially constructed as a pioneering renewable energy project. It holds the title of being the very first offshore wind farm built in Southeast Asia.</p>
@@ -19183,19 +19328,23 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-visual-spectacle-a-photographers-dream" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Visual Spectacle: A Photographer's Dream
+            The Visual Spectacle: A Photographer's Dream
           </h2>
         </div>
       <p>The primary draw of the wind farm for travelers is its incredible photogenicity. The landscape often draws comparisons to the Netherlands or coastal Europe, a stark and unexpected aesthetic in the heart of the tropical Mekong Delta.</p>
 
-        <h3 id="the-concrete-walkways" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Concrete Walkways
-        </h3>
+        <div id="the-concrete-walkways" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Concrete Walkways
+          </h3>
+        </div>
       <p>To service the offshore turbines, developers built a network of elevated concrete pathways stretching for kilometers out into the shallow, muddy sea. These pathways are open to visitors and serve as the perfect runway for photography. Walking along these bridges, with the massive blades swooshing rhythmically overhead and the ocean breeze blowing, is an exhilarating experience.</p>
 
-        <h3 id="the-best-angles" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          The Best Angles
-        </h3>
+        <div id="the-best-angles" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Best Angles
+          </h3>
+        </div>
       <ul>
 <li><strong>The Infinite Perspective:</strong> Shoot straight down the concrete path with the leading lines drawing the eye toward the turbines fading into the horizon.</li>
 <li><strong>The Golden Silhouette:</strong> During sunset, position the camera to capture the dark silhouettes of the spinning blades against the fiery orange sky.</li>
@@ -19203,7 +19352,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="timing-your-visit-for-the-perfect-shot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. Timing Your Visit for the Perfect Shot
+            Timing Your Visit for the Perfect Shot
           </h2>
         </div>
       <p>The coastal environment means the wind farm is completely exposed to the elements. Timing your visit is critical for both comfort and photography:</p>
@@ -19218,7 +19367,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="expanding-your-bac-lieu-itinerary" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. Expanding Your Bac Lieu Itinerary
+            Expanding Your Bac Lieu Itinerary
           </h2>
         </div>
       <p>While the wind farm can be explored in about 1 to 1.5 hours, its location in Vinh Trach Dong makes it highly convenient to combine with other prominent Bac Lieu attractions:</p>
@@ -19230,7 +19379,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-tips" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Tips
+            Travel Logistics and Tips
           </h2>
         </div>
       <ul>
@@ -19241,7 +19390,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>The Bac Lieu Wind Farm is a testament to how infrastructure can inadvertently become art. It offers travelers a unique opportunity to witness Vietnam’s push toward sustainable energy while capturing some of the most dramatic and modern landscape photography available in the Mekong Delta. </p>
@@ -19542,7 +19691,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
             
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="introduction-to-truong-tuyen-cruise" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            1. Introduction to Truong Tuyen Cruise
+            Introduction to Truong Tuyen Cruise
           </h2>
         </div>
       <p>Moored at the bustling Ninh Kieu Wharf, the <strong>Truong Tuyen Cruise</strong> is a highly popular floating restaurant that offers both locals and travelers a quintessential Can Tho evening experience. Designed as a multi-deck vessel, it provides a unique dining venue where the gentle sway of the Hau River complements a feast of Mekong Delta specialties.</p>
@@ -19557,28 +19706,32 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-culinary-experience" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            2. The Culinary Experience
+            The Culinary Experience
           </h2>
         </div>
       <p>The menu aboard the Truong Tuyen Cruise is a deep dive into the robust and rustic flavors of Southern Vietnam. It caters to a wide range of palates, from adventurous foodies to those seeking comforting, familiar dishes.</p>
 
-        <h3 id="signature-dishes-to-order" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Signature Dishes to Order
-        </h3>
+        <div id="signature-dishes-to-order" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Signature Dishes to Order
+          </h3>
+        </div>
       <ul>
 <li><strong>Grilled Snakehead Fish (Cá Lóc Nướng Trui):</strong> The undisputed king of Mekong cuisine. The fish is grilled whole over an open fire, retaining its natural sweetness. It is served with a mountain of fresh herbs, star fruit, and green banana, rolled in rice paper, and dipped in a pungent tamarind fish sauce.</li>
 <li><strong>Mekong River Fish Hotpot (Lẩu Cá Ngát / Cá Lăng):</strong> A sour and spicy hotpot utilizing fresh river fish and local vegetables like river hemp (bông điên điển) and water lily stems.</li>
 <li><strong>Deep-Fried Elephant Ear Fish (Cá Tai Tượng Chiên Xù):</strong> Presented spectacularly upright, the crispy flesh is pulled apart and eaten in fresh spring rolls.</li>
 </ul>
 
-        <h3 id="dining-ambiance" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          Dining Ambiance
-        </h3>
+        <div id="dining-ambiance" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Dining Ambiance
+          </h3>
+        </div>
       <p>The vessel features multiple decks. The lower decks are often enclosed and air-conditioned, suitable for private parties or those sensitive to the wind. However, the upper open-air deck is where the magic happens, offering a 360-degree view of the river and the cool night breeze.</p>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-cultural-soundtrack-don-ca-tai-tu" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            3. The Cultural Soundtrack: Don Ca Tai Tu
+            The Cultural Soundtrack: Don Ca Tai Tu
           </h2>
         </div>
       <p>What elevates the Truong Tuyen experience from a simple dinner to a cultural event is the live entertainment. Every evening, the cruise hosts performances of <strong>Don Ca Tai Tu</strong>—the traditional, UNESCO-recognized amateur music of Southern Vietnam.</p>
@@ -19586,7 +19739,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-cruising-itinerary-and-scenery" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            4. The Cruising Itinerary and Scenery
+            The Cruising Itinerary and Scenery
           </h2>
         </div>
       <ul>
@@ -19596,7 +19749,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="travel-logistics-and-tips" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            5. Travel Logistics and Tips
+            Travel Logistics and Tips
           </h2>
         </div>
       <ul>
@@ -19607,7 +19760,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="epilogue" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            6. Epilogue
+            Epilogue
           </h2>
         </div>
       <p>A night on the Truong Tuyen Cruise is the perfect coda to a day spent exploring the intense heat and chaotic charm of Can Tho. It provides a rare moment to sit back, savor the rich flavors of the delta, and let the traditional music wash over you as the city lights reflect on the gentle currents of the Hau River.</p>

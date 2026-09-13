@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "🏆"
 ---
 
-## 1. The Anatomy of a Masterpiece
+## The Anatomy of a Masterpiece
 
 *Bún Nước Lèo* translates literally to "noodles in broth," but this humble name completely belies the complexity of the dish. It is a masterclass in balancing intense flavors and diverse textures, representing the harmonious coexistence of the three major ethnic groups in Soc Trang: the Khmer, the Kinh (Vietnamese), and the Hoa (Chinese).
 
@@ -49,7 +49,7 @@ A standard bowl is an assembly of premium local ingredients:
 ### The Greens: The Essential Crunch
 No Mekong Delta noodle soup is complete without an overflowing basket of fresh herbs and vegetables. You must add blanched bean sprouts, shredded banana blossom, water lily stems (cọng súng), and garlic chives (hẹ). A squeeze of fresh kumquat and a dash of fiery minced chili complete the symphony.
 
-## 2. The 2026 Curated Michelin-Equivalent Stops
+## The 2026 Curated Michelin-Equivalent Stops
 
 For travelers embarking on a culinary safari through Soc Trang, here are the definitively best establishments to experience authentic *Bún Nước Lèo*:
 
@@ -68,7 +68,7 @@ Perfect for those who prefer the delicate sweetness of fresh river fish over hea
 - **Why it’s special:** They exclusively use wild-caught snakehead fish, ensuring the meat is firm and naturally sweet, elevating the broth to new heights.
 - **Location:** National Route 1A, near the Soc Trang gateway.
 
-## 3. How to Eat Like a Local
+## How to Eat Like a Local
 
 Eating *Bún Nước Lèo* requires a specific ritual to maximize the flavor:
 1. **Taste the Broth First:** Before adding any condiments, take a sip of the pure broth to appreciate the delicate balance of the *mắm* and lemongrass.
@@ -76,11 +76,11 @@ Eating *Bún Nước Lèo* requires a specific ritual to maximize the flavor:
 3. **Customize the Heat:** Add a squeeze of lime or kumquat and a small spoonful of fresh chili. The acidity cuts through the richness of the roast pork and balances the fermented fish.
 4. **The Perfect Bite:** Ensure every spoonful contains a bit of noodle, a piece of crispy pork, a slice of fish, and a crunchy vegetable stalk.
 
-## 4. Culinary Tourism in Soc Trang
+## Culinary Tourism in Soc Trang
 
 While *Bún Nước Lèo* is the undisputed king, a culinary tour of Soc Trang should also include other local marvels. Do not leave the province without purchasing freshly baked **Bánh Pía** (a flaky pastry filled with durian, mung bean, and salted egg yolk) and trying **Bún Cà Ri** (Khmer-style chicken curry noodles). 
 
-## 5. Epilogue
+## Epilogue
 
 *Bún Nước Lèo Sóc Trăng* is not just a meal; it is a consumable piece of history. It tells the story of centuries of cultural migration, adaptation, and harmony in the Mekong Delta. A steaming bowl of this complex, fragrant soup is the ultimate reward for any traveler venturing deep into the heart of Southern Vietnam.
 

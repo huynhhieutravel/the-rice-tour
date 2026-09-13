@@ -59,7 +59,7 @@ epilogue: "Armed with cultural understanding and practical wisdom, Ben Thanh tra
 
 ---
 
-## 1. Introduction: Stepping into Saigon's Beating Heart Like an Insider
+## Introduction: Stepping into Saigon's Beating Heart Like an Insider
 
 Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.
 
@@ -67,7 +67,7 @@ In truth, Ben Thanh Market is only intimidating when entered unprepared. Armed w
 
 ---
 
-## 2. Operating Hours & Two Distinct Daily Rhythms
+## Operating Hours & Two Distinct Daily Rhythms
 
 Ben Thanh operates under two starkly different daily personalities:
 
@@ -82,17 +82,17 @@ Ben Thanh operates under two starkly different daily personalities:
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 1. The Historic Covered Hall Bazaar (06:00 – 18:00)
+### The Historic Covered Hall Bazaar (06:00 – 18:00)
 - **What happens:** All 1,400 interior stalls operate at full capacity. This is the optimal window to browse artisanal textiles, lacquerware, hand-carved coffee filters, cashews, dried fruits, and explore the bustling heritage food court.
 - **Insider Sweet Spot (08:30 – 10:30 AM):** The air is cool, stallholders have completed their morning displays, and interactions are warm, leisurely, and unhurried.
 
-### 2. The Open-Air Night Street Bazaar (18:00 – 23:30)
+### The Open-Air Night Street Bazaar (18:00 – 23:30)
 - **What happens:** At 18:00, the main heavy wooden gates shutter. Immediately, Phan Boi Chau Street (East Gate) and Phan Chu Trinh Street (West Gate) transform into illuminated pedestrian corridors flanked by open charcoal grills and bustling souvenir stalls.
 - **Insider Sweet Spot (19:30 – 21:30 PM):** When evening breezes soften the tropical humidity and the neon lights reflect upon sizzling pans of fresh seafood.
 
 ---
 
-## 3. Official Parking Map & Scam Avoidance
+## Official Parking Map & Scam Avoidance
 
 One of the most persistent headaches for independent travelers on scooters or rental cars is predatory roadside parking attendants charging exorbitant fees (30,000 – 50,000 VND). Memorize these legitimate, municipally regulated parking hubs:
 
@@ -105,7 +105,7 @@ One of the most persistent headaches for independent travelers on scooters or re
 
 ---
 
-## 4. Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
+## Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
 
 Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary **Ha Tam Gold Shop** (*Tiem vang Ha Tam*) and neighboring **Mai Van**:
 
@@ -115,7 +115,7 @@ Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned f
 
 ---
 
-## 5. Master Bargaining Rules: The "Smiling Negotiation" Code
+## Master Bargaining Rules: The "Smiling Negotiation" Code
 
 Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social performance. To shop ethically without overpaying, keep these golden guidelines in mind:
 
@@ -126,7 +126,7 @@ Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social perfo
 
 ---
 
-## 6. Hygiene & Dining Safety in the Culinary Hall
+## Hygiene & Dining Safety in the Culinary Hall
 
 Ben Thanh’s interior food court is a sensory feast. To dine like a seasoned gastronome while ensuring digestive peace:
 
@@ -136,7 +136,7 @@ Ben Thanh’s interior food court is a sensory feast. To dine like a seasoned ga
 
 ---
 
-## 7. Safety, Scams & Emergency Contacts
+## Safety, Scams & Emergency Contacts
 
 - **Crossbody Bags:** Keep zippers facing forward and tucked under your forearm. Motorbike snatch thieves target exposed shoulder straps along the outer perimeter boulevards.
 - **Shoe Shine & Coconut Hustlers:** If a street hustler squirts cleaner onto your sneakers or places a bamboo pole across your shoulder unsolicited, firmly say *"No, thank you"* and keep walking without breaking stride.

@@ -72,7 +72,7 @@ The urban quarter cradling Ben Thanh Market has long evolved beyond its identity
 
 ---
 
-## 1. Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
+## Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
 
 To truly comprehend the allure of the Ben Thanh district, one must trace more than two centuries of dramatic urban evolution.
 
@@ -84,9 +84,9 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
 
 ---
 
-## 2. Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius
+## Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius
 
-### 2.1. Ben Thanh Market: The Living Mirror of Saigon
+### Ben Thanh Market: The Living Mirror of Saigon
 - **Location:** Intersecting Le Loi, Phan Chu Trinh, Phan Boi Chau, and Le Thanh Ton Streets.
 - **Iconic Architecture:** The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam's natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.
 - **Conscious Travel Insight:** Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.
@@ -102,7 +102,7 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   </div>
 </div>
 
-### 2.2. HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
+### HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
 - **Location:** 97A Pho Duc Chinh Street, Nguyen Thai Binh Ward, District 1 (350 meters from the market via Le Thi Hong Gam).
 - **Gilded Heritage:** This magnificent three-mansion estate once served as the private residence and headquarters of **Hui Bon Hoa** (popularly known as *Chú Hỏa*), the legendary Chinese-Vietnamese merchant whose real estate empire defined colonial Saigon. Designed between 1929 and 1934 by French architect Rivera, the complex represents an opulent marriage of **Western Art Deco, Beaux-Arts flourishes, and traditional Feng Shui geomancy**.
 - **Curated Highlights:**
@@ -121,7 +121,7 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   </div>
 </div>
 
-### 2.3. The Independence Palace: High Zenith of Tropical Modernism
+### The Independence Palace: High Zenith of Tropical Modernism
 - **Location:** 135 Nam Ky Khoi Nghia Street, Ben Thanh Ward, District 1 (700 meters north of the market).
 - **Architectural Magnitude:** Erected upon the historic grounds of the former colonial Norodom Palace, the contemporary palace was conceived by master architect **Ngo Viet Thu**—the first Vietnamese laureate of the coveted *Grand Prix de Rome* (1955). Inaugurated in 1966, the structure brilliantly reconciles mid-century modernist clean lines with Eastern philosophical symbolism:
   - The overall footprint forms the Sino-Vietnamese ideogram **CÁT** (吉 - Fortune and Auspiciousness).
@@ -141,7 +141,7 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   </div>
 </div>
 
-### 2.4. Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
+### Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality
 - **Location:** 45 Truong Dinh Street, Ben Thanh Ward, District 1 (200 meters west of the market).
 - **Sacred Sanctuary:** Established in the early 20th century by Tamil merchant communities from South India, this temple is dedicated to Goddess Mariamman, the celestial bringer of fertility, health, and monsoon rains.
 - **Dravidian Artistry:** The towering *gopuram* gateway ascends in tiered majesty, populated by hand-painted sculptures of Hindu deities depicted in saturated hues. Stepping across the threshold, the fragrant warmth of burning incense and camphor oil offers an immediate sensory departure from District 1's urban bustle. Behind the main altar, devotees practice the contemplative ritual of pressing their foreheads and open palms against the sacred granite sanctuary walls to absorb positive spiritual vibrations.
@@ -157,7 +157,7 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   </div>
 </div>
 
-### 2.5. Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
+### Ben Thanh Central Metro Station: The 2026 Subterranean Landmark
 - **Location:** Deep beneath Quach Thi Trang Square.
 - **Contemporary Marvel:** Descending 32 meters across four underground levels, this 236-meter-long terminal anchors the city's newly inaugurated urban transit network. Its architectural showpiece is the **Lotus Toplight**—a monumental circular skylight engineered from structural architectural glass. By day, sunlight cascades into the subterranean concourse, offering commuters looking upward a striking sightline to the century-old clock tower resting on the plaza above.
 
@@ -174,7 +174,7 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
   </div>
 </div>
 
-## 3. Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
+## Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
 
 | Landmark | Distance from Market | Recommended Duration | Signature Style / Unique Feature | Golden Visiting Window | 2026 Reference Admission |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -186,25 +186,25 @@ Fast forward to the mid-2020s and into 2026, the precinct underwent its second g
 
 ---
 
-## 4. Epicurean Mapping & Neighborhood Life
+## Epicurean Mapping & Neighborhood Life
 
 No encounter with Ben Thanh is complete without immersing your palate in the rich gastronomic mosaic of the southern delta.
 
-### 4.1. Classic Daytime Market Stalls (Inside South & East Gates)
+### Classic Daytime Market Stalls (Inside South & East Gates)
 The market's daytime culinary court represents a vibrant orchestra of aromas and textures:
 - **Bún Riêu Gánh Ben Thanh:** A fragrant crab noodle soup characterized by rich crimson tomato broth scented with fermented rice vinegar, brimming with fresh freshwater crab patties, tender cha ca, and golden fried tofu.
 - **Mekong Riverine Bún Mắm:** The pungent, soul-warming essence of the Mekong Delta distilled into a simmering broth of fermented mud carp and snakehead fish, paired with succulent black tiger prawns, crispy pork belly, and crisp water lily stems.
 - **Traditional Chè Dessert Stalls:** Refreshing dessert bowls layered with mung bean paste, candied lotus seeds, water chestnut rubies, and freshly squeezed coconut cream—an indispensable midday salvation in tropical warmth.
 
-### 4.2. Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)
+### Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)
 As the clock tower tolls 18:00, the streets flanking the market transform into an open-air banquet. Sizzling charcoal braziers infuse the dusk air with aromas of grilled lemongrass beef wrapped in betel leaves (*bò lá lốt*), while tables groan beneath platters of Can Gio sea mud crabs, sea snails sautéed in garlic butter, and chilled craft beer brewed from local Mekong botanicals.
 
-### 4.3. Secret Vintage Apartment Hideaways
+### Secret Vintage Apartment Hideaways
 For travelers seeking a contemplative pause, slip into the encaustic-tiled stairwells of aging residential buildings along Pasteur, Le Loi, or Ly Tu Trong Streets. Tucked behind vintage louvered doors are artisan pour-over cafes where one can savor single-origin Arabica from the misty highlands of Da Lat, peering through weathered shutters as Saigon's evening traffic flows like ribbons of light below.
 
 ---
 
-## 5. Curated Walking Itineraries
+## Curated Walking Itineraries
 
 ### Option A: The Half-Day Heritage & Art Stroll (4 Hours)
 - **08:00 – 09:00 AM:** Begin your morning with a steaming bowl of *bún riêu* beside Ben Thanh Market; study the South Gate ceramic reliefs in soft morning sunlight.
@@ -219,7 +219,7 @@ For travelers seeking a contemplative pause, slip into the encaustic-tiled stair
 
 ---
 
-## 6. Field Notes for the Discerning Traveler (2026 Guidelines)
+## Field Notes for the Discerning Traveler (2026 Guidelines)
 
 1. **Sacred Protocol & Dress Code:** Modest attire covering shoulders and knees is mandatory when entering Mariamman Hindu Temple and recommended at the Independence Palace. Remove your footwear before stepping past the threshold of the Hindu sanctuary.
 2. **Graceful Market Etiquette:** In Ben Thanh Market, handcrafted textiles, lacquerware, and souvenirs often include an initial bargaining buffer. Approach bargaining with an engaging smile and sincere respect for artisanal labor; negotiating a modest 15% to 25% adjustment usually arrives at an amicable, balanced price.

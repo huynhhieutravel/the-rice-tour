@@ -60,7 +60,7 @@ featured_image: "https://media.thericetour.com/uploads/apartment-cafe.webp"
 
 ---
 
-## 1. Introduction: The Allure of Saigon’s Hidden Perches
+## Introduction: The Allure of Saigon’s Hidden Perches
 
 If there is a quintessential ritual that defines the contemporary soul of Saigon, it is not found within polished, air-conditioned corporate chains lining wide boulevards. Instead, it thrives in the shadowy alcoves of vintage residential walk-ups—locally known as *cư xá*—where time-worn staircases ascend into an enchanting parallel universe. Within a gentle ten-minute stroll of Ben Thanh Market, several historic apartment complexes built between the late French colonial period and the buoyant 1960s have quietly evolved into magnetic creative sanctuaries.
 
@@ -68,7 +68,7 @@ Stepping through a modest ground-floor motor scooter garage and leaving the bust
 
 ---
 
-## 2. Adaptive Heritage: The Renaissance of Residential Blocks
+## Adaptive Heritage: The Renaissance of Residential Blocks
 
 The phenomenon of converting legacy residential flats into independent boutique cafes took root in the early 2010s and has reached aesthetic maturity by 2026. Rather than razing these multi-generational blocks, young Vietnamese designers and hospitality artisans have championed adaptive reuse, celebrating original raw textures rather than concealing them.
 
@@ -89,11 +89,11 @@ The phenomenon of converting legacy residential flats into independent boutique 
 
 ---
 
-## 3. Four Iconic Heritage Apartment Buildings Near Ben Thanh
+## Four Iconic Heritage Apartment Buildings Near Ben Thanh
 
 Here are the four most evocative historic walk-ups waiting to be explored within walking distance of the market:
 
-### 1. 42 Ton That Thiep – The Artisanal & Bohemian Labyrinth
+### 42 Ton That Thiep – The Artisanal & Bohemian Labyrinth
 Located just 400 meters from Ben Thanh Market, adjacent to the historic Sri Thenday Yuttha Pani Hindu Temple, this atmospheric block was once a residential enclave for regional merchants. Its open, banister-free cement stairs curve gracefully around a leafy courtyard.
 
 - **Coordinates:** 42 Ton That Thiep Street, Ben Nghe Ward, District 1.
@@ -101,7 +101,7 @@ Located just 400 meters from Ben Thanh Market, adjacent to the historic Sri Then
 - **The Signature Vantage:** Securing a window seat on the second or third floor, looking down upon the leafy canopy of tamarind trees while watching the gentle flow of pedestrians below.
 - **Recommended Pour:** Rich Saigon Egg Coffee whipped to velvety perfection, or 24-hour Cold Drip paired with artisan ginger butter biscuits.
 
-### 2. 26 Ly Tu Trong – The Creative Vanguard
+### 26 Ly Tu Trong – The Creative Vanguard
 Occupying the corner of Ly Tu Trong and Dong Khoi streets, diagonally across from the Vincom Center, this imposing French colonial apartment block features one of the oldest functioning cast-iron cage elevators in Southeast Asia.
 
 - **Coordinates:** 26 Ly Tu Trong Street, Ben Nghe Ward, District 1 (650m from Ben Thanh).
@@ -109,7 +109,7 @@ Occupying the corner of Ly Tu Trong and Dong Khoi streets, diagonally across fro
 - **The Signature Vantage:** Soaring arched casement windows looking out toward the leafy historic canopy of Chi Lang Park.
 - **Recommended Pour:** Single-origin pour-over utilizing wet-processed Arabica from Cau Dat, or sparkling espresso tonic infused with organic Vietnamese citrus peel.
 
-### 3. 14 Ton That Dam – The Cinematic Riverfront Relic
+### 14 Ton That Dam – The Cinematic Riverfront Relic
 Overlooking the tranquil waters of the Ben Nghe Canal and the neoclassical State Bank of Vietnam, 14 Ton That Dam is arguably the most atmospheric and photogenic pre-war building in District 1. Its pine staircases creak gently underfoot, while its long corridors glow with afternoon amber light.
 
 - **Coordinates:** 14 Ton That Dam Street, Nguyen Thai Binh Ward, District 1 (750m southeast of Ben Thanh).
@@ -117,7 +117,7 @@ Overlooking the tranquil waters of the Ben Nghe Canal and the neoclassical State
 - **The Signature Vantage:** The narrow exterior balcony overlooking Vo Van Kiet Boulevard at twilight, framing a dramatic contrast between the historic building's faded arches and the gleaming glass spine of Bitexco Financial Tower behind it.
 - **Recommended Pour:** Salted Foam Vietnamese Coffee (*Cà phê muối*) balancing bold bitter tones with savory sweet cream, or iced lotus-seed tea.
 
-### 4. The Balcony Flats of Pasteur & Le Loi
+### The Balcony Flats of Pasteur & Le Loi
 Flanking the grand boulevard that approaches Ben Thanh Market's South Clock Tower, these elevated mezzanine flats feature verdant wrought-iron balconies that hover just above street level.
 
 - **Coordinates:** 158 Pasteur & 130 Le Loi Boulevard, District 1.
@@ -126,7 +126,7 @@ Flanking the grand boulevard that approaches Ben Thanh Market's South Clock Towe
 
 ---
 
-## 4. The Beverage Matrix: From Traditional Phin to Specialty Third Wave
+## The Beverage Matrix: From Traditional Phin to Specialty Third Wave
 
 The apartment cafes surrounding Ben Thanh are serious guardians of Vietnam’s evolving coffee heritage:
 
@@ -140,7 +140,7 @@ The apartment cafes surrounding Ben Thanh are serious guardians of Vietnam’s e
 
 ---
 
-## 5. Conscious Voyager Etiquette for Residential Walk-Ups
+## Conscious Voyager Etiquette for Residential Walk-Ups
 
 Because these historic apartment buildings are shared homes rather than commercial shopping centers, considerate conduct ensures this unique culture continues to flourish:
 
@@ -151,6 +151,6 @@ Because these historic apartment buildings are shared homes rather than commerci
 
 ---
 
-## 6. Epilogue: The Timeless Pause
+## Epilogue: The Timeless Pause
 
 In a metropolis that hurtles forward with dazzling speed, the vintage apartment cafes near Ben Thanh Market serve as precious temporal anchors. Lingering over an amber glass of slow-dripping coffee while afternoon rain patters against weathered green shutters, one discovers that Saigon’s true charm lies not in its speed, but in its capacity for stillness. Here, between the past and the present, the city invites you to sit, breathe, and simply be.

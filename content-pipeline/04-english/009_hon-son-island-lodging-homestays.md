@@ -48,7 +48,7 @@ Rather than presenting an exhaustive, superficial directory, we have ruthlessly 
 
 ## The Field Assessment: Top 7 Flawless Coordinates
 
-### 1. Sohora Sea Mountain Bungalow: The Cliffside Enclave
+### Sohora Sea Mountain Bungalow: The Cliffside Enclave
 
 Suspended precariously along the trekking route to the summit of Ma Thien Lanh, Sohora (formerly known as Lamien Homestay) is a masterclass in custom wooden architecture that physically embraces the natural bedrock.
 
@@ -63,7 +63,7 @@ Suspended precariously along the trekking route to the summit of Ma Thien Lanh, 
   <figcaption>Glass-fronted wooden bungalows clinging to the flanks of Ma Thien Lanh, offering an infinity perspective over the deep blue ocean.</figcaption>
 </figure>
 
-### 2. Rai Ca Homestay: A Radiant Youth on the Shore
+### Rai Ca Homestay: A Radiant Youth on the Shore
 
 To document Hon Son without dedicating ink to Rai Ca (*The Otter*) is a dereliction of duty. Rai Ca does not merely peddle sleeping quarters; it curates an "ecosystem of unbridled youth."
 
@@ -87,7 +87,7 @@ To document Hon Son without dedicating ink to Rai Ca (*The Otter*) is a derelict
   <figcaption>The precise moment twilight overtakes the makeshift beachfront bar at Rai Ca Homestay.</figcaption>
 </figure>
 
-### 3. Bac's Homestay: Contemporary Minimalist Refuge
+### Bac's Homestay: Contemporary Minimalist Refuge
 
 Anchored at Bai Bac—undeniably the softest, most expansive stretch of sand on Hon Son—Bac's Homestay injects a refreshing wave of modern Minimalism that manages to remain fiercely intimate.
 
@@ -100,7 +100,7 @@ Anchored at Bai Bac—undeniably the softest, most expansive stretch of sand on 
   <figcaption>A diminutive, tranquil courtyard corner at Bac's Homestay—the definitive sanctuary for early morning literature consumption.</figcaption>
 </figure>
 
-### 4. Sao Bien Coffee & Homestay (Cocobay)
+### Sao Bien Coffee & Homestay (Cocobay)
 
 Positioned mid-elevation along the serpentine coastal pass, Sao Bien represents the seamless hybridization of a specialized coffee outpost and a lodging facility.
 
@@ -113,7 +113,7 @@ Positioned mid-elevation along the serpentine coastal pass, Sao Bien represents 
   <figcaption>The highly coveted twilight vista characteristic of Sao Bien Homestay, where the heavens bleed into the sea.</figcaption>
 </figure>
 
-### 5. Thuong's House: The Perfect Dawn Interceptor
+### Thuong's House: The Perfect Dawn Interceptor
 
 Straddling the absolute edge of the surf, Thuong's House utilizes massive glass panels to weaponize its visual dominance. You are precisely three strides from your doorframe to the saltwater.
 
@@ -126,7 +126,7 @@ Straddling the absolute edge of the surf, Thuong's House utilizes massive glass 
   <figcaption>The frontal ocean-facing bedroom configuration, engineered to capture the absolute first rays of light at Thuong's House.</figcaption>
 </figure>
 
-### 6. Thanh Duyen Homestay: The Pulse of the Fishing Village
+### Thanh Duyen Homestay: The Pulse of the Fishing Village
 
 If your mandate is to experience the unfiltered, abrasive reality of an authentic fisherman, Thanh Duyen is your harbor. Devoid of pretense or gloss, Thanh Duyen delivers the raw, fervent hospitality of the island's indigenous population.
 
@@ -139,7 +139,7 @@ If your mandate is to experience the unfiltered, abrasive reality of an authenti
   <figcaption>The rustic, unvarnished charm of Thanh Duyen Homestay strikes a deep chord with backpackers craving gritty, authentic immersion.</figcaption>
 </figure>
 
-### 7. Fly Up Resort: High-Altitude Luxury
+### Fly Up Resort: High-Altitude Luxury
 
 Despite adopting the "Resort" nomenclature, Fly Up vigorously defends the ethos of an ecological homestay. It is the ultimate tactical upgrade for honeymooning couples or those harboring uncompromising standards for modern amenities.
 

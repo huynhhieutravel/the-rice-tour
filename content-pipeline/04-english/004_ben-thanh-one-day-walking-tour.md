@@ -71,7 +71,7 @@ As an anchor itinerary within our definitive guide to [things to do near Ben Tha
 
 ---
 
-## 1. Slow Travel Philosophy: Embracing the City on Foot
+## Slow Travel Philosophy: Embracing the City on Foot
 
 Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.
 
@@ -90,7 +90,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
 ---
 
-## 2. Detailed Four-Stage Itinerary Breakdown
+## Detailed Four-Stage Itinerary Breakdown
 
 ### Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers
 - **07:30 – 09:00 AM:** Begin at Ben Thanh Market’s East Portal. Indulge in a steaming bowl of [authentic bún riêu](/ben-thanh-market-food-guide), laden with river crab cakes. Stroll around the South Portal clock tower to admire the 1952 Bien Hoa ceramic reliefs in the crisp morning light.
@@ -111,7 +111,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
 ---
 
-## 3. Curated Time-Block & Budget Matrix (2026 Reference)
+## Curated Time-Block & Budget Matrix (2026 Reference)
 
 | Time Window | Landmark | Core Experience | Admission Tariff 2026 | Estimated Dining Expense |
 | :--- | :--- | :--- | :--- | :--- |
@@ -126,7 +126,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
 ---
 
-## 4. Field Checklist for Conscious Voyagers (2026)
+## Field Checklist for Conscious Voyagers (2026)
 
 - [ ] **Comfortable Walking Footwear:** With 4.5km of strolling, breathable sneakers or ergonomic leather sandals are vital.
 - [ ] **Respectful Cultural Attire:** Ensure garments cover shoulders and knees for temple and palace admissions.

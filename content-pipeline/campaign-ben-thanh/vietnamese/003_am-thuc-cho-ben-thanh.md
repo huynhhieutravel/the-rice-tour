@@ -32,7 +32,7 @@ Nằm trong tổng thể cẩm nang [những địa điểm nổi tiếng quanh 
 
 ---
 
-## 1. Triết Lý Ẩm Thực Phương Nam: Vị Đậm Đà Của Đất Phù Sa
+## Triết Lý Ẩm Thực Phương Nam: Vị Đậm Đà Của Đất Phù Sa
 
 Ẩm thực Nam Bộ tại Chợ Bến Thành là một khúc biến tấu đầy phóng khoáng. Người phương Nam không câu nệ sự cầu kỳ khuôn phép của cung đình đất Bắc, mà đề cao sự tươi rói của nguyên liệu thiên nhiên và sự rõ ràng trong từng tầng vị giác: ngọt phải ra ngọt của mía đường và nước dừa xiêm, cay nồng của ớt hiểm, chua thanh của giấm bỗng hay me dốt, và thơm lừng vị mắm đồng sông nước.
 
@@ -40,29 +40,29 @@ Trải qua hơn một thế kỷ dung nạp, các món ăn tại chợ Bến Th�
 
 ---
 
-## 2. Bóc Tách 5 Món Ăn Di Sản Tại Khu Ẩm Thực Trong Chợ (Ban Ngày)
+## Bóc Tách 5 Món Ăn Di Sản Tại Khu Ẩm Thực Trong Chợ (Ban Ngày)
 
-### 2.1. Bún Riêu Gánh Cửa Đông: Tinh Túy Cua Đồng Sông Nước
+### Bún Riêu Gánh Cửa Đông: Tinh Túy Cua Đồng Sông Nước
 - **Vị trí:** Đối diện Cửa Đông chợ Bến Thành (đường Phan Bội Châu).
 - **Bí quyết nước dùng:** Không sử dụng phẩm màu công nghiệp, màu đỏ cam quyến rũ của nồi nước dùng được chưng cất tự nhiên từ hạt điều đỏ xào cùng cà chua chín mọng. Nước dùng thanh ngọt nhờ xương ống hầm qua đêm kết hợp vị chua dịu của giấm bỗng gạo gia truyền.
 - **Miếng riêu độc bản:** Khác với bún riêu miền Bắc chuộng riêu mỏng xốp, riêu cua Bến Thành được trộn cùng thịt nạc vai xay nhuyễn, tôm khô giã nhuyễn và trứng vịt, hấp chín thành từng bánh dày dặn, cắn ngập chân răng đậm đà vị ngọt bùi tự nhiên.
 
-### 2.2. Bún Mắm Miền Tây: Hơi Thở Cửu Long Giữa Lòng Phố Thị
+### Bún Mắm Miền Tây: Hơi Thở Cửu Long Giữa Lòng Phố Thị
 - **Nghệ thuật nấu mắm:** Nước lèo được ninh từ cốt mắm cá sặc thơm ngát và mắm cá linh béo ngậy vùng biên thùy Châu Đốc (An Giang), khử sạch mùi tanh bằng sả cây đập dập và ớt tươi băm nhuyễn.
 - **Topping thịnh soạn:** Mỗi tô bún là một mâm tiệc thu nhỏ: tôm sú bến Tre tươi giòn sần sật, mực nang xắt khía hoa, chả cá thát lát thì là quết dẻo và vài lát thịt heo quay giòn bì. Ăn kèm là đĩa rau ghém đồ sộ với bông súng, rau đắng non, kèo nèo và hoa chuối bào mỏng.
 
-### 2.3. Gỏi Cuốn Tôm Thịt: Nét Thanh Nhã Giản Đơn
+### Gỏi Cuốn Tôm Thịt: Nét Thanh Nhã Giản Đơn
 Những cuốn gỏi tròn lẳn phô diễn con tôm thẻ luộc đỏ au xuyên qua lớp bánh tráng phơi sương trong suốt. Cắn một miếng, vị ngọt thanh của thịt luộc, giòn mát của xà lách, hẹ tươi hòa quyện cùng chén tương đen chưng nước cốt dừa rắc đậu phộng rang vàng giã thô – một món ăn chơi thanh đạm lý tưởng giữa trưa hè nhiệt đới.
 
-### 2.4. Bánh Bèo, Bánh Nậm Khay Huế: Sự Giao Lưu Văn Hóa Miền Trung
+### Bánh Bèo, Bánh Nậm Khay Huế: Sự Giao Lưu Văn Hóa Miền Trung
 Ghé sạp bánh Huế trong lòng chợ, bạn sẽ bắt gặp những chiếc đĩa gốm nhỏ xinh xếp từng chén bánh bèo mềm mướt rắc bột tôm cháy vàng ươm, tóp mỡ chiên giòn rụm và mỡ hành thơm nức, chan nước mắm mặn ngọt pha ớt chỉ thiên cay xé lưỡi.
 
-### 2.5. Sạp Chè Bà Mười: Nốt Trầm Ngọt Ngào 60 Năm
+### Sạp Chè Bà Mười: Nốt Trầm Ngọt Ngào 60 Năm
 Tủ kính trưng bày hàng chục âu chè óng ánh như một bảng màu hội họa: chè sương sa hạt lựu đỏ hồng ngọc, chè thưng hạt sen bùi béo, chè đậu trắng dẻo thơm chan nước cốt dừa nguyên chất đặc sánh. Một ly chè đá mát lạnh giữa buổi chiều oi ả là phần thưởng tuyệt vời sau hành trình cuốc bộ khám phá bảo tàng.
 
 ---
 
-## 3. Bản Hòa Ca Đêm Phan Bội Châu: Bếp Than Hồng Dưới Bầu Trời Đô Thị
+## Bản Hòa Ca Đêm Phan Bội Châu: Bếp Than Hồng Dưới Bầu Trời Đô Thị
 
 Khi ánh hoàng hôn buông xuống và tháp đồng hồ Bến Thành rực sáng đèn vàng, hai dãy phố bên hông chợ chuyển mình thành đại tiệc ẩm thực đêm náo nhiệt:
 
@@ -82,7 +82,7 @@ Khi ánh hoàng hôn buông xuống và tháp đồng hồ Bến Thành rực s�
 
 ---
 
-## 4. Bảng So Sánh Hương Vị Các Trụ Cột Ẩm Thực Bến Thành
+## Bảng So Sánh Hương Vị Các Trụ Cột Ẩm Thực Bến Thành
 
 | Món Ăn | Đặc Trưng Vị Giác | Nguyên Liệu Cốt Lõi | Khung Giờ Phục Vụ | Mức Giá Tham Khảo 2026 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -94,7 +94,7 @@ Khi ánh hoàng hôn buông xuống và tháp đồng hồ Bến Thành rực s�
 
 ---
 
-## 5. Kinh Nghiệm Sành Ăn Cho Người Du Hành Có GUU (Field Notes 2026)
+## Kinh Nghiệm Sành Ăn Cho Người Du Hành Có GUU (Field Notes 2026)
 
 1. **Vấn đề thanh toán không tiền mặt:** Toàn bộ các sạp ăn bên trong chợ Bến Thành hiện nay đều áp dụng quét mã VietQR và thanh toán thẻ không chạm vô cùng tiện lợi cho du khách quốc tế.
 2. **Khung giờ tránh cao điểm:** Khu ẩm thực trong chợ đông đúc nhất vào khung giờ trưa từ 11:30 đến 13:00. Bạn nên ghé vào khoảng **08:30 – 10:30 sáng** hoặc **14:30 – 16:00 chiều** để có chỗ ngồi thoải mái và được người bán phục vụ ân cần nhất.

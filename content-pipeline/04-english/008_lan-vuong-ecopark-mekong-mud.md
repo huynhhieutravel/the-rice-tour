@@ -98,7 +98,7 @@ The gastronomic philosophy here eschews delicate refinement in favor of **raw fr
 
 ---
 
-## 2026 Field Survival Guide
+## Field Survival Guide
 
 To ensure a day of uninhibited chaos without logistical breakdowns, travelers must memorize the "Rule of 3 Preparations":
 

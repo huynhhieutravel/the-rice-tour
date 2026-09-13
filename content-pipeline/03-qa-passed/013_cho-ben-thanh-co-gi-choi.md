@@ -23,7 +23,7 @@ audit_notes: "Audit passed. Zero banned words. Verified 15 curated experiences a
 
 ---
 
-## 1. Dẫn Nhập: Chợ Bến Thành Đâu Chỉ Là Nơi Mua Bán
+## Dẫn Nhập: Chợ Bến Thành Đâu Chỉ Là Nơi Mua Bán
 
 Nhiều người lữ khách khi nghe nhắc đến Chợ Bến Thành thường chỉ mường tượng về một khu chợ bán vải vóc, đồ lưu niệm và những quầy sạp chen chúc. Nhưng đối với những ai thực sự am tường nhịp thở của Sài Gòn, ngôi chợ 112 năm tuổi này cùng các cung đường bao quanh chính là một "sân khấu văn hóa đô thị" sống động bậc nhất Đông Nam Á. Tại đây, trong bán kính chỉ vài trăm bước chân, bạn có thể chuyển tiếp từ một không gian di sản thuộc địa đầu thế kỷ 20 sang ga tàu điện ngầm hiện đại ngập tràn ánh sáng của năm 2026, từ một quán chè bình dân rộn rã tiếng cười sang một rooftop bar kiêu kỳ ngắm hoàng hôn buông trên dòng sông uốn lượn.
 
@@ -31,7 +31,7 @@ Nếu bạn đang tự hỏi **"Chợ Bến Thành có gì chơi?"**, hãy gạt
 
 ---
 
-## 2. Bản Đồ 15 Trải Nghiệm Vui Chơi Chia Theo 4 Khung Giờ Vàng
+## Bản Đồ 15 Trải Nghiệm Vui Chơi Chia Theo 4 Khung Giờ Vàng
 
 ### 🌅 KHUNG GIỜ 1: Sáng Sớm Tinh Khôi (06:30 – 09:30)
 
@@ -105,7 +105,7 @@ Dạo quanh các sạp hàng lưu niệm mở muộn ngoài trời, thực hành
 
 ---
 
-## 3. Bảng Ma Trận Lựa Chọn Hoạt Động Theo Đối Tượng
+## Bảng Ma Trận Lựa Chọn Hoạt Động Theo Đối Tượng
 
 | Nhóm Đối Tượng | Hoạt Động Ưu Tiên Hàng Đầu | Thời Điểm Lý Tưởng | Ngân Sách Ước Tính |
 | :--- | :--- | :--- | :--- |
@@ -116,6 +116,6 @@ Dạo quanh các sạp hàng lưu niệm mở muộn ngoài trời, thực hành
 
 ---
 
-## 4. Lời Kết: Chợ Bến Thành – Bản Hòa Ca Đầy Màu Sắc
+## Lời Kết: Chợ Bến Thành – Bản Hòa Ca Đầy Màu Sắc
 
 Hơn cả một địa danh trên bản đồ, Chợ Bến Thành là một sinh thể văn hóa biến chuyển kỳ diệu theo từng giờ trong ngày. Sáng trầm mặc cổ kính, trưa rộn rã giao thương, chiều lãng mạn hoài niệm và đêm rực rỡ hoa lệ. Hãy bước đi với một trái tim cởi mở và đôi mắt tò mò, bạn sẽ thấy Chợ Bến Thành luôn có vô vàn điều kỳ thú đang chờ đón bạn khám phá.

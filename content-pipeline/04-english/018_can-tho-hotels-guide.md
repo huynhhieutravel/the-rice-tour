@@ -42,12 +42,12 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
 
 For those seeking uncompromised comfort with unobstructed views of the Hau River.
 
-### 1. Azerai Can Tho (Con Au Islet)
+### Azerai Can Tho (Con Au Islet)
 - **The Profile:** Unrivaled exclusivity. Accessible only by private speedboat, this resort occupies its own islet, offering a masterclass in understated, tropical modernist architecture integrated into the mangrove ecosystem.
 - **2026 Rate Matrix:** Starting at 5,000,000 VND/night.
 - **The Verdict:** The absolute pinnacle of Delta luxury, ideal for extended retreats, though logistically detached from the immediate bustle of the city center.
 
-### 2. Victoria Can Tho Resort (Cai Khe Ward)
+### Victoria Can Tho Resort (Cai Khe Ward)
 - **The Profile:** A heavily nostalgic, Indochine-style property. With its dark wood verandas, expansive manicured lawns, and a legendary riverfront pool, Victoria maintains a stately, old-world cadence.
 - **2026 Rate Matrix:** Starting at 2,800,000 VND/night.
 - **The Verdict:** Perfect for classic romantics and families. Their private Lady Hau cruise boat remains the most elegant way to approach the Cai Rang Floating Market.
@@ -58,11 +58,11 @@ For those seeking uncompromised comfort with unobstructed views of the Hau River
 
 For travelers who prioritize immediate access to the urban core and Ninh Kieu Wharf.
 
-### 3. TTC Hotel – Premium Can Tho (Hai Ba Trung Street)
+### TTC Hotel – Premium Can Tho (Hai Ba Trung Street)
 - **The Profile:** The tallest vantage point directly overlooking the Ninh Kieu Wharf. It offers functional, business-class luxury with unparalleled proximity to the night market.
 - **2026 Rate Matrix:** Starting at 1,200,000 VND/night.
 
-### 4. KP Hotel (Nam Ky Khoi Nghia Street)
+### KP Hotel (Nam Ky Khoi Nghia Street)
 - **The Profile:** A rising star in the boutique sector. KP focuses on highly efficient spatial design, minimalist aesthetics, and an exceptional in-house specialty coffee program.
 - **2026 Rate Matrix:** Starting at 850,000 VND/night.
 

@@ -72,7 +72,7 @@ Highlighted in our comprehensive field guide to [things to do near Ben Thanh Mar
 
 ---
 
-## 1. Footprints of the Tamil Chettiar Community in Old Saigon
+## Footprints of the Tamil Chettiar Community in Old Saigon
 
 To understand why a resplendent Dravidian temple graces the very heart of District 1, one must trace the waves of late 19th-century maritime migration.
 
@@ -82,7 +82,7 @@ To maintain their ancestral faith, the Chettiar merchants funded the constructio
 
 ---
 
-## 2. Deciphering South Indian Dravidian Temple Art
+## Deciphering South Indian Dravidian Temple Art
 
 Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:
 
@@ -97,17 +97,17 @@ Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. The Gopuram: Gateway Between the Earthly and Divine
+### The Gopuram: Gateway Between the Earthly and Divine
 Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway tower. Its tiered facade teems with hand-painted sculptures: Lord Shiva in cosmic dance, Vishnu the preserver, Brahma the creator, the elephant-headed Ganesha, and celestial Apsara maidens frozen in graceful mudras. Finished in saturated tones of saffron gold, emerald green, and vermilion, the tower acts as a spiritual beacon visible from afar.
 
-### 2.2. The Inner Sanctum: The Abode of Goddess Mariamman
+### The Inner Sanctum: The Abode of Goddess Mariamman
 Shedding your footwear at the threshold, you step into a cool, arched central hall. In the inner sanctum (*garbhagriha*) rests the sacred black stone statue of **Goddess Mariamman**, draped in shimmering yellow silk and crowned with fragrant garlands of fresh marigolds. In Hindu mythology, Mariamman is an incarnation of Parvati—the mother goddess of fertility, monsoon rains, healing, and familial harmony.
 
 Flanking her are guardian deities Maduraiveeran and Pechiamman, while surrounding alcoves enshrine Ganesha, Murugan, and the ornate ceremonial Silver Chariot used during the annual autumn festival.
 
 ---
 
-## 3. The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis
+## The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis
 
 The most mesmerizing phenomenon at Mariamman Temple is not merely its architecture, but a unique ritual born from decades of cultural convergence.
 
@@ -117,7 +117,7 @@ Local belief holds that this granite wall directly absorbs the spiritual resonan
 
 ---
 
-## 4. Curated Sacred Exploration Matrix
+## Curated Sacred Exploration Matrix
 
 | Sacred Sector | Location | Deity / Sacred Feature | Spiritual Experience |
 | :--- | :--- | :--- | :--- |
@@ -129,7 +129,7 @@ Local belief holds that this granite wall directly absorbs the spiritual resonan
 
 ---
 
-## 5. Conscious Traveler Protocol & Field Guidelines (2026)
+## Conscious Traveler Protocol & Field Guidelines (2026)
 
 - **Mandatory Footwear Removal:** Remove all shoes and sandals before stepping across the raised timber threshold; storage shelves are provided outside.
 - **Modest Attire:** Garments must cover shoulders and knees. Sleeveless shirts, low-cut tops, and short shorts are strictly prohibited within the temple grounds.

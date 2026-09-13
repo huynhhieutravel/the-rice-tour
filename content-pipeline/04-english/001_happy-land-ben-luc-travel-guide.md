@@ -90,7 +90,7 @@ To ensure a seamless expedition and mitigate travel risks, we have compiled a co
 
 ---
 
-## 2026 Field Notes & Travel Warnings
+## Field Notes & Travel Warnings
 
 From the perspective of seasoned expedition leaders, we strongly advise adhering to the following principles if you are drawn to this area:
 

@@ -72,7 +72,7 @@ Enshrined as a focal monument in our curated guide to [things to do near Ben Tha
 
 ---
 
-## 1. Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
+## Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
 
 The palatial grounds have served as the fulcrum of southern governance across three distinct epochs:
 
@@ -84,7 +84,7 @@ On April 30, 1975, the historic breakthrough of the palace gates sealed the end 
 
 ---
 
-## 2. Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
+## Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
 
 Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:
 
@@ -99,18 +99,18 @@ Unlike Western government palaces that rely on soaring spires or heavy pediments
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Floorplan Sino-Vietnamese Ideograms
+### Floorplan Sino-Vietnamese Ideograms
 - **The Ideogram CÁT (吉 - Auspiciousness):** The primary structural footprint outlines the character *Cát*, symbolizing eternal fortune and peace for the nation.
 - **The Ideogram KHẨU (口 - Free Speech):** The central presidential balcony on the second level frames the square character *Khẩu*, embodying the imperative of free speech and democratic dialogue.
 - **The Ideogram TRUNG (中 - Loyalty):** The vertical flagpole rising precisely through the center of the balcony forms the stroke *Trung*, championing unbending fidelity to the homeland.
 - **The Ideogram CHỦ (主 - Sovereignty):** The rooftop pavilion topped by the national flag finishes the character *Chủ*, declaring undisputed national independence.
 
-### 2.2. The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)
+### The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)
 Enclosing the second and third floor balconies is a distinctive sunscreen facade sculpted into slender **concrete bamboo joints (*đốt trúc*)**. This ingenious structural invention evokes the unyielding resilience of Vietnamese rural bamboo groves while solving a critical equatorial challenge: it deflects harsh midday solar radiation, draws cross-ventilating monsoons through deep covered loggias, and affords diplomats privacy from the public avenues outside.
 
 ---
 
-## 3. Curated Interior Exploration: From Grand Salons to Underground Bunkers
+## Curated Interior Exploration: From Grand Salons to Underground Bunkers
 
 | Sector | Level | Function & Key Artworks | Historical Significance |
 | :--- | :--- | :--- | :--- |
@@ -122,7 +122,7 @@ Enclosing the second and third floor balconies is a distinctive sunscreen facade
 
 ---
 
-## 4. Field Notes for the Discerning Traveler (2026)
+## Field Notes for the Discerning Traveler (2026)
 
 - **Optimal Stroll Window:** Arrive between **14:00 and 16:30 PM**. The afternoon sun dips beneath the giant mahogany canopy, casting dramatic architectural shadows through the bamboo louvers and providing a cooler ambiance for garden exploration.
 - **Dress Code & Etiquette:** Modest attire with covered shoulders and knees is mandatory. Large backpacks must be checked at the security counter near the gate.

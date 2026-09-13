@@ -815,40 +815,33 @@ function processMarkdownToMagazineHtml(file) {
   customRenderer.heading = function({ tokens, depth }) {
     const rawText = this.parser.parseInline(tokens);
     const text = decodeHtmlEntities(rawText).replace(/<[^>]+>/g, '').trim();
-    if (text.toLowerCase().includes('quick overview stats')) {
-      return ''; // We build the stats bar manually
+    if (text.toLowerCase().includes('quick overview stats') || text.toLowerCase().includes('tổng quan nhanh')) {
+      return ''; // Built via dedicated modern Stats Bar
     }
     
-    const id = cleanSlug(text);
+    // Clean any residual leading numbers for SEO & elegant Magazine aesthetics
+    const cleanText = text.replace(/^(\d+(\.\d+)*[\.\:\s\-]+)/, '').replace(/^\.\s*/, '').trim();
+    const id = cleanSlug(cleanText || text);
     
     if (depth === 2) {
       return `
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="${id}" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            ${text}
+            ${cleanText}
           </h2>
         </div>
       `;
     }
     if (depth === 3) {
-      const numMatch = text.match(/^(\d+(\.\d+)?)\s*(.*)$/);
-      if (numMatch) {
-        return `
-          <div id="${id}" class="scroll-mt-28 space-y-2 pt-4">
-            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0">${numMatch[1]}</span>
-              ${numMatch[3]}
-            </h3>
-          </div>
-        `;
-      }
       return `
-        <h3 id="${id}" class="text-lg font-bold text-slate-900 flex items-center gap-2 pt-4">
-          ${text}
-        </h3>
+        <div id="${id}" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            ${cleanText}
+          </h3>
+        </div>
       `;
     }
-    return `<h${depth} id="${id}">${text}</h${depth}>`;
+    return `<h${depth} id="${id}">${cleanText}</h${depth}>`;
   };
   
   customRenderer.blockquote = function({ tokens }) {

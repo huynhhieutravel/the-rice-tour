@@ -21,7 +21,7 @@ featured_image: "https://media.thericetour.com/uploads/tan-son-nhat-airport.webp
 
 ---
 
-## 1. Dẫn Nhập: Chuyến Xe Đầu Tiên Chạm Ngõ Trái Tim Sài Gòn
+## Dẫn Nhập: Chuyến Xe Đầu Tiên Chạm Ngõ Trái Tim Sài Gòn
 
 Khi bánh máy bay vừa chạm đường băng Sân bay Quốc tế Tân Sơn Nhất, hầu hết mọi du khách đều có chung một đích đến đầu tiên: **Trung tâm Quận 1**, mà biểu tượng cốt lõi chính là Chợ Bến Thành. Nơi đây tập trung mật độ khách sạn, nhà hàng, điểm tham quan và đầu mối giao thông lớn nhất thành phố.
 
@@ -42,7 +42,7 @@ Tuy nhiên, bước chân ra khỏi cửa sảnh đến (Arrivals Hall), du khá
 
 ---
 
-## 2. Bảng So Sánh 5 Phương Án Di Chuyển (Cập Nhật Thời Giá 2026)
+## Bảng So Sánh 5 Phương Án Di Chuyển (Cập Nhật Thời Giá 2026)
 
 | Phương Án Di Chuyển | Mức Giá / Vé (2026) | Thời Gian Đi | Vị Trí Đón Xe Tại Sân Bay | Điểm Đến Tại Bến Thành | Đánh Giá Phù Hợp |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -54,7 +54,7 @@ Tuy nhiên, bước chân ra khỏi cửa sảnh đến (Arrivals Hall), du khá
 
 ---
 
-## 3. Hướng Dẫn Chi Tiết Từng Phương Án
+## Hướng Dẫn Chi Tiết Từng Phương Án
 
 ### Phương Án 1: Xe Bus Chất Lượng Cao 109 (Lựa Chọn Vàng Cho Khách Du Lịch)
 - **Đặc điểm xe:** Xe màu vàng tươi nổi bật, sàn thấp hiện đại chuẩn Châu Âu, điều hòa mát lạnh, có wifi miễn phí và khoang riêng để vali cồng kềnh. Nhân viên phục vụ có khả năng giao tiếp tiếng Anh cơ bản.
@@ -80,7 +80,7 @@ Nếu bạn mang nhiều hành lý nặng, đi cùng người lớn tuổi hoặ
 
 ---
 
-## 4. Lời Khuyên Di Chuyển Theo Khung Giờ Thực Tế
+## Lời Khuyên Di Chuyển Theo Khung Giờ Thực Tế
 
 1. **Khung giờ cao điểm kẹt xe (07:30 – 09:00 sáng & 16:30 – 19:00 tối):**  
    Đoạn đường Trường Sơn và Hoàng Văn Thụ thường xuyên ùn tắc nghiêm trọng. Nếu có lịch hẹn quan trọng quanh Bến Thành, hãy dự trù ít nhất **60 – 75 phút** di chuyển.

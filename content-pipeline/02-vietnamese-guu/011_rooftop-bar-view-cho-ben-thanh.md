@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-mar
 
 ---
 
-## 1. Dẫn Nhập: Khi Sài Gòn Thắp Lên Những Tinh Cầu Đêm
+## Dẫn Nhập: Khi Sài Gòn Thắp Lên Những Tinh Cầu Đêm
 
 Khi ánh tà dương màu hổ phách chìm dần sau những rặng xà cừ cổ thụ và tháp đồng hồ Chợ Bến Thành bắt đầu tỏa sáng dưới bầu trời chạng vạng, trung tâm Quận 1 khoác lên mình một tấm áo hoàn toàn khác. Đó là thời khắc mà vẻ đẹp kiêu sa, hoa lệ của một đô thị quốc tế giao hòa cùng nhịp sống đêm quyến rũ. Đối với người lữ khách có "GUU", cách tuyệt vời nhất để khép lại một ngày dài tản bộ di sản không phải là hòa vào những đám đông chen chúc trên mặt đất, mà là bước vào thang máy đưa thẳng lên những tầng cao lộng gió, hoặc luồn lách qua một cánh cửa bí mật nép mình sau tiệm đồ cổ cũ để thưởng thức một ly cocktail thảo mộc bản địa.
 
@@ -28,7 +28,7 @@ Từ trên những sân thượng tầng thượng (rooftop) quanh quảng trư�
 
 ---
 
-## 2. Văn Hóa Mixology Bản Địa: Sự Trỗi Dậy Của Cocktail Hương Vị Việt
+## Văn Hóa Mixology Bản Địa: Sự Trỗi Dậy Của Cocktail Hương Vị Việt
 
 Đời sống quán bar tại khu vực Bến Thành năm 2026 đã bước qua giai đoạn của những dòng đồ uống công nghiệp đại trà. Thay vào đó, đây là lãnh địa của các bartender tài năng—những người nghệ sĩ pha chế coi ly cocktail như một tác phẩm kể chuyện về văn hóa và thổ nhưỡng Việt Nam.
 
@@ -50,11 +50,11 @@ Từ trên những sân thượng tầng thượng (rooftop) quanh quảng trư�
 
 ---
 
-## 3. Bản Đồ 4 Tọa Độ Rooftop Bar & Sky Lounge View Triệu Đô Quanh Bến Thành
+## Bản Đồ 4 Tọa Độ Rooftop Bar & Sky Lounge View Triệu Đô Quanh Bến Thành
 
 Dưới đây là những không gian tầng thượng sở hữu góc ngắm tháp đồng hồ Bến Thành và trung tâm Quận 1 ngoạn mục nhất:
 
-### 1. Sky Lounge Tầng Thượng Đối Diện Vòng Xoay Bến Thành
+### Sky Lounge Tầng Thượng Đối Diện Vòng Xoay Bến Thành
 Tọa lạc trên các tầng cao của các khách sạn boutique mặt tiền đường Phan Bội Châu hoặc Lê Lai, các quán bar sân thượng tại đây sở hữu góc nhìn trực diện không bị che chắn xuống tháp đồng hồ Chợ Bến Thành và quảng trường ánh sáng Quách Thị Trang.
 
 - **Vị trí:** Trục đường Phan Bội Châu & Lê Lai, Quận 1 (cách chợ dưới 100m).
@@ -62,7 +62,7 @@ Tọa lạc trên các tầng cao của các khách sạn boutique mặt tiền 
 - **Không gian:** Thiết kế quầy bar mở ngoài trời, ghế sofa tròn bọc da chống thấm và những chậu cọ nhiệt đới tạo cảm giác như một ốc đảo trên mây.
 - **Món uống khuyên thử:** *Saigon Sunset Spriz* (Aperol, vang nổ Prosecco, nước ép bưởi hồng da xanh Bến Tre và siro hương thảo).
 
-### 2. Sân Thượng Di Sản Trục Đường Tôn Thất Thiệp & Huỳnh Thúc Kháng
+### Sân Thượng Di Sản Trục Đường Tôn Thất Thiệp & Huỳnh Thúc Kháng
 Nằm trên tầng 4 và tầng 5 của các tòa nhà mang phong cách kiến trúc Pháp cổ, những quán rooftop lounge ở đây mang hơi thở nghệ thuật, thân mật và phóng khoáng.
 
 - **Vị trí:** Số 38–44 Tôn Thất Thiệp & Huỳnh Thúc Kháng, Quận 1 (cách Chợ Bến Thành 350m).
@@ -70,7 +70,7 @@ Nằm trên tầng 4 và tầng 5 của các tòa nhà mang phong cách kiến t
 - **Không gian:** Lát sàn gạch bông cổ, bàn gỗ mộc mạc kết hợp ánh nến lung linh và những đêm nhạc acoustic vào cuối tuần.
 - **Món uống khuyên thử:** *Mekong Botanical Gin & Tonic* (Lady Triệu Gin thủ công, tiêu rừng ngâm, nước tonic thảo mộc và lát bưởi sấy).
 
-### 3. Sky Bar Toàn Cảnh Trên Đại Lộ Lê Lợi – Nam Kỳ Khởi Nghĩa
+### Sky Bar Toàn Cảnh Trên Đại Lộ Lê Lợi – Nam Kỳ Khởi Nghĩa
 Dành cho những ai tìm kiếm trải nghiệm thượng lưu chuẩn 5 sao với tầm nhìn panorama 360 độ ôm trọn trung tâm hành chính Quận 1, Nhà hát Lớn và Dinh Độc Lập.
 
 - **Vị trí:** Tầng 24–28 các khối phức hợp cao cấp trên đại lộ Lê Lợi (cách chợ 300m).
@@ -80,7 +80,7 @@ Dành cho những ai tìm kiếm trải nghiệm thượng lưu chuẩn 5 sao v�
 
 ---
 
-## 4. Thế Giới Bí Mật: Những Quán Bar Speakeasy Ẩn Mình Sau Hẻm Cổ
+## Thế Giới Bí Mật: Những Quán Bar Speakeasy Ẩn Mình Sau Hẻm Cổ
 
 Nếu rooftop bar là sự phóng khoáng giữa trời mây, thì các quán **Speakeasy Bar** quanh Bến Thành lại là những mật mã quyến rũ dành cho những ai thích khám phá:
 
@@ -91,7 +91,7 @@ Nếu rooftop bar là sự phóng khoáng giữa trời mây, thì các quán **
 
 ---
 
-## 5. Bảng Giá Thức Uống Tham Khảo (Cập Nhật 2026)
+## Bảng Giá Thức Uống Tham Khảo (Cập Nhật 2026)
 
 | Danh Mục Thức Uống | Thành Phần & Đặc Điểm Pha Chế | Mức Giá Tham Khảo (VNĐ) |
 | :--- | :--- | :--- |
@@ -104,7 +104,7 @@ Nếu rooftop bar là sự phóng khoáng giữa trời mây, thì các quán **
 
 ---
 
-## 6. Sổ Tay Quy Tắc Thực Địa Cho Buổi Tối Hoàn Hảo
+## Sổ Tay Quy Tắc Thực Địa Cho Buổi Tối Hoàn Hảo
 
 Để có một buổi tối thư thái và lịch thiệp nhất tại các sky bar và speakeasy quanh Bến Thành:
 
@@ -117,6 +117,6 @@ Nếu rooftop bar là sự phóng khoáng giữa trời mây, thì các quán **
 
 ---
 
-## 7. Lời Kết: Nâng Ly Dưới Bầu Trời Đêm Đô Thị
+## Lời Kết: Nâng Ly Dưới Bầu Trời Đêm Đô Thị
 
 Ngồi trên tầng cao lộng gió, cầm trên tay chiếc ly pha lê sóng sánh giọt cocktail thảo mộc và nhìn ngắm tháp đồng hồ Bến Thành trầm mặc bên dưới dòng xe xuôi ngược, bạn sẽ cảm nhận được vẻ đẹp trọn vẹn nhất của Sài Gòn. Đó là một thành phố không bao giờ ngủ, luôn bao dung đón nhận những tâm hồn lữ thứ, và luôn biết cách thết đãi những vị khách tinh tế bằng những khoảnh khắc thăng hoa diệu kỳ.

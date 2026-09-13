@@ -52,7 +52,7 @@ Amidst sweeping geographical reclassifications, **the Nam Du Archipelago now fal
 
 ---
 
-## 2026 Transit Guide: Setting Sail
+## Transit Guide: Setting Sail
 
 Embarking on a journey to Nam Du demands meticulous planning, particularly regarding ferry schedules and an acquired tolerance for the ocean's swell.
 
@@ -157,7 +157,7 @@ We highly advise dedicating a full 3 days and 2 nights to Nam Du. The southweste
 
 ---
 
-## 2026 Survival Guide & Budgeting
+## Survival Guide & Budgeting
 
 To ensure a seamless expedition, adhere to these fundamental principles:
 

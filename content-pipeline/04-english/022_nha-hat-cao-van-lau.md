@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "📜"
 ---
 
-## 1. Introduction to Cao Van Lau Theater
+## Introduction to Cao Van Lau Theater
 
 The **Cao Van Lau Theater** is undeniably the most striking architectural landmark in Bac Lieu City. Dominating the spacious Hung Vuong Square, the theater’s design is inspired by the *Nón Lá* (the traditional Vietnamese conical hat), an enduring symbol of Vietnamese culture and the grace of Southern women. 
 
@@ -44,7 +44,7 @@ Named in honor of the legendary musician Cao Van Lau—the composer of the immor
 > - **Scale:** Features three massive conical hat structures.
 > - **Performance Schedule:** Traditional Cai Luong and Don Ca Tai Tu performances are typically held on Saturday evenings.
 
-## 2. The Architectural Masterpiece
+## The Architectural Masterpiece
 
 ### The "Three Conical Hats" Design
 The theater's structural concept is brilliant in its simplicity and profound in its symbolism. The complex consists of three distinct cylindrical buildings, each crowned with a massive, stylized conical hat roof. 
@@ -54,7 +54,7 @@ The theater's structural concept is brilliant in its simplicity and profound in 
 ### The Surrounding Complex
 The theater sits within the expansive Hung Vuong Square, bordered by meticulously manicured gardens, a serene artificial lake, and walking paths. The reflection of the three giant hats on the water's surface, particularly when illuminated by the state-of-the-art LED lighting system at night, creates a cinematic and mesmerizing visual spectacle.
 
-## 3. The Cultural Heartbeat of Bac Lieu
+## The Cultural Heartbeat of Bac Lieu
 
 ### A Fusion of Artistic Troupes
 The theater is not merely an architectural shell; it is a thriving cultural institution. In 2017, it became the unified home for two major local artistic groups: the Cao Van Lau Cai Luong Troupe and the Khmer General Arts Troupe. Today, a robust ensemble of over 80 actors, musicians, and artists continually breathe life into the venue.
@@ -62,7 +62,7 @@ The theater is not merely an architectural shell; it is a thriving cultural inst
 ### Don Ca Tai Tu and Cai Luong Performances
 For travelers seeking authentic cultural immersion, attending a performance at the Cao Van Lau Theater is paramount. The acoustics inside the main auditoriums are engineered to enhance the soulful melodies of traditional instruments like the *đàn bầu* (monochord) and *đàn kìm* (moon lute). On Saturday nights, the theater often hosts free or subsidized performances, allowing both locals and tourists to revel in the golden eras of Cai Luong theater.
 
-## 4. Visitor Guidelines and Photography (2026 Updates)
+## Visitor Guidelines and Photography (2026 Updates)
 
 The Cao Van Lau Theater is incredibly photogenic, but timing your visit is crucial for the best experience.
 
@@ -70,7 +70,7 @@ The Cao Van Lau Theater is incredibly photogenic, but timing your visit is cruci
 - **Evening Magic (Post 18:00):** The square comes alive as locals gather for evening strolls. The theater's dynamic lighting system transforms the structures into glowing, colorful beacons.
 - **Photography Tips:** Use a wide-angle lens to capture the entirety of the three hats from across the square. The reflection pool offers the perfect foreground for symmetrical, cinematic shots.
 
-## 5. Travel Logistics and Nearby Attractions
+## Travel Logistics and Nearby Attractions
 
 Bac Lieu is approximately 280 kilometers from Ho Chi Minh City. With the completion of recent expressway extensions in 2025, travel time has been significantly reduced.
 
@@ -82,7 +82,7 @@ Bac Lieu is approximately 280 kilometers from Ho Chi Minh City. With the complet
 **Complementary Destinations:**
 Maximize your Bac Lieu itinerary by visiting the **Bac Lieu Wind Farm** (Cánh Đồng Điện Gió), the opulent **Mansion of the Bac Lieu Dude** (Nhà Công Tử Bạc Liêu), and the **Quan Am Phat Dai** (Mother Goddess statue facing the sea). 
 
-## 6. Epilogue
+## Epilogue
 
 The Cao Van Lau Theater is a profound architectural statement that bridges the past and the future. It honors the deep roots of Southern Vietnamese music while providing a modern, world-class venue for its continuation. A visit here is a multisensory journey—where the eyes feast on architectural grandeur and the ears are serenaded by the timeless, nostalgic echoes of *Da Co Hoai Lang*.
 

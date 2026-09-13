@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus
 
 ---
 
-## 1. Dẫn Nhập: Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
+## Dẫn Nhập: Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
 
 Giữa nhịp sống đô thị cuộn chảy không ngừng của trung tâm Quận 1, nơi dòng xe máy đan xen như mắc cửi trên những đại lộ rợp bóng cổ thụ trăm năm, trải nghiệm ngắm nhìn Sài Gòn từ độ cao 4 mét trên tầng hai của xe bus mui trần (Hop-on Hop-off) mang đến một nhãn quan hoàn toàn mới mẻ. Không còn bị che khuất tầm mắt bởi dòng người hối hả hay những lớp kính xe hơi ngột ngạt, du khách được đón trọn từng làn gió mát rượi thổi từ sông Sài Gòn, chạm tay vào những tán xà cừ cổ thụ và thu trọn vào tầm mắt những mái ngói vòm cong phong cách Phục Hưng của Bưu điện Trung tâm, tháp chuông uy nghiêm của Nhà thờ Đức Bà hay ánh hoàng hôn buông lơi trên dòng sông uốn lượn qua cầu Ba Son.
 
@@ -28,7 +28,7 @@ Giữa nhịp sống đô thị cuộn chảy không ngừng của trung tâm Qu
 
 ---
 
-## 2. Tổng Quan Hệ Thống & Điểm Khác Biệt Của Xe Bus 2 Tầng Sài Gòn
+## Tổng Quan Hệ Thống & Điểm Khác Biệt Của Xe Bus 2 Tầng Sài Gòn
 
 Hệ thống xe bus hai tầng tại TP. Hồ Chí Minh được vận hành bởi đội xe tiêu chuẩn quốc tế với khoang tầng dưới trang bị điều hòa mát lạnh và khoang tầng trên thiết kế không mui (open-top deck), mang lại góc nhìn toàn cảnh 360 độ.
 
@@ -51,7 +51,7 @@ Hệ thống xe bus hai tầng tại TP. Hồ Chí Minh được vận hành b�
 
 ---
 
-## 3. Bản Đồ Chi Tiết 2 Tuyến Hành Trình Đi Qua Chợ Bến Thành (Cập Nhật 2026)
+## Bản Đồ Chi Tiết 2 Tuyến Hành Trình Đi Qua Chợ Bến Thành (Cập Nhật 2026)
 
 Hiện tại, dịch vụ xe bus 2 tầng khai thác hai tuyến hành trình chính phục vụ nhu cầu tham quan ban ngày lẫn tour đêm ngắm đèn hoa lệ:
 
@@ -91,7 +91,7 @@ Dành cho những tâm hồn muốn thâm nhập sâu vào không gian văn hóa
 
 ---
 
-## 4. Bảng So Sánh Chi Tiết Tuyến Ngày & Tuyến Đêm
+## Bảng So Sánh Chi Tiết Tuyến Ngày & Tuyến Đêm
 
 | Tiêu Chí So Sánh | Chuyến Ban Ngày (08:30 – 16:30) | Chuyến Hoàng Hôn & Đêm (17:00 – 22:30) |
 | :--- | :--- | :--- |
@@ -102,7 +102,7 @@ Dành cho những tâm hồn muốn thâm nhập sâu vào không gian văn hóa
 
 ---
 
-## 5. Bảng Giá Vé Xe Bus 2 Tầng Cập Nhật Năm 2026
+## Bảng Giá Vé Xe Bus 2 Tầng Cập Nhật Năm 2026
 
 Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh hoạt qua cổng thẻ quốc tế (Visa/Mastercard) và mã QR nội địa (VietQR/MoMo):
 
@@ -118,26 +118,26 @@ Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh
 
 ---
 
-## 6. Sổ Tay Kinh Nghiệm Đắt Giá Dành Cho Lữ Khách "Có GUU"
+## Sổ Tay Kinh Nghiệm Đắt Giá Dành Cho Lữ Khách "Có GUU"
 
 Để hành trình ngắm cảnh trên xe bus 2 tầng đạt được sự thư thái trọn vẹn nhất, hãy ghi nhớ những bí quyết thực địa sau:
 
-### 1. Bí quyết chọn vị trí ngồi "Triệu Đô"
+### Bí quyết chọn vị trí ngồi "Triệu Đô"
 - **3 hàng ghế đầu trên tầng 2:** Đây là vị trí có tầm nhìn bao quát nhất phía trước đầu xe. Tuy nhiên, khi đi vào ban ngày, gió thổi trực diện và nắng chiếu có thể làm bạn mau mỏi mắt. Hãy chuẩn bị kính râm và mũ có quai cài chắc chắn.
 - **Hàng ghế bên phải xe:** Khi xe lưu thông qua các tuyến đường một chiều tại Quận 1, làn bên phải sẽ tiếp cận gần nhất với các công trình di sản (Bưu điện, Nhà hát Lớn, Dinh Độc Lập) giúp bạn bắt trọn các góc ảnh chụp cận cảnh rất đẹp.
 - **Hàng ghế giữa tầng 2:** Tránh được độ rung lắc và gió thốc quá mạnh, lý tưởng nhất cho người lớn tuổi hoặc du khách muốn nghe thuyết minh êm ái.
 
-### 2. Khung giờ vàng để lên xe
+### Khung giờ vàng để lên xe
 - **Chuyến 16:30 – 17:00 (Săn hoàng hôn Ba Son):** Xe sẽ đưa bạn qua cầu Ba Son đúng khoảnh khắc mặt trời đỏ rực lặn dần phía sau đường chân trời trung tâm Quận 1, dát vàng lên mặt sông tĩnh lặng.
 - **Chuyến 19:30 – 20:30 (Sài Gòn đêm hoa lệ):** Toàn bộ các trục đường Nguyễn Huệ, Lê Lợi, Đồng Khởi đều bật sáng đèn trang trí, các tòa cao ốc phô diễn hiệu ứng ánh sáng rực rỡ.
 
-### 3. Quy tắc an toàn bắt buộc khi ngồi trên tầng mui trần
+### Quy tắc an toàn bắt buộc khi ngồi trên tầng mui trần
 - **Tuyệt đối không đứng dậy khi xe đang di chuyển:** Tán cây xà cừ dọc các tuyến đường cổ kính Quận 1 (đặc biệt là đường Lê Duẩn và Trương Định) tỏa bóng rất thấp. Du khách đứng lên để chụp ảnh có thể va quẹt vào cành cây gây nguy hiểm.
 - **Giữ chặt vật dụng cá nhân:** Gió trên tầng hai khá mạnh khi xe tăng tốc qua cầu Ba Son; hãy cài chặt nón lá và giữ điện thoại chắc tay khi giơ máy quay clip.
 
 ---
 
-## 7. Gợi Ý Lịch Trình Kết Hợp Quanh Chợ Bến Thành
+## Gợi Ý Lịch Trình Kết Hợp Quanh Chợ Bến Thành
 
 Du khách có thể dễ dàng thiết kế một buổi chiều hoàn hảo bắt đầu và kết thúc tại Chợ Bến Thành:
 
@@ -148,6 +148,6 @@ Du khách có thể dễ dàng thiết kế một buổi chiều hoàn hảo b�
 
 ---
 
-## 8. Lời Kết: Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở
+## Lời Kết: Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở
 
 Ngồi trên tầng mui trần của chuyến xe bus 2 tầng lăn bánh chầm chậm qua các góc phố thân thương, bạn sẽ nhận ra Sài Gòn không hề vội vã như người ta vẫn tưởng. Thành phố này luôn dành riêng những khoảng lặng dịu dàng cho những ai biết ngước nhìn lên cao—nơi những ban công sắt uốn hoa văn kiểu Pháp nép mình sau tán phượng vĩ, nơi tiếng chuông chiều Nhà thờ vang hòa cùng tiếng còi tàu sông xa xa. Một chuyến xe, vạn góc nhìn, để ta thêm yêu một Sài Gòn dung dị mà kiêu hãnh.

@@ -37,7 +37,7 @@ Khu vực xung quanh Chợ Bến Thành từ lâu đã vượt thoát khỏi kh�
 
 ---
 
-## 1. Trầm Tích Lịch Sử: Từ Cửa Sông Bến Nghé Đến Tâm Điểm Đô Thị Thế Kỷ 21
+## Trầm Tích Lịch Sử: Từ Cửa Sông Bến Nghé Đến Tâm Điểm Đô Thị Thế Kỷ 21
 
 Để thấu cảm trọn vẹn vẻ đẹp của khu vực quanh Bến Thành, người lữ khách cần nhìn lại hành trình tiếp biến không gian hơn hai trăm năm của vùng đất này.
 
@@ -49,9 +49,9 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
 
 ---
 
-## 2. Top Tọa Độ Di Sản & Văn Hóa Không Thể Bỏ Qua Trong Bán Kính 1km
+## Top Tọa Độ Di Sản & Văn Hóa Không Thể Bỏ Qua Trong Bán Kính 1km
 
-### 2.1. Chợ Bến Thành: Tấm Gương Phản Chiếu Đời Sống Sài Gòn
+### Chợ Bến Thành: Tấm Gương Phản Chiếu Đời Sống Sài Gòn
 - **Vị trí:** Tiếp giáp 4 tuyến đường Lê Lợi, Phan Chu Trinh, Phan Bội Châu và Lê Thánh Tôn.
 - **Kiến trúc độc bản:** Tháp đồng hồ ba mặt ở Cửa Nam là hình ảnh biểu trưng xuất hiện trên hàng ngàn tác phẩm nhiếp ảnh và văn chương về Sài Gòn. Ít ai để ý rằng phía trên các vòm cửa chính đều gắn các bức phù điêu bằng gốm nung men xanh trứ danh của Trường Mỹ nghệ Biên Hòa (thực hiện năm 1952), khắc họa tinh tế các sản vật trù phú miền Nam: con bò sữa béo tốt, chùm chuối tiêu chín mọng, nhành lúa trĩu hạt và cá biển tươi ngon.
 - **Trải nghiệm có GUU:** Đừng chỉ nhìn ngắm vẻ bề ngoài. Hãy bước vào các lối đi hẹp đan cài như ô cờ, chiêm ngưỡng hệ thống vì kèo thép kiên cố từ đầu thế kỷ 20 giúp không gian lòng chợ luôn thoáng mát dù thời tiết nhiệt đới oi bức bên ngoài.
@@ -67,7 +67,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   </div>
 </div>
 
-### 2.2. Bảo Tàng Mỹ Thuật TP.HCM: Trầm Tích Nghệ Thuật Trong Dinh Thự Nhà Chú Hỏa
+### Bảo Tàng Mỹ Thuật TP.HCM: Trầm Tích Nghệ Thuật Trong Dinh Thự Nhà Chú Hỏa
 - **Vị trí:** Số 97A Phó Đức Chính, Phường Nguyễn Thái Bình, Quận 1 (Cách Chợ Bến Thành khoảng 350m tản bộ).
 - **Trầm tích di sản:** Quần thể gồm ba tòa nhà tráng lệ từng là tư gia kiêm tổng hành dinh kinh doanh của gia tộc thương gia gốc Hoa Hứa Bổn Hỏa (Hui Bon Hoa) – nhân vật đứng thứ tư trong tứ đại phú hộ lừng danh phương Nam xưa. Được thiết kế bởi kiến trúc sư người Pháp Rivera và xây dựng từ năm 1929 đến 1934, dinh thự là kiệt tác giao thoa giữa mỹ học **Art Deco phương Tây** và triết lý trang trí Á Đông.
 - **Điểm nhấn nghệ thuật:**
@@ -86,7 +86,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   </div>
 </div>
 
-### 2.3. Dinh Độc Lập: Đỉnh Cao Kiến Trúc Hiện Đại Nhiệt Đới (Tropical Modernism)
+### Dinh Độc Lập: Đỉnh Cao Kiến Trúc Hiện Đại Nhiệt Đới (Tropical Modernism)
 - **Vị trí:** 135 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, Quận 1 (Cách Chợ Bến Thành 700m).
 - **Giá trị lịch sử & Kiến trúc:** Tọa lạc trên mảnh đất từng là Dinh Norodom thời thuộc địa, Dinh Độc Lập hiện nay là đồ án tâm huyết của Kiến trúc sư Ngô Viết Thụ – người Việt Nam đầu tiên đoạt giải Khôi nguyên La Mã (Grand Prix de Rome) danh giá năm 1955. Công trình khánh thành năm 1966, phản ánh tư duy triết học phương Đông sâu sắc:
   - Mặt bằng tổng thể tạo hình chữ CÁT (吉 - điều tốt lành).
@@ -106,7 +106,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   </div>
 </div>
 
-### 2.4. Đền Hindu Mariamman: Nốt Lặng Tâm Linh Cổ Kính
+### Đền Hindu Mariamman: Nốt Lặng Tâm Linh Cổ Kính
 - **Vị trí:** 45 Trương Định, Phường Bến Thành, Quận 1 (Cách Cửa Tây Chợ Bến Thành chỉ 200m).
 - **Không gian tín ngưỡng:** Ngôi đền được cộng đồng thương nhân người Ấn gốc Tamil xây dựng vào đầu thế kỷ 20 để tôn thờ Nữ thần Mariamman – hiện thân của sự sinh sôi, chữa lành và che chở.
 - **Kiến trúc Dravidian rực rỡ:** Tháp cổng Gopuram vươn cao với hàng chục pho tượng thần linh Hindu được chạm khắc tinh xảo và sơn phết màu sắc sống động. Bước qua cánh cửa gỗ nặng nề, hương trầm nồng ấm và tiếng chuông đồng ngân vang sẽ đưa bạn vào một không gian tách biệt hoàn toàn với sự huyên náo của phố xá Quận 1. Phía sau chánh điện có bức tường đá thiêng – nơi các tín đồ thường áp trán và lòng bàn tay vào đá để nguyện cầu bình an, thanh tịnh.
@@ -122,7 +122,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   </div>
 </div>
 
-### 2.5. Ga Ngầm Trung Tâm Bến Thành: Biểu Tượng Hạ Tầng Thế Kỷ 21
+### Ga Ngầm Trung Tâm Bến Thành: Biểu Tượng Hạ Tầng Thế Kỷ 21
 - **Vị trí:** Dưới lòng đất Quảng trường Quách Thị Trang.
 - **Dấu ấn đương đại 2026:** Ga trung tâm 4 tầng ngầm với chiều dài 236m và sâu 32m là đầu mối giao thông đường sắt đô thị quan trọng nhất thành phố. Điểm nhấn kiến trúc ngoạn mục nhất là **Giếng trời hoa sen (Toplight khổng lồ)** bằng kính cường lực cao cấp, cho phép ánh sáng mặt trời tự nhiên rọi sâu xuống lòng đất, đồng thời mở góc nhìn ngược lên tháp đồng hồ cổ kính của Chợ Bến Thành trên mặt đất.
 
@@ -139,7 +139,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
   </div>
 </div>
 
-## 3. Bảng Ma Trận So Sánh Các Điểm Đến Quanh Trục Bến Thành
+## Bảng Ma Trận So Sánh Các Điểm Đến Quanh Trục Bến Thành
 
 | Điểm Đến | Khoảng Cách Từ Chợ | Thời Lượng Khuyến Nghị | Phong Cách / Điểm Nhấn Độc Bản | Khung Giờ Vàng | Giá Vé Tham Quan 2026 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -151,25 +151,25 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
 
 ---
 
-## 4. Bản Đồ Ẩm Thực & Đời Sống Phố Thị Quanh Bến Thành
+## Bản Đồ Ẩm Thực & Đời Sống Phố Thị Quanh Bến Thành
 
 Không có hành trình nào quanh Bến Thành trọn vẹn nếu thiếu đi những nốt thăng trầm của phong vị ẩm thực đất phương Nam.
 
-### 4.1. Những Góc Ẩm Thực Sạp Chợ Kinh Điển (Ban Ngày)
+### Những Góc Ẩm Thực Sạp Chợ Kinh Điển (Ban Ngày)
 Khu ẩm thực bên trong Cửa Nam và Cửa Đông chợ Bến Thành là một bản hòa ca rực rỡ của màu sắc và mùi vị:
 - **Bún riêu gánh Bến Thành:** Nước dùng đỏ au màu cà chua chín, thanh nhẹ vị giấm bỗng cùng những miếng riêu cua đồng chắc nịch, chả cây giòn dai và đậu hũ chiên béo ngậy.
 - **Bún mắm miền Tây:** Tinh hoa của sông nước Cửu Long hội tụ trong tô bún mắm thơm lừng mắm sặc, mắm linh hòa cùng tôm sú tươi, mực nõn, thịt heo quay giòn bì và đĩa rau đắng, bông súng non mướt.
 - **Hàng chè trứ danh Sài Gòn:** Những ly chè ba màu, chè sương sa hạt lựu, chè khúc bạch long nhãn mát lạnh là liệu pháp giải nhiệt diệu kỳ sau hàng giờ tản bộ dưới nắng vàng phương Nam.
 
-### 4.2. Phố Đêm Phan Bội Châu & Phan Chu Trinh (Khi Hoàng Hôn Buông)
+### Phố Đêm Phan Bội Châu & Phan Chu Trinh (Khi Hoàng Hôn Buông)
 Khi tháp đồng hồ điểm 18:00, hai dãy phố hai bên cánh chợ biến thành không gian ẩm thực ngoài trời sôi động. Khói bếp than hoa nướng thịt bò cuốn lá lốt thơm nức mũi, những mâm hải sản tươi sống từ cua Cần Giờ, ốc hương, sò huyết nướng mọi tạo nên bức tranh đời sống thị dân phóng khoáng và nồng hậu.
 
-### 4.3. Những Nốt Lặng Trong Chung Cư Cổ
+### Những Nốt Lặng Trong Chung Cư Cổ
 Nếu muốn tìm một khoảng lặng chiêm nghiệm, hãy men theo những bậc cầu thang gạch bông của các chung cư cổ trên đường Pasteur, Lê Lợi hoặc Lý Tự Trọng quanh chợ. Nơi đây ẩn giấu những tiệm cà phê pha thủ công (Pour-over), nơi bạn có thể nhâm nhi ly cà phê Robusta chất lượng cao vùng đất đỏ Tây Nguyên, phóng tầm mắt qua khung cửa sổ gỗ lá sách ngắm nhìn dòng xe cộ hối hả phía dưới.
 
 ---
 
-## 5. Khung Lịch Trình Tản Bộ Gợi Ý (Time-Block Itinerary)
+## Khung Lịch Trình Tản Bộ Gợi Ý (Time-Block Itinerary)
 
 ### Phương án A: Lộ Trình Nửa Ngày - Di Sản & Cảm Xúc (4 Tiếng)
 - **08:00 – 09:00:** Khởi đầu ngày mới với tô bún riêu đậm đà bên hông chợ Bến Thành, sau đó ngắm nhìn tháp đồng hồ Cửa Nam và các bức phù điêu gốm.
@@ -184,7 +184,7 @@ Nếu muốn tìm một khoảng lặng chiêm nghiệm, hãy men theo những b
 
 ---
 
-## 6. Lời Khuyên Thực Chiến Dành Cho Người Du Hành Có GUU (Field Notes 2026)
+## Lời Khuyên Thực Chiến Dành Cho Người Du Hành Có GUU (Field Notes 2026)
 
 1. **Trang phục & Ứng xử tôn nghiêm:** Khi tham quan Đền Mariamman và Dinh Độc Lập, du khách nên mặc trang phục lịch sự, kín vai và quá đầu gối. Tại đền Hindu, quy định bắt buộc phải tháo giày dép bên ngoài ngưỡng cửa.
 2. **Kinh nghiệm mua sắm văn minh:** Tại Chợ Bến Thành, các mặt hàng thủ công mỹ nghệ, lụa tơ tằm và trang sức lưu niệm thường được người bán niêm yết giá có khoảng thương lượng. Hãy mỉm cười thân thiện và trả giá với thái độ tôn trọng công sức lao động của tiểu thương; thông thường mức giá giảm từ 15% – 25% là mức cân bằng hợp lý.

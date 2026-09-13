@@ -37,7 +37,7 @@ Là một điểm dừng chân độc đáo mang đậm dấu ấn giao lưu vă
 
 ---
 
-## 1. Dấu Chân Cộng Đồng Tamil Chettiar Tại Sài Gòn Xưa
+## Dấu Chân Cộng Đồng Tamil Chettiar Tại Sài Gòn Xưa
 
 Để hiểu được sự hiện diện của một ngôi đền Hindu lộng lẫy ngay giữa trung tâm Quận 1, ta cần quay ngược bánh xe lịch sử về cuối thế kỷ 19 và đầu thế kỷ 20. 
 
@@ -47,7 +47,7 @@ Thời kỳ này, chính sách mở cửa thương mại của chính quyền th
 
 ---
 
-## 2. Giải Mã Nghệ Thuật Kiến Trúc Dravidian Nam Ấn
+## Giải Mã Nghệ Thuật Kiến Trúc Dravidian Nam Ấn
 
 Bước đến số 45 Trương Định, du khách sẽ ngay lập tức nhận diện những đặc trưng kiến trúc độc bản không thể trộn lẫn của Ấn Độ giáo:
 
@@ -62,17 +62,17 @@ Bước đến số 45 Trương Định, du khách sẽ ngay lập tức nhận 
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Tháp Cổng Gopuram: Chiếc Thang Nối Liền Trần Thế Và Thần Linh
+### Tháp Cổng Gopuram: Chiếc Thang Nối Liền Trần Thế Và Thần Linh
 Mặt tiền đền nổi bật với ngọn tháp cổng **Gopuram** hình kim tự tháp bậc thang vươn cao lên bầu trời. Tháp được chia thành nhiều tầng, mỗi tầng được phủ kín bởi các pho tượng thần linh Hindu được tạc nổi tinh xảo: Thần Sáng tạo Brahma, Thần Bảo hộ Vishnu, Thần Hủy diệt và Tái sinh Shiva, Thần Đầu voi Ganesha biểu trưng cho trí tuệ, cùng các vũ nữ thiên giới Apsara mềm mại trong những tư thế múa linh thiêng. Tất cả đều được sơn phết bằng các gam màu nguyên bản rực rỡ như vàng nghệ, xanh ngọc bích, đỏ son và trắng ngà.
 
-### 2.2. Không Gian Chánh Điện: Nơi Tọa Lạc Của Nữ Thần Mariamman
+### Không Gian Chánh Điện: Nơi Tọa Lạc Của Nữ Thần Mariamman
 Bước qua ngưỡng cửa gỗ nặng nề, bạn sẽ bước vào một hành lang mát rượi lợp mái vòm cao vút. Gian chánh điện đặt trang trọng pho tượng **Nữ thần Mariamman** bằng đá đen nguyên bản, khoác xiêm y lụa truyền thống rực rỡ sắc vàng và đeo tràng hoa cúc vạn thọ tươi thắm. Trong thần thoại Hindu giáo, Mariamman là hiện thân của Nữ thần Parvati – vị Mẹ Đất mang lại những cơn mưa mát lành cho mùa màng trù phú, ban phát sức khỏe, xua đuổi bệnh tật và che chở cho hạnh phúc gia đình.
 
 Hai bên tả hữu của Nữ thần là tượng hai vị thần hộ pháp uy nghi Maduraiveeran và Pechiamman. Bao quanh chánh điện là hệ thống các khám thờ nhỏ dành cho Thần Ganesha, Thần Murugan (Subramanya), Thần Shiva và cỗ xe thần linh Bạc (Silver Chariot) dùng trong các dịp đại lễ rước kiệu.
 
 ---
 
-## 3. Nghi Thức Áp Đá Thiêng: Hiện Tượng Giao Thoa Văn Hóa Độc Bản
+## Nghi Thức Áp Đá Thiêng: Hiện Tượng Giao Thoa Văn Hóa Độc Bản
 
 Điều kỳ diệu nhất tại Đền Mariamman không chỉ nằm ở kiến trúc, mà nằm ở nghi thức chiêm bái độc nhất vô nhị chỉ có tại Sài Gòn.
 
@@ -82,7 +82,7 @@ Theo quan niệm tâm linh bản địa, bức tường đá này hấp thụ tr
 
 ---
 
-## 4. Bảng So Sánh Các Điểm Nhấn Tâm Linh Trong Đền Mariamman
+## Bảng So Sánh Các Điểm Nhấn Tâm Linh Trong Đền Mariamman
 
 | Không Gian | Vị Trí | Đối Tượng Thờ Phụng / Hiện Vật | Trải Nghiệm Tâm Linh |
 | :--- | :--- | :--- | :--- |
@@ -94,7 +94,7 @@ Theo quan niệm tâm linh bản địa, bức tường đá này hấp thụ tr
 
 ---
 
-## 5. Cẩm Nang Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
+## Cẩm Nang Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
 
 - **Quy tắc cởi giày bắt buộc:** Đền Hindu giáo yêu cầu 100% du khách phải cởi bỏ giày, dép và để gọn gàng trên kệ gỗ đặt ngay trước ngưỡng cửa vào đền.
 - **Trang phục kín đáo:** Mặc áo có tay, quần hoặc váy dài quá đầu gối. Tránh mặc quần áo quá ngắn, hở vai hoặc đồ bó sát khi bước vào không gian tôn nghiêm.

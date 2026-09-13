@@ -59,7 +59,7 @@ epilogue: "Navigating the lively bustle of Ha Tam Gold Shop is an essential ritu
 
 ---
 
-## 1. Introduction: Saigon's Miniature Financial Street
+## Introduction: Saigon's Miniature Financial Street
 
 Ask any seasoned expatriate, diplomat, or frequent international traveler where to secure the absolute best currency exchange rates in Ho Chi Minh City, and nine out of ten will point you to the same bustling intersection: **Ha Tam Gold Shop** (*Tiem Vang Ha Tam*), nestled at the corner of Nguyen An Ninh and Phan Chu Trinh streets directly across from Ben Thanh Market's West Gate.
 
@@ -69,7 +69,7 @@ However, carrying substantial physical currency in a bustling marketplace demand
 
 ---
 
-## 2. Ha Tam vs. Mai Van: The West Gate Twin Titans
+## Ha Tam vs. Mai Van: The West Gate Twin Titans
 
 Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants dominate the currency exchange landscape:
 
@@ -91,7 +91,7 @@ Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants do
 
 ---
 
-## 3. Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport
+## Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport
 
 | Evaluation Criteria | Ha Tam Gold Shop (Ben Thanh) | Commercial Banks (Vietcombank, BIDV) | Airport Exchange Kiosks (SGN Airport) |
 | :--- | :--- | :--- | :--- |
@@ -103,25 +103,25 @@ Along the narrow corridor of Nguyen An Ninh Street, two legacy gold merchants do
 
 ---
 
-## 4. Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)
+## Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)
 
 Nearly 80% of foreign travelers are unaware that Vietnamese currency merchants enforce rigorous physical standards for paper cash:
 
-### 1. The USD "Big Head" vs. "Small Head" Reality
+### The USD "Big Head" vs. "Small Head" Reality
 - **Older Series USD (Small Head - Pre-2003/2006):** 100 USD bills featuring the smaller portrait of Benjamin Franklin are either rejected outright or discounted by 100,000 – 300,000 VND ($4 – $12) per note due to counterfeit vulnerability.
 - **New Series USD (Big Head / 3D Blue Security Ribbon - 2013 Series onward):** Guaranteed to receive top-tier, prime exchange quotes. Always request crisp, modern notes from your home bank before traveling.
 
-### 2. Physical Condition of Paper Currency
+### Physical Condition of Paper Currency
 - Ha Tam inspects notes with both ultraviolet light and keen tactile scrutiny. Banknotes that are **torn, pinholed, stamped with ink, annotated with ballpoint pen, stained with oil, or showing heavy mold** will be refused or assessed a 5% – 10% restoration surcharge.
 - *Pro-Tip:* Store foreign bills unfolded inside a flat travel wallet or rigid envelope; avoid folding them into tight rolls.
 
-### 3. Large Denominations Yield Superior Rates
+### Large Denominations Yield Superior Rates
 - $100 and $50 USD notes receive the maximum exchange value.
 - Lower denominations ($1, $5, $10, $20) command slightly lower conversion tiers. This tiering applies equally to Euro and Japanese Yen.
 
 ---
 
-## 5. Five-Step Security Protocol for Large Cash Transactions
+## Five-Step Security Protocol for Large Cash Transactions
 
 Given the dense foot traffic surrounding Nguyen An Ninh Street, opportunistic petty thieves occasionally monitor exchange counters. Adhere strictly to this 5-step safety drill:
 

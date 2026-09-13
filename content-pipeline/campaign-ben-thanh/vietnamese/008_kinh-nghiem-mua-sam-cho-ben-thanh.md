@@ -33,7 +33,7 @@ Là một điểm nhấn thực chiến không thể bỏ lỡ trong cẩm nang 
 
 ---
 
-## 1. Sơ Đồ 4 Phân Khu Hàng Hóa Theo 4 Cửa Chính
+## Sơ Đồ 4 Phân Khu Hàng Hóa Theo 4 Cửa Chính
 
 Để không bị lạc lối giữa ma trận hàng hóa, người du hành thông thái cần nắm rõ bản đồ phân bố các ngành hàng theo 4 hướng cổng chính:
 
@@ -46,21 +46,21 @@ graph TD
     Market --> North["CỬA BẮC: Hoa tươi nhiệt đới, Trái cây đặc sản (Sầu riêng Ri6, Bưởi da xanh)"]
 ```
 
-### 1.1. Cửa Nam (Đường Lê Lợi): Không Gian Vải Vóc & Nghệ Thuật Thủ Công
+### Cửa Nam (Đường Lê Lợi): Không Gian Vải Vóc & Nghệ Thuật Thủ Công
 Cửa Nam là mặt tiền biểu tượng với tháp đồng hồ. Bước vào đây, bạn sẽ choáng ngợp trước những cuộn lụa tơ tằm óng ả, gấm hoa, voan thêu tay tinh xảo. Nơi đây quy tụ các nhà may gia truyền cung cấp dịch vụ chọn vải và may đo áo dài lấy ngay chỉ sau 12 – 24 tiếng với độ chuẩn xác tuyệt vời về phom dáng. Bên cạnh đó là các gian hàng trưng bày đồ sơn mài dát vàng, khảm trai và tranh thêu tay nghệ thuật.
 
-### 1.2. Cửa Đông (Đường Phan Bội Châu): Hương Vị Nông Sản & Trầm Tích Đồ Khô
+### Cửa Đông (Đường Phan Bội Châu): Hương Vị Nông Sản & Trầm Tích Đồ Khô
 Khu vực ngạt ngào mùi hương của những hạt cà phê Robusta Buôn Ma Thuột và Arabica Cầu Đất rang mộc tại chỗ. Nơi đây bày bán các loại hạt cao cấp như hạt điều Bình Phước nguyên vỏ lụa, mắc ca Tây Nguyên, tiêu sọ Phú Quốc và các loại đặc sản cá khô, mực khô một nắng Cần Giờ được đóng gói hút chân không tiêu chuẩn lữ hành quốc tế.
 
-### 1.3. Cửa Tây (Đường Phan Chu Trinh): Thế Giới Phụ Kiện Thủ Công
+### Cửa Tây (Đường Phan Chu Trinh): Thế Giới Phụ Kiện Thủ Công
 Nếu bạn đang tìm kiếm những chiếc túi xách đan bằng mây tre mộc mạc, ví da thuộc thủ công hay những chiếc nón lá vẽ phong cảnh sông nước miền Tây, Cửa Tây chính là thiên đường dành cho bạn.
 
-### 1.4. Cửa Bắc (Đường Lê Thánh Tôn): Sắc Màu Nông Sản Tươi Rói
+### Cửa Bắc (Đường Lê Thánh Tôn): Sắc Màu Nông Sản Tươi Rói
 Thiên đường của các loài hoa quả nhiệt đới tươi ngon chuyển trực tiếp từ miệt vườn Tiền Giang, Bến Tre trong đêm: sầu riêng Ri6 cơm vàng hạt lép, măng cụt Lái Thiêu, xoài cát Hòa Lộc và thanh long Bình Thuận rực rỡ sắc màu.
 
 ---
 
-## 2. Nghệ Thuật Trả Giá Văn Minh: "Bargaining With Grace"
+## Nghệ Thuật Trả Giá Văn Minh: "Bargaining With Grace"
 
 Trả giá tại chợ truyền thống không phải là một cuộc chiến giành giật từng đồng, mà là sự giao tế duyên dáng. Hãy ghi nhớ 4 nguyên tắc vàng sau:
 
@@ -75,19 +75,19 @@ Trả giá tại chợ truyền thống không phải là một cuộc chiến g
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Tôn Trọng "Vía Mở Hàng" Buổi Sáng Sớm
+### Tôn Trọng "Vía Mở Hàng" Buổi Sáng Sớm
 Người tiểu thương phương Nam rất coi trọng người khách mua đầu tiên trong ngày (từ 07:00 đến 08:30 sáng). Họ tin rằng vị khách mở hàng vui vẻ, xởi lởi sẽ đem lại may mắn cho cả ngày buôn bán. Do đó, nếu bạn ghé chợ vào khung giờ này, hãy tránh mặc cả quá gắt gao hoặc nâng lên đặt xuống nhiều lần mà không mua. Nếu muốn trải nghiệm cảm giác trả giá thong thả, hãy ghé sau 09:30 sáng.
 
-### 2.2. Biên Độ Thương Lượng Hợp Lý: 15% – 25%
+### Biên Độ Thương Lượng Hợp Lý: 15% – 25%
 Tại Chợ Bến Thành, nhiều sạp hàng (đặc biệt là hàng lưu niệm và vải vóc) có niêm yết mức giá chào ban đầu cao hơn giá bán thực tế để dự trù khoảng thương lượng cho du khách. Mức trả giá lý tưởng là giảm từ **15% đến 25%**. 
 - *Mẹo nhỏ:* Hãy mỉm cười, bắt đầu bằng câu nói thân thiện: *"Chị ơi, em mua kỷ niệm, chị bớt cho em chút lộc may mắn nhé!"*. Nụ cười chân thành luôn có sức mạnh hơn bất kỳ sự đôi co nào.
 
-### 2.3. Quy Tắc Rời Đi Nhẹ Nhàng (Walk Away Technique)
+### Quy Tắc Rời Đi Nhẹ Nhàng (Walk Away Technique)
 Nếu mức giá người bán đưa ra vẫn chưa đạt tới con số mong muốn của bạn, hãy mỉm cười, cúi đầu cảm ơn lịch sự và thong thả bước sang gian hàng khác. Trong rất nhiều trường hợp, tiểu thương sẽ vui vẻ gọi bạn quay lại và chấp nhận mức giá bạn đã đề nghị.
 
 ---
 
-## 3. Cẩm Nang Phân Biệt Hàng Thủ Công Cao Cấp vs Hàng Công Nghiệp
+## Cẩm Nang Phân Biệt Hàng Thủ Công Cao Cấp vs Hàng Công Nghiệp
 
 | Mặt Hàng | Dấu Hiệu Nhận Biết Hàng Thủ Công Thật | Cảnh Báo Hàng Công Nghiệp Kém Chất Lượng |
 | :--- | :--- | :--- |
@@ -98,7 +98,7 @@ Nếu mức giá người bán đưa ra vẫn chưa đạt tới con số mong m
 
 ---
 
-## 4. Quyền Lợi Của Người Mua Sắm Tại Chợ Bến Thành 2026
+## Quyền Lợi Của Người Mua Sắm Tại Chợ Bến Thành 2026
 
 1. **Kiểm tra trọng lượng tại cân đối chứng:** Nếu mua các mặt hàng nông sản, trái cây hoặc hải sản khô theo trọng lượng (kilogram), bạn có thể mang ngay ra bàn cân đối chứng điện tử tại 4 cửa cổng để kiểm tra lại. Ban Quản lý chợ xử lý rất nghiêm khắc các trường hợp cân thiếu.
 2. **Hệ thống phản ánh du khách 24/7:** Tại mỗi dãy sạp đều có dán mã QR và số điện thoại đường dây nóng của Tổ Quản lý Thị trường Quận 1 và Ban Quản lý Chợ. Mọi tranh chấp về thái độ phục vụ hay giá cả đều được can thiệp giải quyết tức thì.

@@ -60,7 +60,7 @@ featured_image: "https://media.thericetour.com/uploads/hotel-continental-saigon.
 
 ---
 
-## 1. Introduction: Hospitality Imbued with Heritage
+## Introduction: Hospitality Imbued with Heritage
 
 For the voyager who journeys with intention, an urban retreat is not merely a logistical necessity—it is an intimate prism through which a metropolis reveals its spirit. While Saigon’s modern skyline bristles with standardized corporate steel towers, the city’s authentic character lingers along the leafy avenues surrounding Ben Thanh Market. Here, hidden behind antique timber casements and cascading tropical philodendrons, a curated collection of boutique design hotels and restored colonial mansions offers a sophisticated refuge from the kinetic street level.
 
@@ -68,7 +68,7 @@ In these sanctuaries, every encaustic cement tile pressed in historic Mekong kil
 
 ---
 
-## 2. Core Hallmarks of a Bespoke Saigon Boutique Hotel
+## Core Hallmarks of a Bespoke Saigon Boutique Hotel
 
 To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:
 
@@ -90,11 +90,11 @@ To be certified as a premier design sanctuary within our editorial collection, a
 
 ---
 
-## 3. Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh
+## Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh
 
 Here are the five preeminent boutique addresses evaluated and recommended for the 2026 season:
 
-### 1. The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia
+### The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia
 Stationed along quiet Ho Huan Nghiep Street connecting Dong Khoi with the Saigon River, The Myst is an architectural triumph celebrating the 200-year legacy of Saigon’s historic Ba Son naval shipyards.
 
 - **Coordinates:** 6–8 Ho Huan Nghiep Street, Ben Nghe Ward, District 1 (850m from Ben Thanh).
@@ -102,7 +102,7 @@ Stationed along quiet Ho Huan Nghiep Street connecting Dong Khoi with the Saigon
 - **Signature Amenity:** A 14th-floor turquoise mosaic rooftop lap pool, complemented by a lavish, complimentary afternoon high tea buffet served daily to all in-house guests.
 - **2026 Tariff Baseline:** 3,800,000 – 6,500,000 VND / night.
 
-### 2. Silverland Yen Hotel – A Zen Oasis Behind the North Gate
+### Silverland Yen Hotel – A Zen Oasis Behind the North Gate
 Tucked on tree-lined Thu Khoa Huan Street, merely three minutes on foot from Ben Thanh’s North Portal and the shaded green lawns of Tao Dan Park, Silverland Yen delivers an atmosphere of serene, minimalist mindfulness.
 
 - **Coordinates:** 73–75 Thu Khoa Huan Street, Ben Thanh Ward, District 1 (250m from the market).
@@ -110,7 +110,7 @@ Tucked on tree-lined Thu Khoa Huan Street, merely three minutes on foot from Ben
 - **Signature Amenity:** A rooftop open-air heated Jacuzzi offering direct perspectives toward Ben Thanh’s clocktower, coupled with afternoon tea with live acoustic melodies.
 - **2026 Tariff Baseline:** 2,200,000 – 3,800,000 VND / night.
 
-### 3. Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)
+### Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)
 The immortal icon of French colonial hospitality, occupying prime frontage on Dong Khoi Street opposite the Saigon Opera House. It famously sheltered novelist Graham Greene while he penned his masterpiece *The Quiet American*.
 
 - **Coordinates:** 132–134 Dong Khoi Street, Ben Nghe Ward, District 1 (750m from Ben Thanh).
@@ -118,7 +118,7 @@ The immortal icon of French colonial hospitality, occupying prime frontage on Do
 - **Historical Ritual:** Savoring a morning espresso at the street-level Continental Corner terrace, observing the parade of city life just as correspondents did in the 1950s.
 - **2026 Tariff Baseline:** 3,200,000 – 5,500,000 VND / night.
 
-### 4. La Siesta Premium Sai Gon – Sophisticated Indochine Glamour
+### La Siesta Premium Sai Gon – Sophisticated Indochine Glamour
 Located along Ly Tu Trong Street, La Siesta Premium encapsulates the zenith of Neo-Indochine elegance, layering deep emerald greens with midnight lacquer timber and polished brass appointments.
 
 - **Coordinates:** 180–188 Ly Tu Trong Street, Ben Thanh Ward, District 1 (350m from the market).
@@ -126,7 +126,7 @@ Located along Ly Tu Trong Street, La Siesta Premium encapsulates the zenith of N
 - **Signature Amenity:** A breathtaking 12th-floor sky bar and infinity horizon pool framing panoramic sunset vistas across District 1.
 - **2026 Tariff Baseline:** 2,800,000 – 4,800,000 VND / night.
 
-### 5. Fusion Original Saigon Centre – Modernist Artistry on the Metro Line
+### Fusion Original Saigon Centre – Modernist Artistry on the Metro Line
 Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on Le Loi Boulevard, offering direct indoor climate-controlled access to the Ben Thanh Metro Station concourse.
 
 - **Coordinates:** 65 Le Loi Boulevard, Ben Nghe Ward, District 1 (200m from Ben Thanh).
@@ -136,7 +136,7 @@ Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on
 
 ---
 
-## 4. Comparative Matrix: Premier Sanctuaries at a Glance
+## Comparative Matrix: Premier Sanctuaries at a Glance
 
 | Sanctuary Name | Walking Distance to Market | Design Aesthetic | Key Differentiating Highlight | 2026 Tariff Baseline (VND) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -148,7 +148,7 @@ Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on
 
 ---
 
-## 5. Strategic Reservation Guidance for the Discerning Guest
+## Strategic Reservation Guidance for the Discerning Guest
 
 1. **Advance Booking during the Dry Season (Nov – Apr):** Due to the limited room count of boutique properties (typically 50–100 suites), premier river-view and balcony categories sell out 3 to 5 weeks ahead.
 2. **Requesting High Floor Balcony Suites:** When confirming your reservation, request an upper-floor placement with an exterior balcony overlooking either interior green gardens or leafy boulevards for maximum natural ventilation.
@@ -156,6 +156,6 @@ Occupying upper levels of the prestigious Saigon Centre (Takashimaya) complex on
 
 ---
 
-## 6. Epilogue: Awakening to Saigon’s Living Grace
+## Epilogue: Awakening to Saigon’s Living Grace
 
 After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself.

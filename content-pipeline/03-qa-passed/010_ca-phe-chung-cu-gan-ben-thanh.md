@@ -23,7 +23,7 @@ audit_notes: "Audit passed. Zero clickbait/banned terms. Verified apartment coor
 
 ---
 
-## 1. Dẫn Nhập: Sức Hút Của Những "Tổ Chim Cú" Trên Tầng Lầu Cổ
+## Dẫn Nhập: Sức Hút Của Những "Tổ Chim Cú" Trên Tầng Lầu Cổ
 
 Nếu có một nét văn hóa độc bản định hình sâu sắc phong cách sống của người Sài Gòn, đó không phải là những chuỗi cà phê máy lạnh bóng bẩy trên các mặt tiền đắt đỏ, mà chính là những quán cà phê chung cư nép mình sau những vách tường vôi bong tróc và hành lang hẹp bảng lảng bóng thời gian. Trong bán kính đi bộ chưa đầy 10 phút quanh Chợ Bến Thành, những khối nhà chung cư được xây dựng từ giữa thế kỷ 20—từng là cư xá của công chức, thương nhân hay sĩ quan thời kỳ trước—nay đã âm thầm lột xác thành những không gian nghệ thuật, xưởng gốm và quán cà phê mang đầy cá tính sáng tạo.
 
@@ -31,7 +31,7 @@ Bước qua cánh cổng sắt hoen rỉ, bỏ lại sau lưng dòng xe cộ huy
 
 ---
 
-## 2. Nguồn Gốc Lịch Sử: Sự Tái Sinh Của Các Khu Cư Xá Trung Tâm
+## Nguồn Gốc Lịch Sử: Sự Tái Sinh Của Các Khu Cư Xá Trung Tâm
 
 Hiện tượng biến đổi chung cư cũ thành không gian cà phê độc lập tại Sài Gòn bắt đầu nhen nhóm từ đầu những năm 2010 và đạt đến độ chín muồi về thẩm mỹ vào giai đoạn 2025–2026. Thay vì đập bỏ để xây dựng các khối tháp bê tông đồng dạng, những kiến trúc sư và nghệ sĩ trẻ Sài Gòn đã chọn cách "tái sinh di sản" (adaptive reuse).
 
@@ -52,11 +52,11 @@ Hiện tượng biến đổi chung cư cũ thành không gian cà phê độc l
 
 ---
 
-## 3. Top 4 Tòa Chung Cư Cà Phê Di Sản Tiêu Biểu Quanh Bến Thành
+## Top 4 Tòa Chung Cư Cà Phê Di Sản Tiêu Biểu Quanh Bến Thành
 
 Dưới đây là 4 tọa độ chung cư cổ kính giàu bản sắc nhất nằm trong bán kính đi bộ thảnh thơi từ Chợ Bến Thành:
 
-### 1. Chung Cư 42 Tôn Thất Thiệp – Không Gian Nghệ Thuật & Hoài Niệm
+### Chung Cư 42 Tôn Thất Thiệp – Không Gian Nghệ Thuật & Hoài Niệm
 Cách Chợ Bến Thành chỉ 400 mét, tòa chung cư này từng là cư xá thương mại sầm uất kế bên ngôi đền Hindu Sri Thenday Yuttha Pani. Lối vào là một con hẻm nhỏ với cầu thang xi măng uốn lượn không tay vịn sắt, nhuốm màu rêu phong hoài cổ.
 
 - **Vị trí:** Số 42 Tôn Thất Thiệp, Phường Bến Nghé, Quận 1.
@@ -64,7 +64,7 @@ Cách Chợ Bến Thành chỉ 400 mét, tòa chung cư này từng là cư xá 
 - **Góc trải nghiệm đắt giá:** Ngồi bên ô cửa sổ tầng 2 hoặc tầng 3 nhìn xuống tán me rợp bóng trên đường Tôn Thất Thiệp, ngắm nhìn những tà áo dài lướt qua dưới ánh nắng chiều muộn.
 - **Món nước gợi ý:** Cà phê trứng béo ngậy đánh bông mịn hoặc Cà phê phin sữa đá ủ lạnh (Cold Drip) dùng kèm bánh quy bơ gừng.
 
-### 2. Chung Cư 26 Lý Tự Trọng – Điểm Hẹn Của Giới Sáng Tạo
+### Chung Cư 26 Lý Tự Trọng – Điểm Hẹn Của Giới Sáng Tạo
 Nằm ngay góc ngã tư Lý Tự Trọng và Đồng Khởi, đối diện trung tâm mua sắm Vincom, tòa nhà này là một trong những khối chung cư thuộc địa kiên cố nhất khu vực trung tâm với chiếc thang máy lồng sắt cổ điển có tuổi đời ngót trăm năm.
 
 - **Vị trí:** Số 26 Lý Tự Trọng, Phường Bến Nghé, Quận 1 (cách Chợ Bến Thành 650m).
@@ -72,7 +72,7 @@ Nằm ngay góc ngã tư Lý Tự Trọng và Đồng Khởi, đối diện trun
 - **Góc trải nghiệm đắt giá:** Không gian tầng 1 và tầng 2 với trần lộ dầm thép nguyên bản, những khung cửa sổ vòm kính rộng mở nhìn thẳng sang tán cây cổ thụ của Công trường Chi Lăng.
 - **Món nước gợi ý:** Single Origin Pour-over (hạt Arabica chế biến ướt Cầu Đất) và Cà phê ủ lạnh ngâm vỏ cam vàng hữu cơ.
 
-### 3. Chung Cư 14 Tôn Thất Đạm – Nốt Trầm Lắng Đọng Bên Bờ Kênh
+### Chung Cư 14 Tôn Thất Đạm – Nốt Trầm Lắng Đọng Bên Bờ Kênh
 Chung cư 14 Tôn Thất Đạm là khối kiến trúc Pháp cổ kính mang vẻ đẹp u hoài và điện ảnh nhất Sài Gòn. Từng là trụ sở ngân hàng và nhà ở chuyên gia thời Đông Dương, nơi đây giữ trọn vẹn từng chấn song sắt hoa văn duyên dáng và bậc cầu thang gỗ thông cổ thụ.
 
 - **Vị trí:** Số 14 Tôn Thất Đạm, Phường Nguyễn Thái Bình, Quận 1 (cách Bến Thành 750m, gần Ngân hàng Nhà nước).
@@ -80,7 +80,7 @@ Chung cư 14 Tôn Thất Đạm là khối kiến trúc Pháp cổ kính mang v�
 - **Góc trải nghiệm đắt giá:** Ban công hướng về đại lộ Võ Văn Kiệt và dòng kênh Bến Nghé lấp lánh ánh hoàng hôn, nhìn ngắm tháp tài chính Bitexco sừng sững đối lập ngay sau lưng tòa nhà cũ.
 - **Món nước gợi ý:** Cà phê muối béo mặn tinh tế, trà sen ướp lạnh và yaourt dẻo cốt dừa nướng.
 
-### 4. Dãy Cư Xá Ban Công Đường Pasteur & Lê Lợi
+### Dãy Cư Xá Ban Công Đường Pasteur & Lê Lợi
 Nằm ngay trên trục đại lộ trung tâm dẫn thẳng vào mặt tiền Chợ Bến Thành, những căn hộ tầng lửng tại đây sở hữu ban công hoa sắt hướng thẳng tầm mắt về tháp đồng hồ chợ và quảng trường Quách Thị Trang.
 
 - **Vị trí:** Các số nhà 158 Pasteur và 130 Lê Lợi, Quận 1.
@@ -89,7 +89,7 @@ Nằm ngay trên trục đại lộ trung tâm dẫn thẳng vào mặt tiền C
 
 ---
 
-## 4. Ma Trận Đồ Uống: Từ Phin Truyền Thống Đến Cà Phê Thủ Công Đương Đại
+## Ma Trận Đồ Uống: Từ Phin Truyền Thống Đến Cà Phê Thủ Công Đương Đại
 
 Các quán cà phê chung cư quanh Bến Thành năm 2026 không chỉ đầu tư vào không gian mà còn là nơi thăng hoa của nghệ thuật pha chế:
 
@@ -103,7 +103,7 @@ Các quán cà phê chung cư quanh Bến Thành năm 2026 không chỉ đầu t
 
 ---
 
-## 5. Cẩm Nang Văn Hóa Ứng Xử Cho Người Lữ Khách Tinh Tế
+## Cẩm Nang Văn Hóa Ứng Xử Cho Người Lữ Khách Tinh Tế
 
 Chung cư cũ là không gian sống đan xen giữa các hộ dân bản địa lớn tuổi và những cơ sở kinh doanh trẻ. Để trải nghiệm diễn ra văn minh và trọn vẹn, hãy lưu ý:
 
@@ -119,6 +119,6 @@ Chung cư cũ là không gian sống đan xen giữa các hộ dân bản địa
 
 ---
 
-## 6. Lời Kết: Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ
+## Lời Kết: Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ
 
 Trong một thế giới vận hành ngày càng vội vã, những quán cà phê chung cư cổ quanh Bến Thành như một chiếc mỏ neo thời gian, giữ lại cho Sài Gòn một phần ký ức êm đềm và nguyên bản nhất. Ngồi bên chiếc bàn gỗ cũ, nhấp một ngụm cà phê thơm nồng và lắng nghe tiếng còi xe vọng lại từ phía quảng trường, bạn sẽ hiểu vì sao người Sài Gòn có thể ngồi hàng giờ đồng hồ bên một ly cà phê—không phải để giết thời gian, mà là để cảm nhận cuộc sống đang chảy tràn trong từng nhịp thở dịu dàng của phố thị.

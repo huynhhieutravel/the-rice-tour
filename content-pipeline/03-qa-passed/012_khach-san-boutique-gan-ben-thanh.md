@@ -23,7 +23,7 @@ audit_notes: "Checked 100% compliance. Zero banned words. Verified 2026 hotel ta
 
 ---
 
-## 1. Dẫn Nhập: Trải Nghiệm Lưu Trú Mang Chiều Sâu Văn Hóa
+## Dẫn Nhập: Trải Nghiệm Lưu Trú Mang Chiều Sâu Văn Hóa
 
 Đối với người lữ khách có "GUU", một chuyến chu du đến Sài Gòn không đơn thuần là việc tìm kiếm một chốn ngả lưng sau ngày dài di chuyển. Khách sạn chính là tấm gương phản chiếu tâm hồn của vùng đất, là nơi bắt đầu và kết thúc của mọi cảm xúc. Thay vì chọn những khối bê tông vô hồn của các tập đoàn khách sạn thương mại tiêu chuẩn hóa, những du khách sành sỏi luôn hướng về những khách sạn boutique và dinh thự di sản nép mình trên những cung đường rợp bóng me quanh Chợ Bến Thành.
 
@@ -31,7 +31,7 @@ Tại đây, mỗi viên gạch bông lát sàn, mỗi cánh cửa chớp gỗ s
 
 ---
 
-## 2. Tiêu Chuẩn Lựa Chọn Khách Sạn Boutique Chuẩn "GUU"
+## Tiêu Chuẩn Lựa Chọn Khách Sạn Boutique Chuẩn "GUU"
 
 Một khách sạn boutique di sản xuất sắc quanh Chợ Bến Thành phải đáp ứng những tiêu chí khắt khe:
 
@@ -53,11 +53,11 @@ Một khách sạn boutique di sản xuất sắc quanh Chợ Bến Thành phả
 
 ---
 
-## 3. Top 5 Khách Sạn Boutique & Di Sản Xuất Sắc Nhất Quanh Bến Thành
+## Top 5 Khách Sạn Boutique & Di Sản Xuất Sắc Nhất Quanh Bến Thành
 
 Dưới đây là 5 biểu tượng lưu trú hàng đầu được The Rice Tour tuyển chọn và kiểm định thực địa:
 
-### 1. The Myst Dong Khoi – Bản Tình Ca Đóng Tàu Ba Son & Hồn Phố Cổ
+### The Myst Dong Khoi – Bản Tình Ca Đóng Tàu Ba Son & Hồn Phố Cổ
 Nằm trên con đường Hồ Huấn Nghiệp êm đềm nối liền Đồng Khởi và bờ sông Sài Gòn, The Myst là một kiệt tác kiến trúc tôn vinh ký ức của xưởng đóng tàu thủy Ba Son lừng lẫy 200 năm tuổi.
 
 - **Vị trí:** 6–8 Hồ Huấn Nghiệp, Phường Bến Nghé, Quận 1 (cách Bến Thành 850m).
@@ -65,7 +65,7 @@ Nằm trên con đường Hồ Huấn Nghiệp êm đềm nối liền Đồng K
 - **Tiện ích độc bản:** Hồ bơi vô cực ốp đá mosaic xanh ngọc trên tầng 14, tiệc trà chiều cao cấp miễn phí mỗi ngày dành cho mọi khách lưu trú.
 - **Mức giá tham khảo 2026:** 3.800.000 – 6.500.000 VNĐ / đêm.
 
-### 2. Silverland Yen Hotel – Ốc Đảo Tĩnh Lặng Sau Lưng Chợ Bến Thành
+### Silverland Yen Hotel – Ốc Đảo Tĩnh Lặng Sau Lưng Chợ Bến Thành
 Tọa lạc trên đường Thủ Khoa Huân rợp bóng cây xanh, chỉ cách Cửa Bắc Chợ Bến Thành và Công viên Tao Đàn 3 phút đi bộ, Silverland Yen là chốn ẩn mình hoàn hảo mang phong cách thiền định phương Đông (Zen Modern).
 
 - **Vị trí:** 73–75 Thủ Khoa Huân, Phường Bến Thành, Quận 1 (cách chợ 250m).
@@ -73,7 +73,7 @@ Tọa lạc trên đường Thủ Khoa Huân rợp bóng cây xanh, chỉ cách 
 - **Tiện ích độc bản:** Bể sục Jacuzzi ngoài trời trên tầng thượng nhìn thẳng sang tháp đồng hồ Bến Thành, phòng xông hơi thảo mộc và tiệc trà chiều ấm cúng.
 - **Mức giá tham khảo 2026:** 2.200.000 – 3.800.000 VNĐ / đêm.
 
-### 3. Hotel Continental Saigon – Khách Sạn Cổ Kính Nhất Việt Nam (Khánh Thành 1880)
+### Hotel Continental Saigon – Khách Sạn Cổ Kính Nhất Việt Nam (Khánh Thành 1880)
 Biểu tượng bất tử của kiến trúc thuộc địa Pháp, tọa lạc tại vị trí vàng số 132 Đồng Khởi, đối diện Nhà hát Lớn Thành phố. Nơi đây từng là chốn lưu trú của đại văn hào Graham Greene khi ông chắp bút viết nên tiểu thuyết kinh điển "Người Mỹ trầm lặng".
 
 - **Vị trí:** 132–134 Đồng Khởi, Phường Bến Nghé, Quận 1 (cách Bến Thành 750m).
@@ -81,7 +81,7 @@ Biểu tượng bất tử của kiến trúc thuộc địa Pháp, tọa lạc 
 - **Trải nghiệm lịch sử:** Ngồi nhâm nhi tách cà phê tại quán Continental Corner ngoài hàng hiên, ngắm dòng người qua lại trên đại lộ Đồng Khởi như những chính khách thế kỷ trước.
 - **Mức giá tham khảo 2026:** 3.200.000 – 5.500.000 VNĐ / đêm.
 
-### 4. La Siesta Premium Sai Gon – Đẳng Cấp Indochine Quyến Rũ
+### La Siesta Premium Sai Gon – Đẳng Cấp Indochine Quyến Rũ
 Nằm trên đường Lý Tự Trọng, La Siesta Premium mang trọn vẹn tinh hoa của nghệ thuật trang trí Đông Dương (Indochine Glamour) với tone màu xanh ngọc lục bảo kết hợp gỗ đen mun và chi tiết đồng thau mạ vàng.
 
 - **Vị trí:** 180–188 Lý Tự Trọng, Phường Bến Thành, Quận 1 (cách chợ 350m).
@@ -89,7 +89,7 @@ Nằm trên đường Lý Tự Trọng, La Siesta Premium mang trọn vẹn tinh
 - **Tiện ích độc bản:** Sky Bar tầng thượng và hồ bơi chân mây ngắm trọn vẹn hoàng hôn buông xuống trung tâm Quận 1.
 - **Mức giá tham khảo 2026:** 2.800.000 – 4.800.000 VNĐ / đêm.
 
-### 5. Fusion Original Saigon Centre – Phong Cách Đương Đại Trên Tuyến Metro
+### Fusion Original Saigon Centre – Phong Cách Đương Đại Trên Tuyến Metro
 Nằm bên trong tòa tháp phức hợp Saigon Centre (Takashimaya) trên đại lộ Lê Lợi, kết nối trực tiếp với ga ngầm Metro Bến Thành qua hầm đi bộ ngầm hiện đại.
 
 - **Vị trí:** 65 Lê Lợi, Phường Bến Nghé, Quận 1 (cách Bến Thành 200m).
@@ -99,7 +99,7 @@ Nằm bên trong tòa tháp phức hợp Saigon Centre (Takashimaya) trên đạ
 
 ---
 
-## 4. Bảng So Sánh Chi Tiết Các Khách Sạn Boutique Quanh Bến Thành
+## Bảng So Sánh Chi Tiết Các Khách Sạn Boutique Quanh Bến Thành
 
 | Tên Khách Sạn | Cự Ly Đến Bến Thành | Phong Cách Kiến Trúc | Tiện Ích Độc Đáo | Mức Giá Tham Khảo (2026) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -111,7 +111,7 @@ Nằm bên trong tòa tháp phức hợp Saigon Centre (Takashimaya) trên đạ
 
 ---
 
-## 5. Kinh Nghiệm Đặt Phòng & Đặc Quyền Dành Cho Khách "Có GUU"
+## Kinh Nghiệm Đặt Phòng & Đặc Quyền Dành Cho Khách "Có GUU"
 
 1. **Đặt phòng sớm trước 3–4 tuần trong mùa cao điểm:** Mùa khô Sài Gòn (tháng 12 đến tháng 4) và các dịp lễ lớn là thời điểm các khách sạn boutique di sản luôn trong tình trạng kín phòng do số lượng phòng giới hạn.
 2. **Yêu cầu phòng có ban công hoặc view mở:** Khi đặt phòng, hãy ghi chú yêu cầu tầng cao (high floor) hoặc phòng có ban công mở nhìn ra khoảng xanh cây xanh để tận hưởng trọn vẹn luồng gió tự nhiên.
@@ -119,6 +119,6 @@ Nằm bên trong tòa tháp phức hợp Saigon Centre (Takashimaya) trên đạ
 
 ---
 
-## 6. Lời Kết: Chạm Vào Giấc Mơ Đông Dương Giữa Lòng Thành Phố
+## Lời Kết: Chạm Vào Giấc Mơ Đông Dương Giữa Lòng Thành Phố
 
 Sau một ngày rong ruổi trên những vỉa hè đầy ắp thanh âm và sắc màu của Sài Gòn, được trở về căn phòng thơm dịu hương tinh dầu sả chanh, ngâm mình trong làn nước ấm và ngắm nhìn ánh hoàng hôn buông lơi trên những tán cây cổ thụ, bạn sẽ thấy tâm hồn mình được xoa dịu dịu dàng. Khách sạn di sản quanh Chợ Bến Thành không chỉ là nơi để lưu trú; đó là một phần ký ức tươi đẹp của chuyến đi, một nơi níu giữ bước chân để bạn mãi nhớ về một Sài Gòn hào hoa, tao nhã và nồng hậu.

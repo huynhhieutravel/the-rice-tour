@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "📜"
 ---
 
-## 1. Introduction to Mercury Phu Quoc
+## Introduction to Mercury Phu Quoc
 
 When orchestrating complex itineraries on Phu Quoc Island, **The Rice Tour** prioritizes accommodations that offer impeccable service, logistical convenience, and profound relaxation. **Mercury Phu Quoc Resort & Villas** consistently exceeds these criteria, making it one of our most trusted partners for 2026.
 
@@ -44,7 +44,7 @@ Located along the pristine shores of Duong To Beach, the resort is a sanctuary w
 > - **Airport Proximity:** Merely 10 minutes from Phu Quoc International Airport, minimizing transit fatigue.
 > - **Design Ethos:** Classic Vietnamese architecture blended seamlessly with modern tropical resort aesthetics.
 
-## 2. Why The Rice Tour Chooses Mercury Phu Quoc
+## Why The Rice Tour Chooses Mercury Phu Quoc
 
 Our partnership with Mercury Phu Quoc is grounded in the resort's ability to seamlessly integrate into our bespoke travel itineraries. Here is why it remains a top recommendation for our inbound guests:
 
@@ -59,7 +59,7 @@ The resort's hybrid model of standard resort rooms and private villas is a logis
 ### Flawless Logistics for Group Travel
 For our larger tour groups, efficiency is paramount. Mercury Phu Quoc excels in streamlining group check-ins, offering expansive dining venues that can accommodate our customized culinary requests, and providing ample space for specialized group activities.
 
-## 3. Signature Amenities and Experiences
+## Signature Amenities and Experiences
 
 ### The Infinity Pool & Beach Bar
 The resort’s centerpiece is its expansive infinity pool that seems to spill directly into the ocean. Adjacent to it is the Beach Bar, the ultimate vantage point to witness Phu Quoc's legendary sunsets while sipping on a signature Mekong-inspired cocktail.
@@ -70,11 +70,11 @@ After a day of exploring the coral reefs of the An Thoi archipelago, guests can 
 ### Culinary Excellence
 The on-site restaurants celebrate the island's abundant seafood. Through our partnership, The Rice Tour guests can enjoy exclusive dining experiences, from private beach BBQs to curated menus that blend Western fine dining with robust Southern Vietnamese flavors.
 
-## 4. Integrating Mercury into Your 2026 Itinerary
+## Integrating Mercury into Your 2026 Itinerary
 
 Whether you are planning a comprehensive 4-Day/3-Night exploration of the Pearl Island or a leisurely week-long retreat, Mercury Phu Quoc serves as the ideal anchor. Its central location on the western coast means you are perfectly positioned halfway between the bustling Duong Dong town and the natural wonders of the South Island.
 
-## 5. Epilogue
+## Epilogue
 
 Choosing the right accommodation is pivotal to the success of any island expedition. Mercury Phu Quoc Resort & Villas does not merely offer a place to sleep; it provides an immersive environment of tropical luxury and restorative peace. It is a partner that shares The Rice Tour's commitment to delivering flawless, memorable, and culturally enriching travel experiences.
 

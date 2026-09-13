@@ -33,7 +33,7 @@ Chỉ cách Chợ Bến Thành chưa đầy năm phút tản bộ nhẹ nhàng q
 
 ---
 
-## 1. Huyền Thoại Gia Tộc Hứa Bổn Hỏa Và Dấu Ấn Đô Thị Sài Gòn
+## Huyền Thoại Gia Tộc Hứa Bổn Hỏa Và Dấu Ấn Đô Thị Sài Gòn
 
 Dinh thự tráng lệ này vốn là tư gia kiêm văn phòng làm việc của gia tộc **Hứa Bổn Hỏa** (thường gọi dân dã là *Chú Hỏa*, tên tiếng Hoa là Hui Bon Hoa, 1845 – 1901). Trong văn hóa truyền khẩu dân gian phương Nam, câu vè xưng tụng tứ đại phú hộ: *"Nhất Sỹ, Nhì Phương, Tam Xường, Tứ Hỏa"* đã đưa tên tuổi ông vào hàng những huyền thoại kinh tế rực rỡ nhất thời cận đại.
 
@@ -43,7 +43,7 @@ Năm 1929, các người con của Chú Hỏa đã mời kiến trúc sư ngư�
 
 ---
 
-## 2. Giải Mã Bản Giao Hưởng Kiến Trúc Art Deco & Phong Thủy Á Đông
+## Giải Mã Bản Giao Hưởng Kiến Trúc Art Deco & Phong Thủy Á Đông
 
 Điểm cuốn hút bất tận của Bảo tàng Mỹ thuật TP.HCM chính là sự dung hòa kỳ tài giữa mỹ học phương Tây hiện đại với triết lý kiến trúc bản địa:
 
@@ -58,20 +58,20 @@ Năm 1929, các người con của Chú Hỏa đã mời kiến trúc sư ngư�
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Ngoại Thất: Giao Thoa Giữa Cột Thức Châu Âu Và Mái Ngói Lưu Ly
+### Ngoại Thất: Giao Thoa Giữa Cột Thức Châu Âu Và Mái Ngói Lưu Ly
 Nhìn từ mặt tiền đường Phó Đức Chính, tòa nhà chính hiện lên uy nghi với các hàng cột thức Hy Lạp cổ điển nhưng phần mái lại uốn lượn lợp ngói âm dương tráng men lưu ly xanh biếc, điểm xuyết họa tiết cá chép hóa rồng và phù điêu gốm Biên Hòa. Sự đối thoại giữa hình khối vuông vức của phong trào Art Deco thập niên 1930 với những đường cong mềm mại của mái ngói Á Đông tạo nên một cá tính thị giác không thể hòa lẫn.
 
-### 2.2. Nội Thất: Bữa Tiệc Của Ánh Sáng Kính Màu Và Hoa Văn Gạch Bông
+### Nội Thất: Bữa Tiệc Của Ánh Sáng Kính Màu Và Hoa Văn Gạch Bông
 Bước qua sảnh chính, bạn sẽ lập tức bị choáng ngợp bởi sàn nhà được lát hoàn toàn bằng **gạch bông xi măng thủ công** với hàng chục đồ án hoa văn hình học khác nhau trên từng tầng lầu. Mỗi sải chân bước qua từng căn phòng là một sự chuyển biến nhịp nhàng về sắc độ từ vàng đất, xanh lam đến đỏ son.
 
 Đặc biệt, hệ thống cửa sổ vòm cung được lắp kính màu (Stained Glass) mô phỏng kỹ thuật cửa sổ nhà thờ Gothic châu Âu. Dưới ánh nắng nhiệt đới rực rỡ của phương Nam, những tia sáng xuyên qua kính màu tán sắc thành những dải cầu vồng huyền ảo in bóng lên tường vôi vàng óng, mang lại cảm giác thiền định và tĩnh tại tuyệt đối.
 
-### 2.3. Tòa Thang Máy Cổ: Dấu Ấn Tiên Phong Công Nghệ Thế Kỷ Trước
+### Tòa Thang Máy Cổ: Dấu Ấn Tiên Phong Công Nghệ Thế Kỷ Trước
 Tại trung tâm giếng trời tòa nhà 1, buồng thang máy cổ được chạm trổ bằng gỗ quý và bao bọc bởi khung thép uốn hoa văn mạ đồng. Đây là một trong những chiếc thang máy đầu tiên xuất hiện tại đô thị Sài Gòn thời bấy giờ, minh chứng cho sự xa hoa và mức độ tiếp cận công nghệ tân tiến nhất thế giới của gia tộc Hui Bon Hoa.
 
 ---
 
-## 3. Khám Phá 3 Tòa Nhà: Kho Tàng Mỹ Thuật Qua Hàng Thiên Niên Kỷ
+## Khám Phá 3 Tòa Nhà: Kho Tàng Mỹ Thuật Qua Hàng Thiên Niên Kỷ
 
 | Phân Khu | Chủ Đề Trưng Bày | Các Hiện Vật & Tác Phẩm Đỉnh Cao | Trải Nghiệm Khuyến Nghị |
 | :--- | :--- | :--- | :--- |
@@ -84,7 +84,7 @@ Tọa lạc trang trọng tại tầng 2 tòa nhà chính, bức tranh sơn mài
 
 ---
 
-## 4. Kinh Nghiệm Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
+## Kinh Nghiệm Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
 
 - **Khung giờ vàng chiêm ngưỡng ánh sáng:** Thời điểm lý tưởng nhất là từ **08:30 đến 10:30 sáng** hoặc **15:00 đến 16:30 chiều**. Lúc này, góc chiếu của ánh nắng mặt trời tạo ra những vệt đổ bóng dài tuyệt đẹp qua hành lang gạch bông và các ô cửa sổ lá sách.
 - **Quy định bảo tồn di sản:** Tuyệt đối không chạm tay vào bề mặt tranh sơn mài và hiện vật. Khi chụp ảnh kỷ niệm, bắt buộc tắt đèn flash để tránh bức xạ quang phổ làm suy giảm tuổi thọ của lớp sơn cổ và chất liệu lụa nhạy cảm.

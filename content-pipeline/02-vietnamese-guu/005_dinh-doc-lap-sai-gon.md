@@ -33,7 +33,7 @@ Tọa lạc tại vị trí trang trọng bậc nhất trung tâm Quận 1, ch�
 
 ---
 
-## 1. Dòng Chảy Lịch Sử: Từ Dinh Norodom Thuộc Địa Đến Hội Trường Thống Nhất
+## Dòng Chảy Lịch Sử: Từ Dinh Norodom Thuộc Địa Đến Hội Trường Thống Nhất
 
 Mảnh đất nơi Dinh Độc Lập tọa lạc mang trong mình hơn một thế kỷ rưỡi biến động chính trị và lịch sử:
 
@@ -45,7 +45,7 @@ Vào lúc 11 giờ 30 phút ngày 30 tháng 4 năm 1975, chiếc xe tăng mang s
 
 ---
 
-## 2. Giải Mã Mật Mã Triết Học Phương Đông Của KTS Ngô Viết Thụ
+## Giải Mã Mật Mã Triết Học Phương Đông Của KTS Ngô Viết Thụ
 
 Khác biệt hoàn toàn với các công trình thời thuộc địa rập khuôn phương Tây, Dinh Độc Lập là một bài thơ kiến trúc thâm trầm mang đậm tư tưởng Á Đông:
 
@@ -60,18 +60,18 @@ Khác biệt hoàn toàn với các công trình thời thuộc địa rập khu
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Mặt Bằng Tạo Hình Các Hán Tự Triết Học
+### Mặt Bằng Tạo Hình Các Hán Tự Triết Học
 - **Chữ CÁT (吉 - Tốt lành):** Toàn bộ mặt bằng tổng thể của khối nhà chính tạo nên hình chữ Cát, ngụ ý mang lại vận khí hanh thông, thái bình thịnh trị cho đất nước.
 - **Chữ KHẨU (口 - Lời nói tự do):** Tầng bao lơn danh dự ở tầng 2 tạo thành hình chữ Khẩu, thể hiện tư tưởng tôn trọng tiếng nói của nhân dân và tự do ngôn luận.
 - **Chữ TRUNG (中 - Trung kiên):** Cột cờ nằm ở vị trí trung tâm thẳng hàng với chữ Khẩu, tạo nên nét dọc thẳng đứng biểu trưng cho lòng trung trinh ái quốc.
 - **Chữ CHỦ (主 - Chủ quyền):** Mái che trên sân thượng có cột cờ tạo thành hình chữ Chủ, khẳng định chủ quyền độc lập của quốc gia.
 
-### 2.2. Hệ Thống Rèm Hoa Đá Bê Tông: Đốt Trúc Thanh Cao Giữa Vùng Nhiệt Đới
+### Hệ Thống Rèm Hoa Đá Bê Tông: Đốt Trúc Thanh Cao Giữa Vùng Nhiệt Đới
 Mặt tiền phía trước tầng 2 và tầng 3 của dinh thự được bao bọc bởi một hệ thống lam bê tông cách điệu hình những **đốt trúc thanh nhã**. Thiết kế này vừa gợi nhớ hình ảnh lũy tre làng Việt Nam kiên cường, vừa giải quyết xuất sắc bài toán khí hậu nhiệt đới: cản ánh nắng gay gắt trực tiếp, đón gió mát lùa qua các hành lang và mang lại sự kín đáo, trang nghiêm cho các phòng làm việc bên trong.
 
 ---
 
-## 3. Khám Phá Các Phân Khu Trọng Yếu Trong Dinh
+## Khám Phá Các Phân Khu Trọng Yếu Trong Dinh
 
 | Phân Khu | Vị Trí | Công Năng & Hiện Vật Nổi Bật | Giá Trị Lịch Sử |
 | :--- | :--- | :--- | :--- |
@@ -83,7 +83,7 @@ Mặt tiền phía trước tầng 2 và tầng 3 của dinh thự được bao 
 
 ---
 
-## 4. Kinh Nghiệm Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
+## Kinh Nghiệm Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
 
 - **Thời điểm lý tưởng tham quan:** Khung giờ đẹp nhất để ghé thăm Dinh Độc Lập là **14:00 – 16:30 chiều**. Lúc này ánh nắng chiều rọi qua hàng cây cổ thụ tạo bóng râm mát mẻ khắp khuôn viên, đồng thời ánh sáng xiên qua hệ rèm đốt trúc tạo nên những góc chụp ảnh kiến trúc vô cùng ấn tượng.
 - **Trang phục tham quan:** Du khách cần mặc trang phục lịch sự, kín đáo (áo có tay, quần/váy quá đầu gối), không mang theo vũ khí, chất cháy nổ hoặc hành lý cồng kềnh vào phòng trưng bày.

@@ -32,7 +32,7 @@ Là một hợp phần cốt lõi trong hệ thống [những địa điểm n�
 
 ---
 
-## 1. Triết Lý Du Hành: Khám Phá Sài Gòn Bằng Bước Chân Chậm
+## Triết Lý Du Hành: Khám Phá Sài Gòn Bằng Bước Chân Chậm
 
 Tại sao lại là đi bộ? Trung tâm Quận 1 sở hữu một mật độ di sản dày đặc mà việc di chuyển bằng xe máy hay taxi sẽ vô tình tước đi của bạn những chi tiết quý giá: một bức phù điêu gốm Biên Hòa ẩn dưới mái ngói chợ cũ, một cánh cửa gỗ lá sách màu xanh rêu trong con hẻm nhỏ, hay mùi hương trầm nồng ấm thoảng ra từ một ngôi đền cổ bên góc đường Trương Định.
 
@@ -51,7 +51,7 @@ Lộ trình được sắp xếp nương theo nhịp điệu của mặt trời 
 
 ---
 
-## 2. Chi Tiết Lộ Trình 4 Chặng: Từ Bình Minh Đến Đêm Đô Thị
+## Chi Tiết Lộ Trình 4 Chặng: Từ Bình Minh Đến Đêm Đô Thị
 
 ```mermaid
 graph TD
@@ -82,7 +82,7 @@ graph TD
 
 ---
 
-## 3. Bảng Phân Bổ Thời Gian & Dự Toán Chi Phí Thực Tế 2026
+## Bảng Phân Bổ Thời Gian & Dự Toán Chi Phí Thực Tế 2026
 
 | Khung Giờ | Điểm Dừng Chân | Hoạt Động Cốt Lõi | Vé Tham Quan 2026 | Chi Phí Ăn Uống Ước Tính |
 | :--- | :--- | :--- | :--- | :--- |
@@ -97,7 +97,7 @@ graph TD
 
 ---
 
-## 4. Checklist Chuẩn Bị Thực Địa Cho Người Du Hành (Field Checklist 2026)
+## Checklist Chuẩn Bị Thực Địa Cho Người Du Hành (Field Checklist 2026)
 
 - [ ] **Giày đi bộ êm chân:** Vì tổng quãng đường tản bộ khoảng 4.5km, một đôi giày sneaker thoáng khí hoặc sandal da mềm là ưu tiên số một.
 - [ ] **Trang phục kín đáo, lịch sự:** Cần có áo có tay và quần/váy quá đầu gối để tiện vào Đền Mariamman và Dinh Độc Lập.

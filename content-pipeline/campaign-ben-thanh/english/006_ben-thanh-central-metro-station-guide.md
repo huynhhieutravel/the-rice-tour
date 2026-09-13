@@ -72,7 +72,7 @@ Enshrined as the crowning technological triumph within our guide to [things to d
 
 ---
 
-## 1. Subterranean Renaissance: Reimagining the Urban Landscape
+## Subterranean Renaissance: Reimagining the Urban Landscape
 
 Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.
 
@@ -91,7 +91,7 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
 
 ---
 
-## 2. Navigating the Four-Tier Subterranean Labyrinth
+## Navigating the Four-Tier Subterranean Labyrinth
 
 ```mermaid
 graph TD
@@ -102,18 +102,18 @@ graph TD
     B3 --> B4["Level B4: Future Line 2 Platforms & Transit Junction"]
 ```
 
-### 2.1. Level B1: The Commercial Concourse & Ticketing Mezzanine
+### Level B1: The Commercial Concourse & Ticketing Mezzanine
 The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques.
 
-### 2.2. The Architectural Centerpiece: The Lotus Toplight
+### The Architectural Centerpiece: The Lotus Toplight
 Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures an astonishing sightline: the amber tiles of the 1914 Ben Thanh clock tower rising against equatorial clouds—a breathtaking visual metaphor uniting two centuries of Saigon history.
 
-### 2.3. Level B2: Line 1 Boarding Platforms
+### Level B2: Line 1 Boarding Platforms
 Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maintains whisper-quiet acoustics and an ambient temperature of 23°C. Electric trainsets depart every four to eight minutes, whisking passengers northeast along the Saigon River.
 
 ---
 
-## 3. Curated Line 1 Route & Fare Matrix (2026 Reference)
+## Curated Line 1 Route & Fare Matrix (2026 Reference)
 
 | Key Station | Transit Time from Ben Thanh | Signature Destination / Cultural Highlight | Single Fare 2026 |
 | :--- | :--- | :--- | :--- |
@@ -125,7 +125,7 @@ Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maint
 
 ---
 
-## 4. Curated Transit Insights for Conscious Travelers (2026)
+## Curated Transit Insights for Conscious Travelers (2026)
 
 1. **Selecting Your Fare Media:**
    - For casual journeys: Purchase single-journey tokens via automated ticketing machines accepting contactless Visa/Mastercard.

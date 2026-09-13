@@ -59,7 +59,7 @@ epilogue: "To truly experience Ben Thanh Market is not merely to buy a souvenir,
 
 ---
 
-## 1. Introduction: Far More Than a Commodity Bazaar
+## Introduction: Far More Than a Commodity Bazaar
 
 When first-time visitors hear of Ben Thanh Market, many picture a crowded marketplace packed with souvenir stalls, rolled textiles, and aggressive touts. Yet to those attuned to the authentic cadence of Saigon, this 112-year-old landmark and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. Here, within a few hundred footsteps, one transitions effortlessly from early 20th-century Indochinese colonial architecture to the sunlit subterranean concourses of the brand-new 2026 Metro Line 1, and from a humble traditional sweet soup vendor to an opulent rooftop lounge overlooking the meandering Saigon River.
 
@@ -67,7 +67,7 @@ If you are pondering **what to do in and around Ben Thanh Market**, set aside co
 
 ---
 
-## 2. Master Map: 15 Experiences Across Four Golden Windows
+## Master Map: 15 Experiences Across Four Golden Windows
 
 ### 🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)
 
@@ -135,7 +135,7 @@ End your nocturnal culinary adventure with late-night classics favored by locals
 
 ---
 
-## 3. Comparative Itinerary Schedules: 4-Hour Express vs. Full Day
+## Comparative Itinerary Schedules: 4-Hour Express vs. Full Day
 
 | Itinerary | Morning Focus | Midday Focus | Evening Focus | Estimated Spend (VND) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -144,7 +144,7 @@ End your nocturnal culinary adventure with late-night classics favored by locals
 
 ---
 
-## 4. Key Takeaways & Field Advice from The Rice Tour
+## Key Takeaways & Field Advice from The Rice Tour
 
 1. **Morning Light Matters:** The market exterior faces south, making 06:30 – 08:30 the crispest window for clear natural illumination without harsh glare.
 2. **Beat the Midday Heat:** Spend 11:30 to 14:00 inside air-conditioned sanctuaries like the underground Metro retail concourses or the nearby Takashimaya / Saigon Centre complex.

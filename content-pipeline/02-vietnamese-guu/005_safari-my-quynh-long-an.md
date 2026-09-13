@@ -43,7 +43,7 @@ Nhiều du khách khi tìm kiếm thông tin vẫn quen thuộc với từ khóa
 
 Điểm khác biệt lớn nhất của Mỹ Quỳnh Safari so với các công viên chủ đề khác là **chính sách xé lẻ vé**. Khách hàng sẽ không mua một vé "All-in-one" (Trọn gói) ngay từ đầu, mà sẽ chi trả cho từng phân khu mình muốn trải nghiệm. Điều này giúp tối ưu chi phí cho những du khách chỉ muốn dạo mát ngắm cảnh, nhưng lại đòi hỏi sự tính toán cẩn thận cho các gia đình muốn chơi trọn vẹn.
 
-### 1. Vé Vào Cổng (Bắt buộc)
+### Vé Vào Cổng (Bắt buộc)
 Vé này chỉ bao gồm quyền tham quan khu vực vườn thú nuôi nhốt, vườn Bonsai và hồ cá Koi.
 
 | Nhóm Đối Tượng | Giá Vé Niêm Yết |
@@ -52,7 +52,7 @@ Vé này chỉ bao gồm quyền tham quan khu vực vườn thú nuôi nhốt, 
 | **Trẻ em (1m - 1.4m)** | 60.000 VNĐ |
 | **Trẻ em dưới 1m** | Miễn phí |
 
-### 2. Vé Trải Nghiệm Xe Bán Hoang Dã (Safari)
+### Vé Trải Nghiệm Xe Bán Hoang Dã (Safari)
 Đây là "linh hồn" của khu du lịch, nơi bạn sẽ ngồi trên những chiếc xe bus bọc lưới thép đặc chủng đi xuyên qua lãnh địa sinh sống tự do của sư tử, gấu, hổ...
 
 | Nhóm Đối Tượng | Giá Vé / Chỗ ngồi |
@@ -61,7 +61,7 @@ Vé này chỉ bao gồm quyền tham quan khu vực vườn thú nuôi nhốt, 
 | **Trẻ em dưới 1m (chiếm ghế)** | 100.000 VNĐ |
 | **Trẻ sơ sinh (ngồi trong lòng bố mẹ)** | Miễn phí |
 
-### 3. Tổ Hợp Công Viên Nước & Trò Chơi
+### Tổ Hợp Công Viên Nước & Trò Chơi
 Nếu bạn đi vào buổi chiều nắng nóng, công viên nước là điểm dừng chân lý tưởng.
 
 | Hạng Mục | Nhóm Đối Tượng | Giá Vé |
@@ -79,7 +79,7 @@ Nếu bạn đi vào buổi chiều nắng nóng, công viên nước là điể
 
 ## Bản đồ trải nghiệm: Mỹ Quỳnh Safari có gì?
 
-### 1. Chuyến xe bọc thép xuyên rừng bán hoang dã
+### Chuyến xe bọc thép xuyên rừng bán hoang dã
 
 Khác với mô hình nuôi nhốt truyền thống (động vật bị nhốt trong lồng, người đi xem tự do), khu bán hoang dã đảo ngược hoàn toàn vị thế. Ở đây, bạn sẽ là người bị "nhốt" trong một chiếc xe bus an toàn, di chuyển chầm chậm tiến vào môi trường sống rộng lớn của các loài mãnh thú. 
 
@@ -92,7 +92,7 @@ Cảm giác một con hổ Bengal vươn mình áp sát cửa kính, hay những
   <figcaption>Trải nghiệm quan sát động vật hoang dã ở cự ly gần mang tính giáo dục trực quan cao cho trẻ em.</figcaption>
 </figure>
 
-### 2. Không gian Thiền: Vườn Bonsai & Hồ Cá Koi
+### Không gian Thiền: Vườn Bonsai & Hồ Cá Koi
 
 Nếu bạn cần một nhịp nghỉ chậm lại giữa các hoạt động kích thích, khu vườn Bonsai Nhật Bản kết hợp cùng hồ cá Koi khổng lồ là một điểm dừng tĩnh lặng. Cảnh quan được bài trí với nhiều tiểu cảnh cầu gỗ, tảng đá tự nhiên, tạo nên những phông nền lý tưởng để ghi lại những khoảnh khắc gia đình.
 
@@ -112,7 +112,7 @@ Nếu bạn cần một nhịp nghỉ chậm lại giữa các hoạt động k�
   <figcaption>Đàn cá Koi đầy màu sắc bơi lội tung tăng là điểm nhấn cảnh quan nhẹ nhàng bên trong khuôn viên rộng lớn.</figcaption>
 </figure>
 
-### 3. Tổ hợp trò chơi cảm giác mạnh
+### Tổ hợp trò chơi cảm giác mạnh
 
 Bên cạnh công viên nước, khu vực giải trí ngoài trời cung cấp một loạt các trò chơi thử thách lòng can đảm như: tháp rơi tự do, tàu lượn siêu tốc, zipline băng ngang mặt hồ hay các hệ thống thảm nhún liên hoàn. 
 *Lưu ý từ chuyên gia:* Các thiết bị ngoài trời sẽ tự động ngừng hoạt động nếu ban quản lý phát hiện mây giông hoặc mưa lớn để đảm bảo an toàn về điện và chống trượt ngã.

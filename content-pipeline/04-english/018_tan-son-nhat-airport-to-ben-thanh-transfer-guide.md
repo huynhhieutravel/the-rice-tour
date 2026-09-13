@@ -60,7 +60,7 @@ epilogue: "Gliding from the runway into the tree-shaded corridors of District 1 
 
 ---
 
-## 1. Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
+## Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
 
 As your flight touches down at Tan Son Nhat International Airport (SGN), most travelers share an identical maiden destination: **District 1**, anchored by the historic clock tower of Ben Thanh Market. As the epicenter of Saigon’s hospitality, heritage dining, cultural attractions, and municipal transit crossroads, reaching Ben Thanh smoothly sets the rhythm for your entire journey.
 
@@ -81,7 +81,7 @@ To ensure your journey commences with ease and fiscal transparency, The Rice Tou
 
 ---
 
-## 2. Master Comparison of 5 Airport Transfer Options (2026 Rates)
+## Master Comparison of 5 Airport Transfer Options (2026 Rates)
 
 | Transfer Method | Fare / Ticket (2026) | Travel Duration | Airport Pickup Point | Drop-Off Point at Ben Thanh | Suitability Rating |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -93,7 +93,7 @@ To ensure your journey commences with ease and fiscal transparency, The Rice Tou
 
 ---
 
-## 3. Step-by-Step Logistics & Insider Tactics
+## Step-by-Step Logistics & Insider Tactics
 
 ### Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)
 - **Fleet Quality:** Bright yellow modern European-standard low-floor buses equipped with powerful air conditioning, complimentary onboard Wi-Fi, and spacious center luggage bays. Drivers and attendants communicate functional English.
@@ -119,7 +119,7 @@ If you are traveling with elderly companions, young children, or multiple heavy 
 
 ---
 
-## 4. Time-of-Day Traffic Advisories
+## Time-of-Day Traffic Advisories
 
 1. **Peak Traffic Congestion (07:30 – 09:00 AM & 16:30 – 19:00 PM):**  
    Bottlenecks along Truong Son and Hoang Van Thu avenues can double travel times. Allow a minimum of **60 to 75 minutes** to reach District 1 during peak commuter hours.

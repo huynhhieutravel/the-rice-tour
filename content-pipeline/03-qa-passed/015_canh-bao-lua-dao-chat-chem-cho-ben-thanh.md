@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-
 
 ---
 
-## 1. Dẫn Nhập: Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
+## Dẫn Nhập: Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
 
 Chợ Bến Thành là niềm tự hào di sản của người dân Sài Gòn, nơi hội tụ tinh hoa hàng hóa và ẩm thực phương Nam. Tuy nhiên, bất kỳ trung tâm giao thương sầm uất nào trên thế giới – từ Grand Bazaar ở Istanbul, Chatuchak ở Bangkok cho đến Chợ Bến Thành – đều tồn tại những mảng xám thương mại và những cạm bẫy nhắm vào sự bỡ ngỡ, cả tin của du khách thập phương.
 
@@ -28,7 +28,7 @@ Tình trạng "nhìn mặt hét giá", chèo kéo níu tay áo, đánh tráo hà
 
 ---
 
-## 2. Điểm Mặt 7 Chiêu Trò & Cạm Bẫy Phổ Biến Nhất
+## Điểm Mặt 7 Chiêu Trò & Cạm Bẫy Phổ Biến Nhất
 
 ### Chiêu 1: "Hét Giá Trên Trời" Gấp 3 Đến 5 Lần Giá Trị Thật
 - **Kịch bản:** Khi thấy du khách nói giọng miền ngoài, đặc biệt là du khách nước ngoài hoặc Việt kiều, một số tiểu thương kinh doanh quần áo, đồ da, vali kéo hay quà lưu niệm sẽ tự động đẩy giá lên gấp 300% – 500%. Một chiếc áo thun in chữ Saigon giá trị thực khoảng 80.000 – 100.000 VNĐ có thể được báo giá 450.000 – 600.000 VNĐ.
@@ -75,7 +75,7 @@ Tình trạng "nhìn mặt hét giá", chèo kéo níu tay áo, đánh tráo hà
 
 ---
 
-## 3. Bảng Giá Chuẩn Kiểm Chứng Tại Chợ Bến Thành (Năm 2026)
+## Bảng Giá Chuẩn Kiểm Chứng Tại Chợ Bến Thành (Năm 2026)
 
 Để tránh bị "hớ" khi mua sắm, bạn có thể tham khảo mức giá sàn hợp lý sau đây:
 
@@ -102,7 +102,7 @@ Tình trạng "nhìn mặt hét giá", chèo kéo níu tay áo, đánh tráo hà
 
 ---
 
-## 4. Danh Bạ Khẩn Cấp & Kênh Tiếp Nhận Hỗ Trợ 24/7
+## Danh Bạ Khẩn Cấp & Kênh Tiếp Nhận Hỗ Trợ 24/7
 
 Khi gặp tình huống bị đe dọa, chặt chém quá mức hoặc thất lạc tài sản, hãy bình tĩnh liên hệ các cơ quan chức năng sau:
 

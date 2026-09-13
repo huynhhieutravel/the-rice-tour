@@ -59,7 +59,7 @@ epilogue: "Awareness is not about viewing every merchant with suspicion; it is a
 
 ---
 
-## 1. Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+## Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
 
 Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.
 
@@ -67,7 +67,7 @@ Excessive overcharging, physical tugging at sleeves, product bait-and-switch, an
 
 ---
 
-## 2. Anatomy of the 7 Most Common Scams & Traps
+## Anatomy of the 7 Most Common Scams & Traps
 
 ### Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)
 - **The Modus Operandi:** The moment an uninitiated foreign accent is detected, certain vendors selling silk scarves, imitation watches, luggage, or casual tees will inflate quotes by 3x to 5x. A cotton Saigon souvenir T-shirt worth 80,000 – 100,000 VND ($3 – $4) can easily be quoted at 450,000 – 600,000 VND ($18 – $24).
@@ -114,7 +114,7 @@ Excessive overcharging, physical tugging at sleeves, product bait-and-switch, an
 
 ---
 
-## 3. Verified Price Reference Benchmark (2026 Edition)
+## Verified Price Reference Benchmark (2026 Edition)
 
 To navigate commerce with confidence, refer to this ground-verified pricing guide:
 
@@ -141,7 +141,7 @@ To navigate commerce with confidence, refer to this ground-verified pricing guid
 
 ---
 
-## 4. Emergency Directory & 24/7 Tourist Assistance
+## Emergency Directory & 24/7 Tourist Assistance
 
 If you encounter threats, severe extortion, or property loss, remain calm and contact municipal security:
 

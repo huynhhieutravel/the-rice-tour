@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "🌍"
 ---
 
-## 1. Introduction to the Bac Lieu Wind Farm
+## Introduction to the Bac Lieu Wind Farm
 
 Located in Vinh Trach Dong commune, about 20 kilometers from the center of Bac Lieu City, the **Bac Lieu Wind Farm** (Cánh Đồng Điện Gió Bạc Liêu) was initially constructed as a pioneering renewable energy project. It holds the title of being the very first offshore wind farm built in Southeast Asia.
 
@@ -44,7 +44,7 @@ However, thanks to the striking visual of dozens of massive, sleek white turbine
 > - **The Turbines:** There are 62 turbines, each standing 80 meters tall with blades measuring 42 meters in length.
 > - **Ticket Price (2026):** 30,000 VND per adult.
 
-## 2. The Visual Spectacle: A Photographer's Dream
+## The Visual Spectacle: A Photographer's Dream
 
 The primary draw of the wind farm for travelers is its incredible photogenicity. The landscape often draws comparisons to the Netherlands or coastal Europe, a stark and unexpected aesthetic in the heart of the tropical Mekong Delta.
 
@@ -55,7 +55,7 @@ To service the offshore turbines, developers built a network of elevated concret
 - **The Infinite Perspective:** Shoot straight down the concrete path with the leading lines drawing the eye toward the turbines fading into the horizon.
 - **The Golden Silhouette:** During sunset, position the camera to capture the dark silhouettes of the spinning blades against the fiery orange sky.
 
-## 3. Timing Your Visit for the Perfect Shot
+## Timing Your Visit for the Perfect Shot
 
 The coastal environment means the wind farm is completely exposed to the elements. Timing your visit is critical for both comfort and photography:
 
@@ -64,7 +64,7 @@ The coastal environment means the wind farm is completely exposed to the element
   - **06:00 to 07:30:** For early risers, the sunrise offers a serene, quiet experience with excellent soft lighting and significantly fewer crowds.
 - **Midday (Avoid):** From 10:00 to 14:00, the sun is scorching, there is no shade on the concrete pathways, and the harsh overhead light washes out photographs.
 
-## 4. Expanding Your Bac Lieu Itinerary
+## Expanding Your Bac Lieu Itinerary
 
 While the wind farm can be explored in about 1 to 1.5 hours, its location in Vinh Trach Dong makes it highly convenient to combine with other prominent Bac Lieu attractions:
 
@@ -72,13 +72,13 @@ While the wind farm can be explored in about 1 to 1.5 hours, its location in Vin
 - **The Siamese Mud-Skipper Pagoda (Chùa Xiêm Cán):** Just a few kilometers away, this is one of the largest and most ornate Khmer pagodas in the region, featuring stunning golden architecture.
 - **The Longan Garden (Vườn Nhãn Cổ):** Relax in the shade of century-old longan trees and enjoy local specialties like Vietnamese savory pancakes (Bánh Xèo).
 
-## 5. Travel Logistics and Tips
+## Travel Logistics and Tips
 
 - **Getting There:** From Bac Lieu city center, the drive takes about 30 minutes via Cao Van Lau Street heading towards the sea. Taxis and private cars are the best options.
 - **Dress Code for Photography:** Bright, solid colors (like red, yellow, or deep blue) contrast beautifully against the white turbines and the sky, making for striking portraits.
 - **Sun Protection:** Bring sunglasses, sunscreen, and a hat (but hold onto it tightly, as the sea breeze is very strong!).
 
-## 6. Epilogue
+## Epilogue
 
 The Bac Lieu Wind Farm is a testament to how infrastructure can inadvertently become art. It offers travelers a unique opportunity to witness Vietnam’s push toward sustainable energy while capturing some of the most dramatic and modern landscape photography available in the Mekong Delta. 
 

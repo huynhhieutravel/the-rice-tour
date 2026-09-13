@@ -35,9 +35,9 @@ reading_time: 12
 
 ---
 
-## 1. A 300-Year Genesis: From the Sacred Krama to a Southern Icon
+## A 300-Year Genesis: From the Sacred Krama to a Southern Icon
 
-### 1.1. The Spiritual Imprint of Lord Vishnu
+### The Spiritual Imprint of Lord Vishnu
 Many travelers, upon holding the checkered scarf, assume it is a purely Vietnamese invention born from the early migrants. However, from an anthropological perspective, the *khăn rằn* traces its direct lineage to the **Krama**, the ancestral scarf of the indigenous Khmer people in the lower Mekong basin.
 
 In ancient Khmer Hinduism, Lord **Vishnu** is the supreme protector, the embodiment of compassion who often rests upon the seven-headed serpent, Naga. The Krama, meticulously woven with intersecting grid patterns, was designed to mimic the scales of this divine serpent. The early Khmer believed that carrying the Krama was akin to receiving the invisible, divine protection of Vishnu against wild beasts, monsoons, and the unpredictable perils of the riverine wilderness.
@@ -47,14 +47,14 @@ In ancient Khmer Hinduism, Lord **Vishnu** is the supreme protector, the embodim
   <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">The ancestral Khmer Krama—a woven testament to the spiritual protection of Lord Vishnu.</figcaption>
 </figure>
 
-### 1.2. A Natural Evolution in the Age of Reclamation
+### A Natural Evolution in the Age of Reclamation
 When Vietnamese pioneers embarked on the arduous journey to reclaim the marshlands of the Mekong Delta in the 17th and 18th centuries, the unforgiving environment—characterized by labyrinthine canals and a punishing bipolar climate of monsoon rains and scorching sun—necessitated cultural adaptation. The *áo bà ba* (the traditional slit-sided silk tunic) paired with a checkered scarf draped over the shoulder became the ultimate survival attire for those taming the wild frontier.
 
 The term *rằn* in the southern dialect translates to distinct, intersecting stripes. The traditional black-and-white palette was not merely a pragmatic choice for washing out the heavy alum mud, but also a poignant reflection of the pioneers' unpretentious and resilient character.
 
 ---
 
-## 2. The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience
+## The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience
 
 Throughout the resistance wars against French and American forces, the *khăn rằn* transcended its daily utility to become an immortal military and cultural emblem of the southern battlefield:
 
@@ -80,7 +80,7 @@ Throughout the resistance wars against French and American forces, the *khăn r�
 
 ---
 
-## 3. A Comparative Matrix: The Four Iconic Scarves of Southeast Asia
+## A Comparative Matrix: The Four Iconic Scarves of Southeast Asia
 
 To navigate the rich tapestry of regional textiles without confusion, we present a curated comparison of the prominent checkered scarves found across the region:
 
@@ -99,11 +99,11 @@ To navigate the rich tapestry of regional textiles without confusion, we present
 
 ---
 
-## 4. A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A
+## A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A
 
 For travelers seeking to witness the authentic, meticulous creation of a traditional *khăn rằn*, a pilgrimage to the **Long Khanh A Weaving Village (Hong Ngu District, Dong Thap Province)** is an absolute imperative.
 
-### 4.1. Logistical Essentials for 2026
+### Logistical Essentials for 2026
 - **Location:** Situated on the Long Khanh riverine islet, amidst the mighty Tien River, approximately 65 km from Cao Lanh City and 12 km from Hong Ngu City.
 - **The Journey:** From Hong Ngu City, navigate to the Long Khanh ferry terminal for a brief 10-minute crossing. Upon reaching the islet, the newly paved roads offer a seamless route for a motorbike or bicycle exploration through the artisan hamlets.
 - **The Golden Hours:** Aim to arrive between **7:30 AM and 10:30 AM**. This window unveils a spectacular visual feast: vibrant yards of yarn drying under the morning sun, accompanied by the rhythmic, enchanting clatter of wooden looms.
@@ -113,7 +113,7 @@ For travelers seeking to witness the authentic, meticulous creation of a traditi
   <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">Long Khanh A—a National Intangible Heritage site where the rhythmic clatter of the loom has echoed across the Tien River for over a century.</figcaption>
 </figure>
 
-### 4.2. The Six-Step Artisanal Mastery
+### The Six-Step Artisanal Mastery
 Unlike mass-produced textiles, an authentic Long Khanh A scarf undergoes an incredibly laborious manual process:
 
 1. **Unspooling:** Massive spools of cotton thread are meticulously unraveled into smaller, manageable skeins using traditional wooden reels.
@@ -130,7 +130,7 @@ Unlike mass-produced textiles, an authentic Long Khanh A scarf undergoes an incr
 
 ---
 
-## 5. The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn
+## The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn
 
 Wearing the *khăn rằn* correctly transcends mere comfort; it is an unspoken nod to the local culture, projecting the poised demeanor of a seasoned explorer:
 
@@ -157,7 +157,7 @@ Wearing the *khăn rằn* correctly transcends mere comfort; it is an unspoken n
 
 ---
 
-## 6. Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf
+## Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf
 
 - **Identifying Authentic Craftsmanship:** A genuine handwoven scarf from Long Khanh A will initially feel slightly stiff due to its protective rice starch coating. After its first wash, this starch dissolves, revealing a fabric that is phenomenally soft, breathable, and highly absorbent. Conversely, cheap synthetic blends remain slick, repel water, and induce suffocating heat under the sun.
 - **The First Wash Ritual:** To lock in the vibrant colors, soak your new scarf in cold water with a pinch of salt for 15 minutes prior to its first wash. Always dry it in a shaded, breezy area.

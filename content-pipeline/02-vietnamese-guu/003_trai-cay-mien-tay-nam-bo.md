@@ -57,7 +57,7 @@ Dưới đây là cẩm nang tổng hợp 24 nhóm trái cây đặc trưng, mù
 
 ## Bóc tách chi tiết: Top những loại quả phải thử
 
-### 1. Bưởi da xanh – Viên ngọc xanh của miệt vườn
+### Bưởi da xanh – Viên ngọc xanh của miệt vườn
 
 Bưởi da xanh là niềm tự hào của vùng đất Bến Tre (nay sáp nhập vào Vĩnh Long). Đặc trưng của giống bưởi này là lớp vỏ xanh mướt ngay cả khi chín, múi bưởi màu hồng đào, mọng nước, vị ngọt thanh và hoàn toàn không có hạt hoặc rất ít hạt.
 *Bí quyết chọn:* Hãy chọn những quả có da căng bóng, gai nở đều, khi cầm có cảm giác nặng và chắc tay.
@@ -67,7 +67,7 @@ Bưởi da xanh là niềm tự hào của vùng đất Bến Tre (nay sáp nh�
   <figcaption>Bưởi da xanh mang hương vị thanh mát, là món quà biếu tặng cao cấp từ miệt vườn phương Nam.</figcaption>
 </figure>
 
-### 2. Sầu riêng Ri6 – Vua của các loại quả
+### Sầu riêng Ri6 – Vua của các loại quả
 
 Nhắc đến sầu riêng miền Tây là phải nhắc đến giống Ri6 huyền thoại xuất phát từ vùng Bình Hòa Phước (Vĩnh Long). Khác với các giống sầu riêng Thái, Ri6 có phần cơm vàng ươm rực rỡ, hạt lép, vị béo ngậy và hương thơm nồng nàn không thể lẫn lộn.
 *Kinh nghiệm mua:* Khuyên bạn nên thưởng thức trực tiếp tại các nhà vườn có chính sách "bao ăn" (1 đổi 1 nếu sượng) để đảm bảo chất lượng.
@@ -77,7 +77,7 @@ Nhắc đến sầu riêng miền Tây là phải nhắc đến giống Ri6 huy�
   <figcaption>Cơm sầu riêng Ri6 vàng rực, béo ngậy và thơm lừng – thử thách khó cưỡng đối với những tín đồ ẩm thực.</figcaption>
 </figure>
 
-### 3. Vú sữa Lò Rèn Vĩnh Kim
+### Vú sữa Lò Rèn Vĩnh Kim
 
 Chỉ xuất hiện ngắn ngủi từ tháng 1 đến tháng 3, vú sữa Lò Rèn (Đồng Tháp) sở hữu lớp vỏ mỏng, căng bóng. Khi dùng tay vò nhẹ, dòng sữa trắng đục tứa ra ngọt lịm. Đây là thức quà thanh tao, giải nhiệt tuyệt vời trong những ngày chớm hè.
 
@@ -97,7 +97,7 @@ Chỉ xuất hiện ngắn ngủi từ tháng 1 đến tháng 3, vú sữa Lò R
   <figcaption>Giọt sữa ngọt ngào từ vú sữa Lò Rèn Vĩnh Kim, một đặc sản nổi tiếng đòi hỏi kỹ thuật canh tác tỉ mỉ.</figcaption>
 </figure>
 
-### 4. Dừa sáp Trà Vinh
+### Dừa sáp Trà Vinh
 
 Dừa sáp (Cầu Kè, nay thuộc Vĩnh Long) là một hiện tượng đột biến sinh học kỳ thú. Thay vì có nước trong, dừa sáp đặc ruột với phần cơm dừa dày, dẻo quánh như sáp và nước dừa sệt lại. Sinh tố dừa sáp dầm sữa đá là món tráng miệng béo ngậy nhất mà bạn từng nếm thử.
 
@@ -106,7 +106,7 @@ Dừa sáp (Cầu Kè, nay thuộc Vĩnh Long) là một hiện tượng đột 
   <figcaption>Phần cơm dừa đặc quánh và dẻo mềm của dừa sáp – loại quả quý hiếm không phải cây nào cũng cho ra trái sáp.</figcaption>
 </figure>
 
-### 5. Dâu Hạ Châu Phong Điền
+### Dâu Hạ Châu Phong Điền
 
 Dâu Hạ Châu có màu vàng nhạt bắt mắt, nổi bật với sự cân bằng hoàn hảo giữa vị chua nhẹ và ngọt thanh. Nếu có dịp ghé Phong Điền (Cần Thơ) vào tháng 5, bạn sẽ được đi bộ dưới những tán dâu sai trĩu quả rủ từ gốc đến ngọn.
 
@@ -115,7 +115,7 @@ Dâu Hạ Châu có màu vàng nhạt bắt mắt, nổi bật với sự cân b
   <figcaption>Những chùm dâu Hạ Châu vàng ươm đung đưa trong vườn, đặc sản không thể bỏ qua khi ghé thăm Cần Thơ.</figcaption>
 </figure>
 
-### 6. Quýt hồng Lai Vung
+### Quýt hồng Lai Vung
 
 Vào khoảng cuối tháng 12 đến cận Tết Nguyên Đán, vùng đất Lai Vung (Đồng Tháp) như được khoác lên mình chiếc áo mới rực rỡ. Quýt hồng có lớp vỏ mỏng màu đỏ cam, múi quýt nhiều nước và hương thơm nồng nàn mang đậm không khí Tết. 
 
@@ -124,7 +124,7 @@ Vào khoảng cuối tháng 12 đến cận Tết Nguyên Đán, vùng đất La
   <figcaption>Màu cam đỏ rực rỡ của Quýt hồng Lai Vung là tín hiệu báo hiệu một mùa xuân ngập tràn no ấm.</figcaption>
 </figure>
 
-### 7. Nhãn tím Sóc Trăng
+### Nhãn tím Sóc Trăng
 
 Nhãn tím là một giống đột biến tự nhiên tại Sóc Trăng (nay thuộc Cần Thơ). Từ vỏ trái, lá non đến nhánh cây đều mang một màu tím đặc trưng. Độ ngọt và cơm nhãn tương tự nhãn tiêu da bò, nhưng màu sắc độc đáo đã khiến loại quả này luôn trong tình trạng khan hiếm nguồn cung.
 
@@ -133,7 +133,7 @@ Nhãn tím là một giống đột biến tự nhiên tại Sóc Trăng (nay th
   <figcaption>Sắc tím lịm đầy quyến rũ của nhãn tím Sóc Trăng, một giống quả hiếm gặp và đắt giá tại miền Tây.</figcaption>
 </figure>
 
-### 8. Thốt nốt Bảy Núi
+### Thốt nốt Bảy Núi
 
 Đến vùng Bảy Núi (An Giang), bạn không thể bỏ qua thốt nốt. Phần cơm bên trong hạt thốt nốt non có màu trắng trong, mềm dai như thạch. Nước thốt nốt tươi giải khát cực tốt, nhưng do dễ lên men nên thường được người dân nấu thành những khoanh đường thốt nốt thơm lừng, dùng để nấu chè hoặc kho cá.
 
@@ -142,7 +142,7 @@ Nhãn tím là một giống đột biến tự nhiên tại Sóc Trăng (nay th
   <figcaption>Lấy nước và sơ chế hạt thốt nốt – nét văn hóa sinh hoạt đặc sắc của đồng bào Khmer vùng Bảy Núi, An Giang.</figcaption>
 </figure>
 
-### 9. Trái bần chua ven sông
+### Trái bần chua ven sông
 
 Mọc hoang dã ven các bờ sông nước lợ, trái bần tuy không phải loại quả tráng miệng, nhưng là linh hồn của ẩm thực sông nước. Vị chua thanh, hơi chát nhẹ của bần làm nên nồi canh chua cá bông lau hay lẩu bần nức tiếng không nơi nào sánh được.
 

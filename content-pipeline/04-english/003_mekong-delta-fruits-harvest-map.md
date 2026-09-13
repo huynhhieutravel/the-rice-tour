@@ -56,7 +56,7 @@ To optimize your expedition and ensure you arrive at the peak of perfection, uti
 
 ## In-Depth Tasting: The Must-Try Masterpieces
 
-### 1. Green-skin Pomelo – The Emerald of the Delta
+### Green-skin Pomelo – The Emerald of the Delta
 
 The Green-skin Pomelo (*Bưởi da xanh*) is the crowning agricultural jewel of the Ben Tre region (now administratively merged into Vinh Long). Its defining characteristic is a vibrant green rind that remains verdant even at full ripeness, protecting luscious, rosy-pink vesicles that are bursting with a perfectly balanced sweetness and contain few, if any, seeds.
 *Purchasing Tip:* Seek out fruits with taut, glossy skin and well-defined dimples. A superior pomelo will feel remarkably heavy and dense in your hand.
@@ -66,7 +66,7 @@ The Green-skin Pomelo (*Bưởi da xanh*) is the crowning agricultural jewel of 
   <figcaption>The crisp, refreshing Green-skin Pomelo stands as a premium artisanal gift from the southern orchards.</figcaption>
 </figure>
 
-### 2. Ri6 Durian – The King of Fruits
+### Ri6 Durian – The King of Fruits
 
 A discourse on Mekong Delta durians is incomplete without reverence for the legendary Ri6 cultivar, originating from Binh Hoa Phuoc (Vinh Long). Distinguishing itself from Thai varieties, the Ri6 boasts brilliant saffron-yellow flesh, remarkably flat seeds, a decadently creamy texture, and an intoxicatingly pungent aroma that is entirely unmistakable.
 *Tasting Note:* We highly recommend indulging directly at the source—orchards that offer a "quality guarantee" (replacing any subpar fruit immediately) ensure a flawless tasting experience.
@@ -76,7 +76,7 @@ A discourse on Mekong Delta durians is incomplete without reverence for the lege
   <figcaption>The radiant, buttery flesh of the Ri6 Durian—an irresistible challenge for true epicureans.</figcaption>
 </figure>
 
-### 3. Lo Ren Star Apple (Vinh Kim)
+### Lo Ren Star Apple (Vinh Kim)
 
 Making a fleeting appearance exclusively between January and March, the Lo Ren Star Apple (*Vú sữa Lò Rèn*) from Dong Thap features an exquisitely thin, polished skin. A gentle massage of the fruit releases a milky, profoundly sweet nectar. It is a delicate, cooling delicacy, perfect for tempering the onset of the summer heat.
 
@@ -96,7 +96,7 @@ Making a fleeting appearance exclusively between January and March, the Lo Ren S
   <figcaption>The sweet, milky nectar of the Lo Ren Star Apple, an esteemed specialty requiring meticulous cultivation.</figcaption>
 </figure>
 
-### 4. Macapuno Coconut (Tra Vinh)
+### Macapuno Coconut (Tra Vinh)
 
 The Macapuno Coconut (*Dừa sáp*) from Cau Ke (now under Vinh Long) is a fascinating botanical mutation. Rather than yielding clear coconut water, it is densely packed with thick, wax-like, gelatinous flesh, while its liquid is viscous and syrupy. A smoothie blending this waxy coconut with crushed ice and condensed milk ranks among the most decadent tropical desserts imaginable.
 
@@ -105,7 +105,7 @@ The Macapuno Coconut (*Dừa sáp*) from Cau Ke (now under Vinh Long) is a fasci
   <figcaption>The dense, viscous flesh of the Macapuno—a rare genetic marvel that only a fraction of palms can produce.</figcaption>
 </figure>
 
-### 5. Ha Chau Burmese Grape (Phong Dien)
+### Ha Chau Burmese Grape (Phong Dien)
 
 The Ha Chau Burmese Grape (*Dâu Hạ Châu*) is visually arresting with its pale golden hue, renowned for a masterful balance of subtle tartness and clean sweetness. Should you find yourself in Phong Dien (Can Tho) during May, you can wander beneath sprawling canopies where clusters of this fruit cascade heavily from trunk to branch tip.
 
@@ -114,7 +114,7 @@ The Ha Chau Burmese Grape (*Dâu Hạ Châu*) is visually arresting with its pal
   <figcaption>Clusters of golden Ha Chau grapes swaying in the breeze—an unmissable delicacy when venturing through Can Tho.</figcaption>
 </figure>
 
-### 6. Lai Vung Pink Mandarin
+### Lai Vung Pink Mandarin
 
 From late December leading up to the Lunar New Year, the Lai Vung region (Dong Thap) seemingly dons a vibrant new wardrobe. The Pink Mandarin (*Quýt hồng*) features a thin, red-orange rind, bursting with succulent juices and a potent fragrance that instantly evokes the festive spirit of Tet.
 
@@ -123,7 +123,7 @@ From late December leading up to the Lunar New Year, the Lai Vung region (Dong T
   <figcaption>The fiery red-orange hue of the Lai Vung Pink Mandarin signals the arrival of a prosperous and abundant spring.</figcaption>
 </figure>
 
-### 7. Soc Trang Purple Longan
+### Soc Trang Purple Longan
 
 The Purple Longan (*Nhãn tím*) is a stunning natural mutation discovered in Soc Trang (now under Can Tho). Every element—from the fruit’s skin and young leaves to the branches—is suffused with a striking purple pigment. While its sweetness and flesh profile mirror the classic 'cow-hide' longan (*nhãn tiêu da bò*), its arresting visual appeal ensures this rarity remains perpetually in high demand and short supply.
 
@@ -132,7 +132,7 @@ The Purple Longan (*Nhãn tím*) is a stunning natural mutation discovered in So
   <figcaption>The mesmerizing, deep violet hue of the Purple Longan, a highly prized and elusive botanical rarity of the Delta.</figcaption>
 </figure>
 
-### 8. Bay Nui Palmyra Palm
+### Bay Nui Palmyra Palm
 
 When journeying through the Seven Mountains Region (*Vùng Bảy Núi*, An Giang), the Palmyra Palm (*Thốt nốt*) commands attention. The translucent endosperm of the young palm seed is as tender and chewy as artisan jelly. While freshly harvested palm sap is an exceptional thirst quencher, its rapid fermentation means locals often boil it down into fragrant, caramelized discs of palm sugar—an essential ingredient for crafting traditional sweet soups (*chè*) or caramelizing fish.
 
@@ -141,7 +141,7 @@ When journeying through the Seven Mountains Region (*Vùng Bảy Núi*, An Giang
   <figcaption>Extracting sap and preparing palmyra seeds—a profound cultural practice of the indigenous Khmer communities in the Seven Mountains.</figcaption>
 </figure>
 
-### 9. Wild Mangrove Apple (Trái Bần)
+### Wild Mangrove Apple (Trái Bần)
 
 Thriving untamed along the brackish riverbanks, the Mangrove Apple (*Trái bần*) is not intended as a dessert; rather, it is the rustic soul of riverine gastronomy. Its sharp, tart flavor, underscored by a subtle astringency, is the irreplaceable foundation for the legendary sour catfish soup (*canh chua cá bông lau*) or the iconic *lẩu bần* (mangrove apple hotpot)—culinary masterpieces unrivaled elsewhere.
 

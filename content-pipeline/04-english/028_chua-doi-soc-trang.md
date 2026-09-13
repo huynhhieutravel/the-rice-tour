@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "📜"
 ---
 
-## 1. Introduction to the Bat Pagoda (Wat Mahatup)
+## Introduction to the Bat Pagoda (Wat Mahatup)
 
 Officially known in Khmer as **Wat Mahatup** (meaning "gathered by the virtue of monks"), the Bat Pagoda is a cornerstone of Theravada Buddhism in the Mekong Delta. Built in 1569, it has stood the test of time, surviving wars and a devastating fire in 2007 (after which it was meticulously restored to its former glory).
 
@@ -44,7 +44,7 @@ However, what truly sets this temple apart from hundreds of other Khmer pagodas 
 > - **Wildlife Note:** The bats are entirely harmless to humans. They sleep during the day and forage for fruit at night.
 > - **Dress Code:** As with all active Buddhist temples, visitors must dress modestly (covering shoulders and knees).
 
-## 2. The Architectural Splendor
+## The Architectural Splendor
 
 The Bat Pagoda is a textbook example of classic Khmer temple architecture, characterized by vibrant colors, intricate carvings, and deep symbolic meaning.
 
@@ -55,18 +55,18 @@ Inside, the hall houses a massive monolithic stone Buddha statue resting on a lo
 ### The Stupas and the Grounds
 Surrounding the main hall are various stupas holding the ashes of past head monks. The entire complex is enveloped in a primeval forest of towering ancient mahogany (sao) and hopea (dầu) trees, providing a cool, shaded canopy even during the intense heat of the dry season.
 
-## 3. The Enigma of the Bats
+## The Enigma of the Bats
 
 The defining feature of Wat Mahatup is, undeniably, the bats. 
 - **The Phenomenon:** Look up into the high branches of the ancient trees, and you will see thousands of giant fruit bats (Pteropus) hanging upside down, resembling oversized, dark fruits. These creatures have wingspans that can reach up to 1.5 meters.
 - **The Mystery:** Despite the abundance of similar trees in surrounding areas, the bats stubbornly refuse to roost anywhere else but within the sacred grounds of this specific pagoda. They never damage the fruit trees within the pagoda's compound, flying miles away at dusk to forage before returning at dawn.
 - **The Best Viewing Time:** To witness the most spectacular sight, visit around 17:30. As the sun begins to set, the entire colony awakens and takes flight, creating a massive, swirling cloud against the twilight sky—a scene straight out of a gothic novel.
 
-## 4. The Pig with Five Claws: A Local Legend
+## The Pig with Five Claws: A Local Legend
 
 Beyond the bats, the pagoda is famous for another peculiar phenomenon: the graves of pigs with five claws. In local Khmer folklore, a pig born with five claws is considered a manifestation of a mischievous spirit or bad luck. Families owning such a pig will often bring it to the Bat Pagoda, where the monks bless it and care for it until it dies of natural causes. Visitors can walk behind the main compound to see the small, well-kept graves dedicated to these unique animals.
 
-## 5. Travel Logistics and Etiquette
+## Travel Logistics and Etiquette
 
 Soc Trang is an easy detour for travelers exploring the lower Mekong Delta, often combined with trips to Can Tho or Bac Lieu.
 
@@ -76,7 +76,7 @@ Soc Trang is an easy detour for travelers exploring the lower Mekong Delta, ofte
   - Maintain a respectful silence while walking the grounds, as monks are often meditating or studying.
 - **Culinary Stop:** Outside the pagoda gates, you will find numerous vendors selling Soc Trang’s famous *Bánh Pía* (durian pastry) and *Lạp Xưởng* (Chinese sausage)—perfect souvenirs for your journey.
 
-## 6. Epilogue
+## Epilogue
 
 The Bat Pagoda is a rare destination where architectural beauty, profound spirituality, and a touch of the bizarre coalesce perfectly. It stands as a testament to the Khmer people's deep respect for all living creatures, offering modern travelers a sanctuary of peace and a fascinating glimpse into the mystical folklore of the Mekong Delta.
 

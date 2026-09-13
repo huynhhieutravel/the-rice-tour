@@ -59,7 +59,7 @@ epilogue: "A memorable urban journey begins with effortless arrival and ends wit
 
 ---
 
-## 1. Introduction: The Battle for Parking in Saigon’s Heritage Heart
+## Introduction: The Battle for Parking in Saigon’s Heritage Heart
 
 District 1 represents Vietnam's densest urban commercial zone, with Ben Thanh Market serving as its bustling gravitational center. With thousands of shoppers, food lovers, and international visitors converging hourly—combined with newly pedestrianized boulevards across Quach Thi Trang Square—locating secure, municipally regulated parking for scooters or cars is a notorious friction point.
 
@@ -69,7 +69,7 @@ To ensure your cultural exploration begins smoothly, The Rice Tour provides the 
 
 ---
 
-## 2. Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs
+## Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs
 
 | Facility Name | Exact Location | Vehicle Types | Scooter Fee (VND) | Car Fee (VND) | Operating Hours | Security Rating |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -82,7 +82,7 @@ To ensure your cultural exploration begins smoothly, The Rice Tour provides the 
 
 ---
 
-## 3. Practical Recommendations by Vehicle Class
+## Practical Recommendations by Vehicle Class
 
 ### A. For Motorbike & Scooter Riders
 
@@ -118,7 +118,7 @@ To ensure your cultural exploration begins smoothly, The Rice Tour provides the 
 
 ---
 
-## 4. How to Spot Rogue Parking Traps & 3-Step Counteraction
+## How to Spot Rogue Parking Traps & 3-Step Counteraction
 
 Avoid extortion by recognizing the telltale signs of illicit parking operations:
 

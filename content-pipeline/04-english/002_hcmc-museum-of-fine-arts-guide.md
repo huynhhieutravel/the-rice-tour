@@ -72,7 +72,7 @@ Located less than a five-minute stroll across Le Thi Hong Gam Street from the fo
 
 ---
 
-## 1. The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan
+## The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan
 
 To appreciate the palatial grandeur of 97A Pho Duc Chinh, one must understand the man who commissioned it. **Hui Bon Hoa** (famously remembered in southern folklore as *Chú Hỏa*, 1845 – 1901) was an immigrant entrepreneur of Hokkien descent who rose from modest origins to become the fourth figure in Saigon's mythic quartet of tycoons: *"Nhat Sy, Nhi Phuong, Tam Xuong, Tu Hoa"*.
 
@@ -82,7 +82,7 @@ In 1929, the heirs commissioned renowned French architect **Rivera** to design a
 
 ---
 
-## 2. Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy
+## Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy
 
 The enduring magic of the estate lies in its brilliant equilibrium between European avant-garde and indigenous environmental adaptation:
 
@@ -97,20 +97,20 @@ The enduring magic of the estate lies in its brilliant equilibrium between Europ
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
+### The Exterior: Classical Pilasters Crowned by Emerald Dragon Tiles
 Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a regal facade framed by classical Hellenic pilasters. Yet, lifting your eyes reveals a delightful subversion: curved eaves tiled in jade-green glazed ceramic yin-yang tiles, embellished with terra-cotta carp-turning-dragons from the famed Bien Hoa kilns. This spirited dialogue between 1930s European Art Deco geometric rigor and the organic curves of Asian temple roofs bestows the estate with an unmistakable regional identity.
 
-### 2.2. The Interior: Encaustic Tiles and Prismatic Lightwells
+### The Interior: Encaustic Tiles and Prismatic Lightwells
 Cross the threshold, and you immediately step upon an exquisite carpet of **handmade encaustic cement tiles**. Every salon, corridor, and mezzanine boasts a distinct tessellated geometric motif, shifting effortlessly from ochre yellow to marine indigo and cinnabar red.
 
 Equally breathtaking are the arched clerestory windows fitted with vibrant stained glass. As equatorial sunlight filters through these kaleidoscopic panels, vivid amber and cerulean beams dance across weathered plaster walls, creating an atmosphere of contemplative, church-like tranquility.
 
-### 2.3. The Parisian Antique Elevator: Technological Aristocracy
+### The Parisian Antique Elevator: Technological Aristocracy
 Positioned at the core of the central lightwell in Building 1, the vintage lift carriage features intricate brass latticework encasing polished dark timber. Standing before it, one can easily imagine the lavish lifestyle of Saigon’s Roaring Twenties, when this private lift was the envy of Indochina’s merchant elite.
 
 ---
 
-## 3. Navigating the Three Pavilions: A Millennial Artistic Odyssey
+## Navigating the Three Pavilions: A Millennial Artistic Odyssey
 
 | Pavilion | Curatorial Focus | Pinnacle Highlights | Recommended Stroll |
 | :--- | :--- | :--- | :--- |
@@ -123,7 +123,7 @@ Enshrined in a temperature-controlled gallery on the second floor of Building 1 
 
 ---
 
-## 4. Curated Field Notes for the Discerning Traveler (2026)
+## Curated Field Notes for the Discerning Traveler (2026)
 
 - **Golden Light Window:** Visit between **08:30 and 10:30 AM** or **15:00 and 16:30 PM**. During these windows, low-angled sunlight casts dramatic linear shadows across the tiled verandas, creating exceptional conditions for architectural photography.
 - **Conservation Etiquette:** Refrain from touching the fragile lacquer surfaces and historic stone carvings. Flash photography is strictly forbidden to preserve delicate natural pigments and antique silk fibers.

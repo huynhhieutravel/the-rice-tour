@@ -49,7 +49,7 @@ Thay vì liệt kê một danh sách dài lê thê và hời hợt, chúng tôi 
 
 ## Đánh giá chi tiết: Top 7 Tọa độ lưu trú hoàn hảo
 
-### 1. Sohora Sea Mountain Bungalow: Ẩn mình trên vách đá
+### Sohora Sea Mountain Bungalow: Ẩn mình trên vách đá
 
 Nằm cheo leo trên cung đường chinh phục đỉnh Ma Thiên Lãnh, Sohora (tiền thân là Lamien Homestay) là một kiến trúc gỗ độc bản ôm sát vào vách đá tự nhiên.
 
@@ -64,7 +64,7 @@ Nằm cheo leo trên cung đường chinh phục đỉnh Ma Thiên Lãnh, Sohora
   <figcaption>Những căn bungalow gỗ vách kính cheo leo bên sườn núi Ma Thiên Lãnh, mang lại tầm nhìn vô cực ra đại dương xanh thẳm.</figcaption>
 </figure>
 
-### 2. Rái Cá Homestay: Thanh xuân rực rỡ bên bờ biển
+### Rái Cá Homestay: Thanh xuân rực rỡ bên bờ biển
 
 Nhắc đến Hòn Sơn mà bỏ qua Rái Cá thì quả là một thiếu sót. Rái Cá không bán phòng ngủ, họ bán một "hệ sinh thái thanh xuân". 
 
@@ -88,7 +88,7 @@ Nhắc đến Hòn Sơn mà bỏ qua Rái Cá thì quả là một thiếu sót.
   <figcaption>Khoảnh khắc hoàng hôn buông xuống khu vực quầy bar dã chiến của Rái Cá Homestay.</figcaption>
 </figure>
 
-### 3. Bấc's Homestay: Kiến trúc tối giản đương đại
+### Bấc's Homestay: Kiến trúc tối giản đương đại
 
 Tọa lạc tại Bãi Bắc - nơi sở hữu bãi cát dài và êm ái nhất Hòn Sơn, Bấc's Homestay là một làn gió mới với phong cách thiết kế hiện đại, tinh giản (Minimalism) nhưng cực kỳ ấm cúng.
 
@@ -101,7 +101,7 @@ Tọa lạc tại Bãi Bắc - nơi sở hữu bãi cát dài và êm ái nhất
   <figcaption>Góc sân nhỏ xinh xắn và an yên tại Bấc's Homestay, nơi lý tưởng để đọc một quyển sách vào buổi sáng sớm.</figcaption>
 </figure>
 
-### 4. Sao Biển Coffee & Homestay (Cocobay)
+### Sao Biển Coffee & Homestay (Cocobay)
 
 Nằm trên lưng chừng đồi trên con đường đèo uốn lượn ven biển, Sao Biển là sự kết hợp hoàn hảo giữa một trạm nghỉ chân uống cà phê và khu lưu trú.
 
@@ -114,7 +114,7 @@ Nằm trên lưng chừng đồi trên con đường đèo uốn lượn ven bi�
   <figcaption>View ngắm hoàng hôn đắt giá cộp mác Sao Biển Homestay, nơi đất trời hòa quyện vào khoảnh khắc chạng vạng.</figcaption>
 </figure>
 
-### 5. Thương's House: Tọa độ ngắm bình minh hoàn hảo
+### Thương's House: Tọa độ ngắm bình minh hoàn hảo
 
 Nằm sát mép biển, Thương's House thiết kế các mảng kính lớn để tối đa hóa tầm nhìn. Bạn chỉ cần bước 3 bước từ cửa phòng là bàn chân đã chạm vào nước biển.
 
@@ -127,7 +127,7 @@ Nằm sát mép biển, Thương's House thiết kế các mảng kính lớn đ
   <figcaption>Cấu trúc phòng ngủ hướng trực diện ra biển, đón tia nắng đầu tiên của ngày mới tại Thương's House.</figcaption>
 </figure>
 
-### 6. Thanh Duyên Homestay: Hơi thở của làng chài
+### Thanh Duyên Homestay: Hơi thở của làng chài
 
 Nếu bạn muốn trải nghiệm đời sống của một ngư dân thực thụ, Thanh Duyên là bến đỗ. Không cầu kỳ, không hào nhoáng, Thanh Duyên mang đến sự chân chất, nhiệt tình của người bản địa.
 
@@ -140,7 +140,7 @@ Nếu bạn muốn trải nghiệm đời sống của một ngư dân thực th
   <figcaption>Nét mộc mạc, bình dị của Thanh Duyên Homestay rất được lòng các phượt thủ yêu thích trải nghiệm bụi bặm.</figcaption>
 </figure>
 
-### 7. Fly Up Resort: Đẳng cấp giữa hoang sơ
+### Fly Up Resort: Đẳng cấp giữa hoang sơ
 
 Dù mang tên Resort, nhưng Fly Up vẫn giữ được tinh thần của một Homestay sinh thái. Đây là bản nâng cấp hoàn hảo cho những cặp đôi hưởng tuần trăng mật hoặc những ai yêu cầu khắt khe về sự tiện nghi.
 

@@ -33,7 +33,7 @@ sidebar_facts:
     icon: "📅"
 ---
 
-## 1. Introduction to The Rice Tour's Philosophy
+## Introduction to The Rice Tour's Philosophy
 
 At **The Rice Tour**, we believe that a profound travel experience is architected through meticulous attention to detail, deep local knowledge, and an unwavering commitment to authenticity. We do not sell off-the-shelf packages; we curate narratives. 
 
@@ -42,7 +42,7 @@ As a premier inbound tour operator in 2026, our service ecosystem is designed to
 > 🌟 **The FIT (Free Independent Traveler) Advantage**
 > We specialize in FIT travel, meaning every itinerary is highly flexible, tailored specifically to your pace, preferences, and passions.
 
-## 2. Core Tour Offerings: Exploring the Authentic Vietnam
+## Core Tour Offerings: Exploring the Authentic Vietnam
 
 ### The Mekong Delta Masterpieces
 As our geographical heartland, we possess unparalleled expertise in the Mekong Delta. We take you beyond the crowded tourist traps to experience the true rhythm of river life.
@@ -62,7 +62,7 @@ For those seeking dramatic landscapes and diverse ethnic cultures, our Northern 
 - **Ha Long Bay Private Charters:** Exclusive luxury junk boat rentals avoiding the congested main routes.
 - **Highland Trekking:** Guided eco-tours through the terraced fields of Sapa, Ha Giang, and Ninh Binh's karst mountains.
 
-## 3. Specialized Travel Services
+## Specialized Travel Services
 
 Beyond standard itineraries, The Rice Tour offers a suite of specialized services to ensure complete logistical peace of mind.
 
@@ -82,13 +82,13 @@ Our 24/7 concierge desk is always at your disposal to handle the minutiae of tra
 - **High-Speed Ferries:** Premium ticketing for routes like Rach Gia to Phu Quoc, or Vung Tau to Con Dao.
 - **Exclusive Reservations:** Securing tables at Michelin-starred restaurants or highly sought-after local culinary institutions.
 
-## 4. The 2026 Commitment to Sustainable Tourism
+## The 2026 Commitment to Sustainable Tourism
 
 As we navigate the travel landscape of 2026, The Rice Tour is deeply committed to sustainable and responsible tourism. 
 - **Community Empowerment:** We actively partner with local artisans, family-run eateries, and homestays to ensure tourism revenue directly benefits the communities you visit.
 - **Eco-Conscious Practices:** We prioritize low-impact travel methods, discourage single-use plastics on our tours, and support wildlife conservation efforts (such as ethical guidelines at My Quynh Safari).
 
-## 5. Epilogue
+## Epilogue
 
 Your journey to Vietnam should be as unique as you are. The Rice Tour's comprehensive matrix of services guarantees that from the moment you land until your final departure, you are enveloped in the warmth of Vietnamese hospitality and the precision of world-class travel management. 
 

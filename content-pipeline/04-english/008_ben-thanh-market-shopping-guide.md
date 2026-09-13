@@ -71,7 +71,7 @@ Highlighted in our comprehensive field guide to [things to do near Ben Thanh Mar
 
 ---
 
-## 1. Navigating the Four Cardinal Shopping Quadrants
+## Navigating the Four Cardinal Shopping Quadrants
 
 ```mermaid
 graph TD
@@ -82,21 +82,21 @@ graph TD
     Market --> North["NORTH GATE: Tropical Fruits (Ri6 Durian, Mangosteens, Pomelos) & Fresh Botanicals"]
 ```
 
-### 1.1. The South Gate (Le Loi Boulevard): Silks & Master Lacquerware
+### The South Gate (Le Loi Boulevard): Silks & Master Lacquerware
 Entering beneath the iconic clock tower, you are immediately enveloped in vibrant textiles. Bolts of shimmering mulberry silk from Bao Loc and Van Phuc drape from ceiling beams alongside bespoke tailors capable of cutting and stitching an exquisite traditional *áo dài* within 12 to 24 hours. Surrounding stalls showcase handcrafted lacquer boxes inlaid with mother-of-pearl and natural duck eggshells.
 
-### 1.2. The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices
+### The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices
 Follow your nose into the aromatic domain of whole-bean Vietnamese coffees. Merchants roast Arabica from the misty highlands of Da Lat and rich Robusta from Buon Ma Thuot on-site, grinding beans to your exact brewing preference. Nearby bins overflow with silk-skinned Binh Phuoc cashews and white peppercorns from Phu Quoc Island.
 
-### 1.3. The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather
+### The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather
 A haven for sustainable, natural accessories: hand-plaited water hyacinth and rattan tote bags, full-grain leather wallets, and hand-embroidered conical hats.
 
-### 1.4. The North Gate (Le Thanh Ton Street): Orchard Bounty
+### The North Gate (Le Thanh Ton Street): Orchard Bounty
 Vibrant fruit pyramids showcasing southern Vietnam's seasonal harvest: Ri6 golden durians, sweet mangosteens, and green-skin pomelos fresh from Tien Giang province.
 
 ---
 
-## 2. Bargaining with Grace: Cultural Guidelines
+## Bargaining with Grace: Cultural Guidelines
 
 Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:
 
@@ -111,19 +111,19 @@ Negotiating in a traditional Vietnamese market should never feel confrontational
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-### 2.1. Honor the Morning Opening Rite (*Mở Hàng*)
+### Honor the Morning Opening Rite (*Mở Hàng*)
 Southern merchants hold deep spiritual reverence for their first customer of the morning (between 07:00 and 08:30 AM). A swift, pleasant initial sale is believed to bestow auspicious commercial luck upon the entire day. Refrain from aggressive bargaining or prolonged indecision during this dawn window. For unhurried negotiation, visit after 09:30 AM.
 
-### 2.2. The 15% to 25% Equilibrium
+### The 15% to 25% Equilibrium
 Souvenir, textile, and handicraft stalls often quote an initial price that factors in a modest negotiation buffer. Proposing a polite 15% to 25% adjustment usually reaches an equitable midpoint. 
 - *Local Tip:* Frame your counteroffer with a genuine smile and a warm phrase: *"Em mua kỷ niệm, chị bớt chút may mắn nhé!"* (I'm purchasing a keepsake; please grant a little lucky discount).
 
-### 2.3. The Gentle Walk-Away
+### The Gentle Walk-Away
 If a mutually agreeable price cannot be reached, bow your head slightly, offer a sincere thank you, and calmly step toward the next stall. In many instances, the vendor will gracefully call you back and accept your counteroffer.
 
 ---
 
-## 3. Detecting Authentic Artisanship vs. Mass-Produced Counterfeits
+## Detecting Authentic Artisanship vs. Mass-Produced Counterfeits
 
 | Handicraft | Hallmarks of Authentic Craft | Warning Signs of Industrial Fakes |
 | :--- | :--- | :--- |
@@ -134,7 +134,7 @@ If a mutually agreeable price cannot be reached, bow your head slightly, offer a
 
 ---
 
-## 4. Consumer Protections & Traveler Rights (2026)
+## Consumer Protections & Traveler Rights (2026)
 
 1. **Verify Weight at Public Scales:** If purchasing dried fruits, cashews, or spices by weight, feel free to verify your purchase at the electronic scales installed beside each of the four main gates.
 2. **24/7 Consumer Support:** QR complaint placards with hotlines to District 1 market authorities are displayed across every aisle to immediately arbitrate service or pricing disputes.

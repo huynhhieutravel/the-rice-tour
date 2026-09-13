@@ -42,7 +42,7 @@ When scouring the internet for intel, many travelers instinctively search for "M
 
 The most distinctive operational trait of My Quynh Safari, distinguishing it from conventional theme parks, is its **fragmented ticketing policy**. Rather than purchasing a comprehensive "All-in-one" passport at the gate, visitors pay a la carte for specific zones. This modular approach is financially advantageous for those who simply wish to stroll and observe, yet it demands meticulous budget forecasting for families intent on experiencing everything.
 
-### 1. General Admission (Mandatory)
+### General Admission (Mandatory)
 This foundational ticket grants access solely to the traditional enclosed zoo, the Bonsai gardens, and the Koi ponds.
 
 | Passenger Category | Standard Fare |
@@ -51,7 +51,7 @@ This foundational ticket grants access solely to the traditional enclosed zoo, t
 | **Children (1m - 1.4m)** | 60,000 VND |
 | **Children under 1m** | Complimentary |
 
-### 2. The Semi-Wild Safari Expedition
+### The Semi-Wild Safari Expedition
 This is the undeniable soul of the reserve. Here, you board specially modified, steel-mesh buses that plunge deep into the free-roaming territories of lions, bears, and tigers.
 
 | Passenger Category | Fare / Seat |
@@ -60,7 +60,7 @@ This is the undeniable soul of the reserve. Here, you board specially modified, 
 | **Children under 1m (occupying a seat)** | 100,000 VND |
 | **Infants (seated on a parent's lap)** | Complimentary |
 
-### 3. Water Park & Amusement Zones
+### Water Park & Amusement Zones
 Should your expedition extend into the sweltering afternoon, the water park serves as an indispensable refuge.
 
 | Zone | Passenger Category | Fare |
@@ -78,7 +78,7 @@ Should your expedition extend into the sweltering afternoon, the water park serv
 
 ## Expedition Map: What Lies Within My Quynh Safari?
 
-### 1. The Armored Safari Trek
+### The Armored Safari Trek
 
 Subverting the archaic model of caged captivity, the semi-wild sanctuary turns the tables. Here, it is the humans who are "caged" within secure armored buses, crawling methodically into the sprawling, uninhibited habitats of apex predators and towering herbivores.
 
@@ -91,7 +91,7 @@ The visceral thrill of a Bengal tiger pressing its weight against reinforced gla
   <figcaption>Observing formidable wildlife at such intimate proximity offers profound, hands-on educational value for children.</figcaption>
 </figure>
 
-### 2. Zen Sanctuary: Bonsai Gardens & Koi Ponds
+### Zen Sanctuary: Bonsai Gardens & Koi Ponds
 
 If the adrenaline of the safari demands a contemplative pause, the Japanese-inspired Bonsai gardens, seamlessly integrated with massive Koi ponds, offer a sanctuary of stillness. The landscape is masterfully curated with rustic wooden bridges and monolithic natural stones, providing a flawless backdrop for documenting family memories.
 
@@ -111,7 +111,7 @@ If the adrenaline of the safari demands a contemplative pause, the Japanese-insp
   <figcaption>A kaleidoscope of Koi fish gliding through the water provides a soothing visual contrast to the vast, untamed reserve.</figcaption>
 </figure>
 
-### 3. The Adrenaline Zone
+### The Adrenaline Zone
 
 Beyond the aquatic park, the outdoor amusement sector challenges the bold with high-octane installations: free-fall drop towers, roller coasters, a zipline soaring over the lake, and interconnected trampoline labyrinths.
 *Expert Warning:* All outdoor mechanical apparatuses are subject to immediate, unannounced shutdowns if park management detects approaching thunderstorms or heavy squalls, a vital protocol to prevent electrical hazards and slip-and-fall incidents.

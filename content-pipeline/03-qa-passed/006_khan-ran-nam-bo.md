@@ -24,21 +24,21 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-c
 
 ---
 
-## 1. Cội Nguồn 300 Năm: Từ Khăn Krama Đến Biểu Tượng Nam Bộ
+## Cội Nguồn 300 Năm: Từ Khăn Krama Đến Biểu Tượng Nam Bộ
 
-### 1.1. Dấu Ấn Tâm Linh Của Thần Bảo Hộ Vishnu
+### Dấu Ấn Tâm Linh Của Thần Bảo Hộ Vishnu
 Nhiều du khách khi cầm trên tay chiếc khăn rằn thường nghĩ đây là sáng tạo thuần túy của những di dân người Việt thời mở cõi. Tuy nhiên, dưới góc nhìn nhân học văn hóa, chiếc khăn rằn có nguồn gốc trực tiếp từ chiếc **Krama** của người Khmer bản địa vùng châu thổ sông Mê Kông.
 
 Trong thần thoại Khmer cổ chịu ảnh hưởng Ấn Độ giáo, thần **Vishnu** là vị thần bảo hộ tối cao, luôn chở che muôn loài và thường ngự trên lưng rắn thần Naga 7 đầu. Chiếc khăn Krama với hoa văn đan lưới ca-rô được thiết kế tượng trưng cho lớp vảy bảo vệ của rắn thần Naga. Người xưa tin rằng mang chiếc khăn bên mình sẽ nhận được sự che chở vô hình của thần linh trước thú dữ, bão giông và chướng khí chốn rừng thiêng nước độc.
 
-### 1.2. Sự Thích Nghi Hoàn Hảo Trong Thời Kỳ Khai Hoang
+### Sự Thích Nghi Hoàn Hảo Trong Thời Kỳ Khai Hoang
 Khi người Việt tiến vào khai phá vùng đồng bằng sông Cửu Long vào thế kỷ 17 – 18, điều kiện tự nhiên khắc nghiệt với sông ngòi chằng chịt, nắng gắt và mưa dầm đã đòi hỏi trang phục phải cực kỳ thực dụng. Bộ bà ba đen kết hợp cùng chiếc khăn rằn vắt vai đã trở thành biểu tượng sinh tồn không thể tách rời của những lưu dân khai hoang mở cõi.
 
 Từ *"rằn"* trong phương ngữ Nam Bộ có nghĩa là sọc đan chéo. Tông màu đen – trắng truyền thống không chỉ giúp chống bám bẩn phèn bùn phù sa mà còn thể hiện tính cách bộc trực, giản dị và phóng khoáng của con người phương Nam.
 
 ---
 
-## 2. Khăn Rằn Trong Kháng Chiến: Biểu Tượng Của Đội Quân Tóc Dài
+## Khăn Rằn Trong Kháng Chiến: Biểu Tượng Của Đội Quân Tóc Dài
 
 Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên trên công năng sinh hoạt hằng ngày để trở thành một biểu tượng quân sự và văn hóa bất tử của chiến trường miền Nam:
 
@@ -59,7 +59,7 @@ Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên tr
 
 ---
 
-## 3. Ma Trận So Sánh: 4 Loại Khăn Truyền Thống Tiêu Biểu Đông Nam Á
+## Ma Trận So Sánh: 4 Loại Khăn Truyền Thống Tiêu Biểu Đông Nam Á
 
 | Tiêu chí | Khăn Rằn (Nam Bộ) | Krama (Campuchia) | Khăn Chăm (An Giang) | Khăn Piêu (Tây Bắc) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -70,14 +70,14 @@ Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên tr
 
 ---
 
-## 4. Cẩm Nang Thực Địa: Khám Phá Làng Dệt Trăm Năm Long Khánh A
+## Cẩm Nang Thực Địa: Khám Phá Làng Dệt Trăm Năm Long Khánh A
 
-### 4.1. Cẩm Nang Di Chuyển & Thời Điểm Vàng 2026
+### Cẩm Nang Di Chuyển & Thời Điểm Vàng 2026
 - **Tọa độ:** Cù lao Long Khánh A nằm giữa dòng sông Tiền cuồn cuộn phù sa, cách TP. Cao Lãnh khoảng 65 km và TP. Hồng Ngự 12 km.
 - **Cách đi:** Từ trung tâm TP. Hồng Ngự, di chuyển đến bến phà Long Khánh, mất 10 phút qua sông là đến cù lao. Đường sá trên cù lao đã được thảm nhựa hoàn toàn, rất lý tưởng để đạp xe dạo quanh các xóm dệt.
 - **Khung giờ vàng:** Nên đến vào khoảng **7:30 – 10:30 sáng**. Đây là lúc các nghệ nhân căng sợi phơi dưới nắng sớm rực rỡ và tiếng khung cửi lách cách rộn ràng khắp xóm.
 
-### 4.2. Quy Trình 6 Bước Thủ Công & Bí Quyết "Hồ Bột Gạo" Độc Bản
+### Quy Trình 6 Bước Thủ Công & Bí Quyết "Hồ Bột Gạo" Độc Bản
 1. **Xả chỉ & Đánh ống:** Sợi bông nguyên liệu được xả từ cuộn lớn thành từng con sợi nhỏ bằng guồng quay gỗ truyền thống.
 2. **Nhuộm màu thảo mộc:** Nấu trong chảo nước sôi pha màu để sắc tố ngấm sâu vào tim sợi, sau đó vắt ráo.
 3. **Hồ bột gạo (Bí quyết độc bản):** Nhúng sợi qua nước bột gạo khuấy chín để sợi đanh dai, bóng mượt và không bị đứt khi đưa lên khung cửi.
@@ -87,7 +87,7 @@ Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên tr
 
 ---
 
-## 5. The Voyager’s Guide: 4 Cách Quàng Khăn Rằn Chuẩn Guu Lữ Hành
+## The Voyager’s Guide: 4 Cách Quàng Khăn Rằn Chuẩn Guu Lữ Hành
 
 1. **Vắt Vai Phóng Khoáng:** Vòng khăn qua sau gáy, để hai vạt buông tự nhiên trước ngực. Phong cách kinh điển khi dạo chợ nổi hay thăm vườn cây trái.
 2. **Thắt Nút Lệch Vai (Expedition):** Quấn một vòng quanh cổ, luồn một đầu qua khe tạo nút thắt nhẹ lệch vai. Rất gọn gàng khi đi xe máy, chèo xuồng hay trekking.
@@ -96,7 +96,7 @@ Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên tr
 
 ---
 
-## 6. Mẹo Chọn Khăn Dệt Thủ Công & Cách Bảo Quản
+## Mẹo Chọn Khăn Dệt Thủ Công & Cách Bảo Quản
 
 - **Cách nhận biết khăn dệt tay chuẩn:** Khăn Long Khánh A xịn khi mới mua về sẽ có cảm giác hơi đanh và hơi cứng do lớp hồ bột gạo bảo vệ sợi. Sau lần giặt đầu tiên, lớp bột gạo tan đi, khăn sẽ mềm mượt, thấm hút mồ hôi cực tốt. Khăn công nghiệp sợi nylon tổng hợp thì luôn trơn nhẵn bóng bẩy nhưng bí bách và không thấm mồ hôi.
 - **Cách giặt lần đầu:** Ngâm khăn trong nước lạnh pha chút muối hột khoảng 15 phút để hãm màu, sau đó phơi nơi thoáng gió râm mát.

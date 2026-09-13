@@ -71,7 +71,7 @@ Highlighted in our definitive guide to [things to do near Ben Thanh Market](/thi
 
 ---
 
-## 1. Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
+## Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
 
 Southern Vietnamese cookery is fundamentally celebratory and generous. Liberated from the strict ceremonial conventions of the imperial north, cooks of the lower Mekong celebrate sensory immediacy: sweetness is deep and unapologetic (drawn from pure sugarcane and young coconut water), spiciness is sharp and vibrant from red bird’s-eye chilis, sourness is refreshing through fermented rice vinegar or tamarind pods, and umami is anchored in fragrant fermented river fish pastes (*mắm*).
 
@@ -79,29 +79,29 @@ Over a century of metropolitan convergence, Ben Thanh Market has synthesized the
 
 ---
 
-## 2. Deconstructing 5 Heritage Stalls Inside the Market (Daytime)
+## Deconstructing 5 Heritage Stalls Inside the Market (Daytime)
 
-### 2.1. East Gate Bún Riêu: Freshwater Crab Alchemy
+### East Gate Bún Riêu: Freshwater Crab Alchemy
 - **Location:** Flanking the East Portal on Phan Boi Chau Street.
 - **The Broth Blueprint:** Free from artificial coloring, the brilliant amber broth owes its hue to natural annatto seed oil sautéed with vine-ripened tomatoes. Simmered overnight with pork marrow bones and fermented rice vinegar (*giấm bỗng*), the soup balances delicate acidity with deep animal savoriness.
 - **The Signature Crab Cake:** Northern variations feature fragile flakes of crab floating on the surface; Ben Thanh’s version binds river paddy crab meat with minced pork shoulder, crushed dried river shrimp, and duck eggs, steamed into dense, succulent medallions that melt on the tongue.
 
-### 2.2. Mekong Delta Bún Mắm: The Essence of the Great River
+### Mekong Delta Bún Mắm: The Essence of the Great River
 - **Fermented Broth Mastery:** The broth derives its potent soul from simmered snakeskin gourami (*mắm cá sặc*) and mud carp (*mắm cá linh*) transported from Chau Doc on the Cambodian border, deodorized skillfully with bruised lemongrass culms and minced bird's-eye chilies.
 - **Abundant Garnishes:** Each steaming bowl is a lavish aquatic harvest: snappy Ben Tre tiger prawns, scored squid fillets, dill-infused clown featherback fishcakes, and crispy golden pork belly. An accompanying platter brims with river botanicals: water lily stems, bitter herbs, water hyacinth shoots, and shredded banana blossom.
 
-### 2.3. Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls
+### Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls
 Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine vermicelli, and fresh garlic chives rolled into tight, crystalline cylinders. Dip each bite into warm fermented soybean paste infused with coconut cream and crushed roasted peanuts for an exceptionally refreshing midday respite.
 
-### 2.4. Central Vietnamese Steamed Rice Cakes: The Hue Connection
+### Central Vietnamese Steamed Rice Cakes: The Hue Connection
 Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety *bánh bèo*. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.
 
-### 2.5. Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
+### Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
 Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (*chè sương sa hạt lựu*), warm lotus seed porridge (*chè thưng*), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.
 
 ---
 
-## 3. Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
+## Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
 
 When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:
 
@@ -121,7 +121,7 @@ When the market shutters close at 18:00, the flanking pavements burst into noctu
 
 ---
 
-## 4. Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures
+## Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures
 
 | Iconic Dish | Sensory Profile | Core Ingredients | Serving Window | 2026 Reference Price |
 | :--- | :--- | :--- | :--- | :--- |
@@ -133,7 +133,7 @@ When the market shutters close at 18:00, the flanking pavements burst into noctu
 
 ---
 
-## 5. Field Notes for Conscious Gourmands (2026)
+## Field Notes for Conscious Gourmands (2026)
 
 1. **Cashless Tap-to-Pay:** Every certified vendor inside the market now supports VietQR and contactless card payments, eliminating the hassle of counting physical banknotes.
 2. **Navigating Peak Rush:** Stalls reach peak capacity between 11:30 and 13:00. Arrive between **08:30 and 10:30 AM** or **14:30 and 16:00 PM** for leisurely seating and personalized attention from generational cooks.

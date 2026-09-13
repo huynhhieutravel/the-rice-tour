@@ -60,7 +60,7 @@ featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus
 
 ---
 
-## 1. Introduction: Saigon Unveiled from an Open Deck
+## Introduction: Saigon Unveiled from an Open Deck
 
 In the bustling epicenter of District 1, where rivers of vintage mopeds and electric scooters weave through tree-lined French boulevards, experiencing Saigon from four meters above street level on an open-top double-decker bus offers an enchanting shift in perception. Free from the constraints of tinted car windows or the rush of street crossings, voyagers are embraced by river breezes, brush past the sprawling branches of century-old African mahogany trees, and gaze unhurriedly upon the curved Renaissance cornices of the Central Post Office, the red-brick spires of Notre-Dame Cathedral, and the dramatic sweep of the Saigon River illuminated beneath the modern arches of Ba Son Bridge.
 
@@ -68,7 +68,7 @@ Following the unified 2026 opening of the Ben Thanh Central Metro Station and th
 
 ---
 
-## 2. Fleet Architecture & Bespoke Onboard Amenities
+## Fleet Architecture & Bespoke Onboard Amenities
 
 The Saigon double-decker fleet complies with international sightseeing standards, featuring a climate-controlled lower salon and an expansive open-air upper deck offering 360-degree panoramic vantage points.
 
@@ -91,7 +91,7 @@ The Saigon double-decker fleet complies with international sightseeing standards
 
 ---
 
-## 3. Comprehensive Analysis of the Two Signature Routes (2026 Edition)
+## Comprehensive Analysis of the Two Signature Routes (2026 Edition)
 
 The system currently operates two distinct circuits tailored to different cultural curiosities:
 
@@ -131,7 +131,7 @@ Designed for curious voyagers seeking to delve into the historic Ba Tàu heritag
 
 ---
 
-## 4. Daytime vs. Twilight Night Voyages: Comparative Matrix
+## Daytime vs. Twilight Night Voyages: Comparative Matrix
 
 | Evaluation Factor | Midday Heritage Voyage (08:30 – 16:00) | Sunset & Illumination Circuit (16:30 – 22:30) |
 | :--- | :--- | :--- |
@@ -142,7 +142,7 @@ Designed for curious voyagers seeking to delve into the historic Ba Tàu heritag
 
 ---
 
-## 5. Official 2026 Ticket Tariff Schedule
+## Official 2026 Ticket Tariff Schedule
 
 Tickets can be acquired directly at terminal kiosks or via digital e-wallets and international credit cards (Visa/Mastercard/VietQR):
 
@@ -158,26 +158,26 @@ Tickets can be acquired directly at terminal kiosks or via digital e-wallets and
 
 ---
 
-## 6. Curated Field Notes for the Discerning Traveler
+## Curated Field Notes for the Discerning Traveler
 
 To maximize your journey aloft, bear these hard-earned local observations in mind:
 
-### 1. The Strategy of Seat Selection
+### The Strategy of Seat Selection
 - **The Front Three Rows (Top Deck):** Delivers uninterrupted forward vistas and dramatic cinematic framing. However, during high noon, direct sun exposure and headwinds require firm eyewear and secured hats.
 - **The Right-Hand Side:** Because Vietnam drives on the right side of the road, seats along the starboard side travel closest to sidewalk monuments, allowing close-up views of the Continental Hotel facade, Opera House colonnades, and Central Post Office arches.
 - **Mid-Deck Seating:** The most vibration-resistant section of the vehicle, offering the clearest audio reception through the commentary jacks.
 
-### 2. The Golden Departure Windows
+### The Golden Departure Windows
 - **16:30 – 17:00 (The Ba Son Sunset Run):** Timed perfectly so that the coach summits the Ba Son Bridge just as the equatorial sun dips beneath the western horizon, casting molten copper light across the water.
 - **19:30 – 20:30 (The Dazzling Night Cruise):** Captures the illuminated kinetic energy of Nguyen Hue Boulevard, illuminated colonial municipal halls, and riverside skyscrapers.
 
-### 3. Vital Safety Protocols
+### Vital Safety Protocols
 - **Remain seated while in transit:** Saigon’s stately African mahogany and tamarind trees feature low-hanging boughs over older avenues. Standing on the open deck while the bus is in motion is strictly prohibited to prevent injuries.
 - **Secure lightweight electronics:** Cross-winds atop the Ba Son Bridge can be powerful; keep a firm two-handed grip on cameras and mobile phones when recording panoramic clips.
 
 ---
 
-## 7. Seamless Itinerary Integration Around Ben Thanh Market
+## Seamless Itinerary Integration Around Ben Thanh Market
 
 - **15:00 – 16:30:** Afternoon epicurean tasting inside the East Gate of Ben Thanh Market (savoring artisan fresh spring rolls, crab vermicelli, or crushed ice desserts).
 - **16:45:** Stroll 3 minutes to the West Gate Terminal at 23 Phan Chu Trinh Street to board the twilight coach.
@@ -186,6 +186,6 @@ To maximize your journey aloft, bear these hard-earned local observations in min
 
 ---
 
-## 8. Epilogue: The Urban Rhythm from Above
+## Epilogue: The Urban Rhythm from Above
 
 Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. Look upward: past the neon shop signs, French iron balconies rest serenely beneath flowering flame trees, and temple incense mingles with the river breeze. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul.
