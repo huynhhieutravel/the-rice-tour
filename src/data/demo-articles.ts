@@ -7718,7 +7718,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Central Boarding Terminals:</strong> Ben Thanh West Gate (23 Phan Chu Trinh) &amp; Saigon Opera House (Lam Son Square)<br>🎟️ <strong>2026 Tariff Baseline:</strong> 200,000 – 500,000 VND / person<br>⏳ <strong>Circuit Duration:</strong> 60 minutes (District 1 Core Loop) or 120 minutes (Saigon – Chợ Lớn Chinatown Circuit)</p>
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>⏳ <strong>Circuit Duration:</strong> 60 minutes (District 1 Core Loop) or 120 minutes (Saigon – Chợ Lớn Chinatown Circuit)</p>
 </div>
 <hr>
 
@@ -8616,7 +8616,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 300m – 800m from Ben Thanh Market (Ton That Thiep, Ly Tu Trong, Ton That Dam, Pasteur)<br>☕ <strong>Signature Experience:</strong> Handcrafted Vietnamese brews (Traditional Phin, Pour-over, Salted Foam Coffee, Cold Drip)<br>💵 <strong>2026 Price Baseline:</strong> 45,000 – 95,000 VND / beverage</p>
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>☕ <strong>Signature Experience:</strong> Handcrafted Vietnamese brews (Traditional Phin, Pour-over, Salted Foam Coffee, Cold Drip)  </p>
 </div>
 <hr>
 
@@ -9073,9 +9073,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 200m – 700m from Ben Thanh Market (Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang)<br>🍸 <strong>Signature Vibe:</strong> Breezy open-air terraces overlooking the historic clocktower &amp; hidden apothecary cocktail parlors<br>💵 <strong>2026 Price Baseline:</strong> 180,000 – 380,000 VND / signature cocktail</p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="when-saigon-kindles-her-constellations" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -9936,9 +9934,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exploration Radius:</strong> 200m – 900m from Ben Thanh Market (Dong Khoi, Thu Khoa Huan, Ly Tu Trong, Le Loi)<br>🛏️ <strong>Architectural Typologies:</strong> 19th-century French Colonial, Neo-Indochine &amp; Tropical Modernism<br>💵 <strong>2026 Tariff Baseline:</strong> 2,200,000 – 6,800,000 VND / night</p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="hospitality-imbued-with-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -11193,9 +11189,7 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Geographic Scope:</strong> Ben Thanh Market epicenter &amp; within a 1km radius in District 1<br>🌟 <strong>Recommended Duration:</strong> From 4 hours (highlights) to a full 24-hour immersion<br>🎟️ <strong>Estimated Budget:</strong> 250,000 – 850,000 VND ($10 – $34 USD) per person for a comprehensive itinerary  </p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="far-more-than-a-commodity-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -11610,9 +11604,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Exact Address:</strong> Le Loi Street, Ben Thanh Ward, District 1, Ho Chi Minh City, Vietnam<br>🕒 <strong>Operational Hours:</strong> Covered Day Market (06:00 – 18:00) | Outdoor Night Street Market (18:00 – 23:30)<br>💡 <strong>Scope:</strong> Comprehensive intelligence spanning parking lots, currency exchange, bargaining tactics, and personal security  </p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="stepping-into-saigons-beating-heart-like-an-insider" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -12447,9 +12439,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Critical Radius:</strong> East, West, South, North Gates of Ben Thanh Market &amp; Quach Thi Trang Square<br>🚨 <strong>Risk Assessment:</strong> Moderate (predominantly pickpocketing, price inflation, and unauthorized street soliciting)<br>🛡️ <strong>Handbook Objective:</strong> Equipping travelers with sharp defensive intuition to ensure an enriching, hassle-free journey  </p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13657,9 +13647,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Primary Location:</strong> 2 Nguyen An Ninh Street (Corner of Phan Chu Trinh, directly facing Ben Thanh Market West Gate)<br>🕒 <strong>Trading Hours:</strong> 07:30 AM – 08:30 PM Daily (Open Saturdays, Sundays &amp; Public Holidays)<br>💡 <strong>Scope:</strong> Banknote quality requirements, queue etiquette, rate comparisons, and cash security measures  </p>
-</div>
-<hr>
+            <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="saigons-miniature-financial-street" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -14438,7 +14426,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Survey Radius:</strong> 500-meter perimeter surrounding the four main gates of Ben Thanh Market<br>🛵 <strong>Supported Vehicles:</strong> Motorbikes, e-scooters, passenger cars (sedans/SUVs), and chartered tourist buses<br>⚠️ <strong>Critical Advisory:</strong> Strictly avoid unauthorized curbside touts lacking electronic tickets or security surveillance to prevent being gouged 30,000 – 50,000 VND per scooter  </p>
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>⚠️ <strong>Critical Advisory:</strong> Strictly avoid unauthorized curbside touts lacking electronic tickets or security surveillance to prevent being gouged 30,000 – 50,000 VND per scooter  </p>
 </div>
 <hr>
 
@@ -15256,7 +15244,7 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>📍 <strong>Route:</strong> Tan Son Nhat International Airport (SGN) -&gt; Central Ben Thanh Market (District 1)<br>📏 <strong>Distance:</strong> Approximately 7.5 km – 8.5 km (4.7 – 5.3 miles)<br>⏱️ <strong>Travel Time:</strong> 25 minutes (late night / early dawn) to 55 – 70 minutes (rush-hour traffic)<br>💰 <strong>Budget Spectrum:</strong> 5,000 VND ($0.20 USD) public bus to 220,000 VND ($9.00 USD) private luxury sedan  </p>
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>⏱️ <strong>Travel Time:</strong> 25 minutes (late night / early dawn) to 55 – 70 minutes (rush-hour traffic)  </p>
 </div>
 <hr>
 
@@ -16407,8 +16395,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-som-rong-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Som Rong Pagoda</a>
-  <a href="#the-architectural-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpieces</a>
+                  <a href="#the-architectural-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpieces</a>
   <a href="#the-grand-sala-and-main-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Grand Sala and Main Hall</a>
   <a href="#the-majestic-stupa-bao-thap" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Majestic Stupa (Bảo Tháp)</a>
   <a href="#the-giant-reclining-buddha" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Giant Reclining Buddha</a>
@@ -16467,8 +16454,7 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
         </div>
       <p>Located in Ward 5, Soc Trang City, <strong>Som Rong Pagoda</strong> (officially known as Wat Pătum Wôngsa Som Rông) is a crowning jewel of Khmer Theravada Buddhism in the Mekong Delta. Originally constructed around 1785 using bamboo and lá nipa, the pagoda has undergone several major renovations over its 240-year history to become the magnificent architectural complex it is today. </p>
 <p>The name &quot;Som Rong&quot; is derived from a local tree species that once grew abundantly in the area. Today, the pagoda is renowned not just for its spiritual significance but also as a masterpiece of Khmer artistry, drawing thousands of pilgrims and photography enthusiasts annually.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> 367 Ton Duc Thang Street, Ward 5, Soc Trang City.</li>
 <li><strong>Scale:</strong> Covers a sprawling 5-hectare compound.</li>
 <li><strong>Dress Code:</strong> Modest attire is strictly enforced (knees and shoulders covered).</li>
@@ -16565,8 +16551,7 @@ While in Soc Trang, you should also explore other architectural wonders such as 
           </h2>
         </div>
       <p>Som Rong Pagoda is a transcendent destination where the spiritual depth of Khmer Buddhism converges with awe-inspiring artistry. Whether you seek a moment of quiet reflection beneath the gaze of the giant Reclining Buddha or wish to marvel at the intricate details of the grand stupa, this sanctuary promises an unforgettable cultural expedition in the heart of the Mekong Delta.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Cultural Odyssey with The Rice Tour</strong>
-Ready to explore the hidden gems of Soc Trang? Our expert guides at The Rice Tour offer curated itineraries that delve deep into the rich tapestry of Khmer heritage. Contact us today to customize your exclusive Mekong Delta expedition.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Ready to explore the hidden gems of Soc Trang? Our expert guides at The Rice Tour offer curated itineraries that delve deep into the rich tapestry of Khmer heritage. Contact us today to customize your exclusive Mekong Delta expedition.</p>
 </div>
 
           </div>
@@ -16809,8 +16794,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-cao-van-lau-theater" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Cao Van Lau Theater</a>
-  <a href="#the-architectural-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpiece</a>
+                  <a href="#the-architectural-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpiece</a>
   <a href="#the-three-conical-hats-design" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The "Three Conical Hats" Design</a>
   <a href="#the-surrounding-complex" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Surrounding Complex</a>
   <a href="#the-cultural-heartbeat-of-bac-lieu" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Heartbeat of Bac Lieu</a>
@@ -16869,8 +16853,7 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
         </div>
       <p>The <strong>Cao Van Lau Theater</strong> is undeniably the most striking architectural landmark in Bac Lieu City. Dominating the spacious Hung Vuong Square, the theater’s design is inspired by the <em>Nón Lá</em> (the traditional Vietnamese conical hat), an enduring symbol of Vietnamese culture and the grace of Southern women. </p>
 <p>Named in honor of the legendary musician Cao Van Lau—the composer of the immortal <em>Da Co Hoai Lang</em>—the theater stands as a bastion for preserving and promoting <strong>Don Ca Tai Tu</strong>, a musical art form recognized by UNESCO as an Intangible Cultural Heritage of Humanity in 2013.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Hung Vuong Square, Ward 1, Bac Lieu City (Note: Following the 2025 administrative merger, Bac Lieu is now part of the greater Ca Mau province).</li>
 <li><strong>Scale:</strong> Features three massive conical hat structures.</li>
 <li><strong>Performance Schedule:</strong> Traditional Cai Luong and Don Ca Tai Tu performances are typically held on Saturday evenings.</li>
@@ -16963,8 +16946,7 @@ Maximize your Bac Lieu itinerary by visiting the <strong>Bac Lieu Wind Farm</str
           </h2>
         </div>
       <p>The Cao Van Lau Theater is a profound architectural statement that bridges the past and the future. It honors the deep roots of Southern Vietnamese music while providing a modern, world-class venue for its continuation. A visit here is a multisensory journey—where the eyes feast on architectural grandeur and the ears are serenaded by the timeless, nostalgic echoes of <em>Da Co Hoai Lang</em>.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Cultural Odyssey with The Rice Tour</strong>
-Discover the musical soul of the Mekong Delta with The Rice Tour. Our bespoke itineraries ensure you experience the architectural marvels and authentic local culture of Bac Lieu at their absolute best. Let us craft your perfect 2026 expedition.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Discover the musical soul of the Mekong Delta with The Rice Tour. Our bespoke itineraries ensure you experience the architectural marvels and authentic local culture of Bac Lieu at their absolute best. Let us craft your perfect 2026 expedition.</p>
 </div>
 
           </div>
@@ -17207,8 +17189,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-cai-rang-floating-market" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Cai Rang Floating Market</a>
-  <a href="#navigating-the-logistics-boat-rentals-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Logistics: Boat Rentals in 2026</a>
+                  <a href="#navigating-the-logistics-boat-rentals-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Logistics: Boat Rentals in 2026</a>
   <a href="#the-cultural-nuances-deciphering-the-beo-system" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Nuances: Deciphering the "Bẹo" System</a>
   <a href="#unmissable-signature-experiences" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Unmissable Signature Experiences</a>
   <a href="#breakfast-on-the-water" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Breakfast on the Water</a>
@@ -17265,8 +17246,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
         </div>
       <p>Located on the Can Tho River, approximately 6 kilometers from the iconic Ninh Kieu Wharf, <strong>Cai Rang Floating Market</strong> is the largest and most bustling floating market in the Mekong Delta. The name &quot;Cai Rang&quot; traces its roots back to the Khmer word <em>karan</em> (meaning an earthen stove), a nod to the historical trade of pottery and clay stoves in the region. </p>
 <p>Formed in the early 20th century when intricate waterway networks were the primary means of transportation, the market was officially recognized as a National Intangible Cultural Heritage in 2016. While modern road networks have halved the number of traditional merchant boats, the market has evolved, maintaining its cultural essence while accommodating a booming tourism sector.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Golden Hour:</strong> 05:00 AM to 08:00 AM. Arrive by 06:00 AM to witness the sunrise and peak trading activity.</li>
 <li><strong>Distance:</strong> 15-20 minutes by boat from Ninh Kieu Wharf.</li>
 <li><strong>Caution:</strong> Beware of overly cheap boat rental offers from unlicensed street touts at the wharf.</li>
@@ -17345,8 +17325,7 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The Cai Rang Floating Market is a living, breathing museum of the Mekong Delta&#39;s aquatic heritage. While it is undoubtedly a major tourist attraction in 2026, looking past the surface reveals a resilient community that still relies on the river&#39;s ebb and flow. By waking up before dawn and navigating the waters with respect, you become part of a centuries-old tradition that continues to define the spirit of Southern Vietnam.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Cultural Odyssey with The Rice Tour</strong>
-Want to experience Cai Rang Floating Market without the hassle of haggling and logistics? The Rice Tour offers premium, early-morning guided expeditions on private, comfortable boats, ensuring you get the best lighting for photos and the most authentic culinary stops. Contact us to book your unforgettable Mekong sunrise.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Want to experience Cai Rang Floating Market without the hassle of haggling and logistics? The Rice Tour offers premium, early-morning guided expeditions on private, comfortable boats, ensuring you get the best lighting for photos and the most authentic culinary stops. Contact us to book your unforgettable Mekong sunrise.</p>
 </div>
 
           </div>
@@ -17589,8 +17568,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Mercury Phu Quoc</a>
-  <a href="#why-the-rice-tour-chooses-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Why The Rice Tour Chooses Mercury Phu Quoc</a>
+                  <a href="#why-the-rice-tour-chooses-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Why The Rice Tour Chooses Mercury Phu Quoc</a>
   <a href="#the-perfect-beachfront-rhythm" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Perfect Beachfront Rhythm</a>
   <a href="#versatile-accommodation-models" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Versatile Accommodation Models</a>
   <a href="#flawless-logistics-for-group-travel" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Flawless Logistics for Group Travel</a>
@@ -17650,8 +17628,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
         </div>
       <p>When orchestrating complex itineraries on Phu Quoc Island, <strong>The Rice Tour</strong> prioritizes accommodations that offer impeccable service, logistical convenience, and profound relaxation. <strong>Mercury Phu Quoc Resort &amp; Villas</strong> consistently exceeds these criteria, making it one of our most trusted partners for 2026.</p>
 <p>Located along the pristine shores of Duong To Beach, the resort is a sanctuary where lush tropical gardens meet the azure waters of the Gulf of Thailand. It is specifically designed to cater to diverse travel needs—from multi-generational families requiring spacious villas to couples seeking a romantic beachfront hideaway.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Tran Hung Dao Street, Duong To, Phu Quoc City (Note: Following the 2025 administrative restructuring, Phu Quoc is now under the jurisdiction of An Giang Province).</li>
 <li><strong>Airport Proximity:</strong> Merely 10 minutes from Phu Quoc International Airport, minimizing transit fatigue.</li>
 <li><strong>Design Ethos:</strong> Classic Vietnamese architecture blended seamlessly with modern tropical resort aesthetics.</li>
@@ -17730,8 +17707,7 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Choosing the right accommodation is pivotal to the success of any island expedition. Mercury Phu Quoc Resort &amp; Villas does not merely offer a place to sleep; it provides an immersive environment of tropical luxury and restorative peace. It is a partner that shares The Rice Tour&#39;s commitment to delivering flawless, memorable, and culturally enriching travel experiences.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Coastal Odyssey with The Rice Tour</strong>
-Ready to experience the pinnacle of Phu Quoc hospitality? Book your 2026 island expedition with The Rice Tour and enjoy exclusive rates, complimentary upgrades (subject to availability), and personalized itineraries featuring Mercury Phu Quoc Resort &amp; Villas. Contact our travel concierges today.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Ready to experience the pinnacle of Phu Quoc hospitality? Book your 2026 island expedition with The Rice Tour and enjoy exclusive rates, complimentary upgrades (subject to availability), and personalized itineraries featuring Mercury Phu Quoc Resort &amp; Villas. Contact our travel concierges today.</p>
 </div>
 
           </div>
@@ -17974,8 +17950,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-rice-tours-philosophy" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to The Rice Tour's Philosophy</a>
-  <a href="#core-tour-offerings-exploring-the-authentic-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Tour Offerings: Exploring the Authentic Vietnam</a>
+                  <a href="#core-tour-offerings-exploring-the-authentic-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Tour Offerings: Exploring the Authentic Vietnam</a>
   <a href="#the-mekong-delta-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Mekong Delta Masterpieces</a>
   <a href="#central-heritage-and-coastal-retreats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Heritage & Coastal Retreats</a>
   <a href="#northern-expeditions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Northern Expeditions</a>
@@ -18035,8 +18010,7 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
         </div>
       <p>At <strong>The Rice Tour</strong>, we believe that a profound travel experience is architected through meticulous attention to detail, deep local knowledge, and an unwavering commitment to authenticity. We do not sell off-the-shelf packages; we curate narratives. </p>
 <p>As a premier inbound tour operator in 2026, our service ecosystem is designed to handle every logistical nuance, allowing you to focus entirely on the joy of discovery. Whether you are navigating the intricate waterways of the Mekong Delta, exploring the ancient ruins of Hue, or trekking the terraced mountains of the Northwest, our dedicated team ensures your journey is seamless, luxurious, and culturally enriching.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>The FIT (Free Independent Traveler) Advantage</strong>
-We specialize in FIT travel, meaning every itinerary is highly flexible, tailored specifically to your pace, preferences, and passions.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>We specialize in FIT travel, meaning every itinerary is highly flexible, tailored specifically to your pace, preferences, and passions.</p>
 </div>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -18137,8 +18111,7 @@ The Rice Tour expertly handles large-scale logistics for corporate retreats, tea
           </h2>
         </div>
       <p>Your journey to Vietnam should be as unique as you are. The Rice Tour&#39;s comprehensive matrix of services guarantees that from the moment you land until your final departure, you are enveloped in the warmth of Vietnamese hospitality and the precision of world-class travel management. </p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Start Crafting Your Blueprint</strong>
-Do not settle for a generic vacation. Let our travel architects design your definitive 2026 Vietnam expedition. Contact The Rice Tour today to schedule your personalized itinerary consultation.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Do not settle for a generic vacation. Let our travel architects design your definitive 2026 Vietnam expedition. Contact The Rice Tour today to schedule your personalized itinerary consultation.</p>
 </div>
 
           </div>
@@ -18381,8 +18354,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-dinh-cau-shrine" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Dinh Cau Shrine</a>
-  <a href="#the-architectural-and-natural-harmony" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural and Natural Harmony</a>
+                  <a href="#the-architectural-and-natural-harmony" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural and Natural Harmony</a>
   <a href="#the-ultimate-sunset-vantage-point" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Ultimate Sunset Vantage Point</a>
   <a href="#the-night-market-and-culinary-scene" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Night Market and Culinary Scene</a>
   <a href="#travel-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Etiquette</a>
@@ -18437,8 +18409,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
         </div>
       <p><strong>Dinh Cau</strong> (often referred to as Dinh Cau Temple or Shrine) is arguably the most recognizable natural and cultural landmark in Phu Quoc. Located right at the mouth of the Duong Dong River, the shrine is built atop a massive, uniquely shaped rock formation that juts out into the azure sea, shaded by an ancient, twisted frangipani tree.</p>
 <p>For over three centuries, it has served as a spiritual sanctuary for the island&#39;s fishermen. Before every long voyage, locals come here to burn incense and pray to Thuy Long Thanh Mau (the Goddess of the Sea) and the Cau deities for calm waters, bountiful catches, and a safe return.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Bach Dang Street, Quarter 2, Duong Dong Ward, Phu Quoc City.</li>
 <li><strong>Accessibility:</strong> A short walk from the center of Duong Dong town; reachable via a staircase of 29 stone steps leading up the rock.</li>
 <li><strong>Festivals:</strong> The main festival occurs on the 15th and 16th of the 10th lunar month, featuring vibrant rituals and boat races.</li>
@@ -18498,8 +18469,7 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Dinh Cau is more than just a scenic viewpoint; it is the spiritual anchor of Phu Quoc. It encapsulates the island&#39;s dual identity—a serene natural paradise and a vibrant, deeply traditional fishing community. Standing on the rocky precipice as the sun dips below the horizon, one can truly feel the timeless rhythm of the Pearl Island.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Coastal Odyssey with The Rice Tour</strong>
-Experience the magic of Phu Quoc beyond the luxury resorts. The Rice Tour&#39;s curated island itineraries seamlessly blend cultural landmarks like Dinh Cau with exclusive culinary safaris and pristine beach retreats. Contact us to craft your bespoke 2026 island getaway.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Experience the magic of Phu Quoc beyond the luxury resorts. The Rice Tour&#39;s curated island itineraries seamlessly blend cultural landmarks like Dinh Cau with exclusive culinary safaris and pristine beach retreats. Contact us to craft your bespoke 2026 island getaway.</p>
 </div>
 
           </div>
@@ -18897,8 +18867,7 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p><em>Bún Nước Lèo Sóc Trăng</em> is not just a meal; it is a consumable piece of history. It tells the story of centuries of cultural migration, adaptation, and harmony in the Mekong Delta. A steaming bowl of this complex, fragrant soup is the ultimate reward for any traveler venturing deep into the heart of Southern Vietnam.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Culinary Safari with The Rice Tour</strong>
-Food is the gateway to culture. The Rice Tour designs exclusive culinary expeditions across the Mekong Delta, taking you from hidden street food stalls to the kitchens of master artisans. Let us guide your palate through the authentic flavors of Vietnam.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Food is the gateway to culture. The Rice Tour designs exclusive culinary expeditions across the Mekong Delta, taking you from hidden street food stalls to the kitchens of master artisans. Let us guide your palate through the authentic flavors of Vietnam.</p>
 </div>
 
           </div>
@@ -19141,8 +19110,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-bat-pagoda-wat-mahatup" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to the Bat Pagoda (Wat Mahatup)</a>
-  <a href="#the-architectural-splendor" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Splendor</a>
+                  <a href="#the-architectural-splendor" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Splendor</a>
   <a href="#the-main-hall-chanh-ien" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Main Hall (Chánh Điện)</a>
   <a href="#the-stupas-and-the-grounds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Stupas and the Grounds</a>
   <a href="#the-enigma-of-the-bats" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Enigma of the Bats</a>
@@ -19199,8 +19167,7 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
         </div>
       <p>Officially known in Khmer as <strong>Wat Mahatup</strong> (meaning &quot;gathered by the virtue of monks&quot;), the Bat Pagoda is a cornerstone of Theravada Buddhism in the Mekong Delta. Built in 1569, it has stood the test of time, surviving wars and a devastating fire in 2007 (after which it was meticulously restored to its former glory).</p>
 <p>However, what truly sets this temple apart from hundreds of other Khmer pagodas in the region is its unique ecological phenomenon. The expansive, densely wooded compound is home to a massive colony of <strong>Giant Flying Foxes</strong> (fruit bats), creating a mystical atmosphere where religion and nature are profoundly intertwined.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Van Ngoc Chinh Street, Ward 3, Soc Trang City.</li>
 <li><strong>Wildlife Note:</strong> The bats are entirely harmless to humans. They sleep during the day and forage for fruit at night.</li>
 <li><strong>Dress Code:</strong> As with all active Buddhist temples, visitors must dress modestly (covering shoulders and knees).</li>
@@ -19270,8 +19237,7 @@ Inside, the hall houses a massive monolithic stone Buddha statue resting on a lo
           </h2>
         </div>
       <p>The Bat Pagoda is a rare destination where architectural beauty, profound spirituality, and a touch of the bizarre coalesce perfectly. It stands as a testament to the Khmer people&#39;s deep respect for all living creatures, offering modern travelers a sanctuary of peace and a fascinating glimpse into the mystical folklore of the Mekong Delta.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Embark on a Mystical Journey with The Rice Tour</strong>
-Delve into the rich cultural and natural mysteries of Soc Trang. Our expert-guided Mekong Delta itineraries offer deep cultural context, ensuring your visit to the Bat Pagoda is respectful, insightful, and entirely unforgettable. Connect with The Rice Tour today.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Delve into the rich cultural and natural mysteries of Soc Trang. Our expert-guided Mekong Delta itineraries offer deep cultural context, ensuring your visit to the Bat Pagoda is respectful, insightful, and entirely unforgettable. Connect with The Rice Tour today.</p>
 </div>
 
           </div>
@@ -19514,8 +19480,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-bac-lieu-wind-farm" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to the Bac Lieu Wind Farm</a>
-  <a href="#the-visual-spectacle-a-photographers-dream" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Visual Spectacle: A Photographer's Dream</a>
+                  <a href="#the-visual-spectacle-a-photographers-dream" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Visual Spectacle: A Photographer's Dream</a>
   <a href="#the-concrete-walkways" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Walkways</a>
   <a href="#the-best-angles" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Best Angles</a>
   <a href="#timing-your-visit-for-the-perfect-shot" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Timing Your Visit for the Perfect Shot</a>
@@ -19572,8 +19537,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
         </div>
       <p>Located in Vinh Trach Dong commune, about 20 kilometers from the center of Bac Lieu City, the <strong>Bac Lieu Wind Farm</strong> (Cánh Đồng Điện Gió Bạc Liêu) was initially constructed as a pioneering renewable energy project. It holds the title of being the very first offshore wind farm built in Southeast Asia.</p>
 <p>However, thanks to the striking visual of dozens of massive, sleek white turbines stretching out into the ocean against the backdrop of the vast delta sky, it quickly evolved into a viral tourist attraction. Today, it stands as a symbol of modern Bac Lieu, offering a refreshing, contemporary contrast to the region&#39;s ancient historical sites.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Bien Dong A Hamlet, Vinh Trach Dong Commune, Bac Lieu City (Note: Following the 2025 administrative merger, Bac Lieu is now part of Ca Mau province).</li>
 <li><strong>The Turbines:</strong> There are 62 turbines, each standing 80 meters tall with blades measuring 42 meters in length.</li>
 <li><strong>Ticket Price (2026):</strong> 30,000 VND per adult.</li>
@@ -19648,8 +19612,7 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>The Bac Lieu Wind Farm is a testament to how infrastructure can inadvertently become art. It offers travelers a unique opportunity to witness Vietnam’s push toward sustainable energy while capturing some of the most dramatic and modern landscape photography available in the Mekong Delta. </p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Capture the Wind with The Rice Tour</strong>
-Let The Rice Tour optimize your Bac Lieu itinerary. Our expert guides know exactly when to arrive at the wind farm to avoid the crowds and catch the perfect sunset light, seamlessly blending this modern marvel with the rich traditional heritage of the region. Connect with us today.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Let The Rice Tour optimize your Bac Lieu itinerary. Our expert guides know exactly when to arrive at the wind farm to avoid the crowds and catch the perfect sunset light, seamlessly blending this modern marvel with the rich traditional heritage of the region. Connect with us today.</p>
 </div>
 
           </div>
@@ -19892,8 +19855,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-truong-tuyen-cruise" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Truong Tuyen Cruise</a>
-  <a href="#the-culinary-experience" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Culinary Experience</a>
+                  <a href="#the-culinary-experience" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Culinary Experience</a>
   <a href="#signature-dishes-to-order" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Dishes to Order</a>
   <a href="#dining-ambiance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Dining Ambiance</a>
   <a href="#the-cultural-soundtrack-don-ca-tai-tu" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Soundtrack: Don Ca Tai Tu</a>
@@ -19950,8 +19912,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
         </div>
       <p>Moored at the bustling Ninh Kieu Wharf, the <strong>Truong Tuyen Cruise</strong> is a highly popular floating restaurant that offers both locals and travelers a quintessential Can Tho evening experience. Designed as a multi-deck vessel, it provides a unique dining venue where the gentle sway of the Hau River complements a feast of Mekong Delta specialties.</p>
 <p>Unlike standard land-based restaurants, the appeal of Truong Tuyen lies in its mobility. While guests dine, the ship slowly cruises along the river, offering unparalleled, breezy views of the city&#39;s illuminated skyline and the iconic Can Tho Bridge.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🌟 <strong>Key Curated Dimensions / Fast Facts</strong></p>
-<ul>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><ul>
 <li><strong>Location:</strong> Pier 3, Ninh Kieu Wharf, Hai Ba Trung Street, Can Tho City.</li>
 <li><strong>Schedule:</strong> The boat remains docked from 17:00 for early diners, sets sail for a river cruise at 19:30, and returns to the wharf by 21:00.</li>
 <li><strong>Booking:</strong> Advanced reservations are highly recommended during weekends and public holidays.</li>
@@ -20018,8 +19979,7 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>A night on the Truong Tuyen Cruise is the perfect coda to a day spent exploring the intense heat and chaotic charm of Can Tho. It provides a rare moment to sit back, savor the rich flavors of the delta, and let the traditional music wash over you as the city lights reflect on the gentle currents of the Hau River.</p>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🚐 <strong>Dine in Style with The Rice Tour</strong>
-Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-deck tables on the Truong Tuyen Cruise or arrange completely private, luxury dining sampans for an exclusive and intimate river experience. Contact our concierge to orchestrate your perfect evening.</p>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-deck tables on the Truong Tuyen Cruise or arrange completely private, luxury dining sampans for an exclusive and intimate river experience. Contact our concierge to orchestrate your perfect evening.</p>
 </div>
 
           </div>
@@ -20262,8 +20222,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-beyond-the-recipe-card" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Beyond the Recipe Card</a>
-  <a href="#how-living-ingredients-are-chosen-at-the-source" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How Living Ingredients Are Chosen at the Source</a>
+                  <a href="#how-living-ingredients-are-chosen-at-the-source" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How Living Ingredients Are Chosen at the Source</a>
   <a href="#why-the-market-expedition-matters" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Why the Market Expedition Matters</a>
   <a href="#vietnamese-herbs-structural-elements-not-decorative-garnishes" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Vietnamese Herbs: Structural Elements, Not Decorative Garnishes</a>
   <a href="#the-critical-principle-of-timing" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Critical Principle of Timing</a>
@@ -20287,10 +20246,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
   <a href="#cooking-without-measuring-spoons-intuitive-home-adaptation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Cooking Without Measuring Spoons: Intuitive Home Adaptation</a>
   <a href="#comparison-matrix-hands-on-cooking-class-vs-other-culinary-options" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparison Matrix: Hands-on Cooking Class vs. Other Culinary Options</a>
   <a href="#frequently-asked-questions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Frequently Asked Questions</a>
-  <a href="#do-i-need-prior-culinary-experience-to-join-a-vietnamese-cooking-class" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Do I need prior culinary experience to join a Vietnamese cooking class?</a>
-  <a href="#can-classes-accommodate-vegetarians-or-guests-with-seafood-allergies" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Can classes accommodate vegetarians or guests with seafood allergies?</a>
-  <a href="#how-long-does-a-typical-cooking-class-last" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">How long does a typical cooking class last?</a>
-  <a href="#epilogue-taste-vietnam-with-your-own-hands" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Taste Vietnam with Your Own Hands</a>
+  <a href="#learn-vietnamese-cooking-through-a-local-market-experience" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Learn Vietnamese Cooking Through a Local Market Experience</a>
 
               </div>
             </nav>
@@ -20333,18 +20289,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
-            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🔗 <strong>Original Culinary Feature:</strong> The Rice Tour Gastronomy Field Notes  </p>
-</div>
-<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🕒 <strong>Estimated Reading Time:</strong> 14 minutes  </p>
-</div>
-<hr>
-
-        <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-beyond-the-recipe-card" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Beyond the Recipe Card
-          </h2>
-        </div>
-      <p>Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.</p>
+            <p>Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.</p>
 <p>That fundamental philosophy explains why stepping into a hands-on cooking class in Vietnam feels strikingly different from simply watching an instructional video or observing a chef from across a restaurant counter. In a well-structured, participatory kitchen session, your learning frequently begins long before a stove is ever lit. You thread your way through the narrow, vibrant corridors of a neighborhood morning wet market, decipher unfamiliar herbs, prepare time-honored dishes from base ingredients, practice foundational knife and pan techniques, and finally sit down alongside fellow travelers to savor the meal you have coaxed into existence. </p>
 <p>More importantly, you begin to grasp <em>why</em> Vietnamese food tastes the way it does—its philosophical connection to Yin-Yang harmony, its five-element flavor balance, and its reliance on clean freshness over heavy sauces.</p>
 <p>So, what do you actually learn in a Vietnamese cooking class? You master practical kitchen skills, the dynamic logic of seasoning by palate, the cultural significance of local market ecosystems, regional culinary nuances, and the confidence to recreate authentic Vietnamese flavors within your own home kitchen. Here is a definitive look at everything the experience genuinely teaches you.</p>
@@ -20641,37 +20586,83 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
             Frequently Asked Questions
           </h2>
         </div>
-      
-        <div id="do-i-need-prior-culinary-experience-to-join-a-vietnamese-cooking-class" class="scroll-mt-28 pt-5">
-          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            Do I need prior culinary experience to join a Vietnamese cooking class?
-          </h3>
-        </div>
-      <p>Not at all. Professional travel cooking workshops in Vietnam are tailored specifically for everyday food lovers and complete novices. Instructors provide step-by-step physical demonstrations, guide your knife work patiently, and taste your sauces alongside you to help you calibrate your seasonings.</p>
-
-        <div id="can-classes-accommodate-vegetarians-or-guests-with-seafood-allergies" class="scroll-mt-28 pt-5">
-          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            Can classes accommodate vegetarians or guests with seafood allergies?
-          </h3>
-        </div>
-      <p>Yes. Vietnamese cuisine features a rich Buddhist vegetarian heritage (<em>ẩm thực chay</em>). Reputable cooking schools can seamlessly substitute tofu, king oyster mushrooms, fermented soy sauce (<em>nước tương</em>), and vegetable-based broth reductions without compromising on flavor depth or authentic technique. Always inform the school of your dietary preferences during booking.</p>
-
-        <div id="how-long-does-a-typical-cooking-class-last" class="scroll-mt-28 pt-5">
-          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            How long does a typical cooking class last?
-          </h3>
-        </div>
-      <p>A comprehensive cooking workshop paired with a morning wet market walk typically spans between 3.5 and 4.5 hours. This allows ample, unhurried time for market shopping, detailed ingredient preparation, active stovetop cooking, and a shared multicourse sit-down meal.</p>
-<hr>
+      <div class="faq-accordion-wrapper space-y-4 my-8 not-prose">
+  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200" open>
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">What do you learn in a Vietnamese cooking class?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      You learn how to select and prepare living Vietnamese ingredients, master delicate herbs and aromatics, balance the five essential flavor dimensions (salty, sweet, sour, spicy, umami), make classic regional dishes, craft balanced dipping sauces (<em>nước chấm</em>), and practice practical cooking techniques you can readily recreate in your home kitchen.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Do I need prior culinary experience to participate?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      No prior cooking experience is required. Most traveler-focused Vietnamese cooking classes are thoughtfully tailored for everyday novices and curious food lovers. Instructors provide patient, hands-on guidance through knife cuts, stove heat management, and sauce tasting.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">How many dishes do you learn in a Vietnamese cooking class?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      It varies by workshop, but most standard culinary experiences teach 3 to 4 distinct traditional dishes rather than focusing on a single recipe. A well-rounded menu typically features a fresh roll (<em>gỏi cuốn</em>), a crispy savory pancake (<em>bánh xèo</em>), a claypot or noodle dish, and canonical dipping sauces.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Do Vietnamese cooking classes include a local market tour?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      Many morning cooking classes incorporate a guided wet market visit (<em>chợ dân sinh</em>). The market tour is especially valuable because it introduces you to authentic herbs, regional produce, and living market culture before you step into the kitchen.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Can classes accommodate vegetarians or guests with dietary restrictions?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      Yes. Vietnamese culinary culture features a rich Buddhist vegetarian heritage (<em>ẩm thực chay</em>). Reputable cooking schools can seamlessly substitute artisan tofu, king oyster mushrooms, fermented soy sauce (<em>nước tương</em>), and vegetable-based broths without compromising on flavor depth or technique. Be sure to notify the school when booking.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Will I get printed or digital recipes to take home?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      Yes. High-quality cooking schools provide comprehensive recipe cards or booklets containing precise ingredient measurements, cooking methods, and practical home substitution tips for Western supermarket ingredients.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Can I realistically recreate Vietnamese food at home after the class?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      Yes. The easiest and most reliable dishes to recreate are those based on practical knife skills and balance of core seasonings. Because you learn ingredient intent—how to balance sweetness, acidity, and fish sauce—you will feel confident adapting recipes using ingredients readily available at home.
+    </div>
+  </details>  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
+    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
+      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Is a Vietnamese cooking class worth doing in Ho Chi Minh City?</span>
+      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
+    </summary>
+    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
+      For travelers who love food and want an immersive cultural journey, a hands-on cooking class in Ho Chi Minh City is exceptionally worthwhile. It bridges the gap between simply tasting delicious dishes and understanding the culinary heritage, morning market rhythms, and generational techniques behind Vietnamese food.
+    </div>
+  </details>
+</div><hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="epilogue-taste-vietnam-with-your-own-hands" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Epilogue: Taste Vietnam with Your Own Hands
+          <h2 id="learn-vietnamese-cooking-through-a-local-market-experience" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Learn Vietnamese Cooking Through a Local Market Experience
           </h2>
         </div>
-      <p>The most enduring souvenir of any journey through Vietnam is never a mass-produced trinket bought from a market stall; it is the culinary wisdom you bring back to your own family table.</p>
-<p>When you know how to bruise a stalk of lemongrass, coax crackling crispness from a rice-flour batter, and balance the sharp amber depths of fermented fish sauce with fresh lime juice, the sights, aromas, and vibrant life of Vietnam remain alive in your kitchen forever.</p>
-<p>If you are traveling through Ho Chi Minh City and wish to experience this culinary journey firsthand—from discovering morning produce in traditional market alleys to preparing authentic regional dishes alongside master instructors—explore the curated <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Experience with The Rice Tour</a>. You can also pair this with our <a href="/ben-thanh-market-food-guide">Ben Thanh Market street food guide</a>, embark on our <a href="/ben-thanh-one-day-walking-tour">one-day walking tour</a>, or consult our specialists for <a href="/tailor-made">bespoke tailor-made culinary itineraries</a> tailored specifically to your palate.</p>
+      <p>The most memorable part of a Vietnamese cooking class is often not merely the final dish on your table; it is everything you discover along the way.</p>
+<p>You encounter unfamiliar ingredients at a bustling neighborhood market. You inhale the volatile aromas of crushed herbs and root aromatics. You learn the delicate art of balancing salty, sweet, sour, and spicy notes. You practice time-honored techniques with your own hands. Then you sit down with fellow travelers and savor the multi-layered meal you have created from scratch.</p>
+<p>That transformative journey turns Vietnamese cuisine from something you passively eat into a living culinary culture you genuinely understand.</p>
+<p>If you are exploring Ho Chi Minh City and wish to experience Vietnamese cuisine firsthand, explore the curated <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Experience with The Rice Tour</a>. You can also enrich your stay by exploring our <a href="/ben-thanh-market-food-guide">Ben Thanh Market street food guide</a>, joining our <a href="/ben-thanh-one-day-walking-tour">one-day walking tour</a>, taking a <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a>, or requesting a <a href="/tailor-made">bespoke tailor-made culinary itinerary</a> customized entirely to your palate.</p>
 
           </div>
 

@@ -2555,8 +2555,12 @@
       "anchorText": "one-day walking tour"
     },
     {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
       "targetUrl": "/tailor-made",
-      "anchorText": "bespoke tailor-made culinary itineraries"
+      "anchorText": "bespoke tailor-made culinary itinerary"
     },
     {
       "targetUrl": "/tours?country=mien-nam",

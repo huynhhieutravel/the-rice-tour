@@ -790,6 +790,7 @@ function formatTOC(body) {
   headings.forEach(h => {
     const rawText = decodeHtmlEntities(h.text).replace(/<[^>]+>/g, '').trim();
     if (rawText.toLowerCase().includes('quick overview stats')) return;
+    if (rawText.toLowerCase().startsWith('introduction')) return;
     
     const id = cleanSlug(h.text);
     const displayText = rawText.replace(/^[⚡\d\.\s]+/, '').trim();
@@ -829,8 +830,8 @@ function processMarkdownToMagazineHtml(file) {
   
   // Remove H1 title and meta blockquotes from body
   body = body.replace(/^#\s+.*$/m, '');
-  body = body.replace(/^>\s+🏷️.*$/m, '');
-  body = body.replace(/^>\s+🖼️.*$/m, '');
+  body = body.replace(/^>\s*[🔗🏷️🖼️🕒📅].*$/gm, '');
+  body = body.replace(/^>\s*\*\*(?:Original Culinary Feature|Category|Published|Estimated Reading Time):?\*\*.*$/gmi, '');
   body = body.replace(/<figure[^>]*>[\s\S]*?<\/figure>/gi, '');
   body = body.replace(/<img[^>]*>/gi, '');
   
