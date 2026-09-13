@@ -22,13 +22,13 @@ export interface Props {
   noindex?: boolean;
   preloadImages?: string[];
   adminEditUrl?: string;
-  canonicalMdUrl?: string;
   isCorporate?: boolean;
   hideGlobalHeader?: boolean;
   hideGlobalFooter?: boolean;
+  lang?: string;
 }
 
-const { title, description, image, canonical, noindex, preloadImages, adminEditUrl, canonicalMdUrl, isCorporate = false, hideGlobalHeader = false, hideGlobalFooter = false } = Astro.props;
+const { title, description, image, canonical, noindex, preloadImages, adminEditUrl, isCorporate = false, hideGlobalHeader = false, hideGlobalFooter = false, lang = "en" } = Astro.props;
 const isAppView = Astro.url.searchParams.has('appview');
 const finalHideHeader = hideGlobalHeader || isAppView;
 const finalHideFooter = hideGlobalFooter || isAppView;
@@ -70,7 +70,7 @@ if (isCorporate) {
 }
 ---
 
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <ResourceHints preloadImages={preloadImages} />
     <HeadMeta 
@@ -135,7 +135,6 @@ if (isCorporate) {
       </>
     )}
     {settings.tracking?.headerCode && <Fragment set:html={settings.tracking.headerCode} />}
-    {canonicalMdUrl && <link rel="alternate" type="text/markdown" href={canonicalMdUrl} />}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">

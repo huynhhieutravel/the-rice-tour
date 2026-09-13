@@ -153,6 +153,7 @@ const tourCategory = tour.destination ? `Tour ${tour.destination}` : "Vietnam In
 
 const productSchema = {
   name: tour.title,
+  inLanguage: "en-US",
   image: productImages.length > 0 ? productImages : (image ? [image] : []),
   description: description,
   sku: slug,
@@ -177,7 +178,6 @@ const productSchema = {
   image={image} 
   preloadImages={image ? [image] : []}
   adminEditUrl={`/admin/tours/edit?id=${tour.id}`}
-  canonicalMdUrl={`${currentOrigin}/tour/${slug}.md`}
 >
   <Fragment slot="schema">
     <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />

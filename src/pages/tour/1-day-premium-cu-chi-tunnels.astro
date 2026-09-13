@@ -28,7 +28,6 @@ const formattedPrice = tour?.price_text && tour.price_text.includes('$') ? tour.
 const adminEditUrl = tour?.id ? `/admin/tours/edit?id=${tour.id}` : undefined;
 const currentOrigin = Astro.url.origin || 'https://thericetour.com';
 const canonicalUrl = `${currentOrigin}/tour/${slug}`;
-const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
 ---
 
 <BaseLayout 
@@ -38,12 +37,12 @@ const canonicalMdUrl = `${currentOrigin}/tour/${slug}.md`;
   preloadImages={[featuredImage]}
   adminEditUrl={adminEditUrl}
   canonical={canonicalUrl}
-  canonicalMdUrl={canonicalMdUrl}
 >
   <!-- Schema Structured Data for SEO -->
   <script type="application/ld+json" data-cfasync="false" set:html={JSON.stringify({
     "@context": "https://schema.org/",
     "@type": "Product",
+    "inLanguage": "en-US",
     "name": tourTitle,
     "image": featuredImage,
     "description": seoDesc,

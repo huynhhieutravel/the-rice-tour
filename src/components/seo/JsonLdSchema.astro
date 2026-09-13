@@ -18,7 +18,8 @@ if (type === 'custom') {
     "image": data.image,
     "datePublished": data.datePublished,
     "dateModified": data.dateModified,
-    "author": data.author
+    "author": data.author,
+    ...(data.inLanguage && { "inLanguage": data.inLanguage })
   };
 } else if (type === 'product') {
   schema = {
@@ -28,6 +29,7 @@ if (type === 'custom') {
     "image": data.image,
     "description": data.description,
     "sku": data.sku,
+    ...(data.inLanguage && { "inLanguage": data.inLanguage }),
     ...(data.brand && { "brand": data.brand }),
     ...(data.provider && { "provider": data.provider }),
     ...(data.category && { "category": data.category }),
@@ -37,7 +39,7 @@ if (type === 'custom') {
     "offers": {
       "@type": "Offer",
       "url": data.url,
-      "priceCurrency": "VND",
+      "priceCurrency": data.priceCurrency || "USD",
       "price": data.price,
       "availability": data.inStock ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
       "itemCondition": "https://schema.org/NewCondition",
