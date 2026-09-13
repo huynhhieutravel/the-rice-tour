@@ -4,35 +4,11 @@ import { convertHtmlToMarkdown } from '@/lib/htmlToMarkdown';
 
 export const prerender = false;
 
-// Pre-load all compiled English pipeline markdown articles
-const mdModules = import.meta.glob('../../content-pipeline/04-english/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
-
-const pipelineSlugToMdMap: Record<string, string> = {};
-for (const [path, content] of Object.entries(mdModules)) {
-  const filename = path.split('/').pop() || '';
-  const match = filename.match(/^\d+_(.+)\.md$/);
-  if (match) {
-    pipelineSlugToMdMap[match[1]] = content;
-  }
-}
-
 export async function GET({ params, request, url }: any) {
   const { slug } = params;
   
   if (!slug) {
     return new Response('Not Found', { status: 404 });
-  }
-
-  // 1. First check if we have a pipeline markdown file matching this slug
-  if (pipelineSlugToMdMap[slug]) {
-    return new Response(pipelineSlugToMdMap[slug].trim(), {
-      status: 200,
-      headers: {
-        'Content-Type': 'text/markdown; charset=utf-8',
-        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
-        'X-Robots-Tag': 'noindex, follow',
-      }
-    });
   }
 
   const d1Db = env?.dulichcoguu_d1;
