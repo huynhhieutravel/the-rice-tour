@@ -729,8 +729,8 @@ const articleMetadata = {
 
   "what-do-you-learn-in-a-vietnamese-cooking-class": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp",
-    subtitle: "A practical guide to wet market sourcing, herb mastery, the five flavor dimensions, and techniques you can recreate at home",
-    lead: "Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.",
+    subtitle: "A practical guide to wet market sourcing, fresh herbs, balancing five flavors, and home cooking techniques",
+    lead: "Vietnamese cooking is about more than following a recipe. It is about knowing how to choose fresh ingredients, prepare herbs and aromatics, balance different flavors, and bring several textures together in one dish.",
     readTime: 14,
     badges: [
       { icon: "🌿", text: "Fresh Herb & Market Sourcing" },
@@ -750,7 +750,7 @@ const articleMetadata = {
       { icon: "🧑‍🍳", label: "Core Skill", val: "Intuitive seasoning by palate" }
     ],
     epilogueTitle: "Taste Vietnam with Your Own Hands",
-    epilogue: "The most enduring souvenir of any journey through Vietnam is never a mass-produced trinket bought from a market stall; it is the culinary wisdom you bring back to your own family table. When you know how to bruise lemongrass, coax crackling crispness from a rice-flour batter, and balance fermented fish sauce with lime juice, the sights, aromas, and vibrant soul of Vietnam remain alive in your kitchen forever."
+    epilogue: "The best takeaway from a trip to Vietnam isn't something you buy in a souvenir shop—it is the cooking skills you bring back to your own kitchen. Knowing how to pick fresh herbs, balance fish sauce with lime, and roll rice paper lets you share the flavors of Vietnam with family and friends long after your trip is over."
   }
 };
 
