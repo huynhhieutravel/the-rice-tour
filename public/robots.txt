@@ -4,4 +4,5 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /preview-post/
 
+Sitemap: https://thericetour.com/sitemap.xml
 Sitemap: https://thericetour.com/sitemap-index.xml

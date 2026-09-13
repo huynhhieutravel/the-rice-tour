@@ -305,6 +305,35 @@ if (!post) {
   }
 }
 
+// Helper to extract FAQ items from HTML (<details> tags)
+function extractFaqsFromHtml(html: string): { question: string; answer: string }[] {
+  const faqs: { question: string; answer: string }[] = [];
+  if (!html || !html.includes('<details')) return faqs;
+
+  const detailsRegex = /<details[\s\S]*?<summary[\s\S]*?>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi;
+  let match;
+  while ((match = detailsRegex.exec(html)) !== null) {
+    const rawQ = match[1];
+    const rawA = match[2];
+
+    let cleanQ = rawQ
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    cleanQ = cleanQ.replace(/[\+\-▼▲\s]+$/, '').trim();
+
+    let cleanA = rawA
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (cleanQ && cleanA) {
+      faqs.push({ question: cleanQ, answer: cleanA });
+    }
+  }
+  return faqs;
+}
+
 // Variables for post/page
 let tags: any[] = [];
 let relatedPosts: any[] = [];
@@ -579,6 +608,11 @@ if (!isCategory) {
     pageContent = pageContent.replace(/\{\{PAGE_FEATURED_IMAGE\}\}/g, 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
   }
   
+  // Extract FAQ items from HTML (<details> tags) for rich FAQPage Schema
+  if (faqQuestions.length === 0 && pageContent && pageContent.includes('<details')) {
+    faqQuestions = extractFaqsFromHtml(pageContent);
+  }
+
   rawSafeHtml = isJson ? '' : replaceTokens(pageContent, settings);
 
   // Content Sanitizer Pipeline

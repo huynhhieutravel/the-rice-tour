@@ -20,19 +20,49 @@ export function cleanSchema(obj: any): any {
   return obj;
 }
 
-// Fallback Organization Schema (used when Global Schema is unavailable)
-// This ensures the @graph is never broken even without the global SiteSetting.
+// Fallback Organization Schema (used for entity resolution and publisher metadata)
+// This ensures the @graph is always self-contained with rich Local SEO & GEO attributes.
 export const organizationFallback = {
-  "@type": "Organization",
+  "@type": "TravelAgency",
   "@id": "https://thericetour.com/#organization",
-  "name": "FIT TOUR",
+  "name": "The Rice Tour",
+  "alternateName": "The Rice Tour Vietnam",
+  "legalName": "The Rice Tour - Du Lịch Có Guu",
   "url": "https://thericetour.com",
   "logo": {
     "@type": "ImageObject",
     "url": "https://media.thericetour.com/uploads/logo-the-rice.webp",
     "width": 512,
     "height": 512
-  }
+  },
+  "image": "https://media.thericetour.com/uploads/logo-the-rice.webp",
+  "description": "Boutique inbound travel operator in Ho Chi Minh City, Vietnam. Specializing in private cooking classes, Cu Chi Tunnels historical tours, Mekong Delta cultural excursions, and bespoke Vietnam itineraries.",
+  "telephone": "+84962333621",
+  "email": "hello@thericetour.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "195 De Tham Street, Pham Ngu Lao Ward, District 1",
+    "addressLocality": "Ho Chi Minh City",
+    "addressRegion": "Ho Chi Minh",
+    "postalCode": "700000",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 10.7675,
+    "longitude": 106.6931
+  },
+  "hasMap": "https://maps.app.goo.gl/f147oCPxWWumzxpW6",
+  "areaServed": [
+    { "@type": "Country", "name": "Vietnam" },
+    { "@type": "City", "name": "Ho Chi Minh City" },
+    { "@type": "AdministrativeArea", "name": "Mekong Delta" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/thericetour",
+    "https://www.instagram.com/thericetour"
+  ]
 };
 
 // Keep backward compat alias
@@ -40,15 +70,10 @@ export const organizationSchema = organizationFallback;
 
 /**
  * Defensive publisher node:
- * - If Global Schema exists (rendered in <head> via BaseLayout) → use @id reference only
- * - If not (e.g., DB miss, cold start) → fallback to full Organization node
- * This prevents broken @graph in BlogPosting schemas.
+ * Returns the canonical @id reference for publisher linking.
  */
 export function getPublisherNode(globalSchemaExists: boolean) {
-  if (globalSchemaExists) {
-    return { "@id": "https://thericetour.com/#organization" };
-  }
-  return organizationFallback;
+  return { "@id": "https://thericetour.com/#organization" };
 }
 
 export interface BlogSchemaProps {
@@ -63,6 +88,7 @@ export interface BlogSchemaProps {
   category?: { name: string; slug?: string; };
   tags?: any[];
   faqQuestions?: { question: string; answer: string; }[];
+  language?: string;
   /** Pass true when BaseLayout already renders Global Schema in <head> */
   globalSchemaExists?: boolean;
 }
@@ -95,25 +121,33 @@ function toIso(dateStr: string | undefined): string | undefined {
 }
 
 export function generateBlogSchema(props: BlogSchemaProps) {
-  const { title, description, canonicalUrl, image, datePublished, dateModified, authorName, authorUrl, category, tags, faqQuestions, globalSchemaExists = true } = props;
+  const { title, description, canonicalUrl, image, datePublished, dateModified, authorName, authorUrl, category, tags, faqQuestions, language, globalSchemaExists = true } = props;
 
   // ── Fix #1: Normalize dates to ISO 8601 ──────────────────────────────────
   const isoPublished = toIso(datePublished);
   const isoModified = toIso(dateModified) || isoPublished;
 
+  // ── Dynamic Language Detection (vi-VN vs en-US) ─────────────────────────
+  const hasVietnameseDiacritics = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(title);
+  const isEnglish = language === 'en' || language === 'en-US' || 
+    canonicalUrl.includes('/en/') || 
+    !hasVietnameseDiacritics;
+  const langCode = isEnglish ? "en-US" : "vi-VN";
+
   // ── Fix #3: Author object with worksFor for EEAT ─────────────────────────
   let authorObj: any;
-  if (authorName && (authorName.toLowerCase() === 'admin' || authorName.toLowerCase() === 'fit tour' || authorName.toLowerCase() === 'huynh hieu travel')) {
+  const fallbackAuthorName = isEnglish ? "The Rice Tour Editorial Team" : "The Rice Tour";
+  if (authorName && (authorName.toLowerCase() === 'admin' || authorName.toLowerCase() === 'fit tour' || authorName.toLowerCase() === 'huynh hieu travel' || authorName.toLowerCase() === 'the rice tour')) {
     authorObj = {
       "@type": "Organization",
       "@id": "https://thericetour.com/#organization",
-      "name": "FIT TOUR",
+      "name": "The Rice Tour",
       ...(authorUrl && { "url": authorUrl })
     };
   } else {
     authorObj = {
       "@type": "Person",
-      "name": authorName || "FIT TOUR",
+      "name": authorName || fallbackAuthorName,
       ...(authorUrl && { "url": authorUrl }),
       "worksFor": { "@id": "https://thericetour.com/#organization" }
     };
@@ -144,12 +178,12 @@ export function generateBlogSchema(props: BlogSchemaProps) {
     "url": canonicalUrl,
     "headline": title,
     "description": description || title,
-    "inLanguage": "vi-VN",
+    "inLanguage": langCode,
     "image": imageObj,
     "datePublished": isoPublished,
     "dateModified": isoModified,
     "author": authorObj,
-    "publisher": getPublisherNode(globalSchemaExists),
+    "publisher": { "@id": "https://thericetour.com/#organization" },
     "keywords": keywordsStr
   };
 
@@ -158,14 +192,12 @@ export function generateBlogSchema(props: BlogSchemaProps) {
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Trang chủ",
+      "name": isEnglish ? "Home" : "Trang chủ",
       "item": "https://thericetour.com"
     }
   ];
 
   if (category && category.name) {
-    // We assume categories might be at /chuyen-muc/slug or /slug depending on routing. 
-    // Usually they are absolute so we format them.
     const catUrl = category.slug ? `https://thericetour.com/${category.slug}` : undefined;
     breadcrumbItems.push({
       "@type": "ListItem",
@@ -195,10 +227,21 @@ export function generateBlogSchema(props: BlogSchemaProps) {
     "itemListElement": breadcrumbItems
   };
 
-  // 3. Assemble Graph — Organization included defensively if Global Schema might be absent
-  const graphNodes: any[] = [ getPublisherNode(globalSchemaExists), blogPosting, breadcrumbList ];
+  // 3. WebSite Node for Graph Completion
+  const websiteNode = {
+    "@type": "WebSite",
+    "@id": "https://thericetour.com/#website",
+    "url": "https://thericetour.com",
+    "name": "The Rice Tour",
+    "description": "Authentic Inbound Vietnam Travel Experiences & Guided Cultural Tours",
+    "publisher": { "@id": "https://thericetour.com/#organization" },
+    "inLanguage": ["en-US", "vi-VN"]
+  };
 
-  // 4. FAQPage Override (if faq questions exist)
+  // 4. Assemble Graph — Fully self-contained entity resolution
+  const graphNodes: any[] = [ organizationFallback, websiteNode, blogPosting, breadcrumbList ];
+
+  // 5. FAQPage Override (if faq questions exist)
   if (faqQuestions && faqQuestions.length > 0) {
     const faqSchema = {
       "@type": "FAQPage",

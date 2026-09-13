@@ -79,7 +79,7 @@ if (!finalSchemaToRender) {
 }
 ---
 
-<BaseLayout title={title} description={description} image={image} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} isCorporate={isCorporate} noindex={noindex}>
+<BaseLayout title={title} description={description} image={image} canonical={canonicalUrl} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} isCorporate={isCorporate} noindex={noindex}>
   <Fragment slot="schema">
     {finalSchemaToRender && Object.keys(finalSchemaToRender).length > 0 && (
       <JsonLdSchema type="custom" data={finalSchemaToRender} />
