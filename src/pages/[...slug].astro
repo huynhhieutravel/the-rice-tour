@@ -552,7 +552,8 @@ if (!isCategory) {
   }
 
   let pageContent = post.content || '';
-  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('instagram-embed-wrapper'))) {
+  // If D1 content doesn't have the latest 3-column stats bar, use the demoArticlesMap version
+  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('3 Curated Dimensions'))) {
     pageContent = demoArticlesMap[post.slug];
     isLandingPage = true;
     isFullWidth = true;

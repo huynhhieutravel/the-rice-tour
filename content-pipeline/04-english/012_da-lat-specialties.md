@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Culinary Reviews | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Gastronomic Region:** Langbiang Plateau, Lam Dong Province.
-- **Signature Flavors:** Earthy, umami-rich, warming broths, and farm-to-table highland produce.
-- **2026 Price Range:** 30,000 – 150,000 VND (Street Food) | 250,000+ VND (Restaurants).
-- **Optimal Tasting Window:** Early morning for hot broths, late evening for charcoal-grilled street food.
 
 ---
 

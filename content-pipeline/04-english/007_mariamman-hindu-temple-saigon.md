@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-sa
 
 Highlighted in our comprehensive field guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), the **Mariamman Hindu Temple (popularly known to locals as Chùa Bà Ấn Độ)** sits proudly at 45 Truong Dinh Street, a mere 200-meter stroll from the market's West Gate. For over a century, this jewel of Dravidian architecture has stood not only as the spiritual nerve center for the city's Indian diaspora but also as a shining symbol of southern Vietnam’s remarkable religious harmony.
 
----
-
-## Quick Overview Stats (2026 Field Dimensions)
-
-| 📍 Temple Coordinates | 🕉️ Faith & Enshrined Deity | ⏳ Founding Era | 🎟️ 2026 Reference Policy |
-| :--- | :--- | :--- | :--- |
-| **45 Truong Dinh, Ben Thanh Ward, District 1** | **South Indian Hinduism (Goddess Mariamman)** | **Early 20th Century (Tamil Chettiar)** | **Free Entry (Voluntary Offerings)** |
 
 ---
 

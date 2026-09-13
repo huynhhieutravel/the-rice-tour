@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-
 
 As an anchor itinerary within our definitive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), this **One-Day Heritage Walking Tour** has been curated by The Rice Tour to guide conscious voyagers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.
 
----
-
-## Quick Overview Stats (2026 Itinerary Dimensions)
-
-| 🚶 Total Stroll Distance | ⏳ Expedition Duration | ⚡ Physical Intensity | 🎟️ 2026 Estimated Budget |
-| :--- | :--- | :--- | :--- |
-| **4.5 km (4 Leisurely Stages)** | **12 Hours (07:30 AM – 20:30 PM)** | **Gentle & Restorative (All Ages)** | **500,000 – 850,000 VND / person** |
 
 ---
 

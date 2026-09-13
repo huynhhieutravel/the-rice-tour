@@ -21,18 +21,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-c
   Chiếc khăn rằn không đơn thuần là một món quà lưu niệm phổ biến tại các khu chợ miền Tây sông nước. Ẩn sau những ô vuông sọc trắng đen giản dị là một hành trình giao thoa văn hóa kéo dài ba thế kỷ giữa các cộng đồng cư dân vùng hạ lưu sông Mê Kông. Đó là chứng nhân thầm lặng của thời kỳ khai hoang mở cõi, biểu tượng kiên cường trong kháng chiến, và là mạch sống của làng nghề dệt thủ công trăm năm tuổi vừa được công nhận là Di sản Văn hóa Phi vật thể Quốc gia.
 </div>
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-| Hạng mục | Thông tin chi tiết |
-| :--- | :--- |
-| **Cội nguồn lịch sử** | Tiếp biến từ chiếc Krama Khmer vào thế kỷ 17; giao thoa sâu sắc giữa văn hóa Việt, Chăm, Khmer. |
-| **Thủ phủ làng nghề** | Cù lao Long Khánh A, huyện Hồng Ngự, tỉnh Đồng Tháp (hơn 100 năm giữ lửa khung dệt). |
-| **Danh hiệu cao quý** | Được Bộ Văn hóa, Thể thao và Du lịch ghi danh Di sản Văn hóa Phi vật thể Quốc gia (2023). |
-| **Chất liệu cốt lõi** | 100% sợi cotton tự nhiên hoặc sợi tẩm hồ bột gạo truyền thống. |
-| **Kích thước chuẩn** | 160 x 60 cm hoặc 170 x 65 cm. |
-| **Thời giá 2026** | 35.000 – 90.000 VNĐ / chiếc (mua tại hợp tác xã làng dệt); 120.000 – 250.000 VNĐ (dòng cao cấp). |
 
 ---
 

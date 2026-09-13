@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Culture and Festivals | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** Foot of Sam Mountain, Chau Doc City, An Giang Province.
-- **Architectural Style:** Lotus-shaped structure, three-tiered green tiled roof.
-- **The Core Festival (Via Ba):** 23rd to 27th of the 4th Lunar Month.
-- **2026 Operational Status:** Open 24/7 (Peak pilgrimage season: January - April Lunar Calendar).
 
 ---
 

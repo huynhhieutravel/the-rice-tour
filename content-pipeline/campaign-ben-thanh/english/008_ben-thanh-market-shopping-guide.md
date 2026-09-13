@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-shopping
 
 Highlighted in our comprehensive field guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), stepping into the historic market places you at the center of an intoxicating labyrinth of over 1,400 vibrant retail stalls. For conscious voyagers, shopping here is an opportunity to acquire authentic handmade heirlooms and connect directly with the multi-generational trade guilds of the Southern Delta.
 
----
-
-## Quick Overview Stats (2026 Commerce Dimensions)
-
-| 🏪 Merchant Stalls | 🕒 Trading Hours | 💳 2026 Payment Standards | 🤝 Respectful Negotiation Buffer |
-| :--- | :--- | :--- | :--- |
-| **1,400+ Certified Vendors** | **07:00 AM – 18:00 PM (Daily)** | **100% Contactless Cards & VietQR** | **15% – 25% Balanced Adjustment** |
 
 ---
 

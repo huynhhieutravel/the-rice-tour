@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Mekong Delta, Local Specialties | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Peak Harvest Season:** May – August (Summer harvest featuring rambutan, durian, and mangosteen).
-- **Primary Geographical Distribution:** Vinh Long, Dong Thap, Can Tho, and Tien Giang (now part of the Dong Thap ecological zone).
-- **Field Experience:** Orchard tours, hands-on harvesting, and farm-to-table tasting sessions.
-- **Travel Advisory:** While administrative boundaries for areas like Tien Giang and Ben Tre underwent restructuring in 2025, their deeply rooted agricultural heritage and unique terroir remain immaculately preserved.
 
 ---
 

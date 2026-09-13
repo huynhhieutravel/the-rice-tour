@@ -178,6 +178,20 @@ html.dark {
   .prose a {
     @apply font-bold transition-colors hover:text-brand-800;
   }
+  /* Table & UI Contrast Overrides */
+  .prose table thead th,
+  .prose thead th {
+    color: #ffffff !important;
+  }
+  .prose table thead tr,
+  .prose thead tr {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+  }
+  .prose table thead th * {
+    color: #ffffff !important;
+  }
+
 
   /* Dành cho bài viết Blog (do Tiptap sinh ra) */
   .prose-fit {

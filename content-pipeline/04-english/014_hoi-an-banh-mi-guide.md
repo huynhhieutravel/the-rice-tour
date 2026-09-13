@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Culinary Reviews | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Gastronomic Coordinates:** Hoi An Ancient Town, Quang Nam Province.
-- **The Signature Architecture:** Pointed ends, hyper-crispy exterior, intensely dense crumb.
-- **2026 Price Baseline:** 30,000 – 45,000 VND.
-- **Culinary Fusion:** French baking techniques hybridized with complex Champa/Vietnamese marinades.
 
 ---
 

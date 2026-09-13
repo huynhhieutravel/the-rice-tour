@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-o
 
 Located less than a five-minute stroll across Le Thi Hong Gam Street from the four-dial clock tower, the **Ho Chi Minh City Museum of Fine Arts** forms an indispensable cultural pillar in the comprehensive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market). Here, early 20th-century French architectural sophistication coalesces with traditional Sino-Vietnamese spiritual sensibilities, creating one of Southeast Asia's most evocative aesthetic havens.
 
----
-
-## Quick Overview Stats (2026 Field Dimensions)
-
-| 📍 Mansion Coordinates | 🏛️ Architectural Style | ⏳ Construction Era | 🎟️ 2026 Reference Tariff |
-| :--- | :--- | :--- | :--- |
-| **97A Pho Duc Chinh, Nguyen Thai Binh Ward, District 1** | **Art Deco with Beaux-Arts & Oriental Accents** | **1929 – 1934 (Architect Rivera)** | **30,000 VND / adult (15,000 VND student)** |
 
 ---
 

@@ -24,13 +24,6 @@ featured_image: "https://media.thericetour.com/uploads/reunification-palace-saig
 
 Tọa lạc tại vị trí trang trọng bậc nhất trung tâm Quận 1, chỉ cách Chợ Bến Thành khoảng 700 mét tản bộ thong thả dọc theo đường Nam Kỳ Khởi Nghĩa, **Dinh Độc Lập (Hội trường Thống Nhất)** là Di tích Quốc gia đặc biệt và là điểm dừng chân không thể thiếu trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market). Đây là nơi hội tụ đỉnh cao của chủ nghĩa Hiện đại nhiệt đới (Tropical Modernism) kết hợp với triết lý dịch học Á Đông do bàn tay tài hoa của Kiến trúc sư Ngô Viết Thụ kiến tạo.
 
----
-
-## Quick Overview Stats Bar (Thông Số Thực Địa 2026)
-
-| 📍 Tọa độ địa chỉ | 🏛️ Phong cách kiến trúc | ⏳ Năm khánh thành | 🎟️ Giá vé tham quan 2026 |
-| :--- | :--- | :--- | :--- |
-| **135 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, Quận 1** | **Hiện đại nhiệt đới (Tropical Modernism)** | **1966 (KTS Ngô Viết Thụ)** | **65.000 VNĐ / vé trọn gói người lớn** |
 
 ---
 

@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Vui chơi & Giải trí | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Biển Cần Thơ](https://r2.nucuoimekong.com/wp-content/uploads/bien-can-tho-1.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Vị trí:** Khu Bãi Cát, Phường Cái Khế, Quận Ninh Kiều, TP. Cần Thơ (Liền kề Công viên Sông Hậu).
-- **Quy mô:** Chiều dài bãi cát 400m, được đổ hơn 1 triệu khối cát sạch dọc bờ sông Hậu.
-- **Giá vé (2026):** 20.000 VNĐ / Người (Bao gồm 1 phần nước uống miễn phí và phí vệ sinh).
-- **Giờ hoạt động:** 07:00 - 23:00 mỗi ngày.
-- **Tọa độ Check-in rực rỡ nhất:** 17:00 – 18:00 (Khoảnh khắc hoàng hôn buông xuống cầu dây văng).
 
 ---
 

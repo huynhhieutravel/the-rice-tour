@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Điểm du lịch nổi tiếng | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Khu du lịch Lan Vương](https://r2.nucuoimekong.com/wp-content/uploads/khu-du-lich-lan-vuong.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Vị trí (Cập nhật 2025-2026):** Ấp 2, phường An Hội, tỉnh Vĩnh Long (Lưu ý: Khu vực này trước đây thuộc Thành phố Bến Tre).
-- **Giờ hoạt động:** 07:00 - 18:00 (Mở cửa tất cả các ngày trong tuần).
-- **Chính sách vé:** **Vào cổng tự do (Miễn phí)**. Thu phí xé lẻ theo từng trò chơi và dịch vụ ăn uống.
-- **Mức độ vận động:** Cao (Đòi hỏi thể lực và sự lăn xả).
-- **Phù hợp với:** Các hoạt động Team Building doanh nghiệp, hội nhóm sinh viên, gia đình thích trải nghiệm nông nghiệp thực tế.
 
 ---
 

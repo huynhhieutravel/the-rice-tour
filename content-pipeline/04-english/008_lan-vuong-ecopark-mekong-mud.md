@@ -16,15 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Location (2025-2026 Update):** Hamlet 2, An Hoi Ward, Vinh Long Province (Note: Historically part of Ben Tre City).
-- **Operating Hours:** 07:00 AM - 06:00 PM (Open daily).
-- **Ticketing Policy:** **Free Admission**. Fees are charged a la carte for specific activities, equipment rentals, and culinary services.
-- **Physical Demands:** High (Demands stamina and a willingness to get profoundly dirty).
-- **Ideal For:** Corporate team-building excursions, student organizations, and families seeking rugged, hands-on agrarian experiences.
 
 ---
 

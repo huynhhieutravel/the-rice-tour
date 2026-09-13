@@ -17,14 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Về miền Tây, Đặc sản địa phương | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Bản đồ đặc sản trái cây miền Tây](https://r2.nucuoimekong.com/wp-content/uploads/trai-cay-mien-tay.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Mùa trái cây cao điểm:** Tháng 5 – Tháng 8 (Vụ Hè với chôm chôm, sầu riêng, măng cụt).
-- **Phân bổ địa lý chính:** Vĩnh Long, Đồng Tháp, Cần Thơ, Tiền Giang (nay thuộc vùng sinh thái Đồng Tháp).
-- **Trải nghiệm thực địa:** Tham quan miệt vườn, hái trái cây tại rẫy, thưởng thức đặc sản tươi sống.
-- **Lưu ý lữ hành:** Các địa danh cũ như Tiền Giang, Bến Tre có sự thay đổi về mặt hành chính từ năm 2025, tuy nhiên văn hóa và thổ nhưỡng canh tác vẫn giữ nguyên bản sắc.
 
 ---
 

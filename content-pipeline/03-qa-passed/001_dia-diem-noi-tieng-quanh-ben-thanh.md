@@ -24,13 +24,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-to
 
 Khu vực xung quanh Chợ Bến Thành từ lâu đã vượt thoát khỏi khái niệm của một trung tâm giao thương thuần túy để trở thành **"Trái tim văn hóa và di sản"** của đô thị Sài Gòn – Thành phố Hồ Chí Minh. Trong bán kính tản bộ chỉ từ 300m đến 1.200m tính từ tháp đồng hồ bốn mặt trứ danh, du khách sẽ bắt gặp sự giao thoa kỳ diệu giữa ba lớp trầm tích: kiến trúc thời thuộc địa đầu thế kỷ 20, những công trình kiến trúc Hiện đại nhiệt đới thời kỳ đỉnh cao, và hệ thống hạ tầng ngầm đô thị tương lai vừa chính thức định hình diện mạo mới vào năm 2026.
 
----
-
-## Quick Overview Stats Bar (Thông Số Thực Địa 2026)
-
-| 📍 Tọa độ trung tâm | ⏳ Khởi nguồn lịch sử | 🚶 Bán kính khám phá | 🎟️ Thời giá tham quan 2026 |
-| :--- | :--- | :--- | :--- |
-| **Quảng trường Quách Thị Trang, Phường Bến Thành, Quận 1** | **1914 (Khánh thành Chợ Mới Bến Thành)** | **1.2 km (Tản bộ lý tưởng)** | **0 – 65.000 VNĐ / điểm đến** |
 
 ---
 

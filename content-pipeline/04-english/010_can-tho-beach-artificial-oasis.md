@@ -16,15 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Entertainment & Leisure | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** Bai Cat Zone, Cai Khe Ward, Ninh Kieu District, Can Tho City (Adjacent to the Song Hau Park).
-- **Scale:** A 400-meter stretch of sand, engineered with over 1 million cubic meters of purified sand deposited along the Hau River bank.
-- **Admission Fee (2026):** 20,000 VND / Person (Includes one complimentary beverage and sanitation surcharge).
-- **Operating Hours:** 07:00 AM - 11:00 PM daily.
-- **The Golden Visual Coordinates:** 17:00 – 18:00 (The precise hour dusk descends over the cable-stayed bridge).
 
 ---
 

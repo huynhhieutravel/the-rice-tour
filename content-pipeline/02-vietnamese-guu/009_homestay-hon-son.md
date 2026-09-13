@@ -17,14 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Lịch trình & Cẩm nang | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Homestay Hòn Sơn](https://r2.nucuoimekong.com/wp-content/uploads/homestay-hon-son.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Tọa độ:** Đảo Hòn Sơn (Lại Sơn), Kiên Hải, Kiên Giang.
-- **Giá tham khảo 2026:** Từ 300.000 VNĐ (Phòng tiêu chuẩn) đến 1.500.000 VNĐ (Bungalow view biển trọn gói).
-- **Trải nghiệm lõi:** Ngủ lều sát biển, Bungalow vách núi, nướng BBQ hải sản tại bãi biển riêng.
-- **Lưu ý di chuyển:** Tàu cao tốc từ Rạch Giá ra Hòn Sơn mất khoảng 1 giờ 30 phút. 100% các homestay trong danh sách đều hỗ trợ dịch vụ thuê xe máy giao tại cầu cảng.
 
 ---
 

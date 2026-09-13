@@ -16,16 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Location:** 255A Nguyen Hue, Ward 2, Sa Dec City, Dong Thap Province.
-- **Construction Era:** Built in 1895 (by Mr. Huynh Cam Thuan). Major restoration in 1917.
-- **Admission Fee (2026):** 20,000 VND / Person (Includes a traditional serving of tea and candied ginger).
-- **Operating Hours:** 08:30 – 17:30 (Open daily).
-- **Cultural Status:** National Historic Monument (Recognized in 2009).
-- **Accommodation Experience:** Overnight stays in the vintage guest chambers are available (Only 2 rooms; advanced booking is strictly required).
 
 ---
 

@@ -17,16 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Điểm du lịch nổi tiếng | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Nhà cổ Huỳnh Thủy Lê](https://r2.nucuoimekong.com/wp-content/uploads/nha-co-huynh-thuy-le-4.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Vị trí:** 255A Nguyễn Huệ, Phường 2, TP. Sa Đéc, Tỉnh Đồng Tháp.
-- **Niên đại xây dựng:** Năm 1895 (Bởi ông Huỳnh Cẩm Thuận). Đại trùng tu năm 1917.
-- **Giá vé tham quan (2026):** 20.000 VNĐ / Người (Bao gồm trà và mứt gừng tiếp khách).
-- **Giờ mở cửa:** 08:30 – 17:30 (Mở cửa tất cả các ngày trong tuần).
-- **Di sản văn hóa:** Di tích cấp Quốc gia (Được công nhận năm 2009).
-- **Trải nghiệm lưu trú:** Có cung cấp dịch vụ ngủ đêm tại phòng khách cổ (Chỉ 2 phòng, cần đặt trước rất sớm).
 
 ---
 

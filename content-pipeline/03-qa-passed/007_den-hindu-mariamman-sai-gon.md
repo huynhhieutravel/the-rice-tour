@@ -24,13 +24,6 @@ featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-sa
 
 Là một điểm dừng chân độc đáo mang đậm dấu ấn giao lưu văn hóa quốc tế trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Đền Hindu Mariamman (người dân địa phương quen gọi là Chùa Bà Ấn Độ)** tọa lạc tại số 45 Trương Định, cách Cửa Tây Chợ Bến Thành đúng 200 mét. Ngôi đền không chỉ là trung tâm tín ngưỡng linh thiêng của cộng đồng người Ấn Độ tại TP.HCM mà còn là minh chứng sống động cho tinh thần bao dung, hòa hợp tôn giáo tuyệt vời của vùng đất phương Nam.
 
----
-
-## Quick Overview Stats Bar (Thông Số Thực Địa 2026)
-
-| 📍 Địa chỉ tọa độ | 🕉️ Tín ngưỡng & Thần chủ | ⏳ Thời điểm khởi dựng | 🎟️ Giá vé tham quan 2026 |
-| :--- | :--- | :--- | :--- |
-| **45 Trương Định, Phường Bến Thành, Quận 1** | **Hindu giáo Nam Ấn (Thờ Nữ thần Mariamman)** | **Đầu thế kỷ 20 (Cộng đồng Tamil Chettiar)** | **Miễn phí vào cửa (Dâng lễ tùy tâm)** |
 
 ---
 

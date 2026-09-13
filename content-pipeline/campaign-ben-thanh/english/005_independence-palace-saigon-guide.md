@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/reunification-palace-saig
 
 Enshrined as a focal monument in our curated guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), the **Independence Palace (Reunification Convention Hall)** stands just 700 meters north of the central market along tree-canopied Nam Ky Khoi Nghia Boulevard. As Vietnam’s premier Special National Relic, the estate encapsulates an extraordinary dialogue between avant-garde mid-century architecture and ancient Eastern philosophical cosmology.
 
----
-
-## Quick Overview Stats (2026 Curated Dimensions)
-
-| 📍 Palace Coordinates | 🏛️ Architectural Doctrine | ⏳ Inaugural Year | 🎟️ 2026 Comprehensive Tariff |
-| :--- | :--- | :--- | :--- |
-| **135 Nam Ky Khoi Nghia, Ben Thanh Ward, District 1** | **Tropical Modernism with Eastern Symbology** | **1966 (Architect Ngo Viet Thu)** | **65,000 VND / adult comprehensive** |
 
 ---
 

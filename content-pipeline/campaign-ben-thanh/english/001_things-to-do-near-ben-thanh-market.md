@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-clock-to
 
 The urban quarter cradling Ben Thanh Market has long evolved beyond its identity as a bustling commercial marketplace; it stands as the veritable **cultural and architectural heart of Ho Chi Minh City**. Within a gentle walking radius of 300 to 1,200 meters from the iconic four-dial clock tower, travelers are treated to a captivating layered narrative: early 20th-century colonial elegance, mid-century tropical modernism at its zenith, and a visionary underground transit metropolis newly completed in 2026.
 
----
-
-## Quick Overview Stats (2026 Field Dimensions)
-
-| 📍 Epicenter Coordinates | ⏳ Historical Genesis | 🚶 Exploration Radius | 🎟️ 2026 Admission Baseline |
-| :--- | :--- | :--- | :--- |
-| **Quach Thi Trang Square, District 1, HCMC** | **1914 (Inauguration of New Market)** | **1.2 km (Ideal Walking Stroll)** | **0 – 65,000 VND / landmark** |
 
 ---
 

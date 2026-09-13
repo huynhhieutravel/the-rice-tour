@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Itineraries & Guides | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** Hon Son Island (Lai Son), Kien Hai District, Kien Giang Province.
-- **2026 Baseline Tariffs:** From 300,000 VND (Standard lodgings) to 1,500,000 VND (All-inclusive panoramic ocean bungalows).
-- **Core Experiences:** Pitching tents on the surf line, retreating to cliffside wooden bungalows, and executing private beachfront seafood barbecues.
-- **Transit Logistics:** The high-speed maritime crossing from Rach Gia Port to Hon Son demands approximately 1 hour and 30 minutes. 100% of the sanctuaries listed herein facilitate pier-side motorbike delivery.
 
 ---
 

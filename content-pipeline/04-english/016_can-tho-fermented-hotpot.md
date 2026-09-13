@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Toplist, Local Specialties | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Gastronomic Coordinates:** Can Tho City (The epicenter of Mekong Delta cuisine).
-- **The Signature Flavor:** Intensely pungent, umami-rich fermented fish broth (*Mắm Châu Đốc*).
-- **2026 Price Baseline:** 150,000 – 350,000 VND per hotpot (serves 2-4).
-- **The Botanical Accompaniment:** Up to 30 varieties of wild, aquatic, and garden-grown vegetables.
 
 ---
 

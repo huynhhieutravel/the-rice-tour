@@ -20,13 +20,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-c
 
 Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Ga ngầm Trung tâm Bến Thành (Tuyến Metro số 1 Bến Thành – Suối Tiên)** chính thức vận hành thương mại và trở thành niềm tự hào hạ tầng của hơn 10 triệu người dân Thành phố Hồ Chí Minh. Đây không chỉ là một đầu mối giao thông công cộng hiện đại, mà còn là một không gian kiến trúc công cộng mang tính thẩm mỹ cao, mở ra trải nghiệm du hành đô thị văn minh cho du khách trong và ngoài nước.
 
----
-
-## Quick Overview Stats Bar (Thông Số Thực Địa 2026)
-
-| 📍 Vị trí ga trung tâm | 🚇 Chiều sâu & Quy mô | 🕒 Khung giờ vận hành | 🎟️ Giá vé trải nghiệm 2026 |
-| :--- | :--- | :--- | :--- |
-| **Quảng trường Quách Thị Trang, Cửa Nam Chợ Bến Thành** | **Sâu 32m (4 tầng ngầm) – Dài 236m** | **05:00 – 23:00 (4 – 8 phút/chuyến)** | **7.000 – 20.000 VNĐ (Vé ngày: 40.000 VNĐ)** |
 
 ---
 

@@ -98,15 +98,15 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-reality-of-happy-land-entertainment-complex-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Reality of Happy Land Entertainment Complex in 2026</a>
+                  <a href="#the-reality-of-happy-land-entertainment-complex-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Reality of Happy Land Entertainment Complex in 2026</a>
   <a href="#is-happy-land-still-open-to-the-public" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Is Happy Land Still Open to the Public?</a>
   <a href="#updated-administrative-coordinates-since-2025" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Updated Administrative Coordinates (Since 2025)</a>
-  <a href="#echoes-of-a-miniature-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Echoes of a "Miniature Vietnam"</a>
+  <a href="#echoes-of-a-miniature-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Echoes of a "Miniature Vietnam"</a>
   <a href="#architectural-replicas-of-the-north-and-central-regions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Architectural Replicas of the North and Central Regions</a>
   <a href="#the-soul-of-the-southern-riverine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Soul of the Southern Riverine</a>
-  <a href="#at-a-glance-then-vs-now" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">At a Glance: Then vs. Now</a>
-  <a href="#field-notes-and-travel-warnings" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes & Travel Warnings</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#at-a-glance-then-vs-now" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">At a Glance: Then vs. Now</a>
+  <a href="#field-notes-and-travel-warnings" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes & Travel Warnings</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -116,60 +116,40 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">New Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">Binh Duc, Tay Ninh</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Binh Duc, Tay Ninh</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚫</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Status</div>
-        <div class="text-[13px] font-bold text-slate-900">Closed to Individuals</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚫</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Status</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Closed to Public / Private Only</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ticketing / Access</div>
-        <div class="text-[13px] font-bold text-slate-900">Private Events Only</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⚠️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Advisory</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Verify Status Before Travel</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⚠️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Travel Advisory</div>
-        <div class="text-[13px] font-bold text-slate-900">Verify Before Visiting</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Current Location:</strong> Binh Duc Commune, Tay Ninh Province (updated administrative address following the 2025 redistricting).</li>
-<li><strong>Status (2026):</strong> <strong>Permanently closed to independent travelers.</strong></li>
-<li><strong>Admission / Hours:</strong> Not applicable (no official announcements).</li>
-<li><strong>Travel Advisory:</strong> Do not attempt unauthorized visits or wire money for tickets through unverified third parties.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-reality-of-happy-land-entertainment-complex-in-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -228,15 +208,15 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Feature</th><th class="p-4 font-bold text-left">The Golden Era</th><th class="p-4 font-bold text-left">2026 Update</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Feature</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">The Golden Era</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Update</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Public Access</strong></td><td class="p-4">Open daily</td><td class="p-4"><strong>Closed</strong> to independent travelers. Sporadic private events only.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Admission Fees</strong></td><td class="p-4">Adults: ~180,000 VND<br>Children: ~130,000 VND</td><td class="p-4"><strong>Unpublished.</strong> Exercise extreme caution regarding online ticket vendors.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Signature Events</strong></td><td class="p-4">Hot air balloon festivals, rally racing, regional cultural shows.</td><td class="p-4">No recurring events are currently scheduled.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Travel Advisory</strong></td><td class="p-4">An idyllic weekend retreat for families.</td><td class="p-4"><strong>Exclude from itineraries.</strong> Divert to alternative sanctuaries (e.g., Tan Lap Floating Village).</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Public Access</strong></td><td class="p-4 text-slate-800 font-medium">Open daily</td><td class="p-4 text-slate-800 font-medium"><strong>Closed</strong> to independent travelers. Sporadic private events only.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Admission Fees</strong></td><td class="p-4 text-slate-800 font-medium">Adults: ~180,000 VND<br>Children: ~130,000 VND</td><td class="p-4 text-slate-800 font-medium"><strong>Unpublished.</strong> Exercise extreme caution regarding online ticket vendors.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Signature Events</strong></td><td class="p-4 text-slate-800 font-medium">Hot air balloon festivals, rally racing, regional cultural shows.</td><td class="p-4 text-slate-800 font-medium">No recurring events are currently scheduled.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Travel Advisory</strong></td><td class="p-4 text-slate-800 font-medium">An idyllic weekend retreat for families.</td><td class="p-4 text-slate-800 font-medium"><strong>Exclude from itineraries.</strong> Divert to alternative sanctuaries (e.g., Tan Lap Floating Village).</td></tr>
 
           </tbody>
         </table>
@@ -269,7 +249,7 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Intention</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 The story of Happy Land is a poignant reminder that true cultural immersion cannot be manufactured within theme park boundaries. The genuine soul of Vietnam resides in its living waterways, active artisan looms, and the warm hospitality of riverside communities.
               </p>
             </div>
@@ -315,37 +295,37 @@ export const happyLandBenLucTravelGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">New Coordinates</div>
-        <div class="font-bold text-slate-800 text-[13px]">Binh Duc, Tay Ninh (Post-2025)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">New Coordinates</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Binh Duc, Tay Ninh (Post-2025)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚫</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚫</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Operational Status</div>
-        <div class="font-bold text-slate-800 text-[13px]">Permanently Closed to Public</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Operational Status</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Permanently Closed to Public</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌿</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Alternative Destinations</div>
-        <div class="font-bold text-slate-800 text-[13px]">Tan Lap Floating Village, Ben Tre</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Alternative Destinations</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Tan Lap Floating Village, Ben Tre</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⚠️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⚠️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Advisory Level</div>
-        <div class="font-bold text-slate-800 text-[13px]">Strictly Avoid Unverified Tours</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Advisory Level</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Strictly Avoid Unverified Tours</div>
       </div>
     </div>
   
@@ -512,24 +492,24 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis</a>
-  <a href="#historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads</a>
-  <a href="#definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius</a>
+                  <a href="#key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis</a>
+  <a href="#historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads</a>
+  <a href="#definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius</a>
   <a href="#ben-thanh-market-the-living-mirror-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Market: The Living Mirror of Saigon</a>
   <a href="#hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion</a>
   <a href="#the-independence-palace-high-zenith-of-tropical-modernism" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Independence Palace: High Zenith of Tropical Modernism</a>
   <a href="#mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality</a>
   <a href="#ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Central Metro Station: The 2026 Subterranean Landmark</a>
-  <a href="#curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis</a>
-  <a href="#epicurean-mapping-and-neighborhood-life" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epicurean Mapping & Neighborhood Life</a>
+  <a href="#curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis</a>
+  <a href="#epicurean-mapping-and-neighborhood-life" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epicurean Mapping & Neighborhood Life</a>
   <a href="#classic-daytime-market-stalls-inside-south-and-east-gates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Classic Daytime Market Stalls (Inside South & East Gates)</a>
   <a href="#phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)</a>
   <a href="#secret-vintage-apartment-hideaways" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Secret Vintage Apartment Hideaways</a>
-  <a href="#curated-walking-itineraries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Walking Itineraries</a>
+  <a href="#curated-walking-itineraries" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Walking Itineraries</a>
   <a href="#option-a-the-half-day-heritage-and-art-stroll-4-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option A: The Half-Day Heritage & Art Stroll (4 Hours)</a>
   <a href="#option-b-the-complete-full-day-immersion-8-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option B: The Complete Full-Day Immersion (8 Hours)</a>
-  <a href="#field-notes-for-the-discerning-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026 Guidelines)</a>
-  <a href="#epilogue-preserving-the-timeless-soul-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Preserving the Timeless Soul of Saigon</a>
+  <a href="#field-notes-for-the-discerning-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026 Guidelines)</a>
+  <a href="#epilogue-preserving-the-timeless-soul-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Preserving the Timeless Soul of Saigon</a>
 
               </div>
             </nav>
@@ -539,47 +519,34 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Epicenter Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">Quach Thi Trang Square, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Quach Thi Trang Square, District 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Historical Genesis</div>
-        <div class="text-[13px] font-bold text-slate-900">1914 (Centennial New Market)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Walking Radius</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">1.2 km Heritage Perimeter</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Exploration Radius</div>
-        <div class="text-[13px] font-bold text-slate-900">1.2 km (Ideal Walking Stroll)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Tariff</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Free – 65,000 VND / landmark</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Admission Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">Free – 65,000 VND / landmark</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -589,21 +556,6 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
   If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Here, the century-old chime of the clock tower harmonizes with the modern hum of the underground metro, where quiet Indochine colonnades cast long shadows across the ceaseless energy of a city that never sleeps.
 </div><p>The urban quarter cradling Ben Thanh Market has long evolved beyond its identity as a bustling commercial marketplace; it stands as the veritable <strong>cultural and architectural heart of Ho Chi Minh City</strong>. Within a gentle walking radius of 300 to 1,200 meters from the iconic four-dial clock tower, travelers are treated to a captivating layered narrative: early 20th-century colonial elegance, mid-century tropical modernism at its zenith, and a visionary underground transit metropolis newly completed in 2026.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">📍 Epicenter Coordinates</th><th class="p-4 font-bold text-left">⏳ Historical Genesis</th><th class="p-4 font-bold text-left">🚶 Exploration Radius</th><th class="p-4 font-bold text-left">🎟️ 2026 Admission Baseline</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Quach Thi Trang Square, District 1, HCMC</strong></td><td class="p-4"><strong>1914 (Inauguration of New Market)</strong></td><td class="p-4"><strong>1.2 km (Ideal Walking Stroll)</strong></td><td class="p-4"><strong>0 – 65,000 VND / landmark</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -761,16 +713,16 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Landmark</th><th class="p-4 font-bold text-left">Distance from Market</th><th class="p-4 font-bold text-left">Recommended Duration</th><th class="p-4 font-bold text-left">Signature Style / Unique Feature</th><th class="p-4 font-bold text-left">Golden Visiting Window</th><th class="p-4 font-bold text-left">2026 Reference Admission</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Landmark</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Distance from Market</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Recommended Duration</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Signature Style / Unique Feature</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Golden Visiting Window</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Reference Admission</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Market</strong></td><td class="p-4"><em>Epicenter (0m)</em></td><td class="p-4">1.5 – 2.0 hours</td><td class="p-4">1914 clock tower, Bien Hoa ceramics, spice &amp; fabric maze</td><td class="p-4">07:30 – 09:30 AM (early pulse)</td><td class="p-4">Free admission</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>HCMC Museum of Fine Arts</strong></td><td class="p-4">350 meters (5-min walk)</td><td class="p-4">2.0 – 2.5 hours</td><td class="p-4">Hui Bon Hoa mansion, antique elevator, lacquer masterpieces</td><td class="p-4">08:30 – 11:00 AM (soft light)</td><td class="p-4">30,000 VND / person</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Independence Palace</strong></td><td class="p-4">700 meters (9-min walk)</td><td class="p-4">2.0 – 3.0 hours</td><td class="p-4">Ngo Viet Thu&#39;s Tropical Modernism, wartime bunker network</td><td class="p-4">14:00 – 16:00 PM (gentle heat)</td><td class="p-4">65,000 VND / full access</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Mariamman Temple</strong></td><td class="p-4">200 meters (3-min walk)</td><td class="p-4">45 – 60 mins</td><td class="p-4">Dravidian Gopuram gateway, stone wall meditation ritual</td><td class="p-4">08:00 – 10:00 AM (tranquil)</td><td class="p-4">Free (voluntary donation)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Metro Station</strong></td><td class="p-4">Directly at South Gate</td><td class="p-4">30 – 45 mins</td><td class="p-4">Lotus glass skylight, futuristic concourse 2026</td><td class="p-4">16:30 – 18:00 PM (dusk rays)</td><td class="p-4">Per Metro transit ticket</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ben Thanh Market</strong></td><td class="p-4 text-slate-800 font-medium"><em>Epicenter (0m)</em></td><td class="p-4 text-slate-800 font-medium">1.5 – 2.0 hours</td><td class="p-4 text-slate-800 font-medium">1914 clock tower, Bien Hoa ceramics, spice &amp; fabric maze</td><td class="p-4 text-slate-800 font-medium">07:30 – 09:30 AM (early pulse)</td><td class="p-4 text-slate-800 font-medium">Free admission</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>HCMC Museum of Fine Arts</strong></td><td class="p-4 text-slate-800 font-medium">350 meters (5-min walk)</td><td class="p-4 text-slate-800 font-medium">2.0 – 2.5 hours</td><td class="p-4 text-slate-800 font-medium">Hui Bon Hoa mansion, antique elevator, lacquer masterpieces</td><td class="p-4 text-slate-800 font-medium">08:30 – 11:00 AM (soft light)</td><td class="p-4 text-slate-800 font-medium">30,000 VND / person</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Independence Palace</strong></td><td class="p-4 text-slate-800 font-medium">700 meters (9-min walk)</td><td class="p-4 text-slate-800 font-medium">2.0 – 3.0 hours</td><td class="p-4 text-slate-800 font-medium">Ngo Viet Thu&#39;s Tropical Modernism, wartime bunker network</td><td class="p-4 text-slate-800 font-medium">14:00 – 16:00 PM (gentle heat)</td><td class="p-4 text-slate-800 font-medium">65,000 VND / full access</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Mariamman Temple</strong></td><td class="p-4 text-slate-800 font-medium">200 meters (3-min walk)</td><td class="p-4 text-slate-800 font-medium">45 – 60 mins</td><td class="p-4 text-slate-800 font-medium">Dravidian Gopuram gateway, stone wall meditation ritual</td><td class="p-4 text-slate-800 font-medium">08:00 – 10:00 AM (tranquil)</td><td class="p-4 text-slate-800 font-medium">Free (voluntary donation)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ben Thanh Metro Station</strong></td><td class="p-4 text-slate-800 font-medium">Directly at South Gate</td><td class="p-4 text-slate-800 font-medium">30 – 45 mins</td><td class="p-4 text-slate-800 font-medium">Lotus glass skylight, futuristic concourse 2026</td><td class="p-4 text-slate-800 font-medium">16:30 – 18:00 PM (dusk rays)</td><td class="p-4 text-slate-800 font-medium">Per Metro transit ticket</td></tr>
 
           </tbody>
         </table>
@@ -867,7 +819,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Preserving the Timeless Soul of Saigon</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.
               </p>
             </div>
@@ -913,37 +865,37 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Heart of Saigon</div>
-        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Ward, District 1, HCMC</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Heart of Saigon</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ben Thanh Ward, District 1, HCMC</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Golden Visiting Hours</div>
-        <div class="font-bold text-slate-800 text-[13px]">07:30 – 10:30 AM & 16:30 – 21:00 PM</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Golden Visiting Hours</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">07:30 – 10:30 AM & 16:30 – 21:00 PM</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚶</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Experience</div>
-        <div class="font-bold text-slate-800 text-[13px]">Indochine heritage stroll & secret cafes</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Signature Experience</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Indochine heritage stroll & secret cafes</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚇</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Modern Transit</div>
-        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Central Metro Station Line 1</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Modern Transit</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ben Thanh Central Metro Station Line 1</div>
       </div>
     </div>
   
@@ -1110,15 +1062,15 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-hui-bon-hoa-estate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Hui Bon Hoa Estate</a>
-  <a href="#the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan</a>
-  <a href="#deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy</a>
+                  <a href="#key-curated-dimensions-of-the-hui-bon-hoa-estate" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Hui Bon Hoa Estate</a>
+  <a href="#the-hui-bon-hoa-dynasty-from-humble-merchant-to-real-estate-titan" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Hui Bon Hoa Dynasty: From Humble Merchant to Real Estate Titan</a>
+  <a href="#deciphering-the-architectural-harmony-western-art-deco-meets-eastern-geomancy" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deciphering the Architectural Harmony: Western Art Deco Meets Eastern Geomancy</a>
   <a href="#the-interior-encaustic-tiles-and-prismatic-lightwells" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Interior: Encaustic Tiles and Prismatic Lightwells</a>
   <a href="#the-parisian-antique-elevator-technological-aristocracy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Parisian Antique Elevator: Technological Aristocracy</a>
-  <a href="#navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Three Pavilions: A Millennial Artistic Odyssey</a>
+  <a href="#navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Three Pavilions: A Millennial Artistic Odyssey</a>
   <a href="#the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"</a>
-  <a href="#curated-field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler (2026)</a>
-  <a href="#epilogue-a-serene-dialogue-with-the-past" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Serene Dialogue with the Past</a>
+  <a href="#curated-field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#epilogue-a-serene-dialogue-with-the-past" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: A Serene Dialogue with the Past</a>
 
               </div>
             </nav>
@@ -1128,47 +1080,34 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Mansion Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">97A Pho Duc Chinh, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">97A Pho Duc Chinh, District 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Construction Era</div>
-        <div class="text-[13px] font-bold text-slate-900">1929 – 1934 (Architect Rivera)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Walk from Market</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">350 meters (5-minute stroll)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Walk from Ben Thanh</div>
-        <div class="text-[13px] font-bold text-slate-900">350 meters (5-minute stroll)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Ticket</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">30,000 VND / adult</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Reference Tariff</div>
-        <div class="text-[13px] font-bold text-slate-900">30,000 VND / adult (15,000 student)</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -1178,21 +1117,6 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
   Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
 </div><p>Located less than a five-minute stroll across Le Thi Hong Gam Street from the four-dial clock tower, the <strong>Ho Chi Minh City Museum of Fine Arts</strong> forms an indispensable cultural pillar in the comprehensive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>. Here, early 20th-century French architectural sophistication coalesces with traditional Sino-Vietnamese spiritual sensibilities, creating one of Southeast Asia&#39;s most evocative aesthetic havens.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">📍 Mansion Coordinates</th><th class="p-4 font-bold text-left">🏛️ Architectural Style</th><th class="p-4 font-bold text-left">⏳ Construction Era</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Tariff</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>97A Pho Duc Chinh, Nguyen Thai Binh Ward, District 1</strong></td><td class="p-4"><strong>Art Deco with Beaux-Arts &amp; Oriental Accents</strong></td><td class="p-4"><strong>1929 – 1934 (Architect Rivera)</strong></td><td class="p-4"><strong>30,000 VND / adult (15,000 VND student)</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-the-hui-bon-hoa-estate" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -1263,14 +1187,14 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Pavilion</th><th class="p-4 font-bold text-left">Curatorial Focus</th><th class="p-4 font-bold text-left">Pinnacle Highlights</th><th class="p-4 font-bold text-left">Recommended Stroll</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Pavilion</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Curatorial Focus</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Pinnacle Highlights</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Recommended Stroll</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 1 (Main Mansion)</strong></td><td class="p-4">Modern &amp; Contemporary Vietnamese Art (20th – 21st Century)</td><td class="p-4"><em>Spring Garden</em> (Nguyen Gia Tri), silk paintings by Nguyen Phan Chanh, wartime sketches</td><td class="p-4">Bask in stained-glass light on the 2nd and 3rd floor loggias</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 2 (Rear Villa)</strong></td><td class="p-4">Rotating Special Exhibitions &amp; International Dialogues</td><td class="p-4">Contemporary installations, private retrospectives, global exchanges</td><td class="p-4">Encounter cutting-edge experimental Vietnamese art</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Building 3 (Antiquities)</strong></td><td class="p-4">Ancient Indigenous Heritage &amp; Archaeological Sculpture</td><td class="p-4">7th–12th century Cham stone carvings, Oc Eo artifacts, Ly-Tran glazed pottery</td><td class="p-4">Contemplate the prehistoric and medieval riverine civilizations</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Building 1 (Main Mansion)</strong></td><td class="p-4 text-slate-800 font-medium">Modern &amp; Contemporary Vietnamese Art (20th – 21st Century)</td><td class="p-4 text-slate-800 font-medium"><em>Spring Garden</em> (Nguyen Gia Tri), silk paintings by Nguyen Phan Chanh, wartime sketches</td><td class="p-4 text-slate-800 font-medium">Bask in stained-glass light on the 2nd and 3rd floor loggias</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Building 2 (Rear Villa)</strong></td><td class="p-4 text-slate-800 font-medium">Rotating Special Exhibitions &amp; International Dialogues</td><td class="p-4 text-slate-800 font-medium">Contemporary installations, private retrospectives, global exchanges</td><td class="p-4 text-slate-800 font-medium">Encounter cutting-edge experimental Vietnamese art</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Building 3 (Antiquities)</strong></td><td class="p-4 text-slate-800 font-medium">Ancient Indigenous Heritage &amp; Archaeological Sculpture</td><td class="p-4 text-slate-800 font-medium">7th–12th century Cham stone carvings, Oc Eo artifacts, Ly-Tran glazed pottery</td><td class="p-4 text-slate-800 font-medium">Contemplate the prehistoric and medieval riverine civilizations</td></tr>
 
           </tbody>
         </table>
@@ -1308,7 +1232,7 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: A Serene Dialogue with the Past</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship.
               </p>
             </div>
@@ -1354,37 +1278,37 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historical Identity</div>
-        <div class="font-bold text-slate-800 text-[13px]">Private Estate of Hui Bon Hoa Frères</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Historical Identity</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Private Estate of Hui Bon Hoa Frères</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Sunlight Hours</div>
-        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM & 15:00 – 16:30 PM</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Optimal Sunlight Hours</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">08:30 – 10:30 AM & 15:00 – 16:30 PM</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎨</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎨</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Key Masterpiece</div>
-        <div class="font-bold text-slate-800 text-[13px]">Spring Garden of North, Central & South</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Key Masterpiece</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Spring Garden of North, Central & South</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛗</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛗</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pioneering Feature</div>
-        <div class="font-bold text-slate-800 text-[13px]">Saigon's Earliest Timber-Cage Elevator</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Pioneering Feature</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Saigon's Earliest Timber-Cage Elevator</div>
       </div>
     </div>
   
@@ -1551,18 +1475,18 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#nam-du-an-untamed-sanctuary-in-the-southwestern-sea" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Nam Du - An Untamed Sanctuary in the Southwestern Sea</a>
+                  <a href="#nam-du-an-untamed-sanctuary-in-the-southwestern-sea" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Nam Du - An Untamed Sanctuary in the Southwestern Sea</a>
   <a href="#administrative-note-post-redistricting-update" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Administrative Note (Post-Redistricting Update)</a>
-  <a href="#transit-guide-setting-sail" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Transit Guide: Setting Sail</a>
+  <a href="#transit-guide-setting-sail" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Transit Guide: Setting Sail</a>
   <a href="#from-rach-gia-to-nam-du" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">From Rach Gia to Nam Du</a>
   <a href="#the-phu-quoc-nam-du-connection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Phu Quoc – Nam Du Connection</a>
-  <a href="#unveiling-the-archipelago-key-landfalls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Unveiling the Archipelago: Key Landfalls</a>
+  <a href="#unveiling-the-archipelago-key-landfalls" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Unveiling the Archipelago: Key Landfalls</a>
   <a href="#bai-chet-hon-lon-the-logistical-hub" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bai Chet (Hon Lon) – The Logistical Hub</a>
   <a href="#bai-cay-men-the-tranquil-cove" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bai Cay Men – The Tranquil Cove</a>
   <a href="#hon-mau-and-hon-dau-coral-sanctuaries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Hon Mau & Hon Dau – Coral Sanctuaries</a>
   <a href="#hon-ngang-the-voice-of-the-fishing-village" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Hon Ngang – The Voice of the Fishing Village</a>
-  <a href="#recommended-3-day-2-night-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Recommended 3-Day, 2-Night Itinerary</a>
-  <a href="#survival-guide-and-budgeting" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Survival Guide & Budgeting</a>
+  <a href="#recommended-3-day-2-night-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Recommended 3-Day, 2-Night Itinerary</a>
+  <a href="#survival-guide-and-budgeting" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Survival Guide & Budgeting</a>
 
               </div>
             </nav>
@@ -1572,61 +1496,40 @@ export const namDuIslandExpeditionGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">The Archipelago</div>
-        <div class="text-[13px] font-bold text-slate-900">An Son (Kien Giang / Southwest Sea)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Archipelago</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">21 Islands, An Son, Kien Giang</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌤️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Golden Season</div>
-        <div class="text-[13px] font-bold text-slate-900">December – April (Calm Sea)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🌤️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Golden Window</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Dec – April (Calm Azure Seas)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛥️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Transit Time</div>
-        <div class="text-[13px] font-bold text-slate-900">2h from Rach Gia Port</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🛥️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Maritime Link</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">2h Express Ferry from Rach Gia</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">2,000,000 – 3,500,000 VND (3D2N)</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Geographical Coordinates (2026 Update):</strong> Kien Hai Special District, An Giang Province (Note: Formerly under Kien Giang Province).</li>
-<li><strong>Optimal Season:</strong> December to March (Calm seas, radiant sunlight, and minimal storm risk).</li>
-<li><strong>Gateway:</strong> Rach Gia Port (Accessible via a 2–2.5 hour high-speed ferry ride).</li>
-<li><strong>Recommended Duration:</strong> 3 Days 2 Nights (Allowing a buffer for weather-induced ferry delays).</li>
-<li><strong>Physical Demands:</strong> Moderate (Suitable for most ages, though resilience against seasickness is advised).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="nam-du-an-untamed-sanctuary-in-the-southwestern-sea" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -1667,15 +1570,15 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Passenger Category</th><th class="p-4 font-bold text-left">One-Way Fare (VND)</th><th class="p-4 font-bold text-left">Notes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Passenger Category</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">One-Way Fare (VND)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Adults</strong></td><td class="p-4">245,455 VND</td><td class="p-4">Original ID card required</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Seniors (60+ years)</strong></td><td class="p-4">207,163 VND</td><td class="p-4">Proof of age required</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Children (6 - under 12 years)</strong></td><td class="p-4">183,600 VND</td><td class="p-4">Children under 6 (sharing a seat) travel free</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Passengers with Disabilities</strong></td><td class="p-4">183,600 VND</td><td class="p-4">Subject to supporting policies</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Adults</strong></td><td class="p-4 text-slate-800 font-medium">245,455 VND</td><td class="p-4 text-slate-800 font-medium">Original ID card required</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Seniors (60+ years)</strong></td><td class="p-4 text-slate-800 font-medium">207,163 VND</td><td class="p-4 text-slate-800 font-medium">Proof of age required</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Children (6 - under 12 years)</strong></td><td class="p-4 text-slate-800 font-medium">183,600 VND</td><td class="p-4 text-slate-800 font-medium">Children under 6 (sharing a seat) travel free</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Passengers with Disabilities</strong></td><td class="p-4 text-slate-800 font-medium">183,600 VND</td><td class="p-4 text-slate-800 font-medium">Subject to supporting policies</td></tr>
 
           </tbody>
         </table>
@@ -1779,7 +1682,7 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Raw Soul of the Gulf</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Nam Du will not cradle you in five-star luxury, but it will reward the conscious voyager with something infinitely rarer: the primal pulse of an open sea, the scent of morning salt on timber decks, and an unhurried intimacy with islanders who still look to the stars to navigate the tide.
               </p>
             </div>
@@ -1825,37 +1728,37 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">The Archipelago</div>
-        <div class="font-bold text-slate-800 text-[13px]">21 Islands, An Son, Kien Giang</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">The Archipelago</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">21 Islands, An Son, Kien Giang</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Expedition Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">Dec to April (Smooth Seas)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Expedition Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Dec to April (Smooth Seas)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏊</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🏊</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Highlights</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hon Mau coral dives & Cay Men beach</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Signature Highlights</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hon Mau coral dives & Cay Men beach</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛥️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛥️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Maritime Access</div>
-        <div class="font-bold text-slate-800 text-[13px]">Express ferry from Rach Gia / Phu Quoc</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Maritime Access</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Express ferry from Rach Gia / Phu Quoc</div>
       </div>
     </div>
   
@@ -2022,18 +1925,18 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-ben-thanhs-food-court" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of Ben Thanh’s Food Court</a>
-  <a href="#southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil</a>
-  <a href="#deconstructing-5-heritage-stalls-inside-the-market-daytime" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deconstructing 5 Heritage Stalls Inside the Market (Daytime)</a>
+                  <a href="#key-curated-dimensions-of-ben-thanhs-food-court" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of Ben Thanh’s Food Court</a>
+  <a href="#southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil</a>
+  <a href="#deconstructing-5-heritage-stalls-inside-the-market-daytime" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deconstructing 5 Heritage Stalls Inside the Market (Daytime)</a>
   <a href="#east-gate-bun-rieu-freshwater-crab-alchemy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">East Gate Bún Riêu: Freshwater Crab Alchemy</a>
   <a href="#mekong-delta-bun-mam-the-essence-of-the-great-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mekong Delta Bún Mắm: The Essence of the Great River</a>
   <a href="#goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls</a>
   <a href="#central-vietnamese-steamed-rice-cakes-the-hue-connection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Vietnamese Steamed Rice Cakes: The Hue Connection</a>
   <a href="#ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance</a>
-  <a href="#phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky</a>
-  <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
-  <a href="#field-notes-for-conscious-gourmands-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for Conscious Gourmands (2026)</a>
-  <a href="#epilogue-the-warmth-of-living-memory" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Warmth of Living Memory</a>
+  <a href="#phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky</a>
+  <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
+  <a href="#field-notes-for-conscious-gourmands-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for Conscious Gourmands (2026)</a>
+  <a href="#epilogue-the-warmth-of-living-memory" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Warmth of Living Memory</a>
 
               </div>
             </nav>
@@ -2043,47 +1946,34 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Epicenter</div>
-        <div class="text-[13px] font-bold text-slate-900">South & East Portals, Ben Thanh</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Dining Zone</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">South & East Portals, Ben Thanh</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operational Window</div>
-        <div class="text-[13px] font-bold text-slate-900">06:00 – 18:00 (Day) & 18:00 – 23:30 (Night)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Operating Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">06:00 – 23:30 (Day & Night Market)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">30,000 – 120,000 VND / dish</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Pricing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">30,000 – 120,000 VND / dish</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌟</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Must-Taste Icon</div>
-        <div class="text-[13px] font-bold text-slate-900">East Gate Bún Riêu & Lemongrass Beef</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -2093,21 +1983,6 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
   If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.
 </div><p>Highlighted in our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the historic market&#39;s daytime food court and its adjacent evening dining alleys along Phan Boi Chau and Phan Chu Trinh Streets represent a <strong>living gastronomy museum</strong>. Here, ancestral culinary techniques from Chinese Chợ Lớn immigrants, Khmer riverine traditions, and southern Vietnamese delta farmers coalesce into an irresistible feast for the senses.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">🍲 Culinary Heritage</th><th class="p-4 font-bold text-left">🕒 Operational Hours</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Tariffs</th><th class="p-4 font-bold text-left">🌟 Signature Highlights</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Southern Delta, Teochew &amp; Khmer Fusion</strong></td><td class="p-4"><strong>06:00 – 18:00 (Market) &amp; 18:00 – 23:30 (Street)</strong></td><td class="p-4"><strong>30,000 – 120,000 VND / dish</strong></td><td class="p-4"><strong>East Gate Bún Riêu &amp; Grilled Betel Beef</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-ben-thanhs-food-court" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -2213,16 +2088,16 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Iconic Dish</th><th class="p-4 font-bold text-left">Sensory Profile</th><th class="p-4 font-bold text-left">Core Ingredients</th><th class="p-4 font-bold text-left">Serving Window</th><th class="p-4 font-bold text-left">2026 Reference Price</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Iconic Dish</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sensory Profile</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Core Ingredients</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Serving Window</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Reference Price</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>East Gate Bún Riêu</strong></td><td class="p-4">Tart, savory, velvety richness</td><td class="p-4">Paddy crab, pork bone broth, tomatoes, tofu</td><td class="p-4">06:30 – 17:00</td><td class="p-4">55,000 – 65,000 VND / bowl</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Mekong River Bún Mắm</strong></td><td class="p-4">Bold, pungent, herbal complexity</td><td class="p-4">Fermented carp, tiger prawns, roast pork</td><td class="p-4">08:00 – 18:00</td><td class="p-4">75,000 – 90,000 VND / bowl</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Gỏi Cuốn (Spring Rolls)</strong></td><td class="p-4">Crisp, herbal, nutty umami</td><td class="p-4">Rice paper, poached prawns, pork, hoisin dip</td><td class="p-4">All day</td><td class="p-4">15,000 – 20,000 VND / roll</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Grilled Betel Leaf Beef</strong></td><td class="p-4">Smoky, aromatic, peppery</td><td class="p-4">Minced beef, wild betel leaves, anchovy dip</td><td class="p-4">18:00 – 23:30</td><td class="p-4">70,000 – 95,000 VND / set</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Chè Sương Sa Hạt Lựu</strong></td><td class="p-4">Sweet, crunchy, luscious coconut</td><td class="p-4">Water chestnut rubies, agar agar, coconut milk</td><td class="p-4">07:00 – 18:00</td><td class="p-4">30,000 – 40,000 VND / glass</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>East Gate Bún Riêu</strong></td><td class="p-4 text-slate-800 font-medium">Tart, savory, velvety richness</td><td class="p-4 text-slate-800 font-medium">Paddy crab, pork bone broth, tomatoes, tofu</td><td class="p-4 text-slate-800 font-medium">06:30 – 17:00</td><td class="p-4 text-slate-800 font-medium">55,000 – 65,000 VND / bowl</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Mekong River Bún Mắm</strong></td><td class="p-4 text-slate-800 font-medium">Bold, pungent, herbal complexity</td><td class="p-4 text-slate-800 font-medium">Fermented carp, tiger prawns, roast pork</td><td class="p-4 text-slate-800 font-medium">08:00 – 18:00</td><td class="p-4 text-slate-800 font-medium">75,000 – 90,000 VND / bowl</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Gỏi Cuốn (Spring Rolls)</strong></td><td class="p-4 text-slate-800 font-medium">Crisp, herbal, nutty umami</td><td class="p-4 text-slate-800 font-medium">Rice paper, poached prawns, pork, hoisin dip</td><td class="p-4 text-slate-800 font-medium">All day</td><td class="p-4 text-slate-800 font-medium">15,000 – 20,000 VND / roll</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Grilled Betel Leaf Beef</strong></td><td class="p-4 text-slate-800 font-medium">Smoky, aromatic, peppery</td><td class="p-4 text-slate-800 font-medium">Minced beef, wild betel leaves, anchovy dip</td><td class="p-4 text-slate-800 font-medium">18:00 – 23:30</td><td class="p-4 text-slate-800 font-medium">70,000 – 95,000 VND / set</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Chè Sương Sa Hạt Lựu</strong></td><td class="p-4 text-slate-800 font-medium">Sweet, crunchy, luscious coconut</td><td class="p-4 text-slate-800 font-medium">Water chestnut rubies, agar agar, coconut milk</td><td class="p-4 text-slate-800 font-medium">07:00 – 18:00</td><td class="p-4 text-slate-800 font-medium">30,000 – 40,000 VND / glass</td></tr>
 
           </tbody>
         </table>
@@ -2255,7 +2130,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Warmth of Living Memory</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Gastronomic genius is rarely born in isolation; it is forged across decades of devotion by matriarchs who guard family recipes with quiet dignity. At Ben Thanh Market, every ladle of broth and every delicate rice paper roll handed to you represents the culinary soul of the Southern Delta—an unhurried gift for travelers who journey with appetite and reverence.
               </p>
             </div>
@@ -2301,37 +2176,37 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Culinary Court</div>
-        <div class="font-bold text-slate-800 text-[13px]">East Gate Stalls & Phan Boi Chau Street</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Culinary Court</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">East Gate Stalls & Phan Boi Chau Street</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Off-Peak Tasting Hours</div>
-        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM & 14:30 – 16:00 PM</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Off-Peak Tasting Hours</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">08:30 – 10:30 AM & 14:30 – 16:00 PM</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍲</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Legacy Vendor</div>
-        <div class="font-bold text-slate-800 text-[13px]">Ba Muoi Dessert Stall (Since 1968)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Legacy Vendor</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ba Muoi Dessert Stall (Since 1968)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Payment Method</div>
-        <div class="font-bold text-slate-800 text-[13px]">VietQR & Tap-to-Pay Widely Accepted</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Payment Method</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">VietQR & Tap-to-Pay Widely Accepted</div>
       </div>
     </div>
   
@@ -2498,9 +2373,9 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-riverine-orchards-when-is-the-golden-hour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Riverine Orchards: When is the Golden Hour?</a>
-  <a href="#the-harvest-calendar-24-mekong-delta-treasures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Harvest Calendar: 24 Mekong Delta Treasures</a>
-  <a href="#in-depth-tasting-the-must-try-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">In-Depth Tasting: The Must-Try Masterpieces</a>
+                  <a href="#the-riverine-orchards-when-is-the-golden-hour" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Riverine Orchards: When is the Golden Hour?</a>
+  <a href="#the-harvest-calendar-24-mekong-delta-treasures" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Harvest Calendar: 24 Mekong Delta Treasures</a>
+  <a href="#in-depth-tasting-the-must-try-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">In-Depth Tasting: The Must-Try Masterpieces</a>
   <a href="#green-skin-pomelo-the-emerald-of-the-delta" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Green-skin Pomelo – The Emerald of the Delta</a>
   <a href="#ri6-durian-the-king-of-fruits" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ri6 Durian – The King of Fruits</a>
   <a href="#lo-ren-star-apple-vinh-kim" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Lo Ren Star Apple (Vinh Kim)</a>
@@ -2510,7 +2385,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
   <a href="#soc-trang-purple-longan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Soc Trang Purple Longan</a>
   <a href="#bay-nui-palmyra-palm" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bay Nui Palmyra Palm</a>
   <a href="#wild-mangrove-apple-trai-ban" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Wild Mangrove Apple (Trái Bần)</a>
-  <a href="#field-guide-orchard-etiquette-and-logistics" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Guide: Orchard Etiquette & Logistics</a>
+  <a href="#field-guide-orchard-etiquette-and-logistics" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Guide: Orchard Etiquette & Logistics</a>
 
               </div>
             </nav>
@@ -2520,60 +2395,40 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Heartland Provinces</div>
-        <div class="text-[13px] font-bold text-slate-900">Tien Giang, Ben Tre, Can Tho, Vinh Long</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">River Heartland</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Tien Giang, Ben Tre, Can Tho</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">👑</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Crown Jewel</div>
-        <div class="text-[13px] font-bold text-slate-900">Ri6 Durian & Green-skin Pomelo</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🌤️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Peak Harvest</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">May – August (Fruit Season)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌤️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Peak Harvest</div>
-        <div class="text-[13px] font-bold text-slate-900">May – August (Fruit Season)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🍈</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Iconic Cultivars</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Ri6 Durian & Green Pomelo</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Tasting Experience</div>
-        <div class="text-[13px] font-bold text-slate-900">Tree-to-Palate Boat Orchards</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Peak Harvest Season:</strong> May – August (Summer harvest featuring rambutan, durian, and mangosteen).</li>
-<li><strong>Primary Geographical Distribution:</strong> Vinh Long, Dong Thap, Can Tho, and Tien Giang (now part of the Dong Thap ecological zone).</li>
-<li><strong>Field Experience:</strong> Orchard tours, hands-on harvesting, and farm-to-table tasting sessions.</li>
-<li><strong>Travel Advisory:</strong> While administrative boundaries for areas like Tien Giang and Ben Tre underwent restructuring in 2025, their deeply rooted agricultural heritage and unique terroir remain immaculately preserved.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-riverine-orchards-when-is-the-golden-hour" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -2595,25 +2450,25 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Signature Fruit</th><th class="p-4 font-bold text-left">Primary Season (Estimated)</th><th class="p-4 font-bold text-left">Renowned Coordinates (2026 Boundaries)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Signature Fruit</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Primary Season (Estimated)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Renowned Coordinates (2026 Boundaries)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Green-skin Pomelo (<em>Bưởi da xanh</em>)</strong></td><td class="p-4">Year-round, cyclical peaks</td><td class="p-4">Vinh Long (Formerly Ben Tre area)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>King Orange / Xoan Orange</strong></td><td class="p-4">Year-end to early year / Year-round</td><td class="p-4">Vinh Long, Can Tho</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rambutan (<em>Chôm chôm</em>)</strong></td><td class="p-4">May – August</td><td class="p-4">Vinh Long, Dong Thap</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Hoa Loc Sand Mango (<em>Xoài cát Hòa Lộc</em>)</strong></td><td class="p-4">February – May</td><td class="p-4">Dong Thap (Formerly Tien Giang area)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lo Ren Star Apple (<em>Vú sữa Lò Rèn</em>)</strong></td><td class="p-4">January – March</td><td class="p-4">Dong Thap (Vinh Kim, formerly Tien Giang)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ha Chau Burmese Grape (<em>Dâu Hạ Châu</em>)</strong></td><td class="p-4">5th, 8th, 11th Lunar Months</td><td class="p-4">Phong Dien, Can Tho</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Macapuno Coconut / Green Coconut</strong></td><td class="p-4">Year-round</td><td class="p-4">Vinh Long (Formerly Tra Vinh, Ben Tre)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tan Phuoc Pineapple (<em>Khóm Tân Phước</em>)</strong></td><td class="p-4">Year-round</td><td class="p-4">Dong Thap (Formerly Tien Giang area)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Mangosteen (<em>Măng cụt</em>)</strong></td><td class="p-4">Mid-May – Late June</td><td class="p-4">Vinh Long</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ri6 Durian (<em>Sầu riêng Ri6</em>)</strong></td><td class="p-4">Summer (May – August)</td><td class="p-4">Vinh Long</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lai Vung Pink Mandarin (<em>Quýt hồng</em>)</strong></td><td class="p-4">Pre-Lunar New Year</td><td class="p-4">Lai Vung, Dong Thap</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Purple Longan (<em>Nhãn tím</em>)</strong></td><td class="p-4">Year-round via forced blooming (limited supply)</td><td class="p-4">Can Tho (Formerly Soc Trang area)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Go Cong Acerola (<em>Sơ ri Gò Công</em>)</strong></td><td class="p-4">May – November</td><td class="p-4">Dong Thap (Formerly Go Cong area)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Palmyra Palm (<em>Thốt nốt</em>)</strong></td><td class="p-4">Dry Season</td><td class="p-4">Seven Mountains Region (<em>Bảy Núi</em>), An Giang</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Green-skin Pomelo (<em>Bưởi da xanh</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Year-round, cyclical peaks</td><td class="p-4 text-slate-800 font-medium">Vinh Long (Formerly Ben Tre area)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>King Orange / Xoan Orange</strong></td><td class="p-4 text-slate-800 font-medium">Year-end to early year / Year-round</td><td class="p-4 text-slate-800 font-medium">Vinh Long, Can Tho</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Rambutan (<em>Chôm chôm</em>)</strong></td><td class="p-4 text-slate-800 font-medium">May – August</td><td class="p-4 text-slate-800 font-medium">Vinh Long, Dong Thap</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Hoa Loc Sand Mango (<em>Xoài cát Hòa Lộc</em>)</strong></td><td class="p-4 text-slate-800 font-medium">February – May</td><td class="p-4 text-slate-800 font-medium">Dong Thap (Formerly Tien Giang area)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lo Ren Star Apple (<em>Vú sữa Lò Rèn</em>)</strong></td><td class="p-4 text-slate-800 font-medium">January – March</td><td class="p-4 text-slate-800 font-medium">Dong Thap (Vinh Kim, formerly Tien Giang)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ha Chau Burmese Grape (<em>Dâu Hạ Châu</em>)</strong></td><td class="p-4 text-slate-800 font-medium">5th, 8th, 11th Lunar Months</td><td class="p-4 text-slate-800 font-medium">Phong Dien, Can Tho</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Macapuno Coconut / Green Coconut</strong></td><td class="p-4 text-slate-800 font-medium">Year-round</td><td class="p-4 text-slate-800 font-medium">Vinh Long (Formerly Tra Vinh, Ben Tre)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Tan Phuoc Pineapple (<em>Khóm Tân Phước</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Year-round</td><td class="p-4 text-slate-800 font-medium">Dong Thap (Formerly Tien Giang area)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Mangosteen (<em>Măng cụt</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Mid-May – Late June</td><td class="p-4 text-slate-800 font-medium">Vinh Long</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ri6 Durian (<em>Sầu riêng Ri6</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Summer (May – August)</td><td class="p-4 text-slate-800 font-medium">Vinh Long</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lai Vung Pink Mandarin (<em>Quýt hồng</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Pre-Lunar New Year</td><td class="p-4 text-slate-800 font-medium">Lai Vung, Dong Thap</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Purple Longan (<em>Nhãn tím</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Year-round via forced blooming (limited supply)</td><td class="p-4 text-slate-800 font-medium">Can Tho (Formerly Soc Trang area)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Go Cong Acerola (<em>Sơ ri Gò Công</em>)</strong></td><td class="p-4 text-slate-800 font-medium">May – November</td><td class="p-4 text-slate-800 font-medium">Dong Thap (Formerly Go Cong area)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Palmyra Palm (<em>Thốt nốt</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Dry Season</td><td class="p-4 text-slate-800 font-medium">Seven Mountains Region (<em>Bảy Núi</em>), An Giang</td></tr>
 
           </tbody>
         </table>
@@ -2731,7 +2586,7 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Gift of the River</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 To taste a fruit in the Mekong Delta is to partake in a sacred dialogue between volcanic soil, mountain silt carried across six nations, and generational horticultural patience. Step into the shade of the canopy, pluck with reverence, and savor the sweetness of living earth.
               </p>
             </div>
@@ -2777,37 +2632,37 @@ export const mekongDeltaFruitsHarvestMapHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Primary Riverine Basins</div>
-        <div class="font-bold text-slate-800 text-[13px]">Tien & Hau River Alluvium</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Primary Riverine Basins</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Tien & Hau River Alluvium</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Peak Tasting Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">May through August annually</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Peak Tasting Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">May through August annually</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍈</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍈</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Top Geographic Icons</div>
-        <div class="font-bold text-slate-800 text-[13px]">Lo Ren Star Apple, Macapuno Coconut</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Top Geographic Icons</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Lo Ren Star Apple, Macapuno Coconut</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛶</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛶</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Curated Access</div>
-        <div class="font-bold text-slate-800 text-[13px]">Private sampan orchard landings</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Curated Access</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Private sampan orchard landings</div>
       </div>
     </div>
   
@@ -2974,16 +2829,16 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-route" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Route</a>
-  <a href="#slow-travel-philosophy-embracing-the-city-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Slow Travel Philosophy: Embracing the City on Foot</a>
-  <a href="#detailed-four-stage-itinerary-breakdown" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detailed Four-Stage Itinerary Breakdown</a>
+                  <a href="#key-curated-dimensions-of-the-route" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Route</a>
+  <a href="#slow-travel-philosophy-embracing-the-city-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Slow Travel Philosophy: Embracing the City on Foot</a>
+  <a href="#detailed-four-stage-itinerary-breakdown" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Detailed Four-Stage Itinerary Breakdown</a>
   <a href="#stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers</a>
   <a href="#stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats</a>
   <a href="#stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes</a>
   <a href="#stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts</a>
-  <a href="#curated-time-block-and-budget-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Time-Block & Budget Matrix (2026 Reference)</a>
-  <a href="#field-checklist-for-conscious-voyagers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Checklist for Conscious Voyagers (2026)</a>
-  <a href="#epilogue-falling-in-love-with-saigon-one-step-at-a-time" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Falling in Love with Saigon One Step at a Time</a>
+  <a href="#curated-time-block-and-budget-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Time-Block & Budget Matrix (2026 Reference)</a>
+  <a href="#field-checklist-for-conscious-voyagers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Checklist for Conscious Voyagers (2026)</a>
+  <a href="#epilogue-falling-in-love-with-saigon-one-step-at-a-time" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Falling in Love with Saigon One Step at a Time</a>
 
               </div>
             </nav>
@@ -2993,47 +2848,34 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Total Stroll Distance</div>
-        <div class="text-[13px] font-bold text-slate-900">4.5 km (4 Leisurely Stages)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Total Distance</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">4.5 km (4 Curated Stages)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Expedition Duration</div>
-        <div class="text-[13px] font-bold text-slate-900">12 Hours (07:30 AM – 20:30 PM)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Expedition Time</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Full Day (07:30 AM – 20:30 PM)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⚡</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Physical Intensity</div>
-        <div class="text-[13px] font-bold text-slate-900">Gentle & Restorative (All Ages)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Estimated Budget</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">500,000 – 850,000 VND / person</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Estimated Budget</div>
-        <div class="text-[13px] font-bold text-slate-900">500,000 – 850,000 VND / person</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -3043,21 +2885,6 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
   The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.
 </div><p>As an anchor itinerary within our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, this <strong>One-Day Heritage Walking Tour</strong> has been curated by The Rice Tour to guide conscious voyagers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">🚶 Total Stroll Distance</th><th class="p-4 font-bold text-left">⏳ Expedition Duration</th><th class="p-4 font-bold text-left">⚡ Physical Intensity</th><th class="p-4 font-bold text-left">🎟️ 2026 Estimated Budget</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4.5 km (4 Leisurely Stages)</strong></td><td class="p-4"><strong>12 Hours (07:30 AM – 20:30 PM)</strong></td><td class="p-4"><strong>Gentle &amp; Restorative (All Ages)</strong></td><td class="p-4"><strong>500,000 – 850,000 VND / person</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-the-route" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -3139,19 +2966,19 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Time Window</th><th class="p-4 font-bold text-left">Landmark</th><th class="p-4 font-bold text-left">Core Experience</th><th class="p-4 font-bold text-left">Admission Tariff 2026</th><th class="p-4 font-bold text-left">Estimated Dining Expense</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Time Window</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Landmark</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Core Experience</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Admission Tariff 2026</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Estimated Dining Expense</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>07:30 – 09:00</strong></td><td class="p-4">Ben Thanh Market</td><td class="p-4">Bún riêu breakfast, ceramic reliefs</td><td class="p-4">Free entry</td><td class="p-4">60,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>09:15 – 10:15</strong></td><td class="p-4">Mariamman Temple</td><td class="p-4">Gopuram contemplation, shrine blessing</td><td class="p-4">Free (voluntary)</td><td class="p-4">20,000 VND (incense)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>10:30 – 12:00</strong></td><td class="p-4">Fine Arts Museum</td><td class="p-4">Hui Bon Hoa mansion, lacquer treasures</td><td class="p-4">30,000 VND</td><td class="p-4">—</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>12:15 – 13:45</strong></td><td class="p-4">Vintage Apartments</td><td class="p-4">Indochine lunch &amp; artisan pour-over</td><td class="p-4">Free</td><td class="p-4">180,000 – 220,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>14:00 – 16:00</strong></td><td class="p-4">Independence Palace</td><td class="p-4">Modernist halls, wartime command bunker</td><td class="p-4">65,000 VND</td><td class="p-4">—</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>16:15 – 17:45</strong></td><td class="p-4">Metro &amp; Bach Dang</td><td class="p-4">Lotus skylight concourse &amp; river sunset</td><td class="p-4">15,000 VND (metro ticket)</td><td class="p-4">30,000 VND (coconut)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>18:00 – 20:30</strong></td><td class="p-4">Phan Boi Chau &amp; Rooftop</td><td class="p-4">Charcoal street feast &amp; evening cocktail</td><td class="p-4">Free</td><td class="p-4">250,000 – 350,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>TOTALS</strong></td><td class="p-4"><strong>Full 12-Hour Stroll</strong></td><td class="p-4"><strong>6 Heritage Icons + 4 Gastronomic Stops</strong></td><td class="p-4"><strong>~110,000 VND</strong></td><td class="p-4"><strong>~540,000 – 680,000 VND</strong></td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>07:30 – 09:00</strong></td><td class="p-4 text-slate-800 font-medium">Ben Thanh Market</td><td class="p-4 text-slate-800 font-medium">Bún riêu breakfast, ceramic reliefs</td><td class="p-4 text-slate-800 font-medium">Free entry</td><td class="p-4 text-slate-800 font-medium">60,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>09:15 – 10:15</strong></td><td class="p-4 text-slate-800 font-medium">Mariamman Temple</td><td class="p-4 text-slate-800 font-medium">Gopuram contemplation, shrine blessing</td><td class="p-4 text-slate-800 font-medium">Free (voluntary)</td><td class="p-4 text-slate-800 font-medium">20,000 VND (incense)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>10:30 – 12:00</strong></td><td class="p-4 text-slate-800 font-medium">Fine Arts Museum</td><td class="p-4 text-slate-800 font-medium">Hui Bon Hoa mansion, lacquer treasures</td><td class="p-4 text-slate-800 font-medium">30,000 VND</td><td class="p-4 text-slate-800 font-medium">—</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>12:15 – 13:45</strong></td><td class="p-4 text-slate-800 font-medium">Vintage Apartments</td><td class="p-4 text-slate-800 font-medium">Indochine lunch &amp; artisan pour-over</td><td class="p-4 text-slate-800 font-medium">Free</td><td class="p-4 text-slate-800 font-medium">180,000 – 220,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>14:00 – 16:00</strong></td><td class="p-4 text-slate-800 font-medium">Independence Palace</td><td class="p-4 text-slate-800 font-medium">Modernist halls, wartime command bunker</td><td class="p-4 text-slate-800 font-medium">65,000 VND</td><td class="p-4 text-slate-800 font-medium">—</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>16:15 – 17:45</strong></td><td class="p-4 text-slate-800 font-medium">Metro &amp; Bach Dang</td><td class="p-4 text-slate-800 font-medium">Lotus skylight concourse &amp; river sunset</td><td class="p-4 text-slate-800 font-medium">15,000 VND (metro ticket)</td><td class="p-4 text-slate-800 font-medium">30,000 VND (coconut)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>18:00 – 20:30</strong></td><td class="p-4 text-slate-800 font-medium">Phan Boi Chau &amp; Rooftop</td><td class="p-4 text-slate-800 font-medium">Charcoal street feast &amp; evening cocktail</td><td class="p-4 text-slate-800 font-medium">Free</td><td class="p-4 text-slate-800 font-medium">250,000 – 350,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>TOTALS</strong></td><td class="p-4 text-slate-800 font-medium"><strong>Full 12-Hour Stroll</strong></td><td class="p-4 text-slate-800 font-medium"><strong>6 Heritage Icons + 4 Gastronomic Stops</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~110,000 VND</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~540,000 – 680,000 VND</strong></td></tr>
 
           </tbody>
         </table>
@@ -3185,7 +3012,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Falling in Love with Saigon One Step at a Time</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 A day spent walking the avenues surrounding Ben Thanh permanently shatters the myth that Saigon is merely an overwhelming sea of motorbikes. Every alleyway traversed, every centuries-old mahogany tree passed cradles deep alluvial strata of lived human history. As night settles and you gaze out over the illuminated roundabout, you realize you have come to know Saigon through its most gracious, timeless rhythms.
               </p>
             </div>
@@ -3231,37 +3058,37 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Starting & Ending Hub</div>
-        <div class="font-bold text-slate-800 text-[13px]">Quach Thi Trang Plaza, Ben Thanh</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Starting & Ending Hub</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Quach Thi Trang Plaza, Ben Thanh</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Season</div>
-        <div class="font-bold text-slate-800 text-[13px]">Dry Season (December – April)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Season</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Dry Season (December – April)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚶</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pacing Rule</div>
-        <div class="font-bold text-slate-800 text-[13px]">Under 15 mins between landmarks</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Pacing Rule</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Under 15 mins between landmarks</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚇</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Transit Integration</div>
-        <div class="font-bold text-slate-800 text-[13px]">Subterranean Metro Line 1 Passage</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Transit Integration</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Subterranean Metro Line 1 Passage</div>
       </div>
     </div>
   
@@ -3428,12 +3255,12 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#a-century-spanning-icon-above-the-perfume-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Century-Spanning Icon Above the Perfume River</a>
+                  <a href="#a-century-spanning-icon-above-the-perfume-river" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Century-Spanning Icon Above the Perfume River</a>
   <a href="#trang-tien-or-truong-tien-deciphering-the-nomenclature" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Trang Tien or Truong Tien? Deciphering the Nomenclature</a>
-  <a href="#architectural-anatomy-decoding-the-six-arches-twelve-spans" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Architectural Anatomy: Decoding the "Six Arches, Twelve Spans"</a>
-  <a href="#travel-warning-2026-traffic-regulations-and-maintenance-overhaul" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Warning: 2026 Traffic Regulations and Maintenance Overhaul</a>
-  <a href="#the-journalists-lens-capturing-truong-tien" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Journalist’s Lens: Capturing Truong Tien</a>
-  <a href="#the-navigation-matrix-connecting-the-imperial-heritage" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Navigation Matrix: Connecting the Imperial Heritage</a>
+  <a href="#architectural-anatomy-decoding-the-six-arches-twelve-spans" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Architectural Anatomy: Decoding the "Six Arches, Twelve Spans"</a>
+  <a href="#travel-warning-2026-traffic-regulations-and-maintenance-overhaul" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Warning: 2026 Traffic Regulations and Maintenance Overhaul</a>
+  <a href="#the-journalists-lens-capturing-truong-tien" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Journalist’s Lens: Capturing Truong Tien</a>
+  <a href="#the-navigation-matrix-connecting-the-imperial-heritage" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Navigation Matrix: Connecting the Imperial Heritage</a>
 
               </div>
             </nav>
@@ -3443,61 +3270,40 @@ export const truongTienBridgeHueHeritageHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">Perfume River, Hue City</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Perfume River, Hue Imperial City</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Erected</div>
-        <div class="text-[13px] font-bold text-slate-900">1899 (King Thanh Thai & Eiffel Co.)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Construction</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">1899 (Eiffel Iron Metallurgy)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📐</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Scale</div>
-        <div class="text-[13px] font-bold text-slate-900">402.6 Meters / 6 Steel Spans</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📐</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Scale</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">402.6 Meters / 6 Steel Spans</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌙</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Golden Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">Dawn mist (5:30 AM) & Twilight (18:00)</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Official Name:</strong> Truong Tien Bridge (<em>Cầu Trường Tiền</em>, often colloquially known as <em>Tràng Tiền</em>).</li>
-<li><strong>Location:</strong> Spanning the Perfume River, connecting Phu Xuan (North Bank) and Thuan Hoa (South Bank) wards in Hue City.</li>
-<li><strong>Inauguration:</strong> 1900 (Commissioned in 1896 under the reign of Emperor Thanh Thai).</li>
-<li><strong>Structural Specifications:</strong> 6 steel girder arches, each spanning 66.08 meters (Total length: 406.45 meters).</li>
-<li><strong>2026 Operational Status:</strong> <strong>Currently undergoing major structural overhaul (Estimated 150 days commencing June 1, 2026).</strong> Nighttime transit is strictly prohibited.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-century-spanning-icon-above-the-perfume-river" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -3545,14 +3351,14 @@ When venturing to the ancient capital, traversing the Truong Tien Bridge on foot
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Timeframe (During the 2026 Maintenance Phase)</th><th class="p-4 font-bold text-left">Transit Status</th><th class="p-4 font-bold text-left">Directives for Travelers</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Timeframe (During the 2026 Maintenance Phase)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Transit Status</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Directives for Travelers</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>05:00 AM - 09:00 PM</strong></td><td class="p-4">Standard vehicular and pedestrian traffic permitted.</td><td class="p-4">Comply with reduced speed limits. One pedestrian walkway is cordoned off (utilize the opposing side).</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>09:00 PM - 05:00 AM</strong></td><td class="p-4"><strong>Total prohibition of all vehicles and pedestrians.</strong></td><td class="p-4">Divert routes via the Phu Xuan, Da Vien, or Cho Dinh bridges.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Strictly Prohibited Actions</strong></td><td class="p-4">-</td><td class="p-4">Do not halt vehicles on the carriageway for photography. Do not trespass into active construction zones.</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>05:00 AM - 09:00 PM</strong></td><td class="p-4 text-slate-800 font-medium">Standard vehicular and pedestrian traffic permitted.</td><td class="p-4 text-slate-800 font-medium">Comply with reduced speed limits. One pedestrian walkway is cordoned off (utilize the opposing side).</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>09:00 PM - 05:00 AM</strong></td><td class="p-4 text-slate-800 font-medium"><strong>Total prohibition of all vehicles and pedestrians.</strong></td><td class="p-4 text-slate-800 font-medium">Divert routes via the Phu Xuan, Da Vien, or Cho Dinh bridges.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Strictly Prohibited Actions</strong></td><td class="p-4 text-slate-800 font-medium">-</td><td class="p-4 text-slate-800 font-medium">Do not halt vehicles on the carriageway for photography. Do not trespass into active construction zones.</td></tr>
 
           </tbody>
         </table>
@@ -3590,7 +3396,7 @@ When venturing to the ancient capital, traversing the Truong Tien Bridge on foot
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Unbending Arch of Time</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Empires fall and rivers shift their courses, yet Truong Tien remains—slender, graceful, and indestructible. It reminds every traveler that true elegance lies not in heavy stone or towering glass, but in the harmonious union of human craftsmanship and natural serenity.
               </p>
             </div>
@@ -3636,37 +3442,37 @@ When venturing to the ancient capital, traversing the Truong Tien Bridge on foot
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historic Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hue Imperial Capital, Thua Thien Hue</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Historic Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hue Imperial Capital, Thua Thien Hue</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Construction Genesis</div>
-        <div class="font-bold text-slate-800 text-[13px]">1899 (127 Years of Endurance)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Construction Genesis</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">1899 (127 Years of Endurance)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌉</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌉</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Architectural Typology</div>
-        <div class="font-bold text-slate-800 text-[13px]">French Girded Iron Arch</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Architectural Typology</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">French Girded Iron Arch</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚴</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚴</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bespoke Experience</div>
-        <div class="font-bold text-slate-800 text-[13px]">Sunset cycling & Royal cyclos</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Bespoke Experience</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Sunset cycling & Royal cyclos</div>
       </div>
     </div>
   
@@ -3833,13 +3639,13 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-palace-grounds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Palace Grounds</a>
-  <a href="#historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Historical Stratigraphy: From Colonial Norodom Palace to National Reunification</a>
-  <a href="#deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram</a>
+                  <a href="#key-curated-dimensions-of-the-palace-grounds" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Palace Grounds</a>
+  <a href="#historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Historical Stratigraphy: From Colonial Norodom Palace to National Reunification</a>
+  <a href="#deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram</a>
   <a href="#the-concrete-bamboo-louver-curtain-rem-hoa-a" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)</a>
-  <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
-  <a href="#field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026)</a>
-  <a href="#epilogue-a-concrete-hymn-to-sovereignty-and-peace" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Concrete Hymn to Sovereignty and Peace</a>
+  <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
+  <a href="#field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#epilogue-a-concrete-hymn-to-sovereignty-and-peace" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: A Concrete Hymn to Sovereignty and Peace</a>
 
               </div>
             </nav>
@@ -3849,47 +3655,34 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Palace Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">135 Nam Ky Khoi Nghia, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Palace Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">135 Nam Ky Khoi Nghia, District 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📐</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Chief Architect</div>
-        <div class="text-[13px] font-bold text-slate-900">Ngo Viet Thu (Grand Prix de Rome)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Walk from Market</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">700 meters (9-minute walk)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Walk from Market</div>
-        <div class="text-[13px] font-bold text-slate-900">700 meters (9-minute shaded walk)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Admission</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">65,000 VND / adult</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Admission</div>
-        <div class="text-[13px] font-bold text-slate-900">65,000 VND / adult (Palace & Bunkers)</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -3899,21 +3692,6 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
   Few architectural monuments on earth mirror the tectonic shifts of modern history with the stoic poetry of the Independence Palace. Situated amidst 12 hectares of ancient dipterocarp forest in the beating heart of District 1, this masterpiece of Tropical Modernism remains the definitive symbol of Saigon’s dramatic journey from war to peace.
 </div><p>Enshrined as a focal monument in our curated guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the <strong>Independence Palace (Reunification Convention Hall)</strong> stands just 700 meters north of the central market along tree-canopied Nam Ky Khoi Nghia Boulevard. As Vietnam’s premier Special National Relic, the estate encapsulates an extraordinary dialogue between avant-garde mid-century architecture and ancient Eastern philosophical cosmology.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">📍 Palace Coordinates</th><th class="p-4 font-bold text-left">🏛️ Architectural Doctrine</th><th class="p-4 font-bold text-left">⏳ Inaugural Year</th><th class="p-4 font-bold text-left">🎟️ 2026 Comprehensive Tariff</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>135 Nam Ky Khoi Nghia, Ben Thanh Ward, District 1</strong></td><td class="p-4"><strong>Tropical Modernism with Eastern Symbology</strong></td><td class="p-4"><strong>1966 (Architect Ngo Viet Thu)</strong></td><td class="p-4"><strong>65,000 VND / adult comprehensive</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-the-palace-grounds" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -3979,16 +3757,16 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Sector</th><th class="p-4 font-bold text-left">Level</th><th class="p-4 font-bold text-left">Function &amp; Key Artworks</th><th class="p-4 font-bold text-left">Historical Significance</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sector</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Level</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Function &amp; Key Artworks</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Historical Significance</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>State Banquet Chamber</strong></td><td class="p-4">Ground Level</td><td class="p-4">500-guest capacity, hand-woven carpets, monumental lacquer panels</td><td class="p-4">Venue for bilateral state dinners and diplomatic assemblies</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>National Credentials Salon</strong></td><td class="p-4">Level 2</td><td class="p-4">Masterpiece lacquer panel <em>&quot;Binh Ngo Dai Cao&quot;</em> with pure gold leaf by Nguyen Van Minh</td><td class="p-4">The ceremonial hall where foreign ambassadors presented credentials</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Wartime Command Bunker</strong></td><td class="p-4">Subterranean (-2)</td><td class="p-4">1-meter-thick steel-reinforced walls, teleprinters, vintage tactical map tables</td><td class="p-4">Emergency defense operations center during aerial bombardments</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rooftop Heliport</strong></td><td class="p-4">Roof Level</td><td class="p-4">Red targets marking the two bomb impacts from pilot Nguyen Thanh Trung on April 8, 1975</td><td class="p-4">Unrivaled vistas over the tree canopy toward Le Duan Boulevard</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Historical Exhibition Wing</strong></td><td class="p-4">East Pavilion</td><td class="p-4">Archival exhibition: &quot;From Norodom Palace to Independence Palace 1868–1966&quot;</td><td class="p-4">Rare original colonial photographs and diplomatic treaty artifacts</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>State Banquet Chamber</strong></td><td class="p-4 text-slate-800 font-medium">Ground Level</td><td class="p-4 text-slate-800 font-medium">500-guest capacity, hand-woven carpets, monumental lacquer panels</td><td class="p-4 text-slate-800 font-medium">Venue for bilateral state dinners and diplomatic assemblies</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>National Credentials Salon</strong></td><td class="p-4 text-slate-800 font-medium">Level 2</td><td class="p-4 text-slate-800 font-medium">Masterpiece lacquer panel <em>&quot;Binh Ngo Dai Cao&quot;</em> with pure gold leaf by Nguyen Van Minh</td><td class="p-4 text-slate-800 font-medium">The ceremonial hall where foreign ambassadors presented credentials</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Wartime Command Bunker</strong></td><td class="p-4 text-slate-800 font-medium">Subterranean (-2)</td><td class="p-4 text-slate-800 font-medium">1-meter-thick steel-reinforced walls, teleprinters, vintage tactical map tables</td><td class="p-4 text-slate-800 font-medium">Emergency defense operations center during aerial bombardments</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Rooftop Heliport</strong></td><td class="p-4 text-slate-800 font-medium">Roof Level</td><td class="p-4 text-slate-800 font-medium">Red targets marking the two bomb impacts from pilot Nguyen Thanh Trung on April 8, 1975</td><td class="p-4 text-slate-800 font-medium">Unrivaled vistas over the tree canopy toward Le Duan Boulevard</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Historical Exhibition Wing</strong></td><td class="p-4 text-slate-800 font-medium">East Pavilion</td><td class="p-4 text-slate-800 font-medium">Archival exhibition: &quot;From Norodom Palace to Independence Palace 1868–1966&quot;</td><td class="p-4 text-slate-800 font-medium">Rare original colonial photographs and diplomatic treaty artifacts</td></tr>
 
           </tbody>
         </table>
@@ -4022,7 +3800,7 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Where Architecture Mirrors History</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Standing beneath the open sky on the second-floor meditation terrace or walking through the subterranean reinforced concrete bunkers, one realizes the Independence Palace is far more than a museum. It is an unvarnished diary of a nation—where every bronze relief, every open louvered breeze, and every quiet corridor whispers of resilience, peace, and cultural dignity.
               </p>
             </div>
@@ -4068,37 +3846,37 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Park Estate</div>
-        <div class="font-bold text-slate-800 text-[13px]">12-Hectare Ancient Canopy</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Park Estate</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">12-Hectare Ancient Canopy</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Visiting Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">08:00 – 10:30 AM (Cool morning light)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Optimal Visiting Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">08:00 – 10:30 AM (Cool morning light)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📐</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📐</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Architectural Philosophy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Sino-Vietnamese Ideogrammatic Harmony</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Architectural Philosophy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Sino-Vietnamese Ideogrammatic Harmony</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎖️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎖️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Highlight Sector</div>
-        <div class="font-bold text-slate-800 text-[13px]">Underground Command Center</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Highlight Sector</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Underground Command Center</div>
       </div>
     </div>
   
@@ -4265,18 +4043,18 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#a-suburban-oasis-journey-to-my-quynh-safari" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Suburban Oasis: Journey to My Quynh Safari</a>
+                  <a href="#a-suburban-oasis-journey-to-my-quynh-safari" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Suburban Oasis: Journey to My Quynh Safari</a>
   <a href="#crucial-note-regarding-administrative-boundaries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Crucial Note Regarding Administrative Boundaries</a>
-  <a href="#decoding-the-fare-structure-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Decoding the Fare Structure (2026 Rates)</a>
+  <a href="#decoding-the-fare-structure-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Decoding the Fare Structure (2026 Rates)</a>
   <a href="#general-admission-mandatory" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">General Admission (Mandatory)</a>
   <a href="#the-semi-wild-safari-expedition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Semi-Wild Safari Expedition</a>
   <a href="#water-park-and-amusement-zones" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Water Park & Amusement Zones</a>
-  <a href="#expedition-map-what-lies-within-my-quynh-safari" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Expedition Map: What Lies Within My Quynh Safari?</a>
+  <a href="#expedition-map-what-lies-within-my-quynh-safari" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Expedition Map: What Lies Within My Quynh Safari?</a>
   <a href="#the-armored-safari-trek" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Armored Safari Trek</a>
   <a href="#zen-sanctuary-bonsai-gardens-and-koi-ponds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Zen Sanctuary: Bonsai Gardens & Koi Ponds</a>
   <a href="#the-adrenaline-zone" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Adrenaline Zone</a>
-  <a href="#the-strategic-itinerary-time-block-methodology" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Strategic Itinerary (Time-block Methodology)</a>
-  <a href="#field-notes-for-the-family-unit" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Family Unit</a>
+  <a href="#the-strategic-itinerary-time-block-methodology" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Strategic Itinerary (Time-block Methodology)</a>
+  <a href="#field-notes-for-the-family-unit" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Family Unit</a>
 
               </div>
             </nav>
@@ -4286,61 +4064,40 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">New Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">My Hanh Bac, Duc Hoa (Post-2025)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Duc Hoa, Tay Ninh / Long An</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operating Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">07:30 – 18:00 (Daily)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">07:30 – 18:00 Daily</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 All-In Ticket</div>
-        <div class="text-[13px] font-bold text-slate-900">250,000 – 350,000 VND / Guest</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Ticket</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">250,000 – 350,000 VND / Guest</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚗</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Transit from HCMC</div>
-        <div class="text-[13px] font-bold text-slate-900">1h 15m (~40 km via DT824)</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Location (2025-2026 Update):</strong> Bau Cong Hamlet, Hau Nghia Commune, Tay Ninh Province (Note: Formerly located in Tan My Commune, Duc Hoa District, Long An).</li>
-<li><strong>Operating Hours:</strong> 08:00 AM - 05:00 PM (Tuesday to Sunday, <strong>Closed on Mondays</strong>).</li>
-<li><strong>Basic Admission (2026):</strong> 100,000 VND (Adults). <em>Note: Safari and Water Park services are ticketed separately.</em></li>
-<li><strong>Ideal Duration:</strong> Half a day to a full day.</li>
-<li><strong>Perfect For:</strong> Families with young children, student field trips, and educational excursions.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-suburban-oasis-journey-to-my-quynh-safari" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -4375,14 +4132,14 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Passenger Category</th><th class="p-4 font-bold text-left">Standard Fare</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Passenger Category</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Standard Fare</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Adults</strong></td><td class="p-4">100,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Children (1m - 1.4m)</strong></td><td class="p-4">60,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Children under 1m</strong></td><td class="p-4">Complimentary</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Adults</strong></td><td class="p-4 text-slate-800 font-medium">100,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Children (1m - 1.4m)</strong></td><td class="p-4 text-slate-800 font-medium">60,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Children under 1m</strong></td><td class="p-4 text-slate-800 font-medium">Complimentary</td></tr>
 
           </tbody>
         </table>
@@ -4399,14 +4156,14 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Passenger Category</th><th class="p-4 font-bold text-left">Fare / Seat</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Passenger Category</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Fare / Seat</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Adults &amp; Children (1m and above)</strong></td><td class="p-4">150,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Children under 1m (occupying a seat)</strong></td><td class="p-4">100,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Infants (seated on a parent&#39;s lap)</strong></td><td class="p-4">Complimentary</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Adults &amp; Children (1m and above)</strong></td><td class="p-4 text-slate-800 font-medium">150,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Children under 1m (occupying a seat)</strong></td><td class="p-4 text-slate-800 font-medium">100,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Infants (seated on a parent&#39;s lap)</strong></td><td class="p-4 text-slate-800 font-medium">Complimentary</td></tr>
 
           </tbody>
         </table>
@@ -4423,14 +4180,14 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Zone</th><th class="p-4 font-bold text-left">Passenger Category</th><th class="p-4 font-bold text-left">Fare</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Zone</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Passenger Category</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Fare</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Water Park</strong></td><td class="p-4">Guests 1m and above</td><td class="p-4">100,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Water Park</strong></td><td class="p-4">Children under 1m</td><td class="p-4">40,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Indoor/Outdoor Rides</strong></td><td class="p-4">All guests</td><td class="p-4">40,000 VND / Ride / Turn</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Water Park</strong></td><td class="p-4 text-slate-800 font-medium">Guests 1m and above</td><td class="p-4 text-slate-800 font-medium">100,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Water Park</strong></td><td class="p-4 text-slate-800 font-medium">Children under 1m</td><td class="p-4 text-slate-800 font-medium">40,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Indoor/Outdoor Rides</strong></td><td class="p-4 text-slate-800 font-medium">All guests</td><td class="p-4 text-slate-800 font-medium">40,000 VND / Ride / Turn</td></tr>
 
           </tbody>
         </table>
@@ -4513,7 +4270,7 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Guardians of the Wild</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Beyond the thrill of eye-to-eye encounters with apex predators, My Quynh Safari serves as an urgent reminder of our shared responsibility toward global biodiversity. Step lightly, observe with wonder, and let the untamed world kindle your spirit of conservation.
               </p>
             </div>
@@ -4559,37 +4316,37 @@ export const myQuynhSafariDefinitiveGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Savannah Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Duc Hoa, Tay Ninh / Long An Border</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Savannah Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Duc Hoa, Tay Ninh / Long An Border</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🦁</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🦁</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Key Inhabitants</div>
-        <div class="font-bold text-slate-800 text-[13px]">White Bengal Tigers, Rhinos, Zebras</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Key Inhabitants</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">White Bengal Tigers, Rhinos, Zebras</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Visiting Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">Morning (8:00 – 11:00 AM) for animal activity</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Optimal Visiting Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Morning (8:00 – 11:00 AM) for animal activity</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">👨‍👩‍👧</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">👨‍👩‍👧</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Target Audience</div>
-        <div class="font-bold text-slate-800 text-[13px]">Eco-families & bespoke educational groups</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Target Audience</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Eco-families & bespoke educational groups</div>
       </div>
     </div>
   
@@ -4756,15 +4513,15 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#record-breaking-architectural-dimensions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Record-Breaking Architectural Dimensions</a>
-  <a href="#subterranean-renaissance-reimagining-the-urban-landscape" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Subterranean Renaissance: Reimagining the Urban Landscape</a>
-  <a href="#navigating-the-four-tier-subterranean-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Four-Tier Subterranean Labyrinth</a>
+                  <a href="#record-breaking-architectural-dimensions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Record-Breaking Architectural Dimensions</a>
+  <a href="#subterranean-renaissance-reimagining-the-urban-landscape" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Subterranean Renaissance: Reimagining the Urban Landscape</a>
+  <a href="#navigating-the-four-tier-subterranean-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Four-Tier Subterranean Labyrinth</a>
   <a href="#level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B1: The Commercial Concourse & Ticketing Mezzanine</a>
   <a href="#the-architectural-centerpiece-the-lotus-toplight" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Architectural Centerpiece: The Lotus Toplight</a>
   <a href="#level-b2-line-1-boarding-platforms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B2: Line 1 Boarding Platforms</a>
-  <a href="#curated-line-1-route-and-fare-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Line 1 Route & Fare Matrix (2026 Reference)</a>
-  <a href="#curated-transit-insights-for-conscious-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Transit Insights for Conscious Travelers (2026)</a>
-  <a href="#epilogue-the-velocity-of-a-renewed-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Velocity of a Renewed Metropolis</a>
+  <a href="#curated-line-1-route-and-fare-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Line 1 Route & Fare Matrix (2026 Reference)</a>
+  <a href="#curated-transit-insights-for-conscious-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Transit Insights for Conscious Travelers (2026)</a>
+  <a href="#epilogue-the-velocity-of-a-renewed-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Velocity of a Renewed Metropolis</a>
 
               </div>
             </nav>
@@ -4774,47 +4531,34 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Station Epicenter</div>
-        <div class="text-[13px] font-bold text-slate-900">Quach Thi Trang Roundabout, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Station Epicenter</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Quach Thi Trang Roundabout, D1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚇</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operational Line</div>
-        <div class="text-[13px] font-bold text-slate-900">Metro Line 1 (Ben Thanh – Suoi Tien)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Transit Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">05:00 AM – 23:00 PM Daily</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Transit Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">05:00 AM – 23:00 PM Daily</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Ticket Fare</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">6,000 – 20,000 VND / trip</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Ticket Fare</div>
-        <div class="text-[13px] font-bold text-slate-900">6,000 – 20,000 VND / trip</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -4824,21 +4568,6 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
   If Ben Thanh Market's clock tower embodies the romance of 20th-century nostalgia, the cavernous terminal directly beneath its foundations heralds Saigon’s bold technological future. Here, equatorial sunlight cascades through a monumental glass lotus skylight into the subterranean depths, transforming mass transit into a poetic architectural dialogue.
 </div><p>Enshrined as the crowning technological triumph within our guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the newly inaugurated <strong>Ben Thanh Central Metro Station (Urban Railway Line 1)</strong> represents a milestone in Southeast Asian urban infrastructure. Descending four tiers into the southern delta&#39;s earth, this intermodal hub seamlessly integrates ancient heritage with 21st-century rapid transit.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">📍 Epicenter Location</th><th class="p-4 font-bold text-left">🚇 Subterranean Scale</th><th class="p-4 font-bold text-left">🕒 Daily Schedule</th><th class="p-4 font-bold text-left">🎟️ 2026 Fare Baseline</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Quach Thi Trang Concourse, South Portal</strong></td><td class="p-4"><strong>32m Depth (4 Levels) – 236m Length</strong></td><td class="p-4"><strong>05:00 AM – 23:00 PM (4–8 min intervals)</strong></td><td class="p-4"><strong>7,000 – 20,000 VND (Day Pass: 40,000 VND)</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="record-breaking-architectural-dimensions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -4919,16 +4648,16 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Key Station</th><th class="p-4 font-bold text-left">Transit Time from Ben Thanh</th><th class="p-4 font-bold text-left">Signature Destination / Cultural Highlight</th><th class="p-4 font-bold text-left">Single Fare 2026</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Key Station</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Transit Time from Ben Thanh</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Signature Destination / Cultural Highlight</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Single Fare 2026</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Opera House</strong></td><td class="p-4">2 minutes</td><td class="p-4">Continental Hotel, Lam Son Square, Nguyen Hue Walking Street</td><td class="p-4">7,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ba Son Terminal</strong></td><td class="p-4">4 minutes</td><td class="p-4">Historic Naval Shipyards, Thu Thiem 2 Bridge, Riverfront Marina</td><td class="p-4">8,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Van Thanh / Tan Cang</strong></td><td class="p-4">8 minutes</td><td class="p-4">Landmark 81 Tower, Riverside Ecological Park</td><td class="p-4">12,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Thao Dien Station</strong></td><td class="p-4">13 minutes</td><td class="p-4">Bohemian art galleries, international bistros, riverfront lounges</td><td class="p-4">16,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>New Eastern Bus Terminal</strong></td><td class="p-4">28 minutes</td><td class="p-4">Interprovincial terminal connecting Central &amp; Northern Vietnam</td><td class="p-4">20,000 VND</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Saigon Opera House</strong></td><td class="p-4 text-slate-800 font-medium">2 minutes</td><td class="p-4 text-slate-800 font-medium">Continental Hotel, Lam Son Square, Nguyen Hue Walking Street</td><td class="p-4 text-slate-800 font-medium">7,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ba Son Terminal</strong></td><td class="p-4 text-slate-800 font-medium">4 minutes</td><td class="p-4 text-slate-800 font-medium">Historic Naval Shipyards, Thu Thiem 2 Bridge, Riverfront Marina</td><td class="p-4 text-slate-800 font-medium">8,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Van Thanh / Tan Cang</strong></td><td class="p-4 text-slate-800 font-medium">8 minutes</td><td class="p-4 text-slate-800 font-medium">Landmark 81 Tower, Riverside Ecological Park</td><td class="p-4 text-slate-800 font-medium">12,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Thao Dien Station</strong></td><td class="p-4 text-slate-800 font-medium">13 minutes</td><td class="p-4 text-slate-800 font-medium">Bohemian art galleries, international bistros, riverfront lounges</td><td class="p-4 text-slate-800 font-medium">16,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>New Eastern Bus Terminal</strong></td><td class="p-4 text-slate-800 font-medium">28 minutes</td><td class="p-4 text-slate-800 font-medium">Interprovincial terminal connecting Central &amp; Northern Vietnam</td><td class="p-4 text-slate-800 font-medium">20,000 VND</td></tr>
 
           </tbody>
         </table>
@@ -4965,7 +4694,7 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Subterranean Beat of Modern Saigon</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 The launch of Ben Thanh Central Station is more than an engineering milestone; it is the symbolic bridge connecting Saigon’s storied colonial avenues with a world-class transit future. Descending into its cool, luminous chambers reminds us that the city's vitality flows as dynamically beneath the earth as it does along its sunlit boulevards.
               </p>
             </div>
@@ -5011,37 +4740,37 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Subterranean Depth</div>
-        <div class="font-bold text-slate-800 text-[13px]">32 Meters Below Street Level (4 Floors)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Subterranean Depth</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">32 Meters Below Street Level (4 Floors)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏮</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🏮</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Central Atrium</div>
-        <div class="font-bold text-slate-800 text-[13px]">Glass Lotus Skylight (Giếng trời Hoa Sen)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Central Atrium</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Glass Lotus Skylight (Giếng trời Hoa Sen)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚶</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚶</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Underground Passages</div>
-        <div class="font-bold text-slate-800 text-[13px]">Direct exits to Ben Thanh, Le Loi, Park 23/9</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Underground Passages</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Direct exits to Ben Thanh, Le Loi, Park 23/9</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ticketing Tech</div>
-        <div class="font-bold text-slate-800 text-[13px]">Tap-to-pay EMV, VietQR, IC Single/Day Pass</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ticketing Tech</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Tap-to-pay EMV, VietQR, IC Single/Day Pass</div>
       </div>
     </div>
   
@@ -5208,22 +4937,22 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#a-quick-overview-of-the-khan-ran" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Quick Overview of the Khăn Rằn</a>
-  <a href="#a-300-year-genesis-from-the-sacred-krama-to-a-southern-icon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A 300-Year Genesis: From the Sacred Krama to a Southern Icon</a>
+                  <a href="#a-quick-overview-of-the-khan-ran" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Quick Overview of the Khăn Rằn</a>
+  <a href="#a-300-year-genesis-from-the-sacred-krama-to-a-southern-icon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A 300-Year Genesis: From the Sacred Krama to a Southern Icon</a>
   <a href="#the-spiritual-imprint-of-lord-vishnu" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Spiritual Imprint of Lord Vishnu</a>
   <a href="#a-natural-evolution-in-the-age-of-reclamation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A Natural Evolution in the Age of Reclamation</a>
-  <a href="#the-checkered-scarf-in-wartime-an-emblem-of-unyielding-resilience" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience</a>
-  <a href="#a-comparative-matrix-the-four-iconic-scarves-of-southeast-asia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Comparative Matrix: The Four Iconic Scarves of Southeast Asia</a>
-  <a href="#a-bespoke-field-guide-exploring-the-century-old-weaving-village-of-long-khanh-a" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A</a>
+  <a href="#the-checkered-scarf-in-wartime-an-emblem-of-unyielding-resilience" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Checkered Scarf in Wartime: An Emblem of Unyielding Resilience</a>
+  <a href="#a-comparative-matrix-the-four-iconic-scarves-of-southeast-asia" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Comparative Matrix: The Four Iconic Scarves of Southeast Asia</a>
+  <a href="#a-bespoke-field-guide-exploring-the-century-old-weaving-village-of-long-khanh-a" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Bespoke Field Guide: Exploring the Century-Old Weaving Village of Long Khanh A</a>
   <a href="#logistical-essentials-for-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Logistical Essentials for 2026</a>
   <a href="#the-six-step-artisanal-mastery" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Six-Step Artisanal Mastery</a>
-  <a href="#the-voyagers-guide-four-authentic-ways-to-wear-the-khan-ran" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn</a>
+  <a href="#the-voyagers-guide-four-authentic-ways-to-wear-the-khan-ran" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Voyager’s Guide: Four Authentic Ways to Wear the Khăn Rằn</a>
   <a href="#style-1-the-classic-southern-drape" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Style 1: The Classic Southern Drape</a>
   <a href="#style-2-the-expedition-side-knot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Style 2: The Expedition Side-Knot</a>
   <a href="#style-3-the-traditional-laborers-headband" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Style 3: The Traditional Laborer’s Headband</a>
   <a href="#style-4-the-ultimate-sun-shield" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Style 4: The Ultimate Sun Shield</a>
-  <a href="#curated-tips-for-the-conscious-traveler-sourcing-and-caring-for-your-scarf" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#curated-tips-for-the-conscious-traveler-sourcing-and-caring-for-your-scarf" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Tips for the Conscious Traveler: Sourcing and Caring for Your Scarf</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -5233,47 +4962,34 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">The Heartland</div>
-        <div class="text-[13px] font-bold text-slate-900">Long Khanh A, Dong Thap</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Heartland</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Long Khanh A, Dong Thap</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Historical Genesis</div>
-        <div class="text-[13px] font-bold text-slate-900">17th Century (Khmer Krama)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Genesis</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">17th Century (Khmer Krama)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🏆</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Heritage Status</div>
-        <div class="text-[13px] font-bold text-slate-900">National Heritage (2023)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🏆</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Heritage</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">National Intangible Heritage (2023)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Reference Price</div>
-        <div class="text-[13px] font-bold text-slate-900">35,000 – 90,000 VND</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -5292,17 +5008,17 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Category</th><th class="p-4 font-bold text-left">Curated Details</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Category</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Curated Details</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Historical Genesis</strong></td><td class="p-4">Evolved from the Khmer <em>Krama</em> in the 17th century; a profound intersection of Vietnamese and Cham cultures.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Heartland</strong></td><td class="p-4">Long Khanh A islet, Hong Ngu District, Dong Thap Province (over a century of continuous craftsmanship).</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Heritage Status</strong></td><td class="p-4">Officially recognized as a National Intangible Cultural Heritage by the Ministry of Culture in 2023.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Authentic Material</strong></td><td class="p-4">100% natural cotton or traditional rice-starched cotton yarn.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Standard Dimensions</strong></td><td class="p-4">160 x 60 cm or 170 x 65 cm.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2026 Reference Price</strong></td><td class="p-4">35,000 – 90,000 VND / piece (at the artisan village); 120,000 – 250,000 VND (premium bespoke lines).</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Historical Genesis</strong></td><td class="p-4 text-slate-800 font-medium">Evolved from the Khmer <em>Krama</em> in the 17th century; a profound intersection of Vietnamese and Cham cultures.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Heartland</strong></td><td class="p-4 text-slate-800 font-medium">Long Khanh A islet, Hong Ngu District, Dong Thap Province (over a century of continuous craftsmanship).</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Heritage Status</strong></td><td class="p-4 text-slate-800 font-medium">Officially recognized as a National Intangible Cultural Heritage by the Ministry of Culture in 2023.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Authentic Material</strong></td><td class="p-4 text-slate-800 font-medium">100% natural cotton or traditional rice-starched cotton yarn.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Standard Dimensions</strong></td><td class="p-4 text-slate-800 font-medium">160 x 60 cm or 170 x 65 cm.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>2026 Reference Price</strong></td><td class="p-4 text-slate-800 font-medium">35,000 – 90,000 VND / piece (at the artisan village); 120,000 – 250,000 VND (premium bespoke lines).</td></tr>
 
           </tbody>
         </table>
@@ -5364,16 +5080,16 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Criterion</th><th class="p-4 font-bold text-left">Khăn Rằn (Southern Vietnam)</th><th class="p-4 font-bold text-left">Krama (Cambodia)</th><th class="p-4 font-bold text-left">Cham Scarf (An Giang, Vietnam)</th><th class="p-4 font-bold text-left">Piêu Scarf (Northwest Vietnam)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Criterion</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Khăn Rằn (Southern Vietnam)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Krama (Cambodia)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Cham Scarf (An Giang, Vietnam)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Piêu Scarf (Northwest Vietnam)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Core Material</strong></td><td class="p-4">Blended cotton or 100% raw cotton, often treated with rice starch.</td><td class="p-4">Thick cotton yarn or handwoven mulberry silk.</td><td class="p-4">Natural woven fibers, dyed with tree bark and minerals.</td><td class="p-4">Thick, handwoven cotton fabric.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tactile Sensation</strong></td><td class="p-4">Initially crisp due to the rice starch; becomes remarkably soft and breathable after 2-3 washes.</td><td class="p-4">High-density weave, textured surface, built to endure decades of use.</td><td class="p-4">Naturally draped, excellent color retention.</td><td class="p-4">Substantial and weighty, offering warmth rather than sun protection.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Pattern &amp; Palette</strong></td><td class="p-4">Classic grid of black-white, red-white, or blue-white.</td><td class="p-4">Minute, intricate checkers in earth tones (terracotta, indigo, brown).</td><td class="p-4">Stylized geometric motifs with exquisite colorful embroidered borders.</td><td class="p-4">Vibrant, intricate embroidery localized at both ends of the scarf.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Primary Function</strong></td><td class="p-4">Sun protection, sweat absorption, an essential expedition accessory.</td><td class="p-4">Traditional attire, temple rituals, daily utility.</td><td class="p-4">Daily wear and sacred Cham festivals.</td><td class="p-4">A traditional cultural accessory and a symbol of betrothal.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2026 Reference Price</strong></td><td class="p-4">35,000 – 90,000 VND</td><td class="p-4">150,000 – 400,000 VND</td><td class="p-4">60,000 – 180,000 VND</td><td class="p-4">80,000 – 220,000 VND</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Core Material</strong></td><td class="p-4 text-slate-800 font-medium">Blended cotton or 100% raw cotton, often treated with rice starch.</td><td class="p-4 text-slate-800 font-medium">Thick cotton yarn or handwoven mulberry silk.</td><td class="p-4 text-slate-800 font-medium">Natural woven fibers, dyed with tree bark and minerals.</td><td class="p-4 text-slate-800 font-medium">Thick, handwoven cotton fabric.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Tactile Sensation</strong></td><td class="p-4 text-slate-800 font-medium">Initially crisp due to the rice starch; becomes remarkably soft and breathable after 2-3 washes.</td><td class="p-4 text-slate-800 font-medium">High-density weave, textured surface, built to endure decades of use.</td><td class="p-4 text-slate-800 font-medium">Naturally draped, excellent color retention.</td><td class="p-4 text-slate-800 font-medium">Substantial and weighty, offering warmth rather than sun protection.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Pattern &amp; Palette</strong></td><td class="p-4 text-slate-800 font-medium">Classic grid of black-white, red-white, or blue-white.</td><td class="p-4 text-slate-800 font-medium">Minute, intricate checkers in earth tones (terracotta, indigo, brown).</td><td class="p-4 text-slate-800 font-medium">Stylized geometric motifs with exquisite colorful embroidered borders.</td><td class="p-4 text-slate-800 font-medium">Vibrant, intricate embroidery localized at both ends of the scarf.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Primary Function</strong></td><td class="p-4 text-slate-800 font-medium">Sun protection, sweat absorption, an essential expedition accessory.</td><td class="p-4 text-slate-800 font-medium">Traditional attire, temple rituals, daily utility.</td><td class="p-4 text-slate-800 font-medium">Daily wear and sacred Cham festivals.</td><td class="p-4 text-slate-800 font-medium">A traditional cultural accessory and a symbol of betrothal.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>2026 Reference Price</strong></td><td class="p-4 text-slate-800 font-medium">35,000 – 90,000 VND</td><td class="p-4 text-slate-800 font-medium">150,000 – 400,000 VND</td><td class="p-4 text-slate-800 font-medium">60,000 – 180,000 VND</td><td class="p-4 text-slate-800 font-medium">80,000 – 220,000 VND</td></tr>
 
           </tbody>
         </table>
@@ -5486,7 +5202,7 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Soul of the Southern Loom</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Through over 300 years of turbulent history, the khăn rằn has never relinquished its pivotal role in the spiritual and daily life of the southern frontier. It is not merely the story of a woven cloth; it is a profound narrative of cultural inclusivity, an unwavering defense of the homeland, and the resilient hands of artisans along the Mekong.
               </p>
             </div>
@@ -5532,37 +5248,37 @@ export const mekongKhanRanScarfLegacyHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">The Heartland</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hong Ngu, Dong Thap</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">The Heartland</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hong Ngu, Dong Thap</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Best Visiting Time</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-round (7:30 – 10:30 AM)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Best Visiting Time</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-round (7:30 – 10:30 AM)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚴</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚴</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Experiences</div>
-        <div class="font-bold text-slate-800 text-[13px]">Islet cycling & hands-on loom weaving</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Signature Experiences</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Islet cycling & hands-on loom weaving</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏆</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🏆</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Heritage Inscription</div>
-        <div class="font-bold text-slate-800 text-[13px]">National Intangible Heritage (2023)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Heritage Inscription</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">National Intangible Heritage (2023)</div>
       </div>
     </div>
   
@@ -5729,13 +5445,13 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#touching-time-along-the-sa-dec-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Touching Time Along the Sa Dec River</a>
+                  <a href="#touching-time-along-the-sa-dec-river" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Touching Time Along the Sa Dec River</a>
   <a href="#the-genesis-and-evolution-of-the-huynh-dynasty" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Genesis and Evolution of the Huynh Dynasty</a>
-  <a href="#architectural-analysis-western-shell-chinese-core-vietnamese-foundation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Architectural Analysis: "Western Shell, Chinese Core, Vietnamese Foundation"</a>
+  <a href="#architectural-analysis-western-shell-chinese-core-vietnamese-foundation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Architectural Analysis: "Western Shell, Chinese Core, Vietnamese Foundation"</a>
   <a href="#stepping-across-the-threshold-of-time" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stepping Across the Threshold of Time</a>
-  <a href="#the-lover-when-passion-transcends-fiction" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Lover: When Passion Transcends Fiction</a>
+  <a href="#the-lover-when-passion-transcends-fiction" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Lover: When Passion Transcends Fiction</a>
   <a href="#a-tear-stained-romance-on-the-my-thuan-ferry" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A Tear-Stained Romance on the My Thuan Ferry</a>
-  <a href="#field-guide-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Guide: Logistics and Etiquette</a>
+  <a href="#field-guide-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Guide: Logistics and Etiquette</a>
   <a href="#navigating-from-ho-chi-minh-city" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Navigating from Ho Chi Minh City</a>
   <a href="#code-of-conduct-at-the-heritage-site" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Code of Conduct at the Heritage Site</a>
 
@@ -5747,62 +5463,40 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Riverfront Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Sa Dec City, Dong Thap</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Sa Dec Waterfront, Dong Thap</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Construction Genesis</div>
-        <div class="text-[13px] font-bold text-slate-900">1895 (Restored in 1917)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Construction</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">1895 (Sino-French Timber)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Entry Tariff</div>
-        <div class="text-[13px] font-bold text-slate-900">20,000 VND (Includes tea & ginger)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Admission</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">20,000 VND (Includes Lotus Tea)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛏️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Vintage Stay</div>
-        <div class="text-[13px] font-bold text-slate-900">2 Heritage Suites Available</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Location:</strong> 255A Nguyen Hue, Ward 2, Sa Dec City, Dong Thap Province.</li>
-<li><strong>Construction Era:</strong> Built in 1895 (by Mr. Huynh Cam Thuan). Major restoration in 1917.</li>
-<li><strong>Admission Fee (2026):</strong> 20,000 VND / Person (Includes a traditional serving of tea and candied ginger).</li>
-<li><strong>Operating Hours:</strong> 08:30 – 17:30 (Open daily).</li>
-<li><strong>Cultural Status:</strong> National Historic Monument (Recognized in 2009).</li>
-<li><strong>Accommodation Experience:</strong> Overnight stays in the vintage guest chambers are available (Only 2 rooms; advanced booking is strictly required).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="touching-time-along-the-sa-dec-river" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -5838,14 +5532,14 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Architectural Element</th><th class="p-4 font-bold text-left">Design Ethos</th><th class="p-4 font-bold text-left">Materials &amp; Significance</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Architectural Element</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Design Ethos</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Materials &amp; Significance</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Facade</strong></td><td class="p-4">Renaissance (French / Roman)</td><td class="p-4">Square pillars, arched portals, and Western floral reliefs. Projects modernity and authority during the French colonial era.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Trusses &amp; Pillars</strong></td><td class="p-4">Traditional Chinese (Fujian)</td><td class="p-4">Monolithic ironwood, meticulously carved with classical motifs: &quot;The Four Holy Beasts&quot; and &quot;The Eight Immortals.&quot; A direct homage to the Huynh family&#39;s ancestral roots.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Roof &amp; Foundation</strong></td><td class="p-4">Traditional Vietnamese</td><td class="p-4">Wavy yin-yang clay roof tiles engineered for rapid tropical drainage. French-imported cement tiles line the floors, yet the entire foundation is elevated to combat the Delta&#39;s notorious flood season.</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Facade</strong></td><td class="p-4 text-slate-800 font-medium">Renaissance (French / Roman)</td><td class="p-4 text-slate-800 font-medium">Square pillars, arched portals, and Western floral reliefs. Projects modernity and authority during the French colonial era.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Trusses &amp; Pillars</strong></td><td class="p-4 text-slate-800 font-medium">Traditional Chinese (Fujian)</td><td class="p-4 text-slate-800 font-medium">Monolithic ironwood, meticulously carved with classical motifs: &quot;The Four Holy Beasts&quot; and &quot;The Eight Immortals.&quot; A direct homage to the Huynh family&#39;s ancestral roots.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Roof &amp; Foundation</strong></td><td class="p-4 text-slate-800 font-medium">Traditional Vietnamese</td><td class="p-4 text-slate-800 font-medium">Wavy yin-yang clay roof tiles engineered for rapid tropical drainage. French-imported cement tiles line the floors, yet the entire foundation is elevated to combat the Delta&#39;s notorious flood season.</td></tr>
 
           </tbody>
         </table>
@@ -5907,7 +5601,7 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Where Memory Transcends Time</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Walking across the patterned French encaustic tiles under the golden glow of wooden Chinese chandeliers, one realizes that love and art do not perish. The Huynh Thuy Le Mansion endures as an indelible testament to the beauty that blossoms when diverse civilizations meet upon the river.
               </p>
             </div>
@@ -5953,37 +5647,37 @@ export const huynhThuyLeAncientHouseHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historic Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">255A Nguyen Hue, Sa Dec, Dong Thap</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Historic Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">255A Nguyen Hue, Sa Dec, Dong Thap</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Era of Elegance</div>
-        <div class="font-bold text-slate-800 text-[13px]">1895 (131-Year Legacy)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Era of Elegance</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">1895 (131-Year Legacy)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📖</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📖</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Literary Acclaim</div>
-        <div class="font-bold text-slate-800 text-[13px]">Prix Goncourt 1984 (The Lover)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Literary Acclaim</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Prix Goncourt 1984 (The Lover)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🫖</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🫖</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Curated Ritual</div>
-        <div class="font-bold text-slate-800 text-[13px]">Lotus tea tasting & twilight river strolls</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Curated Ritual</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Lotus tea tasting & twilight river strolls</div>
       </div>
     </div>
   
@@ -6150,14 +5844,14 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-sacred-compound" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Sacred Compound</a>
-  <a href="#footprints-of-the-tamil-chettiar-community-in-old-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Footprints of the Tamil Chettiar Community in Old Saigon</a>
-  <a href="#deciphering-south-indian-dravidian-temple-art" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deciphering South Indian Dravidian Temple Art</a>
+                  <a href="#key-curated-dimensions-of-the-sacred-compound" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Sacred Compound</a>
+  <a href="#footprints-of-the-tamil-chettiar-community-in-old-saigon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Footprints of the Tamil Chettiar Community in Old Saigon</a>
+  <a href="#deciphering-south-indian-dravidian-temple-art" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deciphering South Indian Dravidian Temple Art</a>
   <a href="#the-inner-sanctum-the-abode-of-goddess-mariamman" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Inner Sanctum: The Abode of Goddess Mariamman</a>
-  <a href="#the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis</a>
-  <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
-  <a href="#conscious-traveler-protocol-and-field-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Conscious Traveler Protocol & Field Guidelines (2026)</a>
-  <a href="#epilogue-the-universal-language-of-reverence" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Universal Language of Reverence</a>
+  <a href="#the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis</a>
+  <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
+  <a href="#conscious-traveler-protocol-and-field-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Conscious Traveler Protocol & Field Guidelines (2026)</a>
+  <a href="#epilogue-the-universal-language-of-reverence" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Universal Language of Reverence</a>
 
               </div>
             </nav>
@@ -6167,47 +5861,34 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Sanctuary Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">45 Truong Dinh, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Sanctuary Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">45 Truong Dinh, District 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Foundation Era</div>
-        <div class="text-[13px] font-bold text-slate-900">Late 19th Century (Tamil Chettiar)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Distance to Market</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">250 meters (3-minute walk)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Distance to Market</div>
-        <div class="text-[13px] font-bold text-slate-900">250 meters (3-minute walk)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Admission</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Free Entry (Modest Attire)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Admission & Rituals</div>
-        <div class="text-[13px] font-bold text-slate-900">Free Entry (Respectful Modest Dress)</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -6217,21 +5898,6 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
   Turn off the roaring stream of motorbikes on Le Thanh Ton Street into Truong Dinh, and urban velocity recedes instantly into timeless devotion. The spicy warmth of incense and peanut oil mingles with the resonant toll of brass bells as the tiered Gopuram gateway reveals a vibrant sanctuary of South Indian spirituality.
 </div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, the <strong>Mariamman Hindu Temple (popularly known to locals as Chùa Bà Ấn Độ)</strong> sits proudly at 45 Truong Dinh Street, a mere 200-meter stroll from the market&#39;s West Gate. For over a century, this jewel of Dravidian architecture has stood not only as the spiritual nerve center for the city&#39;s Indian diaspora but also as a shining symbol of southern Vietnam’s remarkable religious harmony.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">📍 Temple Coordinates</th><th class="p-4 font-bold text-left">🕉️ Faith &amp; Enshrined Deity</th><th class="p-4 font-bold text-left">⏳ Founding Era</th><th class="p-4 font-bold text-left">🎟️ 2026 Reference Policy</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>45 Truong Dinh, Ben Thanh Ward, District 1</strong></td><td class="p-4"><strong>South Indian Hinduism (Goddess Mariamman)</strong></td><td class="p-4"><strong>Early 20th Century (Tamil Chettiar)</strong></td><td class="p-4"><strong>Free Entry (Voluntary Offerings)</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-the-sacred-compound" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -6304,16 +5970,16 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Sacred Sector</th><th class="p-4 font-bold text-left">Location</th><th class="p-4 font-bold text-left">Deity / Sacred Feature</th><th class="p-4 font-bold text-left">Spiritual Experience</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sacred Sector</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Location</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Deity / Sacred Feature</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Spiritual Experience</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Gopuram Gateway</strong></td><td class="p-4">Exterior Facade</td><td class="p-4">Sculpted Hindu pantheon, Shiva, Ganesha</td><td class="p-4">Admire multi-tiered South Indian bas-reliefs</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Central Sanctum</strong></td><td class="p-4">Heart of Main Hall</td><td class="p-4">Black stone Goddess Mariamman</td><td class="p-4">Witness morning incense rituals &amp; marigold offerings</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rear Granite Wall</strong></td><td class="p-4">Behind Inner Altar</td><td class="p-4">Chanted-infused structural granite</td><td class="p-4">Practice the meditative stone-pressing prayer</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lord Ganesha Shrine</strong></td><td class="p-4">Left Mezzanine</td><td class="p-4">Elephant-headed deity of intellect</td><td class="p-4">Seek auspicious blessings for education &amp; commerce</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Silver Chariot</strong></td><td class="p-4">Side Pavilion</td><td class="p-4">Elaborate 20th-century embossed silver carriage</td><td class="p-4">Inspect the regal carriage used in annual festival processions</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Gopuram Gateway</strong></td><td class="p-4 text-slate-800 font-medium">Exterior Facade</td><td class="p-4 text-slate-800 font-medium">Sculpted Hindu pantheon, Shiva, Ganesha</td><td class="p-4 text-slate-800 font-medium">Admire multi-tiered South Indian bas-reliefs</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Central Sanctum</strong></td><td class="p-4 text-slate-800 font-medium">Heart of Main Hall</td><td class="p-4 text-slate-800 font-medium">Black stone Goddess Mariamman</td><td class="p-4 text-slate-800 font-medium">Witness morning incense rituals &amp; marigold offerings</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Rear Granite Wall</strong></td><td class="p-4 text-slate-800 font-medium">Behind Inner Altar</td><td class="p-4 text-slate-800 font-medium">Chanted-infused structural granite</td><td class="p-4 text-slate-800 font-medium">Practice the meditative stone-pressing prayer</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lord Ganesha Shrine</strong></td><td class="p-4 text-slate-800 font-medium">Left Mezzanine</td><td class="p-4 text-slate-800 font-medium">Elephant-headed deity of intellect</td><td class="p-4 text-slate-800 font-medium">Seek auspicious blessings for education &amp; commerce</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Silver Chariot</strong></td><td class="p-4 text-slate-800 font-medium">Side Pavilion</td><td class="p-4 text-slate-800 font-medium">Elaborate 20th-century embossed silver carriage</td><td class="p-4 text-slate-800 font-medium">Inspect the regal carriage used in annual festival processions</td></tr>
 
           </tbody>
         </table>
@@ -6347,7 +6013,7 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Harmony of Inclusive Faith</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 In the quiet courtyard of Mariamman Temple, the fragrant smoke of camphor and sandalwood mingles with the ambient hum of Saigon’s avenues. Watching Vietnamese, Sino-Vietnamese, and Indian pilgrims offer lotus blossoms side by side reveals the greatest truth of Saigon: it is a city whose soul is defined by welcoming warmth, generosity, and harmonious coexistence.
               </p>
             </div>
@@ -6393,37 +6059,37 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Historic Enclave</div>
-        <div class="font-bold text-slate-800 text-[13px]">45 Truong Dinh Street, Ben Thanh Ward</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Historic Enclave</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">45 Truong Dinh Street, Ben Thanh Ward</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🕒</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🕒</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Puja Aarti Times</div>
-        <div class="font-bold text-slate-800 text-[13px]">09:30 AM & 18:30 PM (Daily Fire Ritual)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Puja Aarti Times</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">09:30 AM & 18:30 PM (Daily Fire Ritual)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🙏</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🙏</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Unique Practice</div>
-        <div class="font-bold text-slate-800 text-[13px]">Pressing head against back stone wall to pray</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Unique Practice</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Pressing head against back stone wall to pray</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">👗</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">👗</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Dress Code</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cover shoulders & knees, remove footwear outside</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Dress Code</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Cover shoulders & knees, remove footwear outside</div>
       </div>
     </div>
   
@@ -6590,18 +6256,18 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-market-commerce" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Key Curated Dimensions of Market Commerce</a>
-  <a href="#navigating-the-four-cardinal-shopping-quadrants" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Four Cardinal Shopping Quadrants</a>
+                  <a href="#key-curated-dimensions-of-market-commerce" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of Market Commerce</a>
+  <a href="#navigating-the-four-cardinal-shopping-quadrants" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Four Cardinal Shopping Quadrants</a>
   <a href="#the-south-gate-le-loi-boulevard-silks-and-master-lacquerware" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The South Gate (Le Loi Boulevard): Silks & Master Lacquerware</a>
   <a href="#the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices</a>
   <a href="#the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather</a>
   <a href="#the-north-gate-le-thanh-ton-street-orchard-bounty" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The North Gate (Le Thanh Ton Street): Orchard Bounty</a>
-  <a href="#bargaining-with-grace-cultural-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bargaining with Grace: Cultural Guidelines</a>
+  <a href="#bargaining-with-grace-cultural-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Bargaining with Grace: Cultural Guidelines</a>
   <a href="#the-15-to-25-equilibrium" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The 15% to 25% Equilibrium</a>
   <a href="#the-gentle-walk-away" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gentle Walk-Away</a>
-  <a href="#detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Counterfeits</a>
-  <a href="#consumer-protections-and-traveler-rights-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Consumer Protections & Traveler Rights (2026)</a>
-  <a href="#epilogue-carrying-home-the-warmth-of-southern-hospitality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Carrying Home the Warmth of Southern Hospitality</a>
+  <a href="#detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Counterfeits</a>
+  <a href="#consumer-protections-and-traveler-rights-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Consumer Protections & Traveler Rights (2026)</a>
+  <a href="#epilogue-carrying-home-the-warmth-of-southern-hospitality" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Carrying Home the Warmth of Southern Hospitality</a>
 
               </div>
             </nav>
@@ -6611,47 +6277,34 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Market Epicenter</div>
-        <div class="text-[13px] font-bold text-slate-900">Intersection of 4 Iconic Gates, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Market Core</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Intersection of 4 Iconic Gates</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Prime Shopping Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">08:30 – 16:30 (Daytime Stalls)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Prime Shopping</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">08:30 – 16:30 (Daytime Stalls)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🤝</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Negotiation Guideline</div>
-        <div class="text-[13px] font-bold text-slate-900">Respectful 20% – 30% discount baseline</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🤝</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Bargaining Rule</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Respectful 20% – 30% discount</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Payment Flexibility</div>
-        <div class="text-[13px] font-bold text-slate-900">VietQR, Mobile Banking & Cash</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -6661,21 +6314,6 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
   Shopping inside the vaulted avenues of Ben Thanh Market has never been a sterile commercial transaction. It is a graceful cultural dance between buyer and seller, where an engaging smile, genuine appreciation for traditional craft, and mutual respect unlock the finest artisanal treasures of southern Vietnam.
 </div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, stepping into the historic market places you at the center of an intoxicating labyrinth of over 1,400 vibrant retail stalls. For conscious voyagers, shopping here is an opportunity to acquire authentic handmade heirlooms and connect directly with the multi-generational trade guilds of the Southern Delta.</p>
 <hr>
-
-      <div class="overflow-x-auto my-6">
-        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
-          <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">🏪 Merchant Stalls</th><th class="p-4 font-bold text-left">🕒 Trading Hours</th><th class="p-4 font-bold text-left">💳 2026 Payment Standards</th><th class="p-4 font-bold text-left">🤝 Respectful Negotiation Buffer</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1,400+ Certified Vendors</strong></td><td class="p-4"><strong>07:00 AM – 18:00 PM (Daily)</strong></td><td class="p-4"><strong>100% Contactless Cards &amp; VietQR</strong></td><td class="p-4"><strong>15% – 25% Balanced Adjustment</strong></td></tr>
-
-          </tbody>
-        </table>
-      </div>
-    <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="key-curated-dimensions-of-market-commerce" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -6783,15 +6421,15 @@ Southern merchants hold deep spiritual reverence for their first customer of the
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Handicraft</th><th class="p-4 font-bold text-left">Hallmarks of Authentic Craft</th><th class="p-4 font-bold text-left">Warning Signs of Industrial Fakes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Handicraft</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Hallmarks of Authentic Craft</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Warning Signs of Industrial Fakes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Eggshell Lacquerware</strong></td><td class="p-4">Smooth, translucent depth, natural microscopic eggshell fractures, subtle resin scent</td><td class="p-4">Printed vinyl stickers covered in thick synthetic epoxy, harsh chemical odor</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bao Loc Natural Silk</strong></td><td class="p-4">Fluid drape, immediate cool touch against skin, shimmering prismatic refraction, wrinkle-resistant</td><td class="p-4">Stiff polyester blends, synthetic static cling, unyielding artificial sheen</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Single-Origin Coffee</strong></td><td class="p-4">Uniform cinnamon-brown beans, dry non-oily surface, herbal floral aromatics</td><td class="p-4">Oily pitch-black beans roasted with artificial butter and chemical flavorings</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Binh Phuoc Cashews</strong></td><td class="p-4">Plump, intact thin papery skin, crisp buttery crunch, no rancid oil trace</td><td class="p-4">Chemically bleached white kernels, shriveled or chewy texture</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Eggshell Lacquerware</strong></td><td class="p-4 text-slate-800 font-medium">Smooth, translucent depth, natural microscopic eggshell fractures, subtle resin scent</td><td class="p-4 text-slate-800 font-medium">Printed vinyl stickers covered in thick synthetic epoxy, harsh chemical odor</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Bao Loc Natural Silk</strong></td><td class="p-4 text-slate-800 font-medium">Fluid drape, immediate cool touch against skin, shimmering prismatic refraction, wrinkle-resistant</td><td class="p-4 text-slate-800 font-medium">Stiff polyester blends, synthetic static cling, unyielding artificial sheen</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Single-Origin Coffee</strong></td><td class="p-4 text-slate-800 font-medium">Uniform cinnamon-brown beans, dry non-oily surface, herbal floral aromatics</td><td class="p-4 text-slate-800 font-medium">Oily pitch-black beans roasted with artificial butter and chemical flavorings</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Binh Phuoc Cashews</strong></td><td class="p-4 text-slate-800 font-medium">Plump, intact thin papery skin, crisp buttery crunch, no rancid oil trace</td><td class="p-4 text-slate-800 font-medium">Chemically bleached white kernels, shriveled or chewy texture</td></tr>
 
           </tbody>
         </table>
@@ -6824,7 +6462,7 @@ Southern merchants hold deep spiritual reverence for their first customer of the
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Gracious Commerce of the Market</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 A visit to Ben Thanh Market is far more than a transactional shopping trip; it is an intimate encounter with the hardworking artisans and vendors who keep Saigon's merchant traditions alive. When approached with a smile, cultural curiosity, and mutual respect, every exchange becomes an unforgettable story to carry home.
               </p>
             </div>
@@ -6870,37 +6508,37 @@ Southern merchants hold deep spiritual reverence for their first customer of the
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Retail Sectors</div>
-        <div class="font-bold text-slate-800 text-[13px]">North: Flowers/Fruit; South: Textiles; East: Food; West: Crafts</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Retail Sectors</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">North: Flowers/Fruit; South: Textiles; East: Food; West: Crafts</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bargaining Etiquette</div>
-        <div class="font-bold text-slate-800 text-[13px]">Smile genuinely; avoid sharp haggling before 9:00 AM</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Bargaining Etiquette</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Smile genuinely; avoid sharp haggling before 9:00 AM</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">☕</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">☕</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Authenticity Tip</div>
-        <div class="font-bold text-slate-800 text-[13px]">Request whole bean inspection before grinding</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Authenticity Tip</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Request whole bean inspection before grinding</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛍️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛍️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Top Souvenirs</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hand-embroidered linen, artisan lacquer, dried Mekong mango</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Top Souvenirs</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hand-embroidered linen, artisan lacquer, dried Mekong mango</div>
       </div>
     </div>
   
@@ -7067,12 +6705,12 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#lan-vuong-redefining-ecological-play" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lan Vuong: Redefining "Ecological Play"</a>
+                  <a href="#lan-vuong-redefining-ecological-play" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Lan Vuong: Redefining "Ecological Play"</a>
   <a href="#crucial-note-regarding-2026-administrative-boundaries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Crucial Note Regarding 2026 Administrative Boundaries</a>
-  <a href="#the-gauntlet-4-physical-challenge-zones" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Gauntlet: 4 Physical Challenge Zones</a>
+  <a href="#the-gauntlet-4-physical-challenge-zones" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Gauntlet: 4 Physical Challenge Zones</a>
   <a href="#the-art-of-team-building-at-lan-vuong" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Art of Team Building at Lan Vuong</a>
-  <a href="#foraging-the-culinary-frontier-southern-agrarian-cuisine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Foraging the Culinary Frontier: Southern Agrarian Cuisine</a>
-  <a href="#field-survival-guide" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Survival Guide</a>
+  <a href="#foraging-the-culinary-frontier-southern-agrarian-cuisine" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Foraging the Culinary Frontier: Southern Agrarian Cuisine</a>
+  <a href="#field-survival-guide" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Survival Guide</a>
 
               </div>
             </nav>
@@ -7082,61 +6720,40 @@ export const lanVuongEcoparkMekongMudHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Updated Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">An Hoi, Vinh Long (Ex-Ben Tre)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">An Hoi, Vinh Long (Ex-Ben Tre)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operating Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">07:00 AM – 18:00 PM Daily</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">07:00 – 18:00 Daily (365 Days)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Gate Admission</div>
-        <div class="text-[13px] font-bold text-slate-900">Free Entry (A la carte activities)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Admission</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Free Entry (A la carte activities)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⚡</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Physical Intensity</div>
-        <div class="text-[13px] font-bold text-slate-900">High (Bring change of clothes)</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Location (2025-2026 Update):</strong> Hamlet 2, An Hoi Ward, Vinh Long Province (Note: Historically part of Ben Tre City).</li>
-<li><strong>Operating Hours:</strong> 07:00 AM - 06:00 PM (Open daily).</li>
-<li><strong>Ticketing Policy:</strong> <strong>Free Admission</strong>. Fees are charged a la carte for specific activities, equipment rentals, and culinary services.</li>
-<li><strong>Physical Demands:</strong> High (Demands stamina and a willingness to get profoundly dirty).</li>
-<li><strong>Ideal For:</strong> Corporate team-building excursions, student organizations, and families seeking rugged, hands-on agrarian experiences.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="lan-vuong-redefining-ecological-play" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -7171,15 +6788,15 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">The Challenge</th><th class="p-4 font-bold text-left">Difficulty</th><th class="p-4 font-bold text-left">Key Characteristics</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">The Challenge</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Difficulty</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Key Characteristics</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Cycling the Monkey Bridge</strong></td><td class="p-4">High</td><td class="p-4">The ultimate test of equilibrium: navigating a bicycle across a wooden plank less than 20cm wide, suspended over a canal. 90% of challengers end up submerged.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Draining the Ditch (Catching Fish)</strong></td><td class="p-4">Moderate</td><td class="p-4">Teams wade into waist-deep mud, utilizing traditional bamboo traps (<em>nôm</em>) and woven baskets to hunt snakehead fish. The spoils are immediately grilled on-site.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Rowing the Three-Plank Sampan</strong></td><td class="p-4">Low</td><td class="p-4">Gliding through narrow canals shaded by dense water coconut fronds. Requires synchronized paddling and clear communication between 2-3 crew members.</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Tarzan Swing</strong></td><td class="p-4">High</td><td class="p-4">Swinging across the lake via a suspended rope. Demands significant upper-body strength and split-second timing on the release.</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Cycling the Monkey Bridge</strong></td><td class="p-4 text-slate-800 font-medium">High</td><td class="p-4 text-slate-800 font-medium">The ultimate test of equilibrium: navigating a bicycle across a wooden plank less than 20cm wide, suspended over a canal. 90% of challengers end up submerged.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Draining the Ditch (Catching Fish)</strong></td><td class="p-4 text-slate-800 font-medium">Moderate</td><td class="p-4 text-slate-800 font-medium">Teams wade into waist-deep mud, utilizing traditional bamboo traps (<em>nôm</em>) and woven baskets to hunt snakehead fish. The spoils are immediately grilled on-site.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Rowing the Three-Plank Sampan</strong></td><td class="p-4 text-slate-800 font-medium">Low</td><td class="p-4 text-slate-800 font-medium">Gliding through narrow canals shaded by dense water coconut fronds. Requires synchronized paddling and clear communication between 2-3 crew members.</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Tarzan Swing</strong></td><td class="p-4 text-slate-800 font-medium">High</td><td class="p-4 text-slate-800 font-medium">Swinging across the lake via a suspended rope. Demands significant upper-body strength and split-second timing on the release.</td></tr>
 
           </tbody>
         </table>
@@ -7237,7 +6854,7 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Joy of the Elemental Earth</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 There is profound liberation in shedding urban sophistication, plunging knee-deep into fertile river silt, and sharing unconditional laughter with comrades. Lan Vuong reminds us that the happiest moments are often the rawest, the muddiest, and the most human.
               </p>
             </div>
@@ -7283,37 +6900,37 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Eco-Park Coordinates</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hamlet 2, An Hoi Ward, Vinh Long</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Eco-Park Coordinates</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hamlet 2, An Hoi Ward, Vinh Long</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🕒</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🕒</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Operating Schedule</div>
-        <div class="font-bold text-slate-800 text-[13px]">Open 365 days a year</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Operating Schedule</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Open 365 days a year</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚣</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚣</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Activities</div>
-        <div class="font-bold text-slate-800 text-[13px]">Alluvial zipline, bamboo bridge bike race</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Signature Activities</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Alluvial zipline, bamboo bridge bike race</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🥥</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🥥</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Culinary Highlights</div>
-        <div class="font-bold text-slate-800 text-[13px]">Crispy river elephant-ear fish & roasted duck</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Culinary Highlights</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Crispy river elephant-ear fish & roasted duck</div>
       </div>
     </div>
   
@@ -7480,9 +7097,9 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#hon-son-the-unpolished-gem-defying-concrete-assimilation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Hon Son: The Unpolished Gem Defying Concrete Assimilation</a>
-  <a href="#the-strategic-comparison-discovering-your-bespoke-sanctuary" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Strategic Comparison: Discovering Your Bespoke Sanctuary</a>
-  <a href="#the-field-assessment-top-7-flawless-coordinates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Field Assessment: Top 7 Flawless Coordinates</a>
+                  <a href="#hon-son-the-unpolished-gem-defying-concrete-assimilation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Hon Son: The Unpolished Gem Defying Concrete Assimilation</a>
+  <a href="#the-strategic-comparison-discovering-your-bespoke-sanctuary" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Strategic Comparison: Discovering Your Bespoke Sanctuary</a>
+  <a href="#the-field-assessment-top-7-flawless-coordinates" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Field Assessment: Top 7 Flawless Coordinates</a>
   <a href="#sohora-sea-mountain-bungalow-the-cliffside-enclave" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Sohora Sea Mountain Bungalow: The Cliffside Enclave</a>
   <a href="#rai-ca-homestay-a-radiant-youth-on-the-shore" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Rai Ca Homestay: A Radiant Youth on the Shore</a>
   <a href="#bacs-homestay-contemporary-minimalist-refuge" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bac's Homestay: Contemporary Minimalist Refuge</a>
@@ -7490,7 +7107,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
   <a href="#thuongs-house-the-perfect-dawn-interceptor" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Thuong's House: The Perfect Dawn Interceptor</a>
   <a href="#thanh-duyen-homestay-the-pulse-of-the-fishing-village" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Thanh Duyen Homestay: The Pulse of the Fishing Village</a>
   <a href="#fly-up-resort-high-altitude-luxury" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Fly Up Resort: High-Altitude Luxury</a>
-  <a href="#the-field-manual-tactical-protocols-for-hon-son-homestays" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Field Manual: Tactical Protocols for Hon Son Homestays</a>
+  <a href="#the-field-manual-tactical-protocols-for-hon-son-homestays" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Field Manual: Tactical Protocols for Hon Son Homestays</a>
 
               </div>
             </nav>
@@ -7500,60 +7117,40 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">Lai Son Island, Kien Giang</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Lai Son Island, Kien Giang</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛥️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Maritime Transit</div>
-        <div class="text-[13px] font-bold text-slate-900">1h 30m Express Ferry from Rach Gia</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🛥️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Transit</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">1h 30m Ferry from Rach Gia</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💵</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">300,000 – 1,500,000 VND / Night</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">💵</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Tariff</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">300,000 – 1,500,000 VND / Night</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛵</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Island Mobility</div>
-        <div class="text-[13px] font-bold text-slate-900">100% Pier-side Scooter Delivery</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> Hon Son Island (Lai Son), Kien Hai District, Kien Giang Province.</li>
-<li><strong>2026 Baseline Tariffs:</strong> From 300,000 VND (Standard lodgings) to 1,500,000 VND (All-inclusive panoramic ocean bungalows).</li>
-<li><strong>Core Experiences:</strong> Pitching tents on the surf line, retreating to cliffside wooden bungalows, and executing private beachfront seafood barbecues.</li>
-<li><strong>Transit Logistics:</strong> The high-speed maritime crossing from Rach Gia Port to Hon Son demands approximately 1 hour and 30 minutes. 100% of the sanctuaries listed herein facilitate pier-side motorbike delivery.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="hon-son-the-unpolished-gem-defying-concrete-assimilation" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -7573,18 +7170,18 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Sanctuary Designation</th><th class="p-4 font-bold text-left">Geographical Vangtage</th><th class="p-4 font-bold text-left">Ideal Demographic</th><th class="p-4 font-bold text-left">2026 Tariff Range</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sanctuary Designation</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Geographical Vangtage</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Ideal Demographic</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Tariff Range</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1. Sohora Sea Mountain</strong></td><td class="p-4">Clinging to the Ma Thien Lanh cliff face</td><td class="p-4">Couples and seekers of absolute isolation</td><td class="p-4">600,000đ - 1,200,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2. Rai Ca Homestay</strong></td><td class="p-4">Straddling the tidal edge</td><td class="p-4">Festive cohorts prioritizing beachfront BBQ</td><td class="p-4">350,000đ - 800,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>3. Bac&#39;s Homestay</strong></td><td class="p-4">Bai Bac (The island&#39;s most pristine cove)</td><td class="p-4">Aesthetic purists favoring warm, minimalist architecture</td><td class="p-4">500,000đ - 1,000,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4. Sao Bien (Cocobay)</strong></td><td class="p-4">Panoramic hillside elevation</td><td class="p-4">Sunset chasers and acoustic music aficionados</td><td class="p-4">500,000đ - 800,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>5. Thuong&#39;s House</strong></td><td class="p-4">Adjacent to the primary pier, Bai Nha</td><td class="p-4">Families requiring rapid logistical connectivity</td><td class="p-4">400,000đ - 900,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>6. Thanh Duyen</strong></td><td class="p-4">Bai Bang (Within the local settlement)</td><td class="p-4">Rugged backpackers pursuing authentic village immersion</td><td class="p-4">250,000đ - 600,000đ</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>7. Fly Up Resort</strong></td><td class="p-4">Exclusive private beach enclave</td><td class="p-4">Luxury retreaters demanding uncompromised privacy</td><td class="p-4">1,200,000đ - 2,500,000đ</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>1. Sohora Sea Mountain</strong></td><td class="p-4 text-slate-800 font-medium">Clinging to the Ma Thien Lanh cliff face</td><td class="p-4 text-slate-800 font-medium">Couples and seekers of absolute isolation</td><td class="p-4 text-slate-800 font-medium">600,000đ - 1,200,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>2. Rai Ca Homestay</strong></td><td class="p-4 text-slate-800 font-medium">Straddling the tidal edge</td><td class="p-4 text-slate-800 font-medium">Festive cohorts prioritizing beachfront BBQ</td><td class="p-4 text-slate-800 font-medium">350,000đ - 800,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>3. Bac&#39;s Homestay</strong></td><td class="p-4 text-slate-800 font-medium">Bai Bac (The island&#39;s most pristine cove)</td><td class="p-4 text-slate-800 font-medium">Aesthetic purists favoring warm, minimalist architecture</td><td class="p-4 text-slate-800 font-medium">500,000đ - 1,000,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4. Sao Bien (Cocobay)</strong></td><td class="p-4 text-slate-800 font-medium">Panoramic hillside elevation</td><td class="p-4 text-slate-800 font-medium">Sunset chasers and acoustic music aficionados</td><td class="p-4 text-slate-800 font-medium">500,000đ - 800,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>5. Thuong&#39;s House</strong></td><td class="p-4 text-slate-800 font-medium">Adjacent to the primary pier, Bai Nha</td><td class="p-4 text-slate-800 font-medium">Families requiring rapid logistical connectivity</td><td class="p-4 text-slate-800 font-medium">400,000đ - 900,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>6. Thanh Duyen</strong></td><td class="p-4 text-slate-800 font-medium">Bai Bang (Within the local settlement)</td><td class="p-4 text-slate-800 font-medium">Rugged backpackers pursuing authentic village immersion</td><td class="p-4 text-slate-800 font-medium">250,000đ - 600,000đ</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>7. Fly Up Resort</strong></td><td class="p-4 text-slate-800 font-medium">Exclusive private beach enclave</td><td class="p-4 text-slate-800 font-medium">Luxury retreaters demanding uncompromised privacy</td><td class="p-4 text-slate-800 font-medium">1,200,000đ - 2,500,000đ</td></tr>
 
           </tbody>
         </table>
@@ -7716,7 +7313,7 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Unhurried Rhythm of the Tide</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 To sleep in a cliffside bungalow on Hon Son is to surrender to the nocturnal symphony of crashing waves, whispering sea winds, and incandescent starlight. Here, time softens, and the traveler rediscovers the restorative simplicity of island life.
               </p>
             </div>
@@ -7762,37 +7359,37 @@ export const honSonIslandLodgingHomestaysHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Island Coordinates</div>
-        <div class="font-bold text-slate-800 text-[13px]">Hon Son (Lai Son), Kien Hai, Kien Giang</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Island Coordinates</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Hon Son (Lai Son), Kien Hai, Kien Giang</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Best Travel Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">November through May (Azure Waters)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Best Travel Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">November through May (Azure Waters)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏡</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🏡</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Top Sanctuaries</div>
-        <div class="font-bold text-slate-800 text-[13px]">Sohora Sea Mountain, Rai Ca, Bac's Homestay</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Top Sanctuaries</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Sohora Sea Mountain, Rai Ca, Bac's Homestay</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🦐</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🦐</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Gastronomy Ritual</div>
-        <div class="font-bold text-slate-800 text-[13px]">Fresh sea urchin BBQ & wild octopus</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Gastronomy Ritual</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Fresh sea urchin BBQ & wild octopus</div>
       </div>
     </div>
   
@@ -7959,19 +7556,19 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Saigon Unveiled from an Open Deck</a>
-  <a href="#fleet-architecture-and-bespoke-onboard-amenities" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Fleet Architecture & Bespoke Onboard Amenities</a>
-  <a href="#comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comprehensive Analysis of the Two Signature Routes (2026 Edition)</a>
+                  <a href="#introduction-saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Saigon Unveiled from an Open Deck</a>
+  <a href="#fleet-architecture-and-bespoke-onboard-amenities" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Fleet Architecture & Bespoke Onboard Amenities</a>
+  <a href="#comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comprehensive Analysis of the Two Signature Routes (2026 Edition)</a>
   <a href="#route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)</a>
   <a href="#route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)</a>
-  <a href="#daytime-vs-twilight-night-voyages-comparative-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Daytime vs. Twilight Night Voyages: Comparative Matrix</a>
-  <a href="#official-2026-ticket-tariff-schedule" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official 2026 Ticket Tariff Schedule</a>
-  <a href="#curated-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler</a>
+  <a href="#daytime-vs-twilight-night-voyages-comparative-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Daytime vs. Twilight Night Voyages: Comparative Matrix</a>
+  <a href="#official-2026-ticket-tariff-schedule" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Official 2026 Ticket Tariff Schedule</a>
+  <a href="#curated-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler</a>
   <a href="#the-strategy-of-seat-selection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Strategy of Seat Selection</a>
   <a href="#the-golden-departure-windows" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Golden Departure Windows</a>
   <a href="#vital-safety-protocols" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Vital Safety Protocols</a>
-  <a href="#seamless-itinerary-integration-around-ben-thanh-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Seamless Itinerary Integration Around Ben Thanh Market</a>
-  <a href="#epilogue-the-urban-rhythm-from-above" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Urban Rhythm from Above</a>
+  <a href="#seamless-itinerary-integration-around-ben-thanh-market" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Seamless Itinerary Integration Around Ben Thanh Market</a>
+  <a href="#epilogue-the-urban-rhythm-from-above" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Urban Rhythm from Above</a>
 
               </div>
             </nav>
@@ -7981,47 +7578,34 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Main Hub at Ben Thanh</div>
-        <div class="text-[13px] font-bold text-slate-900">West Gate (23 Phan Chu Trinh)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Main Terminal</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">West Gate (23 Phan Chu Trinh)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operating Schedule</div>
-        <div class="text-[13px] font-bold text-slate-900">08:00 – 22:30 Daily (Every 30 mins)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Operating Schedule</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">08:00 – 22:30 (Every 30 mins)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Loop Duration</div>
-        <div class="text-[13px] font-bold text-slate-900">60 mins (District 1) / 120 mins (Chợ Lớn)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Ticket Range</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">200,000 – 450,000 VND</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Ticket Range</div>
-        <div class="text-[13px] font-bold text-slate-900">200,000 – 450,000 VND / passenger</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -8125,15 +7709,15 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Evaluation Factor</th><th class="p-4 font-bold text-left">Midday Heritage Voyage (08:30 – 16:00)</th><th class="p-4 font-bold text-left">Sunset &amp; Illumination Circuit (16:30 – 22:30)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Evaluation Factor</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Midday Heritage Voyage (08:30 – 16:00)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sunset &amp; Illumination Circuit (16:30 – 22:30)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Atmospheric Ambience</strong></td><td class="p-4">Crisp natural daylight accentuates intricate plaster reliefs on colonial mansions</td><td class="p-4">Refreshingly breezy; illuminated by glittering architectural LEDs and skyline towers</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Photographic Vantages</strong></td><td class="p-4">Ochre walls of the Post Office; deep green mahogany canopies along Le Duan</td><td class="p-4">Golden hour over Ba Son Bridge; shimmering reflections across the Saigon River</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Physical Comfort</strong></td><td class="p-4">Tropical heat requires sunscreen, shades, and conical hat</td><td class="p-4">Highly relaxing, cool river winds, acoustic music floating from rooftop lounges</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Passenger Volume</strong></td><td class="p-4">Moderate occupancy; effortless access to front-row open deck seating</td><td class="p-4">High demand; arrive 15–20 minutes prior to ensure premier top-deck seating</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Atmospheric Ambience</strong></td><td class="p-4 text-slate-800 font-medium">Crisp natural daylight accentuates intricate plaster reliefs on colonial mansions</td><td class="p-4 text-slate-800 font-medium">Refreshingly breezy; illuminated by glittering architectural LEDs and skyline towers</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Photographic Vantages</strong></td><td class="p-4 text-slate-800 font-medium">Ochre walls of the Post Office; deep green mahogany canopies along Le Duan</td><td class="p-4 text-slate-800 font-medium">Golden hour over Ba Son Bridge; shimmering reflections across the Saigon River</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Physical Comfort</strong></td><td class="p-4 text-slate-800 font-medium">Tropical heat requires sunscreen, shades, and conical hat</td><td class="p-4 text-slate-800 font-medium">Highly relaxing, cool river winds, acoustic music floating from rooftop lounges</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Passenger Volume</strong></td><td class="p-4 text-slate-800 font-medium">Moderate occupancy; effortless access to front-row open deck seating</td><td class="p-4 text-slate-800 font-medium">High demand; arrive 15–20 minutes prior to ensure premier top-deck seating</td></tr>
 
           </tbody>
         </table>
@@ -8150,16 +7734,16 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Ticket Tier</th><th class="p-4 font-bold text-left">Validity Period</th><th class="p-4 font-bold text-left">Adult Fare (VND)</th><th class="p-4 font-bold text-left">Child Fare (Age 6–11)</th><th class="p-4 font-bold text-left">Included Privileges</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Ticket Tier</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Validity Period</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Adult Fare (VND)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Child Fare (Age 6–11)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Included Privileges</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Route 1 Single Loop (District 1)</strong></td><td class="p-4">60 mins (No hop-off)</td><td class="p-4"><strong>200,000</strong></td><td class="p-4"><strong>150,000</strong></td><td class="p-4">Audio guide, conical hat, bottled spring water, transit insurance</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Route 2 Single Loop (Chợ Lớn)</strong></td><td class="p-4">120 mins (No hop-off)</td><td class="p-4"><strong>250,000</strong></td><td class="p-4"><strong>180,000</strong></td><td class="p-4">Full Chinatown immersion, multi-lingual audio commentary</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4-Hour Hop-On Hop-Off Pass</strong></td><td class="p-4">4 consecutive hours</td><td class="p-4"><strong>300,000</strong></td><td class="p-4"><strong>200,000</strong></td><td class="p-4">Unlimited hop-on/hop-off privileges at all designated city stops</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>24-Hour All-Access Pass</strong></td><td class="p-4">24 continuous hours</td><td class="p-4"><strong>450,000</strong></td><td class="p-4"><strong>350,000</strong></td><td class="p-4">Comprehensive day-and-night exploration across museums and night circuits</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Combo Bus + Saigon Waterbus</strong></td><td class="p-4">Same-day validation</td><td class="p-4"><strong>500,000</strong></td><td class="p-4"><strong>400,000</strong></td><td class="p-4">1 bus loop + 1 sunset river cruise departing Bach Dang Pier</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Route 1 Single Loop (District 1)</strong></td><td class="p-4 text-slate-800 font-medium">60 mins (No hop-off)</td><td class="p-4 text-slate-800 font-medium"><strong>200,000</strong></td><td class="p-4 text-slate-800 font-medium"><strong>150,000</strong></td><td class="p-4 text-slate-800 font-medium">Audio guide, conical hat, bottled spring water, transit insurance</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Route 2 Single Loop (Chợ Lớn)</strong></td><td class="p-4 text-slate-800 font-medium">120 mins (No hop-off)</td><td class="p-4 text-slate-800 font-medium"><strong>250,000</strong></td><td class="p-4 text-slate-800 font-medium"><strong>180,000</strong></td><td class="p-4 text-slate-800 font-medium">Full Chinatown immersion, multi-lingual audio commentary</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Hop-On Hop-Off Pass</strong></td><td class="p-4 text-slate-800 font-medium">4 consecutive hours</td><td class="p-4 text-slate-800 font-medium"><strong>300,000</strong></td><td class="p-4 text-slate-800 font-medium"><strong>200,000</strong></td><td class="p-4 text-slate-800 font-medium">Unlimited hop-on/hop-off privileges at all designated city stops</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>24-Hour All-Access Pass</strong></td><td class="p-4 text-slate-800 font-medium">24 continuous hours</td><td class="p-4 text-slate-800 font-medium"><strong>450,000</strong></td><td class="p-4 text-slate-800 font-medium"><strong>350,000</strong></td><td class="p-4 text-slate-800 font-medium">Comprehensive day-and-night exploration across museums and night circuits</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Combo Bus + Saigon Waterbus</strong></td><td class="p-4 text-slate-800 font-medium">Same-day validation</td><td class="p-4 text-slate-800 font-medium"><strong>500,000</strong></td><td class="p-4 text-slate-800 font-medium"><strong>400,000</strong></td><td class="p-4 text-slate-800 font-medium">1 bus loop + 1 sunset river cruise departing Bach Dang Pier</td></tr>
 
           </tbody>
         </table>
@@ -8235,7 +7819,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Urban Rhythm from Above</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Gliding slowly through the evening air above Saigon’s storied streetscapes, one comes to understand that this city does not merely rush forward—it breathes with layered historic grace. In a single hour aloft, the voyager touches the timeless heart of a metropolis that is perpetually vibrant yet rooted in centuries of enduring soul.
               </p>
             </div>
@@ -8281,37 +7865,37 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Prime Boarding Terminals</div>
-        <div class="font-bold text-slate-800 text-[13px]">Central Post Office & Ben Thanh West Gate</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Prime Boarding Terminals</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Central Post Office & Ben Thanh West Gate</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Sunset Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">16:30 – 17:30 PM (Golden hour bridge crossing)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Optimal Sunset Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">16:30 – 17:30 PM (Golden hour bridge crossing)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎧</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎧</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Onboard Technology</div>
-        <div class="font-bold text-slate-800 text-[13px]">Multi-lingual automated audio narration & USB ports</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Onboard Technology</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Multi-lingual automated audio narration & USB ports</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎁</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎁</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Complimentary Amenities</div>
-        <div class="font-bold text-slate-800 text-[13px]">Traditional conical hat, mineral water & rain poncho</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Complimentary Amenities</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Traditional conical hat, mineral water & rain poncho</div>
       </div>
     </div>
   
@@ -8478,12 +8062,12 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#a-delightful-paradox-the-ocean-of-the-western-capital" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Delightful Paradox: The "Ocean" of the Western Capital</a>
+                  <a href="#a-delightful-paradox-the-ocean-of-the-western-capital" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Delightful Paradox: The "Ocean" of the Western Capital</a>
   <a href="#the-convergence-of-ocean-and-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Convergence of "Ocean" and "River"</a>
-  <a href="#expedition-map-navigating-the-beach-ecosystem" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Expedition Map: Navigating the Beach Ecosystem</a>
+  <a href="#expedition-map-navigating-the-beach-ecosystem" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Expedition Map: Navigating the Beach Ecosystem</a>
   <a href="#the-million-dollar-vista-the-illumination-of-can-tho-bridge" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The "Million-Dollar" Vista: The Illumination of Can Tho Bridge</a>
-  <a href="#beachfront-gastronomy-a-unique-culinary-hybrid" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Beachfront Gastronomy: A Unique Culinary Hybrid</a>
-  <a href="#tactical-field-guide" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Tactical Field Guide</a>
+  <a href="#beachfront-gastronomy-a-unique-culinary-hybrid" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Beachfront Gastronomy: A Unique Culinary Hybrid</a>
+  <a href="#tactical-field-guide" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Tactical Field Guide</a>
 
               </div>
             </nav>
@@ -8493,61 +8077,40 @@ export const canThoBeachArtificialOasisHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">Cai Khe Ward, Ninh Kieu, Can Tho</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Song Hau Park, Ninh Kieu, Can Tho</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Hours</div>
-        <div class="text-[13px] font-bold text-slate-900">07:00 AM – 23:00 PM Daily</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">07:00 – 23:00 Daily</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Entry Fee</div>
-        <div class="text-[13px] font-bold text-slate-900">20,000 VND (Includes beverage)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Entry</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">20,000 VND (Includes beverage)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌅</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Golden Hour</div>
-        <div class="text-[13px] font-bold text-slate-900">17:00 – 18:00 (Sunset over Bridge)</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> Bai Cat Zone, Cai Khe Ward, Ninh Kieu District, Can Tho City (Adjacent to the Song Hau Park).</li>
-<li><strong>Scale:</strong> A 400-meter stretch of sand, engineered with over 1 million cubic meters of purified sand deposited along the Hau River bank.</li>
-<li><strong>Admission Fee (2026):</strong> 20,000 VND / Person (Includes one complimentary beverage and sanitation surcharge).</li>
-<li><strong>Operating Hours:</strong> 07:00 AM - 11:00 PM daily.</li>
-<li><strong>The Golden Visual Coordinates:</strong> 17:00 – 18:00 (The precise hour dusk descends over the cable-stayed bridge).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-delightful-paradox-the-ocean-of-the-western-capital" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -8583,15 +8146,15 @@ Officially commissioned in 2014, this infrastructure quenched the "thirst for th
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Sector</th><th class="p-4 font-bold text-left">Core Activities</th><th class="p-4 font-bold text-left">Optimal Timeframe</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sector</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Core Activities</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Optimal Timeframe</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Aquatic Sports Zone</strong></td><td class="p-4">Kayak expeditions, high-velocity Jetski maneuvers, and adrenaline-fueled banana boat towing.</td><td class="p-4">07:00 - 10:00 (Dead calm waters, brilliant sunlight)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bathing &amp; Solarium</strong></td><td class="p-4">Near-shore swimming and recovering on beanbags shaded by thatched palm umbrellas.</td><td class="p-4">15:30 - 17:30 (Evading the solar apex)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Gastronomy Sector</strong></td><td class="p-4">Sourcing fresh coconuts, scallion-grilled seafood, and hyper-local Delta bar snacks.</td><td class="p-4">17:00 - 20:00 (The dinner offensive)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Performance Stage</strong></td><td class="p-4">Synchronized water fountains, belly dance showcases, contemporary choreography, and live acoustic sets.</td><td class="p-4">19:00 - 21:00 (Post-illumination)</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Aquatic Sports Zone</strong></td><td class="p-4 text-slate-800 font-medium">Kayak expeditions, high-velocity Jetski maneuvers, and adrenaline-fueled banana boat towing.</td><td class="p-4 text-slate-800 font-medium">07:00 - 10:00 (Dead calm waters, brilliant sunlight)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Bathing &amp; Solarium</strong></td><td class="p-4 text-slate-800 font-medium">Near-shore swimming and recovering on beanbags shaded by thatched palm umbrellas.</td><td class="p-4 text-slate-800 font-medium">15:30 - 17:30 (Evading the solar apex)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Gastronomy Sector</strong></td><td class="p-4 text-slate-800 font-medium">Sourcing fresh coconuts, scallion-grilled seafood, and hyper-local Delta bar snacks.</td><td class="p-4 text-slate-800 font-medium">17:00 - 20:00 (The dinner offensive)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Performance Stage</strong></td><td class="p-4 text-slate-800 font-medium">Synchronized water fountains, belly dance showcases, contemporary choreography, and live acoustic sets.</td><td class="p-4 text-slate-800 font-medium">19:00 - 21:00 (Post-illumination)</td></tr>
 
           </tbody>
         </table>
@@ -8632,7 +8195,7 @@ Officially commissioned in 2014, this infrastructure quenched the "thirst for th
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Gentle Western Capital</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Can Tho Beach is not about replicating ocean surf; it is about celebrating the gentle, breezy romance of the mighty Hau River. As dusk settles and bridge lights shimmer across the water, the voyager is reminded why Can Tho is celebrated as the unforgettable heart of the Southwest.
               </p>
             </div>
@@ -8678,37 +8241,37 @@ Officially commissioned in 2014, this infrastructure quenched the "thirst for th
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Oasis Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Song Hau Park, Cai Khe, Can Tho</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Oasis Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Song Hau Park, Cai Khe, Can Tho</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌉</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌉</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Iconic Perspective</div>
-        <div class="font-bold text-slate-800 text-[13px]">Direct panorama of Can Tho Cable Bridge</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Iconic Perspective</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Direct panorama of Can Tho Cable Bridge</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌅</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌅</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Optimal Arrival</div>
-        <div class="font-bold text-slate-800 text-[13px]">Late afternoon for cool breeze & sunset</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Optimal Arrival</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Late afternoon for cool breeze & sunset</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍹</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍹</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Leisure Highlights</div>
-        <div class="font-bold text-slate-800 text-[13px]">Riverside cafes, speedboats, acoustic nights</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Leisure Highlights</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Riverside cafes, speedboats, acoustic nights</div>
       </div>
     </div>
   
@@ -8875,16 +8438,16 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Allure of Saigon’s Hidden Perches</a>
-  <a href="#adaptive-heritage-the-renaissance-of-residential-blocks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Adaptive Heritage: The Renaissance of Residential Blocks</a>
-  <a href="#four-iconic-heritage-apartment-buildings-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Iconic Heritage Apartment Buildings Near Ben Thanh</a>
+                  <a href="#introduction-the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Allure of Saigon’s Hidden Perches</a>
+  <a href="#adaptive-heritage-the-renaissance-of-residential-blocks" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Adaptive Heritage: The Renaissance of Residential Blocks</a>
+  <a href="#four-iconic-heritage-apartment-buildings-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Four Iconic Heritage Apartment Buildings Near Ben Thanh</a>
   <a href="#ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Thiep – The Artisanal & Bohemian Labyrinth</a>
   <a href="#ly-tu-trong-the-creative-vanguard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ly Tu Trong – The Creative Vanguard</a>
   <a href="#ton-that-dam-the-cinematic-riverfront-relic" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Dam – The Cinematic Riverfront Relic</a>
   <a href="#the-balcony-flats-of-pasteur-and-le-loi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Balcony Flats of Pasteur & Le Loi</a>
-  <a href="#the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Beverage Matrix: From Traditional Phin to Specialty Third Wave</a>
-  <a href="#conscious-voyager-etiquette-for-residential-walk-ups" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Conscious Voyager Etiquette for Residential Walk-Ups</a>
-  <a href="#epilogue-the-timeless-pause" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Timeless Pause</a>
+  <a href="#the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Beverage Matrix: From Traditional Phin to Specialty Third Wave</a>
+  <a href="#conscious-voyager-etiquette-for-residential-walk-ups" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Conscious Voyager Etiquette for Residential Walk-Ups</a>
+  <a href="#epilogue-the-timeless-pause" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Timeless Pause</a>
 
               </div>
             </nav>
@@ -8894,47 +8457,34 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Walking Radius</div>
-        <div class="text-[13px] font-bold text-slate-900">300m – 800m from Ben Thanh</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Walking Perimeter</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">300m – 800m from Ben Thanh</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Building Eras</div>
-        <div class="text-[13px] font-bold text-slate-900">1920s French & 1960s Modernist Cư Xá</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">☕</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Coffee Spectrum</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Robusta Phin, V60 & Cold Drip</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">☕</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Beverage Spectrum</div>
-        <div class="text-[13px] font-bold text-slate-900">Robusta Phin, V60 Pour-over, Cold Drip</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">💵</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Price Baseline</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">45,000 – 95,000 VND / drink</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💵</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Price Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">45,000 – 95,000 VND / beverage</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -9046,16 +8596,16 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Beverage Typology</th><th class="p-4 font-bold text-left">Extraction Craft &amp; Provenance</th><th class="p-4 font-bold text-left">Flavor Profile</th><th class="p-4 font-bold text-left">2026 Price Baseline</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Beverage Typology</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Extraction Craft &amp; Provenance</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Flavor Profile</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Price Baseline</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Traditional Iced Milk Coffee (<em>Cà Phê Sữa Đá</em>)</strong></td><td class="p-4">Highland Dak Lak natural Robusta, brewed via slow aluminum gravity phin</td><td class="p-4">Viscous, deep chocolate notes, caramel finish</td><td class="p-4">45,000 – 60,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Salted Cream Coffee (<em>Cà Phê Muối</em>)</strong></td><td class="p-4">Dense phin concentrate crowned with whipped cream and pink Himalayan salt</td><td class="p-4">Velvety sweet-savory balance, toasted nut richness</td><td class="p-4">55,000 – 70,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Specialty Pour-Over (V60 / Chemex)</strong></td><td class="p-4">Hand-sorted Cau Dat Arabica or heirloom Typica filtered through paper</td><td class="p-4">Floral, bright citrus acidity, jasmine blossoms</td><td class="p-4">75,000 – 95,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tropical Cascara &amp; Fruit Cold Brew</strong></td><td class="p-4">20-hour steep infused with peach, lychee, or fresh calamansi</td><td class="p-4">Effervescent, naturally sweet, low acidity</td><td class="p-4">65,000 – 85,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Highland Lotus Herbal Infusion</strong></td><td class="p-4">Organic green tea dried within whole lotus blossoms, served with candied ginger</td><td class="p-4">Clean, grounding, restorative after long walks</td><td class="p-4">60,000 – 80,000 VND</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Traditional Iced Milk Coffee (<em>Cà Phê Sữa Đá</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Highland Dak Lak natural Robusta, brewed via slow aluminum gravity phin</td><td class="p-4 text-slate-800 font-medium">Viscous, deep chocolate notes, caramel finish</td><td class="p-4 text-slate-800 font-medium">45,000 – 60,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Saigon Salted Cream Coffee (<em>Cà Phê Muối</em>)</strong></td><td class="p-4 text-slate-800 font-medium">Dense phin concentrate crowned with whipped cream and pink Himalayan salt</td><td class="p-4 text-slate-800 font-medium">Velvety sweet-savory balance, toasted nut richness</td><td class="p-4 text-slate-800 font-medium">55,000 – 70,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Specialty Pour-Over (V60 / Chemex)</strong></td><td class="p-4 text-slate-800 font-medium">Hand-sorted Cau Dat Arabica or heirloom Typica filtered through paper</td><td class="p-4 text-slate-800 font-medium">Floral, bright citrus acidity, jasmine blossoms</td><td class="p-4 text-slate-800 font-medium">75,000 – 95,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Tropical Cascara &amp; Fruit Cold Brew</strong></td><td class="p-4 text-slate-800 font-medium">20-hour steep infused with peach, lychee, or fresh calamansi</td><td class="p-4 text-slate-800 font-medium">Effervescent, naturally sweet, low acidity</td><td class="p-4 text-slate-800 font-medium">65,000 – 85,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Highland Lotus Herbal Infusion</strong></td><td class="p-4 text-slate-800 font-medium">Organic green tea dried within whole lotus blossoms, served with candied ginger</td><td class="p-4 text-slate-800 font-medium">Clean, grounding, restorative after long walks</td><td class="p-4 text-slate-800 font-medium">60,000 – 80,000 VND</td></tr>
 
           </tbody>
         </table>
@@ -9089,7 +8639,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Timeless Pause</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 In a metropolis that hurtles forward with dazzling speed, the vintage apartment cafes near Ben Thanh Market serve as precious temporal anchors. Lingering over an amber glass of slow-dripping coffee while afternoon rain patters against weathered green shutters, one discovers that Saigon’s true charm lies in its capacity for stillness.
               </p>
             </div>
@@ -9135,37 +8685,37 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Epicenter Buildings</div>
-        <div class="font-bold text-slate-800 text-[13px]">42 Ton That Thiep, 26 Ly Tu Trong, 14 Ton That Dam</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Epicenter Buildings</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">42 Ton That Thiep, 26 Ly Tu Trong, 14 Ton That Dam</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Golden Morning Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">08:30 – 11:00 AM (Quiet reading & soft light)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Golden Morning Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">08:30 – 11:00 AM (Quiet reading & soft light)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🪜</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🪜</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Architectural Charm</div>
-        <div class="font-bold text-slate-800 text-[13px]">Centennial iron-cage elevators & mosaic cement tiles</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Architectural Charm</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Centennial iron-cage elevators & mosaic cement tiles</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🤫</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🤫</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Resident Etiquette</div>
-        <div class="font-bold text-slate-800 text-[13px]">Tread softly past residential doorways</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Resident Etiquette</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Tread softly past residential doorways</div>
       </div>
     </div>
   
@@ -9332,17 +8882,17 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: When Saigon Kindles Her Constellations</a>
-  <a href="#terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Terroir Mixology: The Rise of Vietnamese Craft Cocktails</a>
-  <a href="#four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh</a>
+                  <a href="#introduction-when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: When Saigon Kindles Her Constellations</a>
+  <a href="#terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Terroir Mixology: The Rise of Vietnamese Craft Cocktails</a>
+  <a href="#four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh</a>
   <a href="#the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)</a>
   <a href="#heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang</a>
   <a href="#grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Grand Panoramas on Le Loi & Nam Ky Khoi Nghia</a>
-  <a href="#the-subterranean-realm-hidden-alleyway-speakeasies" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Subterranean Realm: Hidden Alleyway Speakeasies</a>
+  <a href="#the-subterranean-realm-hidden-alleyway-speakeasies" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Subterranean Realm: Hidden Alleyway Speakeasies</a>
   <a href="#anatomy-of-the-secret-bar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Anatomy of the Secret Bar:</a>
-  <a href="#curated-beverage-tariff-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Beverage Tariff Matrix (2026 Reference)</a>
-  <a href="#field-protocols-for-nocturnal-elegance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Protocols for Nocturnal Elegance</a>
-  <a href="#epilogue-toasting-the-eternal-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Toasting the Eternal Metropolis</a>
+  <a href="#curated-beverage-tariff-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Beverage Tariff Matrix (2026 Reference)</a>
+  <a href="#field-protocols-for-nocturnal-elegance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Protocols for Nocturnal Elegance</a>
+  <a href="#epilogue-toasting-the-eternal-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Toasting the Eternal Metropolis</a>
 
               </div>
             </nav>
@@ -9352,47 +8902,34 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Walking Radius</div>
-        <div class="text-[13px] font-bold text-slate-900">200m – 700m from Ben Thanh</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Walking Radius</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">200m – 700m from Ben Thanh</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🍸</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Cocktail Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">180,000 – 380,000 VND / signature</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🌅</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Golden Hour</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">17:30 – 19:00 PM (Twilight)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌅</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Golden Twilight Hour</div>
-        <div class="text-[13px] font-bold text-slate-900">17:30 – 19:00 PM (Sunset transition)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🍸</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Cocktail Tariff</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">180,000 – 380,000 VND</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">👔</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Dress Standard</div>
-        <div class="text-[13px] font-bold text-slate-900">Smart Casual (Tailored shirts & footwear)</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -9508,17 +9045,17 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Beverage Classification</th><th class="p-4 font-bold text-left">Ingredients &amp; Extraction Complexity</th><th class="p-4 font-bold text-left">2026 Tariff Baseline (VND)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Beverage Classification</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Ingredients &amp; Extraction Complexity</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Tariff Baseline (VND)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Signature Terroir Cocktails</strong></td><td class="p-4">Premium spirits infused with regional Vietnamese botanicals</td><td class="p-4"><strong>220,000 – 320,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Classic Heritage Standards</strong></td><td class="p-4">Negroni, Boulevardier, Sazerac, and Dry Martini to global standards</td><td class="p-4"><strong>200,000 – 280,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Bespoke Omakase Mixology</strong></td><td class="p-4">Fully tailored libations based on individual palate preferences</td><td class="p-4"><strong>280,000 – 380,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Regional Craft Beers (Pint/Bottle)</strong></td><td class="p-4">Small-batch IPA, wheat, and seasonal porters from local micro-breweries</td><td class="p-4"><strong>110,000 – 160,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Botanical Zero-Proof Mocktails</strong></td><td class="p-4">House-distilled floral hydrosols, cold-pressed tropical juices, and sparkling water</td><td class="p-4"><strong>140,000 – 190,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Artisan Small Plates (Tapas)</strong></td><td class="p-4">Sun-dried upland beef, artisanal Dalat cheeses, and wild truffle shoestring potatoes</td><td class="p-4"><strong>150,000 – 290,000</strong></td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Signature Terroir Cocktails</strong></td><td class="p-4 text-slate-800 font-medium">Premium spirits infused with regional Vietnamese botanicals</td><td class="p-4 text-slate-800 font-medium"><strong>220,000 – 320,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Classic Heritage Standards</strong></td><td class="p-4 text-slate-800 font-medium">Negroni, Boulevardier, Sazerac, and Dry Martini to global standards</td><td class="p-4 text-slate-800 font-medium"><strong>200,000 – 280,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Bespoke Omakase Mixology</strong></td><td class="p-4 text-slate-800 font-medium">Fully tailored libations based on individual palate preferences</td><td class="p-4 text-slate-800 font-medium"><strong>280,000 – 380,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Regional Craft Beers (Pint/Bottle)</strong></td><td class="p-4 text-slate-800 font-medium">Small-batch IPA, wheat, and seasonal porters from local micro-breweries</td><td class="p-4 text-slate-800 font-medium"><strong>110,000 – 160,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Botanical Zero-Proof Mocktails</strong></td><td class="p-4 text-slate-800 font-medium">House-distilled floral hydrosols, cold-pressed tropical juices, and sparkling water</td><td class="p-4 text-slate-800 font-medium"><strong>140,000 – 190,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Artisan Small Plates (Tapas)</strong></td><td class="p-4 text-slate-800 font-medium">Sun-dried upland beef, artisanal Dalat cheeses, and wild truffle shoestring potatoes</td><td class="p-4 text-slate-800 font-medium"><strong>150,000 – 290,000</strong></td></tr>
 
           </tbody>
         </table>
@@ -9551,7 +9088,7 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Toasting the Eternal Metropolis</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Gazing through the rim of a crystal coupe as twilight breeze ruffles the palms, listening to the muffled hum of traffic circling below, one grasps the singular romance of Saigon. She is a city that never completely surrenders to sleep—a resilient, generous metropolis that welcomes the night with grace, warmth, and wonder.
               </p>
             </div>
@@ -9597,37 +9134,37 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Epicenter Boulevards</div>
-        <div class="font-bold text-slate-800 text-[13px]">Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Epicenter Boulevards</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍹</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍹</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Botanical Signatures</div>
-        <div class="font-bold text-slate-800 text-[13px]">Phu Quoc black pepper, Tra Bong cinnamon, pomelo gin</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Botanical Signatures</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Phu Quoc black pepper, Tra Bong cinnamon, pomelo gin</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚇</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Night Transit</div>
-        <div class="font-bold text-slate-800 text-[13px]">Metro Line 1 operating until 23:00 PM</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Night Transit</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Metro Line 1 operating until 23:00 PM</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎶</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎶</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Acoustic Atmosphere</div>
-        <div class="font-bold text-slate-800 text-[13px]">Live jazz, deep soul & vinyl selector nights</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Acoustic Atmosphere</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Live jazz, deep soul & vinyl selector nights</div>
       </div>
     </div>
   
@@ -9794,16 +9331,16 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-resurgence-of-dong-nais-miniature-ha-long-bay" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Resurgence of Dong Nai's "Miniature Ha Long Bay"</a>
-  <a href="#2026-transit-and-logistics-navigating-to-buu-long" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🗺️ 2026 Transit & Logistics: Navigating to Buu Long</a>
+                  <a href="#the-resurgence-of-dong-nais-miniature-ha-long-bay" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Resurgence of Dong Nai's "Miniature Ha Long Bay"</a>
+  <a href="#2026-transit-and-logistics-navigating-to-buu-long" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🗺️ 2026 Transit & Logistics: Navigating to Buu Long</a>
   <a href="#by-private-vehicle-motorbikecar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">By Private Vehicle (Motorbike/Car)</a>
   <a href="#by-public-bus" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">By Public Bus</a>
-  <a href="#the-core-sanctuaries-lakes-and-sacred-peaks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏔️ The Core Sanctuaries: Lakes and Sacred Peaks</a>
+  <a href="#the-core-sanctuaries-lakes-and-sacred-peaks" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏔️ The Core Sanctuaries: Lakes and Sacred Peaks</a>
   <a href="#the-twin-waters-long-an-and-long-van-lakes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Twin Waters: Long An & Long Van Lakes</a>
   <a href="#binh-dien-mountain-and-buu-phong-ancient-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Binh Dien Mountain & Buu Phong Ancient Pagoda</a>
   <a href="#long-an-mountain-and-long-son-thach-dong-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Long An Mountain & Long Son Thach Dong Pagoda</a>
-  <a href="#curated-experiences-for-the-2026-explorer" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏕️ Curated Experiences for the 2026 Explorer</a>
-  <a href="#essential-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 Essential Field Notes for the Discerning Traveler</a>
+  <a href="#curated-experiences-for-the-2026-explorer" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏕️ Curated Experiences for the 2026 Explorer</a>
+  <a href="#essential-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Essential Field Notes for the Discerning Traveler</a>
   <a href="#regional-synergy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Regional Synergy</a>
 
               </div>
@@ -9814,60 +9351,40 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> Huynh Van Nghe Street, Tran Bien Ward, Dong Nai Province (6km from Bien Hoa center).</li>
-<li><strong>Scale:</strong> 84 hectares of lakes, mountains, and ancient temples.</li>
-<li><strong>2026 Ticket Pricing:</strong> 150,000 VND (Adults) | 60,000 VND (Children 1.0m - 1.4m) | Free (Under 1.0m).</li>
-<li><strong>Operating Hours:</strong> 07:00 AM – 05:00 PM (Closed on Tuesdays for maintenance, except on national holidays).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-resurgence-of-dong-nais-miniature-ha-long-bay" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -9967,7 +9484,7 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -10013,37 +9530,28 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -10210,17 +9718,17 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-hospitality-imbued-with-heritage" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Hospitality Imbued with Heritage</a>
-  <a href="#core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Core Hallmarks of a Bespoke Saigon Boutique Hotel</a>
-  <a href="#five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh</a>
+                  <a href="#introduction-hospitality-imbued-with-heritage" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Hospitality Imbued with Heritage</a>
+  <a href="#core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Hallmarks of a Bespoke Saigon Boutique Hotel</a>
+  <a href="#five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh</a>
   <a href="#the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia</a>
   <a href="#silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Silverland Yen Hotel – A Zen Oasis Behind the North Gate</a>
   <a href="#hotel-continental-saigon-vietnams-oldest-grand-hotel-inaugurated-1880" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Hotel Continental Saigon – Vietnam’s Oldest Grand Hotel (Inaugurated 1880)</a>
   <a href="#la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">La Siesta Premium Sai Gon – Sophisticated Indochine Glamour</a>
   <a href="#fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Fusion Original Saigon Centre – Modernist Artistry on the Metro Line</a>
-  <a href="#comparative-matrix-premier-sanctuaries-at-a-glance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comparative Matrix: Premier Sanctuaries at a Glance</a>
-  <a href="#strategic-reservation-guidance-for-the-discerning-guest" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Strategic Reservation Guidance for the Discerning Guest</a>
-  <a href="#epilogue-awakening-to-saigons-living-grace" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Awakening to Saigon’s Living Grace</a>
+  <a href="#comparative-matrix-premier-sanctuaries-at-a-glance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparative Matrix: Premier Sanctuaries at a Glance</a>
+  <a href="#strategic-reservation-guidance-for-the-discerning-guest" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Strategic Reservation Guidance for the Discerning Guest</a>
+  <a href="#epilogue-awakening-to-saigons-living-grace" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Awakening to Saigon’s Living Grace</a>
 
               </div>
             </nav>
@@ -10230,47 +9738,34 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Market Proximity</div>
-        <div class="text-[13px] font-bold text-slate-900">200m – 900m Walking Radius</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Market Proximity</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">200m – 900m Walking Radius</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Architectural Range</div>
-        <div class="text-[13px] font-bold text-slate-900">1880 Belle Époque to Tropical Zen</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚶</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Transit Access</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Direct link to Metro Line 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚶</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Pedestrian Access</div>
-        <div class="text-[13px] font-bold text-slate-900">Direct link to Metro Line 1 & Quach Thi Trang</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">💵</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Tariff</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">2,200,000 – 6,800,000 VND / night</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💵</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Tariff Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">2,200,000 – 6,800,000 VND / night</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -10397,16 +9892,16 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Sanctuary Name</th><th class="p-4 font-bold text-left">Walking Distance to Market</th><th class="p-4 font-bold text-left">Design Aesthetic</th><th class="p-4 font-bold text-left">Key Differentiating Highlight</th><th class="p-4 font-bold text-left">2026 Tariff Baseline (VND)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sanctuary Name</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Walking Distance to Market</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Design Aesthetic</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Key Differentiating Highlight</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Tariff Baseline (VND)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Myst Dong Khoi</strong></td><td class="p-4">850m (11-min walk)</td><td class="p-4">Shipyard Heritage &amp; Tropical Vines</td><td class="p-4">Balcony outdoor stone tub &amp; daily high tea</td><td class="p-4"><strong>3,800,000 – 6,500,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Silverland Yen Hotel</strong></td><td class="p-4">250m (3-min walk)</td><td class="p-4">Zen Modern &amp; Natural Woods</td><td class="p-4">Rooftop clocktower Jacuzzi &amp; Tao Dan proximity</td><td class="p-4"><strong>2,200,000 – 3,800,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Hotel Continental</strong></td><td class="p-4">750m (9-min walk)</td><td class="p-4">Classical French Belle Époque (1880)</td><td class="p-4">Centennial courtyard frangipani &amp; literary heritage</td><td class="p-4"><strong>3,200,000 – 5,500,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>La Siesta Premium</strong></td><td class="p-4">350m (4-min walk)</td><td class="p-4">Neo-Indochine Glamour</td><td class="p-4">Rooftop infinity sunset pool &amp; herbal spa</td><td class="p-4"><strong>2,800,000 – 4,800,000</strong></td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Fusion Original</strong></td><td class="p-4">200m (2-min walk)</td><td class="p-4">Contemporary Pan-Asian Art</td><td class="p-4">Direct subterranean Metro tunnel connection</td><td class="p-4"><strong>3,500,000 – 6,800,000</strong></td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Myst Dong Khoi</strong></td><td class="p-4 text-slate-800 font-medium">850m (11-min walk)</td><td class="p-4 text-slate-800 font-medium">Shipyard Heritage &amp; Tropical Vines</td><td class="p-4 text-slate-800 font-medium">Balcony outdoor stone tub &amp; daily high tea</td><td class="p-4 text-slate-800 font-medium"><strong>3,800,000 – 6,500,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Silverland Yen Hotel</strong></td><td class="p-4 text-slate-800 font-medium">250m (3-min walk)</td><td class="p-4 text-slate-800 font-medium">Zen Modern &amp; Natural Woods</td><td class="p-4 text-slate-800 font-medium">Rooftop clocktower Jacuzzi &amp; Tao Dan proximity</td><td class="p-4 text-slate-800 font-medium"><strong>2,200,000 – 3,800,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Hotel Continental</strong></td><td class="p-4 text-slate-800 font-medium">750m (9-min walk)</td><td class="p-4 text-slate-800 font-medium">Classical French Belle Époque (1880)</td><td class="p-4 text-slate-800 font-medium">Centennial courtyard frangipani &amp; literary heritage</td><td class="p-4 text-slate-800 font-medium"><strong>3,200,000 – 5,500,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>La Siesta Premium</strong></td><td class="p-4 text-slate-800 font-medium">350m (4-min walk)</td><td class="p-4 text-slate-800 font-medium">Neo-Indochine Glamour</td><td class="p-4 text-slate-800 font-medium">Rooftop infinity sunset pool &amp; herbal spa</td><td class="p-4 text-slate-800 font-medium"><strong>2,800,000 – 4,800,000</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Fusion Original</strong></td><td class="p-4 text-slate-800 font-medium">200m (2-min walk)</td><td class="p-4 text-slate-800 font-medium">Contemporary Pan-Asian Art</td><td class="p-4 text-slate-800 font-medium">Direct subterranean Metro tunnel connection</td><td class="p-4 text-slate-800 font-medium"><strong>3,500,000 – 6,800,000</strong></td></tr>
 
           </tbody>
         </table>
@@ -10438,7 +9933,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Awakening to Saigon’s Living Grace</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 After a vibrant day immersed in the aromas, textiles, and lively chatter of Ben Thanh Market, returning to a room scented with gentle lemongrass oil, sinking into cool Egyptian cotton sheets, and gazing out as twilight softens over ancient tamarind trees brings deep restorative peace. The boutique sanctuaries surrounding Ben Thanh do not merely shelter you; they weave you into the enduring, poetic narrative of Saigon herself.
               </p>
             </div>
@@ -10484,37 +9979,37 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Sanctuary Corridors</div>
-        <div class="font-bold text-slate-800 text-[13px]">Ho Huan Nghiep, Thu Khoa Huan, Dong Khoi, Ly Tu Trong, Le Loi</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Sanctuary Corridors</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ho Huan Nghiep, Thu Khoa Huan, Dong Khoi, Ly Tu Trong, Le Loi</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛎️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛎️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Concierge Standard</div>
-        <div class="font-bold text-slate-800 text-[13px]">Bespoke butler service & private airport transfers</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Concierge Standard</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Bespoke butler service & private airport transfers</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛏️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛏️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Signature Highlights</div>
-        <div class="font-bold text-slate-800 text-[13px]">Open-air balcony stone tubs & salvage shipyard timber</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Signature Highlights</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Open-air balcony stone tubs & salvage shipyard timber</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Peak Booking Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">3–4 weeks in advance (Nov – Apr dry season)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Peak Booking Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">3–4 weeks in advance (Nov – Apr dry season)</div>
       </div>
     </div>
   
@@ -10681,15 +10176,15 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-culinary-terroir-of-the-mist-city" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Culinary Terroir of the Mist City</a>
-  <a href="#the-warmth-in-a-bowl-soups-and-broths" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🥣 The Warmth in a Bowl: Soups and Broths</a>
+                  <a href="#the-culinary-terroir-of-the-mist-city" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Culinary Terroir of the Mist City</a>
+  <a href="#the-warmth-in-a-bowl-soups-and-broths" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🥣 The Warmth in a Bowl: Soups and Broths</a>
   <a href="#banh-can-mini-pancake-with-quail-egg" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Banh Can (Mini Pancake with Quail Egg)</a>
   <a href="#banh-mi-xiu-mai-pork-meatball-baguette" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Banh Mi Xiu Mai (Pork Meatball Baguette)</a>
-  <a href="#the-charcoal-evening-night-market-signatures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🔥 The Charcoal Evening: Night Market Signatures</a>
+  <a href="#the-charcoal-evening-night-market-signatures" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🔥 The Charcoal Evening: Night Market Signatures</a>
   <a href="#banh-trang-nuong-vietnamese-pizza" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Banh Trang Nuong (Vietnamese Pizza)</a>
   <a href="#kem-bo-avocado-ice-cream" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Kem Bo (Avocado Ice Cream)</a>
-  <a href="#the-discerning-diners-matrix-top-3-must-eats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The Discerning Diner's Matrix: Top 3 Must-Eats</a>
-  <a href="#insider-protocols-for-the-2026-traveler" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Traveler</a>
+  <a href="#the-discerning-diners-matrix-top-3-must-eats" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The Discerning Diner's Matrix: Top 3 Must-Eats</a>
+  <a href="#insider-protocols-for-the-2026-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Traveler</a>
 
               </div>
             </nav>
@@ -10699,60 +10194,40 @@ export const daLatSpecialtiesHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Gastronomic Region:</strong> Langbiang Plateau, Lam Dong Province.</li>
-<li><strong>Signature Flavors:</strong> Earthy, umami-rich, warming broths, and farm-to-table highland produce.</li>
-<li><strong>2026 Price Range:</strong> 30,000 – 150,000 VND (Street Food) | 250,000+ VND (Restaurants).</li>
-<li><strong>Optimal Tasting Window:</strong> Early morning for hot broths, late evening for charcoal-grilled street food.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-culinary-terroir-of-the-mist-city" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -10828,14 +10303,14 @@ For the 2026 culinary traveler, Da Lat is no longer just a haven of French colon
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Dish</th><th class="p-4 font-bold text-left">Core Ingredient</th><th class="p-4 font-bold text-left">Highland Twist</th><th class="p-4 font-bold text-left">2026 Baseline Price</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Dish</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Core Ingredient</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Highland Twist</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Baseline Price</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lau Ga La E</strong></td><td class="p-4">Free-range chicken</td><td class="p-4">Lemon basil (La E) native to the highlands</td><td class="p-4">250,000 VND / pot</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Banh Can</strong></td><td class="p-4">Rice flour, quail egg</td><td class="p-4">Served with hot xiu mai broth</td><td class="p-4">40,000 VND / portion</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Lau Bo Ba Toa</strong></td><td class="p-4">Mountain-raised beef</td><td class="p-4">Thick, herb-infused bone broth</td><td class="p-4">300,000 VND / pot</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lau Ga La E</strong></td><td class="p-4 text-slate-800 font-medium">Free-range chicken</td><td class="p-4 text-slate-800 font-medium">Lemon basil (La E) native to the highlands</td><td class="p-4 text-slate-800 font-medium">250,000 VND / pot</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Banh Can</strong></td><td class="p-4 text-slate-800 font-medium">Rice flour, quail egg</td><td class="p-4 text-slate-800 font-medium">Served with hot xiu mai broth</td><td class="p-4 text-slate-800 font-medium">40,000 VND / portion</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lau Bo Ba Toa</strong></td><td class="p-4 text-slate-800 font-medium">Mountain-raised beef</td><td class="p-4 text-slate-800 font-medium">Thick, herb-infused bone broth</td><td class="p-4 text-slate-800 font-medium">300,000 VND / pot</td></tr>
 
           </tbody>
         </table>
@@ -10859,7 +10334,7 @@ For the 2026 culinary traveler, Da Lat is no longer just a haven of French colon
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -10905,37 +10380,28 @@ For the 2026 culinary traveler, Da Lat is no longer just a haven of French colon
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -11102,15 +10568,15 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-resilient-looms-of-the-mekong-starch" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Resilient Looms of the Mekong Starch</a>
-  <a href="#the-architecture-of-the-noodle-a-craft-unveiled" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🛶 The Architecture of the Noodle: A Craft Unveiled</a>
+                  <a href="#the-resilient-looms-of-the-mekong-starch" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Resilient Looms of the Mekong Starch</a>
+  <a href="#the-architecture-of-the-noodle-a-craft-unveiled" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🛶 The Architecture of the Noodle: A Craft Unveiled</a>
   <a href="#step-1-the-rice-slurry-xay-bot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Step 1: The Rice Slurry (Xay Bot)</a>
   <a href="#step-2-the-steam-bath-trang-banh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Step 2: The Steam Bath (Trang Banh)</a>
   <a href="#step-3-solar-curing-phoi-banh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Step 3: Solar Curing (Phoi Banh)</a>
   <a href="#step-4-the-mechanical-cut-cat-soi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Step 4: The Mechanical Cut (Cat Soi)</a>
-  <a href="#the-genesis-of-pizza-hu-tieu" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🍕 The Genesis of "Pizza Hu Tieu"</a>
-  <a href="#the-heritage-matrix-tracing-the-flavors" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The Heritage Matrix: Tracing the Flavors</a>
-  <a href="#field-notes-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Field Notes for the 2026 Voyager</a>
+  <a href="#the-genesis-of-pizza-hu-tieu" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🍕 The Genesis of "Pizza Hu Tieu"</a>
+  <a href="#the-heritage-matrix-tracing-the-flavors" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The Heritage Matrix: Tracing the Flavors</a>
+  <a href="#field-notes-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Field Notes for the 2026 Voyager</a>
 
               </div>
             </nav>
@@ -11120,60 +10586,40 @@ export const sauHoaiRiceNoodleOvenHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> 476/14 Lo Vong Cung Street, An Binh Ward, Ninh Kieu District, Can Tho.</li>
-<li><strong>Legacy:</strong> Over 40 years of traditional rice noodle (Hu Tieu) craftsmanship.</li>
-<li><strong>Signature Dish:</strong> The legendary &quot;Pizza Hu Tieu&quot; (Deep-fried rice noodles).</li>
-<li><strong>2026 Admission / Dish Price:</strong> Free entry | 50,000 VND / portion of Pizza Hu Tieu.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-resilient-looms-of-the-mekong-starch" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -11239,14 +10685,14 @@ For the cultural voyager in 2026, this is not merely a rest stop; it is an immer
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Experience</th><th class="p-4 font-bold text-left">Sensory Profile</th><th class="p-4 font-bold text-left">2026 Pricing</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Experience</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sensory Profile</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">2026 Pricing</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Pizza Hu Tieu</strong></td><td class="p-4">Crisp, savory, coconut-infused umami</td><td class="p-4">50,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Traditional Hu Tieu Nam Vang</strong></td><td class="p-4">Chewy strands in clear, bone-marrow pork broth</td><td class="p-4">45,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Noodle Crafting Workshop</strong></td><td class="p-4">Tactile, steamy, physically demanding</td><td class="p-4">Included (Tips appreciated)</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Pizza Hu Tieu</strong></td><td class="p-4 text-slate-800 font-medium">Crisp, savory, coconut-infused umami</td><td class="p-4 text-slate-800 font-medium">50,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Traditional Hu Tieu Nam Vang</strong></td><td class="p-4 text-slate-800 font-medium">Chewy strands in clear, bone-marrow pork broth</td><td class="p-4 text-slate-800 font-medium">45,000 VND</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Noodle Crafting Workshop</strong></td><td class="p-4 text-slate-800 font-medium">Tactile, steamy, physically demanding</td><td class="p-4 text-slate-800 font-medium">Included (Tips appreciated)</td></tr>
 
           </tbody>
         </table>
@@ -11271,7 +10717,7 @@ For the cultural voyager in 2026, this is not merely a rest stop; it is an immer
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -11317,37 +10763,28 @@ For the cultural voyager in 2026, this is not merely a rest stop; it is an immer
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -11514,14 +10951,14 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-far-more-than-a-commodity-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Far More Than a Commodity Bazaar</a>
-  <a href="#master-map-15-experiences-across-four-golden-windows" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Map: 15 Experiences Across Four Golden Windows</a>
+                  <a href="#introduction-far-more-than-a-commodity-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Far More Than a Commodity Bazaar</a>
+  <a href="#master-map-15-experiences-across-four-golden-windows" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Map: 15 Experiences Across Four Golden Windows</a>
   <a href="#time-window-1-early-morning-awakening-0630-0930" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)</a>
   <a href="#time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)</a>
   <a href="#time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)</a>
   <a href="#time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)</a>
-  <a href="#comparative-itinerary-schedules-4-hour-express-vs-full-day" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Comparative Itinerary Schedules: 4-Hour Express vs. Full Day</a>
-  <a href="#key-takeaways-and-field-advice-from-the-rice-tour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Key Takeaways & Field Advice from The Rice Tour</a>
+  <a href="#comparative-itinerary-schedules-4-hour-express-vs-full-day" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparative Itinerary Schedules: 4-Hour Express vs. Full Day</a>
+  <a href="#key-takeaways-and-field-advice-from-the-rice-tour" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Key Takeaways & Field Advice from The Rice Tour</a>
 
               </div>
             </nav>
@@ -11531,47 +10968,34 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Geographic Scope</div>
-        <div class="text-[13px] font-bold text-slate-900">Ben Thanh Epicenter & 1km Radius</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Geographic Scope</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Ben Thanh Core & 1km Radius</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Suggested Duration</div>
-        <div class="text-[13px] font-bold text-slate-900">4 Hours to 24-Hour Immersion</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Suggested Time</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">4 Hours to Full Day Immersion</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">2026 Budget Baseline</div>
-        <div class="text-[13px] font-bold text-slate-900">250,000 – 850,000 VND / Guest</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">2026 Budget</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">250,000 – 850,000 VND / Guest</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌙</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Night Market Shift</div>
-        <div class="text-[13px] font-bold text-slate-900">18:00 – 23:30 Daily</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -11648,13 +11072,13 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Itinerary</th><th class="p-4 font-bold text-left">Morning Focus</th><th class="p-4 font-bold text-left">Midday Focus</th><th class="p-4 font-bold text-left">Evening Focus</th><th class="p-4 font-bold text-left">Estimated Spend (VND)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Itinerary</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Morning Focus</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Midday Focus</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Evening Focus</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Estimated Spend (VND)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4">Photo op at Clock Tower + Breakfast at East Gate</td><td class="p-4">Metro station visit + Che Ba Muoi sweet soup</td><td class="p-4">Quick shopping at craft section</td><td class="p-4">150,000 – 250,000</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Full-Day In-Depth (Cultural Explorer)</strong></td><td class="p-4">Dawn photography + Park coffee + Food court tour</td><td class="p-4">Metro Lotus Skylight + Fine Arts Museum</td><td class="p-4">Rooftop cocktail + Night Market seafood feast</td><td class="p-4">600,000 – 1,200,000</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4 text-slate-800 font-medium">Photo op at Clock Tower + Breakfast at East Gate</td><td class="p-4 text-slate-800 font-medium">Metro station visit + Che Ba Muoi sweet soup</td><td class="p-4 text-slate-800 font-medium">Quick shopping at craft section</td><td class="p-4 text-slate-800 font-medium">150,000 – 250,000</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Full-Day In-Depth (Cultural Explorer)</strong></td><td class="p-4 text-slate-800 font-medium">Dawn photography + Park coffee + Food court tour</td><td class="p-4 text-slate-800 font-medium">Metro Lotus Skylight + Fine Arts Museum</td><td class="p-4 text-slate-800 font-medium">Rooftop cocktail + Night Market seafood feast</td><td class="p-4 text-slate-800 font-medium">600,000 – 1,200,000</td></tr>
 
           </tbody>
         </table>
@@ -11678,7 +11102,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Living Pulse of Saigon</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 To truly experience Ben Thanh Market is not merely to buy a souvenir, but to surrender to its living rhythm: to sit on a low stool at dawn sipping sweet milk coffee, to marvel at century-old rafters, and to watch the city dance beneath neon lights at dusk. It is where Saigon's past, present, and future embrace with timeless warmth.
               </p>
             </div>
@@ -11724,37 +11148,37 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Heart of Saigon</div>
-        <div class="font-bold text-slate-800 text-[13px]">District 1, Ho Chi Minh City</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Heart of Saigon</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">District 1, Ho Chi Minh City</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌤️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌤️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Peak Photography Window</div>
-        <div class="font-bold text-slate-800 text-[13px]">06:30 – 08:00 AM (Golden Dawn)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Peak Photography Window</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">06:30 – 08:00 AM (Golden Dawn)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🍲</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Must-Try Gastronomy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Bun Rieu Cua, Banh Beo & Che Ba Muoi</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Must-Try Gastronomy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Bun Rieu Cua, Banh Beo & Che Ba Muoi</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚇</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Subterranean Link</div>
-        <div class="font-bold text-slate-800 text-[13px]">Direct access to Metro Line 1</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Subterranean Link</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Direct access to Metro Line 1</div>
       </div>
     </div>
   
@@ -11921,14 +11345,14 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Stepping into Saigon's Beating Heart Like an Insider</a>
-  <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
+                  <a href="#introduction-stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Stepping into Saigon's Beating Heart Like an Insider</a>
+  <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
   <a href="#the-open-air-night-street-bazaar-1800-2330" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Open-Air Night Street Bazaar (18:00 – 23:30)</a>
-  <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
-  <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
-  <a href="#master-bargaining-rules-the-smiling-negotiation-code" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Bargaining Rules: The "Smiling Negotiation" Code</a>
-  <a href="#hygiene-and-dining-safety-in-the-culinary-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Hygiene & Dining Safety in the Culinary Hall</a>
-  <a href="#safety-scams-and-emergency-contacts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Safety, Scams & Emergency Contacts</a>
+  <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
+  <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
+  <a href="#master-bargaining-rules-the-smiling-negotiation-code" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Bargaining Rules: The "Smiling Negotiation" Code</a>
+  <a href="#hygiene-and-dining-safety-in-the-culinary-hall" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Hygiene & Dining Safety in the Culinary Hall</a>
+  <a href="#safety-scams-and-emergency-contacts" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Safety, Scams & Emergency Contacts</a>
 
               </div>
             </nav>
@@ -11938,47 +11362,34 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Exact Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Le Loi Blvd, Ben Thanh, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Exact Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Le Loi Blvd, Ben Thanh, District 1</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Covered Day Market</div>
-        <div class="text-[13px] font-bold text-slate-900">06:00 – 18:00 (1,400+ Stalls)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Operating Window</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">06:00 – 18:00 & 18:00 – 23:30</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌙</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Outdoor Night Market</div>
-        <div class="text-[13px] font-bold text-slate-900">18:00 – 23:30 (East & West Gates)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Admission Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Free Public Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Admission Tariff</div>
-        <div class="text-[13px] font-bold text-slate-900">Free Public Entry</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -12038,15 +11449,15 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Parking Facility</th><th class="p-4 font-bold text-left">Vehicle Type</th><th class="p-4 font-bold text-left">Official Fee (2026)</th><th class="p-4 font-bold text-left">Walking Distance</th><th class="p-4 font-bold text-left">Pros &amp; Field Notes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Parking Facility</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Vehicle Type</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Official Fee (2026)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Walking Distance</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Pros &amp; Field Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ben Thanh Central Metro Station Basement</strong></td><td class="p-4">Scooters &amp; E-Bikes</td><td class="p-4">5,000 – 10,000 VND</td><td class="p-4">Direct internal tunnel connection</td><td class="p-4">Brand-new, air-conditioned, 24/7 CCTV, IC card gates</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Saigon Centre / Takashimaya Basement</strong></td><td class="p-4">Scooters &amp; Passenger Cars</td><td class="p-4">Scooter: 10,000 VND / 4h<br>Car: 50,000 VND / 2h</td><td class="p-4">250m (3-min walk)</td><td class="p-4">Premium underground parking, secure, sheltered pedestrian subway link</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>September 23rd Park Facility (Le Lai St)</strong></td><td class="p-4">Scooters &amp; Tour Buses</td><td class="p-4">6,000 – 10,000 VND</td><td class="p-4">150m (2-min walk)</td><td class="p-4">Sheltered surface parking, spacious ingress, operates until 23:00</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Kumho / Diamond Plaza Garage</strong></td><td class="p-4">Passenger Cars</td><td class="p-4">40,000 – 50,000 VND / block</td><td class="p-4">800m (Walk along Le Duan)</td><td class="p-4">Reliable overflow option when central District 1 parking fills up</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ben Thanh Central Metro Station Basement</strong></td><td class="p-4 text-slate-800 font-medium">Scooters &amp; E-Bikes</td><td class="p-4 text-slate-800 font-medium">5,000 – 10,000 VND</td><td class="p-4 text-slate-800 font-medium">Direct internal tunnel connection</td><td class="p-4 text-slate-800 font-medium">Brand-new, air-conditioned, 24/7 CCTV, IC card gates</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Saigon Centre / Takashimaya Basement</strong></td><td class="p-4 text-slate-800 font-medium">Scooters &amp; Passenger Cars</td><td class="p-4 text-slate-800 font-medium">Scooter: 10,000 VND / 4h<br>Car: 50,000 VND / 2h</td><td class="p-4 text-slate-800 font-medium">250m (3-min walk)</td><td class="p-4 text-slate-800 font-medium">Premium underground parking, secure, sheltered pedestrian subway link</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>September 23rd Park Facility (Le Lai St)</strong></td><td class="p-4 text-slate-800 font-medium">Scooters &amp; Tour Buses</td><td class="p-4 text-slate-800 font-medium">6,000 – 10,000 VND</td><td class="p-4 text-slate-800 font-medium">150m (2-min walk)</td><td class="p-4 text-slate-800 font-medium">Sheltered surface parking, spacious ingress, operates until 23:00</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Kumho / Diamond Plaza Garage</strong></td><td class="p-4 text-slate-800 font-medium">Passenger Cars</td><td class="p-4 text-slate-800 font-medium">40,000 – 50,000 VND / block</td><td class="p-4 text-slate-800 font-medium">800m (Walk along Le Duan)</td><td class="p-4 text-slate-800 font-medium">Reliable overflow option when central District 1 parking fills up</td></tr>
 
           </tbody>
         </table>
@@ -12115,7 +11526,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Mastering the Art of Market Travel</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Armed with cultural understanding and practical wisdom, Ben Thanh transforms from a bewildering maze into an open book of southern Vietnamese life. Walk with curiosity, bargain with a smile, and savor the unforgettable tapestry of flavors and human connections waiting around every turn.
               </p>
             </div>
@@ -12161,37 +11572,37 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Centennial Market</div>
-        <div class="font-bold text-slate-800 text-[13px]">Inaugurated March 1914</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Centennial Market</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Inaugurated March 1914</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚪</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚪</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Main Portals</div>
-        <div class="font-bold text-slate-800 text-[13px]">4 Main Gates (South, North, East, West)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Main Portals</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">4 Main Gates (South, North, East, West)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💡</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💡</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Insider Sweet Spot</div>
-        <div class="font-bold text-slate-800 text-[13px]">08:30 – 10:30 AM (Cool & unhurried)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Insider Sweet Spot</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">08:30 – 10:30 AM (Cool & unhurried)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚇</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚇</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Modern Transit</div>
-        <div class="font-bold text-slate-800 text-[13px]">Direct escalator from Metro concourse</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Modern Transit</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Direct escalator from Metro concourse</div>
       </div>
     </div>
   
@@ -12358,12 +11769,12 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-anatomy-of-the-ancient-town-loaf" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Anatomy of the Ancient Town Loaf</a>
-  <a href="#the-master-ovens-2026-curated-tiers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🥖 The Master Ovens: 2026 Curated Tiers</a>
+                  <a href="#the-anatomy-of-the-ancient-town-loaf" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Anatomy of the Ancient Town Loaf</a>
+  <a href="#the-master-ovens-2026-curated-tiers" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🥖 The Master Ovens: 2026 Curated Tiers</a>
   <a href="#tier-1-the-global-icons" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Tier 1: The Global Icons</a>
   <a href="#tier-2-the-local-sanctuaries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Tier 2: The Local Sanctuaries</a>
-  <a href="#the-banh-mi-matrix-decoding-the-fillings" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The Banh Mi Matrix: Decoding the Fillings</a>
-  <a href="#field-notes-for-the-discerning-eater" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Field Notes for the Discerning Eater</a>
+  <a href="#the-banh-mi-matrix-decoding-the-fillings" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The Banh Mi Matrix: Decoding the Fillings</a>
+  <a href="#field-notes-for-the-discerning-eater" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Field Notes for the Discerning Eater</a>
 
               </div>
             </nav>
@@ -12373,60 +11784,40 @@ export const hoiAnBanhMiGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Gastronomic Coordinates:</strong> Hoi An Ancient Town, Quang Nam Province.</li>
-<li><strong>The Signature Architecture:</strong> Pointed ends, hyper-crispy exterior, intensely dense crumb.</li>
-<li><strong>2026 Price Baseline:</strong> 30,000 – 45,000 VND.</li>
-<li><strong>Culinary Fusion:</strong> French baking techniques hybridized with complex Champa/Vietnamese marinades.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-anatomy-of-the-ancient-town-loaf" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -12503,15 +11894,15 @@ For the 2026 epicurean, understanding this sandwich requires looking beyond the 
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Element</th><th class="p-4 font-bold text-left">The Hoi An Standard</th><th class="p-4 font-bold text-left">The Saigon Contrast</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Element</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">The Hoi An Standard</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">The Saigon Contrast</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Bread</strong></td><td class="p-4">Pointed ends, dense crumb, wood-fired</td><td class="p-4">Rounded ends, airy/hollow interior</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Paté</strong></td><td class="p-4">Wet, heavily spiced (five-spice, cinnamon)</td><td class="p-4">Firm, dry, liver-forward</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Gravy</strong></td><td class="p-4">Thick, dark pork braising liquid (<em>Nước xíu</em>)</td><td class="p-4">Soy sauce and Maggi seasoning</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>The Greens</strong></td><td class="p-4">Mint, coriander, sweet basil</td><td class="p-4">Primarily cilantro and cucumber</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Bread</strong></td><td class="p-4 text-slate-800 font-medium">Pointed ends, dense crumb, wood-fired</td><td class="p-4 text-slate-800 font-medium">Rounded ends, airy/hollow interior</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Paté</strong></td><td class="p-4 text-slate-800 font-medium">Wet, heavily spiced (five-spice, cinnamon)</td><td class="p-4 text-slate-800 font-medium">Firm, dry, liver-forward</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Gravy</strong></td><td class="p-4 text-slate-800 font-medium">Thick, dark pork braising liquid (<em>Nước xíu</em>)</td><td class="p-4 text-slate-800 font-medium">Soy sauce and Maggi seasoning</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>The Greens</strong></td><td class="p-4 text-slate-800 font-medium">Mint, coriander, sweet basil</td><td class="p-4 text-slate-800 font-medium">Primarily cilantro and cucumber</td></tr>
 
           </tbody>
         </table>
@@ -12535,7 +11926,7 @@ For the 2026 epicurean, understanding this sandwich requires looking beyond the 
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -12581,37 +11972,28 @@ For the 2026 epicurean, understanding this sandwich requires looking beyond the 
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -12778,8 +12160,8 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar</a>
-  <a href="#anatomy-of-the-7-most-common-scams-and-traps" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Anatomy of the 7 Most Common Scams & Traps</a>
+                  <a href="#introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar</a>
+  <a href="#anatomy-of-the-7-most-common-scams-and-traps" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Anatomy of the 7 Most Common Scams & Traps</a>
   <a href="#scam-1-the-astronomical-price-hike-300-500-inflation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)</a>
   <a href="#scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)</a>
   <a href="#scam-3-the-aggressive-shoe-repair-hustle" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 3: The Aggressive "Shoe Repair Hustle"</a>
@@ -12787,8 +12169,8 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
   <a href="#scam-5-distraction-pickpocketing-in-bottlenecks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 5: Distraction Pickpocketing in Bottlenecks</a>
   <a href="#scam-6-unregulated-copycat-metermonkey-taxis" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 6: Unregulated "Copycat" Metermonkey Taxis</a>
   <a href="#scam-7-confusing-polymer-banknote-denominations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 7: Confusing Polymer Banknote Denominations</a>
-  <a href="#verified-price-reference-benchmark-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Verified Price Reference Benchmark (2026 Edition)</a>
-  <a href="#emergency-directory-and-247-tourist-assistance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Emergency Directory & 24/7 Tourist Assistance</a>
+  <a href="#verified-price-reference-benchmark-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Verified Price Reference Benchmark (2026 Edition)</a>
+  <a href="#emergency-directory-and-247-tourist-assistance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Emergency Directory & 24/7 Tourist Assistance</a>
 
               </div>
             </nav>
@@ -12798,47 +12180,34 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Critical Perimeter</div>
-        <div class="text-[13px] font-bold text-slate-900">All 4 Gates & Quach Thi Trang Square</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">High-Alert Zone</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">All 4 Gates & Roundabout</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚨</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Risk Typology</div>
-        <div class="text-[13px] font-bold text-slate-900">Price Inflation & Curbside Soliciting</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🛡️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Bargaining Rule</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Negotiate 40–50% or Fixed Price</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛡️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Golden Rule</div>
-        <div class="text-[13px] font-bold text-slate-900">Negotiate 40–50% or seek Fixed Price</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">👮</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Market Police Desk</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">South Gate Station (Phan Chu Trinh)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">👮</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Market Police Desk</div>
-        <div class="text-[13px] font-bold text-slate-900">South Gate Station (Phan Chu Trinh)</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -12994,7 +12363,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Travel with Awareness and Heart</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Awareness is not about viewing every merchant with suspicion; it is about cultivating the grounded confidence that allows you to engage with generosity while protecting your peace. When you know the fair value of goods and respect local boundaries, your interactions inside Ben Thanh become joyful, authentic, and mutually rewarding.
               </p>
             </div>
@@ -13040,37 +12409,37 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Watch Out Areas</div>
-        <div class="font-bold text-slate-800 text-[13px]">South Gate pavement & Fruit pole vendors</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Watch Out Areas</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">South Gate pavement & Fruit pole vendors</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🥥</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🥥</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Fair Coconut Price</div>
-        <div class="font-bold text-slate-800 text-[13px]">25,000 – 35,000 VND / fruit</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Fair Coconut Price</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">25,000 – 35,000 VND / fruit</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Payment Safety</div>
-        <div class="font-bold text-slate-800 text-[13px]">Inspect banknote denominations carefully</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Payment Safety</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Inspect banknote denominations carefully</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎒</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎒</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bag Security</div>
-        <div class="font-bold text-slate-800 text-[13px]">Sling diagonally across chest in crowds</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Bag Security</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Sling diagonally across chest in crowds</div>
       </div>
     </div>
   
@@ -13237,13 +12606,13 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#deconstructing-the-an-giang-variation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Deconstructing the An Giang Variation</a>
-  <a href="#the-anatomy-of-the-plate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🥩 The Anatomy of the Plate</a>
+                  <a href="#deconstructing-the-an-giang-variation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deconstructing the An Giang Variation</a>
+  <a href="#the-anatomy-of-the-plate" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🥩 The Anatomy of the Plate</a>
   <a href="#the-meat-caramelized-and-julienned" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Meat: Caramelized and Julienned</a>
   <a href="#the-egg-braised-not-fried" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Egg: Braised, Not Fried</a>
   <a href="#the-accoutrements" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Accoutrements</a>
-  <a href="#the-2026-culinary-map-top-3-local-sanctuaries" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The 2026 Culinary Map: Top 3 Local Sanctuaries</a>
-  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
+  <a href="#the-2026-culinary-map-top-3-local-sanctuaries" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The 2026 Culinary Map: Top 3 Local Sanctuaries</a>
+  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
 
               </div>
             </nav>
@@ -13253,60 +12622,40 @@ export const longXuyenBrokenRiceGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Gastronomic Coordinates:</strong> Long Xuyen City, An Giang Province.</li>
-<li><strong>The Signature Architecture:</strong> Ultra-fine broken rice grains, julienned caramelized pork, braised duck eggs.</li>
-<li><strong>2026 Price Baseline:</strong> 35,000 – 50,000 VND per plate.</li>
-<li><strong>Optimal Tasting Window:</strong> Early morning (06:00 AM) or late night (after 09:00 PM).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="deconstructing-the-an-giang-variation" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13394,7 +12743,7 @@ For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -13440,37 +12789,28 @@ For the 2026 culinary traveler, a plate of Long Xuyen broken rice is immediately
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -13637,10 +12977,10 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-pungent-soul-of-the-delta" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Pungent Soul of the Delta</a>
-  <a href="#the-botanical-matrix-the-true-star-of-the-show" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌿 The Botanical Matrix: The True Star of the Show</a>
-  <a href="#the-2026-culinary-map-top-3-authentic-establishments" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The 2026 Culinary Map: Top 3 Authentic Establishments</a>
-  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
+                  <a href="#the-pungent-soul-of-the-delta" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Pungent Soul of the Delta</a>
+  <a href="#the-botanical-matrix-the-true-star-of-the-show" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌿 The Botanical Matrix: The True Star of the Show</a>
+  <a href="#the-2026-culinary-map-top-3-authentic-establishments" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The 2026 Culinary Map: Top 3 Authentic Establishments</a>
+  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
 
               </div>
             </nav>
@@ -13650,60 +12990,40 @@ export const canThoFermentedHotpotHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Gastronomic Coordinates:</strong> Can Tho City (The epicenter of Mekong Delta cuisine).</li>
-<li><strong>The Signature Flavor:</strong> Intensely pungent, umami-rich fermented fish broth (<em>Mắm Châu Đốc</em>).</li>
-<li><strong>2026 Price Baseline:</strong> 150,000 – 350,000 VND per hotpot (serves 2-4).</li>
-<li><strong>The Botanical Accompaniment:</strong> Up to 30 varieties of wild, aquatic, and garden-grown vegetables.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-pungent-soul-of-the-delta" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -13783,7 +13103,7 @@ Can Tho, as the logistical and cultural capital of the Delta, is the ultimate ar
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -13829,37 +13149,28 @@ Can Tho, as the logistical and cultural capital of the Delta, is the ultimate ar
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -14026,14 +13337,14 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-saigons-miniature-financial-street" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Saigon's Miniature Financial Street</a>
-  <a href="#ha-tam-vs-mai-van-the-west-gate-twin-titans" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Ha Tam vs. Mai Van: The West Gate Twin Titans</a>
-  <a href="#rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport</a>
-  <a href="#crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)</a>
+                  <a href="#introduction-saigons-miniature-financial-street" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Saigon's Miniature Financial Street</a>
+  <a href="#ha-tam-vs-mai-van-the-west-gate-twin-titans" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Ha Tam vs. Mai Van: The West Gate Twin Titans</a>
+  <a href="#rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport</a>
+  <a href="#crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)</a>
   <a href="#the-usd-big-head-vs-small-head-reality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The USD "Big Head" vs. "Small Head" Reality</a>
   <a href="#physical-condition-of-paper-currency" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Physical Condition of Paper Currency</a>
   <a href="#large-denominations-yield-superior-rates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Large Denominations Yield Superior Rates</a>
-  <a href="#five-step-security-protocol-for-large-cash-transactions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Five-Step Security Protocol for Large Cash Transactions</a>
+  <a href="#five-step-security-protocol-for-large-cash-transactions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Five-Step Security Protocol for Large Cash Transactions</a>
 
               </div>
             </nav>
@@ -14043,47 +13354,34 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Exact Coordinates</div>
-        <div class="text-[13px] font-bold text-slate-900">2 Nguyen An Ninh, Ben Thanh, District 1</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Exact Coordinates</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">2 Nguyen An Ninh, Opp. West Gate</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🕒</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Operating Schedule</div>
-        <div class="text-[13px] font-bold text-slate-900">07:30 – 20:30 Daily (7 Days/Week)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🕒</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Operating Hours</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">07:30 – 20:30 Daily (7 Days)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💱</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Top Currencies</div>
-        <div class="text-[13px] font-bold text-slate-900">USD, EUR, AUD, JPY, SGD, THB, KRW</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">💱</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Top Currencies</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">USD, EUR, AUD, JPY, SGD, THB</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛡️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Security Rating</div>
-        <div class="text-[13px] font-bold text-slate-900">High CCTV & Regulated Transactions</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -14133,16 +13431,16 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Evaluation Criteria</th><th class="p-4 font-bold text-left">Ha Tam Gold Shop (Ben Thanh)</th><th class="p-4 font-bold text-left">Commercial Banks (Vietcombank, BIDV)</th><th class="p-4 font-bold text-left">Airport Exchange Kiosks (SGN Airport)</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Evaluation Criteria</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Ha Tam Gold Shop (Ben Thanh)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Commercial Banks (Vietcombank, BIDV)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Airport Exchange Kiosks (SGN Airport)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Exchange Rate (VND Value)</strong></td><td class="p-4">⭐⭐⭐⭐⭐ Highest market rate, razor-thin buy/sell spread</td><td class="p-4">⭐⭐⭐⭐ Official pegged rate, moderate spread</td><td class="p-4">⭐⭐ Lowest rate; travelers lose 5% – 10% in spread</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Service Commission Fee</strong></td><td class="p-4">0 VND (Completely free)</td><td class="p-4">Often minimal or hidden in paperwork</td><td class="p-4">Frequently levies airport licensing fees</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Paperwork Requirements</strong></td><td class="p-4">None: Hand over cash -&gt; receive VND (30 seconds)</td><td class="p-4">Tedious: Passport, outbound flight ticket, proof of purpose</td><td class="p-4">Fast, but mandatory passport scanning</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Currencies Accepted</strong></td><td class="p-4">Vast: USD, EUR, GBP, JPY, AUD, CAD, SGD, THB, KRW, TWD, CNY, MYR...</td><td class="p-4">Restricted primarily to major Tier-1 currencies</td><td class="p-4">Wide variety, but punitive exchange margins</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Operating Hours</strong></td><td class="p-4">07:30 AM – 08:30 PM (7 days a week)</td><td class="p-4">Banking hours only (Mon – Fri, 08:00 – 16:30)</td><td class="p-4">24/7 matching international flight schedules</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Exchange Rate (VND Value)</strong></td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ Highest market rate, razor-thin buy/sell spread</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐ Official pegged rate, moderate spread</td><td class="p-4 text-slate-800 font-medium">⭐⭐ Lowest rate; travelers lose 5% – 10% in spread</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Service Commission Fee</strong></td><td class="p-4 text-slate-800 font-medium">0 VND (Completely free)</td><td class="p-4 text-slate-800 font-medium">Often minimal or hidden in paperwork</td><td class="p-4 text-slate-800 font-medium">Frequently levies airport licensing fees</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Paperwork Requirements</strong></td><td class="p-4 text-slate-800 font-medium">None: Hand over cash -&gt; receive VND (30 seconds)</td><td class="p-4 text-slate-800 font-medium">Tedious: Passport, outbound flight ticket, proof of purpose</td><td class="p-4 text-slate-800 font-medium">Fast, but mandatory passport scanning</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Currencies Accepted</strong></td><td class="p-4 text-slate-800 font-medium">Vast: USD, EUR, GBP, JPY, AUD, CAD, SGD, THB, KRW, TWD, CNY, MYR...</td><td class="p-4 text-slate-800 font-medium">Restricted primarily to major Tier-1 currencies</td><td class="p-4 text-slate-800 font-medium">Wide variety, but punitive exchange margins</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Operating Hours</strong></td><td class="p-4 text-slate-800 font-medium">07:30 AM – 08:30 PM (7 days a week)</td><td class="p-4 text-slate-800 font-medium">Banking hours only (Mon – Fri, 08:00 – 16:30)</td><td class="p-4 text-slate-800 font-medium">24/7 matching international flight schedules</td></tr>
 
           </tbody>
         </table>
@@ -14210,7 +13508,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Financial Savvy on the Southern Frontier</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Navigating the lively bustle of Ha Tam Gold Shop is an essential ritual of the seasoned traveler in Saigon. Stepping away with freshly minted Vietnamese Dong in hand, you are fully prepared to immerse yourself in the rich culinary and artisan treasures of the Mekong Delta with confidence and fiscal peace of mind.
               </p>
             </div>
@@ -14256,37 +13554,37 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Directly opposite West Gate</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Directly opposite West Gate</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💵</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💵</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Banknote Standards</div>
-        <div class="font-bold text-slate-800 text-[13px]">Crisp, unmarked, uncreased bills only</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Banknote Standards</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Crisp, unmarked, uncreased bills only</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">👥</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">👥</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Alternative Option</div>
-        <div class="font-bold text-slate-800 text-[13px]">Mai Van Gold Shop (Next door at 1A)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Alternative Option</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Mai Van Gold Shop (Next door at 1A)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">💡</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">💡</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Pro-Tip</div>
-        <div class="font-bold text-slate-800 text-[13px]">Count and pocket cash before leaving counter</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Pro-Tip</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Count and pocket cash before leaving counter</div>
       </div>
     </div>
   
@@ -14453,11 +13751,11 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-monolith-of-delta-spirituality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Monolith of Delta Spirituality</a>
-  <a href="#the-evolution-of-the-lotus-shrine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏛️ The Evolution of the Lotus Shrine</a>
-  <a href="#the-enigma-of-the-statue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🗿 The Enigma of the Statue</a>
-  <a href="#the-via-ba-festival-a-devotional-spectacle" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🎆 The Vía Bà Festival: A Devotional Spectacle</a>
-  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
+                  <a href="#the-monolith-of-delta-spirituality" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Monolith of Delta Spirituality</a>
+  <a href="#the-evolution-of-the-lotus-shrine" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏛️ The Evolution of the Lotus Shrine</a>
+  <a href="#the-enigma-of-the-statue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🗿 The Enigma of the Statue</a>
+  <a href="#the-via-ba-festival-a-devotional-spectacle" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🎆 The Vía Bà Festival: A Devotional Spectacle</a>
+  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
 
               </div>
             </nav>
@@ -14467,60 +13765,40 @@ export const baChuaXuTempleAnGiangHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> Foot of Sam Mountain, Chau Doc City, An Giang Province.</li>
-<li><strong>Architectural Style:</strong> Lotus-shaped structure, three-tiered green tiled roof.</li>
-<li><strong>The Core Festival (Via Ba):</strong> 23rd to 27th of the 4th Lunar Month.</li>
-<li><strong>2026 Operational Status:</strong> Open 24/7 (Peak pilgrimage season: January - April Lunar Calendar).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-monolith-of-delta-spirituality" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -14595,7 +13873,7 @@ For the cultural observer in 2026, the temple offers an unfiltered, highly kinet
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -14641,37 +13919,28 @@ For the cultural observer in 2026, the temple offers an unfiltered, highly kinet
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -14838,12 +14107,12 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-battle-for-parking-in-saigons-heritage-heart" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: The Battle for Parking in Saigon’s Heritage Heart</a>
-  <a href="#master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs</a>
-  <a href="#practical-recommendations-by-vehicle-class" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Recommendations by Vehicle Class</a>
+                  <a href="#introduction-the-battle-for-parking-in-saigons-heritage-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Battle for Parking in Saigon’s Heritage Heart</a>
+  <a href="#master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs</a>
+  <a href="#practical-recommendations-by-vehicle-class" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Practical Recommendations by Vehicle Class</a>
   <a href="#a-for-motorbike-and-scooter-riders" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A. For Motorbike & Scooter Riders</a>
   <a href="#b-for-rental-cars-and-private-drivers-sedans-and-suvs" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">B. For Rental Cars & Private Drivers (Sedans & SUVs)</a>
-  <a href="#how-to-spot-rogue-parking-traps-and-3-step-counteraction" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">How to Spot Rogue Parking Traps & 3-Step Counteraction</a>
+  <a href="#how-to-spot-rogue-parking-traps-and-3-step-counteraction" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How to Spot Rogue Parking Traps & 3-Step Counteraction</a>
 
               </div>
             </nav>
@@ -14853,47 +14122,34 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Survey Zone</div>
-        <div class="text-[13px] font-bold text-slate-900">500m Perimeter of Market Gates</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Survey Zone</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">500m Perimeter of Market Gates</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🛵</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Official Scooter Tariff</div>
-        <div class="text-[13px] font-bold text-slate-900">5,000 – 10,000 VND / entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🛵</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Scooter Fee</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">5,000 – 10,000 VND / entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚗</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Official Car Tariff</div>
-        <div class="text-[13px] font-bold text-slate-900">35,000 – 50,000 VND / 2-hour block</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚗</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Car Parking</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">35,000 – 50,000 VND / 2 hours</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚇</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Top Regulated Facility</div>
-        <div class="text-[13px] font-bold text-slate-900">Ben Thanh Metro Central Basement</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -14922,17 +14178,17 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Facility Name</th><th class="p-4 font-bold text-left">Exact Location</th><th class="p-4 font-bold text-left">Vehicle Types</th><th class="p-4 font-bold text-left">Scooter Fee (VND)</th><th class="p-4 font-bold text-left">Car Fee (VND)</th><th class="p-4 font-bold text-left">Operating Hours</th><th class="p-4 font-bold text-left">Security Rating</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Facility Name</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Exact Location</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Vehicle Types</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Scooter Fee (VND)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Car Fee (VND)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Operating Hours</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Security Rating</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1. Ben Thanh Central Metro Basement</strong></td><td class="p-4">Direct access beneath Quach Thi Trang Square</td><td class="p-4">Scooters, E-Bikes</td><td class="p-4">5,000 – 10,000 / entry</td><td class="p-4">Cars temporarily not admitted</td><td class="p-4">05:30 – 23:30</td><td class="p-4">⭐⭐⭐⭐⭐ (Guarded, IC smart cards, AI license plate CCTV)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2. Saigon Centre / Takashimaya Basement</strong></td><td class="p-4">Ingress via Pasteur or Nam Ky Khoi Nghia</td><td class="p-4">Scooters &amp; Passenger Cars</td><td class="p-4">10,000 / first 4h<br>(+5,000 / extra hour)</td><td class="p-4">50,000 / first 2h<br>(+30,000 / extra hour)</td><td class="p-4">09:00 – 22:30</td><td class="p-4">⭐⭐⭐⭐⭐ (Premier parking in Saigon, climate-controlled)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>3. September 23rd Park Surface Lot</strong></td><td class="p-4">Gate 1 on Le Lai Street (Opposite New World Hotel)</td><td class="p-4">Scooters, Tourist Coaches</td><td class="p-4">6,000 (day)<br>10,000 (night)</td><td class="p-4">Accommodates 16–45 seat coaches</td><td class="p-4">06:00 – 23:00</td><td class="p-4">⭐⭐⭐⭐ (Canopy shade, wide turning lanes, easy ingress)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4. Kumho Asiana / mPlaza Saigon Garage</strong></td><td class="p-4">39 Le Duan Street (Corner of Hai Ba Trung)</td><td class="p-4">Cars &amp; Scooters</td><td class="p-4">10,000 / entry</td><td class="p-4">40.000 / 2-hour block</td><td class="p-4">24/7</td><td class="p-4">⭐⭐⭐⭐⭐ (Top overflow hub when central lots reach capacity)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>5. Tao Dan Park / Hoa Lu Facility</strong></td><td class="p-4">Huyen Tran Cong Chua Street Gate</td><td class="p-4">Scooters &amp; Cars</td><td class="p-4">6,000 / entry</td><td class="p-4">35,000 – 50,000 / entry</td><td class="p-4">06:00 – 22:00</td><td class="p-4">⭐⭐⭐⭐ (Near Independence Palace, shaded by ancient trees)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>6. Saigon General Hospital Parking</strong></td><td class="p-4">125 Le Loi Blvd (Directly opposite East Gate)</td><td class="p-4">Scooters</td><td class="p-4">5,000 – 8,000 / entry</td><td class="p-4">Cars not admitted</td><td class="p-4">06:00 – 21:30</td><td class="p-4">⭐⭐⭐ (Closest proximity to market, but fills rapidly)</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>1. Ben Thanh Central Metro Basement</strong></td><td class="p-4 text-slate-800 font-medium">Direct access beneath Quach Thi Trang Square</td><td class="p-4 text-slate-800 font-medium">Scooters, E-Bikes</td><td class="p-4 text-slate-800 font-medium">5,000 – 10,000 / entry</td><td class="p-4 text-slate-800 font-medium">Cars temporarily not admitted</td><td class="p-4 text-slate-800 font-medium">05:30 – 23:30</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ (Guarded, IC smart cards, AI license plate CCTV)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>2. Saigon Centre / Takashimaya Basement</strong></td><td class="p-4 text-slate-800 font-medium">Ingress via Pasteur or Nam Ky Khoi Nghia</td><td class="p-4 text-slate-800 font-medium">Scooters &amp; Passenger Cars</td><td class="p-4 text-slate-800 font-medium">10,000 / first 4h<br>(+5,000 / extra hour)</td><td class="p-4 text-slate-800 font-medium">50,000 / first 2h<br>(+30,000 / extra hour)</td><td class="p-4 text-slate-800 font-medium">09:00 – 22:30</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ (Premier parking in Saigon, climate-controlled)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>3. September 23rd Park Surface Lot</strong></td><td class="p-4 text-slate-800 font-medium">Gate 1 on Le Lai Street (Opposite New World Hotel)</td><td class="p-4 text-slate-800 font-medium">Scooters, Tourist Coaches</td><td class="p-4 text-slate-800 font-medium">6,000 (day)<br>10,000 (night)</td><td class="p-4 text-slate-800 font-medium">Accommodates 16–45 seat coaches</td><td class="p-4 text-slate-800 font-medium">06:00 – 23:00</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐ (Canopy shade, wide turning lanes, easy ingress)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4. Kumho Asiana / mPlaza Saigon Garage</strong></td><td class="p-4 text-slate-800 font-medium">39 Le Duan Street (Corner of Hai Ba Trung)</td><td class="p-4 text-slate-800 font-medium">Cars &amp; Scooters</td><td class="p-4 text-slate-800 font-medium">10,000 / entry</td><td class="p-4 text-slate-800 font-medium">40.000 / 2-hour block</td><td class="p-4 text-slate-800 font-medium">24/7</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ (Top overflow hub when central lots reach capacity)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>5. Tao Dan Park / Hoa Lu Facility</strong></td><td class="p-4 text-slate-800 font-medium">Huyen Tran Cong Chua Street Gate</td><td class="p-4 text-slate-800 font-medium">Scooters &amp; Cars</td><td class="p-4 text-slate-800 font-medium">6,000 / entry</td><td class="p-4 text-slate-800 font-medium">35,000 – 50,000 / entry</td><td class="p-4 text-slate-800 font-medium">06:00 – 22:00</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐ (Near Independence Palace, shaded by ancient trees)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>6. Saigon General Hospital Parking</strong></td><td class="p-4 text-slate-800 font-medium">125 Le Loi Blvd (Directly opposite East Gate)</td><td class="p-4 text-slate-800 font-medium">Scooters</td><td class="p-4 text-slate-800 font-medium">5,000 – 8,000 / entry</td><td class="p-4 text-slate-800 font-medium">Cars not admitted</td><td class="p-4 text-slate-800 font-medium">06:00 – 21:30</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐ (Closest proximity to market, but fills rapidly)</td></tr>
 
           </tbody>
         </table>
@@ -15002,7 +14258,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Seamless Mobility in the City Core</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 A memorable urban journey begins with effortless arrival and ends with unburdened peace of mind. By choosing verified municipal and commercial parking garages, your vehicle remains safeguarded beneath high-tech surveillance, leaving you free to wander the historic heart of Saigon with complete serenity.
               </p>
             </div>
@@ -15048,37 +14304,37 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Closest Facility</div>
-        <div class="font-bold text-slate-800 text-[13px]">Saigon General Hospital (125 Le Loi)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Closest Facility</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Saigon General Hospital (125 Le Loi)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🏢</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🏢</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Premier Mall Parking</div>
-        <div class="font-bold text-slate-800 text-[13px]">Takashimaya / Saigon Centre Basement</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Premier Mall Parking</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Takashimaya / Saigon Centre Basement</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Shaded Surface Lot</div>
-        <div class="font-bold text-slate-800 text-[13px]">September 23rd Park Gate 1 (Le Lai)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Shaded Surface Lot</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">September 23rd Park Gate 1 (Le Lai)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⚠️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⚠️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Warning Sign</div>
-        <div class="font-bold text-slate-800 text-[13px]">Refuse chalk-mark sidewalk operators</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Warning Sign</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Refuse chalk-mark sidewalk operators</div>
       </div>
     </div>
   
@@ -15245,15 +14501,15 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-evolution-of-delta-hospitality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Evolution of Delta Hospitality</a>
-  <a href="#tier-1-the-riverfront-patriarchs-luxury-and-heritage" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏨 Tier 1: The Riverfront Patriarchs (Luxury & Heritage)</a>
+                  <a href="#the-evolution-of-delta-hospitality" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Evolution of Delta Hospitality</a>
+  <a href="#tier-1-the-riverfront-patriarchs-luxury-and-heritage" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏨 Tier 1: The Riverfront Patriarchs (Luxury & Heritage)</a>
   <a href="#azerai-can-tho-con-au-islet" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Azerai Can Tho (Con Au Islet)</a>
   <a href="#victoria-can-tho-resort-cai-khe-ward" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Victoria Can Tho Resort (Cai Khe Ward)</a>
-  <a href="#tier-2-the-urban-pragmatists-business-and-boutique" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏙️ Tier 2: The Urban Pragmatists (Business & Boutique)</a>
+  <a href="#tier-2-the-urban-pragmatists-business-and-boutique" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏙️ Tier 2: The Urban Pragmatists (Business & Boutique)</a>
   <a href="#ttc-hotel-premium-can-tho-hai-ba-trung-street" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">TTC Hotel – Premium Can Tho (Hai Ba Trung Street)</a>
   <a href="#kp-hotel-nam-ky-khoi-nghia-street" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">KP Hotel (Nam Ky Khoi Nghia Street)</a>
-  <a href="#the-locational-strategy-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The Locational Strategy Matrix</a>
-  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
+  <a href="#the-locational-strategy-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The Locational Strategy Matrix</a>
+  <a href="#insider-protocols-for-the-2026-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Insider Protocols for the 2026 Voyager</a>
 
               </div>
             </nav>
@@ -15263,60 +14519,40 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Lodging Epicenter:</strong> Ninh Kieu District, Can Tho City.</li>
-<li><strong>2026 Baseline Rates:</strong> 800,000 VND (Boutique) – 3,500,000+ VND (Luxury Riverfront).</li>
-<li><strong>Peak Booking Seasons:</strong> December – April (Dry Season) &amp; Lunar New Year.</li>
-<li><strong>Logistical Proximity:</strong> Optimal locations are within a 1.5km radius of the Ninh Kieu Wharf.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-evolution-of-delta-hospitality" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -15407,14 +14643,14 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Zone</th><th class="p-4 font-bold text-left">Vibe</th><th class="p-4 font-bold text-left">Pros</th><th class="p-4 font-bold text-left">Cons</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Zone</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Vibe</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Pros</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Cons</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Ninh Kieu Wharf (Hai Ba Trung St)</strong></td><td class="p-4">Hyper-kinetic, tourist-centric</td><td class="p-4">Instant access to night markets and boat docks</td><td class="p-4">High ambient noise until 11:00 PM</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Cai Khe Islet</strong></td><td class="p-4">Resort-focused, spacious</td><td class="p-4">Large pools, river views, upscale dining</td><td class="p-4">Requires a short taxi ride to the urban core</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>An Binh (Suburban)</strong></td><td class="p-4">Agricultural, quiet</td><td class="p-4">Proximity to fruit orchards and traditional ovens</td><td class="p-4">Limited late-night dining options</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ninh Kieu Wharf (Hai Ba Trung St)</strong></td><td class="p-4 text-slate-800 font-medium">Hyper-kinetic, tourist-centric</td><td class="p-4 text-slate-800 font-medium">Instant access to night markets and boat docks</td><td class="p-4 text-slate-800 font-medium">High ambient noise until 11:00 PM</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Cai Khe Islet</strong></td><td class="p-4 text-slate-800 font-medium">Resort-focused, spacious</td><td class="p-4 text-slate-800 font-medium">Large pools, river views, upscale dining</td><td class="p-4 text-slate-800 font-medium">Requires a short taxi ride to the urban core</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>An Binh (Suburban)</strong></td><td class="p-4 text-slate-800 font-medium">Agricultural, quiet</td><td class="p-4 text-slate-800 font-medium">Proximity to fruit orchards and traditional ovens</td><td class="p-4 text-slate-800 font-medium">Limited late-night dining options</td></tr>
 
           </tbody>
         </table>
@@ -15438,7 +14674,7 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -15484,37 +14720,28 @@ For the discerning traveler, selecting accommodation in Can Tho is no longer jus
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -15681,13 +14908,13 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-your-gateway-ride-into-saigons-vibrant-heart" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction: Your Gateway Ride into Saigon’s Vibrant Heart</a>
-  <a href="#master-comparison-of-5-airport-transfer-options-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Master Comparison of 5 Airport Transfer Options (2026 Rates)</a>
-  <a href="#step-by-step-logistics-and-insider-tactics" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Step-by-Step Logistics & Insider Tactics</a>
+                  <a href="#introduction-your-gateway-ride-into-saigons-vibrant-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Your Gateway Ride into Saigon’s Vibrant Heart</a>
+  <a href="#master-comparison-of-5-airport-transfer-options-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Comparison of 5 Airport Transfer Options (2026 Rates)</a>
+  <a href="#step-by-step-logistics-and-insider-tactics" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Step-by-Step Logistics & Insider Tactics</a>
   <a href="#option-1-yellow-bus-109-the-smart-travelers-favorite" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)</a>
   <a href="#option-2-app-based-ride-hailing-grab-be-xanh-sm-the-tcp-garage-drill" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 2: App-Based Ride-Hailing (Grab / Be / Xanh SM) — The TCP Garage Drill</a>
   <a href="#option-3-traditional-regulated-taxis-ground-floor-convenience" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 3: Traditional Regulated Taxis (Ground-Floor Convenience)</a>
-  <a href="#time-of-day-traffic-advisories" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Time-of-Day Traffic Advisories</a>
+  <a href="#time-of-day-traffic-advisories" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Time-of-Day Traffic Advisories</a>
 
               </div>
             </nav>
@@ -15697,47 +14924,34 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Transit Distance</div>
-        <div class="text-[13px] font-bold text-slate-900">7.5 km – 8.5 km to Ben Thanh</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Transit Distance</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">7.5 km – 8.5 km to Ben Thanh</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏱️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Transit Duration</div>
-        <div class="text-[13px] font-bold text-slate-900">25 – 45 mins (Traffic dependent)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏱️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Transit Duration</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">25 – 45 mins (Traffic dependent)</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">💰</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Fare Spectrum</div>
-        <div class="text-[13px] font-bold text-slate-900">15,000 VND (Bus) – 350,000 VND (VIP Sedan)</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">💰</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Fare Spectrum</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">15,000 VND (Bus) – 350,000 VND</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🚌</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Optimal Public Route</div>
-        <div class="text-[13px] font-bold text-slate-900">Air-conditioned Yellow Bus 109</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -15775,16 +14989,16 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Transfer Method</th><th class="p-4 font-bold text-left">Fare / Ticket (2026)</th><th class="p-4 font-bold text-left">Travel Duration</th><th class="p-4 font-bold text-left">Airport Pickup Point</th><th class="p-4 font-bold text-left">Drop-Off Point at Ben Thanh</th><th class="p-4 font-bold text-left">Suitability Rating</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Transfer Method</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Fare / Ticket (2026)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Travel Duration</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Airport Pickup Point</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Drop-Off Point at Ben Thanh</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Suitability Rating</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>1. Yellow Bus 109 (Airport Express)</strong></td><td class="p-4">15,000 VND (&lt;5km)<br>20,000 VND (full route)</td><td class="p-4">35 – 45 mins</td><td class="p-4">Column B17–B20 (Domestic) &amp; Column 12 (International)</td><td class="p-4">Ben Thanh Transit Hub (Ham Nghi / Le Loi)</td><td class="p-4">⭐⭐⭐⭐⭐ Top pick for solo &amp; budget travelers; spacious luggage racks</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>2. Public Bus 152 (Local Commuter)</strong></td><td class="p-4">5,000 VND ($0.20)<br>(+5,000 VND per large suitcase)</td><td class="p-4">45 – 55 mins</td><td class="p-4">Column 4 (Domestic) &amp; Column 12 (International)</td><td class="p-4">Ben Thanh Bus Terminal (Le Lai St)</td><td class="p-4">⭐⭐⭐ Ultra-cheap, but older rolling stock and frequent commuter stops</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>3. Ride-Hailing Apps (Grab / Be / Xanh SM)</strong></td><td class="p-4">110,000 – 160,000 VND (Standard 4-seater)</td><td class="p-4">30 – 45 mins</td><td class="p-4">Floors 3, 4, or 5 of TCP Parking Garage (Domestic)</td><td class="p-4">Direct to your hotel doorstep</td><td class="p-4">⭐⭐⭐⭐ Fixed upfront fare, but requires walking to the multi-story garage</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>4. Reputable Taxis (Vinasun / Mai Linh)</strong></td><td class="p-4">130,000 – 180,000 VND (+10,000 airport gate fee)</td><td class="p-4">30 – 45 mins</td><td class="p-4">Ground Lane D1/D2 (Domestic) &amp; Taxi Queue (International)</td><td class="p-4">Direct to your hotel doorstep</td><td class="p-4">⭐⭐⭐⭐ Quick ground-floor boarding; no stairs or elevator queues</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>5. Pre-booked Private Transfer</strong></td><td class="p-4">220,000 – 350,000 VND (All-inclusive)</td><td class="p-4">25 – 40 mins</td><td class="p-4">Chauffeur holding personal name placard at exit</td><td class="p-4">Hotel reception VIP entrance</td><td class="p-4">⭐⭐⭐⭐⭐ Effortless, zero-stress transition after long-haul flights</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>1. Yellow Bus 109 (Airport Express)</strong></td><td class="p-4 text-slate-800 font-medium">15,000 VND (&lt;5km)<br>20,000 VND (full route)</td><td class="p-4 text-slate-800 font-medium">35 – 45 mins</td><td class="p-4 text-slate-800 font-medium">Column B17–B20 (Domestic) &amp; Column 12 (International)</td><td class="p-4 text-slate-800 font-medium">Ben Thanh Transit Hub (Ham Nghi / Le Loi)</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ Top pick for solo &amp; budget travelers; spacious luggage racks</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>2. Public Bus 152 (Local Commuter)</strong></td><td class="p-4 text-slate-800 font-medium">5,000 VND ($0.20)<br>(+5,000 VND per large suitcase)</td><td class="p-4 text-slate-800 font-medium">45 – 55 mins</td><td class="p-4 text-slate-800 font-medium">Column 4 (Domestic) &amp; Column 12 (International)</td><td class="p-4 text-slate-800 font-medium">Ben Thanh Bus Terminal (Le Lai St)</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐ Ultra-cheap, but older rolling stock and frequent commuter stops</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>3. Ride-Hailing Apps (Grab / Be / Xanh SM)</strong></td><td class="p-4 text-slate-800 font-medium">110,000 – 160,000 VND (Standard 4-seater)</td><td class="p-4 text-slate-800 font-medium">30 – 45 mins</td><td class="p-4 text-slate-800 font-medium">Floors 3, 4, or 5 of TCP Parking Garage (Domestic)</td><td class="p-4 text-slate-800 font-medium">Direct to your hotel doorstep</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐ Fixed upfront fare, but requires walking to the multi-story garage</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4. Reputable Taxis (Vinasun / Mai Linh)</strong></td><td class="p-4 text-slate-800 font-medium">130,000 – 180,000 VND (+10,000 airport gate fee)</td><td class="p-4 text-slate-800 font-medium">30 – 45 mins</td><td class="p-4 text-slate-800 font-medium">Ground Lane D1/D2 (Domestic) &amp; Taxi Queue (International)</td><td class="p-4 text-slate-800 font-medium">Direct to your hotel doorstep</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐ Quick ground-floor boarding; no stairs or elevator queues</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>5. Pre-booked Private Transfer</strong></td><td class="p-4 text-slate-800 font-medium">220,000 – 350,000 VND (All-inclusive)</td><td class="p-4 text-slate-800 font-medium">25 – 40 mins</td><td class="p-4 text-slate-800 font-medium">Chauffeur holding personal name placard at exit</td><td class="p-4 text-slate-800 font-medium">Hotel reception VIP entrance</td><td class="p-4 text-slate-800 font-medium">⭐⭐⭐⭐⭐ Effortless, zero-stress transition after long-haul flights</td></tr>
 
           </tbody>
         </table>
@@ -15853,7 +15067,7 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Welcoming Gateway to Saigon</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 Gliding from the runway into the tree-shaded corridors of District 1 marks the opening stanza of your Vietnamese odyssey. With reliable ground logistics and transparent pricing, your transition into the city is smooth, calm, and filled with eager anticipation for the adventures ahead.
               </p>
             </div>
@@ -15899,37 +15113,37 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Arrival Airport</div>
-        <div class="font-bold text-slate-800 text-[13px]">Tan Son Nhat (SGN), Tan Binh Dist</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Arrival Airport</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Tan Son Nhat (SGN), Tan Binh Dist</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚌</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚌</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Bus 109 Frequency</div>
-        <div class="font-bold text-slate-800 text-[13px]">Every 20 – 30 mins (05:45 – 23:45)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Bus 109 Frequency</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Every 20 – 30 mins (05:45 – 23:45)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🚗</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🚗</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ride-Hailing Pickup</div>
-        <div class="font-bold text-slate-800 text-[13px]">Floors 3–5, TCP Garage (Domestic)</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ride-Hailing Pickup</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Floors 3–5, TCP Garage (Domestic)</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🛑</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🛑</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Drop-Off Epicenter</div>
-        <div class="font-bold text-slate-800 text-[13px]">Ben Thanh Transit Hub, Ham Nghi St</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Drop-Off Epicenter</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ben Thanh Transit Hub, Ham Nghi St</div>
       </div>
     </div>
   
@@ -16096,12 +15310,12 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#a-century-of-floral-engineering" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">A Century of Floral Engineering</a>
-  <a href="#the-botanical-stratigraphy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌸 The Botanical Stratigraphy</a>
+                  <a href="#a-century-of-floral-engineering" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Century of Floral Engineering</a>
+  <a href="#the-botanical-stratigraphy" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌸 The Botanical Stratigraphy</a>
   <a href="#the-lunar-new-year-core-tet-season" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Lunar New Year Core (Tet Season)</a>
   <a href="#the-year-round-perennials" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Year-Round Perennials</a>
-  <a href="#the-2026-navigational-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌟 The 2026 Navigational Matrix</a>
-  <a href="#field-notes-for-the-discerning-voyager" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Field Notes for the Discerning Voyager</a>
+  <a href="#the-2026-navigational-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The 2026 Navigational Matrix</a>
+  <a href="#field-notes-for-the-discerning-voyager" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Field Notes for the Discerning Voyager</a>
 
               </div>
             </nav>
@@ -16111,60 +15325,40 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Coordinates:</strong> Tan Quy Dong Ward, Sa Dec City, Dong Thap Province.</li>
-<li><strong>Scale:</strong> Over 313 hectares, cultivating 2,000+ floral species.</li>
-<li><strong>The Signature Architecture:</strong> Aquatic floriculture—flowers grown on elevated bamboo trellises over flooded fields.</li>
-<li><strong>2026 Optimal Window:</strong> Late December to mid-January (leading up to Lunar New Year).</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="a-century-of-floral-engineering" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -16208,14 +15402,14 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">The Zone</th><th class="p-4 font-bold text-left">Primary Focus</th><th class="p-4 font-bold text-left">Photographic Viability</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">The Zone</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Primary Focus</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Photographic Viability</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Sa Nhien - Cai Dao Road</strong></td><td class="p-4">The main tourist artery, highly commercialized</td><td class="p-4">Excellent, but expect heavy crowds</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tan Quy Dong Deep Alleys</strong></td><td class="p-4">Wholesale nurseries, traditional trellis farming</td><td class="p-4">Exceptional, authentic, requires a motorbike</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Happy Land Hung Thy</strong></td><td class="p-4">An integrated eco-tourism park within the village</td><td class="p-4">Curated setups, artificial props</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Sa Nhien - Cai Dao Road</strong></td><td class="p-4 text-slate-800 font-medium">The main tourist artery, highly commercialized</td><td class="p-4 text-slate-800 font-medium">Excellent, but expect heavy crowds</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Tan Quy Dong Deep Alleys</strong></td><td class="p-4 text-slate-800 font-medium">Wholesale nurseries, traditional trellis farming</td><td class="p-4 text-slate-800 font-medium">Exceptional, authentic, requires a motorbike</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Happy Land Hung Thy</strong></td><td class="p-4 text-slate-800 font-medium">An integrated eco-tourism park within the village</td><td class="p-4 text-slate-800 font-medium">Curated setups, artificial props</td></tr>
 
           </tbody>
         </table>
@@ -16240,7 +15434,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -16286,37 +15480,28 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -16483,17 +15668,17 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-arteries-of-the-deltas-commerce" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Arteries of the Delta's Commerce</a>
-  <a href="#tier-1-the-aquatic-giants" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🛶 Tier 1: The Aquatic Giants</a>
+                  <a href="#the-arteries-of-the-deltas-commerce" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Arteries of the Delta's Commerce</a>
+  <a href="#tier-1-the-aquatic-giants" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🛶 Tier 1: The Aquatic Giants</a>
   <a href="#cai-rang-floating-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Cai Rang Floating Market</a>
   <a href="#phong-dien-floating-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Phong Dien Floating Market</a>
-  <a href="#tier-2-the-terrestrial-institutions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🏛️ Tier 2: The Terrestrial Institutions</a>
+  <a href="#tier-2-the-terrestrial-institutions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏛️ Tier 2: The Terrestrial Institutions</a>
   <a href="#can-tho-ancient-market-cho-co-can-tho" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Can Tho Ancient Market (Chợ Cổ Cần Thơ)</a>
   <a href="#xuan-khanh-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Xuan Khanh Market</a>
-  <a href="#tier-3-the-nocturnal-bazaars" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🌙 Tier 3: The Nocturnal Bazaars</a>
+  <a href="#tier-3-the-nocturnal-bazaars" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌙 Tier 3: The Nocturnal Bazaars</a>
   <a href="#tay-do-night-market-ninh-kieu-wharf" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Tay Do Night Market (Ninh Kieu Wharf)</a>
   <a href="#tran-phu-night-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Tran Phu Night Market</a>
-  <a href="#strategic-navigational-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">🧠 Strategic Navigational Matrix</a>
+  <a href="#strategic-navigational-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🧠 Strategic Navigational Matrix</a>
 
               </div>
             </nav>
@@ -16503,60 +15688,40 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <hr>
-<ul>
-<li><strong>Commercial Epicenter:</strong> Can Tho City (The logistical hub of the Mekong Delta).</li>
-<li><strong>The Typology:</strong> Floating wholesale markets, historic covered halls, and hyper-kinetic night bazaars.</li>
-<li><strong>2026 Core Focus:</strong> Preserving agricultural authenticity amidst rapid urban modernization.</li>
-<li><strong>Logistical Proximity:</strong> Most terrestrial markets are concentrated within the Ninh Kieu District.</li>
-</ul>
-<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="the-arteries-of-the-deltas-commerce" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -16650,15 +15815,15 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Market</th><th class="p-4 font-bold text-left">Optimal Hour</th><th class="p-4 font-bold text-left">Primary Objective</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Market</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Optimal Hour</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Primary Objective</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Cai Rang</strong></td><td class="p-4">05:30 AM</td><td class="p-4">Wholesale tropical fruits, riverine photography</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Xuan Khanh</strong></td><td class="p-4">07:00 AM</td><td class="p-4">Authentic local grocery immersion, raw ingredients</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Can Tho Ancient</strong></td><td class="p-4">10:00 AM</td><td class="p-4">Architectural appreciation, souvenir procurement</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Tay Do Night</strong></td><td class="p-4">08:00 PM</td><td class="p-4">Casual street food grazing, river promenade walking</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Cai Rang</strong></td><td class="p-4 text-slate-800 font-medium">05:30 AM</td><td class="p-4 text-slate-800 font-medium">Wholesale tropical fruits, riverine photography</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Xuan Khanh</strong></td><td class="p-4 text-slate-800 font-medium">07:00 AM</td><td class="p-4 text-slate-800 font-medium">Authentic local grocery immersion, raw ingredients</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Can Tho Ancient</strong></td><td class="p-4 text-slate-800 font-medium">10:00 AM</td><td class="p-4 text-slate-800 font-medium">Architectural appreciation, souvenir procurement</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Tay Do Night</strong></td><td class="p-4 text-slate-800 font-medium">08:00 PM</td><td class="p-4 text-slate-800 font-medium">Casual street food grazing, river promenade walking</td></tr>
 
           </tbody>
         </table>
@@ -16671,7 +15836,7 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -16717,37 +15882,28 @@ export const canThoMarketsGuideHtml = `<!-- layout: landing -->
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -16914,16 +16070,16 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-som-rong-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Som Rong Pagoda</a>
-  <a href="#the-architectural-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Architectural Masterpieces</a>
+                  <a href="#introduction-to-som-rong-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Som Rong Pagoda</a>
+  <a href="#the-architectural-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpieces</a>
   <a href="#the-grand-sala-and-main-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Grand Sala and Main Hall</a>
   <a href="#the-majestic-stupa-bao-thap" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Majestic Stupa (Bảo Tháp)</a>
-  <a href="#the-giant-reclining-buddha" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Giant Reclining Buddha</a>
-  <a href="#experiencing-khmer-culture-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Experiencing Khmer Culture in 2026</a>
+  <a href="#the-giant-reclining-buddha" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Giant Reclining Buddha</a>
+  <a href="#experiencing-khmer-culture-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Experiencing Khmer Culture in 2026</a>
   <a href="#festivals-and-celebrations" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Festivals and Celebrations</a>
   <a href="#photography-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Photography and Etiquette</a>
-  <a href="#travel-logistics-and-nearby-attractions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Nearby Attractions</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#travel-logistics-and-nearby-attractions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Nearby Attractions</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -16933,47 +16089,34 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -17056,14 +16199,14 @@ export const chuaSomRongSocTrangHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Mode of Transport</th><th class="p-4 font-bold text-left">Duration</th><th class="p-4 font-bold text-left">Estimated Cost (2026)</th><th class="p-4 font-bold text-left">Notes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Mode of Transport</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Duration</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Estimated Cost (2026)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Sleeper Bus</strong></td><td class="p-4">5 Hours</td><td class="p-4">180,000 - 250,000 VND</td><td class="p-4">Depart from Mien Tay Bus Station (HCMC)</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Private Car</strong></td><td class="p-4">4 Hours</td><td class="p-4">1,800,000 - 2,500,000 VND</td><td class="p-4">Ideal for families or small groups</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Motorbike</strong></td><td class="p-4">6 Hours</td><td class="p-4">~150,000 VND (Gas)</td><td class="p-4">Recommended only for experienced riders</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Sleeper Bus</strong></td><td class="p-4 text-slate-800 font-medium">5 Hours</td><td class="p-4 text-slate-800 font-medium">180,000 - 250,000 VND</td><td class="p-4 text-slate-800 font-medium">Depart from Mien Tay Bus Station (HCMC)</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Private Car</strong></td><td class="p-4 text-slate-800 font-medium">4 Hours</td><td class="p-4 text-slate-800 font-medium">1,800,000 - 2,500,000 VND</td><td class="p-4 text-slate-800 font-medium">Ideal for families or small groups</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Motorbike</strong></td><td class="p-4 text-slate-800 font-medium">6 Hours</td><td class="p-4 text-slate-800 font-medium">~150,000 VND (Gas)</td><td class="p-4 text-slate-800 font-medium">Recommended only for experienced riders</td></tr>
 
           </tbody>
         </table>
@@ -17087,7 +16230,7 @@ Ready to explore the hidden gems of Soc Trang? Our expert guides at The Rice Tou
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -17133,37 +16276,28 @@ Ready to explore the hidden gems of Soc Trang? Our expert guides at The Rice Tou
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -17330,16 +16464,16 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-cao-van-lau-theater" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Cao Van Lau Theater</a>
-  <a href="#the-architectural-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Architectural Masterpiece</a>
+                  <a href="#introduction-to-cao-van-lau-theater" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Cao Van Lau Theater</a>
+  <a href="#the-architectural-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Masterpiece</a>
   <a href="#the-three-conical-hats-design" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The "Three Conical Hats" Design</a>
   <a href="#the-surrounding-complex" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Surrounding Complex</a>
-  <a href="#the-cultural-heartbeat-of-bac-lieu" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Cultural Heartbeat of Bac Lieu</a>
+  <a href="#the-cultural-heartbeat-of-bac-lieu" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Heartbeat of Bac Lieu</a>
   <a href="#a-fusion-of-artistic-troupes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A Fusion of Artistic Troupes</a>
   <a href="#don-ca-tai-tu-and-cai-luong-performances" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Don Ca Tai Tu and Cai Luong Performances</a>
-  <a href="#visitor-guidelines-and-photography-2026-updates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Visitor Guidelines and Photography (2026 Updates)</a>
-  <a href="#travel-logistics-and-nearby-attractions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Nearby Attractions</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#visitor-guidelines-and-photography-2026-updates" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Visitor Guidelines and Photography (2026 Updates)</a>
+  <a href="#travel-logistics-and-nearby-attractions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Nearby Attractions</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -17349,47 +16483,34 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -17469,13 +16590,13 @@ export const nhaHatCaoVanLauHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Mode of Transport</th><th class="p-4 font-bold text-left">Duration</th><th class="p-4 font-bold text-left">Estimated Cost (2026)</th><th class="p-4 font-bold text-left">Notes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Mode of Transport</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Duration</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Estimated Cost (2026)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Limousine/Sleeper Bus</strong></td><td class="p-4">~4.5 Hours</td><td class="p-4">200,000 - 300,000 VND</td><td class="p-4">Frequent departures from Mien Tay Bus Station</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Private Car</strong></td><td class="p-4">4 Hours</td><td class="p-4">2,000,000 - 2,800,000 VND</td><td class="p-4">Most convenient for customized itineraries</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Limousine/Sleeper Bus</strong></td><td class="p-4 text-slate-800 font-medium">~4.5 Hours</td><td class="p-4 text-slate-800 font-medium">200,000 - 300,000 VND</td><td class="p-4 text-slate-800 font-medium">Frequent departures from Mien Tay Bus Station</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Private Car</strong></td><td class="p-4 text-slate-800 font-medium">4 Hours</td><td class="p-4 text-slate-800 font-medium">2,000,000 - 2,800,000 VND</td><td class="p-4 text-slate-800 font-medium">Most convenient for customized itineraries</td></tr>
 
           </tbody>
         </table>
@@ -17499,7 +16620,7 @@ Discover the musical soul of the Mekong Delta with The Rice Tour. Our bespoke it
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -17545,37 +16666,28 @@ Discover the musical soul of the Mekong Delta with The Rice Tour. Our bespoke it
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -17742,14 +16854,14 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-cai-rang-floating-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Cai Rang Floating Market</a>
-  <a href="#navigating-the-logistics-boat-rentals-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Navigating the Logistics: Boat Rentals in 2026</a>
-  <a href="#the-cultural-nuances-deciphering-the-beo-system" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Cultural Nuances: Deciphering the "Bẹo" System</a>
-  <a href="#unmissable-signature-experiences" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Unmissable Signature Experiences</a>
+                  <a href="#introduction-to-cai-rang-floating-market" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Cai Rang Floating Market</a>
+  <a href="#navigating-the-logistics-boat-rentals-in-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Logistics: Boat Rentals in 2026</a>
+  <a href="#the-cultural-nuances-deciphering-the-beo-system" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Nuances: Deciphering the "Bẹo" System</a>
+  <a href="#unmissable-signature-experiences" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Unmissable Signature Experiences</a>
   <a href="#breakfast-on-the-water" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Breakfast on the Water</a>
   <a href="#pineapple-tasting-on-the-roof" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Pineapple Tasting on the Roof</a>
   <a href="#visiting-a-traditional-noodle-factory" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Visiting a Traditional Noodle Factory</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -17759,47 +16871,34 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -17831,15 +16930,15 @@ export const choNoiCaiRangCanThoHtml = `<!-- layout: landing -->
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
-              <th class="p-4 font-bold text-left">Boat Type / Group Size</th><th class="p-4 font-bold text-left">Estimated Price (2026)</th><th class="p-4 font-bold text-left">Duration</th><th class="p-4 font-bold text-left">Notes</th>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Boat Type / Group Size</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Estimated Price (2026)</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Duration</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Notes</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Small Sampan (1-4 pax)</strong></td><td class="p-4">600,000 - 800,000 VND</td><td class="p-4">2-3 Hours</td><td class="p-4">Intimate experience, can navigate narrower canals</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Medium Boat (5-9 pax)</strong></td><td class="p-4">900,000 - 1,200,000 VND</td><td class="p-4">3-4 Hours</td><td class="p-4">Includes roof cover and life jackets</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Large Tourist Boat (10+ pax)</strong></td><td class="p-4">1,490,000 - 2,000,000 VND</td><td class="p-4">4 Hours</td><td class="p-4">Best for large families, stable and spacious</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4"><strong>Join-in Tour Ticket</strong></td><td class="p-4">~150,000 VND / pax</td><td class="p-4">3 Hours</td><td class="p-4">Budget-friendly, departs when full</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Small Sampan (1-4 pax)</strong></td><td class="p-4 text-slate-800 font-medium">600,000 - 800,000 VND</td><td class="p-4 text-slate-800 font-medium">2-3 Hours</td><td class="p-4 text-slate-800 font-medium">Intimate experience, can navigate narrower canals</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Medium Boat (5-9 pax)</strong></td><td class="p-4 text-slate-800 font-medium">900,000 - 1,200,000 VND</td><td class="p-4 text-slate-800 font-medium">3-4 Hours</td><td class="p-4 text-slate-800 font-medium">Includes roof cover and life jackets</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Large Tourist Boat (10+ pax)</strong></td><td class="p-4 text-slate-800 font-medium">1,490,000 - 2,000,000 VND</td><td class="p-4 text-slate-800 font-medium">4 Hours</td><td class="p-4 text-slate-800 font-medium">Best for large families, stable and spacious</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Join-in Tour Ticket</strong></td><td class="p-4 text-slate-800 font-medium">~150,000 VND / pax</td><td class="p-4 text-slate-800 font-medium">3 Hours</td><td class="p-4 text-slate-800 font-medium">Budget-friendly, departs when full</td></tr>
 
           </tbody>
         </table>
@@ -17897,7 +16996,7 @@ Want to experience Cai Rang Floating Market without the hassle of haggling and l
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -17943,37 +17042,28 @@ Want to experience Cai Rang Floating Market without the hassle of haggling and l
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -18140,17 +17230,17 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Mercury Phu Quoc</a>
-  <a href="#why-the-rice-tour-chooses-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Why The Rice Tour Chooses Mercury Phu Quoc</a>
+                  <a href="#introduction-to-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Mercury Phu Quoc</a>
+  <a href="#why-the-rice-tour-chooses-mercury-phu-quoc" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Why The Rice Tour Chooses Mercury Phu Quoc</a>
   <a href="#the-perfect-beachfront-rhythm" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Perfect Beachfront Rhythm</a>
   <a href="#versatile-accommodation-models" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Versatile Accommodation Models</a>
   <a href="#flawless-logistics-for-group-travel" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Flawless Logistics for Group Travel</a>
-  <a href="#signature-amenities-and-experiences" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Signature Amenities and Experiences</a>
+  <a href="#signature-amenities-and-experiences" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Signature Amenities and Experiences</a>
   <a href="#the-infinity-pool-and-beach-bar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Infinity Pool & Beach Bar</a>
   <a href="#wellness-and-rejuvenation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Wellness and Rejuvenation</a>
   <a href="#culinary-excellence" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Culinary Excellence</a>
-  <a href="#integrating-mercury-into-your-2026-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Integrating Mercury into Your 2026 Itinerary</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#integrating-mercury-into-your-2026-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Integrating Mercury into Your 2026 Itinerary</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -18160,47 +17250,34 @@ export const mercuryPhuQuocResortVillasHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -18292,7 +17369,7 @@ Ready to experience the pinnacle of Phu Quoc hospitality? Book your 2026 island 
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -18338,37 +17415,28 @@ Ready to experience the pinnacle of Phu Quoc hospitality? Book your 2026 island 
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -18535,17 +17603,17 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-rice-tours-philosophy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to The Rice Tour's Philosophy</a>
-  <a href="#core-tour-offerings-exploring-the-authentic-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Core Tour Offerings: Exploring the Authentic Vietnam</a>
+                  <a href="#introduction-to-the-rice-tours-philosophy" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to The Rice Tour's Philosophy</a>
+  <a href="#core-tour-offerings-exploring-the-authentic-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Tour Offerings: Exploring the Authentic Vietnam</a>
   <a href="#the-mekong-delta-masterpieces" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Mekong Delta Masterpieces</a>
   <a href="#central-heritage-and-coastal-retreats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Heritage & Coastal Retreats</a>
   <a href="#northern-expeditions" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Northern Expeditions</a>
-  <a href="#specialized-travel-services" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Specialized Travel Services</a>
+  <a href="#specialized-travel-services" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Specialized Travel Services</a>
   <a href="#private-transport-logistics" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Private Transport Logistics</a>
   <a href="#corporate-travel-and-mice" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Corporate Travel & MICE</a>
   <a href="#ticketing-and-concierge-services" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ticketing and Concierge Services</a>
-  <a href="#the-2026-commitment-to-sustainable-tourism" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The 2026 Commitment to Sustainable Tourism</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#the-2026-commitment-to-sustainable-tourism" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The 2026 Commitment to Sustainable Tourism</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -18555,47 +17623,34 @@ export const tongHopDichVuTaiNuCuoiMeKongHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -18709,7 +17764,7 @@ Do not settle for a generic vacation. Let our travel architects design your defi
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -18755,37 +17810,28 @@ Do not settle for a generic vacation. Let our travel architects design your defi
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -18952,12 +17998,12 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-dinh-cau-shrine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Dinh Cau Shrine</a>
-  <a href="#the-architectural-and-natural-harmony" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Architectural and Natural Harmony</a>
-  <a href="#the-ultimate-sunset-vantage-point" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Ultimate Sunset Vantage Point</a>
-  <a href="#the-night-market-and-culinary-scene" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Night Market and Culinary Scene</a>
-  <a href="#travel-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Etiquette</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+                  <a href="#introduction-to-dinh-cau-shrine" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Dinh Cau Shrine</a>
+  <a href="#the-architectural-and-natural-harmony" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural and Natural Harmony</a>
+  <a href="#the-ultimate-sunset-vantage-point" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Ultimate Sunset Vantage Point</a>
+  <a href="#the-night-market-and-culinary-scene" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Night Market and Culinary Scene</a>
+  <a href="#travel-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Etiquette</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -18967,47 +18013,34 @@ export const dinhCauPhuQuocHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -19092,7 +18125,7 @@ Experience the magic of Phu Quoc beyond the luxury resorts. The Rice Tour&#39;s 
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -19138,37 +18171,28 @@ Experience the magic of Phu Quoc beyond the luxury resorts. The Rice Tour&#39;s 
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -19335,17 +18359,17 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#the-anatomy-of-a-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Anatomy of a Masterpiece</a>
+                  <a href="#the-anatomy-of-a-masterpiece" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Anatomy of a Masterpiece</a>
   <a href="#the-soul-of-the-dish-the-broth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Soul of the Dish: The Broth</a>
   <a href="#the-toppings-a-triumvirate-of-cultures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Toppings: A Triumvirate of Cultures</a>
   <a href="#the-greens-the-essential-crunch" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Greens: The Essential Crunch</a>
-  <a href="#the-2026-curated-michelin-equivalent-stops" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The 2026 Curated Michelin-Equivalent Stops</a>
+  <a href="#the-2026-curated-michelin-equivalent-stops" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The 2026 Curated Michelin-Equivalent Stops</a>
   <a href="#bun-nuoc-leo-cay-nhan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bún Nước Lèo Cây Nhãn</a>
   <a href="#bun-nuoc-leo-thao" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bún Nước Lèo Thảo</a>
   <a href="#bun-nuoc-leo-ca-ong" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bún Nước Lèo Cá Đồng</a>
-  <a href="#how-to-eat-like-a-local" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">How to Eat Like a Local</a>
-  <a href="#culinary-tourism-in-soc-trang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Culinary Tourism in Soc Trang</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#how-to-eat-like-a-local" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How to Eat Like a Local</a>
+  <a href="#culinary-tourism-in-soc-trang" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Culinary Tourism in Soc Trang</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -19355,47 +18379,34 @@ export const dacSanBunNuocLeoSocTrangHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -19501,7 +18512,7 @@ Food is the gateway to culture. The Rice Tour designs exclusive culinary expedit
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -19547,37 +18558,28 @@ Food is the gateway to culture. The Rice Tour designs exclusive culinary expedit
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -19744,14 +18746,14 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-bat-pagoda-wat-mahatup" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to the Bat Pagoda (Wat Mahatup)</a>
-  <a href="#the-architectural-splendor" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Architectural Splendor</a>
+                  <a href="#introduction-to-the-bat-pagoda-wat-mahatup" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to the Bat Pagoda (Wat Mahatup)</a>
+  <a href="#the-architectural-splendor" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Architectural Splendor</a>
   <a href="#the-main-hall-chanh-ien" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Main Hall (Chánh Điện)</a>
   <a href="#the-stupas-and-the-grounds" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Stupas and the Grounds</a>
-  <a href="#the-enigma-of-the-bats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Enigma of the Bats</a>
-  <a href="#the-pig-with-five-claws-a-local-legend" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Pig with Five Claws: A Local Legend</a>
-  <a href="#travel-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Etiquette</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#the-enigma-of-the-bats" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Enigma of the Bats</a>
+  <a href="#the-pig-with-five-claws-a-local-legend" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Pig with Five Claws: A Local Legend</a>
+  <a href="#travel-logistics-and-etiquette" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Etiquette</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -19761,47 +18763,34 @@ export const chuaDoiSocTrangHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -19892,7 +18881,7 @@ Delve into the rich cultural and natural mysteries of Soc Trang. Our expert-guid
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -19938,37 +18927,28 @@ Delve into the rich cultural and natural mysteries of Soc Trang. Our expert-guid
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -20135,14 +19115,14 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-the-bac-lieu-wind-farm" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to the Bac Lieu Wind Farm</a>
-  <a href="#the-visual-spectacle-a-photographers-dream" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Visual Spectacle: A Photographer's Dream</a>
+                  <a href="#introduction-to-the-bac-lieu-wind-farm" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to the Bac Lieu Wind Farm</a>
+  <a href="#the-visual-spectacle-a-photographers-dream" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Visual Spectacle: A Photographer's Dream</a>
   <a href="#the-concrete-walkways" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Walkways</a>
   <a href="#the-best-angles" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Best Angles</a>
-  <a href="#timing-your-visit-for-the-perfect-shot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Timing Your Visit for the Perfect Shot</a>
-  <a href="#expanding-your-bac-lieu-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Expanding Your Bac Lieu Itinerary</a>
-  <a href="#travel-logistics-and-tips" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Tips</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#timing-your-visit-for-the-perfect-shot" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Timing Your Visit for the Perfect Shot</a>
+  <a href="#expanding-your-bac-lieu-itinerary" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Expanding Your Bac Lieu Itinerary</a>
+  <a href="#travel-logistics-and-tips" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Tips</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -20152,47 +19132,34 @@ export const canhDongDienGioBacLieuHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -20288,7 +19255,7 @@ Let The Rice Tour optimize your Bac Lieu itinerary. Our expert guides know exact
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -20334,37 +19301,28 @@ Let The Rice Tour optimize your Bac Lieu itinerary. Our expert guides know exact
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   
@@ -20531,14 +19489,14 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-to-truong-tuyen-cruise" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Introduction to Truong Tuyen Cruise</a>
-  <a href="#the-culinary-experience" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Culinary Experience</a>
+                  <a href="#introduction-to-truong-tuyen-cruise" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction to Truong Tuyen Cruise</a>
+  <a href="#the-culinary-experience" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Culinary Experience</a>
   <a href="#signature-dishes-to-order" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Signature Dishes to Order</a>
   <a href="#dining-ambiance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Dining Ambiance</a>
-  <a href="#the-cultural-soundtrack-don-ca-tai-tu" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Cultural Soundtrack: Don Ca Tai Tu</a>
-  <a href="#the-cruising-itinerary-and-scenery" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">The Cruising Itinerary and Scenery</a>
-  <a href="#travel-logistics-and-tips" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Travel Logistics and Tips</a>
-  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue</a>
+  <a href="#the-cultural-soundtrack-don-ca-tai-tu" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cultural Soundtrack: Don Ca Tai Tu</a>
+  <a href="#the-cruising-itinerary-and-scenery" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Cruising Itinerary and Scenery</a>
+  <a href="#travel-logistics-and-tips" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Travel Logistics and Tips</a>
+  <a href="#epilogue" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue</a>
 
               </div>
             </nav>
@@ -20548,47 +19506,34 @@ export const tauTruongTuyenHtml = `<!-- layout: landing -->
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">📍</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Location</div>
-        <div class="text-[13px] font-bold text-slate-900">Vietnam Inbound</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Location</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Vietnam Inbound</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">⏳</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Ideal Timing</div>
-        <div class="text-[13px] font-bold text-slate-900">Year-Round</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏳</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Ideal Timing</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Year-Round</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
   
 
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🎟️</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Access Policy</div>
-        <div class="text-[13px] font-bold text-slate-900">Curated Entry</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🎟️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Access Policy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Curated Entry</div>
       </div>
     </div>
-    <div class="hidden lg:block w-px h-8 bg-slate-200"></div>
-  
-
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto mt-2 lg:mt-0">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">Experience Type</div>
-        <div class="text-[13px] font-bold text-slate-900">Cultural Immersion</div>
-      </div>
-    </div>
-    
   
           </div>
 
@@ -20676,7 +19621,7 @@ Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-d
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Journeying with Purpose</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam.
               </p>
             </div>
@@ -20722,37 +19667,28 @@ Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-d
               <div class="space-y-4">
                 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">📍</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Location</div>
-        <div class="font-bold text-slate-800 text-[13px]">Vietnam Inbound</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Location</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Vietnam Inbound</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">⏳</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">⏳</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Ideal Timing</div>
-        <div class="font-bold text-slate-800 text-[13px]">Year-Round</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Ideal Timing</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Year-Round</div>
       </div>
     </div>
   
 
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🎟️</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🎟️</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Access Policy</div>
-        <div class="font-bold text-slate-800 text-[13px]">Curated Entry</div>
-      </div>
-    </div>
-  
-
-    <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">🌿</div>
-      <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">Experience Type</div>
-        <div class="font-bold text-slate-800 text-[13px]">Cultural Immersion</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Access Policy</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Curated Entry</div>
       </div>
     </div>
   

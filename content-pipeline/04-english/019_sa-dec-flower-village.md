@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** Tan Quy Dong Ward, Sa Dec City, Dong Thap Province.
-- **Scale:** Over 313 hectares, cultivating 2,000+ floral species.
-- **The Signature Architecture:** Aquatic floriculture—flowers grown on elevated bamboo trellises over flooded fields.
-- **2026 Optimal Window:** Late December to mid-January (leading up to Lunar New Year).
 
 ---
 

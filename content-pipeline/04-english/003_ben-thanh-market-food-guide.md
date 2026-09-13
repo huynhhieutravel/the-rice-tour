@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-f
 
 Highlighted in our definitive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), the historic market's daytime food court and its adjacent evening dining alleys along Phan Boi Chau and Phan Chu Trinh Streets represent a **living gastronomy museum**. Here, ancestral culinary techniques from Chinese Chợ Lớn immigrants, Khmer riverine traditions, and southern Vietnamese delta farmers coalesce into an irresistible feast for the senses.
 
----
-
-## Quick Overview Stats (2026 Gastronomic Dimensions)
-
-| 🍲 Culinary Heritage | 🕒 Operational Hours | 🎟️ 2026 Reference Tariffs | 🌟 Signature Highlights |
-| :--- | :--- | :--- | :--- |
-| **Southern Delta, Teochew & Khmer Fusion** | **06:00 – 18:00 (Market) & 18:00 – 23:30 (Street)** | **30,000 – 120,000 VND / dish** | **East Gate Bún Riêu & Grilled Betel Beef** |
 
 ---
 

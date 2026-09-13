@@ -16,15 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Official Name:** Truong Tien Bridge (*Cầu Trường Tiền*, often colloquially known as *Tràng Tiền*).
-- **Location:** Spanning the Perfume River, connecting Phu Xuan (North Bank) and Thuan Hoa (South Bank) wards in Hue City.
-- **Inauguration:** 1900 (Commissioned in 1896 under the reign of Emperor Thanh Thai).
-- **Structural Specifications:** 6 steel girder arches, each spanning 66.08 meters (Total length: 406.45 meters).
-- **2026 Operational Status:** **Currently undergoing major structural overhaul (Estimated 150 days commencing June 1, 2026).** Nighttime transit is strictly prohibited.
 
 ---
 

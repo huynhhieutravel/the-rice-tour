@@ -20,13 +20,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-f
 
 Nằm trong tổng thể cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), khu ẩm thực Chợ Bến Thành và hai tuyến phố vệ tinh Phan Bội Châu – Phan Chu Trinh từ lâu đã trở thành **thánh địa ẩm thực đường phố** thu hút giới sành ăn khắp năm châu. Đây không chỉ là nơi thỏa mãn vị giác, mà còn là bảo tàng sống động lưu giữ kỹ thuật chế biến gia truyền của nhiều thế hệ di dân Nam Kỳ lục tỉnh hội tụ về đất Sài Gòn.
 
----
-
-## Quick Overview Stats Bar (Thông Số Ẩm Thực 2026)
-
-| 🍲 Xuất xứ ẩm thực | 🕒 Khung giờ hoạt động | 🎟️ Khoảng giá tham khảo 2026 | 🌟 Trải nghiệm đỉnh cao |
-| :--- | :--- | :--- | :--- |
-| **Giao thoa Nam Bộ – Hoa – Khmer** | **06:00 – 18:00 (Sạp chợ) & 18:00 – 23:30 (Phố đêm)** | **30.000 – 120.000 VNĐ / món** | **Bún riêu gánh Cửa Đông & Bò nướng lá lốt phố đêm** |
 
 ---
 

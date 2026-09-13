@@ -16,15 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Discovery & Experience, Itineraries & Guides | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Geographical Coordinates (2026 Update):** Kien Hai Special District, An Giang Province (Note: Formerly under Kien Giang Province).
-- **Optimal Season:** December to March (Calm seas, radiant sunlight, and minimal storm risk).
-- **Gateway:** Rach Gia Port (Accessible via a 2–2.5 hour high-speed ferry ride).
-- **Recommended Duration:** 3 Days 2 Nights (Allowing a buffer for weather-induced ferry delays).
-- **Physical Demands:** Moderate (Suitable for most ages, though resilience against seasickness is advised).
 
 ---
 

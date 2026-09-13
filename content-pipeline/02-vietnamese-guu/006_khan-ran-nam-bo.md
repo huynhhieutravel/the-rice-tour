@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Văn hóa và lễ hội | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Khăn rằn Nam Bộ](https://r2.nucuoimekong.com/wp-content/uploads/khan-ran-nam-bo-nu-cuoi-me-kong.webp)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Niên đại lịch sử:** Hơn 300 năm (Phát triển mạnh mẽ từ thế kỷ 19).
-- **Danh hiệu cao quý:** Nghề dệt choàng xã Long Khánh A được công nhận là Di sản văn hóa phi vật thể Quốc gia (2023).
-- **Vị trí làng nghề cốt lõi:** Làng nghề dệt choàng Long Khánh A, huyện Hồng Ngự, tỉnh Đồng Tháp.
-- **Đặc điểm chuẩn:** Họa tiết caro (kẻ sọc vuông), chất liệu cotton pha, thấm hút mồ hôi tốt. Kích thước tiêu chuẩn 160x60cm.
-- **Giá trị 2026:** Dao động từ 20.000 VNĐ - 80.000 VNĐ tùy mức độ thủ công.
 
 ---
 

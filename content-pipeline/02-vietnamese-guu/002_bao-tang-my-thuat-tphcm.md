@@ -20,13 +20,6 @@ featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-o
 
 Chỉ cách Chợ Bến Thành chưa đầy năm phút tản bộ nhẹ nhàng qua ngã tư Lê Thị Hồng Gấm, **Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh** hiện ra như một ốc đảo di sản tách biệt hoàn toàn với tiếng còi xe huyên náo. Không gian này là một mắt xích trọng tâm trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), nơi hội tụ đỉnh cao của mỹ học kiến trúc Đông Dương đầu thế kỷ 20 và kho tàng hơn 22.000 hiện vật nghệ thuật vô giá của dân tộc.
 
----
-
-## Quick Overview Stats Bar (Thông Số Thực Địa 2026)
-
-| 📍 Địa chỉ tọa độ | 🏛️ Phong cách kiến trúc | ⏳ Niên đại khởi dựng | 🎟️ Giá vé tham quan 2026 |
-| :--- | :--- | :--- | :--- |
-| **97A Phó Đức Chính, Phường Nguyễn Thái Bình, Quận 1** | **Art Deco kết hợp Hậu Tân Cổ Điển & Á Đông** | **1929 – 1934 (Kiến trúc sư Rivera)** | **30.000 VNĐ / người lớn (15.000 VNĐ HSSV)** |
 
 ---
 

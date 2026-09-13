@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Culinary Reviews | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Gastronomic Coordinates:** Long Xuyen City, An Giang Province.
-- **The Signature Architecture:** Ultra-fine broken rice grains, julienned caramelized pork, braised duck eggs.
-- **2026 Price Baseline:** 35,000 – 50,000 VND per plate.
-- **Optimal Tasting Window:** Early morning (06:00 AM) or late night (after 09:00 PM).
 
 ---
 

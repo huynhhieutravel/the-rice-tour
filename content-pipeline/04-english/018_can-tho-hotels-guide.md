@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Hotels, Toplist | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Lodging Epicenter:** Ninh Kieu District, Can Tho City.
-- **2026 Baseline Rates:** 800,000 VND (Boutique) – 3,500,000+ VND (Luxury Riverfront).
-- **Peak Booking Seasons:** December – April (Dry Season) & Lunar New Year.
-- **Logistical Proximity:** Optimal locations are within a 1.5km radius of the Ninh Kieu Wharf.
 
 ---
 

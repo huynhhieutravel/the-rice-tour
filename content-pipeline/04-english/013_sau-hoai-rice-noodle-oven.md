@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** 476/14 Lo Vong Cung Street, An Binh Ward, Ninh Kieu District, Can Tho.
-- **Legacy:** Over 40 years of traditional rice noodle (Hu Tieu) craftsmanship.
-- **Signature Dish:** The legendary "Pizza Hu Tieu" (Deep-fried rice noodles).
-- **2026 Admission / Dish Price:** Free entry | 50,000 VND / portion of Pizza Hu Tieu.
 
 ---
 

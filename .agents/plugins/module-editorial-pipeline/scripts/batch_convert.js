@@ -18,10 +18,9 @@ const articleMetadata = {
       { icon: "⚠️", text: "2026 Travel Warning" }
     ],
     stats: [
-      { icon: "📍", label: "New Coordinates", val: "Binh Duc, Tay Ninh" },
-      { icon: "🚫", label: "2026 Status", val: "Closed to Individuals" },
-      { icon: "🎟️", label: "Ticketing / Access", val: "Private Events Only" },
-      { icon: "⚠️", label: "Travel Advisory", val: "Verify Before Visiting" }
+      { icon: "📍", label: "Coordinates", val: "Binh Duc, Tay Ninh" },
+      { icon: "🚫", label: "2026 Status", val: "Closed to Public / Private Only" },
+      { icon: "⚠️", label: "Advisory", val: "Verify Status Before Travel" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "New Coordinates", val: "Binh Duc, Tay Ninh (Post-2025)" },
@@ -44,10 +43,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Untamed Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "The Archipelago", val: "An Son (Kien Giang / Southwest Sea)" },
-      { icon: "🌤️", label: "Golden Season", val: "December – April (Calm Sea)" },
-      { icon: "🛥️", label: "Transit Time", val: "2h from Rach Gia Port" },
-      { icon: "🎟️", label: "2026 Tariff Baseline", val: "2,000,000 – 3,500,000 VND (3D2N)" }
+      { icon: "📍", label: "Archipelago", val: "21 Islands, An Son, Kien Giang" },
+      { icon: "🌤️", label: "Golden Window", val: "Dec – April (Calm Azure Seas)" },
+      { icon: "🛥️", label: "Maritime Link", val: "2h Express Ferry from Rach Gia" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "The Archipelago", val: "21 Islands, An Son, Kien Giang" },
@@ -70,10 +68,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Orchard Field Guide" }
     ],
     stats: [
-      { icon: "📍", label: "Heartland Provinces", val: "Tien Giang, Ben Tre, Can Tho, Vinh Long" },
-      { icon: "👑", label: "Crown Jewel", val: "Ri6 Durian & Green-skin Pomelo" },
+      { icon: "📍", label: "River Heartland", val: "Tien Giang, Ben Tre, Can Tho" },
       { icon: "🌤️", label: "Peak Harvest", val: "May – August (Fruit Season)" },
-      { icon: "🛶", label: "Tasting Experience", val: "Tree-to-Palate Boat Orchards" }
+      { icon: "🍈", label: "Iconic Cultivars", val: "Ri6 Durian & Green Pomelo" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Primary Riverine Basins", val: "Tien & Hau River Alluvium" },
@@ -96,10 +93,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Preservation Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "Coordinates", val: "Perfume River, Hue City" },
-      { icon: "⏳", label: "Erected", val: "1899 (King Thanh Thai & Eiffel Co.)" },
-      { icon: "📐", label: "Scale", val: "402.6 Meters / 6 Steel Spans" },
-      { icon: "🌙", label: "Golden Hours", val: "Dawn mist (5:30 AM) & Twilight (18:00)" }
+      { icon: "📍", label: "Coordinates", val: "Perfume River, Hue Imperial City" },
+      { icon: "⏳", label: "Construction", val: "1899 (Eiffel Iron Metallurgy)" },
+      { icon: "📐", label: "Scale", val: "402.6 Meters / 6 Steel Spans" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Historic Location", val: "Hue Imperial Capital, Thua Thien Hue" },
@@ -122,10 +118,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Family Field Guide" }
     ],
     stats: [
-      { icon: "📍", label: "New Coordinates", val: "My Hanh Bac, Duc Hoa (Post-2025)" },
-      { icon: "🕒", label: "Operating Hours", val: "07:30 – 18:00 (Daily)" },
-      { icon: "🎟️", label: "2026 All-In Ticket", val: "250,000 – 350,000 VND / Guest" },
-      { icon: "🚗", label: "Transit from HCMC", val: "1h 15m (~40 km via DT824)" }
+      { icon: "📍", label: "Coordinates", val: "Duc Hoa, Tay Ninh / Long An" },
+      { icon: "🕒", label: "Hours", val: "07:30 – 18:00 Daily" },
+      { icon: "🎟️", label: "2026 Ticket", val: "250,000 – 350,000 VND / Guest" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Savannah Location", val: "Duc Hoa, Tay Ninh / Long An Border" },
@@ -148,10 +143,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Bespoke Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "The Heartland", val: "Long Khanh A, Dong Thap" },
-      { icon: "⏳", label: "Historical Genesis", val: "17th Century (Khmer Krama)" },
-      { icon: "🏆", label: "Heritage Status", val: "National Heritage (2023)" },
-      { icon: "🎟️", label: "2026 Reference Price", val: "35,000 – 90,000 VND" }
+      { icon: "📍", label: "Heartland", val: "Long Khanh A, Dong Thap" },
+      { icon: "⏳", label: "Genesis", val: "17th Century (Khmer Krama)" },
+      { icon: "🏆", label: "Heritage", val: "National Intangible Heritage (2023)" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "The Heartland", val: "Hong Ngu, Dong Thap" },
@@ -174,10 +168,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Overnight Guest Chambers" }
     ],
     stats: [
-      { icon: "📍", label: "Riverfront Location", val: "Sa Dec City, Dong Thap" },
-      { icon: "⏳", label: "Construction Genesis", val: "1895 (Restored in 1917)" },
-      { icon: "🎟️", label: "2026 Entry Tariff", val: "20,000 VND (Includes tea & ginger)" },
-      { icon: "🛏️", label: "Vintage Stay", val: "2 Heritage Suites Available" }
+      { icon: "📍", label: "Coordinates", val: "Sa Dec Waterfront, Dong Thap" },
+      { icon: "⏳", label: "Construction", val: "1895 (Sino-French Timber)" },
+      { icon: "🎟️", label: "2026 Admission", val: "20,000 VND (Includes Lotus Tea)" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Historic Location", val: "255A Nguyen Hue, Sa Dec, Dong Thap" },
@@ -200,10 +193,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Corporate Field Manual" }
     ],
     stats: [
-      { icon: "📍", label: "Updated Coordinates", val: "An Hoi, Vinh Long (Ex-Ben Tre)" },
-      { icon: "🕒", label: "Operating Hours", val: "07:00 AM – 18:00 PM Daily" },
-      { icon: "🎟️", label: "Gate Admission", val: "Free Entry (A la carte activities)" },
-      { icon: "⚡", label: "Physical Intensity", val: "High (Bring change of clothes)" }
+      { icon: "📍", label: "Coordinates", val: "An Hoi, Vinh Long (Ex-Ben Tre)" },
+      { icon: "🕒", label: "Hours", val: "07:00 – 18:00 Daily (365 Days)" },
+      { icon: "🎟️", label: "Admission", val: "Free Entry (A la carte activities)" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Eco-Park Coordinates", val: "Hamlet 2, An Hoi Ward, Vinh Long" },
@@ -227,9 +219,8 @@ const articleMetadata = {
     ],
     stats: [
       { icon: "📍", label: "Coordinates", val: "Lai Son Island, Kien Giang" },
-      { icon: "🛥️", label: "Maritime Transit", val: "1h 30m Express Ferry from Rach Gia" },
-      { icon: "💵", label: "2026 Tariff Baseline", val: "300,000 – 1,500,000 VND / Night" },
-      { icon: "🛵", label: "Island Mobility", val: "100% Pier-side Scooter Delivery" }
+      { icon: "🛥️", label: "Transit", val: "1h 30m Ferry from Rach Gia" },
+      { icon: "💵", label: "2026 Tariff", val: "300,000 – 1,500,000 VND / Night" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Island Coordinates", val: "Hon Son (Lai Son), Kien Hai, Kien Giang" },
@@ -252,10 +243,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Leisure Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "Coordinates", val: "Cai Khe Ward, Ninh Kieu, Can Tho" },
-      { icon: "🕒", label: "Hours", val: "07:00 AM – 23:00 PM Daily" },
-      { icon: "🎟️", label: "2026 Entry Fee", val: "20,000 VND (Includes beverage)" },
-      { icon: "🌅", label: "Golden Hour", val: "17:00 – 18:00 (Sunset over Bridge)" }
+      { icon: "📍", label: "Coordinates", val: "Song Hau Park, Ninh Kieu, Can Tho" },
+      { icon: "🕒", label: "Hours", val: "07:00 – 23:00 Daily" },
+      { icon: "🎟️", label: "2026 Entry", val: "20,000 VND (Includes beverage)" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Oasis Location", val: "Song Hau Park, Cai Khe, Can Tho" },
@@ -279,10 +269,9 @@ const articleMetadata = {
       { icon: "🌿", text: "Curated Walking Sanctuary" }
     ],
     stats: [
-      { icon: "📍", label: "Epicenter Coordinates", val: "Quach Thi Trang Square, District 1" },
-      { icon: "⏳", label: "Historical Genesis", val: "1914 (Centennial New Market)" },
-      { icon: "🚶", label: "Exploration Radius", val: "1.2 km (Ideal Walking Stroll)" },
-      { icon: "🎟️", label: "2026 Admission Baseline", val: "Free – 65,000 VND / landmark" }
+      { icon: "📍", label: "Coordinates", val: "Quach Thi Trang Square, District 1" },
+      { icon: "🚶", label: "Walking Radius", val: "1.2 km Heritage Perimeter" },
+      { icon: "🎟️", label: "2026 Tariff", val: "Free – 65,000 VND / landmark" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Heart of Saigon", val: "Ben Thanh Ward, District 1, HCMC" },
@@ -306,10 +295,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Curated Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "Mansion Coordinates", val: "97A Pho Duc Chinh, District 1" },
-      { icon: "⏳", label: "Construction Era", val: "1929 – 1934 (Architect Rivera)" },
-      { icon: "🚶", label: "Walk from Ben Thanh", val: "350 meters (5-minute stroll)" },
-      { icon: "🎟️", label: "2026 Reference Tariff", val: "30,000 VND / adult (15,000 student)" }
+      { icon: "📍", label: "Coordinates", val: "97A Pho Duc Chinh, District 1" },
+      { icon: "🚶", label: "Walk from Market", val: "350 meters (5-minute stroll)" },
+      { icon: "🎟️", label: "2026 Ticket", val: "30,000 VND / adult" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Historical Identity", val: "Private Estate of Hui Bon Hoa Frères" },
@@ -333,10 +321,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Gastronomic Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "Epicenter", val: "South & East Portals, Ben Thanh" },
-      { icon: "🕒", label: "Operational Window", val: "06:00 – 18:00 (Day) & 18:00 – 23:30 (Night)" },
-      { icon: "🎟️", label: "2026 Tariff Baseline", val: "30,000 – 120,000 VND / dish" },
-      { icon: "🌟", label: "Must-Taste Icon", val: "East Gate Bún Riêu & Lemongrass Beef" }
+      { icon: "📍", label: "Dining Zone", val: "South & East Portals, Ben Thanh" },
+      { icon: "🕒", label: "Operating Hours", val: "06:00 – 23:30 (Day & Night Market)" },
+      { icon: "🎟️", label: "2026 Pricing", val: "30,000 – 120,000 VND / dish" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Culinary Court", val: "East Gate Stalls & Phan Boi Chau Street" },
@@ -360,10 +347,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Field Expedition" }
     ],
     stats: [
-      { icon: "🚶", label: "Total Stroll Distance", val: "4.5 km (4 Leisurely Stages)" },
-      { icon: "⏳", label: "Expedition Duration", val: "12 Hours (07:30 AM – 20:30 PM)" },
-      { icon: "⚡", label: "Physical Intensity", val: "Gentle & Restorative (All Ages)" },
-      { icon: "🎟️", label: "2026 Estimated Budget", val: "500,000 – 850,000 VND / person" }
+      { icon: "🚶", label: "Total Distance", val: "4.5 km (4 Curated Stages)" },
+      { icon: "⏳", label: "Expedition Time", val: "Full Day (07:30 AM – 20:30 PM)" },
+      { icon: "🎟️", label: "Estimated Budget", val: "500,000 – 850,000 VND / person" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Starting & Ending Hub", val: "Quach Thi Trang Plaza, Ben Thanh" },
@@ -387,10 +373,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Curated Heritage Stroll" }
     ],
     stats: [
-      { icon: "📍", label: "Palace Coordinates", val: "135 Nam Ky Khoi Nghia, District 1" },
-      { icon: "📐", label: "Chief Architect", val: "Ngo Viet Thu (Grand Prix de Rome)" },
-      { icon: "🚶", label: "Walk from Market", val: "700 meters (9-minute shaded walk)" },
-      { icon: "🎟️", label: "2026 Admission", val: "65,000 VND / adult (Palace & Bunkers)" }
+      { icon: "📍", label: "Palace Location", val: "135 Nam Ky Khoi Nghia, District 1" },
+      { icon: "🚶", label: "Walk from Market", val: "700 meters (9-minute walk)" },
+      { icon: "🎟️", label: "2026 Admission", val: "65,000 VND / adult" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Park Estate", val: "12-Hectare Ancient Canopy" },
@@ -414,8 +399,7 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Operational Guide" }
     ],
     stats: [
-      { icon: "📍", label: "Station Epicenter", val: "Quach Thi Trang Roundabout, District 1" },
-      { icon: "🚇", label: "Operational Line", val: "Metro Line 1 (Ben Thanh – Suoi Tien)" },
+      { icon: "📍", label: "Station Epicenter", val: "Quach Thi Trang Roundabout, D1" },
       { icon: "🕒", label: "Transit Hours", val: "05:00 AM – 23:00 PM Daily" },
       { icon: "🎟️", label: "2026 Ticket Fare", val: "6,000 – 20,000 VND / trip" }
     ],
@@ -441,10 +425,9 @@ const articleMetadata = {
       { icon: "🌿", text: "Tamil Heritage Sanctuary" }
     ],
     stats: [
-      { icon: "📍", label: "Sanctuary Coordinates", val: "45 Truong Dinh, District 1" },
-      { icon: "⏳", label: "Foundation Era", val: "Late 19th Century (Tamil Chettiar)" },
+      { icon: "📍", label: "Sanctuary Location", val: "45 Truong Dinh, District 1" },
       { icon: "🚶", label: "Distance to Market", val: "250 meters (3-minute walk)" },
-      { icon: "🎟️", label: "Admission & Rituals", val: "Free Entry (Respectful Modest Dress)" }
+      { icon: "🎟️", label: "Admission", val: "Free Entry (Modest Attire)" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Historic Enclave", val: "45 Truong Dinh Street, Ben Thanh Ward" },
@@ -468,10 +451,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Civilized Buyer's Guide" }
     ],
     stats: [
-      { icon: "📍", label: "Market Epicenter", val: "Intersection of 4 Iconic Gates, District 1" },
-      { icon: "🕒", label: "Prime Shopping Hours", val: "08:30 – 16:30 (Daytime Stalls)" },
-      { icon: "🤝", label: "Negotiation Guideline", val: "Respectful 20% – 30% discount baseline" },
-      { icon: "💳", label: "Payment Flexibility", val: "VietQR, Mobile Banking & Cash" }
+      { icon: "📍", label: "Market Core", val: "Intersection of 4 Iconic Gates" },
+      { icon: "🕒", label: "Prime Shopping", val: "08:30 – 16:30 (Daytime Stalls)" },
+      { icon: "🤝", label: "Bargaining Rule", val: "Respectful 20% – 30% discount" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Retail Sectors", val: "North: Flowers/Fruit; South: Textiles; East: Food; West: Crafts" },
@@ -495,10 +477,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Heritage Circuit Guide" }
     ],
     stats: [
-      { icon: "📍", label: "Main Hub at Ben Thanh", val: "West Gate (23 Phan Chu Trinh)" },
-      { icon: "🕒", label: "Operating Schedule", val: "08:00 – 22:30 Daily (Every 30 mins)" },
-      { icon: "⏳", label: "Loop Duration", val: "60 mins (District 1) / 120 mins (Chợ Lớn)" },
-      { icon: "🎟️", label: "2026 Ticket Range", val: "200,000 – 450,000 VND / passenger" }
+      { icon: "📍", label: "Main Terminal", val: "West Gate (23 Phan Chu Trinh)" },
+      { icon: "🕒", label: "Operating Schedule", val: "08:00 – 22:30 (Every 30 mins)" },
+      { icon: "🎟️", label: "2026 Ticket Range", val: "200,000 – 450,000 VND" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Prime Boarding Terminals", val: "Central Post Office & Ben Thanh West Gate" },
@@ -522,10 +503,9 @@ const articleMetadata = {
       { icon: "🎨", text: "2026 Creative Field Guide" }
     ],
     stats: [
-      { icon: "📍", label: "Walking Radius", val: "300m – 800m from Ben Thanh" },
-      { icon: "⏳", label: "Building Eras", val: "1920s French & 1960s Modernist Cư Xá" },
-      { icon: "☕", label: "Beverage Spectrum", val: "Robusta Phin, V60 Pour-over, Cold Drip" },
-      { icon: "💵", label: "2026 Price Baseline", val: "45,000 – 95,000 VND / beverage" }
+      { icon: "📍", label: "Walking Perimeter", val: "300m – 800m from Ben Thanh" },
+      { icon: "☕", label: "Coffee Spectrum", val: "Robusta Phin, V60 & Cold Drip" },
+      { icon: "💵", label: "2026 Price Baseline", val: "45,000 – 95,000 VND / drink" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Epicenter Buildings", val: "42 Ton That Thiep, 26 Ly Tu Trong, 14 Ton That Dam" },
@@ -550,9 +530,8 @@ const articleMetadata = {
     ],
     stats: [
       { icon: "📍", label: "Walking Radius", val: "200m – 700m from Ben Thanh" },
-      { icon: "🍸", label: "Cocktail Baseline", val: "180,000 – 380,000 VND / signature" },
-      { icon: "🌅", label: "Golden Twilight Hour", val: "17:30 – 19:00 PM (Sunset transition)" },
-      { icon: "👔", label: "Dress Standard", val: "Smart Casual (Tailored shirts & footwear)" }
+      { icon: "🌅", label: "Golden Hour", val: "17:30 – 19:00 PM (Twilight)" },
+      { icon: "🍸", label: "Cocktail Tariff", val: "180,000 – 380,000 VND" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Epicenter Boulevards", val: "Le Loi, Phan Boi Chau, Ton That Thiep, Huynh Thuc Khang" },
@@ -577,9 +556,8 @@ const articleMetadata = {
     ],
     stats: [
       { icon: "📍", label: "Market Proximity", val: "200m – 900m Walking Radius" },
-      { icon: "⏳", label: "Architectural Range", val: "1880 Belle Époque to Tropical Zen" },
-      { icon: "🚶", label: "Pedestrian Access", val: "Direct link to Metro Line 1 & Quach Thi Trang" },
-      { icon: "💵", label: "2026 Tariff Baseline", val: "2,200,000 – 6,800,000 VND / night" }
+      { icon: "🚶", label: "Transit Access", val: "Direct link to Metro Line 1" },
+      { icon: "💵", label: "2026 Tariff", val: "2,200,000 – 6,800,000 VND / night" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Sanctuary Corridors", val: "Ho Huan Nghiep, Thu Khoa Huan, Dong Khoi, Ly Tu Trong, Le Loi" },
@@ -603,10 +581,9 @@ const articleMetadata = {
       { icon: "🌿", text: "15 Curated Experiences" }
     ],
     stats: [
-      { icon: "📍", label: "Geographic Scope", val: "Ben Thanh Epicenter & 1km Radius" },
-      { icon: "⏳", label: "Suggested Duration", val: "4 Hours to 24-Hour Immersion" },
-      { icon: "🎟️", label: "2026 Budget Baseline", val: "250,000 – 850,000 VND / Guest" },
-      { icon: "🌙", label: "Night Market Shift", val: "18:00 – 23:30 Daily" }
+      { icon: "📍", label: "Geographic Scope", val: "Ben Thanh Core & 1km Radius" },
+      { icon: "⏳", label: "Suggested Time", val: "4 Hours to Full Day Immersion" },
+      { icon: "🎟️", label: "2026 Budget", val: "250,000 – 850,000 VND / Guest" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Heart of Saigon", val: "District 1, Ho Chi Minh City" },
@@ -631,9 +608,8 @@ const articleMetadata = {
     ],
     stats: [
       { icon: "📍", label: "Exact Location", val: "Le Loi Blvd, Ben Thanh, District 1" },
-      { icon: "🕒", label: "Covered Day Market", val: "06:00 – 18:00 (1,400+ Stalls)" },
-      { icon: "🌙", label: "Outdoor Night Market", val: "18:00 – 23:30 (East & West Gates)" },
-      { icon: "🎟️", label: "Admission Tariff", val: "Free Public Entry" }
+      { icon: "🕒", label: "Operating Window", val: "06:00 – 18:00 & 18:00 – 23:30" },
+      { icon: "🎟️", label: "Admission Policy", val: "Free Public Entry" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Centennial Market", val: "Inaugurated March 1914" },
@@ -657,9 +633,8 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Security Protocols" }
     ],
     stats: [
-      { icon: "📍", label: "Critical Perimeter", val: "All 4 Gates & Quach Thi Trang Square" },
-      { icon: "🚨", label: "Risk Typology", val: "Price Inflation & Curbside Soliciting" },
-      { icon: "🛡️", label: "Golden Rule", val: "Negotiate 40–50% or seek Fixed Price" },
+      { icon: "📍", label: "High-Alert Zone", val: "All 4 Gates & Roundabout" },
+      { icon: "🛡️", label: "Bargaining Rule", val: "Negotiate 40–50% or Fixed Price" },
       { icon: "👮", label: "Market Police Desk", val: "South Gate Station (Phan Chu Trinh)" }
     ],
     sidebarFacts: [
@@ -684,10 +659,9 @@ const articleMetadata = {
       { icon: "🌿", text: "2026 Currency Field Notes" }
     ],
     stats: [
-      { icon: "📍", label: "Exact Coordinates", val: "2 Nguyen An Ninh, Ben Thanh, District 1" },
-      { icon: "🕒", label: "Operating Schedule", val: "07:30 – 20:30 Daily (7 Days/Week)" },
-      { icon: "💱", label: "Top Currencies", val: "USD, EUR, AUD, JPY, SGD, THB, KRW" },
-      { icon: "🛡️", label: "Security Rating", val: "High CCTV & Regulated Transactions" }
+      { icon: "📍", label: "Exact Coordinates", val: "2 Nguyen An Ninh, Opp. West Gate" },
+      { icon: "🕒", label: "Operating Hours", val: "07:30 – 20:30 Daily (7 Days)" },
+      { icon: "💱", label: "Top Currencies", val: "USD, EUR, AUD, JPY, SGD, THB" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Location", val: "Directly opposite West Gate" },
@@ -712,9 +686,8 @@ const articleMetadata = {
     ],
     stats: [
       { icon: "📍", label: "Survey Zone", val: "500m Perimeter of Market Gates" },
-      { icon: "🛵", label: "Official Scooter Tariff", val: "5,000 – 10,000 VND / entry" },
-      { icon: "🚗", label: "Official Car Tariff", val: "35,000 – 50,000 VND / 2-hour block" },
-      { icon: "🚇", label: "Top Regulated Facility", val: "Ben Thanh Metro Central Basement" }
+      { icon: "🛵", label: "Scooter Fee", val: "5,000 – 10,000 VND / entry" },
+      { icon: "🚗", label: "Car Parking", val: "35,000 – 50,000 VND / 2 hours" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Closest Facility", val: "Saigon General Hospital (125 Le Loi)" },
@@ -740,8 +713,7 @@ const articleMetadata = {
     stats: [
       { icon: "📍", label: "Transit Distance", val: "7.5 km – 8.5 km to Ben Thanh" },
       { icon: "⏱️", label: "Transit Duration", val: "25 – 45 mins (Traffic dependent)" },
-      { icon: "💰", label: "Fare Spectrum", val: "15,000 VND (Bus) – 350,000 VND (VIP Sedan)" },
-      { icon: "🚌", label: "Optimal Public Route", val: "Air-conditioned Yellow Bus 109" }
+      { icon: "💰", label: "Fare Spectrum", val: "15,000 VND (Bus) – 350,000 VND" }
     ],
     sidebarFacts: [
       { icon: "📍", label: "Arrival Airport", val: "Tan Son Nhat (SGN), Tan Binh Dist" },
@@ -795,7 +767,7 @@ function formatTOC(body) {
     const displayText = rawText.replace(/^[⚡\d\.\s]+/, '').trim();
     
     if (h.depth === 2) {
-      tocHtml += `  <a href="#${id}" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">${displayText}</a>\n`;
+      tocHtml += `  <a href="#${id}" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">${displayText}</a>\n`;
     } else {
       tocHtml += `  <a href="#${id}" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">${displayText}</a>\n`;
     }
@@ -833,6 +805,9 @@ function processMarkdownToMagazineHtml(file) {
   body = body.replace(/^>\s+🖼️.*$/m, '');
   body = body.replace(/<figure[^>]*>[\s\S]*?<\/figure>/gi, '');
   body = body.replace(/<img[^>]*>/gi, '');
+  
+  // Remove redundant Quick Overview Stats section and any tables inside it
+  body = body.replace(/##\s*⚡?\s*(?:Quick Overview Stats|Quick Overview|Tổng quan nhanh)[\s\S]*?(?=\n##|\n---|\n<h2|$)/gi, '');
   
   // Extract custom renderer
   const customRenderer = new marked.Renderer();
@@ -884,14 +859,14 @@ function processMarkdownToMagazineHtml(file) {
   customRenderer.table = function({ header, rows }) {
     let headerHtml = '';
     header.forEach(cell => {
-      headerHtml += `<th class="p-4 font-bold text-left">${this.parser.parseInline(cell.tokens)}</th>`;
+      headerHtml += `<th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">${this.parser.parseInline(cell.tokens)}</th>`;
     });
     
     let rowsHtml = '';
     rows.forEach(row => {
       rowsHtml += '<tr class="hover:bg-slate-50/80 transition-colors">';
       row.forEach(cell => {
-        rowsHtml += `<td class="p-4">${this.parser.parseInline(cell.tokens)}</td>`;
+        rowsHtml += `<td class="p-4 text-slate-800 font-medium">${this.parser.parseInline(cell.tokens)}</td>`;
       });
       rowsHtml += '</tr>\n';
     });
@@ -900,7 +875,7 @@ function processMarkdownToMagazineHtml(file) {
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
           <thead>
-            <tr class="bg-slate-900 text-white font-serif">
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
               ${headerHtml}
             </tr>
           </thead>
@@ -930,32 +905,30 @@ function processMarkdownToMagazineHtml(file) {
     </div>
   `).join('\n');
 
-  // Build 4-Card Stats Bar
-  const stats = meta.stats || [
+  // Build 3-Card Quick Stats Bar (Optimized for Laptop & Mobile)
+  const stats = (meta.stats || [
     { icon: "📍", label: "Location", val: "Vietnam Inbound" },
     { icon: "⏳", label: "Ideal Timing", val: "Year-Round" },
-    { icon: "🎟️", label: "Access Policy", val: "Curated Entry" },
-    { icon: "🌿", label: "Experience Type", val: "Cultural Immersion" }
-  ];
+    { icon: "🎟️", label: "Access Policy", val: "Curated Entry" }
+  ]).slice(0, 3);
   const statsHtml = stats.map((s, idx) => `
-    <div class="flex items-center gap-3 w-[48%] lg:w-auto ${idx > 1 ? 'mt-2 lg:mt-0' : ''}">
-      <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/60 shrink-0">${s.icon}</div>
-      <div>
-        <div class="text-[11px] text-slate-500 font-medium">${s.label}</div>
-        <div class="text-[13px] font-bold text-slate-900">${s.val}</div>
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">${s.icon}</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">${s.label}</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">${s.val}</div>
       </div>
     </div>
-    ${idx < stats.length - 1 ? '<div class="hidden lg:block w-px h-8 bg-slate-200"></div>' : ''}
   `).join('\n');
 
   // Build Right Sidebar Quick Facts
   const sidebarFacts = meta.sidebarFacts || stats;
   const sidebarFactsHtml = sidebarFacts.map(f => `
     <div class="flex gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/60 text-lg">${f.icon}</div>
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">${f.icon}</div>
       <div>
-        <div class="text-[11px] text-slate-500 uppercase tracking-wide font-bold">${f.label}</div>
-        <div class="font-bold text-slate-800 text-[13px]">${f.val}</div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">${f.label}</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">${f.val}</div>
       </div>
     </div>
   `).join('\n');
@@ -1073,8 +1046,8 @@ function processMarkdownToMagazineHtml(file) {
         <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
         <main class="col-span-1 lg:col-span-6 space-y-10">
           
-          <!-- Quick Overview Stats Bar -->
-          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4">
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
             ${statsHtml}
           </div>
 
@@ -1087,7 +1060,7 @@ function processMarkdownToMagazineHtml(file) {
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: ${meta.epilogueTitle || "Journeying with Purpose"}</h3>
-              <p class="text-slate-300 text-base leading-relaxed m-0">
+              <p class="text-slate-100 text-base leading-relaxed m-0">
                 ${meta.epilogue || "True exploration is not simply the accumulation of photographs, but the conscious discovery of history, craftsmanship, and human kinship along the living rivers of Vietnam."}
               </p>
             </div>

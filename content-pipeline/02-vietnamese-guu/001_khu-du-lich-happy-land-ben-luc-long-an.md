@@ -17,14 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Điểm du lịch nổi tiếng | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Khu du lịch Happy Land Bến Lức: hiện trạng, giá vé và địa chỉ mới](https://r2.nucuoimekong.com/wp-content/uploads/happy-land-1.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Vị trí hiện tại:** Xã Bình Đức, Tỉnh Tây Ninh (địa chỉ hành chính mới sau sáp nhập 2025).
-- **Trạng thái (2026):** **Ngừng hoạt động thường xuyên đối với khách lẻ.**
-- **Giá vé / Giờ mở cửa:** Không áp dụng (chưa có thông báo chính thức).
-- **Cảnh báo lữ hành:** Không tự ý đến tham quan hoặc chuyển khoản mua vé qua các bên thứ ba không chính thống.
 
 ---
 

@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Khám phá và trải nghiệm, Lịch trình & Cẩm nang | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Cẩm nang thám hiểm Đảo Nam Du](https://r2.nucuoimekong.com/wp-content/uploads/nam-du-co-gi-choi.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Tọa độ địa lý (Cập nhật 2026):** Đặc khu Kiên Hải, Tỉnh An Giang (Lưu ý: Tên hành chính cũ là thuộc tỉnh Kiên Giang).
-- **Mùa đẹp nhất:** Tháng 12 đến tháng 3 năm sau (Biển êm, nắng đẹp, ít bão).
-- **Cửa ngõ di chuyển:** Cảng Rạch Giá (Di chuyển bằng tàu cao tốc khoảng 2 – 2.5 giờ).
-- **Thời lượng khám phá tối ưu:** 3 Ngày 2 Đêm (Dự phòng thời gian lỡ tàu do thời tiết).
-- **Mức độ thử thách thể lực:** Trung bình (Phù hợp với đa số lứa tuổi, yêu cầu khả năng chịu say sóng).
 
 ---
 

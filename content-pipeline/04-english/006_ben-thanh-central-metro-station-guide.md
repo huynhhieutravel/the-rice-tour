@@ -59,13 +59,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-c
 
 Enshrined as the crowning technological triumph within our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), the newly inaugurated **Ben Thanh Central Metro Station (Urban Railway Line 1)** represents a milestone in Southeast Asian urban infrastructure. Descending four tiers into the southern delta's earth, this intermodal hub seamlessly integrates ancient heritage with 21st-century rapid transit.
 
----
-
-## Quick Overview Stats (2026 Transit Dimensions)
-
-| 📍 Epicenter Location | 🚇 Subterranean Scale | 🕒 Daily Schedule | 🎟️ 2026 Fare Baseline |
-| :--- | :--- | :--- | :--- |
-| **Quach Thi Trang Concourse, South Portal** | **32m Depth (4 Levels) – 236m Length** | **05:00 AM – 23:00 PM (4–8 min intervals)** | **7,000 – 20,000 VND (Day Pass: 40,000 VND)** |
 
 ---
 

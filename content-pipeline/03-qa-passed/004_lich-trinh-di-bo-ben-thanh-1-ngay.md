@@ -24,13 +24,6 @@ featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-
 
 Là một hợp phần cốt lõi trong hệ thống [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Lộ trình tản bộ di sản 1 ngày (One-Day Heritage Walking Tour)** được The Rice Tour thiết kế khoa học nhằm giúp người lữ khách có gu tận hưởng trọn vẹn những gì tinh túy nhất của trung tâm Quận 1 mà không hề cảm thấy hối hả hay kiệt sức dưới khí hậu nhiệt đới phương Nam.
 
----
-
-## Quick Overview Stats Bar (Thông Số Lộ Trình 2026)
-
-| 🚶 Tổng cự ly tản bộ | ⏳ Thời lượng trọn vẹn | ⚡ Mức độ tiêu hao thể lực | 🎟️ Dự toán ngân sách 2026 |
-| :--- | :--- | :--- | :--- |
-| **4.5 km (chia thành 4 chặng nhẹ nhàng)** | **12 tiếng (07:30 sáng – 20:30 tối)** | **Nhẹ nhàng – Thư thái (Mọi lứa tuổi)** | **500.000 – 850.000 VNĐ / người** |
 
 ---
 

@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Toplist, Local Heritage | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Commercial Epicenter:** Can Tho City (The logistical hub of the Mekong Delta).
-- **The Typology:** Floating wholesale markets, historic covered halls, and hyper-kinetic night bazaars.
-- **2026 Core Focus:** Preserving agricultural authenticity amidst rapid urban modernization.
-- **Logistical Proximity:** Most terrestrial markets are concentrated within the Ninh Kieu District.
 
 ---
 

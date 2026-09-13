@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Điểm du lịch nổi tiếng | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Mỹ Quỳnh Safari](https://r2.nucuoimekong.com/wp-content/uploads/safari-my-quynh.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Vị trí (Cập nhật 2025-2026):** Ấp Bàu Công, Xã Hậu Nghĩa, Tỉnh Tây Ninh (Lưu ý: Địa chỉ cũ là Xã Tân Mỹ, Huyện Đức Hòa, Long An).
-- **Giờ hoạt động:** 08:00 - 17:00 (Từ Thứ Ba đến Chủ Nhật, **Nghỉ Thứ Hai** hằng tuần).
-- **Vé vào cổng cơ bản (2026):** 100.000 VNĐ (Người lớn). *Lưu ý: Vé các dịch vụ Safari và Công viên nước được tính riêng.*
-- **Thời lượng khám phá lý tưởng:** Nửa ngày đến một ngày trọn vẹn.
-- **Phù hợp với:** Gia đình có trẻ nhỏ, nhóm sinh viên dã ngoại, trường học tổ chức ngoại khóa.
 
 ---
 

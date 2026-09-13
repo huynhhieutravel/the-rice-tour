@@ -17,15 +17,6 @@ phase: 2
 > 🏷️ **Chuyên mục:** Điểm du lịch nổi tiếng | 📅 **Ngày cập nhật:** 2026-08-26  
 > 🖼️ **Ảnh đại diện:** ![Cầu Trường Tiền Huế](https://r2.nucuoimekong.com/wp-content/uploads/cau-trang-tien-1.jpg)
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Tên chính thức:** Cầu Trường Tiền (Thường gọi: Cầu Tràng Tiền).
-- **Vị trí:** Nối liền hai phường Phú Xuân (Bờ Bắc) và Thuận Hóa (Bờ Nam), TP. Huế.
-- **Năm khánh thành:** 1900 (Dụ xây cầu từ 1896 dưới thời vua Thành Thái).
-- **Khẩu độ nhịp thép:** 6 nhịp dầm thép, mỗi nhịp dài 66,08m (Tổng chiều dài 406,45m).
-- **Tình trạng 2026:** **Đang trong giai đoạn đại tu bảo trì (Dự kiến 150 ngày từ 01/06/2026).** Hạn chế lưu thông ban đêm.
 
 ---
 

@@ -16,15 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Location (2025-2026 Update):** Bau Cong Hamlet, Hau Nghia Commune, Tay Ninh Province (Note: Formerly located in Tan My Commune, Duc Hoa District, Long An).
-- **Operating Hours:** 08:00 AM - 05:00 PM (Tuesday to Sunday, **Closed on Mondays**).
-- **Basic Admission (2026):** 100,000 VND (Adults). *Note: Safari and Water Park services are ticketed separately.*
-- **Ideal Duration:** Half a day to a full day.
-- **Perfect For:** Families with young children, student field trips, and educational excursions.
 
 ---
 

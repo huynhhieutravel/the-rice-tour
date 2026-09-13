@@ -79,7 +79,7 @@ if (d1Db) {
     // Auto-seed or repair demo articles if content is missing or table is empty
     const { results: checkPosts } = await d1Db.prepare("SELECT id, content FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10', 'demo_11', 'demo_12', 'demo_13', 'demo_14', 'demo_15', 'demo_16', 'demo_17', 'demo_18', 'demo_19', 'demo_20', 'demo_21', 'demo_22', 'demo_23', 'demo_24', 'demo_25', 'demo_26', 'demo_27', 'demo_28')").all();
     const existingIds = checkPosts?.map(p => String(p.id)) || [];
-    const needsRepair = existingIds.length < 28 || checkPosts?.some(p => !p.content || !p.content.includes('Quick Expedition Facts'));
+    const needsRepair = existingIds.length < 28 || checkPosts?.some(p => !p.content || !p.content.includes('3 Curated Dimensions'));
 
     if (needsRepair) {
       try {

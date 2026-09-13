@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-26  
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Current Location:** Binh Duc Commune, Tay Ninh Province (updated administrative address following the 2025 redistricting).
-- **Status (2026):** **Permanently closed to independent travelers.**
-- **Admission / Hours:** Not applicable (no official announcements).
-- **Travel Advisory:** Do not attempt unauthorized visits or wire money for tickets through unverified third parties.
 
 ---
 

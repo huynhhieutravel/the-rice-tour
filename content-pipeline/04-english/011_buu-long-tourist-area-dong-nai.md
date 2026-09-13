@@ -16,14 +16,6 @@ phase: 3
 
 > 🏷️ **Category:** Famous Destinations | 📅 **Last Updated:** 2026-08-27
 
----
-
-## ⚡ Quick Overview Stats Bar
-
-- **Coordinates:** Huynh Van Nghe Street, Tran Bien Ward, Dong Nai Province (6km from Bien Hoa center).
-- **Scale:** 84 hectares of lakes, mountains, and ancient temples.
-- **2026 Ticket Pricing:** 150,000 VND (Adults) | 60,000 VND (Children 1.0m - 1.4m) | Free (Under 1.0m).
-- **Operating Hours:** 07:00 AM – 05:00 PM (Closed on Tuesdays for maintenance, except on national holidays).
 
 ---
 

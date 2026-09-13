@@ -24,13 +24,6 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-shopping
 
 Là một điểm nhấn thực chiến không thể bỏ lỡ trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **trải nghiệm mua sắm tại Chợ Bến Thành** đưa bạn bước vào mê cung của hơn 1.400 sạp hàng rực rỡ sắc màu. Đối với người lữ khách có gu, việc dạo chợ không chỉ để mang về những món quà lưu niệm độc đáo mà còn là dịp để chiêm ngưỡng kỹ nghệ thủ công tinh xảo của các làng nghề truyền thống ba miền hội tụ về đất Sài Gòn.
 
----
-
-## Quick Overview Stats Bar (Thông Số Mua Sắm 2026)
-
-| 🏪 Quy mô gian hàng | 🕒 Giờ mở cửa hoạt động | 💳 Phương thức thanh toán 2026 | 🌟 Mặt hàng tiêu biểu |
-| :--- | :--- | :--- | :--- |
-| **1.400+ sạp hàng chuyên nghiệp** | **07:00 – 18:00 (Trong chợ)** | **100% Chấp nhận VietQR, Visa/Mastercard** | **Lụa tơ tằm, sơn mài khảm trứng, cà phê rang mộc** |
 
 ---
 
