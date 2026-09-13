@@ -32,14 +32,14 @@
 
 ## 2. 6 LỖ HỔNG KỸ THUẬT ĐÃ PHÁT HIỆN & ĐÁNH GIÁ TÁC ĐỘNG
 
-| STT | Lỗ hổng kỹ thuật | Vị trí phát hiện | Đánh giá rủi ro | Hậu quả nếu không sửa |
-| :---: | :--- | :--- | :---: | :--- |
-| **1** | **FAQPage Schema bị thiếu 100%** | `src/pages/[...slug].astro` | **Rất cao (Critical)** | Bài viết có 8 câu hỏi Accordion tương tác cực hay nhưng Google không biết, mất toàn bộ cơ hội hiển thị FAQ Rich Snippet trên SERP và trích xuất trực tiếp trên AI Overview. |
-| **2** | **Organization Schema bị lỗi Stub rỗng** | `src/lib/schemaGenerator.ts` | **Rất cao (Critical)** | Node 0 của `@graph` chỉ có `{"@id": "..."}` mà không có `@type` hay thông tin, gây lỗi parse schema trên Google Rich Results Test. Tên thương hiệu còn dính chữ "FIT TOUR" cũ. |
-| **3** | **Hardcode ngôn ngữ `inLanguage: "vi-VN"`** | `src/lib/schemaGenerator.ts` | **Cao (High)** | Bài viết viết bằng tiếng Anh hoàn toàn nhưng Schema lại khai báo với Google là tiếng Việt, gây nhiễu bộ phân loại ngôn ngữ quốc tế của Google Inbound. |
-| **4** | **Sitemap XML trả về lỗi 404** | `src/pages/sitemap.xml.ts` | **Cao (High)** | Bot tìm kiếm quét `https://thericetour.com/sitemap.xml` bị lỗi 404, làm chậm phát hiện URL mới. Bài cooking class cũng chưa có trong `sitemap-blog.xml`. |
-| **5** | **Robots.txt thiếu khai báo Sitemap** | `public/robots.txt` | **Trung bình (Medium)** | Chỉ khai báo `sitemap-index.xml`, các bot tìm kiếm theo thói quen quét `/sitemap.xml` không tìm thấy chỉ dẫn. |
-| **6** | **Trang Tour thiếu Brand, Provider & Star Rating** | `src/pages/tour/*.astro` | **Cao (High)** | Cả 6 trang tour thiếu trường `aggregateRating` và `brand`, không kích hoạt được Rich Snippet 5 sao vàng trên Google. |
+| STT | Lỗ hổng kỹ thuật | Vị trí phát hiện | Đánh giá rủi ro | Trạng thái xử lý | Giải pháp & Kết quả kiểm thử Live |
+| :---: | :--- | :--- | :---: | :---: | :--- |
+| **1** | **FAQPage Schema bị thiếu 100%** | `src/pages/[...slug].astro` | **Rất cao (Critical)** | ✅ **ĐÃ FIX & LIVE** | Tự động bóc tách 8 câu hỏi Q&A từ `<details>`, bơm trực tiếp vào JSON-LD Schema. |
+| **2** | **Organization Schema bị lỗi Stub rỗng** | `src/lib/schemaGenerator.ts` | **Rất cao (Critical)** | ✅ **ĐÃ FIX & LIVE** | Chuẩn hóa thực thể `TravelAgency` The Rice Tour với NAP, GPS 195 Đề Thám, Q1 và WebSite node. |
+| **3** | **Hardcode ngôn ngữ `inLanguage: "vi-VN"`** | `src/lib/schemaGenerator.ts` | **Cao (High)** | ✅ **ĐÃ FIX & LIVE** | Nhận diện ngôn ngữ động: Bài tiếng Anh xuất `"en-US"`, HTML `<html lang="en">`, Breadcrumb `"Home"`. Bài tiếng Việt xuất `"vi-VN"`, `<html lang="vi">`. |
+| **4** | **Sitemap XML trả về lỗi 404** | `src/pages/sitemap.xml.ts` | **Cao (High)** | ✅ **ĐÃ FIX & LIVE** | Master `sitemap.xml` trả về `200 OK`, `sitemap-blog.xml` chứa đầy đủ bài cooking class mới. |
+| **5** | **Robots.txt thiếu khai báo Sitemap** | `public/robots.txt` | **Trung bình (Medium)** | ✅ **ĐÃ FIX & LIVE** | Đã khai báo cả `https://thericetour.com/sitemap.xml` và `https://thericetour.com/sitemap-index.xml`. |
+| **6** | **Trang Tour thiếu Brand, Provider & Star Rating** | `src/pages/tour/*.astro` | **Cao (High)** | ✅ **ĐÃ FIX & LIVE** | Cả 6 tour đã có `inLanguage: "en-US"`, `brand`, `provider` và `aggregateRating: 5.0` (TripAdvisor). |
 
 ---
 
