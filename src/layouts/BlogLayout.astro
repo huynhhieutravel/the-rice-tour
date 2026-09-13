@@ -40,6 +40,7 @@ import { generateBlogSchema } from '@/lib/schemaGenerator';
 const currentOrigin = Astro.url.origin;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
+const canonicalMdUrl = `${canonicalUrl}.md`;
 
 // Schema Generation
 let finalSchemaToRender: any = null;
@@ -79,7 +80,7 @@ if (!finalSchemaToRender) {
 }
 ---
 
-<BaseLayout title={title} description={description} image={image} canonical={canonicalUrl} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} isCorporate={isCorporate} noindex={noindex}>
+<BaseLayout title={title} description={description} image={image} canonical={canonicalUrl} canonicalMdUrl={canonicalMdUrl} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} isCorporate={isCorporate} noindex={noindex}>
   <Fragment slot="schema">
     {finalSchemaToRender && Object.keys(finalSchemaToRender).length > 0 && (
       <JsonLdSchema type="custom" data={finalSchemaToRender} />

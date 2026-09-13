@@ -210,87 +210,29 @@ When you know how flavors fit together, you can cook Vietnamese food anywhere in
 
 ## Frequently Asked Questions
 
-<div class="faq-accordion-wrapper space-y-4 my-8 not-prose">
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200" open>
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">What do you learn in a Vietnamese cooking class?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      You learn how to pick fresh market produce, prepare herbs and aromatics, balance sweet, sour, salty, and spicy flavors, make classic dishes, mix dipping sauces from scratch, and practice everyday cooking techniques you can use at home.
-    </div>
-  </details>
+### What do you learn in a Vietnamese cooking class?
+You learn how to pick fresh market produce, prepare herbs and aromatics, balance sweet, sour, salty, and spicy flavors, make classic dishes, mix dipping sauces from scratch, and practice everyday cooking techniques you can use at home.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Do I need prior culinary experience to participate?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      No prior cooking experience is needed. Classes are designed for beginners and food lovers alike. Instructors guide you step by step through prepping ingredients, controlling pan heat, and seasoning sauces.
-    </div>
-  </details>
+### Do I need prior culinary experience to participate?
+No prior cooking experience is needed. Classes are designed for beginners and food lovers alike. Instructors guide you step by step through prepping ingredients, controlling pan heat, and seasoning sauces.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">How many dishes do you learn in a Vietnamese cooking class?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Most half-day classes teach 3 to 4 classic dishes. A typical menu includes a fresh spring roll (<em>gỏi cuốn</em>), a crispy crepe (<em>bánh xèo</em>), a noodle or claypot dish, and a homemade dipping sauce.
-    </div>
-  </details>
+### How many dishes do you learn in a Vietnamese cooking class?
+Most half-day classes teach 3 to 4 classic dishes. A typical menu includes a fresh spring roll (*gỏi cuốn*), a crispy crepe (*bánh xèo*), a noodle or claypot dish, and a homemade dipping sauce.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Do Vietnamese cooking classes include a local market tour?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Yes, most morning sessions begin with a walk through a neighborhood wet market (<em>chợ dân sinh</em>). Your guide helps you explore fresh herb stalls, local vegetables, and seafood vendors before cooking starts.
-    </div>
-  </details>
+### Do Vietnamese cooking classes include a local market tour?
+Yes, most morning sessions begin with a walk through a neighborhood wet market (*chợ dân sinh*). Your guide helps you explore fresh herb stalls, local vegetables, and seafood vendors before cooking starts.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Can classes accommodate vegetarians or guests with dietary restrictions?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Yes. Vietnamese food has a deep vegetarian tradition (<em>ăn chay</em>). Cooking schools can easily swap meats for fresh tofu, mushrooms, soy sauce (<em>nước tương</em>), and vegetable broths. Just let the organizer know when booking.
-    </div>
-  </details>
+### Can classes accommodate vegetarians or guests with dietary restrictions?
+Yes. Vietnamese food has a deep vegetarian tradition (*ăn chay*). Cooking schools can easily swap meats for fresh tofu, mushrooms, soy sauce (*nước tương*), and vegetable broths. Just let the organizer know when booking.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Will I get printed or digital recipes to take home?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Yes. Cooking schools usually provide printed or digital recipe booklets with ingredient quantities, clear steps, and tips on finding substitute ingredients back home.
-    </div>
-  </details>
+### Will I get printed or digital recipes to take home?
+Yes. Cooking schools usually provide printed or digital recipe booklets with ingredient quantities, clear steps, and tips on finding substitute ingredients back home.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Can I realistically recreate Vietnamese food at home after the class?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Yes. Dishes like fresh spring rolls, grilled lemongrass meats, and dipping sauces are straightforward to make at home. Once you understand the basic balance of fish sauce, lime, and sugar, recreating them is simple.
-    </div>
-  </details>
+### Can I realistically recreate Vietnamese food at home after the class?
+Yes. Dishes like fresh spring rolls, grilled lemongrass meats, and dipping sauces are straightforward to make at home. Once you understand the basic balance of fish sauce, lime, and sugar, recreating them is simple.
 
-  <details class="group bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-amber-400 transition-all duration-200">
-    <summary class="flex items-center justify-between gap-4 p-5 font-semibold text-slate-900 cursor-pointer bg-slate-50/70 hover:bg-amber-50/40 transition-colors list-none [&::-webkit-details-marker]:hidden select-none">
-      <span class="text-[16.5px] font-bold text-slate-900 tracking-tight">Is a Vietnamese cooking class worth doing in Ho Chi Minh City?</span>
-      <span class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 font-bold text-lg group-open:rotate-45 group-open:bg-amber-500 group-open:text-white transition-all duration-300 shrink-0 shadow-xs">+</span>
-    </summary>
-    <div class="p-5 md:p-6 text-slate-700 bg-white border-t border-slate-100 leading-relaxed text-[15.5px]">
-      Definitely. If you enjoy food, a hands-on class is one of the best ways to experience local life. You see a neighborhood market, learn how Vietnamese dishes are put together, and eat a fantastic meal you cooked yourself.
-    </div>
-  </details>
-</div>
+### Is a Vietnamese cooking class worth doing in Ho Chi Minh City?
+Definitely. If you enjoy food, a hands-on class is one of the best ways to experience local life. You see a neighborhood market, learn how Vietnamese dishes are put together, and eat a fantastic meal you cooked yourself.
 
 ---
 
