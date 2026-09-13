@@ -24,6 +24,22 @@ export const GET: APIRoute = async ({ request }) => {
       ORDER BY createdAt DESC
     `).all();
 
+    // Ensure all demo articles like cooking class are present in sitemap
+    const existingSlugs = new Set((posts || []).map((p: any) => p.slug));
+    const extraDemoArticles = [
+      {
+        slug: 'what-do-you-learn-in-a-vietnamese-cooking-class',
+        updatedAt: '2026-09-13T16:15:00.000Z',
+        createdAt: '2026-09-13T16:15:00.000Z',
+        featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp'
+      }
+    ];
+    for (const extra of extraDemoArticles) {
+      if (!existingSlugs.has(extra.slug)) {
+        posts.unshift(extra);
+      }
+    }
+
     const siteUrl = 'https://thericetour.com';
 
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
