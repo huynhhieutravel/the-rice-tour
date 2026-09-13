@@ -13,9 +13,13 @@ const currentOrigin = Astro.url.origin;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
 
+const hasVietnameseDiacritics = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(title);
+const pageLang = hasVietnameseDiacritics ? "vi" : "en";
+const breadcrumbHome = hasVietnameseDiacritics ? "Trang chủ" : "Home";
+
 const breadcrumbSchema = {
   items: [
-    { name: "Trang chủ", url: `${currentOrigin}/` },
+    { name: breadcrumbHome, url: `${currentOrigin}/` },
     { name: title, url: canonicalUrl }
   ]
 };
@@ -40,7 +44,7 @@ if (customSchema) {
 schemasToRender.push({ type: 'breadcrumb', data: breadcrumbSchema });
 ---
 
-<BaseLayout title={title} description={description} image={image} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} noindex={noindex}>
+<BaseLayout title={title} description={description} image={image} preloadImages={image ? [image] : []} adminEditUrl={adminEditUrl} noindex={noindex} lang={pageLang}>
   <Fragment slot="schema">
     {schemasToRender.map(schema => (
       <JsonLdSchema type={schema.type as any} data={schema.data} />
