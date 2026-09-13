@@ -157,7 +157,12 @@ if (!post && (demoSlugs.includes(slug) || demoSlugs.includes(cleanPostSlug))) {
   post = {
     id: 'demo_' + actualSlug,
     slug: actualSlug,
-    title: actualSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    title: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class' 
+      ? 'What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion'
+      : actualSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    seoDescription: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class'
+      ? 'A practical guide to wet market sourcing, fresh herbs, balancing five flavors, and home cooking techniques in a Vietnamese cooking class.'
+      : undefined,
     status: 'published',
     content: '', // Will be filled by demo-articles fallback
     createdAt: new Date().toISOString()
