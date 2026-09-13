@@ -172,7 +172,16 @@ const seoData = {
       "@type": "CollectionPage",
       "name": seoData.title,
       "description": seoData.description,
-      "url": seoData.canonicalUrl
+      "url": seoData.canonicalUrl,
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": tours.map((tour, idx) => ({
+          "@type": "ListItem",
+          "position": idx + 1,
+          "name": tour.title,
+          "url": `https://thericetour.com/tour/${tour.slug}`
+        }))
+      }
     }} />
   </Fragment>
 

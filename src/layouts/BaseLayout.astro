@@ -26,9 +26,10 @@ export interface Props {
   hideGlobalHeader?: boolean;
   hideGlobalFooter?: boolean;
   lang?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description, image, canonical, noindex, preloadImages, adminEditUrl, isCorporate = false, hideGlobalHeader = false, hideGlobalFooter = false, lang = "en" } = Astro.props;
+const { title, description, image, canonical, noindex, preloadImages, adminEditUrl, isCorporate = false, hideGlobalHeader = false, hideGlobalFooter = false, lang = "en", ogType = 'website' } = Astro.props;
 const isAppView = Astro.url.searchParams.has('appview');
 const finalHideHeader = hideGlobalHeader || isAppView;
 const finalHideFooter = hideGlobalFooter || isAppView;
@@ -79,6 +80,8 @@ if (isCorporate) {
       image={image} 
       canonical={canonical} 
       noindex={finalNoIndex} 
+      type={ogType}
+      googleVerification={(settings as any)?.seo_google_verification || (settings as any)?.seo?.googleVerification}
     />
     <!-- Google Tag Base (Always loaded for Google Ads and Analytics) -->
     <script is:inline>
@@ -149,7 +152,6 @@ if (isCorporate) {
     <slot name="schema" />
     <slot name="head" />
     <meta name="facebook-domain-verification" content="k43d40vs9hjgei8rndzeo6dzqc81fk" />
-    <meta name="zalo-platform-site-verification" content="O--248RA3Xf_uwW-kVK5Ccx1eX-2jtX4E38r" />
   </head>
   <body class="flex flex-col min-h-screen bg-subtle text-primary font-sans antialiased selection:bg-brand-500 selection:text-white">
     {settings.tracking?.ga && settings.tracking.ga.startsWith('GTM-') && (

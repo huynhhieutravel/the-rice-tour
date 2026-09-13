@@ -5,6 +5,8 @@ export interface Props {
   image?: string;
   canonical?: string;
   noindex?: boolean;
+  type?: 'website' | 'article';
+  googleVerification?: string;
 }
 
 import { env } from 'cloudflare:workers';
@@ -19,7 +21,9 @@ const {
   description, 
   image, 
   canonical = new URL(defaultPath, Astro.site || Astro.url.origin).href,
-  noindex = false
+  noindex = false,
+  type = 'website',
+  googleVerification
 } = Astro.props;
 
 // Xử lý fallback cho OG image: tự động loại bỏ ảnh dính logo Mekong Smile / Nụ Cười Mê Kông cũ
@@ -74,11 +78,12 @@ const robotsContent = noindex
 <!-- Robots & Indexing & Verification -->
 <meta name="msvalidate.01" content="8F832FC6B1D0E38480967492438B78F2" />
 <meta name="zalo-platform-site-verification" content="O--248RA3Xf_uwW-kVK5Ccx1eX-2jtX4E38r" />
+{googleVerification && <meta name="google-site-verification" content={googleVerification} />}
 <meta name="robots" content={robotsContent} />
 {canonical && <link rel="canonical" href={canonical} />}
 
 <!-- Open Graph / Zalo / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:url" content={canonical} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

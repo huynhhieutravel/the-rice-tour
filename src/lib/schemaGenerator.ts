@@ -235,7 +235,15 @@ export function generateBlogSchema(props: BlogSchemaProps) {
     "name": "The Rice Tour",
     "description": "Authentic Inbound Vietnam Travel Experiences & Guided Cultural Tours",
     "publisher": { "@id": "https://thericetour.com/#organization" },
-    "inLanguage": ["en-US", "vi-VN"]
+    "inLanguage": ["en-US", "vi-VN"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://thericetour.com/blog?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   };
 
   // 4. Assemble Graph — Fully self-contained entity resolution

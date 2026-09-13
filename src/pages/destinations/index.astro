@@ -92,17 +92,28 @@ const title = "Vietnam Travel Destinations & Regional Highlights | The Rice Tour
 const description = "Discover the most enchanting destinations in Vietnam: from Hanoi historical alleys and emerald Ha Long Bay to misty Sapa peaks and serene Mekong Delta waterways.";
 ---
 
-<BaseLayout title={title} description={description}>
-  <JsonLdSchema 
-    type="custom"
-    data={{
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: title,
-      description: description,
-      url: "https://thericetour.com/destinations"
-    }}
-  />
+<BaseLayout title={title} description={description} canonical="https://thericetour.com/destinations">
+  <Fragment slot="head">
+    <JsonLdSchema 
+      type="custom"
+      data={{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: title,
+        description: description,
+        url: "https://thericetour.com/destinations",
+        mainEntity: {
+          "@type": "ItemList",
+          "itemListElement": destinations.map((dest: any, idx: number) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "name": dest.name,
+            "url": `https://thericetour.com/destination/${dest.slug}`
+          }))
+        }
+      }}
+    />
+  </Fragment>
 
   <main class="destinations-page bg-gray-50 text-gray-900 min-h-screen">
     <!-- Hero Section with Header Safe Spacing -->

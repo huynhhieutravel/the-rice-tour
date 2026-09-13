@@ -20,7 +20,7 @@ import InboundFooter from '@/components/inbound/InboundFooter.astro';
 const seoData = {
   title: "The Rice Tour | Authentic Vietnam Inbound Journeys & Bespoke Expeditions",
   description: "The Rice Tour is Vietnam's premier boutique inbound travel designer. Curated luxury & cultural journeys, 100% tailor-made itineraries, and 24/7 dedicated concierge.",
-  canonical: "https://thericetour.com/",
+  canonical: "https://thericetour.com",
   image: "https://media.thericetour.com/uploads/girls-taking-selfie-waving-on-rowing-boat-mekong-canal.webp"
 };
 
@@ -29,7 +29,7 @@ const homepageSchemaGraph = {
   "@graph": [
     {
       "@type": "TravelAgency",
-      "@id": "https://thericetour.com/#agency",
+      "@id": "https://thericetour.com/#organization",
       "name": COMPANY_INFO.brandName,
       "alternateName": "The Rice Travel Group",
       "url": "https://thericetour.com",
@@ -59,7 +59,9 @@ const homepageSchemaGraph = {
       },
       "hasMap": "https://maps.app.goo.gl/f147oCPxWWumzxpW6",
       "sameAs": [
-        "https://www.facebook.com/thericetravel"
+        "https://www.facebook.com/thericetour",
+        "https://www.instagram.com/thericetour",
+        "https://maps.app.goo.gl/f147oCPxWWumzxpW6"
       ]
     },
     {
@@ -69,9 +71,17 @@ const homepageSchemaGraph = {
       "name": COMPANY_INFO.brandName,
       "description": "Authentic Vietnam Inbound Journeys & Bespoke Expeditions",
       "publisher": {
-        "@id": "https://thericetour.com/#agency"
+        "@id": "https://thericetour.com/#organization"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://thericetour.com/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "WebPage",
@@ -82,7 +92,7 @@ const homepageSchemaGraph = {
         "@id": "https://thericetour.com/#website"
       },
       "about": {
-        "@id": "https://thericetour.com/#agency"
+        "@id": "https://thericetour.com/#organization"
       },
       "description": seoData.description
     }
