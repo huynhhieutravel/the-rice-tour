@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/mariamman-hindu-temple-sa
 
 > *“Chỉ cần rẽ khỏi dòng xe hối hả trên đường Lê Thánh Tôn bước vào đường Trương Định, âm thanh phố thị dường như lập tức lùi lại phía sau. Hương trầm nồng ấm quyện cùng mùi dầu lạc, tiếng chuông đồng vang lên từng hồi trầm đục, và trước mắt bạn là một tháp cổng Gopuram rực rỡ sắc màu – một góc Nam Ấn cổ kính nép mình bình yên bên hông Chợ Bến Thành suốt hơn một thế kỷ qua.”*
 
-Là một điểm dừng chân độc đáo mang đậm dấu ấn giao lưu văn hóa quốc tế trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Đền Hindu Mariamman (người dân địa phương quen gọi là Chùa Bà Ấn Độ)** tọa lạc tại số 45 Trương Định, cách Cửa Tây Chợ Bến Thành đúng 200 mét. Ngôi đền không chỉ là trung tâm tín ngưỡng linh thiêng của cộng đồng người Ấn Độ tại TP.HCM mà còn là minh chứng sống động cho tinh thần bao dung, hòa hợp tôn giáo tuyệt vời của vùng đất phương Nam.
+Là một điểm dừng chân độc đáo mang đậm dấu ấn giao lưu văn hóa quốc tế trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), **Đền Hindu Mariamman (người dân địa phương quen gọi là Chùa Bà Ấn Độ)** tọa lạc tại số 45 Trương Định, cách Cửa Tây Chợ Bến Thành đúng 200 mét. Ngôi đền không chỉ là trung tâm tín ngưỡng linh thiêng của cộng đồng người Ấn Độ tại TP.HCM mà còn là minh chứng sống động cho tinh thần bao dung, hòa hợp tôn giáo tuyệt vời của vùng đất phương Nam.
 
 
 ---
@@ -99,6 +99,16 @@ Theo quan niệm tâm linh bản địa, bức tường đá này hấp thụ tr
 - **Kết nối hành trình:** Sau khi viếng đền, bạn chỉ cần tản bộ 3 phút ngược lại để thưởng thức [ẩm thực sạp chợ Bến Thành](/am-thuc-cho-ben-thanh), hoặc tiếp tục hành trình khám phá [Bảo tàng Mỹ thuật TP.HCM](/bao-tang-my-thuat-tphcm).
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Lịch trình đi bộ Bến Thành 1 ngày:** viếng đền vào buổi sáng trong [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Cà phê chung cư gần Bến Thành:** nghỉ ngơi thưởng thức cà phê tại các quán [cà phê chung cư gần Bến Thành](/ca-phe-chung-cu-gan-ben-thanh).
+- **Danh mục Tour The Rice Tour:** tham gia nhiều hành trình văn hóa độc đáo trong [danh mục tour The Rice Tour](/tours).
 
 ## Lời Kết (Epilogue): Vẻ Đẹp Của Tình Huynh Đệ Đa Văn Hóa
 

@@ -149,3 +149,17 @@ If you encounter threats, severe extortion, or property loss, remain calm and co
 - **Ben Thanh Ward Police Station (District 1):** 114 Nguyen Du Street (`+84 28 3829 7643`)
 - **Ho Chi Minh City Tourist Police Unit:** Tourist grievance response (`+84 28 3925 1080`)
 - **Municipal Tourism Inspection Hotline:** Dial `1022` (Press ext. 8 for foreign language tourist support)
+
+
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Ben Thanh Market Shopping Guide:** negotiating fair prices with our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
+- **Money Exchange at Ha Tam Gold Shop:** avoiding street money traps by using the [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+- **Tan Son Nhat Airport Transfer Guide:** preventing taxi overcharging through our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Ben Thanh Market Ultimate Travel Guide:** verifying market rules in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
+- **Ben Thanh Market Food Guide:** eating safely at stalls highlighted in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+

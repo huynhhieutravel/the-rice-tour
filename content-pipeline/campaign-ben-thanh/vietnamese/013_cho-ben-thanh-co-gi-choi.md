@@ -63,7 +63,7 @@ Bên dưới hệ khung vì kèo sắt Eiffel và ngói lợp cổ điển, Ch�
 Nằm sâu trong khu ẩm thực, sạp chè Bé (sạp 1119) là huyền thoại ẩm thực được truyền qua 3 thế hệ. Một ly chè thập cẩm đầy đặn với đậu đỏ bùi béo, hạt lựu dai giòn, bánh lọt xanh mướt và chan ngập nước cốt dừa béo ngậy phủ đá bào nhuyễn sẽ xua tan ngay lập tức cái oi bức nhiệt đới.
 
 #### 6. Lặn Xuống Ga Ngầm Metro Bến Thành 32 Mét Chiêm Ngưỡng "Giếng Trời Hoa Sen"
-Khi nhiệt độ ngoài trời đạt đỉnh lúc giữa trưa, hãy bước xuống thang cuốn của Ga ngầm Metro Bến Thành. Không gian điều hòa mát lạnh 24 độ C cùng giếng trời kính khổng lồ (Lotus Skylight) lấy sáng tự nhiên từ quảng trường bên trên sẽ khiến bạn choáng ngợp trước diện mạo giao thông tương lai của Sài Gòn 2026.
+Khi nhiệt độ ngoài trời đạt đỉnh lúc giữa trưa, hãy bước xuống thang cuốn của [Ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh). Không gian điều hòa mát lạnh 24 độ C cùng giếng trời kính khổng lồ (Lotus Skylight) lấy sáng tự nhiên từ quảng trường bên trên sẽ khiến bạn choáng ngợp trước diện mạo giao thông tương lai của Sài Gòn 2026.
 
 #### 7. Ngắm Kiệt Tác Hội Họa Tại Dinh Thự 99 Cửa Sổ (Bảo Tàng Mỹ Thuật)
 Cách chợ 350m đi bộ, dinh thự nguy nga của hào phú Hui Bon Hoa (Chú Hỏa) mở ra một không gian nghệ thuật tĩnh lặng với sàn gạch bông vintage, chiếc thang máy lồng sắt cổ nhất thành phố và bức tranh sơn mài bảo vật quốc gia "Vườn xuân Trung Nam Bắc" của danh họa Nguyễn Gia Trí.
@@ -112,6 +112,17 @@ Dạo quanh các sạp hàng lưu niệm mở muộn ngoài trời, thực hành
 | **Khách quốc tế (Inbound)** | Tour ẩm thực chợ ban ngày + Dinh thự Chú Hỏa + Phố hải sản đêm Phan Bội Châu | Trọn ngày (08:00 – 21:00) | 500.000 – 900.000 VNĐ / người |
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Ẩm thực chợ Bến Thành:** khu ẩm thực phong phú với bún riêu và chè Nam Bộ trong bài [ẩm thực chợ Bến Thành](/am-thuc-cho-ben-thanh).
+- **Kinh nghiệm mua sắm chợ Bến Thành:** bỏ túi bí quyết trả giá nhã nhặn qua cẩm nang [kinh nghiệm mua sắm chợ Bến Thành](/kinh-nghiem-mua-sam-cho-ben-thanh).
+- **Cảnh báo lừa đảo chặt chém:** nhận biết các sạp bán đúng giá theo [cảnh báo lừa đảo chặt chém tại chợ Bến Thành](/canh-bao-lua-dao-chat-chem-cho-ben-thanh).
+- **Địa điểm nổi tiếng quanh Bến Thành:** bước ra ngoài cửa chợ để khám phá thêm các [địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh).
 
 ## Lời Kết: Trọn Vẹn Một Ngày Trải Nghiệm Bến Thành
 

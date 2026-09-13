@@ -67,8 +67,8 @@ Around Ben Thanh Market, the streets tell the story of modern Ho Chi Minh City i
 - **112 Years of Resilience:** The age of the contemporary Ben Thanh Market edifice since its grand inaugural festivities in late March 1914.
 - **4 Main Gates & 12 Side Portals:** Aligned precisely with the cardinal directions (East, West, South, North), crowned by historic Bien Hoa ceramic bas-reliefs illustrating the pastoral bounty of the Mekong.
 - **32-Meter Subterranean Depth:** The depth of the four-story Ben Thanh Central Underground Metro Station—Southeast Asia's premier transit landmark, seamlessly integrated with the surface esplanade.
-- **99 Arched Windows:** The legendary architectural trademark of the Hui Bon Hoa mansion (now the HCMC Museum of Fine Arts), situated a mere 350-meter stroll from the market.
-- **Zero Admission Fees:** Enjoying spiritual reflection at the century-old Mariamman Hindu Temple or marveling at the lotus-shaped underground skylight of the new metro station costs nothing.
+- **99 Arched Windows:** The legendary architectural trademark of the Hui Bon Hoa mansion (now the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide)), situated a mere 350-meter stroll from the market.
+- **Zero Admission Fees:** Enjoying spiritual reflection at the century-old [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon) or marveling at the lotus-shaped underground skylight of the new metro station costs nothing.
 
 ---
 
@@ -80,7 +80,7 @@ In the early 19th century, the ancestral precursor to Ben Thanh was a riverine t
 
 In 1911, the French Governor-General resolved to drain a sprawling, malarial marshland known as *Marais Boresse* (Bo Rua Lake) to construct an ambitious, grand central market. The celebrated French engineering firm **Brossard et Maupin** was commissioned for the monumental endeavor. Employing cutting-edge reinforced concrete and vaulted iron trusses, the construction took three years. On March 28, 29, and 30, 1914, the inauguration of the "New Saigon Market" was celebrated with fireworks, floral processions, and over a hundred thousand visitors arriving from across the Southern Delta.
 
-Fast forward to the mid-2020s and into 2026, the precinct underwent its second great renaissance: the expansive square before the south gate was pedestrianized into a granite-paved urban concourse, integrated directly with the subterranean halls of **Ben Thanh Central Metro Station (Line 1)**. Today, historic memories and future velocity converse effortlessly across every boulevard corner.
+Fast forward to the mid-2020s and into 2026, the precinct underwent its second great renaissance: the expansive square before the south gate was pedestrianized into a granite-paved urban concourse, integrated directly with the subterranean halls of **[Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide) (Line 1)**. Today, historic memories and future velocity converse effortlessly across every boulevard corner.
 
 ---
 
@@ -227,6 +227,15 @@ For travelers seeking a contemplative pause, slip into the encaustic-tiled stair
 4. **2026 Urban Connectivity:** Leverage the newly opened Metro Line 1 from Ben Thanh Central Station to reach the riverside cultural quarter of Thao Dien in under 15 minutes.
 
 ---
+
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Ben Thanh Market Food Guide:** savoring traditional flavors with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **One-Day Ben Thanh Walking Tour:** following our turn-by-turn [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 
 ## Closing Thoughts: Walking Saigon with Open Eyes
 

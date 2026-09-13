@@ -87,3 +87,18 @@ Nếu bạn mang nhiều hành lý nặng, đi cùng người lớn tuổi hoặ
 2. **Khung giờ đêm muộn (sau 23:30):**  
    Xe bus 109 và 152 đã ngừng hoạt động. Lúc này, xe công nghệ hoặc taxi truyền thống chính hãng tại làn đón xe là giải pháp an toàn và nhanh nhất (chỉ mất 20 – 25 phút vì đường rất thông thoáng).
 3. **Mẹo chống say xe:** Nếu bạn dễ say xe trong khí hậu nóng nực, hãy chọn phương án xe bus 109 hoặc xe điện Xanh SM (VinFast) vận hành êm ái, không mùi xăng dầu.
+
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Ga ngầm Metro Bến Thành:** về đến trung tâm, bạn có thể kết nối mạng lưới tàu điện tại [ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh).
+- **Khách sạn boutique gần Bến Thành:** nghỉ ngơi tại các không gian lưu trú sang trọng trong bài [khách sạn boutique gần Bến Thành](/khach-san-boutique-gan-ben-thanh).
+- **Địa điểm nổi tiếng quanh Bến Thành:** khám phá ngay nhịp sống phố thị qua danh sách [địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh).
+- **Đổi ngoại tệ chợ Bến Thành Hà Tâm:** đổi tiền mặt với tỷ giá tốt hơn tại trung tâm theo bài [đổi ngoại tệ chợ Bến Thành Hà Tâm](/doi-ngoai-te-cho-ben-thanh-ha-tam).
+- **Cảnh báo lừa đảo chặt chém:** cảnh giác với taxi gian lận giá cước theo [cảnh báo lừa đảo chặt chém tại chợ Bến Thành](/canh-bao-lua-dao-chat-chem-cho-ben-thanh).
+- **Dịch vụ tour riêng tailor-made:** đặt dịch vụ xe đưa đón VIP riêng tư và thiết kế lịch trình tại [dịch vụ tour riêng tailor-made](/tailor-made).
+

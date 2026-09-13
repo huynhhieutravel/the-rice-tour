@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/reunification-palace-saig
 
 > *“Hiếm có công trình kiến trúc nào trên thế giới mà từng đường nét bê tông, từng hành lang lộng gió lại phản chiếu trọn vẹn những thăng trầm lịch sử và chiều sâu triết học uyên bác như Dinh Độc Lập. Giữa khuôn viên 12 héc-ta rợp bóng những cổ thụ trăm tuổi, công trình đứng đó như một chứng nhân bất biến giữa dòng chảy đổi thay của Sài Gòn.”*
 
-Tọa lạc tại vị trí trang trọng bậc nhất trung tâm Quận 1, chỉ cách Chợ Bến Thành khoảng 700 mét tản bộ thong thả dọc theo đường Nam Kỳ Khởi Nghĩa, **Dinh Độc Lập (Hội trường Thống Nhất)** là Di tích Quốc gia đặc biệt và là điểm dừng chân không thể thiếu trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market). Đây là nơi hội tụ đỉnh cao của chủ nghĩa Hiện đại nhiệt đới (Tropical Modernism) kết hợp với triết lý dịch học Á Đông do bàn tay tài hoa của Kiến trúc sư Ngô Viết Thụ kiến tạo.
+Tọa lạc tại vị trí trang trọng bậc nhất trung tâm Quận 1, chỉ cách Chợ Bến Thành khoảng 700 mét tản bộ thong thả dọc theo đường Nam Kỳ Khởi Nghĩa, **Dinh Độc Lập (Hội trường Thống Nhất)** là Di tích Quốc gia đặc biệt và là điểm dừng chân không thể thiếu trong chuỗi [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh). Đây là nơi hội tụ đỉnh cao của chủ nghĩa Hiện đại nhiệt đới (Tropical Modernism) kết hợp với triết lý dịch học Á Đông do bàn tay tài hoa của Kiến trúc sư Ngô Viết Thụ kiến tạo.
 
 
 ---
@@ -91,6 +91,16 @@ Mặt tiền phía trước tầng 2 và tầng 3 của dinh thự được bao 
 - **Gợi ý tour chuyên sâu:** Để được hướng dẫn viên chuyên gia phân tích tường tận từng ẩn dụ kiến trúc và dẫn lối qua các phòng trưng bày đặc biệt, hãy tham khảo [Ho Chi Minh City Half Day Private Tour](/tour/ho-chi-minh-city-half-day-private-tour) của The Rice Tour.
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Lịch trình đi bộ Bến Thành 1 ngày:** đưa công trình vào lịch trình tản bộ cùng [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Xe bus 2 tầng Hop-On Hop-Off:** đón tuyến xe ngắm cảnh tiện lợi cùng [xe bus 2 tầng Hop-On Hop-Off Sài Gòn](/xe-bus-2-tang-hop-on-hop-off-sai-gon) ngay trước cổng.
+- **Khách sạn boutique gần Bến Thành:** nghỉ dưỡng phong cách tại các [khách sạn boutique gần Bến Thành](/khach-san-boutique-gan-ben-thanh).
 
 ## Lời Kết (Epilogue): Bản Trường Ca Bằng Đá Của Lòng Yêu Nước
 

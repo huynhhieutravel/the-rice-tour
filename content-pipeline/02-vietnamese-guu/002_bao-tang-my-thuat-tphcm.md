@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-o
 
 > *“Rẽ từ trục đường Bến Thành vào phố Phó Đức Chính rợp bóng mát, tiếng ồn ào của xe cộ bỗng nhường chỗ cho không gian tĩnh lặng của dinh thự số 97A. Nắng sớm xiên qua những ô kính màu, rọi xuống hàng gạch hoa trăm tuổi của gia tộc Hứa Bổn Hỏa – nơi ngày nay gìn giữ những bộ sưu tập mỹ thuật quý giá nhất của thành phố.”*
 
-Chỉ cách Chợ Bến Thành chưa đầy năm phút tản bộ nhẹ nhàng qua ngã tư Lê Thị Hồng Gấm, **Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh** hiện ra như một ốc đảo di sản tách biệt hoàn toàn với tiếng còi xe huyên náo. Không gian này là một mắt xích trọng tâm trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), nơi hội tụ đỉnh cao của mỹ học kiến trúc Đông Dương đầu thế kỷ 20 và kho tàng hơn 22.000 hiện vật nghệ thuật vô giá của dân tộc.
+Chỉ cách Chợ Bến Thành chưa đầy năm phút tản bộ nhẹ nhàng qua ngã tư Lê Thị Hồng Gấm, **Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh** hiện ra như một ốc đảo di sản tách biệt hoàn toàn với tiếng còi xe huyên náo. Không gian này là một mắt xích trọng tâm trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), nơi hội tụ đỉnh cao của mỹ học kiến trúc Đông Dương đầu thế kỷ 20 và kho tàng hơn 22.000 hiện vật nghệ thuật vô giá của dân tộc.
 
 
 ---
@@ -88,10 +88,19 @@ Tọa lạc trang trọng tại tầng 2 tòa nhà chính, bức tranh sơn mài
 
 - **Khung giờ vàng chiêm ngưỡng ánh sáng:** Thời điểm lý tưởng nhất là từ **08:30 đến 10:30 sáng** hoặc **15:00 đến 16:30 chiều**. Lúc này, góc chiếu của ánh nắng mặt trời tạo ra những vệt đổ bóng dài tuyệt đẹp qua hành lang gạch bông và các ô cửa sổ lá sách.
 - **Quy định bảo tồn di sản:** Tuyệt đối không chạm tay vào bề mặt tranh sơn mài và hiện vật. Khi chụp ảnh kỷ niệm, bắt buộc tắt đèn flash để tránh bức xạ quang phổ làm suy giảm tuổi thọ của lớp sơn cổ và chất liệu lụa nhạy cảm.
-- **Tuyến tản bộ kết nối:** Sau khi rời bảo tàng, du khách có thể ghé thưởng thức cà phê trứng hoặc nước mía cốt dừa tại các tiệm nước nhỏ mộc mạc trên đường Lê Thị Hồng Gấm, trước khi tiếp tục lộ trình hướng về [Dinh Độc Lập](/independence-palace-saigon-guide) hoặc Ga ngầm [Metro Bến Thành](/ben-thanh-central-metro-station-guide).
+- **Tuyến tản bộ kết nối:** Sau khi rời bảo tàng, du khách có thể ghé thưởng thức cà phê trứng hoặc nước mía cốt dừa tại các tiệm nước nhỏ mộc mạc trên đường Lê Thị Hồng Gấm, trước khi tiếp tục lộ trình hướng về [Dinh Độc Lập](/dinh-doc-lap-sai-gon) hoặc Ga ngầm [Metro Bến Thành](/ga-ngam-metro-ben-thanh).
 - **Tour trải nghiệm gợi ý:** Để lắng nghe trọn vẹn những câu chuyện giai thoại về Chú Hỏa và phân tích chuyên sâu về mỹ thuật Đông Dương cùng hướng dẫn viên bản địa am tường, bạn có thể tham khảo hành trình [Ho Chi Minh City Half Day Private Tour](/tour/ho-chi-minh-city-half-day-private-tour) của The Rice Tour.
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Lịch trình đi bộ Bến Thành 1 ngày:** đưa bảo tàng vào chặng tham quan của [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Cà phê chung cư gần Bến Thành:** thư giãn ngắm phố tại các quán [cà phê chung cư gần Bến Thành](/ca-phe-chung-cu-gan-ben-thanh) trên đường Tôn Thất Đạm.
 
 ## Lời Kết (Epilogue): Khoảng Lặng Thanh Tao Giữa Lòng Đô Thị
 

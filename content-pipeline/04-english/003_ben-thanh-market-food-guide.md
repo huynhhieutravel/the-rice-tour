@@ -142,6 +142,17 @@ When the market shutters close at 18:00, the flanking pavements burst into noctu
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Things to Do in Ben Thanh Market:** discovering the 15 highlighted [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
+- **Ben Thanh Market Scams & Safety Guide:** learning fair price benchmarks from our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Best Rooftop Bars Near Ben Thanh:** enjoying sunset drinks at the [best rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh).
+- **Money Exchange at Ha Tam Gold Shop:** exchanging spending cash at the trusted [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+
 ## Epilogue: The Warmth of Living Memory
 
 Culinary mastery is rarely born in isolation; it is forged across decades of devotion by matriarchs who guard family recipes with quiet dignity. At Ben Thanh Market, every ladle of broth and every delicate rice paper roll handed to you represents the culinary soul of the Southern Delta—an unhurried gift for travelers who journey with appetite and reverence.

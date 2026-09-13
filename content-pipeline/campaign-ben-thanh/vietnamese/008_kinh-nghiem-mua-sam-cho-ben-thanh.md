@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-shopping
 
 > *“Mua sắm tại Chợ Bến Thành chưa bao giờ là một cuộc giao dịch tiền – hàng khô khan. Đó là một cuộc trò chuyện cởi mở đầy duyên dáng giữa người mua và người bán, nơi một nụ cười ấm áp, sự am tường về chất liệu thủ công và thái độ tôn trọng lẫn nhau sẽ mở ra những trải nghiệm mua sắm tuyệt vời nhất giữa lòng đô thị trăm năm.”*
 
-Là một điểm nhấn thực chiến không thể bỏ lỡ trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **trải nghiệm mua sắm tại Chợ Bến Thành** đưa bạn bước vào mê cung của hơn 1.400 sạp hàng rực rỡ sắc màu. Đối với du khách, việc dạo chợ không chỉ để mang về những món quà lưu niệm độc đáo mà còn là dịp để chiêm ngưỡng kỹ nghệ thủ công tinh xảo của các làng nghề truyền thống ba miền hội tụ về đất Sài Gòn.
+Là một điểm nhấn thực chiến không thể bỏ lỡ trong cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), **trải nghiệm mua sắm tại Chợ Bến Thành** đưa bạn bước vào mê cung của hơn 1.400 sạp hàng rực rỡ sắc màu. Đối với du khách, việc dạo chợ không chỉ để mang về những món quà lưu niệm độc đáo mà còn là dịp để chiêm ngưỡng kỹ nghệ thủ công tinh xảo của các làng nghề truyền thống ba miền hội tụ về đất Sài Gòn.
 
 
 ---
@@ -106,6 +106,17 @@ Nếu mức giá người bán đưa ra vẫn chưa đạt tới con số mong m
 4. **Học văn hóa chợ cùng The Rice Tour:** Để được các chuyên gia bản địa đồng hành hướng dẫn từng sạp gia vị và học nghệ thuật chế biến ẩm thực truyền thống, hãy tham gia tour [Cooking Class & Local Market Experience](/tour/cooking-class-local-market).
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Đổi ngoại tệ chợ Bến Thành Hà Tâm:** chuẩn bị tiền mặt trước khi mua sắm tại tiệm vàng trong bài [đổi ngoại tệ chợ Bến Thành Hà Tâm](/doi-ngoai-te-cho-ben-thanh-ha-tam).
+- **Cảnh báo lừa đảo chặt chém:** tránh bị hét giá và chèo kéo cùng [cảnh báo lừa đảo chặt chém tại chợ Bến Thành](/canh-bao-lua-dao-chat-chem-cho-ben-thanh).
+- **Chợ Bến Thành có gì chơi:** nắm rõ sơ đồ các sạp hàng qua cẩm nang [chợ Bến Thành có gì chơi](/cho-ben-thanh-co-gi-choi).
+- **Kinh nghiệm đi chợ Bến Thành:** tra cứu khung giờ vàng và bí quyết mua sắm trong [kinh nghiệm đi chợ Bến Thành toàn tập](/kinh-nghiem-di-cho-ben-thanh).
 
 ## Lời Kết (Epilogue): Mang Về Một Mảnh Hồn Sài Gòn
 

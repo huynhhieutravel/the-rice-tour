@@ -91,3 +91,17 @@ Lưu ý quan trọng: **Xung quanh Chợ Bến Thành KHÔNG CÓ chỗ đỗ ô 
 - **Bước 1:** Tuyệt đối không tắt chìa khóa xe. Bình tĩnh lắc đầu và nói to: *"Cảm ơn, tôi vào hầm Metro đỗ xe"*.
 - **Bước 2:** Giữ vững tay lái, xi-nhan và tiếp tục di chuyển thẳng đến các bãi xe chính quy được liệt kê ở Mục 2.
 - **Bước 3:** Nếu lỡ bị thu tiền sai quy định, hãy chụp lại mẩu vé và vị trí để phản ánh về đường dây nóng trật tự đô thị Quận 1: `028 3829 7643`.
+
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Ga ngầm Metro Bến Thành:** tùy chọn gửi xe hiện đại dưới lòng đất tại [ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh).
+- **Lịch trình đi bộ Bến Thành 1 ngày:** sau khi gửi xe an toàn, bạn có thể bắt đầu [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Địa điểm nổi tiếng quanh Bến Thành:** tản bộ khám phá cụm di tích xung quanh qua bài [địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh).
+- **Kinh nghiệm đi chợ Bến Thành:** xác định cổng vào chợ gần nhất theo [kinh nghiệm đi chợ Bến Thành toàn tập](/kinh-nghiem-di-cho-ben-thanh).
+- **Đổi ngoại tệ chợ Bến Thành Hà Tâm:** chỗ gửi xe tiện lợi khi đến tiệm vàng trong hướng dẫn [đổi ngoại tệ chợ Bến Thành Hà Tâm](/doi-ngoai-te-cho-ben-thanh-ha-tam).
+

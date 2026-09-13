@@ -91,3 +91,17 @@ Vì lượng người đổ về góc đường Nguyễn An Ninh rất đông, k
 3. **Kiểm tra biên nhận & máy đếm tiền:** Nhân viên sẽ cho tiền vào máy đếm tự động ngay trước mắt bạn. Sau đó họ sẽ chi trả bằng các cọc tiền polymer Việt Nam (thường là cọc 500.000 VNĐ) kèm tờ giấy ghi rõ số tiền quy đổi.
 4. **Đếm lại tiền ngay tại quầy:** Hãy bình tĩnh đếm lại đủ số tờ và kiểm tra góc tiền có bị rách hay dính hai tờ vào nhau hay không. Đừng vì thấy người phía sau hối hả mà bỏ qua bước này.
 5. **Cất tiền an toàn TRƯỚC KHI bước ra đường:** Tuyệt đối không vừa cầm xấp tiền vừa bước ra vỉa hè. Hãy bỏ tiền vào túi trong áo khoác hoặc ba lô đeo trước ngực, kéo khóa cẩn thận rồi mới bước ra ngoài. Nếu đổi số tiền lớn trên 50 triệu VNĐ, nên đi cùng 2 người hoặc đặt taxi đón sát cửa tiệm.
+
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Kinh nghiệm mua sắm chợ Bến Thành:** sử dụng tiền mặt hiệu quả khi mua hàng theo bài [kinh nghiệm mua sắm chợ Bến Thành](/kinh-nghiem-mua-sam-cho-ben-thanh).
+- **Cảnh báo lừa đảo chặt chém:** nhận biết các thủ đoạn tráo tiền và lừa đảo qua [cảnh báo lừa đảo chặt chém tại chợ Bến Thành](/canh-bao-lua-dao-chat-chem-cho-ben-thanh).
+- **Bãi gửi xe quanh chợ Bến Thành:** gửi xe máy an toàn khi đến tiệm vàng Phan Chu Trinh theo [bãi gửi xe quanh chợ Bến Thành](/bai-gui-xe-quanh-cho-ben-thanh).
+- **Kinh nghiệm đi chợ Bến Thành:** kết hợp đổi tiền và dạo chợ với [kinh nghiệm đi chợ Bến Thành toàn tập](/kinh-nghiem-di-cho-ben-thanh).
+- **Đi từ sân bay về Bến Thành:** so sánh tỷ giá giữa trung tâm và sân bay trong bài [đi từ sân bay Tân Sơn Nhất về Bến Thành](/di-tu-san-bay-tan-son-nhat-ve-ben-thanh).
+

@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-street-f
 
 > *“Muốn cảm nhận trọn vẹn sức sống của khu chợ này, hãy bắt đầu bằng việc ngồi xuống chiếc ghế nhựa thấp bên dãy ẩm thực lúc sáng sớm. Tiếng muỗng đũa va lách cách, mùi nước lèo ninh xương thơm phức và tiếng chào mời đon đả của các cô bán hàng sẽ lập tức kéo bạn vào nhịp sinh hoạt chân thật nhất của người Sài Gòn.”*
 
-Nằm trong tổng thể cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), khu ẩm thực Chợ Bến Thành và hai tuyến phố vệ tinh Phan Bội Châu – Phan Chu Trinh từ lâu đã trở thành **khu ẩm thực nổi tiếng đường phố** thu hút giới sành ăn khắp năm châu. Đây không chỉ là nơi thỏa mãn vị giác, mà còn là bảo tàng sống động lưu giữ kỹ thuật chế biến gia truyền của nhiều thế hệ di dân Nam Kỳ lục tỉnh hội tụ về đất Sài Gòn.
+Nằm trong tổng thể cẩm nang [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), khu ẩm thực Chợ Bến Thành và hai tuyến phố vệ tinh Phan Bội Châu – Phan Chu Trinh từ lâu đã trở thành **khu ẩm thực nổi tiếng đường phố** thu hút giới sành ăn khắp năm châu. Đây không chỉ là nơi thỏa mãn vị giác, mà còn là bảo tàng sống động lưu giữ kỹ thuật chế biến gia truyền của nhiều thế hệ di dân Nam Kỳ lục tỉnh hội tụ về đất Sài Gòn.
 
 
 ---
@@ -102,6 +102,17 @@ Khi ánh hoàng hôn buông xuống và tháp đồng hồ Bến Thành rực s�
 4. **Trải nghiệm học nấu ăn bản địa:** Nếu muốn tự tay chọn nguyên liệu tại sạp chợ Bến Thành và học bí quyết chế biến món Việt cùng các đầu bếp tài hoa, bạn hãy trải nghiệm tour [Cooking Class & Local Market Experience](/tour/cooking-class-local-market) của The Rice Tour.
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Chợ Bến Thành có gì chơi:** khám phá trọn vẹn 15 trải nghiệm trong bài viết [chợ Bến Thành có gì chơi](/cho-ben-thanh-co-gi-choi).
+- **Cảnh báo lừa đảo chặt chém:** nắm rõ giá cả và mẹo tiêu dùng an toàn qua [cảnh báo lừa đảo chặt chém tại chợ Bến Thành](/canh-bao-lua-dao-chat-chem-cho-ben-thanh).
+- **Rooftop bar view chợ Bến Thành:** ngắm nhìn phố xá lung linh về đêm tại các quán [rooftop bar view chợ Bến Thành](/rooftop-bar-view-cho-ben-thanh).
+- **Đổi ngoại tệ chợ Bến Thành Hà Tâm:** chuẩn bị sẵn tiền mặt đổi từ tiệm vàng uy tín trong hướng dẫn [đổi ngoại tệ chợ Bến Thành Hà Tâm](/doi-ngoai-te-cho-ben-thanh-ha-tam).
 
 ## Lời Kết (Epilogue): Vị Ngon Của Ký Ức Đô Thị
 

@@ -835,6 +835,26 @@
       "anchorText": "Travel Guides"
     },
     {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
       "targetUrl": "/tours?country=mien-nam",
       "anchorText": "🛶 Explore Curated Journeys"
     },
@@ -877,6 +897,14 @@
     {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
     },
     {
       "targetUrl": "/tours?country=mien-nam",
@@ -943,6 +971,22 @@
       "anchorText": "Cooking Class &amp; Local Market Tour"
     },
     {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
       "targetUrl": "/tours?country=mien-nam",
       "anchorText": "🛶 Explore Curated Journeys"
     },
@@ -1003,12 +1047,24 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
       "targetUrl": "/ben-thanh-market-food-guide",
       "anchorText": "authentic bún riêu"
     },
     {
       "targetUrl": "/hcmc-museum-of-fine-arts-guide",
       "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
     },
     {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
@@ -1087,6 +1143,14 @@
       "anchorText": "Ho Chi Minh City Half Day Private Tour"
     },
     {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon Hop-On Hop-Off Bus"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
       "targetUrl": "/tours?country=mien-nam",
       "anchorText": "🛶 Explore Curated Journeys"
     },
@@ -1153,6 +1217,18 @@
     {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
     },
     {
       "targetUrl": "/tours?country=mien-nam",
@@ -1251,6 +1327,18 @@
       "anchorText": "HCMC Museum of Fine Arts"
     },
     {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "curated Vietnam tours"
+    },
+    {
       "targetUrl": "/tours?country=mien-nam",
       "anchorText": "🛶 Explore Curated Journeys"
     },
@@ -1287,228 +1375,20 @@
       "anchorText": "Cooking Class &amp; Local Market Tour"
     },
     {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
     },
     {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
     },
     {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
-    },
-    {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/happy-land-ben-luc-travel-guide",
-      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
-    },
-    {
-      "targetUrl": "/nam-du-island-expedition-guide",
-      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
-    },
-    {
-      "targetUrl": "/mekong-delta-fruits-harvest-map",
-      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/happy-land-ben-luc-travel-guide",
-      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
-    },
-    {
-      "targetUrl": "/nam-du-island-expedition-guide",
-      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
-    },
-    {
-      "targetUrl": "/mekong-delta-fruits-harvest-map",
-      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
-    },
-    {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
-    },
-    {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/happy-land-ben-luc-travel-guide",
-      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
-    },
-    {
-      "targetUrl": "/nam-du-island-expedition-guide",
-      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
-    },
-    {
-      "targetUrl": "/mekong-delta-fruits-harvest-map",
-      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
-    },
-    {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
-    },
-    {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
-    },
-    {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
-    },
-    {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/happy-land-ben-luc-travel-guide",
-      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
-    },
-    {
-      "targetUrl": "/nam-du-island-expedition-guide",
-      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
-    },
-    {
-      "targetUrl": "/mekong-delta-fruits-harvest-map",
-      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
     },
     {
       "targetUrl": "/tours?country=mien-nam",
@@ -1595,6 +1475,26 @@
       "anchorText": "Travel Guides"
     },
     {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private Ho Chi Minh City tour"
+    },
+    {
       "targetUrl": "/tours?country=mien-nam",
       "anchorText": "🛶 Explore Curated Journeys"
     },
@@ -1621,6 +1521,178 @@
     {
       "targetUrl": "/blog",
       "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made journey service"
     },
     {
       "targetUrl": "/tours?country=mien-nam",
@@ -1687,6 +1759,174 @@
       "anchorText": "✨ Curate Your Bespoke Itinerary"
     },
     {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
     },
@@ -1763,60 +2003,24 @@
       "anchorText": "Travel Guides"
     },
     {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
     },
     {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
     },
     {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
     },
     {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
-    },
-    {
-      "targetUrl": "/tours?country=mien-nam",
-      "anchorText": "🛶 Explore Curated Journeys"
-    },
-    {
-      "targetUrl": "/tailor-made",
-      "anchorText": "✨ Curate Your Bespoke Itinerary"
-    },
-    {
-      "targetUrl": "/happy-land-ben-luc-travel-guide",
-      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
-    },
-    {
-      "targetUrl": "/nam-du-island-expedition-guide",
-      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
-    },
-    {
-      "targetUrl": "/mekong-delta-fruits-harvest-map",
-      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
-    },
-    {
-      "targetUrl": "/",
-      "anchorText": "Home"
-    },
-    {
-      "targetUrl": "/blog",
-      "anchorText": "Travel Guides"
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
     },
     {
       "targetUrl": "/tours?country=mien-nam",
@@ -1873,6 +2077,106 @@
     {
       "targetUrl": "/blog",
       "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet nei"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, a"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi C"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made travel design"
     },
     {
       "targetUrl": "/tours?country=mien-nam",

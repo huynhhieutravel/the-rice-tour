@@ -149,3 +149,16 @@ End your nocturnal culinary adventure with late-night classics favored by locals
 1. **Morning Light Matters:** The market exterior faces south, making 06:30 – 08:30 the crispest window for clear natural illumination without harsh glare.
 2. **Beat the Midday Heat:** Spend 11:30 to 14:00 inside air-conditioned sanctuaries like the underground Metro retail concourses or the nearby Takashimaya / Saigon Centre complex.
 3. **Guard Your Personal Effects:** While the market perimeter is well-patrolled, always keep bags slung diagonally across your chest when navigating dense aisles or pedestrian crosswalks.
+
+
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Ben Thanh Market Food Guide:** feasting on regional delicacies with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Ben Thanh Market Shopping Guide:** shopping smart with tips from our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
+- **Ben Thanh Market Scams & Safety Guide:** avoiding tourist traps with our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Things to Do Near Ben Thanh Market:** venturing out to neighboring sights in [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
+

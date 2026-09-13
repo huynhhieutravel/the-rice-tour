@@ -143,6 +143,17 @@ If a mutually agreeable price cannot be reached, bow your head slightly, offer a
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Money Exchange at Ha Tam Gold Shop:** securing local cash at the licensed [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+- **Ben Thanh Market Scams & Safety Guide:** avoiding bargaining traps with our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Things to Do in Ben Thanh Market:** navigating the 4 gates with our [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market) guide.
+- **Ben Thanh Market Ultimate Travel Guide:** checking opening hours in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
+
 ## Epilogue: Carrying Home the Warmth of Southern Hospitality
 
 The greatest souvenir carried away from Ben Thanh Market is not merely an exquisite silk scarf or a fragrant pouch of roasted highland coffee; it is the lingering warmth of human connection with generational merchants who proudly safeguard their craft. Step into these historic corridors with curiosity, bargain with dignity, and you will find Saigon opening its heart to you in return.

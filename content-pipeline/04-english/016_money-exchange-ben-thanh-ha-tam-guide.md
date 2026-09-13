@@ -130,3 +130,17 @@ Given the dense foot traffic surrounding Nguyen An Ninh Street, opportunistic pe
 3. **Machine Verification:** Watch the high-speed counting machine as it counts your notes. The teller will hand over banded stacks of crisp polymer Vietnamese Dong (typically 500,000 VND bills) along with a calculation slip.
 4. **Count Before Leaving the Glass:** Methodically recount your bills against the slip right at the counter edge. Do not let the press of people behind you rush your inspection.
 5. **Conceal BEFORE Stepping onto the Pavement:** Never exit the shop holding visible bundles of cash. Place the money directly into a secure inner zippered jacket pocket or front-facing chest bag, ensure the zip is fastened, and then calmly walk out. For sums exceeding 50,000,000 VND (~$2,000 USD), travel with a companion or summon a ride directly to the storefront.
+
+
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Ben Thanh Market Shopping Guide:** spending local currency wisely in our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
+- **Ben Thanh Market Scams & Safety Guide:** protecting your wallet with our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Parking Guide Near Ben Thanh Market:** finding nearby parking spots in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Ben Thanh Market Ultimate Travel Guide:** planning your market visit with our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
+- **Tan Son Nhat Airport Transfer Guide:** comparing airport vs downtown rates in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+

@@ -132,6 +132,15 @@ Enclosing the second and third floor balconies is a distinctive sunscreen facade
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Saigon Hop-On Hop-Off Bus:** boarding the [Saigon Hop-On Hop-Off Bus](/saigon-hop-on-hop-off-bus-guide) right outside the main palace gate.
+- **Boutique Hotels Near Ben Thanh:** staying within walking distance at curated [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+
 ## Epilogue: A Concrete Hymn to Sovereignty and Peace
 
 The Independence Palace is far more than an exhibition of antique rotary phones and diplomatic chairs; it is an enduring concrete hymn to national sovereignty. Surrounded by the forward rush of Saigon's new metro lines and futuristic skyline in 2026, resting beneath its ancient trees offers the contemplative traveler a rare moment to appreciate how deeply resilience and hope are etched into the stone of this proud city.

@@ -70,7 +70,7 @@ Tuyến hành trình tinh hoa tập trung trong bán kính lõi lịch sử, đ�
   4. Cầu Ba Son (Thủ Thiêm 2) ngắm trọn bờ đông bán đảo Thủ Thiêm và sông Sài Gòn
   5. Bảo tàng Lịch sử TP.HCM & Thảo Cầm Viên
   6. Bảo tàng Chứng tích Chiến tranh
-  7. Dinh Độc Lập (Dinh Thống Nhất)
+  7. [Dinh Độc Lập](/dinh-doc-lap-sai-gon) (Dinh Thống Nhất)
   8. Nhà thờ Đức Bà & Bưu điện Trung tâm Thành phố
   9. Phố đi bộ Bùi Viện (Khu phố Tây)
   10. **Chợ Bến Thành:** Xe lướt qua vòng xoay Quách Thị Trang và đón khách tại trạm đối diện Cửa Tây.
@@ -147,6 +147,17 @@ Du khách có thể dễ dàng thiết kế một buổi chiều hoàn hảo b�
 - **18:15:** Trở về trạm Bến Thành, thong thả dạo bộ sang Phố đi bộ Lê Lợi hoặc xuống ga ngầm Metro trải nghiệm không gian ngầm hiện đại bậc nhất Việt Nam.
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Địa điểm nổi tiếng quanh Bến Thành:** kết nối mạng lưới danh thắng trong [địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh).
+- **Ga ngầm Metro Bến Thành:** trạm trung chuyển nằm ngay bên cạnh [ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh).
+- **Lịch trình đi bộ Bến Thành 1 ngày:** kết hợp dạo phố bằng bước chân theo [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Tour Sài Gòn nửa ngày riêng tư:** trải nghiệm city tour có thuyết minh lịch sử riêng cùng [tour Sài Gòn nửa ngày riêng tư](/tour/ho-chi-minh-city-half-day-private-tour).
 
 ## Lời Kết: Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở
 

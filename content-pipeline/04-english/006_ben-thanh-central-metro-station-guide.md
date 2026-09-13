@@ -136,6 +136,16 @@ Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maint
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Things to Do in Ben Thanh Market:** connecting directly into the bustling stalls of [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
+- **Parking Guide Near Ben Thanh Market:** accessing secure parking with our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Tan Son Nhat Airport Transfer Guide:** connecting from the terminal via our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+
 ## Epilogue: The Velocity of a Renewed Metropolis
 
 Ben Thanh Central Metro Station is far more than an underground web of rails and escalators; it is the physical manifestation of Ho Chi Minh City’s soaring contemporary ambition. Gazing upward through the lotus skylight at the century-old market tower while listening to the whisper of arriving electric trains, the thoughtful traveler realizes that Saigon’s true greatness lies in its capacity to honor its roots while fearlessly accelerating into tomorrow.

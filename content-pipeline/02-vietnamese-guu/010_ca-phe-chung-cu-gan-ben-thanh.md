@@ -116,6 +116,18 @@ Chung cư cũ là không gian sống đan xen giữa các hộ dân bản địa
 
 ---
 
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Địa điểm nổi tiếng quanh Bến Thành:** tọa lạc trong cụm văn hóa di sản [địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh).
+- **Bảo tàng Mỹ thuật TP.HCM:** chỉ cách vài bước chân để sang tham quan [Bảo tàng Mỹ thuật TP.HCM](/bao-tang-my-thuat-tphcm).
+- **Rooftop bar view chợ Bến Thành:** thưởng thức đồ uống tầng cao ngắm hoàng hôn tại các quán [rooftop bar view chợ Bến Thành](/rooftop-bar-view-cho-ben-thanh).
+- **Lịch trình đi bộ Bến Thành 1 ngày:** nghỉ chân thưởng thức cà phê giữa [lịch trình đi bộ Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
+- **Bãi gửi xe quanh chợ Bến Thành:** chọn bãi gửi xe máy an toàn qua cẩm nang [bãi gửi xe quanh chợ Bến Thành](/bai-gui-xe-quanh-cho-ben-thanh).
+
 ## Lời Kết: Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ
 
 Trong một thế giới vận hành ngày càng vội vã, những quán cà phê chung cư cổ quanh Bến Thành như một chiếc mỏ neo thời gian, giữ lại cho Sài Gòn một phần ký ức êm đềm và nguyên bản nhất. Ngồi bên chiếc bàn gỗ cũ, nhấp một ngụm cà phê thơm nồng và lắng nghe tiếng còi xe vọng lại từ phía quảng trường, bạn sẽ hiểu vì sao người Sài Gòn có thể ngồi hàng giờ đồng hồ bên một ly cà phê—không phải để giết thời gian, mà là để cảm nhận cuộc sống đang chảy tràn trong từng nhịp thở dịu dàng của phố thị.

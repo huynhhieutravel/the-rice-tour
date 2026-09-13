@@ -18,14 +18,14 @@ featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-
 
 > *“Cách duy nhất để thấu cảm linh hồn của một đô thị không phải là nhìn ngắm nó qua khung kính kín mít của những chiếc xe hơi máy lạnh, mà là đặt từng bước chân trần thực xuống những vỉa hè rợp bóng cây cổ thụ. Đi để nghe tiếng chuông chùa thanh thản, để ngửi thấy mùi khói cà phê rang xay thơm nồng từ những chung cư trăm tuổi, và để đón làn gió mát rượi thổi vào từ dòng sông Sài Gòn lúc chiều buông.”*
 
-Là một hợp phần cốt lõi trong hệ thống [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Lộ trình tản bộ di sản 1 ngày (One-Day Heritage Walking Tour)** được The Rice Tour thiết kế khoa học nhằm giúp du khách tận hưởng trọn vẹn những gì tinh túy nhất của trung tâm Quận 1 mà không hề cảm thấy hối hả hay kiệt sức dưới khí hậu nhiệt đới phương Nam.
+Là một hợp phần cốt lõi trong hệ thống [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), **Lộ trình tản bộ di sản 1 ngày (One-Day Heritage Walking Tour)** được The Rice Tour thiết kế khoa học nhằm giúp du khách tận hưởng trọn vẹn những gì tinh túy nhất của trung tâm Quận 1 mà không hề cảm thấy hối hả hay kiệt sức dưới khí hậu nhiệt đới phương Nam.
 
 
 ---
 
 ## 🌟 Những Con Số Ấn Tượng Của Cung Đường
 
-- **6 di sản & công trình kiến trúc biểu tượng:** Kết nối liên hoàn Chợ Bến Thành, Đền Hindu Mariamman, Bảo tàng Mỹ thuật TP.HCM, Dinh Độc Lập, Ga ngầm Metro Bến Thành và Bến Bạch Đằng.
+- **6 di sản & công trình kiến trúc biểu tượng:** Kết nối liên hoàn Chợ Bến Thành, [Đền Hindu Mariamman](/den-hindu-mariamman-sai-gon), [Bảo tàng Mỹ thuật TP.HCM](/bao-tang-my-thuat-tphcm), [Dinh Độc Lập](/dinh-doc-lap-sai-gon), [Ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh) và Bến Bạch Đằng.
 - **3 trường phái kiến trúc kinh điển:** Dẫn dắt bạn đi qua phong cách Thuộc địa Pháp (Colonial), Art Deco Đông Dương thập niên 1930 và Hiện đại nhiệt đới (Tropical Modernism) thập niên 1960.
 - **Dưới 15 phút đi bộ:** Khoảng cách tối đa giữa các điểm dừng chân liên tiếp trong hành trình, luôn có bóng mát của các hàng cây dầu và sao đen cổ thụ che chở.
 - **1 hoàng hôn tuyệt mỹ:** Điểm kết ngoạn mục tại công viên bờ sông Bến Bạch Đằng ngắm nhìn mặt trời lặn sau các tòa nhà chọc trời của bán đảo Thủ Thiêm.

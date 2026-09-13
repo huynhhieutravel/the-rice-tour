@@ -110,3 +110,17 @@ Khi gặp tình huống bị đe dọa, chặt chém quá mức hoặc thất l�
 - **Công An Phường Bến Thành (Quận 1):** Số 114 Nguyễn Du, P. Bến Thành (`028 3829 7643`)
 - **Đội Cảnh Sát Du Lịch TP.HCM:** Hỗ trợ tiếp nhận phản ánh lừa đảo du khách (`028 3925 1080`)
 - **Đường Dây Nóng Thanh Tra Sở Du Lịch TP.HCM:** `1022` (Bấm phím 8 để gặp nhánh hỗ trợ du lịch)
+
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Kinh nghiệm mua sắm chợ Bến Thành:** cách trả giá văn minh và chọn hàng đúng giá qua bài [kinh nghiệm mua sắm chợ Bến Thành](/kinh-nghiem-mua-sam-cho-ben-thanh).
+- **Đổi ngoại tệ chợ Bến Thành Hà Tâm:** tuyệt đối không đổi tiền ở điểm trôi nổi, nên đến tiệm vàng trong bài [đổi ngoại tệ chợ Bến Thành Hà Tâm](/doi-ngoai-te-cho-ben-thanh-ha-tam).
+- **Đi từ sân bay về Bến Thành:** cảnh giác với taxi dù từ sân bay theo hướng dẫn [đi từ sân bay Tân Sơn Nhất về Bến Thành](/di-tu-san-bay-tan-son-nhat-ve-ben-thanh).
+- **Kinh nghiệm đi chợ Bến Thành:** xem khung giờ mở cửa và sạp hàng uy tín trong cẩm nang [kinh nghiệm đi chợ Bến Thành toàn tập](/kinh-nghiem-di-cho-ben-thanh).
+- **Ẩm thực chợ Bến Thành:** lựa chọn các quầy ăn niêm yết giá rõ ràng trong [cẩm nang ẩm thực chợ Bến Thành](/am-thuc-cho-ben-thanh).
+

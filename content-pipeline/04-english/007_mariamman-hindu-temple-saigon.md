@@ -139,6 +139,16 @@ Local belief holds that this granite wall directly absorbs the spiritual resonan
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **One-Day Ben Thanh Walking Tour:** including the temple in our morning [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Secret Apartment Cafes:** relaxing after your temple visit in [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
+- **Curated Vietnam Tours:** discovering more southern heritage on our [curated Vietnam tours](/tours).
+
 ## Epilogue: The Universal Language of Reverence
 
 The Mariamman Hindu Temple stands as a radiant testament to Saigon's timeless capacity for cultural inclusion. Within these cool colonnades, language, nationality, and creed dissolve before the universal pursuit of inner tranquility. Taking a contemplative pause here reminds the voyager that mindful travel is ultimately a pilgrimage into the quiet sanctuaries of the human spirit.

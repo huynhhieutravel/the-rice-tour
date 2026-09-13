@@ -64,7 +64,7 @@ As an anchor itinerary within our definitive guide to [things to do near Ben Tha
 
 ## 🌟 Key Curated Dimensions of the Route
 
-- **6 Iconic Monuments:** Seamlessly links Ben Thanh Market, Mariamman Hindu Temple, HCMC Museum of Fine Arts, Independence Palace, Ben Thanh Metro Station, and Bach Dang Riverfront Park.
+- **6 Iconic Monuments:** Seamlessly links Ben Thanh Market, [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon), HCMC Museum of Fine Arts, [Independence Palace](/independence-palace-saigon-guide), Ben Thanh Metro Station, and Bach Dang Riverfront Park.
 - **3 Architectural Golden Eras:** Guides you across French Colonial Beaux-Arts, 1930s Indochine Art Deco, and 1960s Tropical Modernism.
 - **Under 15 Minutes Between Stops:** Every consecutive stage is separated by short, shaded walks beneath century-old dipterocarp and mahogany trees.
 - **1 Breathtaking River Sunset:** Concludes the afternoon at Bach Dang Wharf watching the dusk sky silhouette the futuristic skyline of Thu Thiem Peninsula.
@@ -102,7 +102,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 
 ### Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes
 - **14:00 – 16:00 PM:** Stroll beneath tree-shaded Nam Ky Khoi Nghia Boulevard to the **Independence Palace**. Unpack master architect Ngo Viet Thu’s Tropical Modernism, decipher Eastern philosophical ideograms (Cat, Khau, Trung), and step into the reinforced subterranean wartime telecommunication bunkers.
-- **16:15 – 17:00 PM:** Return to the renovated plaza before Ben Thanh Market. Ride the escalators down into the **2026 Ben Thanh Central Metro Station**, gazing up through the massive circular Lotus Toplight skylight as dusk rays pierce the glass concourse.
+- **16:15 – 17:00 PM:** Return to the renovated plaza before Ben Thanh Market. Ride the escalators down into the **2026 [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide)**, gazing up through the massive circular Lotus Toplight skylight as dusk rays pierce the glass concourse.
 - **17:00 – 17:45 PM:** Walk down Le Loi Boulevard past the Saigon Opera House, reaching **Bach Dang Riverfront Park**. Rest along the granite promenade, catching cooling river winds as the sun sets over the Saigon River.
 
 ### Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts

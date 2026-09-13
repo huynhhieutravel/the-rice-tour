@@ -126,3 +126,18 @@ If you are traveling with elderly companions, young children, or multiple heavy 
 2. **Late-Night Flights (After 23:30 PM):**  
    Public bus routes 109 and 152 terminate service around 23:45 PM. Official taxis at Lane D or app rides provide the safest, fastest option, whisking you to Ben Thanh in 20 – 25 minutes along clear, breezy avenues.
 3. **Motion Sickness Advisory:** Travelers sensitive to tropical fumes and sudden braking should opt for Bus 109 or the electric VinFast fleet (Xanh SM), which run whisper-quiet with zero tailpipe smell.
+
+
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Ben Thanh Central Metro Station:** connecting seamlessly to the [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide) on Line 1.
+- **Boutique Hotels Near Ben Thanh:** checking in to handpicked [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+- **Things to Do Near Ben Thanh Market:** spending your first afternoon exploring [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
+- **Money Exchange at Ha Tam Gold Shop:** exchanging foreign cash downtown at the [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+- **Ben Thanh Market Scams & Safety Guide:** avoiding airport taxi traps with our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Tailor-Made Vietnam Journeys:** booking private VIP transfers and touring with our [tailor-made travel design](/tailor-made).
+

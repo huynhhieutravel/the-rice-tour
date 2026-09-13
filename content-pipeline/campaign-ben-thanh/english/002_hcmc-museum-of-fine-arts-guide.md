@@ -132,6 +132,15 @@ Enshrined in a temperature-controlled gallery on the second floor of Building 1 
 
 ---
 
+
+---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **One-Day Ben Thanh Walking Tour:** incorporating the museum into a curated [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Secret Apartment Cafes:** relaxing over specialty drip coffee in [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
+
 ## Epilogue: A Serene Dialogue with the Past
 
 The Ho Chi Minh City Museum of Fine Arts is far more than an exhibition hall of mounted canvases; the estate itself is a living monument to architectural romance. In an era of rapid technological acceleration, spending two mindful hours listening to the breeze whisper through 99 louvered shutters reminds the traveler that genuine beauty remains forever anchored in patience, craft, and historical memory.

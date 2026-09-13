@@ -54,7 +54,7 @@ const articleMetadata = {
       { icon: "🛥️", label: "Maritime Access", val: "Express ferry from Rach Gia / Phu Quoc" }
     ],
     epilogueTitle: "The Raw Soul of the Gulf",
-    epilogue: "Nam Du will not cradle you in five-star luxury, but it will reward the conscious voyager with something infinitely rarer: the primal pulse of an open sea, the scent of morning salt on timber decks, and an unhurried intimacy with islanders who still look to the stars to navigate the tide."
+    epilogue: "Nam Du will not cradle you in five-star luxury, but it will reward the traveler with something infinitely rarer: the primal pulse of an open sea, the scent of morning salt on timber decks, and an unhurried intimacy with islanders who still look to the stars to navigate the tide."
   },
 
   "mekong-delta-fruits-harvest-map": {
@@ -259,8 +259,9 @@ const articleMetadata = {
 
   "things-to-do-near-ben-thanh-market": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp",
-    subtitle: "An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses",
-    lead: "If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Within a gentle 1-kilometer radius, colonial elegance, tropical modernism, and a visionary 2026 underground transit hub converge in timeless harmony.",
+    subtitle: "A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius",
+    lead: "Early in the morning, before traffic builds around Quach Thi Trang Square, the chime of Ben Thanh Market's South Clock Tower marks the start of another southern day. Within a short walk of this 1914 iron-framed market hall, Saigon reveals its layered character: sun-bleached colonial shutters, fragrant sweet-soup stalls passed down through three generations, and the quiet underground concourses of Metro Line 1.",
+
     readTime: 14,
     badges: [
       { icon: "🏛️", text: "Centennial Urban Heartland" },
@@ -285,8 +286,9 @@ const articleMetadata = {
 
   "hcmc-museum-of-fine-arts-guide": {
     featuredImage: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp",
-    subtitle: "A Mesmerizing Intersection of French Art Deco and Southern Feng Shui",
-    lead: "Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.",
+    subtitle: "Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh",
+    lead: "Just a five-minute walk south of Ben Thanh Market on Pho Duc Chinh Street, the city's frantic pace gives way to the shaded courtyard of the Ho Chi Minh City Museum of Fine Arts. Housed in the former early-20th-century mansions of the merchant Hui Bon Hoa, this three-building complex blends French Art Deco facades, patterned encaustic floor tiles, and cool, high-ceilinged galleries holding over 22,000 works of Vietnamese art.",
+
     readTime: 12,
     badges: [
       { icon: "🏛️", text: "Colonial Gilded Mansion" },
@@ -306,13 +308,13 @@ const articleMetadata = {
       { icon: "🛗", label: "Pioneering Feature", val: "Saigon's Earliest Timber-Cage Elevator" }
     ],
     epilogueTitle: "A Serene Dialogue with the Past",
-    epilogue: "The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship."
+    epilogue: "Visiting the Museum of Fine Arts offers an unhurried look into both Vietnamese art and the residential architecture of 1930s Saigon. From the quiet courtyards to the breeze flowing through louvered wooden windows, the estate invites visitors to slow down and take in the city's artistic heritage."
   },
 
   "ben-thanh-market-food-guide": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp",
-    subtitle: "Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers",
-    lead: "If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.",
+    subtitle: "From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street",
+    lead: "To understand the rhythm of Saigon, pull up a low plastic stool at one of Ben Thanh Market's food stalls early in the morning. Between steaming pots of tomato-scented crab broth, rows of vibrant sweet desserts, and cooks calling out orders, the market serves as an accessible, living introduction to southern Vietnamese cooking.",
     readTime: 12,
     badges: [
       { icon: "🍲", text: "Centennial Market Stalls" },
@@ -571,7 +573,7 @@ const articleMetadata = {
 
   "things-to-do-in-ben-thanh-market": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp",
-    subtitle: "15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows",
+    subtitle: "15 Classic Experiences from Morning Coffee to Late-Night Charcoal Grills (2026 Guide)",
     lead: "Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual.",
     readTime: 14,
     badges: [
@@ -623,7 +625,7 @@ const articleMetadata = {
 
   "ben-thanh-market-scams-safety-guide": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp",
-    subtitle: "7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols",
+    subtitle: "7 Common Tourist Traps, Price Benchmarks & Essential Safety Tips (2026)",
     lead: "While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence.",
     readTime: 14,
     badges: [
@@ -649,7 +651,7 @@ const articleMetadata = {
 
   "money-exchange-ben-thanh-ha-tam-guide": {
     featuredImage: "https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp",
-    subtitle: "Insider Exchange Rates, Banknote Quality Rules & Security Guide at Ha Tam Gold Shop (2026)",
+    subtitle: "Competitive Rates, Banknote Quality Rules & Practical Safety Guide at Ha Tam (2026)",
     lead: "Across the West Gate of Ben Thanh Market lies Saigon's premier open currency exchange nexus: Ha Tam Gold Shop. Learn how to secure near-zero spread market rates for USD, EUR, JPY, and AUD with zero commission and lightning-fast execution.",
     readTime: 13,
     badges: [
@@ -675,7 +677,7 @@ const articleMetadata = {
 
   "parking-guide-near-ben-thanh-market": {
     featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp",
-    subtitle: "6 Official Basements, Regulated Municipal Rates & Curbside Scam Prevention (2026 Master Guide)",
+    subtitle: "6 Regulated Parking Basements, Official Rates & Curbside Scam Prevention (2026 Guide)",
     lead: "District 1's dense urban grid makes finding legitimate parking a major headache. Navigate directly to 6 verified, surveillance-guarded facilities—from the state-of-the-art Metro basement to climate-controlled malls—and avoid aggressive curbside parking touts.",
     readTime: 12,
     badges: [
@@ -701,7 +703,7 @@ const articleMetadata = {
 
   "tan-son-nhat-airport-to-ben-thanh-transfer-guide": {
     featuredImage: "https://media.thericetour.com/uploads/tan-son-nhat-airport.webp",
-    subtitle: "5 Best Transfer Options from SGN to District 1: Express Bus 109, Reputable Cabs & VIP Private Cars (2026)",
+    subtitle: "5 Best Ways from SGN to District 1: Express Bus 109, Grab & Verified Taxis (2026 Guide)",
     lead: "Arriving at Tan Son Nhat Airport (SGN) can be daunting with unlicensed taxi touts and complex terminal pickup lanes. Here is your definitive breakdown of the 5 fastest, safest, and most cost-effective routes straight to Ben Thanh Market in District 1.",
     readTime: 14,
     badges: [

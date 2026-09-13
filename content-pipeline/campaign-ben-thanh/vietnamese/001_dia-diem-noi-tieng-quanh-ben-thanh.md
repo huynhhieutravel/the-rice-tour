@@ -28,8 +28,8 @@ Khu vực xung quanh Chợ Bến Thành không chỉ là trung tâm buôn bán s
 - **112 năm tuổi:** Niên đại vững chãi của công trình Chợ Bến Thành đương đại kể từ lễ khánh thành rực rỡ vào tháng 3 năm 1914.
 - **4 cửa chính & 12 cửa phụ:** Hệ thống cửa trổ theo bốn hướng Đông - Tây - Nam - Bắc, gắn liền với các bức phù điêu gốm Biên Hòa độc bản thể hiện sản vật miền Nam.
 - **32 mét chiều sâu:** Chiều sâu của Nhà ga ngầm Trung tâm Bến Thành (Tuyến Metro số 1) – công trình ngầm 4 tầng hiện đại bậc nhất kết nối trực tiếp với quảng trường mặt đất.
-- **99 ô cửa:** Biểu tượng kiến trúc tráng lệ của Dinh thự Hứa Bổn Hỏa (nay là Bảo tàng Mỹ thuật TP.HCM) tọa lạc cách chợ chỉ 350m đi bộ.
-- **0 đồng:** Chi phí để chiêm bái các không gian tâm linh cổ kính như Đền Hindu Mariamman hay dạo bước ngắm giếng trời hoa sen của ga Metro ngầm.
+- **99 ô cửa:** Biểu tượng kiến trúc tráng lệ của Dinh thự Hứa Bổn Hỏa (nay là [Bảo tàng Mỹ thuật TP.HCM](/bao-tang-my-thuat-tphcm)) tọa lạc cách chợ chỉ 350m đi bộ.
+- **0 đồng:** Chi phí để chiêm bái các không gian tâm linh cổ kính như [Đền Hindu Mariamman](/den-hindu-mariamman-sai-gon) hay dạo bước ngắm giếng trời hoa sen của ga Metro ngầm.
 
 ---
 
@@ -143,7 +143,7 @@ Bước sang thập niên 2020 – 2026, khu vực này đón nhận cuộc đ�
 | **Bảo tàng Mỹ thuật TP.HCM** | 350 mét (5 phút bộ) | 2.0 – 2.5 giờ | Dinh thự Chú Hỏa, thang máy gỗ cổ, tranh sơn mài Nguyễn Gia Trí | 08:30 – 11:00 (nắng đẹp) | 30.000 VNĐ / người |
 | **Dinh Độc Lập** | 700 mét (9 phút bộ) | 2.0 – 3.0 giờ | Kiến trúc Hiện đại nhiệt đới Ngô Viết Thụ, hầm chỉ huy quân sự | 14:00 – 16:00 (tránh nắng gắt) | 65.000 VNĐ / vé trọn gói |
 | **Đền Hindu Mariamman** | 200 mét (3 phút bộ) | 45 – 60 phút | Tháp Gopuram Ấn Độ giáo, nghi thức dâng hương & áp tường đá | 08:00 – 10:00 (thanh tịnh) | Miễn phí (tùy tâm) |
-| **Ga ngầm Metro Bến Thành** | Ngay trước Cửa Nam | 30 – 45 phút | Giếng trời Toplight hoa sen, không gian ngầm hiện đại 2026 | 16:30 – 18:00 (hoàng hôn) | Theo giá vé lượt Metro |
+| **[Ga ngầm Metro Bến Thành](/ga-ngam-metro-ben-thanh)** | Ngay trước Cửa Nam | 30 – 45 phút | Giếng trời Toplight hoa sen, không gian ngầm hiện đại 2026 | 16:30 – 18:00 (hoàng hôn) | Theo giá vé lượt Metro |
 
 ---
 
@@ -188,6 +188,15 @@ Nếu muốn tìm một góc yên tĩnh sau những giờ đi bộ ngoài phố,
 4. **Kết nối hạ tầng 2026:** Hãy tận dụng thẻ từ thông minh của Tuyến Metro số 1 để di chuyển nhanh chóng từ ga ngầm Bến Thành đi Thảo Điền (Quận 2 cũ) hoặc ngược lại chỉ trong vòng chưa đầy 15 phút.
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Ẩm thực chợ Bến Thành:** thưởng thức các món ngon trứ danh qua [cẩm nang ẩm thực chợ Bến Thành](/am-thuc-cho-ben-thanh).
+- **Lịch trình đi bộ Bến Thành 1 ngày:** tối ưu thời gian khám phá với [lịch trình đi bộ quanh Bến Thành 1 ngày](/lich-trinh-di-bo-ben-thanh-1-ngay).
 
 ## Lời Kết: Chút Hồn Phố Thị Sài Gòn
 

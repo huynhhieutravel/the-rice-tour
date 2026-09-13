@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-metro-station-c
 
 > *“Nếu tháp đồng hồ Chợ Bến Thành là biểu tượng của ký ức thế kỷ 20, thì ngay dưới chân nó, Ga ngầm Trung tâm Bến Thành chính là cánh cửa mở toang kỷ nguyên tương lai của Sài Gòn. Nơi đây, ánh sáng mặt trời phương Nam xuyên qua vòm kính giếng trời hoa sen khổng lồ rọi thẳng xuống lòng đất sâu 32 mét, biến không gian trung chuyển đường sắt thành một tác phẩm nghệ thuật vị lai đầy kiêu hãnh.”*
 
-Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Ga ngầm Trung tâm Bến Thành (Tuyến Metro số 1 Bến Thành – Suối Tiên)** chính thức vận hành thương mại và trở thành niềm tự hào hạ tầng của hơn 10 triệu người dân Thành phố Hồ Chí Minh. Đây không chỉ là một đầu mối giao thông công cộng hiện đại, mà còn là một không gian kiến trúc công cộng mang tính thẩm mỹ cao, mở ra trải nghiệm du hành đô thị văn minh cho du khách trong và ngoài nước.
+Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm nổi tiếng quanh Bến Thành](/dia-diem-noi-tieng-quanh-ben-thanh), **Ga ngầm Trung tâm Bến Thành (Tuyến Metro số 1 Bến Thành – Suối Tiên)** chính thức vận hành thương mại và trở thành niềm tự hào hạ tầng của hơn 10 triệu người dân Thành phố Hồ Chí Minh. Đây không chỉ là một đầu mối giao thông công cộng hiện đại, mà còn là một không gian kiến trúc công cộng mang tính thẩm mỹ cao, mở ra trải nghiệm du hành đô thị văn minh cho du khách trong và ngoài nước.
 
 
 ---
@@ -100,6 +100,14 @@ Nơi đoàn tàu metro đón trả khách với hệ thống cửa chắn ke ga 
 4. **Đồng hành cùng The Rice Tour:** Nếu muốn trải nghiệm city tour kết hợp giữa tản bộ di sản cổ kính và đi tàu điện ngầm hiện đại cùng hướng dẫn viên bản địa am tường, hãy đăng ký [Ho Chi Minh City Half Day Private Tour](/tour/ho-chi-minh-city-half-day-private-tour).
 
 ---
+
+
+---
+
+## 🗺️ Liên Kết Hành Trình & Điểm Đến Lân Cận
+
+Để tối ưu hành trình khám phá khu vực trung tâm Bến Thành, mời bạn tham khảo thêm các cẩm nang chuyên sâu liên quan:
+- **Chợ Bến Thành có gì chơi:** lối đi ngầm kết nối trực tiếp đến khu mua sắm [chợ Bến Thành có gì chơi](/cho-ben-thanh-co-gi-choi).
 
 ## Lời Kết (Epilogue): Bước Nhảy Vọt Của Đô Thị Phương Nam
 
