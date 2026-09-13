@@ -14,8 +14,9 @@ const currentPath = Astro.url.pathname;
 const canonicalUrl = `${currentOrigin}${currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath}`;
 
 const hasVietnameseDiacritics = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(title);
-const pageLang = hasVietnameseDiacritics ? "vi" : "en";
-const breadcrumbHome = hasVietnameseDiacritics ? "Trang chủ" : "Home";
+const isVietnameseSlug = /(-co-|-di-|-cho-|-gan-|-quanh-|-ve-|-nam-bo|-sai-gon|-tphcm|kinh-nghiem|am-thuc|lich-trinh|bai-gui-xe|doi-ngoai-te|canh-bao)/i.test(canonicalUrl);
+const pageLang = (hasVietnameseDiacritics || isVietnameseSlug) ? "vi" : "en";
+const breadcrumbHome = (hasVietnameseDiacritics || isVietnameseSlug) ? "Trang chủ" : "Home";
 
 const breadcrumbSchema = {
   items: [

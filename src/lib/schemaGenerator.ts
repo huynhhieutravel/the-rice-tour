@@ -129,9 +129,9 @@ export function generateBlogSchema(props: BlogSchemaProps) {
 
   // ── Dynamic Language Detection (vi-VN vs en-US) ─────────────────────────
   const hasVietnameseDiacritics = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(title);
-  const isEnglish = language === 'en' || language === 'en-US' || 
-    canonicalUrl.includes('/en/') || 
-    !hasVietnameseDiacritics;
+  const isVietnameseSlug = /(-co-|-di-|-cho-|-gan-|-quanh-|-ve-|-nam-bo|-sai-gon|-tphcm|kinh-nghiem|am-thuc|lich-trinh|bai-gui-xe|doi-ngoai-te|canh-bao)/i.test(canonicalUrl);
+  const isEnglish = (language === 'en' || language === 'en-US' || canonicalUrl.includes('/en/')) || 
+    (!hasVietnameseDiacritics && !isVietnameseSlug);
   const langCode = isEnglish ? "en-US" : "vi-VN";
 
   // ── Fix #3: Author object with worksFor for EEAT ─────────────────────────
