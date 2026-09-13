@@ -725,6 +725,32 @@ const articleMetadata = {
     ],
     epilogueTitle: "The Welcoming Gateway to Saigon",
     epilogue: "Gliding from the runway into the tree-shaded corridors of District 1 marks the opening stanza of your Vietnamese odyssey. With reliable ground logistics and transparent pricing, your transition into the city is smooth, calm, and filled with eager anticipation for the adventures ahead."
+  },
+
+  "what-do-you-learn-in-a-vietnamese-cooking-class": {
+    featuredImage: "https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp",
+    subtitle: "A practical guide to wet market sourcing, herb mastery, the five flavor dimensions, and techniques you can recreate at home",
+    lead: "Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.",
+    readTime: 14,
+    badges: [
+      { icon: "🌿", text: "Fresh Herb & Market Sourcing" },
+      { icon: "⚖️", text: "Five Elements Flavor Balancing" },
+      { icon: "🥢", text: "Hands-on Rice Paper & Wok Work" },
+      { icon: "🏠", text: "Authentic Home Adaptation" }
+    ],
+    stats: [
+      { icon: "📍", label: "Cultural Epicenter", val: "Saigon & Mekong Delta" },
+      { icon: "⏱️", label: "Experience Length", val: "3.5 – 4.5 Hours (Hands-on)" },
+      { icon: "🍲", label: "Core Philosophy", val: "Balance of 5 Flavor Dimensions" }
+    ],
+    sidebarFacts: [
+      { icon: "📍", label: "Sourcing Ground", val: "Local Morning Wet Market (Chợ)" },
+      { icon: "🌿", label: "Herb Principle", val: "Substantial ingredients, not garnish" },
+      { icon: "🐟", label: "Flavor Foundation", val: "Artisanal fermented Nước Mắm" },
+      { icon: "🧑‍🍳", label: "Core Skill", val: "Intuitive seasoning by palate" }
+    ],
+    epilogueTitle: "Taste Vietnam with Your Own Hands",
+    epilogue: "The most enduring souvenir of any journey through Vietnam is never a mass-produced trinket bought from a market stall; it is the culinary wisdom you bring back to your own family table. When you know how to bruise lemongrass, coax crackling crispness from a rice-flour batter, and balance fermented fish sauce with lime juice, the sights, aromas, and vibrant soul of Vietnam remain alive in your kitchen forever."
   }
 };
 

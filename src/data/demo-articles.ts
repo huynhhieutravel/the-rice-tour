@@ -20163,3 +20163,663 @@ Elevate your Can Tho evenings with The Rice Tour. We can secure the best upper-d
     </div>
 
 </div>`;
+
+export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing -->
+<div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative w-full min-h-[550px] lg:min-h-[650px] overflow-hidden flex flex-col justify-center pt-32 pb-20 bg-slate-950">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp" 
+          alt="What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion" 
+          class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <span class="text-white/40">/</span>
+          <span class="text-white font-semibold line-clamp-1">What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          A practical guide to wet market sourcing, herb mastery, the five flavor dimensions, and techniques you can recreate at home
+        </h2>
+        <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+          Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.
+        </p>
+
+        {/* Author Meta */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-white flex items-center gap-1">
+              The Rice Tour Editorial
+            </span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <span>Published: Sep 13, 2026</span>
+          </div>
+          <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="text-amber-400">14 min read</span>
+          </div>
+        </div>
+
+        {/* Badges Line */}
+        <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
+          
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🌿</span> Fresh Herb & Market Sourcing
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">⚖️</span> Five Elements Flavor Balancing
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🥢</span> Hands-on Rice Paper & Wok Work
+    </div>
+  
+
+    <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+      <span class="text-amber-400 text-base">🏠</span> Authentic Home Adaptation
+    </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= MAIN CONTENT GRID (3 COLUMNS) ================= -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        <!-- ---------------- LEFT SIDEBAR (TOC) ---------------- -->
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#introduction" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                  <a href="#introduction-beyond-the-recipe-card" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Beyond the Recipe Card</a>
+  <a href="#how-living-ingredients-are-chosen-at-the-source" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How Living Ingredients Are Chosen at the Source</a>
+  <a href="#why-the-market-expedition-matters" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Why the Market Expedition Matters</a>
+  <a href="#vietnamese-herbs-structural-elements-not-decorative-garnishes" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Vietnamese Herbs: Structural Elements, Not Decorative Garnishes</a>
+  <a href="#the-critical-principle-of-timing" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Critical Principle of Timing</a>
+  <a href="#the-logic-of-five-element-flavor-balancing" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Logic of Five-Element Flavor Balancing</a>
+  <a href="#learning-to-season-by-palate-rather-than-teaspoons" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Learning to Season by Palate Rather Than Teaspoons</a>
+  <a href="#practical-hands-on-culinary-techniques" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Practical Hands-on Culinary Techniques</a>
+  <a href="#preparing-aromatics-with-speed-and-finesse" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Preparing Aromatics with Speed and Finesse</a>
+  <a href="#precision-knife-cuts-for-texture" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Precision Knife Cuts for Texture</a>
+  <a href="#pan-heat-and-fire-management-canh-lua" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Pan Heat & Fire Management (*Canh Lửa*)</a>
+  <a href="#the-tactile-skill-of-rolling-rice-paper-cuon-banh-trang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Tactile Skill of Rolling Rice Paper (*Cuốn Bánh Tráng*)</a>
+  <a href="#assembling-the-canonical-dipping-sauce-pha-nuoc-cham" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Assembling the Canonical Dipping Sauce (*Pha Nước Chấm*)</a>
+  <a href="#core-dishes-as-masterclasses-what-each-classic-teaches" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Dishes as Masterclasses: What Each Classic Teaches</a>
+  <a href="#goi-cuon-fresh-summer-rolls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Gỏi Cuốn (Fresh Summer Rolls)</a>
+  <a href="#banh-xeo-sizzling-crispy-savory-crepe" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bánh Xèo (Sizzling Crispy Savory Crepe)</a>
+  <a href="#nuoc-mam-pha-sweet-sour-and-savory-dipping-sauce" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Nước Mắm Pha (Sweet, Sour & Savory Dipping Sauce)</a>
+  <a href="#bun-thit-nuong-charcoal-grilled-pork-over-noodles" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Bún Thịt Nướng (Charcoal-Grilled Pork over Noodles)</a>
+  <a href="#regional-dialects-why-vietnamese-food-changes-with-geography" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Regional Dialects: Why Vietnamese Food Changes with Geography</a>
+  <a href="#the-science-of-nuoc-mam-understanding-liquid-gold" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Science of Nước Mắm: Understanding Liquid Gold</a>
+  <a href="#the-many-lives-of-rice-from-grains-to-wrappers-and-noodles" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Many Lives of Rice: From Grains to Wrappers and Noodles</a>
+  <a href="#table-assembly-how-vietnamese-food-is-meant-to-be-eaten" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Table Assembly: How Vietnamese Food Is Meant to Be Eaten</a>
+  <a href="#cooking-without-measuring-spoons-intuitive-home-adaptation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Cooking Without Measuring Spoons: Intuitive Home Adaptation</a>
+  <a href="#comparison-matrix-hands-on-cooking-class-vs-other-culinary-options" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparison Matrix: Hands-on Cooking Class vs. Other Culinary Options</a>
+  <a href="#frequently-asked-questions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Frequently Asked Questions</a>
+  <a href="#do-i-need-prior-culinary-experience-to-join-a-vietnamese-cooking-class" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Do I need prior culinary experience to join a Vietnamese cooking class?</a>
+  <a href="#can-classes-accommodate-vegetarians-or-guests-with-seafood-allergies" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Can classes accommodate vegetarians or guests with seafood allergies?</a>
+  <a href="#how-long-does-a-typical-cooking-class-last" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">How long does a typical cooking class last?</a>
+  <a href="#epilogue-taste-vietnam-with-your-own-hands" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Taste Vietnam with Your Own Hands</a>
+
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- -->
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          <!-- Quick Overview Stats Bar (3 Curated Dimensions) -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 md:divide-x md:divide-slate-200/80 my-8">
+            
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Cultural Epicenter</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Saigon & Mekong Delta</div>
+      </div>
+    </div>
+  
+
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">⏱️</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Experience Length</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">3.5 – 4.5 Hours (Hands-on)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex items-center gap-3.5 md:px-5 first:pl-0 last:pr-0">
+      <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🍲</div>
+      <div class="min-w-0 flex-1">
+        <div class="text-[11px] sm:text-[12px] font-bold text-slate-600 uppercase tracking-wider mb-0.5 truncate">Core Philosophy</div>
+        <div class="text-[13.5px] sm:text-[14.5px] font-bold text-slate-900 leading-snug">Balance of 5 Flavor Dimensions</div>
+      </div>
+    </div>
+  
+          </div>
+
+          <!-- Main Article Flow -->
+          <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+            <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🔗 <strong>Original Culinary Feature:</strong> The Rice Tour Gastronomy Field Notes  </p>
+</div>
+<div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl"><p>🕒 <strong>Estimated Reading Time:</strong> 14 minutes  </p>
+</div>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="introduction-beyond-the-recipe-card" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Introduction: Beyond the Recipe Card
+          </h2>
+        </div>
+      <p>Vietnamese cooking is about far more than dutifully following a rigid recipe card. At its heart, it is an intuitive understanding of how to select living, fresh ingredients, prepare delicate herbs and pungent aromatics, balance contrasting flavor profiles, and bring an orchestra of distinct textures together onto a single plate.</p>
+<p>That fundamental philosophy explains why stepping into a hands-on cooking class in Vietnam feels strikingly different from simply watching an instructional video or observing a chef from across a restaurant counter. In a well-structured, participatory kitchen session, your learning frequently begins long before a stove is ever lit. You thread your way through the narrow, vibrant corridors of a neighborhood morning wet market, decipher unfamiliar herbs, prepare time-honored dishes from base ingredients, practice foundational knife and pan techniques, and finally sit down alongside fellow travelers to savor the meal you have coaxed into existence. </p>
+<p>More importantly, you begin to grasp <em>why</em> Vietnamese food tastes the way it does—its philosophical connection to Yin-Yang harmony, its five-element flavor balance, and its reliance on clean freshness over heavy sauces.</p>
+<p>So, what do you actually learn in a Vietnamese cooking class? You master practical kitchen skills, the dynamic logic of seasoning by palate, the cultural significance of local market ecosystems, regional culinary nuances, and the confidence to recreate authentic Vietnamese flavors within your own home kitchen. Here is a definitive look at everything the experience genuinely teaches you.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="how-living-ingredients-are-chosen-at-the-source" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            How Living Ingredients Are Chosen at the Source
+          </h2>
+        </div>
+      <p>For many international travelers, the true culinary lesson begins well before entering the classroom doors. High-caliber cooking classes in Vietnam pair kitchen instruction with an early-morning expedition to a bustling wet market (<em>chợ dân sinh</em>). Here, you encounter the raw materials that will soon become your lunch or dinner in their most vivid state. </p>
+<p>This excursion is never a mere photo opportunity; it is an essential masterclass in the foundational grammar of Vietnamese gastronomy. Under the guidance of your instructor, you learn how to identify and assess:</p>
+<ul>
+<li><strong>Living herbs and leafy greens:</strong> Water spinach (<em>rau muống</em>), mustard greens, pennywort, and aromatic sprigs displaying vibrant, springy turgor rather than tired, wilted leaves.</li>
+<li><strong>Root aromatics:</strong> Plump lemongrass stalks with purple-tinged concentric rings, knobby ginger, galangal, crisp purple shallots, and small, pungent Vietnamese garlic cloves whose oils far surpass commercial oversized varieties.</li>
+<li><strong>Fiery local chilies:</strong> Bird&#39;s eye chilies (<em>ớt hiểm</em>), recognizing how their heat and aromatic profile vary by size, color, and maturity.</li>
+<li><strong>Rice noodles and vermicelli:</strong> Understanding the tactile differences between fresh, silky fermented rice noodles (<em>bún tươi</em>), flat phở ribbons, and dried alternatives.</li>
+<li><strong>Artisan rice paper wrappers:</strong> Distinguishing between thin, sun-dried translucent sheets (<em>bánh tráng phơi sương</em>) crafted for raw summer rolls and thicker, textured wrappers designed to crisp up inside smoking oil without bursting.</li>
+<li><strong>The liquid pillars:</strong> Distinguishing high-grade artisanal fish sauce (<em>nước mắm nhỉ</em>) brewed from black anchovies and sea salt in wooden vò barrels from modern industrialized factory blends.</li>
+<li><strong>Sour and sweet balancing agents:</strong> Fresh tamarind pulp, kumquats, calamansi, fragrant yellow limes, and raw unrefined palm sugar disks.</li>
+<li><strong>Daily seasonal seafood and meats:</strong> Observing how local home cooks judge the absolute freshness of river catfish, wild sea prawns, and pasture-raised pork sliced to order by market butchers.</li>
+</ul>
+
+        <div id="why-the-market-expedition-matters" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Why the Market Expedition Matters
+          </h3>
+        </div>
+      <p>Vietnamese cuisine depends on freshness as an active seasoning agent rather than a passive ingredient trait. A written recipe can instruct you to add &quot;a handful of herbs, one minced lemongrass stalk, or three shallots.&quot; But without understanding the moisture content, pungency, and physical texture of those ingredients in their natural form, reproducing the dish faithfully remains an uphill battle. The market visit bridges the gap between printed measurements and living Vietnamese food culture.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="vietnamese-herbs-structural-elements-not-decorative-garnishes" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Vietnamese Herbs: Structural Elements, Not Decorative Garnishes
+          </h2>
+        </div>
+      <p>One of the most eye-opening revelations for Western cooks is the sheer quantity and functional role of fresh herbs (<em>rau sống</em>). In Western classical cuisine, parsley or rosemary is frequently treated as a minor accent, infused into stocks, or placed delicately around a rim as a cosmetic garnish. In Vietnam, herbs are substantial, structural ingredients eaten by the basketful. They dictate the aroma, clean the palate, modify texture, and provide the essential counterbalance to rich braises, grilled meats, and crispy fried treats.</p>
+<p>During a hands-on session, you will handle, bruise, smell, and taste an expansive herbal palette:</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Common Herb</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Vietnamese Name</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Sensory Flavor Profile</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Culinary Role &amp; Pairing</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Thai Basil</strong></td><td class="p-4 text-slate-800 font-medium"><em>Húng quế</em></td><td class="p-4 text-slate-800 font-medium">Sweet, anise-like, mildly peppery with warm clove notes</td><td class="p-4 text-slate-800 font-medium">Floated in hot phở broths; folded into fresh spring rolls</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Vietnamese Coriander</strong></td><td class="p-4 text-slate-800 font-medium"><em>Rau răm</em></td><td class="p-4 text-slate-800 font-medium">Pungent, peppery, slightly citrusy, warm lingering heat</td><td class="p-4 text-slate-800 font-medium">Balances rich poultry, duck salads, and fetal duck eggs</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Spearmint</strong></td><td class="p-4 text-slate-800 font-medium"><em>Húng lủi</em></td><td class="p-4 text-slate-800 font-medium">Crisp, refreshing, cooling menthol sweetness</td><td class="p-4 text-slate-800 font-medium">Cuts through fatty fried spring rolls (<em>chả giò</em>) and grilled pork</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Perilla Leaf</strong></td><td class="p-4 text-slate-800 font-medium"><em>Tía tô</em></td><td class="p-4 text-slate-800 font-medium">Earthy, complex, hints of cinnamon, cumin, and mint</td><td class="p-4 text-slate-800 font-medium">Accompanies sizzling bánh xèo and river fish hotpots</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Fish Mint</strong></td><td class="p-4 text-slate-800 font-medium"><em>Diếp cá</em></td><td class="p-4 text-slate-800 font-medium">Distinctly fishy aroma, tart, mineral-rich, herbal sourness</td><td class="p-4 text-slate-800 font-medium">Traditional partner for grilled Mekong fish and southern rolls</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Culantro / Sawtooth</strong></td><td class="p-4 text-slate-800 font-medium"><em>Ngò gai</em></td><td class="p-4 text-slate-800 font-medium">Deep, pungent coriander flavor with a sturdy serrated leaf</td><td class="p-4 text-slate-800 font-medium">Retains structure in piping hot noodle soups and sour soups</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Lemongrass</strong></td><td class="p-4 text-slate-800 font-medium"><em>Sả</em></td><td class="p-4 text-slate-800 font-medium">Bright, citrusy, resinous, aromatic essential oil punch</td><td class="p-4 text-slate-800 font-medium">Minced into meat marinades, braised with poultry and tofu</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    
+        <div id="the-critical-principle-of-timing" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Critical Principle of Timing
+          </h3>
+        </div>
+      <p>Your instructor will drill an indispensable kitchen rule: <em>herbal timing</em>. Tender leafy greens like mint, perilla, and basil lose their aromatic volatile oils and turn bitter if subjected to prolonged boiling. They are meant to be torn with bare hands immediately before serving or added raw at the table. </p>
+<p>Conversely, hearty aromatics like bruised lemongrass bulbs, smashed ginger, and shallot roots require heat and fat to bloom their essential oils into a dish&#39;s foundation. Learning this vital distinction reinforces a core tenet of Vietnamese cooking: <strong>freshness is an active culinary dimension, not merely an adjective.</strong></p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-logic-of-five-element-flavor-balancing" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Logic of Five-Element Flavor Balancing
+          </h2>
+        </div>
+      <p>If you take only a single skill home from your culinary journey in Vietnam, let it be the dynamic mastery of flavor equilibrium. While certain world cuisines lean heavily on butter, dairy, or singular intense gravies, Vietnamese cooking achieves culinary greatness through a tension-filled harmony of contrasting forces.</p>
+<p>Vietnamese gastronomy adheres closely to the Five Elements (<em>Ngũ Hành</em>), balancing five distinct taste categories within almost every classic dish:</p>
+<ol>
+<li><strong>Salty (<em>Mặn</em> – Water):</strong> Delivered primarily through artisanal fermented fish sauce (<em>nước mắm</em>), sea salt, or fermented soybean pastes.</li>
+<li><strong>Sweet (<em>Ngọt</em> – Earth):</strong> Sourced from caramelized palm sugar, raw cane sugar, fresh coconut water, or the deep natural sweetness of slow-simmered bone broths.</li>
+<li><strong>Sour (<em>Chua</em> – Wood):</strong> Introduced through fresh lime juice, crushed tamarind pulp, fermented rice vinegars, or tart green fruits like mango and starfruit.</li>
+<li><strong>Spicy (<em>Cay</em> – Metal):</strong> Infused via freshly sliced bird&#39;s eye chilies, cracked black peppercorns from Phu Quoc, or warm ginger root.</li>
+<li><strong>Bitter / Umami (<em>Đắng &amp; Đậm Đà</em> – Fire):</strong> Brought forward by bitter melon, charred aromatics, toasted rice powder, and the natural glutamate richness of fermented marinades.</li>
+</ol>
+
+        <div id="learning-to-season-by-palate-rather-than-teaspoons" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Learning to Season by Palate Rather Than Teaspoons
+          </h3>
+        </div>
+      <p>In a commercial cooking class, an experienced instructor will deliberately prevent you from relying on static tablespoon measures. Instead, they will prompt you to taste your sauce with a spoon at every stage of preparation:</p>
+<ul>
+<li><em>What happens if the dipping sauce is overly sharp and acidic?</em> You fold in a teaspoon of warm water and a pinch of palm sugar to soften the citrus bite.</li>
+<li><em>What if the marinade feels cloying and excessively sweet?</em> A few drops of pure 40-degree fish sauce and a squeeze of lime immediately restore sharpness.</li>
+<li><em>What if a broth tastes flat and one-dimensional?</em> Smashed shallots, a bruised knob of ginger, or a splash of fish sauce will awaken its structural depth.</li>
+</ul>
+<p>By liberating yourself from rigid recipes, you learn the underlying grammar of Vietnamese seasoning. You leave the kitchen equipped to taste, assess, and intuitively adjust any dish you make in the future.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="practical-hands-on-culinary-techniques" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Practical Hands-on Culinary Techniques
+          </h2>
+        </div>
+      <p>A genuine Vietnamese cooking workshop is thoroughly active. Rather than being relegated to a passive observer while an instructor performs, you stand before your own prep board, carbon steel knife, and wok station.</p>
+<p>Depending on your day&#39;s curated menu, you will practice several core culinary techniques:</p>
+
+        <div id="preparing-aromatics-with-speed-and-finesse" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Preparing Aromatics with Speed and Finesse
+          </h3>
+        </div>
+      <p>You will learn the specific mechanical handling of Southeast Asian aromatics. Slicing lemongrass requires paper-thin angle cuts across the tender white base to sever tough fibers; mincing shallots and garlic demands rapid cross-hatching to release aromatic allicin without bruising the cells into wateriness. You will learn to crush whole ginger cloves with the broad flat of a cleaver to release juice directly into marinades.</p>
+
+        <div id="precision-knife-cuts-for-texture" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Precision Knife Cuts for Texture
+          </h3>
+        </div>
+      <p>In Vietnamese kitchens, the shape of an ingredient dictates its cooking duration and tactile mouthfeel (<em>kết cấu</em>). You will practice julienning green papaya and carrots into crisp matchsticks for crunchy pickles, cutting morning glory (<em>rau muống</em>) into fine curls, and slicing beef against the grain at an angle to ensure melting tenderness when flash-seared.</p>
+
+        <div id="pan-heat-and-fire-management-canh-lua" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Pan Heat & Fire Management (Canh Lửa)
+          </h3>
+        </div>
+      <p>Vietnamese stir-frying and searing rely on acute thermal control. Too low a flame causes marinated proteins and water-rich greens to weep liquid, boiling rather than searing. Too high an unchecked flame scorches delicate minced garlic and caramelized sugars before meats cook through. Standing over the gas flame, you learn to read visual cues—the shimmer of cooking oil, the first faint wisp of smoke, the audible sizzle of the pan.</p>
+
+        <div id="the-tactile-skill-of-rolling-rice-paper-cuon-banh-trang" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            The Tactile Skill of Rolling Rice Paper (Cuốn Bánh Tráng)
+          </h3>
+        </div>
+      <p>Few dishes look simpler—and humble beginners faster—than rolling authentic fresh summer rolls (<em>gỏi cuốn</em>). You quickly discover that immersing rice paper in a bowl of water turns it into a soggy, tearing disaster. Your chef will teach you the light-touch method: brushing the translucent sheet with a damp palm, placing resilient lettuce leaves first to act as a barrier against sharp ingredients, aligning pink prawns facing outward for visual elegance, and tucking the wrapper into a firm, tight cylinder without puncturing the delicate skin.</p>
+
+        <div id="assembling-the-canonical-dipping-sauce-pha-nuoc-cham" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Assembling the Canonical Dipping Sauce (Pha Nước Chấm)
+          </h3>
+        </div>
+      <p>The golden ratio of Vietnamese dipping sauce—water, sugar, lime juice, and fish sauce—is legendary. You will learn the exact order of dissolution (dissolving sugar thoroughly in warm water and lime juice <em>before</em> adding fish sauce so that finely minced garlic and chili float gracefully on the surface like jewels rather than sinking heavily to the bottom).</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="core-dishes-as-masterclasses-what-each-classic-teaches" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Core Dishes as Masterclasses: What Each Classic Teaches
+          </h2>
+        </div>
+      <p>A carefully designed cooking school menu is never a random selection of popular street foods. Each recipe is selected to demonstrate a distinct culinary discipline:</p>
+
+        <div id="goi-cuon-fresh-summer-rolls" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Gỏi Cuốn (Fresh Summer Rolls)
+          </h3>
+        </div>
+      <ul>
+<li><strong>The Core Lesson:</strong> Ingredient preparation, visual composition, and wrapper moisture control.</li>
+<li><strong>The Takeaway:</strong> Shows how crisp raw herbs, cool vermicelli, poached meats, and delicate rice wrappers combine into an entirely fresh, un-cooked dish that relies on a complex dipping sauce for warmth and richness.</li>
+</ul>
+
+        <div id="banh-xeo-sizzling-crispy-savory-crepe" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bánh Xèo (Sizzling Crispy Savory Crepe)
+          </h3>
+        </div>
+      <ul>
+<li><strong>The Core Lesson:</strong> Batter science, pan temperature management, and textural contrast.</li>
+<li><strong>The Takeaway:</strong> Demonstrates how rice flour, turmeric, and rich coconut milk react to high heat in a seasoned skillet, teaching you to listen for the signature <em>xèo</em> sound and achieve a paper-crisp outer fringe while steaming bean sprouts and sweet shrimp inside.</li>
+</ul>
+
+        <div id="nuoc-mam-pha-sweet-sour-and-savory-dipping-sauce" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Nước Mắm Pha (Sweet, Sour & Savory Dipping Sauce)
+          </h3>
+        </div>
+      <ul>
+<li><strong>The Core Lesson:</strong> Micro-adjustments and the balance of all five flavor dimensions.</li>
+<li><strong>The Takeaway:</strong> Proves that four humble ingredients can create an endlessly adaptable sauce that transforms everything from fried spring rolls to cold vermicelli noodle bowls.</li>
+</ul>
+
+        <div id="bun-thit-nuong-charcoal-grilled-pork-over-noodles" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Bún Thịt Nướng (Charcoal-Grilled Pork over Noodles)
+          </h3>
+        </div>
+      <ul>
+<li><strong>The Core Lesson:</strong> Deep marinades, aromatic oil infusions, and composite bowl assembly.</li>
+<li><strong>The Takeaway:</strong> Teaches how shallots, garlic, lemongrass, honey, and fish sauce tenderize and caramelize pork over glowing coals, and how crushed peanuts, scallion oil (<em>mỡ hành</em>), and pickled vegetables assemble into a unified feast.</li>
+</ul>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="regional-dialects-why-vietnamese-food-changes-with-geography" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Regional Dialects: Why Vietnamese Food Changes with Geography
+          </h2>
+        </div>
+      <p>Vietnamese food is far from monolithic; it is a tapestry of three distinct geographic and cultural landscapes. A skilled cooking instructor will illuminate the history, weather patterns, and agricultural conditions that shaped these differences:</p>
+<ul>
+<li><strong>Northern Vietnam (Hanoi &amp; the Red River Delta):</strong> Defined by cooler winters and historical restraint. Dishes here feature subtle, clean seasoning, highlighting black pepper over chilies, and maintaining clear, delicate broths with minimal sugar (as embodied in traditional Hanoi <em>phở</em> and <em>bún chả</em>).</li>
+<li><strong>Central Vietnam (Hue &amp; Hoi An):</strong> Shaped by imperial court heritage and rugged mountainous coastlines. Dishes are intensely spicy, colorful, and complex, served in delicate small portions with an emphasis on fermented shrimp pastes, fiery chili oils, and crispy textures (exemplified by <em>bánh bèo</em>, <em>cao lầu</em>, and <em>bún bò Huế</em>).</li>
+<li><strong>Southern Vietnam (Saigon &amp; the Mekong Delta):</strong> Blessed with year-round tropical sunshine, fertile volcanic alluvium, and vast networks of waterways. Southern cuisine is generous, sweet, and herb-heavy, embracing rich coconut cream, wild river fish, palm sugar, and sprawling platters of edible blossoms.</li>
+</ul>
+<p>Understanding this regional context transforms a simple cooking lesson into an expansive cultural journey through Vietnam&#39;s geography and heritage.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-science-of-nuoc-mam-understanding-liquid-gold" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Science of Nước Mắm: Understanding Liquid Gold
+          </h2>
+        </div>
+      <p>To international visitors, fermented fish sauce (<em>nước mắm</em>) can initially seem intimidating. In a cooking class, fear quickly turns into reverence.</p>
+<p>You will learn that premium fish sauce is crafted through ancestral fermentation: wild black anchovies (<em>cá cơm</em>) harvested from pristine island waters like Phu Quoc are layered with pure sea salt in giant aged jackwood barrels for 12 to 15 months. The resulting amber nectar is pure natural glutamic acid—the very essence of deep, savory umami.</p>
+<p>Your instructor will demonstrate how fish sauce functions across multiple culinary roles:</p>
+<ul>
+<li>As an invisible foundation in long-simmered broths.</li>
+<li>As a tenderizing, savory glaze in meat marinades.</li>
+<li>As an umami backbone in high-heat vegetable stir-fries.</li>
+<li>As the bright centerpiece of table dipping sauces.</li>
+</ul>
+<p>Crucially, you learn that simply pouring more fish sauce onto a dish does not make it taste more authentic. True culinary mastery lies in how deftly it is tempered with lime, garlic, chili, and sweet palm nectar.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="the-many-lives-of-rice-from-grains-to-wrappers-and-noodles" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Many Lives of Rice: From Grains to Wrappers and Noodles
+          </h2>
+        </div>
+      <p>Rice (<em>gạo</em>) is the lifeblood of Vietnam, but it rarely appears merely as a bowl of plain steamed grains. In a hands-on class, you discover the incredible versatility of this staple crop:</p>
+<ol>
+<li><strong>Rice Paper (<em>Bánh tráng</em>):</strong> Steamed rice batter spread across taut fabric rings, dried under the tropical sun on woven bamboo mats, and rehydrated into pliable wrappers.</li>
+<li><strong>Fresh Noodles (<em>Bún &amp; Bánh phở</em>):</strong> Fermented rice paste extruded into boiling water, yielding silky, tender strands with a faint, appetizing natural tang.</li>
+<li><strong>Savory Batters:</strong> Stone-ground rice flour whisked with cold water, coconut milk, and turmeric to form the golden, crackling crust of <em>bánh xèo</em> and <em>bánh khọt</em>.</li>
+<li><strong>Charred &amp; Toasted Rice (<em>Thính</em>):</strong> Raw rice grains toasted golden brown in dry skillets and pulverized into fragrant powders that coat cured meats and pork rolls.</li>
+</ol>
+<p>Handling these varied textures builds a practical muscle memory that no textbook or food documentary could ever replicate.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="table-assembly-how-vietnamese-food-is-meant-to-be-eaten" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Table Assembly: How Vietnamese Food Is Meant to Be Eaten
+          </h2>
+        </div>
+      <p>In Vietnamese culinary culture, cooking does not end at the stove. It concludes at the dining table, where every diner becomes an active participant in composing their own meal.</p>
+<p>When you sit down to feast upon your creations, your instructor will guide you through authentic dining etiquette:</p>
+<ul>
+<li>How to wrap a hot, oily slice of <em>bánh xèo</em> inside a broad mustard leaf, tucking in sweet sprigs of basil and mint before dipping it deep into amber <em>nước chấm</em>.</li>
+<li>How to dress a bowl of noodle soup with lime, bean sprouts, and torn culantro leaves in measured stages rather than dumping everything in at once.</li>
+<li>How sharing platters of fresh herbs, pickles, and grilled meats embodies the communal warmth (<em>tính cộng đồng</em>) of Vietnamese family life.</li>
+</ul>
+<p>Food is celebrated not as an isolated solo experience, but as an interactive, communal dialogue.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="cooking-without-measuring-spoons-intuitive-home-adaptation" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Cooking Without Measuring Spoons: Intuitive Home Adaptation
+          </h2>
+        </div>
+      <p>Back home, you will rarely find every exact herb or artisan fish sauce brand on your local grocery shelves. A superior cooking class prepares you for this exact reality by teaching you <strong>ingredient intent</strong>.</p>
+<p>You learn the functional purpose of each element:</p>
+<ul>
+<li>If pungent sawtooth coriander (<em>ngò gai</em>) is unavailable at home, fresh flat-leaf parsley combined with a touch of lime zest can replicate its vibrant lift.</li>
+<li>If raw palm sugar cannot be sourced, light brown muscovado sugar provides the necessary molasses undertone.</li>
+<li>If delicate Asian shallots are out of reach, mild French shallots or sweet red onions serve as worthy substitutes.</li>
+</ul>
+<p>By grasping the <em>why</em> behind every ingredient, you gain the creative confidence to step into your own kitchen back home and conjure the unforgettable flavors of Vietnam with ease.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="comparison-matrix-hands-on-cooking-class-vs-other-culinary-options" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Comparison Matrix: Hands-on Cooking Class vs. Other Culinary Options
+          </h2>
+        </div>
+      
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white font-serif" style="background-color: #0f172a !important; color: #ffffff !important;">
+              <th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Evaluation Metric</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Hands-on Cooking Class with Market Tour</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Street Food Walking Tour</th><th class="p-4 font-bold text-left !text-white text-white" style="background-color: #0f172a !important; color: #ffffff !important;">Standard Restaurant Dining</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Primary Focus</strong></td><td class="p-4 text-slate-800 font-medium">Technique, ingredient sourcing &amp; flavor logic</td><td class="p-4 text-slate-800 font-medium">Broad tasting &amp; neighborhood street exploration</td><td class="p-4 text-slate-800 font-medium">Passive enjoyment of finished, plated meals</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ingredient Education</strong></td><td class="p-4 text-slate-800 font-medium">In-depth identification of raw produce &amp; herbs</td><td class="p-4 text-slate-800 font-medium">Brief introductions to finished regional dishes</td><td class="p-4 text-slate-800 font-medium">Minimal to none</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Skill Acquisition</strong></td><td class="p-4 text-slate-800 font-medium">Knife cuts, rolling, heat control, sauce balancing</td><td class="p-4 text-slate-800 font-medium">Ordering etiquette &amp; local dining customs</td><td class="p-4 text-slate-800 font-medium">Pure appreciation of flavors</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Replication at Home</strong></td><td class="p-4 text-slate-800 font-medium">High (equipped with recipes &amp; technique skills)</td><td class="p-4 text-slate-800 font-medium">Low to moderate (understanding flavor memory)</td><td class="p-4 text-slate-800 font-medium">Very low</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Pace of Experience</strong></td><td class="p-4 text-slate-800 font-medium">Slow, educational, tactile, intimate</td><td class="p-4 text-slate-800 font-medium">Fast-paced, dynamic, mobile grazing</td><td class="p-4 text-slate-800 font-medium">Relaxed, observational, commercial</td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ideal For</strong></td><td class="p-4 text-slate-800 font-medium">Curious food lovers, home cooks &amp; couples</td><td class="p-4 text-slate-800 font-medium">First-time visitors seeking diverse tastings</td><td class="p-4 text-slate-800 font-medium">Casual lunches, dinners &amp; quick breaks</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    <hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="frequently-asked-questions" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
+      
+        <div id="do-i-need-prior-culinary-experience-to-join-a-vietnamese-cooking-class" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Do I need prior culinary experience to join a Vietnamese cooking class?
+          </h3>
+        </div>
+      <p>Not at all. Professional travel cooking workshops in Vietnam are tailored specifically for everyday food lovers and complete novices. Instructors provide step-by-step physical demonstrations, guide your knife work patiently, and taste your sauces alongside you to help you calibrate your seasonings.</p>
+
+        <div id="can-classes-accommodate-vegetarians-or-guests-with-seafood-allergies" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            Can classes accommodate vegetarians or guests with seafood allergies?
+          </h3>
+        </div>
+      <p>Yes. Vietnamese cuisine features a rich Buddhist vegetarian heritage (<em>ẩm thực chay</em>). Reputable cooking schools can seamlessly substitute tofu, king oyster mushrooms, fermented soy sauce (<em>nước tương</em>), and vegetable-based broth reductions without compromising on flavor depth or authentic technique. Always inform the school of your dietary preferences during booking.</p>
+
+        <div id="how-long-does-a-typical-cooking-class-last" class="scroll-mt-28 pt-5">
+          <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
+            How long does a typical cooking class last?
+          </h3>
+        </div>
+      <p>A comprehensive cooking workshop paired with a morning wet market walk typically spans between 3.5 and 4.5 hours. This allows ample, unhurried time for market shopping, detailed ingredient preparation, active stovetop cooking, and a shared multicourse sit-down meal.</p>
+<hr>
+
+        <div class="border-l-4 border-amber-500 pl-4 my-8">
+          <h2 id="epilogue-taste-vietnam-with-your-own-hands" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Epilogue: Taste Vietnam with Your Own Hands
+          </h2>
+        </div>
+      <p>The most enduring souvenir of any journey through Vietnam is never a mass-produced trinket bought from a market stall; it is the culinary wisdom you bring back to your own family table.</p>
+<p>When you know how to bruise a stalk of lemongrass, coax crackling crispness from a rice-flour batter, and balance the sharp amber depths of fermented fish sauce with fresh lime juice, the sights, aromas, and vibrant life of Vietnam remain alive in your kitchen forever.</p>
+<p>If you are traveling through Ho Chi Minh City and wish to experience this culinary journey firsthand—from discovering morning produce in traditional market alleys to preparing authentic regional dishes alongside master instructors—explore the curated <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Experience with The Rice Tour</a>. You can also pair this with our <a href="/ben-thanh-market-food-guide">Ben Thanh Market street food guide</a>, embark on our <a href="/ben-thanh-one-day-walking-tour">one-day walking tour</a>, or consult our specialists for <a href="/tailor-made">bespoke tailor-made culinary itineraries</a> tailored specifically to your palate.</p>
+
+          </div>
+
+          <!-- Epilogue -->
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
+              <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: Taste Vietnam with Your Own Hands</h3>
+              <p class="text-slate-100 text-base leading-relaxed m-0">
+                The most enduring souvenir of any journey through Vietnam is never a mass-produced trinket bought from a market stall; it is the culinary wisdom you bring back to your own family table. When you know how to bruise lemongrass, coax crackling crispness from a rice-flour batter, and balance fermented fish sauce with lime juice, the sights, aromas, and vibrant soul of Vietnam remain alive in your kitchen forever.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="my-14 bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10"><svg width="140" height="140" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 22h20L12 2z"/></svg></div>
+            <h3 class="font-serif text-2xl lg:text-3xl font-bold text-slate-900 mb-3 relative z-10">
+              Ready to Experience the Cultural Depth of Vietnam?
+            </h3>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto relative z-10 text-sm sm:text-base">
+              Journey with The Rice Tour on curated, slow-paced cultural expeditions through living riverine waterways and artisan sanctuaries.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+              <a 
+                href="/tours?country=mien-nam" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-[#F7931E] hover:bg-[#e08216] text-white font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group"
+              >
+                <span>🛶</span> Explore Curated Journeys
+              </a>
+              <a 
+                href="/tailor-made" 
+                class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold rounded-xl transition-all shadow-xs flex items-center justify-center gap-2"
+              >
+                <span>✨</span> Curate Your Bespoke Itinerary
+              </a>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- ---------------- RIGHT SIDEBAR ---------------- -->
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            <!-- Quick Facts -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Quick Expedition Facts
+              </div>
+              
+              <div class="space-y-4">
+                
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
+      <div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Sourcing Ground</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Local Morning Wet Market (Chợ)</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🌿</div>
+      <div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Herb Principle</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Substantial ingredients, not garnish</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🐟</div>
+      <div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Flavor Foundation</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Artisanal fermented Nước Mắm</div>
+      </div>
+    </div>
+  
+
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🧑‍🍳</div>
+      <div>
+        <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Core Skill</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Intuitive seasoning by palate</div>
+      </div>
+    </div>
+  
+              </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              <div class="space-y-4">
+                
+      <a href="/happy-land-ben-luc-travel-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates
+        </div>
+      </a>
+    
+
+      <a href="/nam-du-island-expedition-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes
+        </div>
+      </a>
+    
+
+      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+        </div>
+      </a>
+    
+              </div>
+            </div>
+
+            <!-- Share Block -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="text-xs font-bold text-slate-600 mb-4 tracking-wide uppercase text-center">Share This Guide</div>
+              <div class="flex justify-center gap-3">
+                <a 
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://thericetour.com/what-do-you-learn-in-a-vietnamese-cooking-class" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Share on Facebook"
+                  class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                </a>
+                <button 
+                  onclick="navigator.clipboard.writeText('https://thericetour.com/what-do-you-learn-in-a-vietnamese-cooking-class');" 
+                  aria-label="Copy link"
+                  class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200 transition-colors group focus:bg-emerald-100 focus:text-emerald-700"
+                >
+                  <svg class="w-4 h-4 group-focus:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  <span class="hidden group-focus:block text-[9px] font-bold">OK!</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+</div>`;

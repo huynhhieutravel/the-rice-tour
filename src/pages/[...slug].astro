@@ -45,7 +45,8 @@ import {
   benThanhMarketScamsSafetyGuideHtml,
   moneyExchangeBenThanhHaTamGuideHtml,
   parkingGuideNearBenThanhMarketHtml,
-  tanSonNhatAirportToBenThanhTransferGuideHtml
+  tanSonNhatAirportToBenThanhTransferGuideHtml,
+  whatDoYouLearnInAVietnameseCookingClassHtml
 } from '@/data/demo-articles';
 
 let { slug } = Astro.params;
@@ -147,7 +148,8 @@ const demoSlugs = [
   'parking-guide-near-ben-thanh-market',
   'bai-gui-xe-quanh-cho-ben-thanh',
   'tan-son-nhat-airport-to-ben-thanh-transfer-guide',
-  'di-tu-san-bay-tan-son-nhat-ve-ben-thanh'
+  'di-tu-san-bay-tan-son-nhat-ve-ben-thanh',
+  'what-do-you-learn-in-a-vietnamese-cooking-class'
 ];
 
 if (!post && (demoSlugs.includes(slug) || demoSlugs.includes(cleanPostSlug))) {
@@ -502,7 +504,8 @@ if (!isCategory) {
     'tan-son-nhat-airport-to-ben-thanh-transfer-guide': tanSonNhatAirportToBenThanhTransferGuideHtml,
     'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': tanSonNhatAirportToBenThanhTransferGuideHtml,
     'khan-ran-nam-bo': mekongKhanRanScarfLegacyHtml,
-    'khu-du-lich-happy-land-ben-luc-long-an': happyLandBenLucTravelGuideHtml
+    'khu-du-lich-happy-land-ben-luc-long-an': happyLandBenLucTravelGuideHtml,
+    'what-do-you-learn-in-a-vietnamese-cooking-class': whatDoYouLearnInAVietnameseCookingClassHtml
   };
 
   const demoArticlesFeaturedImages: Record<string, string> = {
@@ -541,7 +544,8 @@ if (!isCategory) {
     'parking-guide-near-ben-thanh-market': 'https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp',
     'bai-gui-xe-quanh-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp',
     'tan-son-nhat-airport-to-ben-thanh-transfer-guide': 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp',
-    'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp'
+    'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp',
+    'what-do-you-learn-in-a-vietnamese-cooking-class': 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp'
   };
 
   if (!post.featuredImage && demoArticlesFeaturedImages[post.slug]) {

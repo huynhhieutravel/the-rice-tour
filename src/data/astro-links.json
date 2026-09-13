@@ -2533,6 +2533,50 @@
     {
       "targetUrl": "/mekong-delta-fruits-harvest-map",
       "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Experience with The Rice Tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market street food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day walking tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "bespoke tailor-made culinary itineraries"
+    },
+    {
+      "targetUrl": "/tours?country=mien-nam",
+      "anchorText": "🛶 Explore Curated Journeys"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "✨ Curate Your Bespoke Itinerary"
+    },
+    {
+      "targetUrl": "/happy-land-ben-luc-travel-guide",
+      "anchorText": "Happy Land Ben Luc Travel Guide: Current Status, Ticketing Realities & 2026 Travel Updates"
+    },
+    {
+      "targetUrl": "/nam-du-island-expedition-guide",
+      "anchorText": "Nam Du Island Expedition Guide: Logistics, Marine Sanctuaries & 2026 Archipelago Field Notes"
+    },
+    {
+      "targetUrl": "/mekong-delta-fruits-harvest-map",
+      "anchorText": "Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces"
     }
   ]
 }
