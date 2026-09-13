@@ -744,7 +744,7 @@ const articleMetadata = {
       { icon: "🍲", label: "Core Philosophy", val: "Balance of 5 Flavor Dimensions" }
     ],
     sidebarFacts: [
-      { icon: "📍", label: "Sourcing Ground", val: "Local Morning Wet Market (Chợ)" },
+      { icon: "📍", label: "Sourcing Ground", val: "Neighborhood Wet Market (Chợ Dân Sinh)" },
       { icon: "🌿", label: "Herb Principle", val: "Substantial ingredients, not garnish" },
       { icon: "🐟", label: "Flavor Foundation", val: "Artisanal fermented Nước Mắm" },
       { icon: "🧑‍🍳", label: "Core Skill", val: "Intuitive seasoning by palate" }

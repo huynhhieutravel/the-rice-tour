@@ -20300,7 +20300,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
             How Living Ingredients Are Chosen at the Source
           </h2>
         </div>
-      <p>For many international travelers, the true culinary lesson begins well before entering the classroom doors. High-caliber cooking classes in Vietnam pair kitchen instruction with an early-morning expedition to a bustling wet market (<em>chợ dân sinh</em>). Here, you encounter the raw materials that will soon become your lunch or dinner in their most vivid state. </p>
+      <p>For many international travelers, the true culinary lesson begins well before entering the classroom doors. High-caliber cooking classes in Vietnam pair kitchen instruction with a guided expedition to a bustling neighborhood wet market (<em>chợ dân sinh</em>) during morning or afternoon market hours. Here, you encounter the raw materials that will soon become your lunch or dinner in their most vivid state. </p>
 <p>This excursion is never a mere photo opportunity; it is an essential masterclass in the foundational grammar of Vietnamese gastronomy. Under the guidance of your instructor, you learn how to identify and assess:</p>
 <ul>
 <li><strong>Living herbs and leafy greens:</strong> Water spinach (<em>rau muống</em>), mustard greens, pennywort, and aromatic sprigs displaying vibrant, springy turgor rather than tired, wilted leaves.</li>
@@ -20308,7 +20308,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 <li><strong>Fiery local chilies:</strong> Bird&#39;s eye chilies (<em>ớt hiểm</em>), recognizing how their heat and aromatic profile vary by size, color, and maturity.</li>
 <li><strong>Rice noodles and vermicelli:</strong> Understanding the tactile differences between fresh, silky fermented rice noodles (<em>bún tươi</em>), flat phở ribbons, and dried alternatives.</li>
 <li><strong>Artisan rice paper wrappers:</strong> Distinguishing between thin, sun-dried translucent sheets (<em>bánh tráng phơi sương</em>) crafted for raw summer rolls and thicker, textured wrappers designed to crisp up inside smoking oil without bursting.</li>
-<li><strong>The liquid pillars:</strong> Distinguishing high-grade artisanal fish sauce (<em>nước mắm nhỉ</em>) brewed from black anchovies and sea salt in wooden vò barrels from modern industrialized factory blends.</li>
+<li><strong>The liquid pillars:</strong> Distinguishing high-grade artisanal fish sauce (<em>nước mắm nhỉ</em>) slowly fermented from wild black anchovies and sea salt in traditional wooden vats (<em>thùng gỗ</em>) and terracotta jars (<em>vò sành</em>) from modern industrialized factory blends.</li>
 <li><strong>Sour and sweet balancing agents:</strong> Fresh tamarind pulp, kumquats, calamansi, fragrant yellow limes, and raw unrefined palm sugar disks.</li>
 <li><strong>Daily seasonal seafood and meats:</strong> Observing how local home cooks judge the absolute freshness of river catfish, wild sea prawns, and pasture-raised pork sliced to order by market butchers.</li>
 </ul>
@@ -20370,7 +20370,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 <li><strong>Sweet (<em>Ngọt</em> – Earth):</strong> Sourced from caramelized palm sugar, raw cane sugar, fresh coconut water, or the deep natural sweetness of slow-simmered bone broths.</li>
 <li><strong>Sour (<em>Chua</em> – Wood):</strong> Introduced through fresh lime juice, crushed tamarind pulp, fermented rice vinegars, or tart green fruits like mango and starfruit.</li>
 <li><strong>Spicy (<em>Cay</em> – Metal):</strong> Infused via freshly sliced bird&#39;s eye chilies, cracked black peppercorns from Phu Quoc, or warm ginger root.</li>
-<li><strong>Bitter / Umami (<em>Đắng &amp; Đậm Đà</em> – Fire):</strong> Brought forward by bitter melon, charred aromatics, toasted rice powder, and the natural glutamate richness of fermented marinades.</li>
+<li><strong>Bitter (<em>Đắng</em> – Fire):</strong> Provided by bitter melon (<em>khổ qua</em>), charred scallions, or herbal greens, while the savory depth of <strong>Umami (<em>Đậm đà</em>)</strong> from ancestral fermentation bridges all five elements into a harmonious whole.</li>
 </ol>
 
         <div id="learning-to-season-by-palate-rather-than-teaspoons" class="scroll-mt-28 pt-5">
@@ -20499,7 +20499,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
           </h2>
         </div>
       <p>To international visitors, fermented fish sauce (<em>nước mắm</em>) can initially seem intimidating. In a cooking class, fear quickly turns into reverence.</p>
-<p>You will learn that premium fish sauce is crafted through ancestral fermentation: wild black anchovies (<em>cá cơm</em>) harvested from pristine island waters like Phu Quoc are layered with pure sea salt in giant aged jackwood barrels for 12 to 15 months. The resulting amber nectar is pure natural glutamic acid—the very essence of deep, savory umami.</p>
+<p>You will learn that premium fish sauce is crafted through ancestral fermentation: wild black anchovies (<em>cá cơm</em>) harvested from pristine island waters like Phu Quoc are layered with pure solar sea salt in giant aged indigenous hardwood vats (<em>thùng gỗ bời lời</em>) for 12 to 15 months. The resulting amber nectar is pure natural glutamic acid—the very essence of deep, savory umami.</p>
 <p>Your instructor will demonstrate how fish sauce functions across multiple culinary roles:</p>
 <ul>
 <li>As an invisible foundation in long-simmered broths.</li>
@@ -20719,7 +20719,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
       <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
       <div>
         <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Sourcing Ground</div>
-        <div class="font-bold text-slate-900 text-[13.5px]">Local Morning Wet Market (Chợ)</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Neighborhood Wet Market (Chợ Dân Sinh)</div>
       </div>
     </div>
   

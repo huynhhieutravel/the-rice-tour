@@ -22,7 +22,7 @@ So, what do you actually learn in a Vietnamese cooking class? You master practic
 
 ## How Living Ingredients Are Chosen at the Source
 
-For many international travelers, the true culinary lesson begins well before entering the classroom doors. High-caliber cooking classes in Vietnam pair kitchen instruction with an early-morning expedition to a bustling wet market (*chợ dân sinh*). Here, you encounter the raw materials that will soon become your lunch or dinner in their most vivid state. 
+For many international travelers, the true culinary lesson begins well before entering the classroom doors. High-caliber cooking classes in Vietnam pair kitchen instruction with a guided expedition to a bustling neighborhood wet market (*chợ dân sinh*) during morning or afternoon market hours. Here, you encounter the raw materials that will soon become your lunch or dinner in their most vivid state. 
 
 This excursion is never a mere photo opportunity; it is an essential masterclass in the foundational grammar of Vietnamese gastronomy. Under the guidance of your instructor, you learn how to identify and assess:
 
@@ -31,7 +31,7 @@ This excursion is never a mere photo opportunity; it is an essential masterclass
 - **Fiery local chilies:** Bird's eye chilies (*ớt hiểm*), recognizing how their heat and aromatic profile vary by size, color, and maturity.
 - **Rice noodles and vermicelli:** Understanding the tactile differences between fresh, silky fermented rice noodles (*bún tươi*), flat phở ribbons, and dried alternatives.
 - **Artisan rice paper wrappers:** Distinguishing between thin, sun-dried translucent sheets (*bánh tráng phơi sương*) crafted for raw summer rolls and thicker, textured wrappers designed to crisp up inside smoking oil without bursting.
-- **The liquid pillars:** Distinguishing high-grade artisanal fish sauce (*nước mắm nhỉ*) brewed from black anchovies and sea salt in wooden vò barrels from modern industrialized factory blends.
+- **The liquid pillars:** Distinguishing high-grade artisanal fish sauce (*nước mắm nhỉ*) slowly fermented from wild black anchovies and sea salt in traditional wooden vats (*thùng gỗ*) and terracotta jars (*vò sành*) from modern industrialized factory blends.
 - **Sour and sweet balancing agents:** Fresh tamarind pulp, kumquats, calamansi, fragrant yellow limes, and raw unrefined palm sugar disks.
 - **Daily seasonal seafood and meats:** Observing how local home cooks judge the absolute freshness of river catfish, wild sea prawns, and pasture-raised pork sliced to order by market butchers.
 
@@ -75,7 +75,7 @@ Vietnamese gastronomy adheres closely to the Five Elements (*Ngũ Hành*), balan
 2. **Sweet (*Ngọt* – Earth):** Sourced from caramelized palm sugar, raw cane sugar, fresh coconut water, or the deep natural sweetness of slow-simmered bone broths.
 3. **Sour (*Chua* – Wood):** Introduced through fresh lime juice, crushed tamarind pulp, fermented rice vinegars, or tart green fruits like mango and starfruit.
 4. **Spicy (*Cay* – Metal):** Infused via freshly sliced bird's eye chilies, cracked black peppercorns from Phu Quoc, or warm ginger root.
-5. **Bitter / Umami (*Đắng & Đậm Đà* – Fire):** Brought forward by bitter melon, charred aromatics, toasted rice powder, and the natural glutamate richness of fermented marinades.
+5. **Bitter (*Đắng* – Fire):** Provided by bitter melon (*khổ qua*), charred scallions, or herbal greens, while the savory depth of **Umami (*Đậm đà*)** from ancestral fermentation bridges all five elements into a harmonious whole.
 
 ### Learning to Season by Palate Rather Than Teaspoons
 
@@ -150,7 +150,7 @@ Understanding this regional context transforms a simple cooking lesson into an e
 
 To international visitors, fermented fish sauce (*nước mắm*) can initially seem intimidating. In a cooking class, fear quickly turns into reverence.
 
-You will learn that premium fish sauce is crafted through ancestral fermentation: wild black anchovies (*cá cơm*) harvested from pristine island waters like Phu Quoc are layered with pure sea salt in giant aged jackwood barrels for 12 to 15 months. The resulting amber nectar is pure natural glutamic acid—the very essence of deep, savory umami.
+You will learn that premium fish sauce is crafted through ancestral fermentation: wild black anchovies (*cá cơm*) harvested from pristine island waters like Phu Quoc are layered with pure solar sea salt in giant aged indigenous hardwood vats (*thùng gỗ bời lời*) for 12 to 15 months. The resulting amber nectar is pure natural glutamic acid—the very essence of deep, savory umami.
 
 Your instructor will demonstrate how fish sauce functions across multiple culinary roles:
 - As an invisible foundation in long-simmered broths.
