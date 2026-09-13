@@ -958,8 +958,8 @@ function processMarkdownToMagazineHtml(file) {
   // Build Related Guides
   const isBenThanh = slug.includes('ben-thanh') || slug.includes('fine-arts') || slug.includes('independence') || slug.includes('mariamman') || slug.includes('hop-on') || slug.includes('apartment') || slug.includes('rooftop') || slug.includes('boutique') || slug.includes('tan-son-nhat');
   const pool = isBenThanh 
-    ? Object.keys(articleMetadata).filter(s => (s.includes('ben-thanh') || s.includes('fine-arts') || s.includes('independence') || s.includes('mariamman') || s.includes('hop-on') || s.includes('apartment') || s.includes('rooftop') || s.includes('boutique') || s.includes('tan-son-nhat')) && s !== slug)
-    : Object.keys(articleMetadata).filter(s => s !== slug);
+    ? Object.keys(articleMetadata).filter(s => (s.includes('ben-thanh') || s.includes('fine-arts') || s.includes('independence') || s.includes('mariamman') || s.includes('hop-on') || s.includes('apartment') || s.includes('rooftop') || s.includes('boutique') || s.includes('tan-son-nhat')) && s !== slug && !parsedContent.includes('/' + s))
+    : Object.keys(articleMetadata).filter(s => s !== slug && !parsedContent.includes('/' + s));
   const otherSlugs = pool.slice(0, 3);
   const relatedHtml = otherSlugs.map(os => {
     const om = articleMetadata[os];

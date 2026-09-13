@@ -925,23 +925,23 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-market-shopping-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Ben Thanh Market Shopping Guide: Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)
         </div>
       </a>
     
 
-      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/saigon-hop-on-hop-off-bus-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+          Saigon Hop On Hop Off Bus Guide: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes
         </div>
       </a>
     
@@ -1351,13 +1351,6 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
@@ -1365,9 +1358,16 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
       </a>
     
 
-      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/mariamman-hindu-temple-saigon" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+          Mariamman Hindu Temple Saigon: Raja Gopuram Spire, Sacred Stone Wall Rituals & The Chettiar Legacy (2026)
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-market-shopping-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Market Shopping Guide: Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)
         </div>
       </a>
     
@@ -2273,13 +2273,6 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -2290,6 +2283,13 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
@@ -3154,23 +3154,23 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-market-shopping-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
+          Ben Thanh Market Shopping Guide: Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)
         </div>
       </a>
     
 
-      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/saigon-hop-on-hop-off-bus-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
+          Saigon Hop On Hop Off Bus Guide: Heritage Routes, 2026 Ticketing Guide & Open-Top Panoramic Field Notes
         </div>
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/secret-apartment-cafes-near-ben-thanh" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries, Drip Brews & Heritage Corridors (2026)
         </div>
       </a>
     
@@ -3956,23 +3956,23 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
-      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
-        </div>
-      </a>
-    
-
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-central-metro-station-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Central Metro Station Guide: Architecture, Underpass Network & Essential Commuter Logistics for Saigon Line 1 (2026)
+        </div>
+      </a>
+    
+
+      <a href="/mariamman-hindu-temple-saigon" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mariamman Hindu Temple Saigon: Raja Gopuram Spire, Sacred Stone Wall Rituals & The Chettiar Legacy (2026)
         </div>
       </a>
     
@@ -4857,13 +4857,6 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -4874,6 +4867,13 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
@@ -6203,23 +6203,23 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
 
-      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-central-metro-station-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
+          Ben Thanh Central Metro Station Guide: Architecture, Underpass Network & Essential Commuter Logistics for Saigon Line 1 (2026)
         </div>
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-market-shopping-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Ben Thanh Market Shopping Guide: Artisan Finds, Tailoring Secrets, Authentic Souvenirs & Respectful Bargaining (2026)
         </div>
       </a>
     
@@ -6661,13 +6661,6 @@ Southern merchants hold deep spiritual reverence for their first customer of the
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -6678,6 +6671,13 @@ Southern merchants hold deep spiritual reverence for their first customer of the
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
         </div>
       </a>
     
@@ -8030,13 +8030,6 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -8047,6 +8040,13 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/mariamman-hindu-temple-saigon" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Mariamman Hindu Temple Saigon: Raja Gopuram Spire, Sacred Stone Wall Rituals & The Chettiar Legacy (2026)
         </div>
       </a>
     
@@ -8866,23 +8866,23 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
-      <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
-        </div>
-      </a>
-    
-
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-central-metro-station-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh Central Metro Station Guide: Architecture, Underpass Network & Essential Commuter Logistics for Saigon Line 1 (2026)
         </div>
       </a>
     
@@ -9328,13 +9328,6 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -9342,9 +9335,16 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
@@ -11400,13 +11400,6 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -11414,9 +11407,16 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
@@ -12720,9 +12720,9 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
       </a>
     
 
-      <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
         </div>
       </a>
     
@@ -14638,13 +14638,6 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -14655,6 +14648,13 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/independence-palace-saigon-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Independence Palace Saigon Guide: Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
         </div>
       </a>
     
@@ -15466,13 +15466,6 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
               </div>
               <div class="space-y-4">
                 
-      <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
-        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
-        </div>
-      </a>
-    
-
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
@@ -15483,6 +15476,13 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
           Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
+        </div>
+      </a>
+    
+
+      <a href="/ben-thanh-one-day-walking-tour" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+        <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
+          Ben Thanh One Day Walking Tour: A Curated 4.5km Slow Expedition: Colonial Alleys, Sacred Sanctuaries & River Sunset
         </div>
       </a>
     
@@ -20300,7 +20300,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
             How Fresh Ingredients Are Chosen at Local Markets
           </h2>
         </div>
-      <p>For many travelers, the culinary lesson begins before stepping into the kitchen. Most morning cooking classes in Vietnam start with a guided walk through a neighborhood wet market (<em>chợ dân sinh</em>). This is where you see, smell, and pick the ingredients you are about to cook.</p>
+      <p>For many travelers, the culinary lesson begins before stepping into the kitchen. Most morning cooking classes in Vietnam start with a guided walk through a neighborhood wet market (<em>chợ dân sinh</em>). This is where you see, smell, and pick the ingredients you are about to cook. While landmark hubs like those covered in our <a href="/ben-thanh-market-ultimate-travel-guide">Ben Thanh Market travel guide</a> offer great historical atmosphere, small residential markets provide an authentic look into how local families buy daily produce.</p>
 <p>A market visit is not just a sightseeing walk. It teaches you how local home cooks shop every day. Walking through the stalls with your instructor, you learn what to look for:</p>
 <ul>
 <li><strong>Fresh greens and herbs:</strong> Water spinach (<em>rau muống</em>), mustard greens, pennywort, and aromatic herbs that are crisp and bright, rather than limp or wilted from sitting in the sun.</li>
@@ -20309,7 +20309,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 <li><strong>Fresh rice noodles:</strong> Feeling the texture of fresh fermented rice noodles (<em>bún tươi</em>)—soft, slightly elastic, and naturally tangy—compared to flat phở noodles or dried vermicelli.</li>
 <li><strong>Rice paper wrappers:</strong> The difference between thin, pliable sun-dried sheets (<em>bánh tráng</em>) meant for fresh summer rolls, and thicker wrappers made specifically for frying crispy spring rolls (<em>chả giò</em>) without tearing or blistering.</li>
 <li><strong>Fish sauce (<em>nước mắm</em>):</strong> How to tell traditional fish sauce—aged slowly in wooden vats (<em>thùng gỗ</em>) or terracotta jars (<em>vò sành</em>) with just anchovies and sea salt—apart from diluted, factory-made bottled sauces.</li>
-<li><strong>Sour and sweet elements:</strong> Fresh tamarind pulp, calamansi, limes, and solid cakes of unrefined palm sugar used to balance savory broths and dressings.</li>
+<li><strong>Sour and sweet elements:</strong> Fresh tamarind pulp, calamansi, limes, and seasonal tropical produce—much like the varieties explored in our <a href="/mekong-delta-fruits-harvest-map">Mekong Delta fruit harvest guide</a>—along with solid cakes of unrefined palm sugar used to balance savory broths and dressings.</li>
 <li><strong>Fresh meats and seafood:</strong> Watching how vendors slice pork cuts to order and how cooks check live river fish and sea prawns for clarity and firmness.</li>
 </ul>
 
@@ -20434,7 +20434,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
             Classic Dishes Taught in Class and What They Teach You
           </h2>
         </div>
-      <p>Cooking class menus are designed to introduce different cooking methods and textures:</p>
+      <p>Cooking class menus are designed to introduce different cooking methods and textures. They also mirror the classic street dishes you encounter across southern Vietnam. For travelers looking to taste how veteran street cooks prepare these same items, our <a href="/ben-thanh-market-food-guide">Ben Thanh Market food guide</a> maps out the best local stalls to visit.</p>
 
         <div id="goi-cuon-fresh-summer-rolls" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
@@ -20486,7 +20486,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 <ul>
 <li><strong>Northern Vietnam (Hanoi &amp; the Red River Delta):</strong> Influenced by cooler winters, northern cooking tends to be subtle, clean, and balanced. Cooks rely on black pepper for mild warmth rather than fresh chilies, use minimal sugar, and focus on clear, fragrant broths—as seen in traditional Hanoi <em>phở</em> and <em>bún chả</em>.</li>
 <li><strong>Central Vietnam (Hue &amp; Hoi An):</strong> Shaped by imperial court cooking and coastal terrain, central dishes are famous for bold flavors, vibrant colors, and pronounced heat. Spices, chili pastes, and fermented shrimp paste are common, with specialties served in small, delicate dishes like <em>bánh bèo</em> or spicy bowls of <em>bún bò Huế</em>.</li>
-<li><strong>Southern Vietnam (Saigon &amp; the Mekong Delta):</strong> Warm all year and rich with tropical waterways, southern food is sweeter, generous with fresh herbs, and fond of rich coconut milk. Dishes frequently incorporate palm sugar, wild river fish, and huge baskets of raw greens and edible flowers.</li>
+<li><strong>Southern Vietnam (Saigon &amp; the Mekong Delta):</strong> Warm all year and rich with tropical waterways, southern food is sweeter, generous with fresh herbs, and fond of rich coconut milk. Dishes frequently incorporate palm sugar, wild river fish, and huge baskets of raw greens and edible flowers. Travelers who want to taste these riverine specialties right at the source often pair their cooking class with a <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho">full-day Mekong Delta tour</a> through the orchards of Ben Tre and My Tho.</li>
 </ul>
 <p>Understanding these differences helps you appreciate the local food culture wherever you travel in Vietnam.</p>
 <hr>
@@ -20534,7 +20534,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
 <li>Seasoning a bowl of noodle soup gradually with lime, bean sprouts, and torn culantro leaves rather than adding everything at once.</li>
 <li>Sharing platters of herbs, fresh vegetables, and grilled meats communally (<em>tính cộng đồng</em>).</li>
 </ul>
-<p>Eating together and building each bite by hand is part of everyday Vietnamese food culture.</p>
+<p>Eating together and building each bite by hand is part of everyday Vietnamese food culture. After a shared meal, locals often linger over iced coffee in hidden spaces, much like the historic spots featured in our guide to Saigon&#39;s <a href="/secret-apartment-cafes-near-ben-thanh">heritage apartment cafes</a>.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -20657,7 +20657,7 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
         </div>
       <p>The most memorable part of a Vietnamese cooking class is often not just the food on your plate; it is everything you learn along the way.</p>
 <p>You discover local ingredients at a neighborhood morning market. You learn how fresh herbs and aromatics shape each dish. You practice balancing salty, sweet, sour, and spicy notes with a spoon, and you try classic kitchen techniques with your own hands. By the time you sit down to eat, you understand the care and balance that make Vietnamese cuisine so special.</p>
-<p>If you are visiting Ho Chi Minh City and want to try cooking Vietnamese dishes yourself, check out our <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Experience with The Rice Tour</a>. You can also learn more about local dining through our <a href="/ben-thanh-market-food-guide">Ben Thanh Market street food guide</a>, join our <a href="/ben-thanh-one-day-walking-tour">one-day walking tour</a>, take a <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a>, or request a <a href="/tailor-made">bespoke tailor-made culinary itinerary</a> tailored to your personal taste.</p>
+<p>If you are visiting Ho Chi Minh City and want to try cooking Vietnamese dishes yourself, check out our <a href="/tour/cooking-class-local-market">Cooking Class &amp; Local Market Experience with The Rice Tour</a>. You can also discover more of the city by joining our <a href="/ben-thanh-one-day-walking-tour">one-day Saigon walking tour</a>, booking a private <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a>, or contacting our travel team directly through our <a href="/contact">culinary inquiry page</a> for a personalized itinerary.</p>
 
           </div>
 
@@ -20769,9 +20769,9 @@ export const whatDoYouLearnInAVietnameseCookingClassHtml = `<!-- layout: landing
       </a>
     
 
-      <a href="/mekong-delta-fruits-harvest-map" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
+      <a href="/truong-tien-bridge-hue-heritage" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Mekong Delta Fruits Harvest Map: Orchard Coordinates, Seasonal Matrices & 24 Riverine Masterpieces
+          Truong Tien Bridge Hue Heritage: Eiffel's Iron Lace, Dynastic Memory & 2026 Engineering Heritage
         </div>
       </a>
     
