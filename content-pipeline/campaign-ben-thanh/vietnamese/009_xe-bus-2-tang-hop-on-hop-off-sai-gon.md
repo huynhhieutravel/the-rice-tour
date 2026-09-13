@@ -141,7 +141,7 @@ Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh
 
 Du khách có thể dễ dàng thiết kế một buổi chiều hoàn hảo bắt đầu và kết thúc tại Chợ Bến Thành:
 
-- **15:00 – 16:30:** Dạo bước thưởng thức ẩm thực xế chiều tại Cửa Đông Chợ Bến Thành (thưởng thức gỏi cuốn tôm thịt, bún riêu cua hoặc chè Ba Mười).
+- **15:00 – 16:30:** Dạo bước thưởng thức ẩm thực xế chiều tại Cửa Đông Chợ Bến Thành (thưởng thức gỏi cuốn tôm thịt, bún riêu cua hoặc chè Bé (sạp 1119)).
 - **16:45:** Đi bộ sang trạm đón xe bus tại Cửa Tây (23 Phan Chu Trinh), xuất trình mã vé điện tử và lên tầng 2 đón gió.
 - **17:00 – 18:00:** Tận hưởng trọn vẹn vòng quay 60 phút qua các đại lộ di sản và ngắm hoàng hôn buông trên sông Sài Gòn.
 - **18:15:** Trở về trạm Bến Thành, thong thả dạo bộ sang Phố đi bộ Lê Lợi hoặc xuống ga ngầm Metro trải nghiệm không gian ngầm hiện đại bậc nhất Việt Nam.

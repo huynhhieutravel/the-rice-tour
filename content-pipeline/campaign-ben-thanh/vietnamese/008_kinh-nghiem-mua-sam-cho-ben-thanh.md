@@ -29,7 +29,7 @@ Là một điểm nhấn thực chiến không thể bỏ lỡ trong cẩm nang 
 - **4 chiếc cân đối chứng điện tử:** Được Ban Quản lý chợ lắp đặt cố định tại 4 cổng chính để người mua tự tay kiểm tra độ chính xác tuyệt đối về trọng lượng hàng hóa.
 - **24 giờ may đo lấy liền:** Dịch vụ may áo dài truyền thống và âu phục cao cấp lấy ngay trong ngày dành riêng cho du khách quốc tế bận rộn.
 - **15% – 25%:** Biên độ thương lượng giá cả hợp lý, giúp giữ trọn vẹn sự hài lòng cho cả người mua và người bán.
-- **100% không tiền mặt:** Toàn bộ tiểu thương chợ Bến Thành hiện đều sở hữu mã thanh toán điện tử thông minh, loại bỏ hoàn toàn nỗi lo đổi tiền lẻ.
+- **Thanh toán VietQR & Không tiền mặt:** Hầu hết tiểu thương đều trang bị mã VietQR nhanh chóng; tuy nhiên du khách quốc tế vẫn nên chuẩn bị một khoản tiền mặt nhỏ (200.000 – 500.000 VNĐ) để thuận tiện chi tiêu tại các quầy ẩm thực truyền thống.
 
 ---
 

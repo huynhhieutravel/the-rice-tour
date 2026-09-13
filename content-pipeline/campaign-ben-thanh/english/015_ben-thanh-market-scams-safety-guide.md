@@ -136,7 +136,7 @@ To navigate commerce with confidence, refer to this ground-verified pricing guid
 | **Jumbo Roasted Salted Cashews (500g)** | 110,000 – 140,000 VND | 220,000 – 300,000 VND | Select whole, unbroken, vacuum-sealed jars |
 | **Artisanal Ground Robusta/Arabica (1kg)** | 250,000 – 450,000 VND | 600,000 – 900,000 VND | Request bean grinding on the spot |
 | **Bowl of Crab Noodle Soup (*Bun Rieu*)** | 50,000 – 65,000 VND | 80,000 – 100,000 VND | Confirm bowl price before seating |
-| **Che Ba Muoi Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
+| **Che Be Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
 | **Chilled Fresh Coconut (Curb-side)** | 25,000 – 35,000 VND | 100,000 – 200,000 VND | Only accept once verbal price is agreed |
 
 ---

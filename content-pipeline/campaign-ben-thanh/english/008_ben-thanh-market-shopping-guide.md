@@ -67,7 +67,7 @@ Highlighted in our comprehensive field guide to [things to do near Ben Thanh Mar
 - **1,400 Grid Stalls:** Meticulously organized into specialized guild quadrants accessible through the four cardinal gates.
 - **4 Electronic Verification Scales:** Positioned by municipal market authorities at each portal, empowering shoppers to self-verify weighed items with pinpoint accuracy.
 - **24-Hour Express Tailoring:** Bespoke *áo dài* and linen safari suits tailored overnight for international travelers on tight itineraries.
-- **100% Cashless Operations:** Every vendor terminal is equipped with tap-to-pay technology and dual-currency digital receipts.
+- **VietQR & Cashless Readiness:** While nearly all vendors support digital VietQR payments for domestic accounts, international travelers should still keep modest cash (200,000 – 500,000 VND) on hand for small food stalls and fresh fruit purchases.
 
 ---
 

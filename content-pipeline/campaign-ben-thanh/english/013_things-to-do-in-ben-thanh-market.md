@@ -42,7 +42,7 @@ sidebar_facts:
     val: "06:30 – 08:00 AM (Golden Dawn)"
   - icon: "🍲"
     label: "Must-Try Gastronomy"
-    val: "Bun Rieu Cua, Banh Beo & Che Ba Muoi"
+    val: "Bun Rieu Cua, Banh Beo & Che Be"
   - icon: "🚇"
     label: "Subterranean Link"
     val: "Direct access to Metro Line 1"
@@ -98,8 +98,8 @@ Following breakfast, stroll across Le Lai Street into the verdant canopy of Sept
 #### 4. Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters
 Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.
 
-#### 5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (*Che Ba Muoi*)
-Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (*che thap cam*) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (*banh lot*), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.
+#### 5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (*Che Be*)
+Nestled in the central culinary aisle, Che Be is a culinary institution spanning three generations. A tall glass of mixed sweet soup (*che thap cam*) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (*banh lot*), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.
 
 #### 6. Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"
 When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon's futuristic 2026 urban infrastructure.
@@ -139,7 +139,7 @@ End your nocturnal culinary adventure with late-night classics favored by locals
 
 | Itinerary | Morning Focus | Midday Focus | Evening Focus | Estimated Spend (VND) |
 | :--- | :--- | :--- | :--- | :--- |
-| **4-Hour Express (Morning/Afternoon)** | Photo op at Clock Tower + Breakfast at East Gate | Metro station visit + Che Ba Muoi sweet soup | Quick shopping at craft section | 150,000 – 250,000 |
+| **4-Hour Express (Morning/Afternoon)** | Architectural Photography at Clock Tower + Breakfast at East Gate | Metro station visit + Che Be sweet soup | Quick shopping at craft section | 150,000 – 250,000 |
 | **Full-Day In-Depth (Cultural Explorer)** | Dawn photography + Park coffee + Food court tour | Metro Lotus Skylight + Fine Arts Museum | Rooftop cocktail + Night Market seafood feast | 600,000 – 1,200,000 |
 
 ---

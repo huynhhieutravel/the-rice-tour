@@ -41,7 +41,7 @@ sidebar_facts:
     val: "08:30 – 10:30 AM & 14:30 – 16:00 PM"
   - icon: "🍲"
     label: "Legacy Vendor"
-    val: "Ba Muoi Dessert Stall (Since 1968)"
+    val: "Che Be Dessert Stall (Stall 1119, Est. 1968)"
   - icon: "💳"
     label: "Payment Method"
     val: "VietQR & Tap-to-Pay Widely Accepted"
@@ -66,7 +66,7 @@ Highlighted in our definitive guide to [things to do near Ben Thanh Market](/thi
 
 - **50+ Generational Stalls:** Tightly clustered within the South and East portals, certified under Ho Chi Minh City’s rigorous 2026 street food hygiene and safety standards.
 - **5 Decades of Simmering Broth:** The pedigree of the iconic bún riêu shoulder-pole vendor near the East Gate, where heads of state and street sweepers have sat side by side since 1978.
-- **16 Southern Sweet Soups:** Showcased in jewel-toned glass bowls at Ba Muoi’s traditional dessert stall, serving market crowds since 1968.
+- **16 Southern Sweet Soups:** Showcased in jewel-toned glass bowls at Che Be’s traditional dessert stall (Stall 1119), serving market crowds since 1968.
 - **100% Market-Fresh Daily Logistics:** Ingredients arrive at 04:00 AM every morning from the wholesale agricultural hubs of Thu Duc and the seafood terminals of Binh Dien.
 
 ---
@@ -96,7 +96,7 @@ Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine v
 ### Central Vietnamese Steamed Rice Cakes: The Hue Connection
 Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety *bánh bèo*. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.
 
-### Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
+### Che Be Heritage Sweet Soup Stall (Stall 1119): 60 Years of Sugarcane Romance
 Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (*chè sương sa hạt lựu*), warm lotus seed porridge (*chè thưng*), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.
 
 ---

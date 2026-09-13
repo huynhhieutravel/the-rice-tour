@@ -1950,7 +1950,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
   <a href="#mekong-delta-bun-mam-the-essence-of-the-great-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mekong Delta Bún Mắm: The Essence of the Great River</a>
   <a href="#goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls</a>
   <a href="#central-vietnamese-steamed-rice-cakes-the-hue-connection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Vietnamese Steamed Rice Cakes: The Hue Connection</a>
-  <a href="#ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance</a>
+  <a href="#ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Che Be Heritage Sweet Soup Stall (Stall 1119): 60 Years of Sugarcane Romance</a>
   <a href="#phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky</a>
   <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
   <a href="#field-notes-for-conscious-gourmands-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for Conscious Gourmands (2026)</a>
@@ -2010,7 +2010,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <ul>
 <li><strong>50+ Generational Stalls:</strong> Tightly clustered within the South and East portals, certified under Ho Chi Minh City’s rigorous 2026 street food hygiene and safety standards.</li>
 <li><strong>5 Decades of Simmering Broth:</strong> The pedigree of the iconic bún riêu shoulder-pole vendor near the East Gate, where heads of state and street sweepers have sat side by side since 1978.</li>
-<li><strong>16 Southern Sweet Soups:</strong> Showcased in jewel-toned glass bowls at Ba Muoi’s traditional dessert stall, serving market crowds since 1968.</li>
+<li><strong>16 Southern Sweet Soups:</strong> Showcased in jewel-toned glass bowls at Che Be’s traditional dessert stall (Stall 1119), serving market crowds since 1968.</li>
 <li><strong>100% Market-Fresh Daily Logistics:</strong> Ingredients arrive at 04:00 AM every morning from the wholesale agricultural hubs of Thu Duc and the seafood terminals of Binh Dien.</li>
 </ul>
 <hr>
@@ -2067,7 +2067,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 
         <div id="ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            Ba Muoi’s Sweet Soup Stall: 60 Years of Sugarcane Romance
+            Che Be Heritage Sweet Soup Stall (Stall 1119): 60 Years of Sugarcane Romance
           </h3>
         </div>
       <p>Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (<em>chè sương sa hạt lựu</em>), warm lotus seed porridge (<em>chè thưng</em>), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.</p>
@@ -2210,7 +2210,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
         <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Legacy Vendor</div>
-        <div class="font-bold text-slate-900 text-[13.5px]">Ba Muoi Dessert Stall (Since 1968)</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Che Be Dessert Stall (Stall 1119, Est. 1968)</div>
       </div>
     </div>
   
@@ -6343,7 +6343,7 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 <li><strong>1,400 Grid Stalls:</strong> Meticulously organized into specialized guild quadrants accessible through the four cardinal gates.</li>
 <li><strong>4 Electronic Verification Scales:</strong> Positioned by municipal market authorities at each portal, empowering shoppers to self-verify weighed items with pinpoint accuracy.</li>
 <li><strong>24-Hour Express Tailoring:</strong> Bespoke <em>áo dài</em> and linen safari suits tailored overnight for international travelers on tight itineraries.</li>
-<li><strong>100% Cashless Operations:</strong> Every vendor terminal is equipped with tap-to-pay technology and dual-currency digital receipts.</li>
+<li><strong>100% Cashless Operations:</strong> While nearly all vendors support digital VietQR payments, international travelers should keep modest cash (200,000 – 500,000 VND) on hand for small food stalls.</li>
 </ul>
 <hr>
 
@@ -11079,7 +11079,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
           </h3>
         </div>
       <h4 id="navigating-the-labyrinth-of-1400-heritage-stalls-under-historic-rafters">Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters</h4><p>Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.</p>
-<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Ba Muoi)</h4><p>Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
+<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Be (Stall 1119))</h4><p>Nestled in the central culinary aisle, Che Be (Stall 1119) is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
 <h4 id="descending-32-meters-into-ben-thanh-central-metro-station-to-marvel-at-the-lotus-skylight">Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"</h4><p>When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon&#39;s futuristic 2026 urban infrastructure.</p>
 <h4 id="contemplating-art-masterpieces-in-the-mansion-of-99-windows-hcmc-museum-of-fine-arts">Contemplating Art Masterpieces in the Mansion of 99 Windows (HCMC Museum of Fine Arts)</h4><p>A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa (Uncle Hoa). Here, vintage encaustic cement tiles, the city’s earliest private iron-cage elevator, and the designated National Treasure lacquer masterpiece &quot;Spring Garden of Central, South, and North&quot; by Nguyen Gia Tri await art connoisseurs.</p>
 <hr>
@@ -11118,7 +11118,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4 text-slate-800 font-medium">Photo op at Clock Tower + Breakfast at East Gate</td><td class="p-4 text-slate-800 font-medium">Metro station visit + Che Ba Muoi sweet soup</td><td class="p-4 text-slate-800 font-medium">Quick shopping at craft section</td><td class="p-4 text-slate-800 font-medium">150,000 – 250,000</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4 text-slate-800 font-medium">Architectural Photography at Clock Tower + Breakfast at East Gate</td><td class="p-4 text-slate-800 font-medium">Metro station visit + Che Be (Stall 1119) sweet soup</td><td class="p-4 text-slate-800 font-medium">Quick shopping at craft section</td><td class="p-4 text-slate-800 font-medium">150,000 – 250,000</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Full-Day In-Depth (Cultural Explorer)</strong></td><td class="p-4 text-slate-800 font-medium">Dawn photography + Park coffee + Food court tour</td><td class="p-4 text-slate-800 font-medium">Metro Lotus Skylight + Fine Arts Museum</td><td class="p-4 text-slate-800 font-medium">Rooftop cocktail + Night Market seafood feast</td><td class="p-4 text-slate-800 font-medium">600,000 – 1,200,000</td></tr>
 
           </tbody>
@@ -11210,7 +11210,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
       <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
         <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Must-Try Gastronomy</div>
-        <div class="font-bold text-slate-900 text-[13.5px]">Bun Rieu Cua, Banh Beo & Che Ba Muoi</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Bun Rieu Cua, Banh Beo & Che Be (Stall 1119)</div>
       </div>
     </div>
   
@@ -11296,7 +11296,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
       <div class="absolute inset-0 z-0">
         <img 
           src="https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp" 
-          alt="Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook" 
+          alt="Ben Thanh Market Ultimate Travel Guide 2026: The Complete Insider Field Handbook" 
           class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
           loading="eager"
           fetchpriority="high"
@@ -11313,15 +11313,15 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
           <span class="text-white/40">/</span>
           <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
           <span class="text-white/40">/</span>
-          <span class="text-white font-semibold line-clamp-1">Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook</span>
+          <span class="text-white font-semibold line-clamp-1">Ben Thanh Market Ultimate Travel Guide 2026: The Complete Insider Field Handbook</span>
         </div>
 
         {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
-          Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook
+          Ben Thanh Market Ultimate Travel Guide 2026: The Complete Insider Field Handbook
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          The Definitive A-Z Survival Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics
+          The Definitive Insider Field Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           Stepping into Saigon's centennial market can feel overwhelming without advance intelligence. From decoding stall numbering systems and verified parking basements to mastering civilized bargaining etiquette, this comprehensive field manual ensures an effortless, authentic voyage.
@@ -11346,7 +11346,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
-      <span class="text-amber-400 text-base">🧭</span> Comprehensive A-Z Handbook
+      <span class="text-amber-400 text-base">🧭</span> Comprehensive Field Handbook
     </div>
   
 
@@ -11446,7 +11446,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
           </h2>
         </div>
       <p>Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.</p>
-<p>In truth, Ben Thanh Market is only intimidating when entered unprepared. Armed with insider knowledge, local behavioral codes, and ground-tested field wisdom, your journey through this historic bazaar becomes effortless, highly rewarding, and culturally rich. Here is the <strong>definitive A-Z survival handbook</strong> compiled by The Rice Tour, updated with the latest 2026 infrastructure transformations.</p>
+<p>In truth, Ben Thanh Market is only intimidating when entered unprepared. Armed with insider knowledge, local behavioral codes, and ground-tested field wisdom, your journey through this historic bazaar becomes effortless, highly rewarding, and culturally rich. Here is the <strong>definitive insider field handbook</strong> compiled by The Rice Tour, updated with the latest 2026 infrastructure transformations.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -11540,7 +11540,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <ul>
 <li><strong>Look for Fast Turnover:</strong> Choose vendors with stainless-steel countertops, boiling cauldrons, and bustling queues of local office workers. Rapid turnover ensures fresh ingredients.</li>
 <li><strong>Hydration Etiquette:</strong> Avoid unsealed tap water; request bottled mineral water or freshly cracked whole coconuts.</li>
-<li><strong>Must-Try Specialties:</strong> Do not miss <em>Bun Rieu Cua Dong</em> (East Gate aisle), <em>Banh Beo Hue</em> with crispy pork crackling, and legendary iced sweet soups (<em>Che Ba Muoi</em>).</li>
+<li><strong>Must-Try Specialties:</strong> Do not miss <em>Bun Rieu Cua Dong</em> (East Gate aisle), <em>Banh Beo Hue</em> with crispy pork crackling, and legendary iced sweet soups (<em>Che Be (Stall 1119)</em>).</li>
 </ul>
 <hr>
 
@@ -12399,7 +12399,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 | **Jumbo Roasted Salted Cashews (500g)** | 110,000 – 140,000 VND | 220,000 – 300,000 VND | Select whole, unbroken, vacuum-sealed jars |
 | **Artisanal Ground Robusta/Arabica (1kg)** | 250,000 – 450,000 VND | 600,000 – 900,000 VND | Request bean grinding on the spot |
 | **Bowl of Crab Noodle Soup (*Bun Rieu*)** | 50,000 – 65,000 VND | 80,000 – 100,000 VND | Confirm bowl price before seating |
-| **Che Ba Muoi Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
+| **Che Be (Stall 1119) Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
 | **Chilled Fresh Coconut (Curb-side)** | 25,000 – 35,000 VND | 100,000 – 200,000 VND | Only accept once verbal price is agreed |<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">

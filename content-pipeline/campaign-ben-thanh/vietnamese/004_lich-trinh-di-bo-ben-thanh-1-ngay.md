@@ -91,7 +91,7 @@ graph TD
 | **10:30 – 12:00** | Bảo tàng Mỹ thuật TP.HCM | Khám phá Dinh thự Chú Hỏa, tranh sơn mài | 30.000 VNĐ | — |
 | **12:15 – 13:45** | Phố cổ & Chung cư Pasteur | Ăn trưa món Việt & cà phê pour-over | Miễn phí | 180.000 – 220.000 VNĐ |
 | **14:00 – 16:00** | Dinh Độc Lập | Tham quan phòng khánh tiết & hầm bí mật | 65.000 VNĐ | — |
-| **16:15 – 17:45** | Ga Metro & Bến Bạch Đằng | Check-in giếng trời Toplight, ngắm hoàng hôn | 15.000 VNĐ (vé metro) | 30.000 VNĐ (nước dừa) |
+| **16:15 – 17:45** | Ga Metro & Bến Bạch Đằng | Chiêm ngưỡng giếng trời Toplight, ngắm hoàng hôn | 15.000 VNĐ (vé metro) | 30.000 VNĐ (nước dừa) |
 | **18:00 – 20:30** | Phố đêm & Rooftop Bar | Ẩm thực nướng than hoa & cocktail đêm | Miễn phí | 250.000 – 350.000 VNĐ |
 | **TỔNG CỘNG** | **Trọn vẹn 1 ngày** | **6 di sản văn hóa + 4 trải nghiệm ẩm thực** | **~110.000 VNĐ** | **~540.000 – 680.000 VNĐ** |
 

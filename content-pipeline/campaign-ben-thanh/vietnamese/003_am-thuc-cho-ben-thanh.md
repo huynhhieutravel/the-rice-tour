@@ -27,7 +27,7 @@ Nằm trong tổng thể cẩm nang [những địa điểm nổi tiếng quanh 
 
 - **Hơn 50 sạp ăn truyền thống:** Quy tụ trong khuôn viên cửa Nam và cửa Đông của chợ, phục vụ hàng ngàn lượt thực khách mỗi ngày.
 - **50 năm đỏ lửa:** Niên đại của gánh bún riêu trứ danh bên hiên Cửa Đông chợ, nơi đón tiếp từ người lao động bình dân đến các nguyên thủ quốc tế khi ghé thăm Sài Gòn.
-- **16 loại chè Nam Bộ:** Được trưng bày rực rỡ sắc màu tại sạp chè Bà Mười – tiệm chè cổ truyền hoạt động liên tục từ năm 1968.
+- **16 loại chè Nam Bộ:** Được trưng bày rực rỡ sắc màu tại sạp chè Bé (sạp 1119) – tiệm chè cổ truyền hoạt động liên tục từ năm 1968.
 - **100% nguyên liệu tươi sống:** Được nhập trực tiếp vào mỗi 4 giờ sáng từ các vựa đầu mối nông sản Thủ Đức và chợ hải sản Bình Điền.
 
 ---
@@ -57,7 +57,7 @@ Những cuốn gỏi tròn lẳn phô diễn con tôm thẻ luộc đỏ au xuy�
 ### Bánh Bèo, Bánh Nậm Khay Huế: Sự Giao Lưu Văn Hóa Miền Trung
 Ghé sạp bánh Huế trong lòng chợ, bạn sẽ bắt gặp những chiếc đĩa gốm nhỏ xinh xếp từng chén bánh bèo mềm mướt rắc bột tôm cháy vàng ươm, tóp mỡ chiên giòn rụm và mỡ hành thơm nức, chan nước mắm mặn ngọt pha ớt chỉ thiên cay xé lưỡi.
 
-### Sạp Chè Bà Mười: Nốt Trầm Ngọt Ngào 60 Năm
+### Sạp Chè Bé (Sạp 1119): Nốt Trầm Ngọt Ngào 60 Năm
 Tủ kính trưng bày hàng chục âu chè óng ánh như một bảng màu hội họa: chè sương sa hạt lựu đỏ hồng ngọc, chè thưng hạt sen bùi béo, chè đậu trắng dẻo thơm chan nước cốt dừa nguyên chất đặc sánh. Một ly chè đá mát lạnh giữa buổi chiều oi ả là phần thưởng tuyệt vời sau hành trình cuốc bộ khám phá bảo tàng.
 
 ---

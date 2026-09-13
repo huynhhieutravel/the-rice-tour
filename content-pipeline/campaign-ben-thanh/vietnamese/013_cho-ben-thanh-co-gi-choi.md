@@ -59,10 +59,10 @@ Sau bữa sáng, hãy băng qua đường Lê Lai để tiến vào tán cây xa
 #### 4. Khám Phá Mê Cung 1.400 Sạp Hàng Bên Dưới Vòm Mái Gỗ Thế Kỷ
 Bên dưới hệ khung vì kèo sắt Eiffel và ngói lợp cổ điển, Chợ Bến Thành chia thành 4 khu vực rõ rệt. Hãy thong thả dạo bước qua gian hàng thủ công mỹ nghệ ở Cửa Tây để ngắm nhìn những chiếc hộp khảm ốc xà cừ, quạt lụa vẽ tay và tượng gốm mộc mạc.
 
-#### 5. "Hạ Nhiệt" Bằng Ly Chè Ba Mười Đá Bào Nức Tiếng Từ 1968
-Nằm sâu trong khu ẩm thực, sạp chè Ba Mười là huyền thoại ẩm thực được truyền qua 3 thế hệ. Một ly chè thập cẩm đầy đặn với đậu đỏ bùi béo, hạt lựu dai giòn, bánh lọt xanh mướt và chan ngập nước cốt dừa béo ngậy phủ đá bào nhuyễn sẽ xua tan ngay lập tức cái oi bức nhiệt đới.
+#### 5. "Hạ Nhiệt" Bằng Ly Chè Bé (Sạp 1119) Đá Bào Nức Tiếng Từ 1968
+Nằm sâu trong khu ẩm thực, sạp chè Bé (sạp 1119) là huyền thoại ẩm thực được truyền qua 3 thế hệ. Một ly chè thập cẩm đầy đặn với đậu đỏ bùi béo, hạt lựu dai giòn, bánh lọt xanh mướt và chan ngập nước cốt dừa béo ngậy phủ đá bào nhuyễn sẽ xua tan ngay lập tức cái oi bức nhiệt đới.
 
-#### 6. Lặn Xuống Ga Ngầm Metro Bến Thành 32 Mét Check-in "Giếng Trời Hoa Sen"
+#### 6. Lặn Xuống Ga Ngầm Metro Bến Thành 32 Mét Chiêm Ngưỡng "Giếng Trời Hoa Sen"
 Khi nhiệt độ ngoài trời đạt đỉnh lúc giữa trưa, hãy bước xuống thang cuốn của Ga ngầm Metro Bến Thành. Không gian điều hòa mát lạnh 24 độ C cùng giếng trời kính khổng lồ (Lotus Skylight) lấy sáng tự nhiên từ quảng trường bên trên sẽ khiến bạn choáng ngợp trước diện mạo giao thông tương lai của Sài Gòn 2026.
 
 #### 7. Ngắm Kiệt Tác Hội Họa Tại Dinh Thự 99 Cửa Sổ (Bảo Tàng Mỹ Thuật)
@@ -107,8 +107,8 @@ Dạo quanh các sạp hàng lưu niệm mở muộn ngoài trời, thực hành
 | Nhóm Đối Tượng | Hoạt Động Ưu Tiên Hàng Đầu | Thời Điểm Lý Tưởng | Ngân Sách Ước Tính |
 | :--- | :--- | :--- | :--- |
 | **Cặp đôi lãng mạn** | Cà phê ban công chung cư cổ + Bus 2 tầng hoàng hôn Ba Son + Rooftop Bar view chợ | 15:30 – 21:30 | 600.000 – 1.000.000 VNĐ / cặp |
-| **Nhóm bạn trẻ / Gen Z** | Săn ảnh bình minh Cửa Nam + Check-in giếng trời Metro + Khám phá Speakeasy ẩn mình | 06:30 – 08:30 & 19:30 – 23:00 | 250.000 – 450.000 VNĐ / người |
-| **Gia đình có trẻ nhỏ** | Đi tàu điện Metro Line 1 + Ăn chè Ba Mười mát lạnh + Ngồi xe bus 2 tầng ngắm phố | 08:30 – 11:30 & 16:30 – 18:30 | 400.000 – 700.000 VNĐ / gia đình |
+| **Nhóm bạn trẻ / Gen Z** | Săn ảnh bình minh Cửa Nam + Khám phá kiến trúc giếng trời Metro + Khám phá Speakeasy ẩn mình | 06:30 – 08:30 & 19:30 – 23:00 | 250.000 – 450.000 VNĐ / người |
+| **Gia đình có trẻ nhỏ** | Đi tàu điện Metro Line 1 + Ăn chè Bé (sạp 1119) mát lạnh + Ngồi xe bus 2 tầng ngắm phố | 08:30 – 11:30 & 16:30 – 18:30 | 400.000 – 700.000 VNĐ / gia đình |
 | **Khách quốc tế (Inbound)** | Tour ẩm thực chợ ban ngày + Dinh thự Chú Hỏa + Phố hải sản đêm Phan Bội Châu | Trọn ngày (08:00 – 21:00) | 500.000 – 900.000 VNĐ / người |
 
 ---
