@@ -220,3 +220,26 @@ timeline
 ---
 
 *(Tài liệu này được lưu trữ chính thức tại kho mã nguồn: `KE_HOACH_QA_SEO_GEO_TOAN_DIEN.md`)*
+
+---
+
+## 8. BÁO CÁO QA TOÀN DIỆN CÁC LỖ HỔNG CORE ENGINE (SEO & GEO CHUYÊN SÂU)
+
+Sau khi rà soát kỹ thuật sâu vào lõi hệ thống (`src/middleware.ts`, `src/layouts/BaseLayout.astro`, `src/components/seo/HeadMeta.astro`, `src/pages/index.astro`, `src/pages/tours/index.astro`), đã phát hiện và xử lý dứt điểm **8 vấn đề kiến trúc cốt lõi**:
+
+| STT | Điểm nghẽn Core Engine | Loại lỗi | Trạng thái | Giải pháp kỹ thuật đã triển khai & Kiểm thử Live |
+| :---: | :--- | :---: | :---: | :--- |
+| **1** | **Xung đột Entity ID trong Knowledge Graph** | GEO & Entity SEO | ✅ **ĐÃ FIX & LIVE** | Trang chủ và About dùng `@id: "#agency"`, trong khi bài viết dùng `@id: "#organization"`, tạo ra 2 thực thể rời rạc trên Google. Đã đồng nhất 100% về `@id: "https://thericetour.com/#organization"`. |
+| **2** | **Trùng lặp thẻ meta Zalo Verification** | Core HTML SEO | ✅ **ĐÃ FIX & LIVE** | Thẻ `<meta name="zalo-platform-site-verification">` bị render 2 lần (ở cả `HeadMeta` và `BaseLayout`). Đã gỡ bỏ bản trùng trong `BaseLayout`, kiểm tra `curl` live xác nhận chỉ còn duy nhất 1 thẻ. |
+| **3** | **Thiếu trường Google Search Console Verification** | Indexing SEO | ✅ **ĐÃ FIX & LIVE** | Admin có ô nhập `seo_google_verification` nhưng `HeadMeta` không render thẻ `google-site-verification`. Đã kết nối tự động render meta tag này khi cấu hình. |
+| **4** | **Hardcode `og:type="website"` cho toàn bộ bài viết** | Social & Core SEO | ✅ **ĐÃ FIX & LIVE** | Blog articles bị khai báo là website thông thường. Đã nâng cấp `ogType` động: Trang bài viết xuất `og:type="article"`, trang chủ và tour xuất `og:type="website"`. |
+| **5** | **Thiếu `ItemList` Schema trên trang danh mục Tour & Điểm đến** | Rich Results & GEO | ✅ **ĐÃ FIX & LIVE** | `/tours` và `/destinations` chỉ có `CollectionPage` đơn giản. Đã bổ sung `mainEntity: ItemList` liệt kê toàn bộ item để kích hoạt Rich Carousel và AI entity understanding. |
+| **6** | **JSON-LD Schema trên trang Điểm đến bị rớt vào thẻ `<body>`** | Schema W3C Standard | ✅ **ĐÃ FIX & LIVE** | `src/pages/destinations/index.astro` không khai báo `slot="head"`, khiến Astro đẩy schema xuống `<body>`. Đã bọc `<Fragment slot="head">`. |
+| **7** | **Thiếu Sitelinks Search Box (`SearchAction`)** | Google SERP Feature | ✅ **ĐÃ FIX & LIVE** | Node `WebSite` trên trang chủ và toàn site thiếu `potentialAction: SearchAction`. Đã thêm `target: "https://thericetour.com/blog?q={search_term_string}"`. |
+| **8** | **Dọn sạch endpoint shadow `/[slug].md.ts`** | Duplicate Content | ✅ **ĐÃ FIX & LIVE** | Gỡ bỏ file `src/pages/[slug].md.ts` (trả về 404), bảo vệ 100% cấu trúc URL duy nhất cho SEO. Thay vào đó, AI Agent sử dụng cơ chế RFC Content Negotiation chuẩn qua header `Accept: text/markdown` tích hợp sẵn trong Middleware. |
+
+### Khuyến nghị GEO quan trọng (Cloudflare Managed Content Signals):
+> [!WARNING]
+> Trên tầng Cloudflare Dashboard (`Security -> Bots -> AI Scrapers and Crawlers`), Cloudflare hiện đang kích hoạt bộ chặn tự động với `ClaudeBot`, `GPTBot`, `Google-Extended`.  
+> - **Ảnh hưởng đến GEO:** Nếu bạn muốn nội dung The Rice Tour được ChatGPT Search hoặc Google Gemini AI Overviews đọc trực tiếp để đề xuất tour cho khách hàng quốc tế, bạn có thể vào **Cloudflare Dashboard ➔ Security ➔ Bots** và chuyển chính sách đối với các AI Crawler uy tín này sang **Allow** (Cho phép).
+
