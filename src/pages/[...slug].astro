@@ -552,12 +552,13 @@ if (!isCategory) {
   }
 
   let pageContent = post.content || '';
-  // If D1 content doesn't have the latest 3-column stats bar or still has old numbering badges, use the demoArticlesMap version
-  if (demoArticlesMap[post.slug] && (!pageContent || !pageContent.includes('3 Curated Dimensions') || pageContent.includes('bg-amber-100 text-amber-800') || pageContent.includes('4. Tasting Matrix'))) {
+  // Canonical Magazine 3-Column Articles always use the latest compiled template
+  if (demoArticlesMap[post.slug]) {
     pageContent = demoArticlesMap[post.slug];
     isLandingPage = true;
     isFullWidth = true;
   }
+
 
   // Strip any leaked JSX comments from raw HTML
   pageContent = pageContent.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
