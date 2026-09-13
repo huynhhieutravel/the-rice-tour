@@ -435,10 +435,10 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
           Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
-          If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Within a gentle 1-kilometer radius, colonial elegance, tropical modernism, and a visionary 2026 underground transit hub converge in timeless harmony.
+          Early in the morning, before traffic builds around Quach Thi Trang Square, the chime of Ben Thanh Market's South Clock Tower marks the start of another southern day. Within a short walk of this 1914 iron-framed market hall, Saigon reveals its layered character: sun-bleached colonial shutters, fragrant sweet-soup stalls passed down through three generations, and the quiet underground concourses of Metro Line 1.
         </p>
 
         {/* Author Meta */}
@@ -500,15 +500,15 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis</a>
-  <a href="#historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads</a>
+                  <a href="#at-a-glance-key-numbers-and-highlights-around-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 At a Glance: Key Numbers & Highlights Around Ben Thanh</a>
+  <a href="#from-riverbank-wharf-to-modern-crossroads-a-century-of-history" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">From Riverbank Wharf to Modern Crossroads: A Century of History</a>
   <a href="#definitive-heritage-and-cultural-landmarks-within-a-1-kilometer-radius" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Definitive Heritage & Cultural Landmarks Within a 1-Kilometer Radius</a>
   <a href="#ben-thanh-market-the-living-mirror-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Market: The Living Mirror of Saigon</a>
-  <a href="#hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion</a>
+  <a href="#hcmc-museum-of-fine-arts-indochine-architecture-and-vietnamese-fine-art" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">HCMC Museum of Fine Arts: Indochine Architecture & Vietnamese Fine Art</a>
   <a href="#the-independence-palace-high-zenith-of-tropical-modernism" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Independence Palace: High Zenith of Tropical Modernism</a>
   <a href="#mariamman-hindu-temple-a-colorful-enclave-of-dravidian-spirituality" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality</a>
   <a href="#ben-thanh-central-metro-station-the-2026-subterranean-landmark" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ben Thanh Central Metro Station: The 2026 Subterranean Landmark</a>
-  <a href="#curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis</a>
+  <a href="#key-landmarks-at-a-glance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Key Landmarks at a Glance</a>
   <a href="#epicurean-mapping-and-neighborhood-life" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epicurean Mapping & Neighborhood Life</a>
   <a href="#classic-daytime-market-stalls-inside-south-and-east-gates" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Classic Daytime Market Stalls (Inside South & East Gates)</a>
   <a href="#phan-boi-chau-and-phan-chu-trinh-evening-street-dining-post-dusk" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Phan Boi Chau & Phan Chu Trinh Evening Street Dining (Post-Dusk)</a>
@@ -516,8 +516,8 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
   <a href="#curated-walking-itineraries" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Walking Itineraries</a>
   <a href="#option-a-the-half-day-heritage-and-art-stroll-4-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option A: The Half-Day Heritage & Art Stroll (4 Hours)</a>
   <a href="#option-b-the-complete-full-day-immersion-8-hours" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option B: The Complete Full-Day Immersion (8 Hours)</a>
-  <a href="#field-notes-for-the-discerning-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026 Guidelines)</a>
-  <a href="#epilogue-preserving-the-timeless-soul-of-saigon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Preserving the Timeless Soul of Saigon</a>
+  <a href="#field-notes-for-the-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Traveler (2026 Guidelines)</a>
+  <a href="#closing-thoughts-walking-saigon-with-open-eyes" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Closing Thoughts: Walking Saigon with Open Eyes</a>
 
               </div>
             </nav>
@@ -561,13 +561,13 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
-  If Saigon is a three-century-old chronicle inscribed in brick and stone, Ben Thanh Market and its surrounding tree-shaded boulevards represent its most luminous opening chapter. Here, the century-old chime of the clock tower harmonizes with the modern hum of the underground metro, where quiet Indochine colonnades cast long shadows across the ceaseless energy of a city that never sleeps.
-</div><p>The urban quarter cradling Ben Thanh Market has long evolved beyond its identity as a bustling commercial marketplace; it stands as the veritable <strong>cultural and architectural heart of Ho Chi Minh City</strong>. Within a gentle walking radius of 300 to 1,200 meters from the iconic four-dial clock tower, travelers are treated to a captivating layered narrative: early 20th-century colonial elegance, mid-century tropical modernism at its zenith, and a visionary underground transit metropolis newly completed in 2026.</p>
+  Early in the morning, before traffic builds around Quach Thi Trang Square, the chime of Ben Thanh Market's South Clock Tower marks the start of another southern day. Within a short walk of this 1914 iron-framed market hall, Saigon reveals its layered character: sun-bleached colonial shutters, fragrant sweet-soup stalls passed down through three generations, and the quiet underground concourses of Metro Line 1.
+</div><p>Around Ben Thanh Market, the streets tell the story of modern Ho Chi Minh City in real time. Within a 10- to 15-minute walk of the iconic clock tower, travelers encounter three distinct eras: quiet French colonial administrative buildings, mid-century tropical modernism, and the wide granite esplanades and underground concourses of the new Metro Line 1 completed in 2026.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="key-curated-dimensions-of-the-ben-thanh-heritage-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            🌟 Key Curated Dimensions of the Ben Thanh Heritage Axis
+          <h2 id="at-a-glance-key-numbers-and-highlights-around-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 At a Glance: Key Numbers & Highlights Around Ben Thanh
           </h2>
         </div>
       <ul>
@@ -580,12 +580,12 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="historical-stratigraphy-from-the-ben-nghe-riverbank-to-a-21st-century-crossroads" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Historical Stratigraphy: From the Ben Nghe Riverbank to a 21st-Century Crossroads
+          <h2 id="from-riverbank-wharf-to-modern-crossroads-a-century-of-history" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            From Riverbank Wharf to Modern Crossroads: A Century of History
           </h2>
         </div>
       <p>To truly comprehend the allure of the Ben Thanh district, one must trace more than two centuries of dramatic urban evolution.</p>
-<p>In the early 19th century, the ancestral precursor to Ben Thanh was a riverine trading dock along the Ben Nghe canal, nestled beneath the ramparts of the historic Gia Dinh Citadel. The very name <strong>&quot;Bến Thành&quot;</strong> (literally <em>Wharf of the Citadel</em>) arose from its utilitarian purpose: the landing pier where royal troops, merchant junks, and wandering voyagers arrived to provision the fortress. When French naval forces captured Gia Dinh in 1859, the waterside market was consumed by fire. The colonial administration subsequently rebuilt the market using timber posts and thatched roofs along the Charner Canal (now Nguyen Hue Boulevard), but the rapid influx of merchants quickly overwhelmed the confined canal banks.</p>
+<p>In the early 19th century, the ancestral precursor to Ben Thanh was a riverine trading dock along the Ben Nghe canal, built near the ramparts of the historic Gia Dinh Citadel. The very name <strong>&quot;Bến Thành&quot;</strong> (literally <em>Wharf of the Citadel</em>) arose from its utilitarian purpose: the landing pier where royal troops, merchant junks, and wandering voyagers arrived to provision the fortress. When French naval forces captured Gia Dinh in 1859, the waterside market was consumed by fire. The colonial administration subsequently rebuilt the market using timber posts and thatched roofs along the Charner Canal (now Nguyen Hue Boulevard), but the rapid influx of merchants quickly overwhelmed the confined canal banks.</p>
 <p>In 1911, the French Governor-General resolved to drain a sprawling, malarial marshland known as <em>Marais Boresse</em> (Bo Rua Lake) to construct an ambitious, grand central market. The celebrated French engineering firm <strong>Brossard et Maupin</strong> was commissioned for the monumental endeavor. Employing cutting-edge reinforced concrete and vaulted iron trusses, the construction took three years. On March 28, 29, and 30, 1914, the inauguration of the &quot;New Saigon Market&quot; was celebrated with fireworks, floral processions, and over a hundred thousand visitors arriving from across the Southern Delta.</p>
 <p>Fast forward to the mid-2020s and into 2026, the precinct underwent its second great renaissance: the expansive square before the south gate was pedestrianized into a granite-paved urban concourse, integrated directly with the subterranean halls of <strong>Ben Thanh Central Metro Station (Line 1)</strong>. Today, historic memories and future velocity converse effortlessly across every boulevard corner.</p>
 <hr>
@@ -604,7 +604,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
       <ul>
 <li><strong>Location:</strong> Intersecting Le Loi, Phan Chu Trinh, Phan Boi Chau, and Le Thanh Ton Streets.</li>
 <li><strong>Iconic Architecture:</strong> The three-sided clock tower above the South Gate remains the indelible symbol of Saigon. Beneath the eaves of the four cardinal portals rest exquisite cobalt-glazed ceramic relief medallions crafted in 1952 by artisans from the renowned Bien Hoa School of Applied Arts. These medallions honor southern Vietnam&#39;s natural abundance: grazing dairy cattle, golden rice sheaves, ripe river bananas, and glistening coastal fish.</li>
-<li><strong>Conscious Travel Insight:</strong> Venture beyond the outer perimeter. Step into the cooler labyrinth of interior alleys, where early 20th-century iron roof trusses still support high ceilings, facilitating natural cross-ventilation against the tropical afternoon warmth.</li>
+<li><strong>Insider Tip:</strong> Venture beyond the souvenir stalls at the perimeter. Step into the interior aisles, where early 20th-century iron roof trusses still support high ceilings that keep the market cool through natural cross-ventilation even on hot afternoons.</li>
 </ul>
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
@@ -616,14 +616,14 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-        <div id="hcmc-museum-of-fine-arts-indochine-splendor-in-the-hui-bon-hoa-mansion" class="scroll-mt-28 pt-5">
+        <div id="hcmc-museum-of-fine-arts-indochine-architecture-and-vietnamese-fine-art" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            HCMC Museum of Fine Arts: Indochine Splendor in the Hui Bon Hoa Mansion
+            HCMC Museum of Fine Arts: Indochine Architecture & Vietnamese Fine Art
           </h3>
         </div>
       <ul>
 <li><strong>Location:</strong> 97A Pho Duc Chinh Street, Nguyen Thai Binh Ward, District 1 (350 meters from the market via Le Thi Hong Gam).</li>
-<li><strong>Gilded Heritage:</strong> This magnificent three-mansion estate once served as the private residence and headquarters of <strong>Hui Bon Hoa</strong> (popularly known as <em>Chú Hỏa</em>), the legendary Chinese-Vietnamese merchant whose real estate empire defined colonial Saigon. Designed between 1929 and 1934 by French architect Rivera, the complex represents an opulent marriage of <strong>Western Art Deco, Beaux-Arts flourishes, and traditional Feng Shui geomancy</strong>.</li>
+<li><strong>Historical Background:</strong> This three-building estate once served as the private home and company headquarters of <strong>Hui Bon Hoa</strong> (popularly known as <em>Chú Hỏa</em>), one of Saigon&#39;s most prominent early-20th-century merchants. Designed between 1929 and 1934 by French architect Rivera, the complex combines <strong>Western Art Deco lines, Beaux-Arts stonework, and Chinese feng shui principles</strong>.</li>
 <li><strong>Curated Highlights:</strong><ul>
 <li>One of Saigon&#39;s earliest antique timber-cage elevators, embellished with ornate gilded brass fretwork.</li>
 <li>Stained glass transom panels that filter tropical sunbeams into vibrant geometric tapestries across geometric encaustic cement tiles.</li>
@@ -708,8 +708,8 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
   </div>
 </div>
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="curated-matrix-comparing-landmarks-along-the-ben-thanh-axis" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Curated Matrix: Comparing Landmarks Along the Ben Thanh Axis
+          <h2 id="key-landmarks-at-a-glance" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Key Landmarks at a Glance
           </h2>
         </div>
       
@@ -721,7 +721,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ben Thanh Market</strong></td><td class="p-4 text-slate-800 font-medium"><em>Epicenter (0m)</em></td><td class="p-4 text-slate-800 font-medium">1.5 – 2.0 hours</td><td class="p-4 text-slate-800 font-medium">1914 clock tower, Bien Hoa ceramics, spice &amp; fabric maze</td><td class="p-4 text-slate-800 font-medium">07:30 – 09:30 AM (early pulse)</td><td class="p-4 text-slate-800 font-medium">Free admission</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Ben Thanh Market</strong></td><td class="p-4 text-slate-800 font-medium"><em>Starting Point (0m)</em></td><td class="p-4 text-slate-800 font-medium">1.5 – 2.0 hours</td><td class="p-4 text-slate-800 font-medium">1914 clock tower, Bien Hoa ceramics, spice &amp; fabric maze</td><td class="p-4 text-slate-800 font-medium">07:30 – 09:30 AM (early pulse)</td><td class="p-4 text-slate-800 font-medium">Free admission</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>HCMC Museum of Fine Arts</strong></td><td class="p-4 text-slate-800 font-medium">350 meters (5-min walk)</td><td class="p-4 text-slate-800 font-medium">2.0 – 2.5 hours</td><td class="p-4 text-slate-800 font-medium">Hui Bon Hoa mansion, antique elevator, lacquer masterpieces</td><td class="p-4 text-slate-800 font-medium">08:30 – 11:00 AM (soft light)</td><td class="p-4 text-slate-800 font-medium">30,000 VND / person</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Independence Palace</strong></td><td class="p-4 text-slate-800 font-medium">700 meters (9-min walk)</td><td class="p-4 text-slate-800 font-medium">2.0 – 3.0 hours</td><td class="p-4 text-slate-800 font-medium">Ngo Viet Thu&#39;s Tropical Modernism, wartime bunker network</td><td class="p-4 text-slate-800 font-medium">14:00 – 16:00 PM (gentle heat)</td><td class="p-4 text-slate-800 font-medium">65,000 VND / full access</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Mariamman Temple</strong></td><td class="p-4 text-slate-800 font-medium">200 meters (3-min walk)</td><td class="p-4 text-slate-800 font-medium">45 – 60 mins</td><td class="p-4 text-slate-800 font-medium">Dravidian Gopuram gateway, stone wall meditation ritual</td><td class="p-4 text-slate-800 font-medium">08:00 – 10:00 AM (tranquil)</td><td class="p-4 text-slate-800 font-medium">Free (voluntary donation)</td></tr>
@@ -737,7 +737,7 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
             Epicurean Mapping & Neighborhood Life
           </h2>
         </div>
-      <p>No encounter with Ben Thanh is complete without immersing your palate in the rich gastronomic mosaic of the southern delta.</p>
+      <p>No encounter with Ben Thanh is complete without immersing your palate in the rich culinary culture of the southern delta.</p>
 
         <div id="classic-daytime-market-stalls-inside-south-and-east-gates" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
@@ -797,8 +797,8 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="field-notes-for-the-discerning-traveler-2026-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Field Notes for the Discerning Traveler (2026 Guidelines)
+          <h2 id="field-notes-for-the-traveler-2026-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Field Notes for the Traveler (2026 Guidelines)
           </h2>
         </div>
       <ol>
@@ -810,12 +810,11 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="epilogue-preserving-the-timeless-soul-of-saigon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Epilogue: Preserving the Timeless Soul of Saigon
+          <h2 id="closing-thoughts-walking-saigon-with-open-eyes" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Closing Thoughts: Walking Saigon with Open Eyes
           </h2>
         </div>
-      <p>No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.</p>
-<p>Take your time walking down these tamarind-canopied boulevards. Allow your senses to be awakened by a Saigon that is both humble and grand, timeless yet boldly accelerating into the future—a true pilgrimage for the thoughtful traveler.</p>
+      <p>No matter how many glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human rhythm: morning street greetings between stall keepers, quiet courtyards tucked behind bustling avenues, and the easy coexistence of old traditions with modern city life. Exploring this neighborhood on foot offers a genuine, unfiltered encounter with Saigon at its most welcoming.</p>
 
           </div>
 
@@ -915,14 +914,14 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
                 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -976,7 +975,7 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
       <div class="absolute inset-0 z-0">
         <img 
           src="https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp" 
-          alt="HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa" 
+          alt="HCMC Museum of Fine Arts: Inside the Historic Estate of Hui Bon Hoa" 
           class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
           loading="eager"
           fetchpriority="high"
@@ -993,18 +992,18 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
           <span class="text-white/40">/</span>
           <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
           <span class="text-white/40">/</span>
-          <span class="text-white font-semibold line-clamp-1">HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa</span>
+          <span class="text-white font-semibold line-clamp-1">HCMC Museum of Fine Arts: Inside the Historic Estate of Hui Bon Hoa</span>
         </div>
 
         {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
-          HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa
+          HCMC Museum of Fine Arts: Inside the Historic Estate of Hui Bon Hoa
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
-          Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
+          Just a five-minute walk south of Ben Thanh Market on Pho Duc Chinh Street, the city's frantic pace gives way to the shaded courtyard of the Ho Chi Minh City Museum of Fine Arts. Housed in the former early-20th-century mansions of the merchant Hui Bon Hoa, this three-building complex blends French Art Deco facades, patterned encaustic floor tiles, and cool, high-ceilinged galleries holding over 22,000 works of Vietnamese art.
         </p>
 
         {/* Author Meta */}
@@ -1073,7 +1072,7 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
   <a href="#the-parisian-antique-elevator-technological-aristocracy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Parisian Antique Elevator: Technological Aristocracy</a>
   <a href="#navigating-the-three-pavilions-a-millennial-artistic-odyssey" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Three Pavilions: A Millennial Artistic Odyssey</a>
   <a href="#the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"</a>
-  <a href="#curated-field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#curated-field-notes-for-the-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Traveler (2026)</a>
   <a href="#epilogue-a-serene-dialogue-with-the-past" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: A Serene Dialogue with the Past</a>
 
               </div>
@@ -1118,7 +1117,7 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
           <!-- Main Article Flow -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
-  Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
+  Tucked behind a leafy shade on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a quiet sunlit retreat amidst District 1's urban fast-paced traffic. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
 </div><p>Located less than a five-minute stroll across Le Thi Hong Gam Street from the four-dial clock tower, the <strong>Ho Chi Minh City Museum of Fine Arts</strong> forms an indispensable cultural pillar in the comprehensive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>. Here, early 20th-century French architectural sophistication coalesces with traditional Sino-Vietnamese spiritual sensibilities, creating one of Southeast Asia&#39;s most evocative aesthetic havens.</p>
 <hr>
 
@@ -1211,8 +1210,8 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="curated-field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Curated Field Notes for the Discerning Traveler (2026)
+          <h2 id="curated-field-notes-for-the-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Curated Field Notes for the Traveler (2026)
           </h2>
         </div>
       <ul>
@@ -1237,7 +1236,7 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: A Serene Dialogue with the Past</h3>
               <p class="text-slate-100 text-base leading-relaxed m-0">
-                The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship.
+                Visiting the Museum of Fine Arts offers an unhurried look into both Vietnamese art and the residential architecture of 1930s Saigon. From the quiet courtyards to the breeze flowing through louvered wooden windows, the estate invites visitors to slow down and take in the city's artistic heritage.
               </p>
             </div>
           </section>
@@ -1328,14 +1327,14 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -1701,7 +1700,7 @@ Hon Lon (also known as Cu Tron) serves as the beating heart of the archipelago, 
             <div class="bg-slate-900 text-white rounded-2xl p-8 sm:p-10 my-8 space-y-4">
               <h3 class="font-serif text-2xl font-bold text-amber-400 m-0">Epilogue: The Raw Soul of the Gulf</h3>
               <p class="text-slate-100 text-base leading-relaxed m-0">
-                Nam Du will not cradle you in five-star luxury, but it will reward the conscious voyager with something infinitely rarer: the primal pulse of an open sea, the scent of morning salt on timber decks, and an unhurried intimacy with islanders who still look to the stars to navigate the tide.
+                Nam Du will not cradle you in five-star luxury, but it will reward the traveler with something infinitely rarer: the primal pulse of an open sea, the scent of morning salt on timber decks, and an unhurried intimacy with islanders who still look to the stars to navigate the tide.
               </p>
             </div>
           </section>
@@ -1853,7 +1852,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <div class="absolute inset-0 z-0">
         <img 
           src="https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp" 
-          alt="The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies" 
+          alt="Ben Thanh Market Food Guide: Iconic Heritage Stalls & Night Street Dining" 
           class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
           loading="eager"
           fetchpriority="high"
@@ -1870,18 +1869,18 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
           <span class="text-white/40">/</span>
           <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
           <span class="text-white/40">/</span>
-          <span class="text-white font-semibold line-clamp-1">The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies</span>
+          <span class="text-white font-semibold line-clamp-1">Ben Thanh Market Food Guide: Iconic Heritage Stalls & Night Street Dining</span>
         </div>
 
         {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
-          The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies
+          Ben Thanh Market Food Guide: Iconic Heritage Stalls & Night Street Dining
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
-          If you seek the authentic heartbeat of Saigon, do not search within sterile air-conditioned dining halls. Pull up a modest plastic stool beside a steaming cauldron in Ben Thanh Market, inhale the intoxicating perfume of crab essence and fermented herbs, and surrender to the culinary poetry of the Southern Delta.
+          To understand the rhythm of Saigon, pull up a low plastic stool at one of Ben Thanh Market's food stalls early in the morning. Between steaming pots of tomato-scented crab broth, rows of vibrant sweet desserts, and cooks calling out orders, the market serves as an accessible, living introduction to southern Vietnamese cooking.
         </p>
 
         {/* Author Meta */}
@@ -1944,16 +1943,16 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#key-curated-dimensions-of-ben-thanhs-food-court" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of Ben Thanh’s Food Court</a>
-  <a href="#southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil</a>
+  <a href="#southern-culinary-philosophy-the-bold-soul-of-alluvial-soil" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Southern Culinary Philosophy: The Bold Soul of Alluvial Soil</a>
   <a href="#deconstructing-5-heritage-stalls-inside-the-market-daytime" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deconstructing 5 Heritage Stalls Inside the Market (Daytime)</a>
   <a href="#east-gate-bun-rieu-freshwater-crab-alchemy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">East Gate Bún Riêu: Freshwater Crab Alchemy</a>
   <a href="#mekong-delta-bun-mam-the-essence-of-the-great-river" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Mekong Delta Bún Mắm: The Essence of the Great River</a>
   <a href="#goi-cuon-the-pure-poetry-of-rice-paper-rolls" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Gỏi Cuốn: The Pure Poetry of Rice Paper Rolls</a>
   <a href="#central-vietnamese-steamed-rice-cakes-the-hue-connection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Central Vietnamese Steamed Rice Cakes: The Hue Connection</a>
-  <a href="#ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Che Be Heritage Sweet Soup Stall (Stall 1119): 60 Years of Sugarcane Romance</a>
-  <a href="#phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky</a>
+  <a href="#che-be-dessert-stall-stall-1119-southern-sweet-soups-since-1968" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Chè Bé Dessert Stall (Stall 1119): Southern Sweet Soups Since 1968</a>
+  <a href="#phan-boi-chau-street-at-night-sizzling-seafood-and-charcoal-grills" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Phan Boi Chau Street at Night: Sizzling Seafood & Charcoal Grills</a>
   <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
-  <a href="#field-notes-for-conscious-gourmands-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for Conscious Gourmands (2026)</a>
+  <a href="#field-notes-for-food-lovers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for Food Lovers (2026)</a>
   <a href="#epilogue-the-warmth-of-living-memory" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Warmth of Living Memory</a>
 
               </div>
@@ -2016,8 +2015,8 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="southern-gastronomic-philosophy-the-bold-soul-of-alluvial-soil" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Southern Gastronomic Philosophy: The Bold Soul of Alluvial Soil
+          <h2 id="southern-culinary-philosophy-the-bold-soul-of-alluvial-soil" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Southern Culinary Philosophy: The Bold Soul of Alluvial Soil
           </h2>
         </div>
       <p>Southern Vietnamese cookery is fundamentally celebratory and generous. Liberated from the strict ceremonial conventions of the imperial north, cooks of the lower Mekong celebrate sensory immediacy: sweetness is deep and unapologetic (drawn from pure sugarcane and young coconut water), spiciness is sharp and vibrant from red bird’s-eye chilis, sourness is refreshing through fermented rice vinegar or tamarind pods, and umami is anchored in fragrant fermented river fish pastes (<em>mắm</em>).</p>
@@ -2065,17 +2064,17 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
         </div>
       <p>Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety <em>bánh bèo</em>. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.</p>
 
-        <div id="ba-muois-sweet-soup-stall-60-years-of-sugarcane-romance" class="scroll-mt-28 pt-5">
+        <div id="che-be-dessert-stall-stall-1119-southern-sweet-soups-since-1968" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            Che Be Heritage Sweet Soup Stall (Stall 1119): 60 Years of Sugarcane Romance
+            Chè Bé Dessert Stall (Stall 1119): Southern Sweet Soups Since 1968
           </h3>
         </div>
       <p>Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (<em>chè sương sa hạt lựu</em>), warm lotus seed porridge (<em>chè thưng</em>), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="phan-boi-chau-night-dining-charcoal-braziers-beneath-the-neon-sky" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Phan Boi Chau Night Dining: Charcoal Braziers Beneath the Neon Sky
+          <h2 id="phan-boi-chau-street-at-night-sizzling-seafood-and-charcoal-grills" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Phan Boi Chau Street at Night: Sizzling Seafood & Charcoal Grills
           </h2>
         </div>
       <p>When the market shutters close at 18:00, the flanking pavements burst into nocturnal life:</p>
@@ -2118,8 +2117,8 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="field-notes-for-conscious-gourmands-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Field Notes for Conscious Gourmands (2026)
+          <h2 id="field-notes-for-food-lovers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Field Notes for Food Lovers (2026)
           </h2>
         </div>
       <ol>
@@ -2210,7 +2209,7 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
       <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
         <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Legacy Vendor</div>
-        <div class="font-bold text-slate-900 text-[13.5px]">Che Be Dessert Stall (Stall 1119, Est. 1968)</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Ba Muoi Dessert Stall (Since 1968)</div>
       </div>
     </div>
   
@@ -2235,14 +2234,14 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
@@ -2834,14 +2833,14 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#key-curated-dimensions-of-the-route" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Route</a>
-  <a href="#slow-travel-philosophy-embracing-the-city-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Slow Travel Philosophy: Embracing the City on Foot</a>
+  <a href="#why-district-1-is-best-explored-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Why District 1 Is Best Explored on Foot</a>
   <a href="#detailed-four-stage-itinerary-breakdown" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Detailed Four-Stage Itinerary Breakdown</a>
   <a href="#stage-1-0730-1015-am-market-dawns-and-sacred-whispers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 1 (07:30 – 10:15 AM): Market Dawns & Sacred Whispers</a>
   <a href="#stage-2-1030-am-1345-pm-art-deco-opulence-and-vintage-coffee-retreats" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 2 (10:30 AM – 13:45 PM): Art Deco Opulence & Vintage Coffee Retreats</a>
   <a href="#stage-3-1400-1745-pm-modernist-zenith-metro-marvels-and-river-breezes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 3 (14:00 – 17:45 PM): Modernist Zenith, Metro Marvels & River Breezes</a>
   <a href="#stage-4-1800-2030-pm-night-street-banquets-and-skyward-toasts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Stage 4 (18:00 – 20:30 PM): Night Street Banquets & Skyward Toasts</a>
   <a href="#curated-time-block-and-budget-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Time-Block & Budget Matrix (2026 Reference)</a>
-  <a href="#field-checklist-for-conscious-voyagers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Checklist for Conscious Voyagers (2026)</a>
+  <a href="#field-checklist-for-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Checklist for Travelers (2026)</a>
   <a href="#epilogue-falling-in-love-with-saigon-one-step-at-a-time" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Falling in Love with Saigon One Step at a Time</a>
 
               </div>
@@ -2887,7 +2886,7 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
   The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.
-</div><p>As an anchor itinerary within our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, this <strong>One-Day Heritage Walking Tour</strong> has been curated by The Rice Tour to guide conscious voyagers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.</p>
+</div><p>As an anchor itinerary within our definitive guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, this <strong>One-Day Heritage Walking Tour</strong> has been curated by The Rice Tour to guide travelers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -2904,8 +2903,8 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="slow-travel-philosophy-embracing-the-city-on-foot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Slow Travel Philosophy: Embracing the City on Foot
+          <h2 id="why-district-1-is-best-explored-on-foot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Why District 1 Is Best Explored on Foot
           </h2>
         </div>
       <p>Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.</p>
@@ -2990,7 +2989,7 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>14:00 – 16:00</strong></td><td class="p-4 text-slate-800 font-medium">Independence Palace</td><td class="p-4 text-slate-800 font-medium">Modernist halls, wartime command bunker</td><td class="p-4 text-slate-800 font-medium">65,000 VND</td><td class="p-4 text-slate-800 font-medium">—</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>16:15 – 17:45</strong></td><td class="p-4 text-slate-800 font-medium">Metro &amp; Bach Dang</td><td class="p-4 text-slate-800 font-medium">Lotus skylight concourse &amp; river sunset</td><td class="p-4 text-slate-800 font-medium">15,000 VND (metro ticket)</td><td class="p-4 text-slate-800 font-medium">30,000 VND (coconut)</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>18:00 – 20:30</strong></td><td class="p-4 text-slate-800 font-medium">Phan Boi Chau &amp; Rooftop</td><td class="p-4 text-slate-800 font-medium">Charcoal street feast &amp; evening cocktail</td><td class="p-4 text-slate-800 font-medium">Free</td><td class="p-4 text-slate-800 font-medium">250,000 – 350,000 VND</td></tr>
-<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>TOTALS</strong></td><td class="p-4 text-slate-800 font-medium"><strong>Full 12-Hour Stroll</strong></td><td class="p-4 text-slate-800 font-medium"><strong>6 Heritage Icons + 4 Gastronomic Stops</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~110,000 VND</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~540,000 – 680,000 VND</strong></td></tr>
+<tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>TOTALS</strong></td><td class="p-4 text-slate-800 font-medium"><strong>Full 12-Hour Stroll</strong></td><td class="p-4 text-slate-800 font-medium"><strong>6 Heritage Icons + 4 Culinary Stops</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~110,000 VND</strong></td><td class="p-4 text-slate-800 font-medium"><strong>~540,000 – 680,000 VND</strong></td></tr>
 
           </tbody>
         </table>
@@ -2998,8 +2997,8 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="field-checklist-for-conscious-voyagers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Field Checklist for Conscious Voyagers (2026)
+          <h2 id="field-checklist-for-travelers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Field Checklist for Travelers (2026)
           </h2>
         </div>
       <ul>
@@ -3116,21 +3115,21 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -3563,7 +3562,7 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
       <div class="absolute inset-0 z-0">
         <img 
           src="https://media.thericetour.com/uploads/reunification-palace-saigon.webp" 
-          alt="The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon" 
+          alt="The Independence Palace: Mid-Century Modernism & Historic Landmarks of Saigon" 
           class="w-full h-full object-cover object-center scale-105 transform filter brightness-60 contrast-105"
           loading="eager"
           fetchpriority="high"
@@ -3580,12 +3579,12 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
           <span class="text-white/40">/</span>
           <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
           <span class="text-white/40">/</span>
-          <span class="text-white font-semibold line-clamp-1">The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon</span>
+          <span class="text-white font-semibold line-clamp-1">The Independence Palace: Mid-Century Modernism & Historic Landmarks of Saigon</span>
         </div>
 
         {/* Titles */}
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
-          The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon
+          The Independence Palace: Mid-Century Modernism & Historic Landmarks of Saigon
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
           Deciphering Eastern Ideograms, Climate-Responsive Louvers & Fortified Bunkers (2026)
@@ -3654,11 +3653,11 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#key-curated-dimensions-of-the-palace-grounds" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Palace Grounds</a>
-  <a href="#historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Historical Stratigraphy: From Colonial Norodom Palace to National Reunification</a>
-  <a href="#deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram</a>
+  <a href="#from-norodom-palace-to-national-reunification-key-historical-milestones" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">From Norodom Palace to National Reunification: Key Historical Milestones</a>
+  <a href="#ngo-viet-thus-symbolic-architecture-eastern-philosophy-in-concrete" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Ngo Viet Thu's Symbolic Architecture: Eastern Philosophy in Concrete</a>
   <a href="#the-concrete-bamboo-louver-curtain-rem-hoa-a" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Concrete Bamboo Louver Curtain (*Rèm Hoa Đá*)</a>
   <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
-  <a href="#field-notes-for-the-discerning-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Discerning Traveler (2026)</a>
+  <a href="#field-notes-for-the-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Notes for the Traveler (2026)</a>
   <a href="#epilogue-a-concrete-hymn-to-sovereignty-and-peace" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: A Concrete Hymn to Sovereignty and Peace</a>
 
               </div>
@@ -3722,19 +3721,19 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="historical-stratigraphy-from-colonial-norodom-palace-to-national-reunification" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Historical Stratigraphy: From Colonial Norodom Palace to National Reunification
+          <h2 id="from-norodom-palace-to-national-reunification-key-historical-milestones" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            From Norodom Palace to National Reunification: Key Historical Milestones
           </h2>
         </div>
-      <p>The palatial grounds have served as the fulcrum of southern governance across three distinct epochs:</p>
+      <p>The site has served as the administrative center of southern Vietnam across three distinct eras:</p>
 <p>In 1868, French Governor Lagrandière laid the foundation stone for the palatial <strong>Norodom Palace</strong>, designed in grandiose Neo-Baroque fashion to project French colonial supremacy across Indochina. For over eight decades, it stood as the residence of colonial governors and French high commissioners.</p>
 <p>In 1954, following the Geneva Accords, the palace was transferred to the southern administration and rechristened the <strong>Independence Palace</strong>. In February 1962, a mutinous aerial bombardment collapsed the entire left wing of the nineteenth-century colonial structure. Recognizing the impossibility of restoring the fractured masonry, the government cleared the site and inaugurated a prestigious architectural competition. Vietnamese architect <strong>Ngo Viet Thu</strong> triumphed with a visionary design that broke completely with Western neoclassical mimicry, initiating construction on July 1, 1962, and celebrating its formal inauguration on October 31, 1966.</p>
 <p>On April 30, 1975, the historic breakthrough of the palace gates sealed the end of a thirty-year conflict, cementing the monument’s place as an immutable crossroads of global history.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="deciphering-ngo-viet-thus-eastern-architectural-cryptogram" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Deciphering Ngo Viet Thu’s Eastern Architectural Cryptogram
+          <h2 id="ngo-viet-thus-symbolic-architecture-eastern-philosophy-in-concrete" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Ngo Viet Thu's Symbolic Architecture: Eastern Philosophy in Concrete
           </h2>
         </div>
       <p>Unlike Western government palaces that rely on soaring spires or heavy pediments, the Independence Palace conceals a scholarly philosophical treatise within its geometric proportions:</p>
@@ -3787,8 +3786,8 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="field-notes-for-the-discerning-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Field Notes for the Discerning Traveler (2026)
+          <h2 id="field-notes-for-the-traveler-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Field Notes for the Traveler (2026)
           </h2>
         </div>
       <ul>
@@ -3905,21 +3904,21 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -4523,13 +4522,13 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#record-breaking-architectural-dimensions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Record-Breaking Architectural Dimensions</a>
-  <a href="#subterranean-renaissance-reimagining-the-urban-landscape" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Subterranean Renaissance: Reimagining the Urban Landscape</a>
-  <a href="#navigating-the-four-tier-subterranean-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the Four-Tier Subterranean Labyrinth</a>
+  <a href="#saigons-underground-transit-how-metro-line-1-connects-the-city" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Saigon's Underground Transit: How Metro Line 1 Connects the City</a>
+  <a href="#navigating-the-4-underground-levels-entrances-ticketing-and-platforms" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Navigating the 4 Underground Levels: Entrances, Ticketing & Platforms</a>
   <a href="#level-b1-the-commercial-concourse-and-ticketing-mezzanine" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B1: The Commercial Concourse & Ticketing Mezzanine</a>
   <a href="#the-architectural-centerpiece-the-lotus-toplight" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Architectural Centerpiece: The Lotus Toplight</a>
   <a href="#level-b2-line-1-boarding-platforms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Level B2: Line 1 Boarding Platforms</a>
   <a href="#curated-line-1-route-and-fare-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Line 1 Route & Fare Matrix (2026 Reference)</a>
-  <a href="#curated-transit-insights-for-conscious-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Transit Insights for Conscious Travelers (2026)</a>
+  <a href="#practical-transit-tips-and-passenger-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Practical Transit Tips & Passenger Guidelines (2026)</a>
   <a href="#epilogue-the-velocity-of-a-renewed-metropolis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Velocity of a Renewed Metropolis</a>
 
               </div>
@@ -4593,8 +4592,8 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="subterranean-renaissance-reimagining-the-urban-landscape" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Subterranean Renaissance: Reimagining the Urban Landscape
+          <h2 id="saigons-underground-transit-how-metro-line-1-connects-the-city" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Saigon's Underground Transit: How Metro Line 1 Connects the City
           </h2>
         </div>
       <p>Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.</p>
@@ -4611,8 +4610,8 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
 Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll across a pristine, granite-paved public concourse. Steps away from the historic market entrances, sleek escalator portals invite commuters down into an immaculate underground city of retail promenades, artisan kiosks, and transit platforms.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="navigating-the-four-tier-subterranean-labyrinth" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Navigating the Four-Tier Subterranean Labyrinth
+          <h2 id="navigating-the-4-underground-levels-entrances-ticketing-and-platforms" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Navigating the 4 Underground Levels: Entrances, Ticketing & Platforms
           </h2>
         </div>
       <pre><code class="language-mermaid">graph TD
@@ -4671,8 +4670,8 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="curated-transit-insights-for-conscious-travelers-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Curated Transit Insights for Conscious Travelers (2026)
+          <h2 id="practical-transit-tips-and-passenger-guidelines-2026" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Practical Transit Tips & Passenger Guidelines (2026)
           </h2>
         </div>
       <ol>
@@ -4792,21 +4791,21 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -5866,7 +5865,7 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#key-curated-dimensions-of-the-sacred-compound" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Key Curated Dimensions of the Sacred Compound</a>
   <a href="#footprints-of-the-tamil-chettiar-community-in-old-saigon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Footprints of the Tamil Chettiar Community in Old Saigon</a>
-  <a href="#deciphering-south-indian-dravidian-temple-art" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Deciphering South Indian Dravidian Temple Art</a>
+  <a href="#dravidian-temple-architecture-carved-gopuram-towers-and-sacred-shrines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Dravidian Temple Architecture: Carved Gopuram Towers & Sacred Shrines</a>
   <a href="#the-inner-sanctum-the-abode-of-goddess-mariamman" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Inner Sanctum: The Abode of Goddess Mariamman</a>
   <a href="#the-sacred-stone-pressing-ritual-a-unique-cultural-synthesis" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Sacred Stone-Pressing Ritual: A Unique Cultural Synthesis</a>
   <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
@@ -5944,8 +5943,8 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="deciphering-south-indian-dravidian-temple-art" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Deciphering South Indian Dravidian Temple Art
+          <h2 id="dravidian-temple-architecture-carved-gopuram-towers-and-sacred-shrines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Dravidian Temple Architecture: Carved Gopuram Towers & Sacred Shrines
           </h2>
         </div>
       <p>Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:</p>
@@ -6124,21 +6123,21 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -6281,7 +6280,7 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
   <a href="#the-east-gate-phan-boi-chau-street-highland-coffees-and-delta-spices" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The East Gate (Phan Boi Chau Street): Highland Coffees & Delta Spices</a>
   <a href="#the-west-gate-phan-chu-trinh-street-artisan-woven-goods-and-leather" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The West Gate (Phan Chu Trinh Street): Artisan Woven Goods & Leather</a>
   <a href="#the-north-gate-le-thanh-ton-street-orchard-bounty" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The North Gate (Le Thanh Ton Street): Orchard Bounty</a>
-  <a href="#bargaining-with-grace-cultural-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Bargaining with Grace: Cultural Guidelines</a>
+  <a href="#bargaining-with-a-smile-practical-etiquette-and-tips" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Bargaining with a Smile: Practical Etiquette & Tips</a>
   <a href="#the-15-to-25-equilibrium" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The 15% to 25% Equilibrium</a>
   <a href="#the-gentle-walk-away" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Gentle Walk-Away</a>
   <a href="#detecting-authentic-artisanship-vs-mass-produced-counterfeits" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Counterfeits</a>
@@ -6331,7 +6330,7 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
           <div id="introduction" class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
             <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
   Shopping inside the vaulted avenues of Ben Thanh Market has never been a sterile commercial transaction. It is a graceful cultural dance between buyer and seller, where an engaging smile, genuine appreciation for traditional craft, and mutual respect unlock the finest artisanal treasures of southern Vietnam.
-</div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, stepping into the historic market places you at the center of an intoxicating labyrinth of over 1,400 vibrant retail stalls. For conscious voyagers, shopping here is an opportunity to acquire authentic handmade heirlooms and connect directly with the multi-generational trade guilds of the Southern Delta.</p>
+</div><p>Highlighted in our comprehensive field guide to <a href="/things-to-do-near-ben-thanh-market">things to do near Ben Thanh Market</a>, stepping into the historic market places you at the center of an intoxicating labyrinth of over 1,400 vibrant retail stalls. For travelers, shopping here is an opportunity to acquire authentic handmade heirlooms and connect directly with the multi-generational trade guilds of the Southern Delta.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -6343,7 +6342,7 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 <li><strong>1,400 Grid Stalls:</strong> Meticulously organized into specialized guild quadrants accessible through the four cardinal gates.</li>
 <li><strong>4 Electronic Verification Scales:</strong> Positioned by municipal market authorities at each portal, empowering shoppers to self-verify weighed items with pinpoint accuracy.</li>
 <li><strong>24-Hour Express Tailoring:</strong> Bespoke <em>áo dài</em> and linen safari suits tailored overnight for international travelers on tight itineraries.</li>
-<li><strong>100% Cashless Operations:</strong> While nearly all vendors support digital VietQR payments, international travelers should keep modest cash (200,000 – 500,000 VND) on hand for small food stalls.</li>
+<li><strong>VietQR &amp; Cashless Readiness:</strong> While nearly all vendors support digital VietQR payments for domestic accounts, international travelers should still keep modest cash (200,000 – 500,000 VND) on hand for small food stalls and fresh fruit purchases.</li>
 </ul>
 <hr>
 
@@ -6390,8 +6389,8 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="bargaining-with-grace-cultural-guidelines" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Bargaining with Grace: Cultural Guidelines
+          <h2 id="bargaining-with-a-smile-practical-etiquette-and-tips" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Bargaining with a Smile: Practical Etiquette & Tips
           </h2>
         </div>
       <p>Negotiating in a traditional Vietnamese market should never feel confrontational; it is an engaging, respectful dialogue:</p>
@@ -6567,21 +6566,21 @@ Southern merchants hold deep spiritual reverence for their first customer of the
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -6837,7 +6836,7 @@ To visit Lan Vuong is to consciously shed urban propriety. You don the tradition
           </h2>
         </div>
       <p>Following hours of total physical depletion, Lan Vuong’s thatched-roof culinary pavilions will anchor you with menus deeply rooted in the era of wilderness reclamation.</p>
-<p>The gastronomic philosophy here eschews delicate refinement in favor of <strong>raw freshness and untamed flavor</strong>.</p>
+<p>The culinary philosophy here eschews delicate refinement in favor of <strong>raw freshness and untamed flavor</strong>.</p>
 <ul>
 <li><strong>Charcoal-Grilled Snakehead Fish (<em>Cá lóc nướng trui</em>):</strong> The quintessential Delta classic. A wild snakehead fish (unscaled and un-gutted) is skewered on a fresh bamboo stick and buried in a blazing mound of dry straw. The charred exterior is scraped away to reveal steaming, snow-white flesh, which is then rolled in rice paper with wild herbs and dipped in a pungent tamarind sauce.</li>
 <li><strong>Mekong Crêpes (<em>Bánh xèo miền Tây</em>):</strong> Gigantic, sizzling crêpes poured onto massive cast-iron woks using pork fat. The crust is paper-thin and shattering, enveloping a sweet filling of shrimp, pork, and termite mushrooms.</li>
@@ -7566,14 +7565,14 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Saigon Unveiled from an Open Deck</a>
+                  <a href="#saigon-unveiled-from-an-open-deck" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Saigon Unveiled from an Open Deck</a>
   <a href="#fleet-architecture-and-bespoke-onboard-amenities" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Fleet Architecture & Bespoke Onboard Amenities</a>
   <a href="#comprehensive-analysis-of-the-two-signature-routes-2026-edition" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comprehensive Analysis of the Two Signature Routes (2026 Edition)</a>
   <a href="#route-1-saigon-core-heritage-circuit-60-minute-non-stop-loop" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 1: Saigon Core Heritage Circuit (60-Minute Non-Stop Loop)</a>
   <a href="#route-2-saigon-cho-lon-chinatown-circuit-120-minute-immersion" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Immersion)</a>
   <a href="#daytime-vs-twilight-night-voyages-comparative-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Daytime vs. Twilight Night Voyages: Comparative Matrix</a>
   <a href="#official-2026-ticket-tariff-schedule" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Official 2026 Ticket Tariff Schedule</a>
-  <a href="#curated-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Discerning Traveler</a>
+  <a href="#curated-field-notes-for-the-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Field Notes for the Traveler</a>
   <a href="#the-strategy-of-seat-selection" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Strategy of Seat Selection</a>
   <a href="#the-golden-departure-windows" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Golden Departure Windows</a>
   <a href="#vital-safety-protocols" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Vital Safety Protocols</a>
@@ -7626,8 +7625,8 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-saigon-unveiled-from-an-open-deck" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Saigon Unveiled from an Open Deck
+          <h2 id="saigon-unveiled-from-an-open-deck" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Saigon Unveiled from an Open Deck
           </h2>
         </div>
       <p>In the bustling epicenter of District 1, where rivers of vintage mopeds and electric scooters weave through tree-lined French boulevards, experiencing Saigon from four meters above street level on an open-top double-decker bus offers an enchanting shift in perception. Free from the constraints of tinted car windows or the rush of street crossings, voyagers are embraced by river breezes, brush past the sprawling branches of century-old African mahogany trees, and gaze unhurriedly upon the curved Renaissance cornices of the Central Post Office, the red-brick spires of Notre-Dame Cathedral, and the dramatic sweep of the Saigon River illuminated beneath the modern arches of Ba Son Bridge.</p>
@@ -7766,8 +7765,8 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="curated-field-notes-for-the-discerning-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Curated Field Notes for the Discerning Traveler
+          <h2 id="curated-field-notes-for-the-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Curated Field Notes for the Traveler
           </h2>
         </div>
       <p>To maximize your journey aloft, bear these hard-earned local observations in mind:</p>
@@ -7790,7 +7789,7 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
         </div>
       <ul>
 <li><strong>16:30 – 17:00 (The Ba Son Sunset Run):</strong> Timed perfectly so that the coach summits the Ba Son Bridge just as the equatorial sun dips beneath the western horizon, casting molten copper light across the water.</li>
-<li><strong>19:30 – 20:30 (The Dazzling Night Cruise):</strong> Captures the illuminated kinetic energy of Nguyen Hue Boulevard, illuminated colonial municipal halls, and riverside skyscrapers.</li>
+<li><strong>19:30 – 20:30 (The Dazzling Night Cruise):</strong> Captures the illuminated lively energy of Nguyen Hue Boulevard, illuminated colonial municipal halls, and riverside skyscrapers.</li>
 </ul>
 
         <div id="vital-safety-protocols" class="scroll-mt-28 pt-5">
@@ -7922,21 +7921,21 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -8453,15 +8452,15 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Allure of Saigon’s Hidden Perches</a>
-  <a href="#adaptive-heritage-the-renaissance-of-residential-blocks" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Adaptive Heritage: The Renaissance of Residential Blocks</a>
+                  <a href="#the-allure-of-saigons-hidden-perches" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Allure of Saigon’s Hidden Perches</a>
+  <a href="#how-old-residential-buildings-became-creative-spaces" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">How Old Residential Buildings Became Creative Spaces</a>
   <a href="#four-iconic-heritage-apartment-buildings-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Four Iconic Heritage Apartment Buildings Near Ben Thanh</a>
   <a href="#ton-that-thiep-the-artisanal-and-bohemian-labyrinth" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Thiep – The Artisanal & Bohemian Labyrinth</a>
   <a href="#ly-tu-trong-the-creative-vanguard" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ly Tu Trong – The Creative Vanguard</a>
   <a href="#ton-that-dam-the-cinematic-riverfront-relic" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Ton That Dam – The Cinematic Riverfront Relic</a>
   <a href="#the-balcony-flats-of-pasteur-and-le-loi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Balcony Flats of Pasteur & Le Loi</a>
   <a href="#the-beverage-matrix-from-traditional-phin-to-specialty-third-wave" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Beverage Matrix: From Traditional Phin to Specialty Third Wave</a>
-  <a href="#conscious-voyager-etiquette-for-residential-walk-ups" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Conscious Voyager Etiquette for Residential Walk-Ups</a>
+  <a href="#traveler-etiquette-for-residential-walk-ups" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Traveler Etiquette for Residential Walk-Ups</a>
   <a href="#epilogue-the-timeless-pause" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: The Timeless Pause</a>
 
               </div>
@@ -8510,17 +8509,17 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-the-allure-of-saigons-hidden-perches" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: The Allure of Saigon’s Hidden Perches
+          <h2 id="the-allure-of-saigons-hidden-perches" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Allure of Saigon’s Hidden Perches
           </h2>
         </div>
       <p>If there is a quintessential ritual that defines the contemporary soul of Saigon, it is not found within polished, air-conditioned corporate chains lining wide boulevards. Instead, it thrives in the shadowy alcoves of vintage residential walk-ups—locally known as <em>cư xá</em>—where time-worn staircases ascend into an enchanting parallel universe. Within a gentle ten-minute stroll of Ben Thanh Market, several historic apartment complexes built between the late French colonial period and the buoyant 1960s have quietly evolved into magnetic creative sanctuaries.</p>
-<p>Stepping through a modest ground-floor motor scooter garage and leaving the bustling din of Le Loi Boulevard behind, one climbs worn granito stairs whose edges have been softened by decades of footfalls. Above, heavy wooden louvered doors open to reveal serene spaces where the aroma of freshly roasted highland Arabica and sweet condensed milk mingles with vinyl jazz records, hand-turned pottery, and emerald foliage framing iron French balconies. For the intentional traveler, these vertical villages offer an intimate, poetic glimpse into the living heart of southern urban culture.</p>
+<p>Stepping through a modest ground-floor motor scooter garage and leaving the bustling din of Le Loi Boulevard behind, one climbs worn granito stairs whose edges have been softened by decades of footfalls. Above, heavy wooden louvered doors open to reveal serene spaces where the aroma of freshly roasted highland Arabica and sweet condensed milk mingles with vinyl jazz records, hand-turned pottery, and emerald foliage framing iron French balconies. For the traveler, these vertical villages offer an intimate, poetic glimpse into the living heart of southern urban culture.</p>
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="adaptive-heritage-the-renaissance-of-residential-blocks" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Adaptive Heritage: The Renaissance of Residential Blocks
+          <h2 id="how-old-residential-buildings-became-creative-spaces" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            How Old Residential Buildings Became Creative Spaces
           </h2>
         </div>
       <p>The phenomenon of converting legacy residential flats into independent boutique cafes took root in the early 2010s and has reached aesthetic maturity by 2026. Rather than razing these multi-generational blocks, young Vietnamese designers and hospitality artisans have championed adaptive reuse, celebrating original raw textures rather than concealing them.</p>
@@ -8589,7 +8588,7 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
             The Balcony Flats of Pasteur & Le Loi
           </h3>
         </div>
-      <p>Flanking the grand boulevard that approaches Ben Thanh Market&#39;s South Clock Tower, these elevated mezzanine flats feature verdant wrought-iron balconies that hover just above street level.</p>
+      <p>Flanking the grand boulevard that approaches Ben Thanh Market&#39;s South Clock Tower, these elevated mezzanine flats feature shaded wrought-iron balconies that hover just above street level.</p>
 <ul>
 <li><strong>Coordinates:</strong> 158 Pasteur &amp; 130 Le Loi Boulevard, District 1.</li>
 <li><strong>Interior Vibe:</strong> Lush urban jungle sanctuaries abundant in monsteras and trailing ferns.</li>
@@ -8624,8 +8623,8 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="conscious-voyager-etiquette-for-residential-walk-ups" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Conscious Voyager Etiquette for Residential Walk-Ups
+          <h2 id="traveler-etiquette-for-residential-walk-ups" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Traveler Etiquette for Residential Walk-Ups
           </h2>
         </div>
       <p>Because these historic apartment buildings are shared homes rather than commercial shopping centers, considerate conduct ensures this unique culture continues to flourish:</p>
@@ -8742,21 +8741,21 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -8893,13 +8892,13 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: When Saigon Kindles Her Constellations</a>
-  <a href="#terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Terroir Mixology: The Rise of Vietnamese Craft Cocktails</a>
+                  <a href="#when-saigon-kindles-her-constellations" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">When Saigon Kindles Her Constellations</a>
+  <a href="#craft-cocktails-with-local-flavors-kumquat-betel-leaf-and-lotus-seeds" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Craft Cocktails with Local Flavors: Kumquat, Betel Leaf & Lotus Seeds</a>
   <a href="#four-unrivaled-rooftop-vantage-points-overlooking-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Four Unrivaled Rooftop Vantage Points Overlooking Ben Thanh</a>
   <a href="#the-clocktower-overlook-lounges-phan-boi-chau-and-le-lai" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Clocktower Overlook Lounges (Phan Boi Chau & Le Lai)</a>
   <a href="#heritage-roof-perches-of-ton-that-thiep-and-huynh-thuc-khang" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Heritage Roof Perches of Ton That Thiep & Huynh Thuc Khang</a>
   <a href="#grand-panoramas-on-le-loi-and-nam-ky-khoi-nghia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Grand Panoramas on Le Loi & Nam Ky Khoi Nghia</a>
-  <a href="#the-subterranean-realm-hidden-alleyway-speakeasies" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Subterranean Realm: Hidden Alleyway Speakeasies</a>
+  <a href="#hidden-speakeasies-tucked-away-bars-in-district-1-alleys" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Hidden Speakeasies: Tucked-Away Bars in District 1 Alleys</a>
   <a href="#anatomy-of-the-secret-bar" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Anatomy of the Secret Bar:</a>
   <a href="#curated-beverage-tariff-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Curated Beverage Tariff Matrix (2026 Reference)</a>
   <a href="#field-protocols-for-nocturnal-elegance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Field Protocols for Nocturnal Elegance</a>
@@ -8951,8 +8950,8 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-when-saigon-kindles-her-constellations" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: When Saigon Kindles Her Constellations
+          <h2 id="when-saigon-kindles-her-constellations" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            When Saigon Kindles Her Constellations
           </h2>
         </div>
       <p>When the amber sun descends behind the ancient African mahogany canopies along Le Duan Boulevard and the gilded cupola of Ben Thanh Market blazes with evening illumination, District 1 casts off its daytime hustle and reveals its true glamour. For the voyager seeking elevated encounters, the consummate conclusion to a day of architectural discovery is not found amidst congested ground-level crowds, but within the whisper-quiet ascent of an express elevator rising to an open-air rooftop, or slipping past an unmarked antique bookcase into a hidden speakeasy.</p>
@@ -8960,8 +8959,8 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="terroir-mixology-the-rise-of-vietnamese-craft-cocktails" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Terroir Mixology: The Rise of Vietnamese Craft Cocktails
+          <h2 id="craft-cocktails-with-local-flavors-kumquat-betel-leaf-and-lotus-seeds" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Craft Cocktails with Local Flavors: Kumquat, Betel Leaf & Lotus Seeds
           </h2>
         </div>
       <p>Nocturnal hospitality around Ben Thanh Market in 2026 has decisively evolved beyond generic Western concoctions. Today, Saigon’s most celebrated mixologists treat each coupe as an olfactory canvas celebrating Vietnam’s staggering botanical wealth.</p>
@@ -9028,8 +9027,8 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="the-subterranean-realm-hidden-alleyway-speakeasies" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            The Subterranean Realm: Hidden Alleyway Speakeasies
+          <h2 id="hidden-speakeasies-tucked-away-bars-in-district-1-alleys" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Hidden Speakeasies: Tucked-Away Bars in District 1 Alleys
           </h2>
         </div>
       <p>If sky bars celebrate open horizons, Saigon’s secret <strong>Speakeasies</strong> around Ben Thanh cater to the thrill of discovery:</p>
@@ -9190,21 +9189,21 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -9350,7 +9349,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
   <a href="#binh-dien-mountain-and-buu-phong-ancient-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Binh Dien Mountain & Buu Phong Ancient Pagoda</a>
   <a href="#long-an-mountain-and-long-son-thach-dong-pagoda" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Long An Mountain & Long Son Thach Dong Pagoda</a>
   <a href="#curated-experiences-for-the-2026-explorer" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🏕️ Curated Experiences for the 2026 Explorer</a>
-  <a href="#essential-field-notes-for-the-discerning-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Essential Field Notes for the Discerning Traveler</a>
+  <a href="#essential-field-notes-for-the-traveler" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 Essential Field Notes for the Traveler</a>
   <a href="#regional-synergy" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Regional Synergy</a>
 
               </div>
@@ -9412,7 +9411,7 @@ export const buuLongTouristAreaDongNaiHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-For the discerning traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.<hr>
+For the traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="2026-transit-and-logistics-navigating-to-buu-long" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -9481,8 +9480,8 @@ For the discerning traveler in 2026, Buu Long offers a serene counterpoint to th
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="essential-field-notes-for-the-discerning-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            🌟 Essential Field Notes for the Discerning Traveler
+          <h2 id="essential-field-notes-for-the-traveler" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌟 Essential Field Notes for the Traveler
           </h2>
         </div>
       <p>To maximize your experience in this 84-hectare expanse, consider the following logistical nuances:</p>
@@ -9740,8 +9739,8 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-hospitality-imbued-with-heritage" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Hospitality Imbued with Heritage</a>
-  <a href="#core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Core Hallmarks of a Bespoke Saigon Boutique Hotel</a>
+                  <a href="#hospitality-imbued-with-heritage" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Hospitality Imbued with Heritage</a>
+  <a href="#what-makes-a-great-boutique-hotel-in-central-saigon" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">What Makes a Great Boutique Hotel in Central Saigon</a>
   <a href="#five-exceptional-boutique-and-heritage-sanctuaries-near-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Five Exceptional Boutique & Heritage Sanctuaries Near Ben Thanh</a>
   <a href="#the-myst-dong-khoi-ode-to-ba-son-shipyards-and-alleyway-nostalgia" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Myst Dong Khoi – Ode to Ba Son Shipyards & Alleyway Nostalgia</a>
   <a href="#silverland-yen-hotel-a-zen-oasis-behind-the-north-gate" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Silverland Yen Hotel – A Zen Oasis Behind the North Gate</a>
@@ -9749,7 +9748,7 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
   <a href="#la-siesta-premium-sai-gon-sophisticated-indochine-glamour" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">La Siesta Premium Sai Gon – Sophisticated Indochine Glamour</a>
   <a href="#fusion-original-saigon-centre-modernist-artistry-on-the-metro-line" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Fusion Original Saigon Centre – Modernist Artistry on the Metro Line</a>
   <a href="#comparative-matrix-premier-sanctuaries-at-a-glance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparative Matrix: Premier Sanctuaries at a Glance</a>
-  <a href="#strategic-reservation-guidance-for-the-discerning-guest" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Strategic Reservation Guidance for the Discerning Guest</a>
+  <a href="#strategic-reservation-guidance-for-the-guest" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Strategic Reservation Guidance for the Guest</a>
   <a href="#epilogue-awakening-to-saigons-living-grace" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Epilogue: Awakening to Saigon’s Living Grace</a>
 
               </div>
@@ -9798,8 +9797,8 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-hospitality-imbued-with-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Hospitality Imbued with Heritage
+          <h2 id="hospitality-imbued-with-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Hospitality Imbued with Heritage
           </h2>
         </div>
       <p>For the voyager who journeys with intention, an urban retreat is not merely a logistical necessity—it is an intimate prism through which a metropolis reveals its spirit. While Saigon’s modern skyline bristles with standardized corporate steel towers, the city’s authentic character lingers along the leafy avenues surrounding Ben Thanh Market. Here, hidden behind antique timber casements and cascading tropical philodendrons, a curated collection of boutique design hotels and restored colonial mansions offers a sophisticated refuge from the kinetic street level.</p>
@@ -9807,8 +9806,8 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="core-hallmarks-of-a-bespoke-saigon-boutique-hotel" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Core Hallmarks of a Bespoke Saigon Boutique Hotel
+          <h2 id="what-makes-a-great-boutique-hotel-in-central-saigon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            What Makes a Great Boutique Hotel in Central Saigon
           </h2>
         </div>
       <p>To be certified as a premier design sanctuary within our editorial collection, a property must fulfill four rigorous standards:</p>
@@ -9926,8 +9925,8 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
     <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="strategic-reservation-guidance-for-the-discerning-guest" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Strategic Reservation Guidance for the Discerning Guest
+          <h2 id="strategic-reservation-guidance-for-the-guest" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Strategic Reservation Guidance for the Guest
           </h2>
         </div>
       <ol>
@@ -10042,21 +10041,21 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -10919,7 +10918,7 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
           Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows
+          15 Classic Experiences from Morning Coffee to Late-Night Charcoal Grills (2026 Guide)
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual.
@@ -10984,12 +10983,12 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-far-more-than-a-commodity-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Far More Than a Commodity Bazaar</a>
+                  <a href="#far-more-than-a-commodity-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Far More Than a Commodity Bazaar</a>
   <a href="#master-map-15-experiences-across-four-golden-windows" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Map: 15 Experiences Across Four Golden Windows</a>
   <a href="#time-window-1-early-morning-awakening-0630-0930" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌅 TIME WINDOW 1: Early Morning Awakening (06:30 – 09:30)</a>
   <a href="#time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">☀️ TIME WINDOW 2: Midday Brilliance & Beating the Tropical Heat (10:00 – 14:30)</a>
   <a href="#time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)</a>
-  <a href="#time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)</a>
+  <a href="#time-window-4-vibrant-nightfall-and-night-street-food-1900-late" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">🌙 TIME WINDOW 4: Vibrant Nightfall & Night Street Food (19:00 – Late)</a>
   <a href="#comparative-itinerary-schedules-4-hour-express-vs-full-day" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Comparative Itinerary Schedules: 4-Hour Express vs. Full Day</a>
   <a href="#key-takeaways-and-field-advice-from-the-rice-tour" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Key Takeaways & Field Advice from The Rice Tour</a>
 
@@ -11039,8 +11038,8 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-far-more-than-a-commodity-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Far More Than a Commodity Bazaar
+          <h2 id="far-more-than-a-commodity-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Far More Than a Commodity Bazaar
           </h2>
         </div>
       <p>When first-time visitors hear of Ben Thanh Market, many picture a crowded marketplace packed with souvenir stalls, rolled textiles, and aggressive touts. Yet to those attuned to the authentic cadence of Saigon, this 112-year-old landmark and its encircling boulevards form one of Southeast Asia&#39;s most captivating urban cultural theaters. Here, within a few hundred footsteps, one transitions effortlessly from early 20th-century Indochinese colonial architecture to the sunlit subterranean concourses of the brand-new 2026 Metro Line 1, and from a humble traditional sweet soup vendor to an opulent rooftop lounge overlooking the meandering Saigon River.</p>
@@ -11070,7 +11069,7 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 </div>
 #### 1. Catching the Dawn & Photographing the South Gate Clock Tower Without Crowds
 Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Quach Thi Trang Square. Before the deluge of motorbikes engulfs the downtown roundabout, the iconic South Gate belfry stands in serene grandeur beneath the honeyed morning glow. It is the premier time for architectural photography devoid of vehicular clutter or selfie throngs.<h4 id="savoring-an-authentic-southern-vietnamese-breakfast-at-the-east-gate">Savoring an Authentic Southern Vietnamese Breakfast at the East Gate</h4><p>Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (<em>bun rieu cua dong</em>), hearty beef noodle soup (<em>bun bo Hue</em>), and delicate steamed rice cakes dusted with toasted shrimp powder (<em>banh beo</em>) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.</p>
-<h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
+<h4 id="sipping-ca-phe-vot-and-park-bench-coffee-in-september-23rd-park">Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park</h4><p>Following breakfast, stroll across Le Lai Street into the leafy shade of September 23rd Park (<em>Cong vien 23/9</em>). Order a robust iced condensed milk coffee (<em>ca phe sua da</em>) brewed using traditional cloth-strainer (<em>ca phe vot</em>) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.</p>
 <hr>
 
         <div id="time-window-2-midday-brilliance-and-beating-the-tropical-heat-1000-1430" class="scroll-mt-28 pt-5">
@@ -11079,7 +11078,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
           </h3>
         </div>
       <h4 id="navigating-the-labyrinth-of-1400-heritage-stalls-under-historic-rafters">Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters</h4><p>Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.</p>
-<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-ba-muoi">Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Be (Stall 1119))</h4><p>Nestled in the central culinary aisle, Che Be (Stall 1119) is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
+<h4 id="cooling-down-with-a-legendary-1968-shaved-ice-sweet-soup-che-be">Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (Che Be)</h4><p>Nestled in the central culinary aisle, Che Be is a culinary institution spanning three generations. A tall glass of mixed sweet soup (<em>che thap cam</em>) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (<em>banh lot</em>), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.</p>
 <h4 id="descending-32-meters-into-ben-thanh-central-metro-station-to-marvel-at-the-lotus-skylight">Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"</h4><p>When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon&#39;s futuristic 2026 urban infrastructure.</p>
 <h4 id="contemplating-art-masterpieces-in-the-mansion-of-99-windows-hcmc-museum-of-fine-arts">Contemplating Art Masterpieces in the Mansion of 99 Windows (HCMC Museum of Fine Arts)</h4><p>A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa (Uncle Hoa). Here, vintage encaustic cement tiles, the city’s earliest private iron-cage elevator, and the designated National Treasure lacquer masterpiece &quot;Spring Garden of Central, South, and North&quot; by Nguyen Gia Tri await art connoisseurs.</p>
 <hr>
@@ -11094,9 +11093,9 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
 <h4 id="hopping-on-the-top-deck-of-the-open-air-hop-on-hop-off-sunset-bus">Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus</h4><p>At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird&#39;s-eye views of District 1.</p>
 <hr>
 
-        <div id="time-window-4-vibrant-nightfall-and-gastronomic-revelry-1900-late" class="scroll-mt-28 pt-5">
+        <div id="time-window-4-vibrant-nightfall-and-night-street-food-1900-late" class="scroll-mt-28 pt-5">
           <h3 class="font-serif text-xl lg:text-[22px] font-bold text-slate-900 leading-snug">
-            🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)
+            🌙 TIME WINDOW 4: Vibrant Nightfall & Night Street Food (19:00 – Late)
           </h3>
         </div>
       <h4 id="feasting-on-flaming-seafood-along-phan-boi-chau-night-market">Feasting on Flaming Seafood Along Phan Boi Chau Night Market</h4><p>As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (<em>banh xeo</em>) amidst crackling flames and lively international crowds.</p>
@@ -11118,7 +11117,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4 text-slate-800 font-medium">Architectural Photography at Clock Tower + Breakfast at East Gate</td><td class="p-4 text-slate-800 font-medium">Metro station visit + Che Be (Stall 1119) sweet soup</td><td class="p-4 text-slate-800 font-medium">Quick shopping at craft section</td><td class="p-4 text-slate-800 font-medium">150,000 – 250,000</td></tr>
+            <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>4-Hour Express (Morning/Afternoon)</strong></td><td class="p-4 text-slate-800 font-medium">Architectural Photography at Clock Tower + Breakfast at East Gate</td><td class="p-4 text-slate-800 font-medium">Metro station visit + Che Be sweet soup</td><td class="p-4 text-slate-800 font-medium">Quick shopping at craft section</td><td class="p-4 text-slate-800 font-medium">150,000 – 250,000</td></tr>
 <tr class="hover:bg-slate-50/80 transition-colors"><td class="p-4 text-slate-800 font-medium"><strong>Full-Day In-Depth (Cultural Explorer)</strong></td><td class="p-4 text-slate-800 font-medium">Dawn photography + Park coffee + Food court tour</td><td class="p-4 text-slate-800 font-medium">Metro Lotus Skylight + Fine Arts Museum</td><td class="p-4 text-slate-800 font-medium">Rooftop cocktail + Night Market seafood feast</td><td class="p-4 text-slate-800 font-medium">600,000 – 1,200,000</td></tr>
 
           </tbody>
@@ -11210,7 +11209,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
       <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">🍲</div>
       <div>
         <div class="text-[11px] text-slate-600 uppercase tracking-wider font-bold">Must-Try Gastronomy</div>
-        <div class="font-bold text-slate-900 text-[13.5px]">Bun Rieu Cua, Banh Beo & Che Be (Stall 1119)</div>
+        <div class="font-bold text-slate-900 text-[13.5px]">Bun Rieu Cua, Banh Beo & Che Ba Muoi</div>
       </div>
     </div>
   
@@ -11235,21 +11234,21 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -11321,7 +11320,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
           Ben Thanh Market Ultimate Travel Guide 2026: The Complete Insider Field Handbook
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          The Definitive Insider Field Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics
+          The Definitive A-Z Survival Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           Stepping into Saigon's centennial market can feel overwhelming without advance intelligence. From decoding stall numbering systems and verified parking basements to mastering civilized bargaining etiquette, this comprehensive field manual ensures an effortless, authentic voyage.
@@ -11346,7 +11345,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
         <div class="flex flex-wrap items-center gap-3 mt-8 pt-4">
           
     <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
-      <span class="text-amber-400 text-base">🧭</span> Comprehensive Field Handbook
+      <span class="text-amber-400 text-base">🧭</span> Comprehensive A-Z Handbook
     </div>
   
 
@@ -11386,12 +11385,12 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Stepping into Saigon's Beating Heart Like an Insider</a>
+                  <a href="#stepping-into-saigons-beating-heart-like-an-insider" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Stepping into Saigon's Beating Heart Like an Insider</a>
   <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
   <a href="#the-open-air-night-street-bazaar-1800-2330" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Open-Air Night Street Bazaar (18:00 – 23:30)</a>
   <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
   <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
-  <a href="#master-bargaining-rules-the-smiling-negotiation-code" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Bargaining Rules: The "Smiling Negotiation" Code</a>
+  <a href="#bargaining-with-a-smile-practical-tips-for-respectful-negotiation" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Bargaining with a Smile: Practical Tips for Respectful Negotiation</a>
   <a href="#hygiene-and-dining-safety-in-the-culinary-hall" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Hygiene & Dining Safety in the Culinary Hall</a>
   <a href="#safety-scams-and-emergency-contacts" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Safety, Scams & Emergency Contacts</a>
 
@@ -11441,8 +11440,8 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-stepping-into-saigons-beating-heart-like-an-insider" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Stepping into Saigon's Beating Heart Like an Insider
+          <h2 id="stepping-into-saigons-beating-heart-like-an-insider" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Stepping into Saigon's Beating Heart Like an Insider
           </h2>
         </div>
       <p>Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.</p>
@@ -11518,8 +11517,8 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="master-bargaining-rules-the-smiling-negotiation-code" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Master Bargaining Rules: The "Smiling Negotiation" Code
+          <h2 id="bargaining-with-a-smile-practical-tips-for-respectful-negotiation" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Bargaining with a Smile: Practical Tips for Respectful Negotiation
           </h2>
         </div>
       <p>Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social performance. To shop ethically without overpaying, keep these golden guidelines in mind:</p>
@@ -11540,7 +11539,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <ul>
 <li><strong>Look for Fast Turnover:</strong> Choose vendors with stainless-steel countertops, boiling cauldrons, and bustling queues of local office workers. Rapid turnover ensures fresh ingredients.</li>
 <li><strong>Hydration Etiquette:</strong> Avoid unsealed tap water; request bottled mineral water or freshly cracked whole coconuts.</li>
-<li><strong>Must-Try Specialties:</strong> Do not miss <em>Bun Rieu Cua Dong</em> (East Gate aisle), <em>Banh Beo Hue</em> with crispy pork crackling, and legendary iced sweet soups (<em>Che Be (Stall 1119)</em>).</li>
+<li><strong>Must-Try Specialties:</strong> Do not miss <em>Bun Rieu Cua Dong</em> (East Gate aisle), <em>Banh Beo Hue</em> with crispy pork crackling, and legendary iced sweet soups (<em>Che Be</em>).</li>
 </ul>
 <hr>
 
@@ -11658,21 +11657,21 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -12139,7 +12138,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
           Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols
+          7 Common Tourist Traps, Price Benchmarks & Essential Safety Tips (2026)
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence.
@@ -12204,7 +12203,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar</a>
+                  <a href="#the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Shadows Behind the Splendor of a Century-Old Bazaar</a>
   <a href="#anatomy-of-the-7-most-common-scams-and-traps" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Anatomy of the 7 Most Common Scams & Traps</a>
   <a href="#scam-1-the-astronomical-price-hike-300-500-inflation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)</a>
   <a href="#scam-2-the-fruit-shoulder-pole-photo-trap-200000-vnd-surprise" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Scam 2: The "Fruit Shoulder Pole Photo Trap" (200,000 VND Surprise)</a>
@@ -12262,8 +12261,8 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+          <h2 id="the-shadows-behind-the-splendor-of-a-century-old-bazaar" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Shadows Behind the Splendor of a Century-Old Bazaar
           </h2>
         </div>
       <p>Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.</p>
@@ -12399,7 +12398,7 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 | **Jumbo Roasted Salted Cashews (500g)** | 110,000 – 140,000 VND | 220,000 – 300,000 VND | Select whole, unbroken, vacuum-sealed jars |
 | **Artisanal Ground Robusta/Arabica (1kg)** | 250,000 – 450,000 VND | 600,000 – 900,000 VND | Request bean grinding on the spot |
 | **Bowl of Crab Noodle Soup (*Bun Rieu*)** | 50,000 – 65,000 VND | 80,000 – 100,000 VND | Confirm bowl price before seating |
-| **Che Be (Stall 1119) Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
+| **Che Be Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
 | **Chilled Fresh Coconut (Curb-side)** | 25,000 – 35,000 VND | 100,000 – 200,000 VND | Only accept once verbal price is agreed |<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
@@ -12513,21 +12512,21 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -13336,7 +13335,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
           Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          Insider Exchange Rates, Banknote Quality Rules & Security Guide at Ha Tam Gold Shop (2026)
+          Competitive Rates, Banknote Quality Rules & Practical Safety Guide at Ha Tam (2026)
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           Across the West Gate of Ben Thanh Market lies Saigon's premier open currency exchange nexus: Ha Tam Gold Shop. Learn how to secure near-zero spread market rates for USD, EUR, JPY, and AUD with zero commission and lightning-fast execution.
@@ -13401,7 +13400,7 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-saigons-miniature-financial-street" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Saigon's Miniature Financial Street</a>
+                  <a href="#saigons-miniature-financial-street" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Saigon's Miniature Financial Street</a>
   <a href="#ha-tam-vs-mai-van-the-west-gate-twin-titans" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Ha Tam vs. Mai Van: The West Gate Twin Titans</a>
   <a href="#rate-comparison-ha-tam-vs-commercial-banks-vs-tan-son-nhat-airport" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Rate Comparison: Ha Tam vs. Commercial Banks vs. Tan Son Nhat Airport</a>
   <a href="#crucial-banknote-rules-avoiding-rejection-or-fee-deductions" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Crucial Banknote Rules (Avoiding Rejection or Fee Deductions)</a>
@@ -13456,8 +13455,8 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-saigons-miniature-financial-street" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Saigon's Miniature Financial Street
+          <h2 id="saigons-miniature-financial-street" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Saigon's Miniature Financial Street
           </h2>
         </div>
       <p>Ask any seasoned expatriate, diplomat, or frequent international traveler where to secure the absolute best currency exchange rates in Ho Chi Minh City, and nine out of ten will point you to the same bustling intersection: <strong>Ha Tam Gold Shop</strong> (<em>Tiem Vang Ha Tam</em>), nestled at the corner of Nguyen An Ninh and Phan Chu Trinh streets directly across from Ben Thanh Market&#39;s West Gate.</p>
@@ -13661,21 +13660,21 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -14103,7 +14102,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
           Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          6 Official Basements, Regulated Municipal Rates & Curbside Scam Prevention (2026 Master Guide)
+          6 Regulated Parking Basements, Official Rates & Curbside Scam Prevention (2026 Guide)
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           District 1's dense urban grid makes finding legitimate parking a major headache. Navigate directly to 6 verified, surveillance-guarded facilities—from the state-of-the-art Metro basement to climate-controlled malls—and avoid aggressive curbside parking touts.
@@ -14168,7 +14167,7 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-the-battle-for-parking-in-saigons-heritage-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: The Battle for Parking in Saigon’s Heritage Heart</a>
+                  <a href="#the-battle-for-parking-in-saigons-heritage-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">The Battle for Parking in Saigon’s Heritage Heart</a>
   <a href="#master-comparison-6-regulated-parking-hubs-and-2026-tariffs" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Comparison: 6 Regulated Parking Hubs & 2026 Tariffs</a>
   <a href="#practical-recommendations-by-vehicle-class" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Practical Recommendations by Vehicle Class</a>
   <a href="#a-for-motorbike-and-scooter-riders" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">A. For Motorbike & Scooter Riders</a>
@@ -14221,8 +14220,8 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-the-battle-for-parking-in-saigons-heritage-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: The Battle for Parking in Saigon’s Heritage Heart
+          <h2 id="the-battle-for-parking-in-saigons-heritage-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            The Battle for Parking in Saigon’s Heritage Heart
           </h2>
         </div>
       <p>District 1 represents Vietnam&#39;s densest urban commercial zone, with Ben Thanh Market serving as its bustling gravitational center. With thousands of shoppers, food lovers, and international visitors converging hourly—combined with newly pedestrianized boulevards across Quach Thi Trang Square—locating secure, municipally regulated parking for scooters or cars is a notorious friction point.</p>
@@ -14415,21 +14414,21 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -14635,7 +14634,7 @@ export const canThoHotelsGuideHtml = `<!-- layout: landing -->
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-For the discerning traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.<hr>
+For the traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.<hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
           <h2 id="tier-1-the-riverfront-patriarchs-luxury-and-heritage" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
@@ -14904,7 +14903,7 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
           Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)
         </h1>
         <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
-          5 Best Transfer Options from SGN to District 1: Express Bus 109, Reputable Cabs & VIP Private Cars (2026)
+          5 Best Ways from SGN to District 1: Express Bus 109, Grab & Verified Taxis (2026 Guide)
         </h2>
         <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
           Arriving at Tan Son Nhat Airport (SGN) can be daunting with unlicensed taxi touts and complex terminal pickup lanes. Here is your definitive breakdown of the 5 fastest, safest, and most cost-effective routes straight to Ben Thanh Market in District 1.
@@ -14969,7 +14968,7 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
               </a>
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
-                  <a href="#introduction-your-gateway-ride-into-saigons-vibrant-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Introduction: Your Gateway Ride into Saigon’s Vibrant Heart</a>
+                  <a href="#your-gateway-ride-into-saigons-vibrant-heart" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Your Gateway Ride into Saigon’s Vibrant Heart</a>
   <a href="#master-comparison-of-5-airport-transfer-options-2026-rates" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Master Comparison of 5 Airport Transfer Options (2026 Rates)</a>
   <a href="#step-by-step-logistics-and-insider-tactics" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">Step-by-Step Logistics & Insider Tactics</a>
   <a href="#option-1-yellow-bus-109-the-smart-travelers-favorite" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">Option 1: Yellow Bus 109 (The Smart Traveler’s Favorite)</a>
@@ -15023,8 +15022,8 @@ export const tanSonNhatAirportToBenThanhTransferGuideHtml = `<!-- layout: landin
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="introduction-your-gateway-ride-into-saigons-vibrant-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            Introduction: Your Gateway Ride into Saigon’s Vibrant Heart
+          <h2 id="your-gateway-ride-into-saigons-vibrant-heart" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            Your Gateway Ride into Saigon’s Vibrant Heart
           </h2>
         </div>
       <p>As your flight touches down at Tan Son Nhat International Airport (SGN), most travelers share an identical maiden destination: <strong>District 1</strong>, anchored by the historic clock tower of Ben Thanh Market. As the epicenter of Saigon’s hospitality, heritage dining, cultural attractions, and municipal transit crossroads, reaching Ben Thanh smoothly sets the rhythm for your entire journey.</p>
@@ -15226,21 +15225,21 @@ However, exiting the arrivals terminal into the humid tropical warmth can be ove
                 
       <a href="/things-to-do-near-ben-thanh-market" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Things To Do Near Ben Thanh Market: An Evocative Stroll Through Indochinese Heritage, Sacred Sanctuaries & 2026 Metro Pulses
+          Things To Do Near Ben Thanh Market: A walking guide to century-old Indochine architecture, quiet neighborhood temples, and modern street life within a 1-kilometer radius
         </div>
       </a>
     
 
       <a href="/hcmc-museum-of-fine-arts-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Hcmc Museum Of Fine Arts Guide: A Mesmerizing Intersection of French Art Deco and Southern Feng Shui
+          Hcmc Museum Of Fine Arts Guide: Exploring French Art Deco architecture, Chinese feng shui balance, and 99 stained-glass windows just 350m from Ben Thanh
         </div>
       </a>
     
 
       <a href="/ben-thanh-market-food-guide" class="block p-3 rounded-xl bg-slate-50 hover:bg-amber-50/60 transition-colors border border-slate-100 group">
         <div class="text-[13px] font-bold text-slate-800 group-hover:text-amber-800 transition-colors leading-snug line-clamp-2">
-          Ben Thanh Market Food Guide: Unraveling Simmering Broths, Freshwater Crab Cakes & Charcoal Braziers
+          Ben Thanh Market Food Guide: From Morning Crab Noodle Bowls to Evening Charcoal Stalls on Phan Boi Chau Street
         </div>
       </a>
     
@@ -15378,7 +15377,7 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
               
               <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
                   <a href="#a-century-of-floral-engineering" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">A Century of Floral Engineering</a>
-  <a href="#the-botanical-stratigraphy" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌸 The Botanical Stratigraphy</a>
+  <a href="#flower-varieties-and-seasonal-bloom-cycles" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌸 Flower Varieties & Seasonal Bloom Cycles</a>
   <a href="#the-lunar-new-year-core-tet-season" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Lunar New Year Core (Tet Season)</a>
   <a href="#the-year-round-perennials" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 pl-2 text-[12.5px]">The Year-Round Perennials</a>
   <a href="#the-2026-navigational-matrix" class="block transition-colors leading-tight py-1.5 text-slate-700 hover:text-amber-700 font-semibold text-[13px]">🌟 The 2026 Navigational Matrix</a>
@@ -15437,8 +15436,8 @@ export const saDecFlowerVillageHtml = `<!-- layout: landing -->
 <hr>
 
         <div class="border-l-4 border-amber-500 pl-4 my-8">
-          <h2 id="the-botanical-stratigraphy" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-            🌸 The Botanical Stratigraphy
+          <h2 id="flower-varieties-and-seasonal-bloom-cycles" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+            🌸 Flower Varieties & Seasonal Bloom Cycles
           </h2>
         </div>
       <p>Spanning over 313 hectares, the village operates as the primary floral artery for all of Southern Vietnam, supplying everything from ornamental bonsai to industrial-scale marigold yields.</p>

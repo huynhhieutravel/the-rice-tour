@@ -2,7 +2,7 @@
 id: 34006
 order: 6
 title: "Ben Thanh Central Metro Station: Navigating Saigon’s Futuristic Underground Pulse"
-subtitle: "A 32-meter subterranean engineering marvel crowned by a celestial lotus skylight uniting colonial memory with rapid transit velocity"
+subtitle: "How to navigate Saigon's first underground transit hub: 4 levels, 32 meters below street level, and direct connections across District 1"
 lead: "If Ben Thanh Market's clock tower embodies the romance of 20th-century nostalgia, the cavernous terminal directly beneath its foundations heralds Saigon’s bold technological future. Here, equatorial sunlight cascades through a monumental glass lotus skylight into the subterranean depths, transforming mass transit into a poetic architectural dialogue."
 slug: "ben-thanh-central-metro-station-guide"
 published_date: "2026-09-07T10:30:00"
@@ -72,7 +72,7 @@ Enshrined as the crowning technological triumph within our guide to [things to d
 
 ---
 
-## Subterranean Renaissance: Reimagining the Urban Landscape
+## Saigon's Underground Transit: How Metro Line 1 Connects the City
 
 Following a decade of surgical underground construction utilizing Japanese Tunnel Boring Machines (TBM), Ben Thanh Central Station has catalyzed the total pedestrianization of Quach Thi Trang Square.
 
@@ -91,7 +91,7 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
 
 ---
 
-## Navigating the Four-Tier Subterranean Labyrinth
+## Navigating the 4 Underground Levels: Entrances, Ticketing & Platforms
 
 ```mermaid
 graph TD
@@ -125,7 +125,7 @@ Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maint
 
 ---
 
-## Curated Transit Insights for Conscious Travelers (2026)
+## Practical Transit Tips & Passenger Guidelines (2026)
 
 1. **Selecting Your Fare Media:**
    - For casual journeys: Purchase single-journey tokens via automated ticketing machines accepting contactless Visa/Mastercard.

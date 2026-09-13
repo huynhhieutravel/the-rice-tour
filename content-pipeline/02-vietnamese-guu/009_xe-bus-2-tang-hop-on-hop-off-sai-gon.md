@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus
 
 ---
 
-## Dẫn Nhập: Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
+## Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
 
 Giữa nhịp sống đô thị cuộn chảy không ngừng của trung tâm Quận 1, nơi dòng xe máy đan xen như mắc cửi trên những đại lộ rợp bóng cổ thụ trăm năm, trải nghiệm ngắm nhìn Sài Gòn từ độ cao 4 mét trên tầng hai của xe bus mui trần (Hop-on Hop-off) mang đến một nhãn quan hoàn toàn mới mẻ. Không còn bị che khuất tầm mắt bởi dòng người hối hả hay những lớp kính xe hơi ngột ngạt, du khách được đón trọn từng làn gió mát rượi thổi từ sông Sài Gòn, chạm tay vào những tán xà cừ cổ thụ và thu trọn vào tầm mắt những mái ngói vòm cong phong cách Phục Hưng của Bưu điện Trung tâm, tháp chuông uy nghiêm của Nhà thờ Đức Bà hay ánh hoàng hôn buông lơi trên dòng sông uốn lượn qua cầu Ba Son.
 
@@ -118,7 +118,7 @@ Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh
 
 ---
 
-## Sổ Tay Kinh Nghiệm Đắt Giá Dành Cho Lữ Khách "Có GUU"
+## Sổ Tay Kinh Nghiệm Dành Cho Du Khách Đi Xe Bus 2 Tầng
 
 Để hành trình ngắm cảnh trên xe bus 2 tầng đạt được sự thư thái trọn vẹn nhất, hãy ghi nhớ những bí quyết thực địa sau:
 
@@ -141,7 +141,7 @@ Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh
 
 Du khách có thể dễ dàng thiết kế một buổi chiều hoàn hảo bắt đầu và kết thúc tại Chợ Bến Thành:
 
-- **15:00 – 16:30:** Dạo bước thưởng thức ẩm thực xế chiều tại Cửa Đông Chợ Bến Thành (thưởng thức gỏi cuốn tôm thịt, bún riêu cua hoặc chè Ba Mười).
+- **15:00 – 16:30:** Dạo bước thưởng thức ẩm thực xế chiều tại Cửa Đông Chợ Bến Thành (thưởng thức gỏi cuốn tôm thịt, bún riêu cua hoặc chè Bé (sạp 1119)).
 - **16:45:** Đi bộ sang trạm đón xe bus tại Cửa Tây (23 Phan Chu Trinh), xuất trình mã vé điện tử và lên tầng 2 đón gió.
 - **17:00 – 18:00:** Tận hưởng trọn vẹn vòng quay 60 phút qua các đại lộ di sản và ngắm hoàng hôn buông trên sông Sài Gòn.
 - **18:15:** Trở về trạm Bến Thành, thong thả dạo bộ sang Phố đi bộ Lê Lợi hoặc xuống ga ngầm Metro trải nghiệm không gian ngầm hiện đại bậc nhất Việt Nam.

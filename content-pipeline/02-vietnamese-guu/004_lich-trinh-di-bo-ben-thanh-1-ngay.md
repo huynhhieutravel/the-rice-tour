@@ -18,7 +18,7 @@ featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-
 
 > *“Cách duy nhất để thấu cảm linh hồn của một đô thị không phải là nhìn ngắm nó qua khung kính kín mít của những chiếc xe hơi máy lạnh, mà là đặt từng bước chân trần thực xuống những vỉa hè rợp bóng cây cổ thụ. Đi để nghe tiếng chuông chùa thanh thản, để ngửi thấy mùi khói cà phê rang xay thơm nồng từ những chung cư trăm tuổi, và để đón làn gió mát rượi thổi vào từ dòng sông Sài Gòn lúc chiều buông.”*
 
-Là một hợp phần cốt lõi trong hệ thống [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Lộ trình tản bộ di sản 1 ngày (One-Day Heritage Walking Tour)** được The Rice Tour thiết kế khoa học nhằm giúp người lữ khách có gu tận hưởng trọn vẹn những gì tinh túy nhất của trung tâm Quận 1 mà không hề cảm thấy hối hả hay kiệt sức dưới khí hậu nhiệt đới phương Nam.
+Là một hợp phần cốt lõi trong hệ thống [những địa điểm nổi tiếng quanh Bến Thành](/things-to-do-near-ben-thanh-market), **Lộ trình tản bộ di sản 1 ngày (One-Day Heritage Walking Tour)** được The Rice Tour thiết kế khoa học nhằm giúp du khách tận hưởng trọn vẹn những gì tinh túy nhất của trung tâm Quận 1 mà không hề cảm thấy hối hả hay kiệt sức dưới khí hậu nhiệt đới phương Nam.
 
 
 ---
@@ -67,7 +67,7 @@ graph TD
 - **07:30 – 09:00:** Bắt đầu ngày mới tại Cửa Đông Chợ Bến Thành. Thưởng thức tô [bún riêu gánh Bến Thành](/am-thuc-cho-ben-thanh) nóng hổi đậm đà hương vị cua đồng. Sau đó dạo bước quanh Cửa Nam ngắm tháp đồng hồ 1914 và chiêm ngưỡng các bức phù điêu gốm Biên Hòa dưới ánh nắng sớm tinh khôi.
 - **09:15 – 10:15:** Tản bộ 200m qua đường Trương Định viếng **Đền Hindu Mariamman**. Cởi bỏ giày dép nơi ngưỡng cửa, hít thở hương trầm nồng ấm và ngắm nhìn tháp Gopuram rực rỡ tượng thần Hindu chạm khắc thủ công.
 
-### Chặng 2 (10:30 – 13:45): Không Gian Nghệ Thuật & Nốt Trầm Chung Cư Cổ
+### Chặng 2 (10:30 – 13:45): Không Gian Nghệ Thuật & Quán Cà Phê Chung Cư Cổ
 - **10:30 – 12:00:** Đi bộ 350m qua đường Lê Thị Hồng Gấm hướng về **Bảo tàng Mỹ thuật TP.HCM (97A Phó Đức Chính)**. Dành 90 phút chiêm ngưỡng dinh thự 99 ô cửa của gia tộc Chú Hỏa, ngắm các vệt nắng rọi qua kính màu stained-glass và thưởng lãm kiệt tác *"Vườn xuân Trung Nam Bắc"*.
 - **12:15 – 13:45:** Bữa trưa thanh nhã với các món cơm niêu, gỏi cuốn hoặc phở truyền thống tại nhà hàng phong cách Indochine quanh khu vực Nguyễn Thái Bình. Sau đó, leo cầu thang gạch bông lên quán cà phê ẩn mình trong chung cư cổ đường Pasteur, nhâm nhi ly cà phê phin nguyên bản và đọc một cuốn sách trong không gian hoài niệm.
 
@@ -91,7 +91,7 @@ graph TD
 | **10:30 – 12:00** | Bảo tàng Mỹ thuật TP.HCM | Khám phá Dinh thự Chú Hỏa, tranh sơn mài | 30.000 VNĐ | — |
 | **12:15 – 13:45** | Phố cổ & Chung cư Pasteur | Ăn trưa món Việt & cà phê pour-over | Miễn phí | 180.000 – 220.000 VNĐ |
 | **14:00 – 16:00** | Dinh Độc Lập | Tham quan phòng khánh tiết & hầm bí mật | 65.000 VNĐ | — |
-| **16:15 – 17:45** | Ga Metro & Bến Bạch Đằng | Check-in giếng trời Toplight, ngắm hoàng hôn | 15.000 VNĐ (vé metro) | 30.000 VNĐ (nước dừa) |
+| **16:15 – 17:45** | Ga Metro & Bến Bạch Đằng | Chiêm ngưỡng giếng trời Toplight, ngắm hoàng hôn | 15.000 VNĐ (vé metro) | 30.000 VNĐ (nước dừa) |
 | **18:00 – 20:30** | Phố đêm & Rooftop Bar | Ẩm thực nướng than hoa & cocktail đêm | Miễn phí | 250.000 – 350.000 VNĐ |
 | **TỔNG CỘNG** | **Trọn vẹn 1 ngày** | **6 di sản văn hóa + 4 trải nghiệm ẩm thực** | **~110.000 VNĐ** | **~540.000 – 680.000 VNĐ** |
 
@@ -109,4 +109,4 @@ graph TD
 
 ## Lời Kết (Epilogue): Bước Chậm Để Yêu Sài Gòn Sâu Sắc Hơn
 
-Một ngày tản bộ quanh Bến Thành sẽ đập tan hoàn toàn định kiến cho rằng Sài Gòn chỉ là một đô thị xô bồ, ồn ã và thiếu vắng trầm tích văn hóa. Từng góc phố bạn đi qua, từng bóng cây dầu trăm tuổi bạn dừng chân đều mang trong mình những lớp phù sa lịch sử lấp lánh. Khi đêm buông xuống và nhấp ly cocktail ngắm nhìn dòng xe như thoi đưa quanh bùng binh Bến Thành, bạn sẽ nhận ra mình đã trót yêu thành phố này từ những điều mộc mạc và chân phương nhất.
+Một ngày tản bộ quanh Bến Thành sẽ đập tan hoàn toàn định kiến cho rằng Sài Gòn chỉ là một đô thị xô bồ, ồn ã và thiếu vắng chiều sâu văn hóa. Từng góc phố bạn đi qua, từng bóng cây dầu trăm tuổi bạn dừng chân đều mang trong mình những lớp phù sa lịch sử lấp lánh. Khi đêm buông xuống và nhấp ly cocktail ngắm nhìn dòng xe như thoi đưa quanh bùng binh Bến Thành, bạn sẽ nhận ra mình đã trót yêu thành phố này từ những điều mộc mạc và chân phương nhất.

@@ -9,7 +9,7 @@ author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Safety & Scams", "Pain Points"]
 tags: ["Ben Thanh Market scams", "Overcharging in Saigon", "Saigon tourist traps", "Safety tips Ben Thanh", "Cultured Travel"]
 featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp"
-subtitle: "7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols"
+subtitle: "7 Common Tourist Traps, Price Benchmarks & Essential Safety Tips (2026)"
 lead: "While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence."
 badges:
   - icon: "🛡️"
@@ -59,7 +59,7 @@ epilogue: "Awareness is not about viewing every merchant with suspicion; it is a
 
 ---
 
-## Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+## The Shadows Behind the Splendor of a Century-Old Bazaar
 
 Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.
 

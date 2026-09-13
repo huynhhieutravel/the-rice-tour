@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-main-gat
 
 ---
 
-## Dẫn Nhập: Bước Vào Trái Tim Sài Gòn Với Tâm Thế Của Một Chuyên Gia
+## Bước Vào Trái Tim Sài Gòn Với Tâm Thế Của Một Chuyên Gia
 
 Chợ Bến Thành là biểu tượng số một của Sài Gòn, nơi đón tiếp hàng chục ngàn lượt du khách mỗi ngày. Thế nhưng, đối với những người lần đầu ghé thăm, ngôi chợ trăm tuổi này có thể mang lại cảm giác vừa choáng ngợp vừa e ngại: mê cung hàng ngàn sạp hàng san sát, mức giá "nhìn mặt bắt hình dong", tình trạng chèo kéo hay nỗi lo móc túi giữa đám đông náo nhiệt.
 

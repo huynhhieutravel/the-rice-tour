@@ -27,7 +27,7 @@ Situated in a region historically prone to the unpredictable flood pulses of the
 
 ---
 
-## 🌸 The Botanical Stratigraphy
+## 🌸 Flower Varieties & Seasonal Bloom Cycles
 
 Spanning over 313 hectares, the village operates as the primary floral artery for all of Southern Vietnam, supplying everything from ornamental bonsai to industrial-scale marigold yields.
 

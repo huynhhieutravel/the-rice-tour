@@ -9,7 +9,7 @@ author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Safety & Scams", "Pain Points"]
 tags: ["Ben Thanh Market scams", "Overcharging in Saigon", "Saigon tourist traps", "Safety tips Ben Thanh", "Cultured Travel"]
 featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp"
-subtitle: "7 Common Tourist Traps, Price Inflation Countermeasures & 2026 Personal Security Protocols"
+subtitle: "7 Common Tourist Traps, Price Benchmarks & Essential Safety Tips (2026)"
 lead: "While Ben Thanh Market is a cultural treasure, unwary travelers often face sleeve-pulling, aggressive price gouging, and tourist traps. Here is your definitive field guide to recognizing, preventing, and neutralizing the 7 most frequent scams with dignity and confidence."
 badges:
   - icon: "🛡️"
@@ -59,7 +59,7 @@ epilogue: "Awareness is not about viewing every merchant with suspicion; it is a
 
 ---
 
-## Introduction: The Shadows Behind the Splendor of a Century-Old Bazaar
+## The Shadows Behind the Splendor of a Century-Old Bazaar
 
 Ben Thanh Market is celebrated worldwide as Saigon’s premier cultural monument—a vibrant crossroads of southern commerce, rich culinary heritage, and centuries-old mercantile traditions. However, like legendary bustling markets worldwide—from Istanbul’s Grand Bazaar to Bangkok’s Chatuchak—high concentrations of curious international tourists inevitably attract predatory commercial actors seeking to exploit unfamiliarity and good nature.
 
@@ -136,7 +136,7 @@ To navigate commerce with confidence, refer to this ground-verified pricing guid
 | **Jumbo Roasted Salted Cashews (500g)** | 110,000 – 140,000 VND | 220,000 – 300,000 VND | Select whole, unbroken, vacuum-sealed jars |
 | **Artisanal Ground Robusta/Arabica (1kg)** | 250,000 – 450,000 VND | 600,000 – 900,000 VND | Request bean grinding on the spot |
 | **Bowl of Crab Noodle Soup (*Bun Rieu*)** | 50,000 – 65,000 VND | 80,000 – 100,000 VND | Confirm bowl price before seating |
-| **Che Ba Muoi Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
+| **Che Be Shaved Ice Dessert** | 30,000 – 40,000 VND | Fair & Fixed Price | Renowned family stall with zero bargaining needed |
 | **Chilled Fresh Coconut (Curb-side)** | 25,000 – 35,000 VND | 100,000 – 200,000 VND | Only accept once verbal price is agreed |
 
 ---

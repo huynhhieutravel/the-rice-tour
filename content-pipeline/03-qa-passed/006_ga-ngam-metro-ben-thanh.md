@@ -2,15 +2,11 @@
 id: 34006
 order: 6
 title: "Ga Ngầm Metro Bến Thành 2026: Trải Nghiệm Tuyến Tàu Đô Thị Đầu Tiên Của TP.HCM"
-subtitle: "Khám phá kỳ quan ngầm 4 tầng sâu 32m và giếng trời hoa sen kết nối trái tim lịch sử với tương lai đô thị hiện đại"
+subtitle: "Khám phá nhà ga ngầm 4 tầng sâu 32m và giếng trời hoa sen kết nối giao thông hiện đại với trung tâm thành phố"
 slug: "ga-ngam-metro-ben-thanh"
 category: "Cẩm nang đô thị & Giao thông Sài Gòn"
 tags: ["Metro Bến Thành", "Tuyến Metro số 1", "Ga ngầm Bến Thành", "Quận 1", "Toplight hoa sen", "Giao thông Sài Gòn 2026", "Du lịch có GUU"]
-status: "qa-passed"
-qa_auditor: "The Rice Tour QA Station 2"
-qa_date: "2026-09-07T18:19:10"
-word_count: 1950
-quality_score: 100
+status: "rewritten-guu"
 published_date: "2026-09-07T10:30:00"
 author: "The Rice Tour Editorial"
 read_time: 12
@@ -37,7 +33,7 @@ Là mảnh ghép hiện đại nhất trong bức tranh [những địa điểm 
 
 ---
 
-## Không Gian Đô Thị Ngầm: Bước Chuyển Mình Kỳ Vĩ Của Hạ Tầng Phương Nam
+## Giao Thông Đô Thị Ngầm: Bước Chuyển Mình Hiện Đại Của TP.HCM
 
 Sau hơn một thập kỷ thi công với công nghệ đào hầm TBM (Tunnel Boring Machine) tiên tiến của Nhật Bản cùng hàng ngàn kỹ sư, công nhân Việt Nam, Ga trung tâm Bến Thành đã hoàn thành việc tái thiết toàn bộ cảnh quan quảng trường Quách Thị Trang. 
 
@@ -58,7 +54,7 @@ Sự xuất hiện của ga metro đã thay đổi căn bản cách thức tiế
 
 ---
 
-## Giải Mã Kiến Trúc 4 Tầng Ngầm Dưới Lòng Bến Thành
+## Khám Phá Cấu Trúc 4 Tầng Ngầm Dưới Lòng Bến Thành
 
 ```mermaid
 graph TD
@@ -94,7 +90,7 @@ Nơi đoàn tàu metro đón trả khách với hệ thống cửa chắn ke ga 
 
 ---
 
-## Hướng Dẫn Trải Nghiệm Thực Tế Cho Người Du Hành Có GUU (Field Notes 2026)
+## Hướng Dẫn Di Chuyển Thực Tế Bằng Tuyến Metro Số 1 (2026)
 
 1. **Lựa chọn loại vé thông minh:**
    - Nếu bạn chỉ đi thử nghiệm 1 – 2 chặng: Mua vé lượt tại máy bán vé tự động (chấp nhận tiền mặt, thẻ Visa/Mastercard hoặc quét mã VietQR).

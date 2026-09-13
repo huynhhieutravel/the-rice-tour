@@ -34,7 +34,7 @@ As the undisputed capital of the Mekong Delta, Can Tho has rapidly transitioned 
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-For the discerning traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.
+For the traveler, selecting accommodation in Can Tho is no longer just about securing a bed—it is about positioning yourself strategically to intercept the city’s early morning floating markets and vibrant nocturnal street food scene.
 
 ---
 

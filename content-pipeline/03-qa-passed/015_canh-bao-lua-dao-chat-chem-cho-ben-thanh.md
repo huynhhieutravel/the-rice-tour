@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-
 
 ---
 
-## Dẫn Nhập: Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
+## Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
 
 Chợ Bến Thành là niềm tự hào di sản của người dân Sài Gòn, nơi hội tụ tinh hoa hàng hóa và ẩm thực phương Nam. Tuy nhiên, bất kỳ trung tâm giao thương sầm uất nào trên thế giới – từ Grand Bazaar ở Istanbul, Chatuchak ở Bangkok cho đến Chợ Bến Thành – đều tồn tại những mảng xám thương mại và những cạm bẫy nhắm vào sự bỡ ngỡ, cả tin của du khách thập phương.
 
@@ -97,7 +97,7 @@ Tình trạng "nhìn mặt hét giá", chèo kéo níu tay áo, đánh tráo hà
 | **Hạt điều rang muối loại 1 (Hộp 500g)** | 110.000 – 140.000 VNĐ | 220.000 – 300.000 VNĐ | Chọn hạt to cùi, nguyên hạt không vỡ vụn |
 | **Cà phê Robusta/Arabica rang mộc (1kg)** | 250.000 – 450.000 VNĐ | 600.000 – 900.000 VNĐ | Yêu cầu xay hạt tại chỗ |
 | **Tô bún riêu / Bún bò khu ẩm thực** | 50.000 – 65.000 VNĐ | 80.000 – 100.000 VNĐ | Hỏi giá trước khi ngồi vào bàn |
-| **Ly chè thập cẩm Ba Mười** | 30.000 – 40.000 VNĐ | Không bị hét (giá cố định) | Quán uy tín, an tâm thưởng thức |
+| **Ly chè thập cẩm Chè Bé (sạp 1119)** | 30.000 – 40.000 VNĐ | Không bị hét (giá cố định) | Quán uy tín, an tâm thưởng thức |
 | **Trái dừa tươi ướp lạnh lề đường** | 25.000 – 35.000 VNĐ | 100.000 – 200.000 VNĐ | Chỉ mua khi người bán xác nhận giá trước |
 
 ---

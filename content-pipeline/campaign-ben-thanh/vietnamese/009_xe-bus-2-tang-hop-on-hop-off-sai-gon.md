@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus
 
 ---
 
-## Dẫn Nhập: Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
+## Góc Nhìn Khác Biệt Về Sài Gòn Từ Tầng Mui Trần
 
 Giữa nhịp sống đô thị cuộn chảy không ngừng của trung tâm Quận 1, nơi dòng xe máy đan xen như mắc cửi trên những đại lộ rợp bóng cổ thụ trăm năm, trải nghiệm ngắm nhìn Sài Gòn từ độ cao 4 mét trên tầng hai của xe bus mui trần (Hop-on Hop-off) mang đến một nhãn quan hoàn toàn mới mẻ. Không còn bị che khuất tầm mắt bởi dòng người hối hả hay những lớp kính xe hơi ngột ngạt, du khách được đón trọn từng làn gió mát rượi thổi từ sông Sài Gòn, chạm tay vào những tán xà cừ cổ thụ và thu trọn vào tầm mắt những mái ngói vòm cong phong cách Phục Hưng của Bưu điện Trung tâm, tháp chuông uy nghiêm của Nhà thờ Đức Bà hay ánh hoàng hôn buông lơi trên dòng sông uốn lượn qua cầu Ba Son.
 
@@ -118,7 +118,7 @@ Bảng giá vé được niêm yết công khai và tích hợp thanh toán linh
 
 ---
 
-## Sổ Tay Kinh Nghiệm Đắt Giá Dành Cho Lữ Khách "Có GUU"
+## Sổ Tay Kinh Nghiệm Dành Cho Du Khách Đi Xe Bus 2 Tầng
 
 Để hành trình ngắm cảnh trên xe bus 2 tầng đạt được sự thư thái trọn vẹn nhất, hãy ghi nhớ những bí quyết thực địa sau:
 

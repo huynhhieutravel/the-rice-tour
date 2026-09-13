@@ -9,7 +9,7 @@ author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Practical Field Advice", "Pillar Guide"]
 tags: ["Ben Thanh Market travel guide", "Ben Thanh Market A-Z", "Saigon survival guide", "District 1 travel tips", "Cultured Travel"]
 featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp"
-subtitle: "The Definitive Insider Field Handbook: Operating Hours, Stalls, Bargaining & 2026 Field Logistics"
+subtitle: "Operating Hours, Stall Layouts, Bargaining Tips & Practical 2026 Advice"
 lead: "Stepping into Saigon’s centennial market can feel overwhelming without advance intelligence. From decoding stall numbering systems and verified parking basements to mastering civilized bargaining etiquette, this comprehensive field manual ensures an effortless, authentic voyage."
 badges:
   - icon: "🧭"
@@ -59,7 +59,7 @@ epilogue: "Armed with cultural understanding and practical wisdom, Ben Thanh tra
 
 ---
 
-## Introduction: Stepping into Saigon's Beating Heart Like an Insider
+## Stepping into Saigon's Beating Heart Like an Insider
 
 Ben Thanh Market stands as Saigon’s preeminent civic symbol, welcoming tens of thousands of international and domestic travelers each day. Yet for first-time arrivals, this century-old labyrinth can evoke a blend of exhilaration and anxiety: thousands of packed stalls, subjective pricing, persistent vendor hawking, and the ever-present wariness of pickpockets amidst dense crowds.
 
@@ -115,7 +115,7 @@ Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned f
 
 ---
 
-## Master Bargaining Rules: The "Smiling Negotiation" Code
+## Bargaining with a Smile: Practical Tips for Respectful Negotiation
 
 Bargaining at Ben Thanh is not a hostile duel; it is a time-honored social performance. To shop ethically without overpaying, keep these golden guidelines in mind:
 

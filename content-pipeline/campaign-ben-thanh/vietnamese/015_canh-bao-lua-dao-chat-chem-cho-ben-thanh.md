@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-tourist-
 
 ---
 
-## Dẫn Nhập: Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
+## Sự Thật Đằng Sau Sự Hoa Lệ Của Khu Chợ Trăm Tuổi
 
 Chợ Bến Thành là niềm tự hào di sản của người dân Sài Gòn, nơi hội tụ tinh hoa hàng hóa và ẩm thực phương Nam. Tuy nhiên, bất kỳ trung tâm giao thương sầm uất nào trên thế giới – từ Grand Bazaar ở Istanbul, Chatuchak ở Bangkok cho đến Chợ Bến Thành – đều tồn tại những mảng xám thương mại và những cạm bẫy nhắm vào sự bỡ ngỡ, cả tin của du khách thập phương.
 

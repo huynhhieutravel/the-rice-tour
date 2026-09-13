@@ -1,9 +1,9 @@
 ---
 id: 34002
 order: 2
-title: "HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa"
+title: "HCMC Museum of Fine Arts: Inside the Historic Estate of Hui Bon Hoa"
 subtitle: "A mesmerizing intersection of French Art Deco and southern Feng Shui across 99 stained-glass windows just 350 meters from Ben Thanh Market"
-lead: "Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures."
+lead: "Tucked behind a leafy shade on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a quiet sunlit retreat amidst District 1's urban fast-paced traffic. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures."
 slug: "hcmc-museum-of-fine-arts-guide"
 published_date: "2026-09-07T08:30:00"
 read_time: 12
@@ -46,15 +46,15 @@ sidebar_facts:
     label: "Pioneering Feature"
     val: "Saigon's Earliest Timber-Cage Elevator"
 epilogue_title: "A Serene Dialogue with the Past"
-epilogue: "The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the discerning traveler that true beauty remains forever anchored in patience and craftsmanship."
+epilogue: "The HCMC Museum of Fine Arts is far more than a gallery of mounted canvases; the mansion itself breathes with the layered soul of southern history. In an era of breakneck modernization, spending two unhurried hours listening to the breeze whisper through 99 louvered windows reminds the traveler that true beauty remains forever anchored in patience and craftsmanship."
 
 featured_image: "https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp"
 ---
 
-# HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa
+# HCMC Museum of Fine Arts: Inside the Historic Estate of Hui Bon Hoa
 
 <div class="coguu-lead-box mb-8 p-6 bg-amber-50/80 border-l-4 border-amber-600 rounded-r-2xl shadow-xs font-serif text-[17px] text-slate-800 leading-relaxed italic">
-  Tucked behind a verdant canopy on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a sanctuary of golden stillness amidst District 1's urban kinetic rush. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
+  Tucked behind a leafy shade on Pho Duc Chinh Street, the Ho Chi Minh City Museum of Fine Arts stands as a quiet sunlit retreat amidst District 1's urban fast-paced traffic. Once the palatial residence of colonial Saigon’s wealthiest merchant, this architectural masterpiece now shelters over 22,000 national art treasures.
 </div>
 
 Located less than a five-minute stroll across Le Thi Hong Gam Street from the four-dial clock tower, the **Ho Chi Minh City Museum of Fine Arts** forms an indispensable cultural pillar in the comprehensive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market). Here, early 20th-century French architectural sophistication coalesces with traditional Sino-Vietnamese spiritual sensibilities, creating one of Southeast Asia's most evocative aesthetic havens.
@@ -123,7 +123,7 @@ Enshrined in a temperature-controlled gallery on the second floor of Building 1 
 
 ---
 
-## Curated Field Notes for the Discerning Traveler (2026)
+## Curated Field Notes for the Traveler (2026)
 
 - **Golden Light Window:** Visit between **08:30 and 10:30 AM** or **15:00 and 16:30 PM**. During these windows, low-angled sunlight casts dramatic linear shadows across the tiled verandas, creating exceptional conditions for architectural photography.
 - **Conservation Etiquette:** Refrain from touching the fragile lacquer surfaces and historic stone carvings. Flash photography is strictly forbidden to preserve delicate natural pigments and antique silk fibers.

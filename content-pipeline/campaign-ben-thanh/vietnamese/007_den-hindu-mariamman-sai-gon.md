@@ -2,7 +2,7 @@
 id: 34007
 order: 7
 title: "Đền Hindu Mariamman Sài Gòn: Ngôi Đền Ấn Độ Giáo Cổ Kính Bên Hông Bến Thành"
-subtitle: "Khám phá tháp cổng Dravidian rực rỡ và nghi thức áp đá thiêng độc nhất vô nhị của cộng đồng Tamil cách Bến Thành 200m"
+subtitle: "Khám phá tháp cổng Dravidian rực rỡ và nghi thức áp đá thiêng độc đáo của cộng đồng Tamil cách Bến Thành 200m"
 slug: "den-hindu-mariamman-sai-gon"
 category: "Di tích & Tôn giáo Sài Gòn"
 tags: ["Đền Mariamman", "Chùa Bà Ấn Độ", "Quận 1", "Kiến trúc Dravidian", "Di tích lịch sử", "Trương Định", "Du lịch có GUU"]
@@ -43,7 +43,7 @@ Thời kỳ này, chính sách mở cửa thương mại của chính quyền th
 
 ---
 
-## Giải Mã Nghệ Thuật Kiến Trúc Dravidian Nam Ấn
+## Kiến Trúc Đền Dravidian Nam Ấn: Tháp Cổng Gopuram & Các Ban Thờ Cổ
 
 Bước đến số 45 Trương Định, du khách sẽ ngay lập tức nhận diện những đặc trưng kiến trúc độc bản không thể trộn lẫn của Ấn Độ giáo:
 
@@ -90,7 +90,7 @@ Theo quan niệm tâm linh bản địa, bức tường đá này hấp thụ tr
 
 ---
 
-## Cẩm Nang Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
+## Lưu Ý & Văn Hóa Chiêm Bái Khi Vào Đền (2026)
 
 - **Quy tắc cởi giày bắt buộc:** Đền Hindu giáo yêu cầu 100% du khách phải cởi bỏ giày, dép và để gọn gàng trên kệ gỗ đặt ngay trước ngưỡng cửa vào đền.
 - **Trang phục kín đáo:** Mặc áo có tay, quần hoặc váy dài quá đầu gối. Tránh mặc quần áo quá ngắn, hở vai hoặc đồ bó sát khi bước vào không gian tôn nghiêm.
@@ -102,4 +102,4 @@ Theo quan niệm tâm linh bản địa, bức tường đá này hấp thụ tr
 
 ## Lời Kết (Epilogue): Vẻ Đẹp Của Tình Huynh Đệ Đa Văn Hóa
 
-Đền Hindu Mariamman là một biểu tượng rực rỡ minh chứng cho tâm hồn rộng mở của Sài Gòn. Nơi đây, người lữ khách phương xa không hề cảm thấy khoảng cách về ngôn ngữ, màu da hay tôn giáo; tất cả đều cùng cúi đầu thành kính trước vẻ đẹp của lòng nhân từ và khát vọng bình an. Dành ra một khoảng lặng tĩnh tâm nơi góc đền cổ này, bạn sẽ nhận ra hành trình du ngoạn có GUU thực chất là chuyến hành hương tìm về sự an yên sâu thẳm trong chính tâm hồn mình.
+Đền Hindu Mariamman là một biểu tượng rực rỡ minh chứng cho tâm hồn rộng mở của Sài Gòn. Nơi đây, du khách phương xa không hề cảm thấy khoảng cách về ngôn ngữ, màu da hay tôn giáo; tất cả đều cùng cúi đầu thành kính trước vẻ đẹp của lòng nhân từ và khát vọng bình an. Dành ra một khoảng lặng tĩnh tâm nơi góc đền cổ này, bạn sẽ nhận ra hành trình du ngoạn có GUU thực chất là chuyến hành hương tìm về sự an yên sâu thẳm trong chính tâm hồn mình.

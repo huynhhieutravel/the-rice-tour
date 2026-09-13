@@ -9,7 +9,7 @@ author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Activities & Experiences", "Pillar Guide"]
 tags: ["Things to do in Ben Thanh", "Ben Thanh Market activities", "District 1", "Saigon nightlife", "Cultured Travel"]
 featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp"
-subtitle: "15 Curated Daytime Traditions, Gastronomic Rituals & Nocturnal Wonders Across 4 Time Windows"
+subtitle: "15 Curated Daytime Traditions, Culinary Rituals & Nocturnal Wonders Across 4 Time Windows"
 lead: "Beyond the bustling souvenir stalls and rolled silks, Ben Thanh Market and its encircling boulevards form one of Southeast Asia’s most captivating urban cultural theaters. From misty morning architectural photography to midnight supper, this is your curated 24-hour field manual."
 badges:
   - icon: "🏛️"
@@ -42,7 +42,7 @@ sidebar_facts:
     val: "06:30 – 08:00 AM (Golden Dawn)"
   - icon: "🍲"
     label: "Must-Try Gastronomy"
-    val: "Bun Rieu Cua, Banh Beo & Che Ba Muoi"
+    val: "Bun Rieu Cua, Banh Beo & Che Be"
   - icon: "🚇"
     label: "Subterranean Link"
     val: "Direct access to Metro Line 1"
@@ -59,7 +59,7 @@ epilogue: "To truly experience Ben Thanh Market is not merely to buy a souvenir,
 
 ---
 
-## Introduction: Far More Than a Commodity Bazaar
+## Far More Than a Commodity Bazaar
 
 When first-time visitors hear of Ben Thanh Market, many picture a crowded marketplace packed with souvenir stalls, rolled textiles, and aggressive touts. Yet to those attuned to the authentic cadence of Saigon, this 112-year-old landmark and its encircling boulevards form one of Southeast Asia's most captivating urban cultural theaters. Here, within a few hundred footsteps, one transitions effortlessly from early 20th-century Indochinese colonial architecture to the sunlit subterranean concourses of the brand-new 2026 Metro Line 1, and from a humble traditional sweet soup vendor to an opulent rooftop lounge overlooking the meandering Saigon River.
 
@@ -89,7 +89,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
 Entering through the East Gate at 07:15 AM, the fragrant aromas of simmering crab paste broth (*bun rieu cua dong*), hearty beef noodle soup (*bun bo Hue*), and delicate steamed rice cakes dusted with toasted shrimp powder (*banh beo*) awaken the senses. Perch on a low stainless-steel stool, listen to the melodious banter of market matriarchs, and immerse yourself in the unvarnished conviviality of traditional Saigon.
 
 #### 3. Sipping Ca Phe Vot & Park Bench Coffee in September 23rd Park
-Following breakfast, stroll across Le Lai Street into the verdant canopy of September 23rd Park (*Cong vien 23/9*). Order a robust iced condensed milk coffee (*ca phe sua da*) brewed using traditional cloth-strainer (*ca phe vot*) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.
+Following breakfast, stroll across Le Lai Street into the leafy shade of September 23rd Park (*Cong vien 23/9*). Order a robust iced condensed milk coffee (*ca phe sua da*) brewed using traditional cloth-strainer (*ca phe vot*) techniques from a mobile cart. Rest on the lawn while observing elderly locals practicing Tai Chi and pigeons pecking for crumbs under the morning shade.
 
 ---
 
@@ -98,8 +98,8 @@ Following breakfast, stroll across Le Lai Street into the verdant canopy of Sept
 #### 4. Navigating the Labyrinth of 1,400 Heritage Stalls Under Historic Rafters
 Beneath the Eiffel-inspired iron trusses and classical clay roof tiles, Ben Thanh Market is subdivided into four distinct quadrants. Take a leisurely wander through the West Gate handicrafts corridor to admire mother-of-pearl lacquer boxes, hand-painted silk fans, and rustic Bat Trang ceramics.
 
-#### 5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (*Che Ba Muoi*)
-Nestled in the central culinary aisle, Che Ba Muoi is a culinary institution spanning three generations. A tall glass of mixed sweet soup (*che thap cam*) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (*banh lot*), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.
+#### 5. Cooling Down with a Legendary 1968 Shaved Ice Sweet Soup (*Che Be*)
+Nestled in the central culinary aisle, Che Be is a culinary institution spanning three generations. A tall glass of mixed sweet soup (*che thap cam*) laden with soft red beans, chewy pomegranate rubies, pandan jelly droplets (*banh lot*), and rich coconut cream smothered in finely shaved ice offers instant respite from the tropical humidity.
 
 #### 6. Descending 32 Meters into Ben Thanh Central Metro Station to Marvel at the "Lotus Skylight"
 When midday temperatures reach their zenith, take the escalators down into the state-of-the-art Ben Thanh Metro Station. The climate-controlled 24°C concourses and the architectural marvel of the giant Lotus Skylight—which channels natural sunlight down from the square above—showcase Saigon's futuristic 2026 urban infrastructure.
@@ -122,7 +122,7 @@ At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang 
 
 ---
 
-### 🌙 TIME WINDOW 4: Vibrant Nightfall & Gastronomic Revelry (19:00 – Late)
+### 🌙 TIME WINDOW 4: Vibrant Nightfall & Night Street Food (19:00 – Late)
 
 #### 11. Feasting on Flaming Seafood Along Phan Boi Chau Night Market
 As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (*banh xeo*) amidst crackling flames and lively international crowds.
@@ -139,7 +139,7 @@ End your nocturnal culinary adventure with late-night classics favored by locals
 
 | Itinerary | Morning Focus | Midday Focus | Evening Focus | Estimated Spend (VND) |
 | :--- | :--- | :--- | :--- | :--- |
-| **4-Hour Express (Morning/Afternoon)** | Photo op at Clock Tower + Breakfast at East Gate | Metro station visit + Che Ba Muoi sweet soup | Quick shopping at craft section | 150,000 – 250,000 |
+| **4-Hour Express (Morning/Afternoon)** | Architectural Photography at Clock Tower + Breakfast at East Gate | Metro station visit + Che Be sweet soup | Quick shopping at craft section | 150,000 – 250,000 |
 | **Full-Day In-Depth (Cultural Explorer)** | Dawn photography + Park coffee + Food court tour | Metro Lotus Skylight + Fine Arts Museum | Rooftop cocktail + Night Market seafood feast | 600,000 – 1,200,000 |
 
 ---

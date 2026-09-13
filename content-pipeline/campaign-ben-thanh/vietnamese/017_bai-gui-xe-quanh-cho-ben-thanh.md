@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-motorbik
 
 ---
 
-## Dẫn Nhập: "Cuộc Chiến" Tìm Chỗ Đỗ Xe Giữa Lõi Di Sản Sài Gòn
+## "Cuộc Chiến" Tìm Chỗ Đỗ Xe Giữa Lõi Di Sản Sài Gòn
 
 Quận 1 là trái tim thương mại sầm uất nhất cả nước, và Chợ Bến Thành là tâm điểm có mật độ giao thông dày đặc nhất. Với hàng ngàn lượt khách đổ về mỗi giờ cùng với việc quy hoạch phố đi bộ và quảng trường Quách Thị Trang khang trang, việc tìm một điểm gửi xe máy hoặc ô tô an toàn, đúng giá niêm yết nhà nước luôn là bài toán đau đầu với cả người dân địa phương lẫn du khách tự túc.
 

@@ -2,7 +2,7 @@
 id: 34004
 order: 4
 title: "One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset"
-subtitle: "A curated 4.5-kilometer slow-travel expedition connecting three centuries of architecture, spiritual quietude, and dynamic riverine horizons"
+subtitle: "A 4.5-kilometer walking route linking century-old colonial alleys, quiet neighborhood shrines, and the Saigon River waterfront"
 lead: "The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk."
 slug: "ben-thanh-one-day-walking-tour"
 published_date: "2026-09-07T09:30:00"
@@ -57,7 +57,7 @@ featured_image: "https://media.thericetour.com/uploads/central-ho-chi-minh-city-
   The only authentic way to absorb the living soul of Saigon is not through the tinted, sealed windows of an air-conditioned vehicle, but by placing your feet upon its shaded sidewalks. Walk to hear temple bells dissolve into morning traffic, to catch the rich aroma of pour-over coffee escaping vintage apartment corridors, and to welcome the river breeze at dusk.
 </div>
 
-As an anchor itinerary within our definitive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), this **One-Day Heritage Walking Tour** has been curated by The Rice Tour to guide conscious voyagers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.
+As an anchor itinerary within our definitive guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market), this **One-Day Heritage Walking Tour** has been curated by The Rice Tour to guide travelers through the very best of District 1—seamlessly aligning with the diurnal rhythms of the southern tropical climate.
 
 
 ---
@@ -71,7 +71,7 @@ As an anchor itinerary within our definitive guide to [things to do near Ben Tha
 
 ---
 
-## Slow Travel Philosophy: Embracing the City on Foot
+## Why District 1 Is Best Explored on Foot
 
 Why walk? District 1 concentrates a cultural density that whizzing past on a taxi will inevitably erase: a ceramic dragon medallion nestled beneath ancient market eaves, weathered green French louvers in an alleyway, or the intoxicating fragrance of burning camphor drifting from an open Hindu shrine.
 
@@ -122,11 +122,11 @@ This itinerary harmonizes with the sun: cool morning light is devoted to open ma
 | **14:00 – 16:00** | Independence Palace | Modernist halls, wartime command bunker | 65,000 VND | — |
 | **16:15 – 17:45** | Metro & Bach Dang | Lotus skylight concourse & river sunset | 15,000 VND (metro ticket) | 30,000 VND (coconut) |
 | **18:00 – 20:30** | Phan Boi Chau & Rooftop | Charcoal street feast & evening cocktail | Free | 250,000 – 350,000 VND |
-| **TOTALS** | **Full 12-Hour Stroll** | **6 Heritage Icons + 4 Gastronomic Stops** | **~110,000 VND** | **~540,000 – 680,000 VND** |
+| **TOTALS** | **Full 12-Hour Stroll** | **6 Heritage Icons + 4 Culinary Stops** | **~110,000 VND** | **~540,000 – 680,000 VND** |
 
 ---
 
-## Field Checklist for Conscious Voyagers (2026)
+## Field Checklist for Travelers (2026)
 
 - [ ] **Comfortable Walking Footwear:** With 4.5km of strolling, breathable sneakers or ergonomic leather sandals are vital.
 - [ ] **Respectful Cultural Attire:** Ensure garments cover shoulders and knees for temple and palace admissions.

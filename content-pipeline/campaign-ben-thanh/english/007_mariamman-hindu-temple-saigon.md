@@ -2,7 +2,7 @@
 id: 34007
 order: 7
 title: "Mariamman Hindu Temple: A Colorful Enclave of Dravidian Spirituality in District 1"
-subtitle: "Ascending Gopuram towers, fragrant camphor altars, and the unique stone-pressing meditation ritual 200 meters from Ben Thanh Market"
+subtitle: "A colorful Dravidian sanctuary on Truong Dinh Street: carved Gopuram towers, floral offerings, and the sacred stone-pressing ritual"
 lead: "Turn off the roaring stream of motorbikes on Le Thanh Ton Street into Truong Dinh, and urban velocity recedes instantly into timeless devotion. The spicy warmth of incense and peanut oil mingles with the resonant toll of brass bells as the tiered Gopuram gateway reveals a vibrant sanctuary of South Indian spirituality."
 slug: "mariamman-hindu-temple-saigon"
 published_date: "2026-09-07T11:00:00"
@@ -82,7 +82,7 @@ To maintain their ancestral faith, the Chettiar merchants funded the constructio
 
 ---
 
-## Deciphering South Indian Dravidian Temple Art
+## Dravidian Temple Architecture: Carved Gopuram Towers & Sacred Shrines
 
 Approaching 45 Truong Dinh Street, travelers are greeted by quintessential South Indian artistic traditions:
 

@@ -87,7 +87,7 @@ Bước qua các cuộc kháng chiến, chiếc khăn rằn đã vượt lên tr
 
 ---
 
-## The Voyager’s Guide: 4 Cách Quàng Khăn Rằn Chuẩn Guu Lữ Hành
+## The Voyager’s Guide: 4 Cách Quàng Khăn Rằn Đậm Chất Bản Địa Lữ Hành
 
 1. **Vắt Vai Phóng Khoáng:** Vòng khăn qua sau gáy, để hai vạt buông tự nhiên trước ngực. Phong cách kinh điển khi dạo chợ nổi hay thăm vườn cây trái.
 2. **Thắt Nút Lệch Vai (Expedition):** Quấn một vòng quanh cổ, luồn một đầu qua khe tạo nút thắt nhẹ lệch vai. Rất gọn gàng khi đi xe máy, chèo xuồng hay trekking.

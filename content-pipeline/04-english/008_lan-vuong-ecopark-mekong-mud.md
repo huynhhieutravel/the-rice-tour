@@ -83,7 +83,7 @@ Lan Vuong is the undisputed Mecca for event management agencies. Sprawling acros
 
 Following hours of total physical depletion, Lan Vuong’s thatched-roof culinary pavilions will anchor you with menus deeply rooted in the era of wilderness reclamation.
 
-The gastronomic philosophy here eschews delicate refinement in favor of **raw freshness and untamed flavor**.
+The culinary philosophy here eschews delicate refinement in favor of **raw freshness and untamed flavor**.
 
 - **Charcoal-Grilled Snakehead Fish (*Cá lóc nướng trui*):** The quintessential Delta classic. A wild snakehead fish (unscaled and un-gutted) is skewered on a fresh bamboo stick and buried in a blazing mound of dry straw. The charred exterior is scraped away to reveal steaming, snow-white flesh, which is then rolled in rice paper with wild herbs and dipped in a pungent tamarind sauce.
 - **Mekong Crêpes (*Bánh xèo miền Tây*):** Gigantic, sizzling crêpes poured onto massive cast-iron woks using pork fat. The crust is paper-thin and shattering, enveloping a sweet filling of shrimp, pork, and termite mushrooms.

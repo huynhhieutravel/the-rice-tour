@@ -9,7 +9,7 @@ author: "The Rice Tour Editorial"
 categories: ["Saigon Travel Guide", "Transportation Guide", "Pain Points"]
 tags: ["Parking near Ben Thanh", "Motorbike parking Saigon", "Car parking District 1", "Saigon parking rates 2026", "Cultured Travel"]
 featured_image: "https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp"
-subtitle: "6 Official Basements, Regulated Municipal Rates & Curbside Scam Prevention (2026 Master Guide)"
+subtitle: "6 Regulated Parking Basements, Official Rates & Curbside Scam Prevention (2026 Guide)"
 lead: "District 1’s dense urban grid makes finding legitimate parking a major headache. Navigate directly to 6 verified, surveillance-guarded facilities—from the state-of-the-art Metro basement to climate-controlled malls—and avoid aggressive curbside parking touts."
 badges:
   - icon: "🅿️"
@@ -59,7 +59,7 @@ epilogue: "A memorable urban journey begins with effortless arrival and ends wit
 
 ---
 
-## Introduction: The Battle for Parking in Saigon’s Heritage Heart
+## The Battle for Parking in Saigon’s Heritage Heart
 
 District 1 represents Vietnam's densest urban commercial zone, with Ben Thanh Market serving as its bustling gravitational center. With thousands of shoppers, food lovers, and international visitors converging hourly—combined with newly pedestrianized boulevards across Quach Thi Trang Square—locating secure, municipally regulated parking for scooters or cars is a notorious friction point.
 

@@ -34,7 +34,7 @@ Long before it became a sculpted ecological sanctuary, the landscape of **Buu Lo
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </div>
-For the discerning traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.
+For the traveler in 2026, Buu Long offers a serene counterpoint to the frenetic pace of Ho Chi Minh City. Just a 30-kilometer ride away, this sanctuary invites you to wander through ancient pagodas, paddle across still waters, and find quietude beneath the shade of secular trees.
 
 <figure>
   <img src="https://r2.nucuoimekong.com/wp-content/uploads/khu-du-lich-sinh-thai-buu-long.jpg" alt="Panoramic view of Buu Long Tourist Area">
@@ -93,7 +93,7 @@ Beyond passive observation, Buu Long is designed for active engagement with natu
 
 ---
 
-## 🌟 Essential Field Notes for the Discerning Traveler
+## 🌟 Essential Field Notes for the Traveler
 
 To maximize your experience in this 84-hectare expanse, consider the following logistical nuances:
 

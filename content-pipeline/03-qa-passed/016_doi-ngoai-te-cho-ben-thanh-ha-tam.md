@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/currency-exchange-near-be
 
 ---
 
-## Dẫn Nhập: "Phố Wall Ngoại Tệ" Thu Nhỏ Của Sài Gòn
+## "Phố Wall Ngoại Tệ" Thu Nhỏ Của Sài Gòn
 
 Nếu hỏi bất kỳ người Sài Gòn sành sỏi hay một khách du lịch kỳ cựu nào về địa chỉ đổi ngoại tệ có tỷ giá tốt nhất thành phố, 9 trên 10 câu trả lời sẽ chỉ về cùng một tọa độ: **Tiệm vàng Hà Tâm** nằm ngay góc đường Nguyễn An Ninh và Phan Chu Trinh, đối diện Cửa Tây Chợ Bến Thành. 
 

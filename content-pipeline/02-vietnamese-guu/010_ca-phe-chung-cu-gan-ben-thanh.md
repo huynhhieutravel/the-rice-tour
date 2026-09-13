@@ -20,7 +20,7 @@ featured_image: "https://media.thericetour.com/uploads/apartment-cafe.webp"
 
 ---
 
-## Dẫn Nhập: Sức Hút Của Những "Tổ Chim Cú" Trên Tầng Lầu Cổ
+## Sức Hút Của Những "Tổ Chim Cú" Trên Tầng Lầu Cổ
 
 Nếu có một nét văn hóa độc bản định hình sâu sắc phong cách sống của người Sài Gòn, đó không phải là những chuỗi cà phê máy lạnh bóng bẩy trên các mặt tiền đắt đỏ, mà chính là những quán cà phê chung cư nép mình sau những vách tường vôi bong tróc và hành lang hẹp bảng lảng bóng thời gian. Trong bán kính đi bộ chưa đầy 10 phút quanh Chợ Bến Thành, những khối nhà chung cư được xây dựng từ giữa thế kỷ 20—từng là cư xá của công chức, thương nhân hay sĩ quan thời kỳ trước—nay đã âm thầm lột xác thành những không gian nghệ thuật, xưởng gốm và quán cà phê mang đầy cá tính sáng tạo.
 
@@ -69,7 +69,7 @@ Nằm ngay góc ngã tư Lý Tự Trọng và Đồng Khởi, đối diện trun
 - **Góc trải nghiệm đắt giá:** Không gian tầng 1 và tầng 2 với trần lộ dầm thép nguyên bản, những khung cửa sổ vòm kính rộng mở nhìn thẳng sang tán cây cổ thụ của Công trường Chi Lăng.
 - **Món nước gợi ý:** Single Origin Pour-over (hạt Arabica chế biến ướt Cầu Đất) và Cà phê ủ lạnh ngâm vỏ cam vàng hữu cơ.
 
-### Chung Cư 14 Tôn Thất Đạm – Nốt Trầm Lắng Đọng Bên Bờ Kênh
+### Chung Cư 14 Tôn Thất Đạm – Góc Bình Yên Bên Bờ Kênh Cũ
 Chung cư 14 Tôn Thất Đạm là khối kiến trúc Pháp cổ kính mang vẻ đẹp u hoài và điện ảnh nhất Sài Gòn. Từng là trụ sở ngân hàng và nhà ở chuyên gia thời Đông Dương, nơi đây giữ trọn vẹn từng chấn song sắt hoa văn duyên dáng và bậc cầu thang gỗ thông cổ thụ.
 
 - **Vị trí:** Số 14 Tôn Thất Đạm, Phường Nguyễn Thái Bình, Quận 1 (cách Bến Thành 750m, gần Ngân hàng Nhà nước).
@@ -100,7 +100,7 @@ Các quán cà phê chung cư quanh Bến Thành năm 2026 không chỉ đầu t
 
 ---
 
-## Cẩm Nang Văn Hóa Ứng Xử Cho Người Lữ Khách Tinh Tế
+## Cẩm Nang Văn Hóa Ứng Xử Cho Du Khách
 
 Chung cư cũ là không gian sống đan xen giữa các hộ dân bản địa lớn tuổi và những cơ sở kinh doanh trẻ. Để trải nghiệm diễn ra văn minh và trọn vẹn, hãy lưu ý:
 

@@ -1,8 +1,8 @@
 ---
 id: 34005
 order: 5
-title: "Dinh Độc Lập Sài Gòn: Đỉnh Cao Kiến Trúc Nhiệt Đới & Trầm Tích Lịch Sử Phương Nam"
-subtitle: "Giải mã triết học phương Đông ẩn sau những đốt trúc bê tông thanh thoát và khu hầm chỉ huy thời chiến cách Bến Thành 700m"
+title: "Dinh Độc Lập Sài Gòn: Đỉnh Cao Kiến Trúc Nhiệt Đới & Dấu Ấn Lịch Sử Phương Nam"
+subtitle: "Khám phá triết lý phương Đông trong thiết kế của KTS Ngô Viết Thụ và khu hầm chỉ huy thời chiến cách Bến Thành 700m"
 slug: "dinh-doc-lap-sai-gon"
 category: "Di tích & Kiến trúc Sài Gòn"
 tags: ["Dinh Độc Lập", "Ngô Viết Thụ", "Kiến trúc nhiệt đới", "Quận 1", "Di tích quốc gia đặc biệt", "Du lịch có GUU"]
@@ -14,7 +14,7 @@ read_time: 13
 featured_image: "https://media.thericetour.com/uploads/reunification-palace-saigon.webp"
 ---
 
-# Dinh Độc Lập Sài Gòn: Đỉnh Cao Kiến Trúc Nhiệt Đới & Trầm Tích Lịch Sử Phương Nam
+# Dinh Độc Lập Sài Gòn: Đỉnh Cao Kiến Trúc Nhiệt Đới & Dấu Ấn Lịch Sử Phương Nam
 
 > *“Hiếm có công trình kiến trúc nào trên thế giới mà từng đường nét bê tông, từng hành lang lộng gió lại phản chiếu trọn vẹn những thăng trầm lịch sử và chiều sâu triết học uyên bác như Dinh Độc Lập. Giữa khuôn viên 12 héc-ta rợp bóng những cổ thụ trăm tuổi, công trình đứng đó như một chứng nhân bất biến giữa dòng chảy đổi thay của Sài Gòn.”*
 
@@ -45,7 +45,7 @@ Vào lúc 11 giờ 30 phút ngày 30 tháng 4 năm 1975, chiếc xe tăng mang s
 
 ---
 
-## Giải Mã Mật Mã Triết Học Phương Đông Của KTS Ngô Viết Thụ
+## Dấu Ấn Triết Lý Phương Đông Trong Thiết Kế Của KTS Ngô Viết Thụ
 
 Khác biệt hoàn toàn với các công trình thời thuộc địa rập khuôn phương Tây, Dinh Độc Lập là một bài thơ kiến trúc thâm trầm mang đậm tư tưởng Á Đông:
 
@@ -83,7 +83,7 @@ Mặt tiền phía trước tầng 2 và tầng 3 của dinh thự được bao 
 
 ---
 
-## Kinh Nghiệm Thực Địa Cho Người Du Hành Có GUU (Field Notes 2026)
+## Kinh Nghiệm Tham Quan & Lưu Ý Thực Tế (2026)
 
 - **Thời điểm lý tưởng tham quan:** Khung giờ đẹp nhất để ghé thăm Dinh Độc Lập là **14:00 – 16:30 chiều**. Lúc này ánh nắng chiều rọi qua hàng cây cổ thụ tạo bóng râm mát mẻ khắp khuôn viên, đồng thời ánh sáng xiên qua hệ rèm đốt trúc tạo nên những góc chụp ảnh kiến trúc vô cùng ấn tượng.
 - **Trang phục tham quan:** Du khách cần mặc trang phục lịch sự, kín đáo (áo có tay, quần/váy quá đầu gối), không mang theo vũ khí, chất cháy nổ hoặc hành lý cồng kềnh vào phòng trưng bày.
