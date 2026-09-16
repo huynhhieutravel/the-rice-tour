@@ -371,6 +371,76 @@
       "anchorText": "Khám phá cẩm nang Trung Quốc →"
     }
   ],
+  "visiting-cu-chi-tunnels-by-private-car": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Book Private Cu Chi Car"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "crowd-free Cu Chi guide"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Private Cu Chi Tour"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "dedicated full-day Mekong Delta tour"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Cu Chi & Saigon Highlights Tour"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Private Tour"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Cu Chi & Saigon"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day\n                  \n                  \n                    Cu Chi Tunnels: Half-Day Private "
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "Full-Day\n                    \n                    \n                      1-Day Cu Chi & Saigon Highl"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How to Visit Without Crowds\n                  5 insider strategies for avoiding tour buses"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace Guide\n                  History, underground bunkers & visitor tips"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Fine Arts Museum Guide\n                  French-colonial architecture & Indochine art"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Inquire via WhatsApp / Email"
+    }
+  ],
   "components/RelatedBlog": [
     {
       "targetUrl": "/blog",
