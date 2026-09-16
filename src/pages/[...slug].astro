@@ -70,6 +70,10 @@ if (slug === 'emagazine') {
   slug = 'emegazine';
 }
 
+if (slug === 'how-to-visit-cu-chi-tunnels-without-crowds') {
+  return Astro.redirect('/how-to-visit-cu-chi-tunnels-without-the-crowds', 301);
+}
+
 import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
 
 const d1Db = env?.dulichcoguu_d1;

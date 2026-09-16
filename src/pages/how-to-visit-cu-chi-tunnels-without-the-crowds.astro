@@ -1,0 +1,1154 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+// --- SSR D1 DATABASE QUERY ---
+const currentSlug = 'how-to-visit-cu-chi-tunnels-without-the-crowds';
+
+const d1Db = env?.dulichcoguu_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
+let post: any = null;
+try {
+  if (d1Db) {
+    post = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
+    );
+  }
+} catch (e) {
+  console.warn('[D1 Query Warning] how-to-visit-cu-chi-tunnels-without-the-crowds:', e);
+}
+
+// Fallback metadata if D1 local/remote is not yet populated
+if (!post) {
+  post = {
+    id: 19806,
+    title: 'How to Visit Cu Chi Tunnels Without the Crowds: 5 Insider Strategies',
+    slug: currentSlug,
+    excerpt: 'A practical guide to timing, choosing between Ben Dinh and Ben Duoc, and planning a more relaxed visit from Ho Chi Minh City.',
+    featuredImage: 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp',
+    readingTime: 12,
+    author: 'The Rice Tour Editorial',
+    createdAt: '2026-09-16T08:00:00.000Z',
+    publishedAt: '2026-09-16T08:00:00.000Z',
+    updatedAt: '2026-09-16T08:00:00.000Z'
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const pageTitle = post?.title || 'How to Visit Cu Chi Tunnels Without the Crowds: 5 Insider Strategies';
+const pageDesc = 'A practical guide to timing, choosing between Ben Dinh and Ben Duoc, and planning a more relaxed visit from Ho Chi Minh City.';
+
+const seoTitle = post?.seoTitle || post?.metaTitle || post?.title || pageTitle;
+const seoDesc = 'Avoid tourist buses and crowded corridors at Cu Chi Tunnels. Discover practical arrival windows, compare Ben Dinh and Ben Duoc, and plan a relaxed visit from Ho Chi Minh City.';
+const seoImage = post?.ogImage || post?.featuredImage || 'https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp';
+
+// --- DATE LOGIC (E-E-A-T Compliant) ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-09-16T08:00:00.000Z';
+const updatedAtStr = post.updatedAt || '2026-09-16T08:00:00.000Z';
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000;
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Updated:" : "Published:";
+const formattedDate = displayDate.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "The Rice Tour Editorial": {
+    name: "The Rice Tour Editorial",
+    url: "/about-us",
+    img: "https://media.thericetour.com/uploads/the-rice-tour-editorial-avatar.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/about-us",
+    img: "https://media.thericetour.com/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"];
+
+const adminEditUrl = post.id && post.id !== 19806 ? `/admin/posts/edit?id=${post.id}` : '#';
+
+// TOC Navigation Structure
+const toc = [
+  { id: "gioi-thieu", title: "Introduction", icon: "🏠" },
+  { id: "strategy-1-early-departure", title: "1. Early Morning Timing & Route Buffers", icon: "🌅" },
+  { id: "strategy-2-ben-duoc", title: "2. Choosing Between Ben Dinh & Ben Duoc", icon: "🌿" },
+  { id: "strategy-3-afternoon-inversion", title: "3. A Useful Afternoon Departure Window", icon: "🌤️" },
+  { id: "strategy-4-private-transport", title: "4. Transport Options & Route Flexibility", icon: "🚗" },
+  { id: "strategy-5-zero-shopping", title: "5. Prioritising Direct Travel (No Shopping Stops)", icon: "🚫" },
+  { id: "hour-by-hour-matrix", title: "Practical Crowd Planning Matrix", icon: "📊" },
+  { id: "what-is-original", title: "What Is Actually Original at Cu Chi?", icon: "🏛️" },
+  { id: "above-vs-below-ground", title: "Above vs. Below Ground & Tunnel Dimensions", icon: "🛡️" },
+  { id: "visiting-without-a-tour", title: "Can You Visit Without a Tour?", icon: "🧭" },
+  { id: "2026-ticket-prices-logistics", title: "Practical Information for Visiting Cu Chi", icon: "🎟️" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)", icon: "💡" },
+  { id: "epilogue", title: "Epilogue: Preserving the Historical Experience", icon: "✨" }
+];
+
+// SSR JSON-LD Schemas
+const currentOrigin = 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/${currentSlug}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: `${currentOrigin}/` },
+    { name: "Travel Guides", url: `${currentOrigin}/blog` },
+    { name: pageTitle, url: canonicalUrl }
+  ]
+};
+
+const faqSchema = {
+  questions: [
+    {
+      question: "Which Cu Chi Tunnels site is genuinely less crowded: Ben Dinh or Ben Duoc?",
+      answer: "Ben Duoc is consistently quieter. Located roughly 70 km northwest of Saigon (about 20 km past Ben Dinh), its greater distance discourages large 45-seat commercial tour buses. Aside from preserved multi-level tunnels, Ben Duoc features the Ben Duoc Memorial Temple and the Recreated Liberation Zone spread over peaceful riverside forest. Ben Dinh is closer (~50 km) and absorbs the bulk of budget group tours, making it noticeably crowded between 09:30 AM and midday."
+    },
+    {
+      question: "What is the best time of day to arrive at Cu Chi Tunnels to avoid tour groups?",
+      answer: "Arrive between 07:00 and 08:30 AM (gates open at 07:00 AM). Leaving central Saigon by 06:30 AM allows you to clear the highway before commuter rush hour builds up, putting you on the quiet forest trails before tour buses arrive. A secondary quiet window begins around 01:30 PM, after morning tour groups depart for lunch."
+    },
+    {
+      question: "Is Ben Dinh a 'fake' version of the tunnels compared to Ben Duoc?",
+      answer: "No. Ben Dinh is authentic wartime heritage, not a reproduction. In its July 2026 submission to the UNESCO Tentative List, Vietnam identified both Ben Dinh and Ben Duoc as the two primary sectors preserving the authentic structure, scale, and three-tier depth of the surviving network (~4 km preserved in total). Both sites have subtly reinforced and lit visitor sections. The main difference is that Ben Dinh draws far heavier tour traffic, while Ben Duoc offers a more spacious, tranquil forest setting."
+    },
+    {
+      question: "Can you visit Cu Chi Tunnels without booking an organized tour?",
+      answer: "Yes. You can travel independently by hiring a private car or booking a Grab car. Every admission ticket includes an official English-speaking on-site guide who escorts you through the outdoor displays and tunnels. The main challenge is securing a return ride back to Saigon from rural Cu Chi, so hiring a private car with round-trip waiting time is strongly recommended."
+    },
+    {
+      question: "Can claustrophobic travelers visit Cu Chi Tunnels comfortably without going underground?",
+      answer: "Yes, easily. Roughly 85 to 90 percent of the visit is entirely above ground in shaded woodland. You can examine camouflaged trapdoors, explore booby-trap displays, see the Hoang Cam smokeless kitchen, watch historical documentary film, and walk the trails without ever stepping into a tunnel. Entry into the tunnels is 100% optional."
+    },
+    {
+      question: "What are the official admission fees for visiting Cu Chi Tunnels in 2026?",
+      answer: "For international visitors, the official admission is 135,000 VND per person (effective February 1, 2026), consisting of 35,000 VND relic entrance fee plus 100,000 VND guide and service fee. Always check the official website before travelling in case of updates."
+    },
+    {
+      question: "How long does a half-day private Cu Chi Tunnels visit take from central Ho Chi Minh City?",
+      answer: "Plan on 5 to 6 hours door-to-door. Driving time is roughly 1.5 hours each way to Ben Dinh, or 1.5 to 2 hours to Ben Duoc depending on morning traffic, plus 2 to 2.5 hours on-site exploring the grounds and exhibits."
+    },
+    {
+      question: "Can I use Grab or ride-hailing services to visit Cu Chi Tunnels?",
+      answer: "You can easily catch a Grab from downtown Saigon to Cu Chi, but finding a return driver from rural Cu Chi (especially Ben Duoc, 70 km out) is notoriously unreliable. Booking a private car for the round trip with driver waiting time included avoids the risk of being stranded."
+    },
+    {
+      question: "Is the traditional boiled cassava snack provided during the visit?",
+      answer: "Yes. Every ticket includes a serving of freshly steamed cassava dipped in crushed peanuts, sesame, and salt, served alongside hot tea at the Hoang Cam kitchen pavilion."
+    },
+    {
+      question: "What should I wear and pack for a visit to Cu Chi Tunnels?",
+      answer: "Wear lightweight, breathable clothing and closed-toe walking shoes suitable for forest dirt paths. Bring mosquito repellent, sunscreen, a hat, and plenty of water. If you plan to crawl through the tunnels, wear darker clothes you don't mind getting dusty."
+    },
+    {
+      question: "Is the Cu Chi Tunnels site suitable for seniors and young children?",
+      answer: "Yes. Because going underground is completely optional, seniors and children can comfortably explore the shaded woodland trails and open-air exhibits. Ben Duoc also offers open grounds, wide paths, and on-site electric shuttle carts for visitors needing mobility assistance."
+    }
+  ]
+};
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  canonical={canonicalUrl}
+  preloadImages={[seoImage]}
+  adminEditUrl={adminEditUrl}
+  lang="en"
+  ogType="article"
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <JsonLdSchema type="faq" data={faqSchema} />
+  </Fragment>
+
+  <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
+
+    {/* ================= HERO SECTION ================= */}
+    <section class="relative w-full min-h-[580px] lg:min-h-[660px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+      <div class="absolute inset-0 z-0 bg-slate-950">
+        <img 
+          src={seoImage} 
+          alt={pageTitle} 
+          class="w-full h-full object-cover object-center opacity-85" 
+          width="1280" 
+          height="720"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+        
+        {/* Breadcrumb - Standard 3-level breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6 flex-wrap">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <svg class="w-3 h-3 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <svg class="w-3 h-3 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-white font-semibold line-clamp-1">{pageTitle}</span>
+        </div>
+
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {pageTitle}
+        </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          {pageDesc}
+        </h2>
+
+        {/* Author / Date / Time Row */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-full border-2 border-white/30 bg-amber-500/30 flex items-center justify-center font-serif text-amber-300 font-bold text-lg group-hover:border-amber-400 transition-colors">
+              R
+            </div>
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              {authorData.name} 
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+          </a>
+          
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>{datePrefix} {formattedDate}</span>
+          </div>
+
+          <div class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>{post.readingTime} min read</span>
+          </div>
+        </div>
+
+        {/* Badges */}
+        <div class="flex flex-wrap gap-3 mt-8">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🌅</span> Early Arrival Strategy
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🌿</span> Ben Duoc Forest Sector
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🚗</span> Direct Private Travel
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🏛️</span> Preserved Heritage
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
+            </div>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
+              </a>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar (Strictly 3 Items) */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 md:p-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 gap-4 md:gap-0">
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0">
+                <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Quiet Sector</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">Ben Duoc (An Nhơn Tây)</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/80 shrink-0 shadow-xs">⏰</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Optimal Window</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">Early Morning (07:00–09:00)</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+                <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/80 shrink-0 shadow-xs">🚫</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Routing Focus</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">Direct Travel (No Detours)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section: Giới thiệu */}
+          <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+              <p>
+                Descending into the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) is one of the most intense encounters with wartime history in Vietnam. Carved by hand through dense laterite clay across decades of conflict, this subterranean network once stretched for hundreds of kilometres beneath the rubber plantations and farmland north of Saigon. Today, alongside downtown wartime landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, it remains one of the country's defining historical sites.
+              </p>
+              
+              <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
+                "For many visitors, though, the day turns into an endurance test with tour crowds: rows of 45-seat buses in the gravel lot, loudspeaker briefings echoing through the trees, and long queues waiting to shuffle single-file into the muggy tunnels."
+              </div>
+
+              {/* Featured In-Article Image */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                    alt="Travelers exploring the peaceful forested trail at Ben Duoc Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]" 
+                    width="1280" 
+                    height="720" 
+                    loading="eager" 
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  The forested paths of the Ben Duoc sector, where wider spacing between exhibits creates a more unhurried visit.
+                </p>
+              </div>
+
+              <p>
+                The visitor numbers are staggering. According to Vietnam's 2026 UNESCO submission dossier, the Cu Chi complex had welcomed <strong>over 27 million domestic and international visitors</strong> by the end of 2025. With that volume of foot traffic, visiting without a plan almost guarantees a crowded day. But with thoughtful timing and the right choice between the two main tunnel sectors, your visit can still be quiet, contemplative, and unhurried.
+              </p>
+
+              {/* UNESCO 2026 Callout Box */}
+              <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">🏛️</span> A New Heritage Milestone in 2026
+                </div>
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
+                  On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels to the <strong>UNESCO World Heritage Tentative List</strong>. While full inscription involves a multi-year evaluation, the newly submitted dossier is invaluable: it provides the most precise, up-to-date survey of the surviving tunnel network published in decades.
+                </p>
+              </div>
+
+              <p>
+                A visit here doesn't have to feel like an assembly line. Crowd patterns follow very predictable daily rhythms. By leaving Saigon at the right hour, heading to the less commercial sector, and bypassing highway tourist shops, you can experience the site on your own terms.
+              </p>
+              <p>
+                Here are <strong>5 practical strategies</strong> to visit Cu Chi Tunnels without the crowds.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* STRATEGY 1 */}
+          <section id="strategy-1-early-departure" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Strategy 1: Early Morning Timing & Route Buffers
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Your departure time from downtown Saigon makes or breaks the morning.
+              </p>
+              <p>
+                Most group tours advertise an "early start," but their buses spend the first 45 to 60 minutes weaving through District 1 collecting passengers from half a dozen hotels. By the time they clear city limits, they hit the morning choke point at An Sương intersection along National Route 22 (QL22), rolling into Cu Chi right alongside twenty other tour groups.
+              </p>
+              <p>
+                To beat that wave, you need to arrive near opening time (the gates open at 07:00 AM daily). That means being on the road early with enough buffer time built into the drive.
+              </p>
+
+              {/* Info Box */}
+              <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200 my-5 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-amber-900 text-base">
+                  <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  The Early Morning Advantage
+                </div>
+                <p class="text-amber-950/90 text-sm leading-relaxed">
+                  The 07:00 to 08:30 AM window gives you cool morning air under the forest canopy and quiet dirt paths. You can listen to the birds and take in the forest atmosphere before the midday heat and the tour bus caravans arrive.
+                </p>
+              </div>
+
+              {/* Grid Schedule */}
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">01</span>
+                    Depart by 06:30 – 07:00 AM
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Slip out of the city while the roads are clear. Clearing An Sương before peak commuter traffic saves up to 30 minutes of highway idling.
+                  </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">02</span>
+                    Arrive Between 07:30 and 08:30 AM
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    You will have ticket counters, briefings, and initial trail walks virtually to yourself before the first group buses pull in.
+                  </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">03</span>
+                    Explore in the Cool Hours
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Walk through outdoor displays, bunker exhibits, and preserved tunnel sections while temperatures are still mild.
+                  </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">04</span>
+                    Wrap Up Ahead of Midday Crowds
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Enjoy traditional boiled cassava and tea at the Hoang Cam kitchen shelter just as late-morning tour groups begin arriving, returning to town in time for lunch or a leisurely <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">private half-day Saigon city tour</a> in the afternoon.
+                  </p>
+                </div>
+              </div>
+
+              {/* Image: Morning jungle walk */}
+              <figure class="my-6">
+                <img 
+                  src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                  alt="Tourists walking along quiet shaded jungle path at Cu Chi Tunnels with checkered scarves" 
+                  width="1280"
+                  height="720"
+                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
+                  loading="lazy" 
+                />
+                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
+                  Morning under the canopy: Walking the quiet forest paths of Cu Chi in the early morning air before tour buses arrive.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* STRATEGY 2 */}
+          <section id="strategy-2-ben-duoc" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Strategy 2: Choosing Between Ben Dinh and Ben Duoc (Location, Crowds & Heritage)
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                First-time visitors often assume Cu Chi is a single site with one entrance. In reality, two separate sectors are open to the public, spaced about 15 kilometres apart: <strong>Ben Dinh</strong> (<em>Bến Đình</em>) and <strong>Ben Duoc</strong> (<em>Bến Dược</em>).
+              </p>
+              <p>
+                There is a widespread myth on travel forums that Ben Dinh is "fake" while Ben Duoc is "the only real one." That is historically inaccurate. Vietnam's 2026 UNESCO submission explicitly identifies both sectors as the surviving strongholds that best preserve the layout, depth, and three-tier vertical architecture of the wartime network, with roughly four kilometres of passages conserved between them.
+              </p>
+              <p>
+                The real difference between them comes down to geography, crowd volume, and atmosphere.
+              </p>
+              <p>
+                Importantly, UNESCO's 2026 documentation notes that both sites preserve a <strong>three-level tunnel architecture</strong> connected by vertical trapdoor hatches. Ben Duoc's main spine tunnel features three distinct vertical levels, with its deepest tiers originally engineered to withstand heavy aerial bombardment. Ben Dinh shares a similar three-level design, though its subterranean passages are generally shallower than those at Ben Duoc.
+              </p>
+
+              {/* Comparison Table */}
+              <div class="overflow-x-auto my-6">
+                <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-4 font-bold text-left !text-white text-white w-1/4">Feature</th>
+                      <th class="p-4 font-bold text-left !text-white text-white w-3/8">Ben Dinh (Bến Đình)</th>
+                      <th class="p-4 font-bold text-left !text-white text-white w-3/8">Ben Duoc (Bến Dược)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Location</td>
+                      <td class="p-4">Closer to Ho Chi Minh City (~50 km)</td>
+                      <td class="p-4 font-medium text-emerald-800">Farther northwest (~70 km from central HCMC)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Typical visitor flow</td>
+                      <td class="p-4 text-rose-700 font-medium">More organised tour traffic</td>
+                      <td class="p-4 text-emerald-700 font-medium">Generally fewer tour groups</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Main advantage</td>
+                      <td class="p-4">Convenience and shorter travel time</td>
+                      <td class="p-4 font-medium text-slate-900">More spacious, less concentrated experience</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Historical presentation</td>
+                      <td class="p-4">Preserved 3-level tunnels + visitor exhibits</td>
+                      <td class="p-4">Preserved 3-level tunnels + Ben Duoc Temple + Recreated Liberation Zone</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Best for</td>
+                      <td class="p-4">Travellers with limited time</td>
+                      <td class="p-4 font-medium text-emerald-800">Travellers prioritising a quieter, reflective visit</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Main trade-off</td>
+                      <td class="p-4 text-slate-600">More likely to encounter groups</td>
+                      <td class="p-4 text-slate-600">Longer journey (~20 km additional drive)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <strong>Why Ben Dinh Draws More Buses:</strong> Ben Dinh is located in Nhuận Đức, closer to central Ho Chi Minh City (~50 km). Because it saves nearly an hour of round-trip driving through suburban traffic, the vast majority of budget and commercial bus tours head here. That makes the parking lots fuller and the briefings louder, particularly between 09:30 AM and midday.
+              </p>
+              <p>
+                <strong>The Ben Duoc Setting:</strong> Ben Duoc lies roughly 70 km northwest of downtown Saigon in An Nhơn Tây. That extra 20 km of driving acts as an effective natural filter—large 45-seat tour coaches rarely make the longer journey. The site spreads out along the banks of the Saigon River under mature forest canopy, giving the entire visit a calm, unhurried atmosphere.
+              </p>
+              <p>
+                Crucially, Ben Duoc offers far more than an underground crawl. The grounds house the <strong>Ben Duoc Memorial Temple</strong> (a dignified tribute honouring more than 44,000 fallen soldiers and civilians) and the <strong>Recreated Liberation Zone</strong> (<em>Khu tái hiện Vùng Giải phóng</em>), which depicts wartime village life with thatch cottages, rice-paper drying racks, and artisans demonstrating how guerrilla fighters lived, worked, and wore the iconic <a href="/khan-ran-nam-bo" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">khăn rằn scarf</a>. If you want a deep dive into wartime history rather than just a quick tunnel walk, Ben Duoc is well worth the extra drive. Both sites feature sections subtly adapted to accommodate visitors safely.
+              </p>
+
+              {/* Image: Preserved outdoor wartime tank */}
+              <figure class="my-6">
+                <img 
+                  src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
+                  alt="Travelers exploring open woodland grounds and historic wartime tank at Cu Chi" 
+                  width="1280"
+                  height="720"
+                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
+                  loading="lazy" 
+                />
+                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
+                  Preserved outdoor relics: Exploring wartime artifacts and open forested grounds at Cu Chi without the crowding of commercial buses.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* STRATEGY 3 */}
+          <section id="strategy-3-afternoon-inversion" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Strategy 3: A Useful Afternoon Departure Window
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Getting on the road by 06:30 AM isn't realistic for everyone. If you are travelling with young children or recovering from a 14-hour transpacific flight, setting a dawn alarm can feel more like a chore than a holiday. Many travellers spend their first morning resting or exploring <a href="/things-to-do-near-ben-thanh-market" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">things to do near Ben Thanh Market</a> before departing for the tunnels around midday.
+              </p>
+              <p>
+                The good news: there is a second, often overlooked window. Departing Saigon around 12:00 to 12:30 PM puts you at Cu Chi right as the morning tour groups are filing back onto their buses to return to town for lunch. By 01:30 or 02:00 PM, the trails and briefing huts are noticeably quieter.
+              </p>
+
+              {/* Callout Card */}
+              <div class="bg-blue-50/70 p-5 rounded-2xl border border-blue-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-blue-900 text-base">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Afternoon Timing Context
+                </div>
+                <p class="text-blue-950/90 text-sm leading-relaxed">
+                  Most shared morning tours schedule their departures around midday to return guests to the city by early afternoon. By 01:30 PM, foot traffic on the walking trails often drops sharply, creating a calm second window for independent travellers.
+                </p>
+              </div>
+
+              <p>
+                <strong>A Note on Afternoon Heat:</strong> While Cu Chi's dense forest canopy blocks direct tropical sun, the tunnels themselves trap humid air year-round. An afternoon visit is perfectly comfortable above ground, but drink plenty of water, bring mosquito repellent, and take your time along the trails.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* STRATEGY 4 */}
+          <section id="strategy-4-private-transport" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Strategy 4: Travel via Private Vehicle for Route & Pacing Flexibility
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                The vehicle you choose shapes how the entire morning unfolds.
+              </p>
+              <p>
+                When you join a standard 30-passenger bus tour, your day is tied to the group. You stop when everyone stops, queue when everyone queues, and leave when the driver calls time. If you stumble upon a poignant corner of the memorial temple or want to spend ten extra minutes talking to an on-site guide, you simply don't have that leeway.
+              </p>
+
+              {/* Comparison Box */}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    Shared Group Tours
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                    <li>Multi-hotel pickups can eat up 45–60 minutes of morning time</li>
+                    <li>Rigid itinerary with fixed stop lengths at each display</li>
+                    <li>Large groups moving together along narrow forest paths</li>
+                    <li>Often includes commercial roadside shopping stops</li>
+                  </ul>
+                </div>
+                
+                <div class="bg-emerald-50/60 p-5 rounded-xl border border-emerald-200 space-y-2">
+                  <div class="flex items-center gap-2 font-bold text-emerald-900 text-sm">
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    Private Transport
+                  </div>
+                  <ul class="text-xs text-emerald-950/80 space-y-1.5 list-disc pl-4">
+                    <li>Departs straight from your hotel lobby at your chosen time</li>
+                    <li>Direct routing without unplanned commercial diversions</li>
+                    <li>Freedom to linger at quiet exhibits or bypass noisy areas</li>
+                    <li>Paced entirely around your party's comfort and energy</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>
+                Booking a private vehicle—whether an SUV for a couple or a comfortable passenger van for a family—gives you complete autonomy over your schedule. You can set off early, adjust on the fly based on morning traffic conditions, and head directly to Ben Duoc without stopping. Like most <a href="/tours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">curated private itineraries in Vietnam</a>, this flexibility ensures your day moves at your rhythm rather than a bus timetable.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* STRATEGY 5 */}
+          <section id="strategy-5-zero-shopping" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Strategy 5: Prioritise Direct Travel (Avoid Commercial Stops)
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                A common frustration with standard day tours is the mandatory stop at roadside handicraft factories or lacquerware showrooms along National Route 22.
+              </p>
+              <p>
+                While some of these workshops support local craftspeople, the stops routinely consume 45 to 60 minutes of prime morning daylight. By the time the bus pulls back onto the highway, your window for arriving ahead of the crowds at Cu Chi has evaporated.
+              </p>
+              <p>
+                If you are evaluating tour options, ask upfront: <em>Does this trip drive straight to the tunnels, or does it include commercial shopping stops?</em> Travelling privately ensures every minute of your morning is dedicated to the heritage site itself. And if you do need a quick rest break on the road, you can stop at a quiet local café for fresh coconut water without being herded through a retail showroom.
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* HOUR BY HOUR MATRIX */}
+          <section id="hour-by-hour-matrix" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Practical Crowd Planning Matrix
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Visitor traffic at Cu Chi ebbs and flows according to regular tour operator schedules. Here is a practical overview of what to expect throughout the day across both sectors:
+              </p>
+
+              <div class="overflow-x-auto my-6">
+                <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-4 font-bold text-left !text-white text-white w-1/5">Time</th>
+                      <th class="p-4 font-bold text-left !text-white text-white w-1/4">Ben Dinh</th>
+                      <th class="p-4 font-bold text-left !text-white text-white w-1/4">Ben Duoc</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Planning Approach</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">07:00–09:00</td>
+                      <td class="p-4">Generally less concentrated</td>
+                      <td class="p-4 text-emerald-700 font-medium">Generally less concentrated</td>
+                      <td class="p-4 text-emerald-800 font-semibold">Best window to arrive early</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">09:00–12:00</td>
+                      <td class="p-4 text-amber-800">Tour-group activity tends to increase</td>
+                      <td class="p-4">Generally less concentrated</td>
+                      <td class="p-4 text-slate-600">Expect more organised groups</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">12:00–14:00</td>
+                      <td class="p-4">Visitor flow may ease</td>
+                      <td class="p-4 font-medium text-emerald-700">Often less concentrated</td>
+                      <td class="p-4 text-slate-700 font-medium">Useful alternative for late starters</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">14:00–17:00</td>
+                      <td class="p-4">Variable</td>
+                      <td class="p-4">Variable</td>
+                      <td class="p-4 text-slate-600">Check remaining opening hours (closes 17:00)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-xs text-slate-500 italic">
+                *Note: Crowd levels vary by day, season, holidays, and tour schedules. This is a practical planning reference, not official hourly visitor data.*
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* WHAT IS ACTUALLY ORIGINAL AT CU CHI? */}
+          <section id="what-is-original" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Is Actually Original at Cu Chi? (Preserved vs. Untouched)
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Travel blogs and guidebooks frequently repeat that the Cu Chi network spans "200 to 250 kilometres." That historical figure reflects the network at its greatest wartime expansion, but it often puzzles first-time visitors who expect an underground labyrinth stretching endlessly in every direction.
+              </p>
+              <p>
+                In the five decades since 1975, unmaintained earthen passages in tropical soil naturally collapsed, flooded during monsoon seasons, or gave way to post-war farming. What visitors explore today are carefully conserved heritage sectors.
+              </p>
+              <p>
+                Vietnam's 2026 UNESCO submission confirms that <strong>approximately four kilometres</strong> of the surviving tunnel network are actively preserved across Ben Duoc and Ben Dinh. These two sectors were specifically conserved because they best preserve the authentic multi-tier vertical architecture: Level 1 (roughly 3 metres deep, sheltering living quarters and weapons workshops), Level 2 (roughly 6 metres deep, used during artillery barrages), and Level 3 (up to 8 to 10 metres deep, carved beneath impervious clay layers to withstand heavy aerial bombardment).
+              </p>
+
+              {/* Insight Box */}
+              <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/90 my-4 space-y-2">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-amber-600 text-base">💡</span> Preserved vs. Untouched: What "Authenticity" Really Means
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Neither site is frozen in amber. Passageways open to visitors have been subtly shored up with timber and brick, fitted with discreet low-voltage lighting, and in parts widened slightly so international guests can pass through safely. The authenticity lies in the original engineering, the tactical layout, and the real red earth beneath your feet—not in pretending that visitors are crawling through raw, unreinforced dirt. Ben Duoc simply preserves a quieter, more expansive forest environment.
+                </p>
+              </div>
+
+              {/* Image: Diorama cross-section */}
+              <figure class="my-6">
+                <img 
+                  src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" 
+                  alt="Official site guide explaining the Cu Chi tunnel cross-section diorama model showing three vertical depth levels" 
+                  width="1280"
+                  height="720"
+                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
+                  loading="lazy" 
+                />
+                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
+                  Subterranean engineering: An official site guide demonstrates the multi-level vertical depth structure and ventilation system on a cross-section diorama.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* ABOVE VS BELOW GROUND */}
+          <section id="above-vs-below-ground" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Above vs. Below Ground: The Reality of Crawling Through Tunnels
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Claustrophobia is the single biggest hesitation travellers have when deciding whether to visit Cu Chi. Many imagine they will be forced to spend hours crawling through dark, suffocating holes underground.
+              </p>
+              <p>
+                The reality is quite the opposite: <strong>roughly 85 to 90 percent of your visit takes place in the open air</strong>, walking shaded trails through secondary forest. Going underground is entirely optional.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-emerald-600 text-base">✓</span> Above Ground by Default
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Nobody is forced to crawl. The most compelling elements of Cu Chi—camouflaged trapdoors hidden beneath leaves, termite-mound air vents, booby-trap displays, weapons workshops, documentary film screenings, and the Hoang Cam smokeless kitchen—are all viewed above ground on forest footpaths.
+                  </p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-blue-600 text-base">🚪</span> Short Crawls with Regular Exits
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    If you do choose to head underground, the visitor-accessible tunnels are broken into short, clearly marked segments (usually 20, 40, or 60 metres). Emergency exit hatches are installed every 15 to 20 metres, so you can pop back up into the fresh air whenever you feel ready.
+                  </p>
+                </div>
+              </div>
+
+              {/* Image: Booby traps and outdoor exhibits */}
+              <figure class="my-6">
+                <img 
+                  src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+                  alt="Local site guide demonstrating concealed punji stick traps and woodland defensive mechanisms at Cu Chi Tunnels" 
+                  width="1280"
+                  height="720"
+                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
+                  loading="lazy" 
+                />
+                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
+                  Open-air exploration: More than 85% of a Cu Chi visit takes place above ground, examining ingenious trapdoors and defensive mechanisms along forest trails.
+                </figcaption>
+              </figure>
+
+              {/* Tunnel Size & Mobility Warning */}
+              <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200 my-4 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-amber-900 text-sm sm:text-base">
+                  <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  Tunnel Dimensions & Physical Demands
+                </div>
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
+                  The challenge underground is not just claustrophobia; it is physical exertion. The passages are tight—frequently under 80 centimetres wide—and require duck-walking, crouching, or crawling on all fours through heavy, humid air. For travellers over six feet tall (180 cm), larger-framed guests, or anyone with bad knees or mobility limitations, navigating underground is genuinely strenuous. Skipping the crawl takes nothing away from your visit; you can examine every major exhibit, touch the artifacts, and absorb the history without setting foot underground.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* CAN YOU VISIT WITHOUT A TOUR? */}
+          <section id="visiting-without-a-tour" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Can You Visit Cu Chi Tunnels Without a Tour?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                <strong>Yes, absolutely.</strong> You do not need an organized tour package to visit either Ben Dinh or Ben Duoc. Many independent travellers hire a private driver or book a car through ride-hailing apps like Grab to make the trip.
+              </p>
+              <p>
+                When you purchase your entry ticket at the gate, your admission automatically includes an <strong>official on-site guide</strong>. These local guides are stationed at the entrance, speak English and Vietnamese, and walk with you through the exhibits, demonstrating trapdoors and explaining how the underground network functioned. Because they live in Cu Chi and work exclusively on-site, their historical knowledge is often deeper and far more personal than a standard bus-tour commentary.
+              </p>
+
+              {/* Guide Quality Card */}
+              <div class="bg-blue-50/70 p-5 rounded-2xl border border-blue-200 my-4 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-blue-900 text-sm sm:text-base">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Why Guide Quality Matters as Much as Crowd Timing
+                </div>
+                <p class="text-xs sm:text-sm text-blue-950/90 leading-relaxed">
+                  Crowd timing is only half the battle. Cu Chi is a site where context is everything: without someone to explain why a mound of dirt has disguised ventilation holes, or how smoke was filtered through subterranean chambers, the forest trails can feel like an arbitrary outdoor walk. If you travel independently, always make sure to connect with your designated site guide at the entrance.
+                </p>
+              </div>
+
+              {/* Image: Underground bunker briefing */}
+              <figure class="my-6">
+                <img 
+                  src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" 
+                  alt="Visitors listening to a historical briefing inside an underground bunker hall at Cu Chi Tunnels" 
+                  width="1280"
+                  height="720"
+                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
+                  loading="lazy" 
+                />
+                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
+                  Firsthand history: Visitors gather in a subterranean bunker room for a briefing on how underground hospitals, kitchens, and command rooms functioned.
+                </figcaption>
+              </figure>
+
+              <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-2">
+                <div class="font-bold text-slate-900 text-sm">The Return Trip Catch</div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Getting to Cu Chi independently is straightforward—booking a Grab car from downtown Saigon takes two minutes. Getting <em>back</em>, however, is another matter. Rural Cu Chi, particularly around Ben Duoc (70 km out), has very few ride-hailing drivers looking for return fares into the city. If you rely on an app to get home, you risk waiting an hour or negotiating an inflated cash fare. The smoothest independent approach is hiring a private car for the round trip with waiting time included.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* PRACTICAL INFORMATION FOR VISITING */}
+          <section id="2026-ticket-prices-logistics" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Practical Information For Visiting Cu Chi Tunnels
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="space-y-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-2">
+                  <div class="font-bold text-slate-900 text-sm">1. Admission & Opening Hours</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                    <li><strong>Operating Hours:</strong> 07:00 AM – 5:00 PM daily.</li>
+                    <li><strong>Official 2026 Admission Fees:</strong> For international visitors, the Cu Chi Tunnels Management Board announced an all-inclusive entrance fee of <strong>135,000 VND per person</strong> effective February 1, 2026 (35,000 VND relic admission + 100,000 VND guide and service fee). Always check the official website before travelling in case of updates.</li>
+                    <li><strong>Mobility Assistance:</strong> On-site electric shuttle carts are available for visitors with mobility needs; inquire at the entrance ticket counter.</li>
+                    <li><strong>Steamed Cassava Snack:</strong> Every ticket includes a serving of freshly steamed cassava dipped in crushed peanuts, sesame seeds, and salt, served alongside hot tea at the Hoang Cam kitchen pavilion.</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-2">
+                  <div class="font-bold text-slate-900 text-sm">2. On-Site Shooting Range</div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Both Ben Dinh and Ben Duoc operate sports firing ranges where visitors can purchase live rounds to fire wartime rifles (AK-47, M16). If you are looking for a quiet, contemplative visit, be aware that gunfire echoes through nearby sections of the woods. Tell your guide upfront if you prefer to steer clear of the shooting range area entirely.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-2">
+                  <div class="font-bold text-slate-900 text-sm">3. Transportation & Trip Planning Tips</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                    <li><strong>Time Budget:</strong> Plan for roughly 5 to 6 hours door-to-door for a private morning visit from central Ho Chi Minh City. Driving time is typically 1.5 hours each way to Ben Dinh, and 1.5 to 2 hours to Ben Duoc depending on morning highway traffic.</li>
+                    <li><strong>Don't Combine Cu Chi with the Mekong Delta on the Same Day:</strong> Avoid the temptation to book the ubiquitous "Cu Chi + Mekong Delta in 1 Day" tour package. Cramming both into a single day means spending 5 to 6 hours stuck on highways, leaving only a rushed, superficial hour or two at each destination. Instead, consider booking a <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">dedicated full-day Mekong Delta tour</a> on a separate day for a far richer experience.</li>
+                    <li><strong>What to Wear:</strong> Wear lightweight, breathable clothing and sturdy closed-toe walking shoes suitable for red dirt forest paths. If you plan to crawl through the tunnels, wear darker clothes you don't mind getting dusty.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* COMMERCIAL TOUR CTA BANNER */}
+          <div class="bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] my-10 space-y-4">
+            <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase tracking-wider">
+              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              Private Excursion Options
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 leading-snug">
+              Planning a Private Visit to Cu Chi Tunnels?
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              For travellers looking for a direct, flexible itinerary, a private excursion lets you depart at your own hour, travel straight to Ben Duoc without commercial showroom stops, and explore at your own pace alongside an expert local guide.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a 
+                href="/tour/half-day-cu-chi-tunnels-tour" 
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 text-white font-bold text-sm hover:bg-amber-600 transition-colors shadow-sm"
+              >
+                View Half-Day Private Tour 
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a 
+                href="/tour/1-day-premium-cu-chi-tunnels" 
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-colors"
+              >
+                1-Day Cu Chi & City Highlights
+              </a>
+            </div>
+          </div>
+
+          <hr class="border-slate-200" />
+
+          {/* FAQ SECTION */}
+          <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-3">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                FAQ – Frequently Asked Questions About Visiting Cu Chi Tunnels
+              </h2>
+            </div>
+
+            <div class="space-y-3">
+              {faqSchema.questions.map((faq, idx) => (
+                <details class="group bg-white rounded-xl border border-slate-200/90 shadow-xs overflow-hidden transition-all duration-200 [&_summary::-webkit-details-marker]:hidden" open={idx === 0}>
+                  <summary class="flex items-center justify-between p-4 sm:p-4.5 font-semibold text-slate-900 cursor-pointer hover:text-amber-800 transition-colors text-base list-none select-none">
+                    <span class="font-semibold text-slate-900 text-base leading-snug group-hover:text-amber-800 transition-colors pr-2">
+                      {idx + 1}. {faq.question}
+                    </span>
+                    <span class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-200 group-open:rotate-180 group-open:bg-amber-100 group-open:text-amber-800 shrink-0 ml-3">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div class="px-4.5 pb-4.5 text-sm sm:text-base leading-relaxed text-slate-600 border-t border-slate-100 pt-3.5">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <hr class="border-slate-200" />
+
+          {/* EPILOGUE */}
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Epilogue: Experiencing History with Space to Reflect
+              </h2>
+            </div>
+
+            <div class="prose prose-slate max-w-none text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Standing in the quiet pine and rubber groves of Ben Duoc, with the Saigon River slipping by nearby, it is difficult to imagine that this soil was once the most heavily bombed landscape on earth.
+              </p>
+              <p>
+                Cu Chi is not just an underground novelty to cross off a bucket list. It is a sobering monument to human endurance and the devastation of war. When you strip away the tour bus horns, the loudspeaker briefings, and the crowded roadside shops, what remains is an extraordinarily powerful historical experience.
+              </p>
+              <p>
+                Give yourself time, choose the quieter sector, and arrive before the rest of the world wakes up. That is how Cu Chi is meant to be seen.
+              </p>
+            </div>
+          </section>
+
+        </main>
+
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            {/* Key Travel Facts Card */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Key Travel Facts
+              </div>
+              
+              <div class="space-y-4 text-xs">
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Quiet Sector</div>
+                    <div class="text-slate-600">Ben Duoc, An Nhơn Tây (~70km NW of central HCMC)</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-200/80 text-lg">⏰</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Recommended Arrival</div>
+                    <div class="text-slate-600">07:00 – 08:30 AM (Ahead of larger tour groups)</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/80 text-lg">🎟️</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Official Admission</div>
+                    <div class="text-slate-600">135,000 VND / pax (35k relic entry + 100k guide/service)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Cu Chi & Saigon Guides */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
+              </div>
+              
+              <div class="space-y-3 text-xs">
+                <a href="/tour/half-day-cu-chi-tunnels-tour" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Cu Chi Tunnels: Half-Day Private Tour</div>
+                  <p class="text-slate-500 line-clamp-2">Direct morning private excursion to Ben Duoc or Ben Dinh with flexible pacing.</p>
+                </a>
+
+                <a href="/tour/1-day-premium-cu-chi-tunnels" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">1-Day Cu Chi & Saigon Highlights</div>
+                  <p class="text-slate-500 line-clamp-2">Direct early tunnel exploration paired with central Saigon historical landmarks.</p>
+                </a>
+
+                <a href="/hcmc-museum-of-fine-arts-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">HCMC Fine Arts Museum Guide</div>
+                  <p class="text-slate-500 line-clamp-2">Historic 1920s French-colonial mansion, antique stained glass, and Indochine art in central Saigon.</p>
+                </a>
+
+                <a href="/ben-thanh-one-day-walking-tour" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Saigon Heritage Walking Tour</div>
+                  <p class="text-slate-500 line-clamp-2">A self-paced exploration of historic French-colonial architecture and local heritage markets.</p>
+                </a>
+              </div>
+            </div>
+
+            {/* Share / Copy Link Widget */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Share This Guide
+              </div>
+              <p class="text-xs text-slate-500 mb-4">
+                Know someone planning a trip to Vietnam? Share these insider crowd-free strategies with them.
+              </p>
+              <div class="flex gap-2">
+                <a 
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="flex-1 py-2.5 px-3 rounded-xl bg-blue-600 text-white text-xs font-bold text-center hover:bg-blue-700 transition-colors shadow-2xs"
+                >
+                  Facebook
+                </a>
+                <button 
+                  id="copy-link-btn"
+                  data-url={canonicalUrl}
+                  class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold hover:bg-amber-50 hover:text-amber-700 transition-colors border border-slate-200"
+                >
+                  Copy Link
+                </button>
+              </div>
+              <div id="copy-toast" class="hidden text-[11px] text-emerald-700 font-bold mt-2 text-center">
+                ✓ Copied to clipboard!
+              </div>
+            </div>
+
+            {/* VIP Concierge Card */}
+            <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-md space-y-4">
+              <div class="text-xs text-amber-400 font-bold uppercase tracking-wider">
+                Bespoke Inbound Concierge
+              </div>
+              <div class="font-serif text-lg font-bold">
+                Need a Custom Cu Chi Itinerary?
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Connect directly with our local travel specialists to design a private early morning excursion tailored to your party's schedule.
+              </p>
+              <a 
+                href="/contact" 
+                class="block w-full py-2.5 rounded-xl bg-amber-500 text-white font-bold text-xs text-center hover:bg-amber-600 transition-colors"
+              >
+                Inquire via WhatsApp / Email
+              </a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script is:inline>
+    const copyBtn = document.getElementById('copy-link-btn');
+    const copyToast = document.getElementById('copy-toast');
+    if (copyBtn && copyToast) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-url') || window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+          copyToast.classList.remove('hidden');
+          setTimeout(() => {
+            copyToast.classList.add('hidden');
+          }, 3000);
+        } catch (err) {
+          console.error('Failed to copy link:', err);
+        }
+      });
+    }
+  </script>
+</BaseLayout>

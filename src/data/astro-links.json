@@ -31,6 +31,68 @@
       "anchorText": "Plan Your Bespoke Journey ➔"
     }
   ],
+  "how-to-visit-cu-chi-tunnels-without-the-crowds": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private half-day Saigon city tour"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "khăn rằn scarf"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "dedicated full-day Mekong Delta tour"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "View Half-Day Private Tour"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Cu Chi & City Highlights"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Cu Chi Tunnels: Half-Day Private Tour\n                  Direct morning private excursion to Ben Duoc"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Cu Chi & Saigon Highlights\n                  Direct early tunnel exploration paired with centr"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Fine Arts Museum Guide\n                  Historic 1920s French-colonial mansion, antique staine"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Saigon Heritage Walking Tour\n                  A self-paced exploration of historic French-colonial "
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Inquire via WhatsApp / Email"
+    }
+  ],
   "search": [
     {
       "targetUrl": "/${slug}",
