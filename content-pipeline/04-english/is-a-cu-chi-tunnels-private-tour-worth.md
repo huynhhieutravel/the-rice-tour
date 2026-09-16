@@ -30,8 +30,8 @@ For a solo traveler on a tight budget, the financial gap can be difficult to jus
 
 ![Small private group exploring the forested grounds and secret tunnel entrances at Cu Chi - The Rice Tour](https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp)
 
-> 🏛️ **UNESCO World Heritage Candidacy: Over 20 Million Cumulative Visitors**  
-> Vietnam is actively preparing the formal nomination dossier for the Cu Chi Tunnels complex to be inscribed on the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(vi)*—a major heritage priority in Ho Chi Minh City's cultural roadmap. The documentation highlights Cu Chi as an extraordinary subterranean network developed across both the **First Indochina War** and **Second Indochina War**. Official site records note that Cu Chi has welcomed **more than 20 million cumulative visitors** since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary historical sectors.
+> 🏛️ **UNESCO World Heritage Milestone: Over 27 Million Cumulative Visitors**  
+> On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels complex to the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(vi)*—a historic milestone in Ho Chi Minh City's heritage roadmap as authorities advance the formal nomination dossier toward full inscription. The submission highlights Cu Chi as an extraordinary subterranean network developed across both the **First Indochina War** and **Second Indochina War**. Official site records note that Cu Chi has welcomed **over 27 million cumulative visitors** since opening to tourism, with Ben Duoc and Ben Dinh preserved as the two primary historical sectors.
 
 ### How Cu Chi Grew (Key Historical Milestones)
 - **1946:** Discrete family bomb shelters and escape trenches during the early French Indochina War.
@@ -408,7 +408,7 @@ Some Cu Chi itineraries include a stop near the National Defense Sports Shooting
 Wear lightweight, breathable cotton or linen clothing, comfortable walking sneakers with good grip, and mosquito repellent. If you plan to crawl through the tunnels, wear darker clothes that can tolerate reddish dirt and dust.
 
 ### Is Cu Chi Tunnels recognized by UNESCO?
-Not yet as an inscribed World Heritage Site. Vietnam is actively preparing the formal nomination dossier for Cu Chi Tunnels to be inscribed on UNESCO's World Heritage Tentative List under cultural criteria (iv) and (vi). Approximately 4 km of surviving tunnels are actively preserved across Ben Duoc and Ben Dinh.
+Not yet as a fully inscribed World Heritage Site. On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels complex to UNESCO's World Heritage Tentative List under cultural criteria (iv) and (vi), and authorities are actively advancing the final dossier toward full inscription. Approximately 4 km of surviving tunnels are actively conserved across Ben Duoc and Ben Dinh, welcoming over 27 million cumulative visitors.
 
 ---
 
