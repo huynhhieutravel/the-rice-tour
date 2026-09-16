@@ -111,19 +111,19 @@ const faqSchema = {
   questions: [
     {
       question: "How much does a private Cu Chi tour cost per person?",
-      answer: "In 2026, private tour pricing ranges from approximately US$44 to $110+ per person. The per-person rate depends heavily on party size: solo travelers pay around US$130–$150, couples pay US$70–$85 per person, and families of four or more pay US$40–$55 per person."
+      answer: "Published 2026 listings show that private half-day tours range from roughly US$49 to $110+ per person, depending heavily on party size and inclusions. For two travelers, rates commonly sit around US$70–$90 per person, while larger groups of four to seven can bring the per-person rate down to approximately US$37–$50."
     },
     {
       question: "Is a private tour faster than a shared bus?",
-      answer: "A private vehicle does not bypass highway traffic, but it eliminates 45 to 60 minutes of multi-hotel pickups in District 1 and skips 30-minute commercial shopping detours. This allows you to arrive at the site well ahead of tour bus crowds and return to Saigon by lunchtime."
+      answer: "A private vehicle uses the same road network and faces the same suburban traffic, but it avoids multiple hotel pickups in central Saigon and can be booked without commercial stops. Returning around lunchtime is possible with an early departure, although actual timing depends on traffic, site choice, and how long you stay."
     },
     {
       question: "Can you visit Cu Chi Tunnels without a guide?",
-      answer: "Yes. You can book a private car with driver only. When you purchase your entrance ticket at the gate (135,000 VND for international visitors), the management board assigns an on-site local guide to lead your party through the trails. However, having a dedicated licensed guide in your private vehicle provides richer historical depth throughout the entire day."
+      answer: "Yes. You can arrange private transportation with a driver only. The 2026 foreign-visitor tariff (135,000 VND) includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged upon arrival. Having a dedicated licensed guide in your private vehicle provides richer historical depth throughout the entire drive and visit."
     },
     {
       question: "Which is better on a private tour: Ben Dinh or Ben Duoc?",
-      answer: "For a private tour, Ben Duoc is generally the superior choice. It is situated in a larger, quieter forested park with far fewer tour buses and includes the Ben Duoc Memorial Temple. If you have limited time or are traveling with young children, Ben Dinh saves roughly 40 minutes of driving each way."
+      answer: "Ben Duoc generally offers a quieter setting and preserves sections closer to the historical tunnel environment, with fewer tour buses and the solemn Ben Duoc Memorial Temple. Ben Dinh is closer to District 1 (~50 km vs ~70 km) and usually involves less driving time, making it convenient for tighter schedules or young families."
     },
     {
       question: "Is the tunnel crawl mandatory?",
@@ -131,7 +131,7 @@ const faqSchema = {
     },
     {
       question: "Do private tours include the shooting range?",
-      answer: "Private tours typically include a stop near the National Defense Sports Shooting Range at Cu Chi. However, ammunition is not included in the tour price and must be purchased separately on-site (minimum purchase of 10 rounds, typically ~60,000 VND / $2.40 per bullet). If you prefer a quiet visit, your private guide can easily bypass this section."
+      answer: "Private tours typically include a stop near the National Defense Sports Shooting Range at Cu Chi. However, ammunition is not included in the tour price and must be purchased separately on-site. Published 2025–2026 travel sources commonly report prices around 60,000 VND per round with a 10-round minimum (~600,000 VND total), although prices can change. If you prefer a quiet visit, your guide can easily bypass this section."
     },
     {
       question: "What should you wear on a private Cu Chi tour?",
@@ -301,7 +301,7 @@ const articleSchema = {
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
             <div class="text-xl sm:text-2xl mb-1">🎟️</div>
-            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Official Entry</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Foreign Tariff</div>
             <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">135,000 VND</div>
           </div>
         </div>
@@ -373,10 +373,10 @@ const articleSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                There is no single uniform price for a private tour because different operators package the experience with varying levels of service.
+                There is no single standard private-tour price because operators package the experience differently.
               </p>
               <p>
-                Current 2026 market offerings generally divide into four main tiers:
+                Published 2026 tour listings show a wide range of prices, depending on group size, vehicle and inclusions:
               </p>
 
               {/* Table: Pricing Tiers */}
@@ -393,12 +393,12 @@ const articleSchema = {
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Standard Group Bus</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$13–$20 / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">29–45 seat coach, shared guide, fixed schedule, multiple hotel pickups</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Shared transport, shared guide, fixed itinerary, multiple hotel pickups</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Small Group Tour</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$18–$35 / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">9–16 seat van (max 10–12 guests), more personal guide attention, semi-flexible pickup</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">9–16 seat van (usually 8–12 guests), more personal attention, semi-flexible pickup</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Private Car (Transport Only)</td>
@@ -420,10 +420,10 @@ const articleSchema = {
               </div>
 
               <p>
-                These figures represent realistic market benchmarks rather than legally fixed tariffs. Actual quotations fluctuate based on your departure date, travel party size, pickup district in Ho Chi Minh City, chosen tunnel sector (Ben Dinh vs. Ben Duoc), vehicle classification, and meal inclusions.
+                These figures are illustrative market ranges observed across published listings rather than official standard prices. Actual quotations vary significantly by operator, booking platform, group size, pickup location, vehicle class, and included services.
               </p>
               <p>
-                The essential takeaway is that "private tour" describes an entire category of personalized service rather than a standardized, off-the-shelf product. Before comparing two competing proposals, always verify exactly what each quote includes.
+                The essential takeaway is that "private tour" describes an entire category of personalized service rather than a standardized, off-the-shelf product. Before comparing two competing proposals, always verify exactly what each quote contains.
               </p>
             </div>
           </section>
@@ -447,11 +447,66 @@ const articleSchema = {
                 A <strong>fully guided private tour</strong> includes everything above, plus essential interpretive services: a dedicated licensed guide, pre-arranged entrance arrangements, in-depth historical storytelling throughout the drive and site visit, and walking pacing tailored entirely to your group.
               </p>
               <p>
-                If your primary objective is simply comfortable, air-conditioned transport without sharing a bus with strangers, <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a> may give you everything you need at a lower price point. Upon arriving at the ticket counter, the on-site management board assigns a resident site guide to accompany your party along the official trails.
+                If your primary objective is simply comfortable, air-conditioned transport without sharing a bus with strangers, <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a> may give you everything you need at a lower price point. The 2026 foreign-visitor tariff includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged at the counter.
               </p>
               <p>
-                However, if your main motivation for spending extra is having an articulate guide who can untangle complex wartime geopolitics, answer spontaneous questions, and shepherd your family through the crowds, the dedicated guide is often far more valuable than the private car itself.
+                However, if your main motivation for spending extra is having an articulate guide who can untangle complex wartime geopolitics, answer spontaneous questions, and shepherd your family through the site, a dedicated guide is often far more valuable than the private car itself.
               </p>
+
+              {/* Dedicated Comparison Table: Private Car vs Private Tour */}
+              <div class="overflow-x-auto my-6 not-prose shadow-sm rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-3.5 sm:p-4">Key Inclusions</th>
+                      <th class="p-3.5 sm:p-4">Private Car (Transport Only)</th>
+                      <th class="p-3.5 sm:p-4 bg-amber-900/80">Fully Guided Private Tour</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 bg-white">
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Private vehicle & professional driver</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">✓ Included</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">✓ Included</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Door-to-door hotel transfers</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Usually door-to-door</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Direct lobby pickup & drop-off</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Guide commentary during the drive</td>
+                      <td class="p-3.5 sm:p-4 text-slate-400">✕ None (driver typically speaks basic English)</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">✓ Dedicated guide provides historical context en route</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Guide during tunnel site exploration</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Arranged on-site via foreign-visitor tariff</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">✓ Your dedicated guide leads entire site visit</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Departure time flexibility</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">✓ You choose (early morning recommended)</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">✓ You choose (early morning recommended)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Ben Dinh vs. Ben Duoc sector choice</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Usually flexible upon booking request</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Tailored to your preference</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Commercial shopping detours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Depends on driver/booking terms</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Can be booked without compulsory stops</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Typical Price Level (2026)</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-slate-800">~US$40–$75 / vehicle</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-amber-900 bg-amber-50/30">~US$44–$110+ / person</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
 
@@ -468,7 +523,7 @@ const articleSchema = {
                 One of the most frequent claims made for private Cu Chi excursions is that they are dramatically faster. That assertion requires an honest reality check.
               </p>
               <p>
-                A private vehicle travels on the exact same national highway (QL22) and provincial corridors (TL15) as the large tour coaches. It navigates the same morning commuter bottlenecks at the An Sương intersection and follows the same speed limits through suburban Hóc Môn and Củ Chi.
+                A private vehicle uses the same road network and faces the same traffic conditions as group coaches. It navigates the same morning commuter bottlenecks heading northwest out of Ho Chi Minh City and follows the same speed limits through suburban corridors.
               </p>
               <p>
                 The genuine time advantage comes entirely from what happens <em>before, around, and after</em> the driving:
@@ -480,11 +535,11 @@ const articleSchema = {
                     <span class="text-rose-500">❌</span> The Shared Bus Routine
                   </div>
                   <ul class="text-xs text-slate-600 space-y-2 list-disc pl-4 leading-relaxed">
-                    <li>Circulating 6–12 hotels across District 1 (45–60 min).</li>
-                    <li>Waiting for late passengers in hotel lobbies.</li>
-                    <li>Strict departure window (invariably 07:45–08:15 AM).</li>
-                    <li>Enforced 25-minute stop at commercial lacquer workshops.</li>
-                    <li>Waiting for 30+ people to assemble before departing.</li>
+                    <li>Multiple hotel pickups can add waiting time before the vehicle leaves central Ho Chi Minh City, although the exact delay varies by operator and pickup route.</li>
+                    <li>Waiting for other passengers during hotel lobby loops.</li>
+                    <li>Fixed departure schedules set by the operator.</li>
+                    <li>Potential scheduled stops at commercial craft workshops along the route.</li>
+                    <li>Waiting for large groups to reassemble before departing each stop.</li>
                   </ul>
                 </div>
 
@@ -493,11 +548,11 @@ const articleSchema = {
                     <span class="text-emerald-600">✅</span> The Private Tour Reality
                   </div>
                   <ul class="text-xs text-amber-900 space-y-2 list-disc pl-4 leading-relaxed">
-                    <li>Direct departure the moment your party reaches the lobby.</li>
-                    <li>Depart early (06:45–07:00 AM) to beat highway gridlock.</li>
-                    <li>Arrive at the site before large bus convoys unload.</li>
-                    <li>Direct highway routing with zero commercial detours.</li>
-                    <li>Return to central Saigon by 1:00 PM for lunch.</li>
+                    <li>Direct departure from your lobby with only your travel party.</li>
+                    <li>Option to depart early (e.g., 06:45–07:00 AM) to beat morning commuter traffic.</li>
+                    <li>Arrive at the site before major bus convoys unload.</li>
+                    <li>Direct highway routing without compulsory shopping stops.</li>
+                    <li>Returning to central Ho Chi Minh City around lunchtime is possible with an early departure, although actual timing depends on traffic, site choice, and how long you stay.</li>
                   </ul>
                 </div>
               </div>
@@ -524,40 +579,39 @@ const articleSchema = {
                 Unlike shared coach tours—where the price remains fixed per seat regardless of how many people book together—private tours operate on a base vehicle and guiding fee that spreads out as your party grows.
               </p>
 
-              {/* Highlight Box: Group Size Rates */}
+              {/* Highlight Box: Published 2026 Price Examples */}
               <div class="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs my-6 not-prose">
                 <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-3">
-                  Representative 2026 Operator Rates (Fully Guided Private Half-Day)
+                  Published 2026 Price Examples (Private Half-Day Excursions)
                 </div>
                 <div class="space-y-3 text-xs sm:text-sm">
                   <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span class="font-semibold text-slate-800">Solo Traveler (1 person):</span>
-                    <span class="font-bold text-amber-800">~US$144 total ($144 / person)</span>
+                    <span class="font-semibold text-slate-800">2 Travelers (Couple / Duo):</span>
+                    <span class="font-bold text-amber-800">~VND 1,845,000 / person (~US$74 / person)</span>
                   </div>
                   <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span class="font-semibold text-slate-800">Couple (2 persons):</span>
-                    <span class="font-bold text-amber-800">~US$148 total ($74 / person)</span>
+                    <span class="font-semibold text-slate-800">3 Travelers:</span>
+                    <span class="font-bold text-amber-800">~VND 1,370,000 / person (~US$55 / person)</span>
                   </div>
                   <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span class="font-semibold text-slate-800">Small Group (3 persons):</span>
-                    <span class="font-bold text-amber-800">~US$165 total ($55 / person)</span>
-                  </div>
-                  <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                    <span class="font-semibold text-slate-800">Family of Four (4 persons):</span>
-                    <span class="font-bold text-amber-800">~US$176 total ($44 / person)</span>
+                    <span class="font-semibold text-slate-800">4 Travelers (Family / Friends):</span>
+                    <span class="font-bold text-amber-800">~VND 1,107,000 / person (~US$44 / person)</span>
                   </div>
                   <div class="flex items-center justify-between">
-                    <span class="font-semibold text-slate-800">Group of 5 to 7 persons:</span>
-                    <span class="font-bold text-emerald-700">~US$185–$259 total (~$37 / person)</span>
+                    <span class="font-semibold text-slate-800">5 to 7 Travelers:</span>
+                    <span class="font-bold text-emerald-700">~VND 922,000 / person (~US$37 / person)</span>
                   </div>
                 </div>
+                <p class="text-[11px] text-slate-500 italic mt-3 pt-2 border-t border-slate-100">
+                  *Figures illustrate published tiered pricing from established Ho Chi Minh City operators (such as Sinh Cafe listings). Other bespoke private guides and luxury limousine services can range from US$90 to $150+ per person.
+                </p>
               </div>
 
               <p>
-                For a solo traveler, spending US$144 versus an US$18 bus ticket represents an 800% premium. Unless privacy and customized historical depth are absolute non-negotiables, that cost is difficult to justify on pure economics.
+                For a solo traveler, the price gap can be substantial. Paying the entire vehicle and guide cost alone makes little economic sense compared to an economical shared bus, unless absolute privacy, bespoke timing, or specialized historical research are essential.
               </p>
               <p>
-                For a family of four or a small group of friends, paying US$44 per person is only US$15 to $20 more than a crowded small-group van. For that minor difference, the entire vehicle, driver, and licensed guide belong exclusively to your group.
+                However, for couples, families, or small groups of friends, the per-person math changes significantly. When four people travel together at roughly US$44 per person, the private rate is only slightly higher than a semi-private small group minivan (~US$25–$35). In exchange for that modest difference, your group gets an exclusive vehicle, custom schedule, and a dedicated private guide.
               </p>
             </div>
           </section>
@@ -595,27 +649,27 @@ const articleSchema = {
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Vehicle Type</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">29–45 seat coach</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Medium to large coach (varies)</td>
                       <td class="p-3.5 sm:p-4 text-slate-600">9–16 seat van</td>
                       <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Sedan, SUV, or Limousine</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Total Passengers</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">25 to 45 people</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">20 to 45 people</td>
                       <td class="p-3.5 sm:p-4 text-slate-600">8 to 12 people</td>
                       <td class="p-3.5 sm:p-4 font-semibold text-emerald-800 bg-amber-50/30">Just your party (1–7+)</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Pickup Protocol</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">45–60 min loop</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">20–30 min loop</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Multiple hotel pickup loop</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Short pickup loop</td>
                       <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Direct hotel lobby pickup</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Departure Timing</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Fixed (07:45–08:15 AM)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Fixed departure schedule</td>
                       <td class="p-3.5 sm:p-4 text-slate-600">Semi-fixed</td>
-                      <td class="p-3.5 sm:p-4 font-semibold text-amber-900 bg-amber-50/30">Fully flexible</td>
+                      <td class="p-3.5 sm:p-4 font-semibold text-amber-900 bg-amber-50/30">Flexible departure time</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Site Selection</td>
@@ -625,22 +679,22 @@ const articleSchema = {
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Guide Attention</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Megaphone / shared</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Shared group guide</td>
                       <td class="p-3.5 sm:p-4 text-slate-600">Conversational</td>
-                      <td class="p-3.5 sm:p-4 font-semibold text-emerald-800 bg-amber-50/30">100% dedicated to you</td>
+                      <td class="p-3.5 sm:p-4 font-semibold text-emerald-800 bg-amber-50/30">Dedicated to your group</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Commercial Stops</td>
-                      <td class="p-3.5 sm:p-4 text-rose-600">Almost always (25 min)</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Often included or brief</td>
-                      <td class="p-3.5 sm:p-4 font-semibold text-emerald-800 bg-amber-50/30">100% optional (zero stops)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Often scheduled (varies by tour)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Often brief or optional</td>
+                      <td class="p-3.5 sm:p-4 font-semibold text-emerald-800 bg-amber-50/30">Can be booked without compulsory stops</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <p>
-                If your main goal is simply avoiding an overcrowded 40-person coach, a high-quality small-group tour can solve most of your comfort issues at a fraction of the cost. However, if you require flexible departure times, need to cater to young children or older parents, or specifically want to explore Ben Duoc without commercial stops, the private tour remains unmatched.
+                If your main goal is simply avoiding an overcrowded 40-person coach, a high-quality small-group tour can solve most of your comfort issues at a fraction of the cost. However, if you require flexible departure times, need to cater to young children or older parents, or specifically want to explore Ben Duoc without commercial stops, a private tour offers maximum control.
               </p>
             </div>
           </section>
@@ -674,7 +728,7 @@ const articleSchema = {
                 </div>
 
                 <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
-                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">Absolute Timing Control</h3>
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">Greater Timing Flexibility</h3>
                   <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     You decide when the wheels turn. If you want to leave at 06:45 AM to beat the rush hour traffic and arrive right as the site opens (see our tactical guide on <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">how to visit Cu Chi Tunnels without the crowds</a>), your driver will be waiting.
                   </p>
@@ -690,7 +744,7 @@ const articleSchema = {
                 <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
                   <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">A Dedicated, Responsive Private Guide</h3>
                   <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    On a crowded group tour, the guide must manage dozens of people and keep to a rigid timetable. On a private tour, the guide becomes your personal cultural interpreter, adjusting explanations for children and answering spontaneous questions.
+                    For travelers interested in the history, guide quality can be a more important part of the private-tour premium than the vehicle itself. On a private tour, the guide becomes your personal cultural interpreter, adjusting explanations for children, unpacking military tactics, and answering spontaneous questions at your own walking pace.
                   </p>
                 </div>
               </div>
@@ -757,19 +811,19 @@ const articleSchema = {
                 The short answer is: <strong>no, unless you explicitly confirm it in advance.</strong>
               </p>
               <p>
-                One of the most common surprises for first-time travelers to Vietnam is discovering that booking a "private" tour does not automatically eliminate commercial handicraft or lacquerware stops along National Route 22.
+                One of the most common surprises for first-time travelers to Vietnam is discovering that booking a "private" tour does not automatically eliminate commercial handicraft or lacquerware stops along the route.
               </p>
               <p>
                 Some tour operators routinely route private cars through roadside souvenir centers, lacquer workshops, or rest areas where commissions are paid. While some travelers enjoy seeing traditional lacquer production techniques, many feel frustrated when 30 to 45 minutes of their morning is diverted into a retail showroom.
               </p>
               <p>
-                To avoid misunderstandings, always ask your tour provider directly before paying:
+                To avoid misunderstandings, always ask your tour provider directly before booking:
               </p>
               <blockquote class="border-l-4 border-amber-500 pl-4 py-2 my-4 bg-amber-50/70 text-slate-800 italic text-sm">
-                "Is this itinerary 100% direct between my hotel and Cu Chi Tunnels, with zero compulsory shopping stops or commercial handicraft workshops?"
+                "Is this itinerary direct between my hotel and Cu Chi Tunnels, without compulsory shopping stops or commercial handicraft workshops?"
               </blockquote>
               <p>
-                A reputable, quality-focused tour operator like The Rice Tour will readily guarantee a direct, non-commercial route. Like all our <a href="/tours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">curated private itineraries in Vietnam</a>, private excursions prioritize authentic cultural immersion over tourist retail detours.
+                If avoiding commercial stops matters to you, confirm this explicitly before booking. A private vehicle gives you more control, but "private" does not automatically mean "zero shopping stops." The Rice Tour’s private itinerary is designed without compulsory commercial stops, allowing guests to travel directly to the historical sites without detour or retail pressure.
               </p>
             </div>
           </section>
@@ -784,20 +838,20 @@ const articleSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Yes—and for many discerning travelers, this is the single best justification for booking a private tour.
+                Yes—and for travelers seeking a less commercialized atmosphere, this is a compelling reason to consider private transport.
               </p>
               <p>
                 The Cu Chi complex is divided into two distinct visiting sectors:
               </p>
               <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
-                <li><strong>Ben Dinh (~50 km from District 1):</strong> The closer sector, originally used by the Cu Chi District Party Committee. Because it saves roughly 40 minutes of driving each way, it hosts the vast majority of shared group buses, tour coaches, and budget travelers. Passages here have been substantially widened, and trails can become congested during peak morning hours.</li>
-                <li><strong>Ben Duoc (~70 km from District 1):</strong> The regional headquarters of Military Region 4 and the Saigon–Gia Dinh Party Committee. Set within a tranquil, sprawling forested park, Ben Duoc preserves a more authentic scale, features fewer crowds, and includes the solemn Ben Duoc Memorial Temple.</li>
+                <li><strong>Ben Dinh (~50 km from District 1):</strong> The closer sector, originally used by the Cu Chi District Party Committee. Because it usually involves less driving time, it hosts the vast majority of shared group buses, tour coaches, and budget travelers. Passages here have been widened, and trails can become congested during peak morning hours.</li>
+                <li><strong>Ben Duoc (~70 km from District 1):</strong> The regional headquarters of Military Region 4 and the Saigon–Gia Dinh Party Committee. Ben Duoc generally offers a quieter setting and preserves sections closer to the historical tunnel environment, while Ben Dinh is the more accessible and heavily visited option. Ben Duoc also includes the solemn Ben Duoc Memorial Temple.</li>
               </ul>
               <p>
                 Because group bus companies prioritize tight turnarounds and fuel efficiency, finding a shared group tour that visits Ben Duoc is difficult. Most bus itineraries simply take everyone to Ben Dinh.
               </p>
               <p>
-                With a private tour, visiting Ben Duoc is effortless. You simply request Ben Duoc when booking. While the drive takes an additional 30 to 45 minutes each way, the reward is an atmospheric, unhurried visit surrounded by native rubber trees and bird calls rather than hundreds of cruise passengers and megaphone announcements.
+                With a private tour, choosing Ben Duoc is straightforward. You simply request Ben Duoc when booking. While the drive takes an additional 20 to 35 minutes each way depending on traffic, the reward is an unhurried visit surrounded by native rubber trees and bird calls rather than large tour groups.
               </p>
             </div>
           </section>
@@ -818,10 +872,10 @@ const articleSchema = {
                 The preserved tunnels at both Ben Dinh and Ben Duoc retain their historical dimensions: narrow, unlit in places, warm, and humid. While entry sections at Ben Dinh have been enlarged to accommodate wider shoulders, crawling on hands and knees through 20 to 40 meters of underground trench remains a physical, enclosed experience.
               </p>
               <p>
-                The key benefit of a private tour is that <strong>the crawl is completely optional and pressure-free.</strong>
+                The key benefit of a private tour is that <strong>the crawl is optional and non-enforced.</strong>
               </p>
               <p>
-                On a large group tour, visitors often feel swept along by the momentum of the crowd. If someone experiences mild claustrophobia halfway through, turning around can be awkward when dozens of people are following closely behind. On a private tour, your guide inspects the entrance with you, explains emergency exit points every 10 to 20 meters, and ensures anyone who prefers staying above ground has plenty of fascinating open-air exhibits to explore.
+                On a large group tour, visitors often feel swept along by the momentum of the crowd. If someone experiences mild claustrophobia halfway through, turning around can be awkward when other passengers are following closely behind. On a private tour, your guide inspects the entrance with you, explains the tunnel layout and available exit points before you enter, and ensures anyone who prefers staying above ground has plenty of fascinating open-air exhibits to explore.
               </p>
 
               {/* Third Image Inside Body */}
@@ -870,7 +924,7 @@ const articleSchema = {
                 </div>
                 <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs">
                   <div class="font-bold text-slate-900 text-sm mb-1">⏱️ Travelers on Tight Schedules</div>
-                  <p class="text-xs text-slate-600 leading-relaxed">Return to central Saigon by 1:00 PM, leaving your afternoon free for exploring <a href="/things-to-do-near-ben-thanh-market" class="text-amber-800 font-semibold underline underline-offset-2">things to do near Ben Thanh Market</a>.</p>
+                  <p class="text-xs text-slate-600 leading-relaxed">Returning to central Ho Chi Minh City around lunchtime is possible with an early departure, leaving your afternoon free for exploring <a href="/things-to-do-near-ben-thanh-market" class="text-amber-800 font-semibold underline underline-offset-2">things to do near Ben Thanh Market</a>.</p>
                 </div>
               </div>
             </div>
@@ -919,8 +973,8 @@ const articleSchema = {
                   <div class="font-bold text-slate-900 text-sm mb-1">Scenario A: A Couple (2 Persons)</div>
                   <div class="text-xs text-slate-600 space-y-1">
                     <p>Shared Tour: $18 × 2 = $36</p>
-                    <p>Private Tour: $78 × 2 = $156</p>
-                    <p class="font-semibold text-amber-900 pt-1">Premium: $60 / person for privacy, direct travel, and private guide.</p>
+                    <p>Private Tour: $74 × 2 = $148</p>
+                    <p class="font-semibold text-amber-900 pt-1">Premium: ~$56 / person for privacy, direct travel, and private guide.</p>
                   </div>
                 </div>
 
@@ -928,8 +982,8 @@ const articleSchema = {
                   <div class="font-bold text-slate-900 text-sm mb-1">Scenario B: Family of Four (4 Persons)</div>
                   <div class="text-xs text-slate-600 space-y-1">
                     <p>Small Group: $28 × 4 = $112</p>
-                    <p>Private Tour: $48 × 4 = $192</p>
-                    <p class="font-semibold text-emerald-800 pt-1">Premium: Just $20 / person for an exclusive vehicle and guide.</p>
+                    <p>Private Tour: $44 × 4 = $176</p>
+                    <p class="font-semibold text-emerald-800 pt-1">Premium: Just ~$16 / person for an exclusive vehicle and guide.</p>
                   </div>
                 </div>
               </div>
@@ -972,7 +1026,7 @@ const articleSchema = {
                 </div>
                 <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
                   <span class="text-emerald-600 font-bold">6.</span>
-                  <span>Is the itinerary direct, with zero commercial stops?</span>
+                  <span>Is the itinerary direct, with zero compulsory commercial stops?</span>
                 </div>
                 <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
                   <span class="text-emerald-600 font-bold">7.</span>
@@ -1024,7 +1078,7 @@ const articleSchema = {
                     Half-Day Cu Chi Tunnels Private Tour →
                   </div>
                   <p class="text-xs text-slate-600 leading-relaxed">
-                    Direct 5.5-hour morning or afternoon tour to Ben Dinh or Ben Duoc with dedicated licensed guide and zero commercial stops.
+                    Direct half-day morning or afternoon tour (approx. 5 to 6 hours; drive time varies if selecting Ben Duoc) with dedicated licensed guide and direct routing without compulsory stops.
                   </p>
                 </a>
 
@@ -1096,7 +1150,7 @@ const articleSchema = {
                 You decide when to depart. You choose between Ben Dinh and the peaceful forest trails of Ben Duoc. You skip commercial handicraft diversions. You explore the exhibits at your own pace without feeling rushed by a megaphone. And when your group is ready to return, you climb into a cool, private vehicle and head straight back to your hotel.
               </p>
               <p>
-                Whether that autonomy is worth an extra US$30, $50, or $80 per person depends entirely on how you value your time in Vietnam. For couples, families, and travelers who appreciate rich historical storytelling without group friction, a well-executed private tour is worth every penny.
+                Whether the premium is worth paying depends on how much you value privacy, schedule control, a dedicated guide, and the ability to choose your preferred tunnel sector. For solo budget travelers, a shared tour keeps costs much lower. For couples, families, or small groups, the per-person price gap narrows enough to make a private tour well worth comparing.
               </p>
             </div>
           </section>
@@ -1179,7 +1233,7 @@ const articleSchema = {
               Plan Your Private Cu Chi Journey
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
-              Prefer an exclusive vehicle, dedicated historian guide, and 100% direct route with zero shopping detours?
+              Prefer an exclusive vehicle, dedicated historian guide, and direct route without compulsory shopping stops?
             </p>
             <a 
               href="/contact" 
