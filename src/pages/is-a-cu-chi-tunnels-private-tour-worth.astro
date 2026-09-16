@@ -75,24 +75,24 @@ const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"
 
 // --- TABLE OF CONTENTS (TOC) ---
 const tocItems = [
-  { id: "gioi-thieu", title: "Introduction", icon: "🏠" },
-  { id: "costs-in-2026", title: "Cu Chi Private Tour Costs in 2026", icon: "💵" },
-  { id: "car-vs-tour", title: "Private Car vs. Private Tour", icon: "🚗" },
-  { id: "waiting-time", title: "Waiting Time vs. Driving Time", icon: "⏱️" },
-  { id: "cost-per-person", title: "How Cost Scales With Group Size", icon: "👥" },
-  { id: "comparison-matrix", title: "Matrix: Bus vs. Small Group vs. Private", icon: "⚖️" },
-  { id: "what-you-pay-for", title: "What Are You Actually Paying For?", icon: "💎" },
-  { id: "guide-vs-car", title: "When Is The Guide Worth More Than The Car?", icon: "🎙️" },
-  { id: "shopping-stops", title: "Does Private Guarantee No Shopping?", icon: "🛍️" },
-  { id: "ben-duoc-access", title: "Does Private Travel Make Ben Duoc Accessible?", icon: "🌿" },
-  { id: "tunnel-crawl", title: "What About The Tunnel Crawl?", icon: "🛡️" },
-  { id: "who-benefits", title: "Who Benefits Most From Private Tours?", icon: "🎯" },
-  { id: "who-should-choose-group", title: "Who Is Better Off With Group Tours?", icon: "🚌" },
-  { id: "calculate-premium", title: "Tactical Formula: Calculate Your Premium", icon: "🧮" },
-  { id: "pre-booking-checklist", title: "12-Question Pre-Booking Checklist", icon: "✅" },
-  { id: "recommended-tours", title: "Recommended Cu Chi Experiences", icon: "⭐" },
-  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)", icon: "💡" },
-  { id: "epilogue", title: "Epilogue: Control Over Your Time", icon: "✨" }
+  { id: "gioi-thieu", title: "Introduction" },
+  { id: "costs-in-2026", title: "Cu Chi Private Tour Costs in 2026" },
+  { id: "car-vs-tour", title: "Private Car vs. Private Tour" },
+  { id: "waiting-time", title: "Waiting Time vs. Driving Time" },
+  { id: "cost-per-person", title: "How Cost Scales With Group Size" },
+  { id: "comparison-matrix", title: "Matrix: Bus vs. Small Group vs. Private" },
+  { id: "what-you-pay-for", title: "What Are You Actually Paying For?" },
+  { id: "guide-vs-car", title: "When Is The Guide Worth More Than The Car?" },
+  { id: "shopping-stops", title: "Does Private Guarantee No Shopping?" },
+  { id: "ben-duoc-access", title: "Does Private Travel Make Ben Duoc Accessible?" },
+  { id: "tunnel-crawl", title: "What About The Tunnel Crawl?" },
+  { id: "who-benefits", title: "Who Benefits Most From Private Tours?" },
+  { id: "who-should-choose-group", title: "Who Is Better Off With Group Tours?" },
+  { id: "calculate-premium", title: "Tactical Formula: Calculate Your Premium" },
+  { id: "pre-booking-checklist", title: "12-Question Pre-Booking Checklist" },
+  { id: "recommended-tours", title: "Recommended Cu Chi Experiences" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)" },
+  { id: "epilogue", title: "The True Value: Control Over Your Time" }
 ];
 
 // SSR JSON-LD Schemas
@@ -258,18 +258,23 @@ const articleSchema = {
       <aside class="hidden lg:block lg:col-span-3 sticky top-24">
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 max-h-[calc(100vh-7rem)] overflow-y-auto custom-scrollbar">
           <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
-            Guide Navigation
+            Table of Contents
           </div>
-          <nav class="space-y-1 text-[13px]">
-            {tocItems.map((item) => (
-              <a 
-                href={`#${item.id}`} 
-                class="block py-1.5 px-2.5 rounded-lg text-slate-600 hover:text-amber-900 hover:bg-amber-50 transition-colors leading-snug font-medium"
-              >
-                <span class="mr-1.5 opacity-80">{item.icon}</span>
-                <span>{item.title}</span>
-              </a>
-            ))}
+          <nav class="space-y-1 text-[13.5px] font-medium pr-1">
+            <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold text-[13.5px]">
+              <span class="text-amber-600 text-base">🏠</span> Introduction
+            </a>
+            
+            <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+              {tocItems.slice(1).map((item) => (
+                <a 
+                  href={`#${item.id}`} 
+                  class="block transition-colors leading-snug py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
       </aside>
