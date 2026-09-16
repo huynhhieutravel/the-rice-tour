@@ -78,6 +78,7 @@ const tocItems = [
   { id: "gioi-thieu", title: "Introduction" },
   { id: "costs-in-2026", title: "Cu Chi Private Tour Costs in 2026" },
   { id: "car-vs-tour", title: "Private Car vs. Private Tour" },
+  { id: "diy-vs-private", title: "Visiting Cu Chi Without A Tour (DIY / Grab)" },
   { id: "waiting-time", title: "Waiting Time vs. Driving Time" },
   { id: "cost-per-person", title: "How Cost Scales With Group Size" },
   { id: "comparison-matrix", title: "Matrix: Bus vs. Small Group vs. Private" },
@@ -89,7 +90,7 @@ const tocItems = [
   { id: "who-benefits", title: "Who Benefits Most From Private Tours?" },
   { id: "who-should-choose-group", title: "Who Is Better Off With Group Tours?" },
   { id: "calculate-premium", title: "Tactical Formula: Calculate Your Premium" },
-  { id: "pre-booking-checklist", title: "12-Question Pre-Booking Checklist" },
+  { id: "pre-booking-checklist", title: "15-Question Pre-Booking Checklist" },
   { id: "recommended-tours", title: "Recommended Cu Chi Experiences" },
   { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)" },
   { id: "epilogue", title: "The True Value: Control Over Your Time" }
@@ -119,7 +120,7 @@ const faqSchema = {
     },
     {
       question: "Can you visit Cu Chi Tunnels without a guide?",
-      answer: "Yes. You can arrange private transportation with a driver only. The 2026 foreign-visitor tariff (135,000 VND) includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged upon arrival. Having a dedicated licensed guide in your private vehicle provides richer historical depth throughout the entire drive and visit."
+      answer: "Yes. You can arrange private transportation with a driver only or travel independently via Grab. The 2026 foreign-visitor tariff (135,000 VND) includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged upon arrival. Having a dedicated licensed guide in your private vehicle provides richer historical depth throughout the entire drive and visit."
     },
     {
       question: "Which is better on a private tour: Ben Dinh or Ben Duoc?",
@@ -131,7 +132,7 @@ const faqSchema = {
     },
     {
       question: "Do private tours include the shooting range?",
-      answer: "Private tours typically include a stop near the National Defense Sports Shooting Range at Cu Chi. However, ammunition is not included in the tour price and must be purchased separately on-site. Published 2025–2026 travel sources commonly report prices around 60,000 VND per round with a 10-round minimum (~600,000 VND total), although prices can change. If you prefer a quiet visit, your guide can easily bypass this section."
+      answer: "Some Cu Chi itineraries include a stop near the National Defense Sports Shooting Range, while others skip it. Ammunition is not included in the tour price and must be purchased separately on-site. Published 2025–2026 travel sources commonly report prices around 60,000 VND per round with a 10-round minimum (~600,000 VND total), although prices can change. If your priority is a quiet historical visit, ask your provider whether this stop can be bypassed, as gunfire noise carries across the surrounding woodland."
     },
     {
       question: "What should you wear on a private Cu Chi tour?",
@@ -352,11 +353,27 @@ const articleSchema = {
                 <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
                   <span class="text-lg">🏛️</span> UNESCO Tentative List 2026: Over 27 Million Cumulative Visitors
                 </div>
-                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
-                  On <strong>July 15, 2026</strong>, Vietnam officially submitted the Cu Chi Tunnels complex to the <strong>UNESCO World Heritage Tentative List</strong> under cultural criteria <em>(iv)</em> and <em>(vi)</em>. The nomination documents Cu Chi as an extensive subterranean defense network developed across both the <strong>First Indochina War</strong> and <strong>Second Indochina War</strong>. Official records note that by 2025, Cu Chi had welcomed <strong>more than 27 million cumulative domestic and international visitors</strong> since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary sectors best preserving the original scale, layout, and structure (totaling roughly 4 km of conserved underground passages).
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed mb-3">
+                  On <strong>July 15, 2026</strong>, Vietnam officially submitted the Cu Chi Tunnels complex to the <strong>UNESCO World Heritage Tentative List</strong> under cultural criteria <em>(iv)</em> and <em>(vi)</em>. The nomination documents Cu Chi as an extensive subterranean defense network developed across both the <strong>First Indochina War</strong> and <strong>Second Indochina War</strong>. Official records note that by 2025, Cu Chi had welcomed <strong>more than 27 million cumulative domestic and international visitors</strong> since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary sectors best preserving the original scale, layout, and structure.
                 </p>
+                <div class="bg-white/85 border border-amber-200/80 rounded-xl p-3.5 space-y-1.5 text-xs text-amber-950">
+                  <div class="font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-1">How Cu Chi Grew (UNESCO Dossier Historical Stages):</div>
+                  <div class="grid sm:grid-cols-2 gap-2 text-[11.5px]">
+                    <div><strong>• 1946:</strong> Discrete family bomb shelters and escape trenches</div>
+                    <div><strong>• 1947:</strong> Linked village-wide tunnels (~17 km network)</div>
+                    <div><strong>• 1961–1965:</strong> Fortified 3-tier subterranean network expansion</div>
+                    <div><strong>• 1975 onward:</strong> Post-war preservation and state protection</div>
+                    <div class="sm:col-span-2"><strong>• 1991 to present:</strong> Roughly 4 km actively conserved and presented across Ben Duoc and Ben Dinh</div>
+                  </div>
+                </div>
               </div>
 
+              <p>
+                The famous "250 km" figure frequently cited in travel literature refers to the historical tunnel network at its widest wartime extent; it should not be confused with the roughly 4 km of underground sections actively conserved and presented to visitors today at Ben Dinh and Ben Duoc.
+              </p>
+              <p>
+                Crucially, UNESCO's dossier emphasizes that Cu Chi was not merely a military trench network, but an <strong>"underground village"</strong>—a self-contained communal infrastructure incorporating shelters, grain stores, deep wells, smokeless Hoang Cam kitchens, meeting halls, infirmaries, surgical operating rooms, and spaces for everyday community life beneath intense bombardment.
+              </p>
               <p>
                 Alongside central historical landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a> in downtown Saigon, Cu Chi is vital for understanding Vietnam's modern history. Understanding how different tour formats deliver that history is key to spending your travel budget wisely.
               </p>
@@ -376,7 +393,7 @@ const articleSchema = {
                 There is no single standard private-tour price because operators package the experience differently.
               </p>
               <p>
-                Published 2026 tour listings show a wide range of prices, depending on group size, vehicle and inclusions:
+                Published 2026 tour listings show a wide range of options, depending on group size, vehicle and inclusions:
               </p>
 
               {/* Table: Pricing Tiers */}
@@ -386,34 +403,39 @@ const articleSchema = {
                     <tr class="bg-slate-900 text-white font-serif">
                       <th class="p-3.5 sm:p-4">Tour Format</th>
                       <th class="p-3.5 sm:p-4">Typical 2026 Price</th>
-                      <th class="p-3.5 sm:p-4">What You Usually Receive</th>
+                      <th class="p-3.5 sm:p-4">Main Advantage & Inclusions</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 bg-white">
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Standard Group Bus</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$13–$20 / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Shared transport, shared guide, fixed itinerary, multiple hotel pickups</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Lowest cost; shared transport, shared guide, fixed schedule, multiple hotel pickups</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Small Group Tour</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$18–$35 / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">9–16 seat van (usually 8–12 guests), more personal attention, semi-flexible pickup</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Smaller group; 9–16 seat van (usually 8–12 guests), more personal guide attention</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">DIY / Ride-Hailing (Grab)</td>
+                      <td class="p-3.5 sm:p-4 font-medium text-amber-800">Variable (~$35–$65 return)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Maximum independence; app-hailed car, on-site ticket & resident guide, self-managed return</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Private Car (Transport Only)</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$40–$75 / vehicle</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Private vehicle, dedicated driver, hotel pickup, fuel and tolls included (no dedicated guide)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Dedicated transport; private vehicle, dedicated driver for the day, hotel pickup, fuel and tolls</td>
                     </tr>
                     <tr class="hover:bg-amber-50/50 bg-amber-50/20">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Fully Guided Private Tour</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">~US$50–$110+ / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Exclusive vehicle, dedicated private licensed guide, entrance tickets, customized timing</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Transport + dedicated guide; exclusive vehicle, dedicated licensed guide, entrance tickets, flexible timing</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80">
                       <td class="p-3.5 sm:p-4 font-semibold text-slate-900">VIP / Luxury Private Tour</td>
                       <td class="p-3.5 sm:p-4 font-medium text-amber-800">US$100–$150+ / person</td>
-                      <td class="p-3.5 sm:p-4 text-slate-600">Limousine van or luxury SUV, top-tier multilingual guide, premium refreshments, tailored stops</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Premium comfort; limousine van or luxury SUV, top-tier multilingual guide, premium refreshments</td>
                     </tr>
                   </tbody>
                 </table>
@@ -450,7 +472,7 @@ const articleSchema = {
                 If your primary objective is simply comfortable, air-conditioned transport without sharing a bus with strangers, <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a> may give you everything you need at a lower price point. The 2026 foreign-visitor tariff includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged at the counter.
               </p>
               <p>
-                However, if your main motivation for spending extra is having an articulate guide who can untangle complex wartime geopolitics, answer spontaneous questions, and shepherd your family through the site, a dedicated guide is often far more valuable than the private car itself.
+                If you only want historical interpretation once you arrive at the tunnels, paying for a private guide may not be essential for every traveler. The site provides resident guide services for visitors, while a private guide becomes far more valuable if you want in-depth historical commentary throughout the two-hour drive, a slower unhurried pace, or someone dedicated exclusively to your group.
               </p>
 
               {/* Dedicated Comparison Table: Private Car vs Private Tour */}
@@ -510,6 +532,38 @@ const articleSchema = {
             </div>
           </section>
 
+          <!-- Section: Private Tour vs DIY (Grab) -->
+          <section id="diy-vs-private" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What About Visiting Cu Chi Tunnels Without A Tour? (DIY & Grab)
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                When travelers evaluate whether a private tour is worth the expense, they are increasingly comparing it against an independent alternative: <strong>going on their own using ride-hailing apps like Grab and relying on the on-site guide</strong>.
+              </p>
+              <p>
+                Recent 2026 traveler reports demonstrate that DIY is a practical option rather than mere theory. In a typical real-world run, independent visitors book a GrabCar from central Ho Chi Minh City around 07:30 AM, arrive at the ticket counter by roughly 09:30 AM (reflecting normal suburban morning traffic), purchase their entrance tickets (135,000 VND), explore the trails and tunnel sections with the resident site guide until about 12:15 PM, and hail a return car back to the city.
+              </p>
+              <p>
+                DIY can be surprisingly cost-effective if you are comfortable managing your own arrangements. Because the official foreign-visitor tariff includes on-site guide service, you still receive knowledgeable explanations of secret entrances, ventilation shafts, booby traps, and subterranean living quarters without having booked an agency package.
+              </p>
+              <p>
+                The trade-off is logistical uncertainty:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Return ride availability:</strong> While getting a Grab out to Cu Chi is straightforward, finding an app driver willing to accept a long return trip from outer suburban districts back to District 1 can take time or require cash negotiation.</li>
+                <li><strong>Logistical responsibility:</strong> Managing traffic delays, ticket queues, navigation, and ensuring your party gets back to Ho Chi Minh City on schedule remains entirely in your hands.</li>
+                <li><strong>Transit comfort & storytelling:</strong> Standard ride-hail drivers rarely speak English and do not provide historical context during the 1.5 to 2-hour drive.</li>
+              </ul>
+              <p>
+                A private tour or chartered private car shifts those logistical burdens to the operator. The driver waits on-site throughout your visit, and a private tour guide takes full responsibility for coordinating timing, hydration, and historical depth from your hotel lobby and back.
+              </p>
+            </div>
+          </section>
+
           <!-- Section: Waiting Time vs Driving Time -->
           <section id="waiting-time" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
@@ -550,12 +604,51 @@ const articleSchema = {
                   <ul class="text-xs text-amber-900 space-y-2 list-disc pl-4 leading-relaxed">
                     <li>Direct departure from your lobby with only your travel party.</li>
                     <li>Option to depart early (e.g., 06:45–07:00 AM) to beat morning commuter traffic.</li>
-                    <li>Arrive at the site before major bus convoys unload.</li>
+                    <li>An early departure can help you reach the site before the busiest tour groups arrive, but it cannot eliminate suburban highway traffic.</li>
                     <li>Direct highway routing without compulsory shopping stops.</li>
                     <li>Returning to central Ho Chi Minh City around lunchtime is possible with an early departure, although actual timing depends on traffic, site choice, and how long you stay.</li>
                   </ul>
                 </div>
               </div>
+
+              {/* Time Breakdown Table: Site Time vs Transit Time */}
+              <div class="overflow-x-auto my-6 not-prose shadow-sm rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-3.5 sm:p-4">Time Component</th>
+                      <th class="p-3.5 sm:p-4">Typical Duration</th>
+                      <th class="p-3.5 sm:p-4">What Happens During This Window</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 bg-white">
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">HCMC → Cu Chi Transit</td>
+                      <td class="p-3.5 sm:p-4 font-medium text-amber-800">~1.5 to 2 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Suburban highway transit out of District 1 (varies by morning bottlenecks and Ben Dinh vs. Ben Duoc)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">At the Relic Site</td>
+                      <td class="p-3.5 sm:p-4 font-medium text-amber-800">~2 to 3 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Introductory briefing, forest trails, trap demonstrations, optional tunnel crawl, cassava tasting</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Return Transit → HCMC</td>
+                      <td class="p-3.5 sm:p-4 font-medium text-amber-800">~1.5 to 2 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Return drive to your hotel lobby in central Ho Chi Minh City</td>
+                    </tr>
+                    <tr class="hover:bg-amber-50/50 bg-amber-50/20">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Total Half-Day Commitment</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-emerald-700">~5 to 6 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 font-medium">Planning ranges based on standard conditions, not guaranteed transit times</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-xs text-slate-500 italic">
+                *Note: These are realistic planning windows. As real-world 2026 visits show, even independent or private journeys typically take around 5 to 6 hours total door-to-door from central Saigon.
+              </p>
 
               <p>
                 That is a far more honest and defensible advantage than promising an imaginary high-speed route.
@@ -793,6 +886,9 @@ const articleSchema = {
                 <li>Reconstructed living quarters display how partisans crafted everyday equipment and wore the <a href="/khan-ran-nam-bo" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">traditional khăn rằn checkered scarf</a> as a versatile utility garment and identity symbol.</li>
               </ul>
               <p>
+                Crucially, UNESCO's nomination documents Cu Chi as an <strong>"underground village"</strong> rather than a mere combat tunnel. That distinction matters when choosing a guide. A guide who explains only booby traps and tunnel crawling gives you a very different experience from one who explains how an underground community of thousands actually functioned—how air was supplied through disguised termite-mound vents, how underground surgeries were performed by lamplight, and how families sustained everyday life beneath intense bombardment.
+              </p>
+              <p>
                 If your traveling party includes curious teenagers, history enthusiasts, or seniors who appreciate nuanced storytelling, investing in an experienced private guide transforms the day into an engaging masterclass in modern Vietnamese history.
               </p>
             </div>
@@ -825,6 +921,9 @@ const articleSchema = {
               <p>
                 If avoiding commercial stops matters to you, confirm this explicitly before booking. A private vehicle gives you more control, but "private" does not automatically mean "zero shopping stops." The Rice Tour’s private itinerary is designed without compulsory commercial stops, allowing guests to travel directly to the historical sites without detour or retail pressure.
               </p>
+              <p>
+                Similarly, verify whether optional itinerary add-ons like the on-site shooting range are included. Some Cu Chi itineraries include a stop at the shooting range, while others skip it. Ammunition is charged separately, so confirm the current price and minimum purchase if you want to try it. If your priority is a quiet historical visit, ask whether the shooting range is part of the itinerary, as gunfire noise carries distinctly across the surrounding woodland.
+              </p>
             </div>
           </section>
 
@@ -844,14 +943,14 @@ const articleSchema = {
                 The Cu Chi complex is divided into two distinct visiting sectors:
               </p>
               <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
-                <li><strong>Ben Dinh (~50 km from District 1):</strong> The closer sector, originally used by the Cu Chi District Party Committee. Because it usually involves less driving time, it hosts the vast majority of shared group buses, tour coaches, and budget travelers. Passages here have been widened, and trails can become congested during peak morning hours.</li>
-                <li><strong>Ben Duoc (~70 km from District 1):</strong> The regional headquarters of Military Region 4 and the Saigon–Gia Dinh Party Committee. Ben Duoc generally offers a quieter setting and preserves sections closer to the historical tunnel environment, while Ben Dinh is the more accessible and heavily visited option. Ben Duoc also includes the solemn Ben Duoc Memorial Temple.</li>
+                <li><strong>Ben Dinh (~50 km from District 1):</strong> The closer sector, originally used by the Cu Chi District Party Committee. Because it usually involves less driving time, it hosts the majority of shared group buses, tour coaches, and budget travelers. Passages here have been widened, and trails can become congested during peak morning hours.</li>
+                <li><strong>Ben Duoc (~70 km from District 1):</strong> The regional headquarters of Military Region 4 and the Saigon–Gia Dinh Party Committee. Ben Duoc generally offers a quieter setting and preserves sections closer to the historical tunnel environment, while Ben Dinh is the more accessible and heavily visited option.</li>
               </ul>
               <p>
-                Because group bus companies prioritize tight turnarounds and fuel efficiency, finding a shared group tour that visits Ben Duoc is difficult. Most bus itineraries simply take everyone to Ben Dinh.
+                Ben Duoc also adds a memorial dimension that is easy to miss when Cu Chi is presented only as a tunnel attraction. The <strong>Ben Duoc Memorial Temple</strong> is dedicated to those who died in the wider Saigon–Gia Dinh region, giving the visit a solemn, commemorative character alongside the underground exhibits. Furthermore, its wider complex includes memorial grounds and a reconstructed wartime-life area (liberated zone) illustrating daily life in the resistance base. Travelers interested in the broader social history of Cu Chi may want to allow more time than a standard half-day tunnel stop.
               </p>
               <p>
-                With a private tour, choosing Ben Duoc is straightforward. You simply request Ben Duoc when booking. While the drive takes an additional 20 to 35 minutes each way depending on traffic, the reward is an unhurried visit surrounded by native rubber trees and bird calls rather than large tour groups.
+                Most published group itineraries currently focus on Ben Dinh, while Ben Duoc appears less frequently in standard group products. With a private tour, choosing Ben Duoc is straightforward: you simply request Ben Duoc when booking. While the drive takes an additional 20 to 35 minutes each way depending on traffic, the reward is an unhurried visit surrounded by native rubber trees and bird calls rather than large tour groups.
               </p>
             </div>
           </section>
@@ -872,10 +971,16 @@ const articleSchema = {
                 The preserved tunnels at both Ben Dinh and Ben Duoc retain their historical dimensions: narrow, unlit in places, warm, and humid. While entry sections at Ben Dinh have been enlarged to accommodate wider shoulders, crawling on hands and knees through 20 to 40 meters of underground trench remains a physical, enclosed experience.
               </p>
               <p>
+                The tunnel experience is not simply about height. Body width, mobility, heat tolerance, and claustrophobia can matter just as much. One recent 2026 visitor who described himself as 6 feet tall and size XXL reported that while he was able to enter the tunnel, the passages felt extremely tight and physically taxing in the heat.
+              </p>
+              <p>
                 The key benefit of a private tour is that <strong>the crawl is optional and non-enforced.</strong>
               </p>
               <p>
                 On a large group tour, visitors often feel swept along by the momentum of the crowd. If someone experiences mild claustrophobia halfway through, turning around can be awkward when other passengers are following closely behind. On a private tour, your guide inspects the entrance with you, explains the tunnel layout and available exit points before you enter, and ensures anyone who prefers staying above ground has plenty of fascinating open-air exhibits to explore.
+              </p>
+              <p>
+                Skipping the crawl does not mean skipping Cu Chi. The above-ground circuit includes camouflage trapdoors, bamboo booby-trap demonstrations, bomb craters, reconstructed living spaces, Hoang Cam smokeless kitchens, command bunkers, and rich open-air historical displays. Many visitors find the surface exhibits more educational and memorable than crawling through a humid trench.
               </p>
 
               {/* Third Image Inside Body */}
@@ -946,6 +1051,7 @@ const articleSchema = {
                 <li><strong>You are traveling solo on a backpacker budget:</strong> Paying US$70 to $140 alone for private transport makes little sense when a reliable shared bus costs just US$15 to $20.</li>
                 <li><strong>You enjoy meeting fellow travelers:</strong> Group tours are naturally social. If you want to make friends and swap travel stories, a shared coach atmosphere is part of the experience.</li>
                 <li><strong>You are completely indifferent to schedule and timing:</strong> If you have multiple days in Saigon and do not mind hotel pickup loops, the basic group tour delivers the core visit at minimal cost.</li>
+                <li><strong>You have very limited time in Saigon:</strong> If your stay in Ho Chi Minh City is only 24 to 48 hours, consider the full half-day commitment—not just the tour price. A private vehicle can reduce waiting time, but it cannot remove the physical 100-to-140 km round-trip distance between the city and Cu Chi. Some travelers with tight schedules prefer dedicating their time to downtown heritage sights.</li>
               </ul>
             </div>
           </section>
@@ -994,13 +1100,13 @@ const articleSchema = {
           <section id="pre-booking-checklist" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                12-Question Pre-Booking Checklist
+                15-Question Pre-Booking Checklist
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Before transferring a deposit for any private Cu Chi tour, review these twelve questions with your operator:
+                Before transferring a deposit for any private Cu Chi tour, review these fifteen questions with your operator:
               </p>
 
               <div class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700">
@@ -1051,6 +1157,18 @@ const articleSchema = {
                 <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
                   <span class="text-emerald-600 font-bold">12.</span>
                   <span>What is the cancellation and rescheduling policy?</span>
+                </div>
+                <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                  <span class="text-emerald-600 font-bold">13.</span>
+                  <span>Is on-site guide assistance included if we book transport only?</span>
+                </div>
+                <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                  <span class="text-emerald-600 font-bold">14.</span>
+                  <span>Does the itinerary include the shooting range, and is it optional to visit or bypass?</span>
+                </div>
+                <div class="flex items-start gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100 sm:col-span-2">
+                  <span class="text-emerald-600 font-bold">15.</span>
+                  <span>Which specific parts of Ben Duoc are included (tunnels, memorial temple, or the reconstructed liberated zone)?</span>
                 </div>
               </div>
             </div>
