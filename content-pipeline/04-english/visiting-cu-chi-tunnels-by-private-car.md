@@ -27,7 +27,7 @@ Visiting the **Cu Chi Tunnels** (*Địa đạo Củ Chi*) by private car offers
 ![Small private group exploring the forested grounds and secret tunnel entrances at Cu Chi - The Rice Tour](https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp)
 
 > 🏛️ **UNESCO Tentative List 2026: Over 27 Million Cumulative Visitors**  
-> On **July 15, 2026**, Vietnam officially submitted the Cu Chi Tunnels complex to the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(v)*. The nomination documents Cu Chi as an extensive subterranean defense network developed across both the **First Indochina War** and **Second Indochina War**. Official records note that by 2025, Cu Chi had welcomed **more than 27 million cumulative domestic and international visitors** since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary sectors best preserving the original scale, layout, and structure (totaling roughly 4 km of conserved underground passages).
+> On **July 15, 2026**, Vietnam officially submitted the Cu Chi Tunnels complex to the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(vi)*. The nomination documents Cu Chi as an extensive subterranean defense network developed across both the **First Indochina War** and **Second Indochina War**. Official records note that by 2025, Cu Chi had welcomed **more than 27 million cumulative domestic and international visitors** since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary sectors best preserving the original scale, layout, and structure (totaling roughly 4 km of conserved underground passages).
 
 Alongside central landmarks like the [Independence Palace](/independence-palace-saigon-guide) downtown, Cu Chi provides essential context for understanding Vietnam's modern history. While standard group tours often involve early-morning hotel pickup rounds and stops at commercial lacquerware workshops, hiring a private car allows you to travel directly and experience the historical site on your own terms.
 
@@ -322,7 +322,7 @@ Wear comfortable walking shoes with good grip and lightweight, breathable clothi
 A private car is worthwhile if you value schedule control, privacy, and direct hotel-to-site travel. It allows you to leave early (06:30–07:00 AM) to arrive ahead of tour bus crowds, skip commercial handicraft detours, and return at your own pace. For groups of 2 to 7 people, the cost per person is often comparable to or only slightly higher than joining a shared tour.
 
 ### Is Cu Chi Tunnels a UNESCO World Heritage Site?
-Not yet. Vietnam officially submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List on July 15, 2026, under cultural criteria (iv) and (v). The Tentative List is a formal inventory of properties an authority intends to consider for future nomination.
+Not yet. Vietnam officially submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List on July 15, 2026, under cultural criteria (iv) and (vi). The Tentative List is a formal inventory of properties an authority intends to consider for future nomination.
 
 ---
 
