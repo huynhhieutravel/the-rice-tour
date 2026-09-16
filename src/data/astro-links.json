@@ -93,6 +93,72 @@
       "anchorText": "Inquire via WhatsApp / Email"
     }
   ],
+  "is-a-cu-chi-tunnels-private-tour-worth": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "how to visit Cu Chi Tunnels without the crowds"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "traditional khăn rằn checkered scarf"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Cu Chi Tunnels Private Tour →\n                  \n                  \n                    Dir"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Premium Cu Chi Tunnels Itinerary →\n                  \n                  \n                    T"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private journey"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi By Private Car →\n                2026 vehicle rates, routes & Grab feasibility"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How To Visit Without Crowds →\n                Tactical timing windows & trail navigation"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh →\n                Best cafes, dining & sights in District 1"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "The Southern Khăn Rằn Scarf →\n                Cultural symbol of Mekong & Cu Chi partisans"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Contact Travel Concierge"
+    }
+  ],
   "search": [
     {
       "targetUrl": "/${slug}",
