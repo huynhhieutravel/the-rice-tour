@@ -26,8 +26,8 @@ Visiting the **Cu Chi Tunnels** (*Địa đạo Củ Chi*) by private car gives 
 
 ![Small private group exploring the forested grounds and secret tunnel entrances at Cu Chi - The Rice Tour](https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp)
 
-> 🏛️ **UNESCO Tentative List 2026: Over 27 Million Historic Visitors**  
-> On **July 15, 2026**, Vietnam officially submitted the Cu Chi Tunnels complex to the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(vi)*. The dossier describes the system as an extraordinary subterranean defense network forged across both the **First Indochina War** and **Second Indochina War**. UNESCO records that by 2025, Cu Chi had welcomed **more than 27 million domestic and international visitors**, with Ben Duoc and Ben Dinh recognized as the two key sectors best preserving the original scale, layout, and structure (totaling roughly 4 km of conserved underground passages).
+> 🏛️ **UNESCO Tentative List 2026: Over 27 Million Cumulative Visitors**  
+> On **July 15, 2026**, Vietnam officially submitted the Cu Chi Tunnels complex to the **UNESCO World Heritage Tentative List** under cultural criteria *(iv)* and *(v)*. The dossier describes the system as an extraordinary subterranean defense network forged across both the **First Indochina War** and **Second Indochina War**. UNESCO records note that by 2025, Cu Chi had welcomed **more than 27 million cumulative domestic and international visitors** since opening to tourism, with Ben Duoc and Ben Dinh recognized as the two primary sectors best preserving the original scale, layout, and structure (totaling roughly 4 km of conserved underground passages).
 
 For couples, families, small groups, and travelers who prefer a direct hotel-to-site transfer, a private car can be a practical way to visit without being tied to multiple hotel pickups or a fixed group schedule.
 
@@ -157,7 +157,7 @@ This does not make the historical site meaningless or "fake." It simply helps vi
 
 The most compelling way to understand Cu Chi is not simply as a collection of narrow crawlways, but as an **underground village**.
 
-UNESCO's 2026 documentation describes a subterranean community engineered across three interconnected vertical levels. The system was designed not simply to hide guerrilla fighters during airstrikes, but to support and sustain an entire community under extreme wartime conditions:
+UNESCO's 2026 documentation describes a subterranean community engineered across three interconnected vertical levels: **Level 1 (~3 meters deep)** designed to withstand heavy vehicle traffic and light artillery; **Level 2 (~6 meters deep)** engineered to resist conventional aerial bombardment; and **Level 3 (~8 to 12 meters deep)**, the deepest subterranean sanctuary housing surgical wards, headquarters, and bomb shelters. The network supported and sustained an entire community under extreme wartime conditions:
 
 * **Living & Meeting Quarters:** Multi-tiered chambers where families, leadership committees, and guerrilla units held council.
 * **Smokeless Kitchens (Bếp Hoàng Cầm):** Clever flues that cooled and dispersed cooking smoke horizontally through subterranean brush trenches.
@@ -172,7 +172,7 @@ UNESCO's 2026 documentation describes a subterranean community engineered across
 
 One of the most memorable parts of the visit is the simple wartime food experience.
 
-Near the Hoàng Cầm kitchen pavilion, visitors are offered freshly steamed **boiled cassava dipped in crushed peanuts, roasted sesame seeds, and sea salt** (*khoai mì chấm muối mè*), accompanied by a cup of hot pandan or green tea. Cassava was the drought-hardy, calorie-dense root crop relied upon by villagers and fighters living underground when supply lines were cut.
+Near the Hoàng Cầm kitchen pavilion, visitors are offered complimentary freshly steamed **boiled cassava dipped in crushed peanuts, roasted sesame seeds, and sea salt** (*khoai mì chấm muối mè*), accompanied by a cup of hot pandan or green tea (included as part of the on-site historical visit). Cassava was the drought-hardy, calorie-dense root crop relied upon by villagers and fighters living underground when supply lines were cut.
 
 It is a humble detail, but it helps turn the visit from an abstract walk into a tangible glimpse of everyday life during wartime.
 
@@ -198,7 +198,9 @@ Yes, independent travel is entirely possible.
 
 Travelers frequently ask: *can you go to Cu Chi Tunnels by Grab?* Independent visitors have reported successfully using Grab for both outbound and return journeys. Because the official guiding fee is bundled into the international ticket tariff (**135,000 VND total: 35,000 VND relic fee + 100,000 VND guide/service fee**), you do not need to book an agency group tour simply to have an on-site guide walk you through the grounds. A typical independent morning excursion might leave central Saigon around 07:30 AM and arrive at the ticket counter by 09:30 AM.
 
-Grab can work for the return journey, but availability depends on time and location. Some travelers report getting a return car quickly—with drivers arriving in just 4 to 10 minutes even from the more distant Ben Duoc parking area—while others encounter longer waits or driver cancellations during rural afternoon hours.
+However, examine the true economics before deciding. A one-way GrabCar ride from District 1 to Ben Dinh typically costs around **550,000–750,000 VND** (and up to 850,000 VND to Ben Duoc, plus highway tolls). Booking two separate Grab rides round-trip totals roughly **1.1M–1.5M VND**—virtually identical to the cost of reserving a private car with a dedicated driver.
+
+Furthermore, return ride availability is never guaranteed. While some travelers report getting a return car quickly—with drivers arriving in 4 to 10 minutes even from Ben Duoc—others face long delays, driver cancellations, or hefty offline cash demands from drivers reluctant to make the empty return leg back into the city during rural afternoon hours.
 
 If you want maximum certainty and prefer not to spend time booking rides on a countryside road after walking in the heat, arranging a private car with a waiting driver remains the more predictable, stress-free option.
 
@@ -230,9 +232,11 @@ Practical preparation makes a significant difference to your comfort during the 
 
 ## Note on the On-Site Shooting Range
 
-Both Ben Dinh and Ben Duoc feature a sports firing range where visitors can purchase live ammunition to fire wartime rifles (AK-47, M16).
+Both Ben Dinh and Ben Duoc feature a sports defense firing range where visitors can fire wartime rifles (such as AK-47, M16, or carbines).
 
-**The shooting range is optional and charged separately per bullet.** If you are primarily interested in a quiet, reflective historical experience, you can simply skip this area. Gunfire can be surprisingly loud and echoes through adjacent woodland trails, so inform your guide upfront if you prefer to bypass it.
+**Key rules & pricing:** The shooting range is optional and charged separately. Ammunition cannot be bought as single bullets; it must be purchased as a full clip or minimum set (typically a **minimum of 10 rounds at ~60,000 VND per bullet**, amounting to roughly **600,000 VND / ~$24 USD** per session). Participants must be at least 18 years old and in suitable health. For safety, the rifles are locked onto fixed benches on designated firing lanes under military supervision.
+
+If you are primarily interested in a quiet, reflective historical experience, you can simply skip this area. Gunfire can be surprisingly loud and echoes through adjacent woodland trails, so inform your guide upfront if you prefer to bypass it.
 
 ---
 
@@ -315,7 +319,7 @@ Wear comfortable walking shoes with good grip and lightweight, breathable clothi
 A private car is worthwhile if you value schedule control, privacy, and direct hotel-to-site travel. It allows you to leave early (06:30–07:00 AM) to arrive ahead of tour bus crowds, skip commercial handicraft detours, and return at your own pace. For groups of 2 to 7 people, the cost per person is often comparable to or only slightly higher than joining a shared tour.
 
 ### Is Cu Chi Tunnels a UNESCO World Heritage Site?
-Not yet. Vietnam officially submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List on July 15, 2026, under cultural criteria (iv) and (vi). The Tentative List is a formal inventory of properties an authority intends to consider for future nomination.
+Not yet. Vietnam officially submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List on July 15, 2026, under cultural criteria (iv) and (v). The Tentative List is a formal inventory of properties an authority intends to consider for future nomination.
 
 ---
 
