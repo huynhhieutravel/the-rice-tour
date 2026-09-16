@@ -71,7 +71,7 @@ In short, "private tour" can mean anything from a budget car booking to a fully 
 
 ## Private Car And Private Tour Are Not The Same Thing
 
-Many first-time visitors don't realize that hiring a private car and booking a private tour are two very different services.
+When planning a [South Vietnam travel itinerary](/destination/south-vietnam), many first-time visitors don't realize that hiring a private car and booking a private tour are two very different services.
 
 A **private car service** is essentially a tailored chauffeur arrangement. It typically provides:
 - A private air-conditioned vehicle (sedan, SUV, or passenger van).
@@ -320,10 +320,10 @@ An early morning departure (around 06:45–07:00 AM) gets you to the site right 
 
 Conversely, a private tour is not the right choice for every traveler. You are likely better served by a shared tour if:
 
-- **You are traveling solo on a backpacker budget:** Paying US$70 to $140 alone for private transport makes little sense when a reliable shared bus costs just US$15 to $20.
+- **You are traveling solo on a backpacker budget:** Paying US$70 to $140 alone for private transport makes little sense when a reliable shared bus costs just US$15 to $20. For budget-conscious urban sightseeing, pairing a shared Cu Chi excursion with the [Saigon hop-on hop-off bus](/saigon-hop-on-hop-off-bus-guide) offers comprehensive city coverage at minimal cost.
 - **You enjoy meeting fellow travelers:** Group tours are naturally social. If you are traveling alone and want to swap travel tips and make new friends, the shared coach atmosphere is part of the experience.
 - **You are completely indifferent to schedule and timing:** If you have multiple days in Saigon and do not mind hotel pickup loops, the basic group tour delivers the core visit at minimal cost.
-- **You have very limited time in Saigon:** If your stay in Ho Chi Minh City is only 24 to 48 hours, consider the full half-day commitment—not just the tour price. A private vehicle can reduce waiting time, but it cannot remove the physical 100-to-140 km round-trip distance between the city and Cu Chi. Some travelers with tight schedules prefer dedicating their time to downtown heritage sights.
+- **You have very limited time in Saigon:** If your stay in Ho Chi Minh City is only 24 to 48 hours, consider the full half-day commitment—not just the tour price. A private vehicle can reduce waiting time, but it cannot remove the physical 100-to-140 km round-trip distance between the city and Cu Chi. Some travelers with tight schedules prefer dedicating their time to downtown heritage sights like the Independence Palace and the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 
 ---
 
@@ -379,7 +379,8 @@ If you decide that a private excursion fits your travel style and budget, The Ri
 
 - **[Half-Day Cu Chi Tunnels Private Tour](/tour/half-day-cu-chi-tunnels-tour):** Direct half-day morning or afternoon tour (approx. 5 to 6 hours; drive time varies if selecting Ben Duoc) with dedicated licensed guide and direct routing without compulsory stops.
 - **[1-Day Premium Cu Chi Tunnels Itinerary](/tour/1-day-premium-cu-chi-tunnels):** Tranquil morning at Ben Duoc combined with an afternoon exploring Saigon's historical landmarks and cultural quarters.
-- For custom multi-day journeys across southern Vietnam and the Mekong Delta, consider designing a [tailor-made private journey](/tailor-made) with our inbound travel concierges.
+- Many travelers spend one morning at Cu Chi and dedicate their following day to exploring waterways and orchards on our [full-day Mekong Delta private tour](/tour/full-day-mekong-delta-tour-ben-tre-my-tho) through Ben Tre and My Tho.
+- For custom multi-day journeys across southern Vietnam and the [Mekong Delta](/destination/mekong-delta), consider designing a [tailor-made private journey](/tailor-made) with our inbound travel concierges.
 
 ---
 

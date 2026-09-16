@@ -107,6 +107,10 @@
       "anchorText": "Independence Palace"
     },
     {
+      "targetUrl": "/destination/south-vietnam",
+      "anchorText": "South Vietnam travel itinerary"
+    },
+    {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
       "anchorText": "visiting Cu Chi Tunnels by private car"
     },
@@ -123,12 +127,32 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private half-day Saigon city tour"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon hop-on hop-off bus"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
       "anchorText": "Half-Day Cu Chi Tunnels Private Tour →\n                  \n                  \n                    Dir"
     },
     {
       "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
       "anchorText": "1-Day Premium Cu Chi Tunnels Itinerary →\n                  \n                  \n                    T"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "full-day Mekong Delta private tour"
+    },
+    {
+      "targetUrl": "/destination/mekong-delta",
+      "anchorText": "Mekong Delta"
     },
     {
       "targetUrl": "/tailor-made",
