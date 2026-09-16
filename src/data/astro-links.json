@@ -385,8 +385,32 @@
       "anchorText": "Independence Palace"
     },
     {
+      "targetUrl": "/tours",
+      "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "how to visit Cu Chi Tunnels without the crowds"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "khăn rằn scarf"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private half-day Saigon city tour"
+    },
+    {
       "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
       "anchorText": "full-day Mekong Delta tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private journey"
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
