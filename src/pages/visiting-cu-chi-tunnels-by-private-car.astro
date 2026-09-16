@@ -21,13 +21,13 @@ try {
   console.warn('[D1 Query Warning] visiting-cu-chi-tunnels-by-private-car:', e);
 }
 
-// Fallback metadata if D1 local/remote is not yet populated
+// Fallback metadata if D1 is not yet populated
 if (!post) {
   post = {
-    id: 19807,
+    id: 19808,
     title: 'Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect',
     slug: currentSlug,
-    excerpt: 'A practical guide to hiring a private vehicle from Ho Chi Minh City, calculating per-person costs, choosing between SUVs and limousine vans, and planning routes to Ben Dinh and Ben Duoc.',
+    excerpt: 'A practical guide to vehicle options, 2026 costs, route planning, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.',
     featuredImage: 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
     readingTime: 14,
     author: 'The Rice Tour Editorial',
@@ -37,42 +37,16 @@ if (!post) {
   };
 }
 
-// Check draftSnapshot if exists
-let draftData: any = null;
-if (post?.draftSnapshot) {
-  try {
-    draftData = typeof post.draftSnapshot === 'string' 
-      ? JSON.parse(post.draftSnapshot) 
-      : post.draftSnapshot;
-  } catch (e) {
-    console.log("Could not parse draftSnapshot:", e);
-  }
-}
+const { settings } = await getGlobalSettings();
 
-const rawTitle = draftData?.title || post?.title;
-const rawSeoTitle = draftData?.seoTitle || post?.seoTitle;
-const rawSeoDesc = draftData?.seoDescription || post?.seoDescription || draftData?.excerpt || post?.excerpt;
-const rawFeaturedImage = draftData?.featuredImage || post?.featuredImage || post?.ogImage;
+const pageTitle = post?.title || 'Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect';
+const pageDesc = post?.excerpt || 'A practical guide to vehicle options, 2026 costs, route planning, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.';
 
-const cleanText = (str?: string) => str ? String(str).replace(/<[^>]*>/g, '').replace(/[\t\r\n]+/g, ' ').replace(/\s{2,}/g, ' ').trim() : '';
+const seoTitle = post?.seoTitle || post?.metaTitle || `${pageTitle} | The Rice Tour`;
+const seoDesc = post?.seoDescription || 'Hiring a private car to Cu Chi Tunnels: compare SUV, MPV & limousine costs, avoid hidden fees, choose between Ben Dinh & Ben Duoc, and plan an unhurried day from Saigon.';
+const seoImage = post?.ogImage || post?.featuredImage || 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
 
-const pageTitle = cleanText(rawTitle) || 'Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect';
-const pageDesc = cleanText(rawSeoDesc) || 'A practical guide to hiring a private vehicle from Ho Chi Minh City, calculating per-person costs, choosing between SUVs and limousine vans, and planning routes to Ben Dinh and Ben Duoc.';
-
-let resolvedSeoTitle = cleanText(rawSeoTitle);
-if (!resolvedSeoTitle || resolvedSeoTitle === '%title%' || resolvedSeoTitle === '%%title%%') {
-  resolvedSeoTitle = rawTitle ? `${cleanText(rawTitle)} | The Rice Tour` : "Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect";
-} else if (resolvedSeoTitle.includes('%title%')) {
-  resolvedSeoTitle = resolvedSeoTitle.replace(/%title%/gi, cleanText(rawTitle) || "Cu Chi Tunnels Private Car");
-} else if (resolvedSeoTitle.includes('%%title%%')) {
-  resolvedSeoTitle = resolvedSeoTitle.replace(/%%title%%/gi, cleanText(rawTitle) || "Cu Chi Tunnels Private Car");
-}
-
-const seoTitle = resolvedSeoTitle;
-const seoDesc = 'Hiring a private car to Cu Chi Tunnels: compare SUV, MPV & limousine costs, avoid hidden fees, choose between Ben Dinh & Ben Duoc, and plan an unhurried day from Saigon.';
-const seoImage = rawFeaturedImage || 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
-
-// --- DATE LOGIC ---
+// --- DATE LOGIC (E-E-A-T Compliant) ---
 const createdAtStr = post.createdAt || post.publishedAt || '2026-09-16T08:00:00.000Z';
 const updatedAtStr = post.updatedAt || '2026-09-16T08:00:00.000Z';
 
@@ -98,35 +72,32 @@ const authorMap: Record<string, any> = {
   }
 };
 const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"];
-const author = draftData?.author || post?.author || "The Rice Tour Editorial";
-const publishedTime = post?.publishedAt || post?.createdAt;
-const modifiedTime = post?.updatedAt;
 
-const adminEditUrl = post.id && post.id !== 19807 ? `/admin/posts/edit?id=${post.id}` : '#';
+const adminEditUrl = post.id && post.id !== 19808 ? `/admin/posts/edit?id=${post.id}` : '#';
 
 // TOC Navigation Structure
 const toc = [
-  { id: "introduction", title: "Introduction", icon: "🏠" },
+  { id: "gioi-thieu", title: "Introduction", icon: "🏠" },
   { id: "is-a-private-car-worth-it", title: "1. Is A Private Car Worth It?", icon: "💎" },
-  { id: "costs-and-pricing-2026", title: "2. 2026 Private Car Costs & Pricing", icon: "💵" },
-  { id: "vehicle-options", title: "3. Choosing The Right Vehicle", icon: "🚐" },
-  { id: "route-and-traffic", title: "4. The Route From Saigon To Cu Chi", icon: "🗺️" },
-  { id: "departure-timing", title: "5. What Time Should You Leave?", icon: "⏰" },
-  { id: "ben-dinh-vs-ben-duoc", title: "6. Ben Dinh vs. Ben Duoc By Car", icon: "🌿" },
-  { id: "private-car-vs-group-tour", title: "7. Private Car vs. Group Tour", icon: "⚖️" },
-  { id: "included-services", title: "8. What Is Included in the Service?", icon: "📋" },
-  { id: "visiting-without-a-tour", title: "9. Can You Visit Without A Tour?", icon: "🧭" },
-  { id: "what-to-expect-on-site", title: "10. What To Expect (Optional Crawl)", icon: "🛡️" },
-  { id: "families-and-seniors", title: "11. Families & Senior Travelers", icon: "👨‍👩‍👧‍👦" },
-  { id: "combining-destinations", title: "12. Combining With Other Sights?", icon: "🚫" },
-  { id: "booking-checklist", title: "13. 10-Point Booking Checklist", icon: "✅" },
-  { id: "faq", title: "Frequently Asked Questions", icon: "💡" },
-  { id: "epilogue", title: "Epilogue: Control Over Convenience", icon: "✨" }
+  { id: "private-car-costs-2026", title: "2. 2026 Private Car Costs & Pricing Basis", icon: "💵" },
+  { id: "which-vehicle-should-you-choose", title: "3. Choosing The Right Vehicle", icon: "🚗" },
+  { id: "route-from-hcmc-to-cu-chi", title: "4. The Route From Saigon To Cu Chi", icon: "🗺️" },
+  { id: "what-time-should-you-leave", title: "5. What Time Should You Leave?", icon: "⏰" },
+  { id: "ben-dinh-or-ben-duoc", title: "6. Ben Dinh vs. Ben Duoc By Private Car", icon: "🌿" },
+  { id: "private-car-vs-group-tour", title: "7. Private Car vs. Shared Group Tour", icon: "⚖️" },
+  { id: "what-is-usually-included", title: "8. What Is Included in the Quoted Price?", icon: "📋" },
+  { id: "can-you-visit-without-a-tour", title: "9. Can You Visit Without An Organized Tour?", icon: "🧭" },
+  { id: "what-to-expect-at-the-tunnels", title: "10. What To Expect (Underground Crawl Is Optional)", icon: "🛡️" },
+  { id: "is-private-car-suitable-for-families", title: "11. Families & Senior Travelers", icon: "👨‍👩‍👧‍👦" },
+  { id: "combine-with-another-attraction", title: "12. Combining Cu Chi With Other Destinations", icon: "🚫" },
+  { id: "practical-private-car-checklist", title: "13. 10-Point Booking Checklist", icon: "✅" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)", icon: "💡" },
+  { id: "epilogue", title: "Epilogue: Control Over Speed", icon: "✨" }
 ];
 
 // SSR JSON-LD Schemas
 const currentOrigin = 'https://thericetour.com';
-const canonicalUrl = draftData?.canonicalUrl || post?.canonicalUrl || `${currentOrigin}/${currentSlug}`;
+const canonicalUrl = `${currentOrigin}/${currentSlug}`;
 
 const breadcrumbSchema = {
   items: [
@@ -144,7 +115,7 @@ const faqSchema = {
     },
     {
       question: "Is traveling by private car faster than joining a bus tour?",
-      answer: "Not necessarily on the highway, because all vehicles share the same road network. However, a private car saves 45 to 60 minutes in central Saigon by eliminating multi-hotel passenger pickups and avoiding 45-minute commercial stops at roadside handicraft factories."
+      answer: "Not necessarily on the open highway, because all vehicles share the same road network. However, a private car saves 45 to 60 minutes in central Saigon by eliminating multi-hotel passenger pickups and avoiding 45-minute commercial stops at roadside handicraft factories."
     },
     {
       question: "Which tunnel site should I visit by private car: Ben Dinh or Ben Duoc?",
@@ -183,200 +154,184 @@ const faqSchema = {
   adminEditUrl={adminEditUrl}
   lang="en"
   ogType="article"
-  publishedTime={publishedTime}
-  modifiedTime={modifiedTime}
-  author={author}
 >
   <Fragment slot="schema">
     <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
     <JsonLdSchema type="faq" data={faqSchema} />
   </Fragment>
 
-  <Fragment slot="head">
-    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-    <meta property="article:author" content={author} />
-    <meta property="article:section" content="Heritage & Travel Guides" />
-  </Fragment>
-
   <div class="bg-[#F8F9FA] text-[#1E293B] font-sans antialiased selection:bg-[#F7931E] selection:text-white">
 
     {/* ================= HERO SECTION ================= */}
-    <section class="relative w-full min-h-[560px] lg:min-h-[640px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
+    <section class="relative w-full min-h-[580px] lg:min-h-[660px] overflow-hidden flex flex-col justify-center pt-32 pb-20">
       <div class="absolute inset-0 z-0 bg-slate-950">
         <img 
           src={seoImage} 
           alt={pageTitle} 
-          width="1280"
-          height="720"
           class="w-full h-full object-cover object-center opacity-85" 
-          loading="eager"
-          fetchpriority="high"
+          width="1280" 
+          height="720"
+          fetchpriority="high" 
+          loading="eager" 
+          decoding="async" 
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-[#0B132B]/75 to-transparent"></div>
-        <div class="absolute inset-0 bg-radial-at-c from-transparent via-[#0B132B]/30 to-[#0B132B]/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
       </div>
 
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center lg:text-left flex flex-col items-center lg:items-start">
+      <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
         
-        {/* Breadcrumb Navigation */}
-        <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-300 mb-6 backdrop-blur-md bg-white/10 px-3.5 py-1.5 rounded-full border border-white/15 shadow-sm">
-          <a href="/" class="hover:text-amber-400 transition-colors">Home</a>
-          <span class="text-slate-400">/</span>
-          <a href="/blog" class="hover:text-amber-400 transition-colors">Travel Guides</a>
-          <span class="text-slate-400">/</span>
-          <span class="text-amber-400 font-medium truncate max-w-[200px] sm:max-w-none">Cu Chi By Private Car</span>
-        </nav>
-
-        {/* Category Badge & Meta */}
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4">
-          <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-900 bg-amber-400 rounded-full shadow-sm">
-            Practical Logistics Guide
-          </span>
-          <span class="text-xs text-slate-300 flex items-center gap-1 font-medium">
-            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            14 Min Read
-          </span>
-          <span class="text-xs text-slate-300 flex items-center gap-1 font-medium">
-            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Updated for 2026 Season
-          </span>
+        {/* Breadcrumb - Standard 3-level breadcrumb */}
+        <div class="flex items-center gap-2 text-[13px] text-white/70 font-medium mb-6 flex-wrap">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <svg class="w-3 h-3 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+          <svg class="w-3 h-3 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-white font-semibold line-clamp-1">{pageTitle}</span>
         </div>
 
-        {/* Main H1 Title */}
-        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight lg:leading-[1.15] mb-6 max-w-4xl text-balance">
-          Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect
+        {/* Titles */}
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+          {pageTitle}
         </h1>
+        <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+          {pageDesc}
+        </h2>
 
-        {/* Subtitle / Excerpt */}
-        <p class="text-base sm:text-lg lg:text-xl text-slate-200 font-light max-w-3xl mb-8 leading-relaxed text-balance">
-          A practical guide to hiring a private vehicle from Ho Chi Minh City, calculating per-person costs, choosing between SUVs and luxury limousine vans, and planning direct routes to Ben Dinh and Ben Duoc.
-        </p>
-
-        {/* Author Bio Bar */}
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 border-t border-white/15 w-full max-w-2xl">
-          <div class="flex items-center gap-3">
-            <img 
-              src={authorData.img} 
-              alt={authorData.name} 
-              width="44"
-              height="44"
-              class="w-11 h-11 rounded-full border-2 border-amber-400 object-cover shadow-sm" 
-            />
-            <div class="text-left">
-              <div class="text-white text-sm font-semibold flex items-center gap-1.5">
-                {authorData.name}
-                <svg class="w-4 h-4 text-sky-400 fill-sky-400" viewBox="0 0 20 20"><path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              </div>
-              <div class="text-xs text-slate-300">{datePrefix} {formattedDate}</div>
+        {/* Author / Date / Time Row */}
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-white/80 border-t border-white/20 pt-6 max-w-3xl">
+          <a href={authorData.url} class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-full border-2 border-white/30 bg-amber-500/30 flex items-center justify-center font-serif text-amber-300 font-bold text-lg group-hover:border-amber-400 transition-colors">
+              R
             </div>
+            <span class="font-bold text-white group-hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              {authorData.name} 
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+          </a>
+          
+          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>{datePrefix} {formattedDate}</span>
           </div>
 
-          <div class="hidden sm:block h-7 w-[1px] bg-white/20"></div>
+          <div class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>{post.readingTime || 14} min read</span>
+          </div>
+        </div>
 
-          {/* Social / Sharing */}
-          <div class="flex items-center gap-2">
-            <a 
-              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(canonicalUrl)}&text=${encodeURIComponent(pageTitle)}`}
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white flex items-center justify-center transition-colors"
-              aria-label="Share on Twitter"
-            >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a 
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`}
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white flex items-center justify-center transition-colors"
-              aria-label="Share on Facebook"
-            >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <button 
-              id="copy-link-btn"
-              class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-xs font-medium flex items-center gap-1.5 transition-colors"
-              aria-label="Copy article link"
-            >
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-              <span>Copy Link</span>
-            </button>
+        {/* Badges */}
+        <div class="flex flex-wrap gap-3 mt-8">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🚗</span> Direct Hotel Transfer
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">⏱️</span> Flexible Schedule
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🌿</span> Ben Dinh & Ben Duoc Choice
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-white font-medium bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl">
+            <span class="text-amber-400 text-base">🛡️</span> Driver Waiting Included
           </div>
         </div>
 
       </div>
     </section>
 
-    {/* ================= 3-COLUMN EDITORIAL CONTAINER ================= */}
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-        
-        {/* LEFT COLUMN: STICKY TABLE OF CONTENTS */}
-        <aside class="hidden lg:block lg:col-span-3">
-          <div class="sticky top-24 bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm space-y-4">
-            <div class="flex items-center gap-2 font-bold text-slate-900 pb-3 border-b border-slate-100 text-sm tracking-wide uppercase">
-              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
-              Guide Outline
+    {/* ================= MAIN CONTENT GRID ================= */}
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+        {/* ---------------- LEFT SIDEBAR (TOC) ---------------- */}
+        <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 overflow-hidden">
+            <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+              Table of Contents
             </div>
-            <nav class="space-y-1 text-sm max-h-[calc(100vh-210px)] overflow-y-auto pr-1 text-slate-600 font-sans custom-scrollbar">
-              {toc.map(item => (
-                <a 
-                  href={`#${item.id}`} 
-                  class="flex items-start gap-2 py-1.5 px-2 rounded-lg hover:bg-amber-50 hover:text-amber-900 transition-colors leading-snug group"
-                >
-                  <span class="text-sm shrink-0 opacity-80 group-hover:opacity-100">{item.icon}</span>
-                  <span class="text-xs font-medium line-clamp-1">{item.title}</span>
-                </a>
-              ))}
-            </nav>
-            <div class="pt-3 border-t border-slate-100">
-              <a 
-                href="/tour/half-day-cu-chi-tunnels-tour" 
-                class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs transition-colors shadow-xs"
-              >
-                <span>Book Private Cu Chi Car</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            
+            <nav class="space-y-1 text-[13.5px] font-medium max-h-[calc(100vh-200px)] overflow-y-auto pr-1">
+              <a href="#gioi-thieu" class="flex items-center gap-2 text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold">
+                <span class="text-amber-600 text-base">🏠</span> Introduction
               </a>
-            </div>
+              
+              <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+                {toc.slice(1).map((item) => (
+                  <a 
+                    href={`#${item.id}`} 
+                    class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </nav>
           </div>
         </aside>
 
-        {/* MIDDLE COLUMN: MAIN ARTICLE CONTENT */}
-        <main class="lg:col-span-6 space-y-10">
+        {/* ---------------- CENTER COLUMN (MAIN CONTENT) ---------------- */}
+        <main class="col-span-1 lg:col-span-6 space-y-10">
+          
+          {/* Quick Overview Stats Bar (Strictly 3 Items) */}
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 md:p-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 gap-4 md:gap-0">
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0">
+                <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚗</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Typical Rate</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">$65 – $95 (Per Car)</div>
+                </div>
+              </div>
 
-          {/* QUICK STATS CARDS */}
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 p-5 bg-white rounded-2xl border border-slate-200/90 shadow-sm">
-            <div class="space-y-1 text-center sm:text-left">
-              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Typical Car Rate</div>
-              <div class="text-lg font-bold text-slate-900 font-serif">$65 – $95 <span class="text-xs font-sans font-normal text-slate-500">SUV/MPV</span></div>
-              <div class="text-[11px] text-slate-500">Round-trip door-to-door</div>
-            </div>
-            <div class="space-y-1 text-center sm:text-left border-y sm:border-y-0 sm:border-x border-slate-100 py-3 sm:py-0 sm:px-4">
-              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Drive Distance</div>
-              <div class="text-lg font-bold text-slate-900 font-serif">50 – 70 <span class="text-xs font-sans font-normal text-slate-500">km</span></div>
-              <div class="text-[11px] text-slate-500">Ben Dinh vs Ben Duoc</div>
-            </div>
-            <div class="space-y-1 text-center sm:text-left sm:pl-2">
-              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Best Departure</div>
-              <div class="text-lg font-bold text-emerald-700 font-serif">06:30 – 07:00 AM</div>
-              <div class="text-[11px] text-slate-500">Clears An Suong early</div>
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/80 shrink-0 shadow-xs">📍</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Drive Distance</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">50 km (Ben Dinh) / 70 km (Ben Duoc)</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+                <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/80 shrink-0 shadow-xs">⏰</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Optimal Departure</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">06:30 – 07:00 AM</div>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* SECTION: INTRODUCTION */}
-          <section id="introduction" class="scroll-mt-28 space-y-5">
-            <div class="prose prose-slate max-w-none text-slate-700 text-[16px] sm:text-[16.5px] leading-relaxed space-y-4 font-normal">
-              <p class="text-lg sm:text-xl font-light text-slate-800 leading-relaxed">
-                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car gives travelers complete control over departure time, hotel pickup, vehicle choice, and the pace of the day. Instead of joining a rigid group itinerary with multiple hotel stops, travelers can arrange a direct, door-to-door transfer to either Ben Dinh or Ben Duoc, spend the exact time they need at the historical site, and return to central Ho Chi Minh City on a schedule that fits their group.
+          <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
+            <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
+              <p>
+                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car gives travelers complete control over departure time, hotel pickup, vehicle choice, and the pace of the day. Instead of joining a fixed group itinerary, travelers can arrange a direct transfer to Ben Dinh or Ben Duoc, spend the exact time they need at the historical site, and return to Ho Chi Minh City on a schedule that suits their group.
               </p>
 
-              <blockquote class="p-4 sm:p-5 my-6 border-l-4 border-amber-500 bg-amber-50/60 rounded-r-xl italic font-serif text-slate-800 text-[15.5px]">
-                "The trade-off is straightforward: a private car normally costs more than a shared tour, but that additional investment buys flexibility, comfort, and privacy rather than simply a faster journey."
-              </blockquote>
+              <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
+                "The trade-off is straightforward: a private car normally costs more than a shared tour, but the additional cost buys flexibility and privacy rather than simply a faster journey."
+              </div>
+
+              {/* Featured In-Article Image */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
+                    alt="Travelers exploring the tranquil open-air grounds at Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]" 
+                    width="1280" 
+                    height="720" 
+                    loading="eager" 
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Private transportation gives you the flexibility to spend more time exploring quiet woodland historical exhibits at your own pace.
+                </p>
+              </div>
 
               <p>
-                Alongside downtown landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, the Cu Chi complex remains one of southern Vietnam's defining historical encounters. For couples, families, multi-generational groups, and travelers who value direct travel, private transportation is the most comfortable and reliable way to experience this iconic wartime landmark without feeling rushed.
+                Alongside central wartime landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, the Cu Chi complex remains one of southern Vietnam's defining historical encounters. For couples, families, small groups, and travelers who prefer a direct hotel-to-site transfer, a private car can be a practical way to visit the Cu Chi Tunnels without being tied to multiple hotel pickups or a fixed group schedule.
               </p>
             </div>
           </section>
@@ -393,57 +348,45 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                The answer depends mainly on your group size, travel priorities, and how much flexibility matters to your day.
+                The answer depends mainly on group size, priorities, and how much flexibility matters.
               </p>
               <p>
-                A shared coach tour is built around a fixed schedule and a predetermined group itinerary. Morning pickups routinely consume 45 to 60 minutes weaving through District 1 traffic collecting passengers from half a dozen hotels. Once on-site, the group moves together at a uniform pace. For solo backpackers or travelers focused primarily on keeping transportation expenses as low as possible, this can still be a functional choice.
+                A shared tour is usually designed around a fixed departure time and a common itinerary. Pickup may involve several hotels across District 1, and the group follows the same schedule throughout the excursion. This can be convenient for solo travelers or visitors primarily concerned with keeping transportation costs low.
+              </p>
+              <p>
+                A private car works differently. The vehicle is reserved for one party, so the departure time can be arranged around the travelers' hotel location and preferred visit window. The group can also request a direct itinerary rather than adding stops that are not part of the main visit.
+              </p>
+              <p>
+                This does not mean a private car eliminates traffic or makes the journey dramatically shorter. Its main advantage is <strong>control</strong>.
               </p>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                <div class="bg-white p-4.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5">
-                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-emerald-600">✓</span> Zero Hotel Churn
-                  </div>
-                  <p class="text-xs text-slate-600 leading-relaxed">
-                    Your driver meets you directly in your hotel lobby at your chosen time, heading straight onto the highway.
-                  </p>
+              {/* Callout Box */}
+              <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">💡</span> When Is Private Transportation Most Useful?
                 </div>
-                <div class="bg-white p-4.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5">
-                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-emerald-600">✓</span> Direct Routing
-                  </div>
-                  <p class="text-xs text-slate-600 leading-relaxed">
-                    Express travel without unwanted commercial diversions to roadside lacquerware shops.
-                  </p>
-                </div>
-                <div class="bg-white p-4.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5">
-                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-emerald-600">✓</span> Flexible On-Site Pacing
-                  </div>
-                  <p class="text-xs text-slate-600 leading-relaxed">
-                    Spend extra time reflecting at the memorial shrines or exploring shaded trails without bus deadlines.
-                  </p>
-                </div>
-                <div class="bg-white p-4.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5">
-                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-emerald-600">✓</span> Luggage & Comfort
-                  </div>
-                  <p class="text-xs text-slate-600 leading-relaxed">
-                    Store luggage securely during the tour if you plan direct airport drop-off at Tan Son Nhat afterwards.
-                  </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-amber-950/90 leading-relaxed pt-1">
+                  <div class="flex items-center gap-2">• Traveling as a couple or family</div>
+                  <div class="flex items-center gap-2">• Traveling with children or seniors</div>
+                  <div class="flex items-center gap-2">• Staying outside the central tourist district</div>
+                  <div class="flex items-center gap-2">• Wanting an early departure (06:30 AM)</div>
+                  <div class="flex items-center gap-2">• Carrying luggage between destinations</div>
+                  <div class="flex items-center gap-2">• Preferring direct hotel-to-hotel travel</div>
+                  <div class="flex items-center gap-2">• Avoiding multiple group hotel pickups</div>
+                  <div class="flex items-center gap-2">• Wanting control over the return hour</div>
                 </div>
               </div>
 
               <p>
-                A private car does not magically eliminate highway traffic along National Route 22, but it gives you total control over when and how you encounter it.
+                For solo travelers or visitors whose main priority is minimizing transportation costs, a shared tour may remain a simpler option. But for groups of two or more, private hire is often far more practical.
               </p>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 2: COSTS & PRICING */}
-          <section id="costs-and-pricing-2026" class="scroll-mt-28 space-y-5">
+          {/* SECTION 2: 2026 COSTS */}
+          <section id="private-car-costs-2026" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 2. How Much Does A Private Car To Cu Chi Tunnels Cost In 2026?
@@ -452,75 +395,87 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Private vehicle hire in southern Vietnam is calculated <strong>per vehicle rather than per passenger</strong>. The quoted price reflects the vehicle category, pickup location, group size, itinerary distance, and whether the booking includes round-trip waiting time.
+                Private-car pricing is normally calculated per vehicle rather than per passenger. The final amount depends on the vehicle category, pickup location, number of passengers, itinerary, and whether the service is one-way or round-trip.
               </p>
               <p>
-                To evaluate pricing accurately, travelers should look at both the <strong>total vehicle price</strong> and the <strong>effective cost per person</strong>.
+                A useful way to compare quotations is to look at both the <strong>total vehicle price</strong> and the <strong>estimated cost per person</strong>.
               </p>
 
-              {/* Pricing Table */}
-              <div class="overflow-x-auto my-6 border border-slate-200 rounded-2xl bg-white shadow-xs">
-                <table class="w-full text-left text-xs sm:text-sm">
-                  <thead class="bg-slate-50 text-slate-800 border-b border-slate-200 font-serif">
-                    <tr>
-                      <th class="p-3.5 font-bold">Vehicle Option</th>
-                      <th class="p-3.5 font-bold">Capacity</th>
-                      <th class="p-3.5 font-bold">Best Suited To</th>
-                      <th class="p-3.5 font-bold">Estimated Cost (Round-Trip)</th>
+              {/* Vehicle Pricing Table */}
+              <div class="overflow-x-auto my-6">
+                <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-4 font-bold text-left !text-white text-white">Vehicle Option</th>
+                      <th class="p-4 font-bold text-center !text-white text-white">Typical Group</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Best Suited To</th>
+                      <th class="p-4 font-bold text-right !text-white text-white">Estimated 2026 Rate</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-slate-100 font-sans">
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">SUV / Premium MPV</td>
-                      <td class="p-3.5 text-slate-600">2–3 guests</td>
-                      <td class="p-3.5 text-slate-600">Couples, small families</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">$65 – $85 USD</td>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">SUV / Premium MPV</td>
+                      <td class="p-4 text-center font-medium">2–3 guests</td>
+                      <td class="p-4">Couples, small families with light bags</td>
+                      <td class="p-4 text-right font-bold text-emerald-800">$65 – $80 USD</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">7-Seat Passenger MPV</td>
-                      <td class="p-3.5 text-slate-600">3–5 guests</td>
-                      <td class="p-3.5 text-slate-600">Families & small groups</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">$75 – $95 USD</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">7-Seat MPV (Innova / Xpander)</td>
+                      <td class="p-4 text-center font-medium">3–5 guests</td>
+                      <td class="p-4">Families, small groups with daypacks</td>
+                      <td class="p-4 text-right font-bold text-emerald-800">$75 – $95 USD</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">9-Seat VIP Limousine Van</td>
-                      <td class="p-3.5 text-slate-600">4–7 guests</td>
-                      <td class="p-3.5 text-slate-600">Recliner leather seats & extra space</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">$110 – $150 USD</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">9-Seat VIP Limousine Van</td>
+                      <td class="p-4 text-center font-medium">4–7 guests</td>
+                      <td class="p-4">Larger families, executive comfort, extra legroom</td>
+                      <td class="p-4 text-right font-bold text-emerald-800">$110 – $145 USD</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">16-Seat Minibus / Transit</td>
-                      <td class="p-3.5 text-slate-600">8–12 guests</td>
-                      <td class="p-3.5 text-slate-600">Extended families & corporate parties</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">$130 – $180 USD</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">16-Seat Minibus (Transit / Solati)</td>
+                      <td class="p-4 text-center font-medium">8–12 guests</td>
+                      <td class="p-4">Extended family reunions, corporate teams</td>
+                      <td class="p-4 text-right font-bold text-emerald-800">$130 – $170 USD</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p>
-                As group size increases, private transport becomes surprisingly cost-competitive with group tours on a per-person basis. For a family of four or five, booking a private vehicle often costs only marginally more than purchasing individual seats on a high-end small-group tour—while delivering incomparably superior comfort.
+              <p class="text-xs text-slate-500 italic">
+                *Note: Rates reflect round-trip private hire (half-day 5–6 hours) from central Saigon including driver waiting time, fuel, and tolls. Relic admission fees (135,000 VND / ~$5.30 USD) are paid separately at the entrance.*
               </p>
 
-              {/* What Should Be Included Box */}
-              <div class="bg-amber-50/70 p-5 rounded-2xl border border-amber-200/80 my-5 space-y-2.5">
-                <div class="font-bold text-amber-950 text-sm flex items-center gap-2">
-                  <span>📋</span> What Should Be Included in Your Quoted Price?
+              <p>
+                For example, if a private 7-seat vehicle costs $80 USD for a round trip, two travelers would effectively pay $40 each, while four travelers would pay only $20 each. The vehicle price itself does not increase simply because the group has more passengers, provided the vehicle comfortably accommodates the passengers and their luggage. This is why private transportation becomes significantly more cost-efficient on a per-person basis as group size increases.
+              </p>
+
+              {/* Inclusions Checklist */}
+              <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200/90 my-6 space-y-3">
+                <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                  <span class="text-amber-600 text-base">🔍</span> What Should Be Included In The Quoted Price?
                 </div>
-                <ul class="text-xs sm:text-sm text-amber-900 space-y-1.5 list-disc pl-5">
-                  <li><strong>Door-to-door transfer:</strong> Pickup and drop-off at your central hotel (D1, D3).</li>
-                  <li><strong>Dedicated vehicle & fuel:</strong> All fuel, expressway tolls, and parking tickets covered.</li>
-                  <li><strong>Waiting time at Cu Chi:</strong> Driver remains on-site throughout your 2.5 to 3-hour exploration.</li>
-                  <li><strong>Cold refreshments:</strong> Complimentary bottled water and wet wipes inside the cabin.</li>
-                </ul>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Before booking, always verify whether your quotation includes:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+                  <div class="flex items-center gap-2">✓ Door-to-door hotel pickup & drop-off</div>
+                  <div class="flex items-center gap-2">✓ Dedicated private vehicle & driver</div>
+                  <div class="flex items-center gap-2">✓ Highway tolls & parking fees</div>
+                  <div class="flex items-center gap-2">✓ Driver waiting time at the site</div>
+                  <div class="flex items-center gap-2">✓ Fuel and operating expenses</div>
+                  <div class="flex items-center gap-2">✓ Chilled mineral water & refreshing towels</div>
+                </div>
+                <p class="text-xs text-amber-900/90 font-medium pt-1">
+                  A quotation that appears cheaper may simply exclude waiting time or tolls that another operator has included. Always confirm that your driver will wait at Cu Chi for your return journey.
+                </p>
               </div>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 3: VEHICLE OPTIONS */}
-          <section id="vehicle-options" class="scroll-mt-28 space-y-5">
+          {/* SECTION 3: WHICH VEHICLE */}
+          <section id="which-vehicle-should-you-choose" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 3. Which Vehicle Should You Choose?
@@ -529,40 +484,58 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Selecting the right vehicle depends on passenger headcount, body frames, luggage requirements, and personal comfort standards.
+                The best vehicle is determined not only by passenger numbers but also by luggage, personal space, and the length of the transfer.
               </p>
 
-              <h3 class="font-serif text-lg font-bold text-slate-900 pt-2">SUV Or Premium MPV For 2–3 Guests</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs font-bold">A</span>
+                    SUV Or Premium MPV (2–3 Guests)
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Vehicles such as the Ford Everest or Kia Carnival provide an excellent balance between space and comfort. While an SUV handles rough rural detours easily, a Carnival MPV provides superior seat recline and luggage room for families with large suitcases.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs font-bold">B</span>
+                    9-Seat VIP Limousine (4–7 Guests)
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    For small groups, a luxury 9-seat DCar Limousine van transforms the 1.5 to 2-hour drive into a relaxing executive lounge, featuring plush captain leather recliners, onboard Wi-Fi, individual USB-C charging ports, and ample head and legroom.
+                  </p>
+                </div>
+              </div>
+
+              {/* Image: Road travel comfort */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                    alt="Travelers enjoying shaded woodland paths after arriving by comfortable private car - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[460px]" 
+                    width="1280" 
+                    height="720" 
+                    loading="lazy" 
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Arriving well-rested in air-conditioned comfort makes navigating the outdoor forest paths far more enjoyable.
+                </p>
+              </div>
+
               <p>
-                For couples or pairs of travelers, a modern SUV (such as a Ford Everest) or premium MPV (such as a Kia Carnival) offers the ideal balance of nimble handling and interior room. While an SUV handles rougher rural detour roads smoothly, an MPV provides superior seat recline and luggage flexibility if you are traveling with large suitcases between cities.
+                The important point is not the badge on the vehicle but whether the actual vehicle configuration comfortably accommodates your party and bags without overcrowding.
               </p>
-
-              <h3 class="font-serif text-lg font-bold text-slate-900 pt-2">9-Seat Limousine For 4–7 Guests</h3>
-              <p>
-                For small groups and families, a VIP 9-seat limousine van (customized DCar Transit or Solati) transforms the 1.5 to 2-hour drive into a relaxing lounge experience. These premium conversions typically feature plush captain leather recliners with massage functions, onboard Wi-Fi, individual USB-C charging ports, ambient LED lighting, and generous legroom that allows tall travelers to stretch out comfortably.
-              </p>
-
-              {/* Image: Tourists walking forest path */}
-              <figure class="my-6">
-                <img 
-                  src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
-                  alt="Tourists walking along quiet shaded jungle path at Cu Chi Tunnels with checkered scarves" 
-                  width="1280"
-                  height="720"
-                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
-                  loading="lazy" 
-                />
-                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
-                  Comfort on the road: Booking private transportation ensures your morning begins smoothly without the delays of multi-hotel group pickups.
-                </figcaption>
-              </figure>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 4: ROUTE & TRAFFIC */}
-          <section id="route-and-traffic" class="scroll-mt-28 space-y-5">
+          {/* SECTION 4: ROUTE */}
+          <section id="route-from-hcmc-to-cu-chi" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 4. The Route From Ho Chi Minh City To Cu Chi Tunnels
@@ -571,59 +544,68 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                The Cu Chi Tunnels lie approximately 50 to 70 km northwest of central Ho Chi Minh City. According to Vietnam's 2026 UNESCO World Heritage Tentative List dossier, the historical complex sits in the transition zone between the southeastern uplands and the low-lying Mekong Delta plains.
+                The Cu Chi Tunnels are located approximately 70 km northwest of central Ho Chi Minh City, according to the 2026 UNESCO Tentative List submission.
               </p>
               <p>
-                A standard private car journey follows this corridor:
+                The practical route depends on your pickup location and which tunnel area is being visited:
               </p>
-              <div class="p-4 bg-slate-100 rounded-xl font-mono text-xs text-slate-800 border border-slate-200">
-                Downtown Saigon (D1/D3) ➔ Truong Chinh Blvd ➔ An Sương Interchange ➔ National Route 22 (QL22) ➔ Cu Chi District ➔ Ben Dinh or Ben Duoc ➔ Return
+
+              <div class="p-4 bg-slate-900 text-white rounded-xl text-xs sm:text-sm font-mono text-center my-4 tracking-wide shadow-sm">
+                Hotel Pickup → Northwest Ho Chi Minh City → An Sương Intersection → QL22 / TL15 → Ben Dinh or Ben Duoc → Return Drop-off
               </div>
+
               <p>
-                The biggest advantage of a private vehicle is <strong>route responsiveness</strong>. Rather than blindly adhering to a bus route, an experienced private driver can monitor live GPS navigation to bypass morning bottlenecks around An Sương or route through provincial bypass roads (TL15 or TL2) when highway traffic thickens.
+                The important advantage of private transportation is that the departure time and route can be adjusted around the day's traffic conditions. It would be misleading to promise that a particular route will always avoid congestion around An Suong or other major traffic points. Ho Chi Minh City's traffic changes according to time, weather, road conditions, incidents, and hotel location.
+              </p>
+              <p>
+                A better approach is to plan the departure time and route to <strong>reduce exposure to predictable traffic peaks</strong>. This is one reason an early departure can be exceptionally valuable.
               </p>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 5: DEPARTURE TIMING */}
-          <section id="departure-timing" class="scroll-mt-28 space-y-5">
+          {/* SECTION 5: WHAT TIME SHOULD YOU LEAVE */}
+          <section id="what-time-should-you-leave" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                5. What Time Should You Leave?
+                5. What Time Should You Leave Saigon?
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                The Cu Chi Tunnels historical site operates daily from <strong>07:00 AM to 05:00 PM</strong>. With private transport, you can time your departure to match your group's natural rhythm:
+                The Cu Chi Tunnels historical site currently operates from <strong>7:00 AM to 5:00 PM daily</strong>, making an early start practical for travelers who want more time at the site.
+              </p>
+              <p>
+                For visitors using private transportation, three broad departure strategies work well:
               </p>
 
-              <div class="space-y-4 my-5">
-                <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-xs space-y-2">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold text-slate-900 text-base flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                      Strategy A: Early Morning Departure (06:30 – 07:00 AM)
-                    </span>
-                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Recommended</span>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-emerald-600 text-base">🌅</span> Early Morning (06:30 AM)
                   </div>
-                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Clearing city limits before peak commuter rush hour saves 25 to 35 minutes of highway stop-and-go driving. You arrive between 07:45 and 08:30 AM under cool morning forest shade before tour buses arrive. Pair this with our detailed <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">crowd-free Cu Chi guide</a> for the ultimate early route.
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Leaves the city before rush hour builds up. Arriving between 07:30 and 08:30 AM allows you to enjoy cooler woodland temperatures and avoid the concentrated arrivals of large tour buses.
                   </p>
                 </div>
 
-                <div class="p-5 bg-white rounded-2xl border border-slate-200 shadow-xs space-y-2">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold text-slate-900 text-base flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-                      Strategy B: Midday Inversion Window (12:00 – 12:30 PM)
-                    </span>
-                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Late Starters</span>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-blue-600 text-base">☕</span> Mid-Morning (08:30 AM)
                   </div>
-                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Morning tour bus caravans routinely depart Cu Chi around midday to return guests to town for lunch. Arriving around 01:30 PM provides a secondary calm window across the trails, though travelers should be prepared for warm afternoon humidity.
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    Allows for a relaxed breakfast at your hotel. However, the drive overlaps with heavier morning highway traffic, and you will arrive at the site during peak daytime hours.
+                  </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600 text-base">🌤️</span> Midday (12:00 PM)
+                  </div>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    A great alternative for late risers. Reaching Cu Chi around 01:30 PM coincides with the departure of morning bus tours, offering calmer trails during the early afternoon.
                   </p>
                 </div>
               </div>
@@ -632,8 +614,8 @@ const faqSchema = {
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 6: BEN DINH VS BEN DUOC */}
-          <section id="ben-dinh-vs-ben-duoc" class="scroll-mt-28 space-y-5">
+          {/* SECTION 6: BEN DINH OR BEN DUOC */}
+          <section id="ben-dinh-or-ben-duoc" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 6. Ben Dinh Or Ben Duoc For A Private-Car Visit?
@@ -642,72 +624,79 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Because a private car can travel anywhere without fixed route restrictions, you have complete freedom to choose between the two public sectors of Cu Chi:
+                Private transportation makes either site accessible, but the choice affects travel time and the overall experience.
               </p>
 
               {/* Comparison Table */}
-              <div class="overflow-x-auto my-5 border border-slate-200 rounded-2xl bg-white shadow-xs">
-                <table class="w-full text-left text-xs sm:text-sm">
-                  <thead class="bg-slate-50 text-slate-800 border-b border-slate-200 font-serif">
-                    <tr>
-                      <th class="p-3.5 font-bold">Comparison Factor</th>
-                      <th class="p-3.5 font-bold">Ben Dinh (Bến Đình)</th>
-                      <th class="p-3.5 font-bold">Ben Duoc (Bến Dược)</th>
+              <div class="overflow-x-auto my-6">
+                <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-4 font-bold text-left !text-white text-white">Feature / Metric</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Ben Dinh Sector</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Ben Duoc Sector</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-slate-100 font-sans">
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Distance from District 1</td>
-                      <td class="p-3.5 text-slate-600">~50 km (1.5 hours drive)</td>
-                      <td class="p-3.5 text-slate-600">~70 km (2.0 to 2.5 hours drive)</td>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Administrative Location</td>
+                      <td class="p-4">Nhuan Duc area</td>
+                      <td class="p-4">An Nhon Tay area</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Tour Traffic Volume</td>
-                      <td class="p-3.5 text-slate-600">Absorbs ~70% of commercial group buses</td>
-                      <td class="p-3.5 text-slate-600">Consistently quieter; filtered by distance</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Distance from Central HCMC</td>
+                      <td class="p-4">~50 km (1.5 hours drive)</td>
+                      <td class="p-4 font-medium text-emerald-800">~70 km (1.75 – 2 hours drive)</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Setting & Grounds</td>
-                      <td class="p-3.5 text-slate-600">Compact forest site with direct trail loops</td>
-                      <td class="p-3.5 text-slate-600">Vast woodland park fronting the Saigon River</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Preserved Tunnel Structure</td>
+                      <td class="p-4">Major preserved area with widened crawl sections</td>
+                      <td class="p-4">Major preserved area with authentic 3-tier depths</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Preserved Depth Levels</td>
-                      <td class="p-3.5 text-slate-600">Authentic 3-tier vertical architecture</td>
-                      <td class="p-3.5 text-slate-600">Authentic 3-tier architecture with deep blast shelters</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Visitor Atmosphere</td>
+                      <td class="p-4 text-amber-800">Popular with commercial bus tours</td>
+                      <td class="p-4 font-medium text-emerald-800">Spacious, tranquil riverside forest setting</td>
                     </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Additional Landmarks</td>
-                      <td class="p-3.5 text-slate-600">Weapon dioramas, bomb craters, firing range</td>
-                      <td class="p-3.5 text-slate-600">Ben Duoc Memorial Temple & Liberation Zone</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Best Suited For</td>
-                      <td class="p-3.5 text-slate-600">Travelers with tight schedules (&lt;5 hrs total)</td>
-                      <td class="p-3.5 text-slate-600">Travelers wanting slow travel and reflective heritage</td>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Additional On-Site Attractions</td>
+                      <td class="p-4">Shooting range, documentary theater</td>
+                      <td class="p-4">Ben Duoc Memorial Temple, Recreated Liberation Zone</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p>
-                UNESCO's 2026 Tentative List documentation clarifies that <strong>both Ben Dinh and Ben Duoc are authentic surviving strongholds</strong> preserving approximately 4 km of underground galleries between them. The choice is strictly an itinerary decision: Ben Dinh saves driving time, while Ben Duoc rewards you with spacious grounds and deeper cultural context.
-              </p>
+              {/* UNESCO Insight Box */}
+              <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">🏛️</span> UNESCO 2026 Confirmation: Neither Site Is "Fake"
+                </div>
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
+                  The distinction is important because neither site should be described simply as “real” versus “fake.” UNESCO's 2026 Tentative List submission identifies <strong>Ben Duoc and Ben Dinh as the two areas that best retain the original appearance, scale, and structure of the wider tunnel system</strong>. Together, the preserved sections total approximately 4 km in length.
+                </p>
+              </div>
 
-              {/* Image: Travelers at tank */}
-              <figure class="my-6">
-                <img 
-                  src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
-                  alt="Travelers exploring open woodland grounds and historic wartime tank at Cu Chi" 
-                  width="1280"
-                  height="720"
-                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
-                  loading="lazy" 
-                />
-                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
-                  Peaceful exploration: Choosing Ben Duoc via private car allows travelers to explore authentic wartime relics and memorials in an unhurried setting.
-                </figcaption>
-              </figure>
+              {/* Image: Diorama cross-section */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" 
+                    alt="Official site guide explaining the Cu Chi tunnel cross-section diorama model showing three vertical depth levels" 
+                    class="w-full h-auto object-cover max-h-[460px]" 
+                    width="1280" 
+                    height="720" 
+                    loading="lazy" 
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  An on-site guide explains the diorama showing the 3-tier depth structure preserved at Ben Duoc and Ben Dinh.
+                </p>
+              </div>
+
+              <p>
+                For travelers prioritizing shorter driving time, Ben Dinh is a practical choice. For travelers willing to spend an extra 40 minutes on the road for a quieter, more reflective environment, Ben Duoc is deeply rewarding. The choice is therefore better understood as a <strong>route and itinerary decision</strong>, rather than a question of historical authenticity.
+              </p>
             </div>
           </section>
 
@@ -717,61 +706,57 @@ const faqSchema = {
           <section id="private-car-vs-group-tour" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                7. Private Car Vs Group Tour: The Direct Comparison
+                7. Private Car vs. Shared Group Tour
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
-              <div class="overflow-x-auto my-5 border border-slate-200 rounded-2xl bg-white shadow-xs">
-                <table class="w-full text-left text-xs sm:text-sm">
-                  <thead class="bg-slate-50 text-slate-800 border-b border-slate-200 font-serif">
-                    <tr>
-                      <th class="p-3.5 font-bold">Feature</th>
-                      <th class="p-3.5 font-bold">Shared Group Tour</th>
-                      <th class="p-3.5 font-bold">Private Car Excursion</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-slate-100 font-sans">
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Hotel Pickup</td>
-                      <td class="p-3.5 text-slate-600">Shared bus; 45–60 mins picking up hotels</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">Direct lobby pickup at your exact minute</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Schedule Flexibility</td>
-                      <td class="p-3.5 text-slate-600">Inflexible fixed departure (07:30–08:00 AM)</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">100% adaptable; depart as early as 06:30 AM</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Party Privacy</td>
-                      <td class="p-3.5 text-slate-600">20–35 fellow passengers sharing vehicle</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">Completely private to your own travel party</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Highway Stops</td>
-                      <td class="p-3.5 text-slate-600">Diverted to commercial lacquerware factories</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">Direct express routing with zero shopping stops</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">On-Site Pacing</td>
-                      <td class="p-3.5 text-slate-600">Rushed group movement; strict stop times</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">Linger where you wish; skip uninteresting areas</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50/70 transition-colors">
-                      <td class="p-3.5 font-bold text-slate-900">Return Timing</td>
-                      <td class="p-3.5 text-slate-600">Fixed drop-off time; rigid timetable</td>
-                      <td class="p-3.5 font-semibold text-emerald-700">Head back whenever your party feels ready</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <p>
+                The difference becomes clearer when the two options are compared directly:
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
+                  <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    Shared Group Bus Tour
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                    <li>Fixed pickup window (consumes 45–60 mins across multiple hotels)</li>
+                    <li>Fixed group departure & predetermined pace at each exhibit</li>
+                    <li>Shared cabin with 15–30 other passengers</li>
+                    <li>Usually includes 45-minute commercial stops at highway showrooms</li>
+                    <li>Fixed return hour to downtown Ho Chi Minh City</li>
+                    <li>Lower cost per person for solo travelers</li>
+                  </ul>
+                </div>
+                
+                <div class="bg-emerald-50/60 p-5 rounded-xl border border-emerald-200 space-y-2">
+                  <div class="flex items-center gap-2 font-bold text-emerald-900 text-sm">
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    Private Car Transfer
+                  </div>
+                  <ul class="text-xs text-emerald-950/80 space-y-1.5 list-disc pl-4">
+                    <li>Departs directly from your hotel lobby at your chosen time</li>
+                    <li>Complete control over pacing: linger at displays or bypass crowds</li>
+                    <li>Exclusive cabin for your travel party only</li>
+                    <li>Direct travel: 100% zero commercial stops guaranteed</li>
+                    <li>Flexible return hour whenever your party is ready</li>
+                    <li>More cost-effective per person as group size increases</li>
+                  </ul>
+                </div>
               </div>
+
+              <p>
+                The additional cost of a private car is therefore mainly paying for <strong>flexibility, privacy, and control</strong>. It does not guarantee an empty highway, but it guarantees that your morning belongs entirely to you.
+              </p>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 8: WHAT IS INCLUDED */}
-          <section id="included-services" class="scroll-mt-28 space-y-5">
+          {/* SECTION 8: WHAT IS USUALLY INCLUDED */}
+          <section id="what-is-usually-included" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 8. What Is Usually Included In A Private Car Service?
@@ -780,123 +765,96 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                A standard private transfer commonly includes the vehicle, driver, fuel, and hotel pickup and drop-off within the agreed service area.
+                A standard private transfer commonly includes the vehicle, driver, fuel, highway tolls, and hotel pickup and drop-off within the agreed service area.
               </p>
               <p>
-                Premium packages (such as our <a href="/tour/half-day-cu-chi-tunnels-tour" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Half-Day Private Cu Chi Tour</a>) add:
+                Premium packages may also add upgraded leather seating, onboard Wi-Fi, individual USB charging ports, chilled bottled water, refreshing cold towels, or a private licensed English-speaking guide.
               </p>
-              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
-                <li>Upgraded modern vehicle (Ford Everest SUV, Kia Carnival, or DCar Limousine).</li>
-                <li>Chilled bottled mineral water and refreshing cold towels.</li>
-                <li>Onboard Wi-Fi and individual charging ports.</li>
-                <li>All-inclusive official 2026 entrance fees (135,000 VND / pax).</li>
-                <li>Steamed cassava snack and hot pandan tea at the Hoang Cam kitchen pavilion.</li>
-                <li>Dedicated licensed English-speaking private tour guide.</li>
-              </ul>
-              <p>
-                For that reason, travelers should ask for an itemized quotation rather than assuming that every private car package includes the same amenities.
-              </p>
+
+              <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
+                "A useful booking question to ask: 'Is this a direct private transfer, and does the driver remain on-site while we explore?' This clarifies whether the quote covers only one-way transportation or a complete excursion."
+              </div>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
           {/* SECTION 9: CAN YOU VISIT WITHOUT A TOUR */}
-          <section id="visiting-without-a-tour" class="scroll-mt-28 space-y-5">
+          <section id="can-you-visit-without-a-tour" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                9. Can You Visit Cu Chi Tunnels Without A Tour?
+                9. Can You Visit Cu Chi Tunnels Without An Organized Tour?
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                <strong>Yes.</strong> You do not need to buy an organized tour package to visit Cu Chi Tunnels. Independent travelers can hire a private car, buy admission tickets at the gate, and receive the services of an <strong>official on-site guide</strong> included with their ticket.
+                Yes. Travelers can arrange independent transportation to Cu Chi rather than joining a conventional group tour package.
+              </p>
+              <p>
+                Every international ticket purchased at the gate (135,000 VND / ~$5.30 USD) automatically includes the services of an official on-site English-speaking guide who escorts you through the outdoor displays, shows you camouflaged trapdoors, and guides you into the tunnels.
               </p>
 
-              {/* Grab Return Catch Callout */}
-              <div class="bg-rose-50/80 p-5 rounded-2xl border border-rose-200 space-y-2 my-4">
-                <div class="font-bold text-rose-950 text-sm flex items-center gap-2">
-                  <svg class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                  The Return Catch of Ride-Hailing Apps (Grab / Be)
+              {/* Grab Warning Callout */}
+              <div class="bg-rose-50 border border-rose-200 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-rose-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">⚠️</span> The Ride-Hailing (Grab) Return Dilemma
                 </div>
-                <p class="text-xs sm:text-sm text-rose-900 leading-relaxed">
-                  While booking a Grab or Be taxi from downtown Saigon to Cu Chi takes just minutes, <strong>booking a return ride back from rural Cu Chi is notoriously difficult</strong>. Drivers in outer districts rarely accept return trips to the city center because of empty return legs. Travelers who rely on ride-hailing apps often find themselves stranded at the exit gates for over an hour or forced to negotiate steep cash surcharges. Hiring a private vehicle with round-trip waiting time completely removes this anxiety.
+                <p class="text-xs sm:text-sm text-rose-950/90 leading-relaxed">
+                  The biggest challenge with an independent visit is not getting there—it is getting back. While catching a Grab or taxi from downtown Saigon to Cu Chi is simple, securing an app-based ride back from rural Cu Chi (especially Ben Duoc, 70 km away) is notoriously difficult and unreliable. Booking a private transfer where the driver waits on-site eliminates the stress of being stranded in the countryside.
                 </p>
               </div>
-
-              {/* Image: Diorama model */}
-              <figure class="my-6">
-                <img 
-                  src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" 
-                  alt="Official site guide explaining the Cu Chi tunnel cross-section diorama model showing three vertical depth levels" 
-                  width="1280"
-                  height="720"
-                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
-                  loading="lazy" 
-                />
-                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
-                  Engineering marvel: On-site guides at Cu Chi demonstrate how three tiers of subterranean galleries protected soldiers and civilians during aerial bombardments.
-                </figcaption>
-              </figure>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 10: WHAT TO EXPECT ON SITE */}
-          <section id="what-to-expect-on-site" class="scroll-mt-28 space-y-5">
+          {/* SECTION 10: WHAT TO EXPECT */}
+          <section id="what-to-expect-at-the-tunnels" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                10. What To Expect At The Site: Tunnel Crawls Are 100% Optional
+                10. What To Expect: The Underground Crawl Is Optional
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                A common misconception is that visiting Cu Chi requires squeezing through claustrophobic subterranean holes.
+                The Cu Chi Tunnels are much more than a short crawl underground. UNESCO's current documentation describes a complex historical system that included living bunkers, communication trenches, command posts, kitchens, infirmaries, wells, and storage facilities constructed across decades using simple hand tools.
               </p>
-              <p>
-                In reality, <strong>roughly 85 to 90 percent of the tour takes place entirely above ground</strong> on shaded dirt paths under tall forest trees:
-              </p>
-              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
-                <li>You walk past disguised booby-trap displays, bomb craters, and camouflaged pine-leaf trapdoors.</li>
-                <li>You see the Hoang Cam smokeless kitchen, designed to diffuse underground cooking smoke along distant trenches.</li>
-                <li>If you do choose to descend, visitor tunnels are optional, lit with low-voltage lighting, and fitted with emergency exit hatches every 15 to 20 metres.</li>
-              </ul>
 
-              {/* Physical Dimension Warning */}
-              <div class="p-5 bg-amber-50/70 rounded-2xl border border-amber-200 my-4 space-y-2">
-                <div class="font-bold text-amber-900 text-sm flex items-center gap-2">
-                  <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                  Physical Dimension Warning
+              {/* Image: Punji Stick Traps */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+                    alt="Guide demonstrating camouflaged trapdoor mechanisms on above-ground trail - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[460px]" 
+                    width="1280" 
+                    height="720" 
+                    loading="lazy" 
+                  />
                 </div>
-                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
-                  Passageways in preserved sectors remain tight—frequently under 80 cm wide and 70 to 80 cm high. They require crouching or crawling on hands and knees through humid air. Travelers with bad knees, severe back issues, heart conditions, or claustrophobia can simply enjoy the open-air walking tour and skip the underground passages without missing the historical depth of the site.
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Over 85 percent of the exhibits are entirely outdoors on shaded woodland footpaths.
                 </p>
               </div>
 
-              {/* Image: Punji traps */}
-              <figure class="my-6">
-                <img 
-                  src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
-                  alt="Local site guide demonstrating concealed punji stick traps and woodland defensive mechanisms at Cu Chi Tunnels" 
-                  width="1280"
-                  height="720"
-                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
-                  loading="lazy" 
-                />
-                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
-                  Above-ground exhibits: More than 85% of the Cu Chi visit takes place outdoors, examining trapdoors and ingenious defensive systems along forest paths.
-                </figcaption>
-              </figure>
+              {/* Claustrophobia Info */}
+              <div class="bg-blue-50/70 p-5 rounded-2xl border border-blue-200 space-y-2">
+                <div class="flex items-center gap-2 font-bold text-blue-900 text-base">
+                  <span class="text-lg">🌿</span> Good News for Claustrophobic Travelers
+                </div>
+                <p class="text-blue-950/90 text-sm leading-relaxed">
+                  You never have to crawl underground if you do not feel comfortable doing so. Constricted sections at Ben Dinh measure approximately 40 cm wide and 73 cm high. Travelers with claustrophobia, bad knees, or taller frames can comfortably skip the subterranean crawl without missing the essence of the historical site, as the vast majority of historical displays, film screenings, and trapdoor demonstrations take place above ground.
+                </p>
+              </div>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 11: FAMILIES & SENIORS */}
-          <section id="families-and-seniors" class="scroll-mt-28 space-y-5">
+          {/* SECTION 11: FAMILIES & SENIOR TRAVELERS */}
+          <section id="is-private-car-suitable-for-families" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
                 11. Is A Private Car Suitable For Families & Seniors?
@@ -905,110 +863,134 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Private transport is by far the best option for multi-generational travel in southern Vietnam:
+                Private transportation is particularly convenient for families with young children or multi-generational groups traveling with elderly relatives.
               </p>
-              <ul class="list-disc pl-5 space-y-2 text-slate-700">
-                <li><strong>Child-Friendly Scheduling:</strong> Coordinate departure around nap times and morning breakfasts without rushing to meet a tour bus.</li>
-                <li><strong>Mobility Accommodations:</strong> Ben Duoc offers wide, paved walking paths and on-site electric shuttle carts for seniors needing mobility assistance.</li>
-                <li><strong>Climate Control:</strong> Return to a pre-cooled private cabin immediately after walking in tropical heat.</li>
-              </ul>
+              <p>
+                Parents can coordinate departure around breakfast, carry baby gear or strollers in the trunk, and return to the hotel when children grow tired rather than waiting for a bus of 30 strangers. For senior travelers, remaining in the same comfortable vehicle throughout the excursion eliminates the physical strain of boarding and deboarding large tour buses.
+              </p>
+              <p>
+                However, a private car does not alter the physical nature of the Cu Chi site itself. Expect walking along uneven forest dirt trails, stairs, and warm humid weather under the tree canopy.
+              </p>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
           {/* SECTION 12: COMBINING DESTINATIONS */}
-          <section id="combining-destinations" class="scroll-mt-28 space-y-5">
+          <section id="combine-with-another-attraction" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                12. Should You Combine Cu Chi With The Mekong Delta On The Same Day?
+                12. Should You Combine Cu Chi Tunnels With Another Destination?
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Many budget tour desks in Saigon sell a combined "Cu Chi Tunnels + Mekong Delta in 1 Day" package. <strong>We strongly recommend avoiding this combo.</strong>
+                A private car makes combining destinations easier, but flexibility should not be confused with unlimited time.
               </p>
               <p>
-                Attempting both in a single calendar day forces travelers into 6 or more hours of grueling highway driving, leaving barely an hour of rushed sightseeing at each destination. Instead, dedicate a relaxed half-day morning to Cu Chi by private car, and book a <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">dedicated full-day Mekong Delta tour</a> on a separate day. If you want a full day in Saigon, pair Cu Chi with city landmarks on our <a href="/tour/1-day-premium-cu-chi-tunnels" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">1-Day Cu Chi & Saigon Highlights Tour</a>.
+                Cu Chi is already a substantial excursion from central Ho Chi Minh City (taking roughly 5 to 6 hours door-to-door). Trying to combine Cu Chi and the Mekong Delta into a single day often leads to spending 6 to 7 hours stuck on highways, leaving only an hour of rushed sightseeing at each location.
               </p>
-
-              {/* Image: Underground hall briefing */}
-              <figure class="my-6">
-                <img 
-                  src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" 
-                  alt="Visitors listening to a historical briefing inside an underground bunker hall at Cu Chi Tunnels" 
-                  width="1280"
-                  height="720"
-                  class="w-full rounded-2xl shadow-md object-cover max-h-[440px]" 
-                  loading="lazy" 
-                />
-                <figcaption class="text-center text-sm text-slate-500 mt-3 font-serif italic">
-                  Historical briefing: Travelers gather in a preserved underground meeting hall to learn how medical wards and command posts operated during wartime.
-                </figcaption>
-              </figure>
+              <p>
+                A much better combination is pairing a morning Cu Chi private excursion with a relaxed afternoon exploring central Saigon landmarks, or dedicating a separate full day to the <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Mekong Delta</a>.
+              </p>
             </div>
           </section>
 
           <hr class="border-slate-200" />
 
-          {/* SECTION 13: 10-POINT BOOKING CHECKLIST */}
-          <section id="booking-checklist" class="scroll-mt-28 space-y-5">
+          {/* SECTION 13: CHECKLIST */}
+          <section id="practical-private-car-checklist" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                13. A Practical 10-Point Booking Checklist
+                13. A Practical 10-Point Private-Car Booking Checklist
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Before confirming your vehicle reservation, review these 10 practical questions with your provider:
+                Before confirming your Cu Chi private-car transfer, ensure you have clear answers to these ten questions:
               </p>
 
-              <div class="space-y-2.5 my-4">
+              <div class="space-y-3 my-6">
                 {[
-                  "Is the vehicle 100% private to our party? (Ensure no unexpected passenger sharing)",
-                  "Is the quoted price inclusive of round-trip transfer and driver waiting time?",
-                  "Are highway toll fees and parking charges covered?",
-                  "What exact vehicle model will be provided? (Ford Everest SUV vs. Kia Carnival MPV vs. DCar Limousine)",
-                  "Does the quote include official site entrance tickets (135,000 VND / pax)?",
-                  "Will an English-speaking private guide accompany us in the vehicle, or will we connect with on-site guides?",
-                  "Is the driving itinerary direct, with zero commercial shopping stops?",
-                  "Are onboard amenities like bottled water, cold towels, and phone chargers available?",
-                  "What is the overtime policy if we choose to linger longer at the memorial temple?",
-                  "Can we arrange drop-off at Tan Son Nhat Airport or a central restaurant instead of our hotel?"
+                  { q: "Is the vehicle completely private for our party only?", icon: "🚗" },
+                  { q: "Are hotel pickup and drop-off included in central Saigon?", icon: "🏨" },
+                  { q: "Is the quoted price for a round-trip transfer with driver waiting time?", icon: "⏱️" },
+                  { q: "What exact vehicle model (SUV, MPV, or VIP Limousine) will be provided?", icon: "🚘" },
+                  { q: "How many passenger seats and luggage pieces can the cabin comfortably hold?", icon: "🧳" },
+                  { q: "Are highway tolls, parking fees, and driver fuel fully included?", icon: "⛽" },
+                  { q: "Are entrance tickets (135,000 VND / pax) included or paid separately?", icon: "🎟️" },
+                  { q: "Is a private tour guide included, or will we use the official on-site guide?", icon: "🗣️" },
+                  { q: "Is the route 100% direct with zero commercial showroom detours?", icon: "🚫" },
+                  { q: "Are cold mineral water, refreshing towels, and onboard Wi-Fi guaranteed?", icon: "❄️" }
                 ].map((item, idx) => (
-                  <div class="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-200 shadow-xs">
-                    <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+                    <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                       {idx + 1}
-                    </span>
-                    <span class="text-xs sm:text-sm text-slate-700 font-medium">{item}</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-800 flex-1 leading-snug pt-1">
+                      {item.q}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
+          {/* COMMERCIAL TOUR CTA BANNER */}
+          <div class="bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)] my-10 space-y-4">
+            <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase tracking-wider">
+              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              Private Excursion Options
+            </div>
+            <div role="heading" aria-level="3" class="font-serif text-2xl font-bold text-slate-900 leading-snug">
+              Looking for a Private Cu Chi Excursion?
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Travel directly from your hotel lobby to Ben Dinh or Ben Duoc with a dedicated vehicle, professional driver, and optional private guide. No commercial showroom detours, no rushed stops.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a 
+                href="/tour/half-day-cu-chi-tunnels-tour" 
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 text-white font-bold text-sm hover:bg-amber-600 transition-colors shadow-sm"
+              >
+                View Half-Day Private Tour 
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a 
+                href="/tour/1-day-premium-cu-chi-tunnels" 
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-colors"
+              >
+                1-Day Cu Chi & City Highlights
+              </a>
+            </div>
+          </div>
+
           <hr class="border-slate-200" />
 
-          {/* SECTION: FAQ ACCORDION */}
-          <section id="faq" class="scroll-mt-28 space-y-6">
-            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+          {/* FAQ SECTION */}
+          <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-3">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                Frequently Asked Questions (FAQ)
+                FAQ – Frequently Asked Questions About Visiting By Private Car
               </h2>
             </div>
 
             <div class="space-y-3">
-              {faqSchema.questions.map((faq, index) => (
-                <details class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden transition-all duration-200">
-                  <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none font-serif text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
-                    <span class="pr-4">{faq.question}</span>
-                    <span class="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-amber-100 flex items-center justify-center text-slate-500 group-hover:text-amber-600 transition-transform duration-200 group-open:rotate-180 shrink-0">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              {faqSchema.questions.map((faq, idx) => (
+                <details class="group bg-white rounded-xl border border-slate-200/90 shadow-xs overflow-hidden transition-all duration-200 [&_summary::-webkit-details-marker]:hidden" open={idx === 0}>
+                  <summary class="flex items-center justify-between p-4 sm:p-4.5 font-semibold text-slate-900 cursor-pointer hover:text-amber-800 transition-colors text-base list-none select-none">
+                    <span class="font-semibold text-slate-900 text-base leading-snug group-hover:text-amber-800 transition-colors pr-2">
+                      {idx + 1}. {faq.question}
+                    </span>
+                    <span class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-200 group-open:rotate-180 group-open:bg-amber-100 group-open:text-amber-800 shrink-0 ml-3">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                      </svg>
                     </span>
                   </summary>
-                  <div class="px-4 sm:px-5 pb-5 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 font-sans">
+                  <div class="px-4.5 pb-4.5 text-sm sm:text-base leading-relaxed text-slate-600 border-t border-slate-100 pt-3.5">
                     {faq.answer}
                   </div>
                 </details>
@@ -1018,150 +1000,150 @@ const faqSchema = {
 
           <hr class="border-slate-200" />
 
-          {/* SECTION: EPILOGUE */}
-          <section id="epilogue" class="scroll-mt-28 space-y-5">
+          {/* EPILOGUE */}
+          <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                Epilogue: Control Over Convenience
+                A Private Car Gives You Control, Not A Shortcut
               </h2>
             </div>
 
-            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+            <div class="prose prose-slate max-w-none text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Choosing a private car to visit the Cu Chi Tunnels is not about luxury for its own sake. It is about <strong>protecting the quality of your historical experience</strong>.
+                The main reason to choose a private car for the Cu Chi Tunnels is not simply luxury. It is the ability to shape the day around your own group.
               </p>
               <p>
-                When you leave on your schedule, travel directly without detour shops, explore the quieter forest grounds of Ben Duoc, and take the time you need to reflect at the memorial shrines, Cu Chi ceases to feel like an overcrowded tourist conveyor belt. It becomes what it truly is: one of the most sobering and extraordinary chapters of 20th-century history.
+                You can leave earlier, choose the appropriate vehicle, travel directly from your hotel, select Ben Dinh or Ben Duoc based on your priorities, spend more or less time at the site, and return when the group is ready.
               </p>
-
-              {/* Final CTA Box using role="heading" to preserve SEO heading outline */}
-              <div class="bg-gradient-to-br from-slate-900 to-[#0B132B] text-white p-6 sm:p-8 rounded-3xl mt-8 shadow-md relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                <div class="relative z-10 space-y-4">
-                  <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block">
-                    Bespoke Inbound Transfers
-                  </span>
-                  <div role="heading" aria-level="2" class="text-2xl sm:text-3xl font-serif font-bold text-white leading-tight">
-                    Ready for a Seamless Private Cu Chi Excursion?
-                  </div>
-                  <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl font-light">
-                    From door-to-door Ford Everest SUVs and Kia Carnivals to VIP DCar Limousine vans with English-speaking guides, explore our <a href="/tours" class="text-amber-400 hover:text-amber-300 underline underline-offset-4 decoration-amber-500/50 transition-colors font-medium">curated private itineraries in Vietnam</a>.
-                  </p>
-                  <div class="pt-2 flex flex-wrap gap-3">
-                    <a 
-                      href="/tour/half-day-cu-chi-tunnels-tour" 
-                      class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm transition-colors shadow-sm"
-                    >
-                      <span>Half-Day Private Tour</span>
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                    <a 
-                      href="/tour/1-day-premium-cu-chi-tunnels" 
-                      class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs sm:text-sm transition-colors shadow-sm"
-                    >
-                      <span>1-Day Cu Chi & Saigon</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
+              <p>
+                For two travelers, the additional cost may be a consideration if budget is the only factor. For a family or small group of four to seven, however, the cost-per-person calculation can look quite different.
+              </p>
+              <p>
+                The most useful way to evaluate private transportation is not to ask only: <em>"How much does the car cost?"</em> Ask instead: <strong>"What does the price give us control over?"</strong> When the answer includes direct travel, flexible timing, a waiting driver, and total peace of mind, the value of private transportation becomes unmistakably clear.
+              </p>
             </div>
           </section>
 
         </main>
 
-        {/* RIGHT COLUMN: STICKY SIDEBAR (TOURS & RELATED GUIDES) */}
-        <aside class="lg:col-span-3 space-y-6">
-          <div class="sticky top-24 space-y-6">
-
-            {/* Tour Promotion Widget */}
-            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
-              <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                Featured Private Tours
+        {/* ---------------- RIGHT SIDEBAR ---------------- */}
+        <aside class="col-span-1 lg:col-span-3">
+          <div class="sticky top-24 space-y-8">
+            
+            {/* Key Travel Facts Card */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Key Travel Facts
               </div>
-
-              <div class="space-y-4">
-                <a href="/tour/half-day-cu-chi-tunnels-tour" class="group block space-y-2">
-                  <div class="aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 relative">
-                    <img 
-                      src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
-                      alt="Half-Day Private Cu Chi Tunnels Tour" 
-                      width="640"
-                      height="360"
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      loading="lazy" 
-                    />
-                    <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs text-[10px] font-semibold text-white">Half-Day</span>
+              
+              <div class="space-y-4 text-xs">
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Destinations</div>
+                    <div class="text-slate-600">Ben Duoc (~70km NW) / Ben Dinh (~50km NW)</div>
                   </div>
-                  <div class="font-serif font-bold text-sm text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
-                    Cu Chi Tunnels: Half-Day Private Tour
-                  </div>
-                  <p class="text-xs text-slate-500 line-clamp-2">
-                    Direct morning private excursion to Ben Duoc or Ben Dinh with flexible pacing.
-                  </p>
-                </a>
+                </div>
 
-                <div class="border-t border-slate-100 pt-3">
-                  <a href="/tour/1-day-premium-cu-chi-tunnels" class="group block space-y-2">
-                    <div class="aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 relative">
-                      <img 
-                        src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
-                        alt="1-Day Cu Chi & Saigon Highlights" 
-                        width="640"
-                        height="360"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                        loading="lazy" 
-                      />
-                      <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs text-[10px] font-semibold text-white">Full-Day</span>
-                    </div>
-                    <div class="font-serif font-bold text-sm text-slate-900 group-hover:text-amber-600 transition-colors leading-snug">
-                      1-Day Cu Chi & Saigon Highlights
-                    </div>
-                    <p class="text-xs text-slate-500 line-clamp-2">
-                      Direct early tunnel exploration paired with central Saigon historical landmarks.
-                    </p>
-                  </a>
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-200/80 text-lg">⏰</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Recommended Departure</div>
+                    <div class="text-slate-600">06:30 – 07:00 AM (Ahead of rush hour)</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/80 text-lg">🎟️</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Official Admission</div>
+                    <div class="text-slate-600">135,000 VND / pax (35k relic entry + 100k guide/service)</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 border border-purple-200/80 text-lg">🚗</div>
+                  <div>
+                    <div class="font-bold text-slate-900 mb-0.5">Pricing Basis</div>
+                    <div class="text-slate-600">Per vehicle round-trip (includes waiting time)</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Related Heritage Guides */}
-            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
-              <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                Related Heritage Guides
+            {/* Related Cu Chi & Saigon Guides */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-5 border-l-4 border-rose-500 pl-3 text-sm tracking-wide uppercase">
+                Related Travel Guides
               </div>
-              <div class="space-y-2.5 text-xs">
-                <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-slate-50 border border-slate-100 transition-colors group">
-                  <div class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">How to Visit Without Crowds</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5 line-clamp-1">5 insider strategies for avoiding tour buses</div>
+              
+              <div class="space-y-3 text-xs">
+                <a href="/tour/half-day-cu-chi-tunnels-tour" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Cu Chi Tunnels: Half-Day Private Tour</div>
+                  <p class="text-slate-500 line-clamp-2">Direct morning private excursion to Ben Duoc or Ben Dinh with flexible pacing.</p>
                 </a>
-                <a href="/independence-palace-saigon-guide" class="block p-2.5 rounded-xl hover:bg-slate-50 border border-slate-100 transition-colors group">
-                  <div class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">Independence Palace Guide</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5 line-clamp-1">History, underground bunkers & visitor tips</div>
+
+                <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">How to Visit Cu Chi Tunnels Without the Crowds</div>
+                  <p class="text-slate-500 line-clamp-2">5 insider strategies on timing, routes, and avoiding tour bus caravans.</p>
                 </a>
-                <a href="/hcmc-museum-of-fine-arts-guide" class="block p-2.5 rounded-xl hover:bg-slate-50 border border-slate-100 transition-colors group">
-                  <div class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">HCMC Fine Arts Museum Guide</div>
-                  <div class="text-[11px] text-slate-500 mt-0.5 line-clamp-1">French-colonial architecture & Indochine art</div>
+
+                <a href="/tour/1-day-premium-cu-chi-tunnels" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">1-Day Cu Chi & Saigon Highlights</div>
+                  <p class="text-slate-500 line-clamp-2">Direct early tunnel exploration paired with central Saigon historical landmarks.</p>
+                </a>
+
+                <a href="/independence-palace-saigon-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Independence Palace Saigon Guide</div>
+                  <p class="text-slate-500 line-clamp-2">History, architecture, secret underground war bunkers, and visitor tips.</p>
                 </a>
               </div>
             </div>
 
-            {/* VIP Concierge Box */}
-            <div class="bg-gradient-to-br from-amber-500/10 to-amber-600/5 rounded-2xl p-5 border border-amber-200/60 space-y-3 text-center">
-              <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center mx-auto shadow-xs">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            {/* Share / Copy Link Widget */}
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+              <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-sm tracking-wide uppercase">
+                Share This Guide
               </div>
-              <div>
-                <div class="font-bold text-slate-900 text-sm font-serif">Plan a Private Car Excursion</div>
-                <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
-                  Need a tailored private departure or custom airport transfer? Our travel specialists respond within 2 hours.
-                </p>
+              <p class="text-xs text-slate-500 mb-4">
+                Know someone planning a trip to Vietnam? Share these private-car costs and route strategies with them.
+              </p>
+              <div class="flex gap-2">
+                <a 
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="flex-1 py-2.5 px-3 rounded-xl bg-blue-600 text-white text-xs font-bold text-center hover:bg-blue-700 transition-colors shadow-2xs"
+                >
+                  Facebook
+                </a>
+                <button 
+                  id="copy-link-btn"
+                  data-url={canonicalUrl}
+                  class="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold hover:bg-amber-50 hover:text-amber-700 transition-colors border border-slate-200"
+                >
+                  Copy Link
+                </button>
               </div>
+              <div id="copy-toast" class="hidden text-[11px] text-emerald-700 font-bold mt-2 text-center">
+                ✓ Copied to clipboard!
+              </div>
+            </div>
+
+            {/* VIP Concierge Card */}
+            <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-md space-y-4">
+              <div class="text-xs text-amber-400 font-bold uppercase tracking-wider">
+                Bespoke Inbound Concierge
+              </div>
+              <div class="font-serif text-lg font-bold">
+                Need a Custom Cu Chi Itinerary?
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Connect directly with our local travel specialists to arrange a comfortable private car and curated journey for your group.
+              </p>
               <a 
                 href="/contact" 
-                class="block w-full py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-colors"
+                class="block w-full py-2.5 rounded-xl bg-amber-500 text-white font-bold text-xs text-center hover:bg-amber-600 transition-colors"
               >
                 Inquire via WhatsApp / Email
               </a>
@@ -1175,23 +1157,20 @@ const faqSchema = {
 
   </div>
 
-  {/* Client-side Toast notification for Copy Link */}
   <script is:inline>
-    const btn = document.getElementById('copy-link-btn');
-    if (btn) {
-      btn.addEventListener('click', async () => {
+    const copyBtn = document.getElementById('copy-link-btn');
+    const copyToast = document.getElementById('copy-toast');
+    if (copyBtn && copyToast) {
+      copyBtn.addEventListener('click', async () => {
+        const url = copyBtn.getAttribute('data-url') || window.location.href;
         try {
-          await navigator.clipboard.writeText(window.location.href);
-          const originalText = btn.innerHTML;
-          btn.innerHTML = `
-            <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-emerald-400">Copied!</span>
-          `;
+          await navigator.clipboard.writeText(url);
+          copyToast.classList.remove('hidden');
           setTimeout(() => {
-            btn.innerHTML = originalText;
-          }, 2500);
+            copyToast.classList.add('hidden');
+          }, 3000);
         } catch (err) {
-          console.error('Failed to copy link: ', err);
+          console.error('Failed to copy link:', err);
         }
       });
     }
