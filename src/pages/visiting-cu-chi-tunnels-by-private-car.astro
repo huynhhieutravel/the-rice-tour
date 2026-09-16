@@ -27,9 +27,9 @@ if (!post) {
     id: 19808,
     title: 'Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect',
     slug: currentSlug,
-    excerpt: 'A practical guide to vehicle options, 2026 costs, route planning, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.',
+    excerpt: 'A practical guide to vehicle options, route planning, pricing factors, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.',
     featuredImage: 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp',
-    readingTime: 14,
+    readingTime: 10,
     author: 'The Rice Tour Editorial',
     createdAt: '2026-09-16T08:00:00.000Z',
     publishedAt: '2026-09-16T08:00:00.000Z',
@@ -40,10 +40,10 @@ if (!post) {
 const { settings } = await getGlobalSettings();
 
 const pageTitle = post?.title || 'Visiting Cu Chi Tunnels By Private Car: Costs, Routes & What To Expect';
-const pageDesc = post?.excerpt || 'A practical guide to vehicle options, 2026 costs, route planning, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.';
+const pageDesc = post?.excerpt || 'A practical guide to vehicle options, route planning, pricing factors, and choosing between Ben Dinh and Ben Duoc from Ho Chi Minh City.';
 
 const seoTitle = post?.seoTitle || post?.metaTitle || `${pageTitle} | The Rice Tour`;
-const seoDesc = post?.seoDescription || 'Hiring a private car to Cu Chi Tunnels: compare SUV, MPV & limousine costs, avoid hidden fees, choose between Ben Dinh & Ben Duoc, and plan an unhurried day from Saigon.';
+const seoDesc = post?.seoDescription || 'Hiring a private car to Cu Chi Tunnels: compare SUV, MPV & limousine options, understand pricing factors, choose between Ben Dinh & Ben Duoc, and plan an unhurried day from Saigon.';
 const seoImage = post?.ogImage || post?.featuredImage || 'https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp';
 
 // --- DATE LOGIC (E-E-A-T Compliant) ---
@@ -79,18 +79,18 @@ const adminEditUrl = post.id && post.id !== 19808 ? `/admin/posts/edit?id=${post
 const toc = [
   { id: "gioi-thieu", title: "Introduction", icon: "🏠" },
   { id: "is-a-private-car-worth-it", title: "1. Is A Private Car Worth It?", icon: "💎" },
-  { id: "private-car-costs-2026", title: "2. 2026 Private Car Costs & Pricing Basis", icon: "💵" },
+  { id: "private-car-costs-2026", title: "2. Private Car Pricing Factors in 2026", icon: "💵" },
   { id: "which-vehicle-should-you-choose", title: "3. Choosing The Right Vehicle", icon: "🚗" },
   { id: "route-from-hcmc-to-cu-chi", title: "4. The Route From Saigon To Cu Chi", icon: "🗺️" },
   { id: "what-time-should-you-leave", title: "5. What Time Should You Leave?", icon: "⏰" },
   { id: "ben-dinh-or-ben-duoc", title: "6. Ben Dinh vs. Ben Duoc By Private Car", icon: "🌿" },
   { id: "private-car-vs-group-tour", title: "7. Private Car vs. Shared Group Tour", icon: "⚖️" },
-  { id: "what-is-usually-included", title: "8. What Is Included in the Quoted Price?", icon: "📋" },
+  { id: "what-is-usually-included", title: "8. What Should Be Included in the Quoted Price?", icon: "📋" },
   { id: "can-you-visit-without-a-tour", title: "9. Can You Visit Without An Organized Tour?", icon: "🧭" },
-  { id: "what-to-expect-at-the-tunnels", title: "10. What To Expect (Underground Crawl Is Optional)", icon: "🛡️" },
+  { id: "what-to-expect-at-the-tunnels", title: "10. What To Expect (Tunnel Crawl Is Optional)", icon: "🛡️" },
   { id: "is-private-car-suitable-for-families", title: "11. Families & Senior Travelers", icon: "👨‍👩‍👧‍👦" },
   { id: "combine-with-another-attraction", title: "12. Combining Cu Chi With Other Destinations", icon: "🚫" },
-  { id: "practical-private-car-checklist", title: "13. 10-Point Booking Checklist", icon: "✅" },
+  { id: "practical-private-car-checklist", title: "13. Practical Private-Car Checklist", icon: "✅" },
   { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)", icon: "💡" },
   { id: "epilogue", title: "Epilogue: Control Over Speed", icon: "✨" }
 ];
@@ -111,35 +111,35 @@ const faqSchema = {
   questions: [
     {
       question: "How much does a private car to Cu Chi Tunnels cost in 2026?",
-      answer: "Private-car rates typically range from $65 to $95 USD for a comfortable SUV or 7-seat MPV (2–4 passengers) and $110 to $150 USD for a luxury 9-seat limousine van. These rates cover round-trip door-to-door transfer, driver waiting time, highway tolls, and fuel. Because pricing is per vehicle, it is exceptionally economical per person for families and small groups."
+      answer: "Private-car pricing is quoted per vehicle rather than per passenger, and varies depending on vehicle category, hotel pickup location, itinerary, and whether you visit Ben Dinh or Ben Duoc. Travelers should request a direct quotation from their operator based on group size and inclusions such as tolls and driver waiting time. Because pricing is per vehicle, it becomes increasingly cost-efficient on a per-person basis for couples, families, and small groups."
     },
     {
-      question: "Is traveling by private car faster than joining a bus tour?",
-      answer: "Not necessarily on the open highway, because all vehicles share the same road network. However, a private car saves 45 to 60 minutes in central Saigon by eliminating multi-hotel passenger pickups and avoiding 45-minute commercial stops at roadside handicraft factories."
+      question: "Is traveling by private car faster than joining a shared tour?",
+      answer: "Not necessarily on the highway, as all vehicles share the same road network and traffic conditions. However, a private car provides greater schedule control by departing directly from your hotel lobby, avoiding multiple hotel pickups, and omitting unwanted commercial or shopping stops along the way."
     },
     {
       question: "Which tunnel site should I visit by private car: Ben Dinh or Ben Duoc?",
-      answer: "If your schedule is tight and you want to keep total travel time under 5 hours, Ben Dinh (~50 km) is the practical choice. If you prefer a spacious riverside forest setting with far fewer tour buses and wish to see the Ben Duoc Memorial Temple and Liberation Zone, Ben Duoc (~70 km) is well worth the extra 40 minutes of driving."
+      answer: "Both sites are identified by UNESCO as the primary preserved sectors of the original tunnel network (~4 km preserved in total). Ben Dinh is closer to central Ho Chi Minh City (~50 km) and is generally more convenient for tighter schedules. Ben Duoc is located farther northwest (~70 km) and features a larger historical area, including the Ben Duoc Memorial Temple and the Recreated Liberation Zone. The choice is best understood as a route and pacing decision rather than a matter of authenticity."
     },
     {
       question: "Do I need to book a separate tour guide with my private car?",
-      answer: "Every admission ticket purchased at Cu Chi includes the services of an official English-speaking site guide who walks you through the exhibits and trapdoors. However, for seamless storytelling and assistance from hotel pickup to return drop-off, booking a private licensed tour guide to travel in the vehicle elevates the experience significantly."
+      answer: "Admission for international visitors currently bundles the relic entrance fee and a guide/service fee (135,000 VND). Independent visitors can inquire about on-site guiding arrangements upon arrival at the entrance. However, booking a licensed private guide to travel with you in the vehicle provides continuous historical storytelling and assistance throughout the entire journey."
     },
     {
-      question: "Can travelers with claustrophobia or limited mobility visit comfortably?",
-      answer: "Yes. Roughly 85 to 90 percent of the exhibits are entirely outdoors on shaded woodland footpaths. Nobody is forced to go underground. Ben Duoc also features paved trails and on-site electric carts for visitors requiring mobility support."
+      question: "Can travelers who dislike confined spaces or have limited mobility visit comfortably?",
+      answer: "Yes. Much of the Cu Chi Tunnels experience takes place above ground along shaded forest walking paths, including historical weapon displays, booby-trap demonstrations, documentary screenings, and reconstructed living areas. Entering the underground tunnels is completely optional. Ben Duoc also features paved trails and on-site electric carts for visitors requiring mobility assistance."
     },
     {
       question: "What are the official opening hours and ticket prices in 2026?",
-      answer: "Cu Chi Tunnels open daily from 07:00 AM to 05:00 PM. Effective February 1, 2026, the official entrance fee for international visitors is 135,000 VND per person (comprising 35,000 VND relic admission + 100,000 VND guide and service fee)."
+      answer: "The Cu Chi Tunnels historical site operates daily from 07:00 AM to 05:00 PM. Effective February 1, 2026, the official entrance fee for international visitors is 135,000 VND per person (comprising 35,000 VND relic admission and 100,000 VND guide and service fee). Travelers should verify current arrangements before departure as operational policies can change."
     },
     {
-      question: "Is Cu Chi Tunnels on the UNESCO World Heritage List?",
-      answer: "On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels complex to the UNESCO World Heritage Tentative List. It is currently under evaluation and represents one of Southeast Asia's premier wartime military heritage sites."
+      question: "Is Cu Chi Tunnels a UNESCO World Heritage Site?",
+      answer: "Not yet. Vietnam submitted the Cu Chi Tunnels complex to UNESCO's Tentative List on July 15, 2026. The Tentative List is an inventory of properties an authority intends to consider for nomination; it does not mean the site is already inscribed on the World Heritage List."
     },
     {
-      question: "Can I book a Grab car to Cu Chi and take another Grab back?",
-      answer: "While taking a Grab to Cu Chi is easy, securing a return ride from rural Cu Chi (especially Ben Duoc) is notoriously difficult and unreliable. Booking a private round-trip car with driver waiting time included avoids the stress of being stranded."
+      question: "Can I book a ride-hailing car (Grab) to Cu Chi and arrange another one back?",
+      answer: "While getting a ride-hailing car from downtown Ho Chi Minh City to Cu Chi is straightforward, return availability from rural Cu Chi (particularly Ben Duoc) can be less predictable depending on the time of day and local driver presence. Arranging a round-trip private transfer where the driver waits during your visit provides guaranteed return transportation."
     }
   ]
 };
@@ -217,7 +217,7 @@ const faqSchema = {
 
           <div class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span>{post.readingTime || 14} min read</span>
+            <span>10 min read</span>
           </div>
         </div>
 
@@ -279,23 +279,23 @@ const faqSchema = {
               <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0">
                 <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">🚗</div>
                 <div class="min-w-0 flex-1">
-                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Typical Rate</div>
-                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">$65 – $95 (Per Car)</div>
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Pricing Basis</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">Quoted Per Vehicle</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
                 <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/80 shrink-0 shadow-xs">📍</div>
                 <div class="min-w-0 flex-1">
-                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Drive Distance</div>
-                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">50 km (Ben Dinh) / 70 km (Ben Duoc)</div>
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Distance Range</div>
+                  <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">~50 – 70 km NW</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
                 <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/80 shrink-0 shadow-xs">⏰</div>
                 <div class="min-w-0 flex-1">
-                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Optimal Departure</div>
+                  <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Recommended Window</div>
                   <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">06:30 – 07:00 AM</div>
                 </div>
               </div>
@@ -306,7 +306,7 @@ const faqSchema = {
           <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
             <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
               <p>
-                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car gives travelers complete control over departure time, hotel pickup, vehicle choice, and the pace of the day. Instead of joining a fixed group itinerary, travelers can arrange a direct transfer to Ben Dinh or Ben Duoc, spend the exact time they need at the historical site, and return to Ho Chi Minh City on a schedule that suits their group.
+                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car gives travelers more control over departure time, hotel pickup, vehicle choice, and the pace of the day. Instead of joining a fixed group itinerary, travelers can arrange a direct transfer to Ben Dinh or Ben Duoc, spend the time they need at the historical site, and return to Ho Chi Minh City on a schedule that suits their group.
               </p>
 
               <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
@@ -318,7 +318,7 @@ const faqSchema = {
                 <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
                   <img 
                     src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
-                    alt="Travelers exploring the tranquil open-air grounds at Cu Chi Tunnels - The Rice Tour" 
+                    alt="Travelers exploring the grounds at Cu Chi Tunnels - The Rice Tour" 
                     class="w-full h-auto object-cover max-h-[500px]" 
                     width="1280" 
                     height="720" 
@@ -326,12 +326,22 @@ const faqSchema = {
                   />
                 </div>
                 <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
-                  Private transportation gives you the flexibility to spend more time exploring quiet woodland historical exhibits at your own pace.
+                  Private transportation gives you the flexibility to spend time exploring historical exhibits at your own pace.
+                </p>
+              </div>
+
+              {/* UNESCO 2026 Milestone & 27M Visitors Callout Box */}
+              <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">🏛️</span> A Major Heritage Destination: Over 27 Million Visitors
+                </div>
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
+                  By 2025, the Cu Chi Tunnels complex had received <strong>more than 27 million domestic and international visitors</strong>, according to Vietnam's 2026 UNESCO Tentative List submission. With visitor interest consistently high, understanding how to manage your timing, vehicle, and route makes a noticeable difference to your experience.
                 </p>
               </div>
 
               <p>
-                Alongside central wartime landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, the Cu Chi complex remains one of southern Vietnam's defining historical encounters. For couples, families, small groups, and travelers who prefer a direct hotel-to-site transfer, a private car can be a practical way to visit the Cu Chi Tunnels without being tied to multiple hotel pickups or a fixed group schedule.
+                Alongside central historical landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, the Cu Chi complex remains one of southern Vietnam's defining historical encounters. For couples, families, small groups, and travelers who prefer a direct hotel-to-site transfer, a private car can be a practical way to visit the Cu Chi Tunnels without being tied to multiple hotel pickups or a fixed group schedule.
               </p>
             </div>
           </section>
@@ -351,7 +361,7 @@ const faqSchema = {
                 The answer depends mainly on group size, priorities, and how much flexibility matters.
               </p>
               <p>
-                A shared tour is usually designed around a fixed departure time and a common itinerary. Pickup may involve several hotels across District 1, and the group follows the same schedule throughout the excursion. This can be convenient for solo travelers or visitors primarily concerned with keeping transportation costs low.
+                A shared tour is usually designed around a fixed departure time and a common itinerary. Pickup may involve several hotels, and the group follows the same schedule throughout the excursion. This can be convenient for solo travelers or visitors primarily concerned with keeping transportation costs low.
               </p>
               <p>
                 A private car works differently. The vehicle is reserved for one party, so the departure time can be arranged around the travelers' hotel location and preferred visit window. The group can also request a direct itinerary rather than adding stops that are not part of the main visit.
@@ -367,18 +377,18 @@ const faqSchema = {
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-amber-950/90 leading-relaxed pt-1">
                   <div class="flex items-center gap-2">• Traveling as a couple or family</div>
-                  <div class="flex items-center gap-2">• Traveling with children or seniors</div>
-                  <div class="flex items-center gap-2">• Staying outside the central tourist district</div>
-                  <div class="flex items-center gap-2">• Wanting an early departure (06:30 AM)</div>
-                  <div class="flex items-center gap-2">• Carrying luggage between destinations</div>
-                  <div class="flex items-center gap-2">• Preferring direct hotel-to-hotel travel</div>
-                  <div class="flex items-center gap-2">• Avoiding multiple group hotel pickups</div>
-                  <div class="flex items-center gap-2">• Wanting control over the return hour</div>
+                  <div class="flex items-center gap-2">• Traveling with children or older relatives</div>
+                  <div class="flex items-center gap-2">• Staying outside the main tourist center</div>
+                  <div class="flex items-center gap-2">• Wanting an early departure (around 06:30–07:00 AM)</div>
+                  <div class="flex items-center gap-2">• Carrying luggage between accommodations</div>
+                  <div class="flex items-center gap-2">• Preferring hotel-to-hotel transportation</div>
+                  <div class="flex items-center gap-2">• Wanting to avoid multiple group pickups</div>
+                  <div class="flex items-center gap-2">• Wanting more control over the return time</div>
                 </div>
               </div>
 
               <p>
-                For solo travelers or visitors whose main priority is minimizing transportation costs, a shared tour may remain a simpler option. But for groups of two or more, private hire is often far more practical.
+                For solo travelers or visitors whose main priority is minimizing transportation costs, a shared tour may remain a simpler option.
               </p>
             </div>
           </section>
@@ -398,10 +408,13 @@ const faqSchema = {
                 Private-car pricing is normally calculated per vehicle rather than per passenger. The final amount depends on the vehicle category, pickup location, number of passengers, itinerary, and whether the service is one-way or round-trip.
               </p>
               <p>
+                Private-car prices vary significantly by vehicle, pickup location, and inclusions. Rather than relying on rigid estimates, travelers should ask their operator for a 2026 quotation based on their specific group size and itinerary.
+              </p>
+              <p>
                 A useful way to compare quotations is to look at both the <strong>total vehicle price</strong> and the <strong>estimated cost per person</strong>.
               </p>
 
-              {/* Vehicle Pricing Table */}
+              {/* Vehicle Comparison Table */}
               <div class="overflow-x-auto my-6">
                 <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
                   <thead>
@@ -409,44 +422,40 @@ const faqSchema = {
                       <th class="p-4 font-bold text-left !text-white text-white">Vehicle Option</th>
                       <th class="p-4 font-bold text-center !text-white text-white">Typical Group</th>
                       <th class="p-4 font-bold text-left !text-white text-white">Best Suited To</th>
-                      <th class="p-4 font-bold text-right !text-white text-white">Estimated 2026 Rate</th>
+                      <th class="p-4 font-bold text-right !text-white text-white">Pricing Basis</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-slate-700">
                     <tr class="hover:bg-slate-50/80 transition-colors">
                       <td class="p-4 font-bold text-slate-900">SUV / Premium MPV</td>
                       <td class="p-4 text-center font-medium">2–3 guests</td>
-                      <td class="p-4">Couples, small families with light bags</td>
-                      <td class="p-4 text-right font-bold text-emerald-800">$65 – $80 USD</td>
+                      <td class="p-4">Couples, small families</td>
+                      <td class="p-4 text-right font-medium text-slate-700">Per vehicle</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">7-Seat MPV (Innova / Xpander)</td>
+                      <td class="p-4 font-bold text-slate-900">7-Seat MPV</td>
                       <td class="p-4 text-center font-medium">3–5 guests</td>
-                      <td class="p-4">Families, small groups with daypacks</td>
-                      <td class="p-4 text-right font-bold text-emerald-800">$75 – $95 USD</td>
+                      <td class="p-4">Families and small groups</td>
+                      <td class="p-4 text-right font-medium text-slate-700">Per vehicle</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">9-Seat VIP Limousine Van</td>
+                      <td class="p-4 font-bold text-slate-900">9-Seat Limousine Van</td>
                       <td class="p-4 text-center font-medium">4–7 guests</td>
-                      <td class="p-4">Larger families, executive comfort, extra legroom</td>
-                      <td class="p-4 text-right font-bold text-emerald-800">$110 – $145 USD</td>
+                      <td class="p-4">Larger families, additional space</td>
+                      <td class="p-4 text-right font-medium text-slate-700">Per vehicle</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">16-Seat Minibus (Transit / Solati)</td>
-                      <td class="p-4 text-center font-medium">8–12 guests</td>
-                      <td class="p-4">Extended family reunions, corporate teams</td>
-                      <td class="p-4 text-right font-bold text-emerald-800">$130 – $170 USD</td>
+                      <td class="p-4 font-bold text-slate-900">Larger Private Van</td>
+                      <td class="p-4 text-center font-medium">8+ guests</td>
+                      <td class="p-4">Corporate or larger groups</td>
+                      <td class="p-4 text-right font-medium text-slate-700">Quoted separately</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <p class="text-xs text-slate-500 italic">
-                *Note: Rates reflect round-trip private hire (half-day 5–6 hours) from central Saigon including driver waiting time, fuel, and tolls. Relic admission fees (135,000 VND / ~$5.30 USD) are paid separately at the entrance.*
-              </p>
-
               <p>
-                For example, if a private 7-seat vehicle costs $80 USD for a round trip, two travelers would effectively pay $40 each, while four travelers would pay only $20 each. The vehicle price itself does not increase simply because the group has more passengers, provided the vehicle comfortably accommodates the passengers and their luggage. This is why private transportation becomes significantly more cost-efficient on a per-person basis as group size increases.
+                For example, if a private vehicle costs a fixed amount for a round trip, two travelers would divide that total by two, while four travelers would divide it by four. The vehicle price itself does not necessarily change simply because the group has more passengers, provided the vehicle remains suitable for the group and luggage. This is why private transportation can become more cost-efficient on a per-person basis as group size increases.
               </p>
 
               {/* Inclusions Checklist */}
@@ -455,18 +464,18 @@ const faqSchema = {
                   <span class="text-amber-600 text-base">🔍</span> What Should Be Included In The Quoted Price?
                 </div>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Before booking, always verify whether your quotation includes:
+                  Before booking, travelers should confirm whether the quotation includes:
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
-                  <div class="flex items-center gap-2">✓ Door-to-door hotel pickup & drop-off</div>
-                  <div class="flex items-center gap-2">✓ Dedicated private vehicle & driver</div>
-                  <div class="flex items-center gap-2">✓ Highway tolls & parking fees</div>
-                  <div class="flex items-center gap-2">✓ Driver waiting time at the site</div>
-                  <div class="flex items-center gap-2">✓ Fuel and operating expenses</div>
-                  <div class="flex items-center gap-2">✓ Chilled mineral water & refreshing towels</div>
+                  <div class="flex items-center gap-2">• Hotel pickup and drop-off</div>
+                  <div class="flex items-center gap-2">• Dedicated private vehicle & driver</div>
+                  <div class="flex items-center gap-2">• Highway tolls & parking fees (if applicable)</div>
+                  <div class="flex items-center gap-2">• Driver waiting time at Cu Chi</div>
+                  <div class="flex items-center gap-2">• Fuel and road expenses</div>
+                  <div class="flex items-center gap-2">• Bottled water or refreshments</div>
                 </div>
                 <p class="text-xs text-amber-900/90 font-medium pt-1">
-                  A quotation that appears cheaper may simply exclude waiting time or tolls that another operator has included. Always confirm that your driver will wait at Cu Chi for your return journey.
+                  A quotation that appears cheaper may simply exclude waiting time or road tolls that another operator has included. For a half-day private transfer, it is especially important to confirm whether the driver remains with the vehicle while visitors explore the site and whether the return journey is already included.
                 </p>
               </div>
             </div>
@@ -494,17 +503,17 @@ const faqSchema = {
                     SUV Or Premium MPV (2–3 Guests)
                   </div>
                   <p class="text-slate-600 text-xs leading-relaxed">
-                    Vehicles such as the Ford Everest or Kia Carnival provide an excellent balance between space and comfort. While an SUV handles rough rural detours easily, a Carnival MPV provides superior seat recline and luggage room for families with large suitcases.
+                    Vehicles such as the Ford Everest or Kia Carnival serve different needs. For a couple carrying only light luggage, an SUV can be sufficient. A family with larger bags may prefer the additional cabin flexibility of an MPV.
                   </p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
                   <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
                     <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs font-bold">B</span>
-                    9-Seat VIP Limousine (4–7 Guests)
+                    9-Seat Limousine (4–7 Guests)
                   </div>
                   <p class="text-slate-600 text-xs leading-relaxed">
-                    For small groups, a luxury 9-seat DCar Limousine van transforms the 1.5 to 2-hour drive into a relaxing executive lounge, featuring plush captain leather recliners, onboard Wi-Fi, individual USB-C charging ports, and ample head and legroom.
+                    For small groups and families, keeping everyone in one vehicle provides more cabin space. Depending on the specific vehicle assigned, amenities may include reclining seats, leather upholstery, air conditioning, and charging ports.
                   </p>
                 </div>
               </div>
@@ -514,7 +523,7 @@ const faqSchema = {
                 <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
                   <img 
                     src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
-                    alt="Travelers enjoying shaded woodland paths after arriving by comfortable private car - The Rice Tour" 
+                    alt="Travelers walking on woodland path at Cu Chi Tunnels - The Rice Tour" 
                     class="w-full h-auto object-cover max-h-[460px]" 
                     width="1280" 
                     height="720" 
@@ -522,12 +531,12 @@ const faqSchema = {
                   />
                 </div>
                 <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
-                  Arriving well-rested in air-conditioned comfort makes navigating the outdoor forest paths far more enjoyable.
+                  Arriving comfortably by private car allows travelers to approach the walking paths at their own rhythm.
                 </p>
               </div>
 
               <p>
-                The important point is not the badge on the vehicle but whether the actual vehicle configuration comfortably accommodates your party and bags without overcrowding.
+                Features should be confirmed with the operator rather than assumed to be standard across every limousine vehicle. The important point is whether the actual vehicle configuration comfortably accommodates your passengers and luggage.
               </p>
             </div>
           </section>
@@ -547,18 +556,18 @@ const faqSchema = {
                 The Cu Chi Tunnels are located approximately 70 km northwest of central Ho Chi Minh City, according to the 2026 UNESCO Tentative List submission.
               </p>
               <p>
-                The practical route depends on your pickup location and which tunnel area is being visited:
+                The practical route depends on the pickup location and which tunnel area is being visited:
               </p>
 
               <div class="p-4 bg-slate-900 text-white rounded-xl text-xs sm:text-sm font-mono text-center my-4 tracking-wide shadow-sm">
-                Hotel Pickup → Northwest Ho Chi Minh City → An Sương Intersection → QL22 / TL15 → Ben Dinh or Ben Duoc → Return Drop-off
+                Hotel pickup → northwest Ho Chi Minh City → Cu Chi area → Ben Dinh or Ben Duoc → return to hotel
               </div>
 
               <p>
-                The important advantage of private transportation is that the departure time and route can be adjusted around the day's traffic conditions. It would be misleading to promise that a particular route will always avoid congestion around An Suong or other major traffic points. Ho Chi Minh City's traffic changes according to time, weather, road conditions, incidents, and hotel location.
+                Travel time varies significantly by pickup point, route, and traffic conditions. Allow roughly 1.5 to 2 hours from central Ho Chi Minh City as a general planning range, rather than a guaranteed journey time.
               </p>
               <p>
-                A better approach is to plan the departure time and route to <strong>reduce exposure to predictable traffic peaks</strong>. This is one reason an early departure can be exceptionally valuable.
+                The important advantage of private transportation is that the departure time and route can be adjusted around the day's traffic conditions. It would be misleading to promise that a particular route will always avoid congestion around An Suong or other major intersections. A better approach is to plan the departure time and route to <strong>reduce exposure to predictable traffic peaks</strong>.
               </p>
             </div>
           </section>
@@ -569,13 +578,13 @@ const faqSchema = {
           <section id="what-time-should-you-leave" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                5. What Time Should You Leave Saigon?
+                5. What Time Should You Leave?
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                The Cu Chi Tunnels historical site currently operates from <strong>7:00 AM to 5:00 PM daily</strong>, making an early start practical for travelers who want more time at the site.
+                The Cu Chi Tunnels historical site currently operates from <strong>7:00 AM to 5:00 PM</strong>, making an early start practical for travelers who want more time at the site.
               </p>
               <p>
                 For visitors using private transportation, three broad departure strategies work well:
@@ -584,28 +593,28 @@ const faqSchema = {
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
                 <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
                   <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-emerald-600 text-base">🌅</span> Early Morning (06:30 AM)
+                    <span class="text-emerald-600 text-base">🌅</span> Early Morning
                   </div>
                   <p class="text-slate-600 text-xs leading-relaxed">
-                    Leaves the city before rush hour builds up. Arriving between 07:30 and 08:30 AM allows you to enjoy cooler woodland temperatures and avoid the concentrated arrivals of large tour buses.
+                    Leave around 06:30–07:00 AM if you want an early arrival. Actual travel time varies with your hotel location and traffic, but reaching Cu Chi during the first part of the operating day offers cooler conditions and more flexibility at the site.
                   </p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
                   <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-blue-600 text-base">☕</span> Mid-Morning (08:30 AM)
+                    <span class="text-blue-600 text-base">☕</span> Mid-Morning
                   </div>
                   <p class="text-slate-600 text-xs leading-relaxed">
-                    Allows for a relaxed breakfast at your hotel. However, the drive overlaps with heavier morning highway traffic, and you will arrive at the site during peak daytime hours.
+                    Can work for travelers who prefer not to wake up early. However, it provides less schedule flexibility, and arrival may overlap with more active periods at the site.
                   </p>
                 </div>
 
                 <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2 shadow-xs">
                   <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
-                    <span class="text-amber-600 text-base">🌤️</span> Midday (12:00 PM)
+                    <span class="text-amber-600 text-base">🌤️</span> Midday / Early Afternoon
                   </div>
                   <p class="text-slate-600 text-xs leading-relaxed">
-                    A great alternative for late risers. Reaching Cu Chi around 01:30 PM coincides with the departure of morning bus tours, offering calmer trails during the early afternoon.
+                    Useful for travelers who prefer a slower morning in the city. Some organized tours leave around midday, though crowd levels vary and late departures leave less flexibility for return traffic.
                   </p>
                 </div>
               </div>
@@ -632,36 +641,41 @@ const faqSchema = {
                 <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-xs border border-slate-200/80 text-sm">
                   <thead>
                     <tr class="bg-slate-900 text-white font-serif">
-                      <th class="p-4 font-bold text-left !text-white text-white">Feature / Metric</th>
-                      <th class="p-4 font-bold text-left !text-white text-white">Ben Dinh Sector</th>
-                      <th class="p-4 font-bold text-left !text-white text-white">Ben Duoc Sector</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Characteristic</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Ben Dinh</th>
+                      <th class="p-4 font-bold text-left !text-white text-white">Ben Duoc</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-slate-100 text-slate-700">
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">Administrative Location</td>
+                      <td class="p-4 font-bold text-slate-900">Location</td>
                       <td class="p-4">Nhuan Duc area</td>
                       <td class="p-4">An Nhon Tay area</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">Distance from Central HCMC</td>
-                      <td class="p-4">~50 km (1.5 hours drive)</td>
-                      <td class="p-4 font-medium text-emerald-800">~70 km (1.75 – 2 hours drive)</td>
+                      <td class="p-4 font-bold text-slate-900">Position relative to central HCMC</td>
+                      <td class="p-4">Generally closer (~50 km)</td>
+                      <td class="p-4 font-medium text-slate-800">Generally farther (~70 km)</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">Preserved Tunnel Structure</td>
-                      <td class="p-4">Major preserved area with widened crawl sections</td>
-                      <td class="p-4">Major preserved area with authentic 3-tier depths</td>
+                      <td class="p-4 font-bold text-slate-900">Historical Significance</td>
+                      <td class="p-4">Major preserved tunnel area</td>
+                      <td class="p-4">Major preserved tunnel area</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">Visitor Atmosphere</td>
-                      <td class="p-4 text-amber-800">Popular with commercial bus tours</td>
-                      <td class="p-4 font-medium text-emerald-800">Spacious, tranquil riverside forest setting</td>
+                      <td class="p-4 font-bold text-slate-900">Preserved Structure</td>
+                      <td class="p-4">Three-level preserved tunnel structure</td>
+                      <td class="p-4">Three-level preserved tunnel structure</td>
                     </tr>
                     <tr class="hover:bg-slate-50/80 transition-colors">
-                      <td class="p-4 font-bold text-slate-900">Additional On-Site Attractions</td>
-                      <td class="p-4">Shooting range, documentary theater</td>
-                      <td class="p-4">Ben Duoc Memorial Temple, Recreated Liberation Zone</td>
+                      <td class="p-4 font-bold text-slate-900">Visitor Pattern</td>
+                      <td class="p-4 text-slate-700">Popular with organized tours</td>
+                      <td class="p-4 font-medium text-slate-700">Often less concentrated; varies by day</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80 transition-colors">
+                      <td class="p-4 font-bold text-slate-900">Travel Distance</td>
+                      <td class="p-4">Shorter drive</td>
+                      <td class="p-4">Requires a longer drive</td>
                     </tr>
                   </tbody>
                 </table>
@@ -670,10 +684,10 @@ const faqSchema = {
               {/* UNESCO Insight Box */}
               <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
                 <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
-                  <span class="text-lg">🏛️</span> UNESCO 2026 Confirmation: Neither Site Is "Fake"
+                  <span class="text-lg">🏛️</span> Preserved, Conserved & Presented Heritage
                 </div>
                 <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
-                  The distinction is important because neither site should be described simply as “real” versus “fake.” UNESCO's 2026 Tentative List submission identifies <strong>Ben Duoc and Ben Dinh as the two areas that best retain the original appearance, scale, and structure of the wider tunnel system</strong>. Together, the preserved sections total approximately 4 km in length.
+                  The distinction is important because neither site should be reduced to “real” versus “fake.” UNESCO's 2026 Tentative List submission identifies <strong>Ben Duoc and Ben Dinh as the two areas that best retain the original appearance, scale, and structure of the wider tunnel system</strong>, with approximately 4 km of passages preserved across both sectors. Many other parts of the original network deteriorated or subsided over decades.
                 </p>
               </div>
 
@@ -682,7 +696,7 @@ const faqSchema = {
                 <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
                   <img 
                     src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" 
-                    alt="Official site guide explaining the Cu Chi tunnel cross-section diorama model showing three vertical depth levels" 
+                    alt="Guide explaining the Cu Chi tunnel cross-section diorama model - The Rice Tour" 
                     class="w-full h-auto object-cover max-h-[460px]" 
                     width="1280" 
                     height="720" 
@@ -690,12 +704,12 @@ const faqSchema = {
                   />
                 </div>
                 <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
-                  An on-site guide explains the diorama showing the 3-tier depth structure preserved at Ben Duoc and Ben Dinh.
+                  An on-site guide explains the diorama showing the three-tier vertical architecture preserved at Cu Chi.
                 </p>
               </div>
 
               <p>
-                For travelers prioritizing shorter driving time, Ben Dinh is a practical choice. For travelers willing to spend an extra 40 minutes on the road for a quieter, more reflective environment, Ben Duoc is deeply rewarding. The choice is therefore better understood as a <strong>route and itinerary decision</strong>, rather than a question of historical authenticity.
+                For travelers prioritizing convenience, Ben Dinh can be a practical choice. For travelers willing to spend more time on the road, Ben Duoc offers a larger historical area that includes commemorative displays, the Ben Duoc Memorial Temple, and reconstructed spaces beyond the tunnel crawl itself. The choice is therefore better understood as a <strong>route and itinerary decision</strong>, rather than a question of authenticity.
               </p>
             </div>
           </section>
@@ -719,15 +733,15 @@ const faqSchema = {
                 <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-2">
                   <div class="flex items-center gap-2 font-bold text-slate-800 text-sm">
                     <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                    Shared Group Bus Tour
+                    Shared Group Tour
                   </div>
                   <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
-                    <li>Fixed pickup window (consumes 45–60 mins across multiple hotels)</li>
-                    <li>Fixed group departure & predetermined pace at each exhibit</li>
-                    <li>Shared cabin with 15–30 other passengers</li>
-                    <li>Usually includes 45-minute commercial stops at highway showrooms</li>
-                    <li>Fixed return hour to downtown Ho Chi Minh City</li>
-                    <li>Lower cost per person for solo travelers</li>
+                    <li>Fixed pickup schedule; may involve multiple hotel stops</li>
+                    <li>Predetermined departure and pace at each display</li>
+                    <li>Shared vehicle with other travelers</li>
+                    <li>Some itineraries may include commercial stops depending on the operator</li>
+                    <li>Fixed or semi-fixed return time</li>
+                    <li>Usually lower cost per person for solo travelers</li>
                   </ul>
                 </div>
                 
@@ -737,18 +751,18 @@ const faqSchema = {
                     Private Car Transfer
                   </div>
                   <ul class="text-xs text-emerald-950/80 space-y-1.5 list-disc pl-4">
-                    <li>Departs directly from your hotel lobby at your chosen time</li>
-                    <li>Complete control over pacing: linger at displays or bypass crowds</li>
-                    <li>Exclusive cabin for your travel party only</li>
-                    <li>Direct travel: 100% zero commercial stops guaranteed</li>
-                    <li>Flexible return hour whenever your party is ready</li>
-                    <li>More cost-effective per person as group size increases</li>
+                    <li>Private hotel pickup tailored to your location</li>
+                    <li>Flexible departure time and pacing at each site</li>
+                    <li>Exclusive vehicle for your travel party</li>
+                    <li>Direct travel without commercial stops can be confirmed in advance</li>
+                    <li>More flexible return time when your group is ready</li>
+                    <li>Higher total vehicle cost, but cost-effective per person for groups</li>
                   </ul>
                 </div>
               </div>
 
               <p>
-                The additional cost of a private car is therefore mainly paying for <strong>flexibility, privacy, and control</strong>. It does not guarantee an empty highway, but it guarantees that your morning belongs entirely to you.
+                The additional cost of a private car is therefore mainly paying for <strong>flexibility, privacy, and control</strong>. It does not guarantee a shorter road journey, but it allows your party to experience the day on your own terms.
               </p>
             </div>
           </section>
@@ -765,14 +779,14 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                A standard private transfer commonly includes the vehicle, driver, fuel, highway tolls, and hotel pickup and drop-off within the agreed service area.
+                A standard private transfer commonly includes the vehicle, driver, fuel, and hotel pickup and drop-off within the agreed service area.
               </p>
               <p>
-                Premium packages may also add upgraded leather seating, onboard Wi-Fi, individual USB charging ports, chilled bottled water, refreshing cold towels, or a private licensed English-speaking guide.
+                Premium packages may add an upgraded vehicle, bottled water, Wi-Fi, charging ports, refreshments, or a private guide. These extras vary by operator and vehicle.
               </p>
 
               <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
-                "A useful booking question to ask: 'Is this a direct private transfer, and does the driver remain on-site while we explore?' This clarifies whether the quote covers only one-way transportation or a complete excursion."
+                "A useful booking question to ask: 'Is this a direct private transfer, and what exactly is included in the vehicle price?' This single question clarifies whether the quote covers only transportation or a more complete excursion."
               </div>
             </div>
           </section>
@@ -789,19 +803,19 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Yes. Travelers can arrange independent transportation to Cu Chi rather than joining a conventional group tour package.
+                Yes. Travelers can arrange independent transportation to Cu Chi rather than joining a conventional group tour.
               </p>
               <p>
-                Every international ticket purchased at the gate (135,000 VND / ~$5.30 USD) automatically includes the services of an official on-site English-speaking guide who escorts you through the outdoor displays, shows you camouflaged trapdoors, and guides you into the tunnels.
+                The admission and guide/service fee is currently bundled into the international visitor ticket (<strong>135,000 VND per international visitor</strong>, effective February 1, 2026). Independent visitors can ask about on-site guiding arrangements upon arrival at the entrance counter.
               </p>
 
-              {/* Grab Warning Callout */}
-              <div class="bg-rose-50 border border-rose-200 p-5 rounded-2xl my-6 not-prose">
-                <div class="flex items-center gap-2.5 text-rose-900 font-bold text-sm sm:text-base mb-2">
-                  <span class="text-lg">⚠️</span> The Ride-Hailing (Grab) Return Dilemma
+              {/* Ride-Hailing Warning Callout */}
+              <div class="bg-amber-50/80 border border-amber-200 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">🧭</span> Return Transportation Planning
                 </div>
-                <p class="text-xs sm:text-sm text-rose-950/90 leading-relaxed">
-                  The biggest challenge with an independent visit is not getting there—it is getting back. While catching a Grab or taxi from downtown Saigon to Cu Chi is simple, securing an app-based ride back from rural Cu Chi (especially Ben Duoc, 70 km away) is notoriously difficult and unreliable. Booking a private transfer where the driver waits on-site eliminates the stress of being stranded in the countryside.
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
+                  The primary consideration with an independent visit is securing transportation back to the city. While ride-hailing services are easy to arrange from downtown Ho Chi Minh City to Cu Chi, return availability can be less predictable than in central areas, especially during quieter hours or from farther sectors like Ben Duoc. Arranging a return vehicle or waiting time in advance provides more certainty.
                 </p>
               </div>
             </div>
@@ -819,15 +833,15 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                The Cu Chi Tunnels are much more than a short crawl underground. UNESCO's current documentation describes a complex historical system that included living bunkers, communication trenches, command posts, kitchens, infirmaries, wells, and storage facilities constructed across decades using simple hand tools.
+                The Cu Chi Tunnels are much more than a short crawl underground. UNESCO's current documentation describes a complex historical system that included tunnels, bunkers, communication trenches, combat positions, storage areas, meeting rooms, infirmaries, wells, and other structures constructed over decades using basic hand tools.
               </p>
 
-              {/* Image: Punji Stick Traps */}
+              {/* Image: Traps Demonstration */}
               <div class="my-6 not-prose">
                 <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
                   <img 
                     src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
-                    alt="Guide demonstrating camouflaged trapdoor mechanisms on above-ground trail - The Rice Tour" 
+                    alt="Guide demonstrating historical mechanisms on above-ground trail - The Rice Tour" 
                     class="w-full h-auto object-cover max-h-[460px]" 
                     width="1280" 
                     height="720" 
@@ -835,17 +849,17 @@ const faqSchema = {
                   />
                 </div>
                 <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
-                  Over 85 percent of the exhibits are entirely outdoors on shaded woodland footpaths.
+                  Much of the visitor experience takes place above ground along shaded forest walking trails.
                 </p>
               </div>
 
               {/* Claustrophobia Info */}
               <div class="bg-blue-50/70 p-5 rounded-2xl border border-blue-200 space-y-2">
                 <div class="flex items-center gap-2 font-bold text-blue-900 text-base">
-                  <span class="text-lg">🌿</span> Good News for Claustrophobic Travelers
+                  <span class="text-lg">🌿</span> An Open Experience Above Ground
                 </div>
                 <p class="text-blue-950/90 text-sm leading-relaxed">
-                  You never have to crawl underground if you do not feel comfortable doing so. Constricted sections at Ben Dinh measure approximately 40 cm wide and 73 cm high. Travelers with claustrophobia, bad knees, or taller frames can comfortably skip the subterranean crawl without missing the essence of the historical site, as the vast majority of historical displays, film screenings, and trapdoor demonstrations take place above ground.
+                  Visitors who are uncomfortable with confined spaces or steep steps can choose not to enter the tunnel sections. UNESCO's description notes constricted sections at Ben Dinh measuring approximately 40 cm wide and 73 cm high. There is still plenty to see above ground, including historical displays, equipment, documentary film screenings, and reconstructed spaces.
                 </p>
               </div>
             </div>
@@ -863,13 +877,13 @@ const faqSchema = {
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Private transportation is particularly convenient for families with young children or multi-generational groups traveling with elderly relatives.
+                Private transportation can be particularly convenient for families because the itinerary is not shared with strangers. Parents can coordinate departure times around children, carry personal belongings in the trunk, and return to the hotel when the group is ready.
               </p>
               <p>
-                Parents can coordinate departure around breakfast, carry baby gear or strollers in the trunk, and return to the hotel when children grow tired rather than waiting for a bus of 30 strangers. For senior travelers, remaining in the same comfortable vehicle throughout the excursion eliminates the physical strain of boarding and deboarding large tour buses.
+                For families traveling with older relatives, the ability to remain in the same vehicle throughout the excursion can simplify the day.
               </p>
               <p>
-                However, a private car does not alter the physical nature of the Cu Chi site itself. Expect walking along uneven forest dirt trails, stairs, and warm humid weather under the tree canopy.
+                However, a private car does not remove the physical characteristics of the Cu Chi site itself. Visitors should still expect walking, uneven terrain, stairs or narrow areas depending on the itinerary, and warm conditions inside the tunnels.
               </p>
             </div>
           </section>
@@ -880,7 +894,7 @@ const faqSchema = {
           <section id="combine-with-another-attraction" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                12. Should You Combine Cu Chi Tunnels With Another Destination?
+                12. Should You Combine Cu Chi Tunnels With Another Attraction?
               </h2>
             </div>
 
@@ -889,10 +903,10 @@ const faqSchema = {
                 A private car makes combining destinations easier, but flexibility should not be confused with unlimited time.
               </p>
               <p>
-                Cu Chi is already a substantial excursion from central Ho Chi Minh City (taking roughly 5 to 6 hours door-to-door). Trying to combine Cu Chi and the Mekong Delta into a single day often leads to spending 6 to 7 hours stuck on highways, leaving only an hour of rushed sightseeing at each location.
+                A half-day Cu Chi excursion commonly takes around <strong>5 to 6 hours door-to-door</strong>, depending on pickup location, traffic conditions, and time spent exploring the site. Combining Cu Chi with the Mekong Delta can create a long and tiring day because both destinations require substantial road travel in opposite directions.
               </p>
               <p>
-                A much better combination is pairing a morning Cu Chi private excursion with a relaxed afternoon exploring central Saigon landmarks, or dedicating a separate full day to the <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Mekong Delta</a>.
+                If the goal is a relaxed Cu Chi visit, a dedicated half-day itinerary is often easier to manage. Alternatively, pair a morning Cu Chi excursion with central Saigon historical sights in the afternoon, or reserve a separate full day for the <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Mekong Delta</a>.
               </p>
             </div>
           </section>
@@ -903,27 +917,28 @@ const faqSchema = {
           <section id="practical-private-car-checklist" class="scroll-mt-28 space-y-5">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                13. A Practical 10-Point Private-Car Booking Checklist
+                13. A Practical Private-Car Checklist
               </h2>
             </div>
 
             <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
               <p>
-                Before confirming your Cu Chi private-car transfer, ensure you have clear answers to these ten questions:
+                Before confirming a Cu Chi private-car booking, ask these practical questions:
               </p>
 
               <div class="space-y-3 my-6">
                 {[
-                  { q: "Is the vehicle completely private for our party only?", icon: "🚗" },
-                  { q: "Are hotel pickup and drop-off included in central Saigon?", icon: "🏨" },
-                  { q: "Is the quoted price for a round-trip transfer with driver waiting time?", icon: "⏱️" },
-                  { q: "What exact vehicle model (SUV, MPV, or VIP Limousine) will be provided?", icon: "🚘" },
-                  { q: "How many passenger seats and luggage pieces can the cabin comfortably hold?", icon: "🧳" },
-                  { q: "Are highway tolls, parking fees, and driver fuel fully included?", icon: "⛽" },
-                  { q: "Are entrance tickets (135,000 VND / pax) included or paid separately?", icon: "🎟️" },
-                  { q: "Is a private tour guide included, or will we use the official on-site guide?", icon: "🗣️" },
-                  { q: "Is the route 100% direct with zero commercial showroom detours?", icon: "🚫" },
-                  { q: "Are cold mineral water, refreshing towels, and onboard Wi-Fi guaranteed?", icon: "❄️" }
+                  { q: "Is the vehicle completely private for your group?", icon: "🚗" },
+                  { q: "Is hotel pickup and drop-off included within your area?", icon: "🏨" },
+                  { q: "Is the quoted price for one-way or round-trip transportation?", icon: "⏱️" },
+                  { q: "How many passengers and how much luggage can the vehicle comfortably accommodate?", icon: "🧳" },
+                  { q: "Does the driver remain waiting at Cu Chi during your visit?", icon: "🚘" },
+                  { q: "Are entrance tickets (135,000 VND per international visitor) included or paid separately?", icon: "🎟️" },
+                  { q: "Is an accompanying licensed guide included or optional?", icon: "🗣️" },
+                  { q: "Is the itinerary direct, or are commercial stops included?", icon: "🚫" },
+                  { q: "What vehicle model or category will actually be provided?", icon: "📋" },
+                  { q: "Are tolls, fuel, and parking expenses fully covered in the quote?", icon: "⛽" },
+                  { q: "Are there additional charges for hotels outside the central pickup district?", icon: "📍" }
                 ].map((item, idx) => (
                   <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
                     <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
@@ -935,6 +950,10 @@ const faqSchema = {
                   </div>
                 ))}
               </div>
+
+              <p class="text-xs text-slate-500 italic">
+                Getting clear answers to these questions is more useful than choosing a private-car service based solely on an initial advertised headline.
+              </p>
             </div>
           </section>
 
@@ -973,7 +992,7 @@ const faqSchema = {
           <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
             <div class="border-l-4 border-amber-500 pl-4 mb-3">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                FAQ – Frequently Asked Questions About Visiting By Private Car
+                Frequently Asked Questions About Visiting By Private Car
               </h2>
             </div>
 
@@ -1004,7 +1023,7 @@ const faqSchema = {
           <section id="epilogue" class="scroll-mt-28 space-y-4">
             <div class="border-l-4 border-amber-500 pl-4 mb-4">
               <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
-                A Private Car Gives You Control, Not A Shortcut
+                A Private Car Gives You More Control, Not A Shortcut
               </h2>
             </div>
 
@@ -1016,10 +1035,16 @@ const faqSchema = {
                 You can leave earlier, choose the appropriate vehicle, travel directly from your hotel, select Ben Dinh or Ben Duoc based on your priorities, spend more or less time at the site, and return when the group is ready.
               </p>
               <p>
-                For two travelers, the additional cost may be a consideration if budget is the only factor. For a family or small group of four to seven, however, the cost-per-person calculation can look quite different.
+                For two travelers, the additional cost may be a factor if budget is the only consideration. For a family or group of four to seven, however, the cost-per-person calculation can look quite different.
               </p>
               <p>
-                The most useful way to evaluate private transportation is not to ask only: <em>"How much does the car cost?"</em> Ask instead: <strong>"What does the price give us control over?"</strong> When the answer includes direct travel, flexible timing, a waiting driver, and total peace of mind, the value of private transportation becomes unmistakably clear.
+                The most useful way to compare private-car options is therefore not to ask only: <em>"How much does the car cost?"</em> Ask instead:
+              </p>
+              <div class="font-bold text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-4 bg-amber-50/50 py-3 rounded-r-xl font-serif">
+                "What does the price give us control over?"
+              </div>
+              <p>
+                When the answer includes private pickup, a suitable vehicle, direct travel, flexible timing, a waiting driver, and a clearly defined return journey, the value of private transportation becomes much easier to understand.
               </p>
             </div>
           </section>
@@ -1041,7 +1066,7 @@ const faqSchema = {
                   <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-200/80 text-lg">📍</div>
                   <div>
                     <div class="font-bold text-slate-900 mb-0.5">Destinations</div>
-                    <div class="text-slate-600">Ben Duoc (~70km NW) / Ben Dinh (~50km NW)</div>
+                    <div class="text-slate-600">Ben Duoc & Ben Dinh (~50–70 km NW)</div>
                   </div>
                 </div>
 
@@ -1049,7 +1074,7 @@ const faqSchema = {
                   <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 border border-blue-200/80 text-lg">⏰</div>
                   <div>
                     <div class="font-bold text-slate-900 mb-0.5">Recommended Departure</div>
-                    <div class="text-slate-600">06:30 – 07:00 AM (Ahead of rush hour)</div>
+                    <div class="text-slate-600">06:30 – 07:00 AM (Early window)</div>
                   </div>
                 </div>
 
@@ -1057,7 +1082,7 @@ const faqSchema = {
                   <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/80 text-lg">🎟️</div>
                   <div>
                     <div class="font-bold text-slate-900 mb-0.5">Official Admission</div>
-                    <div class="text-slate-600">135,000 VND / pax (35k relic entry + 100k guide/service)</div>
+                    <div class="text-slate-600">135,000 VND per international visitor</div>
                   </div>
                 </div>
 
@@ -1065,7 +1090,7 @@ const faqSchema = {
                   <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-700 flex items-center justify-center shrink-0 border border-purple-200/80 text-lg">🚗</div>
                   <div>
                     <div class="font-bold text-slate-900 mb-0.5">Pricing Basis</div>
-                    <div class="text-slate-600">Per vehicle round-trip (includes waiting time)</div>
+                    <div class="text-slate-600">Quoted per vehicle (includes driver waiting)</div>
                   </div>
                 </div>
               </div>
@@ -1095,7 +1120,7 @@ const faqSchema = {
 
                 <a href="/independence-palace-saigon-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
                   <div class="font-bold text-slate-900 mb-1">Independence Palace Saigon Guide</div>
-                  <p class="text-slate-500 line-clamp-2">History, architecture, secret underground war bunkers, and visitor tips.</p>
+                  <p class="text-slate-500 line-clamp-2">History, architecture, underground war bunkers, and visitor tips.</p>
                 </a>
               </div>
             </div>
