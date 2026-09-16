@@ -33,7 +33,7 @@ For couples, families, small groups, and travelers who prefer a direct hotel-to-
 
 ---
 
-## 1. Is A Private Car Worth It For Cu Chi Tunnels?
+## Is A Private Car Worth It For Cu Chi Tunnels?
 
 The answer depends mainly on group size, priorities, and how much flexibility matters.
 
@@ -55,7 +55,7 @@ Private transportation is particularly useful when:
 
 ---
 
-## 2. How Much Does A Private Car To Cu Chi Tunnels Cost In 2026?
+## How Much Does A Private Car To Cu Chi Tunnels Cost In 2026?
 
 Private-car pricing is normally calculated per vehicle rather than per passenger. The final amount depends on the vehicle category, pickup location, number of passengers, itinerary, and whether the service includes waiting time at the site.
 
@@ -77,7 +77,7 @@ A useful way to evaluate quotations is to look at both the **total vehicle price
 
 ---
 
-## 3. Which Vehicle Should You Choose?
+## Which Vehicle Should You Choose?
 
 The best vehicle is determined not only by passenger numbers but also by luggage, personal space, and the length of the transfer.
 
@@ -90,7 +90,7 @@ Features should be confirmed with your operator rather than assumed to be standa
 
 ---
 
-## 4. How Far Is Cu Chi From Ho Chi Minh City? (The Route & Drive Time)
+## How Far Is Cu Chi From Ho Chi Minh City? (The Route & Drive Time)
 
 The Cu Chi Tunnels are located approximately 70 km northwest of central Ho Chi Minh City, according to Vietnam's 2026 UNESCO Tentative List documentation. The historical network was spread across sectors north of the Saigon River, including areas such as An Nhon Tay, Thai My, Nhuan Duc, Tan An Hoi, Phu Hoa Dong, and Binh My.
 
@@ -104,14 +104,14 @@ The important advantage of private transportation is that the departure time and
 
 ---
 
-## 5. What Time Should You Leave? (Crowd Strategies & Heat Management)
+## What Time Should You Leave? (Crowd Strategies & Heat Management)
 
 The Cu Chi Tunnels historical site currently operates from **7:00 AM to 5:00 PM** daily. If avoiding crowds matters to your group, arriving around opening time is generally preferable.
 
 > ⏰ **Recommended Practical Departure Window**  
-> * **1. Leave Saigon:** 06:30 – 07:00 AM  
-> * **2. Arrive at Cu Chi:** 08:00 – 09:00 AM  
-> * **3. Time at Site:** 2 – 3 hours unhurried  
+> * **Leave Saigon:** 06:30 – 07:00 AM  
+> * **Arrive at Cu Chi:** 08:00 – 09:00 AM  
+> * **Time at Site:** 2 – 3 hours unhurried  
 > *Note: Crowd levels fluctuate with season, day of the week, and weather. An early departure reduces highway idling and gives you cooler morning temperatures under the forest canopy.*
 
 Alternative departure windows:
@@ -120,7 +120,7 @@ Alternative departure windows:
 
 ---
 
-## 6. Ben Dinh vs. Ben Duoc: Neither Is Simply 'Authentic' Or 'Fake'
+## Ben Dinh vs. Ben Duoc: Neither Is Simply 'Authentic' Or 'Fake'
 
 A common debate among travelers is whether to visit Ben Dinh or Ben Duoc. Online discussions sometimes oversimplify this into an "authentic versus tourist trap" dichotomy. The reality is more nuanced:
 
@@ -141,7 +141,7 @@ A common debate among travelers is whether to visit Ben Dinh or Ben Duoc. Online
 
 ---
 
-## 7. Is Cu Chi Actually Authentic? (Preserved vs. Untouched Tunnels)
+## Is Cu Chi Actually Authentic? (Preserved vs. Untouched Tunnels)
 
 A frequent question among first-time visitors is whether the tunnels they walk through are truly original wartime structures.
 
@@ -153,7 +153,7 @@ This does not make the historical site meaningless or "fake." It simply helps vi
 
 ---
 
-## 8. What Is The Cu Chi 'Underground Village'?
+## What Is The Cu Chi 'Underground Village'?
 
 The most compelling way to understand Cu Chi is not simply as a collection of narrow crawlways, but as an **underground village**.
 
@@ -168,7 +168,7 @@ UNESCO's 2026 documentation describes a subterranean community engineered across
 
 ---
 
-## 9. What Did People Eat In The Tunnels? (Cassava Tasting)
+## What Did People Eat In The Tunnels? (Cassava Tasting)
 
 One of the most memorable parts of the visit is the simple wartime food experience.
 
@@ -178,7 +178,7 @@ It is a humble detail, but it helps turn the visit from an abstract walk into a 
 
 ---
 
-## 10. What To Expect Inside The Tunnels: Optional Crawl & Dimensions
+## What To Expect Inside The Tunnels: Optional Crawl & Dimensions
 
 Visitors should understand the physical reality before deciding whether to enter underground. While tourist passages have been slightly widened, some sections remain low, dark, and constricted. UNESCO's official architectural documentation of Ben Dinh records constricted passage sections measuring approximately **40 cm wide and 73 cm high**.
 
@@ -192,7 +192,7 @@ Travelers measuring over six feet tall (183 cm) or wearing XXL sizes often share
 
 ---
 
-## 11. Can You Visit Cu Chi Without A Tour? (Going By Grab & Independent Travel)
+## Can You Visit Cu Chi Without A Tour? (Going By Grab & Independent Travel)
 
 Yes, independent travel is entirely possible.
 
@@ -204,7 +204,7 @@ If you want maximum certainty and prefer not to spend time booking rides on a co
 
 ---
 
-## 12. What Should Be Included In A Private Car Price?
+## What Should Be Included In A Private Car Price?
 
 A standard private transfer commonly includes the vehicle, driver, fuel, and hotel pickup and drop-off within the agreed service area.
 
@@ -217,7 +217,7 @@ Before confirming, always verify:
 
 ---
 
-## 13. What Should You Wear & Bring To Cu Chi Tunnels?
+## What Should You Wear & Bring To Cu Chi Tunnels?
 
 Practical preparation makes a significant difference to your comfort during the excursion:
 
@@ -228,7 +228,7 @@ Practical preparation makes a significant difference to your comfort during the 
 
 ---
 
-## 14. Note on the On-Site Shooting Range
+## Note on the On-Site Shooting Range
 
 Both Ben Dinh and Ben Duoc feature a sports firing range where visitors can purchase live ammunition to fire wartime rifles (AK-47, M16).
 
@@ -236,7 +236,7 @@ Both Ben Dinh and Ben Duoc feature a sports firing range where visitors can purc
 
 ---
 
-## 15. Can You Combine Cu Chi With Other Attractions?
+## Can You Combine Cu Chi With Other Attractions?
 
 Plan around **5 to 6 hours for a typical half-day visit** from central Ho Chi Minh City, depending on traffic, pickup location, and how long you spend at the site.
 
@@ -246,7 +246,7 @@ If your schedule permits, keep Cu Chi as a dedicated morning excursion returning
 
 ---
 
-## 16. Private Car vs. Shared Tour: A Direct Comparison
+## Private Car vs. Shared Tour: A Direct Comparison
 
 To help you evaluate whether private transport justifies the cost, here is how a dedicated vehicle compares to a standard bus or minivan group tour:
 
@@ -261,7 +261,7 @@ To help you evaluate whether private transport justifies the cost, here is how a
 
 ---
 
-## 17. A Practical Private-Car Booking Checklist
+## A Practical Private-Car Booking Checklist
 
 Before confirming a Cu Chi private-car booking, ask these practical questions:
 
@@ -284,37 +284,37 @@ Before confirming a Cu Chi private-car booking, ask these practical questions:
 
 ## Frequently Asked Questions About Visiting Cu Chi Tunnels
 
-### 1. How much does a private car to Cu Chi Tunnels cost in 2026?
+### How much does a private car to Cu Chi Tunnels cost in 2026?
 Private-car pricing is quoted per vehicle round-trip. Typical 2026 market ranges are approximately 1.0M–1.7M VND (~$40–$68 USD) for a 4-seat sedan, 1.1M–2.0M VND (~$44–$80 USD) for a 7-seat SUV/MPV, and 1.2M–2.2M+ VND (~$48–$88+ USD) for a 9-seat VIP limousine van. Rates vary based on pickup district, waiting time, tolls, and destination sector.
 
-### 2. Can I go to Cu Chi Tunnels by Grab?
+### Can I go to Cu Chi Tunnels by Grab?
 Yes, independent travel by Grab is possible. Outbound rides from downtown Ho Chi Minh City are readily available. Grab can also work for the return journey, but availability depends on time and location; while some travelers report booking a return car within 4 to 10 minutes even from Ben Duoc, others prefer arranging a waiting driver for predictability and peace of mind.
 
-### 3. Can you visit Cu Chi Tunnels without a tour?
+### Can you visit Cu Chi Tunnels without a tour?
 Yes. You can visit independently by private car, taxi, Grab, or public bus. For international visitors, the official ticket total is 135,000 VND per person (35,000 VND for site admission plus 100,000 VND for the guide/service fee). On-site English-speaking guides are provided upon arrival to escort visitors along designated trails and tunnels.
 
-### 4. Do I need a guide at Cu Chi Tunnels?
+### Do I need a guide at Cu Chi Tunnels?
 Having a guide is strongly recommended because Cu Chi is an archaeological and historical relic where physical structures require narrative context. The standard international entrance ticket includes on-site guiding service upon arrival. If you book a dedicated private tour with a licensed guide in your vehicle, you receive continuous historical commentary throughout the drive and visit.
 
-### 5. Ben Dinh or Ben Duoc: which one should I choose?
+### Ben Dinh or Ben Duoc: which one should I choose?
 Ben Dinh is the more convenient choice for a first visit, especially if your priority is a shorter drive from central Ho Chi Minh City (~50 km). Ben Duoc takes longer to reach (~70 km) but offers a larger heritage setting, including the Ben Duoc Memorial Temple and additional reconstructed spaces. Neither site should simply be labelled 'authentic' or 'fake'—both preserve three-tier vertical structures and have been conserved for visitor safety.
 
-### 6. Are Cu Chi Tunnels authentic or adapted for tourists?
+### Are Cu Chi Tunnels authentic or adapted for tourists?
 The historical Cu Chi network once extended for hundreds of kilometres; today, approximately 4 km are preserved across Ben Duoc and Ben Dinh. Passageways open to visitors have been stabilized, repaired, and widened in places for safety. This does not make the site inauthentic—it represents the natural difference between a conserved heritage monument and an untouched, collapsing wartime trench.
 
-### 7. How narrow are Cu Chi Tunnels? (Do I have to crawl?)
+### How narrow are Cu Chi Tunnels? (Do I have to crawl?)
 Constricted sections can be as narrow as 40 cm wide and 73 cm high. However, crawling underground is completely optional. Much of the visit takes place above ground along shaded forest paths with historical exhibits, traps, and reconstructed buildings. If you are tall (6 ft+), broad-shouldered, or claustrophobic, you can easily walk alongside without going underground.
 
-### 8. How long does Cu Chi Tunnels take door-to-door?
+### How long does Cu Chi Tunnels take door-to-door?
 Plan around 5 to 6 hours for a typical half-day visit from central Ho Chi Minh City. This typically comprises 1.5 to 2 hours of road travel each way and 2 to 3 hours exploring the historical grounds.
 
-### 9. What should I wear and bring to Cu Chi Tunnels?
+### What should I wear and bring to Cu Chi Tunnels?
 Wear comfortable walking shoes with good grip and lightweight, breathable clothing that allows you to bend or squat easily. Choose darker clothes that won't easily stain from dusty clay if you plan to crawl. Bring drinking water, sunscreen, and insect repellent for the outdoor jungle paths.
 
-### 10. Is Cu Chi Tunnels worth visiting by private car?
+### Is Cu Chi Tunnels worth visiting by private car?
 A private car is worthwhile if you value schedule control, privacy, and direct hotel-to-site travel. It allows you to leave early (06:30–07:00 AM) to arrive ahead of tour bus crowds, skip commercial handicraft detours, and return at your own pace. For groups of 2 to 7 people, the cost per person is often comparable to or only slightly higher than joining a shared tour.
 
-### 11. Is Cu Chi Tunnels a UNESCO World Heritage Site?
+### Is Cu Chi Tunnels a UNESCO World Heritage Site?
 Not yet. Vietnam officially submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List on July 15, 2026, under cultural criteria (iv) and (vi). The Tentative List is a formal inventory of properties an authority intends to consider for future nomination.
 
 ---
