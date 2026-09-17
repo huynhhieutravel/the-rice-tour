@@ -186,6 +186,8 @@ If you choose a full-day itinerary, picking the right companion stops is key:
 - **The Experience:** Traveling along the Saigon River gives you views of modern city towers contrasting with traditional riverbank life.
 - **Logistics Note:** If you want to take the municipal Saigon Waterbus, check current timetables rather than expecting an impromptu sunset departure. Passengers must check schedules and buy tickets in advance. For a relaxed full-day tour, a chartered private speedboat or evening dinner cruise is much more reliable than the public commuter ferry.
 
+![The grand historic facade and expansive lawns of the Independence Palace in central Ho Chi Minh City](https://media.thericetour.com/uploads/reunification-palace-saigon.webp)
+
 ---
 
 ## Half-Day Vs Full-Day: Comparison Overview
@@ -224,6 +226,8 @@ While a half-day trip involves fewer hours, you should keep the physical realiti
 - **The Tunnel Crawl:** Going underground is 100% optional. Some visitor tunnel sections have been widened for tourists, but they still feel very cramped. Travelers measuring 6 ft or wearing larger clothing sizes confirm that moving through the passages requires awkward duck-walking or crawling on hands and knees through warm, dimly lit underground air.
 - **Surface Walking:** Anyone uncomfortable with tight spaces or strenuous crawling can skip the underground tunnels entirely and enjoy the open-air exhibits, trapdoor demonstrations, bunker kitchens, and documentary film on easy surface paths.
 
+![Visitor demonstrating entering a camouflaged wooden trapdoor hidden beneath fallen forest leaves at Cu Chi Tunnels](https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp)
+
 > ⚠️ **Who Should Skip The Crawl?**  
 > The underground sections are optional. Taller or larger travelers may find the adapted tunnels surprisingly restrictive, while anyone uncomfortable with confined spaces can simply remain above ground.
 
@@ -239,6 +243,8 @@ Travelers consistently report that the quality of their guide makes or breaks th
 
 A longer itinerary with a guide who simply herds you from station to station will feel dry and tiring. On the other hand, an insightful guide on a short two-hour morning visit can make Cu Chi the most memorable part of your trip.
 
+![Licensed tour guide explaining the three-tiered underground network using a detailed cross-section model diorama at Cu Chi](https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp)
+
 ---
 
 ## Ben Dinh vs. Ben Duoc: History, Not "Real vs. Fake"
@@ -253,6 +259,8 @@ The real difference comes down to distance and history:
 - **Ben Duoc:** Located roughly 15 km farther out (~70 km total). It served as the headquarters for the regional military command. Because of the extra drive, it sees far fewer big tour coaches. It also houses the peaceful **Ben Duoc Memorial Temple** (built in 1993 to honor over 44,000 soldiers and locals who died in the area) and an expansive open-air heritage park.
 
 Ben Duoc is not just a quieter version of Ben Dinh; it offers a distinctly different historical perspective.
+
+![Visitors examining an authentic decommissioned wartime armored tank amid the forest canopy at Cu Chi Tunnels](https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp)
 
 ---
 
