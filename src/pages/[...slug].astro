@@ -74,6 +74,10 @@ if (slug === 'how-to-visit-cu-chi-tunnels-without-crowds') {
   return Astro.redirect('/how-to-visit-cu-chi-tunnels-without-the-crowds', 301);
 }
 
+if (slug === 'whatsapp') {
+  return Astro.redirect('https://wa.me/84962333621', 302);
+}
+
 import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
 
 const d1Db = env?.dulichcoguu_d1;

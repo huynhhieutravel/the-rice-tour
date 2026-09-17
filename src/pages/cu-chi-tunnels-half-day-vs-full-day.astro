@@ -1316,6 +1316,54 @@ const articleSchema = {
 
     </div>
   </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '-120px 0px -60% 0px',
+        threshold: 0
+      };
+
+      const sections = document.querySelectorAll('article section[id]');
+      const tocLinks = document.querySelectorAll('aside nav a[href^="#"]');
+
+      if (!sections.length || !tocLinks.length) return;
+
+      let currentActiveId = null;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id !== currentActiveId) {
+              currentActiveId = id;
+              updateActiveToc(id);
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+
+      function updateActiveToc(activeId) {
+        tocLinks.forEach(link => {
+          const href = link.getAttribute('href') || '';
+          const id = href.startsWith('#') ? href.slice(1) : '';
+          if (id === activeId) {
+            link.classList.add('text-amber-900', 'bg-amber-50/90', 'font-bold');
+            link.classList.remove('text-slate-600');
+            link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          } else {
+            link.classList.remove('text-amber-900', 'bg-amber-50/90', 'font-bold');
+            if (id !== 'gioi-thieu') {
+              link.classList.add('text-slate-600');
+            }
+          }
+        });
+      }
+    });
+  </script>
 </BaseLayout>
 
 <style>
