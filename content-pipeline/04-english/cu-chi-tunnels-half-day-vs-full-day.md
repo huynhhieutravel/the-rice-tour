@@ -180,7 +180,7 @@ If you opt for a full-day itinerary, selecting the right companion attractions i
 
 ### 3. Saigon Central Post Office & Notre-Dame Cathedral Area
 - **The Experience:** Iconic French colonial architecture designed in the late 19th century, featuring barrel-vaulted ceilings, hand-painted historical cartography maps, and bustling postal operations.
-- **Why It Pairs Well:** It provides an aesthetic, relaxing architectural contrast after an intensive morning of military history. It can easily be explored in 30–45 minutes.
+- **Why It Pairs Well:** It provides an aesthetic, relaxing architectural contrast after an intensive morning of military history. It can easily be explored in 30–45 minutes. *(Note: The adjacent Notre-Dame Cathedral remains under scaffolding for its multi-year restoration, so visits are focused on the fully active Post Office and surrounding Paris Square).*
 
 ### 4. Saigon River & Waterbus
 - **The Experience:** Traveling along the Saigon River provides sweeping views of modern skyscrapers contrasting with traditional riverbank communities.
@@ -209,7 +209,7 @@ When comparing quotes between half-day and full-day tours, the cost difference c
 1. **Extended Vehicle & Chauffeur Retainer:** Your vehicle and driver remain on standby for 8–10 hours rather than returning to base at midday.
 2. **Extended Licensed Guide Service:** Professional full-day commentary covering both regional warfare history and urban Saigon architecture.
 3. **Sit-Down Lunch:** Most full-day private tours include a multi-course Vietnamese set lunch at a reputable local garden restaurant.
-4. **Downtown Admission Fees:** Entry tickets to the Independence Palace (approx. 40,000–65,000 VND) and War Remnants Museum (40,000 VND). Note that official foreign admission to Cu Chi itself is **135,000 VND** (35,000 VND gate admission + 100,000 VND site guide/service fee).
+4. **Downtown Admission Fees:** Entry tickets to the Independence Palace (approx. 80,000 VND per adult) and War Remnants Museum (40,000 VND). Note that official foreign admission to Cu Chi itself is **135,000 VND** (35,000 VND gate admission + 100,000 VND site guide/service fee).
 5. **Urban Parking & Toll Fees:** Multiple parking and staging fees across District 1 and District 3.
 
 For a detailed analysis of how private vehicle rates compare against guided packages, review our companion guide on [Cu Chi Tunnels private tour cost breakdown](/is-a-cu-chi-tunnels-private-tour-worth).
