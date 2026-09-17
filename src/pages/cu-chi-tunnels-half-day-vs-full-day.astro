@@ -1,0 +1,1231 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+export const prerender = false;
+
+const currentSlug = 'cu-chi-tunnels-half-day-vs-full-day';
+
+// Fetch post from D1 database with fallback
+const d1Db = env?.dulichcoguu_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
+let post: any = null;
+try {
+  if (d1Db) {
+    post = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
+    );
+  }
+} catch (e) {
+  console.warn('[D1 Query Warning] cu-chi-tunnels-half-day-vs-full-day:', e);
+}
+
+// Fallback metadata
+if (!post) {
+  post = {
+    id: 19810,
+    title: 'Cu Chi Tunnels Half-Day Vs Full-Day: Which Tour Should You Choose?',
+    slug: currentSlug,
+    excerpt: 'Compare half-day and full-day Cu Chi Tunnels tours: realistic 2026 durations, physical effort, combination options with Saigon landmarks, and an honest decision framework.',
+    featuredImage: 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp',
+    readingTime: 22,
+    author: 'The Rice Tour Editorial',
+    createdAt: '2026-09-17T12:00:00.000Z',
+    publishedAt: '2026-09-17T12:00:00.000Z',
+    updatedAt: '2026-09-17T12:00:00.000Z'
+  };
+}
+
+const { settings } = await getGlobalSettings();
+
+const pageTitle = post?.title || 'Cu Chi Tunnels Half-Day Vs Full-Day: Which Tour Should You Choose?';
+const pageDesc = post?.excerpt || 'Compare half-day and full-day Cu Chi Tunnels tours: realistic 2026 durations, physical effort, combination options with Saigon landmarks, and an honest decision framework.';
+
+const seoTitle = post?.seoTitle || post?.metaTitle || `${pageTitle} | The Rice Tour`;
+const seoDesc = post?.seoDescription || 'Cu Chi Tunnels half-day vs full-day: compare 2026 door-to-door transit times, on-site pacing, combination options with Saigon sights, and an honest decision matrix.';
+const seoImage = post?.ogImage || post?.featuredImage || 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp';
+
+// --- DATE LOGIC (E-E-A-T Compliant) ---
+const createdAtStr = post.createdAt || post.publishedAt || '2026-09-17T12:00:00.000Z';
+const updatedAtStr = post.updatedAt || '2026-09-17T12:00:00.000Z';
+
+const createdAt = new Date(createdAtStr.replace(' ', 'T'));
+const updatedAt = new Date(updatedAtStr.replace(' ', 'T'));
+
+const isUpdated = updatedAt.getTime() - createdAt.getTime() > 86400000;
+const displayDate = isUpdated ? updatedAt : createdAt;
+const datePrefix = isUpdated ? "Updated:" : "Published:";
+const formattedDate = displayDate.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// --- AUTHOR LOGIC ---
+const authorMap: Record<string, any> = {
+  "The Rice Tour Editorial": {
+    name: "The Rice Tour Editorial",
+    url: "/about-us",
+    img: "https://media.thericetour.com/uploads/the-rice-tour-editorial-avatar.webp"
+  },
+  "Huynh Hieu Travel": {
+    name: "Huynh Hieu Travel",
+    url: "/about-us",
+    img: "https://media.thericetour.com/uploads/huynhhieutravel.webp"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"];
+
+// --- TABLE OF CONTENTS (TOC) ---
+const tocItems = [
+  { id: "gioi-thieu", title: "Introduction" },
+  { id: "quick-decision", title: "Half-Day vs. Full-Day: The Quick Decision" },
+  { id: "tour-durations", title: "How Long Does A Cu Chi Tour Actually Take?" },
+  { id: "what-happens-half-day", title: "What Do You Do On A Half-Day Visit?" },
+  { id: "why-choose-half-day", title: "Why Choose A Half-Day Cu Chi Tour?" },
+  { id: "what-is-full-day", title: "What Is A Full-Day Cu Chi Itinerary?" },
+  { id: "is-full-day-worth-it", title: "Is A Full-Day Tour Worth It?" },
+  { id: "what-to-combine", title: "What Can You Combine With Cu Chi?" },
+  { id: "decision-matrix", title: "Half-Day vs. Full-Day Decision Matrix" },
+  { id: "what-you-pay-for", title: "What Are You Paying For With Full-Day?" },
+  { id: "physical-effort", title: "Physical Effort: Which Format Is Easier?" },
+  { id: "morning-vs-afternoon", title: "Half-Day Morning vs. Half-Day Afternoon" },
+  { id: "combining-with-mekong", title: "Should You Combine Cu Chi & Mekong Delta?" },
+  { id: "shared-vs-diy", title: "Shared Tours, Small Groups & DIY Grab" },
+  { id: "decision-tree", title: "A Simple 7-Question Decision Tree" },
+  { id: "sample-schedules", title: "Sample Half-Day & Full-Day Schedules" },
+  { id: "heritage-update-2026", title: "2026 Heritage Update & UNESCO" },
+  { id: "recommended-tours", title: "Recommended Cu Chi Experiences" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)" },
+  { id: "conclusion", title: "The Verdict: Main Event Or One Chapter?" }
+];
+
+// SSR JSON-LD Schemas
+const currentOrigin = 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/${currentSlug}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: `${currentOrigin}/` },
+    { name: "Travel Guides", url: `${currentOrigin}/blog` },
+    { name: pageTitle, url: canonicalUrl }
+  ]
+};
+
+const faqSchema = {
+  questions: [
+    {
+      question: "How long does a half-day Cu Chi Tunnels tour take door-to-door?",
+      answer: "A typical half-day tour requires approximately 5 to 6 hours door-to-door from central Ho Chi Minh City. This comprises roughly 1.5 to 2 hours of highway transit each way and 2 to 2.5 hours on-site exploring the historical grounds."
+    },
+    {
+      question: "Is a full-day Cu Chi tour worth the extra hours?",
+      answer: "A full-day tour is worth it if you specifically want to pair Cu Chi with major downtown landmarks like the Independence Palace or War Remnants Museum with transportation arranged for the entire day. It is not worth it if you only want to see the tunnels, as actual time spent at Cu Chi is virtually identical on both formats."
+    },
+    {
+      question: "Should I visit Cu Chi in the morning or the afternoon?",
+      answer: "Morning tours departing around 06:45–07:00 AM offer cooler temperatures and arrive before the large group buses, leaving your afternoon free. Afternoon tours departing around 12:30 PM are quieter at the tunnels but experience hotter walking conditions and encounter heavy rush-hour traffic returning to Saigon."
+    },
+    {
+      question: "Can you combine Cu Chi Tunnels and the Mekong Delta in one day?",
+      answer: "While commercially advertised, combining Cu Chi and the Mekong Delta in one day requires 6.5 to 7.5 hours of driving across 200+ km of congested roads. We strongly recommend dedicating Cu Chi to a half-day morning trip and exploring the Mekong Delta on a separate day."
+    },
+    {
+      question: "How much is official admission to Cu Chi Tunnels in 2026?",
+      answer: "The official foreign-visitor tariff is 135,000 VND per person (comprising 35,000 VND gate admission and 100,000 VND for site guide and heritage service)."
+    },
+    {
+      question: "Do I have to crawl through the tunnels?",
+      answer: "No. Entering the underground tunnels is completely optional. All walking routes take place on forested surface paths with open-air exhibits, trapdoor demonstrations, and reconstructed bunkers."
+    },
+    {
+      question: "Which sector is better: Ben Dinh or Ben Duoc?",
+      answer: "Ben Dinh is closer (~50 km from Saigon) and hosts the majority of large group tours. Ben Duoc is further (~70 km), significantly quieter, set in natural rubber forest, and includes the solemn Ben Duoc Memorial Temple honoring over 45,000 fallen soldiers."
+    },
+    {
+      question: "Is Cu Chi Tunnels recognized by UNESCO?",
+      answer: "Not yet as a fully inscribed World Heritage Site. On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels complex to UNESCO's World Heritage Tentative List under cultural criteria (iv) and (vi), and authorities are actively advancing the nomination dossier toward full World Heritage inscription. Over 27 million cumulative visitors have been documented through 2025."
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": pageDesc,
+  "image": seoImage,
+  "datePublished": createdAtStr,
+  "dateModified": updatedAtStr,
+  "author": {
+    "@type": "Person",
+    "name": authorData.name,
+    "url": `${currentOrigin}${authorData.url}`
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Rice Tour",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  }
+};
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  canonical={canonicalUrl}
+  preloadImages={[seoImage]}
+  adminEditUrl={post?.id ? `/admin/posts/edit/${post.id}` : undefined}
+  lang="en"
+  ogType="article"
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <JsonLdSchema type="custom" data={articleSchema} />
+    <JsonLdSchema type="faq" data={faqSchema} />
+  </Fragment>
+
+  <!-- HERO SECTION HEADER (Full-width, Dark Magazine Style) -->
+  <header class="relative bg-slate-950 text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <!-- Background Image with Multi-layer Gradients -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={seoImage} 
+        alt={pageTitle}
+        class="w-full h-full object-cover object-center brightness-75 scale-105 transform motion-safe:animate-subtle-zoom"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-300/80 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+        <span>/</span>
+        <span class="text-amber-400 font-medium truncate max-w-xs sm:max-w-md">{pageTitle}</span>
+      </nav>
+
+      <!-- Main Title -->
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+        {pageTitle}
+      </h1>
+
+      <!-- Subtitle -->
+      <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+        An honest comparison of door-to-door transit times, on-site pacing, city landmark pairings, and travel effort.
+      </h2>
+
+      <!-- Lead Paragraph -->
+      <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+        A visit to the Cu Chi Tunnels can be a focused morning trip or the anchor of a comprehensive 10-hour day. The decision is not about which format is universally better, but whether you want Cu Chi to be the single focal point of your day or one chapter in a broader exploration of Ho Chi Minh City.
+      </p>
+
+      <!-- Author Meta Row -->
+      <div class="flex flex-wrap items-center gap-6 pt-4 border-t border-white/15 text-sm text-slate-300">
+        <div class="flex items-center gap-3">
+          <img 
+            src={authorData.img} 
+            alt={authorData.name} 
+            class="w-10 h-10 rounded-full border-2 border-amber-400 object-cover shadow-sm"
+          />
+          <div>
+            <div class="font-semibold text-white flex items-center gap-1.5">
+              {authorData.name}
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="text-xs text-slate-300/80">Inbound Travel Specialist</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs sm:text-sm text-slate-300/90 ml-auto">
+          <span>{datePrefix} <time datetime={displayDate.toISOString()}>{formattedDate}</time></span>
+          <span>•</span>
+          <span>{post.readingTime || 22} min read</span>
+          <span>•</span>
+          <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 2026 Verified
+          </span>
+        </div>
+      </div>
+
+      <!-- Feature Badges -->
+      <div class="flex flex-wrap gap-2.5 mt-6 pt-4 border-t border-white/10">
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          ⏱️ Half-Day (5–6 hrs) vs. Full-Day (8–10 hrs)
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          🏛️ City Landmark Combinations
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          ⚖️ Pacing & Physical Demands
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          🚫 Mekong Combo Reality Check
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3-COLUMN MAGAZINE LAYOUT CONTAINER -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- LEFT COLUMN: Sticky Table of Contents -->
+      <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 max-h-[calc(100vh-7rem)] overflow-y-auto custom-scrollbar">
+          <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
+            Table of Contents
+          </div>
+          <nav class="space-y-1 text-[13px] font-medium pr-1">
+            <a href="#gioi-thieu" class="block text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold text-[13.5px]">
+              Introduction
+            </a>
+            
+            <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+              {tocItems.slice(1).map((item) => (
+                <a 
+                  href={`#${item.id}`} 
+                  class="block transition-colors leading-snug py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[12.5px]"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- CENTER COLUMN: Main Content Body -->
+      <main class="col-span-1 lg:col-span-6 space-y-10">
+
+        <!-- Top Key Decision Badges Card -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs text-center not-prose">
+          <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200">
+            <div class="text-xl sm:text-2xl mb-1">⏱️</div>
+            <div class="text-[11px] uppercase tracking-wider text-amber-800 font-semibold">Half-Day Window</div>
+            <div class="text-sm sm:text-base font-bold text-amber-950 mt-0.5">5–6 Hours Total</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🏛️</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Full-Day Window</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">8–10 Hours Total</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🚶</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Tunnel Site Time</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">~2 to 2.5 Hours</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🎟️</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Foreign Tariff</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">135,000 VND</div>
+          </div>
+        </div>
+
+        <!-- Article Content Starts -->
+        <article class="space-y-12 text-slate-800 leading-relaxed font-normal">
+
+          <!-- Section: Introduction -->
+          <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                A visit to the Cu Chi Tunnels can take half a day or become the cornerstone of a full day of sightseeing in and around Ho Chi Minh City.
+              </p>
+              <p>
+                For many travelers, the most practical approach is to visit Cu Chi in the early morning and return to the city with the entire afternoon free to relax or explore independently. For others, it makes more sense to consolidate their sightseeing by pairing Cu Chi with central metropolitan landmarks like the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>, the War Remnants Museum, or the historic Saigon Central Post Office.
+              </p>
+              <p>
+                Neither format is universally superior.
+              </p>
+              <p>
+                The right choice comes down to four practical factors: how much time you have in Ho Chi Minh City, your tolerance for suburban highway transit, who you are traveling with, and whether you want Cu Chi to be the single focal point of your day or one chapter in a broader southern Vietnam itinerary.
+              </p>
+              <p>
+                This comprehensive guide evaluates half-day and full-day Cu Chi itineraries across real-world door-to-door transit times, on-site pacing, physical demands, cost structures, and day-trip combination feasibility.
+              </p>
+
+              {/* Callout Quote */}
+              <blockquote class="border-l-4 border-amber-500 pl-4 py-3 my-6 bg-amber-50/60 rounded-r-xl italic text-slate-800 font-serif text-[16.5px]">
+                "A private tour does not eliminate the highway miles between District 1 and Cu Chi, but choosing between a half-day and full-day itinerary determines whether your day feels like an immersive morning excursion or an exhaustive 10-hour marathon."
+              </blockquote>
+
+              {/* Featured Image inside Body */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" 
+                    alt="Tour group listening attentively to a historical briefing in an underground pavilion at Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="eager"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Tour groups attending an introductory briefing in an open-air forested pavilion before exploring the historical tunnel sectors.
+                </p>
+              </div>
+
+              {/* UNESCO Milestone Callout Box */}
+              <div class="bg-amber-50/70 border border-amber-300/80 p-5 rounded-2xl my-6 not-prose">
+                <div class="flex items-center gap-2.5 text-amber-900 font-bold text-sm sm:text-base mb-2">
+                  <span class="text-lg">🏛️</span> UNESCO World Heritage Milestone: Over 27 Million Cumulative Visitors
+                </div>
+                <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed mb-3">
+                  On July 15, 2026, Vietnam officially submitted the Cu Chi Tunnels complex to the <strong>UNESCO World Heritage Tentative List</strong> under cultural criteria <em>(iv)</em> and <em>(vi)</em>—a historic milestone as authorities advance the formal nomination dossier toward full inscription. The submission highlights Cu Chi as an extraordinary subterranean network developed across both the <strong>First Indochina War</strong> and <strong>Second Indochina War</strong>. Official site records note that Cu Chi has welcomed <strong>over 27 million cumulative visitors</strong> since opening to tourism, with Ben Duoc and Ben Dinh preserved as the two primary historical sectors.
+                </p>
+                <div class="bg-white/85 border border-amber-200/80 rounded-xl p-3.5 space-y-1.5 text-xs text-amber-950">
+                  <div class="font-bold text-slate-900 uppercase tracking-wider text-[11px] mb-1">How Cu Chi Grew (Key Historical Milestones):</div>
+                  <div class="grid sm:grid-cols-2 gap-2 text-[11.5px]">
+                    <div><strong>• 1946:</strong> Discrete family bomb shelters and escape trenches</div>
+                    <div><strong>• 1947:</strong> Linked village-wide tunnels (~17 km network)</div>
+                    <div><strong>• 1961–1965:</strong> Fortified 3-tier subterranean defense expansion</div>
+                    <div><strong>• 1975 onward:</strong> Post-war conservation as a National Relic Site</div>
+                    <div class="sm:col-span-2"><strong>• 1991 to present:</strong> Roughly 4 km actively conserved and presented across Ben Duoc and Ben Dinh</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Quick Decision -->
+          <section id="quick-decision" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Half-Day Or Full-Day: The Quick Decision
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                If you are pressed for time, use this diagnostic summary to identify the format that best fits your travel party:
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="p-5 rounded-2xl border border-amber-200 bg-amber-50/50 shadow-xs space-y-3">
+                  <div class="font-bold text-amber-950 text-base flex items-center gap-2">
+                    <span>⚡</span> Choose A Half-Day Tour If You:
+                  </div>
+                  <ul class="text-xs sm:text-[13px] text-amber-900 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li><strong>Want Cu Chi to be the main destination:</strong> You prefer dedicating focused energy to the tunnels without cramming secondary stops into the afternoon.</li>
+                    <li><strong>Value having your afternoon free:</strong> You want time to rest at your hotel, explore cafés, or browse <a href="/things-to-do-near-ben-thanh-market" class="font-semibold underline underline-offset-2">things to do near Ben Thanh Market</a>.</li>
+                    <li><strong>Are traveling with young kids or elderly parents:</strong> Half-day itineraries significantly reduce heat fatigue and vehicle time.</li>
+                    <li><strong>Prefer a flexible, spontaneous pace:</strong> You dislike rigid schedules and want the freedom to decide your afternoon on a whim.</li>
+                    <li><strong>Have only 2 to 3 days in Saigon:</strong> A morning excursion leaves the afternoon open for independent urban exploration.</li>
+                  </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3">
+                  <div class="font-bold text-slate-900 text-base flex items-center gap-2">
+                    <span>🏛️</span> Choose A Full-Day Tour If You:
+                  </div>
+                  <ul class="text-xs sm:text-[13px] text-slate-600 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li><strong>Want an all-inclusive sightseeing day:</strong> You have exactly one day for touring and want private transport arranged from morning to late afternoon.</li>
+                    <li><strong>Want to combine war history perspectives:</strong> Pairing Cu Chi with the War Remnants Museum and Independence Palace creates a coherent narrative.</li>
+                    <li><strong>Are comfortable with longer road time:</strong> You understand that crossing metropolitan Ho Chi Minh City involves 4+ hours in the car.</li>
+                    <li><strong>Want an evening river experience:</strong> You want to conclude your day with dinner or an evening cruise along the Saigon River.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Tour Durations -->
+          <section id="tour-durations" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                How Long Does A Cu Chi Tunnels Tour Actually Take?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                The Cu Chi Tunnels lie northwest of central Ho Chi Minh City. Ben Dinh is situated roughly 50 kilometers from District 1, while the quieter, more historically intact sector of Ben Duoc is approximately 70 kilometers away—a geographical detail emphasized in Vietnam's 2026 UNESCO Tentative List submission.
+              </p>
+              <p>
+                Because vehicles must navigate dense urban streets and suburban commuter bottlenecks along National Route 22, travel time rarely matches straight-line highway estimates:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Focused Half-Day Tour:</strong> Typically requires <strong>5 to 6 hours door-to-door</strong> (e.g., 06:45 AM departure returning around 12:30–01:00 PM, or 12:30 PM departure returning around 06:00 PM).</li>
+                <li><strong>Full-Day Combined Itinerary:</strong> Typically requires <strong>8 to 10 hours door-to-door</strong> (e.g., 07:30 AM departure returning to your hotel between 04:30 PM and 05:30 PM).</li>
+              </ul>
+
+              <h3 class="font-serif text-xl font-bold text-slate-900 pt-2">The "Time-on-Site" Fallacy</h3>
+              <p>
+                A common misconception is that a "full-day Cu Chi tour" means spending twice as much time inside the tunnel complex.
+              </p>
+              <p>
+                In reality, <strong>almost all visitors spend approximately 2 to 2.5 hours on-site at the tunnels</strong>, whether they book half-day or full-day. That window is ample time to watch the introductory documentary, walk the forested trails, view trapdoor demonstrations, inspect bomb craters, sample steamed cassava, and try the optional underground crawl.
+              </p>
+              <p>
+                The additional 3 to 4 hours of a full-day tour are spent entirely on <strong>lunch, transit between urban districts, and touring secondary attractions in downtown Saigon</strong>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: What Happens on Half-Day -->
+          <section id="what-happens-half-day" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Do You Actually Do During A Half-Day Visit?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                A half-day itinerary concentrates entirely on the tunnel complex and eliminates peripheral diversions:
+              </p>
+
+              <div class="space-y-3 my-6 not-prose">
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm mb-1">1. 06:45–07:00 AM — Hotel Lobby Pickup</div>
+                  <p class="text-xs text-slate-600 leading-relaxed">Departing early bypasses the worst rush-hour gridlock heading northwest out of District 1.</p>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm mb-1">2. 07:00–08:45 AM — Highway Transit to Cu Chi</div>
+                  <p class="text-xs text-slate-600 leading-relaxed">A 90-to-105 minute drive with historical context from your licensed guide or peaceful transit when <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a>.</p>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm mb-1">3. 08:45–11:15 AM — On-Site Historical Exploration</div>
+                  <p class="text-xs text-slate-600 leading-relaxed">Walking forested trails, examining camouflaged trapdoors, exploring weapon traps, visiting Hoang Cam smokeless kitchens, seeing how partisans wore the <a href="/khan-ran-nam-bo" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">traditional khăn rằn scarf</a>, trying the optional crawl, and tasting wartime boiled cassava.</p>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm mb-1">4. 11:15 AM–01:00 PM — Return Transit to Central Saigon</div>
+                  <p class="text-xs text-slate-600 leading-relaxed">Heading directly back to your hotel or a recommended downtown restaurant with the afternoon completely open.</p>
+                </div>
+              </div>
+
+              {/* Second Image Inside Body */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+                    alt="Tour guide demonstrating hidden trapdoors and wooden punji stick traps in the forest of Cu Chi - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Resident guides demonstrate the camouflage principles and mechanics of bamboo punji stick traps along shaded forest paths.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Why Choose Half-Day -->
+          <section id="why-choose-half-day" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Why Choose A Half-Day Cu Chi Tour?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <h3 class="font-serif text-xl font-bold text-slate-900">1. You Get Your Afternoon Back</h3>
+              <p>
+                The primary advantage of the half-day format is afternoon autonomy. Rather than remaining locked into a guided coach schedule until late afternoon, you return to central Saigon by lunchtime.
+              </p>
+              <p>
+                You can take a leisurely shower, enjoy a relaxed Vietnamese lunch, spend two hours browsing street food and craft stalls near the central market, visit an independent café in the apartment blocks of Nguyen Hue, or book a therapeutic massage. For travelers who value vacation downtime, this balance prevents travel fatigue.
+              </p>
+
+              <h3 class="font-serif text-xl font-bold text-slate-900 pt-2">2. It Is Vastly Easier for Families with Young Children</h3>
+              <p>
+                Managing children through a full 9-to-10 hour touring day in tropical heat is notoriously difficult. The Cu Chi site itself requires navigating unpaved woodland paths, high humidity, outdoor heat, and constant walking.
+              </p>
+              <p>
+                A half-day tour keeps the adventure manageable: kids experience the secret trapdoors and military hardware in the morning and return to the hotel pool before mid-afternoon exhaustion sets in.
+              </p>
+
+              <h3 class="font-serif text-xl font-bold text-slate-900 pt-2">3. It Maximizes Limited City-Break Time</h3>
+              <p>
+                If you only have 48 to 72 hours in Ho Chi Minh City, dedicating an entire daylight window to an organized tour consumes half your total stay. A morning excursion lets you tick off Cu Chi before noon, leaving your afternoon free to explore vibrant downtown quarters at your own leisure.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: What Is Full-Day -->
+          <section id="what-is-full-day" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Is A Full-Day Cu Chi Itinerary?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                A full-day itinerary frames Cu Chi as the morning foundation of a multi-attraction sightseeing program.
+              </p>
+              <p>
+                A typical sequence looks like:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>07:30–08:00 AM:</strong> Hotel pickup in central Saigon.</li>
+                <li><strong>08:00–09:45 AM:</strong> Highway transit to Cu Chi (Ben Dinh or Ben Duoc).</li>
+                <li><strong>09:45–12:00 PM:</strong> In-depth exploration of the tunnel complex and exhibits.</li>
+                <li><strong>12:15–01:30 PM:</strong> Traditional Vietnamese lunch at a riverside restaurant near Cu Chi or back in suburban Saigon.</li>
+                <li><strong>01:30–02:30 PM:</strong> Drive back toward District 1.</li>
+                <li><strong>02:30–04:45 PM:</strong> Guided exploration of 1–2 central heritage landmarks (e.g., Independence Palace, War Remnants Museum, or Central Post Office).</li>
+                <li><strong>05:00 PM onward:</strong> Return drop-off at your hotel or transfer to Bach Dang Pier for an optional sunset river cruise.</li>
+              </ul>
+              <p>
+                A well-designed full-day tour is not simply a longer tunnel visit; it is a <strong>curated survey of modern Vietnamese history and urban heritage</strong>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Is Full-Day Worth It -->
+          <section id="is-full-day-worth-it" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Is A Full-Day Cu Chi Tunnels Tour Worth It?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                A full-day tour is worthwhile under specific conditions, but it is not the default recommendation for every traveler.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 shadow-xs">
+                  <div class="font-bold text-emerald-950 text-sm mb-2 flex items-center gap-1.5">
+                    <span>✅</span> When Full-Day Is Worth It
+                  </div>
+                  <ul class="text-xs text-emerald-900 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li><strong>Immersive war history narrative:</strong> Morning at Cu Chi guerrilla tunnels paired with afternoon at Independence Palace and War Remnants Museum creates a complete historical arc.</li>
+                    <li><strong>Only one touring day available:</strong> Consolidates vehicle, driver, guide, and entrance tickets into one seamless package.</li>
+                    <li><strong>Air-conditioned private comfort all day:</strong> No need to hail multiple taxis in the afternoon heat.</li>
+                  </ul>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/80 shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-1.5">
+                    <span>⚠️</span> When Full-Day Is NOT Worth It
+                  </div>
+                  <ul class="text-xs text-slate-600 space-y-2 list-disc pl-4 leading-relaxed">
+                    <li><strong>You only care about the tunnels:</strong> A full-day tour will not give you extra tunnel time; the afternoon is spent elsewhere.</li>
+                    <li><strong>You prefer relaxed afternoons:</strong> Multi-stop guided touring all day can feel like an exhausting checklist marathon.</li>
+                    <li><strong>You have multiple days in Saigon:</strong> Walking around downtown sights on foot on your own is easy and inexpensive.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: What Can You Combine -->
+          <section id="what-to-combine" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Can You Combine With Cu Chi?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                If you opt for a full-day itinerary, selecting the right companion attractions is crucial. Here is how the top downtown combinations compare:
+              </p>
+
+              <div class="space-y-4 my-6">
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">1. Independence Palace (Reunification Palace)</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    The former presidential palace preserved as it stood on April 30, 1975. It provides the political contrast to Cu Chi's guerrilla tactics. Visitors explore presidential staterooms, the telecommunications war command bunker in the basement, and vintage military hardware on the grounds. Requires approximately 75–90 minutes.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">2. War Remnants Museum</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    One of Vietnam's most visited museums, housing heavy military aircraft, artillery, and international photojournalism exhibitions documenting the war's human cost. It deepens historical context but is emotionally intense; families with small children may prefer cultural alternatives.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">3. Saigon Central Post Office & French Quarter</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Iconic 19th-century French colonial architecture featuring vaulted ceilings and painted cartography maps. It provides an aesthetic, relaxing contrast after an intensive morning of military history and can easily be enjoyed in 30–45 minutes.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-1">4. Saigon River & Waterbus</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Cruising the Saigon River provides skyline views of Landmark 81 and Bitexco contrasting with riverside life. If using the municipal Waterbus, verify departure schedules in advance. For a seamless full-day tour, a chartered private speedboat or evening dinner cruise is often far more reliable than public transit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Decision Matrix -->
+          <section id="decision-matrix" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Half-Day Vs Full-Day: Comprehensive Decision Matrix
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Use this comprehensive matrix to compare operational differences between both tour lengths:
+              </p>
+
+              {/* Matrix Table */}
+              <div class="overflow-x-auto my-6 not-prose shadow-sm rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-3.5 sm:p-4">Evaluation Factor</th>
+                      <th class="p-3.5 sm:p-4">Half-Day Cu Chi Tour</th>
+                      <th class="p-3.5 sm:p-4 bg-amber-900/80">Full-Day Combined Itinerary</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 bg-white">
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Typical Door-to-Door Window</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">~5 to 6 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">~8 to 10 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Time Spent at Cu Chi Site</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">~2 to 2.5 hours</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">~2 to 2.5 hours (identical)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Primary Focus</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Underground tunnels & relic grounds</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Cu Chi + 1–2 city landmarks + lunch</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Pace of the Day</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Focused, unhurried, energetic</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Structured, comprehensive, full-schedule</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Afternoon Status</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">100% free and open</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Guided touring until 04:30–05:30 PM</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Suitability for Young Children</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">Excellent (avoids midday meltdowns)</td>
+                      <td class="p-3.5 sm:p-4 text-rose-700 bg-amber-50/30">Demanding (risk of heat/fatigue overload)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Suitability for Seniors</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">High (controlled physical exertion)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">Moderate (requires pacing adjustments)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Total Road / Vehicle Time</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">~3 to 3.5 hours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">~4 to 4.5 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Approx. Shared Tour Price (2026)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">US$13–$25 / person</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">US$35–$60 / person</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Approx. Private Tour Price (2026)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">US$44–$110+ / person</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-bold bg-amber-50/30">US$75–$160+ / person</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Best Travel Profile</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Solo budget, families, short breaks</td>
+                      <td class="p-3.5 sm:p-4 text-slate-800 bg-amber-50/30">First-time visitors with 1 dedicated tour day</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: What Are You Paying For -->
+          <section id="what-you-pay-for" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Are You Actually Paying For With A Full-Day Tour?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                When comparing quotes between half-day and full-day tours, look beyond the headline figure. The cost premium of a full-day tour covers several distinct services:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Extended Vehicle & Chauffeur Retainer:</strong> Your vehicle and driver remain on standby for 8–10 hours rather than returning to base at midday.</li>
+                <li><strong>Extended Licensed Guide Service:</strong> Professional full-day commentary covering both regional warfare history and urban Saigon architecture.</li>
+                <li><strong>Sit-Down Lunch:</strong> Most full-day private tours include a multi-course Vietnamese set lunch at a reputable local garden restaurant.</li>
+                <li><strong>Downtown Admission Fees:</strong> Entry tickets to the Independence Palace (approx. 40,000–65,000 VND) and War Remnants Museum (40,000 VND). Note that official foreign admission to Cu Chi itself is <strong>135,000 VND</strong> (35,000 VND gate admission + 100,000 VND site guide/service fee).</li>
+                <li><strong>Urban Parking & Toll Fees:</strong> Multiple parking and staging fees across District 1 and District 3.</li>
+              </ul>
+              <p>
+                For a detailed analysis of how private vehicle rates compare against guided packages, review our companion guide on <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels private tour cost breakdown</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Physical Effort -->
+          <section id="physical-effort" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Physical Effort: Which Format Is Easier?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                While half-day involves fewer hours overall, travelers should understand the physical realities of the Cu Chi site:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Terrain & Climate:</strong> The trails consist of hard-packed red clay and dirt through shaded secondary forest. Ground can be uneven with exposed tree roots. Midday temperatures regularly exceed 32°C (90°F) with high humidity.</li>
+                <li><strong>The Tunnel Crawl:</strong> Entering the tunnels is 100% optional. The 2026 UNESCO nomination dossier details that historical passages feature constrictions as narrow as <strong>40 cm wide and 73 cm high</strong> (though tourist sections at Ben Dinh have been widened to roughly 80 cm x 120 cm). Crawling requires duck-walking or moving on hands and knees through warm, unlit underground air.</li>
+                <li><strong>Above-Ground Accessibility:</strong> Travelers with claustrophobia, knee issues, or heart conditions can completely bypass the crawl and comfortably enjoy all above-ground exhibits, dioramas, kitchens, and weapon displays.</li>
+              </ul>
+              <p>
+                <strong>Verdict:</strong> If your traveling party includes members with limited physical stamina, choose <strong>Half-Day</strong>. Adding an afternoon of walking through multi-story museums after two hours in the Cu Chi forest can be physically exhausting.
+              </p>
+
+              {/* Third Image Inside Body */}
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                    alt="Small group walking along the shaded forested pathways of Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Travelers walking along the forested paths of Cu Chi beneath tropical rubber and bamboo trees.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Morning vs Afternoon -->
+          <section id="morning-vs-afternoon" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Half-Day Morning Vs. Half-Day Afternoon
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                If you select the half-day format, your next tactical decision is whether to depart in the morning or afternoon:
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm mb-2">🌅 Morning Tour (06:45–07:00 AM Departure)</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li>Cooler ambient morning temperatures beneath the forest canopy.</li>
+                    <li>Arriving at opening time (07:30–08:00 AM) beats the large 45-seat tour buses (see our tactical guide on <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">how to visit Cu Chi Tunnels without the crowds</a>).</li>
+                    <li>You return to your hotel by 12:30–01:00 PM with the afternoon entirely ahead of you.</li>
+                    <li>Trade-off: Requires an early wakeup call (06:00 AM) while on holiday.</li>
+                  </ul>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm mb-2">🌇 Afternoon Tour (12:30–01:00 PM Departure)</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li>Relaxed morning sleep-in and leisurely breakfast.</li>
+                    <li>The tunnel complex empties out significantly after 02:30 PM as morning tour buses head back to Saigon.</li>
+                    <li>Trade-off: You tour the forest during the hottest hours of the day (01:30–03:30 PM).</li>
+                    <li>Trade-off: Return drive into District 1 coincides with peak rush-hour gridlock (05:00–06:30 PM).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Combining with Mekong -->
+          <section id="combining-with-mekong" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Should You Combine Cu Chi With The Mekong Delta In One Day?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Many roadside travel agencies in backpacker quarters market an ambitious <strong>"Cu Chi Tunnels + Mekong Delta in One Day"</strong> combo tour.
+              </p>
+              <p>
+                Our direct editorial recommendation: <strong>avoid combining Cu Chi and the Mekong Delta into a single day unless you have no other choice.</strong>
+              </p>
+              <p>
+                Here is the spatial reality:
+              </p>
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-600 text-sm">
+                <li>Central Saigon to Cu Chi: ~50–70 km northwest (~1.5–2 hours).</li>
+                <li>Cu Chi to Ben Tre / My Tho (Mekong Delta): ~110–130 km south across the entire width of metropolitan Saigon (~2.5–3 hours).</li>
+                <li>Mekong Delta back to Saigon: ~80 km north along the Trung Luong Expressway (~2–2.5 hours).</li>
+              </ul>
+              <p>
+                Travelers who attempt this combination routinely spend <strong>6.5 to 7.5 hours sitting inside a minivan</strong> in a single 11-hour day, leaving barely 90 minutes at Cu Chi and a rushed boat ride in the Delta.
+              </p>
+              <p>
+                Instead, allocate Cu Chi as an independent half-day morning trip, and dedicate a separate day to our <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">full-day Mekong Delta private tour</a> through Ben Tre and My Tho, or explore multi-day regional travel across the <a href="/destination/mekong-delta" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Mekong Delta</a> and <a href="/destination/south-vietnam" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">South Vietnam</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Shared vs DIY -->
+          <section id="shared-vs-diy" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Shared Bus, Small Group, Or Independent DIY / Grab?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                When booking either format, consider the transport mechanism:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Shared Coach Tour:</strong> Extremely economical (US$13–$25/pax), but involves 45–60 minutes of central hotel pickup loops and potential mandatory commercial handicraft stops.</li>
+                <li><strong>Small Group Minivan:</strong> A balanced middle ground (US$18–$35/pax) with 8–12 passengers and faster transit.</li>
+                <li><strong>Independent DIY via Grab:</strong> Taking Grab to Cu Chi costs roughly 400,000–550,000 VND ($16–$22) each way. While hailing a Grab out from District 1 is easy, finding an app driver willing to accept a 50 km return trip back to Saigon in the early afternoon can be difficult and unpredictable. For urban budget touring, pairing a half-day trip with the <a href="/saigon-hop-on-hop-off-bus-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Saigon hop-on hop-off bus</a> provides excellent city coverage.</li>
+                <li><strong>Private Chartered Tour:</strong> Maximum flexibility, direct hotel pickup, your choice of Ben Dinh or Ben Duoc, zero compulsory commercial stops, and customized pacing.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Decision Tree -->
+          <section id="decision-tree" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                A Simple 7-Question Decision Tree
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Still undecided? Answer these seven questions to confirm your optimal format:
+              </p>
+
+              <div class="space-y-2.5 text-xs sm:text-sm text-slate-700 not-prose">
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">1.</span>
+                  <div><strong>Is Cu Chi the only out-of-town sight you want to visit today?</strong> → <em>If Yes: Choose <strong>Half-Day</strong>.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">2.</span>
+                  <div><strong>Are there children under 10 or seniors over 70 in your party?</strong> → <em>If Yes: Choose <strong>Half-Day Morning</strong>.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">3.</span>
+                  <div><strong>Do you have only 24 to 48 total hours in Ho Chi Minh City?</strong> → <em>If Yes: Choose <strong>Half-Day Morning</strong> to preserve urban discovery time.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">4.</span>
+                  <div><strong>Do you want to understand the complete narrative of the war in one focused day?</strong> → <em>If Yes: Choose <strong>Full-Day History (Cu Chi + Independence Palace + War Remnants Museum)</strong>.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">5.</span>
+                  <div><strong>Do you enjoy spontaneous afternoon café hopping, shopping, and spa appointments?</strong> → <em>If Yes: Choose <strong>Half-Day</strong>.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">6.</span>
+                  <div><strong>Do you dislike coordinating city taxis and prefer a private driver on standby all day?</strong> → <em>If Yes: Choose <strong>Full-Day</strong>.</em></div>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-2.5">
+                  <span class="font-bold text-amber-800">7.</span>
+                  <div><strong>Are you considering doing Cu Chi and the Mekong Delta on the same calendar day?</strong> → <em>Strong recommendation: <strong>Do not combine them.</strong> Split into a Half-Day Cu Chi tour and a separate full-day Delta trip.</em></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Sample Schedules -->
+          <section id="sample-schedules" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Sample Half-Day & Full-Day Schedules
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm mb-2">⏱️ Sample Half-Day Morning Schedule</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li><strong>06:45 AM:</strong> Private pickup at your hotel in District 1.</li>
+                    <li><strong>07:00–08:30 AM:</strong> Highway drive northwest to Cu Chi; briefing en route.</li>
+                    <li><strong>08:30–11:00 AM:</strong> Complete exploration of Ben Duoc or Ben Dinh relic grounds.</li>
+                    <li><strong>11:00 AM–12:30 PM:</strong> Direct return drive to central Saigon.</li>
+                    <li><strong>12:30 PM:</strong> Drop-off at your hotel or restaurant; afternoon completely free.</li>
+                  </ul>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-sm mb-2">🏛️ Sample Full-Day Heritage Schedule</div>
+                  <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li><strong>07:30 AM:</strong> Hotel pickup.</li>
+                    <li><strong>07:45–09:30 AM:</strong> Drive to Cu Chi Tunnels.</li>
+                    <li><strong>09:30–12:00 PM:</strong> Guided visit of the subterranean relic site.</li>
+                    <li><strong>12:15–01:30 PM:</strong> Traditional Vietnamese set lunch.</li>
+                    <li><strong>01:30–02:45 PM:</strong> Return drive to central Saigon.</li>
+                    <li><strong>02:45–04:00 PM:</strong> Guided exploration of the Independence Palace.</li>
+                    <li><strong>04:00–05:00 PM:</strong> Visit Central Post Office or pair with a <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="text-amber-800 font-semibold underline underline-offset-2">private half-day Saigon city tour</a>.</li>
+                    <li><strong>05:15 PM:</strong> Hotel drop-off.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Heritage Update 2026 -->
+          <section id="heritage-update-2026" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                2026 Heritage Update: Cu Chi Tunnels And UNESCO
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                A vital development for heritage-conscious travelers:
+              </p>
+              <p>
+                On <strong>July 15, 2026</strong>, Vietnam officially submitted the Cu Chi Tunnels complex to the <strong>UNESCO World Heritage Tentative List</strong> under cultural criteria <em>(iv)</em> and <em>(vi)</em>.
+              </p>
+              <p>
+                Travelers often encounter casual marketing claims describing Cu Chi as a "UNESCO World Heritage Site." As of 2026, Cu Chi is an active candidate on the <strong>Tentative List</strong> while authorities advance the formal nomination dossier toward full inscription. The submission officially documents over <strong>27 million cumulative visitors through 2025</strong> and formally benchmarks the conservation zones across Ben Dinh and Ben Duoc.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Recommended Tours -->
+          <section id="recommended-tours" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Recommended Cu Chi Experiences
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                If you are planning your visit, The Rice Tour provides two curated private options:
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <a 
+                  href="/tour/half-day-cu-chi-tunnels-tour" 
+                  class="group block p-5 rounded-2xl border border-slate-200 hover:border-amber-400 bg-white hover:bg-amber-50/30 transition-all shadow-xs"
+                >
+                  <div class="font-serif font-bold text-base text-slate-900 group-hover:text-amber-900 mb-1">
+                    Half-Day Cu Chi Tunnels Tour →
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Direct morning or afternoon private departure (approx. 5 to 6 hours) with dedicated licensed guide, private car, and zero commercial stops.
+                  </p>
+                </a>
+
+                <a 
+                  href="/tour/1-day-premium-cu-chi-tunnels" 
+                  class="group block p-5 rounded-2xl border border-slate-200 hover:border-amber-400 bg-white hover:bg-amber-50/30 transition-all shadow-xs"
+                >
+                  <div class="font-serif font-bold text-base text-slate-900 group-hover:text-amber-900 mb-1">
+                    1-Day Premium Cu Chi Tunnels Itinerary →
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Peaceful morning at Ben Duoc combined with an afternoon exploring Saigon's iconic historical landmarks.
+                  </p>
+                </a>
+              </div>
+
+              <p class="text-sm text-slate-600">
+                For custom multi-day journeys combining Saigon, Cu Chi, and southern riverways, design a <a href="/tailor-made" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">tailor-made private journey</a> with our inbound <a href="/contact" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">travel concierges</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Frequently Asked Questions -->
+          <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Frequently Asked Questions (FAQ)
+              </h2>
+            </div>
+
+            <div class="space-y-3 not-prose">
+              {faqSchema.questions.map((faq) => (
+                <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-200 open:border-amber-300 open:bg-amber-50/20">
+                  <summary class="flex items-center justify-between p-4 sm:p-5 font-bold text-slate-900 text-sm sm:text-base cursor-pointer select-none">
+                    <span class="pr-4">{faq.question}</span>
+                    <span class="text-amber-600 transition-transform duration-200 group-open:rotate-180">
+                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div class="px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- Section: Conclusion -->
+          <section id="conclusion" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                The Verdict: Main Event Or One Chapter?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ultimately, choosing between half-day and full-day comes down to a simple framing question:
+              </p>
+              <p>
+                <strong>Do you want Cu Chi to be the main event of your day, or one chapter in a larger day of exploring Ho Chi Minh City?</strong>
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>If Cu Chi is the main event: <strong>Choose Half-Day.</strong> It delivers the complete historical experience while keeping your afternoon open and restful.</li>
+                <li>If Cu Chi is one chapter in a broader sightseeing day: <strong>Choose Full-Day.</strong> It connects rural resistance history with downtown presidential and wartime landmarks under one seamless, stress-free vehicle charter.</li>
+              </ul>
+              <p>
+                The best itinerary is not the one that checks the most boxes—it is the one that gives you enough breathing room to absorb the places you came to see.
+              </p>
+            </div>
+          </section>
+
+        </article>
+      </main>
+
+      <!-- RIGHT COLUMN: Sticky Sidebar -->
+      <aside class="col-span-1 lg:col-span-3">
+        <div class="sticky top-24 space-y-6">
+
+          <!-- Card 1: Quick Expedition Facts -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 space-y-4">
+            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider border-l-4 border-amber-500 pl-3">
+              Cu Chi Tour Facts
+            </div>
+            <div class="space-y-3 text-xs text-slate-600">
+              <div class="flex items-start gap-2.5">
+                <span class="text-base">📍</span>
+                <div>
+                  <div class="font-semibold text-slate-900">Locations</div>
+                  <div>Ben Dinh (50 km) / Ben Duoc (70 km)</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-base">⏱️</span>
+                <div>
+                  <div class="font-semibold text-slate-900">Duration Windows</div>
+                  <div>Half-Day: 5–6 hrs / Full-Day: 8–10 hrs</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-base">🌅</span>
+                <div>
+                  <div class="font-semibold text-slate-900">Optimal Departure</div>
+                  <div>06:45–07:00 AM (beats traffic & buses)</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-base">🏛️</span>
+                <div>
+                  <div class="font-semibold text-slate-900">Heritage Status</div>
+                  <div>UNESCO World Heritage Candidate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Related Travel Guides -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 space-y-4">
+            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider border-l-4 border-rose-500 pl-3">
+              Related Guides
+            </div>
+            <div class="space-y-3 text-xs">
+              <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Private Tour Worth It? →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">2026 pricing, car vs tour & group scaling</div>
+              </a>
+              <a href="/visiting-cu-chi-tunnels-by-private-car" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Visiting Cu Chi By Private Car →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">2026 vehicle rates, routes & Grab feasibility</div>
+              </a>
+              <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">How To Visit Without Crowds →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">Tactical timing windows & trail navigation</div>
+              </a>
+              <a href="/things-to-do-near-ben-thanh-market" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Things To Do Near Ben Thanh →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">Best cafes, dining & sights in District 1</div>
+              </a>
+              <a href="/khan-ran-nam-bo" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">The Southern Khăn Rằn Scarf →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">Cultural symbol of Mekong & Cu Chi partisans</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Inbound Concierge CTA -->
+          <div class="bg-gradient-to-br from-amber-500/15 via-white to-amber-500/5 border border-amber-300/80 p-5 sm:p-6 rounded-2xl shadow-sm text-center space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center mx-auto text-lg">
+              ✨
+            </div>
+            <div class="font-serif font-bold text-slate-900 text-base">
+              Plan Your Cu Chi Journey
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Need advice on whether a half-day or full-day tour suits your schedule, family, or travel pace best?
+            </p>
+            <a 
+              href="/contact" 
+              class="inline-block w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors"
+            >
+              Contact Travel Concierge
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+</style>

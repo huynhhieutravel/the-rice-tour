@@ -25,6 +25,100 @@
       "anchorText": "Explore Curated Tours"
     }
   ],
+  "cu-chi-tunnels-half-day-vs-full-day": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "traditional khăn rằn scarf"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Cu Chi Tunnels private tour cost breakdown"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "how to visit Cu Chi Tunnels without the crowds"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "full-day Mekong Delta private tour"
+    },
+    {
+      "targetUrl": "/destination/mekong-delta",
+      "anchorText": "Mekong Delta"
+    },
+    {
+      "targetUrl": "/destination/south-vietnam",
+      "anchorText": "South Vietnam"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon hop-on hop-off bus"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private half-day Saigon city tour"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Cu Chi Tunnels Tour →\n                  \n                  \n                    Direct morn"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Premium Cu Chi Tunnels Itinerary →\n                  \n                  \n                    P"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private journey"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "travel concierges"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Private Tour Worth It? →\n                2026 pricing, car vs tour & group scaling"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi By Private Car →\n                2026 vehicle rates, routes & Grab feasibility"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How To Visit Without Crowds →\n                Tactical timing windows & trail navigation"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things To Do Near Ben Thanh →\n                Best cafes, dining & sights in District 1"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "The Southern Khăn Rằn Scarf →\n                Cultural symbol of Mekong & Cu Chi partisans"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Contact Travel Concierge"
+    }
+  ],
   "destinations/index": [
     {
       "targetUrl": "/tailor-made",
