@@ -121,7 +121,7 @@ Spending 9 or 10 hours on a tour bus in tropical humidity takes a toll. The Cu C
 On a half-day trip, kids see the secret trapdoors and military hardware in the morning and can be back in the hotel pool before afternoon meltdowns set in.
 
 ### 3. Great for Quick City Breaks
-If you only have 48 to 72 hours in Ho Chi Minh City, booking a full-day tour eats up half your daylight hours. A half-day run to Cu Chi lets you experience the tunnels and still leaves plenty of time to wander Saigon's street food alleys and neighborhoods.
+If you only have 48 to 72 hours in Ho Chi Minh City, booking a full-day tour eats up half your daylight hours. A half-day run to Cu Chi lets you experience the tunnels and still leaves plenty of time to sample street eats using our [Ben Thanh Market food guide](/ben-thanh-market-food-guide) or wander vibrant neighborhood alleys.
 
 ---
 
@@ -160,7 +160,7 @@ A full-day tour works well under specific conditions, but it is not necessary fo
 ### When to Skip Full-Day:
 - **If you only care about the tunnels:** A full-day tour does not give you extra tunnel time; the afternoon is spent elsewhere.
 - **If you dislike packed schedules:** Rushing from sight to sight all day can feel like a chore.
-- **If you have multiple days in town:** You can easily walk to downtown sights like the Central Post Office or Independence Palace on your own for a fraction of the cost.
+- **If you have multiple days in town:** You can easily explore downtown sights on foot using our self-guided [Ben Thanh one-day walking tour](/ben-thanh-one-day-walking-tour) for a fraction of the cost.
 
 ---
 
@@ -176,7 +176,7 @@ If you choose a full-day itinerary, picking the right companion stops is key:
 ### 2. War Remnants Museum
 - **The Experience:** One of Vietnam's most visited museums, housing military aircraft, armored vehicles, weapon artifacts, and photojournalism exhibitions documenting the war's human cost.
 - **Why It Pairs Well:** It deepens the historical context of what you saw in the Cu Chi forest.
-- **Helpful Note:** The photo galleries are graphic and emotionally heavy. Families with younger children often prefer substituting this stop with cultural sights.
+- **Helpful Note:** The photo galleries are graphic and emotionally heavy. Families with younger children often prefer substituting this stop with gentler cultural sights such as the historic [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 
 ### 3. Saigon Central Post Office & Notre-Dame Cathedral Area
 - **The Experience:** Iconic 19th-century French colonial architecture with vaulted ceilings, painted historical maps, and active postal counters.
@@ -374,7 +374,7 @@ If you are planning your visit, The Rice Tour provides two curated private optio
 
 - **[Half-Day Cu Chi Tunnels Tour](/tour/half-day-cu-chi-tunnels-tour):** Direct morning or afternoon private departure (approx. 5 to 6 hours) with dedicated licensed guide, private car, and zero commercial stops.
 - **[1-Day Premium Cu Chi Tunnels Itinerary](/tour/1-day-premium-cu-chi-tunnels):** Peaceful morning at Ben Duoc combined with an afternoon exploring Saigon's iconic historical landmarks.
-- For custom multi-day journeys combining Saigon, Cu Chi, and southern riverways, design a [tailor-made private journey](/tailor-made) with our inbound [travel concierges](/contact).
+- For custom multi-day journeys combining Saigon, Cu Chi, and southern riverways, learn more [about The Rice Tour](/about-us) or design a [tailor-made private journey](/tailor-made) with our inbound [travel concierges](/contact).
 
 ---
 
