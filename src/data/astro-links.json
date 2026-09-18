@@ -25,6 +25,100 @@
       "anchorText": "Explore Curated Tours"
     }
   ],
+  "ben-dinh-vs-ben-duoc": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon hop-on hop-off bus"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "half-day vs. full-day Cu Chi tour comparison"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "how to visit Cu Chi Tunnels without the crowds"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Cu Chi Tunnels private tour cost breakdown"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "traditional khăn rằn checkered scarf"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Classic Efficiency\n                  \n                  \n                    Half-Day Cu Chi Tunnels"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "Tranquil Heritage\n                  \n                  \n                    1-Day Premium Cu Chi Tun"
+    },
+    {
+      "targetUrl": "/destination/mekong-delta",
+      "anchorText": "Mekong Delta"
+    },
+    {
+      "targetUrl": "/destination/south-vietnam",
+      "anchorText": "South Vietnam"
+    },
+    {
+      "targetUrl": "/about-us",
+      "anchorText": "about The Rice Tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private journey"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "travel concierges"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "full-day Mekong Delta private tour"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Cu Chi Tunnels Half-Day Vs Full-Day: Which Tour Should You Choose?\n                Read Guide →"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds (2026 Guide)\n                Read Guide →"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi Tunnels by Private Car: Practical Driver Hire Guide\n                Read Guide →"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Is A Cu Chi Tunnels Private Tour Worth It? Cost & Value Guide\n                Read Guide →"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "Khăn Rằn Nam Bộ: The Checkered Soul of the Mekong Delta\n                Read Guide →"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Contact Travel Concierge"
+    }
+  ],
   "cu-chi-tunnels-half-day-vs-full-day": [
     {
       "targetUrl": "/",

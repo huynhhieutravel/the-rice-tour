@@ -1,0 +1,1138 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+// Editorial Metadata
+const pageTitle = "Ben Dinh Vs Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?";
+const pageDesc = "An authoritative comparison of Ben Dinh vs. Ben Duoc Cu Chi Tunnels: transit times, depths, crowds, memorial grounds, and 2026 UNESCO heritage facts.";
+const seoTitle = `${pageTitle} | The Rice Tour`;
+const seoDesc = pageDesc;
+const seoImage = "https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp";
+const currentSlug = "ben-dinh-vs-ben-duoc";
+
+const authorData = {
+  name: "The Rice Tour Editorial",
+  url: "/about-us",
+  img: "https://media.thericetour.com/uploads/the-rice-tour-editorial-avatar.webp"
+};
+
+const displayDate = new Date("2026-09-18T08:00:00Z");
+const formattedDate = "September 18, 2026";
+const datePrefix = "Published on";
+const createdAtStr = displayDate.toISOString();
+const updatedAtStr = displayDate.toISOString();
+
+// 19 Interactive Table of Contents items
+const tocItems = [
+  { id: "gioi-thieu", title: "Introduction" },
+  { id: "at-a-glance", title: "Ben Dinh vs. Ben Duoc At A Glance" },
+  { id: "the-real-difference", title: "What Is The Real Difference?" },
+  { id: "authenticity-myth", title: "Is Ben Duoc More Authentic Than Ben Dinh?" },
+  { id: "ben-dinh-convenience", title: "Ben Dinh: The Practical Choice" },
+  { id: "ben-dinh-tunnel-experience", title: "Inside The Ben Dinh Tunnel Experience" },
+  { id: "ben-duoc-memorial", title: "Ben Duoc: Expansive Grounds & Memorial" },
+  { id: "is-ben-duoc-quieter", title: "Is Ben Duoc Truly Quieter Than Ben Dinh?" },
+  { id: "for-history-enthusiasts", title: "Ben Dinh vs. Ben Duoc For History Lovers" },
+  { id: "which-suits-half-day", title: "Which Site Suits A Half-Day Tour?" },
+  { id: "which-suits-slower-day", title: "Which Site Suits A Slower, Immersive Day?" },
+  { id: "decision-matrix", title: "Decision Matrix: Traveler Profile Fit" },
+  { id: "visit-independently", title: "Can You Visit Ben Duoc Independently?" },
+  { id: "tunnel-dimensions", title: "Tunnel Dimensions & Crawl Realities" },
+  { id: "how-much-time", title: "How Much Time Should You Allow?" },
+  { id: "unesco-chronology", title: "2026 UNESCO Heritage Chronology" },
+  { id: "recommended-tours", title: "Recommended Cu Chi Private Journeys" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)" },
+  { id: "final-verdict", title: "Final Verdict: Which Should You Choose?" }
+];
+
+// SSR JSON-LD Schemas
+const currentOrigin = 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/${currentSlug}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: `${currentOrigin}/` },
+    { name: "Travel Guides", url: `${currentOrigin}/blog` },
+    { name: pageTitle, url: canonicalUrl }
+  ]
+};
+
+const faqSchema = {
+  questions: [
+    {
+      question: "Which Cu Chi Tunnels site is better: Ben Dinh or Ben Duoc?",
+      answer: "Neither site is universally better. Ben Dinh is closer to Ho Chi Minh City (~50 km) and better suited for time-efficient half-day tours. Ben Duoc is farther (~70 km) but offers a more peaceful setting, deeper three-level tunnels, and the Ben Duoc Martyrs Memorial Temple."
+    },
+    {
+      question: "Is Ben Duoc really more authentic than Ben Dinh?",
+      answer: "No. UNESCO's 2026 Tentative List documentation specifically identifies both Ben Dinh and Ben Duoc as the two surviving sectors that best retain the original appearance, scale, and structure of the network. Both sites have been preserved and adapted for public safety."
+    },
+    {
+      question: "How much is the official entrance fee to Cu Chi Tunnels in 2026?",
+      answer: "Official foreign-visitor admission at both Ben Dinh and Ben Duoc is 135,000 VND per person (comprising 35,000 VND entrance ticket and 100,000 VND for site guide and heritage service)."
+    },
+    {
+      question: "How far is Ben Duoc from Ben Dinh?",
+      answer: "Ben Duoc is located approximately 15 km northwest of Ben Dinh. Traveling between the two sites takes roughly 20 to 25 minutes by car along rural roads."
+    },
+    {
+      question: "Do I have to crawl underground at either site?",
+      answer: "No. Entering the underground tunnels is completely optional at both Ben Dinh and Ben Duoc. Visitors who prefer to avoid cramped spaces can explore open-air surface trails, traps, bunkers, and video halls."
+    },
+    {
+      question: "Can you visit Ben Duoc independently by Grab?",
+      answer: "Yes. You can book a GrabCar from central Saigon to Ben Duoc for approximately 650,000 to 850,000 VND each way. However, securing a return ride from Ben Duoc can be difficult, so arranging a round-trip wait with your driver is advised."
+    },
+    {
+      question: "What is the Ben Duoc Memorial Temple?",
+      answer: "Inaugurated in 1995, the Ben Duoc Martyrs Memorial Temple is a monumental commemorative site honoring over 44,000 soldiers and civilians who died in the Saigon–Gia Dinh region during the war. It features traditional Vietnamese architecture, lotus ponds, and a nine-story tower."
+    },
+    {
+      question: "Are the Cu Chi Tunnels recognized by UNESCO?",
+      answer: "On July 15, 2026, Viet Nam submitted the Cu Chi Tunnels to the UNESCO World Heritage Tentative List under criteria (iv) and (vi). It is actively seeking full inscription as a World Heritage Site."
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": pageDesc,
+  "image": seoImage,
+  "datePublished": createdAtStr,
+  "dateModified": updatedAtStr,
+  "author": {
+    "@type": "Person",
+    "name": authorData.name,
+    "url": `${currentOrigin}${authorData.url}`
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Rice Tour",
+    "url": currentOrigin,
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  }
+};
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  canonical={canonicalUrl}
+  preloadImages={[seoImage]}
+  lang="en"
+  ogType="article"
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <JsonLdSchema type="custom" data={articleSchema} />
+    <JsonLdSchema type="faq" data={faqSchema} />
+  </Fragment>
+
+  <!-- HERO SECTION HEADER (Full-width, Dark Magazine Style) -->
+  <header class="relative bg-slate-950 text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <!-- Background Image with Multi-layer Gradients -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={seoImage} 
+        alt={pageTitle}
+        class="w-full h-full object-cover object-center brightness-75 scale-105 transform motion-safe:animate-subtle-zoom"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-300/80 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+        <span>/</span>
+        <span class="text-amber-400 font-medium truncate max-w-xs sm:max-w-md">{pageTitle}</span>
+      </nav>
+
+      <!-- Main Title -->
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.15] max-w-4xl drop-shadow-sm">
+        {pageTitle}
+      </h1>
+
+      <!-- Editorial Deck / Subheading -->
+      <p class="mt-5 text-lg sm:text-xl text-slate-200/95 font-sans font-light leading-relaxed max-w-3xl">
+        A practical, on-the-ground comparison between Ben Dinh and Ben Duoc: road distance, underground depths, crowd dynamics, memorial grounds, and 2026 UNESCO heritage facts.
+      </p>
+
+      <!-- Author and Metadata Card -->
+      <div class="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-white/15 max-w-3xl">
+        <div class="flex items-center gap-3">
+          <img 
+            src={authorData.img} 
+            alt={authorData.name} 
+            class="w-10 h-10 rounded-full border-2 border-amber-400 object-cover shadow-sm"
+          />
+          <div>
+            <div class="font-semibold text-white flex items-center gap-1.5">
+              {authorData.name}
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="text-xs text-slate-300/80">Inbound Travel Specialist</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 text-xs sm:text-sm text-slate-300/90 ml-auto">
+          <span>{datePrefix} <time datetime={displayDate.toISOString()}>{formattedDate}</time></span>
+          <span>•</span>
+          <span>22 min read</span>
+          <span>•</span>
+          <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 2026 Verified
+          </span>
+        </div>
+      </div>
+
+      <!-- Feature Badges -->
+      <div class="flex flex-wrap gap-2.5 mt-6 pt-4 border-t border-white/10">
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          📍 Ben Dinh: 50 km | Ben Duoc: 70 km
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          🏛️ Ben Duoc Martyrs Memorial Temple
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          🛡️ UNESCO 2026 Tentative List Facts
+        </span>
+        <span class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium">
+          🚫 Debunking "Real vs. Fake"
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3-COLUMN MAGAZINE LAYOUT CONTAINER -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- LEFT COLUMN: Sticky Table of Contents -->
+      <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 max-h-[calc(100vh-7rem)] overflow-y-auto custom-scrollbar">
+          <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
+            Table of Contents
+          </div>
+          <nav class="space-y-1 text-[13px] font-medium pr-1">
+            <a href="#gioi-thieu" class="block text-amber-900 bg-amber-50/80 px-3 py-2 rounded-lg transition-colors font-bold text-[13.5px]">
+              Introduction
+            </a>
+            
+            <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+              {tocItems.slice(1).map((item) => (
+                <a 
+                  href={`#${item.id}`} 
+                  class="block py-1.5 px-2 text-slate-600 hover:text-amber-900 hover:bg-slate-50 rounded transition-colors truncate"
+                  title={item.title}
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- CENTER COLUMN: Editorial Content -->
+      <main class="col-span-1 lg:col-span-6 space-y-12">
+
+        <!-- Executive Summary Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">📍</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Ben Dinh</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">~50 km (~1.5h)</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🌲</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Ben Duoc</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">~70 km (~2.2h)</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🏛️</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Memorial Temple</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">Ben Duoc Only</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div class="text-xl sm:text-2xl mb-1">🎟️</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Foreign Tariff</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">135,000 VND</div>
+          </div>
+        </div>
+
+        <!-- Article Content Starts -->
+        <article class="space-y-12 text-slate-800 leading-relaxed font-normal">
+
+          <!-- Section: Introduction -->
+          <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                If you are planning a visit to the Cu Chi Tunnels from Ho Chi Minh City, one decision makes a noticeable difference to your day: <strong>Ben Dinh or Ben Duoc?</strong>
+              </p>
+              <p>
+                The two sites are frequently portrayed online as if one were a commercial "tourist" imitation and the other were the "authentic" wartime relic. The historical reality is far more nuanced. UNESCO’s 2026 World Heritage Tentative List documentation specifically identifies both Ben Dinh and Ben Duoc as the two surviving sectors that best retain the original appearance, scale, and structure of the Cu Chi tunnel network. Both have been protected, conserved, and adapted for visitors over the decades.
+              </p>
+              <p>
+                The more useful difference comes down to practical logistics and atmosphere.
+              </p>
+              <p>
+                <strong>Ben Dinh is closer to Ho Chi Minh City and serves as the standard stop for organized coach tours. Ben Duoc is roughly 15 km farther out, set in a tranquil riverside forest, and encompasses an expansive commemorative complex centered around the Ben Duoc Martyrs Memorial Temple.</strong>
+              </p>
+              <p>
+                So which should a traveler choose? The answer depends on your priorities: <strong>saving road transit time to pair Cu Chi with city sightseeing, or dedicating extra time to explore the broader historical setting of Cu Chi.</strong>
+              </p>
+            </div>
+
+            <!-- First Image Inside Body: Diorama Explanation -->
+            <div class="my-6 not-prose">
+              <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="https://media.thericetour.com/uploads/guide-explaining-cu-chi-tunnel-cross-section-model-diorama.webp" 
+                  alt="Licensed tour guide explaining the three-tiered underground network using a detailed cross-section model diorama at Cu Chi" 
+                  class="w-full h-auto object-cover max-h-[500px]"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                An experienced licensed guide uses an architectural diorama to decode Cu Chi's three-tiered underground defense levels.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: At A Glance -->
+          <section id="at-a-glance" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Ben Dinh Vs Ben Duoc At A Glance
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                To help you make an immediate comparison, here is how both preserved sectors stack up side-by-side:
+              </p>
+
+              <!-- Comparison Table -->
+              <div class="overflow-x-auto my-6 border border-slate-200 rounded-xl shadow-xs">
+                <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-3.5 sm:p-4 font-semibold">Comparison Factor</th>
+                      <th class="p-3.5 sm:p-4 font-semibold">Ben Dinh</th>
+                      <th class="p-3.5 sm:p-4 font-semibold bg-amber-900/80 text-amber-100">Ben Duoc</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Distance from Saigon</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">~50 km northwest (~1.5–2 hours)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">~65–70 km northwest (~2–2.5 hours)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Organized Group Tours</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Standard arrival point for large coach tours</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium bg-amber-50/30">Infrequently included on standard bus itineraries</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Wartime Role</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Base of Cu Chi District Party Committee (1961–1975)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Headquarters of Saigon–Gia Dinh Regional Command</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Preserved Tunnel Levels</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Three-level defensive system</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Three-level deeper defensive system</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Principal Depth</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Approx. 3.4 m, 4 m, and 5.15 m</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Approx. 4 m, 6 m, and 7–10 m</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Atmosphere & Crowds</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Busy, compact, higher group density</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-semibold bg-amber-50/30">Quieter, spacious, contemplative forest setting</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Memorial Complex</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Focused historical visitor pavilion</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-semibold bg-amber-50/30">Ben Duoc Martyrs Memorial Temple (44,000+ names)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Surroundings</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600">Road 15 corridor, dense secondary woodland</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700 bg-amber-50/30">Shaded forest near Saigon River and Thai Thai stream</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Best Suited For</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-medium">Shorter morning visits, families with young kids</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-semibold bg-amber-50/30">History enthusiasts, slower unhurried exploration</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Private Transport</td>
+                      <td class="p-3.5 sm:p-4 text-slate-700">Convenient for rapid half-day turnarounds</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-semibold bg-amber-50/30">Essential for schedule control and flexible pacing</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="text-sm text-slate-600 italic">
+                Neither sector is a universal winner. The table describes two distinct ways of experiencing the same monumental underground guerrilla system.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: The Real Difference -->
+          <section id="the-real-difference" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What Is The Real Difference Between Ben Dinh And Ben Duoc?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ben Dinh and Ben Duoc are not separate attractions operated by competing companies. Both belong to the unified <strong>Cu Chi Tunnels Historical Relic Site</strong>, representing different functional sectors of a subterranean guerrilla network that once stretched over 250 km across the Iron Triangle.
+              </p>
+              <p>
+                Their wartime roles were distinct:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Ben Dinh</strong> operated from 1961 to 1975 as the operational base for the Cu Chi District Party Committee. Partisans here directed frontline operations, defended local villages, and mounted ambushes against neighboring military installations.</li>
+                <li><strong>Ben Duoc</strong> served as the regional headquarters for the Saigon–Gia Dinh Military Command and Party Committee during the Second Indochina War. It held strategic command functions, housing regional leadership, planning rooms, printing presses, and field infirmaries.</li>
+              </ul>
+              <p>
+                Their subterranean architecture also differs in depth:
+              </p>
+              <p>
+                Both systems feature a sophisticated three-tiered structural design, but UNESCO’s 2026 archival survey notes that Ben Dinh is shallower than Ben Duoc:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>At <strong>Ben Duoc</strong>, the three principal levels descend to approximately <strong>4 meters</strong>, <strong>6 meters</strong>, and <strong>7 to 10 meters</strong> beneath the forest surface.</li>
+                <li>At <strong>Ben Dinh</strong>, the three tiers sit at approximately <strong>3.4 meters</strong>, <strong>4 meters</strong>, and <strong>5.15 meters</strong>.</li>
+              </ul>
+              <p>
+                Understanding these structural differences gives travelers a grounded perspective rather than accepting the simplistic claim that Ben Duoc is "real" while Ben Dinh is "manufactured."
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Authenticity Myth -->
+          <section id="authenticity-myth" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Is Ben Duoc More Authentic Than Ben Dinh?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Not necessarily. Debunking this persistent online rumor is essential before booking.
+              </p>
+              <p>
+                UNESCO's official 2026 World Heritage Tentative List submission specifically designates <strong>Ben Duoc and Ben Dinh as the two core sectors that best preserve the authentic scale, architectural logic, and defensive structure of the Cu Chi tunnel network</strong>. Together, the two protected zones safeguard approximately 4 km of intact underground passages.
+              </p>
+              <p>
+                Neither site is an untouched, raw wartime trench.
+              </p>
+              <p>
+                Both sectors underwent systematic conservation starting in 1978, followed by continuing stabilization from 1980 onward. In 1991, roughly 4 km of passages across both sites were reinforced, equipped with electrical lighting and ventilation ducts, and formally opened to international visitors.
+              </p>
+              <p>
+                Lonely Planet correctly describes both public sections as enlarged and reinforced adaptations of the original guerrilla tunnels.
+              </p>
+              <p>
+                That distinction matters:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>The <strong>historical subterranean monument</strong> represents the protected archaeological system.</li>
+                <li>The <strong>visitor-accessible crawl circuit</strong> represents a reinforced safety zone engineered to prevent cave-ins and accommodate modern travelers.</li>
+              </ul>
+              <p>
+                The question is not <em>"Which sector is genuine?"</em> Both are historic. The real question is: <strong>"Which environment delivers the atmosphere and travel pace you want?"</strong>
+              </p>
+            </div>
+
+            <!-- Second Image Inside Body: Punji Stick Traps -->
+            <div class="my-6 not-prose">
+              <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+                  alt="Tour guide demonstrating hidden trapdoors and wooden punji stick traps in the forest of Cu Chi - The Rice Tour" 
+                  class="w-full h-auto object-cover max-h-[500px]"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                Resident guides demonstrate the camouflage mechanisms and wooden punji stick traps along shaded forest paths.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Ben Dinh Convenience -->
+          <section id="ben-dinh-convenience" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Ben Dinh: The Practical, Time-Efficient Choice
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ben Dinh is the practical solution for travelers who want to experience Cu Chi without committing an entire day to transit.
+              </p>
+              <p>
+                Sitting roughly 15 km closer to central Saigon, Ben Dinh is easily accessible along Provincial Road 15. Because large 45-seat tour coaches can navigate and park here without difficulty, it serves as the default destination for nearly all commercial group tours.
+              </p>
+              <p>
+                That geographical convenience offers tangible scheduling advantages:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Faster transfers:</strong> Around 90 minutes each way in private transport.</li>
+                <li><strong>Half-day compatibility:</strong> You can depart at 07:00 AM, finish your visit by 11:30 AM, and be back in District 1 for lunch.</li>
+                <li><strong>Afternoon freedom:</strong> Leaves your second half of the day open for a <a href="/saigon-hop-on-hop-off-bus-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Saigon hop-on hop-off bus</a> tour or exploring the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a>.</li>
+              </ul>
+              <p>
+                Ben Dinh is ideal for:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>First-time visitors with limited days in Ho Chi Minh City.</li>
+                <li>Travelers booking a standard half-day morning tour.</li>
+                <li>Families with young children or elderly relatives who tire quickly in tropical heat.</li>
+                <li>Visitors planning a balanced <a href="/cu-chi-tunnels-half-day-vs-full-day" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">half-day vs. full-day Cu Chi tour comparison</a>.</li>
+              </ul>
+
+              <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/60 shadow-2xs">
+                <div class="font-bold text-amber-950 text-sm mb-1 flex items-center gap-1.5">
+                  <span>💡</span> The Trade-Off at Ben Dinh
+                </div>
+                <p class="text-xs text-amber-900 leading-relaxed">
+                  Convenience attracts volume. Between 09:30 AM and 11:30 AM, dozens of tour buses converge on Ben Dinh simultaneously. Shaded pathways can become crowded, and lines form at primary tunnel entrances. Arriving early (by 08:00 AM) is essential (see our tactical guide on <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="font-semibold underline underline-offset-2">how to visit Cu Chi Tunnels without the crowds</a>).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Inside Ben Dinh Tunnel Experience -->
+          <section id="ben-dinh-tunnel-experience" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Inside The Ben Dinh Tunnel Experience
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                The Ben Dinh visitor circuit delivers a compact, concentrated introduction to guerrilla engineering.
+              </p>
+              <p>
+                UNESCO describes Ben Dinh’s preserved layout as a three-level system complete with zigzag communication trenches, disguised firing bunkers, smokeless kitchen ventilation, and narrow defense chokepoints. Certain un-widened demonstration sections measure just <strong>40 cm wide by 73 cm high</strong>.
+              </p>
+              <p>
+                These dimensions require honest physical self-assessment.
+              </p>
+              <p>
+                Moving through the underground crawl is genuinely demanding. A 2026 traveler measuring 6 ft tall and wearing XXL clothing reported that while entering was possible, advancing through the passages required intense duck-walking and knee-crawling in hot, humid air.
+              </p>
+              <p>
+                Fortunately, underground crawling is <strong>100% optional</strong>.
+              </p>
+              <p>
+                Visitors who prefer to stay above ground can walk shaded surface trails, view camouflaged trapdoor demonstrations, examine recovered bomb craters, inspect weapon displays, and watch the historical documentary in open-air thatch pavilions.
+              </p>
+            </div>
+
+            <!-- Third Image Inside Body: Secret Camouflage Trapdoor -->
+            <div class="my-6 not-prose">
+              <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp" 
+                  alt="Visitor demonstrating entering a camouflaged wooden trapdoor hidden beneath fallen forest leaves at Cu Chi Tunnels" 
+                  class="w-full h-auto object-cover max-h-[500px]"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                Visitors can witness or try descending into tiny camouflaged trapdoor shafts disguised beneath the jungle floor.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Ben Duoc Memorial -->
+          <section id="ben-duoc-memorial" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Ben Duoc: Expansive Grounds & Living Memorial
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ben Duoc demands roughly 30 to 45 minutes of additional driving each way, but the reward is a completely different setting.
+              </p>
+              <p>
+                Located deeper in rural Cu Chi near the Saigon River and Thai Thai stream, Ben Duoc encompasses a much larger preserved territory. UNESCO documents a full spectrum of subterranean infrastructure here, including primary communication arteries, combat works, field hospitals, grain caches, freshwater wells, and staff headquarters.
+              </p>
+              <p>
+                Its third underground level reaches 7 to 10 meters deep—considerably lower than Ben Dinh.
+              </p>
+              <p>
+                However, the defining feature of Ben Duoc is above ground: the <strong>Ben Duoc Martyrs Memorial Temple</strong> (<em>Đền Tưởng Niệm Liệt Sĩ Bến Dược</em>).
+              </p>
+              <p>
+                Inaugurated in 1995, this monumental commemorative complex honors over 44,000 soldiers, guerrilla fighters, and civilians who fell in the Saigon–Chợ Lớn–Gia Định theater during the Indochina wars. Walking through its majestic triple-gate entrance, tranquil lotus ponds, and nine-story tower provides an emotional, reflective counterweight to the subterranean combat exhibits.
+              </p>
+              <p>
+                At Ben Duoc, your visit is not merely about crawling through dirt; it is a holistic encounter with wartime sacrifice and national remembrance.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Is Ben Duoc Quieter -->
+          <section id="is-ben-duoc-quieter" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Is Ben Duoc Truly Quieter Than Ben Dinh?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Ben Duoc is significantly less crowded, but "quiet" should be understood in context rather than taken as an absolute guarantee.
+              </p>
+              <p>
+                Because standard commercial bus tours avoid the extra road distance, you will encounter far fewer large tour groups at Ben Duoc. Recent travelers confirm that Ben Duoc offers a much calmer rhythm, without the megaphone chatter or rushed schedules common at Ben Dinh.
+              </p>
+              <p>
+                However, Ben Duoc hosts regular Vietnamese school excursions, military veteran delegations, and domestic memorial groups, particularly on national anniversaries (such as April 30 or July 27).
+              </p>
+              <p>
+                The true distinction:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Ben Dinh</strong> operates on a continuous conveyor belt of international packaged coach tours.</li>
+                <li><strong>Ben Duoc</strong> operates at a peaceful, spacious pace oriented toward independent travelers, private tours, and commemorative groups.</li>
+              </ul>
+            </div>
+
+            <!-- Fourth Image Inside Body: Forest Walk -->
+            <div class="my-6 not-prose">
+              <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                  alt="Small group walking along the shaded forested pathways of Cu Chi Tunnels - The Rice Tour" 
+                  class="w-full h-auto object-cover max-h-[500px]"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                Travelers walking along the peaceful forested paths of Cu Chi beneath tropical rubber and bamboo trees.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: For History Enthusiasts -->
+          <section id="for-history-enthusiasts" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Ben Dinh vs. Ben Duoc For History Lovers
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                For military and cultural history buffs, both sectors have profound merits:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Ben Dinh</strong> illuminates grassroots tactical survival—how local village partisans adapted the red laterite soil into an impenetrable combat zone right on the doorstep of the U.S. 25th Infantry Division base.</li>
+                <li><strong>Ben Duoc</strong> showcases strategic regional coordination—how high-command officers lived and coordinated a multi-province resistance theater from deep underground command bunkers.</li>
+              </ul>
+              <p>
+                If your objective is to study the technical architecture of traps and tunnels in under two hours, Ben Dinh accomplishes that efficiently.
+              </p>
+              <p>
+                If your objective is to absorb the broader landscape—including the memorial temple, war-zone living reconstructions, and shaded forest trails—Ben Duoc offers a vastly richer canvas.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Which Suits Half-Day -->
+          <section id="which-suits-half-day" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Which Site Suits A Half-Day Tour?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                For a standard 5-to-6-hour half-day morning trip, <strong>Ben Dinh is usually the superior logistical fit</strong>.
+              </p>
+              <p>
+                The math is simple:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>Central Saigon to Ben Dinh: 1.5 hours driving.</li>
+                <li>Guided on-site exploration: 2 to 2.5 hours.</li>
+                <li>Return drive to District 1: 1.5 hours.</li>
+                <li><strong>Total duration:</strong> ~5 to 5.5 hours. You are back in time for lunch.</li>
+              </ul>
+              <p>
+                Visiting Ben Duoc on a half-day timeline is feasible via private car, but driving consumes nearly 4 to 4.5 hours of your 6-hour window, leaving less leisure time on-site.
+              </p>
+              <p>
+                For a detailed breakdown of transit times and vehicle choices, consult our guide on <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Which Suits Slower Day -->
+          <section id="which-suits-slower-day" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Which Site Suits A Slower, Immersive Day?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                If you prefer an unhurried, thoughtful journey, <strong>Ben Duoc is well worth the extra travel time</strong>.
+              </p>
+              <p>
+                UNESCO’s nomination dossier describes Cu Chi not as isolated tunnels, but as an integrated <strong>"underground village"</strong> (<em>làng hầm</em>) containing living quarters, dining halls, wells, nurseries, and operating rooms. Exploring Ben Duoc’s spacious grounds allows that comprehensive communal reality to sink in.
+              </p>
+              <p>
+                Pairing Ben Duoc’s tunnels with a peaceful stroll through the Memorial Temple creates a deeply rewarding 7-to-8-hour day trip, especially when structured as a full-day private journey combining morning tunnels with afternoon historic monuments.
+              </p>
+            </div>
+
+            <!-- Fifth Image Inside Body: Tank Relic -->
+            <div class="my-6 not-prose">
+              <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                <img 
+                  src="https://media.thericetour.com/uploads/two-girls-posing-rusted-tank-cu-chi-tunnels-the-rice.webp" 
+                  alt="Visitors examining an authentic decommissioned wartime armored tank amid the forest canopy at Cu Chi Tunnels" 
+                  class="w-full h-auto object-cover max-h-[500px]"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                Both Ben Dinh and Ben Duoc preserve authentic battlefield hardware, bomb craters, and forested historical grounds.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Decision Matrix -->
+          <section id="decision-matrix" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Decision Matrix: Traveler Profile Fit
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Use this practical matrix to match your travel style with the right sector:
+              </p>
+
+              <div class="overflow-x-auto my-6 border border-slate-200 rounded-xl shadow-xs">
+                <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                  <thead>
+                    <tr class="bg-slate-900 text-white font-serif">
+                      <th class="p-3.5 sm:p-4 font-semibold">Traveler Profile</th>
+                      <th class="p-3.5 sm:p-4 font-semibold">Recommended Sector</th>
+                      <th class="p-3.5 sm:p-4 font-semibold bg-amber-900/80 text-amber-100">Core Rationale</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">First-timer with 48–72h in Saigon</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-bold">Ben Dinh</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Fits smoothly into a morning; afternoon free for city sights</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Standard budget coach tour</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-bold">Ben Dinh</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Default destination for group bus operators</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Traveler seeking quiet atmosphere</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-bold">Ben Duoc</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Significantly fewer large tour groups; peaceful forest setting</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Military & architecture enthusiast</td>
+                      <td class="p-3.5 sm:p-4 text-slate-900 font-bold">Either / Both</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Both showcase authentic 3-level guerrilla architecture</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Traveler drawn to commemorative art</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-bold">Ben Duoc</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Features the historic Ben Duoc Martyrs Memorial Temple</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Families with energetic young kids</td>
+                      <td class="p-3.5 sm:p-4 text-emerald-700 font-bold">Ben Dinh</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Shorter travel time avoids car fatigue and mid-day meltdowns</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Taller or claustrophobic travelers</td>
+                      <td class="p-3.5 sm:p-4 text-slate-900 font-bold">Either</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Underground crawling is completely optional at both locations</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50/80">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Travelers booking private car & guide</td>
+                      <td class="p-3.5 sm:p-4 text-amber-900 font-bold">Ben Duoc</td>
+                      <td class="p-3.5 sm:p-4 text-slate-600 bg-amber-50/30">Private transport eliminates transit stress and unlocks Ben Duoc</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Visit Independently -->
+          <section id="visit-independently" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Can You Visit Ben Duoc Independently?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Yes. Joining an organized tour is not mandatory.
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Ride-Hailing (Grab / Be):</strong> Recent 2026 traveler reports confirm that booking a GrabCar from central Saigon to Ben Duoc is straightforward (approx. 650,000–850,000 VND each way). However, securing a return ride from Ben Duoc can be difficult due to limited driver availability in suburban districts. Negotiating a flat round-trip wait fare with your morning driver is strongly advised.</li>
+                <li><strong>Public City Bus:</strong> Budget travelers can take Bus #13 from 23/9 Park to Cu Chi Bus Station, then transfer to Bus #79 directly to Ben Duoc gate. The trip takes 2.5 to 3 hours each way and costs under 30,000 VND.</li>
+              </ul>
+              <p>
+                For transparent pricing across vehicle classes and chauffeur hire, review our <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels private tour cost breakdown</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Tunnel Dimensions -->
+          <section id="tunnel-dimensions" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Tunnel Dimensions & Crawl Realities
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Misconceptions about tunnel crawl dimensions are widespread online:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>At <strong>Ben Duoc</strong>, the main visitor corridors average <strong>62 to 75 cm in width</strong> and <strong>95 to 104 cm in height</strong>.</li>
+                <li>At <strong>Ben Dinh</strong>, the primary levels measure roughly <strong>62 to 65 cm wide</strong> and <strong>105 to 110 cm high</strong>, with certain constricted passages dipping to <strong>40 cm by 73 cm</strong>.</li>
+              </ul>
+              <p>
+                While select sections have been enlarged for international tourism, the physical experience remains restrictive. You will duck-walk or crawl on hands and knees through humid, red-clay passages. Wearing loose, breathable clothes and packing a <a href="/khan-ran-nam-bo" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">traditional khăn rằn checkered scarf</a> to wipe away sweat will make your on-site exploration far more comfortable.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: How Much Time -->
+          <section id="how-much-time" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                How Much Time Should You Allow?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                The time required depends on whether you are joining a packaged tour or exploring independently.
+              </p>
+              <p>
+                A standard half-day excursion is designed to provide an introduction to the tunnels and return you to Ho Chi Minh City without consuming your entire daylight window.
+              </p>
+              <p>
+                An independent visit can be far more flexible. The wider visitor areas contain historical displays, reconstructed spaces, models, artefacts, and commemorative areas beyond the tunnel passages themselves.
+              </p>
+              <p>
+                This is particularly relevant at Ben Duoc: a traveler interested in the broader history, memorial complex, and preserved landscape can comfortably spend 3 to 4 unhurried hours exploring the grounds.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: UNESCO Chronology -->
+          <section id="unesco-chronology" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                2026 UNESCO Heritage Chronology
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                Travelers should understand the official heritage status of Cu Chi Tunnels:
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li>On <strong>July 15, 2026</strong>, the State Party of Viet Nam officially inscribed the Cu Chi Tunnels onto the <strong>UNESCO World Heritage Tentative List</strong> under cultural criteria <strong>(iv)</strong> and <strong>(vi)</strong>.</li>
+                <li>A Tentative List listing is a mandatory prerequisite, not final inscription on the World Heritage List.</li>
+                <li>UNESCO's dossier recognizes both Ben Dinh and Ben Duoc as the definitive core attributes preserving the integrity and authenticity of the 250-km wartime system.</li>
+                <li>Official data confirms that the site welcomed over <strong>27 million cumulative visitors</strong> by the end of 2025.</li>
+                <li>The official foreign admission tariff remains <strong>135,000 VND</strong> per adult (35,000 VND entrance + 100,000 VND site guide service fee).</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Recommended Tours -->
+          <section id="recommended-tours" class="scroll-mt-28 space-y-5">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Recommended Cu Chi Private Journeys
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                To experience Cu Chi with maximum comfort, schedule flexibility, and licensed historical storytelling, The Rice Tour curates two dedicated private journeys:
+              </p>
+
+              <!-- Recommendation Cards -->
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <a 
+                  href="/tour/half-day-cu-chi-tunnels-tour" 
+                  class="group block p-5 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-amber-400 hover:shadow-md transition-all"
+                >
+                  <div class="text-xs uppercase tracking-wider text-amber-600 font-bold mb-1">
+                    Classic Efficiency
+                  </div>
+                  <div class="font-serif text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors mb-2">
+                    Half-Day Cu Chi Tunnels Tour →
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Direct morning or afternoon private departure to Ben Dinh (approx. 5 to 6 hours) with dedicated licensed guide, private car, and zero commercial stops.
+                  </p>
+                </a>
+
+                <a 
+                  href="/tour/1-day-premium-cu-chi-tunnels" 
+                  class="group block p-5 rounded-2xl border border-slate-200 bg-white shadow-xs hover:border-amber-400 hover:shadow-md transition-all"
+                >
+                  <div class="text-xs uppercase tracking-wider text-amber-600 font-bold mb-1">
+                    Tranquil Heritage
+                  </div>
+                  <div class="font-serif text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors mb-2">
+                    1-Day Premium Cu Chi Tunnels Itinerary →
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Peaceful morning at Ben Duoc combined with an afternoon exploring Saigon's iconic historical landmarks.
+                  </p>
+                </a>
+              </div>
+
+              <p class="text-sm text-slate-600">
+                For custom multi-day journeys combining Saigon, Cu Chi, and southern riverways across the <a href="/destination/mekong-delta" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Mekong Delta</a> and <a href="/destination/south-vietnam" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">South Vietnam</a>, learn more <a href="/about-us" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">about The Rice Tour</a> or design a <a href="/tailor-made" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">tailor-made private journey</a> with our inbound <a href="/contact" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">travel concierges</a>. You can also dedicate a separate day to our <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">full-day Mekong Delta private tour</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Frequently Asked Questions -->
+          <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Frequently Asked Questions (FAQ)
+              </h2>
+            </div>
+
+            <div class="space-y-3 not-prose">
+              {faqSchema.questions.map((faq) => (
+                <details class="group bg-white rounded-xl border border-slate-200 p-4 transition-all duration-200 open:shadow-xs open:border-amber-300">
+                  <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none text-sm sm:text-base">
+                    <span>{faq.question}</span>
+                    <span class="transition-transform duration-200 group-open:rotate-180 text-amber-600 font-bold ml-2">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <p class="text-slate-600 text-xs sm:text-sm mt-3 pt-3 border-t border-slate-100 leading-relaxed font-normal">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- Section: Final Verdict -->
+          <section id="final-verdict" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Final Verdict: Which Sector Should You Choose?
+              </h2>
+            </div>
+
+            <div class="text-slate-700 text-[15.5px] leading-relaxed space-y-4">
+              <p>
+                There is no need to agonize over finding the "true" Cu Chi. Both sectors preserve authentic, protected remnants of one of the 20th century's most extraordinary subterranean defense works.
+              </p>
+              <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
+                <li><strong>Choose Ben Dinh</strong> if you value time efficiency, want an easy morning excursion, or are traveling with young children.</li>
+                <li><strong>Choose Ben Duoc</strong> if you want to escape commercial tour-bus crowds, explore deeper tunnels, and pay respects at the solemn Ben Duoc Memorial Temple.</li>
+              </ul>
+              <p>
+                Whichever sector you select, booking private transportation and an insightful licensed guide ensures you experience the living history of Cu Chi with depth, comfort, and respect.
+              </p>
+            </div>
+          </section>
+
+        </article>
+      </main>
+
+      <!-- RIGHT COLUMN: Related Guides & Concierge CTA -->
+      <aside class="hidden lg:block lg:col-span-3 sticky top-24 space-y-6">
+        <div class="space-y-6">
+
+          <!-- Card 1: Companion Cu Chi & Saigon Guides -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 space-y-4">
+            <div class="flex items-center gap-2 font-bold text-slate-900 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
+              Companion Guides
+            </div>
+
+            <div class="space-y-3">
+              <a href="/cu-chi-tunnels-half-day-vs-full-day" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="text-[13px] font-bold text-slate-800 line-clamp-2">Cu Chi Tunnels Half-Day Vs Full-Day: Which Tour Should You Choose?</div>
+                <div class="text-[11px] text-slate-400 mt-1">Read Guide →</div>
+              </a>
+              <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="text-[13px] font-bold text-slate-800 line-clamp-2">How to Visit Cu Chi Tunnels Without the Crowds (2026 Guide)</div>
+                <div class="text-[11px] text-slate-400 mt-1">Read Guide →</div>
+              </a>
+              <a href="/visiting-cu-chi-tunnels-by-private-car" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="text-[13px] font-bold text-slate-800 line-clamp-2">Visiting Cu Chi Tunnels by Private Car: Practical Driver Hire Guide</div>
+                <div class="text-[11px] text-slate-400 mt-1">Read Guide →</div>
+              </a>
+              <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="text-[13px] font-bold text-slate-800 line-clamp-2">Is A Cu Chi Tunnels Private Tour Worth It? Cost & Value Guide</div>
+                <div class="text-[11px] text-slate-400 mt-1">Read Guide →</div>
+              </a>
+              <a href="/khan-ran-nam-bo" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="text-[13px] font-bold text-slate-800 line-clamp-2">Khăn Rằn Nam Bộ: The Checkered Soul of the Mekong Delta</div>
+                <div class="text-[11px] text-slate-400 mt-1">Read Guide →</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Inbound Concierge CTA -->
+          <div class="bg-gradient-to-br from-amber-500/15 via-white to-amber-500/5 border border-amber-300/80 p-5 sm:p-6 rounded-2xl shadow-sm text-center space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center mx-auto text-lg">
+              ✨
+            </div>
+            <div class="font-serif font-bold text-slate-900 text-base">
+              Plan Your Cu Chi Journey
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Need advice on whether Ben Dinh or Ben Duoc suits your schedule, family, or travel pace best?
+            </p>
+            <a 
+              href="/contact" 
+              class="inline-block w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors"
+            >
+              Contact Travel Concierge
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '-120px 0px -60% 0px',
+        threshold: 0
+      };
+
+      const sections = document.querySelectorAll('article section[id]');
+      const tocLinks = document.querySelectorAll('aside nav a[href^="#"]');
+
+      if (!sections.length || !tocLinks.length) return;
+
+      let currentActiveId = null;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id !== currentActiveId) {
+              currentActiveId = id;
+              updateActiveToc(id);
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+
+      function updateActiveToc(activeId) {
+        tocLinks.forEach(link => {
+          const href = link.getAttribute('href') || '';
+          const id = href.startsWith('#') ? href.slice(1) : '';
+          if (id === activeId) {
+            link.classList.add('text-amber-900', 'bg-amber-50/90', 'font-bold');
+            link.classList.remove('text-slate-600');
+            link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          } else {
+            link.classList.remove('text-amber-900', 'bg-amber-50/90', 'font-bold');
+            if (id !== 'gioi-thieu') {
+              link.classList.add('text-slate-600');
+            }
+          }
+        });
+      }
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+</style>
