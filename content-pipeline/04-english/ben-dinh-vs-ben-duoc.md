@@ -113,7 +113,7 @@ Don't let those numbers intimidate you. The sections opened to modern travelers 
 
 Your total time in Ho Chi Minh City is usually the deciding factor:
 
-**Choose Ben Dinh if you have half a day:** Spending 3 to 4 hours on the road round-trip means you can finish your visit in roughly 5 to 6 hours door-to-door. You return to the city by 13:30 with plenty of energy left for evening dining or downtown museums.
+**Choose Ben Dinh if you have half a day:** Spending 3 to 4 hours on the road round-trip means you can finish your visit in roughly 5 to 6 hours door-to-door. You return to the city by 13:30 with plenty of energy left for an afternoon [Ho Chi Minh City half-day private tour](/tour/ho-chi-minh-city-half-day-private-tour) or evening dining in District 1.
 
 **Choose Ben Duoc if you can spare a full day:** Adding 30 to 45 minutes of driving each direction turns this into a 7- to 8-hour day trip. It is well worth the extra journey if you want to explore the memorial grounds, visit the reconstructed village, and enjoy a relaxed local lunch along the river without watching the clock.
 
@@ -167,7 +167,7 @@ Choosing a private journey removes the stress of highway traffic and rural trans
 - **[Half-Day Cu Chi Tunnels Tour](/tour/half-day-cu-chi-tunnels-tour):** Direct morning private departure to Ben Dinh (approx. 5 to 6 hours door-to-door) with dedicated licensed guide and private vehicle.
 - **[1-Day Premium Cu Chi Tunnels Itinerary](/tour/1-day-premium-cu-chi-tunnels):** Morning visit to Ben Duoc combined with afternoon exploration of central Saigon historical monuments.
 
-For broader itineraries connecting Ho Chi Minh City with the [Mekong Delta](/destination/mekong-delta) and [South Vietnam](/destination/south-vietnam), learn more [about The Rice Tour](/about-us) or request a [tailor-made private journey](/tailor-made) with our [travel concierges](/contact). You can also dedicate a separate day to our [full-day Mekong Delta private tour](/tour/full-day-mekong-delta-tour-ben-tre-my-tho).
+For broader itineraries connecting Ho Chi Minh City with the [Mekong Delta](/destination/mekong-delta) and [South Vietnam](/destination/south-vietnam), explore our complete collection of [curated Vietnam private tours](/tours), learn more [about The Rice Tour](/about-us), or request a [tailor-made private journey](/tailor-made) with our [travel concierges](/contact). You can also dedicate a separate day to our [full-day Mekong Delta private tour](/tour/full-day-mekong-delta-tour-ben-tre-my-tho).
 
 ---
 
@@ -202,6 +202,6 @@ Don't get bogged down in internet debates over which site is "authentic." Both B
 
 > **"Choose Ben Dinh for efficient timing; choose Ben Duoc for deeper reflection and a wider historical setting."**
 
-If your Saigon itinerary is packed and you want an insightful, well-organized morning that gets you back in time for an afternoon coffee in District 1, Ben Dinh is the practical, time-tested choice. But if you have room for a full day, appreciate traditional architecture, and want to walk beneath peaceful trees without the rush of tour buses, the journey out to Ben Duoc is richly rewarding.
+If your Saigon itinerary is packed and you want an insightful, well-organized morning that gets you back in time for an afternoon coffee in the [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh), Ben Dinh is the practical, time-tested choice. But if you have room for a full day, appreciate traditional architecture, and want to walk beneath peaceful trees without the rush of tour buses, the journey out to Ben Duoc is richly rewarding.
 
 Whichever gate you enter, go with curiosity, hire a knowledgeable guide who can bring the soil to life, and take time to absorb the ingenuity and sheer endurance etched into the red clay beneath your feet.

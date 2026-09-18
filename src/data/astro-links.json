@@ -51,6 +51,10 @@
       "anchorText": "traditional khăn rằn checkered scarf"
     },
     {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City half-day private tour"
+    },
+    {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
       "anchorText": "half-day vs. full-day Cu Chi tours"
     },
@@ -79,6 +83,10 @@
       "anchorText": "South Vietnam"
     },
     {
+      "targetUrl": "/tours",
+      "anchorText": "curated Vietnam private tours"
+    },
+    {
       "targetUrl": "/about-us",
       "anchorText": "about The Rice Tour"
     },
@@ -93,6 +101,10 @@
     {
       "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
       "anchorText": "full-day Mekong Delta private tour"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
     },
     {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
