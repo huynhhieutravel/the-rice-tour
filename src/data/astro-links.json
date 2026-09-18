@@ -35,16 +35,12 @@
       "anchorText": "Travel Guides"
     },
     {
-      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
-      "anchorText": "Saigon hop-on hop-off bus"
-    },
-    {
       "targetUrl": "/independence-palace-saigon-guide",
       "anchorText": "Independence Palace"
     },
     {
-      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
-      "anchorText": "half-day vs. full-day Cu Chi tour comparison"
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon hop-on hop-off bus"
     },
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
@@ -53,6 +49,10 @@
     {
       "targetUrl": "/khan-ran-nam-bo",
       "anchorText": "traditional khăn rằn checkered scarf"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "half-day vs. full-day Cu Chi tours"
     },
     {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
@@ -64,11 +64,11 @@
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
-      "anchorText": "Classic Efficiency\n                    \n                    \n                      Half-Day Cu Chi T"
+      "anchorText": "Time-Efficient Morning\n                    \n                    \n                      Half-Day Cu C"
     },
     {
       "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
-      "anchorText": "Tranquil Heritage\n                    \n                    \n                      1-Day Premium Cu C"
+      "anchorText": "Extended Historical Context\n                    \n                    \n                      1-Day Pr"
     },
     {
       "targetUrl": "/destination/mekong-delta",
@@ -96,23 +96,23 @@
     },
     {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
-      "anchorText": "Cu Chi Tunnels Half-Day Vs Full-Day\n                  Realistic 2026 durations, physical effort, and"
+      "anchorText": "Cu Chi Tunnels Half-Day Vs Full-Day\n                  Realistic durations, physical pacing, and city"
     },
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
-      "anchorText": "How to Visit Without Crowds\n                  5 insider strategies on timing windows, routes, and av"
+      "anchorText": "How to Visit Without Crowds\n                  Practical timing advice, arrival windows, and trail na"
     },
     {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
-      "anchorText": "Visiting Cu Chi By Private Car\n                  Practical driver hire guide, vehicle rates, routes,"
+      "anchorText": "Visiting Cu Chi By Private Car\n                  Driver hire considerations, routes, and vehicle cho"
     },
     {
       "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
-      "anchorText": "Is A Private Tour Worth It?\n                  Price comparisons, guide value, group size formulas, a"
+      "anchorText": "Is A Private Tour Worth It?\n                  Cost breakdown, licensed guide value, and group size p"
     },
     {
       "targetUrl": "/khan-ran-nam-bo",
-      "anchorText": "The Southern Khăn Rằn Scarf\n                  Cultural symbol of the Mekong Delta and southern resis"
+      "anchorText": "The Southern Khăn Rằn Scarf\n                  Cultural history of the Mekong Delta and southern wart"
     },
     {
       "targetUrl": "/contact",
