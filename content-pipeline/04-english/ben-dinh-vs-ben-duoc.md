@@ -4,7 +4,7 @@ If you are planning a visit to the Cu Chi Tunnels from Ho Chi Minh City, one dec
 
 > **Ben Dinh saves time; Ben Duoc gives the wider Cu Chi site more room to breathe.**
 
-The two sectors are often discussed online as if one were a tourist imitation and the other the authentic relic. The historical record is more nuanced. Both Ben Dinh and Ben Duoc are preserved historical areas within the Cu Chi Tunnels Historical Site, recognized by UNESCO's 2026 World Heritage Tentative List submission as the two sectors that best retain the original appearance, scale and structure of the network.
+The two sectors are often discussed online as if one were a tourist imitation and the other the authentic relic. The historical record is more nuanced. Both Ben Dinh and Ben Duoc are preserved historical areas within the Cu Chi Tunnels Historical Site, recognized in official World Heritage nomination documentation prepared for UNESCO as the two sectors that best retain the original appearance, scale and structure of the network.
 
 The practical difference comes down to distance, visitor patterns, and the surrounding setting: **Ben Dinh is closer to Ho Chi Minh City and absorbs the majority of organized tour traffic. Ben Duoc is located farther northwest, set in a more forested landscape near the Saigon River, and includes the Ben Duoc Martyrs Memorial Temple.**
 
@@ -21,7 +21,7 @@ The following comparison outlines the primary factual distinctions between both 
 | **Approximate Distance** | ~50 km northwest of central HCMC | ~65–70 km northwest of central HCMC |
 | **One-Way Road Travel** | ~1.5 to 2 hours (planning estimate) | ~2 to 2.5 hours (planning estimate) |
 | **Visitor Pattern** | More commonly used by organized bus tours | Less central to standard bus itineraries |
-| **Physical Setting** | Along Provincial Road 15 near Saigon River | Forest landscape near Saigon River and Thai Thai stream |
+| **Physical Setting** | Along Provincial Road 15 in Nhuan Duc Commune near the Saigon River | Forested rural landscape along the Saigon River in Phu My Hung Commune |
 | **Wartime Historical Role** | Cu Chi District Party Committee base (1961–1975) | Saigon–Gia Dinh Military Zone & Regional Party Committee base |
 | **Memorial Structure** | None on-site | Ben Duoc Martyrs Memorial Temple |
 | **Foreign Admission** | 135,000 VND at publication | 135,000 VND at publication |
@@ -33,9 +33,9 @@ The following comparison outlines the primary factual distinctions between both 
 
 The common online assertion that one sector is an imitation while the other is an untouched wartime relic is misleading.
 
-Older travel descriptions sometimes draw a sharper line between the two sites, describing Ben Duoc as original and Ben Dinh as reconstructed. UNESCO's 2026 World Heritage documentation provides a more nuanced picture: both are protected historical areas that retain important original structures, while both have also undergone restoration and adaptation for visitors. Both are preserved historical areas, but neither should be presented as an untouched wartime time capsule.
+Older travel descriptions sometimes draw a sharper line between the two sites, describing Ben Duoc as original and Ben Dinh as reconstructed. Official World Heritage nomination documentation prepared for UNESCO provides a more nuanced picture: both are protected historical areas that retain important original structures, while both have also undergone restoration and adaptation for visitors. Both are preserved historical areas, but neither should be presented as an untouched wartime time capsule.
 
-In Vietnam's World Heritage documentation submitted to UNESCO on July 15, 2026, UNESCO identifies Ben Duoc and Ben Dinh as the two areas that best retain the original appearance, scale and structure of the tunnel system, with a combined preserved length of approximately 4 km.
+In the official World Heritage nomination dossier (Summary Heritage Report) prepared for UNESCO, heritage experts identify Ben Duoc and Ben Dinh as the two primary sectors that best retain the original appearance, scale and structure of the tunnel system, with approximately 4 km of restored passages conserved for educational and public visits.
 
 The Cu Chi network was not simply a passage network; it functioned as an integrated underground settlement (*làng hầm*) that sustained daily life under intense bombardment. The subterranean system incorporated living quarters, food and ammunition storage, smokeless Hoàng Cầm kitchens, water wells, meeting rooms, surgery and infirmary quarters, and spaces for theatrical performances and cultural exchange.
 
@@ -79,7 +79,7 @@ Both sites have attached shooting ranges where gunfire noise is audible in certa
 
 ## Ben Duoc: Forest Setting & The Memorial Complex
 
-Located in Phu My Hung Commune approximately 70 km from central Saigon, Ben Duoc is set in a more forested landscape bounded by the Saigon River and Thai Thai stream.
+Located in Phu My Hung Commune approximately 70 km from central Saigon, Ben Duoc is set in a spacious, forested landscape along the Saigon River.
 
 The Ben Duoc Memorial Temple (*Đền Tưởng niệm Liệt sĩ Bến Dược*) adds an important cultural and commemorative dimension that is separate from the tunnels themselves. Built from 1993 and opened in phases from 1995, the approximately 7-hectare memorial complex was created as a place of remembrance and incorporates traditional Vietnamese architectural elements, including a ceremonial gateway and a nine-storey memorial tower. The temple commemorates those who died in the wars in the Saigon–Cho Lon–Gia Dinh area.
 
@@ -154,14 +154,14 @@ The quality of interpretation can matter as much as the choice of tunnel site. T
 
 ---
 
-## 2026 UNESCO Heritage Documentation
+## UNESCO World Heritage Nomination Dossier
 
-Official documentation provides important historical and administrative context:
+Official heritage documentation prepared for UNESCO recognition provides important historical and administrative context:
 
-- On **July 15, 2026**, Viet Nam submitted the Cu Chi Tunnels to UNESCO's World Heritage Tentative List under cultural criteria **(iv)** and **(vi)**.
-- A Tentative List submission is an inventory step required before a formal nomination for inscription can be examined by the World Heritage Committee.
-- UNESCO identifies Ben Duoc and Ben Dinh as the two areas that best retain the original appearance, scale and structure of the tunnel system, with a combined preserved length of approximately 4 km.
-- Official heritage figures record that the Cu Chi complex welcomed over **27 million cumulative visitors** by the end of 2025.
+- Vietnamese heritage authorities have prepared the formal **Summary Heritage Report** for the Cu Chi Tunnels nomination to UNESCO under cultural criteria **(iv)** (exceptional military architecture and subterranean engineering) and **(v)** (extraordinary human settlement and environmental adaptation under extreme wartime conditions).
+- The comprehensive nomination roadmap coordinated by Ho Chi Minh City and the Ministry of Culture, Sports and Tourism targets formal examination for UNESCO World Heritage inscription by 2027.
+- Official heritage surveys document Ben Duoc and Ben Dinh as the two core sectors that best preserve the authentic multi-tier layout, appearance, and engineering of the tunnel network, with roughly 4 km of restored passages conserved for educational and public visitation.
+- The Cu Chi Tunnels complex welcomes **over one million domestic and international visitors annually**, maintaining its status as one of Vietnam's most visited National Special Relics.
 - Foreign visitor admission is **135,000 VND** at the time of publication (consisting of 35,000 VND relic entrance fee and 100,000 VND site guide service fee).
 
 ---
@@ -183,7 +183,7 @@ For broader itineraries connecting Ho Chi Minh City with the [Mekong Delta](/des
 Neither site is universally better. Ben Dinh is closer to central Ho Chi Minh City (~50 km) and more commonly used for half-day morning excursions. Ben Duoc is farther away (~70 km) and features a more forested landscape, deeper multi-level tunnels, and the Ben Duoc Martyrs Memorial Temple.
 
 ### Is Ben Duoc really more authentic than Ben Dinh?
-The common assertion that one sector is an imitation while the other is an untouched wartime relic is misleading. Both sites are preserved historical sectors of the Cu Chi Tunnels Historical Site, and UNESCO's 2026 World Heritage Tentative List submission identifies both as the two primary areas retaining the authentic structure, scale, and multi-tier depth of the wartime network.
+The common assertion that one sector is an imitation while the other is an untouched wartime relic is misleading. Both sites are preserved historical sectors of the Cu Chi Tunnels Historical Site, and official World Heritage nomination documentation prepared for UNESCO identifies both as the two primary areas retaining the authentic structure, scale, and multi-tier depth of the wartime network.
 
 ### How much is the admission fee to Cu Chi Tunnels in 2026?
 Foreign visitor admission is 135,000 VND per person at the time of publication (consisting of 35,000 VND relic entrance fee and 100,000 VND site guide service fee). Travelers should check official site notices for current tariffs.
