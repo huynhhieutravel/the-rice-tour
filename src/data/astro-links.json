@@ -107,6 +107,10 @@
       "anchorText": "secret apartment cafes near Ben Thanh"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels: The Complete Travel Guide\n                  The definitive pillar guide to sectors, "
+    },
+    {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
       "anchorText": "Cu Chi Tunnels Half-Day Vs Full-Day\n                  Realistic durations, physical pacing, and city"
     },
@@ -217,6 +221,10 @@
       "anchorText": "travel concierges"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels Travel Guide →\n                The complete pillar guide to sectors, history & logist"
+    },
+    {
       "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
       "anchorText": "Private Tour Worth It? →\n                2026 pricing, car vs tour & group scaling"
     },
@@ -239,6 +247,92 @@
     {
       "targetUrl": "/contact",
       "anchorText": "Contact Travel Concierge"
+    }
+  ],
+  "cu-chi-tunnels-travel-guide": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon hop-on hop-off bus"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/destination/mekong-delta",
+      "anchorText": "Mekong Delta"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Cu Chi Tunnels Half-Day vs. Full-Day: Which Tour Should You Choose?"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi Tunnels by Private Car"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Is a Cu Chi Tunnels Private Tour Worth the Extra Cost?"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds"
+    },
+    {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "khăn rằn checkered scarf"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private journey"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Explore Tour Details & Reserve →"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "Discover 1-Day Itinerary Details →"
+    },
+    {
+      "targetUrl": "/destination/south-vietnam",
+      "anchorText": "Southern Vietnam"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc\n                Which preserved sector should you visit?"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Half-Day vs. Full-Day\n                Realistic travel times, pacing, and effort"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "Visiting Without Crowds\n                Morning windows & bypass strategy"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Private Car Travel Guide\n                Vehicle options, pricing, and routes"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Is A Private Tour Worth It?\n                Honest price, value & guide breakdown"
+    },
+    {
+      "targetUrl": "/contact",
+      "anchorText": "Inquire via WhatsApp / Email"
     }
   ],
   "destinations/index": [
@@ -287,6 +381,10 @@
     {
       "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
       "anchorText": "1-Day Cu Chi & City Highlights"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels: The Complete Travel Guide\n                  The definitive pillar guide to sectors, "
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
@@ -373,6 +471,10 @@
     {
       "targetUrl": "/tailor-made",
       "anchorText": "tailor-made private journey"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels: Complete Travel Guide →\n                The comprehensive pillar guide to sectors & "
     },
     {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
@@ -721,6 +823,10 @@
     {
       "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
       "anchorText": "1-Day Cu Chi & City Highlights"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels: The Complete Travel Guide\n                  The definitive pillar guide to sectors, "
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",

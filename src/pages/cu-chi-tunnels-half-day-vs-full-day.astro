@@ -60,14 +60,14 @@ const authorMap: Record<string, { name: string; role: string; img: string; url: 
   "The Rice Tour Editorial": {
     name: "The Rice Tour Editorial",
     role: "Inbound Travel Specialist",
-    img: "https://media.thericetour.com/uploads/the-rice-tour-editorial.webp",
-    url: "/author/the-rice-tour-editorial"
+    img: "/images/the-rice-tour-editorial.webp",
+    url: "/about-us"
   },
   "Hieu Huynh": {
     name: "Hieu Huynh",
     role: "Founder & Indochina Cultural Guide",
-    img: "https://media.thericetour.com/uploads/author-hieu-huynh.webp",
-    url: "/author/hieu-huynh"
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp",
+    url: "/about-us"
   }
 };
 const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"];
@@ -1337,6 +1337,10 @@ const articleSchema = {
               Related Guides
             </div>
             <div class="space-y-3 text-xs">
+              <a href="/cu-chi-tunnels-travel-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Cu Chi Tunnels Travel Guide →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">The complete pillar guide to sectors, history & logistics</div>
+              </a>
               <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
                 <div class="font-bold text-slate-900 text-[13px] leading-snug">Private Tour Worth It? →</div>
                 <div class="text-slate-500 text-[11.5px] mt-0.5">2026 pricing, car vs tour & group scaling</div>

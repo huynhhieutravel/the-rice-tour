@@ -77,7 +77,7 @@ The trade-off is atmosphere. Mid-morning at Ben Dinh can feel busy as tour group
 
 ## Ben Duoc: Forest Setting & The Memorial Complex
 
-Drive another 25 to 30 minutes northwest into Phu My Hung Commune, and the landscape shifts. Ben Duoc sits right against the curves of the Saigon River, sheltered beneath high forest canopy and rubber groves.
+Drive another 25 to 30 minutes northwest past An Nhon Tay into Phu My Hung Commune, and the landscape shifts. Ben Duoc sits right against the curves of the Saigon River, sheltered beneath high forest canopy and rubber groves.
 
 What truly sets Ben Duoc apart is the **Ben Duoc Memorial Temple** (*Đền Tưởng niệm Liệt sĩ Bến Dược*). Spread across seven manicured hectares, this solemn memorial honors the soldiers, guerrillas, and civilians who lost their lives across the greater Saigon–Cho Lon–Gia Dinh region during the Indochina wars. Commissioned in 1993 and opened in 1995, the complex was built in classical Vietnamese temple style, complete with a stately three-arched gateway (*tam quan*), carved stone steles, and a soaring nine-storey memorial tower.
 

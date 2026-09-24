@@ -12,3 +12,6 @@ globs: "**/*"
 2. **Ưu tiên kiểm tra nhanh và chính xác (Fast Code-Level Verification):**
    - Xác thực kết quả thông qua chạy build script, test terminal (`npm run build`, node execution script), hoặc evaluate nhanh 1 câu lệnh DOM selector duy nhất nếu cần.
    - Báo cáo kết quả ngắn gọn, rõ ràng ngay khi hoàn thành code thay vì chờ đợi các bước giả lập trình duyệt rườm rà.
+
+3. **Luôn khởi chạy và cung cấp link Localhost trước khi deploy / bàn giao:**
+   - Bất kỳ khi nào tạo mới hoặc chỉnh sửa trang/bài viết, BẮT BUỘC phải đảm bảo local dev server đang chạy và cung cấp link `http://localhost:<port>/<slug>` rõ ràng trong câu trả lời để người dùng tự click kiểm tra trực tiếp trước khi tiến hành deploy.

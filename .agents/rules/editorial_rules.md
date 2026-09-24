@@ -56,9 +56,10 @@ Mọi bài viết Pillar Guide khi đóng gói HTML **BẮT BUỘC KẾ THỪA 1
    - Card **Related Travel Guides** (Danh sách bài viết kèm link).
    - Card **Share This Guide** (Nút Facebook + Nút Copy Link có toast phản hồi `OK!`).
 
-## 6. Pre-Deploy 4-Step Checklist & Smoke Test (Kiểm Tra Trước Khi Bàn Giao)
-Trước khi deploy và thông báo hoàn thành cho người dùng, Agent **BẮT BUỘC** phải thực hiện:
+## 6. Pre-Deploy 5-Step Checklist & Localhost Verification (Kiểm Tra Trước Khi Bàn Giao)
+Trước khi bàn giao hoặc thực hiện deploy, Agent **BẮT BUỘC** phải thực hiện đầy đủ 5 bước:
 1. **Language Audit:** Xác nhận 100% text trên trang (từ Hero, TOC, Content, Table đến Sidebar) là tiếng Anh.
 2. **Domain Sweep:** Quét sạch mọi link `fittour.vn` và đổi thành `thericetour.com` hoặc relative URL `/admin/posts/edit?id=...`.
 3. **Asset Sweep:** Không còn bất kỳ link ảnh nào từ `r2.nucuoimekong.com`.
-4. **Smoke Test:** Chạy `curl -sL https://thericetour.com/[slug]` để kiểm chứng trực tiếp trên Live server.
+4. **Localhost Preview (BẮT BUỘC):** Đảm bảo Dev Server đang hoạt động (`npx astro dev --port 4324`), curl test HTTP 200, và cung cấp link xem trước trực quan `http://localhost:4324/[slug]` để người dùng bấm vào duyệt trang trực tiếp trước khi deploy.
+5. **Live Smoke Test (sau khi deploy):** Chạy `curl -sL https://thericetour.com/[slug]` để kiểm chứng trực tiếp trên Live server.

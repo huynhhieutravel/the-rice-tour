@@ -127,7 +127,7 @@ Travel forums often frame this choice as a debate between "authentic" and "touri
 
 | Characteristic | Ben Dinh | Ben Duoc |
 | :--- | :--- | :--- |
-| **Location** | Nhuan Duc area | An Nhon Tay area |
+| **Location** | Nhuan Duc area | Phu My Hung area |
 | **Position from Central HCMC** | Generally closer (~50 km) | Generally farther (~70 km) |
 | **Historical Significance** | Cu Chi District Party Committee base | Regional Military & Party Headquarters |
 | **Preserved Structure** | Three-level preserved tunnel structure | Three-level preserved tunnel structure |
