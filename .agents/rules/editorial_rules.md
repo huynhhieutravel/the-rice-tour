@@ -12,9 +12,10 @@
 > [!IMPORTANT]
 > **Nguyên Tắc Bất Di Bất Dịch: Không Phân Mảnh Giao Diện Giữa File Tĩnh Và Database.**
 > 1. Toàn bộ mã nguồn giao diện 3 Cột Magazine (Hero + Left Sticky TOC + Center Content + Right Sticky Sidebar) **BẮT BUỘC ĐƯỢC ĐÓNG GÓI THÀNH MỘT KHỐI HTML HOÀN CHỈNH (Raw HTML)** và lưu thẳng vào trường `content` của Database D1 (`Post.content`).
-> 2. File `src/pages/[slug].astro` chỉ đóng vai trò là **Dynamic Wrapper mỏng**: Gọi `<BaseLayout>` và render `<Fragment set:html={htmlContent} />` lấy từ `post.content`.
-> 3. Bằng cách này, khi người dùng hoặc biên tập viên vào CMS (`/admin/posts/edit?id=...`) chỉnh sửa bất kỳ nội dung nào và bấm **Update**, trang web ngoài production sẽ **cập nhật tức thì mà vẫn bảo toàn 100% cấu trúc Magazine 3 Cột**.
-> 4. Trường `featuredImage` trong Database khi tạo bài mới luôn đặt là `NULL` (không copy link ảnh watermark cũ của Nụ Cười Mê Kông).
+> 2. File `src/pages/[slug].astro` **BẮT BUỘC TRUY VẤN D1 DATABASE** để lấy dữ liệu bài viết (`post`) và truyền `adminEditUrl={post?.id ? `/admin/posts/edit?id=${post.id}` : '/admin/posts/edit?id=<fallback_id>'}` vào `<BaseLayout>`.
+> 3. **BẮT BUỘC HIỂN THỊ NÚT "Edit Article" TRÊN ADMIN BAR:** Khi Admin đăng nhập, thanh công cụ `#wp-admin-bar` luôn luôn phải hiển thị nút chỉnh sửa bài viết dẫn thẳng tới `/admin/posts/edit?id=...`. Tuyệt đối không để bài viết độc lập mà không liên kết CMS.
+> 4. **Cơ chế Sync Production D1 qua Worker SSR:** Vì lệnh CLI `wrangler d1 execute ... --remote` bị giới hạn quyền token (Code 10000), việc tạo/đồng bộ bài viết vào Production D1 **BẮT BUỘC** thông qua SSR API route (chạy runtime Worker với binding `env.dulichcoguu_d1`) và gọi qua `curl -s https://thericetour.com/api/sync-...`.
+> 5. Trường `featuredImage` trong Database khi tạo bài mới luôn đặt là `NULL` hoặc URL ảnh chính thức từ kho R2 Media của The Rice Tour (không copy link ảnh watermark cũ của Nụ Cười Mê Kông).
 
 ## 3. Zero Truncation Rule (Tuyệt Đối Không Rút Gọn Bài Viết)
 - Mọi bài viết Cẩm Nang Chuyên Sâu (Pillar Guide) trong hệ thống **BẮT BUỘC PHẢI ĐẠT ĐỘ DÀI TỪ 1.800 – 3.500 TỪ**.
@@ -25,7 +26,7 @@
 ## 4. Strict Image & Asset Policy (Quy Tắc Quản Lý Hình Ảnh)
 - **100% CẤM dùng ảnh cũ của Mekong Smile:** Tuyệt đối không chứa chữ chìm watermark, logo, hoặc link CDN `r2.nucuoimekong.com`.
 - **100% CẤM tự ý lấy ảnh mạng / Unsplash:** Không tự ý chèn ảnh placeholder từ internet vào bài viết. 
-- Cấu trúc bài viết tập trung hoàn toàn vào chất lượng văn bản, bảng biểu, box dữ liệu chuyên sâu; vị trí hình ảnh để trống để biên tập viên / người dùng tự upload và chèn ảnh độc quyền từ CMS sau.
+- **ƯU TIÊN KHAI THÁC KHO ẢNH CMS MEDIA LIBRARY:** Chủ động tra cứu bảng `Media` hoặc kho CDN `https://media.thericetour.com/uploads/...` để chọn lọc ảnh thực địa sắc nét, đúng chủ đề đưa vào các vị trí trực quan (Hero, Cover, Card, Section galleries), tránh để bài viết bị thưa thớt hoặc thiếu ảnh. Cấu trúc bài viết luôn hài hòa giữa chiều sâu chữ và hình ảnh thực địa.
 
 ## 5. 3-Column Magazine Architecture Standard (Chuẩn Giao Diện 3 Cột Magazine)
 Mọi bài viết Pillar Guide khi đóng gói HTML **BẮT BUỘC KẾ THỪA 1:1 CẤU TRÚC 3 CỘT CỦA `van-ly-truong-thanh.astro`**:
