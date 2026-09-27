@@ -145,8 +145,8 @@
       "anchorText": "Travel Guides"
     },
     {
-      "targetUrl": "/ben-dinh-vs-ben-duoc",
-      "anchorText": "Ben Dinh and Ben Duoc differ"
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels travel guide"
     },
     {
       "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
@@ -165,12 +165,28 @@
       "anchorText": "How Far Are The Cu Chi Tunnels From Ho Chi Minh City?"
     },
     {
+      "targetUrl": "/khan-ran-nam-bo",
+      "anchorText": "traditional southern Vietnamese khăn rằn"
+    },
+    {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
-      "anchorText": "Private Car Guide"
+      "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City half-day private tour"
+    },
+    {
+      "targetUrl": "/destination/mekong-delta",
+      "anchorText": "Mekong Delta"
     },
     {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
       "anchorText": "Cu Chi Tunnels Half-Day vs. Full-Day"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made private tour"
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",

@@ -18,6 +18,12 @@ html_parts = []
 in_list = False
 in_table = False
 
+def format_inline(val: str) -> str:
+    val = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', val)
+    val = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", val)
+    val = re.sub(r"\*(.*?)\*", r"<em>\1</em>", val)
+    return val
+
 for line in lines:
     stripped = line.strip()
     if not stripped:
@@ -37,6 +43,7 @@ for line in lines:
     # Blockquote
     if stripped.startswith(">"):
         quote_text = stripped.lstrip("> ").strip()
+        quote_text = format_inline(quote_text)
         html_parts.append(f"<blockquote><p>{quote_text}</p></blockquote>")
         continue
 
@@ -59,9 +66,7 @@ for line in lines:
         if not in_list:
             html_parts.append("<ul>")
             in_list = True
-        item = stripped[2:].strip()
-        item = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", item)
-        item = re.sub(r"\*(.*?)\*", r"<em>\1</em>", item)
+        item = format_inline(stripped[2:].strip())
         html_parts.append(f"<li>{item}</li>")
         continue
     else:
@@ -74,15 +79,13 @@ for line in lines:
         cells = [c.strip() for c in stripped.split("|")[1:-1]]
         if all(re.match(r"^:?-+:?$", c) for c in cells if c):
             continue
-        cleaned_cells = [re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", c) for c in cells]
+        cleaned_cells = [format_inline(c) for c in cells]
         row_html = "".join(f"<td>{c}</td>" for c in cleaned_cells)
         html_parts.append(f"<tr>{row_html}</tr>")
         continue
 
     # Regular paragraph
-    p = stripped
-    p = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", p)
-    p = re.sub(r"\*(.*?)\*", r"<em>\1</em>", p)
+    p = format_inline(stripped)
     html_parts.append(f"<p>{p}</p>")
 
 if in_list:
