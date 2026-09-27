@@ -295,7 +295,7 @@ For a detailed timing breakdown, read our guide: [Cu Chi Tunnels Half-Day vs. Fu
 
 ## How To Get To Cu Chi Tunnels
 
-Cu Chi lies roughly 50 to 70 km northwest of central Saigon by road. Driving time matters far more than distance: Highway 22 (the Trans-Asia corridor) carries heavy container truck traffic and constant suburban congestion. Morning rush hour (07:30–09:00 AM) and evening rush hour (04:30–06:30 PM) can easily add 45 minutes to the drive.
+Cu Chi lies roughly 50 to 70 km northwest of central Saigon by road. Driving time matters far more than distance: Highway 22 (the Trans-Asia corridor) carries heavy container truck traffic and constant suburban congestion. Morning rush hour (07:30–09:00 AM) and evening rush hour (04:30–06:30 PM) can easily add 45 minutes to the drive. For detailed transit times, route comparisons, and highway traffic advice, see our dedicated guide: [How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times](/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city).
 
 ![Travelers walking along shaded forest pathways at Cu Chi Tunnels](https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp)
 

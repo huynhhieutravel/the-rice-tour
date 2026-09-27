@@ -1,0 +1,1249 @@
+---
+import { env } from 'cloudflare:workers';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+import { getGlobalSettings } from '@/lib/settingsHelper';
+import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+
+export const prerender = false;
+
+const currentSlug = 'how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city';
+
+// Fetch post from D1 database with fallback
+const d1Db = env?.dulichcoguu_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
+let post: any = null;
+try {
+  if (d1Db) {
+    post = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
+    );
+  }
+} catch (e) {
+  console.warn('[D1 Query Warning] how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city:', e);
+}
+
+// Fallback metadata if D1 is not yet populated
+if (!post) {
+  post = {
+    id: 19820,
+    title: 'How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times',
+    slug: currentSlug,
+    description: 'Realistic distance and travel times from Ho Chi Minh City to Cu Chi Tunnels: Ben Dinh vs. Ben Duoc road kilometers, transit times, traffic bottlenecks, and door-to-door itinerary planning.',
+    featuredImage: 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp',
+    publishedAt: '2026-09-27T08:00:00.000Z',
+    updatedAt: '2026-09-27T10:00:00.000Z',
+    readingTime: 22,
+    author: 'The Rice Tour Editorial',
+    tags: JSON.stringify(['Cu Chi Tunnels', 'Ho Chi Minh City', 'Vietnam Travel Guide', 'Ben Dinh', 'Ben Duoc', 'Travel Logistics', 'Saigon Day Trips'])
+  };
+}
+
+const pageTitle = post.title || 'How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times';
+const pageDesc = post.description || 'Realistic distance and travel times from Ho Chi Minh City to Cu Chi Tunnels: Ben Dinh vs. Ben Duoc road kilometers, transit times, traffic bottlenecks, and door-to-door itinerary planning.';
+const seoTitle = `${pageTitle} | The Rice Tour`;
+const seoDesc = pageDesc;
+const seoImage = post.featuredImage || 'https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp';
+
+// Author & Date Formatting
+const displayDate = post.updatedAt ? new Date(post.updatedAt) : (post.publishedAt ? new Date(post.publishedAt) : new Date());
+const formattedDate = displayDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+const datePrefix = post.updatedAt ? 'Updated on' : 'Published on';
+const createdAtStr = post.publishedAt ? new Date(post.publishedAt).toISOString() : new Date().toISOString();
+const updatedAtStr = post.updatedAt ? new Date(post.updatedAt).toISOString() : createdAtStr;
+
+const authorMap: Record<string, { name: string; role: string; img: string; url: string }> = {
+  "The Rice Tour Editorial": {
+    name: "The Rice Tour Editorial",
+    role: "Inbound Travel Specialist",
+    img: "/images/the-rice-tour-editorial.webp",
+    url: "/about-us"
+  },
+  "Hieu Huynh": {
+    name: "Hieu Huynh",
+    role: "Founder & Indochina Cultural Guide",
+    img: "https://media.fittour.vn/uploads/huynhhieutravel.webp",
+    url: "/about-us"
+  }
+};
+const authorData = authorMap[post.author] || authorMap["The Rice Tour Editorial"];
+
+// --- TABLE OF CONTENTS (TOC) ---
+const tocItems = [
+  { id: "gioi-thieu", title: "Introduction" },
+  { id: "at-a-glance", title: "Cu Chi Tunnels Distance & Travel Times At A Glance" },
+  { id: "where-located", title: "Where Are The Cu Chi Tunnels Located?" },
+  { id: "why-different-distances", title: "Why Travel Websites List Different Distances" },
+  { id: "tripartite-rule", title: "Distance vs. Travel Time vs. Tour Duration" },
+  { id: "transport-modes", title: "Travel Times by Transport Mode" },
+  { id: "why-longer-than-map", title: "Why Cu Chi Takes Longer Than It Looks on Google Maps" },
+  { id: "ben-dinh-vs-ben-duoc", title: "Ben Dinh vs. Ben Duoc: Which Site Takes Less Time?" },
+  { id: "day-budget-breakdown", title: "How Much of Your Day Will a Cu Chi Trip Actually Take?" },
+  { id: "visit-without-tour", title: "Can You Visit Cu Chi Tunnels Without a Tour?" },
+  { id: "best-departure-time", title: "Best Time to Depart Ho Chi Minh City" },
+  { id: "hotel-location-impact", title: "What If Your Hotel Is Not in District 1?" },
+  { id: "combining-destinations", title: "Can You Combine Cu Chi with Other Destinations?" },
+  { id: "pre-booking-checklist", title: "Pre-Booking Tour Checklist" },
+  { id: "frequently-asked-questions", title: "Frequently Asked Questions (FAQ)" },
+  { id: "recommended-tours", title: "Curated Cu Chi Journeys from The Rice Tour" },
+  { id: "conclusion", title: "Final Planning Takeaway" }
+];
+
+// SSR JSON-LD Schemas
+const currentOrigin = 'https://thericetour.com';
+const canonicalUrl = `${currentOrigin}/${currentSlug}`;
+
+const breadcrumbSchema = {
+  items: [
+    { name: "Home", url: `${currentOrigin}/` },
+    { name: "Travel Guides", url: `${currentOrigin}/blog` },
+    { name: pageTitle, url: canonicalUrl }
+  ]
+};
+
+const faqSchema = {
+  questions: [
+    {
+      question: "How far are the Cu Chi Tunnels from downtown Ho Chi Minh City?",
+      answer: "The Cu Chi Tunnels are located approximately 50 to 70 kilometers northwest of central Ho Chi Minh City depending on the gate. Ben Dinh is roughly 50 km from District 1, while Ben Duoc is approximately 70 km away. According to Vietnam's 2026 UNESCO Tentative List dossier, the wider heritage area sits approximately 70 km northwest of central Saigon."
+    },
+    {
+      question: "How long does the drive to Cu Chi Tunnels actually take?",
+      answer: "A private car or taxi takes approximately 1.5 to 2 hours to reach Ben Dinh, and 2 to 2.5 hours to reach Ben Duoc under standard morning conditions. Shared tourist buses taking multiple passenger pickups often require 2 to 3 hours each way."
+    },
+    {
+      question: "Is Ben Dinh closer than Ben Duoc?",
+      answer: "Yes. Ben Dinh is approximately 15 to 20 kilometers closer to central Ho Chi Minh City than Ben Duoc. Choosing Ben Dinh saves approximately 40 to 60 minutes of round-trip driving time."
+    },
+    {
+      question: "How far apart are Ben Dinh and Ben Duoc from each other?",
+      answer: "Ben Dinh and Ben Duoc are separate conserved historical sites located roughly 13 kilometers apart across rural district roads. They are not adjacent gates of the same park."
+    },
+    {
+      question: "Can I visit the Cu Chi Tunnels on a half-day trip?",
+      answer: "Yes. A half-day trip is the most common format. If you leave early (around 07:30 AM) in a private car to Ben Dinh, you can complete the site tour and return to central District 1 by 01:00 to 01:30 PM, consuming around 5.5 to 6 hours door-to-door."
+    },
+    {
+      question: "Can I take a Grab to the Cu Chi Tunnels?",
+      answer: "Yes, booking an outbound Grab from central Saigon is easy and costs approximately 600,000 to 900,000 VND one-way. However, getting an on-demand Grab driver to accept a return ride from rural Cu Chi back to the city can be extremely difficult. If taking Grab, negotiate a waiting fee with your driver to ensure your return transport."
+    },
+    {
+      question: "Is taking the public bus to Cu Chi practical?",
+      answer: "The public bus is very affordable (less than 30,000 VND each way) but takes 2.5 to 3.5 hours in each direction. You must board Bus #13 from Ben Thanh Station to Cu Chi Bus Station, then transfer to Bus #79 to reach Ben Duoc. It is practical only for budget backpackers with flexible, unstructured schedules."
+    },
+    {
+      question: "What is the best departure time from Saigon to avoid traffic?",
+      answer: "Departing between 07:00 and 07:30 AM is ideal. This window allows your vehicle to pass the An Suong highway interchange before morning rush hour builds, arriving at the tunnels right as the forest opens."
+    },
+    {
+      question: "Do I have to crawl through the tunnels during the visit?",
+      answer: "No. Entering the subterranean crawl tunnels is completely voluntary. The majority of the experience consists of shaded walking trails through forest clearings, examining bomb craters, booby-trap demonstrations, and open-air thatch briefing pavilions."
+    },
+    {
+      question: "How much time do you actually spend at the Cu Chi Tunnels site?",
+      answer: "A thorough guided visit of either Ben Dinh or Ben Duoc takes roughly 2 to 2.5 hours on the ground. The remaining time of your half-day excursion is consumed by road travel."
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": pageDesc,
+  "image": seoImage,
+  "datePublished": createdAtStr,
+  "dateModified": updatedAtStr,
+  "author": {
+    "@type": "Person",
+    "name": authorData.name,
+    "url": `${currentOrigin}${authorData.url}`
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Rice Tour",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://media.thericetour.com/uploads/logo-the-rice.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  }
+};
+---
+
+<BaseLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  image={seoImage}
+  canonical={canonicalUrl}
+  preloadImages={[seoImage]}
+  adminEditUrl={post?.id ? `/admin/posts/edit/${post.id}` : undefined}
+  lang="en"
+  ogType="article"
+>
+  <Fragment slot="schema">
+    <JsonLdSchema type="breadcrumb" data={breadcrumbSchema} />
+    <JsonLdSchema type="custom" data={articleSchema} />
+    <JsonLdSchema type="faq" data={faqSchema} />
+  </Fragment>
+
+  <!-- HERO SECTION HEADER (Full-width, Dark Magazine Style) -->
+  <header class="relative bg-slate-950 text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <!-- Background Image with Multi-layer Gradients -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={seoImage} 
+        alt={pageTitle}
+        class="w-full h-full object-cover object-center brightness-75 scale-105 transform motion-safe:animate-subtle-zoom"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-300/80 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Travel Guides</a>
+        <span>/</span>
+        <span class="text-amber-400 font-medium truncate max-w-xs sm:max-w-md">{pageTitle}</span>
+      </nav>
+
+      <!-- Main Title -->
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-[1.15] drop-shadow-lg max-w-5xl">
+        {pageTitle}
+      </h1>
+
+      <!-- Subtitle -->
+      <h2 class="font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium">
+        The Ground Reality of Road Kilometers, Highway 22 Traffic Bottlenecks, and Real Door-to-Door Travel Times
+      </h2>
+
+      <!-- Lead Paragraph -->
+      <p class="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal">
+        The Cu Chi Tunnels are often assumed to be a quick suburban taxi ride outside Ho Chi Minh City. In reality, a nominal 50-kilometer distance requires budgeting 1.5 to 2.5 hours each way across suburban trunk roads. Here is the definitive logistical breakdown of distances, transit modes, and door-to-door time commitments for 2026.
+      </p>
+
+      <!-- Author Meta Row -->
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-slate-300 border-t border-white/15 pt-6 max-w-4xl">
+        <div class="flex items-center gap-2.5">
+          <img 
+            src={authorData.img} 
+            alt={authorData.name} 
+            class="w-9 h-9 rounded-full object-cover border border-amber-400/50 shadow-xs" 
+            onerror="this.src='/favicon.png'"
+          />
+          <div>
+            <div class="font-semibold text-white flex items-center gap-1.5">
+              <span>{authorData.name}</span>
+              <span class="text-blue-400 text-xs" title="Verified Author">✓</span>
+            </div>
+            <div class="text-[11px] text-amber-300/90">{authorData.role}</div>
+          </div>
+        </div>
+
+        <div class="h-8 w-px bg-white/15 hidden sm:block"></div>
+
+        <div>
+          <span class="text-slate-400">{datePrefix}:</span> {formattedDate}
+        </div>
+
+        <div class="h-8 w-px bg-white/15 hidden sm:block"></div>
+
+        <div class="flex items-center gap-1.5 text-xs sm:text-sm">
+          <span>⏱️</span>
+          <span>{post.readingTime} min logistics read</span>
+        </div>
+      </div>
+
+      <!-- Badges Line -->
+      <div class="flex flex-wrap gap-2.5 sm:gap-3 mt-8">
+        <div class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium flex items-center gap-2">
+          <span>📍</span> ~50 to 70 km Northwest
+        </div>
+        <div class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium flex items-center gap-2">
+          <span>⏱️</span> 1.5 to 2.5h Road Travel
+        </div>
+        <div class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium flex items-center gap-2">
+          <span>🚗</span> Highway 22 Route Logistics
+        </div>
+        <div class="bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium flex items-center gap-2">
+          <span>🏛️</span> Ben Dinh vs. Ben Duoc
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT 3-COLUMN LAYOUT ================= -->
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- LEFT COLUMN: Sticky Table of Contents -->
+      <aside class="hidden lg:block lg:col-span-3 sticky top-24">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 overflow-hidden">
+          <div class="flex items-center gap-2 font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
+            <span>📑</span> Table of Contents
+          </div>
+
+          <nav class="space-y-1 text-[13px] font-medium max-h-[calc(100vh-180px)] overflow-y-auto pr-1">
+            <a 
+              href="#gioi-thieu" 
+              class="flex items-center gap-2 py-2 px-2.5 rounded-lg text-amber-900 bg-amber-50/80 font-bold transition-colors"
+            >
+              <span>🏠</span> Introduction
+            </a>
+            
+            <div class="pt-1.5 space-y-1 border-l border-slate-200 ml-3 pl-3">
+              {tocItems.slice(1).map((item) => (
+                <a 
+                  href={`#${item.id}`} 
+                  class="block py-1.5 px-2 text-slate-600 hover:text-amber-900 hover:bg-slate-50 rounded transition-colors truncate"
+                  title={item.title}
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- CENTER COLUMN: Editorial Content -->
+      <main class="col-span-1 lg:col-span-6 space-y-12">
+
+        <!-- Quick Overview Stats Bar (Strictly 3 Items) -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 md:p-6 mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 gap-4 md:gap-0">
+            <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0">
+              <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 text-xl border border-amber-200/80 shrink-0 shadow-xs">📍</div>
+              <div class="min-w-0 flex-1">
+                <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Distance Range</div>
+                <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">~50 – 70 km NW</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+              <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center text-blue-700 text-xl border border-blue-200/80 shrink-0 shadow-xs">⏱️</div>
+              <div class="min-w-0 flex-1">
+                <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Road Transit</div>
+                <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">1.5 to 2.5 hrs</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 md:px-4 first:pl-0 last:pr-0 pt-3 md:pt-0">
+              <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700 text-xl border border-emerald-200/80 shrink-0 shadow-xs">📅</div>
+              <div class="min-w-0 flex-1">
+                <div class="text-[10.5px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-0.5 leading-tight">Day Impact</div>
+                <div class="text-[13.5px] sm:text-[14px] font-bold text-slate-900 leading-snug">5 to 8 hrs total</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="space-y-12 text-slate-800 leading-relaxed font-normal">
+
+          <!-- Section: Introduction -->
+          <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                The Cu Chi Tunnels are one of the most popular day trips from Ho Chi Minh City, but the answer to "how far are the Cu Chi Tunnels from Ho Chi Minh City?" is never just a single number.
+              </p>
+              <p>
+                Vietnam's 2026 UNESCO World Heritage Tentative List submission places the Cu Chi Tunnels approximately <strong>70 km northwest of central Ho Chi Minh City</strong>. However, actual road distance varies depending on your hotel neighborhood, which visitor sector you select, and the highway route your driver takes.
+              </p>
+              <p>
+                For practical day planning, the far more critical metric is <strong>travel time</strong>. Because of urban traffic choke points along Highway 22, travelers should generally budget <strong>1.5 to 3 hours each way</strong> by road.
+              </p>
+              <p>
+                The two main public visitor areas—<strong>Ben Dinh</strong> and <strong>Ben Duoc</strong>—are distinct, physically separate sites within the wider historical relic zone. Ben Dinh is closer to downtown Saigon (~50 km), while Ben Duoc sits farther northwest (~70 km).
+              </p>
+
+              <!-- Callout Quote -->
+              <blockquote class="border-l-4 border-amber-500 pl-4 py-3 my-6 bg-amber-50/60 rounded-r-xl italic text-slate-800 font-serif text-[16.5px]">
+                "The real planning question is not simply how many kilometers lie between Saigon and Cu Chi. It is how much of your waking day the door-to-door transit will actually consume."
+              </blockquote>
+
+              <!-- Featured Image Inside Body -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp" 
+                    alt="Tour group listening to a historical guide in an open-air forested pavilion at Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="eager"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Travelers attending an introductory briefing in an open-air forest clearing before exploring the preserved tunnel sectors.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: At a Glance -->
+          <section id="at-a-glance" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Cu Chi Tunnels Distance & Travel Times At A Glance
+              </h2>
+            </div>
+            <p class="text-slate-700 text-[16px]">
+              Before unpacking the geography, review the practical planning metrics summarized below:
+            </p>
+
+            <div class="overflow-x-auto my-6">
+              <table class="w-full text-left text-sm text-slate-700 border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                <thead class="bg-slate-900 text-white font-serif">
+                  <tr>
+                    <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800 w-1/3">Planning Question</th>
+                    <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Practical Ground Reality</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Geographic Direction</td>
+                    <td class="p-3.5 sm:p-4">Northwest of central Ho Chi Minh City along the Saigon River basin</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">UNESCO Reference Distance</td>
+                    <td class="p-3.5 sm:p-4">~70 km northwest of central District 1</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Actual Road Distance</td>
+                    <td class="p-3.5 sm:p-4">~50 km to Ben Dinh; ~70 km to Ben Duoc</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Road Travel Time (One Way)</td>
+                    <td class="p-3.5 sm:p-4">1.5 to 2 hours for Ben Dinh; 2 to 2.5+ hours for Ben Duoc</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Time Spent On-Site</td>
+                    <td class="p-3.5 sm:p-4">2 to 2.5 hours of guided walking and exploration</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Total Door-to-Door Commitment</td>
+                    <td class="p-3.5 sm:p-4">5 to 7 hours for a half-day; 8 to 10 hours for a full-day</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Private Car Transit</td>
+                    <td class="p-3.5 sm:p-4">1.5 to 2 hours in normal traffic; direct hotel pickup</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Group Tour Bus Transit</td>
+                    <td class="p-3.5 sm:p-4">2 to 3 hours each way due to multiple hotel pickups and rest stops</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Grab / App Taxi</td>
+                    <td class="p-3.5 sm:p-4">Viable outbound (~600k–900k VND); return pickup can be difficult</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Public Bus Option</td>
+                    <td class="p-3.5 sm:p-4">2.5 to 3.5 hours each way (Bus 13 + Bus 79); requires transfers</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Speedboat Option</td>
+                    <td class="p-3.5 sm:p-4">75 to 90 minutes along the Saigon River directly to the jetty</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Primary Variable</td>
+                    <td class="p-3.5 sm:p-4 font-semibold text-amber-800">Highway 22 morning and late afternoon urban traffic congestion</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-500 italic">
+              *Note: These figures represent realistic planning ranges rather than guaranteed speeds. Weather, road construction, and departure hours significantly shift transit times.
+            </p>
+          </section>
+
+          <!-- Section: Where Are The Tunnels Located? -->
+          <section id="where-located" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Where Are The Cu Chi Tunnels Located?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                The Cu Chi Tunnels lie in Cu Chi District, an expansive peri-urban region forming the northwestern boundary of Ho Chi Minh City, bordering Tay Ninh and Binh Duong provinces.
+              </p>
+              <p>
+                The official 2026 UNESCO Tentative List documentation describes Cu Chi as approximately <strong>70 km northwest of downtown Ho Chi Minh City</strong>. It designates two primary protected zones:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                <li><strong>Ben Duoc Sector:</strong> Covering roughly 8.4 hectares in Phu My Hung Commune (bordering historical An Nhon Tay).</li>
+                <li><strong>Ben Dinh Sector:</strong> Covering roughly 6.71 hectares in Nhuan Duc Commune.</li>
+              </ul>
+              <p>
+                Together with buffer belts, the nominated heritage property encompasses <strong>15.11 hectares</strong>, within which roughly <strong>4 km of original and reinforced tunnel networks</strong> are conserved for historical research and tourism.
+              </p>
+              <p>
+                Geographically, the tunnel system sits between the Saigon River and the Vam Co Dong River. The terrain consists of dense, iron-rich laterite red clay beneath secondary rubber plantations and mixed tropical scrub.
+              </p>
+              <p>
+                As you leave the concrete sprawl of central Saigon, the highway transitions past motorcycle repair stalls, suburban markets, and suburban commuter towns before opening into quiet, rural countryside. This environmental shift explains why the journey feels like an expedition rather than a short suburban taxi ride.
+              </p>
+              <p>
+                For a comprehensive breakdown of the entire historical complex, read our <a href="/cu-chi-tunnels-travel-guide" class="text-amber-800 hover:underline font-semibold">Cu Chi Tunnels: The Complete Travel Guide</a>.
+              </p>
+
+              <!-- UNESCO Callout Box -->
+              <div class="p-5 sm:p-6 rounded-2xl bg-amber-50/80 border border-amber-200 text-slate-800 text-sm sm:text-base leading-relaxed my-6 shadow-sm">
+                <div class="font-bold text-amber-900 mb-2 flex items-center gap-2">
+                  <span class="text-xl">🏛️</span> 2026 UNESCO Relic Dossier Summary
+                </div>
+                <p class="text-slate-700 text-sm">
+                  Vietnam officially submitted the Cu Chi Tunnels to the <strong>UNESCO World Heritage Tentative List</strong> on July 15, 2026, under cultural criteria (iv) and (vi). The dossier defines a 15.11-hectare nominated property protecting roughly 4 km of intact multi-tier tunnel chambers across Ben Duoc and Ben Dinh.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Why Websites Give Different Distances -->
+          <section id="why-different-distances" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Why Travel Websites List Different Distances
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Travelers researching Cu Chi often find confusing, contradictory numbers: some guidebooks say 40 km, others say 50 km, and official documents cite 70 km.
+              </p>
+              <p>
+                This variation does not mean one source is incorrect. The discrepancy stems from different reference points:
+              </p>
+              <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-4 space-y-1.5 shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600 font-mono">01.</span> Urban Starting Point
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Measuring from Ben Thanh Market or the Opera House produces a different kilometer count than measuring from Tan Binh near the airport or Thu Duc on the eastern bank.
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-4 space-y-1.5 shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600 font-mono">02.</span> Ben Dinh vs. Ben Duoc
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    The two visitor gates sit roughly 13 km apart from each other. Measuring to Ben Dinh gives ~50 km; measuring to Ben Duoc gives ~70 km.
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-4 space-y-1.5 shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600 font-mono">03.</span> Straight-Line vs. Real Road
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    As the crow flies, Cu Chi is 40 to 45 km away. Vehicles must follow Route 22 and provincial bends, adding substantial road kilometers.
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-slate-50/70 p-4 space-y-1.5 shadow-2xs">
+                  <div class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                    <span class="text-amber-600 font-mono">04.</span> District vs. Relic Gate
+                  </div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Cu Chi District covers over 430 km². The southern border starts 30 km out, while the actual historical gates sit at the far northwestern perimeter.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Tripartite Rule -->
+          <section id="tripartite-rule" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Distance vs. Travel Time vs. Tour Duration: The Tripartite Rule
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Independent travelers frequently conflate three distinct measurements:
+              </p>
+              <ul class="list-disc pl-6 space-y-1 text-slate-700">
+                <li><strong>Distance (km):</strong> Pure geographic space on a road map (~50–70 km).</li>
+                <li><strong>Travel Time (hrs):</strong> The duration spent sitting inside a moving vehicle (1.5–2.5 hrs each way).</li>
+                <li><strong>Tour Duration (hrs):</strong> The total chunk of your vacation day consumed from stepping out of your hotel lobby to stepping back in (5–8 hrs).</li>
+              </ul>
+
+              <div class="overflow-x-auto my-6">
+                <table class="w-full text-left text-sm text-slate-700 border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                  <thead class="bg-slate-900 text-white font-serif">
+                    <tr>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Dimension</th>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Ben Dinh Sector</th>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Ben Duoc Sector</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 bg-white">
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">One-Way Road Distance</td>
+                      <td class="p-3.5 sm:p-4">~50 km</td>
+                      <td class="p-3.5 sm:p-4">~70 km</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">One-Way Travel Time</td>
+                      <td class="p-3.5 sm:p-4">1.5 to 2 hours</td>
+                      <td class="p-3.5 sm:p-4">2 to 2.5 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Time Spent Inside the Relic</td>
+                      <td class="p-3.5 sm:p-4">2 to 2.5 hours</td>
+                      <td class="p-3.5 sm:p-4">2.5 to 3 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Half-Day Door-to-Door Impact</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-amber-900">5 to 6.5 hours</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-amber-900">6.5 to 8 hours</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                Because traffic delays of 30 to 60 minutes are common along the suburban trunk roads, planning your afternoon around tight flight connections or rigid dinner bookings based solely on kilometer estimates is a major risk.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Transport Modes -->
+          <section id="transport-modes" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                How Long Does It Take to Reach Cu Chi by Transport Mode?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Road conditions vary widely depending on how you choose to travel:
+              </p>
+
+              <div class="space-y-4 my-6">
+                <!-- Private Car -->
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-base mb-1 flex items-center justify-between">
+                    <span class="flex items-center gap-2">🚗 1. Private Car (Fastest & Most Predictable)</span>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Recommended</span>
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A private vehicle provides direct door-to-door transit without stops for other hotel guests. Under normal morning traffic, expect <strong>1.5 to 1 hour 45 minutes</strong> to Ben Dinh, and <strong>2 to 2 hours 15 minutes</strong> to Ben Duoc. Leaving at 07:00 or 07:30 AM allows your driver to clear urban choke points before morning commuter rush hour peaks.  
+                    For a full route breakdown, consult our guide on <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:underline font-semibold">Visiting Cu Chi Tunnels by Private Car: The Complete Guide</a>.
+                  </p>
+                </div>
+
+                <!-- Group Tour Bus -->
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-base mb-1">
+                    🚌 2. Shared Group Tour Bus (Most Common Budget Route)
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Large 29-seat or 45-seat coach tours take <strong>2 to 3 hours each way</strong>. The coach must snake through District 1 to pick up guests at 6 to 10 hotels, and virtually all mass tours schedule a mandatory 25-minute stop at a lacquerware handicraft workshop along the highway.
+                  </p>
+                </div>
+
+                <!-- App Taxi -->
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-base mb-1">
+                    📱 3. App-Based Ride Hailing (Grab or Be)
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    A 4-seat or 7-seat Grab can reach Ben Dinh in <strong>1.5 to 2 hours</strong>. While outbound rides from District 1 are easily booked (costing roughly 600,000 to 900,000 VND one-way), securing a return Grab ride from rural Cu Chi back to the city in the afternoon is notoriously unreliable.
+                  </p>
+                </div>
+
+                <!-- Public Bus -->
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-base mb-1">
+                    🚍 4. Public Transit Buses (Lowest Cost, Highest Time Investment)
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Taking public transit requires <strong>2.5 to 3.5 hours each way</strong>. You take Bus #13 from Ben Thanh Bus Station to Cu Chi Bus Station (approx. 1.5 to 2 hrs), then transfer to Bus #79 heading northwest to Ben Duoc (approx. 45 to 60 mins). This option costs less than 30,000 VND total, but easily consumes 6 to 7 hours in travel alone.
+                  </p>
+                </div>
+
+                <!-- Speedboat -->
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
+                  <div class="font-bold text-slate-900 text-base mb-1">
+                    🚤 5. Speedboat Along the Saigon River (Scenic Alternative)
+                  </div>
+                  <p class="text-sm text-slate-600 leading-relaxed">
+                    Speedboat operators run express water journeys from Bach Dang Wharf in central District 1 directly to the Ben Dinh river jetty. The river cruise takes <strong>75 to 90 minutes</strong>, bypassing suburban road congestion entirely, though total trip time still averages 5 to 6 hours once walking and briefings are factored in.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Mid-article Image -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-check-in-cu-chi-ben-dinh-historic-site-the-rice.webp" 
+                    alt="Travelers arriving at the forested entrance gate of Cu Chi Tunnels Ben Dinh historical site - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Travelers arriving at Ben Dinh historical site, situated approximately 50 km northwest of downtown Ho Chi Minh City.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Why Longer than Maps -->
+          <section id="why-longer-than-map" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Why Cu Chi Takes Longer Than It Looks on Google Maps
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                A 50-kilometer highway journey in Western Europe or North America takes roughly 35 to 45 minutes. In southern Vietnam, that same 50 km requires at least 90 to 120 minutes. Several factors explain why:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                <li><strong>Urban Sprawl Bottlenecks:</strong> Leaving District 1 requires traversing District 3, Phu Nhuan, Tan Binh, and District 12. Congestion around the An Suong roundabout—the major freight interchange connecting Saigon with the Cambodian border—often slows traffic to a crawl.</li>
+                <li><strong>Mixed-Traffic Speed Limits:</strong> Highway 22 (Quoc Lo 22) carries heavy container trucks, interprovincial buses, delivery vans, and thousands of motorbikes sharing adjacent lanes. Speed limits through populated peri-urban sections are strictly enforced at 50 to 60 km/h.</li>
+                <li><strong>Traffic Light Clusters:</strong> Dozens of signalized intersections cross the highway through Hoc Mon and southern Cu Chi, preventing steady highway cruising speeds.</li>
+                <li><strong>Monsoon Cloudbursts:</strong> During the May-to-November rainy season, heavy afternoon downpours can cause localized road ponding, reducing vehicle speeds significantly.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Ben Dinh vs Ben Duoc -->
+          <section id="ben-dinh-vs-ben-duoc" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Ben Dinh vs. Ben Duoc: Which Site Takes Less Time?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Ben Dinh and Ben Duoc are not merely two turnstiles leading to the same clearing. They are separate historical sites situated roughly <strong>13 km apart</strong> across Cu Chi's rural road network.
+              </p>
+
+              <div class="overflow-x-auto my-6">
+                <table class="w-full text-left text-sm text-slate-700 border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                  <thead class="bg-slate-900 text-white font-serif">
+                    <tr>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Criterion</th>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Ben Dinh Sector</th>
+                      <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Ben Duoc Sector</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 bg-white">
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Exact Commune Location</td>
+                      <td class="p-3.5 sm:p-4">Nhuan Duc Commune</td>
+                      <td class="p-3.5 sm:p-4">Phu My Hung Commune</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Distance from District 1</td>
+                      <td class="p-3.5 sm:p-4">~50 km</td>
+                      <td class="p-3.5 sm:p-4">~70 km</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">One-Way Drive Time</td>
+                      <td class="p-3.5 sm:p-4">1.5 to 2 hours</td>
+                      <td class="p-3.5 sm:p-4">2 to 2.5 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Visitor Density</td>
+                      <td class="p-3.5 sm:p-4">High (majority of package tour buses)</td>
+                      <td class="p-3.5 sm:p-4">Low (independent travelers, school groups)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Wartime Role</td>
+                      <td class="p-3.5 sm:p-4">Cu Chi District Party Committee base</td>
+                      <td class="p-3.5 sm:p-4">Regional Zone Command of Saigon–Gia Dinh</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Signature Memorial</td>
+                      <td class="p-3.5 sm:p-4">Relic displays & bomb craters</td>
+                      <td class="p-3.5 sm:p-4">Ben Duoc Martyrs Memorial Temple (7 ha, 44,752 names)</td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                      <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Best Suited For</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-amber-900">Tight schedules & half-day morning tours</td>
+                      <td class="p-3.5 sm:p-4 font-bold text-amber-900">Reflective pacing, photography & deep history</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                If your primary constraint is minimizing time spent in transit, <strong>Ben Dinh is the clear logistical winner</strong>. If your priority is quiet woodland atmosphere and cultural depth without bus crowds, <strong>Ben Duoc is well worth the extra 45 minutes on the road</strong>.
+              </p>
+              <p>
+                For a deep-dive analysis, read our dedicated comparison: <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:underline font-semibold">Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?</a>
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Day Budget Breakdown -->
+          <section id="day-budget-breakdown" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                How Much of Your Day Will a Cu Chi Trip Actually Take?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                How your excursion fits into your Saigon itinerary depends on the pacing model you select:
+              </p>
+
+              <div class="grid sm:grid-cols-3 gap-4 my-6 not-prose">
+                <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-2 shadow-xs">
+                  <div class="text-xs font-bold text-amber-700 uppercase tracking-wider">Fast Half-Day</div>
+                  <h3 class="font-serif text-lg font-bold text-slate-900">5 to 6.5 Hours</h3>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    07:30 AM departure to Ben Dinh. 2 hours on-site. Back in District 1 by 01:15 PM. Leaves afternoon open for the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:underline font-semibold">Independence Palace</a> or a <a href="/saigon-hop-on-hop-off-bus-guide" class="text-amber-800 hover:underline font-semibold">Saigon hop-on hop-off bus</a> tour.
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-2 shadow-xs">
+                  <div class="text-xs font-bold text-blue-700 uppercase tracking-wider">Relaxed Half-Day</div>
+                  <h3 class="font-serif text-lg font-bold text-slate-900">6.5 to 8 Hours</h3>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    08:00 AM departure to Ben Duoc. 2.5 hours exploring multi-tier tunnels and memorial temple. Riverside lunch included. Return to District 1 by 03:30 PM.
+                  </p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-5 space-y-2 shadow-xs">
+                  <div class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Full-Day Circuit</div>
+                  <h3 class="font-serif text-lg font-bold text-slate-900">8 to 10 Hours</h3>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Full day combining Cu Chi with Tay Ninh Cao Dai Temple or downtown Saigon monuments. To decide between these structures, read our comparison on <a href="/cu-chi-tunnels-half-day-vs-full-day" class="text-amber-800 hover:underline font-semibold">Cu Chi Tunnels Half-Day vs. Full-Day: Which Tour Should You Choose?</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Image inside Body -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp" 
+                    alt="Tour guide demonstrating concealed trapdoors and wooden punji stick traps in Cu Chi forest" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  A licensed heritage docent demonstrating wooden punji stick traps in the shaded forest circuits of Cu Chi.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Can You Visit Without a Tour? -->
+          <section id="visit-without-tour" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Can You Visit Cu Chi Tunnels Without a Tour?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Yes, independent visits are entirely feasible for travelers who prefer self-guided exploration. However, independent visitors must solve the return logistics beforehand:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                <li><strong>Renting a Private Vehicle with Driver:</strong> The most seamless independent option. The driver waits in the shaded parking lot while you tour the site at your own pace.</li>
+                <li><strong>Motorbike Expedition:</strong> Popular with adventurous backpackers. Riding 50 to 70 km along Highway 22 requires navigating heavy industrial truck traffic, intense exhaust fumes, and unpredictable merging. It takes roughly 2 to 2.5 hours each way and is recommended only for experienced riders.</li>
+                <li><strong>Public Bus DIY:</strong> Budget-friendly, but requires navigating bus bay transfers at Cu Chi town. Ensure you carry small Vietnam Dong cash denominations and keep track of late-afternoon return bus timetables.</li>
+                <li><strong>Hiring an On-Site Guide:</strong> Upon paying your entrance ticket (135,000 VND foreign visitor tariff), you are assigned an official on-site heritage docent who leads you through the forest circuits and underground chambers.</li>
+              </ul>
+              <p>
+                To evaluate whether booking a dedicated private guide is worth the expense, review our breakdown: <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="text-amber-800 hover:underline font-semibold">Is a Cu Chi Tunnels Private Tour Worth the Extra Cost?</a>
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Best Time to Depart -->
+          <section id="best-departure-time" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Best Time to Depart Ho Chi Minh City
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Timing your departure is the single most effective way to cut down road transit time:
+              </p>
+              <div class="space-y-3 my-4">
+                <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/70">
+                  <div class="font-bold text-amber-900 text-sm mb-1">🌟 The Golden Window (07:00 – 07:30 AM)</div>
+                  <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    Departing early clears the An Suong bottleneck before commuter congestion peaks. You reach Ben Dinh or Ben Duoc right as gates open (07:30–08:00 AM), exploring shaded forest trails during the coolest hour of the day before the first large group tour buses arrive at 09:30 AM.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                  <div class="font-bold text-slate-900 text-sm mb-1">⚠️ The Midday Rush (08:00 – 09:00 AM)</div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Peak traffic window. The drive can easily stretch past 2.5 hours, and you will arrive at the relic during peak heat alongside dozens of tour groups.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-white">
+                  <div class="font-bold text-slate-900 text-sm mb-1">🌿 The Afternoon Window (12:30 – 01:00 PM)</div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    A viable alternative for late risers. Morning tour crowds begin departing around 12:30 PM, leaving the afternoon quiet. However, you will face higher forest humidity and must manage the return drive through evening commuter gridlock between 04:30 and 06:30 PM.
+                  </p>
+                </div>
+              </div>
+              <p>
+                For detailed tactical advice on crowd avoidance, check <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="text-amber-800 hover:underline font-semibold">How to Visit Cu Chi Tunnels Without the Crowds</a>.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Hotel Location Impact -->
+          <section id="hotel-location-impact" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                What If Your Hotel Is Not in District 1?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Travel times quoted in standard guidebooks assume a starting point in central District 1 (near Nguyen Hue or Dong Khoi). If you are staying elsewhere, adjust your expectations:
+              </p>
+              <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                <li><strong>Tan Binh District (Near Tan Son Nhat Airport):</strong> You are already on the northwestern side of town. The drive is roughly 10 to 12 km shorter, saving 20 to 30 minutes in morning traffic.</li>
+                <li><strong>District 2 / Thao Dien (Thu Duc City):</strong> Located east of the Saigon River. Your vehicle must cross the city center or navigate the northern beltway, adding 30 to 45 minutes to outbound and inbound journeys.</li>
+                <li><strong>District 7 (Phu My Hung):</strong> Located south of downtown. Crossing through central Saigon during morning rush hour adds at least 45 minutes to total travel time.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section: Combining Destinations -->
+          <section id="combining-destinations" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Can You Combine Cu Chi with Other Destinations?
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                Because Cu Chi lies outside central Saigon, travelers frequently attempt multi-destination combinations:
+              </p>
+
+              <div class="space-y-4 my-4">
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
+                  <div class="font-bold text-slate-900 text-sm mb-1">1. Cu Chi Tunnels + Cao Dai Holy See (Tay Ninh)</div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    A classic full-day combination. Tay Ninh lies roughly 55 km further northwest along Highway 22 near the Cambodian border. Combining both means spending 5 to 6 hours inside a vehicle throughout the day. It works well if you want to witness the 12:00 PM noon mass prayer at the Cao Dai Great Temple, but leaves little downtime.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
+                  <div class="font-bold text-slate-900 text-sm mb-1">2. Cu Chi Tunnels + The Mekong Delta</div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    While frequently advertised by budget agencies as a "one-day mega tour", Cu Chi and My Tho (the gateway to the <a href="/destination/mekong-delta" class="text-amber-800 hover:underline font-semibold">Mekong Delta</a>) lie in completely opposite geographic directions. Combining them requires driving northwest in the morning, cutting back across the entirety of Ho Chi Minh City at midday, and heading southwest into the delta in the afternoon. You spend 6 to 7 hours in transit to get hurried 1-hour glimpses of both. We strongly advise dedicating separate days to each region.
+                  </p>
+                </div>
+
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60">
+                  <div class="font-bold text-slate-900 text-sm mb-1">3. Cu Chi Tunnels + Downtown Saigon Historical Monuments</div>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    The most practical combination. Spend the morning at Cu Chi, return to central Saigon by 01:00 PM for lunch, and spend the afternoon walking through the War Remnants Museum, Independence Palace, and colonial French heritage landmarks.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                If you desire a fully customized schedule, our team can arrange a <a href="/tailor-made" class="text-amber-800 hover:underline font-semibold">tailor-made private journey</a> tailored to your exact pacing.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section: Pre-Booking Checklist -->
+          <section id="pre-booking-checklist" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Pre-Booking Tour Checklist
+              </h2>
+            </div>
+            <p class="text-slate-700 text-[16px]">
+              Before booking any excursion to the tunnels, verify these details with your operator:
+            </p>
+
+            <div class="overflow-x-auto my-6">
+              <table class="w-full text-left text-sm text-slate-700 border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-2xs">
+                <thead class="bg-slate-900 text-white font-serif">
+                  <tr>
+                    <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800 w-1/3">Verification Item</th>
+                    <th class="p-3.5 sm:p-4 font-bold border-b border-slate-800">Why It Matters</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Specific Visitor Sector</td>
+                    <td class="p-3.5 sm:p-4">Confirm whether the tour visits Ben Dinh or Ben Duoc (changes road time by 1+ hr)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Pickup Protocol</td>
+                    <td class="p-3.5 sm:p-4">Direct private pickup vs. a 45-minute shared shuttle sweep through District 1</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Commercial Workshop Stops</td>
+                    <td class="p-3.5 sm:p-4">Check whether an unannounced 30-minute lacquerware shopping stop is included</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Departure Hour</td>
+                    <td class="p-3.5 sm:p-4">An early 07:30 AM departure saves up to an hour of road congestion</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Entrance Fee Inclusions</td>
+                    <td class="p-3.5 sm:p-4">Confirm whether the 135,000 VND site entrance ticket is covered in the quote</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 sm:p-4 font-semibold text-slate-900">Return Drop-off Window</td>
+                    <td class="p-3.5 sm:p-4">Ensure your scheduled return leaves ample buffer for evening flights or dining</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section: FAQs -->
+          <section id="frequently-asked-questions" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Frequently Asked Questions (FAQ)
+              </h2>
+            </div>
+            
+            <div class="space-y-4 my-6">
+              {faqSchema.questions.map((faq) => (
+                <details class="group bg-white rounded-2xl border border-slate-200 p-5 open:bg-slate-50/50 transition-colors shadow-2xs">
+                  <summary class="font-serif font-bold text-base sm:text-lg text-slate-900 cursor-pointer list-none flex justify-between items-center gap-4">
+                    <span>{faq.question}</span>
+                    <span class="text-amber-500 group-open:rotate-180 transition-transform duration-200 text-xl font-mono">↓</span>
+                  </summary>
+                  <p class="mt-3 text-slate-600 text-sm sm:text-[15px] leading-relaxed pt-2 border-t border-slate-100">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- Section: Recommended Tours -->
+          <section id="recommended-tours" class="scroll-mt-28 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4 mb-2">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Curated Cu Chi Journeys from The Rice Tour
+              </h2>
+            </div>
+            <p class="text-slate-700 text-[16px]">
+              To experience the historical depth of Cu Chi without navigating bus crowds or transportation stress, consider our hand-crafted small group and private journeys:
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6 my-6 not-prose">
+              <!-- Tour 1 -->
+              <div class="rounded-2xl border border-amber-200 bg-amber-50/50 p-6 shadow-sm flex flex-col justify-between space-y-4">
+                <div class="space-y-2">
+                  <div class="text-xs font-bold text-amber-800 uppercase tracking-wider">Bespoke Morning Excursion</div>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">Half-Day Premium Cu Chi Tunnels Tour</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    A private morning expedition designed around an early 07:30 AM departure. Travel in premium air-conditioned comfort directly to either Ben Dinh or Ben Duoc, explore at an unhurried pace with a licensed heritage specialist, and return to central Saigon in time for lunch.
+                  </p>
+                </div>
+                <a 
+                  href="/tour/half-day-cu-chi-tunnels-tour" 
+                  class="inline-block py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs text-center transition-colors shadow-2xs"
+                >
+                  Explore Half-Day Tour Details & Reserve Your Journey →
+                </a>
+              </div>
+
+              <!-- Tour 2 -->
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm flex flex-col justify-between space-y-4">
+                <div class="space-y-2">
+                  <div class="text-xs font-bold text-blue-700 uppercase tracking-wider">Full-Day Historical Circuit</div>
+                  <h3 class="font-serif text-xl font-bold text-slate-900">1-Day Cu Chi & Saigon Discovery</h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    A comprehensive historical circuit connecting the rural battlefield resilience of Cu Chi in the morning with Saigon's landmark monuments in the afternoon, including the Independence Palace and French colonial architectural icons. Includes a curated regional lunch.
+                  </p>
+                </div>
+                <a 
+                  href="/tour/1-day-premium-cu-chi-tunnels" 
+                  class="inline-block py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center transition-colors shadow-2xs"
+                >
+                  Discover The Complete 1-Day Itinerary & Reserve →
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section: Final Planning Takeaway -->
+          <section id="conclusion" class="scroll-mt-28 space-y-4">
+            <div class="border-l-4 border-amber-500 pl-4 mb-4">
+              <h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">
+                Final Planning Takeaway
+              </h2>
+            </div>
+            <div class="text-slate-700 text-[16px] sm:text-[17px] leading-relaxed space-y-4">
+              <p>
+                When planning an excursion from Ho Chi Minh City to Cu Chi, never base your schedule on odometer kilometers alone.
+              </p>
+              <p>
+                A nominal 50 km drive can easily become a two-hour journey when suburban highway traffic thickens. Plan your day around <strong>transit buffer, site choice (Ben Dinh for speed vs. Ben Duoc for depth), and total door-to-door time</strong>.
+              </p>
+              <p>
+                With an early morning start and dependable private transportation, the Cu Chi Tunnels offer one of the most rewarding and soberingly educational excursions you can experience anywhere in <a href="/destination/south-vietnam" class="text-amber-800 hover:underline font-semibold">Southern Vietnam</a>.
+              </p>
+            </div>
+          </section>
+
+        </article>
+      </main>
+
+      <!-- RIGHT COLUMN: Sticky Sidebar -->
+      <aside class="col-span-1 lg:col-span-3">
+        <div class="sticky top-24 space-y-6">
+
+          <!-- Card 1: Quick Logistics Facts -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 space-y-4">
+            <div class="flex items-center gap-2 font-bold text-slate-900 border-l-4 border-amber-500 pl-3 text-xs tracking-wider uppercase">
+              <span>⚡</span> Quick Logistics Summary
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
+                <span class="text-base shrink-0">📍</span>
+                <div>
+                  <div class="font-bold text-slate-900">Geographic Position</div>
+                  <div class="text-slate-600">~50 to 70 km NW of District 1</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
+                <span class="text-base shrink-0">🚗</span>
+                <div>
+                  <div class="font-bold text-slate-900">Driving Duration</div>
+                  <div class="text-slate-600">1.5 to 2.5 hours each way</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5 pb-2.5 border-b border-slate-100">
+                <span class="text-base shrink-0">🌅</span>
+                <div>
+                  <div class="font-bold text-slate-900">Best Departure Window</div>
+                  <div class="text-slate-600">07:00 – 07:30 AM (Beats rush hour)</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <span class="text-base shrink-0">🏛️</span>
+                <div>
+                  <div class="font-bold text-slate-900">Visitor Sectors</div>
+                  <div class="text-slate-600">Ben Dinh (~50 km) & Ben Duoc (~70 km)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Related Cu Chi Travel Guides -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 space-y-4">
+            <div class="flex items-center gap-2 font-bold text-slate-900 border-l-4 border-blue-500 pl-3 text-xs tracking-wider uppercase">
+              <span>📖</span> Related Cu Chi Guides
+            </div>
+
+            <div class="space-y-2.5 text-xs sm:text-sm">
+              <a 
+                href="/cu-chi-tunnels-travel-guide" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Cu Chi Tunnels: The Complete Travel Guide</div>
+                <div class="text-xs text-slate-500">The authoritative 2026 pillar guide</div>
+              </a>
+
+              <a 
+                href="/ben-dinh-vs-ben-duoc" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Ben Dinh vs. Ben Duoc</div>
+                <div class="text-xs text-slate-500">Which visitor sector should you visit?</div>
+              </a>
+
+              <a 
+                href="/cu-chi-tunnels-half-day-vs-full-day" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Half-Day vs. Full-Day Cu Chi Tours</div>
+                <div class="text-xs text-slate-500">Compare tour pacing and combinations</div>
+              </a>
+
+              <a 
+                href="/visiting-cu-chi-tunnels-by-private-car" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Visiting Cu Chi by Private Car</div>
+                <div class="text-xs text-slate-500">Routes, rates, and highway advice</div>
+              </a>
+
+              <a 
+                href="/how-to-visit-cu-chi-tunnels-without-the-crowds" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Visiting Without Crowds</div>
+                <div class="text-xs text-slate-500">Timing strategies to avoid tour bus convoys</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Share This Guide -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 space-y-3">
+            <div class="font-bold text-slate-900 text-xs tracking-wider uppercase border-l-4 border-emerald-500 pl-3">
+              Share This Guide
+            </div>
+            <p class="text-xs text-slate-600">
+              Found this logistical breakdown helpful? Share it with fellow travelers planning their Vietnam trip:
+            </p>
+            <div class="flex items-center gap-2 pt-1">
+              <a 
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="flex-1 py-2 px-3 text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors shadow-2xs"
+              >
+                Facebook
+              </a>
+              <button 
+                onclick={`navigator.clipboard.writeText('${canonicalUrl}'); alert('Article URL copied to clipboard!');`} 
+                class="flex-1 py-2 px-3 text-center text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
+              >
+                Copy Link
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</BaseLayout>
