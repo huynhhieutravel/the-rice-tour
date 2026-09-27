@@ -1,24 +1,48 @@
 ---
+import { env } from 'cloudflare:workers';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLdSchema from '../components/seo/JsonLdSchema.astro';
+import { safeQueryCritical } from '@/lib/db-client';
+
+export const prerender = false;
 
 // --- DATA CONFIGURATION ---
 const currentSlug = "how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city";
-const pageTitle = "How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times (2026)";
-const pageDescription = "A realistic guide to road distances, travel times, transport options, and door-to-door itinerary planning from Ho Chi Minh City to the Cu Chi Tunnels.";
 
-const post = {
-  title: pageTitle,
-  description: pageDescription,
-  slug: currentSlug,
-  author: "The Rice Tour Editorial",
-  publishedAt: "2026-09-27T08:00:00.000Z",
-  updatedAt: "2026-09-27T13:45:00.000Z",
-  readingTime: 20,
-  category: "Travel Guides",
-  featuredImage: "https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp",
-  tags: ["Cu Chi Tunnels", "Ho Chi Minh City", "Vietnam Travel Guide", "Ben Dinh", "Ben Duoc", "Travel Logistics", "Saigon Day Trips"]
-};
+// Fetch post from D1 database with fallback
+const d1Db = (env as any)?.dulichcoguu_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
+let post: any = null;
+try {
+  if (d1Db) {
+    post = await safeQueryCritical(
+      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
+    );
+  }
+} catch (e) {
+  console.warn('[D1 Query Warning] how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city:', e);
+}
+
+// Fallback metadata if D1 query is empty or local
+if (!post) {
+  post = {
+    id: 33742,
+    title: "How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times (2026)",
+    description: "A realistic guide to road distances, travel times, transport options, and door-to-door itinerary planning from Ho Chi Minh City to the Cu Chi Tunnels.",
+    slug: currentSlug,
+    author: "The Rice Tour Editorial",
+    publishedAt: "2026-09-27T08:00:00.000Z",
+    updatedAt: "2026-09-27T13:45:00.000Z",
+    readingTime: 20,
+    category: "Travel Guides",
+    featuredImage: "https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp",
+    tags: ["Cu Chi Tunnels", "Ho Chi Minh City", "Vietnam Travel Guide", "Ben Dinh", "Ben Duoc", "Travel Logistics", "Saigon Day Trips"]
+  };
+}
+
+const pageTitle = post?.title || "How Far Are The Cu Chi Tunnels From Ho Chi Minh City? Distance & Travel Times (2026)";
+const pageDescription = post?.excerpt || post?.description || "A realistic guide to road distances, travel times, transport options, and door-to-door itinerary planning from Ho Chi Minh City to the Cu Chi Tunnels.";
+const adminEditUrl = post?.id ? `/admin/posts/edit?id=${post.id}` : '/admin/posts/edit?id=33742';
 
 // Format dates
 const pubDate = new Date(post.publishedAt);
@@ -168,6 +192,7 @@ const articleSchema = {
   image={post.featuredImage}
   canonical={canonicalUrl}
   preloadImages={[post.featuredImage]}
+  adminEditUrl={adminEditUrl}
   ogType="article"
   lang="en"
 >
