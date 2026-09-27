@@ -137,7 +137,7 @@ The 100,000 VND component is specifically identified in the current tariff as a 
 
 ## Why The Visitor Tunnels Differ From Wartime Dimensions
 
-The tunnel system began developing in the late 1940s, with UNESCO's 2026 Tentative List tracing its origins to 1946. Today, the passages open to visitors have been adapted for tourism. UNESCO's 2026 Tentative List documentation records original and conserved tunnel dimensions at both Ben Duoc and Ben Dinh that remain very narrow, illustrating why the visitor experience has been modified for modern travelers.
+The tunnel system began developing in the late 1940s, with historical records tracing its origins to 1946. Today, the passages open to visitors have been adapted for tourism. Scientific survey records and national heritage documentation record original conserved tunnel dimensions at both Ben Duoc and Ben Dinh that remain very narrow, illustrating why the visitor experience has been modified for modern travelers.
 
 - **Ben Duoc Recorded Measurements:** Level 1: ~62 cm × 104 cm; Level 3: ~75 cm × 95 cm.
 - **Ben Dinh Recorded Measurements:** Passages around 62–65 cm wide; constricted sections down to ~40 × 73 cm.
@@ -145,9 +145,9 @@ The tunnel system began developing in the late 1940s, with UNESCO's 2026 Tentati
 This is why “authenticity” is better understood as the historical site and preserved tunnel network rather than assuming that every passage tourists crawl through remains untouched.
 
 ### Why Were The Tunnels Built In Zigzags?
-The tunnel network was not designed as a simple straight corridor. UNESCO's 2026 documentation describes winding and zigzag passages, staggered tunnel levels, and concealed connections between them. Straight segments at Ben Duoc were generally kept under 30 metres to limit blast damage and hinder straight-line pursuit.
+The tunnel network was not designed as a simple straight corridor. Historical architectural documentation describes winding and zigzag passages, staggered tunnel levels, and concealed connections between them. Straight segments at Ben Duoc were generally kept under 30 metres to limit blast damage and hinder straight-line pursuit.
 
-*(Source: UNESCO World Heritage Tentative List Submission Dossier, Cultural Category, Ref. 7038, submitted July 15, 2026. Across both sectors, roughly 4 kilometers of preserved tunnel passages are protected).*
+*(Source: Special National Historical Site conservation records & Cu Chi Historical Relic Management Board documentation. Over 120 kilometers of historical tunnel network are protected throughout Cu Chi district).*
 
 ---
 
@@ -233,7 +233,7 @@ Choose between Ben Dinh and Ben Duoc based on **experience and logistics**, not 
 
 Ben Dinh is often the more convenient choice for a half-day trip because of its location and compact visitor experience. Ben Duoc is farther away and offers a broader heritage setting, including the Ben Duoc memorial area and additional visitor spaces.
 
-Neither should simply be described as the “real” site and the other as “fake.” Both are included on Viet Nam's UNESCO World Heritage Tentative List (Cultural Category, Ref. 7038, submitted July 15, 2026), while the visitor experience differs.
+Neither should simply be described as the “real” site and the other as “fake.” Both are legally protected within Viet Nam's Special National Historical Site system and are part of the ongoing nomination for UNESCO World Heritage recognition, while the visitor experience differs.
 
 ---
 
@@ -313,14 +313,14 @@ Dress practically for a tropical outdoor environment:
 
 - **Families With Children:** Children can visit the site, but parents should consider heat, walking, confined spaces, noise around the shooting range, and whether the child is comfortable with the historical displays. Children do not have to enter the tunnels, so families can focus on the outdoor sections. For younger children, a private itinerary can be easier because you can control the pace and return whenever necessary.
 - **Older Travelers & Mobility Considerations:** The site is not exclusively an underground experience. Older travelers can explore the above-ground areas and skip the tunnel crawl. If mobility is limited, the above-ground route is the relevant part of the visit; the tunnel crawl can simply be skipped. Private transportation is particularly convenient because it reduces walking between vehicles and ticket gates.
-- **Tall Or Larger-Framed Travelers:** They may find the crawl demanding. UNESCO's 2026 documentation records some constricted sections at Ben Dinh measuring approximately 40 cm wide and 73 cm high, while preserved main passages are also very narrow. Visitor sections have been adapted for tourists, but taller or larger travelers may still find duck-walking through the passages uncomfortable. You can simply remain above ground and walk along the surface trail.
+- **Tall Or Larger-Framed Travelers:** They may find the crawl demanding. Official architectural survey records record some constricted sections at Ben Dinh measuring approximately 40 cm wide and 73 cm high, while preserved main passages are also very narrow. Visitor sections have been adapted for tourists, but taller or larger travelers may still find duck-walking through the passages uncomfortable. You can simply remain above ground and walk along the surface trail.
 - **Claustrophobia Considerations:** The site can still be visited comfortably because the underground section is optional. You can experience the forest trails, concealed entrances, trap demonstrations, and historical briefings completely in the open air.
 
 ---
 
 ## Optional On-Site Activities & Refreshment Costs
 
-- **Shooting Range & Live-Fire Costs:** The shooting range is an optional paid activity and is not included in the basic 135,000 VND international visitor charge. Shooting-range ammunition is charged separately, and published prices vary by source and weapon type (recent travel sources cite roughly 50,000–75,000 VND per round, with some reporting a minimum purchase requirement of 10 rounds). Confirm current pricing directly at the range.
+- **Shooting Range & Live-Fire Costs:** The shooting range is an optional paid activity and is not included in the basic 135,000 VND international visitor charge. Shooting-range ammunition is charged separately, and published prices vary by source and weapon type (recent travel sources cite roughly 50,000–75,000 VND per round, with some reporting a minimum purchase requirement of 10 rounds). Participants must be at least 18 years old and meet physical safety guidelines (children are strictly prohibited from participating in live-fire activities). Confirm current pricing directly at the range.
   - *Audible Gunfire Note:* You can completely skip the shooting range. Keep in mind that gunfire can still be audible from parts of the visitor site when the range is operating.
 - **Food, Drinks & Tapioca Tasting:** Food and bottled refreshments are separate from historical-site admission. Many tours include a sampling of steamed tapioca with roasted peanut salt and warm tea (a wartime staple food), but full meals are not included in the standard admission.
 
@@ -385,7 +385,7 @@ Yes. The vast majority of the visitor experience takes place above ground along 
 The standard visitor route involves roughly 600 to 700 metres of walking in total, generally taken at an easy pace with regular stops along shaded woodland paths.
 
 ### Are Cu Chi Tunnels Difficult For Tall Or Larger Travelers?
-They can be. Conserved historical passages recorded in UNESCO documentation are very narrow (with some sections only 40 to 65 cm wide). While tourist sections have been adapted, taller or larger-framed visitors may still find crouching through the crawl uncomfortable. However, entering underground is completely optional.
+They can be. Conserved historical passages recorded in official heritage survey records are very narrow (with some sections only 40 to 65 cm wide). While tourist sections have been adapted, taller or larger-framed visitors may still find crouching through the crawl uncomfortable. However, entering underground is completely optional.
 
 ### Can I Skip The Shooting Range?
 Yes. The shooting range is entirely optional and located in a separate area. However, gunfire sounds can still be audible from parts of the woodland trails while the range operates.
