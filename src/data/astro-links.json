@@ -135,6 +135,80 @@
       "anchorText": "Inquire via WhatsApp / Email"
     }
   ],
+  "cu-chi-tunnels-entrance-fee-and-opening-hours": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh and Ben Duoc differ"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Is a Cu Chi Tunnels Private Tour Worth the Extra Cost?"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?"
+    },
+    {
+      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
+      "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds"
+    },
+    {
+      "targetUrl": "/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city",
+      "anchorText": "How Far Are The Cu Chi Tunnels From Ho Chi Minh City?"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Private Car Guide"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Cu Chi Tunnels Half-Day vs. Full-Day"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "Half-Day Premium Cu Chi Tunnels →"
+    },
+    {
+      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
+      "anchorText": "1-Day Cu Chi & Saigon Discovery →"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels: Complete Travel Guide\n                The authoritative 2026 pillar guide"
+    },
+    {
+      "targetUrl": "/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city",
+      "anchorText": "How Far Are The Tunnels From Saigon?\n                Distance, travel times & traffic realities"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc\n                Which site fits your schedule & style?"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi by Private Car\n                Complete route & driver logistics"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Half-Day vs. Full-Day Tour\n                Itinerary timing & destination pairing"
+    },
+    {
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "View Private Journey →"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Request Custom Consultation →"
+    }
+  ],
   "cu-chi-tunnels-half-day-vs-full-day": [
     {
       "targetUrl": "/",
