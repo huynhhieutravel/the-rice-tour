@@ -359,6 +359,10 @@
       "anchorText": "Cu Chi Tunnels: The Complete Travel Guide"
     },
     {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "Ben Thanh Market"
+    },
+    {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
       "anchorText": "Visiting Cu Chi Tunnels by Private Car: The Complete Guide"
     },
@@ -375,6 +379,10 @@
       "anchorText": "Saigon hop-on hop-off bus"
     },
     {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "half-day private city tour"
+    },
+    {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
       "anchorText": "Cu Chi Tunnels Half-Day vs. Full-Day: Which Tour Should You Choose?"
     },
@@ -387,8 +395,16 @@
       "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds"
     },
     {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat Airport transfer guide"
+    },
+    {
       "targetUrl": "/destination/mekong-delta",
       "anchorText": "Mekong Delta"
+    },
+    {
+      "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
+      "anchorText": "full-day Mekong Delta excursion to Ben Tre and My Tho"
     },
     {
       "targetUrl": "/tailor-made",
@@ -403,8 +419,16 @@
       "anchorText": "Discover The Complete 1-Day Itinerary & Reserve →"
     },
     {
+      "targetUrl": "/tours",
+      "anchorText": "curated Vietnam tours"
+    },
+    {
       "targetUrl": "/destination/south-vietnam",
       "anchorText": "Southern Vietnam"
+    },
+    {
+      "targetUrl": "/destinations",
+      "anchorText": "Vietnam travel destinations"
     },
     {
       "targetUrl": "/cu-chi-tunnels-travel-guide",
@@ -412,19 +436,19 @@
     },
     {
       "targetUrl": "/ben-dinh-vs-ben-duoc",
-      "anchorText": "Ben Dinh vs. Ben Duoc\n                Which visitor sector should you visit?"
+      "anchorText": "Ben Dinh vs. Ben Duoc\n                Which site fits your schedule & style?"
     },
     {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
-      "anchorText": "Half-Day vs. Full-Day Cu Chi Tours\n                Compare tour pacing and combinations"
+      "anchorText": "Half-Day vs. Full-Day Tour\n                Side-by-side itinerary timing breakdown"
     },
     {
-      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
-      "anchorText": "Visiting Cu Chi by Private Car\n                Routes, rates, and highway advice"
+      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
+      "anchorText": "View Private Journey →"
     },
     {
-      "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
-      "anchorText": "Visiting Without Crowds\n                Timing strategies to avoid tour bus convoys"
+      "targetUrl": "/tailor-made",
+      "anchorText": "Request Custom Consultation →"
     }
   ],
   "how-to-visit-cu-chi-tunnels-without-the-crowds": [
