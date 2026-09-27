@@ -48,7 +48,7 @@ graph TD
   - Avatar tác giả + `The Rice Tour Editorial` / `Huynh Hieu Travel` kèm icon `<CheckCircle2 class="w-4 h-4 text-blue-400" />`.
   - Hộp ngày đăng (`Published: Month DD, 2026`).
   - Hộp thời gian đọc (`X min read`).
-- **Badges Line:** 4 thẻ tag bo tròn viền mờ `bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium` kèm icon emoji (tiếng Anh).
+- **Badges Line:** LOẠI BỎ HOÀN TOÀN khối badges line này khỏi Hero Header để tránh trùng lặp thông tin với Quick Overview Stats Bar và Sidebar ngay bên dưới. Giữ Header thanh thoát, trang nhã.
 
 ---
 
@@ -66,8 +66,8 @@ graph TD
 ### Khối 3: Cột Giữa (Main Content Column)
 - **Container:** `<main class="col-span-1 lg:col-span-6 space-y-10">`
 - **1. Quick Overview Stats Bar:**
-  - `bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6 flex flex-wrap lg:flex-nowrap items-center justify-between gap-4`.
-  - 4 ô tròn bo góc với icon emoji, nhãn phụ `text-[11px] text-slate-500` và giá trị `text-[13px] font-bold text-slate-900` (tiếng Anh).
+  - `bg-white rounded-2xl shadow-sm border border-slate-200/60 p-5 md:p-6 mb-8`.
+  - **BẮT BUỘC ĐÚNG 3 Ô THÔNG SỐ (Strictly 3 items - chia cột `md:grid-cols-3`):** Tuyệt đối không làm 4 ô gây vỡ layout và quá tải thông tin. Mỗi ô có icon emoji, nhãn phụ `text-[11px] font-bold text-slate-500 uppercase tracking-wider` và giá trị `text-[14px] font-bold text-slate-900`.
 - **2. Lead-in Prose Box:**
   - `prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700`.
   - Đoạn trích dẫn nổi bật viền cam `border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl`.
@@ -75,7 +75,7 @@ graph TD
   - `bg-amber-50/80 border border-amber-200/90 p-6 md:p-8 rounded-2xl my-8 shadow-sm`.
 - **4. Các Section Thân Bài:**
   - Tiêu đề H2 có vạch cam: `<div class="border-l-4 border-amber-500 pl-4 mb-4"><h2 class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">...</h2></div>`.
-  - Subsection H3 có số tròn: `<span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs">...</span>`.
+  - Subsection H3 có số tròn hoặc định dạng chuẩn.
 - **5. Bảng Ma Trận So Sánh:**
   - Bọc trong `<div class="overflow-x-auto my-6">`.
   - Header bảng đen `bg-slate-900 text-white font-serif`, các ô dữ liệu cách điệu `divide-y divide-slate-100`.
@@ -85,6 +85,8 @@ graph TD
   - `bg-gradient-to-br from-amber-500/10 via-white to-amber-500/5 border border-amber-300 p-8 rounded-2xl shadow-[0_4px_20px_-4px_rgba(247,147,30,0.15)]`.
 - **8. Chuỗi Bài Viết Liên Quan:**
   - `<DataPost source="tag" slug="..." limit="6" title="..." />`.
+- **9. Section FAQs (Câu hỏi thường gặp):**
+  - Tiêu đề câu hỏi trong thẻ `<summary>` **TUYỆT ĐỐI KHÔNG ĐÁNH SỐ THỨ TỰ** (ví dụ: không ghi "1. How far...", "2. Is Ben Dinh..."). Phải là câu hỏi văn phong tự nhiên.
 
 ---
 
@@ -104,14 +106,19 @@ graph TD
 
 ---
 
-## 3. Pre-Deploy 4-Step Checklist (Bắt Buộc Chạy Cho Bài Viết)
+## 3. Quy Trình Duyệt Localhost & Quy Tắc Xuất Bản Production (Bắt Buộc Tuân Thủ)
 1. **Language Check:** Xác nhận 100% nội dung từ Hero đến Footer là tiếng Anh.
 2. **Domain Check:** Đảm bảo nút "Sửa bài viết" là relative link `/admin/posts/edit?id=...` và các nút share trỏ về `thericetour.com`.
 3. **Asset Check & Stripping:** 
-   - TUYỆT ĐỐI XÓA BỎ 100% các thẻ `<img>` và `<figure>` khỏi mã HTML bài viết thường (không sử dụng placeholder). 
-   - Nội dung văn bản phải trơn tru, để người dùng tự chèn lại ảnh sạch qua CMS Admin sau. 
-   - `featuredImage` ban đầu đặt là `NULL`. 0% xuất hiện link ảnh `r2.nucuoimekong.com`.
-4. **Smoke Test:** Kiểm chứng live bằng `curl -sL https://thericetour.com/[slug]` trước khi bàn giao.
+   - 0% xuất hiện link ảnh `r2.nucuoimekong.com` hoặc ảnh Unsplash tự tiện.
+   - Giữ cấu trúc văn bản sạch sẽ để người dùng tự chèn ảnh độc quyền từ Media Library sau.
+4. **Localhost Verification (BẮT BUỘC):**
+   - Đảm bảo Dev Server đang chạy (`npx astro dev --port 4324`).
+   - Kiểm tra `curl -I http://localhost:4324/[slug]` trả về 200 OK.
+   - Cung cấp link `http://localhost:4324/[slug]` và BÁO CÁO ĐỂ NGƯỜI DÙNG DUYỆT.
+5. **RÀNG BUỘC SỐNG CÒN - KHÔNG TỰ Ý DEPLOY LÊN PRODUCTION:**
+   - **TUYỆT ĐỐI KHÔNG** tự ý chạy `wrangler deploy` hay đẩy code lên Live server khi người dùng chưa kiểm tra xong.
+   - **CHỈ ĐƯỢC PHÉP DEPLOY** khi người dùng kiểm tra xong trên Localhost và ra lệnh rõ ràng: *"ok deploy"*, *"deloy đi"*, hoặc *"lên sóng"*.
 
 ---
 

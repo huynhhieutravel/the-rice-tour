@@ -36,13 +36,13 @@ Mọi bài viết Pillar Guide khi đóng gói HTML **BẮT BUỘC KẾ THỪA 1
    - H2 Subtitle: `font-serif text-lg sm:text-2xl lg:text-3xl text-amber-400 italic mb-8 max-w-4xl drop-shadow-md font-medium`
    - Lead snippet: `text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed mb-8 hidden md:block drop-shadow-md font-normal`
    - Author Meta: Avatar + `The Rice Tour Editorial` hoặc `Huynh Hieu Travel` kèm `CheckCircle2` xanh dương + Ngày đăng (`Calendar`) + Thời gian đọc (`Clock`)
-   - Badges Line: 4 thẻ tag bo tròn viền mờ `bg-black/60 backdrop-blur-md px-3.5 py-2 border border-white/10 rounded-lg shadow-xl text-xs sm:text-sm text-white font-medium`
+   - **Badges Line: LOẠI BỎ HOÀN TOÀN** (Không dùng thẻ badges trong Hero Header vì gây trùng lặp thông tin với thanh Quick Overview Stats Bar và Sidebar bên dưới).
 
 2. **Cột Trái (Left Sticky TOC `lg:col-span-3 sticky top-24`):**
    - Hộp Mục lục bài viết (`Table of Contents`) neo cố định, cuộn mượt mà theo từng đề mục H2/H3 (100% English).
 
 3. **Cột Giữa (Main Content Column `lg:col-span-6 space-y-10`):**
-   - Quick Overview Stats Bar (4 ô tròn thống kê nổi bật).
+   - **Quick Overview Stats Bar:** BẮT BUỘC ĐÚNG 3 Ô THỐNG KÊ (Strictly 3 items, layout `md:grid-cols-3`, tuyệt đối không dùng 4 ô).
    - Lead-in Quote Box viền cam đất `border-l-4 border-amber-500`.
    - Hộp Highlight số liệu `🌟 Curated Dimensions / Key Numbers`.
    - Các Section đánh số tuần tự có tiêu đề viền cam bên trái (`border-l-4 border-amber-500 pl-4 mb-4`).
@@ -50,16 +50,19 @@ Mọi bài viết Pillar Guide khi đóng gói HTML **BẮT BUỘC KẾ THỪA 1
    - Thẻ Quy trình / Hướng dẫn dạng lưới 2 cột (`grid sm:grid-cols-2 gap-4`).
    - Banner CTA Đặt Tour / Thiết kế tour riêng cuối bài.
    - Chuỗi bài viết liên quan (`DataPost`).
+   - **Section FAQs (Câu hỏi thường gặp):** TUYỆT ĐỐI KHÔNG ĐÁNH SỐ THỨ TỰ vào câu hỏi FAQ trong thẻ `<summary>` (ví dụ: không ghi "1. How far...", "2. Is Ben Dinh...").
 
 4. **Cột Phải (Right Sticky Sidebar `lg:col-span-3`):**
    - Card **Quick Expedition Facts** (4 hàng icon).
    - Card **Related Travel Guides** (Danh sách bài viết kèm link).
    - Card **Share This Guide** (Nút Facebook + Nút Copy Link có toast phản hồi `OK!`).
 
-## 6. Pre-Deploy 5-Step Checklist & Localhost Verification (Kiểm Tra Trước Khi Bàn Giao)
-Trước khi bàn giao hoặc thực hiện deploy, Agent **BẮT BUỘC** phải thực hiện đầy đủ 5 bước:
+## 6. Quy Trình Localhost First & Quy Tắc Xuất Bản Production (Bắt Buộc Tuân Thủ)
+Trước khi bàn giao hoặc xuất bản bài viết, Agent **BẮT BUỘC** phải tuân thủ nghiêm ngặt quy trình:
 1. **Language Audit:** Xác nhận 100% text trên trang (từ Hero, TOC, Content, Table đến Sidebar) là tiếng Anh.
 2. **Domain Sweep:** Quét sạch mọi link `fittour.vn` và đổi thành `thericetour.com` hoặc relative URL `/admin/posts/edit?id=...`.
-3. **Asset Sweep:** Không còn bất kỳ link ảnh nào từ `r2.nucuoimekong.com`.
-4. **Localhost Preview (BẮT BUỘC):** Đảm bảo Dev Server đang hoạt động (`npx astro dev --port 4324`), curl test HTTP 200, và cung cấp link xem trước trực quan `http://localhost:4324/[slug]` để người dùng bấm vào duyệt trang trực tiếp trước khi deploy.
-5. **Live Smoke Test (sau khi deploy):** Chạy `curl -sL https://thericetour.com/[slug]` để kiểm chứng trực tiếp trên Live server.
+3. **Asset Sweep:** 0% link ảnh từ `r2.nucuoimekong.com` hoặc ảnh Unsplash tự tiện.
+4. **Localhost Verification (BẮT BUỘC):** Đảm bảo Dev Server đang hoạt động (`npx astro dev --port 4324`), curl test HTTP 200, và cung cấp link xem trước trực quan `http://localhost:4324/[slug]` để người dùng bấm vào duyệt trang trực tiếp.
+5. **RÀNG BUỘC SỐNG CÒN - KHÔNG TỰ Ý DEPLOY LÊN PRODUCTION:**
+   - **TUYỆT ĐỐI KHÔNG** tự ý chạy `wrangler deploy` hay đẩy code lên Live server khi người dùng chưa kiểm tra xong.
+   - **CHỈ ĐƯỢC PHÉP DEPLOY** khi người dùng kiểm tra xong trên Localhost và ra lệnh rõ ràng: *"ok deploy"*, *"deloy đi"*, hoặc *"lên sóng"*. Sau khi deploy mới chạy `curl -sL https://thericetour.com/[slug]` để smoke test.
