@@ -21,6 +21,9 @@ Vietnam's official heritage nomination files describe the Cu Chi historical comp
 
 For realistic day planning, forget the straight-line map distance. Plan on spending **1.5 to 2.5 hours in transit each way by car**, and setting aside **5 to 8 hours for the entire door-to-door excursion**.
 
+![Travelers attending an introductory briefing in an open-air forest clearing before exploring the preserved tunnel sectors](https://media.thericetour.com/uploads/tour-group-listening-briefing-underground-hall-cu-chi-tunnels.webp)
+*Travelers attending an introductory briefing in an open-air forest clearing before exploring the preserved tunnel sectors.*
+
 ---
 
 > [!IMPORTANT]
@@ -69,6 +72,9 @@ In the official UNESCO World Heritage nomination dossier prepared by Ho Chi Minh
 Geographically, the terrain sits on high laterite clay between the Saigon River and the Vam Co Dong River. As your car leaves the concrete highway behind, the surroundings give way to quiet rubber plantations, bamboo groves, and family fruit orchards—a striking contrast to the high-rises and busy avenues of downtown Saigon.
 
 For an in-depth look at the history, battlefield engineering, and exhibits, read our [Cu Chi Tunnels: The Complete Travel Guide](/cu-chi-tunnels-travel-guide).
+
+![The preserved tropical forest canopy and laterite terrain surrounding the historical Cu Chi tunnel sectors in the northwestern countryside](https://media.thericetour.com/uploads/cu-chi-tunnel-entrance-mossy-roots-millipedes-jungle.webp)
+*The preserved tropical forest canopy and laterite terrain surrounding the historical Cu Chi tunnel sectors in the northwestern countryside.*
 
 ---
 
@@ -119,6 +125,9 @@ A private car picks you up directly at your hotel with no detours to collect oth
 Expect roughly **2 to 3 hours** on the road each way.  
 Shared tour buses are economical, but their travel time is inherently longer. You will spend the first 45 to 60 minutes winding through central districts picking up guests from multiple hotels. In addition, many shared itineraries include a scheduled 20-to-30-minute stop at a highway handicraft or lacquerware showroom along the way. If you enjoy a social day and aren't on a tight schedule, it works fine—just don't expect a quick morning return.
 
+![Travelers boarding early morning tour transfer in central Ho Chi Minh City](https://media.thericetour.com/uploads/the-rice-bus-at-bui-vien-walking-street-ho-chi-minh.webp)
+*Departing early from central Ho Chi Minh City allows travelers to clear the suburban ring roads before Highway 22 morning freight traffic peaks.*
+
 ### 3. Ride-Hailing App (Grab, Be, Xanh SM)
 Expect roughly **1.5 to 2 hours** outbound; the return leg requires planning.  
 Booking a one-way car from District 1 through Grab or Xanh SM is straightforward and usually costs between 550,000 and 750,000 VND ($22–$30 USD). The tricky part is coming back: drivers rarely idle outside the rural Cu Chi ticket gates waiting for fares. **Local tip:** When you arrive, ask your driver if they are willing to wait in the parking area for you in exchange for an agreed-upon return flat fee (typically 300,000 to 450,000 VND extra). Most drivers welcome the guaranteed fare.
@@ -133,6 +142,12 @@ If you have an open calendar and enjoy everyday local commutes, it is an authent
 ### 5. Speedboat along the Saigon River (The Scenic Bypass)
 Expect roughly **75 to 90 minutes** on the water.  
 A few boutique operators run speedboats departing from Bach Dang Wharf in central Saigon straight upriver to the private boat jetty at Ben Dinh. You completely bypass the highway exhaust and traffic lights, watching urban glass towers give way to lush riverbanks and floating water hyacinths. It is the most scenic way to travel, though priced at a premium (typically $80–$110 USD per person including guide and entrance fees).
+
+![Saigon River departure pier for speedboat cruises to Cu Chi Tunnels](https://media.thericetour.com/uploads/saigon-skyline-mekong-tour-departure.webp)
+*Departing along the Saigon River by speedboat completely bypasses highway traffic, offering a 75-minute scenic journey directly to the Ben Dinh pier.*
+
+![Travelers arriving at the forested entrance gate of Cu Chi Tunnels Ben Dinh historical site](https://media.thericetour.com/uploads/tourists-check-in-cu-chi-ben-dinh-historic-site-the-rice.webp)
+*Travelers arriving at Ben Dinh historical site, situated in Nhuan Duc Commune northwest of Ho Chi Minh City.*
 
 ---
 
@@ -165,6 +180,9 @@ Here is how a standard visit unfolds from start to finish:
 
 Seeing the full circuit makes it clear why you need **1.5 to 2.5 hours on site**, even if your underground crawl only lasts five minutes.
 
+![Tourists watching a guide demonstrate a camouflaged wooden secret trapdoor in the Cu Chi forest](https://media.thericetour.com/uploads/tourists-watching-hidden-tunnel-entrance-demo-cu-chi.webp)
+*An on-site guide demonstrates the ingeniously disguised wooden trapdoors concealed under leaves along the forest floor.*
+
 ---
 
 ## How Long Do You Actually Spend Underground?
@@ -188,6 +206,9 @@ During the war, these passageways were hand-dug to accommodate slender local fig
 To make the site safe and accessible, the management board widened and heightened the tourist sections by roughly 20% to 30%, installed low-voltage lighting, reinforced critical earthen ceilings with hidden concrete beams, and built regular emergency exit stairs.
 
 You still experience the unmistakable earthy scent, the humid underground heat, and the visceral feeling of tight confinement—but without the danger of a cave-in. Away from these maintained visitor paths, much of the historical 250-kilometer underground network has naturally settled and collapsed back into the soil over the last half-century.
+
+![Travelers experiencing a widened, softly lit underground passage at Cu Chi Tunnels](https://media.thericetour.com/uploads/tourists-inside-underground-tunnel-cu-chi-tunnels-experience.webp)
+*Inside a preserved and widened visitor tunnel segment: reinforced with hidden supports and low-voltage lighting with exit stairs every 20 meters.*
 
 ---
 
@@ -224,6 +245,9 @@ Ben Dinh and Ben Duoc are not two ticket gates at the same park entrance—they 
 
 For a full side-by-side comparison, read our dedicated guide: [Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?](/ben-dinh-vs-ben-duoc).
 
+![Visitors walking along the quiet woodland trails of Ben Duoc historical site in Cu Chi](https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp)
+*The peaceful, shaded forest walking circuits of Ben Duoc in An Nhon Tay—offering an unhurried cultural setting far from large tour-bus crowds.*
+
 ---
 
 ## How Much of Your Day Does a Cu Chi Trip Take?
@@ -236,6 +260,9 @@ A visit at the site itself takes about two hours. What turns Cu Chi into a half-
   A full day makes sense if you want to visit Ben Duoc at an unhurried pace, enjoy a leisurely countryside lunch by the river, or pair the tunnels with the vibrant noon service at the **Cao Dai Great Temple in Tay Ninh**.
 
 To help you decide which schedule matches your travel style, see our guide on [Cu Chi Tunnels Half-Day vs. Full-Day: Which Tour Should You Choose?](/cu-chi-tunnels-half-day-vs-full-day).
+
+![Tour guide demonstrating concealed trapdoors and wooden punji stick traps in Cu Chi forest](https://media.thericetour.com/uploads/guide-showing-punji-stick-traps-cu-chi-tunnels-tour.webp)
+*An on-site guide demonstrating wooden punji stick traps in the shaded forest circuits of Cu Chi.*
 
 ---
 
@@ -310,6 +337,9 @@ Tour agencies frequently advertise a "Cu Chi Tunnels + Mekong Delta in 1 Day" to
 **Our Advice:** If you have more than two days in Saigon, give each destination its own dedicated day. You will experience both places at a relaxed pace rather than watching southern Vietnam pass by through a bus window. Explore our [Mekong Delta](/destination/mekong-delta) guides to plan that leg separately, or reserve a dedicated [full-day Mekong Delta excursion to Ben Tre and My Tho](/tour/full-day-mekong-delta-tour-ben-tre-my-tho) on a different day.
 
 For a customized schedule designed around your preferred pace, consider a [tailor-made private journey](/tailor-made).
+
+![Travelers observing a preserved B-52 bomb crater along the Cu Chi historical walking circuit](https://media.thericetour.com/uploads/tourists-looking-into-crater-bomb-pit-cu-chi-tunnels.webp)
+*A preserved B-52 bomb crater along the open-air walking circuit, illustrating the intense aerial bombardment endured by the Cu Chi region.*
 
 ---
 

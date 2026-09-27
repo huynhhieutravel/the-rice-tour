@@ -167,6 +167,7 @@ const articleSchema = {
   description={pageDescription}
   image={post.featuredImage}
   canonical={canonicalUrl}
+  preloadImages={[post.featuredImage]}
   ogType="article"
   lang="en"
 >
@@ -190,10 +191,26 @@ const articleSchema = {
     </div>
   </div>
 
-  <!-- Hero Header (Zero Badges Per Directive) -->
-  <header class="relative bg-slate-950 text-white pt-16 pb-20 sm:pt-20 sm:pb-24 overflow-hidden border-b border-slate-800">
+  <!-- Hero Header (Cinematic Editorial Magazine Style with CMS Hero Background) -->
+  <header class="relative bg-slate-950 text-white pt-20 pb-20 sm:pt-24 sm:pb-28 overflow-hidden border-b border-slate-800">
+    <!-- Background Image with Multi-layer Gradients -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={post.featuredImage} 
+        alt={post.title}
+        class="w-full h-full object-cover object-center brightness-[0.35] scale-105 transform motion-safe:animate-subtle-zoom"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/50"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent"></div>
+    </div>
+
     <!-- Atmospheric Ambient Elements -->
-    <div class="absolute inset-0 bg-radial-at-t from-amber-900/20 via-slate-950/60 to-slate-950 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-radial-at-t from-amber-900/20 via-slate-950/40 to-slate-950 pointer-events-none"></div>
     <div class="absolute -top-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
     
     <div class="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -481,6 +498,23 @@ const articleSchema = {
               <p>
                 For an in-depth look at the history, battlefield engineering, and exhibits, read our <a href="/cu-chi-tunnels-travel-guide" class="text-amber-800 hover:underline font-semibold">Cu Chi Tunnels: The Complete Travel Guide</a>.
               </p>
+
+              <!-- Image: Preserved Forest Terrain -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/cu-chi-tunnel-entrance-mossy-roots-millipedes-jungle.webp" 
+                    alt="Preserved forest terrain and natural jungle surroundings at Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  The preserved tropical forest canopy and laterite terrain surrounding the historical Cu Chi tunnel sectors in the northwestern countryside.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -631,6 +665,23 @@ const articleSchema = {
                   </p>
                 </div>
 
+                <!-- Image: Morning Transport Departure -->
+                <div class="my-4 not-prose">
+                  <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img 
+                      src="https://media.thericetour.com/uploads/the-rice-bus-at-bui-vien-walking-street-ho-chi-minh.webp" 
+                      alt="Travelers boarding early morning tour transfer in central Ho Chi Minh City - The Rice Tour" 
+                      class="w-full h-auto object-cover max-h-[500px]"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                    Departing early from central Ho Chi Minh City allows travelers to clear the suburban ring roads before Highway 22 morning freight traffic peaks.
+                  </p>
+                </div>
+
                 <!-- Grab Or App Taxi -->
                 <div class="p-5 rounded-2xl border border-slate-200 bg-white shadow-xs">
                   <div class="font-bold text-slate-900 text-base mb-1">
@@ -658,6 +709,23 @@ const articleSchema = {
                   </div>
                   <p class="text-sm text-slate-600 leading-relaxed">
                     Expect roughly <strong>75 to 90 minutes</strong> on the water. A few boutique operators run speedboats departing from Bach Dang Wharf in central Saigon straight upriver to the private boat jetty at Ben Dinh. You completely bypass the highway exhaust and traffic lights, watching urban glass towers give way to lush riverbanks and floating water hyacinths. It is the most scenic way to travel, though priced at a premium (typically $80–$110 USD per person including guide and entrance fees).
+                  </p>
+                </div>
+
+                <!-- Image: Saigon River Departure Pier -->
+                <div class="my-4 not-prose">
+                  <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img 
+                      src="https://media.thericetour.com/uploads/saigon-skyline-mekong-tour-departure.webp" 
+                      alt="Saigon River departure pier for speedboat cruises to Cu Chi Tunnels - The Rice Tour" 
+                      class="w-full h-auto object-cover max-h-[500px]"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                    Departing along the Saigon River by speedboat completely bypasses highway traffic, offering a 75-minute scenic journey directly to the Ben Dinh pier.
                   </p>
                 </div>
               </div>
@@ -773,6 +841,23 @@ const articleSchema = {
               <p>
                 Seeing the full circuit makes it clear why you need <strong>1.5 to 2.5 hours on site</strong>, even if your underground crawl only lasts five minutes.
               </p>
+
+              <!-- Image: Camouflaged Trapdoor Demonstration -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-watching-hidden-tunnel-entrance-demo-cu-chi.webp" 
+                    alt="Tourists watching a guide demonstrate a camouflaged wooden secret trapdoor in the Cu Chi forest - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  An on-site guide demonstrates the ingeniously disguised wooden trapdoors concealed under leaves along the forest floor.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -819,6 +904,23 @@ const articleSchema = {
               <p>
                 You still experience the unmistakable earthy scent, the humid underground heat, and the visceral feeling of tight confinement—but without the danger of a cave-in. Away from these maintained visitor paths, much of the historical 250-kilometer underground network has naturally settled and collapsed back into the soil over the last half-century.
               </p>
+
+              <!-- Image: Underground Tunnel Experience -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-inside-underground-tunnel-cu-chi-tunnels-experience.webp" 
+                    alt="Travelers experiencing a widened, softly lit underground passage at Cu Chi Tunnels - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  Inside a preserved and widened visitor tunnel segment: reinforced with hidden supports and low-voltage lighting with exit stairs every 20 meters.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -921,6 +1023,23 @@ const articleSchema = {
               <p>
                 For a comprehensive comparison, read our dedicated guide: <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:underline font-semibold">Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?</a>
               </p>
+
+              <!-- Image: Ben Duoc Peaceful Woodland Trail -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-walking-jungle-path-cu-chi-tunnels-checkered-scarf.webp" 
+                    alt="Visitors walking along the quiet woodland trails of Ben Duoc historical site in Cu Chi - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  The peaceful, shaded forest walking circuits of Ben Duoc in An Nhon Tay—offering an unhurried cultural setting far from large tour-bus crowds.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -1096,6 +1215,23 @@ const articleSchema = {
               <p>
                 For a customized schedule designed around your preferred pace, consider a <a href="/tailor-made" class="text-amber-800 hover:underline font-semibold">tailor-made private journey</a>.
               </p>
+
+              <!-- Image: Preserved Bomb Crater -->
+              <div class="my-6 not-prose">
+                <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                  <img 
+                    src="https://media.thericetour.com/uploads/tourists-looking-into-crater-bomb-pit-cu-chi-tunnels.webp" 
+                    alt="Travelers observing a preserved B-52 bomb crater along the Cu Chi historical walking circuit - The Rice Tour" 
+                    class="w-full h-auto object-cover max-h-[500px]"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="text-center text-xs sm:text-sm text-slate-500 italic mt-2.5">
+                  A preserved B-52 bomb crater along the open-air walking circuit, illustrating the intense aerial bombardment endured by the Cu Chi region.
+                </p>
+              </div>
             </div>
           </section>
 
