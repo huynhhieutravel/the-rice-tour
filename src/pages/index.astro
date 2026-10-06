@@ -98,6 +98,12 @@ const homepageSchemaGraph = {
     }
   ]
 };
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
+}
 ---
 
 <BaseLayout 

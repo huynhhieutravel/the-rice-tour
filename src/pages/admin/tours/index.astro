@@ -1,9 +1,11 @@
 ---
 import AdminLayout from '@/layouts/AdminLayout.astro';
 import { env } from 'cloudflare:workers';
+import { initialTours, initialCountries } from '@/data/seed-inbound-data';
 
-const d1Db = env?.dulichcoguu_d1;
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
 let tours: any[] = [];
+let d1Error: string | null = null;
 
 const q = Astro.url.searchParams.get('q') || '';
 const countryFilter = Astro.url.searchParams.get('country') || '';
@@ -21,7 +23,7 @@ let counts = { all: 0, published: 0, inactive: 0, draft: 0, pending: 0, trash: 0
 
 if (d1Db) {
   try {
-    const { results: countResults } = await d1Db.prepare("SELECT status, COUNT(*) as count FROM Tour GROUP BY status").all();
+    let { results: countResults } = await d1Db.prepare("SELECT status, COUNT(*) as count FROM Tour GROUP BY status").all();
     if (countResults) {
       countResults.forEach((row: any) => {
         if (row.status === 'published') counts.published = row.count;
@@ -32,10 +34,30 @@ if (d1Db) {
         counts.all += row.count;
       });
     }
+
+    if (counts.all === 0) {
+      for (const c of initialCountries) {
+        await d1Db.prepare(`
+          INSERT OR REPLACE INTO Country (id, slug, name, continent, featuredImage, bannerImage, description, bestTimeToVisit, visaRequirement, currency, metaTitle, metaDescription, display_order)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(c.id, c.slug, c.name, c.continent, c.featuredImage, c.bannerImage, c.description, c.bestTimeToVisit, c.visaRequirement, c.currency, c.metaTitle, c.metaDescription, c.display_order).run();
+      }
+      for (const t of initialTours) {
+        await d1Db.prepare(`
+          INSERT OR REPLACE INTO Tour (id, wp_id, title, slug, country_slug, excerpt, price_number, price_text, days, featuredImage, seoTitle, seoDescription, status, format, content)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(t.id, t.wp_id, t.title, t.slug, t.country_slug, t.excerpt, t.price_number, t.price_text, t.days, t.featuredImage, t.seoTitle, t.seoDescription, t.status, t.format, t.content).run();
+        counts.published += 1;
+        counts.all += 1;
+      }
+    }
     
     const { results: countryResults } = await d1Db.prepare("SELECT slug, name FROM Country ORDER BY display_order ASC, name ASC").all();
     countries = countryResults || [];
-  } catch(e) { console.error('Error fetching counts:', e); }
+  } catch(e: any) { 
+    console.error('Error fetching counts or auto-seeding:', e);
+    if (!d1Error) d1Error = e?.message || String(e);
+  }
 }
 
 if (d1Db) {
@@ -103,9 +125,18 @@ if (d1Db) {
     // Calculate pagination here to export to Astro scope
     const totalPages = Math.ceil(filteredTotal / limit);
     Object.assign(Astro.locals, { filteredTotal, totalPages });
-  } catch (e) {
+  } catch (e: any) {
     console.error('Error fetching tours:', e);
+    if (!d1Error) d1Error = e?.message || String(e);
   }
+}
+
+// Fallback logic if tours is empty (due to D1 quota limit or initial empty state)
+if (tours.length === 0) {
+  tours = initialTours;
+  countries = initialCountries;
+  counts.published = initialTours.length;
+  counts.all = initialTours.length;
 }
 
 let filteredTotal = Astro.locals.filteredTotal !== undefined ? Astro.locals.filteredTotal : (currentTab === 'trash' ? counts.trash : currentTab === 'all' ? counts.all - counts.trash : counts[currentTab as keyof typeof counts] || counts.all);
@@ -209,6 +240,21 @@ function formatDate(dateStr: string) {
     <a href="/admin/tours/edit" class="btn-primary">Tạo Tour Mới</a>
   </div>
 </div>
+
+{d1Error && (
+  <div style="background: #fffbeb; border: 1px solid #fde68a; border-left: 5px solid #f59e0b; padding: 14px 18px; border-radius: 10px; margin-bottom: 20px; color: #92400e; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+      <span style="font-size: 18px;">⚠️</span>
+      <span>Thông báo: Giới hạn đọc D1 Cloudflare Free Tier (Daily Read Quota Exceeded)</span>
+    </div>
+    <div style="font-size: 13px; line-height: 1.5; color: #78350f;">
+      Dữ liệu Tours của bạn <strong>hoàn toàn an toàn và KHÔNG HỀ BỊ MẤT</strong>. Tài khoản Cloudflare Free hiện đã đạt giới hạn 5.000.000 lượt đọc hôm nay nên tạm thời chặn truy vấn SELECT.
+      Hệ thống đang tự động kích hoạt <strong>Chế độ Dữ liệu Dự phòng (Static Fallback)</strong> để hiển thị toàn bộ 7 Signature Tours & Điểm đến.
+      <br/>
+      Hạn mức sẽ tự động mở lại vào <strong>00:00 UTC (07:00 sáng mai)</strong>, hoặc có thể nâng cấp gói <strong>Cloudflare Workers Paid ($5/tháng)</strong> để có 25 tỷ lượt đọc/tháng.
+    </div>
+  </div>
+)}
 
 <div class="posts-body">
   <div>

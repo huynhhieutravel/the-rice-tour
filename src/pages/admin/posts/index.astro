@@ -11,29 +11,14 @@ import {
   huynhThuyLeAncientHouseHtml,
   lanVuongEcoparkMekongMudHtml,
   honSonIslandLodgingHomestaysHtml,
-  canThoBeachArtificialOasisHtml,
-  thingsToDoNearBenThanhMarketHtml,
-  hcmcMuseumOfFineArtsGuideHtml,
-  benThanhMarketFoodGuideHtml,
-  benThanhOneDayWalkingTourHtml,
-  independencePalaceSaigonGuideHtml,
-  benThanhCentralMetroStationGuideHtml,
-  mariammanHinduTempleSaigonHtml,
-  benThanhMarketShoppingGuideHtml,
-  saigonHopOnHopOffBusGuideHtml,
-  secretApartmentCafesNearBenThanhHtml,
-  bestRooftopBarsNearBenThanhHtml,
-  boutiqueHotelsNearBenThanhHtml,
-  thingsToDoInBenThanhMarketHtml,
-  benThanhMarketUltimateTravelGuideHtml,
-  benThanhMarketScamsSafetyGuideHtml,
-  moneyExchangeBenThanhHaTamGuideHtml,
-  parkingGuideNearBenThanhMarketHtml,
-  tanSonNhatAirportToBenThanhTransferGuideHtml
+  canThoBeachArtificialOasisHtml
 } from '@/data/demo-articles';
+import { benThanhPostsForDatabase } from '@/data/ben-thanh-articles';
+import { initialCategories } from '@/data/seed-inbound-data';
 
-const d1Db = env?.dulichcoguu_d1;
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
 let posts: any[] = [];
+let d1Error: string | null = null;
 
 const q = Astro.url.searchParams.get('q') || '';
 let categoryFilter = Astro.url.searchParams.get('category') || '';
@@ -77,9 +62,11 @@ if (d1Db) {
     }
 
     // Auto-seed or repair demo articles if content is missing or table is empty
-    const { results: checkPosts } = await d1Db.prepare("SELECT id, content FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10', 'demo_11', 'demo_12', 'demo_13', 'demo_14', 'demo_15', 'demo_16', 'demo_17', 'demo_18', 'demo_19', 'demo_20', 'demo_21', 'demo_22', 'demo_23', 'demo_24', 'demo_25', 'demo_26', 'demo_27', 'demo_28')").all();
+    const btIds = benThanhPostsForDatabase.map(p => `'${p.id}'`).join(',');
+    const { results: checkPosts } = await d1Db.prepare(`SELECT id, content FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10', ${btIds})`).all();
     const existingIds = checkPosts?.map(p => String(p.id)) || [];
-    const needsRepair = existingIds.length < 28 || checkPosts?.some(p => !p.content || !p.content.includes('3 Curated Dimensions') || p.content.includes('bg-amber-100 text-amber-800') || p.content.includes('4. Tasting Matrix'));
+    const expectedTotal = 10 + benThanhPostsForDatabase.length;
+    const needsRepair = existingIds.length < expectedTotal || checkPosts?.some(p => !p.content || p.content.includes('bg-amber-100 text-amber-800') || p.content.includes('4. Tasting Matrix'));
 
     if (needsRepair) {
       try {
@@ -95,37 +82,50 @@ if (d1Db) {
           { id: 'demo_8', title: 'Lan Vuong Eco-Park (2026): A Visceral Dive into Mekong Mud & Team Dynamics', slug: 'lan-vuong-ecopark-mekong-mud', html: lanVuongEcoparkMekongMudHtml },
           { id: 'demo_9', title: 'The 2026 Hon Son Lodging Matrix: 7 Bespoke Coastal Sanctuaries', slug: 'hon-son-island-lodging-homestays', html: honSonIslandLodgingHomestaysHtml },
           { id: 'demo_10', title: 'Can Tho Beach: An Artificial Oasis Beneath the Cable-Stayed Giant (2026)', slug: 'can-tho-beach-artificial-oasis', html: canThoBeachArtificialOasisHtml },
-          { id: 'demo_11', title: 'Top Things to Do Near Ben Thanh Market: The Definitive Heritage & Walking Guide', slug: 'things-to-do-near-ben-thanh-market', html: thingsToDoNearBenThanhMarketHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-clock-tower.webp' },
-          { id: 'demo_12', title: 'HCMC Museum of Fine Arts: Inside the Gilded Legacy of Hui Bon Hoa', slug: 'hcmc-museum-of-fine-arts-guide', html: hcmcMuseumOfFineArtsGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp' },
-          { id: 'demo_13', title: 'The Culinary Maze of Ben Thanh: Signature Stalls & Night Street Delicacies', slug: 'ben-thanh-market-food-guide', html: benThanhMarketFoodGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp' },
-          { id: 'demo_14', title: 'One-Day Heritage Walking Tour Around Ben Thanh: From Colonial Alleys to River Sunset', slug: 'ben-thanh-one-day-walking-tour', html: benThanhOneDayWalkingTourHtml, featuredImage: 'https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp' },
-          { id: 'demo_15', title: 'The Independence Palace: Mid-Century Modernism & Historic Crossroads of Saigon', slug: 'independence-palace-saigon-guide', html: independencePalaceSaigonGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/reunification-palace-saigon.webp' },
-          { id: 'demo_16', title: 'Ben Thanh Central Metro Station: Navigating Saigon’s Subterranean Marvel (2026)', slug: 'ben-thanh-central-metro-station-guide', html: benThanhCentralMetroStationGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp' },
-          { id: 'demo_17', title: 'Mariamman Hindu Temple: A Vivid Sanctuary of South Indian Heritage in Saigon', slug: 'mariamman-hindu-temple-saigon', html: mariammanHinduTempleSaigonHtml, featuredImage: 'https://media.thericetour.com/uploads/mariamman-hindu-temple-saigon.webp' },
-          { id: 'demo_18', title: 'Ben Thanh Market Shopping Guide: Civilized Bargaining & Artisan Finds (2026)', slug: 'ben-thanh-market-shopping-guide', html: benThanhMarketShoppingGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-shopping.webp' },
-          { id: 'demo_19', title: 'Saigon Hop-On Hop-Off Bus: Heritage Routes, 2026 Ticketing Guide & Panoramic Field Notes', slug: 'saigon-hop-on-hop-off-bus-guide', html: saigonHopOnHopOffBusGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/saigon-hop-on-hop-off-bus.webp' },
-          { id: 'demo_20', title: 'Secret Apartment Cafes Near Ben Thanh: Saigon’s Vintage Sanctuaries & Drip Brews', slug: 'secret-apartment-cafes-near-ben-thanh', html: secretApartmentCafesNearBenThanhHtml, featuredImage: 'https://media.thericetour.com/uploads/apartment-cafe.webp' },
-          { id: 'demo_21', title: 'Best Rooftop Bars & Speakeasies Near Ben Thanh: Twilight Cocktails & Nightlife Guide', slug: 'best-rooftop-bars-near-ben-thanh', html: bestRooftopBarsNearBenThanhHtml, featuredImage: 'https://media.thericetour.com/uploads/rooftop-bar-ben-thanh-market-view.webp' },
-          { id: 'demo_22', title: 'Boutique & Heritage Hotels Near Ben Thanh: Saigon’s Premier Indochine Sanctuaries', slug: 'boutique-hotels-near-ben-thanh', html: boutiqueHotelsNearBenThanhHtml, featuredImage: 'https://media.thericetour.com/uploads/hotel-continental-saigon.webp' },
-          { id: 'demo_23', title: 'Things to Do in Ben Thanh Market: 15 Must-Try Experiences by Day and Night (2026 Guide)', slug: 'things-to-do-in-ben-thanh-market', html: thingsToDoInBenThanhMarketHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp' },
-          { id: 'demo_24', title: 'Ben Thanh Market Ultimate Travel Guide 2026: The Complete A-Z Survival Handbook', slug: 'ben-thanh-market-ultimate-travel-guide', html: benThanhMarketUltimateTravelGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-main-gate.webp' },
-          { id: 'demo_25', title: 'Ben Thanh Market Scams & Tourist Traps (2026): 7 Traps to Avoid & Complete Safety Manual', slug: 'ben-thanh-market-scams-safety-guide', html: benThanhMarketScamsSafetyGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-tourist-tips.webp' },
-          { id: 'demo_26', title: 'Money Exchange at Ha Tam Gold Shop (Ben Thanh Market): Insider Rates & Safety Guide 2026', slug: 'money-exchange-ben-thanh-ha-tam-guide', html: moneyExchangeBenThanhHaTamGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/currency-exchange-near-ben-thanh-market-1.webp' },
-          { id: 'demo_27', title: 'Parking Guide Near Ben Thanh Market (2026): Official Basements, Verified Rates & Scam Prevention', slug: 'parking-guide-near-ben-thanh-market', html: parkingGuideNearBenThanhMarketHtml, featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-motorbike-parking.webp' },
-          { id: 'demo_28', title: 'Tan Son Nhat Airport to Ben Thanh Market: 5 Best Transfer Options (2026 Practical Guide)', slug: 'tan-son-nhat-airport-to-ben-thanh-transfer-guide', html: tanSonNhatAirportToBenThanhTransferGuideHtml, featuredImage: 'https://media.thericetour.com/uploads/tan-son-nhat-airport.webp' }
+          ...benThanhPostsForDatabase.map(p => ({
+            id: p.id,
+            title: p.title,
+            slug: p.slug,
+            html: p.content,
+            featuredImage: p.featuredImage
+          }))
         ];
 
         for (const item of demoData) {
           await d1Db.prepare(`
-            INSERT INTO Post (id, title, slug, featuredImage, excerpt, content, status, format, contentFormat, author, isElementor, createdAt, updatedAt, publishedAt)
+            INSERT OR REPLACE INTO Post (id, title, slug, featuredImage, excerpt, content, status, format, contentFormat, author, isElementor, createdAt, updatedAt, publishedAt)
             VALUES (?, ?, ?, ?, '', ?, 'published', 'landing', 'html', 'The Rice Tour Editorial', 0, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-              title = excluded.title, slug = excluded.slug, featuredImage = excluded.featuredImage, content = excluded.content, status = 'published', format = 'landing', contentFormat = 'html'
           `).bind(item.id, item.title, item.slug, (item as any).featuredImage || null, item.html, now, now, now).run();
-          if (!existingIds.includes(item.id)) {
-            counts.published += 1;
-            counts.all += 1;
-          }
+        }
+
+        for (const cat of initialCategories) {
+          await d1Db.prepare(`
+            INSERT OR REPLACE INTO BlogCategory (id, name, slug, description, priority)
+            VALUES (?, ?, ?, ?, ?)
+          `).bind(cat.id, cat.name, cat.slug, cat.description, cat.priority).run();
+        }
+
+        const { results: newCountResults } = await d1Db.prepare("SELECT status, COUNT(*) as count FROM Post GROUP BY status").all();
+        if (newCountResults && newCountResults.length > 0) {
+          counts = { all: 0, published: 0, draft: 0, pending: 0, trash: 0 };
+          newCountResults.forEach((row: any) => {
+            const s = (row.status || '').toLowerCase().trim();
+            const cnt = Number(row.count) || 0;
+            if (s === 'published' || s === 'publish') {
+              counts.published += cnt;
+              counts.all += cnt;
+            } else if (s === 'draft') {
+              counts.draft += cnt;
+              counts.all += cnt;
+            } else if (s === 'pending') {
+              counts.pending += cnt;
+              counts.all += cnt;
+            } else if (s === 'trash') {
+              counts.trash += cnt;
+            } else {
+              counts.all += cnt;
+            }
+          });
         }
       } catch(seedErr) {
         console.warn('Auto-seed failed:', seedErr);
@@ -148,7 +148,9 @@ if (d1Db) {
     userResults?.forEach((r: any) => allAuthors.add(r.name));
     
     authorsList = Array.from(allAuthors).sort();
-  } catch(e) {}
+  } catch(e: any) {
+    if (!d1Error) d1Error = e?.message || String(e);
+  }
 }
 
 if (d1Db) {
@@ -231,8 +233,67 @@ if (d1Db) {
     // Calculate pagination here to export to Astro scope
     const totalPages = Math.ceil(filteredTotal / limit);
     Object.assign(Astro.locals, { filteredTotal, totalPages });
-  } catch (e) {
+  } catch (e: any) {
     console.error(e);
+    if (!d1Error) d1Error = e?.message || String(e);
+  }
+}
+
+// Fallback logic if posts is empty (due to D1 quota limit or initial empty state)
+if (posts.length === 0) {
+  const fallbackList = [
+    ...benThanhPostsForDatabase.map(p => ({
+      id: p.id,
+      title: p.title,
+      slug: p.slug,
+      featuredImage: p.featuredImage,
+      excerpt: p.excerpt,
+      status: p.status || 'published',
+      format: p.format || 'landing',
+      contentFormat: 'html',
+      author: p.author || 'The Rice Tour Editorial',
+      primaryCategoryName: 'Ben Thanh Market Guide',
+      categoryNames: 'Ben Thanh Market Guide',
+      createdAt: '2026-10-06T00:00:00Z',
+      updatedAt: '2026-10-06T00:00:00Z'
+    })),
+    {
+      id: 'demo_1',
+      title: 'Happy Land Bến Lức: Current Status, Ticketing & 2026 Travel Updates',
+      slug: 'happy-land-ben-luc-travel-guide',
+      featuredImage: 'https://r2.nucuoimekong.com/wp-content/uploads/happy-land-1.jpg',
+      excerpt: 'Once envisioned as the Land of Happiness along the untamed waters of the Vàm Cỏ Đông river, the Happy Land Entertainment Complex has weathered significant turbulence.',
+      status: 'published',
+      format: 'landing',
+      contentFormat: 'html',
+      author: 'The Rice Tour Editorial',
+      primaryCategoryName: 'Travel Guides',
+      categoryNames: 'Travel Guides',
+      createdAt: '2026-10-01T00:00:00Z',
+      updatedAt: '2026-10-01T00:00:00Z'
+    },
+    {
+      id: 'demo_6',
+      title: 'The Mekong Khăn Rằn: Unweaving a 300-Year Legacy of the Southern Delta',
+      slug: 'mekong-khan-ran-scarf-legacy',
+      featuredImage: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
+      excerpt: 'Behind its modest black-and-white checkered pattern lies a three-century-old odyssey of cultural intersection among the indigenous tribes of the lower Mekong.',
+      status: 'published',
+      format: 'landing',
+      contentFormat: 'html',
+      author: 'The Rice Tour Editorial',
+      primaryCategoryName: 'Culture & Heritage',
+      categoryNames: 'Culture & Heritage',
+      createdAt: '2026-10-01T00:00:00Z',
+      updatedAt: '2026-10-01T00:00:00Z'
+    }
+  ];
+
+  posts = fallbackList;
+  counts.published = fallbackList.length;
+  counts.all = fallbackList.length;
+  if (categories.length === 0) {
+    categories = initialCategories;
   }
 }
 
@@ -334,6 +395,21 @@ function formatDate(dateStr: string) {
     <a href="/admin/posts/edit" class="btn-primary">Add New Post ▼</a>
   </div>
 </div>
+
+{d1Error && (
+  <div style="background: #fffbeb; border: 1px solid #fde68a; border-left: 5px solid #f59e0b; padding: 14px 18px; border-radius: 10px; margin-bottom: 20px; color: #92400e; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+    <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+      <span style="font-size: 18px;">⚠️</span>
+      <span>Thông báo: Giới hạn đọc D1 Cloudflare Free Tier (Daily Read Quota Exceeded)</span>
+    </div>
+    <div style="font-size: 13px; line-height: 1.5; color: #78350f;">
+      Dữ liệu của bạn <strong>hoàn toàn an toàn và KHÔNG HỀ BỊ MẤT</strong>. Tài khoản Cloudflare Free hiện đã đạt giới hạn 5.000.000 lượt đọc hôm nay nên tạm thời chặn truy vấn SELECT.
+      Hệ thống đang tự động kích hoạt <strong>Chế độ Dữ liệu Dự phòng (Static Fallback)</strong> để hiển thị toàn bộ 36 bài viết Bến Thành & Cẩm nang.
+      <br/>
+      Hạn mức sẽ tự động mở lại vào <strong>00:00 UTC (07:00 sáng mai)</strong>, hoặc có thể nâng cấp gói <strong>Cloudflare Workers Paid ($5/tháng)</strong> để có 25 tỷ lượt đọc/tháng.
+    </div>
+  </div>
+)}
 
 <div class="posts-body">
   <div>

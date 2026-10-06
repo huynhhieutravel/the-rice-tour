@@ -86,34 +86,8 @@ const canonicalTours = [
 let tours: any[] = [];
 
 try {
-  const d1Db = env?.dulichcoguu_d1;
+  const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1;
   if (d1Db) {
-    // Ensure all 6 canonical tours exist and are updated in D1
-    for (const ct of canonicalTours) {
-      try {
-        const existing = await d1Db.prepare("SELECT id FROM Tour WHERE slug = ?").bind(ct.slug).first();
-        if (!existing) {
-          await d1Db.prepare(`
-            INSERT INTO Tour (id, title, slug, status, featuredImage, price_number, price_text, days, excerpt, country_slug, createdAt, updatedAt)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
-          `).bind(ct.id, ct.title, ct.slug, ct.status, ct.featuredImage, ct.price_number, ct.price_text, ct.days, ct.excerpt, ct.country_slug).run();
-        } else {
-          // Keep canonical image and price synchronized
-          await d1Db.prepare(`
-            UPDATE Tour 
-            SET title = COALESCE(title, ?),
-                featuredImage = COALESCE(featuredImage, ?),
-                price_number = ?,
-                price_text = ?,
-                days = COALESCE(days, ?)
-            WHERE slug = ?
-          `).bind(ct.title, ct.featuredImage, ct.price_number, ct.price_text, ct.days, ct.slug).run();
-        }
-      } catch (seedErr) {
-        console.error('Error auto-syncing tour:', ct.slug, seedErr);
-      }
-    }
-
     const { results } = await d1Db.prepare(`
       SELECT t.id, t.slug, t.title, t.featuredImage, t.price_number, t.price_text, t.days, t.excerpt, t.country_slug, c.name as country_name
       FROM Tour t
@@ -128,7 +102,7 @@ try {
     }
   }
 } catch (e) {
-  console.error("Error fetching featured tours:", e);
+  // Silent fallback to canonical authentic tours
 }
 
 // Fallback to canonical authentic tours if needed

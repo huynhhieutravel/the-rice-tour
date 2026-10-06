@@ -28,6 +28,31 @@ import {
   lanVuongEcoparkMekongMudHtml,
   honSonIslandLodgingHomestaysHtml,
   canThoBeachArtificialOasisHtml,
+  whatDoYouLearnInAVietnameseCookingClassHtml
+} from '@/data/demo-articles';
+
+import {
+  benThanhArticlesMetadata,
+  // 18 Vietnamese articles
+  diaDiemNoiTiengQuanhBenThanhHtml,
+  baoTangMyThuatTphcmHtml,
+  amThucChoBenThanhHtml,
+  lichTrinhDiBoBenThanh1NgayHtml,
+  dinhDocLapSaiGonHtml,
+  gaNgamMetroBenThanhHtml,
+  denHinduMariammanSaiGonHtml,
+  kinhNghiemMuaSamChoBenThanhHtml,
+  xeBus2TangHopOnHopOffSaiGonHtml,
+  caPheChungCuGanBenThanhHtml,
+  rooftopBarViewChoBenThanhHtml,
+  khachSanBoutiqueGanBenThanhHtml,
+  choBenThanhCoGiChoiHtml,
+  kinhNghiemDiChoBenThanhHtml,
+  canhBaoLuaDaoChatChemChoBenThanhHtml,
+  doiNgoaiTeChoBenThanhHaTamHtml,
+  baiGuiXeQuanhChoBenThanhHtml,
+  diTuSanBayTanSonNhatVeBenThanhHtml,
+  // 18 English articles
   thingsToDoNearBenThanhMarketHtml,
   hcmcMuseumOfFineArtsGuideHtml,
   benThanhMarketFoodGuideHtml,
@@ -45,9 +70,8 @@ import {
   benThanhMarketScamsSafetyGuideHtml,
   moneyExchangeBenThanhHaTamGuideHtml,
   parkingGuideNearBenThanhMarketHtml,
-  tanSonNhatAirportToBenThanhTransferGuideHtml,
-  whatDoYouLearnInAVietnameseCookingClassHtml
-} from '@/data/demo-articles';
+  tanSonNhatAirportToBenThanhTransferGuideHtml
+} from '@/data/ben-thanh-articles';
 
 let { slug } = Astro.params;
 const url = new URL(Astro.request.url);
@@ -80,28 +104,27 @@ if (slug === 'whatsapp') {
 
 import { safeQueryCritical, safeQueryOptional } from '@/lib/db-client';
 
-const d1Db = env?.dulichcoguu_d1;
-
-if (!d1Db) {
-  return Astro.rewrite("/500");
-}
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
 
 // Fetch Post and Category
 let post;
 const cleanPostSlug = slug.replace(/^blog\//, '');
 
-try {
-  post = await safeQueryCritical(
-    d1Db.prepare(`
-      SELECT p.*, u.url as authorUrl, u.avatar as authorAvatar, u.displayName as authorName
-      FROM Post p 
-      LEFT JOIN "User" u ON p.authorId = u.id 
-      WHERE (p.slug = ? OR p.slug = ?) AND (p.status = 'published' OR p.status = 'publish')
-    `).bind(slug, cleanPostSlug).first<any>(),
-    { route: Astro.url.pathname, slug, queryType: "fetch_post_by_slug" }
-  );
-} catch (e) {
-  return Astro.rewrite("/500");
+if (d1Db) {
+  try {
+    post = await safeQueryCritical(
+      d1Db.prepare(`
+        SELECT p.*, u.url as authorUrl, u.avatar as authorAvatar, u.displayName as authorName
+        FROM Post p 
+        LEFT JOIN "User" u ON p.authorId = u.id 
+        WHERE (p.slug = ? OR p.slug = ?) AND (p.status = 'published' OR p.status = 'publish')
+      `).bind(slug, cleanPostSlug).first<any>(),
+      { route: Astro.url.pathname, slug, queryType: "fetch_post_by_slug" }
+    );
+  } catch (e) {
+    // If D1 fails (e.g. read quota exceeded or temporary outage), continue to fallback
+    console.warn('[Slug] D1 query failed, trying static fallback:', e);
+  }
 }
 
 let isPage = false;
@@ -162,19 +185,36 @@ const demoSlugs = [
 
 if (!post && (demoSlugs.includes(slug) || demoSlugs.includes(cleanPostSlug))) {
   const actualSlug = demoSlugs.includes(slug) ? slug : cleanPostSlug;
-  post = {
-    id: 'demo_' + actualSlug,
-    slug: actualSlug,
-    title: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class' 
-      ? 'What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion'
-      : actualSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-    seoDescription: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class'
-      ? 'A practical guide to wet market sourcing, fresh herbs, balancing five flavors, and home cooking techniques in a Vietnamese cooking class.'
-      : undefined,
-    status: 'published',
-    content: '', // Will be filled by demo-articles fallback
-    createdAt: new Date().toISOString()
-  };
+  const benThanhMeta = benThanhArticlesMetadata.find(
+    m => m.slug_vi === actualSlug || m.slug_en === actualSlug
+  );
+  if (benThanhMeta) {
+    const isVi = benThanhMeta.slug_vi === actualSlug;
+    post = {
+      id: 'demo_' + actualSlug,
+      slug: actualSlug,
+      title: isVi ? benThanhMeta.title_vi : benThanhMeta.title_en,
+      seoDescription: isVi ? (benThanhMeta.subtitle_vi || benThanhMeta.title_vi) : (benThanhMeta.subtitle_en || benThanhMeta.title_en),
+      featuredImage: benThanhMeta.featuredImage,
+      status: 'published',
+      content: '', // Will be filled by demo-articles fallback
+      createdAt: benThanhMeta.publishedAt
+    };
+  } else {
+    post = {
+      id: 'demo_' + actualSlug,
+      slug: actualSlug,
+      title: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class' 
+        ? 'What Do You Learn in a Vietnamese Cooking Class? Skills, Flavor Logic & Cultural Immersion'
+        : actualSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      seoDescription: actualSlug === 'what-do-you-learn-in-a-vietnamese-cooking-class'
+        ? 'A practical guide to wet market sourcing, fresh herbs, balancing five flavors, and home cooking techniques in a Vietnamese cooking class.'
+        : undefined,
+      status: 'published',
+      content: '', // Will be filled by demo-articles fallback
+      createdAt: new Date().toISOString()
+    };
+  }
 }
 
 if (!post) {
@@ -200,6 +240,7 @@ if (!post) {
     }
 
     if (!categoryData) {
+      Astro.response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
       return Astro.rewrite("/404");
     }
     isCategory = true;
@@ -399,16 +440,21 @@ if (!isCategory) {
       { route: Astro.url.pathname, slug, queryType: "fetch_post_tags" }
     );
     
+    const relatedSql = post.categoryId
+      ? `SELECT id, title, slug, featuredImage as image, createdAt as date
+         FROM Post
+         WHERE categoryId = ? AND id != ? AND (status = 'published' OR status = 'publish')
+         ORDER BY createdAt DESC
+         LIMIT 4`
+      : `SELECT id, title, slug, featuredImage as image, createdAt as date
+         FROM Post
+         WHERE id != ? AND (status = 'published' OR status = 'publish')
+         ORDER BY createdAt DESC
+         LIMIT 4`;
+    const relatedParams = post.categoryId ? [post.categoryId, post.id] : [post.id];
+
     relatedPromise = safeQueryOptional(
-      d1Db.prepare(`
-        SELECT p.id, p.title, p.slug, p.featuredImage as image, p.createdAt as date,
-               (SELECT COUNT(*) FROM PostTag pt1 WHERE pt1.postId = p.id AND pt1.tagId IN (SELECT tagId FROM PostTag WHERE postId = ?)) as tag_match,
-               CASE WHEN p.categoryId = ? THEN 1 ELSE 0 END as cat_match
-        FROM Post p
-        WHERE p.id != ? AND (p.status = 'published' OR p.status = 'publish')
-        ORDER BY (cat_match * 5) + tag_match DESC, p.createdAt DESC
-        LIMIT 4
-      `).bind(post.id, post.categoryId || '', post.id).all<any>(),
+      d1Db.prepare(relatedSql).bind(...relatedParams).all<any>(),
       { results: [] },
       { route: Astro.url.pathname, slug, queryType: "fetch_related_posts" }
     );
@@ -509,42 +555,46 @@ if (!isCategory) {
     'lan-vuong-ecopark-mekong-mud': lanVuongEcoparkMekongMudHtml,
     'hon-son-island-lodging-homestays': honSonIslandLodgingHomestaysHtml,
     'can-tho-beach-artificial-oasis': canThoBeachArtificialOasisHtml,
+    // Ben Thanh Campaign - Vietnamese
+    'dia-diem-noi-tieng-quanh-ben-thanh': diaDiemNoiTiengQuanhBenThanhHtml,
+    'bao-tang-my-thuat-tphcm': baoTangMyThuatTphcmHtml,
+    'am-thuc-cho-ben-thanh': amThucChoBenThanhHtml,
+    'lich-trinh-di-bo-ben-thanh-1-ngay': lichTrinhDiBoBenThanh1NgayHtml,
+    'dinh-doc-lap-sai-gon': dinhDocLapSaiGonHtml,
+    'ga-ngam-metro-ben-thanh': gaNgamMetroBenThanhHtml,
+    'den-hindu-mariamman-sai-gon': denHinduMariammanSaiGonHtml,
+    'kinh-nghiem-mua-sam-cho-ben-thanh': kinhNghiemMuaSamChoBenThanhHtml,
+    'xe-bus-2-tang-hop-on-hop-off-sai-gon': xeBus2TangHopOnHopOffSaiGonHtml,
+    'ca-phe-chung-cu-gan-ben-thanh': caPheChungCuGanBenThanhHtml,
+    'rooftop-bar-view-cho-ben-thanh': rooftopBarViewChoBenThanhHtml,
+    'khach-san-boutique-gan-ben-thanh': khachSanBoutiqueGanBenThanhHtml,
+    'cho-ben-thanh-co-gi-choi': choBenThanhCoGiChoiHtml,
+    'kinh-nghiem-di-cho-ben-thanh': kinhNghiemDiChoBenThanhHtml,
+    'canh-bao-lua-dao-chat-chem-cho-ben-thanh': canhBaoLuaDaoChatChemChoBenThanhHtml,
+    'doi-ngoai-te-cho-ben-thanh-ha-tam': doiNgoaiTeChoBenThanhHaTamHtml,
+    'bai-gui-xe-quanh-cho-ben-thanh': baiGuiXeQuanhChoBenThanhHtml,
+    'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': diTuSanBayTanSonNhatVeBenThanhHtml,
+
+    // Ben Thanh Campaign - English
     'things-to-do-near-ben-thanh-market': thingsToDoNearBenThanhMarketHtml,
-    'dia-diem-noi-tieng-quanh-ben-thanh': thingsToDoNearBenThanhMarketHtml,
     'hcmc-museum-of-fine-arts-guide': hcmcMuseumOfFineArtsGuideHtml,
-    'bao-tang-my-thuat-tphcm': hcmcMuseumOfFineArtsGuideHtml,
     'ben-thanh-market-food-guide': benThanhMarketFoodGuideHtml,
-    'am-thuc-cho-ben-thanh': benThanhMarketFoodGuideHtml,
     'ben-thanh-one-day-walking-tour': benThanhOneDayWalkingTourHtml,
-    'lich-trinh-di-bo-ben-thanh-1-ngay': benThanhOneDayWalkingTourHtml,
     'independence-palace-saigon-guide': independencePalaceSaigonGuideHtml,
-    'dinh-doc-lap-sai-gon': independencePalaceSaigonGuideHtml,
     'ben-thanh-central-metro-station-guide': benThanhCentralMetroStationGuideHtml,
-    'ga-ngam-metro-ben-thanh': benThanhCentralMetroStationGuideHtml,
     'mariamman-hindu-temple-saigon': mariammanHinduTempleSaigonHtml,
-    'den-hindu-mariamman-sai-gon': mariammanHinduTempleSaigonHtml,
     'ben-thanh-market-shopping-guide': benThanhMarketShoppingGuideHtml,
-    'kinh-nghiem-mua-sam-cho-ben-thanh': benThanhMarketShoppingGuideHtml,
     'saigon-hop-on-hop-off-bus-guide': saigonHopOnHopOffBusGuideHtml,
-    'xe-bus-2-tang-hop-on-hop-off-sai-gon': saigonHopOnHopOffBusGuideHtml,
     'secret-apartment-cafes-near-ben-thanh': secretApartmentCafesNearBenThanhHtml,
-    'ca-phe-chung-cu-gan-ben-thanh': secretApartmentCafesNearBenThanhHtml,
     'best-rooftop-bars-near-ben-thanh': bestRooftopBarsNearBenThanhHtml,
-    'rooftop-bar-view-cho-ben-thanh': bestRooftopBarsNearBenThanhHtml,
     'boutique-hotels-near-ben-thanh': boutiqueHotelsNearBenThanhHtml,
-    'khach-san-boutique-gan-ben-thanh': boutiqueHotelsNearBenThanhHtml,
     'things-to-do-in-ben-thanh-market': thingsToDoInBenThanhMarketHtml,
-    'cho-ben-thanh-co-gi-choi': thingsToDoInBenThanhMarketHtml,
     'ben-thanh-market-ultimate-travel-guide': benThanhMarketUltimateTravelGuideHtml,
-    'kinh-nghiem-di-cho-ben-thanh': benThanhMarketUltimateTravelGuideHtml,
     'ben-thanh-market-scams-safety-guide': benThanhMarketScamsSafetyGuideHtml,
-    'canh-bao-lua-dao-chat-chem-cho-ben-thanh': benThanhMarketScamsSafetyGuideHtml,
     'money-exchange-ben-thanh-ha-tam-guide': moneyExchangeBenThanhHaTamGuideHtml,
-    'doi-ngoai-te-cho-ben-thanh-ha-tam': moneyExchangeBenThanhHaTamGuideHtml,
     'parking-guide-near-ben-thanh-market': parkingGuideNearBenThanhMarketHtml,
-    'bai-gui-xe-quanh-cho-ben-thanh': parkingGuideNearBenThanhMarketHtml,
     'tan-son-nhat-airport-to-ben-thanh-transfer-guide': tanSonNhatAirportToBenThanhTransferGuideHtml,
-    'di-tu-san-bay-tan-son-nhat-ve-ben-thanh': tanSonNhatAirportToBenThanhTransferGuideHtml,
+
     'khan-ran-nam-bo': mekongKhanRanScarfLegacyHtml,
     'khu-du-lich-happy-land-ben-luc-long-an': happyLandBenLucTravelGuideHtml,
     'what-do-you-learn-in-a-vietnamese-cooking-class': whatDoYouLearnInAVietnameseCookingClassHtml
@@ -557,8 +607,8 @@ if (!isCategory) {
     'bao-tang-my-thuat-tphcm': 'https://media.thericetour.com/uploads/ho-chi-minh-city-museum-of-fine-arts.webp',
     'ben-thanh-market-food-guide': 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp',
     'am-thuc-cho-ben-thanh': 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp',
-    'ben-thanh-one-day-walking-tour': 'https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp',
-    'lich-trinh-di-bo-ben-thanh-1-ngay': 'https://media.thericetour.com/uploads/central-ho-chi-minh-city-street-scene.webp',
+    'ben-thanh-one-day-walking-tour': 'https://media.thericetour.com/uploads/ben-thanh-market-evening-walk.webp',
+    'lich-trinh-di-bo-ben-thanh-1-ngay': 'https://media.thericetour.com/uploads/ben-thanh-market-evening-walk.webp',
     'independence-palace-saigon-guide': 'https://media.thericetour.com/uploads/reunification-palace-saigon.webp',
     'dinh-doc-lap-sai-gon': 'https://media.thericetour.com/uploads/reunification-palace-saigon.webp',
     'ben-thanh-central-metro-station-guide': 'https://media.thericetour.com/uploads/ben-thanh-metro-station-circular-entrance.webp',
@@ -641,6 +691,13 @@ if (!isCategory) {
 const corporateSlugs = ['tour-doanh-nghiep'];
 const isCorporatePost = category && category.slug ? corporateSlugs.includes(category.slug) : false;
 const isCorporateCategory = categoryData && categoryData.slug ? corporateSlugs.includes(categoryData.slug) : false;
+
+// Edge Caching: Cache HTML at Cloudflare CDN for 24 hours to prevent D1 row exhaustion
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
+}
 ---
 
 {isCategory ? (

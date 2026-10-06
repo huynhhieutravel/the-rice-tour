@@ -15,12 +15,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] cu-chi-tunnels-half-day-vs-full-day:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata
@@ -356,7 +362,7 @@ const articleSchema = {
                 What really matters is how much time you have, how much road travel you want to handle, who is traveling with you, and whether you want Cu Chi to stand alone as the main event or anchor a broader day of city sightseeing.
               </p>
               <p>
-                This guide breaks down half-day and full-day Cu Chi options by real driving times, on-site pacing, physical demands, logistics, and companion sights.
+                This guide breaks down half-day and full-day Cu Chi options by real driving times, on-site pacing, physical demands, logistics, and companion sights. If you are starting your trip planning from scratch, begin with our comprehensive <a href="/cu-chi-tunnels-travel-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels travel guide</a> for an overall orientation.
               </p>
 
               {/* Callout Quote */}
@@ -825,7 +831,7 @@ const articleSchema = {
                 <li><strong>Extended Vehicle & Chauffeur Retainer:</strong> Your car and driver stay on standby for 8 to 10 hours rather than returning to base at noon.</li>
                 <li><strong>Full-Day Guide Service:</strong> Commentary covering both rural warfare history and Saigon's urban architecture.</li>
                 <li><strong>Sit-Down Lunch:</strong> Most private full-day tours include a multi-course Vietnamese meal at a reputable garden restaurant.</li>
-                <li><strong>Downtown Admission Fees:</strong> Entry tickets to the Independence Palace (approx. 80,000 VND per adult) and War Remnants Museum (40,000 VND). The official foreign admission to Cu Chi itself is <strong>135,000 VND</strong> (35,000 VND gate admission + 100,000 VND site guide and service fee).</li>
+                <li><strong>Downtown Admission Fees:</strong> Entry tickets to the Independence Palace (approx. 80,000 VND per adult) and War Remnants Museum (40,000 VND). The official foreign admission to Cu Chi itself is <strong>135,000 VND</strong> (35,000 VND gate admission + 100,000 VND site guide and service fee; read our comprehensive guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels entrance fee and opening hours</a>).</li>
                 <li><strong>Urban Parking & Toll Fees:</strong> Multiple parking and staging fees across District 1 and District 3.</li>
               </ul>
               <p>
@@ -963,7 +969,7 @@ const articleSchema = {
                 <li><strong>Ben Duoc:</strong> Located roughly 15 km farther out (~70 km total). It served as the headquarters for the regional military command. Because of the extra drive, it sees far fewer big tour coaches. It also houses the peaceful <strong>Ben Duoc Memorial Temple</strong> (built in 1993 to honor over 44,000 soldiers and locals who died in the area) and an expansive open-air heritage park.</li>
               </ul>
               <p>
-                Ben Duoc is not just a quieter version of Ben Dinh; it offers a distinctly different historical perspective.
+                Ben Duoc is not just a quieter version of Ben Dinh; it offers a distinctly different historical perspective. For a detailed breakdown of route distances and transit times to both gates, consult our guide on <a href="/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">how far the Cu Chi Tunnels are from Ho Chi Minh City</a>, or see our in-depth comparison of <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Ben Dinh vs Ben Duoc</a>.
               </p>
 
               {/* Historic Battlefield Relic Image Inside Body */}
@@ -1353,9 +1359,9 @@ const articleSchema = {
                 <div class="font-bold text-slate-900 text-[13px] leading-snug">How To Visit Without Crowds →</div>
                 <div class="text-slate-500 text-[11.5px] mt-0.5">Tactical timing windows & trail navigation</div>
               </a>
-              <a href="/things-to-do-near-ben-thanh-market" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                <div class="font-bold text-slate-900 text-[13px] leading-snug">Things To Do Near Ben Thanh →</div>
-                <div class="text-slate-500 text-[11.5px] mt-0.5">Best cafes, dining & sights in District 1</div>
+              <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Entrance Fee & Opening Hours →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">Verified 2026 tariff, ticket slip breakdown & timing</div>
               </a>
               <a href="/khan-ran-nam-bo" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
                 <div class="font-bold text-slate-900 text-[13px] leading-snug">The Southern Khăn Rằn Scarf →</div>

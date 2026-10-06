@@ -110,6 +110,13 @@ export const POST: APIRoute = async ({ request, locals, cookies }) => {
 
   } catch (err: any) {
     console.error('Login Error:', err);
+    const errMsg = err?.message || err?.toString?.() || '';
+    if (errMsg.includes('exceeded D1') || errMsg.includes('row read limit')) {
+      return new Response(JSON.stringify({ 
+        success: false, 
+        message: 'Database D1 tạm thời đạt giới hạn đọc trong ngày (Free Tier limit). Sẽ tự reset lúc 07:00 sáng mai hoặc sau khi nâng cấp Workers Paid.' 
+      }), { status: 503 });
+    }
     return new Response(JSON.stringify({ success: false, message: 'Lỗi hệ thống. Vui lòng thử lại.' }), { status: 500 });
   }
 };

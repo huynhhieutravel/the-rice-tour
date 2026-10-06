@@ -15,12 +15,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] cu-chi-tunnels-entrance-fee-and-opening-hours:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 query is empty or local

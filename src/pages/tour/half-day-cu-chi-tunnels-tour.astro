@@ -11,12 +11,18 @@ let tour: any;
 if (d1Db) {
   try {
     tour = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Tour WHERE slug = ?").bind(slug).first<any>(),
+      d1Db.prepare("SELECT id, title, seoTitle, seoDescription, excerpt, featuredImage, ogImage, price_number, price_text FROM Tour WHERE slug = ?").bind(slug).first<any>(),
       { route: Astro.url.pathname, slug, queryType: "fetch_tour_by_slug" }
     );
   } catch (e) {
     console.error("Fetch tour D1 error:", e);
   }
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 const tourTitle = tour?.title || "Half-Day Premium Cu Chi Tunnels Discovery";

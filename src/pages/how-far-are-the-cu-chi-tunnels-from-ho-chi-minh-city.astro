@@ -15,12 +15,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 query is empty or local
@@ -1164,7 +1170,7 @@ const articleSchema = {
                 <li><strong>100,000 VND:</strong> Guided trail service and tunnel maintenance fee</li>
               </ul>
               <p>
-                <em>Note for tour bookers:</em> When comparing private or group tour prices, always verify whether this 135,000 VND site fee is included in your quote or if you need to pay cash at the gate.
+                <em>Note for tour bookers:</em> When comparing private or group tour prices, always verify whether this 135,000 VND site fee is included in your quote or if you need to pay cash at the gate. For the full official price schedule, payment notes, and visiting hours across both sectors, see our guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:underline font-semibold">Cu Chi Tunnels entrance fee and opening hours</a>.
               </p>
             </div>
           </section>
@@ -1480,11 +1486,27 @@ const articleSchema = {
               </a>
 
               <a 
+                href="/cu-chi-tunnels-entrance-fee-and-opening-hours" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Entrance Fee & Opening Hours</div>
+                <div class="text-xs text-slate-500">Official 2026 tariff, tickets & timing</div>
+              </a>
+
+              <a 
                 href="/cu-chi-tunnels-half-day-vs-full-day" 
                 class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
               >
                 <div class="font-bold text-slate-900 mb-0.5">Half-Day vs. Full-Day Tour</div>
                 <div class="text-xs text-slate-500">Side-by-side itinerary timing breakdown</div>
+              </a>
+
+              <a 
+                href="/visiting-cu-chi-tunnels-by-private-car" 
+                class="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200"
+              >
+                <div class="font-bold text-slate-900 mb-0.5">Visiting Cu Chi by Private Car</div>
+                <div class="text-xs text-slate-500">Vehicle types, rates & driver logistics</div>
               </a>
             </div>
           </div>

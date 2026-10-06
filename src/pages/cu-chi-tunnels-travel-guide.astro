@@ -15,12 +15,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] cu-chi-tunnels-travel-guide:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 is not yet populated
@@ -1118,7 +1124,7 @@ const articleSchema = {
               <strong>Yes. Cu Chi can be visited completely on your own.</strong>
             </p>
             <p class="text-slate-700 text-[16px]">
-              You can hire a private driver, call a Grab taxi, or take public buses from Saigon, buy your ticket at the entrance booth, and join an on-site guide. The 135,000 VND foreign entrance fee includes a site guide stationed at the gate who walks your group through the outdoor circuit and explains the traps.
+              You can hire a private driver, call a Grab taxi, or take public buses from Saigon, buy your ticket at the entrance booth, and join an on-site guide. The 135,000 VND foreign entrance fee includes a site guide stationed at the gate who walks your group through the outdoor circuit and explains the traps. For verified details on gate costs and visiting schedules, read our full breakdown of <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:underline font-semibold">Cu Chi Tunnels entrance fee and opening hours</a>.
             </p>
             <p class="text-slate-700 text-[16px]">
               The trade-off is <strong>convenience versus control</strong>:
@@ -1581,6 +1587,14 @@ const articleSchema = {
             </div>
 
             <div class="space-y-2 text-xs">
+              <a 
+                href="/cu-chi-tunnels-entrance-fee-and-opening-hours" 
+                class="block p-2.5 rounded-xl hover:bg-amber-50/80 transition-colors border border-transparent hover:border-amber-200 group"
+              >
+                <div class="font-bold text-slate-900 group-hover:text-amber-900">Entrance Fee & Opening Hours</div>
+                <div class="text-[11px] text-slate-500">Official 2026 tariff, tickets & timing</div>
+              </a>
+
               <a 
                 href="/ben-dinh-vs-ben-duoc" 
                 class="block p-2.5 rounded-xl hover:bg-amber-50/80 transition-colors border border-transparent hover:border-amber-200 group"

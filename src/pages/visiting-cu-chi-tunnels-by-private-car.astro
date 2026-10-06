@@ -13,12 +13,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] visiting-cu-chi-tunnels-by-private-car:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 is not yet populated
@@ -322,7 +328,7 @@ const faqSchema = {
           <section id="gioi-thieu" class="scroll-mt-28 space-y-4">
             <div class="prose prose-slate max-w-none prose-p:leading-relaxed prose-p:text-[16px] prose-p:text-slate-700">
               <p>
-                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car offers a level of comfort and flexibility that group tours simply cannot match: you decide when to leave, which vehicle suits your party, which tunnel sector to visit, and how long to stay.
+                Visiting the <strong>Cu Chi Tunnels</strong> (<em>Địa đạo Củ Chi</em>) by private car offers a level of comfort and flexibility that group tours simply cannot match: you decide when to leave, which vehicle suits your party, which tunnel sector to visit, and how long to stay. If you need foundational context on history and site layouts before booking transit, consult our master <a href="/cu-chi-tunnels-travel-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels travel guide</a>.
               </p>
 
               <div class="font-medium text-slate-900 text-lg border-l-4 border-amber-500 pl-4 my-5 bg-amber-50/50 py-3 rounded-r-xl">
@@ -478,7 +484,7 @@ const faqSchema = {
                   <span class="text-lg">🎟️</span> Official 2026 Ticket Pricing Structure
                 </div>
                 <p class="text-xs sm:text-sm text-amber-950/90 leading-relaxed">
-                  For international visitors, the current official total is <strong>135,000 VND per person</strong>: 35,000 VND for site admission plus 100,000 VND for the guide/service fee (effective February 1, 2026). Confirm the current tariff before visiting, as ticketing arrangements can change. Entrance fees are normally paid on-site unless explicitly included in your private car excursion package.
+                  For international visitors, the current official total is <strong>135,000 VND per person</strong>: 35,000 VND for site admission plus 100,000 VND for the guide/service fee (effective February 1, 2026). Confirm the current tariff before visiting, as ticketing arrangements can change. Entrance fees are normally paid on-site unless explicitly included in your private car excursion package. For complete details on ticket policies, cash requirements, and site hours, see our verified guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels entrance fee and opening hours</a>.
                 </p>
               </div>
             </div>
@@ -645,7 +651,7 @@ const faqSchema = {
                 <strong>Ben Duoc (~70 km from District 1)</strong> served as the regional headquarters for Military Region 4 and the Saigon-Gia Dinh Party Committee. Set within a larger, quieter forested park, it includes the Ben Duoc Memorial Temple and reconstructed artisan quarters illustrating how resistance fighters lived, worked, and wore the traditional <a href="/khan-ran-nam-bo" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">khăn rằn scarf</a>. The tunnels here retain a more rugged character, and visitor numbers are substantially lower.
               </p>
               <p>
-                <em>In short: If your time is limited or you are traveling with young children, Ben Dinh saves roughly 45 minutes of driving each way. If you prefer tranquil surroundings and fewer crowds, Ben Duoc is worth the extra distance.</em>
+                <em>In short: If your time is limited or you are traveling with young children, Ben Dinh saves roughly 45 minutes of driving each way. If you prefer tranquil surroundings and fewer crowds, Ben Duoc is worth the extra distance (see our comprehensive head-to-head comparison of <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Ben Dinh vs Ben Duoc</a>).</em>
               </p>
 
               {/* Comparison Table */}
@@ -1005,7 +1011,7 @@ const faqSchema = {
                 Cu Chi is located 70 km northwest of Saigon, while key Mekong Delta access points like My Tho and Ben Tre lie 80 km to the southwest. Combining them creates a rushed 10-to-12-hour itinerary with 5 to 6 hours spent navigating traffic in opposite directions, leaving very little time to appreciate either destination.
               </p>
               <p>
-                A better approach is to visit Cu Chi as a relaxed morning excursion, returning to town in time for lunch before pairing it with a <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">private half-day Saigon city tour</a> in the afternoon, while reserving a separate day for an in-depth <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">full-day Mekong Delta tour</a>.
+                A better approach is to visit Cu Chi as a relaxed morning excursion, returning to town in time for lunch before pairing it with a <a href="/tour/ho-chi-minh-city-half-day-private-tour" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">private half-day Saigon city tour</a> in the afternoon, while reserving a separate day for an in-depth <a href="/tour/full-day-mekong-delta-tour-ben-tre-my-tho" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">full-day Mekong Delta tour</a> (for more details on deciding between schedules, see our analysis on <a href="/cu-chi-tunnels-half-day-vs-full-day" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels half day vs full day</a>).
               </p>
             </div>
           </section>
@@ -1069,6 +1075,10 @@ const faqSchema = {
                   </tbody>
                 </table>
               </div>
+
+              <p>
+                If you are also weighing whether to hire an accompanying private tour guide alongside the car or rely solely on site-provided staff at the gates, consult our detailed analysis on <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">is a Cu Chi Tunnels private tour worth it</a>.
+              </p>
             </div>
           </section>
 
@@ -1272,28 +1282,28 @@ const faqSchema = {
               
               <div class="space-y-3 text-xs">
                 <a href="/cu-chi-tunnels-travel-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">Cu Chi Tunnels: The Complete Travel Guide</div>
+                  <div class="font-bold text-slate-900 mb-1">Cu Chi Tunnels: The Complete Travel Guide →</div>
                   <p class="text-slate-500 line-clamp-2">The definitive pillar guide to sectors, underground engineering, and trip logistics.</p>
                 </a>
 
-                <a href="/tour/half-day-cu-chi-tunnels-tour" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">Cu Chi Tunnels: Half-Day Private Tour</div>
-                  <p class="text-slate-500 line-clamp-2">Direct morning private excursion to Ben Duoc or Ben Dinh with flexible pacing.</p>
+                <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Entrance Fee & Opening Hours →</div>
+                  <p class="text-slate-500 line-clamp-2">Verified 2026 tariff (135,000 VND), ticket breakdown, and site hours.</p>
+                </a>
+
+                <a href="/ben-dinh-vs-ben-duoc" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Ben Dinh vs Ben Duoc →</div>
+                  <p class="text-slate-500 line-clamp-2">Head-to-head comparison of history, atmospheres, crowds, and drive times.</p>
                 </a>
 
                 <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">How to Visit Cu Chi Tunnels Without the Crowds</div>
-                  <p class="text-slate-500 line-clamp-2">5 insider strategies on timing, routes, and avoiding tour bus caravans.</p>
+                  <div class="font-bold text-slate-900 mb-1">How to Visit Without Crowds →</div>
+                  <p class="text-slate-500 line-clamp-2">5 insider strategies on departure windows, routes, and quiet forest trails.</p>
                 </a>
 
-                <a href="/tour/1-day-premium-cu-chi-tunnels" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">1-Day Cu Chi & Saigon Highlights</div>
-                  <p class="text-slate-500 line-clamp-2">Direct early tunnel exploration paired with central Saigon historical landmarks.</p>
-                </a>
-
-                <a href="/independence-palace-saigon-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">Independence Palace Saigon Guide</div>
-                  <p class="text-slate-500 line-clamp-2">History, architecture, underground war bunkers, and visitor tips.</p>
+                <a href="/is-a-cu-chi-tunnels-private-tour-worth" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Is A Private Tour Worth It? →</div>
+                  <p class="text-slate-500 line-clamp-2">2026 cost comparison, group size tipping points, and guide quality.</p>
                 </a>
               </div>
             </div>

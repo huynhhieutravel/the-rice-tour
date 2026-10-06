@@ -10,11 +10,17 @@ const d1Db = env?.dulichcoguu_d1;
 let post;
 try {
   if (d1Db) post = await safeQueryCritical(
-    d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('van-ly-truong-thanh').first<any>(),
+    d1Db.prepare("SELECT id, title, excerpt, createdAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind('van-ly-truong-thanh').first<any>(),
     { route: Astro.url.pathname, slug: 'van-ly-truong-thanh', queryType: "fetch_post_by_slug" }
   );
 } catch (e) {
   // Gracefully fallback if DB error or not created yet
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if post is not yet populated in CMS

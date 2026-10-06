@@ -15,12 +15,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] ben-dinh-vs-ben-duoc:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 is not yet populated
@@ -536,7 +542,7 @@ const articleSchema = {
                   If your time in southern Vietnam is limited, Ben Dinh makes logistical sense:
                 </p>
                 <ul class="list-disc pl-5 space-y-2 text-slate-600 text-sm">
-                  <li><strong>Predictable transit:</strong> Driving takes about 1.5 to 2 hours each way, depending on morning rush-hour traffic exiting the city.</li>
+                  <li><strong>Predictable transit:</strong> Driving takes about 1.5 to 2 hours each way, depending on morning rush-hour traffic exiting the city. For realistic driving times and route breakdowns from different districts, see our guide on <a href="/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">how far the Cu Chi Tunnels are from Ho Chi Minh City</a>.</li>
                   <li><strong>Clean half-day timing:</strong> You can leave your hotel at 07:30, walk the grounds, crawl a tunnel section, and be back in District 1 in time for a late lunch.</li>
                   <li><strong>Easy city pairing:</strong> That leaves your entire afternoon open to walk through the <a href="/independence-palace-saigon-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Independence Palace</a> or take the <a href="/saigon-hop-on-hop-off-bus-guide" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Saigon hop-on hop-off bus</a> around the French Quarter.</li>
                 </ul>
@@ -787,7 +793,7 @@ const articleSchema = {
                   <li><strong>Nomination Status:</strong> The Ministry of Culture, Sports and Tourism and the Ho Chi Minh City government have completed the formal <strong>Summary Heritage Report</strong>, advancing the site toward full UNESCO World Heritage nomination under cultural criteria <strong>(iv)</strong> (unique subterranean military engineering) and <strong>(v)</strong> (exceptional human settlement and resilience in an extreme wartime environment), with formal international evaluation targeted for 2027.</li>
                   <li><strong>Preserved Core:</strong> Heritage surveys confirm that Ben Dinh and Ben Duoc remain the two primary sectors preserving authentic subterranean architecture, with approximately four kilometers of restored passages maintained for public education and historical visits.</li>
                   <li><strong>National Significance:</strong> Designated a Special National Relic in 2015, the Cu Chi complex welcomes <strong>over one million domestic and international visitors each year</strong>.</li>
-                  <li><strong>Current Admission:</strong> Foreign visitor entry is <strong>135,000 VND</strong> (approximately $5.50 USD), which covers both the 35,000 VND relic entrance fee and the 100,000 VND official site guide service.</li>
+                  <li><strong>Current Admission:</strong> Foreign visitor entry is <strong>135,000 VND</strong> (approximately $5.50 USD), which covers both the 35,000 VND relic entrance fee and the 100,000 VND official site guide service. For ticket window details, valid operating hours, and payment notes, read our guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels entrance fee and opening hours</a>.</li>
                 </ul>
               </div>
             </section>
@@ -977,6 +983,11 @@ const articleSchema = {
                 <a href="/how-to-visit-cu-chi-tunnels-without-the-crowds" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
                   <div class="font-bold text-slate-900 mb-1">How to Visit Without Crowds</div>
                   <p class="text-slate-500 line-clamp-2">Practical timing advice, arrival windows, and trail navigation.</p>
+                </a>
+
+                <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Entrance Fee & Opening Hours</div>
+                  <p class="text-slate-500 line-clamp-2">Verified 2026 international tariff, included guide services, and gate timing.</p>
                 </a>
 
                 <a href="/visiting-cu-chi-tunnels-by-private-car" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">

@@ -35,6 +35,10 @@
       "anchorText": "Travel Guides"
     },
     {
+      "targetUrl": "/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city",
+      "anchorText": "how far the Cu Chi Tunnels are from Ho Chi Minh City"
+    },
+    {
       "targetUrl": "/independence-palace-saigon-guide",
       "anchorText": "Independence Palace"
     },
@@ -65,6 +69,10 @@
     {
       "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
       "anchorText": "Cu Chi Tunnels private tour cost breakdown"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
@@ -117,6 +125,10 @@
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
       "anchorText": "How to Visit Without Crowds\n                  Practical timing advice, arrival windows, and trail na"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours\n                  Verified 2026 international tariff, included guide se"
     },
     {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
@@ -239,6 +251,10 @@
       "anchorText": "Independence Palace"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels travel guide"
+    },
+    {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
     },
@@ -263,8 +279,20 @@
       "anchorText": "HCMC Museum of Fine Arts"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
+    },
+    {
       "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
       "anchorText": "Cu Chi Tunnels private tour cost breakdown"
+    },
+    {
+      "targetUrl": "/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city",
+      "anchorText": "how far the Cu Chi Tunnels are from Ho Chi Minh City"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs Ben Duoc"
     },
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
@@ -327,8 +355,8 @@
       "anchorText": "How To Visit Without Crowds →\n                Tactical timing windows & trail navigation"
     },
     {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh →\n                Best cafes, dining & sights in District 1"
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours →\n                Verified 2026 tariff, ticket slip breakdown & timing"
     },
     {
       "targetUrl": "/khan-ran-nam-bo",
@@ -351,6 +379,10 @@
     {
       "targetUrl": "/ben-dinh-vs-ben-duoc",
       "anchorText": "Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
     },
     {
       "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
@@ -403,6 +435,10 @@
     {
       "targetUrl": "/destination/south-vietnam",
       "anchorText": "Southern Vietnam"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours\n                Official 2026 tariff, tickets & timing"
     },
     {
       "targetUrl": "/ben-dinh-vs-ben-duoc",
@@ -481,6 +517,10 @@
       "anchorText": "Is a Cu Chi Tunnels Private Tour Worth the Extra Cost?"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
+    },
+    {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
       "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds"
     },
@@ -529,8 +569,16 @@
       "anchorText": "Ben Dinh vs. Ben Duoc\n                Which site fits your schedule & style?"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours\n                Official 2026 tariff, tickets & timing"
+    },
+    {
       "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
       "anchorText": "Half-Day vs. Full-Day Tour\n                Side-by-side itinerary timing breakdown"
+    },
+    {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "Visiting Cu Chi by Private Car\n                Vehicle types, rates & driver logistics"
     },
     {
       "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
@@ -559,6 +607,10 @@
       "anchorText": "private half-day Saigon city tour"
     },
     {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?"
+    },
+    {
       "targetUrl": "/khan-ran-nam-bo",
       "anchorText": "khăn rằn scarf"
     },
@@ -567,8 +619,16 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
+      "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
+      "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
       "targetUrl": "/tours",
       "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
     },
     {
       "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
@@ -595,12 +655,12 @@
       "anchorText": "1-Day Cu Chi & Saigon Highlights\n                  Direct early tunnel exploration paired with centr"
     },
     {
-      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
-      "anchorText": "HCMC Fine Arts Museum Guide\n                  Historic 1920s French-colonial mansion, antique staine"
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours\n                  Verified 2026 tariff, ticket slip breakdown & timing."
     },
     {
-      "targetUrl": "/ben-thanh-one-day-walking-tour",
-      "anchorText": "Saigon Heritage Walking Tour\n                  A self-paced exploration of historic French-colonial "
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc\n                  Which site matches your schedule and travel style?"
     },
     {
       "targetUrl": "/contact",
@@ -627,6 +687,14 @@
     {
       "targetUrl": "/visiting-cu-chi-tunnels-by-private-car",
       "anchorText": "visiting Cu Chi Tunnels by private car"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs. Ben Duoc"
     },
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
@@ -685,8 +753,8 @@
       "anchorText": "How To Visit Without Crowds →\n                Tactical timing windows & trail navigation"
     },
     {
-      "targetUrl": "/things-to-do-near-ben-thanh-market",
-      "anchorText": "Things To Do Near Ben Thanh →\n                Best cafes, dining & sights in District 1"
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours →\n                Verified 2026 tariff, ticket slip breakdown & timing"
     },
     {
       "targetUrl": "/khan-ran-nam-bo",
@@ -985,12 +1053,20 @@
       "anchorText": "Travel Guides"
     },
     {
+      "targetUrl": "/cu-chi-tunnels-travel-guide",
+      "anchorText": "Cu Chi Tunnels travel guide"
+    },
+    {
       "targetUrl": "/independence-palace-saigon-guide",
       "anchorText": "Independence Palace"
     },
     {
       "targetUrl": "/tours",
       "anchorText": "curated private itineraries in Vietnam"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Cu Chi Tunnels entrance fee and opening hours"
     },
     {
       "targetUrl": "/how-far-are-the-cu-chi-tunnels-from-ho-chi-minh-city",
@@ -1009,12 +1085,24 @@
       "anchorText": "khăn rằn scarf"
     },
     {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs Ben Duoc"
+    },
+    {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "private half-day Saigon city tour"
     },
     {
       "targetUrl": "/tour/full-day-mekong-delta-tour-ben-tre-my-tho",
       "anchorText": "full-day Mekong Delta tour"
+    },
+    {
+      "targetUrl": "/cu-chi-tunnels-half-day-vs-full-day",
+      "anchorText": "Cu Chi Tunnels half day vs full day"
+    },
+    {
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "is a Cu Chi Tunnels private tour worth it"
     },
     {
       "targetUrl": "/tailor-made",
@@ -1030,23 +1118,23 @@
     },
     {
       "targetUrl": "/cu-chi-tunnels-travel-guide",
-      "anchorText": "Cu Chi Tunnels: The Complete Travel Guide\n                  The definitive pillar guide to sectors, "
+      "anchorText": "Cu Chi Tunnels: The Complete Travel Guide →\n                  The definitive pillar guide to sectors"
     },
     {
-      "targetUrl": "/tour/half-day-cu-chi-tunnels-tour",
-      "anchorText": "Cu Chi Tunnels: Half-Day Private Tour\n                  Direct morning private excursion to Ben Duoc"
+      "targetUrl": "/cu-chi-tunnels-entrance-fee-and-opening-hours",
+      "anchorText": "Entrance Fee & Opening Hours →\n                  Verified 2026 tariff (135,000 VND), ticket breakdow"
+    },
+    {
+      "targetUrl": "/ben-dinh-vs-ben-duoc",
+      "anchorText": "Ben Dinh vs Ben Duoc →\n                  Head-to-head comparison of history, atmospheres, crowds, an"
     },
     {
       "targetUrl": "/how-to-visit-cu-chi-tunnels-without-the-crowds",
-      "anchorText": "How to Visit Cu Chi Tunnels Without the Crowds\n                  5 insider strategies on timing, rou"
+      "anchorText": "How to Visit Without Crowds →\n                  5 insider strategies on departure windows, routes, a"
     },
     {
-      "targetUrl": "/tour/1-day-premium-cu-chi-tunnels",
-      "anchorText": "1-Day Cu Chi & Saigon Highlights\n                  Direct early tunnel exploration paired with centr"
-    },
-    {
-      "targetUrl": "/independence-palace-saigon-guide",
-      "anchorText": "Independence Palace Saigon Guide\n                  History, architecture, underground war bunkers, a"
+      "targetUrl": "/is-a-cu-chi-tunnels-private-tour-worth",
+      "anchorText": "Is A Private Tour Worth It? →\n                  2026 cost comparison, group size tipping points, and"
     },
     {
       "targetUrl": "/contact",
@@ -1539,6 +1627,2088 @@
     {
       "targetUrl": "/our-team/",
       "anchorText": "Xem thêm"
+    }
+  ],
+  "ben-thanh-articles": [
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo tàng Mỹ thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/den-hindu-mariamman-sai-gon",
+      "anchorText": "Đền Hindu Mariamman"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "Ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "cẩm nang ẩm thực chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ quanh Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Dinh Độc Lập"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/ca-phe-chung-cu-gan-ben-thanh",
+      "anchorText": "cà phê chung cư gần Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Metro Station"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Experience"
+    },
+    {
+      "targetUrl": "/cho-ben-thanh-co-gi-choi",
+      "anchorText": "chợ Bến Thành có gì chơi"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/rooftop-bar-view-cho-ben-thanh",
+      "anchorText": "rooftop bar view chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Tour"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/den-hindu-mariamman-sai-gon",
+      "anchorText": "Đền Hindu Mariamman"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo tàng Mỹ thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Dinh Độc Lập"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "Ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "bún riêu gánh Bến Thành"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "authentic bún riêu"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/xe-bus-2-tang-hop-on-hop-off-sai-gon",
+      "anchorText": "xe bus 2 tầng Hop-On Hop-Off Sài Gòn"
+    },
+    {
+      "targetUrl": "/khach-san-boutique-gan-ben-thanh",
+      "anchorText": "khách sạn boutique gần Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "One-Day Walking Tour"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon Hop-On Hop-Off Bus"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo tàng Mỹ thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Dinh Độc Lập"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Lộ trình Walking Tour 1 ngày"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/cho-ben-thanh-co-gi-choi",
+      "anchorText": "chợ Bến Thành có gì chơi"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "One-Day Walking Tour"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City Half Day Private Tour"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "ẩm thực sạp chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo tàng Mỹ thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/ca-phe-chung-cu-gan-ben-thanh",
+      "anchorText": "cà phê chung cư gần Bến Thành"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "danh mục tour The Rice Tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh market stalls"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "curated Vietnam tours"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "những địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Experience"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/cho-ben-thanh-co-gi-choi",
+      "anchorText": "chợ Bến Thành có gì chơi"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-di-cho-ben-thanh",
+      "anchorText": "kinh nghiệm đi chợ Bến Thành toàn tập"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Tour"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dinh-doc-lap-sai-gon",
+      "anchorText": "Dinh Độc Lập"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "tour Sài Gòn nửa ngày riêng tư"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "private Ho Chi Minh City tour"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo tàng Mỹ thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/rooftop-bar-view-cho-ben-thanh",
+      "anchorText": "rooftop bar view chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/bai-gui-xe-quanh-cho-ben-thanh",
+      "anchorText": "bãi gửi xe quanh chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "ẩm thực chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/ca-phe-chung-cu-gan-ben-thanh",
+      "anchorText": "cà phê chung cư gần Bến Thành"
+    },
+    {
+      "targetUrl": "/khach-san-boutique-gan-ben-thanh",
+      "anchorText": "khách sạn boutique gần Bến Thành"
+    },
+    {
+      "targetUrl": "/di-tu-san-bay-tan-son-nhat-ve-ben-thanh",
+      "anchorText": "đi từ sân bay Tân Sơn Nhất về Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/cho-ben-thanh-co-gi-choi",
+      "anchorText": "chợ Bến Thành có gì chơi"
+    },
+    {
+      "targetUrl": "/di-tu-san-bay-tan-son-nhat-ve-ben-thanh",
+      "anchorText": "đi từ sân bay Tân Sơn Nhất về Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/rooftop-bar-view-cho-ben-thanh",
+      "anchorText": "rooftop bar view chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "dịch vụ tour riêng tailor-made"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made journey service"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "Ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "ẩm thực chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-mua-sam-cho-ben-thanh",
+      "anchorText": "kinh nghiệm mua sắm chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/cho-ben-thanh-co-gi-choi",
+      "anchorText": "chợ Bến Thành có gì chơi"
+    },
+    {
+      "targetUrl": "/di-tu-san-bay-tan-son-nhat-ve-ben-thanh",
+      "anchorText": "đi từ sân bay Tân Sơn Nhất về Bến Thành"
+    },
+    {
+      "targetUrl": "/bai-gui-xe-quanh-cho-ben-thanh",
+      "anchorText": "bãi gửi xe quanh chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-mua-sam-cho-ben-thanh",
+      "anchorText": "kinh nghiệm mua sắm chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/di-tu-san-bay-tan-son-nhat-ve-ben-thanh",
+      "anchorText": "đi từ sân bay Tân Sơn Nhất về Bến Thành"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-di-cho-ben-thanh",
+      "anchorText": "kinh nghiệm đi chợ Bến Thành toàn tập"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "cẩm nang ẩm thực chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-mua-sam-cho-ben-thanh",
+      "anchorText": "kinh nghiệm mua sắm chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/bai-gui-xe-quanh-cho-ben-thanh",
+      "anchorText": "bãi gửi xe quanh chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-di-cho-ben-thanh",
+      "anchorText": "kinh nghiệm đi chợ Bến Thành toàn tập"
+    },
+    {
+      "targetUrl": "/di-tu-san-bay-tan-son-nhat-ve-ben-thanh",
+      "anchorText": "đi từ sân bay Tân Sơn Nhất về Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "lịch trình đi bộ Bến Thành 1 ngày"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/kinh-nghiem-di-cho-ben-thanh",
+      "anchorText": "kinh nghiệm đi chợ Bến Thành toàn tập"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Trang chủ"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Cẩm nang du lịch"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Tour Riêng ➜"
+    },
+    {
+      "targetUrl": "/ga-ngam-metro-ben-thanh",
+      "anchorText": "ga ngầm Metro Bến Thành"
+    },
+    {
+      "targetUrl": "/khach-san-boutique-gan-ben-thanh",
+      "anchorText": "khách sạn boutique gần Bến Thành"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "địa điểm nổi tiếng quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/doi-ngoai-te-cho-ben-thanh-ha-tam",
+      "anchorText": "đổi ngoại tệ chợ Bến Thành Hà Tâm"
+    },
+    {
+      "targetUrl": "/canh-bao-lua-dao-chat-chem-cho-ben-thanh",
+      "anchorText": "cảnh báo lừa đảo chặt chém tại chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "dịch vụ tour riêng tailor-made"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Thiết Kế Lịch Trình Riêng ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Xem Danh Sách Tour"
+    },
+    {
+      "targetUrl": "/dia-diem-noi-tieng-quanh-ben-thanh",
+      "anchorText": "Địa Điểm Nổi Tiếng Quanh Bến Thành"
+    },
+    {
+      "targetUrl": "/bao-tang-my-thuat-tphcm",
+      "anchorText": "Bảo Tàng Mỹ Thuật TP.HCM"
+    },
+    {
+      "targetUrl": "/am-thuc-cho-ben-thanh",
+      "anchorText": "Khu Ẩm Thực Chợ Bến Thành"
+    },
+    {
+      "targetUrl": "/lich-trinh-di-bo-ben-thanh-1-ngay",
+      "anchorText": "Cẩm Nang Bến Thành 2026"
+    },
+    {
+      "targetUrl": "/",
+      "anchorText": "Home"
+    },
+    {
+      "targetUrl": "/blog",
+      "anchorText": "Travel Guides"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Plan Private Journey ➜"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made travel design"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "Tailor-Made Journey ➜"
+    },
+    {
+      "targetUrl": "/tours",
+      "anchorText": "Explore All Journeys"
+    },
+    {
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "Things to Do Near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market Food Guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "Ben Thanh Travel Guide"
     }
   ],
   "demo-articles": [
@@ -3341,6 +5511,24 @@
     {
       "targetUrl": "/truong-tien-bridge-hue-heritage",
       "anchorText": "Truong Tien Bridge Hue Heritage: Eiffel's Iron Lace, Dynastic Memory & 2026 Engineering Heritage"
+    }
+  ],
+  "seed-inbound-data": [
+    {
+      "targetUrl": "tel:0962333621",
+      "anchorText": "0962.333.621"
+    },
+    {
+      "targetUrl": "/tour/mekong-delta-floating-life-3d2n",
+      "anchorText": "\\n          \\n            \\n              \\n              3 Ngày 2 Đêm\\n            \\n            \\n"
+    },
+    {
+      "targetUrl": "/tour/sapa-rice-terraces-trek-4d3n",
+      "anchorText": "\\n          \\n            \\n              \\n              4 Ngày 3 Đêm\\n            \\n            \\n"
+    },
+    {
+      "targetUrl": "/tour/grand-vietnam-discovery-14d13n",
+      "anchorText": "\\n          \\n            \\n              \\n              14 Ngày 13 Đêm\\n            \\n            "
     }
   ]
 }

@@ -99,6 +99,8 @@ CREATE TABLE IF NOT EXISTS Tour (
 CREATE INDEX IF NOT EXISTS idx_tour_slug ON Tour(slug);
 CREATE INDEX IF NOT EXISTS idx_tour_country ON Tour(country_slug);
 CREATE INDEX IF NOT EXISTS idx_tour_status ON Tour(status);
+CREATE INDEX IF NOT EXISTS idx_tour_status_price ON Tour(status, price_number ASC);
+CREATE INDEX IF NOT EXISTS idx_tour_status_created ON Tour(status, createdAt DESC);
 
 -- 4. Blog Categories
 CREATE TABLE IF NOT EXISTS BlogCategory (
@@ -149,6 +151,9 @@ CREATE TABLE IF NOT EXISTS Post (
 CREATE INDEX IF NOT EXISTS idx_post_slug ON Post(slug);
 CREATE INDEX IF NOT EXISTS idx_post_category ON Post(categoryId);
 CREATE INDEX IF NOT EXISTS idx_post_status ON Post(status);
+CREATE INDEX IF NOT EXISTS idx_post_status_created ON Post(status, createdAt DESC);
+CREATE INDEX IF NOT EXISTS idx_post_category_status_created ON Post(categoryId, status, createdAt DESC);
+CREATE INDEX IF NOT EXISTS idx_post_slug_status ON Post(slug, status);
 
 -- 5.1 Post Revisions (Version History & Diff)
 CREATE TABLE IF NOT EXISTS PostRevision (
@@ -219,6 +224,7 @@ CREATE TABLE IF NOT EXISTS Page (
 );
 
 CREATE INDEX IF NOT EXISTS idx_page_slug ON Page(slug);
+CREATE INDEX IF NOT EXISTS idx_page_slug_status ON Page(slug, status);
 
 -- 9. Media Library
 CREATE TABLE IF NOT EXISTS Media (
@@ -298,6 +304,7 @@ CREATE TABLE IF NOT EXISTS Popup (
     updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+CREATE INDEX IF NOT EXISTS idx_popup_active_created ON Popup(is_active, created_at DESC);
 
 -- 14. Short Topics & Videos (Reels)
 CREATE TABLE IF NOT EXISTS ShortTopic (

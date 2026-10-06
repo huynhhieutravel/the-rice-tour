@@ -10,6 +10,8 @@ const RESERVED_SLUGS = new Set([
   'sitemap-pages.xml', 'sitemap-posts.xml', 'sitemap-tours.xml', 'sitemap-countries.xml'
 ]);
 
+let inMemoryLinkCache: { data: Record<string, any>; expiry: number } | null = null;
+
 export const onRequest = defineMiddleware(async (context, next) => {
   const path = context.url.pathname;
 
@@ -69,6 +71,29 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (pathname === '/emegazine' || pathname === '/emegazine/') {
     cleanUrl.pathname = '/emagazine';
     return context.redirect(cleanUrl.toString(), 301);
+  }
+
+  // 0.7 Early Bot / Vulnerability Scanner Rejection (Prevent wasteful D1 table scans)
+  const lowerPath = pathname.toLowerCase();
+  const BOT_PATTERNS = [
+    /\.php($|\?)/i,
+    /\.env($|\?)/i,
+    /\.git($|\/)/i,
+    /^\/wp-(admin|content|includes|login|json)/i,
+    /^\/xmlrpc/i,
+    /^\/(phpmyadmin|pma|myadmin)/i,
+    /^\/(cgi-bin|servlet)/i,
+    /\.(asp|aspx|jsp|cgi)$/i,
+    /^\/(autodiscover|actuator)/i
+  ];
+  if (BOT_PATTERNS.some(pattern => pattern.test(lowerPath))) {
+    return new Response('Not Found', {
+      status: 404,
+      headers: {
+        'Content-Type': 'text/plain',
+        'Cache-Control': 'public, max-age=86400, s-maxage=86400'
+      }
+    });
   }
 
   // 1. Handle Admin Routes FIRST
@@ -195,34 +220,42 @@ export const onRequest = defineMiddleware(async (context, next) => {
     // Process shortlinks only if not a reserved slug and DB exists
     if (!RESERVED_SLUGS.has(slug) && d1Db) {
       try {
-        // Fetch from KV cache
         let linkMap: Record<string, any> = {};
-        const cacheKey = 'links:all';
-        let cacheHit = false;
+        const nowMs = Date.now();
+        if (inMemoryLinkCache && inMemoryLinkCache.expiry > nowMs) {
+          linkMap = inMemoryLinkCache.data;
+        } else {
+          const cacheKey = 'links:all';
+          let cacheHit = false;
 
-        if (sessionKV) {
-          try {
-            const cached = await sessionKV.get(cacheKey);
-            if (cached) {
-              linkMap = JSON.parse(cached);
-              cacheHit = true;
-            }
-          } catch (_) {}
-        }
-
-        // Cache miss → query D1
-        if (!cacheHit) {
-          const { results } = await d1Db.prepare("SELECT * FROM Link WHERE isActive = 1").all();
-          if (results?.length > 0) {
-            for (const link of results) {
-              linkMap[(link as any).slug] = link;
-            }
-          }
           if (sessionKV) {
             try {
-              await sessionKV.put(cacheKey, JSON.stringify(linkMap), { expirationTtl: 86400 });
+              const cached = await sessionKV.get(cacheKey);
+              if (cached) {
+                linkMap = JSON.parse(cached);
+                cacheHit = true;
+              }
             } catch (_) {}
           }
+
+          // Cache miss → query D1
+          if (!cacheHit) {
+            try {
+              const { results } = await d1Db.prepare("SELECT slug, url, statusCode, isActive FROM Link WHERE isActive = 1").all();
+              if (results?.length > 0) {
+                for (const link of results) {
+                  linkMap[(link as any).slug] = link;
+                }
+              }
+              if (sessionKV) {
+                try {
+                  await sessionKV.put(cacheKey, JSON.stringify(linkMap), { expirationTtl: 86400 });
+                } catch (_) {}
+              }
+            } catch (_) {}
+          }
+
+          inMemoryLinkCache = { data: linkMap, expiry: nowMs + 600000 }; // 10 minutes memory TTL
         }
 
         // Exact match lookup

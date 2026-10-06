@@ -2,12 +2,9 @@
 import { env } from 'cloudflare:workers';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import JsonLdSchema from '@/components/seo/JsonLdSchema.astro';
+import { initialTours, initialCountries } from '@/data/seed-inbound-data';
 
-const d1Db = env?.dulichcoguu_d1;
-
-if (!d1Db) {
-  return new Response("Database binding not available", { status: 500 });
-}
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
 
 const canonicalPrices: Record<string, { price_number: number, price_text: string }> = {
   'half-day-cu-chi-tunnels-tour': { price_number: 75, price_text: '$75 USD' },
@@ -34,12 +31,22 @@ const limit = 12;
 const offset = (page - 1) * limit;
 
 // 2. Fetch distinct destinations
-const countriesRes = await d1Db.prepare(`
-  SELECT DISTINCT c.slug, c.name 
-  FROM Country c 
-  ORDER BY c.display_order ASC, c.name ASC
-`).all<any>();
-const filterCountries = countriesRes.results || [];
+let filterCountries: any[] = [];
+if (d1Db) {
+  try {
+    const countriesRes = await d1Db.prepare(`
+      SELECT DISTINCT c.slug, c.name 
+      FROM Country c 
+      ORDER BY c.display_order ASC, c.name ASC
+    `).all<any>();
+    filterCountries = countriesRes.results || [];
+  } catch (e) {
+    // fallback
+  }
+}
+if (filterCountries.length === 0) {
+  filterCountries = initialCountries.map(c => ({ slug: c.slug, name: c.name }));
+}
 
 // 3. Build SQL Where Clauses
 const whereClauses = ["t.status = 'published'"];
@@ -109,6 +116,11 @@ try {
   console.error("Error fetching tours:", error);
 }
 
+if (!tours || tours.length === 0) {
+  tours = initialTours;
+  totalTours = initialTours.length;
+}
+
 // Utils
 function formatPriceUSD(priceNumber: number | null, priceText: string | null, slug?: string): string {
   if (slug && canonicalPrices[slug]) {
@@ -158,6 +170,12 @@ const seoData = {
   ogImageUrl: "https://media.thericetour.com/uploads/group-posing-secret-tunnel-entrance-leaves-cu-chi-1280x720.webp",
   schemaType: "custom" as const
 };
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
+}
 ---
 
 <BaseLayout 

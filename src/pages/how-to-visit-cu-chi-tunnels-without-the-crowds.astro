@@ -13,12 +13,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] how-to-visit-cu-chi-tunnels-without-the-crowds:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 local/remote is not yet populated
@@ -469,7 +475,7 @@ const faqSchema = {
                 There is a widespread myth on travel forums that Ben Dinh is "fake" while Ben Duoc is "the only real one." That is historically inaccurate. Vietnam's 2026 UNESCO submission explicitly identifies both sectors as the surviving strongholds that best preserve the layout, depth, and three-tier vertical architecture of the wartime network, with roughly four kilometres of passages conserved between them.
               </p>
               <p>
-                The real difference between them comes down to geography, crowd volume, and atmosphere.
+                The real difference between them comes down to geography, crowd volume, and atmosphere. For a comprehensive side-by-side breakdown of both sectors, see our guide on <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Ben Dinh vs. Ben Duoc: Which Cu Chi Tunnels Site Should You Visit?</a>.
               </p>
               <p>
                 Importantly, UNESCO's 2026 documentation notes that both sites preserve a <strong>three-level tunnel architecture</strong> connected by vertical trapdoor hatches. Ben Duoc's main spine tunnel features three distinct vertical levels, with its deepest tiers originally engineered to withstand heavy aerial bombardment. Ben Dinh shares a similar three-level design, though its subterranean passages are generally shallower than those at Ben Duoc.
@@ -597,7 +603,7 @@ const faqSchema = {
                 The vehicle you choose shapes how the entire morning unfolds.
               </p>
               <p>
-                When you join a standard 30-passenger bus tour, your day is tied to the group. You stop when everyone stops, queue when everyone queues, and leave when the driver calls time. If you stumble upon a poignant corner of the memorial temple or want to spend ten extra minutes talking to an on-site guide, you simply don't have that leeway.
+                When you join a standard 30-passenger bus tour, your day is tied to the group. You stop when everyone stops, queue when everyone queues, and leave when the driver calls time. If you stumble upon a poignant corner of the memorial temple or want to spend ten extra minutes talking to an on-site guide, you simply don't have that leeway. For vehicle types, rates, and highway advice, see our complete guide to <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a>.
               </p>
 
               {/* Comparison Box */}
@@ -900,7 +906,7 @@ const faqSchema = {
                   <div class="font-bold text-slate-900 text-sm">1. Admission & Opening Hours</div>
                   <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
                     <li><strong>Operating Hours:</strong> 07:00 AM – 5:00 PM daily.</li>
-                    <li><strong>Official 2026 Admission Fees:</strong> For international visitors, the Cu Chi Tunnels Management Board announced an all-inclusive entrance fee of <strong>135,000 VND per person</strong> effective February 1, 2026 (35,000 VND relic admission + 100,000 VND guide and service fee). Always check the official website before travelling in case of updates.</li>
+                    <li><strong>Official 2026 Admission Fees:</strong> For international visitors, the Cu Chi Tunnels Management Board announced an all-inclusive entrance fee of <strong>135,000 VND per person</strong> effective February 1, 2026 (35,000 VND relic admission + 100,000 VND guide and service fee). For complete pricing details and visitor guidelines, read our verified guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels entrance fee and opening hours</a>.</li>
                     <li><strong>Mobility Assistance:</strong> On-site electric shuttle carts are available for visitors with mobility needs; inquire at the entrance ticket counter.</li>
                     <li><strong>Steamed Cassava Snack:</strong> Every ticket includes a serving of freshly steamed cassava dipped in crushed peanuts, sesame seeds, and salt, served alongside hot tea at the Hoang Cam kitchen pavilion.</li>
                   </ul>
@@ -1069,14 +1075,14 @@ const faqSchema = {
                   <p class="text-slate-500 line-clamp-2">Direct early tunnel exploration paired with central Saigon historical landmarks.</p>
                 </a>
 
-                <a href="/hcmc-museum-of-fine-arts-guide" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">HCMC Fine Arts Museum Guide</div>
-                  <p class="text-slate-500 line-clamp-2">Historic 1920s French-colonial mansion, antique stained glass, and Indochine art in central Saigon.</p>
+                <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Entrance Fee & Opening Hours</div>
+                  <p class="text-slate-500 line-clamp-2">Verified 2026 tariff, ticket slip breakdown & timing.</p>
                 </a>
 
-                <a href="/ben-thanh-one-day-walking-tour" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                  <div class="font-bold text-slate-900 mb-1">Saigon Heritage Walking Tour</div>
-                  <p class="text-slate-500 line-clamp-2">A self-paced exploration of historic French-colonial architecture and local heritage markets.</p>
+                <a href="/ben-dinh-vs-ben-duoc" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                  <div class="font-bold text-slate-900 mb-1">Ben Dinh vs. Ben Duoc</div>
+                  <p class="text-slate-500 line-clamp-2">Which site matches your schedule and travel style?</p>
                 </a>
               </div>
             </div>

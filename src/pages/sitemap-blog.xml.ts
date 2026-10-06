@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
 import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
 
+import { benThanhArticlesMetadata } from '@/data/ben-thanh-articles';
+
 /** Escape special XML characters in URLs and text */
 function escXml(str: string): string {
   return str
@@ -24,7 +26,7 @@ export const GET: APIRoute = async ({ request }) => {
       ORDER BY createdAt DESC
     `).all();
 
-    // Ensure all demo articles like cooking class are present in sitemap
+    // Ensure all demo articles like cooking class and Ben Thanh articles are present in sitemap
     const existingSlugs = new Set((posts || []).map((p: any) => p.slug));
     const extraDemoArticles = [
       {
@@ -32,7 +34,21 @@ export const GET: APIRoute = async ({ request }) => {
         updatedAt: '2026-09-13T16:15:00.000Z',
         createdAt: '2026-09-13T16:15:00.000Z',
         featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp'
-      }
+      },
+      ...benThanhArticlesMetadata.flatMap(item => [
+        {
+          slug: item.slug_vi,
+          updatedAt: item.publishedAt,
+          createdAt: item.publishedAt,
+          featuredImage: item.featuredImage
+        },
+        {
+          slug: item.slug_en,
+          updatedAt: item.publishedAt,
+          createdAt: item.publishedAt,
+          featuredImage: item.featuredImage
+        }
+      ])
     ];
     for (const extra of extraDemoArticles) {
       if (!existingSlugs.has(extra.slug)) {
@@ -82,7 +98,7 @@ export const GET: APIRoute = async ({ request }) => {
       status: 200,
       headers: {
         'Content-Type': 'application/xml',
-        'Cache-Control': 'public, max-age=3600'
+        'Cache-Control': 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
       }
     });
   } catch (err) {

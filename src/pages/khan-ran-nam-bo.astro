@@ -24,6 +24,12 @@ const image = post?.featuredImage || undefined;
 const has3Col = post?.content && post.content.includes('Table of Contents');
 const rawSource = has3Col ? post.content : mekongKhanRanScarfLegacyHtml;
 const htmlContent = (rawSource || '').replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
+}
 ---
 
 <BaseLayout 

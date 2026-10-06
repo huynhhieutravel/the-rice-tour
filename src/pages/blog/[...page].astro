@@ -6,6 +6,8 @@ import BlogCardImage from '@/components/blog/BlogCardImage.astro';
 import { safeQueryCritical } from '@/lib/db-client';
 import { getCanonicalMediaUrl } from '@/lib/imageOptimization';
 
+import { benThanhArticlesMetadata } from '@/data/ben-thanh-articles';
+
 let { page } = Astro.params;
 
 let currentPage = 1;
@@ -19,43 +21,60 @@ if (page) {
   }
 }
 
-const d1Db = env?.dulichcoguu_d1;
-if (!d1Db) {
-  return Astro.rewrite("/500");
-}
+const d1Db = (env as any)?.dulichcoguu_d1 || (env as any)?.thericetour_d1 || (Astro.locals as any)?.runtime?.env?.dulichcoguu_d1;
 
 const POSTS_PER_PAGE = 12;
 const offset = (currentPage - 1) * POSTS_PER_PAGE;
 let posts: any[] = [];
 let totalPages = 1;
 
-try {
-  const countRes = await safeQueryCritical(
-    d1Db.prepare("SELECT COUNT(*) as total FROM Post WHERE status = 'published' OR status = 'publish'").first<any>(),
-    { route: Astro.url.pathname, queryType: "count_all_posts" }
-  );
-  
-  const totalPosts = countRes?.total || 0;
-  totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+if (d1Db) {
+  try {
+    const countRes = await safeQueryCritical(
+      d1Db.prepare("SELECT COUNT(*) as total FROM Post WHERE status = 'published' OR status = 'publish'").first<any>(),
+      { route: Astro.url.pathname, queryType: "count_all_posts" }
+    );
+    
+    const totalPosts = countRes?.total || 0;
+    totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE) || 1;
 
-  const postsRes = await safeQueryCritical(
-    d1Db.prepare(`
-      SELECT id, slug, title, excerpt, featuredImage 
-      FROM Post 
-      WHERE status = 'published' OR status = 'publish'
-      ORDER BY createdAt DESC
-      LIMIT ? OFFSET ?
-    `).bind(POSTS_PER_PAGE, offset).all<any>(),
-    { route: Astro.url.pathname, queryType: "fetch_all_posts" }
-  );
-  
-  posts = postsRes.results || [];
-} catch (e) {
-  return Astro.rewrite("/500");
+    const postsRes = await safeQueryCritical(
+      d1Db.prepare(`
+        SELECT id, slug, title, excerpt, featuredImage 
+        FROM Post 
+        WHERE status = 'published' OR status = 'publish'
+        ORDER BY createdAt DESC
+        LIMIT ? OFFSET ?
+      `).bind(POSTS_PER_PAGE, offset).all<any>(),
+      { route: Astro.url.pathname, queryType: "fetch_all_posts" }
+    );
+    
+    posts = postsRes.results || [];
+  } catch (e) {
+    console.warn('[Blog] D1 query failed, falling back to static articles:', e);
+  }
+}
+
+if (posts.length === 0) {
+  const fallbackArticles = benThanhArticlesMetadata.map(item => ({
+    id: 'demo_' + item.slug_en,
+    slug: item.slug_en,
+    title: item.title_en,
+    excerpt: item.subtitle_en || item.title_en,
+    featuredImage: item.featuredImage
+  }));
+  totalPages = Math.ceil(fallbackArticles.length / POSTS_PER_PAGE) || 1;
+  posts = fallbackArticles.slice(offset, offset + POSTS_PER_PAGE);
 }
 
 const title = `Vietnam Travel Guides & Insights | The Rice Tour ${currentPage > 1 ? `- Page ${currentPage}` : ''}`;
 const description = "Discover insider travel guides, cultural nuances, and Vietnam itinerary planning essentials from The Rice Tour destination architects.";
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
+}
 ---
 
 <BaseLayout 

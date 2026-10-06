@@ -21,9 +21,20 @@ export default function FloatingToast() {
 
     const fetchPopup = async () => {
       try {
-        const res = await fetch('/api/popups/active');
-        if (!res.ok) return;
-        const popups: PopupData[] = await res.json();
+        let popups: PopupData[] | null = null;
+        try {
+          const cached = sessionStorage.getItem('cached_active_popups');
+          if (cached) popups = JSON.parse(cached);
+        } catch (_) {}
+
+        if (!popups) {
+          const res = await fetch('/api/popups/active');
+          if (!res.ok) return;
+          popups = await res.json();
+          try {
+            sessionStorage.setItem('cached_active_popups', JSON.stringify(popups));
+          } catch (_) {}
+        }
         
         if (!popups || popups.length === 0) return;
 

@@ -13,12 +13,18 @@ let post: any = null;
 try {
   if (d1Db) {
     post = await safeQueryCritical(
-      d1Db.prepare("SELECT * FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
+      d1Db.prepare("SELECT id, title, excerpt, publishedAt, updatedAt, featuredImage FROM Post WHERE slug = ? AND (status = 'published' OR status = 'publish')").bind(currentSlug).first<any>(),
       { route: Astro.url.pathname, slug: currentSlug, queryType: "fetch_post_by_slug" }
     );
   }
 } catch (e) {
   console.warn('[D1 Query Warning] is-a-cu-chi-tunnels-private-tour-worth:', e);
+}
+
+if ((Astro.locals as any)?.isAdminLoggedIn) {
+  Astro.response.headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+} else {
+  Astro.response.headers.set('Cache-Control', 'public, max-age=600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 // Fallback metadata if D1 is not yet populated
@@ -497,7 +503,7 @@ const articleSchema = {
                 If your primary objective is simply comfortable, air-conditioned transport without sharing a bus with strangers, <a href="/visiting-cu-chi-tunnels-by-private-car" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">visiting Cu Chi Tunnels by private car</a> may give you everything you need at a lower price point. The 2026 foreign-visitor tariff includes a guide/service component, so travelers booking transport-only should confirm how the on-site guide service is arranged at the counter.
               </p>
               <p>
-                If you only care about having someone explain the exhibits once you arrive, paying extra for an agency guide may not be necessary. The site already provides knowledgeable resident guides as part of the foreign-visitor ticket. A private guide from town is mainly worth it if you want someone to talk about history during the drive, help you navigate the crowds, and adapt the day entirely to your pace.
+                If you only care about having someone explain the exhibits once you arrive, paying extra for an agency guide may not be necessary. The site already provides knowledgeable resident guides as part of the foreign-visitor ticket. A private guide from town is mainly worth it if you want someone to talk about history during the drive, help you navigate the crowds, and adapt the day entirely to your pace. For exact details on the 135,000 VND tariff and gate guiding logistics, see our verified guide on <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Cu Chi Tunnels entrance fee and opening hours</a>.
               </p>
 
               {/* Dedicated Comparison Table: Private Car vs Private Tour */}
@@ -816,7 +822,7 @@ const articleSchema = {
               </div>
 
               <p>
-                If your main goal is simply avoiding an overcrowded 40-person coach, a high-quality small-group tour can solve most of your comfort issues at a fraction of the cost. However, if you require flexible departure times, need to cater to young children or older parents, or specifically want to explore Ben Duoc without commercial stops, a private tour offers maximum control.
+                If your main goal is simply avoiding an overcrowded 40-person coach, a high-quality small-group tour can solve most of your comfort issues at a fraction of the cost. However, if you require flexible departure times, need to cater to young children or older parents, or specifically want to explore Ben Duoc without commercial stops, a private tour offers maximum control. To decide which sector fits your schedule, consult our comparison of <a href="/ben-dinh-vs-ben-duoc" class="text-amber-800 hover:text-amber-900 font-semibold underline underline-offset-2 decoration-amber-300">Ben Dinh vs. Ben Duoc</a>.
               </p>
             </div>
           </section>
@@ -1367,9 +1373,9 @@ const articleSchema = {
                 <div class="font-bold text-slate-900 text-[13px] leading-snug">How To Visit Without Crowds →</div>
                 <div class="text-slate-500 text-[11.5px] mt-0.5">Tactical timing windows & trail navigation</div>
               </a>
-              <a href="/things-to-do-near-ben-thanh-market" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
-                <div class="font-bold text-slate-900 text-[13px] leading-snug">Things To Do Near Ben Thanh →</div>
-                <div class="text-slate-500 text-[11.5px] mt-0.5">Best cafes, dining & sights in District 1</div>
+              <a href="/cu-chi-tunnels-entrance-fee-and-opening-hours" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
+                <div class="font-bold text-slate-900 text-[13px] leading-snug">Entrance Fee & Opening Hours →</div>
+                <div class="text-slate-500 text-[11.5px] mt-0.5">Verified 2026 tariff, ticket slip breakdown & timing</div>
               </a>
               <a href="/khan-ran-nam-bo" class="block p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-200">
                 <div class="font-bold text-slate-900 text-[13px] leading-snug">The Southern Khăn Rằn Scarf →</div>

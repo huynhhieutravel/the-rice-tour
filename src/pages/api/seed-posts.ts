@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
+import { benThanhPostsForDatabase } from '@/data/ben-thanh-articles';
 
 export const prerender = false;
 
@@ -291,7 +292,8 @@ export const GET: APIRoute = async () => {
       format: 'landing',
       contentFormat: 'html',
       author: 'The Rice Tour Editorial'
-    }
+    },
+    ...benThanhPostsForDatabase
   ];
 
   const results: any[] = [];
