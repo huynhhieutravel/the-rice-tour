@@ -1711,12 +1711,40 @@
       "anchorText": "Ben Thanh Central Metro Station"
     },
     {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
       "targetUrl": "/ben-thanh-market-food-guide",
       "anchorText": "Ben Thanh Market food guide"
     },
     {
       "targetUrl": "/ben-thanh-one-day-walking-tour",
       "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
+      "anchorText": "Ho Chi Minh City half-day private tour"
     },
     {
       "targetUrl": "/tailor-made",
@@ -1819,12 +1847,16 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
       "targetUrl": "/independence-palace-saigon-guide",
       "anchorText": "Independence Palace"
     },
     {
       "targetUrl": "/ben-thanh-central-metro-station-guide",
-      "anchorText": "Ben Thanh Metro Station"
+      "anchorText": "Ben Thanh Central Metro Station"
     },
     {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
@@ -1837,6 +1869,18 @@
     {
       "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
       "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made travel design"
     },
     {
       "targetUrl": "/tailor-made",
@@ -1939,24 +1983,40 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
-      "targetUrl": "/tour/cooking-class-local-market",
-      "anchorText": "Cooking Class &amp; Local Market Tour"
-    },
-    {
       "targetUrl": "/things-to-do-in-ben-thanh-market",
       "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "Ha Tam Gold Shop"
     },
     {
       "targetUrl": "/ben-thanh-market-scams-safety-guide",
       "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
-      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
-      "anchorText": "best rooftop bars near Ben Thanh"
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Tour"
     },
     {
-      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "money exchange near Ben Thanh Market"
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station guide"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2083,8 +2143,32 @@
       "anchorText": "Ben Thanh Central Metro Station"
     },
     {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "shopping guide"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "Vintage Apartment Cafes"
+    },
+    {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "Ho Chi Minh City Half Day Tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made journey service"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2191,6 +2275,14 @@
       "anchorText": "One-Day Walking Tour"
     },
     {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food hall"
+    },
+    {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "Ho Chi Minh City Half Day Private Tour"
     },
@@ -2201,6 +2293,14 @@
     {
       "targetUrl": "/boutique-hotels-near-ben-thanh",
       "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/tailor-made",
+      "anchorText": "tailor-made travel service"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2303,6 +2403,18 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
       "targetUrl": "/ben-thanh-one-day-walking-tour",
       "anchorText": "One-Day Walking Tour"
     },
@@ -2311,16 +2423,20 @@
       "anchorText": "Ho Chi Minh City Half Day Private Tour"
     },
     {
-      "targetUrl": "/things-to-do-in-ben-thanh-market",
-      "anchorText": "things to do in Ben Thanh Market"
-    },
-    {
       "targetUrl": "/parking-guide-near-ben-thanh-market",
       "anchorText": "parking guide near Ben Thanh Market"
     },
     {
       "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
       "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon Hop-On Hop-Off Bus"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2427,6 +2543,14 @@
       "anchorText": "Ben Thanh market stalls"
     },
     {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "Ha Tam Gold Shop"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
       "targetUrl": "/hcmc-museum-of-fine-arts-guide",
       "anchorText": "HCMC Museum of Fine Arts"
     },
@@ -2437,6 +2561,14 @@
     {
       "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
       "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tours",
@@ -2543,16 +2675,20 @@
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
-      "targetUrl": "/tour/cooking-class-local-market",
-      "anchorText": "Cooking Class &amp; Local Market Tour"
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
       "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "money exchange near Ben Thanh Market"
+      "anchorText": "Ha Tam Gold Shop"
     },
     {
-      "targetUrl": "/ben-thanh-market-scams-safety-guide",
-      "anchorText": "Ben Thanh Market scams and safety guide"
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food hall"
+    },
+    {
+      "targetUrl": "/tour/cooking-class-local-market",
+      "anchorText": "Cooking Class &amp; Local Market Tour"
     },
     {
       "targetUrl": "/things-to-do-in-ben-thanh-market",
@@ -2561,6 +2697,14 @@
     {
       "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
       "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2663,6 +2807,18 @@
       "anchorText": "Independence Palace"
     },
     {
+      "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
+      "anchorText": "Ben Thanh Market ultimate travel guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food hall"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "rooftop bars near Ben Thanh"
+    },
+    {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
     },
@@ -2673,6 +2829,14 @@
     {
       "targetUrl": "/tour/ho-chi-minh-city-half-day-private-tour",
       "anchorText": "private Ho Chi Minh City tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2767,6 +2931,18 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
     },
@@ -2783,8 +2959,12 @@
       "anchorText": "one-day Ben Thanh walking tour"
     },
     {
-      "targetUrl": "/parking-guide-near-ben-thanh-market",
-      "anchorText": "parking guide near Ben Thanh Market"
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2879,6 +3059,14 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
     },
@@ -2887,16 +3075,20 @@
       "anchorText": "Ben Thanh Market food guide"
     },
     {
-      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
-      "anchorText": "secret apartment cafes near Ben Thanh"
-    },
-    {
       "targetUrl": "/boutique-hotels-near-ben-thanh",
       "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
       "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
       "targetUrl": "/tailor-made",
@@ -2991,6 +3183,18 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
       "targetUrl": "/things-to-do-in-ben-thanh-market",
       "anchorText": "things to do in Ben Thanh Market"
     },
@@ -3005,6 +3209,14 @@
     {
       "targetUrl": "/best-rooftop-bars-near-ben-thanh",
       "anchorText": "best rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3103,6 +3315,26 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/saigon-hop-on-hop-off-bus-guide",
+      "anchorText": "Saigon Hop-On Hop-Off Bus"
+    },
+    {
+      "targetUrl": "/best-rooftop-bars-near-ben-thanh",
+      "anchorText": "rooftop bars near Ben Thanh"
+    },
+    {
+      "targetUrl": "/hcmc-museum-of-fine-arts-guide",
+      "anchorText": "HCMC Museum of Fine Arts"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/secret-apartment-cafes-near-ben-thanh",
+      "anchorText": "secret apartment cafes near Ben Thanh"
+    },
+    {
       "targetUrl": "/ben-thanh-market-food-guide",
       "anchorText": "Ben Thanh Market food guide"
     },
@@ -3117,6 +3349,18 @@
     {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3211,6 +3455,22 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "money exchange near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-shopping-guide",
+      "anchorText": "Ben Thanh Market shopping guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
       "targetUrl": "/things-to-do-in-ben-thanh-market",
       "anchorText": "things to do in Ben Thanh Market"
     },
@@ -3223,12 +3483,16 @@
       "anchorText": "parking guide near Ben Thanh Market"
     },
     {
-      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "money exchange near Ben Thanh Market"
+      "targetUrl": "/things-to-do-near-ben-thanh-market",
+      "anchorText": "things to do near Ben Thanh Market"
     },
     {
-      "targetUrl": "/ben-thanh-market-scams-safety-guide",
-      "anchorText": "Ben Thanh Market scams and safety guide"
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3327,20 +3591,36 @@
       "anchorText": "Ben Thanh Market shopping guide"
     },
     {
-      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "money exchange near Ben Thanh Market"
-    },
-    {
       "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
       "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "Ha Tam Gold Shop"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
     },
     {
       "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
       "anchorText": "Ben Thanh Market ultimate travel guide"
     },
     {
-      "targetUrl": "/ben-thanh-market-food-guide",
-      "anchorText": "Ben Thanh Market food guide"
+      "targetUrl": "/things-to-do-in-ben-thanh-market",
+      "anchorText": "things to do in Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3439,20 +3719,32 @@
       "anchorText": "Ben Thanh Market shopping guide"
     },
     {
-      "targetUrl": "/ben-thanh-market-scams-safety-guide",
-      "anchorText": "Ben Thanh Market scams and safety guide"
+      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
+      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
     },
     {
-      "targetUrl": "/parking-guide-near-ben-thanh-market",
-      "anchorText": "parking guide near Ben Thanh Market"
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
       "targetUrl": "/ben-thanh-market-ultimate-travel-guide",
       "anchorText": "Ben Thanh Market ultimate travel guide"
     },
     {
-      "targetUrl": "/tan-son-nhat-airport-to-ben-thanh-transfer-guide",
-      "anchorText": "Tan Son Nhat airport to Ben Thanh transfer guide"
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/parking-guide-near-ben-thanh-market",
+      "anchorText": "parking guide near Ben Thanh Market"
+    },
+    {
+      "targetUrl": "/mariamman-hindu-temple-saigon",
+      "anchorText": "Mariamman Hindu Temple"
+    },
+    {
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3547,12 +3839,20 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
+      "targetUrl": "/independence-palace-saigon-guide",
+      "anchorText": "Independence Palace"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "Ha Tam Gold Shop"
+    },
+    {
       "targetUrl": "/ben-thanh-central-metro-station-guide",
       "anchorText": "Ben Thanh Central Metro Station"
     },
     {
-      "targetUrl": "/ben-thanh-one-day-walking-tour",
-      "anchorText": "one-day Ben Thanh walking tour"
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
     },
     {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
@@ -3563,8 +3863,16 @@
       "anchorText": "Ben Thanh Market ultimate travel guide"
     },
     {
-      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "money exchange near Ben Thanh Market"
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
+    },
+    {
+      "targetUrl": "/boutique-hotels-near-ben-thanh",
+      "anchorText": "boutique hotels near Ben Thanh"
     },
     {
       "targetUrl": "/tailor-made",
@@ -3663,24 +3971,32 @@
       "anchorText": "Plan Private Journey ➜"
     },
     {
-      "targetUrl": "/ben-thanh-central-metro-station-guide",
-      "anchorText": "Ben Thanh Central Metro Station guide"
-    },
-    {
       "targetUrl": "/boutique-hotels-near-ben-thanh",
       "anchorText": "boutique hotels near Ben Thanh"
+    },
+    {
+      "targetUrl": "/ben-thanh-central-metro-station-guide",
+      "anchorText": "Ben Thanh Central Metro Station"
+    },
+    {
+      "targetUrl": "/ben-thanh-market-scams-safety-guide",
+      "anchorText": "Ben Thanh Market scams and safety guide"
+    },
+    {
+      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
+      "anchorText": "Ha Tam Gold Shop"
     },
     {
       "targetUrl": "/things-to-do-near-ben-thanh-market",
       "anchorText": "things to do near Ben Thanh Market"
     },
     {
-      "targetUrl": "/money-exchange-ben-thanh-ha-tam-guide",
-      "anchorText": "Ben Thanh money exchange guide"
+      "targetUrl": "/ben-thanh-market-food-guide",
+      "anchorText": "Ben Thanh Market food guide"
     },
     {
-      "targetUrl": "/ben-thanh-market-scams-safety-guide",
-      "anchorText": "Ben Thanh Market scams and safety guide"
+      "targetUrl": "/ben-thanh-one-day-walking-tour",
+      "anchorText": "one-day Ben Thanh walking tour"
     },
     {
       "targetUrl": "/tailor-made",

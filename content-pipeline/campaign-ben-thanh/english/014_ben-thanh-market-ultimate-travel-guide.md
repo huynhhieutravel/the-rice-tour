@@ -107,7 +107,7 @@ If arriving on a rented scooter or car, avoid informal sidewalk parking attendan
 
 ## Exchanging Currency at Ha Tam Gold Shop
 
-Just opposite the West Gate at 2 Nguyen An Ninh Street sits **Ha Tam Gold Shop**, known across the city for offering competitive foreign exchange rates:
+Just opposite the West Gate at 2 Nguyen An Ninh Street sits **Ha Tam Gold Shop**, known across the city for offering competitive foreign exchange rates (see our detailed [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide) guide):
 
 - **Why People Go Here:** Ha Tam often gives slightly better rates than standard bank counters for USD, EUR, AUD, SGD, and JPY, with no hidden commission fees.
 - **What to Keep in Mind:** Expect a brief line of locals and travelers during the afternoon. Bring clean, uncreased banknotes with no tears or writing (especially higher-denomination $50 or $100 bills) to get the best exchange rate.
@@ -117,7 +117,7 @@ Just opposite the West Gate at 2 Nguyen An Ninh Street sits **Ha Tam Gold Shop**
 
 ## How to Bargain Fairly and Politely
 
-Bargaining inside the market is a normal part of buying souvenirs and clothing. Here are a few friendly guidelines:
+Bargaining inside the market is a normal part of buying souvenirs and clothing (see our complete [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide)):
 
 1. **Be Mindful in the Early Morning (*Mở Hàng*):** Between 06:00 and 08:30 AM, vendors appreciate a quick, easy first sale to start their day. Avoid haggling hard or spending 20 minutes inspecting items if you don't plan to buy.
 2. **Standard Negotiation Margin:** For clothing, souvenirs, and non-perishables, starting asking prices often include room to negotiate. Offering 20% to 30% below the quoted price usually leads to an agreeable middle ground.
@@ -128,7 +128,7 @@ Bargaining inside the market is a normal part of buying souvenirs and clothing. 
 
 ## Dining Tips for the Food Hall
 
-The indoor food court is one of the most rewarding parts of Ben Thanh Market:
+The indoor food court is one of the most rewarding parts of Ben Thanh Market (explore all dishes in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide)):
 
 - **Pick Busy Counters:** Look for stalls with high turnover and a steady flow of local customers.
 - **Ask Prices First:** Most food stalls have printed menus with Vietnamese Dong prices. If not, confirm the price before ordering.
@@ -138,7 +138,7 @@ The indoor food court is one of the most rewarding parts of Ben Thanh Market:
 
 ## Safety & Helpful Contacts
 
-- **Keep Valuables Close:** In crowded aisles or while waiting at street crossings, carry your backpack or shoulder bag in front of you.
+- **Keep Valuables Close:** In crowded aisles or while waiting at street crossings, carry your backpack or shoulder bag in front of you—see our full [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
 - **Street Vendors:** If street peddlers offer shoe-cleaning services or place fruit poles on your shoulder for photos, simply smile, say *"No, thank you,"* and keep walking.
 - **Helpful Numbers:**
   - District 1 Police: `+84 28 3829 7643`
@@ -153,8 +153,9 @@ To help you navigate District 1 with ease, explore our companion heritage guides
 - **Activities & Sights:** Read our guide to [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
 - **Airport Transport:** Routes and costs in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
 - **Parking Locations:** Full map in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
-- **Currency Exchange:** Detailed steps in our [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide) guide.
-- **Staying Safe:** Practical tips in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Area Highlights:** Discover 8 landmarks in our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
+- **Walking Route:** Connect the market with colonial sights on our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Where to Stay:** Character-rich lodging in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) review.
 
 ## Final Thoughts: Getting the Most from Your Visit
 

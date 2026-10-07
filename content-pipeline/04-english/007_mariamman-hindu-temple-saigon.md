@@ -135,7 +135,7 @@ Local belief holds that this granite wall absorbs the quiet spiritual focus of t
 - **Modest Attire:** Garments must cover shoulders and knees. Sleeveless shirts, low-cut tops, and short shorts are strictly prohibited within the temple grounds.
 - **Offerings & Donations:** Admission is completely free. Should you wish to make a traditional offering, vendors outside sell fresh coconuts, marigold garlands, and bananas for 20,000 to 40,000 VND.
 - **Optimal Visiting Window:** Arrive between **08:00 and 10:00 AM** when morning rituals (*puja*) take place amidst tranquil lighting and uncrowded verandas.
-- **Neighbourhood Connections:** After your visit, stroll 3 minutes back to sample authentic [Ben Thanh market stalls](/ben-thanh-market-food-guide) or proceed toward the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
+- **Neighbourhood Connections:** After your visit, stroll 3 minutes back to sample authentic [Ben Thanh market stalls](/ben-thanh-market-food-guide), exchange currency on Nguyen An Ninh at [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide), walk 5 minutes north to the [Independence Palace](/independence-palace-saigon-guide), or proceed toward the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 
 ---
 
@@ -146,6 +146,8 @@ Local belief holds that this granite wall absorbs the quiet spiritual focus of t
 To help you navigate District 1 with ease, explore our companion heritage guides:
 - **One-Day Ben Thanh Walking Tour:** including the temple in our morning [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 - **Secret Apartment Cafes:** relaxing after your temple visit in [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
+- **Ben Thanh Central Metro Station:** easily connecting across the city from [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide).
+- **Boutique Hotels Near Ben Thanh:** staying nearby at handpicked [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
 - **Curated Vietnam Tours:** discovering more southern heritage on our [curated Vietnam tours](/tours).
 
 ## Epilogue: A Shared Neighborhood Sanctuary

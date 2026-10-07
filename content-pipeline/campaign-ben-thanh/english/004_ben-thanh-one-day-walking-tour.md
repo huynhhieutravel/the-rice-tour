@@ -107,7 +107,7 @@ This route is planned around the heat: outdoor markets and temples in the cooler
 
 ### Stage 4 (18:00 – 20:30 PM): Street Dining & Evening Drinks
 - **18:00 – 19:30 PM:** Circle back to Phan Boi Chau Street flanking Ben Thanh Market. Feast on betel-leaf wrapped beef grilled over open charcoal embers and fresh coastal shellfish.
-- **19:45 – 20:30 PM:** Conclude your walk at an open-air rooftop lounge overlooking the square, sipping a refreshing cocktail as the illuminated clock tower presides over evening traffic below.
+- **19:45 – 20:30 PM:** Conclude your walk at one of the [best rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh) overlooking the square, sipping a refreshing cocktail as the illuminated clock tower presides over evening traffic below.
 
 ---
 
@@ -115,10 +115,10 @@ This route is planned around the heat: outdoor markets and temples in the cooler
 
 | Time Window | Landmark | Core Experience | Admission Tariff 2026 | Estimated Dining Expense |
 | :--- | :--- | :--- | :--- | :--- |
-| **07:30 – 09:00** | Ben Thanh Market | Bún riêu breakfast, ceramic reliefs | Free entry | 60,000 VND |
+| **07:30 – 09:00** | Ben Thanh Market | Bún riêu breakfast, ceramic reliefs, [shopping guide](/ben-thanh-market-shopping-guide) tips | Free entry | 60,000 VND |
 | **09:15 – 10:15** | Mariamman Temple | Gopuram contemplation, shrine blessing | Free (voluntary) | 20,000 VND (incense) |
 | **10:30 – 12:00** | Fine Arts Museum | Hui Bon Hoa mansion, lacquer treasures | 30,000 VND | — |
-| **12:15 – 13:45** | Vintage Apartments | Local lunch & artisan pour-over | Free | 180,000 – 220,000 VND |
+| **12:15 – 13:45** | [Vintage Apartment Cafes](/secret-apartment-cafes-near-ben-thanh) | Local lunch & artisan pour-over | Free | 180,000 – 220,000 VND |
 | **14:00 – 16:00** | Independence Palace | Modernist halls, wartime command bunker | 65,000 VND | — |
 | **16:15 – 17:45** | Metro & Bach Dang | Lotus skylight concourse & river sunset | 15,000 VND (metro ticket) | 30,000 VND (coconut) |
 | **18:00 – 20:30** | Phan Boi Chau & Rooftop | Charcoal street feast & evening cocktail | Free | 250,000 – 350,000 VND |
@@ -135,6 +135,13 @@ This route is planned around the heat: outdoor markets and temples in the cooler
 - [ ] **Elevate with Expert Guidance:** To uncover the deeper human stories behind each landmark with certified cultural historians, reserve the private [Ho Chi Minh City Half Day Tour](/tour/ho-chi-minh-city-half-day-private-tour) curated by The Rice Tour.
 
 ---
+
+## 🗺️ Curated Cluster Connections
+
+To help you navigate District 1 with ease, explore our companion heritage guides:
+- **Boutique Hotels Near Ben Thanh:** staying near the start of the walking loop at [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+- **Airport Transfer Guide:** reaching District 1 from the runway with our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Tailor-Made Travel Service:** crafting custom walking routes and private excursions with our [tailor-made journey service](/tailor-made).
 
 ## Epilogue: Exploring Saigon on Foot
 

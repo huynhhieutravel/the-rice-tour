@@ -62,7 +62,7 @@ epilogue: "Having local Vietnamese Dong on hand makes paying for street food, ic
 
 Ask long-time residents, expats, or frequent visitors to Saigon where to exchange money, and many will point you to **Ha Tam Gold Shop** (*Tiệm Vàng Hà Tâm*), located at the corner of Nguyen An Ninh and Phan Chu Trinh streets directly across from Ben Thanh Market's West Gate.
 
-Even as credit cards and QR payments become common across Vietnam, having physical cash remains essential for small family stalls, street food vendors, and traditional markets. Ha Tam continues to draw steady crowds because it offers competitive exchange rates close to the mid-market rate with no commission fees, counting machines that process notes in seconds, and transparent quotes.
+Even as credit cards and QR payments become common across Vietnam, having physical cash remains essential for small family stalls, street food vendors, and traditional markets (learn how to shop fairly with our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide)). Ha Tam continues to draw steady crowds because it offers competitive exchange rates close to the mid-market rate with no commission fees, counting machines that process notes in seconds, and transparent quotes.
 
 ---
 
@@ -95,6 +95,8 @@ On this short block of Nguyen An Ninh Street, two gold shops handle the bulk of 
 | Feature | Ha Tam Gold Shop | Commercial Banks (Vietcombank, etc.) | Tan Son Nhat Airport Kiosks |
 | :--- | :--- | :--- | :--- |
 | **Exchange Rate** | Very competitive; narrow buy/sell spread | Official central bank rate; moderate spread | Lower rates; noticeably wider spread |
+
+*Traveler Tip:* As detailed in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide), exchange only a small amount at SGN for immediate transport and convert the bulk of your funds downtown at Ha Tam for a much better rate.
 | **Fees & Commission** | No added transaction fee | Usually small or built into rate | Often include airport convenience fees |
 | **Speed & Paperwork** | Hand over cash, count, receive VND (under a minute) | Passport required; forms to fill out | Passport required; quick service |
 | **Currencies Handled** | Wide range: USD, EUR, GBP, JPY, AUD, CAD, SGD, THB, KRW... | Mainly major international currencies | Common tourist currencies |
@@ -121,7 +123,7 @@ Money changers in Vietnam inspect physical banknotes closely:
 
 ## Simple Safety Steps for Exchanging Cash
 
-Because Nguyen An Ninh is a busy pedestrian street right outside the market, follow these common-sense safety practices:
+Because Nguyen An Ninh is a busy pedestrian street right outside the market, follow these common-sense safety practices (and review our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide)):
 
 1. **Prepare Your Bills in Advance:** Count the exact amount of cash you want to exchange before leaving your hotel room. Avoid pulling out large stacks of bills on the sidewalk.
 2. **Check the Rate on the Counter Calculator:** Hand over your bills and check the number shown on the calculator to confirm the total payout.
@@ -133,11 +135,11 @@ Because Nguyen An Ninh is a busy pedestrian street right outside the market, fol
 ## 🗺️ Nearby Guides & Resources
 
 To help you navigate District 1 with ease, explore our companion heritage guides:
-- **Shopping Tips:** How to bargain and spend wisely in our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
-- **Safety Precautions:** Avoid tourist traps with our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
-- **Where to Park:** Find secure spots in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
 - **Full Planning Guide:** Hours and layout in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
-- **Airport Transport:** Transportation options in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Market Food Guide:** Sampling traditional dishes with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Where to Park:** Find secure spots in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Mariamman Hindu Temple:** Visit the serene [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon) just two minutes away on Truong Dinh.
+- **One-Day Walking Tour:** Follow our step-by-step [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 
 ## Final Thoughts: A Reliable Spot to Exchange Cash
 

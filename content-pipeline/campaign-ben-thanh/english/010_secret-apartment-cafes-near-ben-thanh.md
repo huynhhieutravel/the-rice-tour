@@ -93,7 +93,7 @@ Rather than tearing down older housing blocks, young cafe founders, designers, a
 Here are three accessible historic walk-ups worth exploring within a short stroll of the market:
 
 ### 42 Ton That Thiep
-Located about 400 meters from Ben Thanh Market, near the Sri Thenday Yuttha Pani Hindu Temple, this atmospheric block wraps around an open central staircase and courtyard.
+Located about 400 meters from Ben Thanh Market, near the Sri Thenday Yuttha Pani Hindu Temple and just down the street from [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon), this atmospheric block wraps around an open central staircase and courtyard.
 
 - **Address:** 42 Ton That Thiep Street, District 1.
 - **Atmosphere:** Exposed brickwork, handmade ceramics, boutique teas, and vintage wooden seating.
@@ -101,7 +101,7 @@ Located about 400 meters from Ben Thanh Market, near the Sri Thenday Yuttha Pani
 - **What to Order:** Whipped egg coffee (*cà phê trứng*) or a slow cold brew.
 
 ### 26 Ly Tu Trong
-Standing at the intersection of Ly Tu Trong and Dong Khoi, opposite Vincom Center, this large colonial-era building has one of Saigon's earliest functioning wrought-iron cage elevators.
+Standing at the intersection of Ly Tu Trong and Dong Khoi, opposite Vincom Center and a 5-minute walk from the [Independence Palace](/independence-palace-saigon-guide), this large colonial-era building has one of Saigon's earliest functioning wrought-iron cage elevators.
 
 - **Address:** 26 Ly Tu Trong Street, District 1 (about 650m from Ben Thanh).
 - **Atmosphere:** High ceilings, vintage floor tiles, small art galleries, indie fashion boutiques, and specialty coffee bars.
@@ -137,7 +137,7 @@ Vietnamese coffee culture covers everything from rich traditional robusta brews 
 Because these historic walk-ups are active homes for local families, a few simple courtesies go a long way:
 
 1. **Keep Noise Down on Stairwells:** Hallways amplify sound; speak quietly when walking past open residential doors.
-2. **Motorbike Parking:** If arriving by scooter, park with the ground-floor attendant. Parking tickets usually cost 10,000 to 20,000 VND. Note that building front gates often lock around 22:30 or 23:00.
+2. **Motorbike Parking:** If arriving by scooter, park with the ground-floor attendant or use the nearby facilities in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market). Note that building front gates often lock around 22:30 or 23:00.
 3. **Respect Privacy:** Avoid taking close-up photos through open apartment doors into private living rooms.
 4. **Payment:** Most cafes accept mobile banking transfers (VietQR), cash, and card payments.
 
@@ -150,7 +150,8 @@ To help you explore District 1 with ease, check out these related guides:
 - **Fine Arts Museum:** Just a block from Ton That Dam, visit the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 - **Evening Spots:** View the skyline from the [best rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh).
 - **Walking Itinerary:** Plan your route with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
-- **Parking Information:** Find scooter and car lots in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Market Food Stalls:** Pair your coffee with regional snacks in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Where to Stay:** Find charming stays nearby in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) guide.
 
 ## Final Thoughts: A Quiet Pause in District 1
 

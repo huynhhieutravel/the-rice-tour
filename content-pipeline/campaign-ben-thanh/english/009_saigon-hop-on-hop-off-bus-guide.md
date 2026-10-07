@@ -112,7 +112,7 @@ This loop circles the core colonial and administrative heart of District 1:
   7. [Independence Palace](/independence-palace-saigon-guide) (Reunification Hall)
   8. Notre-Dame Cathedral & Central Post Office
   9. Bui Vien Walking Street area
-  10. **Ben Thanh Market:** Stops just outside the West Gate on Phan Chu Trinh Street.
+  10. **Ben Thanh Market:** Stops just outside the West Gate on Phan Chu Trinh Street—see our comprehensive [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
 
 ### Route 2: Saigon – Chợ Lớn Chinatown Circuit (120-Minute Route)
 This route travels west into District 5 and District 6, connecting central District 1 with Ho Chi Minh City's historic Chinese commercial quarter:
@@ -169,10 +169,10 @@ Tickets can be purchased at boarding kiosks or paid by card / digital transfer:
 
 ## Suggested Half-Day Plan Around Ben Thanh Market
 
-- **15:00 – 16:15:** Browse local handicrafts and grab a refreshment inside Ben Thanh Market.
+- **15:00 – 16:15:** Browse local handicrafts and grab a refreshment inside the [Ben Thanh Market food hall](/ben-thanh-market-food-guide).
 - **16:30:** Walk across to the West Gate bus stop at 23 Phan Chu Trinh Street.
 - **16:45 – 17:45:** Take the 60-minute sunset loop across District 1 and the Ba Son Bridge.
-- **18:00:** Disembark back at Ben Thanh Market, ready for dinner at a nearby street stall or descending into the Metro.
+- **18:00:** Disembark back at Ben Thanh Market, ready for dinner at a nearby street stall or heading up to [rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh) to enjoy night views over the city.
 
 ---
 
@@ -182,6 +182,8 @@ To help you explore District 1 with ease, check out these related guides:
 - **Highlights Near the Market:** Top attractions in our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
 - **Walking Option:** Explore on foot with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 - **In-Depth City Tour:** Join a local guide on a [private Ho Chi Minh City tour](/tour/ho-chi-minh-city-half-day-private-tour).
+- **Boutique Hotels Nearby:** Staying close to the bus terminus at curated [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+- **Fine Arts Museum:** Hopping off nearby to explore the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 
 ## Final Thoughts: Seeing the City from a Different Angle
 

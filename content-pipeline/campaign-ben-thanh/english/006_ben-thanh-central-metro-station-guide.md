@@ -103,10 +103,10 @@ graph TD
 ```
 
 ### Level B1: The Commercial Concourse & Ticketing Mezzanine
-The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques.
+The upper concourse functions as an expansive subterranean civic plaza. Automated multi-lingual kiosks dispense tickets via cash, international credit cards, or VietQR codes. Flanking the ticketing gates are specialty coffee houses serving cold-brew Robusta, traditional bakeries, and curated cultural boutiques—with direct pedestrian escalators leading up to [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
 
 ### The Architectural Centerpiece: The Lotus Toplight
-Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures a striking view: the roof of the 1914 Ben Thanh clock tower framed against the sky above, uniting two centuries of Saigon history.
+Standing at the center of Level B1, commuters are naturally drawn toward the monumental skylight. Looking skyward through its geometric framework, one captures a striking view: the roof of the 1914 Ben Thanh clock tower framed against the sky above, uniting two centuries of Saigon history. From the surrounding square, you can easily walk 700m north to the [Independence Palace](/independence-palace-saigon-guide) or 350m southeast to the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 
 ### Level B2: Line 1 Boarding Platforms
 Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maintains quiet acoustics and an ambient temperature of 23°C. Electric trainsets depart every four to eight minutes, whisking passengers northeast along the Saigon River.
@@ -141,9 +141,10 @@ Equipped with full-height, automated Platform Screen Doors (PSD), Level B2 maint
 ## 🗺️ Curated Cluster Connections
 
 To help you navigate District 1 with ease, explore our companion heritage guides:
-- **Things to Do in Ben Thanh Market:** connecting directly into the market stalls of [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
-- **Parking Guide Near Ben Thanh Market:** accessing secure parking with our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
-- **Tan Son Nhat Airport Transfer Guide:** connecting from the terminal via our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Parking Guide Near Ben Thanh Market:** accessing secure underground parking with our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Tan Son Nhat Airport Transfer Guide:** connecting from the airport terminal via our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Boutique Hotels Near Ben Thanh:** staying near the central transit terminal at [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+- **Saigon Hop-On Hop-Off Bus:** continuing above-ground city sightseeing on the [Saigon Hop-On Hop-Off Bus](/saigon-hop-on-hop-off-bus-guide).
 
 ## Epilogue: A Modern Milestone for District 1
 

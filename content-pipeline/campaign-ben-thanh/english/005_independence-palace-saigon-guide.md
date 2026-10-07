@@ -127,7 +127,7 @@ Enclosing the second and third floor balconies is a distinctive sunscreen facade
 - **Optimal Stroll Window:** Arrive between **14:00 and 16:30 PM**. The afternoon sun dips beneath the giant mahogany canopy, casting dramatic architectural shadows through the bamboo louvers and providing a cooler ambiance for garden exploration.
 - **Dress Code & Etiquette:** Modest attire with covered shoulders and knees is mandatory. Large backpacks must be checked at the security counter near the gate.
 - **Smart Audio Guides:** Multi-language interactive audio wands (English, French, German, Japanese, Mandarin) are available at the reception desk for 50,000 VND, offering insightful curatorial narratives at your own pace.
-- **Seamless Walking Connection:** Combine your palace visit with the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide) or follow our curated [One-Day Walking Tour](/ben-thanh-one-day-walking-tour).
+- **Seamless Walking Connection:** Combine your palace visit with the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide) or follow our curated [One-Day Walking Tour](/ben-thanh-one-day-walking-tour). You can also stroll 700 meters south to [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide) or stop for lunch at the [Ben Thanh Market food hall](/ben-thanh-market-food-guide).
 - **Curated Expert Excursion:** For a private tour led by accredited architectural historians, reserve the [Ho Chi Minh City Half Day Private Tour](/tour/ho-chi-minh-city-half-day-private-tour) hosted by The Rice Tour.
 
 ---
@@ -140,6 +140,8 @@ Enclosing the second and third floor balconies is a distinctive sunscreen facade
 To help you navigate District 1 with ease, explore our companion heritage guides:
 - **Saigon Hop-On Hop-Off Bus:** boarding the [Saigon Hop-On Hop-Off Bus](/saigon-hop-on-hop-off-bus-guide) right outside the main palace gate.
 - **Boutique Hotels Near Ben Thanh:** staying within walking distance at curated [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh).
+- **Mariamman Hindu Temple:** visiting the colorful South Indian [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon) just a 5-minute walk south on Truong Dinh.
+- **Tailor-Made Vietnam Journeys:** designing bespoke historical itineraries with our [tailor-made travel service](/tailor-made).
 
 ## Epilogue: Understanding Modern Vietnam Through Its Landmarks
 

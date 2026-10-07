@@ -71,7 +71,7 @@ None of these situations should discourage you from visiting. With basic awarene
 ### Scam 1: The "Astronomical Price Hike" (300% – 500% Inflation)
 ### 1. High Starting Prices for Souvenirs
 - **What happens:** At stalls selling clothing, lacquerware, coffee, and souvenirs, starting asking prices are often set high for foreign travelers. For example, a basic souvenir T-shirt that usually sells for 80,000 – 100,000 VND may be initially quoted at 300,000 – 400,000 VND.
-- **What to do:** Don't take it personally—negotiation is expected. Check prices at two or three stalls first to get a baseline. Counter-offer politely at about 30% to 50% below the asking price, or look for stalls with posted "Fixed Price" signs where prices are clearly labeled.
+- **What to do:** Don't take it personally—negotiation is expected. Check prices at two or three stalls first to get a baseline. Counter-offer politely at about 30% to 50% below the asking price, or look for stalls with posted "Fixed Price" signs where prices are clearly labeled—consult our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide) for category-by-category tips.
 
 ### 2. The Fruit Shoulder-Pole Photo Trap
 - **What happens:** On sidewalks near the South and West Gates, vendors carrying fruit or coconuts on traditional bamboo shoulder poles (*đòn gánh*) may offer to let you try holding the pole or wear their conical hat for a photo. Once the photo is taken, they may open two coconuts and ask for 150,000 to 200,000 VND each.
@@ -91,17 +91,17 @@ None of these situations should discourage you from visiting. With basic awarene
 
 ### 6. Unlicensed Street Taxis
 - **What happens:** Unaffiliated cabs parked around the market perimeter may use vehicles that look like reputable brands (Mai Linh or Vinasun) but run fast meters or refuse to turn the meter on.
-- **What to do:** Book your ride through a mobile app (Grab, Be, or Xanh SM) to have fixed upfront pricing. If taking a regular street taxi, make sure it is from an official fleet like Vinasun (`028.38.27.27.27`) or Mai Linh (`028.38.38.38.38`), and confirm the meter is running.
+- **What to do:** Book your ride through a mobile app (Grab, Be, or Xanh SM) to have fixed upfront pricing. If taking a regular street taxi, make sure it is from an official fleet like Vinasun (`028.38.27.27.27`) or Mai Linh (`028.38.38.38.38`), and confirm the meter is running—see our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
 
 ### 7. Similar-Looking Banknotes
 - **What happens:** Vietnamese polymer currency can be confusing at first glance. In particular, the blue 500,000 VND note and the blue 20,000 VND note look somewhat similar in dim light, as do the 10,000 VND and 200,000 VND bills.
-- **What to do:** Take a few moments when receiving change to count your bills and check the numbers carefully before leaving the stall.
+- **What to do:** Take a few moments when receiving change to count your bills and check the numbers carefully before leaving the stall. If you need to convert currency safely at fair rates, head across from the West Gate to [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide).
 
 ---
 
 ## Fair Price Benchmarks (2026 Reference)
 
-To give you an idea of typical costs around the market:
+To give you an idea of typical costs around the market (see our detailed [Ben Thanh Market food guide](/ben-thanh-market-food-guide) for stall recommendations):
 
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
@@ -140,11 +140,11 @@ If you experience an issue or need assistance:
 ## 🗺️ Nearby Guides & Resources
 
 To help you navigate District 1 with ease, explore our companion heritage guides:
-- **Shopping Practicalities:** How to negotiate respectfully in our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
-- **Currency Exchange:** Find fair rates across the street at the [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
-- **Airport Transfers:** Reliable taxi and bus options in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
 - **Complete Overview:** Hours and history in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
-- **Dining Recommendations:** Reliable stalls in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Things to Do in Market:** Orientation and highlights in our [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market) guide.
+- **Parking Guide:** Avoiding street parking overcharges with our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **Walking Tour:** Explore safely on foot with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Boutique Hotels:** Secure stays in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) review.
 
 ## Final Thoughts: Enjoying the Market with Confidence
 

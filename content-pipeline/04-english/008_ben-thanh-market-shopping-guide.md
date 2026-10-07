@@ -137,8 +137,8 @@ If you cannot agree on a price, thank the vendor with a smile and begin walking 
 ## Consumer Tips & Traveler Rights (2026)
 
 1. **Check Weights at Public Scales:** If you buy dried fruit, nuts, or coffee by the kilogram, you can verify your package at the electronic scales situated near each of the market's four gates.
-2. **Clear Price Inquiries:** Always confirm prices before having fruits sliced or coffee beans ground into powder.
-3. **Payment Methods:** While vendors commonly use VietQR bank transfers, international cards are accepted at larger jewelry and textile shops. Keep cash handy for small transactions.
+2. **Clear Price Inquiries:** Always confirm prices before having fruits sliced or coffee beans ground into powder—learn more in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+3. **Payment Methods:** While vendors commonly use VietQR bank transfers, international cards are accepted at larger jewelry and textile shops. Keep cash handy for small transactions, which you can conveniently exchange across from the West Gate at [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide). When taking a break from shopping, sample regional noodles in the [Ben Thanh Market food hall](/ben-thanh-market-food-guide).
 4. **Market & Cooking Tours:** If you'd like to explore the market with a local chef and learn how fresh ingredients are selected for classic southern dishes, check out our [Cooking Class & Local Market Tour](/tour/cooking-class-local-market).
 
 ---
@@ -146,10 +146,10 @@ If you cannot agree on a price, thank the vendor with a smile and begin walking 
 ## 🗺️ Nearby Guides & Resources
 
 To help you explore District 1 with ease, check out these related guides:
-- **Exchanging Money:** Find competitive rates at the trusted [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
-- **Avoiding Common Scams:** Practical safety advice in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
 - **Market Highlights:** Gate-by-gate orientation in our [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market) guide.
 - **Full Planning Overview:** Hours, history, and tips in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
+- **Parking Information:** Finding secure lots in our [parking guide near Ben Thanh Market](/parking-guide-near-ben-thanh-market).
+- **One-Day Walking Tour:** Combining market shopping with local sights on our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 
 ## Final Thoughts: Shopping with Respect and Curiosity
 

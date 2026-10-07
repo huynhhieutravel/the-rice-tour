@@ -130,7 +130,7 @@ Located in the upper floors of Saigon Centre on Le Loi Boulevard, offering direc
 
 - **Address:** 65 Le Loi Boulevard, District 1 (200m from the market).
 - **Style & Rooms:** Contemporary urban art, floor-to-ceiling city views, and spacious modern layouts.
-- **Standout Features:** Direct underground connection to the Metro, convenient for travelers who want easy transit across the city.
+- **Standout Features:** Direct underground connection to the [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide), convenient for travelers who want easy transit across the city.
 - **Typical 2026 Rates:** 3,500,000 – 6,800,000 VND per night.
 
 ---
@@ -139,9 +139,9 @@ Located in the upper floors of Saigon Centre on Le Loi Boulevard, offering direc
 
 | Hotel | Walking Distance | Style | Standout Feature | Typical Rates (VND/Night) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Silverland Yen** | 250m (3 mins) | Zen Minimalist | Quiet location near Tao Dan Park; rooftop jacuzzi | **2,200,000 – 3,800,000** |
+| **Silverland Yen** | 250m (3 mins) | Zen Minimalist | Quiet location near Tao Dan Park and [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon); rooftop jacuzzi | **2,200,000 – 3,800,000** |
 | **La Siesta Premium** | 350m (4 mins) | Modern Indochine | Rooftop infinity pool; spa services | **2,800,000 – 4,800,000** |
-| **Hotel Continental** | 750m (9 mins) | Historic Colonial (1880) | Frangipani courtyard; historic literary heritage | **3,200,000 – 5,500,000** |
+| **Hotel Continental** | 750m (9 mins) | Historic Colonial (1880) | Frangipani courtyard; historic literary heritage near the [Independence Palace](/independence-palace-saigon-guide) | **3,200,000 – 5,500,000** |
 | **The Myst Dong Khoi** | 850m (11 mins) | Green Riverfront Heritage | Balcony stone tubs; complimentary afternoon tea | **3,800,000 – 6,500,000** |
 | **Fusion Original** | 200m (2 mins) | Modern Art & Design | Direct underground access to Metro Line 1 | **3,500,000 – 6,800,000** |
 
@@ -162,6 +162,8 @@ To help you explore District 1 with ease, explore our companion heritage guides:
 - **Airport Transit:** Smooth airport transfers with our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
 - **Self-Guided Walk:** Start our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour) right from your hotel door.
 - **Sunset Drinks:** Unwind with views from the [best rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh).
+- **Market Food Guide:** Dining at generational stalls with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Fine Arts Museum:** Exploring French Indochine design at the [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide).
 - **Custom Itineraries:** Plan a curated trip with our [tailor-made journey service](/tailor-made).
 
 ## Final Thoughts: A Comfortable Base in District 1

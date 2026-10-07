@@ -74,8 +74,10 @@ Below is an overview of 6 official, regulated parking options located within a s
 | **2. Saigon Centre / Takashimaya Basement** | Ingress via Pasteur or Nam Ky Khoi Nghia | Scooters & Passenger Cars | 10,000 / first 4h<br>(+5,000 / extra hour) | 50,000 / first 2h<br>(+30,000 / extra hour) | 09:00 – 22:30 | ⭐⭐⭐⭐⭐ (Premier parking in Saigon, climate-controlled) |
 | **3. September 23rd Park Surface Lot** | Gate 1 on Le Lai Street (Opposite New World Hotel) | Scooters, Tourist Coaches | 6,000 (day)<br>10,000 (night) | Accommodates 16–45 seat coaches | 06:00 – 23:00 | ⭐⭐⭐⭐ (Canopy shade, wide turning lanes, easy ingress) |
 | **4. Kumho Asiana / mPlaza Saigon Garage** | 39 Le Duan Street (Corner of Hai Ba Trung) | Cars & Scooters | 10,000 / entry | 40.000 / 2-hour block | 24/7 | ⭐⭐⭐⭐⭐ (Top overflow hub when central lots reach capacity) |
-| **5. Tao Dan Park / Hoa Lu Facility** | Huyen Tran Cong Chua Street Gate | Scooters & Cars | 6,000 / entry | 35,000 – 50,000 / entry | 06:00 – 22:00 | ⭐⭐⭐⭐ (Near Independence Palace, shaded by ancient trees) |
+| **5. Tao Dan Park / Hoa Lu Facility** | Huyen Tran Cong Chua Street Gate | Scooters & Cars | 6,000 / entry | 35,000 – 50,000 / entry | 06:00 – 22:00 | ⭐⭐⭐⭐ (Near the [Independence Palace](/independence-palace-saigon-guide), shaded by ancient trees) |
 | **6. Saigon General Hospital Parking** | 125 Le Loi Blvd (Directly opposite East Gate) | Scooters | 5,000 – 8,000 / entry | Cars not admitted | 06:00 – 21:30 | ⭐⭐⭐ (Closest proximity to market, but fills rapidly) |
+
+*Convenient for currency exchange:* If heading directly to [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide) on Nguyen An Ninh, park at the Metro basement or hospital lot before walking across.
 
 ---
 
@@ -95,7 +97,7 @@ Below is an overview of 6 official, regulated parking options located within a s
 </div>
 
 #### 1. Best Choice: Ben Thanh Central Metro Station Basement
-- **How to Enter:** Follow signs along Le Loi Boulevard or Ham Nghi Street down into the underground Metro station parking ramps.
+- **How to Enter:** Follow signs along Le Loi Boulevard or Ham Nghi Street down into the underground parking ramps at the new [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide).
 - **Why It's Great:** Automated gates, license plate cameras, security attendants, and direct escalators up into Quach Thi Trang Square and the market entrance.
 
 #### 2. Shaded Outdoor Alternative: September 23rd Park (Le Lai St)
@@ -117,7 +119,7 @@ Below is an overview of 6 official, regulated parking options located within a s
 
 ## How to Avoid Overpaying on the Street
 
-Watch out for these common warning signs of informal, unregulated parking:
+Watch out for these common warning signs of informal parking (see our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide)):
 
 1. **Sidewalk Waving:** Individuals standing in traffic on Phan Chu Trinh or Nguyen An Ninh gesturing you onto the curb, claiming official lots are full.
 2. **No Printed Ticket:** If an attendant writes a number in chalk on your seat or tears off a plain scrap of paper without a stamp or card scanner, it is an informal setup.
@@ -130,11 +132,11 @@ Watch out for these common warning signs of informal, unregulated parking:
 ## 🗺️ Nearby Guides & Resources
 
 To help you navigate District 1 with ease, explore our companion heritage guides:
-- **Metro Overview:** Full guide to [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide).
-- **Walking Itinerary:** Plan your route with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 - **Area Highlights:** Explore the neighborhood in our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
 - **Hours & Gates:** Check opening times in our [Ben Thanh Market ultimate travel guide](/ben-thanh-market-ultimate-travel-guide).
-- **Exchanging Money:** Find competitive rates at the [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+- **Walking Itinerary:** Plan your route with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Market Food Guide:** Refuel after parking with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Where to Stay:** Character-filled rooms in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) review.
 
 ## Final Thoughts: Parking with Peace of Mind
 

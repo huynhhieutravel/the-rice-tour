@@ -62,7 +62,7 @@ epilogue: "Riding from Tan Son Nhat into the green boulevards of District 1 is y
 
 ## Getting from the Airport into Central Saigon
 
-When your flight lands at Tan Son Nhat International Airport (SGN), your first destination is almost certainly **District 1**, centered around the familiar clock tower of Ben Thanh Market. As Saigon’s central crossroads for hotels, street food, historic sights, and the new underground metro terminal, arriving around Ben Thanh puts you right where you want to be.
+When your flight lands at Tan Son Nhat International Airport (SGN), your first destination is almost certainly **District 1**, centered around the familiar clock tower of Ben Thanh Market and its surrounding [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh). As Saigon’s central crossroads for hotels, street food, historic sights, and the new underground metro terminal, arriving around Ben Thanh puts you right where you want to be.
 
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
   <div class="w-full max-w-[540px] overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white p-2">
@@ -99,7 +99,7 @@ To help you get into town smoothly and pay a fair price, here is a comparison of
 The bright yellow 109 bus is one of the most convenient and cost-effective ways to reach District 1.
 - **The Vehicles:** Modern, low-floor city buses with strong air conditioning, dedicated luggage racks in the center aisle, and bilingual signage. Conductors speak functional English and can tell you when your stop is coming up.
 - **Hours & Frequency:** Runs daily from **05:45 to 23:45**, departing every 15 to 20 minutes.
-- **Route:** SGN Airport -> Truong Son -> Tran Quoc Hoan -> Hoang Van Thu -> Nguyen Van Troi -> Nam Ky Khoi Nghia -> Ham Nghi -> Ben Thanh Central Station.
+- **Route:** SGN Airport -> Truong Son -> Tran Quoc Hoan -> Hoang Van Thu -> Nguyen Van Troi -> Nam Ky Khoi Nghia -> Ham Nghi -> [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide).
 - **Where to Board:**
   - *International Terminal:* Walk out past currency exchange desks, cross the first crosswalk to Column 12.
   - *Domestic Terminal:* Walk out through the main doors, cross Lane B toward Columns B17 through B20.
@@ -124,7 +124,7 @@ If you have young children, elderly family members, or heavy luggage and prefer 
   - **Vinasun Taxi:** White vehicles with red and green horizontal stripes (Hotline: `028 38 27 27 27`).
   - **Mai Linh Taxi:** Distinctive bright green vehicles (Hotline: `028 38 38 38 38`).
 - **Where to Board:** Follow terminal signage to **Lane D1 / D2** on the ground floor. Official attendants in green or maroon uniforms manage the line, hand you a slip with the cab's plate number, and help load your luggage.
-- **Watch Out For Touts:** Ignore anyone walking up to you inside the arrivals hall offering a "fast taxi" or claiming to be a Grab driver. Legitimate taxi drivers will always stay with their cars at the official rank.
+- **Watch Out For Touts:** Ignore anyone walking up to you inside the arrivals hall offering a "fast taxi" or claiming to be a Grab driver—learn how to avoid illegal cabs in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide). Legitimate taxi drivers will always stay with their cars at the official rank.
 
 ### 5. Pre-Booked Private Car Transfer
 If you are landing late at night after a long-haul flight, traveling in a group, or simply want to walk straight from baggage claim to a waiting vehicle:
@@ -140,7 +140,7 @@ If you are landing late at night after a long-haul flight, traveling in a group,
 2. **Late-Night Flights:**  
    Buses 109 and 152 finish their routes by 23:45. If your flight lands past 23:00, plan to take an official taxi from Lane D or book a ride-hailing car. At night, roads are clear, and the drive to District 1 takes around 20 to 25 minutes.
 3. **Keep Small Cash Handy:**  
-   If you plan to ride Bus 109 or take a metered taxi, keep a few 20,000, 50,000, or 100,000 VND banknotes handy. Drivers and bus conductors often struggle to break a 500,000 VND note for a small fare.
+   If you plan to ride Bus 109 or take a metered taxi, keep a few 20,000, 50,000, or 100,000 VND banknotes handy. Once downtown, you can easily exchange larger foreign currency notes at [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide) right across from the market's West Gate.
 4. **Getting Connected:**  
    You can buy a local physical SIM card or activate an eSIM at counters right beside the baggage claim exit. Having data connectivity before you walk outside makes ride-hailing and checking maps much smoother.
 
@@ -149,9 +149,7 @@ If you are landing late at night after a long-haul flight, traveling in a group,
 ## 🗺️ Related Guides for Exploring Around Ben Thanh
 
 Once you settle in at your hotel, these guides help you navigate the neighborhood:
-- **Ben Thanh Central Metro Station:** Learn how to use the underground transit system with our [Ben Thanh Central Metro Station guide](/ben-thanh-central-metro-station-guide).
-- **Boutique Hotels Near Ben Thanh:** Find character-filled places to stay in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) review.
 - **Things to Do Near Ben Thanh Market:** Plan your first afternoon using our [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market) walking list.
-- **Money Exchange at Ha Tam Gold Shop:** Get fair exchange rates nearby with our [Ben Thanh money exchange guide](/money-exchange-ben-thanh-ha-tam-guide).
-- **Safety & Scam Prevention:** Keep your belongings safe using our practical [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
+- **Ben Thanh Market Food Guide:** Discover authentic stalls in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **One-Day Walking Tour:** Explore central Saigon on foot with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 - **Tailor-Made Vietnam Journeys:** For private airport pickups, boutique tours, and custom itineraries, explore our [tailor-made travel design](/tailor-made).

@@ -117,7 +117,7 @@ Located on Truong Dinh Street just two blocks from the market's West Gate, this 
 Head up the stairs at 26 Ly Tu Trong or 42 Ton That Thiep to one of District 1's tucked-away apartment cafes. Sitting by an open window with an iced tea or drip coffee provides a relaxing vantage over the street below.
 
 #### 10. Ride the Open-Top Double-Decker Bus at Sunset
-At around 17:00, catch the hop-on hop-off bus outside Ben Thanh's West Gate. Taking the top-deck loop at dusk offers panoramic views of the city's French colonial buildings and the crossing over Ba Son Bridge.
+At around 17:00, catch the [Saigon Hop-On Hop-Off Bus](/saigon-hop-on-hop-off-bus-guide) outside Ben Thanh's West Gate. Taking the top-deck loop at dusk offers panoramic views of the city's French colonial buildings and the crossing over Ba Son Bridge.
 
 ---
 
@@ -127,7 +127,7 @@ At around 17:00, catch the hop-on hop-off bus outside Ben Thanh's West Gate. Tak
 Around 18:00, when the indoor market closes, food stalls set up along Phan Boi Chau and Phan Chu Trinh streets outside. You can order grilled river prawns, steamed clams with lemongrass, grilled meats, and crispy *bánh xèo*.
 
 #### 12. Have an Evening Drink with a Clock Tower View
-Head up to a rooftop terrace along Le Lai or Phan Boi Chau Street. Settle in with a cold craft beer or cocktail and watch the evening lights reflect off the market's terracotta roof and the busy streets below.
+Head up to [rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh) along Le Lai or Phan Boi Chau Street. Settle in with a cold craft beer or cocktail and watch the evening lights reflect off the market's terracotta roof and the busy streets below.
 
 #### 13. Late-Night Broken Rice (*Cơm Tấm*)
 Finish the night with one of Saigon's signature dishes: grilled pork chop over broken rice (*cơm tấm sườn nướng*), served with pickled vegetables and sweet fish sauce at late-night eateries near Nguyen Trai.
@@ -139,14 +139,14 @@ Finish the night with one of Saigon's signature dishes: grilled pork chop over b
 | Option | Morning | Midday | Evening | Typical Spend (VND) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Half-Day Highlights** | South Gate photo + East Gate noodle breakfast | Metro station visit + Chè Bé dessert | Quick stroll through souvenir stalls | 150,000 – 250,000 |
-| **Full Day in District 1** | Early market photo + Park coffee + Food court | Metro Lotus Skylight + Fine Arts Museum | Rooftop sunset view + Night street food | 500,000 – 900,000 |
+| **Full Day in District 1** | Early market photo + Park coffee + Food court | Metro Lotus Skylight + [HCMC Museum of Fine Arts](/hcmc-museum-of-fine-arts-guide) | Rooftop sunset view + Night street food | 500,000 – 900,000 |
 
 ---
 
 ## Practical Tips for Your Visit
 
 1. **Best Time for Photos:** Early morning (06:30 – 08:00) gives you clear lighting on the clock tower facade with minimal traffic.
-2. **Avoiding Midday Heat:** Plan indoor or air-conditioned stops between 11:30 and 14:00, such as the Metro concourses or nearby cafes.
+2. **Avoiding Midday Heat:** Plan indoor or air-conditioned stops between 11:30 and 14:00, such as the [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide) concourses or [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
 3. **Keep Belongings Secure:** As in any busy central district, keep bags zipped and held in front when walking through crowded aisles or waiting at crosswalks.
 
 ---
@@ -158,6 +158,9 @@ To help you navigate District 1 with ease, explore our companion heritage guides
 - **Shopping Tips:** How to browse fairly with our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
 - **Safety Advice:** Common scams to avoid in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
 - **Attractions Close By:** Neighboring sights in our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
+- **Walking Itinerary:** Step-by-step route in our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Where to Stay:** Character-rich hotels in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) guide.
+- **Airport Connections:** Fast airport transit in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
 
 ## Final Thoughts: Experiencing Ben Thanh's Daily Rhythm
 

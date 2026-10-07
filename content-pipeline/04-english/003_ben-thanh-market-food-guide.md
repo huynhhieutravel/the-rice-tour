@@ -97,13 +97,13 @@ Translucent rice paper reveals scarlet poached prawns, tender pork belly, fine v
 Seek out the Central Vietnamese stalls serving stacks of miniature porcelain saucers containing velvety *bánh bèo*. Topped with golden toasted shrimp powder, crispy pork crackling, and scallion oil, they are doused in sweetened chili-spiked fish sauce for a textural revelation.
 
 ### Chè Bé Dessert Stall (Stall 1119): Southern Sweet Soups Since 1968
-Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (*chè sương sa hạt lựu*), warm lotus seed porridge (*chè thưng*), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat.
+Glistening under glass cases are bowls of vibrant southern desserts: ruby water chestnut dumplings suspended in coconut cream (*chè sương sa hạt lựu*), warm lotus seed porridge (*chè thưng*), and white bean soup stewed with glutinous rice. An icy glass is the quintessential antidote to the tropical midday heat. Between snacks, explore the market's historical architecture and layout with our guide to [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
 
 ---
 
 ## Phan Boi Chau Street at Night: Sizzling Seafood & Charcoal Grills
 
-When the market shutters close at 18:00, the flanking pavements burst into evening life:
+When the market shutters close at 18:00, the flanking pavements burst into evening life. Many visitors start with sunset drinks at nearby [rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh) before heading down to the open-air food stalls:
 
 
 <div class="instagram-embed-wrapper my-8 flex justify-center not-prose w-full">
@@ -135,7 +135,7 @@ When the market shutters close at 18:00, the flanking pavements burst into eveni
 
 ## Field Notes for Food Lovers (2026)
 
-1. **Cashless Tap-to-Pay:** Every certified vendor inside the market now supports VietQR and contactless card payments, eliminating the hassle of counting physical banknotes.
+1. **Cashless Tap-to-Pay:** Every certified vendor inside the market now supports VietQR and contactless card payments. If you need cash, exchange notes across from the West Gate at [Ha Tam Gold Shop](/money-exchange-ben-thanh-ha-tam-guide), and learn fair price benchmarks from our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
 2. **Navigating Peak Rush:** Stalls reach peak capacity between 11:30 and 13:00. Arrive between **08:30 and 10:30 AM** or **14:30 and 16:00 PM** for leisurely seating and personalized attention from generational cooks.
 3. **Local Condiment Wisdom:** When indulging in bún riêu or bún mắm, squeeze a wedge of fresh lime and stir in a spoonful of chili paste to brighten the herbal complexity of the broth.
 4. **Hands-On Market Immersion:** To navigate the produce aisles alongside master chefs and prepare classic Vietnamese banquets from scratch, consider reserving the [Cooking Class & Local Market Tour](/tour/cooking-class-local-market) operated by The Rice Tour.
@@ -147,10 +147,10 @@ When the market shutters close at 18:00, the flanking pavements burst into eveni
 ## 🗺️ Curated Cluster Connections
 
 To help you navigate District 1 with ease, explore our companion heritage guides:
-- **Things to Do in Ben Thanh Market:** discovering the 15 highlighted [things to do in Ben Thanh Market](/things-to-do-in-ben-thanh-market).
-- **Ben Thanh Market Scams & Safety Guide:** learning fair price benchmarks from our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
-- **Best Rooftop Bars Near Ben Thanh:** enjoying sunset drinks at the [best rooftop bars near Ben Thanh](/best-rooftop-bars-near-ben-thanh).
-- **Money Exchange at Ha Tam Gold Shop:** exchanging spending cash at the trusted [money exchange near Ben Thanh Market](/money-exchange-ben-thanh-ha-tam-guide).
+- **Ben Thanh Market Shopping Guide:** browsing handicrafts, coffee, and textiles with our [Ben Thanh Market shopping guide](/ben-thanh-market-shopping-guide).
+- **One-Day Ben Thanh Walking Tour:** connecting food stalls with neighborhood heritage on our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Central Metro Station Guide:** arriving directly beneath the market via our [Ben Thanh Central Metro Station guide](/ben-thanh-central-metro-station-guide).
+- **Boutique Hotels Near Ben Thanh:** staying within walking distance of night dining with our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) guide.
 
 ## Epilogue: The Warmth of Living Memory
 

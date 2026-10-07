@@ -127,7 +127,7 @@ Enshrined in a gallery on the second floor of Building 1 rests the monumental la
 
 - **Golden Light Window:** Visit between **08:30 and 10:30 AM** or **15:00 and 16:30 PM**. During these windows, low-angled sunlight casts long shadows across the tiled verandas, creating great conditions for architectural photography.
 - **Conservation Etiquette:** Refrain from touching lacquer surfaces and stone carvings. Flash photography is strictly forbidden to preserve delicate pigments and antique silk fibers.
-- **Neighborhood Connections:** After your museum visit, cross the street to sample iced Vietnamese coffee at the cafes along Le Thi Hong Gam Street, before continuing toward the [Independence Palace](/independence-palace-saigon-guide) or descending into the lotus skylight of the [Ben Thanh Metro Station](/ben-thanh-central-metro-station-guide).
+- **Neighborhood Connections:** After your museum visit, cross the street to sample iced Vietnamese coffee at the cafes along Le Thi Hong Gam Street, pair your morning with the nearby [Mariamman Hindu Temple](/mariamman-hindu-temple-saigon), continue toward the [Independence Palace](/independence-palace-saigon-guide), or descend into the lotus skylight of the [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide).
 - **Curated Private Excursion:** To explore the Hui Bon Hoa estate alongside certified cultural guides, consider booking the [Ho Chi Minh City Half Day Private Tour](/tour/ho-chi-minh-city-half-day-private-tour) hosted by The Rice Tour.
 
 ---
@@ -139,6 +139,9 @@ Enshrined in a gallery on the second floor of Building 1 rests the monumental la
 To help you navigate District 1 with ease, explore our companion heritage guides:
 - **One-Day Ben Thanh Walking Tour:** incorporating the museum into a curated [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
 - **Secret Apartment Cafes:** relaxing over specialty drip coffee in [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
+- **Ben Thanh Market Food Guide:** refueling after museum walks with our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
+- **Boutique Hotels Near Ben Thanh:** finding character-filled lodging nearby in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) review.
+- **Tailor-Made Vietnam Journeys:** planning private art and architectural touring with our [tailor-made travel design](/tailor-made).
 
 ## Epilogue: A Serene Dialogue with the Past
 

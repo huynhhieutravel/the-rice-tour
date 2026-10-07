@@ -123,7 +123,7 @@ For those wanting wide panoramic views spanning the Opera House, City Hall, and 
 
 If open rooftop views aren't your preference, District 1 also has a thriving speakeasy culture:
 
-- **Unmarked Entrances:** Several bars hide behind unmarked doors in old apartment corridors, behind sliding bookcases, or down quiet residential alleys on Pasteur and Ly Tu Trong.
+- **Unmarked Entrances:** Several bars hide behind unmarked doors in old apartment corridors (similar to the character-filled walk-ups in our guide to [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh)), behind sliding bookcases, or down quiet residential alleys on Pasteur and Ly Tu Trong.
 - **Intimate Interiors:** Dim candlelight, comfortable leather booths, and curated spirits.
 - **Custom Cocktails:** Rather than ordering off a set list, bartenders are often happy to craft drinks based on your flavor preferences—whether smoky, herbal, dry, or citrusy.
 
@@ -145,7 +145,7 @@ If open rooftop views aren't your preference, District 1 also has a thriving spe
 
 1. **Sunset Timing (17:30 – 18:30):** Sunset happens quickly in southern Vietnam. If you want a good table for golden hour, arrive early or book ahead for weekend evenings.
 2. **Dress Code:** Most upscale rooftop lounges ask for smart casual dress (avoid beach sandals, athletic tank tops, or gym wear).
-3. **Getting Around Safely:** Central Saigon has strict zero-tolerance drunk driving laws. Use ride-hailing apps (Grab or Xanh SM) or take Metro Line 1 (running until 23:00) to return safely to your hotel.
+3. **Getting Around Safely:** Central Saigon has strict zero-tolerance drunk driving laws. Use ride-hailing apps (Grab or Xanh SM) or board from [Ben Thanh Central Metro Station](/ben-thanh-central-metro-station-guide) (Line 1 running until 23:00) to return safely to your hotel.
 
 ---
 
@@ -154,9 +154,10 @@ If open rooftop views aren't your preference, District 1 also has a thriving spe
 To help you navigate District 1 with ease, explore our companion heritage guides:
 - **Neighborhood Sights:** Check out our guide to [things to do near Ben Thanh Market](/things-to-do-near-ben-thanh-market).
 - **Dinner Ideas:** Find popular dinner stalls in our [Ben Thanh Market food guide](/ben-thanh-market-food-guide).
-- **Daytime Coffee:** Spend a quiet afternoon in [secret apartment cafes near Ben Thanh](/secret-apartment-cafes-near-ben-thanh).
 - **Where to Stay:** Recommended accommodations in our [boutique hotels near Ben Thanh](/boutique-hotels-near-ben-thanh) guide.
 - **Airport Connections:** Convenient routes in our [Tan Son Nhat airport to Ben Thanh transfer guide](/tan-son-nhat-airport-to-ben-thanh-transfer-guide).
+- **Walking Itinerary:** Wrap up daytime sightseeing with our [one-day Ben Thanh walking tour](/ben-thanh-one-day-walking-tour).
+- **Staying Safe at Night:** Practical nightlife security in our [Ben Thanh Market scams and safety guide](/ben-thanh-market-scams-safety-guide).
 
 ## Final Thoughts: An Evening Above District 1
 
