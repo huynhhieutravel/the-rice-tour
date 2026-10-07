@@ -297,7 +297,10 @@ export const GET: APIRoute = async () => {
   ];
 
   const results: any[] = [];
-  const now = new Date().toISOString();
+  // Clean up legacy duplicate demo posts from database
+  try {
+    await d1Db.prepare("DELETE FROM Post WHERE id IN ('demo_1', 'demo_2', 'demo_3', 'demo_4', 'demo_5', 'demo_6', 'demo_7', 'demo_8', 'demo_9', 'demo_10')").run();
+  } catch (_) {}
 
   for (const p of postsToSeed) {
     await d1Db.prepare(`
