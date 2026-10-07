@@ -28,7 +28,7 @@ const articlesConfig = [
       { icon: "🏛️", text: "Centennial Urban Heartland" },
       { icon: "🎨", text: "Indochine Art Deco Heritage" },
       { icon: "🚇", text: "2026 Metro Central Hub" },
-      { icon: "🌿", text: "Curated Walking Sanctuary" }
+      { icon: "🌿", text: "Curated Walking Loop" }
     ],
     statsVi: [
       { icon: "📍", label: "Tọa Độ Trung Tâm", val: "Quảng trường Quách Thị Trang, Quận 1" },
@@ -106,7 +106,7 @@ const articlesConfig = [
     enVar: 'benThanhMarketFoodGuideHtml',
     featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp',
     extraImages: [
-      { url: 'https://media.thericetour.com/uploads/saigon-food-variety.webp', captionVi: 'Hàng chục món ăn dân dã ba miền hội tụ đầy màu sắc tại khu ẩm thực Cửa Đông', captionEn: 'A vibrant kaleidoscope of authentic regional Vietnamese street food stalls' }
+      { url: 'https://media.thericetour.com/uploads/saigon-food-variety.webp', captionVi: 'Hàng chục món ăn dân dã ba miền hội tụ đầy màu sắc tại khu ẩm thực Cửa Đông', captionEn: 'A wide variety of authentic regional Vietnamese street food stalls' }
     ],
     badgesVi: [
       { icon: "🍜", text: "Thiên Đường Ẩm Thực Cửa Đông" },
@@ -137,7 +137,7 @@ const articlesConfig = [
       { icon: "💡", label: "Mẹo thực khách", val: "Xác nhận giá trước khi gọi món" }
     ],
     factsEn: [
-      { icon: "📍", label: "Epicenter", val: "Aisle 7 & 8 near East Gate entrance" },
+      { icon: "📍", label: "Location", val: "Aisle 7 & 8 near East Gate entrance" },
       { icon: "🍜", label: "Signature Bowls", val: "Bun Rieu, Bun Mam, Che Suong Sa" },
       { icon: "🍧", label: "Generational Stalls", val: "Che Be (Est. 1968), West Gate Bun Rieu" },
       { icon: "💡", label: "Insider Rule", val: "Always check prices on displayed menus" }
@@ -294,7 +294,7 @@ const articlesConfig = [
       { icon: "🕊️", text: "Giao Thoa Văn Hóa Việt - Ấn" }
     ],
     badgesEn: [
-      { icon: "🛕", text: "Historic South Indian Sanctuary" },
+      { icon: "🛕", text: "Historic South Indian Temple" },
       { icon: "🕉️", text: "Dravidian Architectural Gopuram" },
       { icon: "🧱", text: "Sacred Ceramic Figurine Walls" },
       { icon: "🕊️", text: "Centennial Hindu-Saigon Harmony" }
@@ -513,10 +513,10 @@ const articlesConfig = [
       { icon: "📍", text: "Vị Trí Vàng Trung Tâm Quận 1" }
     ],
     badgesEn: [
-      { icon: "🏨", text: "Heritage Boutique Sanctuaries" },
+      { icon: "🏨", text: "Heritage Boutique Hotels" },
       { icon: "🛎️", text: "Dedicated VIP Concierge" },
       { icon: "🎨", text: "Indochine Architectural Elegance" },
-      { icon: "📍", text: "Prime District 1 Epicenter" }
+      { icon: "📍", text: "Central District 1 Location" }
     ],
     statsVi: [
       { icon: "📍", label: "Khu Vực", val: "Bán kính 200m – 800m quanh Chợ Bến Thành" },
@@ -549,7 +549,7 @@ const articlesConfig = [
     enVar: 'thingsToDoInBenThanhMarketHtml',
     featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-atmosphere.webp',
     extraImages: [
-      { url: 'https://media.thericetour.com/uploads/ben-thanh-market-interior-ho-chi-minh-city.webp', captionVi: 'Không gian buôn bán đa sắc màu với hơn 1.500 gian hàng bên trong chợ', captionEn: 'A vibrant labyrinth of commerce spanning four interconnected halls' }
+      { url: 'https://media.thericetour.com/uploads/ben-thanh-market-interior-ho-chi-minh-city.webp', captionVi: 'Không gian buôn bán đa sắc màu với hơn 1.500 gian hàng bên trong chợ', captionEn: 'Bustling market stalls spanning four interconnected halls' }
     ],
     badgesVi: [
       { icon: "🎪", text: "15 Trải Nghiệm Không Thể Bỏ Lỡ" },
@@ -889,15 +889,17 @@ function compileArticle(cfg, lang = 'vi') {
   body = body.replace(/^#\s+.*$/m, '');
 
   // Extract lead quote if present
-  let lead = '';
-  const leadMatch = body.match(/^>\s*\*(?:“|")([\s\S]*?)(?:”|")\*/m) || body.match(/^>\s*(?:“|")([\s\S]*?)(?:”|")/m);
-  if (leadMatch) {
-    lead = leadMatch[1].replace(/\n>\s*/g, ' ').trim();
-    body = body.replace(/^>[\s\S]*?\n\n/m, '');
-  } else {
-    lead = isVi 
-      ? 'Chỉ cần tản bộ trong bán kính một cây số quanh ngôi chợ trăm tuổi này, bạn sẽ bước qua ba thời kỳ của thành phố: từ những dãy phố buôn bán thời thuộc địa, các dinh thự Art Deco đầu thế kỷ 20, cho đến không gian ngầm hiện đại của tuyến metro vừa đi vào hoạt động.'
-      : 'Early in the morning, before traffic builds around Quach Thi Trang Square, the chime of Ben Thanh Market South Clock Tower marks the start of another southern day. Discover layered heritage, street gastronomy, and subterranean metro concourses.';
+  let lead = fm.lead || '';
+  if (!lead) {
+    const leadMatch = body.match(/^>\s*\*(?:“|")([\s\S]*?)(?:”|")\*/m) || body.match(/^>\s*(?:“|")([\s\S]*?)(?:”|")/m);
+    if (leadMatch) {
+      lead = leadMatch[1].replace(/\n>\s*/g, ' ').trim();
+      body = body.replace(/^>[\s\S]*?\n\n/m, '');
+    } else {
+      lead = isVi 
+        ? 'Chỉ cần tản bộ trong bán kính một cây số quanh ngôi chợ trăm tuổi này, bạn sẽ bước qua ba thời kỳ của thành phố: từ những dãy phố buôn bán thời thuộc địa, các dinh thự Art Deco đầu thế kỷ 20, cho đến không gian ngầm hiện đại của tuyến metro vừa đi vào hoạt động.'
+        : 'Early in the morning, before traffic builds around Quach Thi Trang Square, the chime of Ben Thanh Market South Clock Tower marks the start of another southern day. Discover layered heritage, street gastronomy, and subterranean metro concourses.';
+    }
   }
 
   // Build Badges
@@ -1018,10 +1020,10 @@ function compileArticle(cfg, lang = 'vi') {
   `;
 
   // Epilogue Box
-  const epilogueTitle = isVi ? 'Lắng Đọng Tâm Hồn Sài Gòn' : 'The Timeless Soul of Saigon';
-  const epilogueText = isVi
+  const epilogueTitle = fm.epilogue_title || (isVi ? 'Lắng Đọng Tâm Hồn Sài Gòn' : 'Exploring Saigon\'s Living Heritage');
+  const epilogueText = fm.epilogue || (isVi
     ? 'Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.'
-    : 'No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.';
+    : 'No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.');
 
   const epilogueHtml = `
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
