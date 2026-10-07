@@ -1246,23 +1246,10 @@ function run() {
   // Export metadata
   tsCode += `export const benThanhArticlesMetadata = ${JSON.stringify(metadataList, null, 2)};\n\n`;
 
-  // Export posts array for database seeding
+  // Export posts array for database seeding (English only for inbound site)
   tsCode += `export const benThanhPostsForDatabase = [\n`;
   for (const meta of metadataList) {
     tsCode += `  {
-    id: 'bt_vi_${meta.order}',
-    title: ${JSON.stringify(meta.title_vi)},
-    slug: ${JSON.stringify(meta.slug_vi)},
-    featuredImage: ${JSON.stringify(meta.featuredImage)},
-    excerpt: ${JSON.stringify(meta.subtitle_vi || meta.title_vi)},
-    content: ${meta.viVar},
-    status: 'published',
-    format: 'landing',
-    contentFormat: 'html',
-    author: 'The Rice Tour Editorial',
-    publishedAt: ${JSON.stringify(meta.publishedAt)}
-  },
-  {
     id: 'bt_en_${meta.order}',
     title: ${JSON.stringify(meta.title_en)},
     slug: ${JSON.stringify(meta.slug_en)},

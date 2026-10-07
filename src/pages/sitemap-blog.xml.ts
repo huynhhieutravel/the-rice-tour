@@ -35,20 +35,12 @@ export const GET: APIRoute = async ({ request }) => {
         createdAt: '2026-09-13T16:15:00.000Z',
         featuredImage: 'https://media.thericetour.com/uploads/ben-thanh-market-street-food.webp'
       },
-      ...benThanhArticlesMetadata.flatMap(item => [
-        {
-          slug: item.slug_vi,
-          updatedAt: item.publishedAt,
-          createdAt: item.publishedAt,
-          featuredImage: item.featuredImage
-        },
-        {
-          slug: item.slug_en,
-          updatedAt: item.publishedAt,
-          createdAt: item.publishedAt,
-          featuredImage: item.featuredImage
-        }
-      ])
+      ...benThanhArticlesMetadata.map(item => ({
+        slug: item.slug_en,
+        updatedAt: item.publishedAt,
+        createdAt: item.publishedAt,
+        featuredImage: item.featuredImage
+      }))
     ];
     for (const extra of extraDemoArticles) {
       if (!existingSlugs.has(extra.slug)) {
