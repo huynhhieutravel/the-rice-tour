@@ -943,6 +943,24 @@ function compileArticle(cfg, lang = 'vi') {
       </a>`;
   }).join('\n');
 
+  // Extract trailing closing thoughts / epilogue if present in markdown body
+  let detectedEpilogueTitle = null;
+  let detectedEpilogueText = null;
+
+  const trailingMatch = body.match(/##\s+((?:Epilogue|Closing Thoughts|Final Thoughts|Lời Kết|Lắng Đọng)[^\n]*)\n+([\s\S]*?)$/i);
+  if (trailingMatch) {
+    detectedEpilogueTitle = trailingMatch[1].trim()
+      .replace(/^(?:Epilogue|Closing Thoughts|Final Thoughts|Lời Kết|Lắng Đọng)\s*[:\-–]?\s*/i, '')
+      .replace(/\s*\(Epilogue\)\s*/i, '')
+      .trim();
+    if (!detectedEpilogueTitle) {
+      detectedEpilogueTitle = isVi ? 'Lắng Đọng Tâm Hồn Sài Gòn' : 'Exploring Saigon\'s Living Heritage';
+    }
+    detectedEpilogueText = trailingMatch[2].trim();
+    // Remove it from body so it does not render twice (once in body prose, once in epilogue box)
+    body = body.slice(0, trailingMatch.index).trim();
+  }
+
   // Format TOC
   const tocHtml = formatTOC(body, lang);
 
@@ -1020,8 +1038,8 @@ function compileArticle(cfg, lang = 'vi') {
   `;
 
   // Epilogue Box
-  const epilogueTitle = fm.epilogue_title || (isVi ? 'Lắng Đọng Tâm Hồn Sài Gòn' : 'Exploring Saigon\'s Living Heritage');
-  const epilogueText = fm.epilogue || (isVi
+  const epilogueTitle = fm.epilogue_title || detectedEpilogueTitle || (isVi ? 'Lắng Đọng Tâm Hồn Sài Gòn' : 'Exploring Saigon\'s Living Heritage');
+  const epilogueText = fm.epilogue || detectedEpilogueText || (isVi
     ? 'Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.'
     : 'No matter how many futuristic glass towers rise into the southern sky, the quarter surrounding Ben Thanh Market preserves an irreplaceable human soul. It is a soul woven from the rhythmic clatter of street life, the sweet call of wandering dessert vendors, the stoic beauty of French brick facades, and the unquenchable optimism of those who call this river city home.');
 

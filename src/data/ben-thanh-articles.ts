@@ -101,7 +101,6 @@ export const diaDiemNoiTiengQuanhBenThanhHtml = `<!-- layout: landing -->
   <a href="#phuong-an-b-lo-trinh-tron-ven-mot-ngay-tu-hoai-niem-en-tuong-lai-8-tieng" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Phương án B: Lộ Trình Trọn Vẹn Một Ngày - Từ Hoài Niệm Đến Tương Lai (8 Tiếng)</a>
   <a href="#kinh-nghiem-and-luu-y-khi-kham-pha-khu-vuc-ben-thanh-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Kinh Nghiệm & Lưu Ý Khi Khám Phá Khu Vực Bến Thành (2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-chut-hon-pho-thi-sai-gon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Chút Hồn Phố Thị Sài Gòn</a>
 
               </div>
             </nav>
@@ -358,8 +357,6 @@ export const diaDiemNoiTiengQuanhBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Ẩm thực chợ Bến Thành:</strong> thưởng thức các món ngon trứ danh qua <a href="/am-thuc-cho-ben-thanh">cẩm nang ẩm thực chợ Bến Thành</a>.</li>
 <li><strong>Lịch trình đi bộ Bến Thành 1 ngày:</strong> tối ưu thời gian khám phá với <a href="/lich-trinh-di-bo-ben-thanh-1-ngay">lịch trình đi bộ quanh Bến Thành 1 ngày</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-chut-hon-pho-thi-sai-gon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Chút Hồn Phố Thị Sài Gòn</h2></div>
-<p>Dù trung tâm thành phố ngày càng nhiều cao ốc hiện đại, khu phố quanh Chợ Bến Thành vẫn giữ được nét quyến rũ rất riêng: tiếng gọi nhau đầu ngày của các tiểu thương, bóng râm mát rượi dưới hàng cây cổ thụ trên đường Pasteur, và sự đan xen tự nhiên giữa nếp sống cũ với hạ tầng mới. Dành trọn một ngày đi bộ quanh khu vực này sẽ cho bạn cảm nhận rõ nét về một Sài Gòn vừa quen vừa lạ, sống động và đầy lòng hiếu khách.</p>
 
           </div>
 
@@ -381,8 +378,8 @@ export const diaDiemNoiTiengQuanhBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Chút Hồn Phố Thị Sài Gòn</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù trung tâm thành phố ngày càng nhiều cao ốc hiện đại, khu phố quanh Chợ Bến Thành vẫn giữ được nét quyến rũ rất riêng: tiếng gọi nhau đầu ngày của các tiểu thương, bóng râm mát rượi dưới hàng cây cổ thụ trên đường Pasteur, và sự đan xen tự nhiên giữa nếp sống cũ với hạ tầng mới. Dành trọn một ngày đi bộ quanh khu vực này sẽ cho bạn cảm nhận rõ nét về một Sài Gòn vừa quen vừa lạ, sống động và đầy lòng hiếu khách.</p>
     </div>
   
 
@@ -588,7 +585,6 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
   <a href="#option-b-the-complete-full-day-immersion-8-hours" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Option B: The Complete Full-Day Immersion (8 Hours)</a>
   <a href="#field-notes-for-the-traveler-2026-guidelines" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Traveler (2026 Guidelines)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#closing-thoughts-walking-saigon-with-open-eyes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Closing Thoughts: Walking Saigon with Open Eyes</a>
 
               </div>
             </nav>
@@ -834,8 +830,6 @@ export const thingsToDoNearBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Airport Transfer Guide:</strong> planning your arrival from SGN with our <a href="/tan-son-nhat-airport-to-ben-thanh-transfer-guide">Tan Son Nhat airport to Ben Thanh transfer guide</a>.</li>
 <li><strong>Ho Chi Minh City Private Tour:</strong> exploring central sights with local experts on our <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City half-day private tour</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="closing-thoughts-walking-saigon-with-open-eyes" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Closing Thoughts: Walking Saigon with Open Eyes</h2></div>
-<p>No matter how many glass towers rise into the southern sky, the streets around Ben Thanh Market keep an authentic neighborhood rhythm: morning greetings between stall keepers, quiet courtyards tucked behind bustling avenues, and the easy coexistence of old traditions with modern city life. Exploring this neighborhood on foot offers a genuine, unhurried encounter with Saigon at its most welcoming.</p>
 
           </div>
 
@@ -1055,7 +1049,6 @@ export const baoTangMyThuatTphcmHtml = `<!-- layout: landing -->
   <a href="#kiet-tac-trong-tam-vuon-xuan-trung-nam-bac-bao-vat-quoc-gia" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Kiệt Tác Trọng Tâm: "Vườn Xuân Trung Nam Bắc" (Bảo Vật Quốc Gia)</a>
   <a href="#kinh-nghiem-and-luu-y-tham-quan-thuc-te-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Kinh Nghiệm & Lưu Ý Tham Quan Thực Tế (2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-khoang-lang-thanh-tao-giua-long-o-thi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Khoảng Lặng Thanh Tao Giữa Lòng Đô Thị</a>
 
               </div>
             </nav>
@@ -1189,8 +1182,6 @@ Nhìn từ mặt tiền đường Phó Đức Chính, tòa nhà chính hiện l�
 <li><strong>Lịch trình đi bộ Bến Thành 1 ngày:</strong> đưa bảo tàng vào chặng tham quan của <a href="/lich-trinh-di-bo-ben-thanh-1-ngay">lịch trình đi bộ Bến Thành 1 ngày</a>.</li>
 <li><strong>Cà phê chung cư gần Bến Thành:</strong> thư giãn ngắm phố tại các quán <a href="/ca-phe-chung-cu-gan-ben-thanh">cà phê chung cư gần Bến Thành</a> trên đường Tôn Thất Đạm.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-khoang-lang-thanh-tao-giua-long-o-thi" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Khoảng Lặng Thanh Tao Giữa Lòng Đô Thị</h2></div>
-<p>Bảo tàng Mỹ thuật TP.HCM không đơn thuần là nơi trưng bày các bức tranh trên tường vôi; chính bản thân tòa dinh thự đã là một tác phẩm nghệ thuật đồ sộ biết thở. Giữa nhịp sống cuồn cuộn đổi thay của trung tâm Sài Gòn 2026, dành ra hai tiếng đồng hồ bước đi chậm rãi trên sàn gạch bông mát rượi, lắng nghe tiếng gió lùa qua khe cửa gỗ 99 tuổi, bạn sẽ tìm thấy một khoảng lặng thanh tao hiếm có – nơi cái đẹp của quá khứ mãi mãi nâng niu tâm hồn du khách.</p>
 
           </div>
 
@@ -1212,8 +1203,8 @@ Nhìn từ mặt tiền đường Phó Đức Chính, tòa nhà chính hiện l�
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Khoảng Lặng Thanh Tao Giữa Lòng Đô Thị</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Bảo tàng Mỹ thuật TP.HCM không đơn thuần là nơi trưng bày các bức tranh trên tường vôi; chính bản thân tòa dinh thự đã là một tác phẩm nghệ thuật đồ sộ biết thở. Giữa nhịp sống cuồn cuộn đổi thay của trung tâm Sài Gòn 2026, dành ra hai tiếng đồng hồ bước đi chậm rãi trên sàn gạch bông mát rượi, lắng nghe tiếng gió lùa qua khe cửa gỗ 99 tuổi, bạn sẽ tìm thấy một khoảng lặng thanh tao hiếm có – nơi cái đẹp của quá khứ mãi mãi nâng niu tâm hồn du khách.</p>
     </div>
   
 
@@ -1410,7 +1401,6 @@ export const hcmcMuseumOfFineArtsGuideHtml = `<!-- layout: landing -->
   <a href="#the-crown-jewel-spring-garden-of-north-central-and-south-vietnam" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">The Crown Jewel: "Spring Garden of North, Central, and South Vietnam"</a>
   <a href="#curated-field-notes-for-the-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Field Notes for the Traveler (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-a-serene-dialogue-with-the-past" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Serene Dialogue with the Past</a>
 
               </div>
             </nav>
@@ -1549,8 +1539,6 @@ Gazing up from the iron gates on Pho Duc Chinh Street, the main villa presents a
 <li><strong>Boutique Hotels Near Ben Thanh:</strong> finding character-filled lodging nearby in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> review.</li>
 <li><strong>Tailor-Made Vietnam Journeys:</strong> planning private art and architectural touring with our <a href="/tailor-made">tailor-made travel design</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-a-serene-dialogue-with-the-past" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: A Serene Dialogue with the Past</h2></div>
-<p>The Ho Chi Minh City Museum of Fine Arts is as much an architectural visit as an art collection. Taking an unhurried morning stroll through its breezy verandas, patterned tile hallways, and quiet courtyards offers a rare sense of calm right in the center of District 1.</p>
 
           </div>
 
@@ -1773,7 +1761,6 @@ export const amThucChoBenThanhHtml = `<!-- layout: landing -->
   <a href="#bang-so-sanh-huong-vi-cac-tru-cot-am-thuc-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng So Sánh Hương Vị Các Trụ Cột Ẩm Thực Bến Thành</a>
   <a href="#kinh-nghiem-sanh-an-cho-nguoi-du-hanh-co-guu-field-notes-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Kinh Nghiệm Sành Ăn Cho Người Du Hành Có GUU (Field Notes 2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-vi-ngon-cua-ky-uc-o-thi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Vị Ngon Của Ký Ức Đô Thị</a>
 
               </div>
             </nav>
@@ -1937,8 +1924,6 @@ export const amThucChoBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Rooftop bar view chợ Bến Thành:</strong> ngắm nhìn phố xá lung linh về đêm tại các quán <a href="/rooftop-bar-view-cho-ben-thanh">rooftop bar view chợ Bến Thành</a>.</li>
 <li><strong>Đổi ngoại tệ chợ Bến Thành Hà Tâm:</strong> chuẩn bị sẵn tiền mặt đổi từ tiệm vàng uy tín trong hướng dẫn <a href="/doi-ngoai-te-cho-ben-thanh-ha-tam">đổi ngoại tệ chợ Bến Thành Hà Tâm</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-vi-ngon-cua-ky-uc-o-thi" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Vị Ngon Của Ký Ức Đô Thị</h2></div>
-<p>Món ăn ngon không chỉ nằm ở kỹ thuật xào nấu, mà nằm ở ký ức và tâm hồn của người trao truyền. Tại Chợ Bến Thành, mỗi tô bún, mỗi cuốn gỏi trao đến tay bạn là kết tinh của hàng chục năm thăng trầm giữ lửa nghề của những bà má, cô dì đất Nam Bộ. Hãy thưởng thức bằng sự trân trọng và chậm rãi, để vị ngọt bùi của đất phù sa ngấm sâu vào hành trình du ngoạn Sài Gòn của bạn.</p>
 
           </div>
 
@@ -1960,8 +1945,8 @@ export const amThucChoBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Vị Ngon Của Ký Ức Đô Thị</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Món ăn ngon không chỉ nằm ở kỹ thuật xào nấu, mà nằm ở ký ức và tâm hồn của người trao truyền. Tại Chợ Bến Thành, mỗi tô bún, mỗi cuốn gỏi trao đến tay bạn là kết tinh của hàng chục năm thăng trầm giữ lửa nghề của những bà má, cô dì đất Nam Bộ. Hãy thưởng thức bằng sự trân trọng và chậm rãi, để vị ngọt bùi của đất phù sa ngấm sâu vào hành trình du ngoạn Sài Gòn của bạn.</p>
     </div>
   
 
@@ -2161,7 +2146,6 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
   <a href="#tasting-matrix-comparing-ben-thanhs-culinary-signatures" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Tasting Matrix: Comparing Ben Thanh’s Culinary Signatures</a>
   <a href="#field-notes-for-food-lovers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for Food Lovers (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-the-warmth-of-living-memory" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: The Warmth of Living Memory</a>
 
               </div>
             </nav>
@@ -2327,8 +2311,6 @@ export const benThanhMarketFoodGuideHtml = `<!-- layout: landing -->
 <li><strong>Central Metro Station Guide:</strong> arriving directly beneath the market via our <a href="/ben-thanh-central-metro-station-guide">Ben Thanh Central Metro Station guide</a>.</li>
 <li><strong>Boutique Hotels Near Ben Thanh:</strong> staying within walking distance of night dining with our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> guide.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-the-warmth-of-living-memory" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: The Warmth of Living Memory</h2></div>
-<p>The best food experiences around Ben Thanh Market aren&#39;t fancy or complicated. They come down to family stalls that have spent forty or fifty years perfecting a single broth, grilling over hot coals, and serving neighbors and travelers side by side. Grab a stool, take your time, and enjoy every bite.</p>
 
           </div>
 
@@ -2548,7 +2530,6 @@ export const lichTrinhDiBoBenThanh1NgayHtml = `<!-- layout: landing -->
   <a href="#chang-4-1800-2030-ai-tiec-pho-em-and-khuc-bien-tau-cocktail" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Chặng 4 (18:00 – 20:30): Đại Tiệc Phố Đêm & Khúc Biến Tấu Cocktail</a>
   <a href="#bang-phan-bo-thoi-gian-and-du-toan-chi-phi-thuc-te-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng Phân Bổ Thời Gian & Dự Toán Chi Phí Thực Tế 2026</a>
   <a href="#checklist-chuan-bi-thuc-ia-cho-nguoi-du-hanh-field-checklist-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Checklist Chuẩn Bị Thực Địa Cho Người Du Hành (Field Checklist 2026)</a>
-  <a href="#loi-ket-epilogue-buoc-cham-e-yeu-sai-gon-sau-sac-hon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Bước Chậm Để Yêu Sài Gòn Sâu Sắc Hơn</a>
 
               </div>
             </nav>
@@ -2732,8 +2713,6 @@ Lộ trình được sắp xếp nương theo nhịp điệu của mặt trời 
 <li><input disabled="" type="checkbox"> <strong>Nâng tầm trải nghiệm với chuyên gia:</strong> Nếu bạn muốn có một chuyên gia văn hóa đồng hành thuyết minh chi tiết từng câu chuyện lịch sử và bảo bối nghệ thuật, hãy đặt tour <a href="/tour/ho-chi-minh-city-half-day-private-tour">Ho Chi Minh City Half Day Private Tour</a> độc quyền của The Rice Tour.</li>
 </ul>
 <hr>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-buoc-cham-e-yeu-sai-gon-sau-sac-hon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Bước Chậm Để Yêu Sài Gòn Sâu Sắc Hơn</h2></div>
-<p>Một ngày tản bộ quanh Bến Thành sẽ đập tan hoàn toàn định kiến cho rằng Sài Gòn chỉ là một đô thị xô bồ, ồn ã và thiếu vắng chiều sâu văn hóa. Từng góc phố bạn đi qua, từng bóng cây dầu trăm tuổi bạn dừng chân đều mang trong mình những lớp phù sa lịch sử lấp lánh. Khi đêm buông xuống và nhấp ly cocktail ngắm nhìn dòng xe như thoi đưa quanh bùng binh Bến Thành, bạn sẽ nhận ra mình đã trót yêu thành phố này từ những điều mộc mạc và chân phương nhất.</p>
 
           </div>
 
@@ -2755,8 +2734,8 @@ Lộ trình được sắp xếp nương theo nhịp điệu của mặt trời 
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Bước Chậm Để Yêu Sài Gòn Sâu Sắc Hơn</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Một ngày tản bộ quanh Bến Thành sẽ đập tan hoàn toàn định kiến cho rằng Sài Gòn chỉ là một đô thị xô bồ, ồn ã và thiếu vắng chiều sâu văn hóa. Từng góc phố bạn đi qua, từng bóng cây dầu trăm tuổi bạn dừng chân đều mang trong mình những lớp phù sa lịch sử lấp lánh. Khi đêm buông xuống và nhấp ly cocktail ngắm nhìn dòng xe như thoi đưa quanh bùng binh Bến Thành, bạn sẽ nhận ra mình đã trót yêu thành phố này từ những điều mộc mạc và chân phương nhất.</p>
     </div>
   
 
@@ -2954,7 +2933,6 @@ export const benThanhOneDayWalkingTourHtml = `<!-- layout: landing -->
   <a href="#curated-time-block-and-budget-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Time-Block & Budget Matrix (2026 Reference)</a>
   <a href="#field-checklist-for-travelers-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Checklist for Travelers (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-exploring-saigon-on-foot" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Exploring Saigon on Foot</a>
 
               </div>
             </nav>
@@ -3139,8 +3117,6 @@ This route is planned around the heat: outdoor markets and temples in the cooler
 <li><strong>Airport Transfer Guide:</strong> reaching District 1 from the runway with our <a href="/tan-son-nhat-airport-to-ben-thanh-transfer-guide">Tan Son Nhat airport to Ben Thanh transfer guide</a>.</li>
 <li><strong>Tailor-Made Travel Service:</strong> crafting custom walking routes and private excursions with our <a href="/tailor-made">tailor-made journey service</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-exploring-saigon-on-foot" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: Exploring Saigon on Foot</h2></div>
-<p>Spending a full day walking District 1 shows that behind the rush of motorbikes, the city has a steady, walkable pulse. When you connect its shaded boulevards, quiet courtyards, and food stalls on foot, Saigon feels surprisingly personal and easy to navigate.</p>
 
           </div>
 
@@ -3358,7 +3334,6 @@ export const dinhDocLapSaiGonHtml = `<!-- layout: landing -->
   <a href="#kham-pha-cac-phan-khu-trong-yeu-trong-dinh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Khám Phá Các Phân Khu Trọng Yếu Trong Dinh</a>
   <a href="#kinh-nghiem-tham-quan-and-luu-y-thuc-te-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Kinh Nghiệm Tham Quan & Lưu Ý Thực Tế (2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-ban-truong-ca-bang-a-cua-long-yeu-nuoc" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Bản Trường Ca Bằng Đá Của Lòng Yêu Nước</a>
 
               </div>
             </nav>
@@ -3504,8 +3479,6 @@ export const dinhDocLapSaiGonHtml = `<!-- layout: landing -->
 <li><strong>Xe bus 2 tầng Hop-On Hop-Off:</strong> đón tuyến xe ngắm cảnh tiện lợi cùng <a href="/xe-bus-2-tang-hop-on-hop-off-sai-gon">xe bus 2 tầng Hop-On Hop-Off Sài Gòn</a> ngay trước cổng.</li>
 <li><strong>Khách sạn boutique gần Bến Thành:</strong> nghỉ dưỡng phong cách tại các <a href="/khach-san-boutique-gan-ben-thanh">khách sạn boutique gần Bến Thành</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-ban-truong-ca-bang-a-cua-long-yeu-nuoc" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Bản Trường Ca Bằng Đá Của Lòng Yêu Nước</h2></div>
-<p>Dinh Độc Lập không chỉ là một bảo tàng lịch sử của quá khứ; công trình là một kiệt tác sống động thể hiện sự vươn mình của kiến trúc Việt Nam trên trường quốc tế. Giữa lòng một Sài Gòn đang tăng tốc với tàu điện ngầm và những tòa tháp chọc trời năm 2026, dừng bước trước thảm cỏ xanh mướt của Dinh Độc Lập để nghe tiếng gió rì rào qua tán cây trăm tuổi, bạn sẽ thấu hiểu sâu sắc hơn về giá trị thiêng liêng của hòa bình và độc lập tự do.</p>
 
           </div>
 
@@ -3527,8 +3500,8 @@ export const dinhDocLapSaiGonHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Bản Trường Ca Bằng Đá Của Lòng Yêu Nước</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dinh Độc Lập không chỉ là một bảo tàng lịch sử của quá khứ; công trình là một kiệt tác sống động thể hiện sự vươn mình của kiến trúc Việt Nam trên trường quốc tế. Giữa lòng một Sài Gòn đang tăng tốc với tàu điện ngầm và những tòa tháp chọc trời năm 2026, dừng bước trước thảm cỏ xanh mướt của Dinh Độc Lập để nghe tiếng gió rì rào qua tán cây trăm tuổi, bạn sẽ thấu hiểu sâu sắc hơn về giá trị thiêng liêng của hòa bình và độc lập tự do.</p>
     </div>
   
 
@@ -3723,7 +3696,6 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
   <a href="#curated-interior-exploration-from-grand-salons-to-underground-bunkers" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Interior Exploration: From Grand Salons to Underground Bunkers</a>
   <a href="#field-notes-for-the-traveler-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Field Notes for the Traveler (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-understanding-modern-vietnam-through-its-landmarks" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: Understanding Modern Vietnam Through Its Landmarks</a>
 
               </div>
             </nav>
@@ -3873,8 +3845,6 @@ export const independencePalaceSaigonGuideHtml = `<!-- layout: landing -->
 <li><strong>Mariamman Hindu Temple:</strong> visiting the colorful South Indian <a href="/mariamman-hindu-temple-saigon">Mariamman Hindu Temple</a> just a 5-minute walk south on Truong Dinh.</li>
 <li><strong>Tailor-Made Vietnam Journeys:</strong> designing bespoke historical itineraries with our <a href="/tailor-made">tailor-made travel service</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-understanding-modern-vietnam-through-its-landmarks" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: Understanding Modern Vietnam Through Its Landmarks</h2></div>
-<p>Walking through the quiet halls, presidential staterooms, and fortified underground bunkers of the Independence Palace brings modern Vietnamese history into sharp focus. Outside, beneath the tall trees of its central lawns, the contrast between Saigon&#39;s peaceful present and turbulent past couldn&#39;t be clearer.</p>
 
           </div>
 
@@ -4094,7 +4064,6 @@ export const gaNgamMetroBenThanhHtml = `<!-- layout: landing -->
   <a href="#bang-ma-tran-lo-trinh-and-gia-ve-tuyen-metro-so-1-nam-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng Ma Trận Lộ Trình & Giá Vé Tuyến Metro Số 1 (Năm 2026)</a>
   <a href="#huong-dan-di-chuyen-thuc-te-bang-tuyen-metro-so-1-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Hướng Dẫn Di Chuyển Thực Tế Bằng Tuyến Metro Số 1 (2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-buoc-nhay-vot-cua-o-thi-phuong-nam" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Bước Nhảy Vọt Của Đô Thị Phương Nam</a>
 
               </div>
             </nav>
@@ -4250,8 +4219,6 @@ Khu vực lầy lội hồ Bồ Rùa thời phong kiến, bùng binh giao thông
 <ul>
 <li><strong>Chợ Bến Thành có gì chơi:</strong> lối đi ngầm kết nối trực tiếp đến khu mua sắm <a href="/cho-ben-thanh-co-gi-choi">chợ Bến Thành có gì chơi</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-buoc-nhay-vot-cua-o-thi-phuong-nam" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Bước Nhảy Vọt Của Đô Thị Phương Nam</h2></div>
-<p>Ga ngầm Bến Thành không chỉ rút ngắn khoảng cách địa lý giữa các quận huyện, mà còn là lời khẳng định mạnh mẽ về sức sống và khát vọng vươn tầm của Thành phố Hồ Chí Minh trong kỷ nguyên mới. Đứng dưới giếng trời hoa sen, ngắm nhìn dòng người đa sắc tộc thong dong bước lên những chuyến tàu hiện đại, bạn sẽ cảm nhận sâu sắc rằng Sài Gòn luôn biết cách tự làm mới mình mà không bao giờ đánh mất bản sắc hào sảng vốn có.</p>
 
           </div>
 
@@ -4273,8 +4240,8 @@ Khu vực lầy lội hồ Bồ Rùa thời phong kiến, bùng binh giao thông
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Bước Nhảy Vọt Của Đô Thị Phương Nam</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Ga ngầm Bến Thành không chỉ rút ngắn khoảng cách địa lý giữa các quận huyện, mà còn là lời khẳng định mạnh mẽ về sức sống và khát vọng vươn tầm của Thành phố Hồ Chí Minh trong kỷ nguyên mới. Đứng dưới giếng trời hoa sen, ngắm nhìn dòng người đa sắc tộc thong dong bước lên những chuyến tàu hiện đại, bạn sẽ cảm nhận sâu sắc rằng Sài Gòn luôn biết cách tự làm mới mình mà không bao giờ đánh mất bản sắc hào sảng vốn có.</p>
     </div>
   
 
@@ -4471,7 +4438,6 @@ export const benThanhCentralMetroStationGuideHtml = `<!-- layout: landing -->
   <a href="#curated-line-1-route-and-fare-matrix-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Line 1 Route & Fare Matrix (2026 Reference)</a>
   <a href="#practical-transit-tips-and-passenger-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Transit Tips & Passenger Guidelines (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-a-modern-milestone-for-district-1" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Modern Milestone for District 1</a>
 
               </div>
             </nav>
@@ -4630,8 +4596,6 @@ Where colonial roundabouts once jammed with exhaust fumes, visitors now stroll a
 <li><strong>Boutique Hotels Near Ben Thanh:</strong> staying near the central transit terminal at <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a>.</li>
 <li><strong>Saigon Hop-On Hop-Off Bus:</strong> continuing above-ground city sightseeing on the <a href="/saigon-hop-on-hop-off-bus-guide">Saigon Hop-On Hop-Off Bus</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-a-modern-milestone-for-district-1" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: A Modern Milestone for District 1</h2></div>
-<p>The opening of Ben Thanh Central Metro Station has reshaped how people move through Ho Chi Minh City. Stepping from the air-conditioned train platform into the warm morning light of Quach Thi Trang Square, you see firsthand how a historic trading quarter is stepping smoothly into modern urban life.</p>
 
           </div>
 
@@ -4850,7 +4814,6 @@ export const denHinduMariammanSaiGonHtml = `<!-- layout: landing -->
   <a href="#bang-so-sanh-cac-iem-nhan-tam-linh-trong-en-mariamman" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng So Sánh Các Điểm Nhấn Tâm Linh Trong Đền Mariamman</a>
   <a href="#luu-y-and-van-hoa-chiem-bai-khi-vao-en-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lưu Ý & Văn Hóa Chiêm Bái Khi Vào Đền (2026)</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-ve-ep-cua-tinh-huynh-e-a-van-hoa" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Vẻ Đẹp Của Tình Huynh Đệ Đa Văn Hóa</a>
 
               </div>
             </nav>
@@ -4996,8 +4959,6 @@ Mặt tiền đền nổi bật với ngọn tháp cổng **Gopuram** hình kim 
 <li><strong>Cà phê chung cư gần Bến Thành:</strong> nghỉ ngơi thưởng thức cà phê tại các quán <a href="/ca-phe-chung-cu-gan-ben-thanh">cà phê chung cư gần Bến Thành</a>.</li>
 <li><strong>Danh mục Tour The Rice Tour:</strong> tham gia nhiều hành trình văn hóa độc đáo trong <a href="/tours">danh mục tour The Rice Tour</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-ve-ep-cua-tinh-huynh-e-a-van-hoa" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Vẻ Đẹp Của Tình Huynh Đệ Đa Văn Hóa</h2></div>
-<p>Đền Hindu Mariamman là một biểu tượng rực rỡ minh chứng cho tâm hồn rộng mở của Sài Gòn. Nơi đây, du khách phương xa không hề cảm thấy khoảng cách về ngôn ngữ, màu da hay tôn giáo; tất cả đều cùng cúi đầu thành kính trước vẻ đẹp của lòng nhân từ và khát vọng bình an. Dành ra một khoảng lặng tĩnh tâm nơi góc đền cổ này, bạn sẽ nhận ra hành trình du ngoạn có GUU thực chất là chuyến hành hương tìm về sự an yên sâu thẳm trong chính tâm hồn mình.</p>
 
           </div>
 
@@ -5019,8 +4980,8 @@ Mặt tiền đền nổi bật với ngọn tháp cổng **Gopuram** hình kim 
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Vẻ Đẹp Của Tình Huynh Đệ Đa Văn Hóa</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Đền Hindu Mariamman là một biểu tượng rực rỡ minh chứng cho tâm hồn rộng mở của Sài Gòn. Nơi đây, du khách phương xa không hề cảm thấy khoảng cách về ngôn ngữ, màu da hay tôn giáo; tất cả đều cùng cúi đầu thành kính trước vẻ đẹp của lòng nhân từ và khát vọng bình an. Dành ra một khoảng lặng tĩnh tâm nơi góc đền cổ này, bạn sẽ nhận ra hành trình du ngoạn có GUU thực chất là chuyến hành hương tìm về sự an yên sâu thẳm trong chính tâm hồn mình.</p>
     </div>
   
 
@@ -5216,7 +5177,6 @@ export const mariammanHinduTempleSaigonHtml = `<!-- layout: landing -->
   <a href="#curated-sacred-exploration-matrix" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Curated Sacred Exploration Matrix</a>
   <a href="#conscious-traveler-protocol-and-field-guidelines-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Conscious Traveler Protocol & Field Guidelines (2026)</a>
   <a href="#curated-cluster-connections" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Curated Cluster Connections</a>
-  <a href="#epilogue-a-shared-neighborhood-sanctuary" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Epilogue: A Shared Neighborhood Sanctuary</a>
 
               </div>
             </nav>
@@ -5366,8 +5326,6 @@ Soaring above the street is the **Gopuram**—a stepped trapezoidal gateway towe
 <li><strong>Boutique Hotels Near Ben Thanh:</strong> staying nearby at handpicked <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a>.</li>
 <li><strong>Curated Vietnam Tours:</strong> discovering more southern heritage on our <a href="/tours">curated Vietnam tours</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="epilogue-a-shared-neighborhood-sanctuary" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Epilogue: A Shared Neighborhood Sanctuary</h2></div>
-<p>Mariamman Temple is one of the most welcoming sacred spaces in District 1. Seeing Vietnamese, Chinese, and Indian visitors light incense together or take a quiet moment at the back stone wall shows how comfortably different cultures have lived alongside one another in Saigon for generations.</p>
 
           </div>
 
@@ -5590,7 +5548,6 @@ export const kinhNghiemMuaSamChoBenThanhHtml = `<!-- layout: landing -->
   <a href="#cam-nang-phan-biet-hang-thu-cong-cao-cap-vs-hang-cong-nghiep" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Cẩm Nang Phân Biệt Hàng Thủ Công Cao Cấp vs Hàng Công Nghiệp</a>
   <a href="#quyen-loi-cua-nguoi-mua-sam-tai-cho-ben-thanh-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Quyền Lợi Của Người Mua Sắm Tại Chợ Bến Thành 2026</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-epilogue-mang-ve-mot-manh-hon-sai-gon" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết (Epilogue): Mang Về Một Mảnh Hồn Sài Gòn</a>
 
               </div>
             </nav>
@@ -5740,8 +5697,6 @@ Người tiểu thương phương Nam rất coi trọng người khách mua đ�
 <li><strong>Chợ Bến Thành có gì chơi:</strong> nắm rõ sơ đồ các sạp hàng qua cẩm nang <a href="/cho-ben-thanh-co-gi-choi">chợ Bến Thành có gì chơi</a>.</li>
 <li><strong>Kinh nghiệm đi chợ Bến Thành:</strong> tra cứu khung giờ vàng và bí quyết mua sắm trong <a href="/kinh-nghiem-di-cho-ben-thanh">kinh nghiệm đi chợ Bến Thành toàn tập</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-epilogue-mang-ve-mot-manh-hon-sai-gon" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết (Epilogue): Mang Về Một Mảnh Hồn Sài Gòn</h2></div>
-<p>Món quà lưu niệm quý giá nhất sau chuyến đi Chợ Bến Thành không chỉ là tấm khăn lụa mềm mại hay hộp cà phê rang xay thơm ngát, mà chính là kỷ niệm về những cuộc đối thoại ấm áp với những người buôn bán chân chất đất phương Nam. Hãy bước vào chợ bằng sự háo hức, mua sắm bằng sự am tường và trả giá bằng lòng tôn trọng – bạn sẽ thấy Chợ Bến Thành luôn dành tặng cho bạn những điều tuyệt vời nhất.</p>
 
           </div>
 
@@ -5763,8 +5718,8 @@ Người tiểu thương phương Nam rất coi trọng người khách mua đ�
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">: Mang Về Một Mảnh Hồn Sài Gòn</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Món quà lưu niệm quý giá nhất sau chuyến đi Chợ Bến Thành không chỉ là tấm khăn lụa mềm mại hay hộp cà phê rang xay thơm ngát, mà chính là kỷ niệm về những cuộc đối thoại ấm áp với những người buôn bán chân chất đất phương Nam. Hãy bước vào chợ bằng sự háo hức, mua sắm bằng sự am tường và trả giá bằng lòng tôn trọng – bạn sẽ thấy Chợ Bến Thành luôn dành tặng cho bạn những điều tuyệt vời nhất.</p>
     </div>
   
 
@@ -5964,7 +5919,6 @@ export const benThanhMarketShoppingGuideHtml = `<!-- layout: landing -->
   <a href="#detecting-authentic-artisanship-vs-mass-produced-goods" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Detecting Authentic Artisanship vs. Mass-Produced Goods</a>
   <a href="#consumer-tips-and-traveler-rights-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Consumer Tips & Traveler Rights (2026)</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-shopping-with-respect-and-curiosity" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Shopping with Respect and Curiosity</a>
 
               </div>
             </nav>
@@ -6113,8 +6067,6 @@ Market vendors in southern Vietnam value their first transaction of the day (usu
 <li><strong>Parking Information:</strong> Finding secure lots in our <a href="/parking-guide-near-ben-thanh-market">parking guide near Ben Thanh Market</a>.</li>
 <li><strong>One-Day Walking Tour:</strong> Combining market shopping with local sights on our <a href="/ben-thanh-one-day-walking-tour">one-day Ben Thanh walking tour</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-shopping-with-respect-and-curiosity" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Shopping with Respect and Curiosity</h2></div>
-<p>Shopping at Ben Thanh Market is less about driving a hard bargain and more about engaging with Saigon&#39;s everyday commercial rhythm. Take your time, inspect goods closely, and maintain good humor throughout. With a friendly approach and realistic expectations, you&#39;ll find quality souvenirs and enjoy one of the city&#39;s most enduring traditions.</p>
 
           </div>
 
@@ -6338,7 +6290,6 @@ export const xeBus2TangHopOnHopOffSaiGonHtml = `<!-- layout: landing -->
   <a href="#quy-tac-an-toan-bat-buoc-khi-ngoi-tren-tang-mui-tran" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Quy tắc an toàn bắt buộc khi ngồi trên tầng mui trần</a>
   <a href="#goi-y-lich-trinh-ket-hop-quanh-cho-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Gợi Ý Lịch Trình Kết Hợp Quanh Chợ Bến Thành</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-lang-nghe-nhip-ap-o-thi-tu-khoang-troi-mo" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở</a>
 
               </div>
             </nav>
@@ -6576,8 +6527,6 @@ export const xeBus2TangHopOnHopOffSaiGonHtml = `<!-- layout: landing -->
 <li><strong>Lịch trình đi bộ Bến Thành 1 ngày:</strong> kết hợp dạo phố bằng bước chân theo <a href="/lich-trinh-di-bo-ben-thanh-1-ngay">lịch trình đi bộ Bến Thành 1 ngày</a>.</li>
 <li><strong>Tour Sài Gòn nửa ngày riêng tư:</strong> trải nghiệm city tour có thuyết minh lịch sử riêng cùng <a href="/tour/ho-chi-minh-city-half-day-private-tour">tour Sài Gòn nửa ngày riêng tư</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-lang-nghe-nhip-ap-o-thi-tu-khoang-troi-mo" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở</h2></div>
-<p>Ngồi trên tầng mui trần của chuyến xe bus 2 tầng lăn bánh chầm chậm qua các góc phố thân thương, bạn sẽ nhận ra Sài Gòn không hề vội vã như người ta vẫn tưởng. Thành phố này luôn dành riêng những khoảng lặng dịu dàng cho những ai biết ngước nhìn lên cao—nơi những ban công sắt uốn hoa văn kiểu Pháp nép mình sau tán phượng vĩ, nơi tiếng chuông chiều Nhà thờ vang hòa cùng tiếng còi tàu sông xa xa. Một chuyến xe, vạn góc nhìn, để ta thêm yêu một Sài Gòn dung dị mà kiêu hãnh.</p>
 
           </div>
 
@@ -6599,8 +6548,8 @@ export const xeBus2TangHopOnHopOffSaiGonHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Nghe Nhịp Đập Đô Thị Từ Khoảng Trời Mở</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Ngồi trên tầng mui trần của chuyến xe bus 2 tầng lăn bánh chầm chậm qua các góc phố thân thương, bạn sẽ nhận ra Sài Gòn không hề vội vã như người ta vẫn tưởng. Thành phố này luôn dành riêng những khoảng lặng dịu dàng cho những ai biết ngước nhìn lên cao—nơi những ban công sắt uốn hoa văn kiểu Pháp nép mình sau tán phượng vĩ, nơi tiếng chuông chiều Nhà thờ vang hòa cùng tiếng còi tàu sông xa xa. Một chuyến xe, vạn góc nhìn, để ta thêm yêu một Sài Gòn dung dị mà kiêu hãnh.</p>
     </div>
   
 
@@ -6798,7 +6747,6 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
   <a href="#practical-travel-tips" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Travel Tips</a>
   <a href="#suggested-half-day-plan-around-ben-thanh-market" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Suggested Half-Day Plan Around Ben Thanh Market</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-seeing-the-city-from-a-different-angle" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Seeing the City from a Different Angle</a>
 
               </div>
             </nav>
@@ -7024,8 +6972,6 @@ export const saigonHopOnHopOffBusGuideHtml = `<!-- layout: landing -->
 <li><strong>Boutique Hotels Nearby:</strong> Staying close to the bus terminus at curated <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a>.</li>
 <li><strong>Fine Arts Museum:</strong> Hopping off nearby to explore the <a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-seeing-the-city-from-a-different-angle" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Seeing the City from a Different Angle</h2></div>
-<p>The open-top double-decker bus is one of the simplest ways to understand Ho Chi Minh City&#39;s geography before diving in on foot. Gliding past the leafy canopies of District 1, through the old French quarter, and out across the river at dusk gives you a relaxed, panoramic view of a city that is constantly on the move.</p>
 
           </div>
 
@@ -7246,7 +7192,6 @@ export const caPheChungCuGanBenThanhHtml = `<!-- layout: landing -->
   <a href="#ma-tran-o-uong-tu-phin-truyen-thong-en-ca-phe-thu-cong-uong-ai" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Ma Trận Đồ Uống: Từ Phin Truyền Thống Đến Cà Phê Thủ Công Đương Đại</a>
   <a href="#cam-nang-van-hoa-ung-xu-cho-du-khach" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Cẩm Nang Văn Hóa Ứng Xử Cho Du Khách</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-tim-lai-not-lang-giua-trung-tam-hoa-le" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ</a>
 
               </div>
             </nav>
@@ -7427,8 +7372,6 @@ export const caPheChungCuGanBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Lịch trình đi bộ Bến Thành 1 ngày:</strong> nghỉ chân thưởng thức cà phê giữa <a href="/lich-trinh-di-bo-ben-thanh-1-ngay">lịch trình đi bộ Bến Thành 1 ngày</a>.</li>
 <li><strong>Bãi gửi xe quanh chợ Bến Thành:</strong> chọn bãi gửi xe máy an toàn qua cẩm nang <a href="/bai-gui-xe-quanh-cho-ben-thanh">bãi gửi xe quanh chợ Bến Thành</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-tim-lai-not-lang-giua-trung-tam-hoa-le" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ</h2></div>
-<p>Trong một thế giới vận hành ngày càng vội vã, những quán cà phê chung cư cổ quanh Bến Thành như một chiếc mỏ neo thời gian, giữ lại cho Sài Gòn một phần ký ức êm đềm và nguyên bản nhất. Ngồi bên chiếc bàn gỗ cũ, nhấp một ngụm cà phê thơm nồng và lắng nghe tiếng còi xe vọng lại từ phía quảng trường, bạn sẽ hiểu vì sao người Sài Gòn có thể ngồi hàng giờ đồng hồ bên một ly cà phê—không phải để giết thời gian, mà là để cảm nhận cuộc sống đang chảy tràn trong từng nhịp thở dịu dàng của phố thị.</p>
 
           </div>
 
@@ -7450,8 +7393,8 @@ export const caPheChungCuGanBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Tìm Lại Nốt Lặng Giữa Trung Tâm Hoa Lệ</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Trong một thế giới vận hành ngày càng vội vã, những quán cà phê chung cư cổ quanh Bến Thành như một chiếc mỏ neo thời gian, giữ lại cho Sài Gòn một phần ký ức êm đềm và nguyên bản nhất. Ngồi bên chiếc bàn gỗ cũ, nhấp một ngụm cà phê thơm nồng và lắng nghe tiếng còi xe vọng lại từ phía quảng trường, bạn sẽ hiểu vì sao người Sài Gòn có thể ngồi hàng giờ đồng hồ bên một ly cà phê—không phải để giết thời gian, mà là để cảm nhận cuộc sống đang chảy tràn trong từng nhịp thở dịu dàng của phố thị.</p>
     </div>
   
 
@@ -7648,7 +7591,6 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
   <a href="#popular-coffee-styles-to-try" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Popular Coffee Styles to Try</a>
   <a href="#etiquette-for-visiting-apartment-cafes" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Etiquette for Visiting Apartment Cafes</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-a-quiet-pause-in-district-1" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: A Quiet Pause in District 1</a>
 
               </div>
             </nav>
@@ -7808,8 +7750,6 @@ export const secretApartmentCafesNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Market Food Stalls:</strong> Pair your coffee with regional snacks in our <a href="/ben-thanh-market-food-guide">Ben Thanh Market food guide</a>.</li>
 <li><strong>Where to Stay:</strong> Find charming stays nearby in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> guide.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-a-quiet-pause-in-district-1" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: A Quiet Pause in District 1</h2></div>
-<p>Tucked inside Saigon&#39;s older residential buildings, these apartment cafes offer a calm refuge right in the middle of District 1. Sitting on a small balcony with an iced coffee while watching the street traffic below is one of the most relaxing ways to spend an hour between museum visits and market walks.</p>
 
           </div>
 
@@ -8031,7 +7971,6 @@ export const rooftopBarViewChoBenThanhHtml = `<!-- layout: landing -->
   <a href="#bang-gia-thuc-uong-tham-khao-cap-nhat-2026" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng Giá Thức Uống Tham Khảo (Cập Nhật 2026)</a>
   <a href="#so-tay-quy-tac-thuc-ia-cho-buoi-toi-hoan-hao" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Sổ Tay Quy Tắc Thực Địa Cho Buổi Tối Hoàn Hảo</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-nang-ly-duoi-bau-troi-em-o-thi" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Nâng Ly Dưới Bầu Trời Đêm Đô Thị</a>
 
               </div>
             </nav>
@@ -8204,8 +8143,6 @@ export const rooftopBarViewChoBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Khách sạn boutique gần Bến Thành:</strong> lựa chọn lưu trú tại các <a href="/khach-san-boutique-gan-ben-thanh">khách sạn boutique gần Bến Thành</a> có rooftop sang trọng.</li>
 <li><strong>Đi từ sân bay về Bến Thành:</strong> di chuyển ra sân bay đêm muộn thuận tiện theo hướng dẫn <a href="/di-tu-san-bay-tan-son-nhat-ve-ben-thanh">đi từ sân bay Tân Sơn Nhất về Bến Thành</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-nang-ly-duoi-bau-troi-em-o-thi" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Nâng Ly Dưới Bầu Trời Đêm Đô Thị</h2></div>
-<p>Ngồi trên tầng cao lộng gió, cầm trên tay chiếc ly pha lê sóng sánh giọt cocktail thảo mộc và nhìn ngắm tháp đồng hồ Bến Thành trầm mặc bên dưới dòng xe xuôi ngược, bạn sẽ cảm nhận được vẻ đẹp trọn vẹn nhất của Sài Gòn. Đó là một thành phố không bao giờ ngủ, luôn bao dung đón nhận những tâm hồn lữ thứ, và luôn biết cách thết đãi những vị khách tinh tế bằng những khoảnh khắc thăng hoa diệu kỳ.</p>
 
           </div>
 
@@ -8227,8 +8164,8 @@ export const rooftopBarViewChoBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Nâng Ly Dưới Bầu Trời Đêm Đô Thị</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Ngồi trên tầng cao lộng gió, cầm trên tay chiếc ly pha lê sóng sánh giọt cocktail thảo mộc và nhìn ngắm tháp đồng hồ Bến Thành trầm mặc bên dưới dòng xe xuôi ngược, bạn sẽ cảm nhận được vẻ đẹp trọn vẹn nhất của Sài Gòn. Đó là một thành phố không bao giờ ngủ, luôn bao dung đón nhận những tâm hồn lữ thứ, và luôn biết cách thết đãi những vị khách tinh tế bằng những khoảnh khắc thăng hoa diệu kỳ.</p>
     </div>
   
 
@@ -8426,7 +8363,6 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
   <a href="#typical-drink-prices-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Typical Drink Prices (2026 Reference)</a>
   <a href="#practical-nightlife-tips" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Nightlife Tips</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-an-evening-above-district-1" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: An Evening Above District 1</a>
 
               </div>
             </nav>
@@ -8586,8 +8522,6 @@ export const bestRooftopBarsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Walking Itinerary:</strong> Wrap up daytime sightseeing with our <a href="/ben-thanh-one-day-walking-tour">one-day Ben Thanh walking tour</a>.</li>
 <li><strong>Staying Safe at Night:</strong> Practical nightlife security in our <a href="/ben-thanh-market-scams-safety-guide">Ben Thanh Market scams and safety guide</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-an-evening-above-district-1" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: An Evening Above District 1</h2></div>
-<p>Whether you choose a breezy rooftop overlooking Ben Thanh&#39;s iconic clock tower or settle into a quiet speakeasy on Ton That Thiep, spending an evening above Saigon&#39;s energetic streets is a rewarding way to wrap up a day of exploring. Take in the night breeze, sip a drink crafted with local herbs, and watch the city lights unfold below.</p>
 
           </div>
 
@@ -8809,7 +8743,6 @@ export const khachSanBoutiqueGanBenThanhHtml = `<!-- layout: landing -->
   <a href="#bang-so-sanh-chi-tiet-cac-khach-san-boutique-quanh-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng So Sánh Chi Tiết Các Khách Sạn Boutique Quanh Bến Thành</a>
   <a href="#kinh-nghiem-at-phong-and-luu-y-thuc-te" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Kinh Nghiệm Đặt Phòng & Lưu Ý Thực Tế</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-cham-vao-giac-mo-ong-duong-giua-long-thanh-pho" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Chạm Vào Giấc Mơ Đông Dương Giữa Lòng Thành Phố</a>
 
               </div>
             </nav>
@@ -8990,8 +8923,6 @@ export const khachSanBoutiqueGanBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Rooftop bar view chợ Bến Thành:</strong> thư giãn ngắm phố thị lung linh tại các quán <a href="/rooftop-bar-view-cho-ben-thanh">rooftop bar view chợ Bến Thành</a>.</li>
 <li><strong>Dịch vụ tour riêng tailor-made:</strong> đặt xe đưa đón VIP và lịch trình thiết kế riêng tại <a href="/tailor-made">dịch vụ tour riêng tailor-made</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-cham-vao-giac-mo-ong-duong-giua-long-thanh-pho" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Chạm Vào Giấc Mơ Đông Dương Giữa Lòng Thành Phố</h2></div>
-<p>Sau một ngày rong ruổi trên những vỉa hè đầy ắp thanh âm và sắc màu của Sài Gòn, được trở về căn phòng thơm dịu hương tinh dầu sả chanh, ngâm mình trong làn nước ấm và ngắm nhìn ánh hoàng hôn buông lơi trên những tán cây cổ thụ, bạn sẽ thấy tâm hồn mình được xoa dịu dịu dàng. Khách sạn di sản quanh Chợ Bến Thành không chỉ là nơi để lưu trú; đó là một phần ký ức tươi đẹp của chuyến đi, một nơi níu giữ bước chân để bạn mãi nhớ về một Sài Gòn hào hoa, tao nhã và nồng hậu.</p>
 
           </div>
 
@@ -9013,8 +8944,8 @@ export const khachSanBoutiqueGanBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Chạm Vào Giấc Mơ Đông Dương Giữa Lòng Thành Phố</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Sau một ngày rong ruổi trên những vỉa hè đầy ắp thanh âm và sắc màu của Sài Gòn, được trở về căn phòng thơm dịu hương tinh dầu sả chanh, ngâm mình trong làn nước ấm và ngắm nhìn ánh hoàng hôn buông lơi trên những tán cây cổ thụ, bạn sẽ thấy tâm hồn mình được xoa dịu dịu dàng. Khách sạn di sản quanh Chợ Bến Thành không chỉ là nơi để lưu trú; đó là một phần ký ức tươi đẹp của chuyến đi, một nơi níu giữ bước chân để bạn mãi nhớ về một Sài Gòn hào hoa, tao nhã và nồng hậu.</p>
     </div>
   
 
@@ -9213,7 +9144,6 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
   <a href="#quick-comparison-table" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Quick Comparison Table</a>
   <a href="#practical-booking-tips" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Booking Tips</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-a-comfortable-base-in-district-1" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: A Comfortable Base in District 1</a>
 
               </div>
             </nav>
@@ -9394,8 +9324,6 @@ export const boutiqueHotelsNearBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Fine Arts Museum:</strong> Exploring French Indochine design at the <a href="/hcmc-museum-of-fine-arts-guide">HCMC Museum of Fine Arts</a>.</li>
 <li><strong>Custom Itineraries:</strong> Plan a curated trip with our <a href="/tailor-made">tailor-made journey service</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-a-comfortable-base-in-district-1" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: A Comfortable Base in District 1</h2></div>
-<p>After a day of exploring Ben Thanh Market and the surrounding streets, having a peaceful room to come back to makes all the difference. Staying in a well-located boutique hotel allows you to take a midday break when the sun is hottest, freshen up, and head back out as the evening cool sets in.</p>
 
           </div>
 
@@ -9614,7 +9542,6 @@ export const choBenThanhCoGiChoiHtml = `<!-- layout: landing -->
   <a href="#khung-gio-4-em-hoi-hoa-le-and-am-thuc-uong-pho-1830-2330" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">� KHUNG GIỜ 4: Đêm Hội Hoa Lệ & Ẩm Thực Đường Phố (18:30 – 23:30)</a>
   <a href="#bang-ma-tran-lua-chon-hoat-ong-theo-oi-tuong" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bảng Ma Trận Lựa Chọn Hoạt Động Theo Đối Tượng</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-tron-ven-mot-ngay-trai-nghiem-ben-thanh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Trọn Vẹn Một Ngày Trải Nghiệm Bến Thành</a>
 
               </div>
             </nav>
@@ -9767,8 +9694,6 @@ Khoảng 06:30 đến 07:00 sáng là khoảnh khắc kỳ diệu nhất trong n
 <li><strong>Cảnh báo lừa đảo chặt chém:</strong> nhận biết các sạp bán đúng giá theo <a href="/canh-bao-lua-dao-chat-chem-cho-ben-thanh">cảnh báo lừa đảo chặt chém tại chợ Bến Thành</a>.</li>
 <li><strong>Địa điểm nổi tiếng quanh Bến Thành:</strong> bước ra ngoài cửa chợ để khám phá thêm các <a href="/dia-diem-noi-tieng-quanh-ben-thanh">địa điểm nổi tiếng quanh Bến Thành</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-tron-ven-mot-ngay-trai-nghiem-ben-thanh" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Trọn Vẹn Một Ngày Trải Nghiệm Bến Thành</h2></div>
-<p>Hơn cả một địa danh trên bản đồ, Chợ Bến Thành là một sinh thể văn hóa biến chuyển kỳ diệu theo từng giờ trong ngày. Sáng trầm mặc cổ kính, trưa rộn rã giao thương, chiều lãng mạn hoài niệm và đêm rực rỡ hoa lệ. Hãy bước đi với một trái tim cởi mở và đôi mắt tò mò, bạn sẽ thấy Chợ Bến Thành luôn có vô vàn điều kỳ thú đang chờ đón bạn khám phá.</p>
 
           </div>
 
@@ -9790,8 +9715,8 @@ Khoảng 06:30 đến 07:00 sáng là khoảnh khắc kỳ diệu nhất trong n
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Trọn Vẹn Một Ngày Trải Nghiệm Bến Thành</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Hơn cả một địa danh trên bản đồ, Chợ Bến Thành là một sinh thể văn hóa biến chuyển kỳ diệu theo từng giờ trong ngày. Sáng trầm mặc cổ kính, trưa rộn rã giao thương, chiều lãng mạn hoài niệm và đêm rực rỡ hoa lệ. Hãy bước đi với một trái tim cởi mở và đôi mắt tò mò, bạn sẽ thấy Chợ Bến Thành luôn có vô vàn điều kỳ thú đang chờ đón bạn khám phá.</p>
     </div>
   
 
@@ -9988,7 +9913,6 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
   <a href="#suggested-itinerary-options" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Suggested Itinerary Options</a>
   <a href="#practical-tips-for-your-visit" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Practical Tips for Your Visit</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-experiencing-ben-thanhs-daily-rhythm" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Experiencing Ben Thanh's Daily Rhythm</a>
 
               </div>
             </nav>
@@ -10054,6 +9978,7 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
   <div style="padding:16px;">
     <a href="https://www.instagram.com/p/DbPb_4yIGFy/?utm_source=ig_embed&utm_campaign=loading" target="_blank">Xem bài viết này trên Instagram</a>
+  </div>
 </blockquote>
 <script async src="//www.instagram.com/embed.js"></script>
   </div>
@@ -10135,8 +10060,6 @@ export const thingsToDoInBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Where to Stay:</strong> Character-rich hotels in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> guide.</li>
 <li><strong>Airport Connections:</strong> Fast airport transit in our <a href="/tan-son-nhat-airport-to-ben-thanh-transfer-guide">Tan Son Nhat airport to Ben Thanh transfer guide</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-experiencing-ben-thanhs-daily-rhythm" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Experiencing Ben Thanh&#39;s Daily Rhythm</h2></div>
-<p>The best way to experience Ben Thanh Market is to take it at your own pace: start with an early morning iced milk coffee on a low plastic stool, browse the craft stalls before the midday heat, and return in the evening when the street food stalls set up outside. It remains one of the most vibrant corners of District 1.</p>
 
           </div>
 
@@ -10360,7 +10283,6 @@ export const kinhNghiemDiChoBenThanhHtml = `<!-- layout: landing -->
   <a href="#canh-bao-an-ninh-5-cam-bay-pho-bien-and-cach-phong-tranh" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Cảnh Báo An Ninh: 5 Cạm Bẫy Phổ Biến & Cách Phòng Tránh</a>
   <a href="#cam-nang-an-uong-and-ve-sinh-ca-nhan" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Cẩm Nang Ăn Uống & Vệ Sinh Cá Nhân</a>
   <a href="#lien-ket-hanh-trinh-and-iem-en-lan-can" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Liên Kết Hành Trình & Điểm Đến Lân Cận</a>
-  <a href="#loi-ket-kham-pha-cho-ben-thanh-bang-su-tinh-te" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Lời Kết: Khám Phá Chợ Bến Thành Bằng Sự Tinh Tế</a>
 
               </div>
             </nav>
@@ -10537,8 +10459,6 @@ export const kinhNghiemDiChoBenThanhHtml = `<!-- layout: landing -->
 <li><strong>Đổi ngoại tệ chợ Bến Thành Hà Tâm:</strong> đổi tiền với tỷ giá cạnh tranh tại tiệm vàng trong bài <a href="/doi-ngoai-te-cho-ben-thanh-ha-tam">đổi ngoại tệ chợ Bến Thành Hà Tâm</a>.</li>
 <li><strong>Cảnh báo lừa đảo chặt chém:</strong> bảo vệ tài sản và tránh bị ép giá cùng cẩm nang <a href="/canh-bao-lua-dao-chat-chem-cho-ben-thanh">cảnh báo lừa đảo chặt chém tại chợ Bến Thành</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="loi-ket-kham-pha-cho-ben-thanh-bang-su-tinh-te" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Lời Kết: Khám Phá Chợ Bến Thành Bằng Sự Tinh Tế</h2></div>
-<p>Chợ Bến Thành không hoàn hảo, nhưng chính những ồn ào, náo nhiệt, hương vị đan xen và sự lanh lẹ của những tiểu thương nơi đây mới làm nên cái hồn bất diệt của Sài Gòn. Khi bạn bước vào chợ với một nụ cười rạng rỡ, một sự chuẩn bị chu đáo và sự thấu hiểu văn hóa bản địa, Chợ Bến Thành sẽ đền đáp cho bạn bằng những kỷ niệm ấm áp và sống động nhất của cuộc đời lữ hành.</p>
 
           </div>
 
@@ -10560,8 +10480,8 @@ export const kinhNghiemDiChoBenThanhHtml = `<!-- layout: landing -->
           <!-- Epilogue -->
           
     <div class="my-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-amber-500/10 via-amber-50/50 to-transparent border border-amber-200/80 not-prose">
-      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Lắng Đọng Tâm Hồn Sài Gòn</h3>
-      <p class="text-slate-700 text-[15px] leading-relaxed italic">Dù bao nhiêu tòa tháp kính tương lai mọc lên trên bầu trời phương Nam, khu vực quanh Chợ Bến Thành vẫn lưu giữ một tâm hồn nguyên vẹn: được dệt nên từ tiếng còi xe rộn rã, tiếng mời chào ngọt ngào của những gánh chè ba đời, nét trầm tư của những ô cửa gỗ Pháp trăm năm, và niềm lạc quan bất tận của những con người xem mảnh đất này là quê hương.</p>
+      <h3 class="font-serif text-xl font-bold text-slate-900 mb-2">Khám Phá Chợ Bến Thành Bằng Sự Tinh Tế</h3>
+      <p class="text-slate-700 text-[15px] leading-relaxed italic">Chợ Bến Thành không hoàn hảo, nhưng chính những ồn ào, náo nhiệt, hương vị đan xen và sự lanh lẹ của những tiểu thương nơi đây mới làm nên cái hồn bất diệt của Sài Gòn. Khi bạn bước vào chợ với một nụ cười rạng rỡ, một sự chuẩn bị chu đáo và sự thấu hiểu văn hóa bản địa, Chợ Bến Thành sẽ đền đáp cho bạn bằng những kỷ niệm ấm áp và sống động nhất của cuộc đời lữ hành.</p>
     </div>
   
 
@@ -10758,7 +10678,6 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
   <a href="#dining-tips-for-the-food-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Dining Tips for the Food Hall</a>
   <a href="#safety-and-helpful-contacts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Safety & Helpful Contacts</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-getting-the-most-from-your-visit" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Getting the Most from Your Visit</a>
 
               </div>
             </nav>
@@ -10927,8 +10846,6 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 <li><strong>Walking Route:</strong> Connect the market with colonial sights on our <a href="/ben-thanh-one-day-walking-tour">one-day Ben Thanh walking tour</a>.</li>
 <li><strong>Where to Stay:</strong> Character-rich lodging in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> review.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-getting-the-most-from-your-visit" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Getting the Most from Your Visit</h2></div>
-<p>Ben Thanh Market gives you a snapshot of Saigon&#39;s energetic daily life in one place. With an understanding of market hours, a friendly attitude toward bargaining, and a clear idea of where to park or eat, your visit will be smooth, enjoyable, and memorable.</p>
 
           </div>
 
@@ -11535,7 +11452,6 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
   <a href="#fair-price-benchmarks-2026-reference" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Fair Price Benchmarks (2026 Reference)</a>
   <a href="#helpful-local-contacts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Helpful Local Contacts</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-enjoying-the-market-with-confidence" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Enjoying the Market with Confidence</a>
 
               </div>
             </nav>
@@ -11703,8 +11619,6 @@ export const benThanhMarketScamsSafetyGuideHtml = `<!-- layout: landing -->
 <li><strong>Walking Tour:</strong> Explore safely on foot with our <a href="/ben-thanh-one-day-walking-tour">one-day Ben Thanh walking tour</a>.</li>
 <li><strong>Boutique Hotels:</strong> Secure stays in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> review.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-enjoying-the-market-with-confidence" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Enjoying the Market with Confidence</h2></div>
-<p>Staying aware doesn&#39;t mean treating every stallholder with suspicion—it simply means knowing fair local prices and keeping your belongings secure. When you approach the market with a friendly smile, clear boundaries, and realistic expectations, you&#39;ll have a safe, enjoyable visit.</p>
 
           </div>
 
@@ -12295,7 +12209,6 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
   <a href="#high-denominations-get-better-rates" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">High Denominations Get Better Rates</a>
   <a href="#simple-safety-steps-for-exchanging-cash" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Simple Safety Steps for Exchanging Cash</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-a-reliable-spot-to-exchange-cash" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: A Reliable Spot to Exchange Cash</a>
 
               </div>
             </nav>
@@ -12427,8 +12340,6 @@ export const moneyExchangeBenThanhHaTamGuideHtml = `<!-- layout: landing -->
 <li><strong>Mariamman Hindu Temple:</strong> Visit the serene <a href="/mariamman-hindu-temple-saigon">Mariamman Hindu Temple</a> just two minutes away on Truong Dinh.</li>
 <li><strong>One-Day Walking Tour:</strong> Follow our step-by-step <a href="/ben-thanh-one-day-walking-tour">one-day Ben Thanh walking tour</a>.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-a-reliable-spot-to-exchange-cash" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: A Reliable Spot to Exchange Cash</h2></div>
-<p>Having local Vietnamese Dong on hand makes paying for street food, iced coffees, and small taxi rides seamless. Ha Tam and its neighboring gold shops remain one of the most reliable, cost-effective options in District 1—just remember to bring clean, uncreased bills and keep your money stowed safely before heading back onto the sidewalk.</p>
 
           </div>
 
@@ -13046,7 +12957,6 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
   <a href="#cars-and-passenger-vans" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">Cars & Passenger Vans</a>
   <a href="#how-to-avoid-overpaying-on-the-street" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">How to Avoid Overpaying on the Street</a>
   <a href="#nearby-guides-and-resources" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">�️ Nearby Guides & Resources</a>
-  <a href="#final-thoughts-parking-with-peace-of-mind" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Final Thoughts: Parking with Peace of Mind</a>
 
               </div>
             </nav>
@@ -13226,8 +13136,6 @@ export const parkingGuideNearBenThanhMarketHtml = `<!-- layout: landing -->
 <li><strong>Market Food Guide:</strong> Refuel after parking with our <a href="/ben-thanh-market-food-guide">Ben Thanh Market food guide</a>.</li>
 <li><strong>Where to Stay:</strong> Character-filled rooms in our <a href="/boutique-hotels-near-ben-thanh">boutique hotels near Ben Thanh</a> review.</li>
 </ul>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="final-thoughts-parking-with-peace-of-mind" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Final Thoughts: Parking with Peace of Mind</h2></div>
-<p>Having your motorbike or car parked in a secure, official facility makes exploring District 1 much more enjoyable. Pick one of the verified basements or lots nearby, grab your ticket, and enjoy an unhurried visit to the market.</p>
 
           </div>
 
