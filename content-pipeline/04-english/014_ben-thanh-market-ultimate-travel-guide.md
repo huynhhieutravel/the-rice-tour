@@ -105,9 +105,9 @@ One of the most persistent headaches for independent travelers on scooters or re
 
 ---
 
-## Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)
+## Currency Exchange: The Gold Shop Quarter on Nguyen An Ninh (Ha Tam & Mai Van)
 
-Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary **Ha Tam Gold Shop** (*Tiem vang Ha Tam*) and neighboring **Mai Van**:
+Facing the West Gate at the corner of Phan Chu Trinh and Nguyen An Ninh streets lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary **Ha Tam Gold Shop** (2 Nguyen An Ninh) and neighboring **Mai Van** (1A Nguyen An Ninh):
 
 - **Why Locals Choose It:** Ha Tam consistently quotes foreign exchange rates matching or exceeding official bank rates for USD, EUR, AUD, JPY, SGD, and THB, with zero service commission and instantaneous counting machines.
 - **Operational Protocol:** Expect a queue of locals and expat traders during peak afternoon hours. Bring crisp, uncreased, tear-free banknotes (especially 100 USD bills) to secure the highest tiered rates.

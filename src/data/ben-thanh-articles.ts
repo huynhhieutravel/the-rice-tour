@@ -10106,9 +10106,9 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
 <hr>
 <h3 id="time-window-3-golden-sunset-and-cultural-contemplation-1500-1830" class="font-serif text-xl font-bold text-slate-800 mt-6 mb-3">🌇 TIME WINDOW 3: Golden Sunset &amp; Cultural Contemplation (15:00 – 18:30)</h3>
 <h4>8. Seeking Serenity and Scented Jasmine at Mariamman Hindu Temple</h4>
-<p>Located on Truong Dinh Street, this 1885 South Indian sanctuary offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.</p>
+<p>Located on Truong Dinh Street, this centennial South Indian sanctuary founded in the late 19th century offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.</p>
 <h4>9. Climbing to a Secret Apartment Hideaway Cafe on Ly Tu Trong</h4>
-<p>Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like <em>Cong Ca Phe</em> and <em>The Workshop</em> overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.</p>
+<p>Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like <em>Cong Ca Phe</em> and indie coffee ateliers overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.</p>
 <h4>10. Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus</h4>
 <p>At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird&#39;s-eye views of District 1.</p>
 <hr>
@@ -10116,7 +10116,7 @@ Between 06:30 and 07:00 AM lies the most enchanting moment of the day across Qua
 <h4>11. Feasting on Flaming Seafood Along Phan Boi Chau Night Market</h4>
 <p>As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (<em>banh xeo</em>) amidst crackling flames and lively international crowds.</p>
 <h4>12. Sipping Craft Cocktails Overlooking the Illuminated Clock Tower at Twilight</h4>
-<p>Ascend to <em>The Daun Rooftop</em> or <em>Broma Not a Bar</em> along Le Loi Boulevard. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.</p>
+<p>Ascend to <em>OMG Rooftop Bar</em> (14–16 Le Lai) or <em>The Daun Rooftop</em> directly overlooking the square. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.</p>
 <h4>13. Late-Night Supper: Golden Roasted Quail on Dong Du or Broken Rice on Nguyen Trai</h4>
 <p>End your nocturnal culinary adventure with late-night classics favored by locals: aromatic crispy butter-roasted quail paired with salted lime-pepper dip, or a plate of smoky grilled pork chop broken rice (<em>com tam suon bi cha</em>) served well past midnight.</p>
 <hr>
@@ -10778,7 +10778,7 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
   <a href="#operating-hours-and-two-distinct-daily-rhythms" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Operating Hours & Two Distinct Daily Rhythms</a>
   <a href="#the-open-air-night-street-bazaar-1800-2330" class="block transition-colors leading-tight py-1 text-slate-500 hover:text-amber-700 pl-2 text-[12.5px]">The Open-Air Night Street Bazaar (18:00 – 23:30)</a>
   <a href="#official-parking-map-and-scam-avoidance" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Official Parking Map & Scam Avoidance</a>
-  <a href="#currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam & Mai Van)</a>
+  <a href="#currency-exchange-the-gold-shop-quarter-on-nguyen-an-ninh-ha-tam-and-mai-van" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Currency Exchange: The Gold Shop Quarter on Nguyen An Ninh (Ha Tam & Mai Van)</a>
   <a href="#bargaining-with-a-smile-practical-tips-for-respectful-negotiation" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Bargaining with a Smile: Practical Tips for Respectful Negotiation</a>
   <a href="#hygiene-and-dining-safety-in-the-culinary-hall" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Hygiene & Dining Safety in the Culinary Hall</a>
   <a href="#safety-scams-and-emergency-contacts" class="block transition-colors leading-tight py-1.5 text-slate-600 hover:text-amber-800 font-semibold text-[13px]">Safety, Scams & Emergency Contacts</a>
@@ -10904,8 +10904,8 @@ export const benThanhMarketUltimateTravelGuideHtml = `<!-- layout: landing -->
 </tr>
 </tbody></table></div>
 <hr>
-<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="currency-exchange-the-gold-shop-quarter-on-phan-chu-trinh-ha-tam-and-mai-van" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Currency Exchange: The Gold Shop Quarter on Phan Chu Trinh (Ha Tam &amp; Mai Van)</h2></div>
-<p>Facing the West Gate along Phan Chu Trinh Street lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary <strong>Ha Tam Gold Shop</strong> (<em>Tiem vang Ha Tam</em>) and neighboring <strong>Mai Van</strong>:</p>
+<div class="border-l-4 border-amber-500 pl-4 mt-10 mb-4"><h2 id="currency-exchange-the-gold-shop-quarter-on-nguyen-an-ninh-ha-tam-and-mai-van" class="font-serif text-2xl lg:text-[26px] font-bold text-slate-900 leading-tight">Currency Exchange: The Gold Shop Quarter on Nguyen An Ninh (Ha Tam &amp; Mai Van)</h2></div>
+<p>Facing the West Gate at the corner of Phan Chu Trinh and Nguyen An Ninh streets lies Saigon’s most renowned foreign currency exchange hub, headlined by the legendary <strong>Ha Tam Gold Shop</strong> (2 Nguyen An Ninh) and neighboring <strong>Mai Van</strong> (1A Nguyen An Ninh):</p>
 <ul>
 <li><strong>Why Locals Choose It:</strong> Ha Tam consistently quotes foreign exchange rates matching or exceeding official bank rates for USD, EUR, AUD, JPY, SGD, and THB, with zero service commission and instantaneous counting machines.</li>
 <li><strong>Operational Protocol:</strong> Expect a queue of locals and expat traders during peak afternoon hours. Bring crisp, uncreased, tear-free banknotes (especially 100 USD bills) to secure the highest tiered rates.</li>

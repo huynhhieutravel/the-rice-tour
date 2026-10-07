@@ -112,10 +112,10 @@ A mere 350-meter stroll south leads to the opulent estate of tycoon Hui Bon Hoa 
 ### 🌇 TIME WINDOW 3: Golden Sunset & Cultural Contemplation (15:00 – 18:30)
 
 #### 8. Seeking Serenity and Scented Jasmine at Mariamman Hindu Temple
-Located on Truong Dinh Street, this 1885 South Indian sanctuary offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.
+Located on Truong Dinh Street, this centennial South Indian sanctuary founded in the late 19th century offers an immediate spiritual sanctuary. Admire the colorful Gopuram tower adorned with sculpted deities, feel the soothing cool of polished granite flagstones, and observe devotees seeking blessing against the sacred outer sanctuary walls.
 
 #### 9. Climbing to a Secret Apartment Hideaway Cafe on Ly Tu Trong
-Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like *Cong Ca Phe* and *The Workshop* overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.
+Tucked inside an aging 1960s apartment block at 26 Ly Tu Trong, artisanal cafes like *Cong Ca Phe* and indie coffee ateliers overlook the busy street below. Sip a signature slow-drip coconut coffee while listening to vintage vinyl records amidst weathered brick walls and lush potted monstera.
 
 #### 10. Hopping on the Top Deck of the Open-Air Hop-On Hop-Off Sunset Bus
 At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang Square. Gliding past the Notre-Dame Cathedral renovation site, the Central Post Office, and the French colonial City Hall beneath the dusky purple twilight offers panoramic bird's-eye views of District 1.
@@ -128,7 +128,7 @@ At 17:30, board the double-decker tourist bus right in front of Quach Thi Trang 
 As the iron market gates shutter at 18:00, the adjacent avenues of Phan Boi Chau and Phan Chu Trinh transform into a pulsating open-air night market. Savor charcoal-grilled river prawns, scallion-oil butter sea snails, and crispy Vietnamese pancakes (*banh xeo*) amidst crackling flames and lively international crowds.
 
 #### 12. Sipping Craft Cocktails Overlooking the Illuminated Clock Tower at Twilight
-Ascend to *The Daun Rooftop* or *Broma Not a Bar* along Le Loi Boulevard. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.
+Ascend to *OMG Rooftop Bar* (14–16 Le Lai) or *The Daun Rooftop* directly overlooking the square. Holding a signature gin cocktail infused with local kumquat and lemongrass while watching the luminous illuminated clock face of Ben Thanh Market and modern skyscrapers sparkle creates an unforgettable memory.
 
 #### 13. Late-Night Supper: Golden Roasted Quail on Dong Du or Broken Rice on Nguyen Trai
 End your nocturnal culinary adventure with late-night classics favored by locals: aromatic crispy butter-roasted quail paired with salted lime-pepper dip, or a plate of smoky grilled pork chop broken rice (*com tam suon bi cha*) served well past midnight.
